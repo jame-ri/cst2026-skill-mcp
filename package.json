@@ -1,0 +1,16 @@
+{
+  "name": "cst2026-mcp",
+  "version": "0.1.0",
+  "description": "A dependency-free MCP server for CST2026.",
+  "type": "module",
+  "bin": {
+    "cst2026-mcp": "./src/server.js"
+  },
+  "scripts": {
+    "start": "node ./src/server.js"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "license": "MIT"
+}
