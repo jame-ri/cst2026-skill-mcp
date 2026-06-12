@@ -12,18 +12,48 @@ creating design records, and invoking conservative CST Python helpers.
 ## Run
 
 ```powershell
-D:\cst2026-mcp\run-cst2026-mcp.cmd
+D:\CSTapi\run-cst2026-mcp.cmd
 ```
 
 The server has no npm dependencies. It speaks JSON-RPC over stdio and supports
 the MCP `initialize`, `tools/list`, and `tools/call` methods.
+
+## Local CST Path Configuration
+
+CST installation paths vary by machine. The launch script and MCP server use
+this order:
+
+1. Explicit environment variables from the Codex MCP config or shell.
+2. Auto-detection of common CST 2026 install paths.
+3. Tool-call override fields such as `python_executable`.
+
+Supported environment variables:
+
+| Variable | Purpose | Example on this machine |
+| --- | --- | --- |
+| `CST_INSTALL_DIR` | CST installation root | `D:\CST` |
+| `CST_PYTHON_EXE` | CST bundled Python used for `cst.interface` / `cst.results` | `D:\CST\Python\python.exe` |
+| `CST_MACRO_ROOT` | Installed CST macro library root | `D:\CST\Library\Macros` |
+| `CST_DESIGN_ENV_EXE` | CST Design Environment executable, for diagnostics/documentation | `D:\CST\CST DESIGN ENVIRONMENT.exe` |
+
+The current machine was verified with:
+
+```text
+CST_INSTALL_DIR=D:\CST
+CST_PYTHON_EXE=D:\CST\Python\python.exe
+CST_MACRO_ROOT=D:\CST\Library\Macros
+CST_DESIGN_ENV_EXE=D:\CST\CST DESIGN ENVIRONMENT.exe
+```
+
+If CST is installed somewhere else, set the environment variables in the MCP
+configuration instead of editing source code.
 
 ## Suggested Codex MCP Entry
 
 Use this command when adding the server to a Codex MCP config:
 
 ```powershell
-D:\cst2026-mcp\run-cst2026-mcp.cmd
+D:\CSTapi\run-cst2026-mcp.cmd
 ```
 
 An example TOML snippet is available at:
@@ -48,7 +78,8 @@ that the configured command path is absolute.
 - CST project mutation tools default to `execute=false`.
 - The CST helper does not call `save()` or `Save()`.
 - `records.*` only writes inside this repository.
-- Macro reads are limited to indexed `D:\CST\Library\Macros` files.
+- Macro reads are limited to the detected CST macro root, normally
+  `%CST_MACRO_ROOT%` or `<CST_INSTALL_DIR>\Library\Macros`.
 
 ## Example Tool Calls
 
@@ -112,8 +143,9 @@ Plan a live parameter edit without executing:
 When `execute=true`, the MCP server calls:
 
 ```powershell
-D:\CST\AMD64\python.exe D:\CSTapi\mcp\python\cst_ops.py ...
+%CST_PYTHON_EXE% D:\CSTapi\mcp\python\cst_ops.py ...
 ```
 
-Override the Python path with `python_executable` or the `CST_PYTHON_EXE`
-environment variable.
+Override the Python path with the tool argument `python_executable` or the
+`CST_PYTHON_EXE` environment variable. On this machine the working CST Python is
+`D:\CST\Python\python.exe`.

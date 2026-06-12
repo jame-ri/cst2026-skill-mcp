@@ -10,7 +10,6 @@ const repoRoot = path.resolve(__dirname, "..", "..");
 const macroInventoryPath = path.join(repoRoot, "macro-library", "macro-inventory.csv");
 const officialDocsRoot = path.join(repoRoot, "official-docs");
 const recordsRoot = path.join(repoRoot, "design-records");
-const cstMacroRoot = "D:\\CST\\Library\\Macros";
 const cstHelperPath = path.join(repoRoot, "mcp", "python", "cst_ops.py");
 
 let macroRowsCache = null;
@@ -18,6 +17,8 @@ let inputBuffer = "";
 let framedTransport = false;
 
 const textExtensions = new Set([".htm", ".html", ".md", ".py", ".txt", ".bas", ".cls", ".mcr", ".mcs"]);
+
+const cstPaths = detectCstPaths();
 
 const tools = [
   {
@@ -41,7 +42,7 @@ const tools = [
     inputSchema: {
       type: "object",
       properties: {
-        source_path: { type: "string", description: "Absolute original macro path under D:\\CST\\Library\\Macros." },
+        source_path: { type: "string", description: "Absolute original macro path under the detected CST macro root." },
         relative_path: { type: "string", description: "Inventory relative_path, for example Solver\\Ports\\Set Port Mode Evaluation Frequency^+MWS+PS.mcr." },
         max_chars: { type: "integer", minimum: 500, maximum: 100000, default: 12000 }
       }
@@ -121,7 +122,7 @@ const tools = [
       type: "object",
       properties: {
         project_path: { type: "string" },
-        python_executable: { type: "string", description: "CST Python executable. Defaults to CST_PYTHON_EXE or D:\\CST\\AMD64\\python.exe." },
+        python_executable: { type: "string", description: "CST Python executable. Defaults to CST_PYTHON_EXE, then auto-detected CST Python." },
         execute: { type: "boolean", default: false, description: "False returns the planned command; true actually runs CST Python." },
         timeout_sec: { type: "integer", minimum: 5, maximum: 3600, default: 180 }
       },
@@ -155,6 +156,56 @@ function nowIso() {
 
 function normalizeSlashes(value) {
   return String(value ?? "").replaceAll("/", "\\");
+}
+
+function unique(values) {
+  return [...new Set(values.filter(Boolean))];
+}
+
+function firstExisting(paths) {
+  return paths.find((candidate) => candidate && fs.existsSync(candidate)) ?? null;
+}
+
+function detectCstInstallDir() {
+  const envRoot = process.env.CST_INSTALL_DIR || process.env.CST_HOME || process.env.CST_ROOT;
+  const candidates = unique([
+    envRoot,
+    "D:\\CST",
+    "C:\\CST",
+    "C:\\Program Files\\CST Studio Suite 2026",
+    "C:\\Program Files\\Dassault Systemes\\CST Studio Suite 2026",
+    "C:\\Program Files\\SIMULIA\\CST Studio Suite 2026"
+  ]);
+  return firstExisting(candidates);
+}
+
+function detectCstPaths() {
+  const installDir = detectCstInstallDir();
+  const pythonCandidates = unique([
+    process.env.CST_PYTHON_EXE,
+    installDir ? path.join(installDir, "Python", "python.exe") : null,
+    installDir ? path.join(installDir, "AMD64", "python.exe") : null,
+    installDir ? path.join(installDir, "AMD64", "python", "python.exe") : null
+  ]);
+  const macroCandidates = unique([
+    process.env.CST_MACRO_ROOT,
+    installDir ? path.join(installDir, "Library", "Macros") : null,
+    "D:\\CST\\Library\\Macros"
+  ]);
+  const designEnvironmentCandidates = unique([
+    process.env.CST_DESIGN_ENV_EXE,
+    installDir ? path.join(installDir, "CST DESIGN ENVIRONMENT.exe") : null,
+    installDir ? path.join(installDir, "AMD64", "CST DESIGN ENVIRONMENT_AMD64.exe") : null
+  ]);
+  return {
+    installDir,
+    pythonExecutable: firstExisting(pythonCandidates),
+    macroRoot: firstExisting(macroCandidates) || macroCandidates[0],
+    designEnvironmentExecutable: firstExisting(designEnvironmentCandidates),
+    pythonCandidates,
+    macroCandidates,
+    designEnvironmentCandidates
+  };
 }
 
 function safeNumber(value, fallback, min, max) {
@@ -281,14 +332,18 @@ function findMacroPath(args) {
     const requested = normalizeSlashes(args.relative_path).toLowerCase();
     const row = rows.find((item) => normalizeSlashes(item.relative_path).toLowerCase() === requested);
     if (!row) throw new Error(`Macro relative_path not found in inventory: ${args.relative_path}`);
-    return row.source_path;
+    const detectedPath = path.join(cstPaths.macroRoot, normalizeSlashes(row.relative_path));
+    return fs.existsSync(detectedPath) ? detectedPath : row.source_path;
   }
   if (args.source_path) {
     const requested = normalizeSlashes(args.source_path);
     const row = rows.find((item) => normalizeSlashes(item.source_path).toLowerCase() === requested.toLowerCase());
-    if (row) return row.source_path;
-    if (!normalizeSlashes(requested).toLowerCase().startsWith(normalizeSlashes(cstMacroRoot).toLowerCase() + "\\")) {
-      throw new Error(`source_path must be under ${cstMacroRoot}`);
+    if (row) {
+      const detectedPath = path.join(cstPaths.macroRoot, normalizeSlashes(row.relative_path));
+      return fs.existsSync(detectedPath) ? detectedPath : row.source_path;
+    }
+    if (!normalizeSlashes(requested).toLowerCase().startsWith(normalizeSlashes(cstPaths.macroRoot).toLowerCase() + "\\")) {
+      throw new Error(`source_path must be under ${cstPaths.macroRoot}`);
     }
     return requested;
   }
@@ -556,7 +611,7 @@ function appendOperation(args) {
 }
 
 function defaultCstPython(args) {
-  return args.python_executable || process.env.CST_PYTHON_EXE || "D:\\CST\\AMD64\\python.exe";
+  return args.python_executable || cstPaths.pythonExecutable || "python.exe";
 }
 
 function buildCstCommand(kind, args) {

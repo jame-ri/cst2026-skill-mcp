@@ -4,5 +4,13 @@
 # restart the Codex session so the new server appears in the available tools.
 
 [mcp_servers.cst2026]
-command = "D:\\cst2026-mcp\\run-cst2026-mcp.cmd"
+command = "D:\\CSTapi\\run-cst2026-mcp.cmd"
 args = []
+
+# Optional but recommended when moving this MCP config between machines.
+# Update these values to match the local CST installation path.
+[mcp_servers.cst2026.env]
+CST_INSTALL_DIR = "D:\\CST"
+CST_PYTHON_EXE = "D:\\CST\\Python\\python.exe"
+CST_MACRO_ROOT = "D:\\CST\\Library\\Macros"
+CST_DESIGN_ENV_EXE = "D:\\CST\\CST DESIGN ENVIRONMENT.exe"
