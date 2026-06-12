@@ -1,0 +1,9 @@
+*------------------------------
+* SPICE Model for a capacitor
+* nominal value: c = 22pF
+*------------------------------
+.subckt spice_cap port1 port2
+c1 port1 11 2.20e-11
+l2 11 12 1.3e-10
+r3 12 port2 1.3e-2
+.ends spice_cap

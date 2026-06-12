@@ -1,0 +1,384 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="Adobe RoboHelp 11" />
+<title>Wire Object</title>
+<link rel="StyleSheet" href="../online_help_vba.css" type="text/css" />
+<style type="text/css">
+/*<![CDATA[*/
+<!--
+body { border-bottom-style:None; }
+-->
+/*]]>*/
+</style>
+
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+        origWidth = innerWidth;
+        origHeight = innerHeight;
+        onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+/*<![CDATA[*/
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+-->
+/*]]>*/
+</style>
+
+<script type="text/javascript" language="javascript1.2" src="../whmsg.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript" src="../whver.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript1.2" src="../whutils.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript1.2" src="../whproxy.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript1.2" src="../whlang.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript1.2" src="../whtopic.js" charset="utf-8">
+</script>
+</head>
+<body>
+<script type="text/javascript" language="javascript1.2">
+//<![CDATA[
+<!--
+if (window.gbWhTopic)
+{
+        var strUrl = document.location.href;
+        var bc = 0;
+        var n = strUrl.toLowerCase().indexOf("bc-");
+        if(n != -1)
+        {
+                document.location.replace(strUrl.substring(0, n));
+                bc = strUrl.substring(n+3);
+        }
+
+        if (window.addTocInfo)
+        {
+        addTocInfo("3D Simulation VBA\nVBA Objects\nShapes\nWire");
+
+        }
+        if (window.writeBtnStyle)
+                writeBtnStyle();
+
+        if (window.writeIntopicBar)
+                writeIntopicBar(0);
+
+        
+        document.write("<p style=\"font-family: Tahoma; font-size: 9pt; font-weight: 400;  font-style:normal; color: rgb(0, 0, 0); text-decoration:none; text-align: left\"> ");
+AddMasterBreadcrumbs("../index.htm", "font-family: Tahoma; font-size: 9pt; font-weight: 400;  font-style:normal; color: rgb(0, 0, 0); text-decoration:none; text-align: left", "|", "Home", "../special_vbaobjects/special_vbaobjects_vbaobjects.htm");
+document.write("<a style=\"font-family: Tahoma; font-size: 9pt; font-weight: 400;  font-style:normal; color: rgb(0, 0, 0); text-decoration:none; text-align: left\" href=\"../special_vbaobjects/special_vbaobjects_vbaobjects.htm\">3D Simulation VBA<\/a> | <a style=\"font-family: Tahoma; font-size: 9pt; font-weight: 400;  font-style:normal; color: rgb(0, 0, 0); text-decoration:none; text-align: left\" href=\"../special_vbaobjects/special_vbaobjects_vbaobjects.htm\">VBA Objects<\/a> | <a style=\"font-family: Tahoma; font-size: 9pt; font-weight: 400;  font-style:normal; color: rgb(0, 0, 0); text-decoration:none; text-align: left\" href=\"common_vbaanalyticalface_object.htm\">Shapes<\/a> | Wire<\/p>");
+
+}
+else
+        if (window.gbIE4)
+                document.location.reload();
+
+onLoadHandler = function()
+{
+  if (window.setRelStartPage)
+        {
+        setTimeout("setRelStartPage('../index.htm');", 1)
+
+    setTimeout("UpdateBreadCrumbsMarker();", 1);
+        }
+}
+
+if (window.addEventListener){  
+        window.addEventListener('load', onLoadHandler, false);   
+} else if (window.attachEvent){  
+        window.attachEvent('onload', onLoadHandler);  
+}
+
+function onSetStartPage()
+{
+  autoSync(1);
+  sendSyncInfo();
+  sendAveInfoOut();
+}
+//-->
+//]]>
+</script><script type="text/javascript" src="../ehlpdhtm.js" language="JavaScript1.2">
+</script>
+<table cellspacing="0" width="100%">
+<col style="width: 50%;" />
+<col style="width: 50%;" />
+<tr>
+<td style="vertical-align: middle; padding-top: 5px; padding-bottom: 5px;">
+<p style="margin-top: 0px; margin-bottom: 0px;"><img src="../3ds.png" alt="" style="border: none;" border="0" /></p>
+</td>
+<td style="vertical-align: middle;">
+<p style="text-align: right;"><a href="https://www.3ds.com/products-services/3dexperience/" target="_blank"><img src="../3dexp.png" alt="" style="border: none;" width="32" height="32" border="0" /></a></p>
+</td>
+</tr>
+</table>
+<p class="VBA-Heading-Object">Wire Object</p>
+<p class="VBA-Text">This object is used to create a new wire. This wire may either specified by its start / end points and its height above the working plane or by a previously defined curve.</p>
+<ul>
+<li class="p-VBA-Index-Category">
+<p class="VBA-Index-Category"><a href="#Methods">Methods</a></p>
+</li>
+<li class="p-VBA-Index-Category">
+<p class="VBA-Index-Category"><a href="#Defaults">Default Settings</a></p>
+</li>
+<li class="p-VBA-Index-Category">
+<p class="VBA-Index-Category"><a href="#Example">Example</a></p>
+</li>
+</ul>
+<p class="VBA-Heading-Category"><a name="Methods" id="Methods"></a>Methods</p>
+<p class="VBA-Heading-Method">Reset</p>
+<p class="VBA-Text-Indent">Resets all internal settings to their default values.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">Name ( <span><a href="../common_vbageneral/common_general_name.htm" style="font-weight: normal; font-style: normal;">name</a></span> <span style="font-style: italic;"><i>wirename</i></span> )</p>
+<p class="VBA-Text-Indent">Sets the name of the wire. (Complete <a href="../common_vbageneral/common_general_global_names.htm">global names</a> are also allowed here, the folder name can be skipped in this case.)</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">Folder ( <span><a href="../common_vbageneral/common_general_name.htm" style="font-weight: normal; font-style: normal;">name</a></span> <span style="font-style: italic;"><i>foldername</i></span> )</p>
+<p class="VBA-Text-Indent">Sets the name of the folder for the new wire. If the name is empty, then the wire does not belong to a folder.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">Type ( <a href="../common_vbageneral/common_general_enum.htm" id="a1" style="font-weight: normal; font-style: normal;" name="a1">enum</a> <span style="font-style: italic;"><i>wiretype</i></span> )</p>
+<p class="VBA-Text-Indent">Specifies the type of the wire:</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<table style="vertical-align: top; margin-left: 40px;" cellspacing="0" width="63.373%">
+<col style="width: 25.883%;" />
+<col style="width: 74.117%;" />
+<tr style="vertical-align: top;">
+<td style="border: Solid 1px #000000; width: 25.883%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text">"Bondwire"</p>
+</td>
+<td style="border-top: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 74.117%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text">The shape of a bondwire is specified by its start / endpoints and its height above the working plane</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 25.883%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text">"Curvewire"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 74.117%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text">The shape of a curvewire is specified by a previously defined curve which needs to be a single connected path</p>
+</td>
+</tr>
+</table>
+<p style="margin-left: 0px;">&#160;</p>
+<p class="VBA-Heading-Method">BondWireType ( <a href="../common_vbageneral/common_general_enum.htm" id="a3" style="font-weight: normal; font-style: normal;" name="a3">enum</a> <span style="font-style: italic;"><i>bondWiretype</i></span> )</p>
+<p class="VBA-Text-Indent">Specifies the bond wire type. Type must be of type "Bondwire"</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<table style="vertical-align: top; margin-left: 40px;" cellspacing="0" width="63.373%">
+<col style="width: 25.883%;" />
+<col style="width: 74.117%;" />
+<tr style="vertical-align: top;">
+<td style="border: Solid 1px #000000; width: 25.883%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text">"Spline"</p>
+</td>
+<td style="border-top: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 74.117%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text">The shape of the bondwire is specified by its start / endpoints (Point1/Point2) its height above the working plane and the position of its maximum height.</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 25.883%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text">"JEDEC4"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 74.117%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text">The shape of the bondwire is defined by the JEDEC4 norm. The shape is defined by the start/end points (Point1/Point2) and its height above the working plane.</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 25.883%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text">"JEDEC5"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 74.117%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text">The shape of the bondwire is defined by the JEDEC5 norm. The shape is defined by the start/end points (Point1/Point2), the angles Alpha and Beta and its height above the working plane.</p>
+</td>
+</tr>
+</table>
+<p class="VBA-Heading-Method">&#160;</p>
+<p class="VBA-Heading-Method">Height ( <span><a href="../common_vbageneral/common_general_double.htm" id="a2" style="font-weight: normal; font-style: normal;" name="a2">double</a></span> <span style="font-style: italic;"><i>value</i></span> )</p>
+<p class="VBA-Text-Indent">Specifies the height of the bondwire's midpoint above the currently active workplane (either the x/y plane or the u/v plane, depending on whether a local coordinate system is active or not). This setting is only used for bondwires.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">RelativeCenterPosition (<a href="../common_vbageneral/common_general_double.htm" id="a27" style="font-weight: normal; font-style: normal;" name="a27">double</a> center)</p>
+<p class="VBA-Text-Indent">Defines the relative position of the maximum height of the bond wire. <span style="font-style: italic;"><i>Center</i></span> must be a value between 0 - 1,</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">Point1 ( <span><a href="../common_vbageneral/common_general_double.htm" id="a4" style="font-weight: normal; font-style: normal;" name="a4">double</a></span> &#160;<span style="font-style: italic;"><i>x</i></span>, <span><a href="../common_vbageneral/common_general_double.htm" id="a5" style="font-weight: normal; font-style: normal;" name="a5">double</a></span> &#160;<span style="font-style: italic;"><i>y</i></span>, <span><a href="../common_vbageneral/common_general_double.htm" id="a6" style="font-weight: normal; font-style: normal;" name="a6">double</a></span> &#160;<span style="font-style: italic;"><i>z</i></span>, <span><a href="../common_vbageneral/common_general_bool_data_type.htm" id="a11" style="font-weight: normal; font-style: normal;" name="a11">bool</a></span> &#160;<span style="font-style: italic;"><i>pick</i></span> )</p>
+<p class="VBA-Text-Indent">Specifies the start point of the wire. The start point can either be specified numerically by the x/y/z coordinate settings or automatically be set to the first pickpoint in the list of picked points. If the pick flag is set to True, the picked point is used, otherwise the numerical coordinates specify the point's location. This setting is only used for bondwires.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">Point2 ( <span><a href="../common_vbageneral/common_general_double.htm" id="a7" style="font-weight: normal; font-style: normal;" name="a7">double</a></span> <span style="font-style: italic;"><i>x</i></span>, <span><a href="../common_vbageneral/common_general_double.htm" id="a8" style="font-weight: normal; font-style: normal;" name="a8">double</a></span> <span style="font-style: italic;"><i>y</i></span>, <span><a href="../common_vbageneral/common_general_double.htm" id="a9" style="font-weight: normal; font-style: normal;" name="a9">double</a></span> <span style="font-style: italic;"><i>z</i></span>, <span><a href="../common_vbageneral/common_general_bool_data_type.htm" id="a12" style="font-weight: normal; font-style: normal;" name="a12">bool</a></span> <span style="font-style: italic;"><i>pick</i></span> )</p>
+<p class="VBA-Text-Indent">Specifies the end point of the wire. The end point can either be specified numerically by the x/y/z coordinate settings or automatically be set to the first pickpoint in the list of picked points. If the pick flag is set to True, the picked point is used, otherwise the numerical coordinates specify the point's location. This setting is only used for bondwires.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">Alpha (<a href="../common_vbageneral/common_general_double.htm" id="a26" style="font-weight: normal; font-style: normal;" name="a26">double</a> angle)</p>
+<p class="VBA-Text-Indent">Parameter needed to define a JEDEC5 bondwire.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">Beta (<a href="../common_vbageneral/common_general_double.htm" id="a25" style="font-weight: normal; font-style: normal;" name="a25">double</a> angle)</p>
+<p class="VBA-Text-Indent">Parameter needed to define a JEDEC5 bondwire.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">Curve ( <span><a href="../common_vbageneral/common_general_name.htm" id="a13" style="font-weight: normal; font-style: normal;" name="a13">name</a></span> <span style="font-style: italic;"><i>curvename</i></span> )</p>
+<p class="VBA-Text-Indent">Specifies the name of the previously defined curve which should be converted into a wire. This setting is only used for curvewires.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">Radius ( <span><a href="../common_vbageneral/common_general_double.htm" id="a10" style="font-weight: normal; font-style: normal;" name="a10">double</a></span> <span style="font-style: italic;"><i>value</i></span> )</p>
+<p class="VBA-Text-Indent">Specifies the radius of the wire.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">SolidWireModel ( <a href="../common_vbageneral/common_general_bool_data_type.htm" id="a34" style="font-weight: normal; font-style: normal;" name="a34">bool</a> &#160;<span style="font-style: italic;"><i>bSolidWireModel</i></span> &#160;)</p>
+<p class="VBA-Text-Indent">If set to true the bond wire is created as a solid model.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">Material ( <a href="../common_vbageneral/common_general_string.htm" id="a31" style="font-weight: normal; font-style: normal;" name="a31">string</a> &#160;<span style="font-style: italic;"><i>materialname</i></span> )</p>
+<p class="VBA-Text-Indent">Specifies a material. If the bond wire is created by a SolidWireModel any material can be selected. Otherwise only PEC or Lossy metal materials can be selected. Lossy metal will only be supported by the Integral equation solver.</p>
+<p class="VBA-Text-Indent">For <span style="font-style: italic;"><i>ConvertToSolidShape</i></span> the meaning is as follows: If left out or set to an empty name, the material of the solid wire is copied, if given this material is used for the new solid.</p>
+<p class="vba-text-indent">&#160;</p>
+<p class="VBA-Heading-Method">ChangeMaterial ( <a href="../common_vbageneral/common_general_string.htm" id="a32" style="font-weight: normal; font-style: normal;" name="a32">string</a> &#160;<span style="font-style: italic;"><i>wirename,</i></span> <a href="../common_vbageneral/common_general_string.htm" id="a33" style="font-weight: normal; font-style: normal;" name="a33">string</a> &#160;<span style="font-style: italic;"><i>newMaterialName</i></span> )</p>
+<p class="VBA-Text-Indent">Changes the material for the bond wire. Please see Method <span style="font-weight: bold;">Material</span> for supported materials.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">Termination ( <a href="../common_vbageneral/common_general_enum.htm" id="a30" style="font-weight: normal; font-style: normal;" name="a30">enum</a> <span style="font-weight: normal;">{"natural" / "rounded" / "extended"}</span> )</p>
+<p class="VBA-Text-Indent">Selects the shape of the bond wire's ends.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">AdvancedChainSelection ( <a href="../common_vbageneral/common_general_bool_data_type.htm" id="a39" style="font-weight: normal; font-style: normal;" name="a39">bool</a> &#160;<span style="font-style: italic;"><i>bFlag</i></span> )</p>
+<p class="VBA-Text-Indent">Flag to activate the new chain selection algorithm, a new way to find adjacent curve items for curve wire creation. The initial value for this flag is false to be backward compatible to old project files.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">Add</p>
+<p class="VBA-Text-Indent">Creates the wire. All necessary settings for this wire have to be made previously.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">SolidName ( <span style="font-weight: normal;"><a href="../common_vbageneral/common_general_solid_names.htm">solidname</a></span> <span style="font-style: italic;"><i>newsolidname</i></span>)</p>
+<p class="VBA-Text-Indent">Used for <span style="font-style: italic;"><i>ConvertToSolidShape</i></span>. Specifies the name (including its component name) for the new solid shape.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">KeepWire&#160;( <a href="../common_vbageneral/common_general_bool_data_type.htm" id="a391" style="font-weight: normal; font-style: normal;" name="a391">bool</a> &#160;<span style="font-style: italic;"><i>bFlag</i></span> )</p>
+<p class="VBA-Text-Indent">Used for <span style="font-style: italic;"><i>ConvertToSolidShape</i></span>. Specifies, whether the wire should be deleted after solid creation or coexist with the new solid.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">ConvertToSolidShape</p>
+<p class="VBA-Text-Indent">Creates a new solid based on a wire given by <span style="font-style: italic;"><i>Name</i></span> and <span style="font-style: italic;"><i>Folder</i></span>. If no <span style="font-style: italic;"><i>Material</i></span> has been defined, the material will also be copied from the wire. The original wire may be deleted or kept.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">Delete ( <span><a href="../common_vbageneral/common_general_string.htm" id="a14" style="font-weight: normal; font-style: normal;" name="a14">string</a></span> <span style="font-style: italic;"><i>wirename</i></span> )</p>
+<p class="VBA-Text-Indent">Deletes the specified wire.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">Rename ( <span><a href="../common_vbageneral/common_general_string.htm" id="a15" style="font-weight: normal; font-style: normal;" name="a15">string</a></span> <span style="font-style: italic;"><i>oldname</i></span>, <span><a href="../common_vbageneral/common_general_string.htm" id="a16" style="font-weight: normal; font-style: normal;" name="a16">string</a></span> <span style="font-style: italic;"><i>newname</i></span> )</p>
+<p class="VBA-Text-Indent">Renames the existing wire name to the new name.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">SetAutomeshFixpoints ( <span><a href="../common_vbageneral/common_general_string.htm" id="a41" style="font-weight: normal; font-style: normal;" name="a41">string</a></span> <span style="font-style: italic;"><i>wirename,</i></span> <a href="../common_vbageneral/common_general_bool_data_type.htm" id="a136" style="font-weight: normal; font-style: normal;" name="a136">bool</a> <span style="font-style: italic;"><i>flag</i></span> )</p>
+<p class="VBA-Text-Indent">This method determines if the specified wire should be considered by the automatic mesh generation or not. If the wire is unimportant for the mesh generation the setting <span style="font-style: italic;"><i>flag</i></span> =False makes sure that the wire does not have any influence on the mesh. No fix- or density points will be created for this wire.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">SetPriority ( <span><a href="../common_vbageneral/common_general_string.htm" id="a54" style="font-weight: normal; font-style: normal;" name="a54">string</a></span> <span style="font-style: italic;"><i>wirename</i></span>, <span style="font-style: italic;"><i><a href="../common_vbageneral/common_general_double.htm" id="a133" style="font-weight: normal; font-style: normal;" name="a133">double</a> priority</i></span> )</p>
+<p class="VBA-Text-Indent">This method specifies how the specified wire should be treated by the automatic mesh generation. If the wire is more important than others, a <span style="font-style: italic;"><i>priority</i></span> can be given for it. Generally the priority for all objects (apart from wires, lumped elements, discrete ports) equals to zero. In the case that two fixpoints are so close to each other that the ratiolimit prohibits a mesh line for each point, the mesh lines will be merged. However if one of the fixpoints has been created by an object of higher priority the mesh lines will be placed on this fixpoint.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Text-Indent">Because wires, lumped elements and discrete ports are very sensitive to their start and endpoints, they have a priority of 1000, to ensure the connection of the wire.</p>
+<p class="vba-text-indent">&#160;</p>
+<p class="VBA-Heading-Method">SetMaterialBasedRefinement ( <span><a href="../common_vbageneral/common_general_string.htm" id="a55" style="font-weight: normal; font-style: normal;" name="a55">string</a></span> <span style="font-style: italic;"><i>wirename</i></span>, <span style="font-style: italic;"><i>&#160;</i></span><a href="../common_vbageneral/common_general_bool_data_type.htm" id="a137" style="font-weight: normal; font-style: normal;" name="a137">bool</a> <span style="font-style: italic;"><i>flag</i></span> <span style="font-weight: normal;">)</span></p>
+<p class="VBA-Text-Indent">Use this method to activate the material based refinement to be considered by the mesh generation of the selected wire.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">SetMeshStepwidth ( <span><a href="../common_vbageneral/common_general_string.htm" id="a20" style="font-weight: normal; font-style: normal;" name="a20">string</a></span> <span style="font-style: italic;"><i>wirename</i></span>, <span><a href="../common_vbageneral/common_general_double.htm" id="a21" style="font-weight: normal; font-style: normal;" name="a21">double</a></span> <span style="font-style: italic;"><i>xstep</i></span>, <span><a href="../common_vbageneral/common_general_double.htm" id="a22" style="font-weight: normal; font-style: normal;" name="a22">double</a></span> <span style="font-style: italic;"><i>ystep</i></span>, <span><a href="../common_vbageneral/common_general_double.htm" id="a23" style="font-weight: normal; font-style: normal;" name="a23">double</a></span> <span style="font-style: italic;"><i>zstep</i></span> )</p>
+<p class="VBA-Text-Indent">For some structures it might be necessary to increase the mesh density for individual wires. To do this a maximum step width for all three directions can be given. The automatic mesh generator tries to realize these values within the bounding box of the specified wire. However, this is not an exclusive setting, it competes with other automesh settings. It might not be fulfilled exactly.</p>
+<p class="VBA-Text-Indent">If zero is specified for one coordinate direction, no further influence to the mesh generation in this direction is made.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">SetMeshStepwidthTet ( <span><a href="../common_vbageneral/common_general_string.htm" id="a52" style="font-weight: normal; font-style: normal;" name="a52">string</a></span> <span style="font-style: italic;"><i>wirename</i></span>, <span><a href="../common_vbageneral/common_general_double.htm" id="a53" style="font-weight: normal; font-style: normal;" name="a53">double</a></span> <span style="font-style: italic;"><i>stepwidth</i></span> )</p>
+<p class="VBA-Text-Indent">The prescribed step width is an absolute value. The automatic mesh generator will not exceed this step width for this structure element. If a zero value is specified (default), it &#160;will be ignored and the mesh size will be controlled by the global setting.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">SetMeshStepwidthSrf ( <a href="../common_vbageneral/common_general_string.htm" id="a36" style="font-weight: normal;" name="a36">string</a> &#160;<span style="font-style: italic;"><i>wirename</i></span>, <a href="../common_vbageneral/common_general_double.htm" id="a37" style="font-weight: normal;" name="a37">double</a> &#160;<span style="font-style: italic;"><i>stepwidth</i></span> )</p>
+<p class="VBA-Text-Indent">The prescribed step width is an absolute value. The automatic mesh generator will not exceed this step width for this structure element. If a zero value is specified (default), it &#160;will be ignored and the mesh size will be controlled by the global setting.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">SetMeshExtendwidth ( <span><a href="../common_vbageneral/common_general_string.htm" id="a42" style="font-weight: normal; font-style: normal;" name="a42">string</a></span> <span style="font-style: italic;"><i>wirename</i></span>, <span><a href="../common_vbageneral/common_general_double.htm" id="a43" style="font-weight: normal; font-style: normal;" name="a43">double</a></span> <span style="font-style: italic;"><i>xextend</i></span>, <span><a href="../common_vbageneral/common_general_double.htm" id="a44" style="font-weight: normal; font-style: normal;" name="a44">double</a></span> <span style="font-style: italic;"><i>yextend</i></span>, <span><a href="../common_vbageneral/common_general_double.htm" id="a45" style="font-weight: normal; font-style: normal;" name="a45">double</a></span> <span style="font-style: italic;"><i>zextend</i></span> &#160;)</p>
+<p class="VBA-Text-Indent">Extends the mesh refinement .</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">SetMeshRefinement ( <span><a href="../common_vbageneral/common_general_string.htm" id="a24" style="font-weight: normal; font-style: normal;" name="a24">string</a></span> <span style="font-style: italic;"><i>wirename</i></span>, <span><a href="../common_vbageneral/common_general_bool_data_type.htm" id="a38" style="font-weight: normal; font-style: normal;" name="a38">bool</a></span> <span style="font-style: italic;"><i>specialedgerefinement</i></span>, <span><a href="../common_vbageneral/common_general_double.htm" id="a40" style="font-weight: normal; font-style: normal;" name="a40">double</a></span> <span style="font-style: italic;"><i>edgerefinementfactor &#160;</i></span>)</p>
+<p class="VBA-Text-Indent">Refines the mesh around <span style="font-style: italic;"><i>wirename</i></span> by <span style="font-style: italic;"><i>edgerefinementfactor</i></span> if <span style="font-style: italic;"><i>specialedgerefinement</i></span> is set to <span style="font-style: italic;"><i>true</i></span>.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">SetMeshVolumeRefinement ( <span><a href="../common_vbageneral/common_general_string.htm" id="a35" style="font-weight: normal; font-style: normal;" name="a35">string</a></span> <span style="font-style: italic;"><i>wirename</i></span>, <a href="../common_vbageneral/common_general_bool_data_type.htm" id="a50" style="font-weight: normal; font-style: normal;" name="a50">bool</a> &#160;<span style="font-style: italic;"><i>specialvolumerefinement</i></span>, <span><a href="../common_vbageneral/common_general_double.htm" id="a51" style="font-weight: normal; font-style: normal;" name="a51">double</a></span> <span style="font-style: italic;"><i>volumerefinementfactor</i></span> )</p>
+<p class="VBA-Text-Indent">Refines the mesh within the bounding box around <span style="font-style: italic;"><i>wirename</i></span> by <span style="font-style: italic;"><i>volumerefinementfactor</i></span> if <span style="font-style: italic;"><i>specialvolumerefinement</i></span> is set to <span style="font-style: italic;"><i>true</i></span>.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">SetUseForSimulation ( <a href="../common_vbageneral/common_general_string.htm" id="a28" style="font-weight: normal; font-style: normal;" name="a28">string</a> <span style="font-style: italic;"><i>wirename</i></span><span style="font-weight: normal;">, <a href="../common_vbageneral/common_general_bool_data_type.htm" id="a29" style="font-weight: normal; font-style: normal;" name="a29">bool</a></span> <span style="font-style: italic;"><i>useForSimulation</i></span> )</p>
+<p class="VBA-Text-Indent">Inserts or removes the bondwire wirename into or from the simulation.</p>
+<p style="margin-left: 40px;">&#160;</p>
+<p class="VBA-Heading-Method">GetLength ( <span><a href="../common_vbageneral/common_general_string.htm" id="a46" style="font-weight: normal; font-style: normal;" name="a46">string</a></span> <span style="font-style: italic;"><i>wirename</i></span> ) <span><a href="../common_vbageneral/common_general_double.htm" id="a48" style="font-weight: normal; font-style: normal;" name="a48">double</a></span></p>
+<p class="VBA-Text-Indent">Get the exact length of the named wire.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">GetGridLength ( <span><a href="../common_vbageneral/common_general_string.htm" id="a47" style="font-weight: normal; font-style: normal;" name="a47">string</a></span> <span style="font-style: italic;"><i>wirename</i></span> ) <span><a href="../common_vbageneral/common_general_double.htm" id="a49" style="font-weight: normal; font-style: normal;" name="a49">double</a></span></p>
+<p class="VBA-Text-Indent">Get the length of the named wire in mesh representation.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">NewFolder ( <span><a href="../common_vbageneral/common_general_string.htm" id="a17" style="font-weight: normal; font-style: normal;" name="a17">string</a></span> <span style="font-style: italic;"><i>foldername</i></span> )</p>
+<p class="VBA-Text-Indent">Creates a new folder with the given name.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">DeleteFolder ( <span><a href="../common_vbageneral/common_general_string.htm" id="a56" style="font-weight: normal; font-style: normal;" name="a56">string</a></span> <span style="font-style: italic;"><i>foldername</i></span> )</p>
+<p class="VBA-Text-Indent">Deletes an existing folder and all the containing elements.</p>
+<p class="vba-text-indent">&#160;</p>
+<p class="VBA-Heading-Method">RenameFolder ( <span><a href="../common_vbageneral/common_general_string.htm" id="a18" style="font-weight: normal; font-style: normal;" name="a18">string</a></span> <span style="font-style: italic;"><i>oldFoldername</i></span>, <span><a href="../common_vbageneral/common_general_string.htm" id="a19" style="font-weight: normal; font-style: normal;" name="a19">string</a></span> <span style="font-style: italic;"><i>newFoldername</i></span> )</p>
+<p class="VBA-Text-Indent">Changes the name of an existing folder.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">DoesFolderExist ( <span><a href="../common_vbageneral/common_general_string.htm" id="a57" style="font-weight: normal; font-style: normal;" name="a57">string</a></span> <span style="font-style: italic;"><i>name</i></span> ) <a href="../common_vbageneral/common_general_bool_data_type.htm" id="a58" style="font-weight: normal; font-style: normal;" name="a58">bool</a></p>
+<p class="VBA-Text-Indent">Returnes true if the name is an existing folder.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">Slice( <a href="../common_vbageneral/common_general_name.htm" id="a201" style="font-weight: normal; font-style: normal;" name="a201">name</a> <span style="font-style: italic;"><i>sName</i></span>)</p>
+<p class="vba-text-indent">Slices the wire named <span style="font-style: italic;"><i>sName</i></span> into pieces while the currently active active working coordinate system defines the cutting plane.</p>
+<p class="vba-text-indent">&#160;</p>
+<p class="VBA-Heading-Method">SliceFolder( <a href="../common_vbageneral/common_general_name.htm" id="a2011" style="font-weight: normal; font-style: normal;" name="a2011">name</a> <span style="font-style: italic;"><i>sName</i></span>)</p>
+<p class="vba-text-indent">Cuts all the wires in the wire-folder named <span style="font-style: italic;"><i>sName</i></span> into pieces while the currently active working coordinate system defines the cutting plane.</p>
+<p class="VBA-Heading-Category"><a name="Defaults" id="Defaults"></a>Default Settings</p>
+<p class="VBA-Text-Example">Height (0)</p>
+<p class="VBA-Text-Example">Radius (0)</p>
+<p class="VBA-Text-Example">BondWireType ("Spline")</p>
+<p class="VBA-Text-Example">RelativeCenterPosition (0.5)</p>
+<p class="VBA-Text-Example">Termination ("natural")</p>
+<p class="VBA-Text-Example">SolidWireModel (False)</p>
+<p class="VBA-Text-Example">AdvancedChainSelection (True)</p>
+<p class="VBA-Text-Example">Material ("")</p>
+<p class="VBA-Heading-Category"><a name="Example" id="Example"></a>Examples</p>
+<p class="VBA-Text-Example">With Wire</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;.Reset</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;.Name ("bondwire1")</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;.Type ("Bondwire")</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;.Point1 (0, 0, 0, False)</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;.Point2 (1, 1, 0, False)</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;.Height (1)</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;.Radius (0.01)</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;.Add</p>
+<p class="VBA-Text-Example">End With</p>
+<p class="VBA-Text-Example">&#160;</p>
+<p class="VBA-Text-Example">With Wire</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.Reset</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.SolidName "component1:wire1"</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.Name "wire1"</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.Folder "Folder1"</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.Material "Copper (annealed)"</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.KeepWire "False"</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.ConvertToSolidShape</p>
+<p class="VBA-Text-Example">End With</p>
+<?rh-p style="margin-bottom: 0px; text-align: Right; margin-left: 18px; 
+                 margin-right: 18px; margin-top: 18px;" ?>
+<div style="width: 100%; position: relative;" id="footer">
+<p style="border-bottom: Solid 1px #dddddd; text-align: Left; margin-left: 0px; font-family: Arial, sans-serif; line-height: Normal; margin-top: 9px; margin-right: 0px; margin-bottom: 6px; border-left-width: 1px; border-top-width: 1px; border-right-width: 1px;"><span style="text-align: Left; font-family: Arial, sans-serif; line-height: Normal;">&#160;</span></p>
+<table cellspacing="0" width="100%">
+<col style="width: 50%;" />
+<col style="width: 50%;" />
+<tr>
+<td style="vertical-align: Top;"><span style="font-family: Arial, sans-serif; line-height: Normal; font-size: 8pt;"><font size="1" style="font-size:8pt;">CST Studio Suite 2026</font></span></td>
+<td style="vertical-align: Top;">
+<p style="text-align: right;">&#160;</p>
+</td>
+</tr>
+</table>
+<p>&#160;</p>
+</div>
+<script type="text/javascript" language="javascript1.2">
+//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+        writeIntopicBar(0);
+
+
+highlightSearch();
+//-->
+//]]>
+</script>
+</body>
+</html>

@@ -1,0 +1,329 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="Adobe RoboHelp 11" />
+<title>DXF Object</title>
+<link rel="StyleSheet" href="../online_help_vba.css" type="text/css" />
+<style type="text/css">
+/*<![CDATA[*/
+<!--
+body { border-bottom-style:None; }
+-->
+/*]]>*/
+</style>
+
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+        origWidth = innerWidth;
+        origHeight = innerHeight;
+        onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+/*<![CDATA[*/
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+-->
+/*]]>*/
+</style>
+
+<script type="text/javascript" language="javascript1.2" src="../whmsg.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript" src="../whver.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript1.2" src="../whutils.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript1.2" src="../whproxy.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript1.2" src="../whlang.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript1.2" src="../whtopic.js" charset="utf-8">
+</script>
+</head>
+<body>
+<script type="text/javascript" language="javascript1.2">
+//<![CDATA[
+<!--
+if (window.gbWhTopic)
+{
+        var strUrl = document.location.href;
+        var bc = 0;
+        var n = strUrl.toLowerCase().indexOf("bc-");
+        if(n != -1)
+        {
+                document.location.replace(strUrl.substring(0, n));
+                bc = strUrl.substring(n+3);
+        }
+
+        if (window.addTocInfo)
+        {
+        addTocInfo("3D Simulation VBA\nVBA Objects\nImport/Export\nDXF");
+addAvenueInfo("common_VBAIMP_EXP","common_VBAImpExp/common_VBAIE_SAT.htm","common_VBAImpExp/common_VBAIE_GDSII.htm");
+
+        }
+        if (window.writeBtnStyle)
+                writeBtnStyle();
+
+        if (window.writeIntopicBar)
+                writeIntopicBar(0);
+
+        
+        document.write("<p style=\"font-family: Tahoma; font-size: 9pt; font-weight: 400;  font-style:normal; color: rgb(0, 0, 0); text-decoration:none; text-align: left\"> ");
+AddMasterBreadcrumbs("../index.htm", "font-family: Tahoma; font-size: 9pt; font-weight: 400;  font-style:normal; color: rgb(0, 0, 0); text-decoration:none; text-align: left", "|", "Home", "../special_vbaobjects/special_vbaobjects_vbaobjects.htm");
+document.write("<a style=\"font-family: Tahoma; font-size: 9pt; font-weight: 400;  font-style:normal; color: rgb(0, 0, 0); text-decoration:none; text-align: left\" href=\"../special_vbaobjects/special_vbaobjects_vbaobjects.htm\">3D Simulation VBA<\/a> | <a style=\"font-family: Tahoma; font-size: 9pt; font-weight: 400;  font-style:normal; color: rgb(0, 0, 0); text-decoration:none; text-align: left\" href=\"../special_vbaobjects/special_vbaobjects_vbaobjects.htm\">VBA Objects<\/a> | <a style=\"font-family: Tahoma; font-size: 9pt; font-weight: 400;  font-style:normal; color: rgb(0, 0, 0); text-decoration:none; text-align: left\" href=\"../special_vbaimpexp/adscomponentexport.htm\">Import/Export<\/a> | DXF<\/p>");
+
+}
+else
+        if (window.gbIE4)
+                document.location.reload();
+
+onLoadHandler = function()
+{
+  if (window.setRelStartPage)
+        {
+        setTimeout("setRelStartPage('../index.htm');", 1)
+
+    setTimeout("UpdateBreadCrumbsMarker();", 1);
+        }
+}
+
+if (window.addEventListener){  
+        window.addEventListener('load', onLoadHandler, false);   
+} else if (window.attachEvent){  
+        window.attachEvent('onload', onLoadHandler);  
+}
+
+function onSetStartPage()
+{
+  autoSync(1);
+  sendSyncInfo();
+  sendAveInfoOut();
+}
+//-->
+//]]>
+</script><script type="text/javascript" src="../ehlpdhtm.js" language="JavaScript1.2">
+</script>
+<table cellspacing="0" width="100%">
+<col style="width: 50%;" />
+<col style="width: 50%;" />
+<tr>
+<td style="vertical-align: middle; padding-top: 5px; padding-bottom: 5px;">
+<p style="margin-top: 0px; margin-bottom: 0px;"><img src="../3ds.png" alt="" style="border: none;" border="0" /></p>
+</td>
+<td style="vertical-align: middle;">
+<p style="text-align: right;"><a href="https://www.3ds.com/products-services/3dexperience/" target="_blank"><img src="../3dexp.png" alt="" style="border: none;" width="32" height="32" border="0" /></a></p>
+</td>
+</tr>
+</table>
+<p class="VBA-Heading-Object">DXF Object</p>
+<p class="VBA-Text">This command offers 2D DXF file import. With this feature you can import data from CAD systems which provide the famous DXF file format from Autodesk Inc<span style="font-style: italic;"><i>.</i></span> as an export option.</p>
+<p class="VBA-Text">The 2D data is imported relative to the current coordinate system and extruded with a profile height to a 3D solid. Use this import option to import printed circuits or complex microstrip lines.</p>
+<p class="VBA-Text">If you need to import pure 3D data it is recommended to use the <a href="common_vbaie_sat.htm">SAT</a> or <a href="common_vbaie_iges.htm">IGES</a> import.</p>
+<ul>
+<li class="p-VBA-Index-Category">
+<p class="VBA-Index-Category"><a href="#Methods">Methods</a></p>
+</li>
+<li class="p-VBA-Index-Category">
+<p class="VBA-Index-Category"><a href="#Default">Default Settings</a></p>
+</li>
+<li class="p-VBA-Index-Category">
+<p class="VBA-Index-Category"><a href="#Example">Example</a></p>
+</li>
+</ul>
+<p class="VBA-Heading-Category"><a name="Methods" id="Methods"></a>Methods</p>
+<p class="VBA-Heading-Method">Reset</p>
+<p class="VBA-Text-Indent">Resets the import options to the default.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">FileName ( <span><a href="../common_vbageneral/common_general_filename.htm" id="a31" style="font-weight: normal; font-style: normal;" name="a31">filename</a></span> <span style="font-style: italic;"><i>filename</i></span> )</p>
+<p class="VBA-Text-Indent">Sets the name of the file to import or export.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">Version ( <a href="../common_vbageneral/common_general_double.htm" id="a7" style="font-weight: normal; font-style: normal;" name="a7">double</a> <span style="font-style: italic;"><i>version</i></span> )</p>
+<p class="VBA-Text-Indent">Sets the version of the import filter, since the behavior of the import may slightly change from version to version. This setting is available for backward compatibility reasons and should ensure that later versions of the import can exactly reproduce the behavior of earlier versions. The most recent version of the import is 11.3.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">ScaleToUnit ( <a href="../common_vbageneral/common_general_bool_data_type.htm" id="a23" style="font-weight: normal; font-style: normal;" name="a23">bool</a> <span style="font-style: italic;"><i>switch</i></span> )</p>
+<p class="VBA-Text-Indent">If set to <a href="../common_vbageneral/common_general_true_keyword.htm" id="a24" name="a24">True</a> the imported model is scaled to the currently active unit. The scale factor is determined by the unit of the import model and the currently active unit in the project. As the unit of the import model are not defined in the import file you have to specify the unit of the import model by using &#160;<span style="font-weight: bold;">ImportFileUnits.</span> If not activated no scaling occurs.</p>
+<p class="VBA-Heading-Method">&#160;</p>
+<p class="VBA-Heading-Method">ImportFileUnits ( <span style="font-weight: normal; color: #0000ff; text-decoration: underline;"><font color="blue"><u>enum</u></font></span> <span style="font-style: italic;"><i>{</i></span><span lang="EN-US" xml:lang="EN-US" style="font-style: italic;"><i>"m", "cm", "mm", "um", "nm", "ft", "mil", "in"</i></span><span style="font-style: italic;"><i>} units</i></span> )</p>
+<p class="VBA-Text-Indent">Sets the units of the imported model. The units have to be defined when <span style="font-weight: bold;">ScaleToUnit</span> is activated.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">UseModelTolerance ( <span><a href="../common_vbageneral/common_general_bool_data_type.htm" id="a25" style="font-weight: normal; font-style: normal;" name="a25">bool</a></span> <span style="font-style: italic;"><i>switch</i></span> )</p>
+<p class="VBA-Text-Indent">If set to <a href="../common_vbageneral/common_general_true_keyword.htm" id="a28" name="a28">True</a>, then the vertices of the imported model are merged to one vertex if they are inside the defined <span style="font-weight: bold;">Model Tolerance</span>.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">ModelTolerance ( <a href="../common_vbageneral/common_general_double.htm" id="a29" style="font-weight: normal; font-style: normal;" name="a29">double</a> <span style="font-style: italic;"><i>tolerance</i></span> )</p>
+<p class="VBA-Text-Indent">Sets the model tolerance which is used to define whether vertices are equal. The model tolerance has to be defined when <span style="font-weight: bold;">UseModelTolerance</span> is activated.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">Height ( <span><a href="../common_vbageneral/common_general_double.htm" id="a26" style="font-weight: normal; font-style: normal;" name="a26">double</a></span> <span style="font-style: italic;"><i>height</i></span> )</p>
+<p class="VBA-Text-Indent">This value specifies the extrusion height applied to the 2D profiles to create a 3D solid. The default value 0.0 leads to a very thin (not exact zero) profile.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">Offset ( <a href="../common_vbageneral/common_general_double.htm" id="a1" style="font-weight: normal; font-style: normal;" name="a1">double</a> <span style="font-style: italic;"><i>offset</i></span> )</p>
+<p class="VBA-Text-Indent">This value specifies the distance of the imported 2D profiles relative to the active coordinate system.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">AddAllShapes( <a href="../common_vbageneral/common_general_enum.htm" id="a17" style="font-weight: normal;" name="a17">enum</a><span style="font-weight: normal;">{"True", "False"}</span> <span style="font-style: italic;"><i>&#160;switch</i></span> )</p>
+<p class="VBA-Text-Indent">Set this parameter to "True" in order to create one single shape for each layer of the imported data.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">PreserveHoles ( <a href="../common_vbageneral/common_general_enum.htm" id="a30" style="font-weight: normal;" name="a30">enum</a><span style="font-weight: normal;">{"True", "False"}</span> <span style="font-style: italic;"><i>&#160;switch</i></span> )</p>
+<p class="VBA-Text-Indent">If set to True, then the holes of the shape are preserved. This option is only considered when <span style="font-weight: bold;">AddAllShapes</span> is activated.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">CloseShapes ( <a href="../common_vbageneral/common_general_enum.htm" id="a2" style="font-weight: normal;" name="a2">enum</a><span style="font-weight: normal;">{"True", "False"}</span> <span style="font-style: italic;"><i>&#160;switch</i></span> )</p>
+<p class="VBA-Text-Indent">Profiles which have a different start and end point are automatically closed, if this parameter is "True".</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">ExtendedDXF ( <a href="../common_vbageneral/common_general_enum.htm" id="a3" style="font-weight: normal;" name="a3">enum</a><span style="font-weight: normal;">{"True", "False"}</span> <span style="font-style: italic;"><i>&#160;switch</i></span> )</p>
+<p class="VBA-Text-Indent">This option provides a fully functional 2D import of DXF files containing BLOCKS, THICK LINES, SOLIDS and more. Moreover that you can select certain layers you want to import. You need the appropriate license to use this feature. When this option is not used, the DXF import is restricted to POLYLINES, LINES, CIRCLES and ARCS without any hierarchy.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Text-Indent" style="margin-left: 0px;"><span style="font-weight: bold;">GetID (</span> <a href="../common_vbageneral/common_general_filename.htm" id="a311" style="font-weight: normal; font-style: normal;" name="a311">filename</a> <span style="font-style: italic; font-weight: bold;"><i>filename</i></span> <span style="font-weight: bold;">)</span> <a href="../common_vbageneral/common_general_string.htm" id="a281" style="font-weight: normal; font-style: normal;" name="a281">string</a></p>
+<p class="VBA-Text-Indent">This method returns the unique ID for the target file name.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">Id ( <a href="../common_vbageneral/common_general_integer.htm" id="a13" style="font-weight: normal; font-style: normal;" name="a13">int</a> <span style="font-style: italic;"><i>id</i></span> )</p>
+<p class="VBA-Text-Indent">A CAD file may be imported more than once into the same project with different settings of import options or layer selections. In order to improve the performance of structure rebuilds, an intermediate file is stored during the import process which allows to quickly re-read the data during rebuilds in case that the original CAD file has not been modified. The naming convention of the intermediate file follows the name of the original file, but is marked with a tilde at the end of the file name. However, these names have to be unique for each individual import step. Therefore, in case that the same file is imported more than once into the project, the Id setting needs to be increased. The Id will then be incorporated into the file name which ensures unique file names for every import. Method <span style="font-weight: bold;">GetID (</span> <a href="../common_vbageneral/common_general_filename.htm" id="a3111" style="font-weight: normal; font-style: normal;" name="a3111">filename</a> <span style="font-style: italic; font-weight: bold;"><i>filename</i></span> <span style="font-weight: bold;">)</span> can be used to obtain the unique ID for the file to be imported.</p>
+<p class="VBA-Heading-Method">&#160;</p>
+<p class="VBA-Heading-Method">Healing ( <a href="../common_vbageneral/common_general_enum.htm" id="a4" style="font-weight: normal;" name="a4">enum</a><span style="font-weight: normal;">{"True", "False"}</span> <span style="font-style: italic;"><i>&#160;switch</i></span> )</p>
+<p class="VBA-Text-Indent">If set to "True" vertices or edges which are not aligned are healed during the import.</p>
+<p class="VBA-Heading-Method">&#160;</p>
+<p class="VBA-Heading-Method">HealSelfIntersections ( <a href="../common_vbageneral/common_general_enum.htm" id="a5" style="font-weight: normal;" name="a5">enum</a><span style="font-weight: normal;">{"True", "False"}</span> <span style="font-style: italic;"><i>&#160;switch</i></span> )</p>
+<p class="VBA-Text-Indent">If set to "True" self intersecting profiles are automatically repaired during import. Use this option only when there are actually self intersections. Without this option set the import is much faster.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">AsCurves ( <a href="../common_vbageneral/common_general_enum.htm" id="a6" style="font-weight: normal;" name="a6">enum</a><span style="font-weight: normal;">{"True", "False"}</span> <span style="font-style: italic;"><i>&#160;switch</i></span> )</p>
+<p class="VBA-Text-Indent">Reads the geometric structure of the corresponding data file as curves (<span style="font-style: italic;"><i>switch</i></span> = "True") or as solids (<span style="font-style: italic;"><i>switch</i></span> = "False"). The import as curves offers a fast possibility to get a sufficient impression of the complete structure.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">Layer ( <a href="../common_vbageneral/common_general_string.htm" id="a27" style="font-weight: normal; font-style: normal;" name="a27">string</a> <span style="font-style: italic;"><i>importlayer, <a href="../common_vbageneral/common_general_string.htm" id="a10" style="font-weight: normal; font-style: normal;" name="a10">string</a> targetlayer, <a href="../common_vbageneral/common_general_double.htm" id="a11" style="font-weight: normal; font-style: normal;" name="a11">double</a> elevation, <a href="../common_vbageneral/common_general_double.htm" id="a12" style="font-weight: normal; font-style: normal;" name="a12">double</a> thickness</i></span> )</p>
+<p class="VBA-Text-Indent">Specifies the name, elevation and thickness for each imported layer.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">AddLayer ( <a href="../common_vbageneral/common_general_string.htm" id="a32" style="font-weight: normal; font-style: normal;" name="a32">string</a> <span style="font-style: italic;"><i>importlayer, <a href="../common_vbageneral/common_general_string.htm" id="a33" style="font-weight: normal; font-style: normal;" name="a33">string</a> targetlayer, <a href="../common_vbageneral/common_general_double.htm" id="a34" style="font-weight: normal; font-style: normal;" name="a34">double</a> elevation, <a href="../common_vbageneral/common_general_double.htm" id="a35" style="font-weight: normal; font-style: normal;" name="a35">double</a> thickness</i></span> , <span style="font-style: italic;"><i><a href="../common_vbageneral/common_general_double.htm" id="a36" style="font-weight: normal; font-style: normal;" name="a36">double</a> etch_factor</i></span>)</p>
+<p class="VBA-Text-Indent">Specifies the name, elevation, thickness and etch factor for each imported layer.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">AllowZeroHeight ( <a href="../common_vbageneral/common_general_bool_data_type.htm" id="a8" style="font-weight: normal; font-style: normal;" name="a8">bool</a> <span style="font-style: italic;"><i>switch</i></span> )</p>
+<p class="VBA-Text-Indent">Set this option to allow shapes of zero height.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">SetSimplifyActive ( <a href="../common_vbageneral/common_general_bool_data_type.htm" id="a22" style="font-weight: normal; font-style: normal;" name="a22">bool</a> <span style="font-style: italic;"><i>switch</i></span> )</p>
+<p class="VBA-Text-Indent">Set this option to enable the polygon simplification.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">SetSimplifyMinPointsArc ( <a href="../common_vbageneral/common_general_integer.htm" id="a14" style="font-weight: normal; font-style: normal;" name="a14">int</a> <span style="font-style: italic;"><i>nCount</i></span> )</p>
+<p class="VBA-Text-Indent">Minimum number of segments needed to recognize an arc. Must be &gt;= 3.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">SetSimplifyMinPointsCircle ( <a href="../common_vbageneral/common_general_integer.htm" id="a15" style="font-weight: normal; font-style: normal;" name="a15">int</a> <span style="font-style: italic;"><i>nCount</i></span> )</p>
+<p class="VBA-Text-Indent">Minimum number of segments needed for complete circles. Must be &gt; 'SetSimplifyMinPointsArc' and at least 5.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">SetSimplifyAngle ( <a href="../common_vbageneral/common_general_double.htm" id="a21" style="font-weight: normal; font-style: normal;" name="a21">double</a> <span style="font-style: italic;"><i>angle</i></span> )</p>
+<p class="VBA-Text-Indent">The maximum angle in degrees between two adjacent segments. All smaller angles will be considered to be simplified. The angle is only used for arcs and not for circles.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">SetSimplifyAdjacentTol ( <a href="../common_vbageneral/common_general_double.htm" id="a16" style="font-weight: normal; font-style: normal;" name="a16">double</a> <span style="font-style: italic;"><i>angle</i></span> )</p>
+<p class="VBA-Text-Indent">Is only used by the simplification algorithm to find a good starting point for arcs. It means the maximum angular difference in the angle of adjacent segments. A good value for this parameter will be 1.0.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">SetSimplifyRadiusTol ( <a href="../common_vbageneral/common_general_double.htm" id="a18" style="font-weight: normal; font-style: normal;" name="a18">double</a> <span style="font-style: italic;"><i>deviation</i></span> )</p>
+<p class="VBA-Text-Indent">This means the maximum deviation in percent the distance a segment end point can have to the current definition of the simplification circle center point. The tolerance is used for circles and arcs.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">SetSimplifyAngleTang ( <a href="../common_vbageneral/common_general_double.htm" id="a19" style="font-weight: normal; font-style: normal;" name="a19">double</a> <span style="font-style: italic;"><i>angle</i></span> )</p>
+<p class="VBA-Text-Indent">Maximum angular tolerance in radians used when deciding to create the arc tangential or not to its adjacent line segments. If an angle is beneath the specified value, the arc is build tangential to the neighbor edge.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">SetSimplifyEdgeLength ( <a href="../common_vbageneral/common_general_double.htm" id="a20" style="font-weight: normal; font-style: normal;" name="a20">double</a> <span style="font-style: italic;"><i>length</i></span> )</p>
+<p class="VBA-Text-Indent">Edges smaller than the defined length will be removed. Can be used to remove tiny fragments.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">ExportHoleConnection ( <a href="../common_vbageneral/common_general_enum.htm" id="a61" style="font-weight: normal;" name="a61">enum</a><span style="font-weight: normal;">{"True", "False"}</span> <span style="font-style: italic;"><i>&#160;switch</i></span> )</p>
+<p class="VBA-Text-Indent">If exported DXF is intended to be used in CST Studio Suite then set this option to "True". If set to True, cut lines will be added to faces with holes. These lines will help in identification of holes.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">ExportCurves ( <a href="../common_vbageneral/common_general_enum.htm" id="a611" style="font-weight: normal;" name="a611">enum</a><span style="font-weight: normal;">{"True", "False"}</span> <span style="font-style: italic;"><i>&#160;switch</i></span> )</p>
+<p class="VBA-Text-Indent">If this option is set to "true", curve items within the xy-plane (z=0) or the uv-plane (w=0) will also be exported to the DXF file.</p>
+<p class="VBA-Heading-Method">&#160;</p>
+<p class="VBA-Heading-Method">Read</p>
+<p class="VBA-Text-Indent">Starts the import of the file.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">Write</p>
+<p class="VBA-Text-Indent">Starts the export of the file.</p>
+<p class="VBA-Heading-Category"><a name="Default" id="Default"></a>Default Settings</p>
+<p class="VBA-Text-Example">FileName ("")</p>
+<p class="VBA-Text-Example">Version (4.0)</p>
+<p class="VBA-Text-Example">CloseShapes ("True")</p>
+<p class="VBA-Text-Example">AddAllShapes ("False")</p>
+<p class="VBA-Text-Example">PreserveHoles ("True")</p>
+<p class="VBA-Text-Example">ExtendedDXF ("False")</p>
+<p class="VBA-Text-Example">Id (0)</p>
+<p class="VBA-Text-Example">Healing ("True")</p>
+<p class="VBA-Text-Example">HealSelfIntersections ("False")</p>
+<p class="VBA-Text-Example">AsCurves ("False")</p>
+<p class="VBA-Text-Example">AllowZeroHeight (False)</p>
+<p class="VBA-Text-Example">ScaleToUnit ("False")</p>
+<p class="VBA-Text-Example">ImportFileUnits ("m")</p>
+<p class="VBA-Text-Example">UseModelTolerance (False)</p>
+<p class="VBA-Text-Example">ModelTolerance (0.0001)</p>
+<p class="VBA-Text-Example">SetSimplifyActive (False)</p>
+<p class="VBA-Text-Example">SetSimplifyMinPointsArc (3)</p>
+<p class="VBA-Text-Example">SetSimplifyMinPointsCircle (5)</p>
+<p class="VBA-Text-Example">SetSimplifyAngle (5.0)</p>
+<p class="VBA-Text-Example">SetSimplifyAdjacentTol (1.0)</p>
+<p class="VBA-Text-Example">SetSimplifyRadiusTol (5.0)</p>
+<p class="VBA-Text-Example">SetSimplifyAngleTang (1.0)</p>
+<p class="VBA-Text-Example">SetSimplifyEdgeLength (0.0)</p>
+<p class="VBA-Text-Example">ExportHoleConnection ("True")</p>
+<p class="VBA-Text-Example">ExportCurves ("False")</p>
+<p class="VBA-Heading-Category"><a name="Example" id="Example"></a>Examples</p>
+<p class="VBA-Text-Example">With DXF</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.Reset</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.FileName (".\example.dxf")</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.AddAllShapes ("False")</p>
+<p class="VBA-Text-Example"><span style="margin-left: 40px;">&#160;&#160;&#160;&#160;&#160;.PreserveHoles ("True")</span></p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.CloseShapes ("True")</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.AsCurves ("False")</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.HealSelfIntersections ("True")</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.Id "1"</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.SetSimplifyActive "True"</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.SetSimplifyAngle "5.0"</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.SetSimplifyRadiusTol "5.0"</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.SetSimplifyEdgeLength "0.0"</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.ScaleToUnit "False"</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.ImportFileUnits "m"</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.UseModelTolerance "False"</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.ModelTolerance "0.0001"</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.AddLayer ("rf_circuit", "rf_circuit", "0.0", "0.0", "0.0")</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.Read</p>
+<p class="VBA-Text-Example">End With</p>
+<p class="VBA-Text-Example">&#160;</p>
+<p class="VBA-Text-Example">With DXF</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.Reset</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.FileName (".\example.dxf")</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.ExportHoleConnection ("False")</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.ExportCurves ("False")</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.Write</p>
+<p class="VBA-Text-Example">End With</p>
+<?rh-p style="margin-bottom: 0px; text-align: Right; margin-left: 18px; 
+                 margin-right: 18px; margin-top: 18px;" ?>
+<div style="width: 100%; position: relative;" id="footer">
+<p style="border-bottom: Solid 1px #dddddd; text-align: Left; margin-left: 0px; font-family: Arial, sans-serif; line-height: Normal; margin-top: 9px; margin-right: 0px; margin-bottom: 6px; border-left-width: 1px; border-top-width: 1px; border-right-width: 1px;"><span style="text-align: Left; font-family: Arial, sans-serif; line-height: Normal;">&#160;</span></p>
+<table cellspacing="0" width="100%">
+<col style="width: 50%;" />
+<col style="width: 50%;" />
+<tr>
+<td style="vertical-align: Top;"><span style="font-family: Arial, sans-serif; line-height: Normal; font-size: 8pt;"><font size="1" style="font-size:8pt;">CST Studio Suite 2026</font></span></td>
+<td style="vertical-align: Top;">
+<p style="text-align: right;">&#160;</p>
+</td>
+</tr>
+</table>
+<p>&#160;</p>
+</div>
+<script type="text/javascript" language="javascript1.2">
+//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+        writeIntopicBar(0);
+
+
+highlightSearch();
+//-->
+//]]>
+</script>
+</body>
+</html>

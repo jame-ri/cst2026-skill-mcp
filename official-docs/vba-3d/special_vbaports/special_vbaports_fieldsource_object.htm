@@ -1,0 +1,396 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="Adobe RoboHelp 11" />
+<title>FieldSource Object</title>
+<link rel="StyleSheet" href="../online_help_vba.css" type="text/css" />
+<script type="text/javascript" language="JavaScript1.2">
+//<![CDATA[
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+//]]>
+</script>
+<script type="text/javascript" id="MathJax-script" async="" src="../mathjax/es5/tex-svg.js" language="JavaScript1.2">
+</script>
+<style type="text/css">
+/*<![CDATA[*/
+<!--
+body { border-bottom-style:None; }
+-->
+/*]]>*/
+</style>
+
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+        origWidth = innerWidth;
+        origHeight = innerHeight;
+        onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+/*<![CDATA[*/
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+-->
+/*]]>*/
+</style>
+
+<script type="text/javascript" language="javascript1.2" src="../whmsg.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript" src="../whver.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript1.2" src="../whutils.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript1.2" src="../whproxy.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript1.2" src="../whlang.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript1.2" src="../whtopic.js" charset="utf-8">
+</script>
+</head>
+<body>
+<script type="text/javascript" language="javascript1.2">
+//<![CDATA[
+<!--
+if (window.gbWhTopic)
+{
+        var strUrl = document.location.href;
+        var bc = 0;
+        var n = strUrl.toLowerCase().indexOf("bc-");
+        if(n != -1)
+        {
+                document.location.replace(strUrl.substring(0, n));
+                bc = strUrl.substring(n+3);
+        }
+
+        if (window.addTocInfo)
+        {
+        addTocInfo("3D Simulation VBA\nVBA Objects\nSources and Ports\nHigh Frequency\nFieldSource");
+
+        }
+        if (window.writeBtnStyle)
+                writeBtnStyle();
+
+        if (window.writeIntopicBar)
+                writeIntopicBar(0);
+
+        
+        document.write("<p style=\"font-family: Tahoma; font-size: 9pt; font-weight: 400;  font-style:normal; color: rgb(0, 0, 0); text-decoration:none; text-align: left\"> ");
+AddMasterBreadcrumbs("../index.htm", "font-family: Tahoma; font-size: 9pt; font-weight: 400;  font-style:normal; color: rgb(0, 0, 0); text-decoration:none; text-align: left", "|", "Home", "../special_vbaobjects/special_vbaobjects_vbaobjects.htm");
+document.write("<a style=\"font-family: Tahoma; font-size: 9pt; font-weight: 400;  font-style:normal; color: rgb(0, 0, 0); text-decoration:none; text-align: left\" href=\"../special_vbaobjects/special_vbaobjects_vbaobjects.htm\">3D Simulation VBA<\/a> | <a style=\"font-family: Tahoma; font-size: 9pt; font-weight: 400;  font-style:normal; color: rgb(0, 0, 0); text-decoration:none; text-align: left\" href=\"../special_vbaobjects/special_vbaobjects_vbaobjects.htm\">VBA Objects<\/a> | <a style=\"font-family: Tahoma; font-size: 9pt; font-weight: 400;  font-style:normal; color: rgb(0, 0, 0); text-decoration:none; text-align: left\" href=\"../special_vbasignals/special_vbasignals_timesignal_object.htm\">Sources and Ports<\/a> | <a style=\"font-family: Tahoma; font-size: 9pt; font-weight: 400;  font-style:normal; color: rgb(0, 0, 0); text-decoration:none; text-align: left\" href=\"../special_vbasignals/special_vbasignals_timesignal_object.htm\">High Frequency<\/a> | FieldSource<\/p>");
+
+}
+else
+        if (window.gbIE4)
+                document.location.reload();
+
+onLoadHandler = function()
+{
+  if (window.setRelStartPage)
+        {
+        setTimeout("setRelStartPage('../index.htm');", 1)
+
+    setTimeout("UpdateBreadCrumbsMarker();", 1);
+        }
+}
+
+if (window.addEventListener){  
+        window.addEventListener('load', onLoadHandler, false);   
+} else if (window.attachEvent){  
+        window.attachEvent('onload', onLoadHandler);  
+}
+
+function onSetStartPage()
+{
+  autoSync(1);
+  sendSyncInfo();
+  sendAveInfoOut();
+}
+//-->
+//]]>
+</script><script type="text/javascript" src="../ehlpdhtm.js" language="JavaScript1.2">
+</script>
+<table cellspacing="0" width="100%">
+<col style="width: 50%;" />
+<col style="width: 50%;" />
+<tr>
+<td style="vertical-align: middle; padding-top: 5px; padding-bottom: 5px;">
+<p style="margin-top: 0px; margin-bottom: 0px;"><img src="../3ds.png" alt="" style="border: none;" border="0" /></p>
+</td>
+<td style="vertical-align: middle;">
+<p style="text-align: right;"><a href="https://www.3ds.com/products-services/3dexperience/" target="_blank"><img src="../3dexp.png" alt="" style="border: none;" width="32" height="32" border="0" /></a></p>
+</td>
+</tr>
+</table>
+<h1 style="font-size: 12pt;">FieldSource Object</h1>
+<p class="VBA-Text">Use this object to define a field source for the simulation.</p>
+<ul>
+<li class="p-VBA-Index-Category">
+<p class="VBA-Index-Category"><a href="#Methods" target="_self">Methods: General</a></p>
+</li>
+<li class="p-VBA-Index-Category">
+<p class="VBA-Index-Category"><a href="#Field_Imports" target="_self">Methods: Field Import</a></p>
+</li>
+<li class="p-VBA-Index-Category">
+<p class="VBA-Index-Category"><a href="#Examples">Example</a></p>
+</li>
+<li class="p-VBA-Index-Category">
+<p class="VBA-Index-Category"><a href="#Examples">Convenience Methods</a></p>
+</li>
+</ul>
+<p class="VBA-Heading-Category"><a name="Methods" id="Methods"></a>Methods: General</p>
+<p class="VBA-Heading-Method">Reset ()</p>
+<p class="VBA-Text-Indent">Resets all internal settings to their default values.</p>
+<p class="vba-text-indent">&#160;</p>
+<p class="VBA-Heading-Method">Name ( <span style="font-style: italic;"><i><a href="../common_vbageneral/common_general_string.htm" id="a6" style="font-weight: normal; font-style: normal;" name="a6">string</a> name</i></span> )</p>
+<p class="VBA-Text-Indent">Specifies the <span style="font-style: italic;"><i>name</i></span> for the current distribution.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method"><a name="FileName" id="FileName">FileName</a> &#160;( <span style="font-style: italic;"><i><a href="../common_vbageneral/common_general_string.htm" id="a7" style="font-weight: normal; font-style: normal;" name="a7">string</a> name</i></span> )</p>
+<p class="VBA-Text-Indent">Specifies the <span style="font-style: italic;"><i>name</i></span> of the field source data file. Available for import are CST Microwave Studio FSM files (*.fsm), CST Microwave Studio hexanhedral field monitors (*.m3d), CST Mphysics Studio displacement files (*.fic), CST Cable Studio / CST PCB Studio RSD files (*.rsd), or Sigrity® NFD files (*.nfd).</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">Delete ( <span style="font-style: italic;"><i><a href="../common_vbageneral/common_general_string.htm" id="a8" style="font-weight: normal; font-style: normal;" name="a8">string</a> name</i></span> )</p>
+<p class="VBA-Text-Indent">Deletes an existing field source, which is specified by the <span style="font-style: italic;"><i>name</i></span>.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">Id ( <span><a href="../common_vbageneral/common_general_integer.htm" id="a4" style="font-weight: normal; font-style: normal;" name="a4">integer</a></span> <span style="font-style: italic;"><i>uniqueID</i></span>)</p>
+<p class="VBA-Text-Indent">Set the unique ID of the field source which was generated using <a href="#GetNextId">GetNextId</a>.</p>
+<p class="VBA-Heading-Method">&#160;</p>
+<p class="VBA-Heading-Method"><a name="GetNextId" id="GetNextId">GetNextId</a> () <a href="../common_vbageneral/common_general_integer.htm" id="a5" name="a5"><span style="font-weight: normal; font-style: normal;">integer</span></a></p>
+<p class="VBA-Text-Indent">Returns the next free unique ID for a new field source. The filename has to be set and match the filename of the new field source. Set filename with <a href="#FileName">FileName</a>.</p>
+<p class="Tip-Note-Heading">DeleteAll</p>
+<p class="VBA-Text-Indent">Delete all field sources.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">Rename &#160;( <span style="font-style: italic;"><i><a href="../common_vbageneral/common_general_string.htm" id="a9" style="font-weight: normal; font-style: normal;" name="a9">string</a> oldname,</i></span> <span style="font-style: italic;"><i><a href="../common_vbageneral/common_general_string.htm" id="a10" style="font-weight: normal; font-style: normal;" name="a10">string</a> newname</i></span> )</p>
+<p class="VBA-Text-Indent">Renames an existing field source from <span style="font-style: italic;"><i>oldname</i></span> to <span style="font-style: italic;"><i>newname</i></span>.</p>
+<p class="vba-text-indent">&#160;</p>
+<p class="VBA-Heading-Method">Read</p>
+<p class="VBA-Text-Indent">Activates the import, which has to be previously specified using the <span style="font-weight: bold;">FileName</span> method. This method is used for the following file types: &#160;*.rsd, *.fsm, and *.nfd.</p>
+<p class="VBA-Heading-Category"><a name="Field_Imports" id="Field_Imports"></a>Methods: Field Import</p>
+<p class="VBA-Heading-Method">ProjectPath (<span style="font-weight: normal;"><a href="../common_vbageneral/common_general_string.htm">string</a></span> <span style="font-style: italic;"><i>path</i></span>)</p>
+<p class="VBA-Text-Indent">Specifies the project the field import is taken from. This may be an absolute path (<span style="font-weight: bold;">UseRelativePath</span> is set to "False") or a path relative to the current project file (<span style="font-weight: bold;">UseRelativePath</span> is set to "True").</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">UseRelativePath (<span style="font-weight: normal;"><a href="../common_vbageneral/common_general_bool_data_type.htm">bool</a></span> <span style="font-style: italic;"><i>flag</i></span>)</p>
+<p class="VBA-Text-Indent">Defines if the <span style="font-weight: bold;">ProjectPath</span> is given with a relative or absolute path. In the former case <span style="font-weight: bold;">ProjectPath</span> must specify a location relative to the current project file.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">ResultSubDirectory &#160;(<a href="../common_vbageneral/common_general_string.htm" style="font-weight: normal;">string</a> <span style="font-style: italic;"><i>dirname</i></span>)</p>
+<p class="VBA-Text-Indent">Specifies the name of the subdirectory within the Result directory where the solver results can be found. For example, IR-Drop solver writes the archive with thermal losses into Result\IRDROPRESULTS. In this case, the name of subdirectory must be specified by .ResultSubDirectory "IRDROPRESULTS".</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">SourceName (<span style="font-weight: normal;"><a href="../common_vbageneral/common_general_enum.htm">enum</a></span> <span style="font-style: italic;"><i>FieldType</i></span>)</p>
+<p class="VBA-Text-Indent">Defines which field should be imported from the project specified by <span style="font-weight: bold;">ProjectPath</span>. The value of <span style="font-style: italic; font-weight: bold;"><i>FieldType</i></span> must be "Temperature", "Displacement", "Force Density", "Nodal Forces" or "Thermal Losses".</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">FieldMonitorName (<span style="font-weight: normal;"><a href="../common_vbageneral/common_general_enum.htm">enum</a></span> <span style="font-style: italic;"><i>name</i></span>)</p>
+<p class="VBA-Text-Indent">If the project specified by <span style="font-weight: bold;">ProjectPath</span> contains a transient thermal solution, use this command to specify the monitor from which the distribution should be imported. <span style="font-style: italic; font-weight: bold;"><i>name</i></span> may have the following values:</p>
+<table style="margin-left: 24px;" cellspacing="0" width="90%">
+<col width="101" />
+<col width="450" />
+<tr style="vertical-align: top;">
+<td style="border: Solid 1px #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;" width="101">
+<p>”Initial Solution”</p>
+</td>
+<td style="border-top: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;" width="450">
+<p>the initial temperature distribution is imported.</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;" width="101">
+<p>”Stationary Solution”</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;" width="450">
+<p>if the source project contains a solution made by the stationary thermal solver, this solution will be imported.</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;" width="101">
+<p>Name of a 3D temperature monitor</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;" width="450">
+<p>one of the temperature distributions saved by this monitor is imported. The time frame is then specified in <span style="font-weight: bold;">TimeValue</span> or by <span style="font-weight: bold;">UseLastTimeFrame</span>.</p>
+</td>
+</tr>
+</table>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">ResultSubDirectory &#160;(<a href="../common_vbageneral/common_general_string.htm" style="font-weight: normal;">string</a> <span style="font-style: italic;"><i>dirname</i></span>)</p>
+<p class="VBA-Text-Indent">Specifies the name of the subdirectory within the Result directory where the solver results can be found. For example, IR-Drop solver writes the archive with thermal losses into Result\IRDROPRESULTS. In this case, the name of subdirectory must be specified by .ResultSubDirectory "IRDROPRESULTS".</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">ImportSettings (<span style="font-weight: normal;"><a href="../common_vbageneral/common_general_enum.htm">enum</a></span> <span style="font-style: italic;"><i>key,</i></span> <span style="font-weight: normal;"><a href="../common_vbageneral/common_general_enum.htm">enum</a></span> <span style="font-style: italic;"><i>value</i></span>)</p>
+<p class="VBA-Text-Indent">Specifies additional field import settings in the form of a (key, value) correspondence. The settings are generally used to define and import an external field which could be possibly converted and / or processed before it can be used as valid source.</p>
+<p class="VBA-Text-Indent">The <span style="font-size: 12px; font-variant-ligatures: normal; font-variant-caps: normal; orphans: 2; widows: 2; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial; display: inline ! important ; float: none;">available keys belong to the property enumeration</span>&#160;<a href="../common_vbageneral/common_general_enum.htm">enum</a>&#160;<span style="font-size: 12px; font-variant-ligatures: normal; font-variant-caps: normal; orphans: 2; widows: 2; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial; font-weight: bold;">{ "FormatSource" , "FormatTarget" , "NastranFilename" , "TemperatureFilename" ,&#160;"GeometryUnit" , "TemperatureUnit" , "WorkingDir"</span>&#160;<span style="font-size: 12px; font-variant-ligatures: normal; font-variant-caps: normal; orphans: 2; widows: 2; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial; font-weight: bold;">}</span><span style="font-size: 12px; font-variant-ligatures: normal; font-variant-caps: normal; orphans: 2; widows: 2; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial; display: inline ! important ; float: none;">.</span></p>
+<p class="VBA-Text-Indent">Among all keys only <span style="font-size: 12px; font-variant-ligatures: normal; font-variant-caps: normal; orphans: 2; widows: 2; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial; font-weight: bold;">"FormatSource"</span> <span style="font-size: 12px; font-variant-ligatures: normal; font-variant-caps: normal; orphans: 2; widows: 2; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;">is always mandatory. The remaining keys are generally optional and their use strictly depends on the value selected for the</span> <span style="font-size: 12px; font-variant-ligatures: normal; font-variant-caps: normal; orphans: 2; widows: 2; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial; font-weight: bold;">"FormatSource"</span> <span style="font-size: 12px; font-variant-ligatures: normal; font-variant-caps: normal; orphans: 2; widows: 2; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;">key and eventually on:</span></p>
+<ul style="list-style: circle;">
+<li>
+<p class="VBA-Text-Indent" style="margin-left: 64px; font-variant-ligatures: normal; font-variant-caps: normal; font-size: 12px; orphans: 2; widows: 2; -webkit-text-stroke-width: 0px;"><span style="text-decoration-style: initial; text-decoration-color: initial;">&#160;the value set with the key</span> <span style="text-decoration-style: initial; text-decoration-color: initial; font-weight: bold;">"FormatTarget"</span><span style="text-decoration-style: initial; text-decoration-color: initial;">.</span></p>
+</li>
+<li>
+<p class="VBA-Text-Indent" style="margin-left: 64px; font-variant-ligatures: normal; font-variant-caps: normal; font-size: 12px;"><span style="orphans: 2; widows: 2; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;">the field type selected with the method</span> <span style="font-weight: bold;">.SourceName</span>.</p>
+</li>
+<li>
+<p class="VBA-Text-Indent" style="margin-left: 64px; font-size: 12px; font-variant-ligatures: normal; font-variant-caps: normal;"><span style="orphans: 2; widows: 2; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;">the monitor type selected with the method</span> <span style="font-weight: bold;">.FieldMonitorName</span>.</p>
+</li>
+</ul>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Text-Indent" style="font-variant-ligatures: normal; font-variant-caps: normal; orphans: 2; widows: 2; font-size: 12px;"><span style="-webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;">The available value(s) for the key</span> <span style="-webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial; font-weight: bold;">"FormatSource"</span> <span style="-webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;">belong to the set</span> <a href="../common_vbageneral/common_general_enum.htm">enum</a>&#160;<span style="-webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial; font-weight: bold;">{</span> "<span style="font-weight: bold;">Abaqus</span>"<span style="-webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial; font-weight: bold;">&#160;,</span> "<span style="font-weight: bold;">Tet</span>"<span style="-webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial; font-weight: bold;">&#160;,</span> "<span style="font-weight: bold;">Hex</span>"<span style="-webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial; font-weight: bold;">&#160;,</span> "<span style="font-weight: bold;">CHT</span>"<span style="-webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial; font-weight: bold;">}</span><span style="-webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial; display: inline ! important ; float: none;">.</span></p>
+<ul style="list-style: disc;">
+<li style="font-size: 12px;">
+<p class="VBA-Text-Indent" style="font-variant-ligatures: normal; font-variant-caps: normal; orphans: 2; widows: 2; font-size: 12px;"><span style="-webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial; display: inline ! important ; float: none;">The value</span> "<span style="font-weight: bold;">Abaqus</span>"&#160;specifies a distribution generated by Abaqus. The distribution is defined by means of a Nastran mesh with volumetric CHEXA elements (i.e. solid elements with eight corner GRIDs and six faces) together with an Abaqus Report File defining the nodal field at the grid positions.</p>
+</li>
+<li style="font-size: 12px;">
+<p class="VBA-Text-Indent" style="font-variant-ligatures: normal; font-variant-caps: normal; orphans: 2; widows: 2; font-size: 12px;">The value "<span style="font-weight: bold;">Tet</span>" specifies the typical internal CST Studio Suite exchange format using tetrahedral mesh based solvers.</p>
+</li>
+<li style="font-size: 12px;">
+<p class="VBA-Text-Indent" style="font-variant-ligatures: normal; font-variant-caps: normal; orphans: 2; widows: 2; font-size: 12px;">The value "<span style="font-weight: bold;">Hex</span>" specifies the typical internal CST Studio Suite exchange format using hexahedral mesh based solvers.</p>
+</li>
+<li style="font-size: 12px;">
+<p class="VBA-Text-Indent" style="font-variant-ligatures: normal; font-variant-caps: normal; orphans: 2; widows: 2; font-size: 12px;">The value <span style="font-weight: bold;">"CHT</span>" specifies the typical internal CST Studio Suite exchange format using the conjugate heat transfer (CHT) solver.</p>
+</li>
+</ul>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Text-Indent">At the current stage the only external field supported is a temperature distribution generated by Abaqus. This field can be imported into CST Studio suite using a tetrahedral based mesh conversion. This leads to the following settings:</p>
+<p class="VBA-Text-Indent" style="margin-left: 64px;"><span style="font-weight: bold;">.SourceName</span> ( "<span style="font-style: italic;"><i>Temperature"</i></span> )</p>
+<p class="VBA-Text-Indent" style="margin-left: 64px;"><span style="font-weight: bold;">.FieldMonitorName</span> ( <span style="font-style: italic;"><i>""</i></span> )</p>
+<p class="VBA-Text-Indent" style="margin-left: 64px;"><span style="font-weight: bold;">.ImportSettings</span> ( <span style="font-size: 12px; font-variant-ligatures: normal; font-variant-caps: normal; orphans: 2; widows: 2; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial; font-weight: bold;">"FormatSource" , "</span><span style="font-weight: bold;">Abaqus</span><span style="font-size: 12px; font-variant-ligatures: normal; font-variant-caps: normal; orphans: 2; widows: 2; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial; font-weight: bold;">"</span> )</p>
+<p class="VBA-Text-Indent" style="margin-left: 64px;"><span style="font-weight: bold;">.ImportSettings</span> ( <span style="font-size: 12px; font-variant-ligatures: normal; font-variant-caps: normal; orphans: 2; widows: 2; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial; font-weight: bold;">"FormatTarget", "</span><span style="font-weight: bold;">Tet</span><span style="font-size: 12px; font-variant-ligatures: normal; font-variant-caps: normal; orphans: 2; widows: 2; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial; font-weight: bold;">"</span> )</p>
+<p class="VBA-Text-Indent" style="margin-left: 64px;">&#160;</p>
+<p class="VBA-Text-Indent" style="margin-left: 64px; font-variant-ligatures: normal; font-variant-caps: normal; font-size: 12px;"><span style="orphans: 2; widows: 2; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;">This combination requires additional information to be provided by means of the .</span><span style="orphans: 2; widows: 2; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial; font-weight: bold;">ImportSettings</span> <span style="orphans: 2; widows: 2; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;">command as explained below:</span></p>
+<div style="list-style: disc; margin-left: 2em">
+<ul style="list-style: disc;">
+<li style="font-size: 12px;">
+<p class="VBA-Text-Indent" style="font-variant-ligatures: normal; font-variant-caps: normal; orphans: 2; widows: 2; font-size: 12px; -webkit-text-stroke-width: 0px;"><span style="text-decoration-style: initial; text-decoration-color: initial;">"</span><span style="text-decoration-style: initial; text-decoration-color: initial; font-weight: bold;">WorkingDir" -</span> <span style="text-decoration-style: initial; text-decoration-color: initial;">The value for this key is a</span> ( <a href="../common_vbageneral/common_general_string.htm" style="font-weight: normal;">string</a> <span style="font-style: italic; font-weight: bold;"><i>Directory</i></span> ) specifying the folder where the Abaqus source files are expected. <span style="font-weight: bold;">Directory</span> is either an absolute path or a path relative to the <span style="font-style: italic;"><i>&lt;Project&gt;/Temp</i></span> subdirectory (here <span style="font-style: italic;"><i>&lt;Project&gt;</i></span> is the CST Studio Suite project).</p>
+</li>
+<li style="font-size: 12px;">
+<p class="VBA-Text-Indent" style="font-variant-ligatures: normal; font-variant-caps: normal; orphans: 2; widows: 2; font-size: 12px; -webkit-text-stroke-width: 0px;"><span style="text-decoration-style: initial; text-decoration-color: initial;">"</span><span style="text-decoration-style: initial; text-decoration-color: initial; font-weight: bold;">NastranFilename" -</span> <span style="text-decoration-style: initial; text-decoration-color: initial;">The value for this key is a</span> ( <a href="../common_vbageneral/common_general_string.htm" style="font-weight: normal;">string</a> <span style="font-style: italic; font-weight: bold;"><i>Filename</i></span> ) specifying the file name of the mesh file generated by Abaqus in Nastran format. The file has typically the <span style="font-style: italic;"><i>.inp</i></span> or <span style="font-style: italic;"><i>.nas</i></span> extension and should contain a volumetric mesh with CHEXA elements. The mesh can be directly exported by Abaqus.</p>
+</li>
+<li style="font-size: 12px;">
+<p class="VBA-Text-Indent" style="font-variant-ligatures: normal; font-variant-caps: normal; orphans: 2; widows: 2; font-size: 12px; -webkit-text-stroke-width: 0px;"><span style="text-decoration-style: initial; text-decoration-color: initial;">"</span><span style="text-decoration-style: initial; text-decoration-color: initial; font-weight: bold;">TemperatureFilename" -</span> <span style="text-decoration-style: initial; text-decoration-color: initial;">The value for this key is a</span> <span style="text-decoration-style: initial; text-decoration-color: initial; font-weight: bold;">( <a href="../common_vbageneral/common_general_string.htm" style="font-weight: normal;">string</a></span> <span style="font-style: italic; font-weight: bold;"><i>Filename</i></span> <span style="text-decoration-style: initial; text-decoration-color: initial;">)</span> specifying the file name of the temperature scalar distribution generated by Abaqus. The file has typically the .<span style="font-style: italic;"><i>rpt</i></span> extension and is an ASCII file containing the nodal temperatures. Also this output can be directly generated in Abaqus using its <span style="font-style: italic;"><i>Report</i></span> functionality. The temperatures have to be written selecting "<span style="font-style: italic;"><i>Unique Nodal</i></span>" as <span style="font-style: italic;"><i>Position</i></span> and the field "<span style="font-style: italic;"><i>NT11</i></span>" has to be exported as output variable. It follows that the file contains at least the columns named <span style="font-style: italic;"><i>"Node Label"</i></span> and <span style="font-style: italic;"><i>"NT11</i></span>".</p>
+</li>
+<li style="font-size: 12px;">
+<p class="VBA-Text-Indent" style="font-variant-ligatures: normal; font-variant-caps: normal; orphans: 2; widows: 2; font-size: 12px; -webkit-text-stroke-width: 0px;"><span style="text-decoration-style: initial; text-decoration-color: initial;">"</span><span style="text-decoration-style: initial; text-decoration-color: initial; font-weight: bold;">GeometryUnit" -</span> <span style="text-decoration-style: initial; text-decoration-color: initial;">The value for this key is a</span> ( <a href="../common_vbageneral/common_general_enum.htm" id="a18" style="font-weight: normal;" name="a18">enum</a> <span style="font-style: italic; font-weight: bold;"><i>GeomUnit</i></span> ) specifying the geometrical unit adopted in the Nastran mesh file. The available units are the same specified with the <span style="font-weight: bold;">.Geometry</span> method in the Units object (see the <a href="../common_vbaunitso/common_vbaunitso_units_object.htm#Methods Geometry">Methods for Geometric Units</a> page).</p>
+</li>
+<li style="font-size: 12px;">
+<p class="VBA-Text-Indent" style="font-variant-ligatures: normal; font-variant-caps: normal; orphans: 2; widows: 2; font-size: 12px; -webkit-text-stroke-width: 0px;"><span style="text-decoration-style: initial; text-decoration-color: initial;">"</span><span style="text-decoration-style: initial; text-decoration-color: initial; font-weight: bold;">TemperatureUnit" :</span> <span style="text-decoration-style: initial; text-decoration-color: initial;">the value for this key is a ( <a href="../common_vbageneral/common_general_enum.htm" id="a181" style="font-weight: normal;" name="a181">enum</a></span> <span style="text-decoration-style: initial; text-decoration-color: initial; font-style: italic; font-weight: bold;"><i>Temp</i></span><span style="font-style: italic; font-weight: bold;"><i>Unit</i></span> <span style="text-decoration-style: initial; text-decoration-color: initial;">) specifying the temperature unit used in the report temperature file. The available units are the same specified with the</span> <span style="text-decoration-style: initial; text-decoration-color: initial; font-weight: bold;">.TemperatureUnit</span> <span style="text-decoration-style: initial; text-decoration-color: initial;">method in the Units object (see the <a href="../common_vbaunitso/common_vbaunitso_units_object.htm">Units Object</a> page).</span></p>
+</li>
+</ul>
+</div>
+<p class="VBA-Heading-Method">&#160;</p>
+<p class="VBA-Heading-Method">TimeValue (<span style="font-weight: normal;"><a href="../common_vbageneral/common_general_double.htm">double</a></span> <span style="font-style: italic;"><i>time</i></span>)</p>
+<p class="VBA-Text-Indent">If a single temperature field is imported from a transient temperature monitor specified in <span style="font-weight: bold;">FieldMonitorName</span>, use this command to specify from which time point the temperature distribution must be imported. Parameter <span style="font-weight: bold; font-style: italic;"><i>time</i></span> must be specified in seconds. This command is ignored if <span style="font-weight: bold;">UseLastTimeFrame</span> is set to "True".</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">UseLastTimeFrame (<span style="font-weight: normal;"><a href="../common_vbageneral/common_general_bool_data_type.htm">bool</a></span> <span style="font-style: italic;"><i>flag</i></span>)</p>
+<p class="VBA-Text-Indent">If a single temperature field is imported from a transient temperature monitor specified in <span style="font-weight: bold;">FieldMonitorName</span>, use this command to select the last frame saved by the monitor.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">UseCopyOnly (<span style="font-weight: normal;"><a href="../common_vbageneral/common_general_bool_data_type.htm">bool</a></span> <span style="font-style: italic;"><i>flag</i></span>)</p>
+<p class="VBA-Text-Indent">Defines if the internal copy of the field import should be used only. If this setting is activated, the imported field is not updated anymore, even if it has been changed in the source project.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method"><a name="CreateFieldImport" id="CreateFieldImport">CreateFieldImport</a></p>
+<p class="VBA-Text-Indent">Creates a temperature, displacement, thermal loss or static force field import from a project, which needs to be specified with the <span style="font-weight: bold;">ProjectPath</span> method.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Category"><a name="Examples" id="Examples"></a>Example</p>
+<p class="VBA-Text-Example" style="color: #008000;">' Obtain a free unique ID for "test.rsd"</p>
+<p class="vba-text-example">Dim sID as String</p>
+<p class="vba-text-example">&#160;</p>
+<p class="vba-text-example">With FieldSource</p>
+<p class="vba-text-example">&#160;&#160;&#160;&#160;.Reset</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;.FileName ("test.rsd")</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;fsID = .GetNextId</p>
+<p class="vba-text-example">&#160;&#160;&#160;&#160;.Reset</p>
+<p class="vba-text-example">End With</p>
+<p class="vba-text-example">&#160;</p>
+<p class="VBA-Text-Example" style="color: #008000;">' Define a field source with an evaluated ID</p>
+<p class="VBA-Text-Example">With FieldSource</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;.Reset</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;.Name ("CD1")</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;.FileName ("test.rsd")</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;.Id "42"</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;.Read</p>
+<p class="VBA-Text-Example">End With</p>
+<p class="VBA-Text-Example">&#160;</p>
+<p class="VBA-Text-Example" style="color: #008000;">' Import a single (final) temperature distribution from a transient thermal project</p>
+<p class="VBA-Text-Example">With FieldSource</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;.Reset</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;.Name ("field1")</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;.Id ("59")</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;.ProjectPath ("Thermal TD.cst")</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;.UseRelativePath ("True")</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;.SourceName ("Temperature")</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;.FieldMonitorName ("temp (t=0.0..end(100))")</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;.UseLastTimeFrame ("True")</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;.UseCopyOnly ("False")</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;.CreateFieldImport</p>
+<p class="VBA-Text-Example">End With</p>
+<p class="VBA-Text-Example">&#160;</p>
+<p class="VBA-Text-Example" style="color: #008000;">'Delete the FieldSource</p>
+<p class="VBA-Text-Example" style="color: #000000;">FieldSource .Delete ("CD1")</p>
+<p class="VBA-Text-Example" style="color: #000000;">&#160;</p>
+<p class="VBA-Text-Indent">Activates the import, which has to be previously specified using the <span style="font-weight: bold;">FileName</span> method. This method is used for the following file types: &#160;*.rsd, *.fsm, and *.nfd.</p>
+<p class="VBA-Heading-Category"><a name="Convenience_Mehtods" id="Convenience_Mehtods"></a>Convenience Methods</p>
+<p class="VBA-Heading-Method">CreateFieldImportFromAbaqus( <span style="font-style: italic;"><i><a href="../common_vbageneral/common_general_string.htm" id="a61" style="font-weight: normal; font-style: normal;" name="a61">string</a> name ,</i></span> <span style="font-style: italic;"><i><a href="../common_vbageneral/common_general_string.htm" id="a611" style="font-weight: normal; font-style: normal;" name="a611">string</a> directory ,</i></span> <span style="font-style: italic;"><i><a href="../common_vbageneral/common_general_string.htm" id="a612" style="font-weight: normal; font-style: normal;" name="a612">string</a> NastranFilename ,</i></span> <span style="font-style: italic;"><i><a href="../common_vbageneral/common_general_string.htm" id="a613" style="font-weight: normal; font-style: normal;" name="a613">string</a> DistributionFilename , &#160;</i></span><span style="font-variant-ligatures: normal; font-variant-caps: normal; orphans: 2; widows: 2; font-size: 12px; -webkit-text-stroke-width: 0px; font-style: italic;"><i><a href="../common_vbageneral/common_general_enum.htm" id="a182" style="font-weight: normal;" name="a182">enum</a></i></span> <span style="font-style: italic;"><i>GeomUnit , &#160;</i></span><span style="font-variant-ligatures: normal; font-variant-caps: normal; orphans: 2; widows: 2; font-size: 12px; -webkit-text-stroke-width: 0px;"><a href="../common_vbageneral/common_general_enum.htm" id="a183" style="font-weight: normal;" name="a183">enum</a></span> <span style="font-style: italic;"><i>TempUnit</i></span> )</p>
+<p class="VBA-Text-Indent" style="margin-top: 0pt; margin-bottom: 3pt; font-variant-ligatures: normal; font-variant-caps: normal; orphans: 2; widows: 2; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;">This is a convenience method to generate a complete and working field import definition using an external temperature distribution calculated by Abaqus. The method can be executed as control macro with the VBA macro editor and it stores a new command entry in the project history list filled with all information and the correct .<span style="font-weight: bold;">ImportSettings</span> commands (see paragraph <a href="#Field_Imports" target="_self">Methods: Field Import</a>). The item also appears in the project tree under <span style="font-weight: bold;">Field Sources</span> (please note that the generated item is at the moment not editable using the CST Studio Suite dialog but only working on the VBA History).</p>
+<p class="VBA-Text-Indent" style="margin-top: 0pt; margin-bottom: 3pt; font-family: Arial; font-size: 9pt; text-align: left; margin-left: 24px; color: rgb(0, 0, 0); font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: normal; letter-spacing: normal; orphans: 2; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;">The <span style="font-weight: bold; font-style: italic;"><i>name</i></span>&#160;parameter is the name given to the created field source import.</p>
+<p class="VBA-Text-Indent" style="margin-top: 0pt; margin-bottom: 3pt; font-family: Arial; font-size: 9pt; text-align: left; margin-left: 24px; color: rgb(0, 0, 0); font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: normal; letter-spacing: normal; orphans: 2; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;">The <span style="font-weight: bold; font-style: italic;"><i>directory</i></span> parameter is the folder where the Abaqus data are expected. It can be <span style="font-size: 12px;">either an absolute path or a path relative to the</span> <span style="font-style: italic;"><i>&lt;Project&gt;/Temp</i></span> <span style="font-size: 12px;">subdirectory (here</span> <span style="font-style: italic;"><i>&lt;Project&gt;</i></span> <span style="font-size: 12px;">is the CST Studio Suite project).</span></p>
+<p class="VBA-Text-Indent" style="margin-top: 0pt; margin-bottom: 3pt; font-family: Arial; font-size: 9pt; text-align: left; margin-left: 24px; color: rgb(0, 0, 0); font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: normal; letter-spacing: normal; orphans: 2; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;"><span style="font-weight: bold; font-style: italic;"><i>NastranFilename</i></span> and <span style="font-weight: bold; font-style: italic;"><i>DistributionFilename</i></span> correspond to the mesh output in Nastran format (extension .<span style="font-style: italic;"><i>nas</i></span> or .<span style="font-style: italic;"><i>inp</i></span>) and to the temperature field report (extension .<span style="font-style: italic;"><i>rpt</i></span>) generated by Abaqus.</p>
+<p class="VBA-Text-Indent" style="margin-top: 0pt; margin-bottom: 3pt; font-family: Arial; font-size: 9pt; text-align: left; margin-left: 24px; color: rgb(0, 0, 0); font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; letter-spacing: normal; orphans: 2; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial; font-weight: normal;">Finallly <span style="font-weight: bold; font-style: italic;"><i>GeomUnit</i></span> and <span style="font-style: italic; font-weight: bold;"><i>TempUnit</i></span> specify the units for the geometry and the temperature to be used interpreting the Nastran mesh and the Temperature field report, respectively.</p>
+<p class="VBA-Text-Indent" style="margin-top: 0pt; margin-bottom: 3pt; font-family: Arial; font-size: 9pt; text-align: left; margin-left: 24px; color: rgb(0, 0, 0); font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: normal; letter-spacing: normal; orphans: 2; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;">Please note that temperature field imports generated by this method are currently limited to use with the transient FIT-TD-solver.</p>
+<p class="VBA-Text-Indent" style="margin-top: 0pt; margin-bottom: 3pt; font-family: Arial; font-size: 9pt; text-align: left; margin-left: 24px; color: rgb(0, 0, 0); font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: normal; letter-spacing: normal; orphans: 2; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;">&#160;</p>
+<p class="VBA-Heading-Method"><span style="font-variant-ligatures: normal; font-variant-caps: normal; orphans: 2; widows: 2; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;">CreateReverberationChamberFieldImport</span>( <span style="font-style: italic;"><i><a href="../common_vbageneral/common_general_string.htm" id="a614" style="font-weight: normal; font-style: normal;" name="a614">string</a> f_min, <a href="../common_vbageneral/common_general_string.htm" id="a6111" style="font-weight: normal; font-style: normal;" name="a6111">string</a> f_max, <a href="../common_vbageneral/common_general_string.htm" id="a6121" style="font-weight: normal; font-style: normal;" name="a6121">string</a> working_volume_x_min, <a href="../common_vbageneral/common_general_string.htm" id="a61211" style="font-weight: normal; font-style: normal;" name="a61211">string</a> working_volume_y_min, <a href="../common_vbageneral/common_general_string.htm" id="a61212" style="font-weight: normal; font-style: normal;" name="a61212">string</a> working_volume_z_min,</i></span> <span style="font-style: italic;"><i><a href="../common_vbageneral/common_general_string.htm" id="a61213" style="font-weight: normal; font-style: normal;" name="a61213">string</a> working_volume_x_max, <a href="../common_vbageneral/common_general_string.htm" id="a612111" style="font-weight: normal; font-style: normal;" name="a612111">string</a> working_volume_y_max, <a href="../common_vbageneral/common_general_string.htm" id="a612121" style="font-weight: normal; font-style: normal;" name="a612121">string</a> working_volume_z_max,</i></span> <span style="font-style: italic;"><i><a href="../common_vbageneral/common_general_string.htm" id="a6121211" style="font-weight: normal; font-style: normal;" name="a6121211">string</a> spacer,</i></span> <span style="font-weight: normal;"><a href="../common_vbageneral/common_general_bool_data_type.htm">bool</a></span> <span style="font-style: italic;"><i>use_linear_samples_or_step, &#160;<a href="../common_vbageneral/common_general_string.htm" id="a6131" style="font-weight: normal; font-style: normal;" name="a6131">string</a> lin_freq_samples,</i></span> <span style="font-style: italic;"><i><a href="../common_vbageneral/common_general_string.htm" id="a61311" style="font-weight: normal; font-style: normal;" name="a61311">string</a> lin_freq_step,</i></span> <span style="font-weight: normal;"><a href="../common_vbageneral/common_general_bool_data_type.htm">bool</a></span> <span style="font-style: italic;"><i>use_log_samples, <a href="../common_vbageneral/common_general_string.htm" id="a6141" style="font-weight: normal; font-style: normal;" name="a6141">string</a> ext_freq_file,</i></span> <span style="font-style: italic;"><i><a href="../common_vbageneral/common_general_string.htm" id="a6142" style="font-weight: normal; font-style: normal;" name="a6142">string</a> monte_carlo_iters,</i></span> <span style="font-style: italic;"><i><a href="../common_vbageneral/common_general_string.htm" id="a61431" style="font-weight: normal; font-style: normal;" name="a61431">string</a> seed,</i></span> <span style="font-style: italic;"><i><a href="../common_vbageneral/common_general_string.htm" id="a6143" style="font-weight: normal; font-style: normal;" name="a6143">string</a> num_waves,</i></span> <span style="font-weight: normal;"><a href="../common_vbageneral/common_general_bool_data_type.htm">bool</a></span> <span style="font-style: italic;"><i>generate_field_source,</i></span> <span style="font-weight: normal;"><a href="../common_vbageneral/common_general_bool_data_type.htm">bool</a></span> <span style="font-style: italic;"><i>delete_previous_results,</i></span> <a href="../common_vbageneral/common_general_bool_data_type.htm"><span style="font-weight: normal;">bool</span></a> <span style="font-style: italic;"><i>user_probes</i></span>)</p>
+<p class="VBA-Text-Indent" style="margin-top: 0pt; margin-bottom: 3pt; font-variant-ligatures: normal; font-variant-caps: normal; orphans: 2; widows: 2; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;">This is a convenience method to generate a complete and working field import simulating a reverberation chamber. The method generates a set of Monte Carlo iterations with randomly oriented and phase shifted plane waves sampled on the unit sphere. Together with the field sources some statistics (average and standard deviation) of the field peak value are produced, in order to asses the uniformity of the resulting field.</p>
+<p class="VBA-Text-Indent" style="margin-top: 0pt; margin-bottom: 3pt; font-variant-ligatures: normal; font-variant-caps: normal; orphans: 2; widows: 2; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;">For further information about the usage of the macro and its results, please refer to the <a href="../../3D/common_preloadedmacro/common_preloadedmacro_solver_reverberation_chamber.htm">Solver / Reverberation Chamber</a> pre loaded macro page where an in depth description is available.</p>
+<p class="VBA-Text-Indent" style="margin-top: 0pt; margin-bottom: 3pt; font-variant-ligatures: normal; font-variant-caps: normal; orphans: 2; widows: 2; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;">The<span style="font-style: italic;"><i>&#160;</i></span><span style="font-style: italic; font-weight: bold;"><i>f_min</i></span> and <span style="font-style: italic; font-weight: bold;"><i>f_max</i></span> parameters specify the minimum and maximum frequency range (in user unit) of the generated field sources.</p>
+<p class="VBA-Text-Indent" style="margin-top: 0pt; margin-bottom: 3pt; font-variant-ligatures: normal; font-variant-caps: normal; orphans: 2; widows: 2; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial; font-weight: normal; font-style: normal;">The <span style="font-weight: bold; font-style: italic;"><i>working_volume_x_min, working_volume_y_min</i></span>, <span style="font-weight: bold; font-style: italic;"><i>working_volume_z_min</i></span> and their <span style="font-weight: bold; font-style: italic;"><i>_max</i></span> counterpart specify the working volume (in user unit). To be valid this bounding box should enclose a positive volume.</p>
+<p class="VBA-Text-Indent" style="margin-top: 0pt; margin-bottom: 3pt; font-variant-ligatures: normal; font-variant-caps: normal; orphans: 2; widows: 2; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial; font-weight: normal; font-style: normal;"><span style="font-size: 12px; font-weight: 400; text-align: justify; display: inline ! important ; float: none;">A spacer is introduced between the working volume and the generated field source. This is expressed in term of a layer number (</span><span style="display: inline ! important ; float: none; font-size: 12px; text-align: justify; font-weight: bold; font-style: italic;"><i>s</i></span><span style="font-size: 12px; text-align: justify; font-weight: bold; font-style: italic;"><i>pacer</i></span><span style="font-size: 12px; text-align: justify;">)</span><span style="font-size: 12px; font-weight: 400; text-align: justify; display: inline ! important ; float: none;">, where each layer´s thickness is evaluated as $\lambda_{min} / 15$, $\lambda_{min}$ being the minimal simulation wavelength according to the frequency settings (see below).</span></p>
+<p class="VBA-Text-Indent" style="margin-top: 0pt; margin-bottom: 3pt; font-variant-ligatures: normal; font-variant-caps: normal; orphans: 2; widows: 2; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial; font-weight: normal; font-style: normal;">&#160;</p>
+<p class="VBA-Text-Indent" style="margin-top: 0pt; margin-bottom: 3pt; font-variant-ligatures: normal; font-variant-caps: normal; orphans: 2; widows: 2; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;">The frequency &#160;samples distribution is controlled by the following parameters:</p>
+<p class="VBA-Text-Indent" style="margin-top: 0pt; margin-bottom: 3pt; font-variant-ligatures: normal; font-variant-caps: normal; orphans: 2; widows: 2; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial; margin-left: 64px;"><span style="font-style: italic; font-weight: bold;"><i>use_linear_samples_or_step</i></span> specifies a set of uniformly distributed frequencies. If the flag is <span style="font-style: italic;"><i>true</i></span>, the samples are defined as a total number by the parameter <span style="font-style: italic; font-weight: bold;"><i>lin_freq_samples</i></span>. If instead the flag is <span style="font-style: italic;"><i>false</i></span>, the samples are spaced apart according to the parameter <span style="font-style: italic; font-weight: bold;"><i>lin_freq_step</i></span>.</p>
+<p class="VBA-Text-Indent" style="margin-top: 0pt; margin-bottom: 3pt; font-variant-ligatures: normal; font-variant-caps: normal; orphans: 2; widows: 2; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial; margin-left: 64px;">With <span style="font-style: italic; font-weight: bold;"><i>use_log_samples</i></span> logarithmically distributed samples are added. The logarithmic sampling is not uniform but follows instead the <span style="font-size: 12px; text-align: justify; display: inline ! important ; float: none;">IEC 61000-4-21 standard (for more information</span> please refer to the <a href="../../3D/common_preloadedmacro/common_preloadedmacro_solver_reverberation_chamber.htm">Solver / Reverberation Chamber</a> page).<br />
+Finally with <span style="font-style: italic; font-weight: bold;"><i>ext_freq_file</i></span> further samples can be added as specified in an external file. This file just contains a single column with the requested frequencies. The frequencies are generally assumed in user unit. This behavior can be overwritten by means of a header command, with the syntax <span style="font-weight: bold; font-style: italic;"><i>#freq_scale:my_freq_scale</i></span>, where <span style="font-weight: bold; font-style: italic;"><i>my_freq_scale</i></span> specifies the file frequency unit.</p>
+<p class="VBA-Text-Indent">The <span style="font-style: italic; font-weight: bold;"><i>monte_carlo_iters</i></span> parameter controls the number of Monte Carlo iterations (and the number of field sources) to be performed. During each Monte Carlo simulation the field source is constructed as a sum of <span style="font-style: italic; font-weight: bold;"><i>num_waves</i></span> randomly generated plane waves. The seed for the plane wave phase shift and polarization is randomly chosen assigning to <span style="font-weight: bold; font-style: italic;"><i>seed</i></span> the value -1. A zero or positive <span style="font-weight: bold; font-style: italic;"><i>seed</i></span>&#160;value can be used to fix &#160;the seed to the given number and to obtain consistently reproducible Monte Carlo iterations.</p>
+<p class="VBA-Text-Indent">The <span style="font-style: italic; font-weight: bold;"><i>generate_field_source</i></span> controls if the field sources have to be generated and imported in the project. Otherwise only the statistical analysis of the field homogeneity will be performed and inserted as result into the 1D Result tree.</p>
+<p class="VBA-Text-Indent">The option <span style="font-style: italic; font-weight: bold;"><i>delete_previous_results</i></span> removes all previously generated results and field sources, in order to reduce the required disk space and memory.</p>
+<p class="VBA-Text-Indent">Finally the option <span style="font-style: italic; font-weight: bold;"><i>user_probes</i></span> evaluates for each electric (magnetic, respectively) field probe defined in the project and for each Monte Carlo iteration the field generated by the reverberation chamber.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<?rh-p style="margin-bottom: 0px; text-align: Right; margin-left: 18px; 
+                 margin-right: 18px; margin-top: 18px;" ?>
+<div style="width: 100%; position: relative;" id="footer">
+<p style="border-bottom: Solid 1px #dddddd; text-align: Left; margin-left: 0px; font-family: Arial, sans-serif; line-height: Normal; margin-top: 9px; margin-right: 0px; margin-bottom: 6px; border-left-width: 1px; border-top-width: 1px; border-right-width: 1px;"><span style="text-align: Left; font-family: Arial, sans-serif; line-height: Normal;">&#160;</span></p>
+<table cellspacing="0" width="100%">
+<col style="width: 50%;" />
+<col style="width: 50%;" />
+<tr>
+<td style="vertical-align: Top;"><span style="font-family: Arial, sans-serif; line-height: Normal; font-size: 8pt;"><font size="1" style="font-size:8pt;">CST Studio Suite 2026</font></span></td>
+<td style="vertical-align: Top;">
+<p style="text-align: right;">&#160;</p>
+</td>
+</tr>
+</table>
+<p>&#160;</p>
+</div>
+<script type="text/javascript" language="javascript1.2">
+//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+        writeIntopicBar(0);
+
+
+highlightSearch();
+//-->
+//]]>
+</script>
+</body>
+</html>

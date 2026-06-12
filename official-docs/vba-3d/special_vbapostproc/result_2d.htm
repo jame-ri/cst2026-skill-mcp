@@ -1,0 +1,405 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="Adobe RoboHelp 11" />
+<title>Result2D Object</title>
+<link rel="StyleSheet" href="../online_help_vba.css" type="text/css" />
+<style type="text/css">
+/*<![CDATA[*/
+<!--
+body { border-bottom-style:None; }
+-->
+/*]]>*/
+</style>
+
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function ehlp_showtip(current,e,text)
+{
+  if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == 'Netscape'))
+  {
+    document.tooltip.document.write("<layer bgColor='yellow' style='border:1px solid black;font-size:12px;'>"+ text + "<\/layer>");
+    document.tooltip.document.close();
+    document.tooltip.left=e.pageX+5;
+    document.tooltip.top=e.pageY+5;
+    document.tooltip.visibility="show";
+  }
+}
+function ehlp_hidetip()
+{
+  document.tooltip.visibility="hidden";
+}
+//]]>
+</script>
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+        origWidth = innerWidth;
+        origHeight = innerHeight;
+        onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+/*<![CDATA[*/
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+-->
+/*]]>*/
+</style>
+
+<script type="text/javascript" language="javascript1.2" src="../whmsg.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript" src="../whver.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript1.2" src="../whutils.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript1.2" src="../whproxy.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript1.2" src="../whlang.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript1.2" src="../whtopic.js" charset="utf-8">
+</script>
+</head>
+<body>
+<script type="text/javascript" language="javascript1.2">
+//<![CDATA[
+<!--
+if (window.gbWhTopic)
+{
+        var strUrl = document.location.href;
+        var bc = 0;
+        var n = strUrl.toLowerCase().indexOf("bc-");
+        if(n != -1)
+        {
+                document.location.replace(strUrl.substring(0, n));
+                bc = strUrl.substring(n+3);
+        }
+
+        if (window.addTocInfo)
+        {
+        addTocInfo("3D Simulation VBA\nVBA Objects\nPost Processing\nResult2D");
+
+        }
+        if (window.writeBtnStyle)
+                writeBtnStyle();
+
+        if (window.writeIntopicBar)
+                writeIntopicBar(0);
+
+        
+        document.write("<p style=\"font-family: Tahoma; font-size: 9pt; font-weight: 400;  font-style:normal; color: rgb(0, 0, 0); text-decoration:none; text-align: left\"> ");
+AddMasterBreadcrumbs("../index.htm", "font-family: Tahoma; font-size: 9pt; font-weight: 400;  font-style:normal; color: rgb(0, 0, 0); text-decoration:none; text-align: left", "|", "Home", "../special_vbaobjects/special_vbaobjects_vbaobjects.htm");
+document.write("<a style=\"font-family: Tahoma; font-size: 9pt; font-weight: 400;  font-style:normal; color: rgb(0, 0, 0); text-decoration:none; text-align: left\" href=\"../special_vbaobjects/special_vbaobjects_vbaobjects.htm\">3D Simulation VBA<\/a> | <a style=\"font-family: Tahoma; font-size: 9pt; font-weight: 400;  font-style:normal; color: rgb(0, 0, 0); text-decoration:none; text-align: left\" href=\"../special_vbaobjects/special_vbaobjects_vbaobjects.htm\">VBA Objects<\/a> | <a style=\"font-family: Tahoma; font-size: 9pt; font-weight: 400;  font-style:normal; color: rgb(0, 0, 0); text-decoration:none; text-align: left\" href=\"special_vbapostproc_type_method.htm\">Post Processing<\/a> | Result2D<\/p>");
+
+}
+else
+        if (window.gbIE4)
+                document.location.reload();
+
+onLoadHandler = function()
+{
+  if (window.setRelStartPage)
+        {
+        setTimeout("setRelStartPage('../index.htm');", 1)
+
+    setTimeout("UpdateBreadCrumbsMarker();", 1);
+        }
+}
+
+if (window.addEventListener){  
+        window.addEventListener('load', onLoadHandler, false);   
+} else if (window.attachEvent){  
+        window.attachEvent('onload', onLoadHandler);  
+}
+
+function onSetStartPage()
+{
+  autoSync(1);
+  sendSyncInfo();
+  sendAveInfoOut();
+}
+//-->
+//]]>
+</script><script type="text/javascript" src="../ehlpdhtm.js" language="JavaScript1.2">
+</script>
+<table cellspacing="0" width="100%">
+<col style="width: 50%;" />
+<col style="width: 50%;" />
+<tr>
+<td style="vertical-align: middle; padding-top: 5px; padding-bottom: 5px;">
+<p style="margin-top: 0px; margin-bottom: 0px;"><img src="../3ds.png" alt="" style="border: none;" border="0" /></p>
+</td>
+<td style="vertical-align: middle;">
+<p style="text-align: right;"><a href="https://www.3ds.com/products-services/3dexperience/" target="_blank"><img src="../3dexp.png" alt="" style="border: none;" width="32" height="32" border="0" /></a></p>
+</td>
+</tr>
+</table>
+<h1>Result2D Object</h1>
+<h3>This object offers access and manipulation functions for 2D results. This object is available in 3D Simulation and Circuits &amp; Systems.</h3>
+<h3>A Result2D object represents a rectangular domain holding data values. The domain is defined on a two dimensional coordinate system with x- and y-axis with a minimum and maximum value on each axis. The data within the domain can be arranged in two different ways, either using discrete samples on a regular grid or triangle based. In both arrangements the data values can hold real or complex data values.</h3>
+<ul>
+<li class="p-VBA-Index-Category">
+<p class="VBA-Index-Category"><a href="#FileInit">Initialization, File Operation</a></p>
+</li>
+<li class="p-VBA-Index-Category">
+<p class="VBA-Index-Category"><a href="#General">General Settings</a></p>
+</li>
+<li class="p-VBA-Index-Category">
+<p class="VBA-Index-Category"><a href="#Access">Data Access</a></p>
+</li>
+<li class="p-VBA-Index-Category">
+<p class="VBA-Index-Category"><a href="#Global">2D to 2D Operations</a></p>
+</li>
+<li class="p-VBA-Index-Category">
+<p class="VBA-Index-Category"><a href="#Local">Local Operations</a></p>
+</li>
+<li class="p-VBA-Index-Category">
+<p class="VBA-Index-Category"><a href="#Examples">Example</a></p>
+</li>
+</ul>
+<p class="VBA-Heading-Category"><a name="FileInit" id="FileInit"></a>Initialization, File Operation</p>
+<p class="VBA-Text"><span style="font-weight: bold;">Construction</span></p>
+<p class="VBA-Text-Indent">A Result2D object can be created as follows:</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Text-Example" style="margin-left: 40px;">Dim result As Object</p>
+<p class="VBA-Text-Example" style="margin-left: 40px;">Set result = Result2D("")</p>
+<p class="VBA-Text-Example" style="margin-left: 40px;">&#160;</p>
+<p class="VBA-Text-Indent">This will create an empty object. Alternatively, a file name can be given as a parameter, then the object loads the data from the file.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">Initialize ( <a href="../common_vbageneral/common_general_long.htm" id="a1" style="font-weight: normal; font-style: normal;" name="a1">long</a> <span style="font-style: italic;"><i>nX,</i></span> <a href="../common_vbageneral/common_general_long.htm" id="a11" style="font-weight: normal; font-style: normal;" name="a11">long</a> <span style="font-style: italic;"><i>nY</i></span> )</p>
+<p class="VBA-Text-Indent">Initializes an empty Result2D object ("2D") arranged in a regular grid with the specified dimension <span style="font-style: italic;"><i>nX x nY</i></span> <span>for the storage of real-valued data</span>.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">InitializeComplex ( <a href="../common_vbageneral/common_general_long.htm" id="a12" style="font-weight: normal; font-style: normal;" name="a12">long</a> <span style="font-style: italic;"><i>nX,</i></span> <a href="../common_vbageneral/common_general_long.htm" id="a111" style="font-weight: normal; font-style: normal;" name="a111">long</a> <span style="font-style: italic;"><i>nY</i></span> )</p>
+<p class="VBA-Text-Indent">Initializes an empty Result2D object ("2DC") arranged in a regular grid with the specified dimension <span style="font-style: italic;"><i>nX x nY</i></span> for the storage of complex-valued data.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">InitializeTriangulation ( <a href="../common_vbageneral/common_general_long.htm" id="a14" style="font-weight: normal; font-style: normal;" name="a14">long</a> <span style="font-style: italic;"><i>nTriangles</i></span> )</p>
+<p class="VBA-Text-Indent">Initializes an empty Result2D object ("2D") in a triangle based arrangement with the specified dimension <span style="font-style: italic;"><i>nTriangles</i></span> <span>for the storage of real-valued data</span>.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">InitializeTriangulationComplex ( <a href="../common_vbageneral/common_general_long.htm" id="a121" style="font-weight: normal; font-style: normal;" name="a121">long</a> <span style="font-style: italic;"><i>nTriangles</i></span> )</p>
+<p class="VBA-Text-Indent">Initializes an empty Result2D object ("2DC") in a triangle based arrangement with the specified dimension <span style="font-style: italic;"><i>nTriangles</i></span> for the storage of complex-valued data.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">Load ( <a href="../common_vbageneral/common_general_string.htm" id="a13" style="font-weight: normal; font-style: normal;" name="a13">string</a> s<span style="font-style: italic;"><i>FileName</i></span> )</p>
+<p class="VBA-Text-Indent">Loads the Result2D object from file.</p>
+<p class="VBA-Text-Indent"><span style="font-weight: bold;">Note:</span> The names used in the ResultTree do not necessarily correspond to the file names. The file names of tree items can be queried using the <a href="special_vbapostproc_resulttreeo.htm">ResultTree Object</a>.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">Save ( <a href="../common_vbageneral/common_general_string.htm" id="a131" style="font-weight: normal; font-style: normal;" name="a131">string</a> <span style="font-style: italic;"><i>sFileName</i></span> )</p>
+<p class="VBA-Text-Indent">Saves the Result2D object to file.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">AddToTree ( <span><a href="../common_vbageneral/common_general_name.htm" id="a8" style="font-weight: normal; font-style: normal;" name="a8">name</a></span> <span style="font-style: italic;"><i>sTreePath</i></span> )</p>
+<p class="VBA-Text-Indent">Inserts the Result2D object into the tree at the folder specified by sTreePath.</p>
+<p class="VBA-Text-Indent"><span style="font-weight: bold;">Note:</span> Save the Result2D object before adding it to the tree to set correct path.</p>
+<p class="VBA-Heading-Category"><a name="General" id="General"></a>General Settings</p>
+<p class="VBA-Heading-Method">SetType ( <a href="../common_vbageneral/common_general_enum.htm" id="a57" style="font-weight: normal;" name="a57"><span>enum</span></a> <span style="font-style: italic;"><i>key</i></span> )</p>
+<p class="VBA-Heading-Method">GetType <a href="../common_vbageneral/common_general_enum.htm" id="a57" style="font-weight: normal;" name="a57"><span>enum</span></a></p>
+<p class="VBA-Text-Indent">Define/retrieve the type of the Result2D object.</p>
+<table style="vertical-align: top; margin-left: 24px;" cellspacing="0" width="360">
+<col style="width: 22.572%;" />
+<col style="width: 77.428%;" />
+<tr style="vertical-align: top;">
+<td style="border: Solid 1px #000000; width: 22.572%; padding-right: 10px; padding-left: 10px;">
+<p><a href="../common_vbageneral/common_general_enum.htm" id="a56" name="a56">enum</a> <span style="font-style: italic; font-weight: bold;"><i>key</i></span></p>
+</td>
+<td style="border-top: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 77.428%; padding-right: 10px; padding-left: 10px;">
+<p style="font-weight: bold;">meaning</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 22.572%; padding-right: 10px; padding-left: 10px;">
+<p>"magnitude"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 77.428%; padding-right: 10px; padding-left: 10px;">
+<p>Magnitude (default)</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 22.572%; padding-right: 10px; padding-left: 10px;">
+<p>"dB"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 77.428%; padding-right: 10px; padding-left: 10px;">
+<p>Magnitude in dB</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 22.572%; padding-right: 10px; padding-left: 10px;">
+<p>"phase"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 77.428%; padding-right: 10px; padding-left: 10px;">
+<p>Phase in degrees</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 22.572%; padding-right: 10px; padding-left: 10px;">
+<p>"real"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 77.428%; padding-right: 10px; padding-left: 10px;">
+<p>Real part</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 22.572%; padding-right: 10px; padding-left: 10px;">
+<p>"imaginary"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 77.428%; padding-right: 10px; padding-left: 10px;">
+<p>Imaginary part</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 22.572%; padding-right: 10px; padding-left: 10px;">
+<p>"integer"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 77.428%; padding-right: 10px; padding-left: 10px;">
+<p>Integer values</p>
+</td>
+</tr>
+</table>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Text-Indent"><span style="font-weight: bold;">Note:</span> If SetType is used with a "2DC" object an error is produced. GetType returns "complex" for a "2DC" object.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">SetTitle / SetXLabel / SetYLabel ( <a href="../common_vbageneral/common_general_string.htm" id="a54" style="font-weight: normal; font-style: normal;" name="a54">string</a> <span style="font-style: italic;"><i>sName</i></span> )</p>
+<p class="VBA-Heading-Method">GetTitle / GetXLabel / GetYLabel <a href="../common_vbageneral/common_general_string.htm" id="a55" style="font-weight: normal; font-style: normal;" name="a55">string</a></p>
+<p class="VBA-Text-Indent">Sets / returns the title / x-axis label / y-axis label of the result.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">SetXmin / SetXmax / SetYmin / SetYmax ( <a href="../common_vbageneral/common_general_double.htm" id="a4313" style="font-weight: normal; font-style: normal;" name="a4313">double</a>&#160;<span style="font-style: italic;"><i>dValue</i></span> )</p>
+<p class="VBA-Heading-Method">GetXmin / GetXmax / GetYmin / GetYmax <a href="../common_vbageneral/common_general_double.htm" id="a43131" style="font-weight: normal; font-style: normal;" name="a43131">double</a></p>
+<p class="VBA-Text-Indent">Sets / returns the minimum / maximum value on the x- / y-axis. This defines the rectangular domain of the Result2D object. <span style="font-weight: bold;">Note:</span> Result2D objects may have an inverted x-axis and/or y-axis. In that case the according minimum value is larger than the maximum value.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">SetDataUnit / SetXUnit / SetYUnit ( <a href="../common_vbageneral/common_general_string.htm" id="a51" style="font-weight: normal; font-style: normal;" name="a51">string</a> <span style="font-style: italic;"><i>sUnit</i></span> )</p>
+<p class="VBA-Heading-Method">GetDataUnit / GetXUnit / GetYUnit <a href="../common_vbageneral/common_general_string.htm" id="a532" style="font-weight: normal; font-style: normal;" name="a532">string</a></p>
+<p class="VBA-Text-Indent">Sets / returns the unit of the stored data / x-axis / y-axis as string. The unit string uses the syntax described on the <a title="Units" href="../../../userinterface/overview/units.htm" onmouseover="if ((parseInt(navigator.appVersion) == 4) &amp;&amp; (navigator.appName == 'Netscape')) ehlp_showtip(this,event,'Units');" onmouseout="if ((parseInt(navigator.appVersion) == 4) &amp;&amp; (navigator.appName == 'Netscape')) ehlp_hidetip();">Units</a> help page.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">SetLogarithmicFactor ( <a href="../common_vbageneral/common_general_double.htm" id="a51" style="font-weight: normal; font-style: normal;" name="a51">double</a> <span style="font-style: italic;"><i>dValue</i></span> )</p>
+<p class="VBA-Heading-Method">GetLogarithmicFactor <a href="../common_vbageneral/common_general_double.htm" id="a532" style="font-weight: normal; font-style: normal;" name="a532">double</a></p>
+<p class="VBA-Text-Indent">Sets / returns logarithmic factor used for dB Scaling. The logarithmic factor can be 10 for power quantities, 20 for field quantities and zero if dB scaling is not available.</p>
+<p class="VBA-Heading-Category"><a name="Access" id="Access"></a>Data Access</p>
+<p class="VBA-Heading-Method">GetNX / GetNY <a href="../common_vbageneral/common_general_long.htm" id="a53" style="font-weight: normal; font-style: normal;" name="a53">long</a></p>
+<p class="VBA-Text-Indent">If the Result2D object has a regular grid arrangement GetNX / GetNY returns the number of data values on the x- / y-axis.</p>
+<p class="VBA-Text-Indent">If the Result2D object has a triangle based arrangement GetNX returns the number of data values (total number of triangle corners) while GetNY always returns 1.</p>
+<p class="VBA-Text-Indent">Thus the product of both values always is the total number of data values stored in the Result2D object.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">GetNTriangles <a href="../common_vbageneral/common_general_long.htm" id="a533" style="font-weight: normal; font-style: normal;" name="a533">long</a></p>
+<p class="VBA-Text-Indent">Returns the total number of triangles stored in the Result2D object.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">IsComplex <a href="../common_vbageneral/common_general_bool_data_type.htm" id="a531" style="font-weight: normal; font-style: normal;" name="a531">bool</a></p>
+<p class="VBA-Text-Indent">Returns true if the Result2D object holds complex-valued data ("2DC"), otherwise false ("2D").</p>
+<p class="VBA-Heading-Method">&#160;</p>
+<p class="VBA-Heading-Method">GetResultObjectType <a href="../common_vbageneral/common_general_string.htm" id="a15" style="font-weight: normal; font-style: normal;" name="a15">string</a></p>
+<p class="VBA-Text-Indent">Returns the string <span style="font-style: italic;"><i>"2DC"</i></span> if the result object contains complex-valued data, otherwise it returns the string <span style="font-style: italic;"><i>"2D"</i></span>. This method can be used to distinguish the result object from other result objects in a context where the type of a result object is unknown.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">SetValue ( <a href="../common_vbageneral/common_general_long.htm" id="a442" style="font-weight: normal; font-style: normal;" name="a442">long</a> <span style="font-style: italic;"><i>iX,</i></span> <a href="../common_vbageneral/common_general_long.htm" id="a4411" style="font-weight: normal; font-style: normal;" name="a4411">long</a> <span style="font-style: italic;"><i>iY,</i></span> <a href="../common_vbageneral/common_general_double.htm" id="a431" style="font-weight: normal; font-style: normal;" name="a431">double</a>&#160;<span style="font-style: italic;"><i>dValue</i></span> )</p>
+<p class="VBA-Heading-Method">GetValue ( <a href="../common_vbageneral/common_general_long.htm" id="a44" style="font-weight: normal; font-style: normal;" name="a44">long</a> <span style="font-style: italic;"><i>iX,</i></span> <a href="../common_vbageneral/common_general_long.htm" id="a441" style="font-weight: normal; font-style: normal;" name="a441">long</a> <span style="font-style: italic;"><i>iY</i></span> ) <a href="../common_vbageneral/common_general_double.htm" id="a43" style="font-weight: normal; font-style: normal;" name="a43">double</a></p>
+<p class="VBA-Text-Indent">Sets / returns the real data value at the specified x/y index in the Result2D object. <span style="font-weight: bold;">Note:</span> If used with a "2DC" object an error is produced.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">SetValueComplex ( <a href="../common_vbageneral/common_general_long.htm" id="a4421" style="font-weight: normal; font-style: normal;" name="a4421">long</a> <span style="font-style: italic;"><i>iX,</i></span> <a href="../common_vbageneral/common_general_long.htm" id="a44111" style="font-weight: normal; font-style: normal;" name="a44111">long</a> <span style="font-style: italic;"><i>iY, <a href="../common_vbageneral/common_general_double.htm" id="a43111" style="font-weight: normal; font-style: normal;" name="a43111">double</a>&#160;dRe,</i></span> <a href="../common_vbageneral/common_general_double.htm" id="a4311" style="font-weight: normal; font-style: normal;" name="a4311">double</a>&#160;<span style="font-style: italic;"><i>dIm</i></span> )</p>
+<p class="VBA-Heading-Method">GetValueComplex ( <a href="../common_vbageneral/common_general_long.htm" id="a443" style="font-weight: normal; font-style: normal;" name="a443">long</a> <span style="font-style: italic;"><i>iX,</i></span> <a href="../common_vbageneral/common_general_long.htm" id="a4412" style="font-weight: normal; font-style: normal;" name="a4412">long</a> <span style="font-style: italic;"><i>iY,</i></span> <a href="../common_vbageneral/common_general_double_ref.htm" id="a29" style="font-weight: normal;" name="a29">double_ref</a><span style="font-style: italic;"><i>&#160;dRe,</i></span> <a href="../common_vbageneral/common_general_double_ref.htm" id="a291" style="font-weight: normal;" name="a291">double_ref</a>&#160;<span style="font-style: italic;"><i>dIm</i></span> )</p>
+<p class="VBA-Text-Indent">Sets / returns the complex data value at the specified x/y index in the Result2D object. <span style="font-weight: bold;">Note:</span> If used with a "2D" object an error is produced.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">SetValueRe / SetValueIm ( <a href="../common_vbageneral/common_general_long.htm" id="a44221" style="font-weight: normal; font-style: normal;" name="a44221">long</a> <span style="font-style: italic;"><i>iX,</i></span> <a href="../common_vbageneral/common_general_long.htm" id="a441121" style="font-weight: normal; font-style: normal;" name="a441121">long</a> <span style="font-style: italic;"><i>iY,</i></span> <a href="../common_vbageneral/common_general_double.htm" id="a43121" style="font-weight: normal; font-style: normal;" name="a43121">double</a>&#160;<span style="font-style: italic;"><i>dValue</i></span> )</p>
+<p class="VBA-Heading-Method">GetValueRe / GetValueIm ( <a href="../common_vbageneral/common_general_long.htm" id="a4441" style="font-weight: normal; font-style: normal;" name="a4441">long</a> <span style="font-style: italic;"><i>iX,</i></span> <a href="../common_vbageneral/common_general_long.htm" id="a44131" style="font-weight: normal; font-style: normal;" name="a44131">long</a> <span style="font-style: italic;"><i>iY</i></span> ) <a href="../common_vbageneral/common_general_double.htm" id="a4321" style="font-weight: normal; font-style: normal;" name="a4321">double</a></p>
+<p class="VBA-Text-Indent">Sets / returns the real part / imaginary of the complex data value at the specified x/y index in the Result2D object. <span style="font-weight: bold;">Note:</span> If used with a "2D" object an error is produced.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">SetArray ( <a href="../common_vbageneral/common_general_variant.htm" id="a511" style="font-weight: normal; font-style: normal;" name="a511">variant</a> <span style="font-style: italic;"><i>dArray</i></span> )</p>
+<p class="VBA-Heading-Method">GetArray <a href="../common_vbageneral/common_general_variant.htm" id="a5111" style="font-weight: normal; font-style: normal;" name="a5111">variant</a></p>
+<p class="VBA-Text-Indent">Sets / returns data of &#160;the Result2D object from / as a double array.</p>
+<p class="VBA-Text-Indent">The array needs to start with index zero and is expected to have as many elements as the Result2D object contains. Consider using the methods 'GetNX' and 'GetNY' to query and one of the 'Initialize...' commands to modify the number of data values of the Result2D object. The array's data layout is in row-major order. In case of complex data the real and imaginary values are alternating.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">SetTriangleArray ( <a href="../common_vbageneral/common_general_variant.htm" id="a5112" style="font-weight: normal; font-style: normal;" name="a5112">variant</a> <span style="font-style: italic;"><i>dArray</i></span> )</p>
+<p class="VBA-Heading-Method">GetTriangleArray <a href="../common_vbageneral/common_general_variant.htm" id="a51111" style="font-weight: normal; font-style: normal;" name="a51111">variant</a></p>
+<p class="VBA-Text-Indent">Sets / returns triangle data of &#160;the Result2D object from / as a double array.</p>
+<p class="VBA-Text-Indent">The array needs to start with index zero and is expected to have as many elements as the Result2D object contains. Consider using the methods 'GetNTriangle' to query and 'InitializeTriangulation' or 'InitializeTriangulationComplex' to modify the number of triangles of the Result2D object. The array's data layout is x11,y11, x12,y12, x13,y13, x21,y21,... with x1*, y1* being the coordinates of the first triangle and so on.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">GetGlobalMaximum / GetGlobalMinimum ( <a href="../common_vbageneral/common_general_long_ref.htm" id="a44" style="font-weight: normal; font-style: normal;" name="a44">long_ref</a> <span style="font-style: italic;"><i>iX,</i></span> <a href="../common_vbageneral/common_general_long_ref.htm" id="a441" style="font-weight: normal; font-style: normal;" name="a441">long_ref</a> <span style="font-style: italic;"><i>iY</i></span> ) <a href="../common_vbageneral/common_general_double.htm" id="a43" style="font-weight: normal; font-style: normal;" name="a43">double</a></p>
+<p class="VBA-Text-Indent">Returns the x/y index of the overall maximum / minimum of the data values and the overall maximum / minimum value itself. <span style="font-weight: bold;">Note:</span> If used with a "2DC" object an error is produced.</p>
+<p class="VBA-Heading-Category"><a name="Global" id="Global"></a>2D to 2D Operations</p>
+<p class="VBA-Heading-Method">Copy <span style="color: #0000ff; font-weight: normal;"><font color="blue">Result2D Object</font></span></p>
+<p class="VBA-Text-Indent"><span style="color: #000000; text-decoration: none;"><font color="black">Returns a copy of the object.</font></span></p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">Real / Imaginary <span style="color: #0000ff; font-weight: normal;"><font color="blue">Result2D Object</font></span></p>
+<p class="VBA-Text-Indent">Returns a Result2D object filled with the real / imaginary part of the data stored in the calling Result2D object. <span style="font-weight: bold;">Note:</span> If used with a "2D" object an error is produced.</p>
+<p class="vba-text-indent">&#160;</p>
+<p class="VBA-Heading-Method">Magnitude / Phase&#160;<span style="color: #0000ff; font-weight: normal;"><font color="blue">Result2D Object</font></span></p>
+<p class="VBA-Text-Indent">Returns a Result2D object filled with the magnitude / phase (in degrees) of the data stored in the calling Result2D object. <span style="font-weight: bold;">Note:</span> If used with a "2D" object an error is produced.</p>
+<p class="VBA-Heading-Category"><a name="Local" id="Local"></a>Local Operations</p>
+<p class="VBA-Heading-Method">Add / Subtract ( <span style="color: #0000ff; font-weight: normal;"><font color="blue">Result2D Object</font></span> <span style="font-style: italic;"><i>oObject</i></span> )</p>
+<p class="VBA-Text-Indent">Adds / subtracts the components in <span style="font-style: italic;"><i>oObject</i></span> &#160;to / from the calling object's components. The result will be stored in the calling object. Before calling this method please make sure that the calling object and <span style="font-style: italic;"><i>oObject</i></span> contain compatible data (same number of samples, same value type (real/complex)).</p>
+<p class="vba-text-indent">&#160;</p>
+<p class="VBA-Heading-Method">ComponentMult / ComponentDiv ( <span style="color: #0000ff; font-weight: normal;"><font color="blue">Result2D Object</font></span> <span style="font-style: italic;"><i>oObject</i></span> )</p>
+<p class="VBA-Text-Indent">Multiplies / divides the components in <span style="font-style: italic;"><i>oObject</i></span> &#160;with / by the calling object's components. The result will be stored in the calling object. Before calling this method please make sure that the calling object and <span style="font-style: italic;"><i>oObject</i></span> contain compatible data&#160;(same number of samples, same value type (real/complex)).</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">ScalarMult ( <a href="../common_vbageneral/common_general_double.htm" id="a432111" style="font-weight: normal; font-style: normal;" name="a432111">double</a> <span style="font-style: italic;"><i>dValue</i></span> )</p>
+<p class="VBA-Text-Indent">Multiplies all real data values of the current object with the given real number. <span style="font-weight: bold;">Note:</span> If used with a "2DC" object an error is produced.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">ScalarMultReIm ( <a href="../common_vbageneral/common_general_double.htm" id="a43211" style="font-weight: normal; font-style: normal;" name="a43211">double</a> <span style="font-style: italic;"><i>dRe,</i></span> <a href="../common_vbageneral/common_general_double.htm" id="a43212" style="font-weight: normal; font-style: normal;" name="a43212">double</a> <span style="font-style: italic;"><i>dIm</i></span> )</p>
+<p class="VBA-Text-Indent">Multiplies all complex data values of the current object with the given complex number. <span style="font-weight: bold;">Note:</span> If used with a "2D" object an error is produced.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">Conjugate</p>
+<p class="VBA-Text-Indent">Conjugates all complex data values of the current object.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">InterpolateTriangulation</p>
+<p class="VBA-Text-Indent">Converts a Result2D object with a triangle based arrangement into a Result2D object with a regular grid arrangement. The number of samples on the grid is automatically derived from the number of triangles.</p>
+<p class="VBA-Text-Indent"><span style="font-weight: bold;">Note:</span> For complex data values, the interpolation is done on real and imaginary parts separately.</p>
+<p class="VBA-Text-Indent"><span style="font-weight: bold;">Note:</span> If used with grid based Result2D object an error is produced.</p>
+<p class="VBA-Heading-Category"><a name="Examples" id="Examples"></a>Example</p>
+<p class="VBA-Text-Indent">This example creates an empty object, fills it with real-valued data and adds it to the 3D Simulation result tree.</p>
+<p class="VBA-Text-Example" style="margin-left: 40px;">&#160;</p>
+<p class="VBA-Text-Example" style="margin-left: 40px;">Dim result As Object</p>
+<p class="VBA-Text-Example" style="margin-left: 40px;">Set result = Result2D("")</p>
+<p class="VBA-Text-Example" style="margin-left: 40px;">With result</p>
+<p class="VBA-Text-Example" style="margin-left: 40px;">&#160;&#160;.Initialize(2, 2)</p>
+<p class="VBA-Text-Example" style="margin-left: 40px;">&#160;&#160;.SetValue(0, 0, 0.0)</p>
+<p class="VBA-Text-Example" style="margin-left: 40px;">&#160;&#160;.SetValue(0, 1, 0.5)</p>
+<p class="VBA-Text-Example" style="margin-left: 40px;">&#160;&#160;.SetValue(1, 0, 0.5)</p>
+<p class="VBA-Text-Example" style="margin-left: 40px;">&#160;&#160;.SetValue(1, 1, 1.0)</p>
+<p class="VBA-Text-Example" style="margin-left: 40px;">&#160;&#160;.SetTitle("2D Result")</p>
+<p class="VBA-Text-Example" style="margin-left: 40px;">&#160;&#160;.Save("my_result.dat")</p>
+<p class="VBA-Text-Example" style="margin-left: 40px;">&#160;&#160;.AddToTree("2D/3D Results\Test\real2d")</p>
+<p class="VBA-Text-Example" style="margin-left: 40px;">End With</p>
+<p class="VBA-Text-Example">&#160;</p>
+<p class="VBA-Text-Example">&#160;</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<?rh-p style="margin-bottom: 0px; text-align: Right; margin-left: 18px; 
+                 margin-right: 18px; margin-top: 18px;" ?>
+<div style="width: 100%; position: relative;" id="footer">
+<p style="border-bottom: Solid 1px #dddddd; text-align: Left; margin-left: 0px; font-family: Arial, sans-serif; line-height: Normal; margin-top: 9px; margin-right: 0px; margin-bottom: 6px; border-left-width: 1px; border-top-width: 1px; border-right-width: 1px;"><span style="text-align: Left; font-family: Arial, sans-serif; line-height: Normal;">&#160;</span></p>
+<table cellspacing="0" width="100%">
+<col style="width: 50%;" />
+<col style="width: 50%;" />
+<tr>
+<td style="vertical-align: Top;"><span style="font-family: Arial, sans-serif; line-height: Normal; font-size: 8pt;"><font size="1" style="font-size:8pt;">CST Studio Suite 2026</font></span></td>
+<td style="vertical-align: Top;">
+<p style="text-align: right;">&#160;</p>
+</td>
+</tr>
+</table>
+<p>&#160;</p>
+</div>
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+ if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == 'Netscape'))
+  document.write("<div id='tooltip' class='WebHelpPopupMenu'><\/div>");
+//]]>
+</script><script type="text/javascript" language="javascript1.2">
+//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+        writeIntopicBar(0);
+
+
+highlightSearch();
+//-->
+//]]>
+</script>
+</body>
+</html>

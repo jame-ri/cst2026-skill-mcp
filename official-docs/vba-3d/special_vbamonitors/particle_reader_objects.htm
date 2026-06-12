@@ -1,0 +1,775 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="Adobe RoboHelp 11" />
+<title>Particle Reader Objects</title>
+<link rel="StyleSheet" href="../online_help_vba.css" type="text/css" />
+<script type="text/javascript" language="JavaScript1.2">
+//<![CDATA[
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+//]]>
+</script>
+<script type="text/javascript" id="MathJax-script" async="" src="../mathjax/es5/tex-svg.js" language="JavaScript1.2">
+</script>
+<style type="text/css">
+/*<![CDATA[*/
+<!--
+body { border-bottom-style:None; }
+-->
+/*]]>*/
+</style>
+
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+        origWidth = innerWidth;
+        origHeight = innerHeight;
+        onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+/*<![CDATA[*/
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+-->
+/*]]>*/
+</style>
+
+<script type="text/javascript" language="javascript1.2" src="../whmsg.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript" src="../whver.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript1.2" src="../whutils.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript1.2" src="../whproxy.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript1.2" src="../whlang.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript1.2" src="../whtopic.js" charset="utf-8">
+</script>
+</head>
+<body>
+<script type="text/javascript" language="javascript1.2">
+//<![CDATA[
+<!--
+if (window.gbWhTopic)
+{
+        var strUrl = document.location.href;
+        var bc = 0;
+        var n = strUrl.toLowerCase().indexOf("bc-");
+        if(n != -1)
+        {
+                document.location.replace(strUrl.substring(0, n));
+                bc = strUrl.substring(n+3);
+        }
+
+        if (window.addTocInfo)
+        {
+        addTocInfo("3D Simulation VBA\nVBA Objects\nMonitors\nParticle\nParticle2DMonitorReader (TRK)");
+addTocInfo("3D Simulation VBA\nVBA Objects\nMonitors\nParticle\nPIC2DMonitorReader");
+addTocInfo("3D Simulation VBA\nVBA Objects\nMonitors\nParticle\nPICPositionMonitorReader");
+addTocInfo("3D Simulation VBA\nVBA Objects\nMonitors\nParticle\nParticleTrajectoryReader");
+
+        }
+        if (window.writeBtnStyle)
+                writeBtnStyle();
+
+        if (window.writeIntopicBar)
+                writeIntopicBar(0);
+
+        
+        if(bc == 3)
+{
+        document.write("<p style=\"font-family: Tahoma; font-size: 9pt; font-weight: 400;  font-style:normal; color: rgb(0, 0, 0); text-decoration:none; text-align: left\"> ");
+AddMasterBreadcrumbs("../index.htm", "font-family: Tahoma; font-size: 9pt; font-weight: 400;  font-style:normal; color: rgb(0, 0, 0); text-decoration:none; text-align: left", "|", "Home", "../special_vbaobjects/special_vbaobjects_vbaobjects.htm");
+document.write("<a style=\"font-family: Tahoma; font-size: 9pt; font-weight: 400;  font-style:normal; color: rgb(0, 0, 0); text-decoration:none; text-align: left\" href=\"../special_vbaobjects/special_vbaobjects_vbaobjects.htm\">3D Simulation VBA<\/a> | <a style=\"font-family: Tahoma; font-size: 9pt; font-weight: 400;  font-style:normal; color: rgb(0, 0, 0); text-decoration:none; text-align: left\" href=\"../special_vbaobjects/special_vbaobjects_vbaobjects.htm\">VBA Objects<\/a> | <a style=\"font-family: Tahoma; font-size: 9pt; font-weight: 400;  font-style:normal; color: rgb(0, 0, 0); text-decoration:none; text-align: left\" href=\"special_vbamonitors_monitor_object.htm\">Monitors<\/a> | <a style=\"font-family: Tahoma; font-size: 9pt; font-weight: 400;  font-style:normal; color: rgb(0, 0, 0); text-decoration:none; text-align: left\" href=\"special_vbamonitors_picpositionmonitor_object.htm\">Particle<\/a> | ParticleTrajectoryReader<\/p>");
+}
+else if(bc == 2)
+{
+        document.write("<p style=\"font-family: Tahoma; font-size: 9pt; font-weight: 400;  font-style:normal; color: rgb(0, 0, 0); text-decoration:none; text-align: left\"> ");
+AddMasterBreadcrumbs("../index.htm", "font-family: Tahoma; font-size: 9pt; font-weight: 400;  font-style:normal; color: rgb(0, 0, 0); text-decoration:none; text-align: left", "|", "Home", "../special_vbaobjects/special_vbaobjects_vbaobjects.htm");
+document.write("<a style=\"font-family: Tahoma; font-size: 9pt; font-weight: 400;  font-style:normal; color: rgb(0, 0, 0); text-decoration:none; text-align: left\" href=\"../special_vbaobjects/special_vbaobjects_vbaobjects.htm\">3D Simulation VBA<\/a> | <a style=\"font-family: Tahoma; font-size: 9pt; font-weight: 400;  font-style:normal; color: rgb(0, 0, 0); text-decoration:none; text-align: left\" href=\"../special_vbaobjects/special_vbaobjects_vbaobjects.htm\">VBA Objects<\/a> | <a style=\"font-family: Tahoma; font-size: 9pt; font-weight: 400;  font-style:normal; color: rgb(0, 0, 0); text-decoration:none; text-align: left\" href=\"special_vbamonitors_monitor_object.htm\">Monitors<\/a> | <a style=\"font-family: Tahoma; font-size: 9pt; font-weight: 400;  font-style:normal; color: rgb(0, 0, 0); text-decoration:none; text-align: left\" href=\"special_vbamonitors_picpositionmonitor_object.htm\">Particle<\/a> | PICPositionMonitorReader<\/p>");
+}
+else if(bc == 1)
+{
+        document.write("<p style=\"font-family: Tahoma; font-size: 9pt; font-weight: 400;  font-style:normal; color: rgb(0, 0, 0); text-decoration:none; text-align: left\"> ");
+AddMasterBreadcrumbs("../index.htm", "font-family: Tahoma; font-size: 9pt; font-weight: 400;  font-style:normal; color: rgb(0, 0, 0); text-decoration:none; text-align: left", "|", "Home", "../special_vbaobjects/special_vbaobjects_vbaobjects.htm");
+document.write("<a style=\"font-family: Tahoma; font-size: 9pt; font-weight: 400;  font-style:normal; color: rgb(0, 0, 0); text-decoration:none; text-align: left\" href=\"../special_vbaobjects/special_vbaobjects_vbaobjects.htm\">3D Simulation VBA<\/a> | <a style=\"font-family: Tahoma; font-size: 9pt; font-weight: 400;  font-style:normal; color: rgb(0, 0, 0); text-decoration:none; text-align: left\" href=\"../special_vbaobjects/special_vbaobjects_vbaobjects.htm\">VBA Objects<\/a> | <a style=\"font-family: Tahoma; font-size: 9pt; font-weight: 400;  font-style:normal; color: rgb(0, 0, 0); text-decoration:none; text-align: left\" href=\"special_vbamonitors_monitor_object.htm\">Monitors<\/a> | <a style=\"font-family: Tahoma; font-size: 9pt; font-weight: 400;  font-style:normal; color: rgb(0, 0, 0); text-decoration:none; text-align: left\" href=\"special_vbamonitors_picpositionmonitor_object.htm\">Particle<\/a> | PIC2DMonitorReader<\/p>");
+}
+else{
+        document.write("<p style=\"font-family: Tahoma; font-size: 9pt; font-weight: 400;  font-style:normal; color: rgb(0, 0, 0); text-decoration:none; text-align: left\"> ");
+AddMasterBreadcrumbs("../index.htm", "font-family: Tahoma; font-size: 9pt; font-weight: 400;  font-style:normal; color: rgb(0, 0, 0); text-decoration:none; text-align: left", "|", "Home", "../special_vbaobjects/special_vbaobjects_vbaobjects.htm");
+document.write("<a style=\"font-family: Tahoma; font-size: 9pt; font-weight: 400;  font-style:normal; color: rgb(0, 0, 0); text-decoration:none; text-align: left\" href=\"../special_vbaobjects/special_vbaobjects_vbaobjects.htm\">3D Simulation VBA<\/a> | <a style=\"font-family: Tahoma; font-size: 9pt; font-weight: 400;  font-style:normal; color: rgb(0, 0, 0); text-decoration:none; text-align: left\" href=\"../special_vbaobjects/special_vbaobjects_vbaobjects.htm\">VBA Objects<\/a> | <a style=\"font-family: Tahoma; font-size: 9pt; font-weight: 400;  font-style:normal; color: rgb(0, 0, 0); text-decoration:none; text-align: left\" href=\"special_vbamonitors_monitor_object.htm\">Monitors<\/a> | <a style=\"font-family: Tahoma; font-size: 9pt; font-weight: 400;  font-style:normal; color: rgb(0, 0, 0); text-decoration:none; text-align: left\" href=\"special_vbamonitors_picpositionmonitor_object.htm\">Particle<\/a> | Particle2DMonitorReader (TRK)<\/p>");
+}
+
+
+}
+else
+        if (window.gbIE4)
+                document.location.reload();
+
+onLoadHandler = function()
+{
+  if (window.setRelStartPage)
+        {
+        setTimeout("setRelStartPage('../index.htm');", 1)
+
+    setTimeout("UpdateBreadCrumbsMarker();", 1);
+        }
+}
+
+if (window.addEventListener){  
+        window.addEventListener('load', onLoadHandler, false);   
+} else if (window.attachEvent){  
+        window.attachEvent('onload', onLoadHandler);  
+}
+
+function onSetStartPage()
+{
+  autoSync(1);
+  sendSyncInfo();
+  sendAveInfoOut();
+}
+//-->
+//]]>
+</script><script type="text/javascript" src="../ehlpdhtm.js" language="JavaScript1.2">
+</script>
+<table cellspacing="0" width="100%">
+<col style="width: 50%;" />
+<col style="width: 50%;" />
+<tr>
+<td style="vertical-align: middle; padding-top: 5px; padding-bottom: 5px;">
+<p style="margin-top: 0px; margin-bottom: 0px;"><img src="../3ds.png" alt="" style="border: none;" border="0" /></p>
+</td>
+<td style="vertical-align: middle;">
+<p style="text-align: right;"><a href="https://www.3ds.com/products-services/3dexperience/" target="_blank"><img src="../3dexp.png" alt="" style="border: none;" width="32" height="32" border="0" /></a></p>
+</td>
+</tr>
+</table>
+<p class="VBA-Heading-Object">Particle Reader Objects</p>
+<p class="VBA-Text">The Particle Reader objects allow for convenient access to particle monitor data created by the different Particle Studio solvers. They support a set of common methods which are available for all Particle Reader objects. In addition, each object offers some functions which only apply to their specific particle monitor type.</p>
+<p class="VBA-Text">In order to allow for fast access to the particle data (which can be huge for some monitors), the philosophy of these reader objects is to prevent access to individual particles but to deliver complete arrays with the requested data for all particles at once.</p>
+<p class="VBA-Text">Internally, the particle data is organized in one or more (time-)frames which consist of one or more samples. The actual number of frames and samples depends on the specific monitor type and settings and can be queried with appropriate functions. When loading monitor data to memory, the objects always process one frame at a time but load all samples at once. However, when requesting data, only the particle data for the currently selected sample (inside the currently loaded frame) is returned.</p>
+<ul>
+<li class="p-VBA-Index-Category">
+<p class="VBA-Index-Category"><a href="#Common_Methods">Common Methods</a></p>
+</li>
+</ul>
+<ul>
+<li class="p-VBA-Index-Category">
+<p class="VBA-Index-Category"><a href="#Particle2DMonitorReader">Particle2DMonitorReader Object</a></p>
+</li>
+<li class="p-VBA-Index-Category">
+<p class="VBA-Index-Category"><a href="#PICPositionMonitorReader">PICPositionMonitorReader Object</a></p>
+</li>
+<li class="p-VBA-Index-Category">
+<p class="VBA-Index-Category"><a href="#ParticleTrajectoryReader">ParticleTrajectoryReader Object</a></p>
+</li>
+</ul>
+<ul>
+<li class="p-VBA-Index-Category">
+<p class="VBA-Index-Category"><a href="#Example">Examples</a></p>
+</li>
+</ul>
+<p class="VBA-Heading-Category"><a name="Common_Methods" id="Common_Methods"></a>Common Methods</p>
+<p class="VBA-Text">The following methods are available for all Particle Reader objects below.</p>
+<p class="VBA-Text">&#160;</p>
+<p class="VBA-Heading-Method"><a name="Reset" id="Reset">Reset</a></p>
+<p class="VBA-Text-Indent">Resets all internal values to their default settings, frees all internally allocated memory. It is recommend to call this command before using the object to ensure proper initialization and after using the object to avoid wasting memory for data which is not needed any more.</p>
+<p class="VBA-Heading-Method"><a name="SelectDataSource" id="SelectDataSource">SelectDataSource</a> ( <a href="../common_vbageneral/common_general_string.htm" id="a5211111" style="font-weight: normal; font-style: normal;" name="a5211111">String</a> <span style="font-style: italic;"><i>tree_path</i></span> )</p>
+<p class="VBA-Text-Indent">Selects a data source based on its path in the result tree.</p>
+<p class="VBA-Text-Indent" style="font-style: italic;">Please do not call this method directly. Use the specialized object methods below instead.</p>
+<p class="VBA-Heading-Method"><a name="GetNFrames" id="GetNFrames">GetNFrames</a>&#160;<a href="../common_vbageneral/common_general_long.htm" id="a5213" style="font-weight: normal; font-style: normal;" name="a5213">long</a></p>
+<p class="VBA-Text-Indent">Returns the number of trajectories available.</p>
+<p class="VBA-Heading-Method">GetFrameInfo ( <a href="../common_vbageneral/common_general_long.htm" id="a9121" style="font-weight: normal; font-style: normal;" name="a9121">long</a> <span style="font-style: italic;"><i>number,</i></span> <a href="../common_vbageneral/single_ref_data_type.htm" id="a91211" style="font-weight: normal; font-style: normal;" name="a91211">single &amp;</a> <span style="font-style: italic;"><i>tmin,</i></span> <a href="../common_vbageneral/single_ref_data_type.htm" id="a912111" style="font-weight: normal; font-style: normal;" name="a912111">single &amp;</a> <span style="font-style: italic;"><i>tmax,</i></span> <a href="../common_vbageneral/single_ref_data_type.htm" id="a912112" style="font-weight: normal; font-style: normal;" name="a912112">single &amp;</a> <span style="font-style: italic;"><i>tstep</i></span> )</p>
+<p class="VBA-Text-Indent">Retrieves information about the frame identified by <span style="font-style: italic;"><i>number</i></span> without loading the particle data. The parameter <span style="font-style: italic;"><i>number</i></span> can range from 0 to <a href="#GetNFrames">GetNFrames</a>-1. The returned values are the frame minimum and maximum physical time (<span style="font-style: italic;"><i>tmin</i></span> and <span style="font-style: italic;"><i>tmax</i></span>) and the frame time step (<span style="font-style: italic;"><i>tstep</i></span>).</p>
+<p class="VBA-Heading-Method"><a name="SelectFrame" id="SelectFrame">SelectFrame</a>&#160;( <a href="../common_vbageneral/common_general_long.htm" id="a912" style="font-weight: normal; font-style: normal;" name="a912">long</a> <span style="font-style: italic;"><i>number</i></span> )</p>
+<p class="VBA-Text-Indent">Selects a frame as the source for subsequent data request methods such as <a href="#GetQuantityValues">GetQuantityValues</a>. This call loads the data for all particle inside the frame into memory. The parameter <span style="font-style: italic;"><i>number</i></span> can range from 0 to <a href="#GetNFrames">GetNFrames</a>-1.</p>
+<p class="VBA-Heading-Method"><a name="GetNSamples" id="GetNSamples">GetNSamples</a>&#160;<a href="../common_vbageneral/common_general_long.htm" id="a5214" style="font-weight: normal; font-style: normal;" name="a5214">long</a></p>
+<p class="VBA-Text-Indent">Returns the number of samples available in the current frame.</p>
+<p class="VBA-Text-Indent" style="font-style: italic;">Please do not call this method directly. Use the specialized object methods below instead.</p>
+<p class="VBA-Heading-Method"><a name="SelectSample" id="SelectSample">SelectSample</a>&#160;( <a href="../common_vbageneral/common_general_long.htm" id="a913" style="font-weight: normal; font-style: normal;" name="a913">long</a> <span style="font-style: italic;"><i>number</i></span> )</p>
+<p class="VBA-Text-Indent">Selects a specific sample from the current frame as the source for subsequent data request methods such as <a href="#GetQuantityValues">GetQuantityValues</a>. The parameter <span style="font-style: italic;"><i>number</i></span> can range from 0 to <a href="#GetNSamples">GetNSamples</a>-1.</p>
+<p class="VBA-Text-Indent" style="font-style: italic;"><span style="font-style: italic;"><i>Please do not call this method directly. Use the specialized object methods below instead.</i></span></p>
+<p class="VBA-Heading-Method"><a name="GetNParticles" id="GetNParticles">GetNParticles</a>&#160;<a href="../common_vbageneral/common_general_long.htm" id="a52141" style="font-weight: normal; font-style: normal;" name="a52141">long</a></p>
+<p class="VBA-Text-Indent">Returns the number of particles inside the selected sample of the currently loaded frame.</p>
+<p class="VBA-Heading-Method"><a name="GetSourceIDs" id="GetSourceIDs">GetSourceIDs</a> <span style="font-weight: normal;"><a href="../common_vbageneral/long_array_data_type.htm">LongArray</a></span></p>
+<p class="VBA-Text-Indent">Returns an array with all particle source IDs contained in the result data.</p>
+<p class="VBA-Heading-Method">GetSourceName ( <span style="font-style: italic;"><i><a href="../common_vbageneral/common_general_long.htm" id="a9131" style="font-weight: normal; font-style: normal;" name="a9131">long</a></i></span> <span style="font-style: italic;"><i>id</i></span> ) <a href="../common_vbageneral/common_general_string.htm" id="a521112" style="font-weight: normal; font-style: normal;" name="a521112">String</a></p>
+<p class="VBA-Text-Indent">Returns the name of the particle source with the given <span style="font-style: italic;"><i>id</i></span>. The parameter <span style="font-style: italic;"><i>id</i></span> must be one of the entries of the array retrieved by the <a href="#GetSourceIDs">GetSourceIDs</a> method. This information can be used to map particle source IDs retrieved via <a href="#GetQuantityValues">GetQuantityValues</a> to their respective source name.</p>
+<p class="VBA-Heading-Method">SelectSource ( <span style="font-style: italic;"><i><a href="../common_vbageneral/common_general_long.htm" id="a91312" style="font-weight: normal; font-style: normal;" name="a91312">long</a></i></span> <span style="font-style: italic;"><i>id</i></span> )</p>
+<p class="VBA-Text-Indent">Filters the data for subsequent calls to only yield particles that were emitted from the source <span style="font-style: italic;"><i>id</i></span>. The parameter <span style="font-style: italic;"><i>id</i></span> must be one of the entries of the array retrieved by the <a href="#GetSourceIDs">GetSourceIDs</a> method.</p>
+<p class="VBA-Text-Indent">Calls to <a href="#SelectDataSource">SelectDataSource</a>, <a href="#LoadTrajectoryData">LoadTrajectoryData</a>, <a href="#SelectMonitor">SelectMonitor</a>, <a href="#SelectSample">SelectSample</a>, <a href="#SelectFrame">SelectFrame</a>, <a href="#SelectPlane">SelectPlane</a>, <a href="javascript:void(0);" id="a1" onmouseover="if (parseInt(navigator.appVersion) &gt;= 4 &amp;&amp; typeof(BSPSPopupOnMouseOver) == 'function') BSPSPopupOnMouseOver(event);" class="BSSCPopup" onclick="BSSCPopup('#SelectTrajectory');return false;" name="a1">SelectTrajectory</a>, &#160;<a href="javascript:void(0);" id="a2" onmouseover="if (parseInt(navigator.appVersion) &gt;= 4 &amp;&amp; typeof(BSPSPopupOnMouseOver) == 'function') BSPSPopupOnMouseOver(event);" class="BSSCPopup" onclick="BSSCPopup('#Reset');return false;" name="a2">Reset</a>, etc. will remove the filter and lead to yielding particle data for all sources again.</p>
+<p class="VBA-Heading-Method"><a name="GetQuantityNames" id="GetQuantityNames">GetQuantityNames</a>&#160;<a href="../common_vbageneral/string_array_data_type.htm" id="a521121" style="font-weight: normal; font-style: normal;" name="a521121">StringArray</a></p>
+<p class="VBA-Text-Indent">Returns an array with all physical quantities that can be retrieved from the monitor data.</p>
+<p class="VBA-Heading-Method"><a name="GetNComponents" id="GetNComponents">GetNComponents</a> (&#160;<a href="../common_vbageneral/common_general_string.htm" id="a5211121" style="font-weight: normal; font-style: normal;" name="a5211121">String</a> <span style="font-style: italic;"><i>quantity</i></span> ) <a href="../common_vbageneral/common_general_long.htm" id="a91311" style="font-weight: normal; font-style: normal;" name="a91311">long</a></p>
+<p class="VBA-Text-Indent">Returns the number of components of the given <span style="font-style: italic;"><i>quantity</i></span>. The return value is either 3 for vectorial or 1 for scalar quantities. The parameter <span style="font-style: italic;"><i>quantity</i></span> must be one of the entries of the array retrieved by the <a href="#GetQuantityNames">GetQuantityNames</a> method.</p>
+<p class="VBA-Heading-Method"><a name="GetQuantityValues" id="GetQuantityValues">GetQuantityValues</a> ( <span style="font-weight: normal;"><a href="../common_vbageneral/common_general_string.htm" id="a52111211" style="font-weight: normal; font-style: normal;" name="a52111211">String</a></span> <span style="font-style: italic;"><i>quantity,</i></span> <a href="../common_vbageneral/common_general_string.htm" id="a521112111" style="font-weight: normal; font-style: normal;" name="a521112111">String</a> <span style="font-style: italic;"><i>component</i></span> ) <span style="font-weight: normal;"><a href="../common_vbageneral/single_array_data_type.htm">SingleArray</a></span></p>
+<p class="VBA-Text-Indent">Returns an array with the <span style="font-style: italic;"><i>quantity.component</i></span> values for all particles in the selected sample of the current frame. The array length always corresponds to the result of a call to <a href="#GetNParticles">GetNParticles</a>.</p>
+<p class="VBA-Text-Indent">The parameter <span style="font-style: italic;"><i>quantity</i></span> must be one of the entries of the array retrieved by the <a href="#GetQuantityNames">GetQuantityNames</a> method.</p>
+<p class="VBA-Text-Indent">The following quantities are available for all monitors:</p>
+<table style="border-left-style: Solid; border-top-style: Solid; border-right-style: Solid; border-bottom-style: Solid; border-left-width: 1px; border-right-width: 1px; border-top-width: 1px; border-bottom-width: 1px; left: 246px; top: 1029px;" cellspacing="0" width="871" align="center">
+<col style="width: 22.67%;" />
+<col style="width: 71.577%;" />
+<col style="width: 8.151%;" />
+<tr style="height: 22px;">
+<td style="border-left-style: Solid; border-top-style: Solid; border-bottom-width: 1px; border-bottom-style: Solid; border-left-width: 1px; border-top-width: 1px;">
+<p class="VBA-Text-Example">"Position"</p>
+</td>
+<td style="border-top-style: Solid; border-bottom-width: 1px; border-bottom-style: Solid; border-top-width: 1px;">
+<p class="VBA-Text">Particle position</p>
+<p class="VBA-Text">$$\vec{x} =(x,y,z)^T, \qquad [\vec{x}] = \text{ model length unit}$$</p>
+</td>
+<td style="border-top-style: Solid; border-bottom-width: 1px; border-bottom-style: Solid; border-top-width: 1px;">
+<p class="VBA-Text">Vectorial</p>
+</td>
+</tr>
+<tr style="height: 20px;">
+<td style="border-left-style: Solid; border-bottom-width: 1px; border-bottom-style: Solid; border-left-width: 1px;">
+<p class="VBA-Text-Example">"Momentum"</p>
+</td>
+<td style="border-bottom-width: 1px; border-bottom-style: Solid;">
+<p class="VBA-Text">Normed Momentum of the particle</p>
+<p class="VBA-Text">$$\vec{u} = \vec{\beta} \gamma, \qquad [\vec{u}] = 1$$</p>
+</td>
+<td style="border-bottom-width: 1px; border-bottom-style: Solid;">
+<p class="VBA-Text">Vectorial</p>
+</td>
+</tr>
+<tr style="height: 20px;">
+<td style="border-left-style: Solid; border-bottom-width: 1px; border-bottom-style: Solid; border-left-width: 1px;">
+<p class="VBA-Text-Example">"ChargeMacro"</p>
+</td>
+<td style="border-bottom-width: 1px; border-bottom-style: Solid;">
+<p>Particle macro charge</p>
+<p>$$Q, \qquad [Q] = \mathrm{C} $$</p>
+</td>
+<td style="border-bottom-width: 1px; border-bottom-style: Solid;">
+<p class="VBA-Text">Scalar</p>
+</td>
+</tr>
+<tr style="height: 20px;">
+<td style="border-left-style: Solid; border-bottom-width: 1px; border-bottom-style: Solid; border-left-width: 1px;">
+<p class="VBA-Text-Example">"Mass"</p>
+</td>
+<td style="border-bottom-width: 1px; border-bottom-style: Solid;">
+<p>Particle (non-macro) mass</p>
+<p>$$m_0, \qquad [m_0] = \mathrm{kg}$$</p>
+</td>
+<td style="border-bottom-width: 1px; border-bottom-style: Solid;">
+<p class="VBA-Text">Scalar</p>
+</td>
+</tr>
+<tr style="height: 18px;">
+<td style="border-left-style: Solid; border-bottom-width: 1px; border-bottom-style: Solid; border-left-width: 1px;">
+<p class="VBA-Text-Example">"Gamma"</p>
+</td>
+<td style="border-bottom-width: 1px; border-bottom-style: Solid;">
+<p class="VBA-Text">Lorentz factor</p>
+<p class="VBA-Text">$$ \gamma = \frac{1}{\sqrt{1-|\vec{\beta}|^2}} , \qquad \left[\gamma\right] = 1 $$</p>
+</td>
+<td style="border-bottom-width: 1px; border-bottom-style: Solid;">
+<p class="VBA-Text">Scalar</p>
+</td>
+</tr>
+<tr style="height: 20px;">
+<td style="border-left-style: Solid; border-bottom-width: 1px; border-bottom-style: Solid; border-left-width: 1px;">
+<p class="VBA-Text-Example">"Beta"</p>
+</td>
+<td style="border-bottom-width: 1px; border-bottom-style: Solid;">
+<p class="VBA-Text">Normed particle velocity</p>
+<p class="VBA-Text">$$ \vec{\beta} = \frac{\vec{v}}{c} , \qquad \left[\vec{\beta}\right] = 1 $$</p>
+</td>
+<td style="border-bottom-width: 1px; border-bottom-style: Solid;">
+<p class="VBA-Text">Vectorial</p>
+</td>
+</tr>
+<tr style="height: 20px;">
+<td style="border-left-style: Solid; border-bottom-width: 1px; border-bottom-style: Solid; border-left-width: 1px;">
+<p class="VBA-Text-Example">"Velocity"</p>
+</td>
+<td style="border-bottom-width: 1px; border-bottom-style: Solid;">
+<p class="VBA-Text">Particle velocity</p>
+<p class="VBA-Text">$$ \vec{v} , \qquad \left[\vec{v}\right] = \frac{\mathrm{m}}{\mathrm{s}}$$</p>
+</td>
+<td style="border-bottom-width: 1px; border-bottom-style: Solid;">
+<p class="VBA-Text">Vectorial</p>
+</td>
+</tr>
+<tr style="height: 20px;">
+<td style="border-left-style: Solid; border-bottom-width: 1px; border-bottom-style: Solid; border-left-width: 1px;">
+<p class="VBA-Text-Example">"Energy"</p>
+</td>
+<td style="border-bottom-width: 1px; border-bottom-style: Solid;">
+<p class="VBA-Text">Particle kinetic energy in eV</p>
+<p class="VBA-Text">$$ U = \left(\gamma-1\right)m_0\frac{c^2}{e} , \qquad \left[U\right] = \mathrm{eV}$$</p>
+</td>
+<td style="border-bottom-width: 1px; border-bottom-style: Solid;">
+<p class="VBA-Text">Scalar</p>
+</td>
+</tr>
+<tr style="height: 18px;">
+<td style="border-left-style: Solid; border-bottom-style: Solid; border-left-width: 1px; border-bottom-width: 1px;">
+<p class="VBA-Text-Example">"Orbital Angle", "Angle"</p>
+</td>
+<td style="border-bottom-style: Solid; border-bottom-width: 1px;">
+<p>Orbital angle $$ \alpha_{\rm comp} = \frac{|v_{\rm comp}|}{|v_{\rm Normal}|} = \frac{|u_{\rm comp}|}{|u_{\rm Normal}|} , \qquad {\rm comp} \in\left\{U, V\right\} , \qquad \left[\alpha_{\rm comp}\right] = \mathrm{rad} $$</p>
+<p>&#160;</p>
+</td>
+<td style="border-bottom-style: Solid; border-bottom-width: 1px;">
+<p class="VBA-Text">Vectorial</p>
+</td>
+</tr>
+</table>
+<p class="VBA-Text-Indent">The different monitors provide several additional quantities. Therefore, it is advisable to always use GetQuantityNames to query the monitor's capabilities.</p>
+<p class="VBA-Text-Indent">The parameter <span style="font-style: italic;"><i>component</i></span> can be one of</p>
+<table style="left: 0px; top: 992px; height: 209px; border-left-style: Solid; border-top-style: Solid; border-right-style: Solid; border-bottom-style: Solid; border-left-width: 1px; border-right-width: 1px; border-top-width: 1px; border-bottom-width: 1px;" cellspacing="0" width="1067" align="center">
+<col style="width: 3.474%;" />
+<col style="width: 10.047%;" />
+<col style="width: 12.676%;" />
+<col style="width: 45.165%;" />
+<col style="width: 28.638%;" />
+<tr>
+<td style="border-left-style: Solid; border-left-width: 1px; border-top-width: 1px; border-top-style: Solid; border-bottom-style: Solid; border-bottom-width: 1px;">
+<p class="VBA-Text-Example">"-1"</p>
+</td>
+<td style="border-top-width: 1px; border-top-style: Solid; border-bottom-style: Solid; border-bottom-width: 1px;">
+<p class="VBA-Text-Example">""</p>
+</td>
+<td style="border-top-width: 1px; border-top-style: Solid; border-bottom-style: Solid; border-bottom-width: 1px;">
+<p class="VBA-Text-Example">"-"</p>
+</td>
+<td style="border-top-width: 1px; border-top-style: Solid; border-bottom-style: Solid; border-bottom-width: 1px;">
+<p class="VBA-Text">Queries a scalar value such as mass, current, etc.</p>
+</td>
+<td style="border-top-width: 1px; border-top-style: Solid; border-right-width: 1px; border-right-style: Solid; border-bottom-style: Solid; border-bottom-width: 1px;">
+<p class="VBA-Text">Has to be used for scalar quantities, see <a href="#GetNComponents">GetNComponents</a> for more details.</p>
+</td>
+</tr>
+<tr>
+<td style="border-left-width: 1px; border-left-style: Solid;">
+<p class="VBA-Text-Example">"0"</p>
+</td>
+<td>
+<p class="VBA-Text-Example">"X"</p>
+</td>
+<td>
+<p class="VBA-Text-Example">"X-DIRECTION"</p>
+</td>
+<td>
+<p class="VBA-Text">Returns the x-component of a vectorial quantity.</p>
+</td>
+<td rowspan="4" style="border-right-style: Solid; border-right-width: 1px; border-bottom-style: Solid; border-bottom-width: 1px;">
+<p class="VBA-Text">Only apply to vectorial quantities, see <a href="#GetNComponents">GetNComponents</a> for more details.</p>
+</td>
+</tr>
+<tr>
+<td style="border-left-width: 1px; border-left-style: Solid;">
+<p class="VBA-Text-Example">"1"</p>
+</td>
+<td>
+<p class="VBA-Text-Example">"Y"</p>
+</td>
+<td>
+<p class="VBA-Text-Example">"Y-DIRECTION"</p>
+</td>
+<td>
+<p class="VBA-Text">Returns the y-component of a vectorial quantity.</p>
+</td>
+</tr>
+<tr>
+<td style="border-left-width: 1px; border-left-style: Solid;">
+<p class="VBA-Text-Example">"2"</p>
+</td>
+<td>
+<p class="VBA-Text-Example">"Z"</p>
+</td>
+<td>
+<p class="VBA-Text-Example">"Z-DIRECTION"</p>
+</td>
+<td>
+<p class="VBA-Text">Returns the z-component of a vectorial quantity.</p>
+</td>
+</tr>
+<tr>
+<td style="border-left-style: Solid; border-left-width: 1px; border-bottom-style: Solid; border-bottom-width: 1px;">
+<p class="VBA-Text-Example">"3"</p>
+</td>
+<td style="border-bottom-style: Solid; border-bottom-width: 1px;">
+<p class="VBA-Text-Example">"ABS (XYZ)"</p>
+</td>
+<td style="border-bottom-style: Solid; border-bottom-width: 1px;">
+<p class="VBA-Text-Example">"ABSOLUTE"</p>
+</td>
+<td style="border-bottom-style: Solid; border-bottom-width: 1px;">
+<p class="VBA-Text">Returns the norm of a vectorial quantity, i.e. $$ |\vec{x}| = \sqrt{x^2 + y^2 + z^2}$$</p>
+</td>
+</tr>
+<tr>
+<td style="border-left-width: 1px; border-left-style: Solid;">
+<p class="VBA-Text-Example">"4"</p>
+</td>
+<td>
+<p class="VBA-Text-Example">"U"</p>
+</td>
+<td>
+<p class="VBA-Text-Example">"U-DIRECTION"</p>
+</td>
+<td>
+<p class="VBA-Text">Returns the projection of a vectorial quantity onto a plane's u-direction.</p>
+</td>
+<td rowspan="4" style="border-right-width: 1px; border-right-style: Solid; border-bottom-width: 1px; border-bottom-style: Solid;">
+<p class="VBA-Text">Only apply to vectorial quantities, see <a href="#GetNComponents">GetNComponents</a> for more details, and planar monitors, such as the <a href="#Particle2DMonitorReader">Particle2DMonitorReader</a> object.</p>
+</td>
+</tr>
+<tr>
+<td style="border-left-width: 1px; border-left-style: Solid;">
+<p class="VBA-Text-Example">"5"</p>
+</td>
+<td>
+<p class="VBA-Text-Example">"V"</p>
+</td>
+<td>
+<p class="VBA-Text-Example">"V-DIRECTION"</p>
+</td>
+<td>
+<p class="VBA-Text">Returns the projection of a vectorial quantity onto a plane's v-direction.</p>
+</td>
+</tr>
+<tr>
+<td style="border-left-width: 1px; border-left-style: Solid;">
+<p class="VBA-Text-Example">"6"</p>
+</td>
+<td>
+<p class="VBA-Text-Example">"NORMAL"</p>
+</td>
+<td>
+<p class="VBA-Text-Example">"W-DIRECTION"</p>
+</td>
+<td>
+<p class="VBA-Text">Returns the projection of a vectorial quantity onto a plane's normal-direction.</p>
+</td>
+</tr>
+<tr>
+<td style="border-bottom-style: Solid; border-left-width: 1px; border-left-style: Solid; border-bottom-width: 1px;">
+<p class="VBA-Text-Example">"7"</p>
+</td>
+<td style="border-bottom-style: Solid; border-bottom-width: 1px;">
+<p class="VBA-Text-Example">"ABS (UV)"</p>
+</td>
+<td style="border-bottom-style: Solid; border-bottom-width: 1px;">
+<p class="VBA-Text-Example">"NORM(UV)"</p>
+</td>
+<td style="border-bottom-style: Solid; border-bottom-width: 1px;">
+<p class="VBA-Text">Returns the norm of the in-plane components of a vectorial quantity, i.e. $$|(u,v)^T| = \sqrt{u^2 + v^2}$$</p>
+</td>
+</tr>
+</table>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Text-Indent">All entries in an individual row of the table above are equivalent. The parameters <span style="font-style: italic;"><i>quantity</i></span> and <span style="font-style: italic;"><i>component</i></span> are case-insensitive to allow for more convenient VBA-UI development.</p>
+<p class="VBA-Text-Indent">Subsequent calls to <a href="#GetQuantityValues">GetQuantityValues</a> for different quantities retain the particle's order. Thus it is guaranteed, that for example after calling</p>
+<p class="VBA-Text-Example" style="margin-left: 80px;">lstPosX = GetQuantityValues("Position", "x")</p>
+<p class="VBA-Text-Example" style="margin-left: 80px;">lstPosY = GetQuantityValues("Position", "y")</p>
+<p class="VBA-Text-Example" style="margin-left: 80px;">lstPosZ = GetQuantityValues("Position", "z")</p>
+<p class="VBA-Text-Example" style="margin-left: 80px;">lstCurrent = GetQuantityValues("Current", "")</p>
+<p class="VBA-Text-Indent">the entries</p>
+<p class="VBA-Text-Example" style="margin-left: 80px;">lstPosX(0), lstPosY(0), lstPosZ(0), lstCurrent(0)</p>
+<p class="VBA-Text-Indent">contain the position and current of the very first particle in the selected sample.</p>
+<p class="VBA-Text-Indent"><span style="font-style: italic;"><i>Note</i></span>: When the parameter quantity is equal to "ParticleID" or "EmissionID", the return type is <a href="../common_vbageneral/long_array_data_type.htm">LongArray</a>.</p>
+<p class="VBA-Heading-Method"><a name="GetQuantityWithReduction" id="GetQuantityWithReduction">GetQuantityWithReduction</a>&#160;( <span style="font-weight: normal;"><a href="../common_vbageneral/common_general_string.htm" id="a521112112" style="font-weight: normal; font-style: normal;" name="a521112112">String</a></span> <span style="font-style: italic;"><i>quantity,</i></span> <a href="../common_vbageneral/common_general_string.htm" id="a5211121111" style="font-weight: normal; font-style: normal;" name="a5211121111">String</a> <span style="font-style: italic;"><i>component,</i></span> <a href="../common_vbageneral/common_general_string.htm" id="a52111211111" style="font-weight: normal; font-style: normal;" name="a52111211111">String</a> <span style="font-style: italic;"><i>reduction</i></span> ) <span style="font-weight: normal;"><a href="../common_vbageneral/single_data_type.htm">Single</a></span></p>
+<p class="VBA-Text-Indent">In addition to retrieving the full list of quantities for all particles, it is possible to perform some immediate reductions on the data set.</p>
+<p class="VBA-Text-Indent">For information on the parameters <span style="font-style: italic;"><i>quantity</i></span> and <span style="font-style: italic;"><i>component</i></span>, please refer to GetQuantityValues.</p>
+<p class="VBA-Text-Indent">The parameter <span style="font-style: italic;"><i>reduction</i></span> can be any of (case-insensitive)</p>
+<table style="border-left-style: Solid; border-left-width: 1px; border-right-style: Solid; border-right-width: 1px; border-top-style: Solid; border-top-width: 1px; border-bottom-style: Solid; border-bottom-width: 1px; left: 268px; top: 1738px;" cellspacing="0" width="718" align="center">
+<col style="width: 21.788%;" />
+<col style="width: 78.212%;" />
+<tr>
+<td style="border-bottom-width: 1px; border-bottom-style: Solid; border-left-width: 1px; border-left-style: Solid; border-top-width: 1px; border-top-style: Solid;">
+<p class="VBA-Text-Example">"min"</p>
+</td>
+<td style="border-bottom-width: 1px; border-bottom-style: Solid; border-top-width: 1px; border-top-style: Solid; border-right-width: 1px; border-right-style: Solid;">
+<p class="VBA-Text">Minimum value of <span style="font-style: italic;"><i>quantity.component</i></span> across all particles in the selected sample $$ \min_{p=1\ldots N} {\rm q}_{{\rm c}, p} $$</p>
+</td>
+</tr>
+<tr>
+<td style="border-bottom-width: 1px; border-bottom-style: Solid; border-left-width: 1px; border-left-style: Solid;">
+<p class="VBA-Text-Example">"max"</p>
+</td>
+<td style="border-bottom-width: 1px; border-bottom-style: Solid; border-right-width: 1px; border-right-style: Solid;">
+<p class="VBA-Text">Maximum value of <span style="font-style: italic;"><i>quantity.component</i></span> across all particles in the selected sample $$ \max_{p=1\ldots N} {\rm q}_{{\rm c}, p} $$</p>
+</td>
+</tr>
+<tr>
+<td style="border-bottom-width: 1px; border-bottom-style: Solid; border-left-width: 1px; border-left-style: Solid;">
+<p class="VBA-Text-Example">"mean"</p>
+</td>
+<td style="border-bottom-width: 1px; border-bottom-style: Solid; border-right-width: 1px; border-right-style: Solid;">
+<p class="VBA-Text">Mean value of <span style="font-style: italic;"><i>quantity.component</i></span> across all particles in the selected sample $$ \left \lt {\rm q}_{\rm c}\right \gt = \frac{1}{N}\sum_{p=1}^N {\rm q}_{{\rm c}, p} $$</p>
+</td>
+</tr>
+<tr>
+<td style="border-bottom-width: 1px; border-bottom-style: Solid; border-left-width: 1px; border-left-style: Solid;">
+<p class="VBA-Text-Example">"total"</p>
+</td>
+<td style="border-bottom-width: 1px; border-bottom-style: Solid; border-right-width: 1px; border-right-style: Solid;">
+<p class="VBA-Text">Total sum of <span style="font-style: italic;"><i>quantity.component</i></span> across all particles in the selected sample $${\rm q}_{\rm c,tot} = \sum_{p=1}^N {\rm q}_{{\rm c}, p}$$</p>
+</td>
+</tr>
+<tr>
+<td style="border-bottom-width: 1px; border-bottom-style: Solid; border-left-width: 1px; border-left-style: Solid;">
+<p class="VBA-Text-Example">"deviation", "sigma"</p>
+</td>
+<td style="border-bottom-width: 1px; border-bottom-style: Solid; border-right-width: 1px; border-right-style: Solid;">
+<p class="VBA-Text">Standard deviation of <span style="font-style: italic;"><i>quantity.component</i></span> across all particles in the selected sample $$\sigma\left[{\rm q}_{\rm c}\right] = \sqrt{\frac{1}{N-1}\sum_{p=1}^N \big({\rm q}_{{\rm c}, p}-\left \lt {\rm q}_{\rm c}\right \gt \big)^2}$$</p>
+</td>
+</tr>
+<tr>
+<td style="border-bottom-width: 1px; border-bottom-style: Solid; border-left-width: 1px; border-left-style: Solid;">
+<p class="VBA-Text-Example">"rms"</p>
+</td>
+<td style="border-bottom-width: 1px; border-bottom-style: Solid; border-right-width: 1px; border-right-style: Solid;">
+<p class="VBA-Text">RMS value of <span style="font-style: italic;"><i>quantity.component</i></span> across all particles in the selected sample $$\text{RMS}\left[{\rm q}_{\rm c}\right] = \sqrt{\frac{1}{N}\sum_{p=1}^N {\rm q}_{{\rm c}, p}^2}$$</p>
+</td>
+</tr>
+<tr>
+<td style="border-left-width: 1px; border-left-style: Solid; border-bottom-width: 1px; border-bottom-style: Solid;">
+<p class="VBA-Text-Example">"norm"</p>
+</td>
+<td style="border-bottom-width: 1px; border-bottom-style: Solid; border-right-width: 1px; border-right-style: Solid;">
+<p class="VBA-Text">Norm of the <span style="font-style: italic;"><i>quantity.component</i></span> vector across all particles in the selected sample $$|{\rm q}_{\rm c}|_2 = \sqrt{\sum_{p=1}^N {\rm q}_{{\rm c}, p}^2}$$</p>
+</td>
+</tr>
+</table>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">&#160;</p>
+<p class="VBA-Heading-Method"><a name="GetSupportedQuantityNames" id="GetSupportedQuantityNames">GetSupportedQuantityNames</a></p>
+<p class="VBA-Text-Indent">Returns an array of quantities that can be computed from the available particle data. These quantities are mainly beam quality parameters. Their computation is usually more involved than the reductions available via <a href="#GetQuantityWithReduction">GetQuantityWithReduction</a>.</p>
+<p class="VBA-Heading-Method"><a name="GetGlobalQuantity" id="GetGlobalQuantity">GetGlobalQuantity</a> &#160;( <span style="font-weight: normal;"><a href="../common_vbageneral/common_general_string.htm" id="a521112113" style="font-weight: normal; font-style: normal;" name="a521112113">String</a></span> <span style="font-style: italic;"><i>quantity,</i></span> <a href="../common_vbageneral/common_general_string.htm" id="a5211121112" style="font-weight: normal; font-style: normal;" name="a5211121112">String</a> <span style="font-style: italic;"><i>component</i></span> ) <span style="font-weight: normal;"><a href="../common_vbageneral/single_data_type.htm">Single</a></span></p>
+<p class="VBA-Text-Indent">Computes and returns the requested global quantity. The parameter <span style="font-style: italic;"><i>quantity</i></span> must be one of the entries of the array retrieved by the <a href="#GetSupportedQuantityNames">GetSupportedQuantityNames</a> method. For the possible values of the parameter component, refer to <a href="#GetQuantityValues">GetQuantityValues</a>.</p>
+<p class="VBA-Text-Indent">Currently, the following global quantities are supported, but not applicable for all monitors:</p>
+<table style="border-left-style: Solid; border-left-width: 1px; border-right-style: Solid; border-right-width: 1px; border-top-style: Solid; border-top-width: 1px; border-bottom-style: Solid; border-bottom-width: 1px; left: 41px; top: 3196px;" cellspacing="0" width="1177" align="center">
+<col style="width: 20.523%;" />
+<col style="width: 59.983%;" />
+<col style="width: 19.494%;" />
+<tr>
+<td style="border-bottom-width: 1px; border-bottom-style: Solid; border-left-width: 1px; border-left-style: Solid; border-top-width: 1px; border-top-style: Solid;">
+<p class="VBA-Text-Example">"Emittance"</p>
+</td>
+<td style="border-bottom-width: 1px; border-bottom-style: Solid; border-top-width: 1px; border-top-style: Solid;">
+<p class="VBA-Text">Computes the RMS emittance $$ \varepsilon_{\mathrm{comp}} = \sqrt{\left \lt x_{\mathrm{comp}}^2\right \gt \left \lt \alpha_{\mathrm{comp}}^2\right \gt - \left \lt x_{\mathrm{comp}}\, \alpha_{\mathrm{comp}}\right \gt^2}, \qquad [\varepsilon_\mathrm{comp}] = \text{ model length unit} $$</p>
+</td>
+<td style="border-bottom-width: 1px; border-bottom-style: Solid; border-top-width: 1px; border-top-style: Solid; border-right-width: 1px; border-right-style: Solid;">
+<p class="VBA-Text">Usually, the <span style="font-style: italic;"><i>component</i></span>s "U" and "V" will be of interest.</p>
+</td>
+</tr>
+<tr>
+<td style="border-bottom-width: 1px; border-bottom-style: Solid; border-left-width: 1px; border-left-style: Solid;">
+<p class="VBA-Text-Example">"Envelope"</p>
+</td>
+<td style="border-bottom-width: 1px; border-bottom-style: Solid;">
+<p class="VBA-Text">Computes the beam envelope, i.e. the maximum absolute distance of all particles from their average position $$ r_{\max} = \max_{p=1\ldots N} \big(|\vec{x_p}-\left \lt \vec{x}\right \gt|\big) , \qquad \left[r_{\max}\right] = \text{ model length unit} $$</p>
+</td>
+<td style="border-bottom-width: 1px; border-bottom-style: Solid; border-right-width: 1px; border-right-style: Solid;">
+<p class="VBA-Text">The distance can be computed component-wise ("X", "Y", "Z", "U", "V"), circular ("ABS (UV)") or spherical ("ABS (XYZ)").</p>
+</td>
+</tr>
+<tr>
+<td style="border-bottom-width: 1px; border-bottom-style: Solid; border-left-width: 1px; border-left-style: Solid;">
+<p class="VBA-Text-Example">"Velocity Spread"</p>
+</td>
+<td style="border-bottom-width: 1px; border-bottom-style: Solid;">
+<p class="VBA-Text">Computes the velocity spread $$ \tilde{v} = \frac{\sqrt{\left \lt \left(|v_\parallel|-\left \lt |v_\parallel|\right \gt \right)^2\right \gt}}{\left \lt |v_\parallel|\right \gt} , \qquad |v_\parallel| = \sqrt{v_{\rm U}^2+v_{\rm V}^2} , \qquad \left[\tilde{v}\right] = 1 $$</p>
+</td>
+<td style="border-bottom-width: 1px; border-bottom-style: Solid; border-right-width: 1px; border-right-style: Solid;">
+<p class="VBA-Text">Scalar quantity, <span style="font-style: italic;"><i>component</i></span> must be "".</p>
+</td>
+</tr>
+<tr>
+<td style="border-bottom-width: 1px; border-bottom-style: Solid; border-left-width: 1px; border-left-style: Solid;">
+<p class="VBA-Text-Example">"Divergence Angle"</p>
+</td>
+<td style="border-bottom-width: 1px; border-bottom-style: Solid;">
+<p class="VBA-Text">Computes the beam divergence angle $$ \vartheta = 2\tan^{-1}\frac{r_{\rm max}(x+h)-r_{\rm max}(x)}{2h} , \qquad \left[\vartheta\right] = \mathrm{rad}$$</p>
+</td>
+<td style="border-bottom-width: 1px; border-bottom-style: Solid; border-right-width: 1px; border-right-style: Solid;">
+<p class="VBA-Text">Scalar quantity, <span style="font-style: italic;"><i>component</i></span> must be "".</p>
+</td>
+</tr>
+<tr>
+<td style="border-left-width: 1px; border-left-style: Solid; border-bottom-width: 1px; border-bottom-style: Solid;">
+<p class="VBA-Text-Example">"Brightness"</p>
+</td>
+<td style="border-bottom-width: 1px; border-bottom-style: Solid;">
+<p class="VBA-Text">Computes the beam brightness $$ B = \frac{I_{\rm tot}}{\varepsilon_{\rm U}\varepsilon_{\rm V}} , \qquad \left[B\right] = \frac{\mathrm{A}}{(\text{model length unit} \cdot \mathrm{rad} )^2}$$</p>
+</td>
+<td style="border-bottom-width: 1px; border-bottom-style: Solid; border-right-width: 1px; border-right-style: Solid;">
+<p class="VBA-Text">Scalar quantity, <span style="font-style: italic;"><i>component</i></span> must be "".</p>
+</td>
+</tr>
+</table>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">&#160;</p>
+<p class="VBA-Text">To simplify access to often-used data, the following convenience methods are available. They are mostly shorthand notations that can also be achieved using an appropriate <a href="#GetQuantityValues">GetQuantityValues</a> or <a href="#GetGlobalQuantity">GetGlobalQuantity</a> call.</p>
+<p class="VBA-Heading-Method">&#160;</p>
+<p class="VBA-Heading-Method">GetPositionsX <span style="font-weight: normal;"><a href="../common_vbageneral/single_array_data_type.htm">SingleArray</a></span></p>
+<p class="VBA-Heading-Method">GetPositionsY <span style="font-weight: normal;"><a href="../common_vbageneral/single_array_data_type.htm">SingleArray</a></span></p>
+<p class="VBA-Heading-Method">GetPositionsZ <span style="font-weight: normal;"><a href="../common_vbageneral/single_array_data_type.htm">SingleArray</a></span></p>
+<p class="VBA-Text-Indent">Retrieve the x-, y-, and z-component of all particle positions.</p>
+<p class="VBA-Heading-Method">GetMomentaX <span style="font-weight: normal;"><a href="../common_vbageneral/single_array_data_type.htm">SingleArray</a></span></p>
+<p class="VBA-Heading-Method">GetMomentaY <span style="font-weight: normal;"><a href="../common_vbageneral/single_array_data_type.htm">SingleArray</a></span></p>
+<p class="VBA-Heading-Method">GetMomentaZ <span style="font-weight: normal;"><a href="../common_vbageneral/single_array_data_type.htm">SingleArray</a></span></p>
+<p class="VBA-Text-Indent">Retrieve the x-, y-, and z-component of all particle momenta.</p>
+<p class="VBA-Heading-Method">GetMacroCharges <span style="font-weight: normal;"><a href="../common_vbageneral/single_array_data_type.htm">SingleArray</a></span></p>
+<p class="VBA-Text-Indent">Retrieve the macro charges of all particles.</p>
+<p class="VBA-Heading-Method">GetTimes <span style="font-weight: normal;"><a href="../common_vbageneral/single_array_data_type.htm">SingleArray</a></span></p>
+<p class="VBA-Text-Indent">Retrieve the collision time of all particles with the monitor (not available for all monitor types).</p>
+<p class="VBA-Heading-Method">GetCurrents <span style="font-weight: normal;"><a href="../common_vbageneral/single_array_data_type.htm">SingleArray</a></span></p>
+<p class="VBA-Text-Indent">Retrieve all particle currents (not available for all monitor types).</p>
+<p class="VBA-Heading-Method">GetMasses <span style="font-weight: normal;"><a href="../common_vbageneral/single_array_data_type.htm">SingleArray</a></span></p>
+<p class="VBA-Text-Indent">Retrieve all particle masses.</p>
+<p class="VBA-Heading-Method">GetParticleIDs <span style="font-weight: normal;"><a href="../common_vbageneral/long_array_data_type.htm">LongArray</a></span></p>
+<p class="VBA-Text-Indent">Retrieve the unique IDs of all particles (not available for all monitor types).</p>
+<p class="VBA-Heading-Method">GetEmissionIDs <span style="font-weight: normal;"><a href="../common_vbageneral/long_array_data_type.htm">LongArray</a></span></p>
+<p class="VBA-Text-Indent">Retrieve the unique IDs of all particle sources and interfaces.</p>
+<p class="VBA-Text">&#160;</p>
+<p class="VBA-Text">The following quantities can only be computed from 2D monitors. Not each quantity is available for every solver:</p>
+<p class="VBA-Text">&#160;</p>
+<p class="VBA-Heading-Method">GetEmittance ( <a href="../common_vbageneral/common_general_string.htm" id="a52111211112" style="font-weight: normal; font-style: normal;" name="a52111211112">String</a> <span style="font-style: italic;"><i>component</i></span> ) <span style="font-weight: normal;"><a href="../common_vbageneral/single_data_type.htm">Single</a></span></p>
+<p class="VBA-Text-Indent">Returns the emittance, see <a href="#GetGlobalQuantity">GetGlobalQuantity</a> for details.</p>
+<p class="VBA-Heading-Method">GetEnvelope ( <a href="../common_vbageneral/common_general_string.htm" id="a521112111121" style="font-weight: normal; font-style: normal;" name="a521112111121">String</a> <span style="font-style: italic;"><i>component</i></span> ) <span style="font-weight: normal;"><a href="../common_vbageneral/single_data_type.htm">Single</a></span></p>
+<p class="VBA-Text-Indent">Returns the envelope, see <a href="#GetGlobalQuantity">GetGlobalQuantity</a> for details.</p>
+<p class="VBA-Heading-Method">GetVelocitySpread <span style="font-weight: normal;"><a href="../common_vbageneral/single_data_type.htm">Single</a></span></p>
+<p class="VBA-Text-Indent">Returns the beam velocity spread, see <a href="#GetGlobalQuantity">GetGlobalQuantity</a> for details.</p>
+<p class="VBA-Heading-Method">GetDivergenceAngle <span style="font-weight: normal;"><a href="../common_vbageneral/single_data_type.htm">Single</a></span></p>
+<p class="VBA-Text-Indent">Returns the beam divergence angle, see <a href="#GetGlobalQuantity">GetGlobalQuantity</a> for details.</p>
+<p class="VBA-Heading-Method">GetBrightness <span style="font-weight: normal;"><a href="../common_vbageneral/single_data_type.htm">Single</a></span></p>
+<p class="VBA-Text-Indent">Returns the beam brightness, see <a href="#GetGlobalQuantity">GetGlobalQuantity</a> for details.</p>
+<p class="VBA-Heading-Category"><a name="Particle2DMonitorReaderbc-1" id="Particle2DMonitorReaderbc-1"></a><a name="Particle2DMonitorReader" id="Particle2DMonitorReader"></a>Particle2DMonitorReader and PIC2DMonitorReader Object</p>
+<p class="VBA-Text">Particle2DMonitorReader data consists of multiple frames. The first frame is selected automatically. The monitor's planes are represented by the individual samples in the dataset.</p>
+<p class="VBA-Text">PIC2DMonitorReader data only consists of a single plane which is automatically selected. However, multiple frames are available.</p>
+<p class="VBA-Text">In addition to the <a href="#Common_Methods">common methods</a>, the following methods are available:</p>
+<p class="VBA-Heading-Method">&#160;</p>
+<p class="VBA-Heading-Method"><a name="GetMonitorNamesParticle2D" id="GetMonitorNamesParticle2D">GetMonitorNames</a> <a href="../common_vbageneral/string_array_data_type.htm" id="a52112" style="font-weight: normal; font-style: normal;" name="a52112">StringArray</a></p>
+<p class="VBA-Text-Indent">Returns an array with all Particle 2D Monitors that contain result data.</p>
+<p class="VBA-Heading-Method"><a name="SelectMonitorParticle2D" id="SelectMonitorParticle2D">SelectMonitor</a> ( <a href="../common_vbageneral/common_general_string.htm" id="a521111" style="font-weight: normal; font-style: normal;" name="a521111">String</a> <span style="font-style: italic;"><i>name</i></span> )</p>
+<p class="VBA-Text-Indent">Selects a specific monitor as source for subsequent&#160;data request methods such as <a href="#GetQuantityValues">GetQuantityValues</a>. The parameter <span style="font-style: italic;"><i>name</i></span> must be one of the entries of the array retrieved by the <a href="#GetMonitorNamesParticle2D">GetMonitorNames</a> method. This call automatically loads the monitor data to memory and automatically selects the first plane.</p>
+<p class="VBA-Heading-Method"><a name="GetNPlanes" id="GetNPlanes">GetNPlanes</a>&#160;<a href="../common_vbageneral/common_general_long.htm" id="a5212" style="font-weight: normal; font-style: normal;" name="a5212">long</a></p>
+<p class="VBA-Text-Indent">Returns the number of monitor planes available.</p>
+<p class="VBA-Heading-Method"><a name="SelectPlane" id="SelectPlane">SelectPlane</a> ( <a href="../common_vbageneral/common_general_long.htm" id="a911" style="font-weight: normal; font-style: normal;" name="a911">long</a> <span style="font-style: italic;"><i>number</i></span> )</p>
+<p class="VBA-Text-Indent">Selects a specific monitor plane as the source for subsequent data request methods such as <a href="#GetQuantityValues">GetQuantityValues</a>. The parameter <span style="font-style: italic;"><i>number</i></span> can range from 0 to <a href="#GetNPlanes">GetNPlanes</a>-1.</p>
+<p class="VBA-Heading-Method">GetNormal ( <span style="font-weight: normal;"><a href="../common_vbageneral/common_general_double_ref.htm" id="a271" style="font-weight: normal;" name="a271">double &amp;</a></span> <span style="font-style: italic;"><i>xNorm</i></span><span style="font-weight: normal;">,</span> <a href="../common_vbageneral/common_general_double_ref.htm" id="a2711" style="font-weight: normal;" name="a2711">double &amp;</a> y<span style="font-style: italic;"><i>Norm</i></span>, <a href="../common_vbageneral/common_general_double_ref.htm" id="a2712" style="font-weight: normal;" name="a2712">double &amp;</a> <span style="font-style: italic;"><i>zNorm</i></span> )</p>
+<p class="VBA-Text-Indent">Returns the normal of the selected monitor plane.</p>
+<p class="VBA-Heading-Method">GetLocalU ( <a href="../common_vbageneral/common_general_double_ref.htm" id="a2713" style="font-weight: normal;" name="a2713">double &amp;</a> <span style="font-style: italic;"><i>xNorm</i></span><span style="font-weight: normal;">,</span> <a href="../common_vbageneral/common_general_double_ref.htm" id="a2716" style="font-weight: normal;" name="a2716">double &amp;</a> y<span style="font-style: italic;"><i>Norm</i></span>, <a href="../common_vbageneral/common_general_double_ref.htm" id="a2717" style="font-weight: normal;" name="a2717">double &amp;</a> <span style="font-style: italic;"><i>zNorm</i></span> )</p>
+<p class="VBA-Heading-Method">GetLocalV ( <a href="../common_vbageneral/common_general_double_ref.htm" id="a2714" style="font-weight: normal;" name="a2714">double &amp;</a> <span style="font-style: italic;"><i>xNorm</i></span><span style="font-weight: normal;">,</span> <a href="../common_vbageneral/common_general_double_ref.htm" id="a2715" style="font-weight: normal;" name="a2715">double &amp;</a> y<span style="font-style: italic;"><i>Norm</i></span>, <a href="../common_vbageneral/common_general_double_ref.htm" id="a2718" style="font-weight: normal;" name="a2718">double &amp;</a> <span style="font-style: italic;"><i>zNorm</i></span> )</p>
+<p class="VBA-Text-Indent">Returns the local (in-plane) coordinate system of the selected plane.</p>
+<p class="VBA-Heading-Method">GetPlaneDistance <a href="../common_vbageneral/common_general_double.htm" id="a101" style="font-weight: normal; font-style: normal;" name="a101">double</a></p>
+<p class="VBA-Text-Indent">Returns the distance of the selected plane from the origin.</p>
+<p class="VBA-Heading-Method">RemoveOutliers ( <a href="../common_vbageneral/common_general_double.htm" id="a1011" style="font-weight: normal; font-style: normal;" name="a1011">double</a> <span style="font-style: italic;"><i>current_percent</i></span> &#160;)</p>
+<p class="VBA-Text-Indent">This methods removes outlier particles from the currently selected plane. The parameter <span style="font-style: italic;"><i>current_percent</i></span> can be any value between 0 and 100. It specifies the percentage of the total current through the plane to be kept. The method first sorts all particles on the plane by their distance to the average position. Then, starting from the most central particles, it runs outwards and accumulates the particle current. As soon as the current reaches the given percentage of the total current, the method terminates and removes all remaining particles. After calling this method, <a href="#GetNParticles">GetNParticles</a> will return the appropriately reduced number of particles and the arrays returned by <a href="#GetQuantityValues">GetQuantityValues</a> are shorter.</p>
+<p class="VBA-Text-Indent">Note, that while the original result data files are not modified by this method, the in-memory representation is. Thus, the only way to undo this operation is to reload the monitor from disk again using <a href="#SelectMonitorParticle2D">SelectMonitor</a> and <a href="#SelectPlane">SelectPlane</a>.</p>
+<p class="VBA-Heading-Category"><a name="PICPositionMonitorReaderbc-2" id="PICPositionMonitorReaderbc-2"></a><a name="PICPositionMonitorReader" id="PICPositionMonitorReader"></a>PICPositionMonitorReader Object</p>
+<p class="VBA-Text">PICPositionMonitorReader data consists of multiple frames which correspond to the monitor time steps. Each frame only consists of a single sample which is selected automatically upon calling <a href="#SelectFrame">SelectFrame</a>.</p>
+<p class="VBA-Text">In addition to the <a href="#Common_Methods">common methods</a>, the following methods are available:</p>
+<p class="VBA-Text">&#160;</p>
+<p class="VBA-Heading-Method"><a name="GetMonitorNamesPIC" id="GetMonitorNamesPIC">GetMonitorNames</a> <a href="../common_vbageneral/string_array_data_type.htm" id="a5211" style="font-weight: normal; font-style: normal;" name="a5211">StringArray</a></p>
+<p class="VBA-Text-Indent">Returns an array with all PIC Position Monitors that contain result data.</p>
+<p class="VBA-Heading-Method"><a name="SelectMonitor" id="SelectMonitor">SelectMonitor</a> ( <a href="../common_vbageneral/common_general_string.htm" id="a52111" style="font-weight: normal; font-style: normal;" name="a52111">String</a> <span style="font-style: italic;"><i>name</i></span> )</p>
+<p class="VBA-Text-Indent">Selects a specific monitor as source for subsequent&#160;data request methods such as <a href="#GetQuantityValues">GetQuantityValues</a>. The parameter <span style="font-style: italic;"><i>name</i></span> must be one of the entries of the array retrieved by the <a href="#GetMonitorNamesPIC">GetMonitorNames</a> method. This call automatically selects the first frame of the monitor and loads the respective data to memory.</p>
+<p class="VBA-Heading-Category"><a name="ParticleTrajectoryReaderbc-3" id="ParticleTrajectoryReaderbc-3"></a><a name="ParticleTrajectoryReader" id="ParticleTrajectoryReader"></a>ParticleTrajectoryReader Object</p>
+<p class="VBA-Text">ParticleTrajectoryReader data only consists of a single frame which is automatically selected. The individual trajectories are represented by the samples in the dataset.</p>
+<p class="VBA-Text">In addition to the <a href="#Common_Methods">common methods</a>, the following methods are available:</p>
+<p class="VBA-Text">&#160;</p>
+<p class="VBA-Heading-Method"><a name="LoadTrajectoryData" id="LoadTrajectoryData">LoadTrajectoryData</a></p>
+<p class="VBA-Text-Indent">Loads all trajectory data into memory.</p>
+<p class="VBA-Heading-Method"><a name="GetNTrajectories" id="GetNTrajectories">GetNTrajectories</a>&#160;<a href="../common_vbageneral/common_general_long.htm" id="a521" style="font-weight: normal; font-style: normal;" name="a521">long</a></p>
+<p class="VBA-Text-Indent">Returns the number of trajectories available.</p>
+<p class="VBA-Heading-Method"><a name="SelectTrajectory" id="SelectTrajectory">SelectTrajectory</a>&#160;( <a href="../common_vbageneral/common_general_long.htm" id="a91" style="font-weight: normal; font-style: normal;" name="a91">long</a> <span style="font-style: italic;"><i>number</i></span> )</p>
+<p class="VBA-Text-Indent">Selects a specific trajectory as the source for subsequent data request methods such as <a href="#GetQuantityValues">GetQuantityValues</a>. The parameter <span style="font-style: italic;"><i>number</i></span> can range from 0 to <a href="#GetNTrajectories">GetNTrajectories</a>-1.</p>
+<p class="VBA-Heading-Category"><a name="Example" id="Example"></a>Examples</p>
+<p class="VBA-Text-Example" style="color: #008000;">' Get some result data from the PIC position monitor and prints it into one text file per frame</p>
+<p class="VBA-Text-Example" style="color: #008000;"><span style="color: #008000;"><font color="green">' Attention: this can produce a huge amount of data</font></span></p>
+<p class="VBA-Text-Example" style="margin-left: 0px;"><span style="color: #0000ff;"><font color="blue">Sub</font></span> Main</p>
+<p class="VBA-Text-Example" style="margin-left: 40px;"><span style="color: #0000ff;"><font color="blue">Dim</font></span> lstMonitors() <span style="color: #0000ff;"><font color="blue">As String</font></span></p>
+<p class="VBA-Text-Example" style="margin-left: 40px;">lstMonitors = <span style="color: #00009e;"><font color="#00009E">PICPositionMonitorReader</font></span>.GetMonitorNames()</p>
+<p class="VBA-Text-Example" style="margin-left: 40px; color: #008000;">' for simplicity, we just select the very first monitor found</p>
+<p class="VBA-Text-Example" style="margin-left: 40px;"><span style="color: #0000ff;"><font color="blue">Dim</font></span> sMonitorName <span style="color: #0000ff;"><font color="blue">As String</font></span></p>
+<p class="VBA-Text-Example" style="margin-left: 40px;">sMonitorName = lstMonitors(0)</p>
+<p class="VBA-Text-Example" style="margin-left: 40px;"><span style="color: #00009e;"><font color="#00009E">PICPositionMonitorReader</font></span>.SelectMonitor(sMonitorName)</p>
+<p class="VBA-Text-Example" style="margin-left: 40px;">&#160;</p>
+<p class="VBA-Text-Example" style="margin-left: 40px;"><span style="color: #0000ff;"><font color="blue">Dim</font></span> iFrame <span style="color: #0000ff;"><font color="blue">As Long</font></span></p>
+<p class="VBA-Text-Example" style="margin-left: 40px;"><span style="color: #0000ff;"><font color="blue">For</font></span> iFrame=0 <span style="color: #0000ff;"><font color="blue">To</font></span> <span style="color: #00009e;"><font color="#00009E">PICPositionMonitorReader</font></span>.GetNFrames()-1</p>
+<p class="VBA-Text-Example" style="margin-left: 80px;"><span style="color: #0000ff;"><font color="blue">Dim</font></span> sFileName <span style="color: #0000ff;"><font color="blue">As String</font></span></p>
+<p class="VBA-Text-Example" style="margin-left: 80px;">sFileName = sMonitorName + <span style="color: #800000;"><font color="maroon">" - Frame"</font></span> + Format(iFrame, <span style="color: #800000;"><font color="maroon">"000"</font></span>) + <span style="color: #800000;"><font color="maroon">".txt"</font></span></p>
+<p class="VBA-Text-Example" style="margin-left: 80px;">&#160;</p>
+<p class="VBA-Text-Example" style="margin-left: 80px;"><span style="color: #008080;"><font color="teal">Open</font></span> sFileName <span style="color: #0000ff;"><font color="blue">For</font></span> <span style="color: #008080;"><font color="teal">Output</font></span> <span style="color: #0000ff;"><font color="blue">As</font></span> #1</p>
+<p class="VBA-Text-Example" style="margin-left: 80px;"><span style="color: #00009e;"><font color="#00009E">PICPositionMonitorReader</font></span>.SelectFrame(iFrame)</p>
+<p class="VBA-Text-Example">&#160;</p>
+<p class="VBA-Text-Example" style="margin-left: 80px;"><span style="color: #0000ff;"><font color="blue">Dim</font></span> lstPosX() <span style="color: #0000ff;"><font color="blue">As Single</font></span>, lstPosY() <span style="color: #0000ff;"><font color="blue">As Single</font></span>, lstMomentum() <span style="color: #0000ff;"><font color="blue">As Single</font></span></p>
+<p class="VBA-Text-Example" style="margin-left: 80px;">lstPosX = <span style="color: #00009e;"><font color="#00009E">PICPositionMonitorReader</font></span>.GetQuantityValues(<span style="color: #800000;"><font color="maroon">"Position"</font></span>, <span style="color: #800000;"><font color="maroon">"X"</font></span>)</p>
+<p class="VBA-Text-Example" style="margin-left: 80px;">lstPosY = <span style="color: #00009e;"><font color="#00009E">PICPositionMonitorReader</font></span>.GetQuantityValues(<span style="color: #800000;"><font color="maroon">"Position"</font></span>, <span style="color: #800000;"><font color="maroon">"Y"</font></span>)</p>
+<p class="VBA-Text-Example" style="margin-left: 80px;">lstMomentum = <span style="color: #00009e;"><font color="#00009E">PICPositionMonitorReader</font></span>.GetQuantityValues("Momentum", "ABS (XYZ)")</p>
+<p class="VBA-Text-Example" style="margin-left: 80px;">&#160;</p>
+<p class="VBA-Text-Example" style="margin-left: 80px;"><span style="color: #0000ff;"><font color="blue">Dim</font></span> iParticle <span style="color: #0000ff;"><font color="blue">As Long</font></span></p>
+<p class="VBA-Text-Example" style="margin-left: 80px;"><span style="color: #0000ff;"><font color="blue">For</font></span> iParticle = 0 <span style="color: #0000ff;"><font color="blue">To</font></span> <span style="color: #00009e;"><font color="#00009E">PICPositionMonitorReader</font></span>.GetNParticles()-1</p>
+<p class="VBA-Text-Example" style="margin-left: 120px;"><span style="color: #008080;"><font color="teal">Print</font></span> #1, iParticle; <span style="color: #800000;"><font color="maroon">" &#160;"</font></span>; lstPosX(iParticle); <span style="color: #800000;"><font color="maroon">" &#160;"</font></span>; lstPosY(iParticle); <span style="color: #800000;"><font color="maroon">" &#160;"</font></span>; lstMomentum(iParticle); <span style="color: #800000;"><font color="maroon">" &#160;"</font></span></p>
+<p class="VBA-Text-Example" style="margin-left: 80px; color: #0000ff;">Next</p>
+<p class="VBA-Text-Example" style="margin-left: 80px;">&#160;</p>
+<p class="VBA-Text-Example" style="margin-left: 80px;"><span style="color: #008080;"><font color="teal">Close</font></span> #1</p>
+<p class="VBA-Text-Example" style="margin-left: 40px; color: #0000ff;">Next</p>
+<p class="VBA-Text-Example" style="color: #0000ff;">End Sub</p>
+<p class="VBA-Text-Example">&#160;</p>
+<?rh-p style="margin-bottom: 0px; text-align: Right; margin-left: 18px; 
+                 margin-right: 18px; margin-top: 18px;" ?>
+<div style="width: 100%; position: relative;" id="footer">
+<p style="border-bottom: Solid 1px #dddddd; text-align: Left; margin-left: 0px; font-family: Arial, sans-serif; line-height: Normal; margin-top: 9px; margin-right: 0px; margin-bottom: 6px; border-left-width: 1px; border-top-width: 1px; border-right-width: 1px;"><span style="text-align: Left; font-family: Arial, sans-serif; line-height: Normal;">&#160;</span></p>
+<table cellspacing="0" width="100%">
+<col style="width: 50%;" />
+<col style="width: 50%;" />
+<tr>
+<td style="vertical-align: Top;"><span style="font-family: Arial, sans-serif; line-height: Normal; font-size: 8pt;"><font size="1" style="font-size:8pt;">CST Studio Suite 2026</font></span></td>
+<td style="vertical-align: Top;">
+<p style="text-align: right;">&#160;</p>
+</td>
+</tr>
+</table>
+<p>&#160;</p>
+</div>
+<script type="text/javascript" language="JavaScript1.2">
+//<![CDATA[
+        if( typeof( FilePopupInit ) != 'function' ) FilePopupInit = new Function();
+        FilePopupInit('a1');
+        FilePopupInit('a2');
+//]]>
+</script><script type="text/javascript" language="javascript1.2">
+//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+        writeIntopicBar(0);
+
+
+highlightSearch();
+//-->
+//]]>
+</script>
+</body>
+</html>

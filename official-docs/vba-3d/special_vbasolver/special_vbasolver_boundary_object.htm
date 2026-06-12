@@ -1,0 +1,897 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="Adobe RoboHelp 11" />
+<title>Boundary Object</title>
+<link rel="StyleSheet" href="../online_help_vba.css" type="text/css" />
+<script type="text/javascript" language="JavaScript1.2">
+//<![CDATA[
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+//]]>
+</script>
+<script type="text/javascript" id="MathJax-script" async="" src="../mathjax/es5/tex-svg.js" language="JavaScript1.2">
+</script>
+<style type="text/css">
+/*<![CDATA[*/
+<!--
+body { border-bottom-style:None; }
+-->
+/*]]>*/
+</style>
+
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+        origWidth = innerWidth;
+        origHeight = innerHeight;
+        onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+/*<![CDATA[*/
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+-->
+/*]]>*/
+</style>
+
+<script type="text/javascript" language="javascript1.2" src="../whmsg.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript" src="../whver.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript1.2" src="../whutils.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript1.2" src="../whproxy.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript1.2" src="../whlang.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript1.2" src="../whtopic.js" charset="utf-8">
+</script>
+</head>
+<body>
+<script type="text/javascript" language="javascript1.2">
+//<![CDATA[
+<!--
+if (window.gbWhTopic)
+{
+        var strUrl = document.location.href;
+        var bc = 0;
+        var n = strUrl.toLowerCase().indexOf("bc-");
+        if(n != -1)
+        {
+                document.location.replace(strUrl.substring(0, n));
+                bc = strUrl.substring(n+3);
+        }
+
+        if (window.addTocInfo)
+        {
+        addTocInfo("3D Simulation VBA\nVBA Objects\nSolver\nBoundary");
+
+        }
+        if (window.writeBtnStyle)
+                writeBtnStyle();
+
+        if (window.writeIntopicBar)
+                writeIntopicBar(0);
+
+        
+        document.write("<p style=\"font-family: Tahoma; font-size: 9pt; font-weight: 400;  font-style:normal; color: rgb(0, 0, 0); text-decoration:none; text-align: left\"> ");
+AddMasterBreadcrumbs("../index.htm", "font-family: Tahoma; font-size: 9pt; font-weight: 400;  font-style:normal; color: rgb(0, 0, 0); text-decoration:none; text-align: left", "|", "Home", "../special_vbaobjects/special_vbaobjects_vbaobjects.htm");
+document.write("<a style=\"font-family: Tahoma; font-size: 9pt; font-weight: 400;  font-style:normal; color: rgb(0, 0, 0); text-decoration:none; text-align: left\" href=\"../special_vbaobjects/special_vbaobjects_vbaobjects.htm\">3D Simulation VBA<\/a> | <a style=\"font-family: Tahoma; font-size: 9pt; font-weight: 400;  font-style:normal; color: rgb(0, 0, 0); text-decoration:none; text-align: left\" href=\"../special_vbaobjects/special_vbaobjects_vbaobjects.htm\">VBA Objects<\/a> | <a style=\"font-family: Tahoma; font-size: 9pt; font-weight: 400;  font-style:normal; color: rgb(0, 0, 0); text-decoration:none; text-align: left\" href=\"special_vbasolver_background_object.htm\">Solver<\/a> | Boundary<\/p>");
+
+}
+else
+        if (window.gbIE4)
+                document.location.reload();
+
+onLoadHandler = function()
+{
+  if (window.setRelStartPage)
+        {
+        setTimeout("setRelStartPage('../index.htm');", 1)
+
+    setTimeout("UpdateBreadCrumbsMarker();", 1);
+        }
+}
+
+if (window.addEventListener){  
+        window.addEventListener('load', onLoadHandler, false);   
+} else if (window.attachEvent){  
+        window.attachEvent('onload', onLoadHandler);  
+}
+
+function onSetStartPage()
+{
+  autoSync(1);
+  sendSyncInfo();
+  sendAveInfoOut();
+}
+//-->
+//]]>
+</script><script type="text/javascript" src="../ehlpdhtm.js" language="JavaScript1.2">
+</script>
+<table cellspacing="0" width="100%">
+<col style="width: 50%;" />
+<col style="width: 50%;" />
+<tr>
+<td style="vertical-align: middle; padding-top: 5px; padding-bottom: 5px;">
+<p style="margin-top: 0px; margin-bottom: 0px;"><img src="../3ds.png" alt="" style="border: none;" border="0" /></p>
+</td>
+<td style="vertical-align: middle;">
+<p style="text-align: right;"><a href="https://www.3ds.com/products-services/3dexperience/" target="_blank"><img src="../3dexp.png" alt="" style="border: none;" width="32" height="32" border="0" /></a></p>
+</td>
+</tr>
+</table>
+<p class="VBA-Heading-Object">Boundary Object</p>
+<p class="VBA-Text">Represents the boundary condition of the calculation domain for each boundary plane. You may either have a magnetic, electric or an open boundary condition.</p>
+<ul>
+<li class="p-VBA-Index-Category">
+<p class="VBA-Index-Category"><a href="#General">General Methods</a></p>
+</li>
+<li class="p-VBA-Index-Category">
+<p class="VBA-Index-Category"><a href="#Methods_Concerning_Thermal_Boundary_Conditions">Methods Concerning Thermal Boundary conditions</a></p>
+</li>
+<li class="p-VBA-Index-Category">
+<p class="VBA-Index-Category"><a href="#Open">Methods Concerning Open Boundary Conditions</a></p>
+</li>
+<li class="p-VBA-Index-Category">
+<p class="VBA-Index-Category"><a href="#Periodic">Methods Concerning Periodic Boundary Conditions</a></p>
+</li>
+<li class="p-VBA-Index-Category">
+<p class="VBA-Index-Category"><a href="#PeriodicAndUnitCells">Methods Concerning Periodic Boundaries and Unit Cells</a></p>
+</li>
+<li class="p-VBA-Index-Category">
+<p class="VBA-Index-Category"><a href="#UnitCells">Methods Concerning the Unit Cell Geometry</a></p>
+</li>
+<li class="p-VBA-Index-Category">
+<p class="VBA-Index-Category"><a href="#Defaults">Default Settings</a></p>
+</li>
+<li class="p-VBA-Index-Category">
+<p class="VBA-Index-Category"><a href="#Example">Example</a></p>
+</li>
+</ul>
+<p class="VBA-Heading-Category"><a name="General" id="General"></a>General Methods</p>
+<p class="VBA-Heading-Method">Xmin ( <a href="../common_vbageneral/common_general_enum.htm" id="a1" style="font-weight: normal; font-style: normal;" name="a1">enum</a> <span style="font-style: italic;"><i>boundaryType</i></span> )</p>
+<p class="VBA-Heading-Method">Xmax ( <a href="../common_vbageneral/common_general_enum.htm" id="a2" style="font-weight: normal; font-style: normal;" name="a2">enum</a> <span style="font-style: italic;"><i>boundaryType</i></span> )</p>
+<p class="VBA-Heading-Method">Ymin ( <a href="../common_vbageneral/common_general_enum.htm" id="a4" style="font-weight: normal; font-style: normal;" name="a4">enum</a> <span style="font-style: italic;"><i>boundaryType</i></span> )</p>
+<p class="VBA-Heading-Method">Ymax ( <a href="../common_vbageneral/common_general_enum.htm" id="a5" style="font-weight: normal; font-style: normal;" name="a5">enum</a> <span style="font-style: italic;"><i>boundaryType</i></span> )</p>
+<p class="VBA-Heading-Method">Zmin ( <a href="../common_vbageneral/common_general_enum.htm" id="a6" style="font-weight: normal; font-style: normal;" name="a6">enum</a> <span style="font-style: italic;"><i>boundaryType</i></span> )</p>
+<p class="VBA-Heading-Method">Zmax ( <a href="../common_vbageneral/common_general_enum.htm" id="a7" style="font-weight: normal; font-style: normal;" name="a7">enum</a> <span style="font-style: italic;"><i>boundaryType</i></span> )</p>
+<p class="VBA-Heading-Method">GetXmin <a href="../common_vbageneral/common_general_enum.htm" id="a8" style="font-weight: normal; font-style: normal;" name="a8">enum</a> <span style="font-style: italic;"><i>boundaryType</i></span></p>
+<p class="VBA-Heading-Method">GetXmax <a href="../common_vbageneral/common_general_enum.htm" id="a9" style="font-weight: normal; font-style: normal;" name="a9">enum</a> <span style="font-style: italic;"><i>boundaryType</i></span></p>
+<p class="VBA-Heading-Method">GetYmin <a href="../common_vbageneral/common_general_enum.htm" id="a10" style="font-weight: normal; font-style: normal;" name="a10">enum</a> <span style="font-style: italic;"><i>boundaryType</i></span></p>
+<p class="VBA-Heading-Method">GetYmax <a href="../common_vbageneral/common_general_enum.htm" id="a11" style="font-weight: normal; font-style: normal;" name="a11">enum</a> <span style="font-style: italic;"><i>boundaryType</i></span></p>
+<p class="VBA-Heading-Method">GetZmin <a href="../common_vbageneral/common_general_enum.htm" id="a12" style="font-weight: normal; font-style: normal;" name="a12">enum</a> <span style="font-style: italic;"><i>boundaryType</i></span></p>
+<p class="VBA-Heading-Method">GetZmax <a href="../common_vbageneral/common_general_enum.htm" id="a13" style="font-weight: normal; font-style: normal;" name="a13">enum</a> <span style="font-style: italic;"><i>boundaryType</i></span></p>
+<p class="VBA-Text-Indent"><span style="font-weight: bold;">Xmin</span>, <span style="font-weight: bold;">Xmax</span>, <span style="font-weight: bold;">Ymin</span>, <span style="font-weight: bold;">Ymax</span>, <span style="font-weight: bold;">Zmin</span> and <span style="font-weight: bold;">Zmax</span> specifiy the boundary conditions for the lower or upper x, y or z calculation domain boundary respectively.</p>
+<p class="VBA-Text-Indent"><span style="font-weight: bold;">GetXmin</span>, <span style="font-weight: bold;">GetXmax</span>, <span style="font-weight: bold;">GetYmin</span>, <span style="font-weight: bold;">GetYmax</span>, <span style="font-weight: bold;">GetZmin</span>, <span style="font-weight: bold;">GetZmax</span> return the boundary conditions at the lower or upper x, y or z calculation domain boundary respectively.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Text-Indent"><span style="font-style: italic;"><i>boundaryType</i></span> can have one of the following values:</p>
+<table style="margin-left: 24px; left: 0px; top: 821px;" cellspacing="0" width="597">
+<col width="153" />
+<col width="450" />
+<tr style="vertical-align: top;">
+<td style="border: Solid 1px #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;" width="153">
+<p class="VBA-Text-Indent">”electric”</p>
+</td>
+<td style="border-top: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;" width="450">
+<p class="VBA-Text-Indent">Electric boundary condition (Etan = 0)</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;" width="153">
+<p class="VBA-Text-Indent">”magnetic”</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;" width="450">
+<p class="VBA-Text-Indent">Magnetic boundary condition (Htan = 0)</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;" width="153">
+<p class="VBA-Text-Indent">"tangential"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;" width="450">
+<p class="VBA-Text-Indent">All tangential field components for all sorts of &#160;fields are zero.</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;" width="153">
+<p class="VBA-Text-Indent">"normal"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;" width="450">
+<p class="VBA-Text-Indent">All normal field components for all sorts of &#160;fields are zero.</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;" width="153">
+<p class="VBA-Text-Indent">”open”</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;" width="450">
+<p class="VBA-Text-Indent">Simulates the open space.</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;" width="153">
+<p class="VBA-Text-Indent">”expanded open”</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;" width="450">
+<p class="VBA-Text-Indent">Same as ”open” but adds some extra space to the calculation domain.</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;" width="153">
+<p class="VBA-Text-Indent">”periodic”</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;" width="450">
+<p class="VBA-Text-Indent">Simulates a periodic expansion of the calculation domain.</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;" width="153">
+<p class="VBA-Text-Indent">"conducting wall"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;" width="450">
+<p class="VBA-Text-Indent">This boundary behaves like a wall of lossy metal material.</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;" width="153">
+<p class="VBA-Text-Indent">"unit cell"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;" width="450">
+<p class="VBA-Text-Indent">Simulates a unit cell structure.</p>
+</td>
+</tr>
+</table>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">Xsymmetry ( <a href="../common_vbageneral/common_general_enum.htm" id="a14" style="font-weight: normal; font-style: normal;" name="a14">enum</a> <span style="font-style: italic;"><i>symmetryType</i></span> )</p>
+<p class="VBA-Heading-Method">Ysymmetry ( <a href="../common_vbageneral/common_general_enum.htm" id="a15" style="font-weight: normal; font-style: normal;" name="a15">enum</a> <span style="font-style: italic;"><i>symmetryType</i></span> )</p>
+<p class="VBA-Heading-Method">Zsymmetry ( <a href="../common_vbageneral/common_general_enum.htm" id="a16" style="font-weight: normal; font-style: normal;" name="a16">enum</a> <span style="font-style: italic;"><i>symmetryType</i></span> )</p>
+<p class="VBA-Heading-Method">GetXSymmetry <a href="../common_vbageneral/common_general_enum.htm" id="a17" style="font-weight: normal; font-style: normal;" name="a17">enum</a> <span style="font-style: italic;"><i>symmetryType</i></span></p>
+<p class="VBA-Heading-Method">GetYSymmetry <a href="../common_vbageneral/common_general_enum.htm" id="a18" style="font-weight: normal; font-style: normal;" name="a18">enum</a> <span style="font-style: italic;"><i>symmetryType</i></span></p>
+<p class="VBA-Heading-Method">GetZSymmetry <a href="../common_vbageneral/common_general_enum.htm" id="a19" style="font-weight: normal; font-style: normal;" name="a19">enum</a> <span style="font-style: italic;"><i>symmetryType</i></span></p>
+<p class="VBA-Text-Indent"><span style="font-weight: bold;">Xsymmetry</span>, <span style="font-weight: bold;">Ysymmetry</span> and <span style="font-weight: bold;">Zsymmetry</span> define if the structure is electrically or magnetically symmetric regarding the origin of the x, y or z-axis respectively.</p>
+<p class="VBA-Text-Indent"><span style="font-weight: bold;">GetXSymmetry</span>, <span style="font-weight: bold;">GetYSymmetry</span> and <span style="font-weight: bold;">GetZSymmetry</span> return the currently set symmetry type for the x, y or z-symmetry plane respectively.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Text-Indent"><span style="font-style: italic;"><i>symmetryType</i></span> can have one of the following values:</p>
+<table style="margin-left: 24px; left: 0px; top: 1139px;" cellspacing="0" width="601">
+<col width="152" />
+<col width="438" />
+<tr style="vertical-align: top;">
+<td style="border: Solid 1px #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;" width="152">
+<p class="VBA-Text-Indent">”electric”</p>
+</td>
+<td style="border-top: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;" width="438">
+<p class="VBA-Text-Indent">All tangential E-fields are considered zero at the symmetry plane.</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;" width="152">
+<p class="VBA-Text-Indent">”magnetic”</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;" width="438">
+<p class="VBA-Text-Indent">All tangential H-fields are considered zero at the symmetry plane.</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;" width="152">
+<p class="VBA-Text-Indent">”none”</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;" width="438">
+<p class="VBA-Text-Indent">No symmetry.</p>
+</td>
+</tr>
+</table>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">ApplyInAllDirections ( <a href="../common_vbageneral/common_general_bool_data_type.htm" id="a67" style="font-weight: normal; font-style: normal;" name="a67">bool</a> <span style="font-style: italic;"><i>switch</i></span> )</p>
+<p class="vba-text-indent">Is used by the background dialog to identify if the Xmin value should be applied in all the other directions.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">XminPotentialType ( <a href="../common_vbageneral/common_general_enum.htm" id="a3" name="a3">enum</a> <span style="font-style: italic;"><i>type</i></span> )</p>
+<p class="VBA-Heading-Method">XmaxPotentialType ( <a href="../common_vbageneral/common_general_enum.htm" id="a50" name="a50">enum</a> <span style="font-style: italic;"><i>type</i></span> )</p>
+<p class="VBA-Heading-Method">YminPotentialType ( <a href="../common_vbageneral/common_general_enum.htm" id="a51" name="a51">enum</a> <span style="font-style: italic;"><i>type</i></span> )</p>
+<p class="VBA-Heading-Method">YmaxPotentialType ( <a href="../common_vbageneral/common_general_enum.htm" id="a52" name="a52">enum</a> <span style="font-style: italic;"><i>type</i></span> )</p>
+<p class="VBA-Heading-Method">ZminPotentialType ( <a href="../common_vbageneral/common_general_enum.htm" id="a53" name="a53">enum</a> <span style="font-style: italic;"><i>type</i></span> )</p>
+<p class="VBA-Heading-Method">ZmaxPotentialType ( <a href="../common_vbageneral/common_general_enum.htm" id="a54" name="a54">enum</a> <span style="font-style: italic;"><i>type</i></span> )</p>
+<p class="VBA-Text-Indent">Specifies the potential <span style="font-style: italic;"><i>type</i></span> of the lower and upper boundaries. The setting of a potential value is only enabled if the type of the boundary is set to "normal" or "electric". The potential <span style="font-style: italic;"><i>type</i></span> can have one of the following values:</p>
+<table style="margin-left: 24px; left: 0px; top: 1139px;" cellspacing="0" width="601">
+<col width="152" />
+<col width="438" />
+<tr style="vertical-align: top;">
+<td style="border: Solid 1px #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;" width="152">
+<p class="VBA-Text-Indent">”none”</p>
+</td>
+<td style="border-top: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;" width="438">
+<p class="VBA-Text-Indent">No potential is considered on the corresponding boundary.</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;" width="152">
+<p class="VBA-Text-Indent">”fixed”</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;" width="438">
+<p class="VBA-Text-Indent">On the boundaries a fixed potential can be defined by use of the corresponding <span style="font-weight: bold;">Potential</span> methods (see below).</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;" width="152">
+<p class="VBA-Text-Indent">”floating”</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;" width="438">
+<p class="VBA-Text-Indent">The potential is defined as floating on the corresponding boundary.</p>
+</td>
+</tr>
+</table>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">XminPotential ( <a href="../common_vbageneral/common_general_double.htm" id="a25" style="font-weight: normal; font-style: normal;" name="a25">double</a> &#160;<span style="font-style: italic;"><i>potvalue</i></span> )</p>
+<p class="VBA-Heading-Method">YminPotential ( <a href="../common_vbageneral/common_general_double.htm" id="a30" style="font-weight: normal; font-style: normal;" name="a30">double</a> &#160;<span style="font-style: italic;"><i>potvalue</i></span> )</p>
+<p class="VBA-Heading-Method">ZminPotential ( <a href="../common_vbageneral/common_general_double.htm" id="a26" style="font-weight: normal; font-style: normal;" name="a26">double</a> &#160;<span style="font-style: italic;"><i>potvalue</i></span> )</p>
+<p class="VBA-Heading-Method">XmaxPotential ( <a href="../common_vbageneral/common_general_double.htm" id="a27" style="font-weight: normal; font-style: normal;" name="a27">double</a> &#160;<span style="font-style: italic;"><i>potvalue</i></span> )</p>
+<p class="VBA-Heading-Method">YmaxPotential ( <a href="../common_vbageneral/common_general_double.htm" id="a28" style="font-weight: normal; font-style: normal;" name="a28">double</a> &#160;<span style="font-style: italic;"><i>potvalue</i></span> )</p>
+<p class="VBA-Heading-Method">ZmaxPotential ( <a href="../common_vbageneral/common_general_double.htm" id="a29" style="font-weight: normal; font-style: normal;" name="a29">double</a> &#160;<span style="font-style: italic;"><i>potvalue</i></span> )</p>
+<p class="VBA-Text-Indent">Specifies the potential values of the lower and upper boundaries. The setting of a potential value has only an effect if the type of the boundary is set to "normal" or "electric" and the corresponding <span style="font-weight: bold;">PotentialType</span> is set to "fixed".</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">XminThermal(<a href="../common_vbageneral/common_general_enum.htm" id="a41" name="a41">enum</a> <span style="font-style: italic;"><i>ThermalBoundaryType</i></span>)</p>
+<p class="VBA-Heading-Method">XmaxThermal(<a href="../common_vbageneral/common_general_enum.htm" id="a74" name="a74">enum</a> <span style="font-style: italic;"><i>ThermalBoundaryType</i></span>)</p>
+<p class="VBA-Heading-Method">YminThermal(<a href="../common_vbageneral/common_general_enum.htm" id="a75" name="a75">enum</a> <span style="font-style: italic;"><i>ThermalBoundaryType</i></span>)</p>
+<p class="VBA-Heading-Method">YmaxThermal(<a href="../common_vbageneral/common_general_enum.htm" id="a76" name="a76">enum</a> <span style="font-style: italic;"><i>ThermalBoundaryType</i></span>)</p>
+<p class="VBA-Heading-Method">ZminThermal(<a href="../common_vbageneral/common_general_enum.htm" id="a77" name="a77">enum</a> <span style="font-style: italic;"><i>ThermalBoundaryType</i></span>)</p>
+<p class="VBA-Heading-Method">ZmaxThermal(<a href="../common_vbageneral/common_general_enum.htm" id="a78" name="a78">enum</a> <span style="font-style: italic;"><i>ThermalBoundaryType</i></span>)</p>
+<p class="VBA-Heading-Method">GetXminThermal <a href="../common_vbageneral/common_general_enum.htm" id="a85" style="font-weight: bold;" name="a85">enum</a> <span style="font-style: italic;"><i>ThermalBoundaryType</i></span></p>
+<p class="VBA-Heading-Method">GetXmaxThermal <a href="../common_vbageneral/common_general_enum.htm" id="a86" style="font-weight: bold;" name="a86">enum</a> <span style="font-style: italic;"><i>ThermalBoundaryType</i></span></p>
+<p class="VBA-Heading-Method">GetYminThermal <a href="../common_vbageneral/common_general_enum.htm" id="a87" style="font-weight: bold;" name="a87">enum</a> <span style="font-style: italic;"><i>ThermalBoundaryType</i></span></p>
+<p class="VBA-Heading-Method">GetYmaxThermal <a href="../common_vbageneral/common_general_enum.htm" id="a88" style="font-weight: bold;" name="a88">enum</a> <span style="font-style: italic;"><i>ThermalBoundaryType</i></span></p>
+<p class="VBA-Heading-Method">GetZminThermal <a href="../common_vbageneral/common_general_enum.htm" id="a89" style="font-weight: bold;" name="a89">enum</a> <span style="font-style: italic;"><i>ThermalBoundaryType</i></span></p>
+<p class="VBA-Heading-Method">GetZmaxThermal <a href="../common_vbageneral/common_general_enum.htm" id="a90" style="font-weight: bold;" name="a90">enum</a> <span style="font-style: italic;"><i>ThermalBoundaryType</i></span></p>
+<p class="vba-heading-method">&#160;</p>
+<p class="VBA-Text-Indent"><span style="font-style: italic;"><i>thermalBoundaryType</i></span> can have one of the following values:</p>
+<table style="margin-left: 24px; left: 0px; top: 821px;" cellspacing="0" width="597">
+<col width="153" />
+<col width="450" />
+<tr style="vertical-align: top;">
+<td style="border: Solid 1px #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;" width="153">
+<p class="VBA-Text-Indent">"isothermal"</p>
+</td>
+<td style="border-top: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;" width="450">
+<p class="VBA-Text-Indent">Boundary condition with constant temperature (T=const). This boundary type can carry a temperature definition.</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;" width="153">
+<p class="VBA-Text-Indent">"adiabatic"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;" width="450">
+<p class="VBA-Text-Indent">Boundary condition without any heat-flow through the boundary (dT / dN = 0).</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;" width="153">
+<p class="VBA-Text-Indent">”open”</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;" width="450">
+<p class="VBA-Text-Indent">Simulates the open space.</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;" width="153">
+<p class="VBA-Text-Indent">”expanded open”</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;" width="450">
+<p class="VBA-Text-Indent">Same as ”open” but adds some extra space to the calculation domain.</p>
+</td>
+</tr>
+</table>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method"><span style="font-style: italic;"><i>X</i></span>symmetryThermal(<a href="../common_vbageneral/common_general_enum.htm" id="a79" name="a79">enum</a> <span style="font-style: italic;"><i>ThermalSymmetryType</i></span>)</p>
+<p class="VBA-Heading-Method">YsymmetryThermal(<a href="../common_vbageneral/common_general_enum.htm" id="a80" name="a80">enum</a> <span style="font-style: italic;"><i>ThermalSymmetryType</i></span>)</p>
+<p class="VBA-Heading-Method">ZsymmetryThermal(<a href="../common_vbageneral/common_general_enum.htm" id="a81" name="a81">enum</a> <span style="font-style: italic;"><i>ThermalSymmetryType</i></span>)</p>
+<p class="VBA-Heading-Method">GetXSymmetryThermal <a href="../common_vbageneral/common_general_enum.htm" id="a82" style="font-weight: bold;" name="a82">enum</a> <span style="font-style: italic;"><i>ThermalSymmetryType</i></span></p>
+<p class="VBA-Heading-Method">GetYSymmetryThermal <a href="../common_vbageneral/common_general_enum.htm" id="a83" style="font-weight: bold;" name="a83">enum</a> <span style="font-style: italic;"><i>ThermalSymmetryType</i></span></p>
+<p class="VBA-Heading-Method">GetZSymmetryThermal <a href="../common_vbageneral/common_general_enum.htm" id="a84" style="font-weight: bold;" name="a84">enum</a> <span style="font-style: italic;"><i>ThermalSymmetryType</i></span></p>
+<p class="vba-heading-method">&#160;</p>
+<p class="VBA-Text-Indent"><span style="font-style: italic;"><i>thermalSymmetryType</i></span> can have one of the following values:</p>
+<table style="margin-left: 24px; left: 0px; top: 821px;" cellspacing="0" width="597">
+<col width="153" />
+<col width="450" />
+<tr style="vertical-align: top;">
+<td style="border: Solid 1px #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;" width="153">
+<p class="VBA-Text-Indent">"isothermal"</p>
+</td>
+<td style="border-top: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;" width="450">
+<p class="VBA-Text-Indent">Symmetry condition with constant temperature at the symmetry plane (T=const).</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;" width="153">
+<p class="VBA-Text-Indent">"adiabatic"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;" width="450">
+<p class="VBA-Text-Indent">Symmetry condition without any heat-flow through the symmetry plane (dT / dN = 0).</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;" width="153">
+<p class="VBA-Text-Indent">"none"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;" width="450">
+<p class="VBA-Text-Indent">No symmetry.</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;" width="153">
+<p class="VBA-Text-Indent">”expanded open”</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;" width="450">
+<p class="VBA-Text-Indent">Same as ”open” but adds some extra space to the calculation domain.</p>
+</td>
+</tr>
+</table>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">XminTemperatureType ( <a href="../common_vbageneral/common_general_enum.htm" id="a56" name="a56">enum</a> <span style="font-style: italic;"><i>type</i></span> )</p>
+<p class="VBA-Heading-Method">XmaxTemperatureType ( <a href="../common_vbageneral/common_general_enum.htm" id="a57" name="a57">enum</a> <span style="font-style: italic;"><i>type</i></span> )</p>
+<p class="VBA-Heading-Method">YminTemperatureType ( <a href="../common_vbageneral/common_general_enum.htm" id="a58" name="a58">enum</a> <span style="font-style: italic;"><i>type</i></span> )</p>
+<p class="VBA-Heading-Method">YmaxTemperatureType ( <a href="../common_vbageneral/common_general_enum.htm" id="a59" name="a59">enum</a> <span style="font-style: italic;"><i>type</i></span> )</p>
+<p class="VBA-Heading-Method">ZminTemperatureType ( <a href="../common_vbageneral/common_general_enum.htm" id="a60" name="a60">enum</a> <span style="font-style: italic;"><i>type</i></span> )</p>
+<p class="VBA-Heading-Method">ZmaxTemperatureType ( <a href="../common_vbageneral/common_general_enum.htm" id="a61" name="a61">enum</a> <span style="font-style: italic;"><i>type</i></span> )</p>
+<p class="VBA-Text-Indent">Specifies the temperature <span style="font-style: italic;"><i>type</i></span> of the lower and upper boundaries.</p>
+<p class="VBA-Text-Indent">The temperature <span style="font-style: italic;"><i>type</i></span> can have one of the following values:</p>
+<table style="margin-left: 24px; left: 0px; top: 1139px;" cellspacing="0" width="601">
+<col width="152" />
+<col width="438" />
+<tr style="vertical-align: top;">
+<td style="border: Solid 1px #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;" width="152">
+<p class="VBA-Text-Indent">”none”</p>
+</td>
+<td style="border-top: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;" width="438">
+<p class="VBA-Text-Indent">No temperature is set for &#160;the corresponding boundary.</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;" width="152">
+<p class="VBA-Text-Indent">”fixed”</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;" width="438">
+<p class="VBA-Text-Indent">On the boundaries a fixed temperature value can be defined by use of the corresponding <span style="font-weight: bold;">Temperature</span> methods (see below).</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;" width="152">
+<p class="VBA-Text-Indent">”floating”</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;" width="438">
+<p class="VBA-Text-Indent">The temperature is defined as floating on the corresponding boundary.</p>
+</td>
+</tr>
+</table>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">XminTemperature ( <a href="../common_vbageneral/common_general_double.htm" id="a55" name="a55">double</a> &#160;<span style="font-style: italic;"><i>value</i></span> )</p>
+<p class="VBA-Heading-Method">XmaxTemperature &#160;( <a href="../common_vbageneral/common_general_double.htm" id="a62" name="a62">double</a> &#160;<span style="font-style: italic;"><i>value</i></span> )</p>
+<p class="VBA-Heading-Method">YminTemperature &#160;( <a href="../common_vbageneral/common_general_double.htm" id="a63" name="a63">double</a> &#160;<span style="font-style: italic;"><i>value</i></span> )</p>
+<p class="VBA-Heading-Method">YmaxTemperature &#160;( <a href="../common_vbageneral/common_general_double.htm" id="a64" name="a64">double</a> &#160;<span style="font-style: italic;"><i>value</i></span> )</p>
+<p class="VBA-Heading-Method">ZminTemperature &#160;( <a href="../common_vbageneral/common_general_double.htm" id="a65" name="a65">double</a> &#160;<span style="font-style: italic;"><i>value</i></span> )</p>
+<p class="VBA-Heading-Method">ZmaxTemperature &#160;( <a href="../common_vbageneral/common_general_double.htm" id="a66" name="a66">double</a> &#160;<span style="font-style: italic;"><i>value</i></span> )</p>
+<p class="VBA-Text-Indent">Specifies the temperature values of the lower and upper boundaries. This settings has only an effect if the type of the corresponding <span style="font-weight: bold;">TemperatureType</span> is set to "fixed".</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">GetCalculationBox ( <a href="../common_vbageneral/common_general_double_ref.htm" id="a20" style="font-weight: normal;" name="a20">double_ref</a> <span style="font-style: italic;"><i>xmin</i></span>, <a href="../common_vbageneral/common_general_double_ref.htm" id="a21" style="font-weight: normal;" name="a21">double_ref</a> <span style="font-style: italic;"><i>xmax</i></span>, <a href="../common_vbageneral/common_general_double_ref.htm" id="a22" style="font-weight: normal;" name="a22">double_ref</a> <span style="font-style: italic;"><i>ymin</i></span>, <a href="../common_vbageneral/common_general_double_ref.htm" id="a23" style="font-weight: normal;" name="a23">double_ref</a> <span style="font-style: italic;"><i>ymax</i></span>, <a href="../common_vbageneral/common_general_double_ref.htm" id="a24" style="font-weight: normal;" name="a24">double_ref</a> <span style="font-style: italic;"><i>zmin</i></span>, <a href="../common_vbageneral/common_general_double_ref.htm" id="a38" style="font-weight: normal;" name="a38">double_ref</a> <span style="font-style: italic;"><i>zmax</i></span> )</p>
+<p class="VBA-Text-Indent">Returns the bounding box the calculation domain. The minimum and maximum values of the bounding box of the calculation domain regarding the x, y and z direction are stored in the parameters <span style="font-style: italic;"><i>xmin</i></span>, <span style="font-style: italic;"><i>xmax</i></span>, <span style="font-style: italic;"><i>ymin</i></span>, <span style="font-style: italic;"><i>ymax</i></span>, <span style="font-style: italic;"><i>zmin</i></span>, <span style="font-style: italic;"><i>zmax</i></span> respectively.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">GetStructureBox( <a href="../common_vbageneral/common_general_double_ref.htm" id="a201" style="font-weight: normal;" name="a201">double_ref</a> <span style="font-style: italic;"><i>xmin</i></span>, <a href="../common_vbageneral/common_general_double_ref.htm" id="a211" style="font-weight: normal;" name="a211">double_ref</a> <span style="font-style: italic;"><i>xmax</i></span>, <a href="../common_vbageneral/common_general_double_ref.htm" id="a221" style="font-weight: normal;" name="a221">double_ref</a> <span style="font-style: italic;"><i>ymin</i></span>, <a href="../common_vbageneral/common_general_double_ref.htm" id="a231" style="font-weight: normal;" name="a231">double_ref</a> <span style="font-style: italic;"><i>ymax</i></span>, <a href="../common_vbageneral/common_general_double_ref.htm" id="a241" style="font-weight: normal;" name="a241">double_ref</a> <span style="font-style: italic;"><i>zmin</i></span>, <a href="../common_vbageneral/common_general_double_ref.htm" id="a381" style="font-weight: normal;" name="a381">double_ref</a> <span style="font-style: italic;"><i>zmax</i></span> )</p>
+<p class="VBA-Text-Indent">Returns the structure bounding box, that is the smallest bounding box enclosing the structure without considering the additional surrounding space. The minimum and maximum values of the structure box for the x, y and z direction are stored in the parameters <span style="font-style: italic;"><i>xmin</i></span>, <span style="font-style: italic;"><i>xmax</i></span>, <span style="font-style: italic;"><i>ymin</i></span>, <span style="font-style: italic;"><i>ymax</i></span>, <span style="font-style: italic;"><i>zmin</i></span>, <span style="font-style: italic;"><i>zmax</i></span> respectively.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Text-Indent" style="margin-left: 0px; font-weight: bold; font-style: italic;"><a name="Methods_Concerning_Thermal_Boundary_Conditions" id="Methods_Concerning_Thermal_Boundary_Conditions"></a>Methods Concerning Thermal Boundary Conditions</p>
+<p class="VBA-Text-Indent" style="margin-left: 0px; font-weight: bold; font-style: italic;">&#160;</p>
+<p class="VBA-Heading-Method"><a name="ThermalBoundary" id="ThermalBoundary"></a>ThermalBoundary (<span style="font-weight: normal;"><a href="../common_vbageneral/common_general_enum.htm">enum</a></span> <span style="font-style: italic;"><i>position,</i></span> <span style="font-weight: normal;"><a href="../common_vbageneral/common_general_enum.htm">enum</a></span> <span style="font-style: italic;"><i>type</i></span>)</p>
+<p class="vba-text-indent">Defines the thermal boundary <span style="font-weight: bold;">type</span> for the boundary at <span style="font-weight: bold;">position</span>. Possible values of <span style="font-weight: bold;">position</span> are "Xmin ", "Xmax ", "Ymin ", "Ymax ", "Zmin ", "Zmax ", "All". "All" applies to all boundaries. Possible values for <span style="font-weight: bold;">type</span> are "adiabatic", "isothermal", "open" or "expanded open".</p>
+<p class="vba-text-indent">Default for all boundaries: "isothermal"</p>
+<p class="vba-text-indent">&#160;</p>
+<p class="VBA-Heading-Method">ThermalSymmetry(<span style="font-weight: normal;"><a href="../common_vbageneral/common_general_enum.htm">enum</a></span> <span style="font-style: italic;"><i>plane,</i></span> <span style="font-weight: normal;"><a href="../common_vbageneral/common_general_enum.htm">enum</a></span> <span style="font-style: italic;"><i>type</i></span>)</p>
+<p class="vba-text-indent">Defines the thermal symmetry <span style="font-weight: bold;">type</span> for the given symmetry <span style="font-weight: bold;">plane</span>. Possible values of <span style="font-weight: bold;">plane</span> are "X", "Y", "Z ". &#160;"All" applies to all symmetries. Possible values for <span style="font-weight: bold;">type</span> are "symmetric" or "none".</p>
+<p class="vba-text-indent">Default for all boundaries: "none"</p>
+<p class="vba-text-indent">&#160;</p>
+<p class="vba-text-indent" style="margin-left: 0px; font-weight: bold; font-style: italic;">ResetThermalBoundaryValues( )</p>
+<p class="vba-text-indent" style="margin-left: 40px;">Reset thermal boundaries to default values.</p>
+<p class="vba-text-indent" style="margin-left: 40px;">&#160;</p>
+<p class="VBA-Heading-Method"><a name="SetBoundaryValue" id="SetBoundaryValue"></a>SetBoundaryValue(<span style="font-weight: normal;"><a href="../common_vbageneral/common_general_enum.htm">enum</a></span> <span style="font-style: italic;"><i>position,</i></span> <span style="font-weight: normal;"><a href="../common_vbageneral/common_general_enum.htm">enum</a></span> <span style="font-style: italic;"><i>quantity ,</i></span> <span style="font-weight: normal;"><a href="../common_vbageneral/common_general_enum.htm">enum</a></span> <span style="font-style: italic;"><i>type, &#160;</i></span><a href="../common_vbageneral/common_general_string.htm" id="a610" style="font-weight: normal; font-style: normal;" name="a610">string</a> <span style="font-style: italic;"><i>value1,&#160;</i></span><a href="../common_vbageneral/common_general_string.htm" id="a611" style="font-weight: normal; font-style: normal;" name="a611">string</a> <span style="font-style: italic;"><i>value2,</i></span> <a href="../common_vbageneral/common_general_string.htm" id="a612" style="font-weight: normal; font-style: normal;" name="a612">string</a><span style="font-style: italic;"><i>&#160;value3,</i></span> <a href="../common_vbageneral/common_general_string.htm" id="a613" style="font-weight: normal; font-style: normal;" name="a613">string</a> <span style="font-style: italic;"><i>value4</i></span> )</p>
+<p class="vba-text-indent">Defines <span style="font-weight: bold;">values</span> of a certain <span style="font-weight: bold;">type</span> for the given <span style="font-weight: bold;">quantity</span> at the given boundary <span style="font-weight: bold;">position</span>. Arguments <span style="font-weight: bold;">value1, value2, value3</span> and <span style="font-weight: bold;">value4</span> are optional and are used to specify &#160;values and units in the different calls. See the table below for possible combinations.</p>
+<table style="vertical-align: top; margin-left: 24px; left: 0px; top: 749px;" cellspacing="0">
+<col width="49" />
+<col width="109" />
+<col width="79" />
+<col width="79" />
+<col width="79" />
+<col width="79" />
+<col width="79" />
+<col width="182" />
+<tr style="vertical-align: top; height: 19px;">
+<td style="border-left: Solid 1px #000000; border-top: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text" style="font-weight: bold;">Position</p>
+</td>
+<td style="border-top: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text" style="font-weight: bold;">Quantity</p>
+</td>
+<td style="border-top: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text" style="font-weight: bold;">Type</p>
+</td>
+<td style="border-top: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text" style="font-weight: bold;">value1</p>
+</td>
+<td style="border-top: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text" style="font-weight: bold;">value2</p>
+</td>
+<td style="border-top: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text" style="font-weight: bold;">value3</p>
+</td>
+<td style="border-top: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text" style="font-weight: bold;">value4</p>
+</td>
+<td style="border-top: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text" style="font-weight: bold;">Comments</p>
+</td>
+</tr>
+<tr style="vertical-align: top; height: 209px;">
+<td rowspan="6" style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-right: 10px; padding-left: 10px; vertical-align: middle;">
+<p class="VBA-Text">"Xmin ", "Xmax ", "Ymin ", "Ymax ", "Zmin ", "Zmax ", "All"</p>
+</td>
+<td rowspan="3" style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-right: 10px; padding-left: 10px; vertical-align: middle;">
+<p class="VBA-Text">"Temperature"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-right: 10px; padding-left: 10px; vertical-align: middle;">
+<p class="VBA-Text">"Ambient"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-right: 10px; padding-left: 10px; vertical-align: middle;">
+<p class="VBA-Text">---</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-right: 10px; padding-left: 10px; vertical-align: middle;">
+<p class="VBA-Text">---</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-right: 10px; padding-left: 10px; vertical-align: middle;">
+<p class="VBA-Text">---</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-right: 10px; padding-left: 10px; vertical-align: middle;">
+<p class="VBA-Text">---</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-right: 10px; padding-left: 10px; vertical-align: middle;">
+<p class="VBA-Text">For all thermal boundary types except for "adiabatic".</p>
+</td>
+</tr>
+<tr style="vertical-align: top; height: 123px;">
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-right: 10px; padding-left: 10px; vertical-align: middle;">
+<p class="VBA-Text">"Fixed"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-right: 10px; padding-left: 10px; vertical-align: middle;">
+<p class="VBA-Text">value</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-right: 10px; padding-left: 10px; vertical-align: middle;">
+<p class="VBA-Text">units:</p>
+<p class="VBA-Text">&#160;</p>
+<p class="VBA-Text">"Celsius", "Fahrenheit", "Kelvin"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-right: 10px; padding-left: 10px; vertical-align: middle;">
+<p class="VBA-Text">---</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-right: 10px; padding-left: 10px; vertical-align: middle;">
+<p class="VBA-Text">---</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-right: 10px; padding-left: 10px; vertical-align: middle;">
+<p class="VBA-Text">For all thermal boundary types.</p>
+<p class="VBA-Text">&#160;</p>
+<p class="VBA-Text"><span style="font-weight: bold;">THs and THt</span> solvers: Not available for the "adiabatic" boundary type.</p>
+<p class="VBA-Text">&#160;</p>
+<p class="VBA-Text"><span style="font-weight: bold;">CHT</span> solver only: This option defines the radiation temperature value.</p>
+</td>
+</tr>
+<tr style="vertical-align: top; height: 48px;">
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-right: 10px; padding-left: 10px; vertical-align: middle;">
+<p class="VBA-Text">"Floating"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-right: 10px; padding-left: 10px; vertical-align: middle;">
+<p class="VBA-Text">---</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-right: 10px; padding-left: 10px; vertical-align: middle;">
+<p class="VBA-Text">---</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-right: 10px; padding-left: 10px; vertical-align: middle;">
+<p class="VBA-Text">---</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-right: 10px; padding-left: 10px; vertical-align: middle;">
+<p class="VBA-Text">---</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-right: 10px; padding-left: 10px; vertical-align: middle;">
+<p class="VBA-Text"><span style="font-weight: bold;">THs</span> and <span style="font-weight: bold;">THt</span> solvers only: For all thermal boundary types except "adiabatic".</p>
+</td>
+</tr>
+<tr style="vertical-align: top; height: 48px;">
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-right: 10px; padding-left: 10px; vertical-align: middle;">
+<p class="VBA-Text">"Radiation"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-right: 10px; padding-left: 10px; vertical-align: middle;">
+<p class="VBA-Text">"Fixed"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-right: 10px; padding-left: 10px; vertical-align: middle;">
+<p class="VBA-Text">value</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-right: 10px; padding-left: 10px; vertical-align: middle;">
+<p class="VBA-Text">---</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-right: 10px; padding-left: 10px; vertical-align: middle;">
+<p class="VBA-Text">---</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-right: 10px; padding-left: 10px; vertical-align: middle;">
+<p class="VBA-Text">---</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-right: 10px; padding-left: 10px; vertical-align: middle;">
+<p class="VBA-Text"><span style="font-weight: bold;">CHT</span> solver only: It specifies the emissivity. For all thermal boundary types.</p>
+</td>
+</tr>
+<tr style="vertical-align: top; height: 63px;">
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-right: 10px; padding-left: 10px; vertical-align: middle;">
+<p class="VBA-Text">"Pressure"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-right: 10px; padding-left: 10px; vertical-align: middle;">
+<p class="VBA-Text">"Fixed"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-right: 10px; padding-left: 10px; vertical-align: middle;">
+<p class="VBA-Text">value</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-right: 10px; padding-left: 10px; vertical-align: middle;">
+<p class="VBA-Text">units:</p>
+<p class="VBA-Text">&#160;</p>
+<p class="VBA-Text">"atm", "bar", "Pa", "psi"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-right: 10px; padding-left: 10px; vertical-align: middle;">
+<p class="VBA-Text">---</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-right: 10px; padding-left: 10px; vertical-align: middle;">
+<p class="VBA-Text">---</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-right: 10px; padding-left: 10px; vertical-align: middle;">
+<p class="VBA-Text"><span style="font-weight: bold;">CHT</span> solver only: Only for "open" and "expanded open". "pressure" and "velocity" cannot be defined on the same boundary <span style="font-weight: bold;">position.</span></p>
+</td>
+</tr>
+<tr style="vertical-align: top; height: 63px;">
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-right: 10px; padding-left: 10px; vertical-align: middle;">
+<p class="VBA-Text">"Velocity"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-right: 10px; padding-left: 10px; vertical-align: middle;">
+<p class="VBA-Text">"Fixed"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-right: 10px; padding-left: 10px; vertical-align: middle;">
+<p class="VBA-Text">value x</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-right: 10px; padding-left: 10px; vertical-align: middle;">
+<p class="VBA-Text">value y</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-right: 10px; padding-left: 10px; vertical-align: middle;">
+<p class="VBA-Text">value z</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-right: 10px; padding-left: 10px; vertical-align: middle;">
+<p class="VBA-Text">units:</p>
+<p class="VBA-Text">&#160;</p>
+<p class="VBA-Text">"m/s", "km/h"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-right: 10px; padding-left: 10px; vertical-align: middle;">
+<p class="VBA-Text"><span style="font-weight: bold;">CHT</span> solver only: Only for "open" and "expanded open".&#160;"pressure" and "velocity" cannot be defined on the same boundary <span style="font-weight: bold;">position</span>.</p>
+</td>
+</tr>
+</table>
+<p class="vba-text-indent">&#160;</p>
+<p class="vba-text-indent">Examples:</p>
+<p class="vba-text-indent">SetBoundaryValue("All", "Temperature", "Fixed", "300", "K")</p>
+<p class="vba-text-indent">SetBoundaryValue("Xmin", "Temperature", "Ambient")</p>
+<p class="vba-text-indent" style="-qt-block-indent: 0;">SetBoundaryValue("Yman", "Radiation", "Fixed", "1.0")</p>
+<p class="vba-text-indent" style="-qt-block-indent: 0;">SetBoundaryValue("Zmax", "Velocity", "Fixed", "1", "0.0", "0.0", "km/h")</p>
+<p class="vba-text-indent">SetBoundaryValue("Zmin", "Pressure", "Fixed", "1", "Pa")</p>
+<p class="vba-text-indent">&#160;</p>
+<p class="VBA-Heading-Method">WallFlow(<span style="font-weight: normal;"><a href="../common_vbageneral/common_general_enum.htm">enum</a></span> <span style="font-style: italic;"><i>position,</i></span> <span style="font-weight: normal;"><a href="../common_vbageneral/common_general_enum.htm">enum</a></span> <span style="font-style: italic;"><i>type</i></span>)</p>
+<p class="vba-text-indent">Defines the wall flow <span style="font-weight: bold;">type</span> for the boundary at <span style="font-weight: bold;">position</span>. Possible values of <span style="font-weight: bold;">position</span> are "Xmin ", "Xmax ", "Ymin ", "Ymax ", "Zmin ", "Zmax ", "All". "All" applies to all boundaries. Possible values for <span style="font-weight: bold;">type</span> are "Slip" or "NoSlip". <span style="font-size: 12px; font-variant-ligatures: normal; font-variant-caps: normal; orphans: 2; text-align: justify; widows: 2; -webkit-text-stroke-width: 0px; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; display: inline ! important ; float: none;">The slip boundary condition sets the tangential velocity gradient to zero at the wall which implies that the flow encounters no friction at the wall and thus doesn't slow down. Conversely, the no-slip boundary condition sets the tangential velocity to zero at the wall which implies that the wall friction slows down the flow. The no-slip boundary condition is typically used to model a physical wall.</span> "Slip" has no effect on "open" and "expanded open" <a href="#ThermalBoundary">boundaries</a>. This command is considered or the <span style="font-weight: bold;">CHT</span> solver only.</p>
+<p class="vba-text-indent">Default for all boundaries: "NoSlip"</p>
+<p class="vba-text-indent">&#160;</p>
+<p class="VBA-Heading-Method">EnableThermalRadiation(<span style="font-weight: normal;"><a href="../common_vbageneral/common_general_enum.htm">enum</a></span> <span style="font-style: italic;"><i>position,</i></span> <a href="../common_vbageneral/common_general_bool_data_type.htm" style="font-weight: normal;">bool</a> <span style="font-style: italic;"><i>flag</i></span>)</p>
+<p class="VBA-Text-Indent"><span style="font-weight: bold;">Deprecated</span>: EnableThermalRadiation should be always True.</p>
+<p class="vba-text-indent">Enables or disables thermal radiation for the boundary at <span style="font-weight: bold;">position</span>. Possible values of <span style="font-weight: bold;">position</span> are "Xmin ", "Xmax ", "Ymin ", "Ymax ", "Zmin ", "Zmax ", "All". "All" applies to all boundaries. This command is considered for the <span style="font-weight: bold;">CHT</span> solver only.</p>
+<p class="vba-text-indent">Default for all boundaries: True</p>
+<p class="vba-text-indent" style="margin-left: 0px;">&#160;</p>
+<p class="VBA-Heading-Method">OverwriteThermalRadiation(<span style="font-weight: normal;"><a href="../common_vbageneral/common_general_enum.htm">enum</a></span> <span style="font-style: italic;"><i>position,</i></span> <a href="../common_vbageneral/common_general_bool_data_type.htm" style="font-weight: normal;">bool</a> <span style="font-style: italic;"><i>flag</i></span>)</p>
+<p class="vba-text-indent">Enables or disables the overwrite of the emissivity value for thermal radiation for the boundary at <span style="font-weight: bold;">position</span>. For "adiabatic" boundaries it also overwrites the radiation temperature. If <span style="font-weight: bold;">flag</span> is True, the new values are taken from the values set by <a href="#SetBoundaryValue">SetBoundaryValue</a>. Possible values of <span style="font-weight: bold;">position</span> are "Xmin ", "Xmax ", "Ymin ", "Ymax ", "Zmin ", "Zmax ", "All". "All" applies to all boundaries. It is ignored for "isothermal" boundaries. This command is considered for the <span style="font-weight: bold;">CHT</span> solver only.</p>
+<p class="vba-text-indent">Default for all boundaries: False</p>
+<p class="VBA-Heading-Category"><a name="Open" id="Open"></a>Methods Concerning Open Boundary Conditions</p>
+<p class="VBA-Heading-Method">Layer ( <a href="../common_vbageneral/common_general_integer.htm" id="a39" style="font-weight: normal;" name="a39">int</a> <span style="font-style: italic;"><i>numLayers</i></span> )</p>
+<p class="VBA-Text-Indent">Specifies the number of PML layers. Usually 4 layers are sufficient.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">MinimumLinesDistance ( <a href="../common_vbageneral/common_general_double.htm" id="a32" style="font-weight: normal; font-style: normal;" name="a32">double</a> <span style="font-style: italic;"><i>value</i></span> )</p>
+<p class="VBA-Text-Indent">Specifies the minimum distance from the PML boundary to the structure to be modeled. The distance is determined by the absolute number of grid lines.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">MinimumDistanceType ( &#160;<a href="../common_vbageneral/common_general_enum.htm" id="a43" name="a43"><span style="font-weight: normal;">enum</span></a> <span style="font-weight: normal;">{"Fraction", "Absolute"}</span> <span style="font-style: italic;"><i>type</i></span> )</p>
+<p class="VBA-Text-Indent">Selecting the <span style="font-style: italic;"><i>Fraction</i></span> option activates the geometrical domain enlargement computed as a fraction of the wavelength. With the <span style="font-style: italic;"><i>Absolute</i></span> option the distance is directly given in geometrical user units. To this purpose use the <span style="font-weight: bold;">SetAbsoluteDistance</span> command.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">SetAbsoluteDistance ( <a href="../common_vbageneral/common_general_double.htm" id="a91" style="font-weight: normal; font-style: normal;" name="a91">double</a> <span style="font-style: italic;"><i>value</i></span> )</p>
+<p class="VBA-Text-Indent">Specifies the absolute distance to enlarge the simulation domain. To be used selecting the <span style="font-style: italic;"><i>Absolute</i></span> option with the command <span style="font-weight: bold;">MinimumDistanceType</span>.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">MinimumDistanceReferenceFrequencyType ( &#160;<a href="../common_vbageneral/common_general_enum.htm" id="a92" name="a92"><span style="font-weight: normal;">enum</span></a> <span style="font-weight: normal;">{"Center", "Centernmonitors", "User"}</span> <span style="font-style: italic;"><i>type</i></span> )</p>
+<p class="VBA-Text-Indent">The command determines the reference frequency where the wavelength has to be computed. The command should be used jointly with the <span style="font-weight: bold;">MinimumDistanceType</span> command activating the <span style="font-style: italic;"><i>Fraction</i></span> option.</p>
+<p class="VBA-Text-Indent"><span style="font-style: italic;"><i>Center</i></span> means that the reference frequency is the mid simulation frequency, in formula <span style="font-style: italic;"><i>$(f_{min} + f_{max} ) / 2$</i></span>.</p>
+<p class="VBA-Text-Indent">The second choice <span style="font-style: italic;"><i>Centernmonitors</i></span> computes the reference frequency as the minimum non zero frequency selected among the center frequency and the user defined relevant &#160;monitor frequencies.</p>
+<p class="VBA-Text-Indent">The third possibility is <span style="font-style: italic;"><i>User,</i></span> which enables to specify directly the frequency <span>with the companion</span> <span style="font-weight: bold;">FrequencyForMinimumDistance</span> <span>command.</span></p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">MinimumDistancePerWavelength &#160;( <a href="../common_vbageneral/common_general_double.htm" id="a33" style="font-weight: normal; font-style: normal;" name="a33">double</a> <span style="font-style: italic;"><i>value</i></span> )</p>
+<p class="VBA-Text-Indent">Specifies the minimum distance from the PML boundary to the structure to be modeled. The distance is determined relatively to the wavelength, either in respect to the center frequency, center and monitor frequencies or to a user defined frequency value. See also the <span style="font-weight: bold;">MinimumDistanceReferenceFrequencyType</span> command.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">FrequencyForMinimumDistance &#160;( <a href="../common_vbageneral/common_general_double.htm" id="a49" style="font-weight: normal; font-style: normal;" name="a49">double</a> <span style="font-style: italic;"><i>value</i></span> )</p>
+<p class="VBA-Text-Indent">Specifies the frequency which represents the reference value for the <span style="font-weight: bold;">MinimumDistancePerWavelength</span> method.</p>
+<p class="VBA-Heading-Category"><a name="Periodic" id="Periodic"></a>Methods Concerning Periodic Boundary Conditions</p>
+<p class="VBA-Heading-Method">XPeriodicShift ( <a href="../common_vbageneral/common_general_double.htm" id="a35" style="font-weight: normal; font-style: normal;" name="a35">double</a> <span style="font-style: italic;"><i>value</i></span> )</p>
+<p class="VBA-Heading-Method">YPeriodicShift ( <a href="../common_vbageneral/common_general_double.htm" id="a36" style="font-weight: normal; font-style: normal;" name="a36">double</a> <span style="font-style: italic;"><i>value</i></span> )</p>
+<p class="VBA-Heading-Method">ZPeriodicShift ( <a href="../common_vbageneral/common_general_double.htm" id="a37" style="font-weight: normal; font-style: normal;" name="a37">double</a> <span style="font-style: italic;"><i>value</i></span> )</p>
+<p class="VBA-Text-Indent">Enables to define a phase shift value for a periodic boundary condition. Please note that the phase shift only applies to the frequency domain solver and the eigenmode solver. The settings are ignored by the transient solver.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">PeriodicUseConstantAngles ( <a href="../common_vbageneral/common_general_bool_data_type.htm" id="a48" style="font-weight: normal;" name="a48">bool</a> <span style="font-style: italic;"><i>bFlag</i></span> )</p>
+<p class="VBA-Text-Indent">In contrast to the definition of a constant phase shift between two opposite periodic boundaries (using the <span style="font-weight: bold;">XPeriodicShift</span>, <span style="font-weight: bold;">YPeriodicShift</span> or <span style="font-weight: bold;">ZPeriodicShift</span> methods) it is also possible to define an incident angle value of the normal propagation direction of a virtual plane wave entering the calculation domain. The angle can be defined in a spherical coordinate system using the <span style="font-weight: bold;">SetPeriodicBoundaryAngles</span> method. In fact this procedure also realizes a phase shift between the periodic boundaries, however, this time it depends on the current frequency sample. You can activate (<span style="font-style: italic;"><i>bFlag</i></span> = True) or deactivate (<span style="font-style: italic;"><i>bFlag</i></span> = False) this option using the present method.</p>
+<p class="VBA-Heading-Category"><a name="PeriodicAndUnitCells" id="PeriodicAndUnitCells"></a>Methods Concerning Periodic Boundaries and Unit Cells</p>
+<p class="VBA-Heading-Method">SetPeriodicBoundaryAngles ( <a href="../common_vbageneral/common_general_double.htm" id="a40" style="font-weight: normal; font-style: normal;" name="a40">double</a> <span style="font-style: italic;"><i>theta</i></span>, <a href="../common_vbageneral/common_general_double.htm" id="a42" style="font-weight: normal; font-style: normal;" name="a42">double</a> <span style="font-style: italic;"><i>phi</i></span> )</p>
+<p class="VBA-Text-Indent">Defines the angle in a spherical coordinate system using <span style="font-style: italic;"><i>theta</i></span> and <span style="font-style: italic;"><i>phi</i></span> values for the calculation of phase shifts between periodic boundaries. The z-axis corresponds to that of the global coordinate system.</p>
+<p class="VBA-Text-Indent">Please note that this method is only relevant for the frequency domain solver and the FIT-transient solver and in case that the <span style="font-weight: bold;">PeriodicUseConstantAngles</span> method is activated or unit cell boundaries are used.</p>
+<p class="VBA-Heading-Method">&#160;</p>
+<p class="VBA-Heading-Method">SetPeriodicBoundaryAnglesDirection ( <a href="../common_vbageneral/common_general_enum.htm" id="a68" style="font-weight: normal; font-style: normal;" name="a68">enum</a> <span style="font-style: italic;"><i>direction</i></span> )</p>
+<p class="VBA-Text-Indent"><span style="font-style: italic;"><i>direction</i></span> defines whether the scan angles defined with <span style="font-weight: bold;">SetPeriodicBoundaryAngles</span> refer to an $+z$ (outward) or $-z$ (inward) propagating plane wave:</p>
+<table style="margin-left: 24px; left: 0px; top: 1139px;" cellspacing="0" width="601">
+<col width="152" />
+<col width="438" />
+<tr style="vertical-align: top;">
+<td style="border: Solid 1px #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;" width="152">
+<p class="VBA-Text-Indent">”outward”</p>
+</td>
+<td style="border-top: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;" width="438">
+<p class="VBA-Text-Indent">The coordinate system for the scan angle definition is matched to a plane wave excited at the $z_{min}$ boundary and propagating in the $+z$ direction. The propagation vector for the TE(0,0) and TM(0,0) mode is the following: \begin{equation} \left( \begin{array}{ccc} k_x \\ k_y \\ k_z \end{array} \right)_{z_{min},\; +z} = \left( \begin{array}{ccc} 2 \pi f \; \sqrt{\epsilon \mu} \; \operatorname{sin}(\theta) \operatorname{cos}(\phi) \\ 2 \pi f \; \sqrt{\epsilon \mu} \; \operatorname{sin}(\theta) \operatorname{sin}(\phi) \\ 2 \pi f \; \sqrt{\epsilon \mu} \; \operatorname{cos}(\theta) \end{array} \right) \end{equation} where $f$ is the frequency, $\epsilon, \; \mu$ the background permittivity and permeability respectively, and $\theta \in [0, \; \pi], \; \phi \in [0, \; 2\pi]$ the polar and azimuthal angles in the spherical coordinate system.</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;" width="152">
+<p class="VBA-Text-Indent">”inward”</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;" width="438">
+<p class="VBA-Text-Indent">The coordinate system for the scan angle definition is matched to a plane wave excited at the $z_{max}$ boundary and propagating in the $-z$ direction. The propagation vector for the TE(0,0) and TM(0,0) mode is the following: \begin{equation} \left( \begin{array}{ccc} k_x \\ k_y \\ k_z \end{array} \right)_{z_{max},\; -z} = \left( \begin{array}{ccc} -2 \pi f \; \sqrt{\epsilon \mu} \; \operatorname{sin}(\theta) \operatorname{cos}(\phi) \\ -2 \pi f \; \sqrt{\epsilon \mu} \; \operatorname{sin}(\theta) \operatorname{sin}(\phi) \\ -2 \pi f \; \sqrt{\epsilon \mu} \; \operatorname{cos}(\theta) \end{array} \right) \end{equation}</p>
+</td>
+</tr>
+</table>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">GetUnitCellScanAngle ( <a href="../common_vbageneral/common_general_double_ref.htm" id="a103" style="font-weight: normal; font-style: normal;" name="a103">double_ref</a> <span style="font-style: italic;"><i>theta,</i></span> <a href="../common_vbageneral/common_general_double_ref.htm" id="a104" style="font-weight: normal; font-style: normal;" name="a104">double_ref</a> <span style="font-style: italic;"><i>phi,</i></span> <a href="../common_vbageneral/common_general_long_ref.htm" id="a105" style="font-weight: normal; font-style: normal;" name="a105">long_ref</a> <span style="font-style: italic;"><i>direction</i></span> ) <a href="../common_vbageneral/common_general_bool_data_type.htm" id="a106" style="font-weight: normal;" name="a106">bool</a></p>
+<p class="VBA-Text-Indent">The scan angle defined with <span style="font-weight: bold;">SetPeriodicBoundaryAngles</span> and its orientation as defined by calling <span style="font-weight: bold;">SetPeriodicBoundaryAnglesDirection</span> can be accessed using this function. All arguments of this function are output values, which are set by the function. Its return value is True if the unit cell is active and the expressions for the scan angle are valid. If <span style="font-style: italic;"><i>direction</i></span> is +1, then it refers to the ”outward” direction, and to the ”inward” direction if <span style="font-style: italic;"><i>direction</i></span> is -1.</p>
+<p class="VBA-Heading-Category"><a name="UnitCells" id="UnitCells"></a>Methods Concerning the Unit Cell Geometry</p>
+<p class="VBA-Heading-Method">UnitCellDs1 ( <a href="../common_vbageneral/common_general_double.htm" id="a45" style="font-weight: normal; font-style: normal;" name="a45">double</a> <span style="font-style: italic;"><i>value</i></span> )</p>
+<p class="VBA-Heading-Method">UnitCellDs2 &#160;( <a href="../common_vbageneral/common_general_double.htm" id="a46" style="font-weight: normal; font-style: normal;" name="a46">double</a> <span style="font-style: italic;"><i>value</i></span> )</p>
+<p class="VBA-Text-Indent">These two methods specify the distances between two neighboring unit cells in two different coordinate directions, whereby the first axis (<span style="font-weight: bold;">UnitCellDs1</span>) is always aligned to the x-axis of the global coordinate system. The spatial relation between these &#160;two axes is defined by the <span style="font-weight: bold;">UnitCellAngle</span> method.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">GetUnitCellDs1 <a href="../common_vbageneral/common_general_double.htm" id="a100" style="font-weight: normal; font-style: normal;" name="a100">double</a></p>
+<p class="VBA-Heading-Method">GetUnitCellDs2 <a href="../common_vbageneral/common_general_double.htm" id="a101" style="font-weight: normal; font-style: normal;" name="a101">double</a></p>
+<p class="VBA-Text-Indent">These two functions return the lengths of the unit cell lattice vectors.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">UnitCellAngle &#160;( <a href="../common_vbageneral/common_general_double.htm" id="a47" style="font-weight: normal; font-style: normal;" name="a47">double</a> <span style="font-style: italic;"><i>value</i></span> )</p>
+<p class="VBA-Text-Indent">Specifies the spatial relation between the two axes defined by the methods <span style="font-weight: bold;">UnitCellDs1</span> and <span style="font-weight: bold;">UnitCellDs2</span> .</p>
+<p class="VBA-Text-Indent">Please note, that the hexahedral frequency domain solver needs a value of 90 degree for this value.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">GetUnitCellAngle <a href="../common_vbageneral/common_general_double.htm" id="a102" style="font-weight: normal; font-style: normal;" name="a102">double</a></p>
+<p class="VBA-Text-Indent">This function returns the angle between the unit cell lattice vectors in degrees.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">UnitCellOrigin &#160;( <a href="../common_vbageneral/common_general_double.htm" id="a69" style="font-weight: normal; font-style: normal;" name="a69">double</a> <span style="font-style: italic;"><i>posx</i></span>, <a href="../common_vbageneral/common_general_double.htm" id="a70" style="font-weight: normal; font-style: normal;" name="a70">double</a> <span style="font-style: italic;"><i>posy</i></span> )</p>
+<p class="VBA-Text-Indent">Allows to shift the origin of the unit cell and thereby the calculation domain for the frequency domain solver with tetrahedral mesh. The values may range from zero to less than two, where the default zero lets the center of the bounding box and the center of the unit cell coincide, while a value of one moves the origin by half the size of the unit cell lattice in the corresponding direction.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">UnitCellFitToBoundingBox &#160;( <a href="../common_vbageneral/common_general_bool_data_type.htm" id="a44" style="font-weight: normal;" name="a44">bool</a> <span style="font-style: italic;"><i>bFlag</i></span> )</p>
+<p class="VBA-Text-Indent">If this method is activated, the structure model will be repeated at its bounding box borders, neglecting any settings of the methods <span style="font-weight: bold;">UnitCellDs1</span>,<span style="font-weight: bold;">UnitCellDs2</span> and <span style="font-weight: bold;">UnitCellAngle</span>.</p>
+<p class="VBA-Heading-Category"><a name="Defaults" id="Defaults"></a>Default Settings</p>
+<p class="VBA-Text-Example">Xmin (<span style="font-weight: normal;">"electric"</span>)</p>
+<p class="VBA-Text-Example">Xmax ("electric")</p>
+<p class="VBA-Text-Example">Ymin ("electric")</p>
+<p class="VBA-Text-Example">Ymax ("electric")</p>
+<p class="VBA-Text-Example">Zmin ("electric")</p>
+<p class="VBA-Text-Example">Zmax ("electric")</p>
+<p class="VBA-Text-Example">Xsymmetry ("none")</p>
+<p class="VBA-Text-Example">Ysymmetry ("none")</p>
+<p class="VBA-Text-Example">Zsymmetry ("none")</p>
+<p class="VBA-Text-Example">ApplyInAllDirections (False)</p>
+<p class="VBA-Text-Example">XminTemperatureType ("none")</p>
+<p class="VBA-Text-Example">XmaxTemperatureType ("none")</p>
+<p class="VBA-Text-Example">YminTemperatureType ("none")</p>
+<p class="VBA-Text-Example">YmaxTemperatureType ("none")</p>
+<p class="VBA-Text-Example">ZminTemperatureType ("none")</p>
+<p class="VBA-Text-Example">ZmaxTemperatureType ("none")</p>
+<p class="VBA-Text-Example">XminPotentialType ("none")</p>
+<p class="VBA-Text-Example">XmaxPotentialType ("none")</p>
+<p class="VBA-Text-Example">YminPotentialType ("none")</p>
+<p class="VBA-Text-Example">YmaxPotentialType ("none")</p>
+<p class="VBA-Text-Example">ZminPotentialType ("none")</p>
+<p class="VBA-Text-Example">ZmaxPotentialType ("none")</p>
+<p class="VBA-Text-Example">Layer (4)</p>
+<p class="VBA-Text-Example">Reflection (0.0001)</p>
+<p class="VBA-Text-Example">MinimumLinesDistance (5)</p>
+<p class="VBA-Text-Example">MinimumDistancePerWavelength &#160;(8)</p>
+<p class="VBA-Text-Example">SetConvPMLExponentM (3)</p>
+<p class="VBA-Text-Example">SetConvPMLKMax (5)</p>
+<p class="VBA-Text-Example">SetConvPMLOuterBoundary ("MAG")</p>
+<p class="VBA-Text-Example">ActivePMLFactor &#160;(1.0)</p>
+<p class="VBA-Text-Example">XPeriodicShift (0.0)</p>
+<p class="VBA-Text-Example">YPeriodicShift (0.0)</p>
+<p class="VBA-Text-Example">ZPeriodicShift (0.0)</p>
+<p class="VBA-Text-Example">PeriodicUseConstantAngles (False)</p>
+<p class="VBA-Text-Example">SetPeriodicBoundaryAnglesDirection ("outward")</p>
+<p class="VBA-Text-Example">SetPeriodicBoundaryAngles (0.0, 0.0)</p>
+<p class="VBA-Text-Example">UnitCellFitToBoundingBox (True)</p>
+<p class="VBA-Text-Example">UnitCellAngle (90.0)</p>
+<p class="VBA-Text-Example">UnitCellOrigin (0.0, 0.0)</p>
+<p class="VBA-Text-Example">MinimumDistanceAtCenterFrequency (True)</p>
+<p class="VBA-Text-Example">ThermalBoundary (&lt;all_boundaries&gt;, "isothermal")</p>
+<p class="VBA-Text-Example">ThermalSymmetry (&lt;all_boundaries&gt;, "none")</p>
+<p class="VBA-Text-Example">WallFlow (&lt;all_boundaries&gt;, "NoSlip")</p>
+<p class="VBA-Text-Example">EnableThermalRadiation (&lt;all_boundaries&gt;, True)</p>
+<p class="VBA-Text-Example">OverwriteThermalRadiation (&lt;all_boundaries&gt;, False)</p>
+<p class="VBA-Heading-Category"><a name="Example" id="Example"></a>Example</p>
+<p class="VBA-Text-Example">With Boundary</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.Xmin ("electric")</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.Xmax ("electric")</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.Ymin ("electric")</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.Ymax ("electric")</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.Zmin ("electric")</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.Zmax ("electric")</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.Xsymmetry ("none")</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.Ysymmetry ("none")</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.Zsymmetry ("none")</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.ApplyInAllDirections (False)</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.XPeriodicShift (45.0)</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.YPeriodicShift (0.0)</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.ZPeriodicShift (0.0)</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.PeriodicUseConstantAngles (True)</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.SetPeriodicBoundaryAngles (30.0, 0.0)</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.XminPotential ""</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.XmaxPotential ""</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.YminPotential ""</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.YmaxPotential ""</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.ZmaxPotential ""</p>
+<p class="VBA-Text-Example">End With</p>
+<p class="VBA-Text-Example">&#160;</p>
+<?rh-p style="margin-bottom: 0px; text-align: Right; margin-left: 18px; 
+                 margin-right: 18px; margin-top: 18px;" ?>
+<div style="width: 100%; position: relative;" id="footer">
+<p style="border-bottom: Solid 1px #dddddd; text-align: Left; margin-left: 0px; font-family: Arial, sans-serif; line-height: Normal; margin-top: 9px; margin-right: 0px; margin-bottom: 6px; border-left-width: 1px; border-top-width: 1px; border-right-width: 1px;"><span style="text-align: Left; font-family: Arial, sans-serif; line-height: Normal;">&#160;</span></p>
+<table cellspacing="0" width="100%">
+<col style="width: 50%;" />
+<col style="width: 50%;" />
+<tr>
+<td style="vertical-align: Top;"><span style="font-family: Arial, sans-serif; line-height: Normal; font-size: 8pt;"><font size="1" style="font-size:8pt;">CST Studio Suite 2026</font></span></td>
+<td style="vertical-align: Top;">
+<p style="text-align: right;">&#160;</p>
+</td>
+</tr>
+</table>
+<p>&#160;</p>
+</div>
+<script type="text/javascript" language="javascript1.2">
+//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+        writeIntopicBar(0);
+
+
+highlightSearch();
+//-->
+//]]>
+</script>
+</body>
+</html>

@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="Adobe RoboHelp 11" />
+<title>Arfilter Object</title>
+<link rel="StyleSheet" href="../online_help_vba.css" type="text/css" />
+<style type="text/css">
+/*<![CDATA[*/
+<!--
+body { border-bottom-style:None; }
+-->
+/*]]>*/
+</style>
+
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+        origWidth = innerWidth;
+        origHeight = innerHeight;
+        onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+/*<![CDATA[*/
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+-->
+/*]]>*/
+</style>
+
+<script type="text/javascript" language="javascript1.2" src="../whmsg.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript" src="../whver.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript1.2" src="../whutils.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript1.2" src="../whproxy.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript1.2" src="../whlang.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript1.2" src="../whtopic.js" charset="utf-8">
+</script>
+</head>
+<body>
+<script type="text/javascript" language="javascript1.2">
+//<![CDATA[
+<!--
+if (window.gbWhTopic)
+{
+        var strUrl = document.location.href;
+        var bc = 0;
+        var n = strUrl.toLowerCase().indexOf("bc-");
+        if(n != -1)
+        {
+                document.location.replace(strUrl.substring(0, n));
+                bc = strUrl.substring(n+3);
+        }
+
+        if (window.addTocInfo)
+        {
+        addTocInfo("3D Simulation VBA\nVBA Objects\nPost Processing\nArfilter");
+
+        }
+        if (window.writeBtnStyle)
+                writeBtnStyle();
+
+        if (window.writeIntopicBar)
+                writeIntopicBar(0);
+
+        
+        document.write("<p style=\"font-family: Tahoma; font-size: 9pt; font-weight: 400;  font-style:normal; color: rgb(0, 0, 0); text-decoration:none; text-align: left\"> ");
+AddMasterBreadcrumbs("../index.htm", "font-family: Tahoma; font-size: 9pt; font-weight: 400;  font-style:normal; color: rgb(0, 0, 0); text-decoration:none; text-align: left", "|", "Home", "../special_vbaobjects/special_vbaobjects_vbaobjects.htm");
+document.write("<a style=\"font-family: Tahoma; font-size: 9pt; font-weight: 400;  font-style:normal; color: rgb(0, 0, 0); text-decoration:none; text-align: left\" href=\"../special_vbaobjects/special_vbaobjects_vbaobjects.htm\">3D Simulation VBA<\/a> | <a style=\"font-family: Tahoma; font-size: 9pt; font-weight: 400;  font-style:normal; color: rgb(0, 0, 0); text-decoration:none; text-align: left\" href=\"../special_vbaobjects/special_vbaobjects_vbaobjects.htm\">VBA Objects<\/a> | <a style=\"font-family: Tahoma; font-size: 9pt; font-weight: 400;  font-style:normal; color: rgb(0, 0, 0); text-decoration:none; text-align: left\" href=\"special_vbapostproc_type_method.htm\">Post Processing<\/a> | Arfilter<\/p>");
+
+}
+else
+        if (window.gbIE4)
+                document.location.reload();
+
+onLoadHandler = function()
+{
+  if (window.setRelStartPage)
+        {
+        setTimeout("setRelStartPage('../index.htm');", 1)
+
+    setTimeout("UpdateBreadCrumbsMarker();", 1);
+        }
+}
+
+if (window.addEventListener){  
+        window.addEventListener('load', onLoadHandler, false);   
+} else if (window.attachEvent){  
+        window.attachEvent('onload', onLoadHandler);  
+}
+
+function onSetStartPage()
+{
+  autoSync(1);
+  sendSyncInfo();
+  sendAveInfoOut();
+}
+//-->
+//]]>
+</script><script type="text/javascript" src="../ehlpdhtm.js" language="JavaScript1.2">
+</script>
+<table cellspacing="0" width="100%">
+<col style="width: 50%;" />
+<col style="width: 50%;" />
+<tr>
+<td style="vertical-align: middle; padding-top: 5px; padding-bottom: 5px;">
+<p style="margin-top: 0px; margin-bottom: 0px;"><img src="../3ds.png" alt="" style="border: none;" border="0" /></p>
+</td>
+<td style="vertical-align: middle;">
+<p style="text-align: right;"><a href="https://www.3ds.com/products-services/3dexperience/" target="_blank"><img src="../3dexp.png" alt="" style="border: none;" width="32" height="32" border="0" /></a></p>
+</td>
+</tr>
+</table>
+<p class="VBA-Heading-Object">Arfilter Object</p>
+<p class="VBA-Text">Defines the settings for signal prediction. Signal prediction may be applied to time signals at the ports, probe signals or current and voltage monitor signals. You may define different settings for port, probe and monitor signals. A Signal prediction run can be started by using the <a href="special_vbapostproc_postprocess1d_object.htm">PostProcess1D</a> object.</p>
+<ul>
+<li class="p-VBA-Index-Category">
+<p class="VBA-Index-Category"><a href="#Methods">Methods</a></p>
+</li>
+<li class="p-VBA-Index-Category">
+<p class="VBA-Index-Category"><a href="#Defaults">Default Settings</a></p>
+</li>
+<li class="p-VBA-Index-Category">
+<p class="VBA-Index-Category"><a href="#Example">Example</a></p>
+</li>
+</ul>
+<p class="VBA-Heading-Category"><a name="Methods" id="Methods"></a>Methods</p>
+<p class="VBA-Heading-Method">SetType ( <a href="../common_vbageneral/common_general_enum.htm" id="a6" style="font-style: normal;" name="a6"><span style="font-weight: normal;">enum</span></a><span style="font-weight: normal;">{"s-parameter", "probe", "monitor"}</span> <span style="font-style: italic;"><i>type</i></span> )</p>
+<p class="VBA-Text-Indent">Sets the type of signals the signal prediction settings are applied to.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">SetAlgorithmType( <span style="font-weight: normal;"><a href="../common_vbageneral/common_general_enum.htm" id="a61" style="font-style: normal;" name="a61">enum</a>{"Basic", "Enhanced"}</span> <span style="font-style: italic;"><i>type</i></span> )</p>
+<p class="VBA-Text-Indent">Sets the type of algorithm for the signal prediction.</p>
+<p class="VBA-Heading-Category">The behavior of the "Basic (Default)" algorithm can be configured via the five options listed below. The "Enhanced (Preview)" version does not require any configuration.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">SetFirstTime (<a href="../common_vbageneral/common_general_string.htm" id="a11" style="font-weight: normal; font-style: normal;" name="a11">string</a> <span style="font-style: italic;"><i>time</i></span> )</p>
+<p class="VBA-Text-Indent">The first time step (in seconds) from which filter determination starts. Instead of a numerical value you can also use <span style="font-style: italic;"><i>"auto"</i></span> for the setting to be determined automatically.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">SetSkip ( <span><a href="../common_vbageneral/common_general_long.htm" id="a1" style="font-weight: normal; font-style: normal;" name="a1">long</a></span> <span style="font-style: italic;"><i>skip</i></span> )</p>
+<p class="VBA-Text-Indent">The number of time steps which will be skipped after an AR-filter has been found and before the next filter will be determined.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">SetMaxFrq ( <span style="font-weight: normal;"><a href="../common_vbageneral/common_general_string.htm" id="a111" style="font-weight: normal; font-style: normal;" name="a111">string</a></span> <span style="font-style: italic;"><i>fMax</i></span> )</p>
+<p class="VBA-Text-Indent">Because the time signals will be low pass filtered within the AR calculation process, the maximum frequency of the low pass filter can be specified here. &#160;Instead of a numerical value you can also use <span style="font-style: italic;"><i>"auto"</i></span> for the setting to be determined automatically.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">SetMaxOrder ( <a href="../common_vbageneral/common_general_long.htm" id="a4" style="font-weight: normal; font-style: normal;" name="a4">long</a> <span style="font-style: italic;"><i>order</i></span> )</p>
+<p class="VBA-Text-Indent">Sets the number of recursive filter elements. Higher order filters usually deliver more accurate results, but the calculation time increases parabolically with the number of filter elements (max. 100 elements).</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">SetWindowLength ( <a href="../common_vbageneral/common_general_double.htm" id="a5" style="font-weight: normal; font-style: normal;" name="a5">double</a> <span style="font-style: italic;"><i>length</i></span> )</p>
+<p class="VBA-Text-Indent">This method sets the length of the analyzed time interval relative to the maximum number of elements. E.g.&#160;with maximum order of filter 40 and a window length of 2.0 the number of analyzed time samples is 40 * 2.0 = 80.</p>
+<p class="VBA-Heading-Category"><a name="Defaults" id="Defaults"></a>Default Settings</p>
+<p class="VBA-Text-Example">SetAlgorithmType ("Basic")</p>
+<p class="VBA-Text-Example">SetType ("s-parameter")</p>
+<p class="VBA-Text-Example">SetFirstTime ("auto")</p>
+<p class="VBA-Text-Example">SetSkip (10)</p>
+<p class="VBA-Text-Example">SetMaxFrq ("auto")</p>
+<p class="VBA-Text-Example">SetMaxOrder (40)</p>
+<p class="VBA-Text-Example">SetWindowLength (2.0)</p>
+<p class="VBA-Heading-Category"><a name="Example" id="Example"></a>Example</p>
+<p class="VBA-Text-Example">With Arfilter</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;.SetType ("s-parameter")</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;.SetFirstTime (0.1777274577508)</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;.SetSkip (10)</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;.SetMaxFrq ("fMax * 1.2")</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;.SetMaxOrder (40)</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;.SetWindowLength (2.0) &#160;</p>
+<p class="VBA-Text-Example">End With</p>
+<p class="VBA-Text-Example">&#160;</p>
+<p class="VBA-Text-Example">&#160;</p>
+<?rh-p style="margin-bottom: 0px; text-align: Right; margin-left: 18px; 
+                 margin-right: 18px; margin-top: 18px;" ?>
+<div style="width: 100%; position: relative;" id="footer">
+<p style="border-bottom: Solid 1px #dddddd; text-align: Left; margin-left: 0px; font-family: Arial, sans-serif; line-height: Normal; margin-top: 9px; margin-right: 0px; margin-bottom: 6px; border-left-width: 1px; border-top-width: 1px; border-right-width: 1px;"><span style="text-align: Left; font-family: Arial, sans-serif; line-height: Normal;">&#160;</span></p>
+<table cellspacing="0" width="100%">
+<col style="width: 50%;" />
+<col style="width: 50%;" />
+<tr>
+<td style="vertical-align: Top;"><span style="font-family: Arial, sans-serif; line-height: Normal; font-size: 8pt;"><font size="1" style="font-size:8pt;">CST Studio Suite 2026</font></span></td>
+<td style="vertical-align: Top;">
+<p style="text-align: right;">&#160;</p>
+</td>
+</tr>
+</table>
+<p>&#160;</p>
+</div>
+<script type="text/javascript" language="javascript1.2">
+//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+        writeIntopicBar(0);
+
+
+highlightSearch();
+//-->
+//]]>
+</script>
+</body>
+</html>

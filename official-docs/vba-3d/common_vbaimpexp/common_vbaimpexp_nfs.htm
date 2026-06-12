@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="Adobe RoboHelp 11" />
+<title>NFSFile Object</title>
+<link rel="StyleSheet" href="../online_help_vba.css" type="text/css" />
+<style type="text/css">
+/*<![CDATA[*/
+<!--
+body { border-bottom-style:None; }
+-->
+/*]]>*/
+</style>
+
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+        origWidth = innerWidth;
+        origHeight = innerHeight;
+        onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+/*<![CDATA[*/
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+-->
+/*]]>*/
+</style>
+
+<script type="text/javascript" language="javascript1.2" src="../whmsg.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript" src="../whver.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript1.2" src="../whutils.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript1.2" src="../whproxy.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript1.2" src="../whlang.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript1.2" src="../whtopic.js" charset="utf-8">
+</script>
+</head>
+<body>
+<script type="text/javascript" language="javascript1.2">
+//<![CDATA[
+<!--
+if (window.gbWhTopic)
+{
+        var strUrl = document.location.href;
+        var bc = 0;
+        var n = strUrl.toLowerCase().indexOf("bc-");
+        if(n != -1)
+        {
+                document.location.replace(strUrl.substring(0, n));
+                bc = strUrl.substring(n+3);
+        }
+
+        if (window.addTocInfo)
+        {
+        addTocInfo("3D Simulation VBA\nVBA Objects\nImport/Export\nNFSFile");
+
+        }
+        if (window.writeBtnStyle)
+                writeBtnStyle();
+
+        if (window.writeIntopicBar)
+                writeIntopicBar(0);
+
+        
+        document.write("<p style=\"font-family: Tahoma; font-size: 9pt; font-weight: 400;  font-style:normal; color: rgb(0, 0, 0); text-decoration:none; text-align: left\"> ");
+AddMasterBreadcrumbs("../index.htm", "font-family: Tahoma; font-size: 9pt; font-weight: 400;  font-style:normal; color: rgb(0, 0, 0); text-decoration:none; text-align: left", "|", "Home", "../special_vbaobjects/special_vbaobjects_vbaobjects.htm");
+document.write("<a style=\"font-family: Tahoma; font-size: 9pt; font-weight: 400;  font-style:normal; color: rgb(0, 0, 0); text-decoration:none; text-align: left\" href=\"../special_vbaobjects/special_vbaobjects_vbaobjects.htm\">3D Simulation VBA<\/a> | <a style=\"font-family: Tahoma; font-size: 9pt; font-weight: 400;  font-style:normal; color: rgb(0, 0, 0); text-decoration:none; text-align: left\" href=\"../special_vbaobjects/special_vbaobjects_vbaobjects.htm\">VBA Objects<\/a> | <a style=\"font-family: Tahoma; font-size: 9pt; font-weight: 400;  font-style:normal; color: rgb(0, 0, 0); text-decoration:none; text-align: left\" href=\"../special_vbaimpexp/adscomponentexport.htm\">Import/Export<\/a> | NFSFile<\/p>");
+
+}
+else
+        if (window.gbIE4)
+                document.location.reload();
+
+onLoadHandler = function()
+{
+  if (window.setRelStartPage)
+        {
+        setTimeout("setRelStartPage('../index.htm');", 1)
+
+    setTimeout("UpdateBreadCrumbsMarker();", 1);
+        }
+}
+
+if (window.addEventListener){  
+        window.addEventListener('load', onLoadHandler, false);   
+} else if (window.attachEvent){  
+        window.attachEvent('onload', onLoadHandler);  
+}
+
+function onSetStartPage()
+{
+  autoSync(1);
+  sendSyncInfo();
+  sendAveInfoOut();
+}
+//-->
+//]]>
+</script><script type="text/javascript" src="../ehlpdhtm.js" language="JavaScript1.2">
+</script>
+<table cellspacing="0" width="100%">
+<col style="width: 50%;" />
+<col style="width: 50%;" />
+<tr>
+<td style="vertical-align: middle; padding-top: 5px; padding-bottom: 5px;">
+<p style="margin-top: 0px; margin-bottom: 0px;"><img src="../3ds.png" alt="" style="border: none;" border="0" /></p>
+</td>
+<td style="vertical-align: middle;">
+<p style="text-align: right;"><a href="https://www.3ds.com/products-services/3dexperience/" target="_blank"><img src="../3dexp.png" alt="" style="border: none;" width="32" height="32" border="0" /></a></p>
+</td>
+</tr>
+</table>
+<p class="VBA-Heading-Object">NFSFile Object</p>
+<p class="VBA-Text">The NFS file format allows the imprint of equivalent surface fields on a box or even on single planes. This format is especially designed for scan data and is able to handle an equidistant as well as a non-equidistant sampled spatial distribution of field data.</p>
+<p class="VBA-Text">The format is based on the IEC<span lang="EN-US" xml:lang="EN-US">®</span> Technical Report IEC/TR 61967-1-1.</p>
+<p class="VBA-Text">&#160;</p>
+<p class="VBA-Text">In order to describe surface fields on a rectangular box surface, each face and field component has to be defined &#160;in a single XML-file and a corresponding DAT-file.</p>
+<p class="VBA-Text">The XML-file contains all meta-data such as field type, field components (Ex, Ey, Ez, Hx, Hy, Hz ), frequencies, and a reference to the DAT-file.</p>
+<p class="VBA-Text">The DAT-file contains the actual field data values in the following ASCII pattern:</p>
+<p class="Tip-Note-Text">&#160;</p>
+<p class="VBA-Text-Example" style="margin-left: 0px; text-indent: 48px;">x0 y0 z0 Re(freq1) Im(freq1) Re(freq2) Im(freq2) Re(freq3) Im(freq3) ...</p>
+<p class="VBA-Text-Example" style="text-indent: 48px;">x1 y0 z0 Re(freq1) Im(freq1) Re(freq2) Im(freq2) Re(freq3) Im(freq3) ...</p>
+<p class="VBA-Text-Example" style="text-indent: 48px;"><span style="font-family: 'Courier New', monospace;">x0 y1 z0 Re(freq1) Im(freq1) Re(freq2) Im(freq2) Re(freq3) Im(freq3) ...</span></p>
+<p class="VBA-Text-Example" style="text-indent: 48px;">...</p>
+<p class="Tip-Note-Text">&#160;</p>
+<p class="VBA-Text">Where (<span style="font-family: 'Courier New', monospace;">x_i, y_i, z_i</span>) describe point positions of a cartesian grid and <span style="font-family: 'Courier New', monospace;">Re(freq1)</span> / <span style="font-family: 'Courier New', monospace;">Im(freq2)</span> the real / imaginary part of the field value at frequency <span style="font-family: 'Courier New', monospace;">freq1</span> and position (<span style="font-family: 'Courier New', monospace;">x_i, y_i, z_i</span>). Example files for the supported types of the NFS format for the CST Microwave Studio <a href="../../3D/special_overview/special_overview_fdtd_overview.htm">transient solver</a> can be found <a href="../../3D/example_files/nfs_example_files.zip">here</a>. A detailed description of the file syntax can be found in &#160;IEC<span lang="EN-US" xml:lang="EN-US">®</span> Technical Report IEC/TR 61967-1-1.</p>
+<ul>
+<li class="p-VBA-Index-Category">
+<p class="VBA-Index-Category"><a href="#Methods">Methods</a></p>
+</li>
+<li class="p-VBA-Index-Category">
+<p class="VBA-Index-Category"><a href="#Default">Default Settings</a></p>
+</li>
+<li class="p-VBA-Index-Category">
+<p class="VBA-Index-Category"><a href="#Example">Example</a></p>
+</li>
+</ul>
+<p class="VBA-Heading-Category"><a name="Methods" id="Methods"></a>Methods</p>
+<p class="VBA-Heading-Method">Reset</p>
+<p class="VBA-Text-Indent">Resets the import options to the default.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">SetCoarsening ( <a href="../common_vbageneral/common_general_double.htm" id="a8" style="font-weight: normal; font-style: normal;" name="a8">double</a> <span style="font-style: italic;"><i>coarseningFactor</i></span> )</p>
+<p class="VBA-Text-Indent">Set the coarsening of the hexaedral mesh that will be generated to export the field monitor data. The factor sets the density of the output mesh in relation to the existing mesh, that can be inspected with &#160;"Home -&gt; Mesh -&gt; Mesh View". For example, a factor of 2 leads to a mesh which is 2 times coarser than the original mesh.</p>
+<p class="VBA-Heading-Method">&#160;</p>
+<p class="VBA-Heading-Method">SetInteractive ( <a href="../common_vbageneral/common_general_bool_data_type.htm" id="a22" style="font-weight: normal; font-style: normal;" name="a22">bool</a> <span style="font-style: italic;"><i>Interactive</i></span> )</p>
+<p class="VBA-Text-Indent">Set to true, will ask for user interaction when something unexpected happens, e.g. if a folder has to be deleted before exporting. Otherwise will abort.</p>
+<p class="vba-text-indent">&#160;</p>
+<p class="VBA-Heading-Method">DeleteFolderIfPresent ( <a href="../common_vbageneral/common_general_bool_data_type.htm" id="a6" style="font-weight: normal; font-style: normal;" name="a6">bool</a> <span style="font-style: italic;"><i>DeleteFolderIfPresent</i></span> )</p>
+<p class="VBA-Text-Indent">Set this option to True to delete an existing folder when exporting <span style="font-weight: bold; font-style: italic;"><i>without prompting</i></span>. Only works in non-interactive mode.</p>
+<p class="vba-text-indent">&#160;</p>
+<p class="VBA-Heading-Method">SetOutputFolder ( <a href="../common_vbageneral/common_general_filename.htm" id="a31" style="font-weight: normal; font-style: normal;" name="a31">filename</a> <span style="font-style: italic;"><i>NFSDirectoryPath</i></span> )</p>
+<p class="VBA-Text-Indent">Sets the output directory path where the NFS files should be located.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">Export ( <span style="font-weight: normal; color: #0000ff; text-decoration: underline;"><font color="blue"><u><a href="../common_vbageneral/common_general_string.htm" id="a1" name="a1">string</a></u></font></span> <span style="font-style: italic;"><i>MonitorName</i></span>, <span style="font-weight: normal; color: #0000ff; text-decoration: underline;"><font color="blue"><u><a href="../common_vbageneral/common_general_string.htm" id="a3" name="a3">string</a></u></font></span> <span style="font-style: italic;"><i>ExcitationString</i></span> )</p>
+<p class="VBA-Text-Indent">Export the specified field source monitor of the excitation in the current project.</p>
+<p class="VBA-Heading-Method">&#160;</p>
+<p class="VBA-Heading-Method">Write ( <a href="../common_vbageneral/common_general_filename.htm" id="a7" style="font-weight: normal; font-style: normal;" name="a7">filename</a> <span style="font-style: italic;"><i>FSMFile</i></span>, &#160;<a href="../common_vbageneral/common_general_filename.htm" id="a10" style="font-weight: normal; font-style: normal;" name="a10">filename</a> <span style="font-style: italic;"><i>NFSDirectoryPath</i></span> )</p>
+<p class="VBA-Text-Indent">Converts FSM-file to NFS-files, that will be saved in the specified directory. An absolute path has to be specified.</p>
+<p class="VBA-Heading-Category"><a name="Default" id="Default"></a>Default Settings</p>
+<p class="VBA-Text-Example">SetOutputFolder ("&lt;<span style="font-size: 8pt;"><font size="1" style="font-size:8pt;">Path to FSM-file&gt;</font></span>\&lt;FSM-filename without file-ending (.fsm)&gt;\")</p>
+<p class="VBA-Text-Example">SetCoarsening (1)</p>
+<p class="VBA-Text-Example">SetInteractive (True)</p>
+<p class="VBA-Text-Example">DeleteFolderIfPresent (False)</p>
+<p class="VBA-Heading-Category"><a name="Example" id="Example"></a>Examples</p>
+<p class="VBA-Text-Example" style="color: #008000;"><span style="color: #008000;"><font color="green">' Convert an FSM-file by directly specifying the filename and output folder</font></span></p>
+<p class="VBA-Text-Example">NFSFile.Write("C:\Path\To\Some\Monitorfile.fsm", "C:\Output")</p>
+<p class="vba-text-example">&#160;</p>
+<p class="VBA-Text-Example" style="color: #008000;">' Export the monitor named "my_monitor" with excitation string "1" to the path "C:\nfs-export\".</p>
+<p class="VBA-Text-Example" style="color: #008000;"><span style="color: #008000;"><font color="green">' Set the mesh half as dense as the mesh on the field source monitor surface.</font></span></p>
+<p class="VBA-Text-Example">With NFSFile</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;.Reset</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;.SetCoarsening (2)</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;.SetOutputFolder ("C:\nfs-export")</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;.Export ("my_monitor", "1")</p>
+<p class="VBA-Text-Example">End With</p>
+<p class="VBA-Text-Example">&#160;</p>
+<?rh-p style="margin-bottom: 0px; text-align: Right; margin-left: 18px; 
+                 margin-right: 18px; margin-top: 18px;" ?>
+<div style="width: 100%; position: relative;" id="footer">
+<p style="border-bottom: Solid 1px #dddddd; text-align: Left; margin-left: 0px; font-family: Arial, sans-serif; line-height: Normal; margin-top: 9px; margin-right: 0px; margin-bottom: 6px; border-left-width: 1px; border-top-width: 1px; border-right-width: 1px;"><span style="text-align: Left; font-family: Arial, sans-serif; line-height: Normal;">&#160;</span></p>
+<table cellspacing="0" width="100%">
+<col style="width: 50%;" />
+<col style="width: 50%;" />
+<tr>
+<td style="vertical-align: Top;"><span style="font-family: Arial, sans-serif; line-height: Normal; font-size: 8pt;"><font size="1" style="font-size:8pt;">CST Studio Suite 2026</font></span></td>
+<td style="vertical-align: Top;">
+<p style="text-align: right;">&#160;</p>
+</td>
+</tr>
+</table>
+<p>&#160;</p>
+</div>
+<script type="text/javascript" language="javascript1.2">
+//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+        writeIntopicBar(0);
+
+
+highlightSearch();
+//-->
+//]]>
+</script>
+</body>
+</html>

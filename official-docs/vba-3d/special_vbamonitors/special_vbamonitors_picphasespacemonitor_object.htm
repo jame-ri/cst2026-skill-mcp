@@ -1,0 +1,275 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="Adobe RoboHelp 11" />
+<title>PICPhaseSpaceMonitor Object</title>
+<link rel="StyleSheet" href="../online_help_vba.css" type="text/css" />
+<style type="text/css">
+/*<![CDATA[*/
+<!--
+body { border-bottom-style:None; }
+-->
+/*]]>*/
+</style>
+
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+        origWidth = innerWidth;
+        origHeight = innerHeight;
+        onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+/*<![CDATA[*/
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+-->
+/*]]>*/
+</style>
+
+<script type="text/javascript" language="javascript1.2" src="../whmsg.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript" src="../whver.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript1.2" src="../whutils.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript1.2" src="../whproxy.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript1.2" src="../whlang.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript1.2" src="../whtopic.js" charset="utf-8">
+</script>
+</head>
+<body>
+<script type="text/javascript" language="javascript1.2">
+//<![CDATA[
+<!--
+if (window.gbWhTopic)
+{
+        var strUrl = document.location.href;
+        var bc = 0;
+        var n = strUrl.toLowerCase().indexOf("bc-");
+        if(n != -1)
+        {
+                document.location.replace(strUrl.substring(0, n));
+                bc = strUrl.substring(n+3);
+        }
+
+        if (window.addTocInfo)
+        {
+        addTocInfo("3D Simulation VBA\nVBA Objects\nMonitors\nParticle\nPICPhaseSpaceMonitor");
+
+        }
+        if (window.writeBtnStyle)
+                writeBtnStyle();
+
+        if (window.writeIntopicBar)
+                writeIntopicBar(0);
+
+        
+        document.write("<p style=\"font-family: Tahoma; font-size: 9pt; font-weight: 400;  font-style:normal; color: rgb(0, 0, 0); text-decoration:none; text-align: left\"> ");
+AddMasterBreadcrumbs("../index.htm", "font-family: Tahoma; font-size: 9pt; font-weight: 400;  font-style:normal; color: rgb(0, 0, 0); text-decoration:none; text-align: left", "|", "Home", "../special_vbaobjects/special_vbaobjects_vbaobjects.htm");
+document.write("<a style=\"font-family: Tahoma; font-size: 9pt; font-weight: 400;  font-style:normal; color: rgb(0, 0, 0); text-decoration:none; text-align: left\" href=\"../special_vbaobjects/special_vbaobjects_vbaobjects.htm\">3D Simulation VBA<\/a> | <a style=\"font-family: Tahoma; font-size: 9pt; font-weight: 400;  font-style:normal; color: rgb(0, 0, 0); text-decoration:none; text-align: left\" href=\"../special_vbaobjects/special_vbaobjects_vbaobjects.htm\">VBA Objects<\/a> | <a style=\"font-family: Tahoma; font-size: 9pt; font-weight: 400;  font-style:normal; color: rgb(0, 0, 0); text-decoration:none; text-align: left\" href=\"special_vbamonitors_monitor_object.htm\">Monitors<\/a> | <a style=\"font-family: Tahoma; font-size: 9pt; font-weight: 400;  font-style:normal; color: rgb(0, 0, 0); text-decoration:none; text-align: left\" href=\"special_vbamonitors_picpositionmonitor_object.htm\">Particle<\/a> | PICPhaseSpaceMonitor<\/p>");
+
+}
+else
+        if (window.gbIE4)
+                document.location.reload();
+
+onLoadHandler = function()
+{
+  if (window.setRelStartPage)
+        {
+        setTimeout("setRelStartPage('../index.htm');", 1)
+
+    setTimeout("UpdateBreadCrumbsMarker();", 1);
+        }
+}
+
+if (window.addEventListener){  
+        window.addEventListener('load', onLoadHandler, false);   
+} else if (window.attachEvent){  
+        window.attachEvent('onload', onLoadHandler);  
+}
+
+function onSetStartPage()
+{
+  autoSync(1);
+  sendSyncInfo();
+  sendAveInfoOut();
+}
+//-->
+//]]>
+</script><script type="text/javascript" src="../ehlpdhtm.js" language="JavaScript1.2">
+</script>
+<table cellspacing="0" width="100%">
+<col style="width: 50%;" />
+<col style="width: 50%;" />
+<tr>
+<td style="vertical-align: middle; padding-top: 5px; padding-bottom: 5px;">
+<p style="margin-top: 0px; margin-bottom: 0px;"><img src="../3ds.png" alt="" style="border: none;" border="0" /></p>
+</td>
+<td style="vertical-align: middle;">
+<p style="text-align: right;"><a href="https://www.3ds.com/products-services/3dexperience/" target="_blank"><img src="../3dexp.png" alt="" style="border: none;" width="32" height="32" border="0" /></a></p>
+</td>
+</tr>
+</table>
+<h1>PICPhaseSpaceMonitor Object</h1>
+<p class="VBA-Text">Defines a phase space monitor for the PIC solver.</p>
+<ul>
+<li class="p-VBA-Index-Category">
+<p class="VBA-Index-Category"><a href="#Methods">Methods</a></p>
+</li>
+<li class="p-VBA-Index-Category">
+<p class="VBA-Index-Category"><a href="#Defaults">Default Settings</a></p>
+</li>
+<li class="p-VBA-Index-Category">
+<p class="VBA-Index-Category"><a href="#Example">Examples</a></p>
+</li>
+</ul>
+<p class="VBA-Heading-Category"><a name="Methods" id="Methods"></a>Methods</p>
+<p class="VBA-Heading-Method">Reset</p>
+<p class="VBA-Text-Indent">Resets all internal values to their default settings.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">Name ( <a href="../common_vbageneral/common_general_name.htm" id="a1" style="font-weight: normal; font-style: normal;" name="a1">name</a> <span style="font-style: italic;"><i>monitorName</i></span> )</p>
+<p class="VBA-Text-Indent">Sets the name of the monitor.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">XType ( <span style="font-style: italic;"><i><a href="../common_vbageneral/common_general_enum.htm" id="a3" style="font-weight: normal; font-style: normal;" name="a3">enum</a> dir</i></span> )</p>
+<p class="VBA-Text-Indent">This method defines the type of the abscissa of the phase space plot. Possible values are:</p>
+<ul style="list-style: disc;">
+<li class="p-VBA-Text">
+<p class="VBA-Text">Position</p>
+</li>
+<li class="p-VBA-Text">
+<p class="VBA-Text">Normed Momentum</p>
+</li>
+<li class="p-VBA-Text">
+<p class="VBA-Text">Gamma</p>
+</li>
+<li class="p-VBA-Text">
+<p class="VBA-Text">Beta</p>
+</li>
+<li class="p-VBA-Text">
+<p class="VBA-Text">Velocity</p>
+</li>
+<li class="p-VBA-Text">
+<p class="VBA-Text">Energy</p>
+</li>
+</ul>
+<p class="VBA-Heading-Method">XComponent ( <span style="font-style: italic;"><i><a href="../common_vbageneral/common_general_enum.htm" id="a33" style="font-weight: normal; font-style: normal;" name="a33">enum</a> dir</i></span> )</p>
+<p class="VBA-Text-Indent">This method defines the component of the abscissa of the phase space plot. Possible values are X, Y, Z and Abs.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">YType ( <span style="font-style: italic;"><i><a href="../common_vbageneral/common_general_enum.htm" id="a34" style="font-weight: normal; font-style: normal;" name="a34">enum</a> dir</i></span> )</p>
+<p class="VBA-Text-Indent">This method defines the type of the ordinate of the phase space plot. Possible values are:</p>
+<ul style="list-style: disc;">
+<li class="p-VBA-Text">
+<p class="VBA-Text">Position</p>
+</li>
+<li class="p-VBA-Text">
+<p class="VBA-Text">Normed Momentum</p>
+</li>
+<li class="p-VBA-Text">
+<p class="VBA-Text">Gamma</p>
+</li>
+<li class="p-VBA-Text">
+<p class="VBA-Text">Beta</p>
+</li>
+<li class="p-VBA-Text">
+<p class="VBA-Text">Velocity</p>
+</li>
+<li class="p-VBA-Text">
+<p class="VBA-Text">Energy</p>
+</li>
+</ul>
+<p class="VBA-Heading-Method">YComponent ( <span style="font-style: italic;"><i><a href="../common_vbageneral/common_general_enum.htm" id="a331" style="font-weight: normal; font-style: normal;" name="a331">enum</a> dir</i></span> )</p>
+<p class="VBA-Text-Indent">This method defines the component of the ordinate of the phase space plot. Possible values are X, Y, Z and Abs.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">Tstart ( <a href="../common_vbageneral/common_general_double.htm" id="a2" style="font-weight: normal; font-style: normal;" name="a2">double</a> <span style="font-style: italic;"><i>startTime</i></span> )</p>
+<p class="VBA-Text-Indent">Sets starting time for a time domain monitor to <span style="font-style: italic;"><i>startTime</i></span>.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">Tstep ( <a href="../common_vbageneral/common_general_double.htm" id="a4" style="font-weight: normal; font-style: normal;" name="a4">double</a> <span style="font-style: italic;"><i>timeStep</i></span> )</p>
+<p class="VBA-Text-Indent">Sets the time increment for a time domain monitor to <span style="font-style: italic;"><i>timeStep</i></span>.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">Tend ( <a href="../common_vbageneral/common_general_double.htm" id="a25" style="font-weight: normal; font-style: normal;" name="a25">double</a> <span style="font-style: italic;"><i>stopTime</i></span> )</p>
+<p class="VBA-Text-Indent">Sets the end time for a time domain monitor to <span style="font-style: italic;"><i>stopTime</i></span>.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">UseTend ( <a href="../common_vbageneral/common_general_bool_data_type.htm" id="a26" style="font-weight: normal; font-style: normal;" name="a26">bool</a> <span style="font-style: italic;"><i>bFlag</i></span> )</p>
+<p class="VBA-Text-Indent">If <span style="font-style: italic;"><i>bFlag</i></span> is TRUE, the time domain monitor will stop storing the results when the end time set with <span style="font-weight: bold;">Tend</span> is reached. Otherwise the monitor will continue until the simulation stops.</p>
+<p class="VBA-Heading-Method">&#160;</p>
+<p class="VBA-Heading-Method">FType ( <span style="font-weight: normal;"><a href="../common_vbageneral/common_general_name.htm" id="a51" style="font-weight: normal; font-style: normal;" name="a51">name</a></span> <span style="font-style: italic;"><i>name</i></span> )</p>
+<p class="VBA-Text-Indent"><span style="font-size: 12px; font-variant-ligatures: normal; font-variant-caps: normal; orphans: 2; text-align: justify; widows: 2; -webkit-text-stroke-width: 0px; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial;">Select a particle source for filtering during runtime. Only particles emitted by this source are considered. The default option</span>&#160;<span style="font-size: 12px; font-variant-ligatures: normal; font-variant-caps: normal; orphans: 2; text-align: justify; widows: 2; -webkit-text-stroke-width: 0px; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; font-style: italic;"><i>none</i></span>&#160;<span style="font-size: 12px; font-variant-ligatures: normal; font-variant-caps: normal; orphans: 2; text-align: justify; widows: 2; -webkit-text-stroke-width: 0px; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial;">considers all particles.</span></p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">Delete ( <a href="../common_vbageneral/common_general_name.htm" id="a5" style="font-weight: normal; font-style: normal;" name="a5">name</a> <span style="font-style: italic;"><i>monitorName</i></span> )</p>
+<p class="VBA-Text-Indent">Deletes the monitor named <span style="font-style: italic;"><i>monitorName</i></span>.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">Rename ( <a href="../common_vbageneral/common_general_name.htm" id="a31" style="font-weight: normal; font-style: normal;" name="a31">name</a> <span style="font-style: italic;"><i>oldname,</i></span> &#160;<a href="../common_vbageneral/common_general_name.htm" id="a32" style="font-weight: normal; font-style: normal;" name="a32">name</a> <span style="font-style: italic;"><i>newname</i></span> )</p>
+<p class="VBA-Text-Indent">Renames the monitor named <span style="font-style: italic;"><i>oldname</i></span> to <span style="font-style: italic;"><i>newname</i></span>.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">Create</p>
+<p class="VBA-Text-Indent">Creates the monitor with the previously applied settings.</p>
+<p class="VBA-Heading-Category"><a name="Defaults" id="Defaults"></a>Default Settings</p>
+<p class="VBA-Text-Example">Tstart (0.0)</p>
+<p class="VBA-Text-Example">Tstep &#160;(0.0)</p>
+<p class="VBA-Text-Example">Tend &#160;&#160;(0.0)</p>
+<p class="VBA-Text-Example">UseTend (FALSE)</p>
+<p class="VBA-Heading-Category"><a name="Example" id="Example"></a>Examples</p>
+<p class="VBA-Text-Example" style="color: #008000;">' creates a PIC Phase Space Monitor</p>
+<p class="VBA-Text-Example">&#160;</p>
+<p class="VBA-Text-Example">With PICPhaseSpaceMonitor</p>
+<p class="VBA-Text-Example" style="margin-left: 40px;">.Reset</p>
+<p class="VBA-Text-Example" style="margin-left: 40px;">.Name "pic phase space monitor 1"</p>
+<p class="VBA-Text-Example" style="margin-left: 40px;">.XType "Position"</p>
+<p class="VBA-Text-Example" style="margin-left: 40px;">.XComponent "Z"</p>
+<p class="VBA-Text-Example" style="margin-left: 40px;">.YType "Normed Momentum"</p>
+<p class="VBA-Text-Example" style="margin-left: 40px;">.YComponent "Z"</p>
+<p class="VBA-Text-Example" style="margin-left: 40px;">.Tstart "0.0"</p>
+<p class="VBA-Text-Example" style="margin-left: 40px;">.Tstep "0"</p>
+<p class="VBA-Text-Example" style="margin-left: 40px;">.Tend "0.0"</p>
+<p class="VBA-Text-Example" style="margin-left: 40px;">.UseTend "False"</p>
+<p class="VBA-Text-Example" style="margin-left: 40px;">.FType "none"</p>
+<p class="VBA-Text-Example" style="margin-left: 40px;">.Create</p>
+<p class="VBA-Text-Example">End With</p>
+<p class="VBA-Text-Example">&#160;</p>
+<?rh-p style="margin-bottom: 0px; text-align: Right; margin-left: 18px; 
+                 margin-right: 18px; margin-top: 18px;" ?>
+<div style="width: 100%; position: relative;" id="footer">
+<p style="border-bottom: Solid 1px #dddddd; text-align: Left; margin-left: 0px; font-family: Arial, sans-serif; line-height: Normal; margin-top: 9px; margin-right: 0px; margin-bottom: 6px; border-left-width: 1px; border-top-width: 1px; border-right-width: 1px;"><span style="text-align: Left; font-family: Arial, sans-serif; line-height: Normal;">&#160;</span></p>
+<table cellspacing="0" width="100%">
+<col style="width: 50%;" />
+<col style="width: 50%;" />
+<tr>
+<td style="vertical-align: Top;"><span style="font-family: Arial, sans-serif; line-height: Normal; font-size: 8pt;"><font size="1" style="font-size:8pt;">CST Studio Suite 2026</font></span></td>
+<td style="vertical-align: Top;">
+<p style="text-align: right;">&#160;</p>
+</td>
+</tr>
+</table>
+<p>&#160;</p>
+</div>
+<script type="text/javascript" language="javascript1.2">
+//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+        writeIntopicBar(0);
+
+
+highlightSearch();
+//-->
+//]]>
+</script>
+</body>
+</html>

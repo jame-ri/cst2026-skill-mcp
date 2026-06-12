@@ -1,0 +1,297 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="Adobe RoboHelp 11" />
+<title>TimeMonitor3D Object</title>
+<link rel="StyleSheet" href="../online_help_vba.css" type="text/css" />
+<style type="text/css">
+/*<![CDATA[*/
+<!--
+body { border-bottom-style:None; }
+-->
+/*]]>*/
+</style>
+
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+        origWidth = innerWidth;
+        origHeight = innerHeight;
+        onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+/*<![CDATA[*/
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+-->
+/*]]>*/
+</style>
+
+<script type="text/javascript" language="javascript1.2" src="../whmsg.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript" src="../whver.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript1.2" src="../whutils.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript1.2" src="../whproxy.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript1.2" src="../whlang.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript1.2" src="../whtopic.js" charset="utf-8">
+</script>
+</head>
+<body>
+<script type="text/javascript" language="javascript1.2">
+//<![CDATA[
+<!--
+if (window.gbWhTopic)
+{
+        var strUrl = document.location.href;
+        var bc = 0;
+        var n = strUrl.toLowerCase().indexOf("bc-");
+        if(n != -1)
+        {
+                document.location.replace(strUrl.substring(0, n));
+                bc = strUrl.substring(n+3);
+        }
+
+        if (window.addTocInfo)
+        {
+        addTocInfo("3D Simulation VBA\nVBA Objects\nMonitors\nTime\nTimeMonitor3D");
+
+        }
+        if (window.writeBtnStyle)
+                writeBtnStyle();
+
+        if (window.writeIntopicBar)
+                writeIntopicBar(0);
+
+        
+        document.write("<p style=\"font-family: Tahoma; font-size: 9pt; font-weight: 400;  font-style:normal; color: rgb(0, 0, 0); text-decoration:none; text-align: left\"> ");
+AddMasterBreadcrumbs("../index.htm", "font-family: Tahoma; font-size: 9pt; font-weight: 400;  font-style:normal; color: rgb(0, 0, 0); text-decoration:none; text-align: left", "|", "Home", "../special_vbaobjects/special_vbaobjects_vbaobjects.htm");
+document.write("<a style=\"font-family: Tahoma; font-size: 9pt; font-weight: 400;  font-style:normal; color: rgb(0, 0, 0); text-decoration:none; text-align: left\" href=\"../special_vbaobjects/special_vbaobjects_vbaobjects.htm\">3D Simulation VBA<\/a> | <a style=\"font-family: Tahoma; font-size: 9pt; font-weight: 400;  font-style:normal; color: rgb(0, 0, 0); text-decoration:none; text-align: left\" href=\"../special_vbaobjects/special_vbaobjects_vbaobjects.htm\">VBA Objects<\/a> | <a style=\"font-family: Tahoma; font-size: 9pt; font-weight: 400;  font-style:normal; color: rgb(0, 0, 0); text-decoration:none; text-align: left\" href=\"special_vbamonitors_monitor_object.htm\">Monitors<\/a> | <a style=\"font-family: Tahoma; font-size: 9pt; font-weight: 400;  font-style:normal; color: rgb(0, 0, 0); text-decoration:none; text-align: left\" href=\"special_vbamonitors_timemonitor_object.htm\">Time<\/a> | TimeMonitor3D<\/p>");
+
+}
+else
+        if (window.gbIE4)
+                document.location.reload();
+
+onLoadHandler = function()
+{
+  if (window.setRelStartPage)
+        {
+        setTimeout("setRelStartPage('../index.htm');", 1)
+
+    setTimeout("UpdateBreadCrumbsMarker();", 1);
+        }
+}
+
+if (window.addEventListener){  
+        window.addEventListener('load', onLoadHandler, false);   
+} else if (window.attachEvent){  
+        window.attachEvent('onload', onLoadHandler);  
+}
+
+function onSetStartPage()
+{
+  autoSync(1);
+  sendSyncInfo();
+  sendAveInfoOut();
+}
+//-->
+//]]>
+</script><script type="text/javascript" src="../ehlpdhtm.js" language="JavaScript1.2">
+</script>
+<table cellspacing="0" width="100%">
+<col style="width: 50%;" />
+<col style="width: 50%;" />
+<tr>
+<td style="vertical-align: middle; padding-top: 5px; padding-bottom: 5px;">
+<p style="margin-top: 0px; margin-bottom: 0px;"><img src="../3ds.png" alt="" style="border: none;" border="0" /></p>
+</td>
+<td style="vertical-align: middle;">
+<p style="text-align: right;"><a href="https://www.3ds.com/products-services/3dexperience/" target="_blank"><img src="../3dexp.png" alt="" style="border: none;" width="32" height="32" border="0" /></a></p>
+</td>
+</tr>
+</table>
+<p class="VBA-Heading-Object">TimeMonitor3D Object</p>
+<p class="VBA-Text">Defines a functional monitor which evaluates a function on a specified solid or volume.</p>
+<ul>
+<li class="p-VBA-Index-Category">
+<p class="VBA-Index-Category"><a href="#Methods">Methods</a></p>
+</li>
+<li class="p-VBA-Index-Category">
+<p class="VBA-Index-Category"><a href="#Methods">Default Settings</a></p>
+</li>
+<li class="p-VBA-Index-Category">
+<p class="VBA-Index-Category"><a href="#Examples">Examples</a></p>
+</li>
+</ul>
+<p class="VBA-Heading-Category"><a name="Methods" id="Methods"></a>Methods</p>
+<p class="VBA-Heading-Method">Reset</p>
+<p class="VBA-Text-Indent">Resets all internal values to their default settings.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">Name ( <a href="../common_vbageneral/common_general_name.htm" id="a11" style="font-weight: normal; font-style: normal;" name="a11">name</a> <span style="font-style: italic;"><i>monitorName</i></span> )</p>
+<p class="VBA-Text-Indent">Sets the name of the monitor.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">Rename ( <a href="../common_vbageneral/common_general_name.htm" id="a13" style="font-weight: normal; font-style: normal;" name="a13">name</a> <span style="font-style: italic;"><i>oldName</i></span>, <a href="../common_vbageneral/common_general_name.htm" id="a14" style="font-weight: normal; font-style: normal;" name="a14">name</a> <span style="font-style: italic;"><i>newName</i></span> )</p>
+<p class="VBA-Text-Indent">Renames the monitor named <span style="font-style: italic;"><i>oldName</i></span> to <span style="font-style: italic;"><i>newName</i></span>.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">Delete ( <a href="../common_vbageneral/common_general_name.htm" id="a15" style="font-weight: normal; font-style: normal;" name="a15">name</a> <span style="font-style: italic;"><i>monitorName</i></span> )</p>
+<p class="VBA-Text-Indent">Deletes the monitor named <span style="font-style: italic;"><i>monitorName</i></span>.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">Create</p>
+<p class="VBA-Text-Indent">Creates the monitor with the previously applied settings.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">Extend2TouchingShapes ( <a href="../common_vbageneral/common_general_bool_data_type.htm" id="a1" style="font-weight: normal; font-style: normal;" name="a1">bool</a> <span style="font-style: italic;"><i>bFlag</i></span> )</p>
+<p class="VBA-Text-Indent">The implemented force computation method requires that the shape, on which the force is to be computed, is completely surrounded by background. Otherwise the results will be influenced by the touching shapes and can therefore be distorted.</p>
+<p class="VBA-Text-Indent">In order to ensure reasonable results, connected sets of shapes will be detected automatically, and the force on the entire set connected to the specified shape will be computed. This feature is default and corresponds to <span style="font-style: italic;"><i>bFlag = True</i></span>. If <span style="font-style: italic;"><i>bFlag</i></span> is set <span style="font-style: italic;"><i>False</i></span>, the feature will be disabled and a warning might be printed.</p>
+<p class="VBA-Heading-Method">&#160;</p>
+<p class="VBA-Heading-Method">FieldType ( <a href="../common_vbageneral/common_general_enum.htm" id="a16" style="font-weight: normal; font-style: normal;" name="a16">enum</a> <span style="font-style: italic;"><i>fType</i></span> )</p>
+<p class="VBA-Text-Indent">Sets what value is to be monitored.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Text-Indent"><span style="font-style: italic;"><i>fType</i></span> can have one of the following values:</p>
+<table style="margin-left: 24px;" cellspacing="0" width="90%">
+<col width="242" />
+<col width="1113" />
+<tr style="vertical-align: top;">
+<td style="border: Solid 1px #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;">
+<p>”Energy”</p>
+</td>
+<td style="border-top: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;">
+<p>The energy will be monitored.</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;">
+<p>"Losses"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;">
+<p>Ohmic losses will be monitored.</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;">
+<p>”Force”</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;">
+<p>The force on a solid will be monitored.</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;">
+<p>"Coil Voltages"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;">
+<p>Coil voltages will be monitored.</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;">
+<p>"I-loss"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;">
+<p>Iron losses will be monitored.</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;">
+<p>"Mag.Mom."</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;">
+<p>Magnetic moment will be monitored.</p>
+</td>
+</tr>
+</table>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">UseAllSolids ( <a href="../common_vbageneral/common_general_bool_data_type.htm" id="a17" style="font-weight: normal; font-style: normal;" name="a17">bool</a> <span style="font-style: italic;"><i>bFlag</i></span> )</p>
+<p class="VBA-Text-Indent">If <span style="font-style: italic;"><i>bFlag</i></span> is True, the specified function will be evaluated in the entire computation domain, and SolidName and SolidType settings will be ignored.</p>
+<p class="VBA-Heading-Method">&#160;</p>
+<p class="VBA-Heading-Method">SolidName ( <a href="../common_vbageneral/common_general_name.htm" id="a18" style="font-weight: normal; font-style: normal;" name="a18">name</a> <span style="font-style: italic;"><i>solidName</i></span> )</p>
+<p class="VBA-Text-Indent">Sets the name of the solid or volume on which the specified function is to be monitored.</p>
+<p class="VBA-Text-Indent"><span style="font-weight: bold;">Please note</span> that <span style="font-style: italic;"><i>Coil Voltages</i></span> can be evaluated only on coils and <span style="font-style: italic;"><i>Forces</i></span> can be evaluated only on non-sheet and non-hybrid solids as well as on coils and solid wires. The options "Background" or "UseAllSolids" are not available for these field types.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">SolidType ( <a href="../common_vbageneral/common_general_name.htm" id="a19" style="font-weight: normal; font-style: normal;" name="a19">name</a> <span style="font-style: italic;"><i>solidType</i></span> )</p>
+<p class="VBA-Text-Indent">Sets the type of the solid or volume on which the specified function is to be monitored. This will be "solid", "coil" or "wire" depending on whether SolidName specifies a solid, a coil or a solid wire.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">ComputeForceDensity ( <a href="../common_vbageneral/common_general_bool_data_type.htm" id="a171" style="font-weight: normal; font-style: normal;" name="a171">bool</a> <span style="font-style: italic;"><i>bFlag</i></span> )</p>
+<p class="VBA-Text-Indent">Enable the computation of the surface and volume force density fields for monitors of type "Force".</p>
+<p class="VBA-Heading-Method">&#160;</p>
+<p class="VBA-Heading-Method">TorqueOrigin ( <span style="font-weight: normal;"><a href="../common_vbageneral/common_general_double.htm">double</a></span> <span style="font-style: italic;"><i>X,</i></span> <span style="font-weight: normal;"><a href="../common_vbageneral/common_general_double.htm">double</a></span> <span style="font-style: italic;"><i>Y,</i></span> <span style="font-weight: normal;"><a href="../common_vbageneral/common_general_double.htm">double</a></span> <span style="font-style: italic;"><i>Z</i></span> )</p>
+<p class="VBA-Heading-Method">TorqueNormal ( <span style="font-weight: normal;"><a href="../common_vbageneral/common_general_double.htm">double</a></span> <span style="font-style: italic;"><i>X,</i></span> <span style="font-weight: normal;"><a href="../common_vbageneral/common_general_double.htm">double</a></span> <span style="font-style: italic;"><i>Y,</i></span> <span style="font-weight: normal;"><a href="../common_vbageneral/common_general_double.htm">double</a></span> <span style="font-style: italic;"><i>Z</i></span> )</p>
+<p class="VBA-Text-Indent">The torque settings are relevant only, if the "<span style="font-style: italic;"><i>Force</i></span>" type of the monitor is chosen. The <span style="font-style: italic;"><i>X</i></span>, <span style="font-style: italic;"><i>Y</i></span> and <span style="font-style: italic;"><i>Z</i></span> components of the position and the orientation of the torque axis can be specified here, respectively.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">IronLossModel ( <a href="../common_vbageneral/common_general_enum.htm" id="a2" style="font-weight: normal; font-style: normal;" name="a2">enum</a> <span style="font-style: italic;"><i>modeltype</i></span> )</p>
+<p class="VBA-Text-Indent">The name of the model to be considered. The name can be chosen among: "Steinmetz", "Generalized Steinmetz", &#160;"Improved Generalized Steinmetz", "Bertotti", "Improved".</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">IronLossPrecalculationMethod ( <a href="../common_vbageneral/common_general_enum.htm" id="a21" style="font-weight: normal; font-style: normal;" name="a21">enum</a> <span style="font-style: italic;"><i>precalculatiomethod</i></span> )</p>
+<p class="VBA-Text-Indent">The name of the <span style="font-style: italic;"><i>precalculation</i></span> method to be considered. The name can be chosen among: "Remove DC", "No Action", &#160;"Fourier Transform". The two <span style="font-style: italic;"><i>precalculationmethods</i></span> can be used together with the iron loss models: "Steinmetz", "Bertotti" and "Improved".</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">IronLossTimeAveraging (&#160;<a href="../common_vbageneral/common_general_enum.htm" id="a211" style="font-weight: normal; font-style: normal;" name="a211">enum</a> <span style="font-style: italic;"><i>method</i></span>, <a href="../common_vbageneral/common_general_double.htm">double</a> <span style="font-style: italic;"><i>value</i></span>, <a href="../common_vbageneral/common_general_double.htm">double</a> <span style="font-style: italic;"><i>period</i></span> )</p>
+<p class="VBA-Text-Indent">Uses a time range for the calculation of iron losses. The available <span style="font-style: italic;"><i>methods</i></span> for definition of the time range are "None", "Auto", "Start" and "End". The <span style="font-style: italic;"><i>value</i></span> defines for the methods "Start" and "End" the start and respectively the end time of the time range. The <span style="font-style: italic;"><i>period</i></span> is used for the methods "Auto", "Start" and "End" to determine the size of the time range. The method "None", which consider all calculated points for the computation of losses, cannot be used together with the precalculation methods "Remove DC" or "Fourier Transform".</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">IronLossFrequencySamples ( <a href="../common_vbageneral/common_general_long.htm" id="a3" style="font-weight: normal; font-style: normal;" name="a3">long</a> <span style="font-style: italic;"><i>numberfrequencies</i></span> )</p>
+<p class="VBA-Text-Indent">Number of frequencies to be considered.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">IronLossFrequencyRange ( <span style="font-weight: normal;"><a href="../common_vbageneral/common_general_double.htm">double</a></span> <span style="font-style: italic;"><i>start,</i></span> <span style="font-weight: normal;"><a href="../common_vbageneral/common_general_double.htm">double</a></span> <span style="font-style: italic;"><i>stop</i></span> )</p>
+<p class="VBA-Text-Indent">Values of the bounds of the frequency range.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">SetIronLossModelParameter ( <a href="../common_vbageneral/common_general_enum.htm" id="a4" style="font-weight: normal; font-style: normal;" name="a4">enum</a> <span style="font-style: italic;"><i>parametertype</i></span> <span style="font-style: italic;"><i>,</i></span> <span style="font-weight: normal;"><a href="../common_vbageneral/common_general_double.htm">double</a></span> <span style="font-style: italic;"><i>value</i></span>)</p>
+<p class="VBA-Text-Indent">Assign a value to the parameter knowing the name of it. "parametertype" can have one of these values: "C", "x", "y", "Alpha", "Khys", "Kedd", "Kexc", "a1", "a2", "a3", "a4", "a5".</p>
+<p class="VBA-Heading-Category"><a name="Defaults" id="Defaults"></a>Default Settings</p>
+<p class="VBA-Text-Example">UseAllSolids (False)</p>
+<p class="VBA-Text-Example">Extend2TouchingShapes "True"</p>
+<p class="VBA-Heading-Category"><a name="Examples" id="Examples"></a>Examples</p>
+<p class="VBA-Text-Example" style="color: #008000;">' creates a time domain energy monitor over the entire computation domain</p>
+<p class="VBA-Text-Example">With TimeMonitor3D</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.Reset</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.Name "monitor on volume"</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.FieldType "Energy"</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.UseAllSolids "True"</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.Create</p>
+<p class="VBA-Text-Example">End With</p>
+<p class="VBA-Text-Example">&#160;</p>
+<p class="vba-text-example">&#160;</p>
+<?rh-p style="margin-bottom: 0px; text-align: Right; margin-left: 18px; 
+                 margin-right: 18px; margin-top: 18px;" ?>
+<div style="width: 100%; position: relative;" id="footer">
+<p style="border-bottom: Solid 1px #dddddd; text-align: Left; margin-left: 0px; font-family: Arial, sans-serif; line-height: Normal; margin-top: 9px; margin-right: 0px; margin-bottom: 6px; border-left-width: 1px; border-top-width: 1px; border-right-width: 1px;"><span style="text-align: Left; font-family: Arial, sans-serif; line-height: Normal;">&#160;</span></p>
+<table cellspacing="0" width="100%">
+<col style="width: 50%;" />
+<col style="width: 50%;" />
+<tr>
+<td style="vertical-align: Top;"><span style="font-family: Arial, sans-serif; line-height: Normal; font-size: 8pt;"><font size="1" style="font-size:8pt;">CST Studio Suite 2026</font></span></td>
+<td style="vertical-align: Top;">
+<p style="text-align: right;">&#160;</p>
+</td>
+</tr>
+</table>
+<p>&#160;</p>
+</div>
+<script type="text/javascript" language="javascript1.2">
+//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+        writeIntopicBar(0);
+
+
+highlightSearch();
+//-->
+//]]>
+</script>
+</body>
+</html>

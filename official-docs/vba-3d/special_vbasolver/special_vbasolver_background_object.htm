@@ -1,0 +1,291 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="Adobe RoboHelp 11" />
+<title>Background Object</title>
+<link rel="StyleSheet" href="../online_help_vba.css" type="text/css" />
+<style type="text/css">
+/*<![CDATA[*/
+<!--
+body { border-bottom-style:None; }
+-->
+/*]]>*/
+</style>
+
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+        origWidth = innerWidth;
+        origHeight = innerHeight;
+        onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+/*<![CDATA[*/
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+-->
+/*]]>*/
+</style>
+
+<script type="text/javascript" language="javascript1.2" src="../whmsg.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript" src="../whver.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript1.2" src="../whutils.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript1.2" src="../whproxy.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript1.2" src="../whlang.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript1.2" src="../whtopic.js" charset="utf-8">
+</script>
+</head>
+<body>
+<script type="text/javascript" language="javascript1.2">
+//<![CDATA[
+<!--
+if (window.gbWhTopic)
+{
+        var strUrl = document.location.href;
+        var bc = 0;
+        var n = strUrl.toLowerCase().indexOf("bc-");
+        if(n != -1)
+        {
+                document.location.replace(strUrl.substring(0, n));
+                bc = strUrl.substring(n+3);
+        }
+
+        if (window.addTocInfo)
+        {
+        addTocInfo("3D Simulation VBA\nVBA Objects\nSolver\nBackground");
+
+        }
+        if (window.writeBtnStyle)
+                writeBtnStyle();
+
+        if (window.writeIntopicBar)
+                writeIntopicBar(0);
+
+        
+        document.write("<p style=\"font-family: Tahoma; font-size: 9pt; font-weight: 400;  font-style:normal; color: rgb(0, 0, 0); text-decoration:none; text-align: left\"> ");
+AddMasterBreadcrumbs("../index.htm", "font-family: Tahoma; font-size: 9pt; font-weight: 400;  font-style:normal; color: rgb(0, 0, 0); text-decoration:none; text-align: left", "|", "Home", "../special_vbaobjects/special_vbaobjects_vbaobjects.htm");
+document.write("<a style=\"font-family: Tahoma; font-size: 9pt; font-weight: 400;  font-style:normal; color: rgb(0, 0, 0); text-decoration:none; text-align: left\" href=\"../special_vbaobjects/special_vbaobjects_vbaobjects.htm\">3D Simulation VBA<\/a> | <a style=\"font-family: Tahoma; font-size: 9pt; font-weight: 400;  font-style:normal; color: rgb(0, 0, 0); text-decoration:none; text-align: left\" href=\"../special_vbaobjects/special_vbaobjects_vbaobjects.htm\">VBA Objects<\/a> | <a style=\"font-family: Tahoma; font-size: 9pt; font-weight: 400;  font-style:normal; color: rgb(0, 0, 0); text-decoration:none; text-align: left\" href=\"special_vbasolver_background_object.htm\">Solver<\/a> | Background<\/p>");
+
+}
+else
+        if (window.gbIE4)
+                document.location.reload();
+
+onLoadHandler = function()
+{
+  if (window.setRelStartPage)
+        {
+        setTimeout("setRelStartPage('../index.htm');", 1)
+
+    setTimeout("UpdateBreadCrumbsMarker();", 1);
+        }
+}
+
+if (window.addEventListener){  
+        window.addEventListener('load', onLoadHandler, false);   
+} else if (window.attachEvent){  
+        window.attachEvent('onload', onLoadHandler);  
+}
+
+function onSetStartPage()
+{
+  autoSync(1);
+  sendSyncInfo();
+  sendAveInfoOut();
+}
+//-->
+//]]>
+</script><script type="text/javascript" src="../ehlpdhtm.js" language="JavaScript1.2">
+</script>
+<table cellspacing="0" width="100%">
+<col style="width: 50%;" />
+<col style="width: 50%;" />
+<tr>
+<td style="vertical-align: middle; padding-top: 5px; padding-bottom: 5px;">
+<p style="margin-top: 0px; margin-bottom: 0px;"><img src="../3ds.png" alt="" style="border: none;" border="0" /></p>
+</td>
+<td style="vertical-align: middle;">
+<p style="text-align: right;"><a href="https://www.3ds.com/products-services/3dexperience/" target="_blank"><img src="../3dexp.png" alt="" style="border: none;" width="32" height="32" border="0" /></a></p>
+</td>
+</tr>
+</table>
+<p class="VBA-Heading-Object">Background Object</p>
+<p class="VBA-Text">The background object defines the kind of material that surrounds your structure. And defines its volume. By default the volume is defined by the maximum distances of your structure.</p>
+<ul>
+<li class="p-VBA-Index-Category">
+<p class="VBA-Index-Category"><a href="#Methods">Methods</a></p>
+</li>
+<li class="p-VBA-Index-Category">
+<p class="VBA-Index-Category"><a href="#Defaults">Default Settings</a></p>
+</li>
+<li class="p-VBA-Index-Category">
+<p class="VBA-Index-Category"><a href="#Example">Example</a></p>
+</li>
+</ul>
+<p class="VBA-Heading-Category"><a name="Methods" id="Methods"></a>Methods</p>
+<p class="VBA-Heading-Method">Reset</p>
+<p class="VBA-Text-Indent">Resets all internal values to their default settings.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">Type ( <a href="../common_vbageneral/common_general_enum.htm" style="font-weight: normal; font-style: normal;" id="a2" name="a2">enum</a> <span style="font-style: italic;"><i>materialType</i></span> )</p>
+<p class="VBA-Text-Indent">Sets the material type used for the background.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Text-Indent"><span style="font-style: italic;"><i>materialType</i></span> can have one of the following values:</p>
+<table style="margin-left: 24px;" cellspacing="0" width="453">
+<tr style="vertical-align: top;">
+<td style="border: Solid 1px #000000;padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;" width="200">
+<p class="VBA-Text-Indent">normal</p>
+</td>
+<td style="border-top: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;" width="253">
+<p class="VBA-Text-Indent">Not &#160;conducting, with relative permittivity epsilon and relative permeability mu.</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;" width="200">
+<p class="VBA-Text-Indent">pec</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;" width="253">
+<p class="VBA-Text-Indent">Perfect electric conducting material</p>
+</td>
+</tr>
+</table>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">Epsilon ( <a href="../common_vbageneral/common_general_double.htm" style="font-weight: normal; font-style: normal;" id="a1" name="a1">double</a> <span style="font-style: italic;"><i>value</i></span> )</p>
+<p class="VBA-Text-Indent">Defines the electric permittivity of the background material.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">Mu ( <a href="../common_vbageneral/common_general_double.htm" style="font-weight: normal; font-style: normal;" id="a4" name="a4">double</a> <span style="font-style: italic;"><i>value</i></span> )</p>
+<p class="VBA-Text-Indent">Defines the permeability of the background material.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">ElConductivity ( <a href="../common_vbageneral/common_general_double.htm" style="font-weight: normal; font-style: normal;" id="a12" name="a12">double</a> <span style="font-style: italic;"><i>value</i></span> )</p>
+<p class="VBA-Text-Indent">Defines the electric conductivity of the background material. This value is considered only for Low Frequency simulations.</p>
+<p class="vba-text-indent">&#160;</p>
+<p class="VBA-Heading-Method">XminSpace ( <a href="../common_vbageneral/common_general_double.htm" style="font-weight: normal; font-style: normal;" id="a5" name="a5">double</a> <span style="font-style: italic;"><i>value</i></span> )</p>
+<p class="VBA-Heading-Method">XmaxSpace ( <a href="../common_vbageneral/common_general_double.htm" style="font-weight: normal; font-style: normal;" id="a6" name="a6">double</a> <span style="font-style: italic;"><i>value</i></span> )</p>
+<p class="VBA-Heading-Method">YminSpace ( <a href="../common_vbageneral/common_general_double.htm" style="font-weight: normal; font-style: normal;" id="a7" name="a7">double</a> <span style="font-style: italic;"><i>value</i></span> )</p>
+<p class="VBA-Heading-Method">YmaxSpace ( <a href="../common_vbageneral/common_general_double.htm" style="font-weight: normal; font-style: normal;" id="a8" name="a8">double</a> <span style="font-style: italic;"><i>value</i></span> )</p>
+<p class="VBA-Heading-Method">ZminSpace ( <a href="../common_vbageneral/common_general_double.htm" style="font-weight: normal; font-style: normal;" id="a9" name="a9">double</a> <span style="font-style: italic;"><i>value</i></span> )</p>
+<p class="VBA-Heading-Method">ZmaxSpace ( <a href="../common_vbageneral/common_general_double.htm" style="font-weight: normal; font-style: normal;" id="a10" name="a10">double</a> <span style="font-style: italic;"><i>value</i></span> )</p>
+<p class="VBA-Text-Indent">Adds space to the lower or upper x, y or z boundary of the current calculation volume respectively.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">ThermalType ( <a href="../common_vbageneral/common_general_enum.htm" style="font-weight: normal; font-style: normal;" id="a11" name="a11">enum</a> <span style="font-style: italic;"><i>thermalMaterialType</i></span> )</p>
+<p class="VBA-Text-Indent">Sets the material type used for the background.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Text-Indent"><span style="font-style: italic;"><i>thermalMaterialType</i></span> can have one of the following values:</p>
+<table style="margin-left: 24px;" cellspacing="0" width="453">
+<tr style="vertical-align: top;">
+<td style="border: Solid 1px #000000;padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;" width="200">
+<p class="VBA-Text-Indent">normal</p>
+</td>
+<td style="border-top: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;" width="253">
+<p class="VBA-Text-Indent">Not thermal conducting, with relative permittivity epsilon and relative permeability mu.</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;" width="200">
+<p class="VBA-Text-Indent">ptc</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;" width="253">
+<p class="VBA-Text-Indent">Perfect thermal conducting material</p>
+</td>
+</tr>
+</table>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">ThermalConductivity ( <a href="../common_vbageneral/common_general_double.htm" style="font-weight: normal; font-style: normal;" id="a3" name="a3">double</a> &#160;<span style="font-style: italic;"><i>value</i></span> )</p>
+<p class="VBA-Text-Indent">Thermal conductivity is a property of materials that expresses the heat flux f (W/m2) that will flow through the material if a certain temperature gradient DT (K/m) exists over the material. The unit for <span style="font-style: italic;"><i>value</i></span> is W/K/m.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">ApplyInAllDirections ( <a href="../common_vbageneral/common_general_bool_data_type.htm" style="font-weight: normal; font-style: normal;" id="a20" name="a20">bool</a> <span style="font-style: italic;"><i>&#160;flag</i></span> )</p>
+<p class="VBA-Text-Indent">Is at the moment used for the background dialog to identify if the xmin value should be applied in all directions.</p>
+<p class="VBA-Heading-Category"><a name="Defaults" id="Defaults"></a>Default Settings</p>
+<p class="VBA-Text-Example">Type ("pec")</p>
+<p class="VBA-Text-Example">Epsilon (<span style="font-weight: normal;">1.0</span>)</p>
+<p class="VBA-Text-Example">Mu (1.0)</p>
+<p class="VBA-Text-Example">XminSpace (0.0)</p>
+<p class="VBA-Text-Example">XmaxSpace (0.0)</p>
+<p class="VBA-Text-Example">YminSpace (0.0)</p>
+<p class="VBA-Text-Example">YmaxSpace (0.0)</p>
+<p class="VBA-Text-Example">ZminSpace (0.0)</p>
+<p class="VBA-Text-Example">ZmaxSpace (0.0)</p>
+<p class="VBA-Text-Example">ThermalType ("normal")</p>
+<p class="VBA-Text-Example">ThermalConductivity (0.0)</p>
+<p class="VBA-Text-Example">ApplyInAllDirections (False)</p>
+<p class="VBA-Heading-Category"><a name="Example" id="Example"></a>Example</p>
+<p class="VBA-Text-Example">With Background</p>
+<p class="VBA-Text-Example" style="margin-left: 40px;">.Reset</p>
+<p class="VBA-Text-Example" style="margin-left: 40px;">.Type ("normal")</p>
+<p class="VBA-Text-Example" style="margin-left: 40px;">.Epsilon (<span>"eps"</span>)</p>
+<p class="VBA-Text-Example" style="margin-left: 40px;">.Mu (1.0)</p>
+<p class="VBA-Text-Example" style="margin-left: 40px;">.XminSpace (50.0)</p>
+<p class="VBA-Text-Example" style="margin-left: 40px;">.XmaxSpace (50.0)</p>
+<p class="VBA-Text-Example" style="margin-left: 40px;">.YminSpace (25.0)</p>
+<p class="VBA-Text-Example" style="margin-left: 40px;">.YmaxSpace (25.0)</p>
+<p class="VBA-Text-Example" style="margin-left: 40px;">.ZminSpace (50.0)</p>
+<p class="VBA-Text-Example" style="margin-left: 40px;">.ZmaxSpace (50.0)</p>
+<p class="VBA-Text-Example" style="margin-left: 40px;">.ThermalType ("normal")</p>
+<p class="VBA-Text-Example" style="margin-left: 40px;">.ThermalConductivity (0.0)</p>
+<p class="VBA-Text-Example" style="margin-left: 40px;">.ApplyInAllDirections (False)</p>
+<p class="VBA-Text-Example">End With</p>
+<p class="VBA-Text-Example">&#160;</p>
+<script type="text/javascript" language="JavaScript1.2">
+//<![CDATA[
+        if( typeof( FilePopupInit ) != 'function' ) FilePopupInit = new Function();
+        FilePopupInit('a2');
+        FilePopupInit('a1');
+        FilePopupInit('a4');
+        FilePopupInit('a12');
+        FilePopupInit('a5');
+        FilePopupInit('a6');
+        FilePopupInit('a7');
+        FilePopupInit('a8');
+        FilePopupInit('a9');
+        FilePopupInit('a10');
+        FilePopupInit('a11');
+        FilePopupInit('a3');
+        FilePopupInit('a20');
+//]]>
+</script><?rh-p style="margin-bottom: 0px; text-align: Right; margin-left: 18px; 
+                 margin-right: 18px; margin-top: 18px;" ?>
+<div style="width: 100%; position: relative;" id="footer">
+<p style="border-bottom: Solid 1px #dddddd; text-align: Left; margin-left: 0px; font-family: Arial, sans-serif; line-height: Normal; margin-top: 9px; margin-right: 0px; margin-bottom: 6px; border-left-width: 1px; border-top-width: 1px; border-right-width: 1px;"><span style="text-align: Left; font-family: Arial, sans-serif; line-height: Normal;">&#160;</span></p>
+<table cellspacing="0" width="100%">
+<col style="width: 50%;" />
+<col style="width: 50%;" />
+<tr>
+<td style="vertical-align: Top;"><span style="font-family: Arial, sans-serif; line-height: Normal; font-size: 8pt;"><font size="1" style="font-size:8pt;">CST Studio Suite 2026</font></span></td>
+<td style="vertical-align: Top;">
+<p style="text-align: right;">&#160;</p>
+</td>
+</tr>
+</table>
+<p>&#160;</p>
+</div>
+<script type="text/javascript" language="javascript1.2">
+//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+        writeIntopicBar(0);
+
+
+highlightSearch();
+//-->
+//]]>
+</script>
+</body>
+</html>

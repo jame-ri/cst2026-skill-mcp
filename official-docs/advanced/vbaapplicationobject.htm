@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="Adobe RoboHelp 11" />
+<title>VBA Application Object</title>
+<link rel="StyleSheet" href="../online_help.css" type="text/css" />
+<link rel="StyleSheet" href="../online_help.css" type="text/css" />
+<style type="text/css">
+/*<![CDATA[*/
+<!--
+body { border-bottom-style:None; }
+-->
+/*]]>*/
+</style>
+
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+        origWidth = innerWidth;
+        origHeight = innerHeight;
+        onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+/*<![CDATA[*/
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+-->
+/*]]>*/
+</style>
+
+<script type="text/javascript" language="javascript1.2" src="../whmsg.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript" src="../whver.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript1.2" src="../whutils.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript1.2" src="../whproxy.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript1.2" src="../whlang.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript1.2" src="../whtopic.js" charset="utf-8">
+</script>
+</head>
+<body>
+<script type="text/javascript" language="javascript1.2">
+//<![CDATA[
+<!--
+if (window.gbWhTopic)
+{
+        var strUrl = document.location.href;
+        var bc = 0;
+        var n = strUrl.toLowerCase().indexOf("bc-");
+        if(n != -1)
+        {
+                document.location.replace(strUrl.substring(0, n));
+                bc = strUrl.substring(n+3);
+        }
+
+        if (window.addTocInfo)
+        {
+        addTocInfo("Automation and Scripting\nVisual Basic (VBA)\nVBA Application Object");
+addAvenueInfo("Untitled","sax_basic/ww_00000.htm","advanced/central_shared_installation.htm");
+
+        }
+        if (window.writeBtnStyle)
+                writeBtnStyle();
+
+        if (window.writeIntopicBar)
+                writeIntopicBar(0);
+
+        
+        document.write("<p style=\"font-family: Tahoma; font-size: 9pt; font-weight: 400;  font-style:normal; color: rgb(0, 0, 0); text-decoration:none; text-align: left\"> ");
+AddMasterBreadcrumbs("../cst_studio_suite_help.htm", "font-family: Tahoma; font-size: 9pt; font-weight: 400;  font-style:normal; color: rgb(0, 0, 0); text-decoration:none; text-align: left", "|", "Home", "../general/welcome_de.htm");
+document.write("<a style=\"font-family: Tahoma; font-size: 9pt; font-weight: 400;  font-style:normal; color: rgb(0, 0, 0); text-decoration:none; text-align: left\" href=\"../vba/vba_macro_language_overview.htm\">Automation and Scripting<\/a> | <a style=\"font-family: Tahoma; font-size: 9pt; font-weight: 400;  font-style:normal; color: rgb(0, 0, 0); text-decoration:none; text-align: left\" href=\"../vba/vba_macro_language_overview.htm\">Visual Basic (VBA)<\/a> | VBA Application Object<\/p>");
+
+}
+else
+        if (window.gbIE4)
+                document.location.reload();
+
+onLoadHandler = function()
+{
+  if (window.setRelStartPage)
+        {
+        setTimeout("setRelStartPage('../cst_studio_suite_help.htm');", 1)
+
+    setTimeout("UpdateBreadCrumbsMarker();", 1);
+        }
+}
+
+if (window.addEventListener){  
+        window.addEventListener('load', onLoadHandler, false);   
+} else if (window.attachEvent){  
+        window.attachEvent('onload', onLoadHandler);  
+}
+
+function onSetStartPage()
+{
+  autoSync(1);
+  sendSyncInfo();
+  sendAveInfoOut();
+}
+//-->
+//]]>
+</script><script type="text/javascript" src="../ehlpdhtm.js" language="JavaScript1.2">
+</script>
+<table cellspacing="0" width="100%">
+<col style="width: 50%;" />
+<col style="width: 50%;" />
+<tr>
+<td style="vertical-align: middle; padding-top: 5px; padding-bottom: 5px;">
+<p style="margin-top: 0px; margin-bottom: 0px;"><img src="../3ds.png" alt="" style="border: none;" border="0" /></p>
+</td>
+<td style="vertical-align: middle;">
+<p style="text-align: right;"><a href="https://www.3ds.com/products-services/3dexperience/" target="_blank"><img src="../3dexp.png" alt="" style="border: none;" width="32" height="32" border="0" /></a></p>
+</td>
+</tr>
+</table>
+<h1>VBA Application Object</h1>
+<p style="margin-top: 6pt;">CST Studio Suite is implemented as an OLE automation server. &#160;The application is registered under "CSTStudio.Application". &#160;An instance can be created through the common VBA <span style="font-style: italic;"><i>CreateObject</i></span> command:</p>
+<p style="font-family: 'Courier New', monospace;">Dim app As Object</p>
+<p style="font-family: 'Courier New', monospace;">Set app = CreateObject ("CSTStudio.Application")</p>
+<p style="font-family: 'Times New Roman', serif;">&#160;</p>
+<p style="font-family: Arial, sans-serif;">This application object provides methods to open, create and close projects. It always opens the last installed version of the software. If you want start a specific version use e.g.</p>
+<p style="font-family: 'Courier New', monospace;">Set app = CreateObject ("CSTStudio.Application.2026")</p>
+<p style="font-family: Arial, sans-serif;">&#160;</p>
+<p style="font-family: Arial, sans-serif;">Refer to the following list for details:</p>
+<h4>Methods</h4>
+<p>&#160;</p>
+<p class="Tip-Note-Heading">NewMWS <span style="font-weight: normal;">Project</span></p>
+<p class="VBA-Text-Indent" style="margin-left: 24px;">Creates a new CST Microwave Studio project.</p>
+<p class="VBA-Text-Indent" style="margin-left: 24px;">&#160;</p>
+<p class="Tip-Note-Heading">NewEMS <span style="font-weight: normal;">Project</span></p>
+<p class="VBA-Text-Indent" style="margin-left: 24px;">Creates a new CST EM Studio project.</p>
+<p class="VBA-Text-Indent" style="margin-left: 24px;">&#160;</p>
+<p class="Tip-Note-Heading">NewPS <span style="font-weight: normal;">Project</span></p>
+<p class="VBA-Text-Indent" style="margin-left: 24px;">Creates a new CST Particle Studio project.</p>
+<p class="VBA-Text-Indent" style="margin-left: 24px;">&#160;</p>
+<p class="Tip-Note-Heading">NewMPS <span style="font-weight: normal;">Project</span></p>
+<p class="VBA-Text-Indent" style="margin-left: 24px;">Creates a new CST Mphysics Studio project.</p>
+<p class="VBA-Text-Indent" style="margin-left: 24px;">&#160;</p>
+<p class="Tip-Note-Heading">NewCS <span style="font-weight: normal;">Project</span></p>
+<p class="VBA-Text-Indent" style="margin-left: 24px;">Creates a new CST Cable Studio project.</p>
+<p class="VBA-Text-Indent" style="margin-left: 24px;">&#160;</p>
+<p class="Tip-Note-Heading">NewPCBS <span style="font-weight: normal;">Project</span></p>
+<p class="VBA-Text-Indent" style="margin-left: 24px;">Creates a new CST PCB Studio project.</p>
+<p class="VBA-Text-Indent" style="margin-left: 24px;">&#160;</p>
+<p class="Tip-Note-Heading">NewDS <span style="font-weight: normal;">Project</span></p>
+<p class="VBA-Text-Indent" style="margin-left: 24px;">Creates a new CST Design Studio project.</p>
+<p class="VBA-Text-Indent" style="margin-left: 24px;">&#160;</p>
+<p class="Tip-Note-Heading">OpenFile <span style="font-weight: normal;">(</span><a href="../sax_basic/ww_00225.htm">string</a> <span style="font-style: italic;"><i>filename</i></span>)</p>
+<p class="VBA-Text-Indent" style="margin-left: 24px;">Opens a project .</p>
+<p class="VBA-Text-Indent" style="margin-left: 24px;">&#160;</p>
+<p class="Tip-Note-Heading">Active3D</p>
+<p class="VBA-Text-Indent" style="margin-left: 24px;">Offers access to the currently active CST Microwave Studio, CST EM Studio, CST Particle Studio, CST Mphysics Studio or CST Cable Studio project.</p>
+<p class="VBA-Text-Indent" style="margin-left: 24px;">&#160;</p>
+<p class="Tip-Note-Heading">ActiveDS</p>
+<p class="VBA-Text-Indent" style="margin-left: 24px;">Offers access to the currently active CST Design Studio project.</p>
+<p class="VBA-Text-Indent" style="margin-left: 24px;">&#160;</p>
+<p class="Tip-Note-Heading">SetQuietMode (<a href="../sax_basic/ww_00014.htm">bool</a> <span style="font-style: italic;"><i>flag</i></span>)</p>
+<p class="VBA-Text-Indent" style="margin-left: 24px;">When flag is set to True message boxes are suppressed. Please note: Dialog boxes which requires user input cannot be suppressed.</p>
+<p class="Topic-Text-Indent">&#160;</p>
+<p class="Tip-Note-Heading">ProtectProject <span style="font-weight: normal;">(</span><a href="../sax_basic/ww_00225.htm">string</a> <span style="font-style: italic;"><i>name,</i></span> <a href="../sax_basic/ww_00225.htm">string</a> <span style="font-style: italic;"><i>protected project settings</i></span> <span style="font-style: italic;"><i>file</i></span>)</p>
+<p class="VBA-Text-Indent" style="margin-left: 24px;">Saves a protected copy of the specified CST project (name). If a directory is specified, all CST projects found in the directory and its sub-directories will be saved as protected. The <a href="protected_project_settings.htm">protected project settings</a> file could be used to control which objects are marked protected.</p>
+<p class="VBA-Text-Indent" style="margin-left: 24px;">&#160;</p>
+<p class="Tip-Note-Heading">GetFileMainVersion <span style="font-weight: normal;">(</span><a href="../sax_basic/ww_00225.htm">string</a> <span style="font-style: italic;"><i>filename</i></span>) int</p>
+<p class="VBA-Text-Indent" style="margin-left: 24px;">Return the main version of a CST project as an integer number..</p>
+<p class="VBA-Text-Indent" style="margin-left: 24px;">&#160;</p>
+<p class="Tip-Note-Heading">GetFilePatchVersion <span style="font-weight: normal;">(</span><a href="../sax_basic/ww_00225.htm">string</a> <span style="font-style: italic;"><i>filename</i></span>) int</p>
+<p class="VBA-Text-Indent" style="margin-left: 24px;">Return the patch version of a CST project as an integer number..</p>
+<p class="VBA-Text-Indent" style="margin-left: 24px;">&#160;</p>
+<p class="VBA-Heading-Method" style="font-weight: bold;">Quit</p>
+<p class="VBA-Text-Indent" style="margin-left: 24px;">Exits the application.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<h4>Example:</h4>
+<p>&#160;</p>
+<p class="VBA-Text-Example" style="font-family: 'Courier New', monospace;">Dim app As Object</p>
+<p class="VBA-Text-Example" style="font-family: 'Courier New', monospace;">Set app = CreateObject ("CSTStudio.Application")</p>
+<p class="VBA-Text-Example" style="font-family: 'Courier New', monospace;">&#160;</p>
+<p class="VBA-Text-Example" style="font-family: 'Courier New', monospace;">Dim mws As Object</p>
+<p class="VBA-Text-Example" style="font-family: 'Courier New', monospace;">Set mws = app.OpenFile ("D:\CST EXAMPLES\Amplifier.cst")</p>
+<p class="VBA-Text-Example" style="font-family: 'Courier New', monospace;">&#160;</p>
+<p class="VBA-Text-Example" style="font-family: 'Courier New', monospace;"><span style="font-family: 'Courier New', monospace;">Dim iver, ip As Integer</span></p>
+<p class="VBA-Text-Example" style="font-family: 'Courier New', monospace;">iver = app.GetFileMainVersion("D:\CST EXAMPLES\Amplifier.cst")</p>
+<p class="VBA-Text-Example" style="font-family: 'Courier New', monospace;">ip = app.GetFilePatchVersion("D:\CST EXAMPLES\Amplifier.cst")</p>
+<p class="VBA-Text-Example" style="font-family: 'Courier New', monospace;">MsgBox "CST Version of file: " + CStr(iver) + "." + CStr(ip)</p>
+<?rh-p style="margin-bottom: 0px; text-align: Right; margin-left: 18px; 
+                 margin-right: 18px; margin-top: 18px;" ?>
+<div style="width: 100%; position: relative;" id="footer">
+<p style="border-bottom: Solid 1px #dddddd; text-align: Left; margin-left: 0px; font-family: Arial, sans-serif; line-height: Normal; margin-top: 9px; margin-right: 0px; margin-bottom: 6px; border-left-width: 1px; border-top-width: 1px; border-right-width: 1px;"><span style="text-align: Left; font-family: Arial, sans-serif; line-height: Normal;">&#160;</span></p>
+<table cellspacing="0" width="100%">
+<col style="width: 50%;" />
+<col style="width: 50%;" />
+<tr>
+<td style="vertical-align: Top;"><span style="font-family: Arial, sans-serif; line-height: Normal; font-size: 8pt;"><font size="1" style="font-size:8pt;">CST Studio Suite 2026</font></span></td>
+<td style="vertical-align: Top;">
+<p style="text-align: right;">&#160;</p>
+</td>
+</tr>
+</table>
+<p>&#160;</p>
+</div>
+<script type="text/javascript" language="javascript1.2">
+//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+        writeIntopicBar(0);
+
+
+highlightSearch();
+//-->
+//]]>
+</script>
+</body>
+</html>

@@ -1,0 +1,1644 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="Adobe RoboHelp 11" />
+<title>Block Types</title>
+<link rel="StyleSheet" href="../online_help_vba.css" type="text/css" />
+<style type="text/css">
+/*<![CDATA[*/
+<!--
+body { border-bottom-style:None; }
+-->
+/*]]>*/
+</style>
+
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+        origWidth = innerWidth;
+        origHeight = innerHeight;
+        onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+/*<![CDATA[*/
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+-->
+/*]]>*/
+</style>
+
+<script type="text/javascript" language="javascript1.2" src="../whmsg.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript" src="../whver.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript1.2" src="../whutils.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript1.2" src="../whproxy.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript1.2" src="../whlang.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript1.2" src="../whtopic.js" charset="utf-8">
+</script>
+</head>
+<body>
+<script type="text/javascript" language="javascript1.2">
+//<![CDATA[
+<!--
+if (window.gbWhTopic)
+{
+        var strUrl = document.location.href;
+        var bc = 0;
+        var n = strUrl.toLowerCase().indexOf("bc-");
+        if(n != -1)
+        {
+                document.location.replace(strUrl.substring(0, n));
+                bc = strUrl.substring(n+3);
+        }
+
+        if (window.addTocInfo)
+        {
+        
+        }
+        if (window.writeBtnStyle)
+                writeBtnStyle();
+
+        if (window.writeIntopicBar)
+                writeIntopicBar(0);
+
+        
+        document.write("<p style=\"font-family: Tahoma; font-size: 9pt; font-weight: 400;  font-style:normal; color: rgb(0, 0, 0); text-decoration:none; text-align: left\"> ");
+AddMasterBreadcrumbs("../index.htm", "font-family: Tahoma; font-size: 9pt; font-weight: 400;  font-style:normal; color: rgb(0, 0, 0); text-decoration:none; text-align: left", "|", "Home", "../special_vbaobjects/cstdesignstudiovbaobjects.htm");
+document.write("Block Types<\/p>");
+
+}
+else
+        if (window.gbIE4)
+                document.location.reload();
+
+onLoadHandler = function()
+{
+  if (window.setRelStartPage)
+        {
+        setTimeout("setRelStartPage('../index.htm');", 1)
+
+    setTimeout("UpdateBreadCrumbsMarker();", 1);
+        }
+}
+
+if (window.addEventListener){  
+        window.addEventListener('load', onLoadHandler, false);   
+} else if (window.attachEvent){  
+        window.attachEvent('onload', onLoadHandler);  
+}
+
+function onSetStartPage()
+{
+  autoSync(1);
+  sendSyncInfo();
+  sendAveInfoOut();
+}
+//-->
+//]]>
+</script><script type="text/javascript" src="../ehlpdhtm.js" language="JavaScript1.2">
+</script>
+<table cellspacing="0" width="100%">
+<col style="width: 50%;" />
+<col style="width: 50%;" />
+<tr>
+<td style="vertical-align: middle; padding-top: 5px; padding-bottom: 5px;">
+<p style="margin-top: 0px; margin-bottom: 0px;"><img src="../3ds.png" alt="" style="border: none;" border="0" /></p>
+</td>
+<td style="vertical-align: middle;">
+<p style="text-align: right;"><a href="https://www.3ds.com/products-services/3dexperience/" target="_blank"><img src="../3dexp.png" alt="" style="border: none;" width="32" height="32" border="0" /></a></p>
+</td>
+</tr>
+</table>
+<h1>Block Types</h1>
+<p>&#160;</p>
+<p>To create a new block, one of the following block types must be specified within the <span style="font-weight: bold;">Type</span> method of the <a href="blockobject.htm">Block object</a>.</p>
+<ul>
+<li class="p-VBA-Index-Category">
+<p class="VBA-Index-Category"><a href="#FieldSimulator">Field simulator block types</a></p>
+</li>
+<li class="p-VBA-Index-Category">
+<p class="VBA-Index-Category"><a href="#DataImport">Data import block types</a></p>
+</li>
+<li class="p-VBA-Index-Category">
+<p class="VBA-Index-Category"><a href="#Miscellaneous">Miscellaneous block types</a></p>
+</li>
+<li class="p-VBA-Index-Category">
+<p class="VBA-Index-Category"><a href="#Microwave">Microwave RF block types</a></p>
+</li>
+<li class="p-VBA-Index-Category">
+<p class="VBA-Index-Category"><a href="#Transmission">Transmission line block types</a></p>
+</li>
+<li class="p-VBA-Index-Category">
+<p class="VBA-Index-Category"><a href="#Microstrip">Microstrip block types</a></p>
+</li>
+<li class="p-VBA-Index-Category">
+<p class="VBA-Index-Category"><a href="#Stripline">Stripline block types</a></p>
+</li>
+<li class="p-VBA-Index-Category">
+<p class="VBA-Index-Category"><a href="#Waveguide">Waveguide block types</a></p>
+</li>
+<li class="p-VBA-Index-Category">
+<p class="VBA-Index-Category"><a href="#Circuit_Basic">Circuit Basic block types</a></p>
+</li>
+<li class="p-VBA-Index-Category">
+<p class="VBA-Index-Category"><a href="#Circuit_Semi">Circuit Semiconductor block types</a></p>
+</li>
+</ul>
+<p class="VBA-Heading-Category"><a name="FieldSimulator" id="FieldSimulator"></a>Field simulator block types</p>
+<table style="vertical-align: top;" cellspacing="0" width="99.49%">
+<col style="width: 26.662%;" />
+<col style="width: 73.338%;" />
+<tr style="vertical-align: top;">
+<td style="border: Solid 1px #000000; width: 26.662%; padding-right: 10px; padding-left: 10px;">
+<p>"CSTMWS"</p>
+</td>
+<td style="border-top: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 73.338%; padding-right: 10px; padding-left: 10px;">
+<p>CST Microwave Studio block</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 26.662%; padding-right: 10px; padding-left: 10px;">
+<p>"CSTMWSFile"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 73.338%; padding-right: 10px; padding-left: 10px;">
+<p>CST Microwave Studio file block</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 26.662%; padding-right: 10px; padding-left: 10px;">
+<p>"CSTEMStudio"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 73.338%; padding-right: 10px; padding-left: 10px;">
+<p>CST EM Studio block</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 26.662%; padding-right: 10px; padding-left: 10px;">
+<p>"CSTEMStudioFile"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 73.338%; padding-right: 10px; padding-left: 10px;">
+<p>CST EM Studio file block</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 26.662%; padding-right: 10px; padding-left: 10px;">
+<p>"CSTCableStudio"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 73.338%; padding-right: 10px; padding-left: 10px;">
+<p>CST Cable Studio block</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 26.662%; padding-right: 10px; padding-left: 10px;">
+<p>"CSTCableStudioFile"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 73.338%; padding-right: 10px; padding-left: 10px;">
+<p>CST Cable Studio file block</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 26.662%; padding-right: 10px; padding-left: 10px;">
+<p>"CSTPCBStudioFile"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 73.338%; padding-right: 10px; padding-left: 10px;">
+<p>CST PCB Studio file block</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 26.662%; padding-right: 10px; padding-left: 10px;">
+<p>"CSTMPhysicsStudio"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 73.338%; padding-right: 10px; padding-left: 10px;">
+<p>CST Mphysics Studio block</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 26.662%; padding-right: 10px; padding-left: 10px;">
+<p>"CSTMPhysicsStudioFile"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 73.338%; padding-right: 10px; padding-left: 10px;">
+<p>CST Mphysics Studio file block</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 26.662%; padding-right: 10px; padding-left: 10px;">
+<p>"CSTParticleStudio"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 73.338%; padding-right: 10px; padding-left: 10px;">
+<p>CST Particle Studio block</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 26.662%; padding-right: 10px; padding-left: 10px;">
+<p>"CSTParticleStudioFile"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 73.338%; padding-right: 10px; padding-left: 10px;">
+<p>CST Particle Studio file block</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 26.662%; padding-right: 10px; padding-left: 10px;">
+<p>"FEST3D"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 73.338%; padding-right: 10px; padding-left: 10px;">
+<p>FEST3D block</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 26.662%; padding-right: 10px; padding-left: 10px;">
+<p>"FilterDesigner3D"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 73.338%; padding-right: 10px; padding-left: 10px;">
+<p>Filter Designer 3D block</p>
+</td>
+</tr>
+</table>
+<p class="VBA-Heading-Category"><a name="DataImport" id="DataImport"></a>Data import block types</p>
+<table style="vertical-align: top;" cellspacing="0" width="99.49%">
+<col style="width: 26.662%;" />
+<col style="width: 73.338%;" />
+<tr style="vertical-align: top;">
+<td style="border: Solid 1px #000000; width: 26.662%; padding-right: 10px; padding-left: 10px;">
+<p>"MDIF"</p>
+</td>
+<td style="border-top: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 73.338%; padding-right: 10px; padding-left: 10px;">
+<p>MDIF file block</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 26.662%; padding-right: 10px; padding-left: 10px;">
+<p>"MDIFProjectInternal"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 73.338%; padding-right: 10px; padding-left: 10px;">
+<p>MDIF block</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 26.662%; padding-right: 10px; padding-left: 10px;">
+<p>"Touchstone"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 73.338%; padding-right: 10px; padding-left: 10px;">
+<p>Touchstone file block</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 26.662%; padding-right: 10px; padding-left: 10px;">
+<p>"TouchstoneProjectInternal"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 73.338%; padding-right: 10px; padding-left: 10px;">
+<p>Touchstone block</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 26.662%; padding-right: 10px; padding-left: 10px;">
+<p>"SPICEImport"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 73.338%; padding-right: 10px; padding-left: 10px;">
+<p>SPICE file block</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 26.662%; padding-right: 10px; padding-left: 10px;">
+<p>"SPICE"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 73.338%; padding-right: 10px; padding-left: 10px;">
+<p>SPICE block</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 26.662%; padding-right: 10px; padding-left: 10px;">
+<p>"IBISRefFile"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 73.338%; padding-right: 10px; padding-left: 10px;">
+<p>IBIS reference file block</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 26.662%; padding-right: 10px; padding-left: 10px;">
+<p>"IBISRefProj"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 73.338%; padding-right: 10px; padding-left: 10px;">
+<p>IBIS reference project block</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 26.662%; padding-right: 10px; padding-left: 10px;">
+<p>"IBIS"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 73.338%; padding-right: 10px; padding-left: 10px;">
+<p>IBIS buffer block</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 26.662%; padding-right: 10px; padding-left: 10px;">
+<p>"SimLabFile"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 73.338%; padding-right: 10px; padding-left: 10px;">
+<p>SimLab TL/PEEC file block</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 26.662%; padding-right: 10px; padding-left: 10px;">
+<p>"SimLab"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 73.338%; padding-right: 10px; padding-left: 10px;">
+<p>SimLab TL/PEEC block</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 26.662%; padding-right: 10px; padding-left: 10px;">
+<p>"ResistanceMatrix"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 73.338%; padding-right: 10px; padding-left: 10px;">
+<p>Resistance matrix file block</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 26.662%; padding-right: 10px; padding-left: 10px;">
+<p>"ResistanceMatrixProjectInternal"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 73.338%; padding-right: 10px; padding-left: 10px;">
+<p>Resistance matrix block</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 26.662%; padding-right: 10px; padding-left: 10px;">
+<p>"InductanceMatrix"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 73.338%; padding-right: 10px; padding-left: 10px;">
+<p>Inductance matrix file block</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 26.662%; padding-right: 10px; padding-left: 10px;">
+<p>"InductanceMatrixProjectInternal"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 73.338%; padding-right: 10px; padding-left: 10px;">
+<p>Inductance matrix block</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 26.662%; padding-right: 10px; padding-left: 10px;">
+<p>"ConductanceMatrix"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 73.338%; padding-right: 10px; padding-left: 10px;">
+<p>Conductance matrix file block</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 26.662%; padding-right: 10px; padding-left: 10px;">
+<p>"ConductanceMatrixProjectInternal"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 73.338%; padding-right: 10px; padding-left: 10px;">
+<p>Conductance matrix block</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 26.662%; padding-right: 10px; padding-left: 10px;">
+<p>"CapacitanceMatrix"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 73.338%; padding-right: 10px; padding-left: 10px;">
+<p>Capacitance matrix file block</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 26.662%; padding-right: 10px; padding-left: 10px;">
+<p>"CapacitanceMatrixProjectInternal"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 73.338%; padding-right: 10px; padding-left: 10px;">
+<p>Capacitance matrix block</p>
+</td>
+</tr>
+</table>
+<p class="VBA-Heading-Category"><a name="Miscellaneous" id="Miscellaneous"></a>Miscellaneous block types</p>
+<table style="vertical-align: top;" cellspacing="0" width="99.49%">
+<col style="width: 26.662%;" />
+<col style="width: 73.338%;" />
+<tr style="vertical-align: top;">
+<td style="border: Solid 1px #000000; width: 26.662%; padding-right: 10px; padding-left: 10px;">
+<p>"CSTDesignStudio"</p>
+</td>
+<td style="border-top: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 73.338%; padding-right: 10px; padding-left: 10px;">
+<p>CST DESIGN STUDIO project block</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 26.662%; padding-right: 10px; padding-left: 10px;">
+<p>"Array"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 73.338%; padding-right: 10px; padding-left: 10px;">
+<p>Array block</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 26.662%; padding-right: 10px; padding-left: 10px;">
+<p>"VisualBasic"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 73.338%; padding-right: 10px; padding-left: 10px;">
+<p>Visual Basic block</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 26.662%; padding-right: 10px; padding-left: 10px;">
+<p>"Clone"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 73.338%; padding-right: 10px; padding-left: 10px;">
+<p>Clone block</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 26.662%; padding-right: 10px; padding-left: 10px;">
+<p>"SimulationProjectReference"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 73.338%; padding-right: 10px; padding-left: 10px;">
+<p>Simulation project reference block</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 26.662%; padding-right: 10px; padding-left: 10px;">
+<p>"HybridSolver"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 73.338%; padding-right: 10px; padding-left: 10px;">
+<p>Hybrid solver reference block</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 26.662%; padding-right: 10px; padding-left: 10px;">
+<p>"ModeConverter"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 73.338%; padding-right: 10px; padding-left: 10px;">
+<p>Mode converter block</p>
+</td>
+</tr>
+</table>
+<p class="VBA-Heading-Category"><a name="Microwave" id="Microwave"></a>Microwave RF block types</p>
+<table style="vertical-align: top;" cellspacing="0" width="99.49%">
+<col style="width: 26.662%;" />
+<col style="width: 73.338%;" />
+<tr style="vertical-align: top;">
+<td style="border: Solid 1px #000000; width: 26.662%; padding-right: 10px; padding-left: 10px;">
+<p>"Attenuator"</p>
+</td>
+<td style="border-top: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 73.338%; padding-right: 10px; padding-left: 10px;">
+<p>Attenuator block</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 26.662%; padding-right: 10px; padding-left: 10px;">
+<p>"Isolator"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 73.338%; padding-right: 10px; padding-left: 10px;">
+<p>Isolator block</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 26.662%; padding-right: 10px; padding-left: 10px;">
+<p>"Amplifier"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 73.338%; padding-right: 10px; padding-left: 10px;">
+<p>Amplifier block</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 26.662%; padding-right: 10px; padding-left: 10px;">
+<p>"3dBSplitter"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 73.338%; padding-right: 10px; padding-left: 10px;">
+<p>3dB splitter block</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 26.662%; padding-right: 10px; padding-left: 10px;">
+<p>"PowerDivider"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 73.338%; padding-right: 10px; padding-left: 10px;">
+<p>Power Divider block</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 26.662%; padding-right: 10px; padding-left: 10px;">
+<p>"DirectionalCoupler"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 73.338%; padding-right: 10px; padding-left: 10px;">
+<p>Directional Coupler block</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 26.662%; padding-right: 10px; padding-left: 10px;">
+<p>"IdealPhaseShifter"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 73.338%; padding-right: 10px; padding-left: 10px;">
+<p>Ideal phase shifter block</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 26.662%; padding-right: 10px; padding-left: 10px;">
+<p>"VariableReflection"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 73.338%; padding-right: 10px; padding-left: 10px;">
+<p>Variable reflection block</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 26.662%; padding-right: 10px; padding-left: 10px;">
+<p>"PerfectAbsorber"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 73.338%; padding-right: 10px; padding-left: 10px;">
+<p>Perfect absorber block</p>
+</td>
+</tr>
+</table>
+<p class="VBA-Heading-Category"><a name="Transmission" id="Transmission"></a>Transmission line block types</p>
+<table style="vertical-align: top;" cellspacing="0" width="100.014%">
+<col style="width: 26.522%;" />
+<col style="width: 73.478%;" />
+<tr style="vertical-align: top;">
+<td style="border: Solid 1px #000000; width: 26.522%; padding-right: 10px; padding-left: 10px;">
+<p>"GeneralizedTransmissionLineReference"</p>
+</td>
+<td style="border-top: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 73.478%; padding-right: 10px; padding-left: 10px;">
+<p>Generalized transmission line reference block</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 26.522%; padding-right: 10px; padding-left: 10px;">
+<p>"GeneralizedTransmissionLine"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 73.478%; padding-right: 10px; padding-left: 10px;">
+<p>Generalized transmission line block</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 26.522%; padding-right: 10px; padding-left: 10px;">
+<p>"TransmissionLineReference"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 73.478%; padding-right: 10px; padding-left: 10px;">
+<p>Transmission line reference block</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 26.522%; padding-right: 10px; padding-left: 10px;">
+<p>"ElectricalTransmissionLine"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 73.478%; padding-right: 10px; padding-left: 10px;">
+<p>Electrical transmission line block</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 26.522%; padding-right: 10px; padding-left: 10px;">
+<p>"TransmissionLine"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 73.478%; padding-right: 10px; padding-left: 10px;">
+<p>Transmission line block</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 26.522%; padding-right: 10px; padding-left: 10px;">
+<p>"CoaxialLine"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 73.478%; padding-right: 10px; padding-left: 10px;">
+<p>Coaxial line block</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 26.522%; padding-right: 10px; padding-left: 10px;">
+<p>"CoupledTransmissionLines"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 73.478%; padding-right: 10px; padding-left: 10px;">
+<p>Coupled transmission lines block</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 26.522%; padding-right: 10px; padding-left: 10px;">
+<p>"TransmissionLineShort"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 73.478%; padding-right: 10px; padding-left: 10px;">
+<p>Transmission line short block</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 26.522%; padding-right: 10px; padding-left: 10px;">
+<p>"TransmissionLineOpen"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 73.478%; padding-right: 10px; padding-left: 10px;">
+<p>Transmission line open block</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 26.522%; padding-right: 10px; padding-left: 10px;">
+<p>"TransmissionLineShuntShort"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 73.478%; padding-right: 10px; padding-left: 10px;">
+<p>Transmission line shunt short block</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 26.522%; padding-right: 10px; padding-left: 10px;">
+<p>"TransmissionLineShuntOpen"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 73.478%; padding-right: 10px; padding-left: 10px;">
+<p>Transmission line shunt open block</p>
+</td>
+</tr>
+</table>
+<p class="VBA-Heading-Category"><a name="Microstrip" id="Microstrip"></a>Microstrip block types</p>
+<table style="vertical-align: top;" cellspacing="0" width="102.6%">
+<col style="width: 25.854%;" />
+<col style="width: 74.146%;" />
+<tr style="vertical-align: top;">
+<td style="border: Solid 1px #000000; width: 25.854%; padding-right: 10px; padding-left: 10px;">
+<p>"MicrostripReference"</p>
+</td>
+<td style="border-top: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 74.146%; padding-right: 10px; padding-left: 10px;">
+<p>Microstrip reference block</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 25.854%; padding-right: 10px; padding-left: 10px;">
+<p>"MicrostripLine"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 74.146%; padding-right: 10px; padding-left: 10px;">
+<p>Microstrip line block</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 25.854%; padding-right: 10px; padding-left: 10px;">
+<p>"MicrostripBend90"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 74.146%; padding-right: 10px; padding-left: 10px;">
+<p>Microstrip bend block</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 25.854%; padding-right: 10px; padding-left: 10px;">
+<p>"MicrostripBend90OptimalMitered"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 74.146%; padding-right: 10px; padding-left: 10px;">
+<p>Microstrip bend optimal mitered block</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 25.854%; padding-right: 10px; padding-left: 10px;">
+<p>"MicrostripBendRadial"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 74.146%; padding-right: 10px; padding-left: 10px;">
+<p>Microstrip bend with radial stub block</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 25.854%; padding-right: 10px; padding-left: 10px;">
+<p>"MicrostripCurvedBend"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 74.146%; padding-right: 10px; padding-left: 10px;">
+<p>Microstrip curved arbitrary angle bend block</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 25.854%; padding-right: 10px; padding-left: 10px;">
+<p>"MicrostripTaper"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 74.146%; padding-right: 10px; padding-left: 10px;">
+<p>Microstrip taper block</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 25.854%; padding-right: 10px; padding-left: 10px;">
+<p>"MicrostripStep"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 74.146%; padding-right: 10px; padding-left: 10px;">
+<p>Microstrip step block</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 25.854%; padding-right: 10px; padding-left: 10px;">
+<p>"MicrostripStepAsymmetric"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 74.146%; padding-right: 10px; padding-left: 10px;">
+<p>Microstrip asymmetric step block</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 25.854%; padding-right: 10px; padding-left: 10px;">
+<p>"MicrostripGap"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 74.146%; padding-right: 10px; padding-left: 10px;">
+<p>Microstrip gap block</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 25.854%; padding-right: 10px; padding-left: 10px;">
+<p>"MicrostripGapAsymmetric"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 74.146%; padding-right: 10px; padding-left: 10px;">
+<p>Microstrip asymmetric gap block</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 25.854%; padding-right: 10px; padding-left: 10px;">
+<p>"MicrostripMea"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 74.146%; padding-right: 10px; padding-left: 10px;">
+<p>Microstrip meander line</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 25.854%; padding-right: 10px; padding-left: 10px;">
+<p>"MicrostripOpenEnd"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 74.146%; padding-right: 10px; padding-left: 10px;">
+<p>Microstrip open end block</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 25.854%; padding-right: 10px; padding-left: 10px;">
+<p>"MicrostripRadialOpen"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 74.146%; padding-right: 10px; padding-left: 10px;">
+<p>Microstrip open radial stub</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 25.854%; padding-right: 10px; padding-left: 10px;">
+<p>"MicrostripShortStub"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 74.146%; padding-right: 10px; padding-left: 10px;">
+<p>Microstrip short stub</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 25.854%; padding-right: 10px; padding-left: 10px;">
+<p>"MicrostripRadial"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 74.146%; padding-right: 10px; padding-left: 10px;">
+<p>Microstrip radial shunt stub</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 25.854%; padding-right: 10px; padding-left: 10px;">
+<p>"MicrostripRadial2"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 74.146%; padding-right: 10px; padding-left: 10px;">
+<p>Microstrip butterfly shunt stub</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 25.854%; padding-right: 10px; padding-left: 10px;">
+<p>"MicrostripTJunction"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 74.146%; padding-right: 10px; padding-left: 10px;">
+<p>Microstrip T-junction block</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 25.854%; padding-right: 10px; padding-left: 10px;">
+<p>"MicrostripCrossJunction"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 74.146%; padding-right: 10px; padding-left: 10px;">
+<p>Microstrip cross-junction block</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 25.854%; padding-right: 10px; padding-left: 10px;">
+<p>"MicrostripCoupledLines"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 74.146%; padding-right: 10px; padding-left: 10px;">
+<p>Microstrip line coupler (4 ports) block</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 25.854%; padding-right: 10px; padding-left: 10px;">
+<p>"MicrostripCoupledLines2Port"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 74.146%; padding-right: 10px; padding-left: 10px;">
+<p>Microstrip line coupler (2 ports) block</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 25.854%; padding-right: 10px; padding-left: 10px;">
+<p>"MicrostripCoupledLinesOpen"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 74.146%; padding-right: 10px; padding-left: 10px;">
+<p>Microstrip coupled lines open end block</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 25.854%; padding-right: 10px; padding-left: 10px;">
+<p>"MicrostripCoupledMeaLine"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 74.146%; padding-right: 10px; padding-left: 10px;">
+<p>Microstrip coupled meander/straight lines block</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 25.854%; padding-right: 10px; padding-left: 10px;">
+<p>"MicrostripCoupledLinesMea"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 74.146%; padding-right: 10px; padding-left: 10px;">
+<p>Microstrip coupled meander lines block</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 25.854%; padding-right: 10px; padding-left: 10px;">
+<p>"MicrostripCoupledLinesRegular"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 74.146%; padding-right: 10px; padding-left: 10px;">
+<p>Microstrip regular coupled lines block</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 25.854%; padding-right: 10px; padding-left: 10px;">
+<p>"MicrostripCoupledLinesIrregular"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 74.146%; padding-right: 10px; padding-left: 10px;">
+<p>Microstrip irregular coupled lines block</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 25.854%; padding-right: 10px; padding-left: 10px;">
+<p>"MicrostripBranchlineCoupler"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 74.146%; padding-right: 10px; padding-left: 10px;">
+<p>Microstrip branchline coupler block</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 25.854%; padding-right: 10px; padding-left: 10px;">
+<p>"MicrostripRatraceCoupler"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 74.146%; padding-right: 10px; padding-left: 10px;">
+<p>Microstrip ratrace ring coupler block</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 25.854%; padding-right: 10px; padding-left: 10px;">
+<p>"MicrostripBroadsideCoupler"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 74.146%; padding-right: 10px; padding-left: 10px;">
+<p>Microstrip broadside coupler (4 ports) block</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 25.854%; padding-right: 10px; padding-left: 10px;">
+<p>"MicrostripVia"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 74.146%; padding-right: 10px; padding-left: 10px;">
+<p>Microstrip via block</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 25.854%; padding-right: 10px; padding-left: 10px;">
+<p>"MicrostripVia2Port"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 74.146%; padding-right: 10px; padding-left: 10px;">
+<p>Microstrip two-port via block</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 25.854%; padding-right: 10px; padding-left: 10px;">
+<p>"MicrostripVia2Layer"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 74.146%; padding-right: 10px; padding-left: 10px;">
+<p>Microstrip two-port interconnection via block</p>
+</td>
+</tr>
+</table>
+<p class="VBA-Heading-Category"><a name="Stripline" id="Stripline"></a>Stripline block types</p>
+<table style="vertical-align: top;" cellspacing="0" width="102.6%">
+<col style="width: 25.854%;" />
+<col style="width: 74.146%;" />
+<tr style="vertical-align: top;">
+<td style="border: Solid 1px #000000; width: 25.854%; padding-right: 10px; padding-left: 10px;">
+<p>"StriplineReference"</p>
+</td>
+<td style="border-top: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 74.146%; padding-right: 10px; padding-left: 10px;">
+<p>Stripline reference block</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 25.854%; padding-right: 10px; padding-left: 10px;">
+<p>"Stripline"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 74.146%; padding-right: 10px; padding-left: 10px;">
+<p>Stripline line block</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 25.854%; padding-right: 10px; padding-left: 10px;">
+<p>"StriplineBend90"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 74.146%; padding-right: 10px; padding-left: 10px;">
+<p>Stripline bend block</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 25.854%; padding-right: 10px; padding-left: 10px;">
+<p>"StriplineBend90OptimalMitered"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 74.146%; padding-right: 10px; padding-left: 10px;">
+<p>Stripline bend optimal mitered block</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 25.854%; padding-right: 10px; padding-left: 10px;">
+<p>"StriplineBendRadial"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 74.146%; padding-right: 10px; padding-left: 10px;">
+<p>Stripline bend with radial stub block</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 25.854%; padding-right: 10px; padding-left: 10px;">
+<p>"StriplineCurvedBend"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 74.146%; padding-right: 10px; padding-left: 10px;">
+<p>Stripline curved arbitrary angle bend block</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 25.854%; padding-right: 10px; padding-left: 10px;">
+<p>"StriplineTaper"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 74.146%; padding-right: 10px; padding-left: 10px;">
+<p>Stripline taper block</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 25.854%; padding-right: 10px; padding-left: 10px;">
+<p>"StriplineStep"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 74.146%; padding-right: 10px; padding-left: 10px;">
+<p>Stripline step block</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 25.854%; padding-right: 10px; padding-left: 10px;">
+<p>"StriplineStepAsymmetric"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 74.146%; padding-right: 10px; padding-left: 10px;">
+<p>Stripline asymmetric step block</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 25.854%; padding-right: 10px; padding-left: 10px;">
+<p>"StriplineGap"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 74.146%; padding-right: 10px; padding-left: 10px;">
+<p>Stripline gap block</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 25.854%; padding-right: 10px; padding-left: 10px;">
+<p>"StriplineGapAsymmetric"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 74.146%; padding-right: 10px; padding-left: 10px;">
+<p>Stripline asymmetric gap block</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 25.854%; padding-right: 10px; padding-left: 10px;">
+<p>"StriplineMea"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 74.146%; padding-right: 10px; padding-left: 10px;">
+<p>Stripline meander line</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 25.854%; padding-right: 10px; padding-left: 10px;">
+<p>"StriplineOpenEnd"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 74.146%; padding-right: 10px; padding-left: 10px;">
+<p>Stripline open end block</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 25.854%; padding-right: 10px; padding-left: 10px;">
+<p>"StriplineRadialOpen"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 74.146%; padding-right: 10px; padding-left: 10px;">
+<p>Stripline open radial stub</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 25.854%; padding-right: 10px; padding-left: 10px;">
+<p>"StriplineShortStub"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 74.146%; padding-right: 10px; padding-left: 10px;">
+<p>Stripline short stub</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 25.854%; padding-right: 10px; padding-left: 10px;">
+<p>"StriplineRadial"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 74.146%; padding-right: 10px; padding-left: 10px;">
+<p>Stripline radial shunt stub</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 25.854%; padding-right: 10px; padding-left: 10px;">
+<p>"StriplineRadial2"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 74.146%; padding-right: 10px; padding-left: 10px;">
+<p>Stripline butterfly shunt stub</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 25.854%; padding-right: 10px; padding-left: 10px;">
+<p>"StriplineTJunction"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 74.146%; padding-right: 10px; padding-left: 10px;">
+<p>Stripline T-junction block</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 25.854%; padding-right: 10px; padding-left: 10px;">
+<p>"StriplineCrossJunction"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 74.146%; padding-right: 10px; padding-left: 10px;">
+<p>Stripline cross-junction block</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 25.854%; padding-right: 10px; padding-left: 10px;">
+<p>"StriplineCoupledLines"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 74.146%; padding-right: 10px; padding-left: 10px;">
+<p>Stripline line coupler (4 ports) block</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 25.854%; padding-right: 10px; padding-left: 10px;">
+<p>"StriplineCoupledLines2Port"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 74.146%; padding-right: 10px; padding-left: 10px;">
+<p>Stripline line coupler (2 ports) block</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 25.854%; padding-right: 10px; padding-left: 10px;">
+<p>"StriplineCoupledLinesOpen"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 74.146%; padding-right: 10px; padding-left: 10px;">
+<p>Stripline coupled lines open end block</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 25.854%; padding-right: 10px; padding-left: 10px;">
+<p>"StriplineCoupledMeaLine"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 74.146%; padding-right: 10px; padding-left: 10px;">
+<p>Stripline coupled meander/straight lines block</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 25.854%; padding-right: 10px; padding-left: 10px;">
+<p>"StriplineCoupledLinesMea"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 74.146%; padding-right: 10px; padding-left: 10px;">
+<p>Stripline coupled meander lines block</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 25.854%; padding-right: 10px; padding-left: 10px;">
+<p>"StriplineCoupledLinesRegular"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 74.146%; padding-right: 10px; padding-left: 10px;">
+<p>Stripline regular coupled lines block</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 25.854%; padding-right: 10px; padding-left: 10px;">
+<p>"StriplineCoupledLinesIrregular"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 74.146%; padding-right: 10px; padding-left: 10px;">
+<p>Stripline irregular coupled lines block</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 25.854%; padding-right: 10px; padding-left: 10px;">
+<p>"StriplineBranchlineCoupler"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 74.146%; padding-right: 10px; padding-left: 10px;">
+<p>Stripline branchline coupler block</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 25.854%; padding-right: 10px; padding-left: 10px;">
+<p>"StriplineRatraceCoupler"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 74.146%; padding-right: 10px; padding-left: 10px;">
+<p>Stripline ratrace ring coupler block</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 25.854%; padding-right: 10px; padding-left: 10px;">
+<p>"StriplineVia"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 74.146%; padding-right: 10px; padding-left: 10px;">
+<p>Stripline via block</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 25.854%; padding-right: 10px; padding-left: 10px;">
+<p>"StriplineVia2Port"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 74.146%; padding-right: 10px; padding-left: 10px;">
+<p>Stripline two-port via block</p>
+</td>
+</tr>
+</table>
+<p class="VBA-Heading-Category"><a name="Waveguide" id="Waveguide"></a>Waveguide block types</p>
+<table style="vertical-align: top;" cellspacing="0" width="103.277%">
+<col style="width: 25.684%;" />
+<col style="width: 74.316%;" />
+<tr style="vertical-align: top;">
+<td style="border: Solid 1px #000000; width: 25.684%; padding-right: 10px; padding-left: 10px;">
+<p>"RectangularWaveguideReference"</p>
+</td>
+<td style="border-top: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 74.316%; padding-right: 10px; padding-left: 10px;">
+<p>Rectangular waveguide reference block</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 25.684%; padding-right: 10px; padding-left: 10px;">
+<p>"RectangularWaveguide"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 74.316%; padding-right: 10px; padding-left: 10px;">
+<p>Rectangular waveguide block</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 25.684%; padding-right: 10px; padding-left: 10px;">
+<p>"RectangularWaveguideEPlaneCorner"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 74.316%; padding-right: 10px; padding-left: 10px;">
+<p>Rectangular waveguide E-plane corner block (TE10)</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 25.684%; padding-right: 10px; padding-left: 10px;">
+<p>"RectangularWaveguideHPlaneCorner"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 74.316%; padding-right: 10px; padding-left: 10px;">
+<p>Rectangular waveguide H-plane corner block (TE10)</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 25.684%; padding-right: 10px; padding-left: 10px;">
+<p>"RectangularWaveguideEPlaneBend"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 74.316%; padding-right: 10px; padding-left: 10px;">
+<p>Rectangular waveguide E-plane bend block (TE10)</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 25.684%; padding-right: 10px; padding-left: 10px;">
+<p>"RectangularWaveguideHPlaneBend"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 74.316%; padding-right: 10px; padding-left: 10px;">
+<p>Rectangular waveguide H-plane bend block (TE10)</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 25.684%; padding-right: 10px; padding-left: 10px;">
+<p>"RectangularWaveguideEPlaneTJunction"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 74.316%; padding-right: 10px; padding-left: 10px;">
+<p>Rectangular waveguide E-plane T-junction block (TE10)</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 25.684%; padding-right: 10px; padding-left: 10px;">
+<p>"RectangularWaveguideHPlaneTJunction"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 74.316%; padding-right: 10px; padding-left: 10px;">
+<p>Rectangular waveguide H-plane T-junction block (TE10)</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 25.684%; padding-right: 10px; padding-left: 10px;">
+<p>"RectangularWaveguideSymIrisFinitePerp"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 74.316%; padding-right: 10px; padding-left: 10px;">
+<p>Rectangular waveguide finite symmetric iris perpendicular to E block (TE10)</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 25.684%; padding-right: 10px; padding-left: 10px;">
+<p>"RectangularWaveguideSymIrisFinitePar"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 74.316%; padding-right: 10px; padding-left: 10px;">
+<p>Rectangular waveguide finite symmetric iris parallel to E block (TE10)</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 25.684%; padding-right: 10px; padding-left: 10px;">
+<p>"RectangularWaveguideAsymIrisFinitePerp"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 74.316%; padding-right: 10px; padding-left: 10px;">
+<p>Rectangular waveguide finite asymmetric iris perpendicular to E block (TE10)</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 25.684%; padding-right: 10px; padding-left: 10px;">
+<p>"RectangularWaveguideAsymIrisFinitePar"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 74.316%; padding-right: 10px; padding-left: 10px;">
+<p>Rectangular waveguide finite asymmetric iris parallel to E block (TE10)</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 25.684%; padding-right: 10px; padding-left: 10px;">
+<p>"CircularWaveguideReference"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 74.316%; padding-right: 10px; padding-left: 10px;">
+<p>Circular waveguide reference block</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 25.684%; padding-right: 10px; padding-left: 10px;">
+<p>"CircularWaveguide"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 74.316%; padding-right: 10px; padding-left: 10px;">
+<p>Circular waveguide block</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 25.684%; padding-right: 10px; padding-left: 10px;">
+<p>"HollowWaveguide"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 74.316%; padding-right: 10px; padding-left: 10px;">
+<p>Hollow waveguide block</p>
+</td>
+</tr>
+</table>
+<p class="VBA-Heading-Category"><a name="Circuit_Basic" id="Circuit_Basic"></a>Circuit Basic block types</p>
+<table style="vertical-align: top;" cellspacing="0" width="101.574%">
+<col style="width: 48.453%;" />
+<col style="width: 51.547%;" />
+<tr style="vertical-align: top;">
+<td style="border: Solid 1px #000000; width: 48.453%; padding-right: 10px; padding-left: 10px;">
+<p>"Ground"</p>
+</td>
+<td style="border-top: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 51.547%; padding-right: 10px; padding-left: 10px;">
+<p>Ground element</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 48.453%; padding-right: 10px; padding-left: 10px;">
+<p>"CircuitBasic\Resistor"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 51.547%; padding-right: 10px; padding-left: 10px;">
+<p>Resistor</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 48.453%; padding-right: 10px; padding-left: 10px;">
+<p>"CircuitBasic\Capacitor"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 51.547%; padding-right: 10px; padding-left: 10px;">
+<p>Capacitor</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 48.453%; padding-right: 10px; padding-left: 10px;">
+<p>"CircuitBasic\Inductor"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 51.547%; padding-right: 10px; padding-left: 10px;">
+<p>Inductor</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 48.453%; padding-right: 10px; padding-left: 10px;">
+<p>"CircuitBasic\Generic 2-Pin Device"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 51.547%; padding-right: 10px; padding-left: 10px;">
+<p>Generic 2-Pin Device</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 48.453%; padding-right: 10px; padding-left: 10px;">
+<p>"CircuitBasic\Generic 3-Pin Device"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 51.547%; padding-right: 10px; padding-left: 10px;">
+<p>Generic 3-Pin Device</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 48.453%; padding-right: 10px; padding-left: 10px;">
+<p>"CircuitBasic\Generic 4-Pin Device"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 51.547%; padding-right: 10px; padding-left: 10px;">
+<p>Generic 4-Pin Device</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 48.453%; padding-right: 10px; padding-left: 10px;">
+<p>"CircuitBasic\Mutual Coupling"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 51.547%; padding-right: 10px; padding-left: 10px;">
+<p>Mutual Coupling</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 48.453%; padding-right: 10px; padding-left: 10px;">
+<p>"CircuitBasic\Voltage DC Source"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 51.547%; padding-right: 10px; padding-left: 10px;">
+<p>Voltage DC Source</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 48.453%; padding-right: 10px; padding-left: 10px;">
+<p>"CircuitBasic\Voltage Signal Source"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 51.547%; padding-right: 10px; padding-left: 10px;">
+<p>Voltage Signal Source (AC or HB)</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 48.453%; padding-right: 10px; padding-left: 10px;">
+<p>"CircuitBasic\Current Source"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 51.547%; padding-right: 10px; padding-left: 10px;">
+<p>Current Source</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 48.453%; padding-right: 10px; padding-left: 10px;">
+<p>"CircuitBasic\Linear Current-Controlled Current Source"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 51.547%; padding-right: 10px; padding-left: 10px;">
+<p>Linear Current-Controlled Current Source</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 48.453%; padding-right: 10px; padding-left: 10px;">
+<p>"CircuitBasic\Linear Voltage-Controlled Current Source"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 51.547%; padding-right: 10px; padding-left: 10px;">
+<p>Linear Voltage-Controlled Current Source</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 48.453%; padding-right: 10px; padding-left: 10px;">
+<p>"CircuitBasic\Linear Current-Controlled Voltage Source"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 51.547%; padding-right: 10px; padding-left: 10px;">
+<p>Linear Current-Controlled Voltage Source</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 48.453%; padding-right: 10px; padding-left: 10px;">
+<p>"CircuitBasic\Linear Voltage-Controlled Voltage Source"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 51.547%; padding-right: 10px; padding-left: 10px;">
+<p>Linear Voltage-Controlled Voltage Source</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 48.453%; padding-right: 10px; padding-left: 10px;">
+<p>"CircuitBasic\Infinite Value Capacitor"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 51.547%; padding-right: 10px; padding-left: 10px;">
+<p>Infinite Value Capacitor</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 48.453%; padding-right: 10px; padding-left: 10px;">
+<p>"CircuitBasic\Infinite Value Inductor"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 51.547%; padding-right: 10px; padding-left: 10px;">
+<p>Infinite Value Inductor</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 48.453%; padding-right: 10px; padding-left: 10px;">
+<p>"CircuitBasic\Ideal Transformer"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 51.547%; padding-right: 10px; padding-left: 10px;">
+<p>Ideal Transformer</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 48.453%; padding-right: 10px; padding-left: 10px;">
+<p>"CircuitBasic\Operational Amplifier"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 51.547%; padding-right: 10px; padding-left: 10px;">
+<p>Operational Amplifier</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 48.453%; padding-right: 10px; padding-left: 10px;">
+<p>"VoltageControlledSwitch"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 51.547%; padding-right: 10px; padding-left: 10px;">
+<p>Voltage-Controlled Switch</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 48.453%; padding-right: 10px; padding-left: 10px;">
+<p>"CurrentControlledSwitch"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 51.547%; padding-right: 10px; padding-left: 10px;">
+<p>Current-Controlled Switch</p>
+</td>
+</tr>
+</table>
+<p class="VBA-Heading-Category"><a name="Circuit_Semi" id="Circuit_Semi"></a>Circuit Semiconductor block types</p>
+<table style="vertical-align: top;" cellspacing="0" width="100.866%">
+<col style="width: 59.558%;" />
+<col style="width: 40.442%;" />
+<tr style="vertical-align: top;">
+<td style="border: Solid 1px #000000; width: 59.558%; padding-right: 10px; padding-left: 10px;">
+<p>"CircuitSemi\Diode"</p>
+</td>
+<td style="border-top: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 40.442%; padding-right: 10px; padding-left: 10px;">
+<p>Diode</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 59.558%; padding-right: 10px; padding-left: 10px;">
+<p>"CircuitSemi\Schottky Diode"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 40.442%; padding-right: 10px; padding-left: 10px;">
+<p>Schottky diode</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 59.558%; padding-right: 10px; padding-left: 10px;">
+<p>"CircuitSemi\Zener Diode"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 40.442%; padding-right: 10px; padding-left: 10px;">
+<p>Zener diode</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 59.558%; padding-right: 10px; padding-left: 10px;">
+<p>"CircuitSemi\NPN Bipolar Transistor"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 40.442%; padding-right: 10px; padding-left: 10px;">
+<p>NPN bipolar transistor</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 59.558%; padding-right: 10px; padding-left: 10px;">
+<p>"CircuitSemi\PNP Bipolar Transistor"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 40.442%; padding-right: 10px; padding-left: 10px;">
+<p>PNP bipolar transistor</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 59.558%; padding-right: 10px; padding-left: 10px;">
+<p>"CircuitSemi\N Junction Field-Effect Transistor"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 40.442%; padding-right: 10px; padding-left: 10px;">
+<p>N Junction Field-Effect Transistor</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 59.558%; padding-right: 10px; padding-left: 10px;">
+<p>"CircuitSemi\P Junction Field-Effect Transistor"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 40.442%; padding-right: 10px; padding-left: 10px;">
+<p>P Junction Field-Effect Transistor</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 59.558%; padding-right: 10px; padding-left: 10px;">
+<p>"CircuitSemi\N GaAS Metal-Schottky Field-Effect Transistor (MESFET)"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 40.442%; padding-right: 10px; padding-left: 10px;">
+<p>N GaAS Metal-Schottky Field-Effect Transistor (MESFET)</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 59.558%; padding-right: 10px; padding-left: 10px;">
+<p>"CircuitSemi\P GaAS Metal-Schottky Field-Effect Transistor (MESFET)"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 40.442%; padding-right: 10px; padding-left: 10px;">
+<p>P GaAS Metal-Schottky Field-Effect Transistor (MESFET)</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 59.558%; padding-right: 10px; padding-left: 10px;">
+<p>"CircuitSemi\N MOS Transistor"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 40.442%; padding-right: 10px; padding-left: 10px;">
+<p>N MOS Transistor</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 59.558%; padding-right: 10px; padding-left: 10px;">
+<p>"CircuitSemi\P MOS Transistor"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 40.442%; padding-right: 10px; padding-left: 10px;">
+<p>P MOS Transistor</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 59.558%; padding-right: 10px; padding-left: 10px;">
+<p>"CircuitSemi\N MOS Transistor (3 Terminal)"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 40.442%; padding-right: 10px; padding-left: 10px;">
+<p>N MOS Transistor (3 Terminal)</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 59.558%; padding-right: 10px; padding-left: 10px;">
+<p>"CircuitSemi\P MOS Transistor (3 Terminal)"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 40.442%; padding-right: 10px; padding-left: 10px;">
+<p>P MOS Transistor (3 Terminal)</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 59.558%; padding-right: 10px; padding-left: 10px;">
+<p>"CircuitSemi\NPN Darlington Transistor"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 40.442%; padding-right: 10px; padding-left: 10px;">
+<p>NPN Darlington Transistor</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 59.558%; padding-right: 10px; padding-left: 10px;">
+<p>"CircuitSemi\PNP Darlington Transistor"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 40.442%; padding-right: 10px; padding-left: 10px;">
+<p>PNP Darlington Transistor</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 59.558%; padding-right: 10px; padding-left: 10px;">
+<p>"CircuitSemi\N-Channel IGBT"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 40.442%; padding-right: 10px; padding-left: 10px;">
+<p>N-Channel Insulated Gate Bipolar Transistor</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 59.558%; padding-right: 10px; padding-left: 10px;">
+<p>"CircuitSemi\P-Channel IGBT"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 40.442%; padding-right: 10px; padding-left: 10px;">
+<p>P-Channel Insulated Gate Bipolar Transistor</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 59.558%; padding-right: 10px; padding-left: 10px;">
+<p>"CircuitSemi\Thyristor"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 40.442%; padding-right: 10px; padding-left: 10px;">
+<p>Thyristor</p>
+</td>
+</tr>
+</table>
+<p>&#160;</p>
+<?rh-p style="margin-bottom: 0px; text-align: Right; margin-left: 18px; 
+                 margin-right: 18px; margin-top: 18px;" ?>
+<div style="width: 100%; position: relative;" id="footer">
+<p style="border-bottom: Solid 1px #dddddd; text-align: Left; margin-left: 0px; font-family: Arial, sans-serif; line-height: Normal; margin-top: 9px; margin-right: 0px; margin-bottom: 6px; border-left-width: 1px; border-top-width: 1px; border-right-width: 1px;"><span style="text-align: Left; font-family: Arial, sans-serif; line-height: Normal;">&#160;</span></p>
+<table cellspacing="0" width="100%">
+<col style="width: 50%;" />
+<col style="width: 50%;" />
+<tr>
+<td style="vertical-align: Top;"><span style="font-family: Arial, sans-serif; line-height: Normal; font-size: 8pt;"><font size="1" style="font-size:8pt;">CST Studio Suite 2026</font></span></td>
+<td style="vertical-align: Top;">
+<p style="text-align: right;">&#160;</p>
+</td>
+</tr>
+</table>
+<p>&#160;</p>
+</div>
+<script type="text/javascript" language="javascript1.2">
+//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+        writeIntopicBar(0);
+
+
+highlightSearch();
+//-->
+//]]>
+</script>
+</body>
+</html>

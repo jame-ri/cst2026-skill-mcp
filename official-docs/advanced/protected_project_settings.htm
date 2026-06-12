@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="Adobe RoboHelp 11" />
+<title>Protected Project Settings</title>
+<link rel="StyleSheet" href="../online_help.css" type="text/css" />
+<link rel="StyleSheet" href="../online_help.css" type="text/css" />
+<style type="text/css">
+/*<![CDATA[*/
+<!--
+body { border-bottom-style:None; }
+-->
+/*]]>*/
+</style>
+
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+        origWidth = innerWidth;
+        origHeight = innerHeight;
+        onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+/*<![CDATA[*/
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+-->
+/*]]>*/
+</style>
+
+<script type="text/javascript" language="javascript1.2" src="../whmsg.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript" src="../whver.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript1.2" src="../whutils.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript1.2" src="../whproxy.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript1.2" src="../whlang.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript1.2" src="../whtopic.js" charset="utf-8">
+</script>
+</head>
+<body>
+<script type="text/javascript" language="javascript1.2">
+//<![CDATA[
+<!--
+if (window.gbWhTopic)
+{
+        var strUrl = document.location.href;
+        var bc = 0;
+        var n = strUrl.toLowerCase().indexOf("bc-");
+        if(n != -1)
+        {
+                document.location.replace(strUrl.substring(0, n));
+                bc = strUrl.substring(n+3);
+        }
+
+        if (window.addTocInfo)
+        {
+        
+        }
+        if (window.writeBtnStyle)
+                writeBtnStyle();
+
+        if (window.writeIntopicBar)
+                writeIntopicBar(0);
+
+        
+        document.write("<p style=\"font-family: Tahoma; font-size: 9pt; font-weight: 400;  font-style:normal; color: rgb(0, 0, 0); text-decoration:none; text-align: left\"> ");
+AddMasterBreadcrumbs("../cst_studio_suite_help.htm", "font-family: Tahoma; font-size: 9pt; font-weight: 400;  font-style:normal; color: rgb(0, 0, 0); text-decoration:none; text-align: left", "|", "Home", "../general/welcome_de.htm");
+document.write("Protected Project Settings<\/p>");
+
+}
+else
+        if (window.gbIE4)
+                document.location.reload();
+
+onLoadHandler = function()
+{
+  if (window.setRelStartPage)
+        {
+        setTimeout("setRelStartPage('../cst_studio_suite_help.htm');", 1)
+
+    setTimeout("UpdateBreadCrumbsMarker();", 1);
+        }
+}
+
+if (window.addEventListener){  
+        window.addEventListener('load', onLoadHandler, false);   
+} else if (window.attachEvent){  
+        window.attachEvent('onload', onLoadHandler);  
+}
+
+function onSetStartPage()
+{
+  autoSync(1);
+  sendSyncInfo();
+  sendAveInfoOut();
+}
+//-->
+//]]>
+</script><script type="text/javascript" src="../ehlpdhtm.js" language="JavaScript1.2">
+</script>
+<table cellspacing="0" width="100%">
+<col style="width: 50%;" />
+<col style="width: 50%;" />
+<tr>
+<td style="vertical-align: middle; padding-top: 5px; padding-bottom: 5px;">
+<p style="margin-top: 0px; margin-bottom: 0px;"><img src="../3ds.png" alt="" style="border: none;" border="0" /></p>
+</td>
+<td style="vertical-align: middle;">
+<p style="text-align: right;"><a href="https://www.3ds.com/products-services/3dexperience/" target="_blank"><img src="../3dexp.png" alt="" style="border: none;" width="32" height="32" border="0" /></a></p>
+</td>
+</tr>
+</table>
+<h1>Protected Project Settings</h1>
+<p style="font-family: Arial, sans-serif;">In order to automate the creation of projected projects, one can define the protected project settings in a JSON file. This JSON file can then be used when creating protected projects either using the command line option or using scripts.</p>
+<p style="font-family: Arial, sans-serif;">&#160;</p>
+<p style="font-family: Arial, sans-serif;">The content of the JSON file can be defined as shown here:</p>
+<p style="font-family: Arial, sans-serif;">&#160;</p>
+<p style="font-family: 'Courier New', monospace; font-weight: bold;">{</p>
+<p style="font-family: 'Courier New', monospace; margin-left: 40px; font-weight: bold;"><span style="color: #007f00;"><font color="#007F00">&#160;"destination_folder" &#160;</font></span>: <span style="color: #ff7f00;"><font color="#FF7F00">"E:\\Protected"</font></span>,</p>
+<p style="font-family: 'Courier New', monospace; margin-left: 40px; font-weight: bold;"><span style="color: #007f00;"><font color="#007F00">&#160;"placeholders" &#160;&#160;&#160;&#160;&#160;&#160;&#160;</font></span>: <span style="color: #ff7f00;"><font color="#FF7F00">"component1:solid2"</font></span>,</p>
+<p style="font-family: 'Courier New', monospace; margin-left: 40px; font-weight: bold;"><span style="color: #007f00;"><font color="#007F00">&#160;"unprotect_shapes" &#160;&#160;&#160;</font></span>: <span style="color: #ff7f00;"><font color="#FF7F00">"component1:solid1_1"</font></span>,</p>
+<p style="font-family: 'Courier New', monospace; margin-left: 40px; font-weight: bold;">&#160;<span style="color: #007f00;"><font color="#007F00">"unprotect_wires" &#160;&#160;&#160;&#160;</font></span>: [<span style="color: #ff7f00;"><font color="#FF7F00">"Folder1:wire2"</font></span>, <span style="color: #ff7f00;"><font color="#FF7F00">"wire1"</font></span>],</p>
+<p style="font-family: 'Courier New', monospace; margin-left: 40px; font-weight: bold;">&#160;<span style="color: #007f00;"><font color="#007F00">"unprotect_ports" &#160;&#160;&#160;&#160;</font></span>: <span style="color: #ff7f00;"><font color="#FF7F00">true</font></span>,</p>
+<p style="font-family: 'Courier New', monospace; margin-left: 40px; font-weight: bold;"><span style="color: #007f00;"><font color="#007F00">&#160;"unprotect_materials"</font></span> : <span style="color: #ff7f00;"><font color="#FF7F00">false</font></span></p>
+<p style="font-family: 'Courier New', monospace; font-weight: bold;">}</p>
+<p style="font-family: Arial, sans-serif;">&#160;</p>
+<p style="font-family: Arial, sans-serif;">It is not mandatory to specify all the below mentioned sections. You could specify one or more sections in the file depending on your workflow.</p>
+<p style="font-family: Arial, sans-serif;">&#160;</p>
+<p style="font-family: Arial, sans-serif;"><span style="font-weight: bold;">destination_folder</span>:</p>
+<p class="Topic-Text-Indent">Specify a string.</p>
+<p class="Topic-Text-Indent">The string defines where the protected projects should be saved.</p>
+<p class="Topic-Text-Indent">The protected projects are normally saved at the same location as that of the original project.</p>
+<p class="Topic-Text-Indent">The project name is automatically suffixed with '<span style="font-style: italic;"><i>_protected</i></span>'.</p>
+<p style="font-family: Arial, sans-serif;">&#160;</p>
+<p style="font-family: Arial, sans-serif;"><span style="font-weight: bold;">placeholders</span>:</p>
+<p class="Topic-Text-Indent">Specify a string or an array of strings.</p>
+<p class="Topic-Text-Indent">The string can be a complete name of a solid or a component which you want to use as a placeholder shape.</p>
+<p class="Topic-Text-Indent">The protected projects normally defines an automatic placeholder by performing a boolean unite operation of the bonding boxes of all the protected shapes and wires.</p>
+<p style="font-family: Arial, sans-serif;">&#160;</p>
+<p style="font-family: Arial, sans-serif;"><span style="font-weight: bold;">unprotect_shapes</span>:</p>
+<p class="Topic-Text-Indent">Specify a string, an array of strings, true or false.</p>
+<p class="Topic-Text-Indent">The string can be a complete name of a solid or a component which you do not want to protect.</p>
+<p class="Topic-Text-Indent"><span style="font-family: Arial, sans-serif;">If you specify true, no shapes will be protected. If you specify false, all shapes will be protected.</span></p>
+<p class="Topic-Text-Indent">The protected projects normally protects all shapes.</p>
+<p style="font-family: Arial, sans-serif;">&#160;</p>
+<p style="font-family: Arial, sans-serif;"><span style="font-weight: bold;">unprotect_wires</span>:</p>
+<p class="Topic-Text-Indent">Specify a string, an array of strings, true or false.</p>
+<p class="Topic-Text-Indent">The string can be a complete name of a wire or a folder which you do not want to protect.</p>
+<p class="Topic-Text-Indent">If you specify true, no wires will be protected. If you specify false, all wires will be protected.</p>
+<p class="Topic-Text-Indent">The protected projects normally protects all wires.</p>
+<p style="font-family: Arial, sans-serif;">&#160;</p>
+<p style="font-family: Arial, sans-serif;"><span style="font-weight: bold;">unprotect_materials</span>:</p>
+<p class="Topic-Text-Indent">Specify a string, an array of strings, true or false.</p>
+<p class="Topic-Text-Indent">The string can be a complete name of a material or a folder which you do not want to protect.</p>
+<p class="Topic-Text-Indent">If you specify true, no materials will be protected. If you specify false, all materials will be protected.</p>
+<p class="Topic-Text-Indent">The protected projects normally protects all materials except default materials i.e. &#160;PEC, Vacuum and Air.</p>
+<p>&#160;</p>
+<p style="font-family: Arial, sans-serif;"><span style="font-weight: bold;">unprotect_ports</span>:</p>
+<p class="Topic-Text-Indent">Specify a string, an array of strings, true or false.</p>
+<p class="Topic-Text-Indent">The string can be a complete name of a port or a folder which you do not want to protect.</p>
+<p class="Topic-Text-Indent">If you specify true, no ports will be protected. If you specify false, all ports will be protected.</p>
+<p class="Topic-Text-Indent">The protected projects normally protects all ports.</p>
+<p style="font-family: Arial, sans-serif;">&#160;</p>
+<p style="font-family: Arial, sans-serif;">&#160;</p>
+<h4>Example:</h4>
+<table style="left: 0px; top: 1035px;" width="936" cellspacing="0" border="1">
+<col style="width: 47.73%;" />
+<col style="width: 52.27%;" />
+<tr style="height: 34px;">
+<td><span style="font-family: Arial, sans-serif; font-weight: bold;">Protect only materials</span></td>
+<td><span style="font-family: Arial, sans-serif; font-weight: bold;">Protect only shapes and materials</span></td>
+</tr>
+<tr style="height: 115px;">
+<td>
+<p class="VBA-Text-Example" style="font-family: 'Courier New', monospace; font-weight: bold; margin-left: 0px;"><span style="font-family: 'Courier New', monospace; font-weight: bold;"><span style="font-family: 'Courier New', monospace; font-weight: bold;">{</span></span></p>
+<p style="font-family: 'Courier New', monospace; font-weight: bold; margin-left: 40px;"><span style="color: #007f00;"><font color="#007F00">&#160;"unprotect_shapes" &#160;&#160;&#160;</font></span>: <span style="color: #ff7f00;"><font color="#FF7F00">true</font></span>,</p>
+<p style="font-family: 'Courier New', monospace; font-weight: bold; margin-left: 40px;">&#160;<span style="color: #007f00;"><font color="#007F00">"unprotect_wires" &#160;&#160;&#160;&#160;</font></span>: <span style="color: #ff7f00;"><font color="#FF7F00">true</font></span>,</p>
+<p style="font-family: 'Courier New', monospace; font-weight: bold; margin-left: 40px;">&#160;<span style="color: #007f00;"><font color="#007F00">"unprotect_ports" &#160;&#160;&#160;&#160;</font></span>: <span style="color: #ff7f00;"><font color="#FF7F00">true</font></span>,</p>
+<p style="font-family: 'Courier New', monospace; font-weight: bold; margin-left: 40px;"><span style="color: #007f00;"><font color="#007F00">&#160;"unprotect_materials"</font></span> : <span style="color: #ff7f00;"><font color="#FF7F00">false</font></span></p>
+<p style="font-family: 'Courier New', monospace; font-weight: bold; margin-left: 0px;">}</p>
+</td>
+<td>
+<p class="VBA-Text-Example" style="font-family: 'Courier New', monospace; font-weight: bold; margin-left: 0px;"><span style="font-family: 'Courier New', monospace; font-weight: bold;"><span style="font-family: 'Courier New', monospace; font-weight: bold;">{</span></span></p>
+<p style="font-family: 'Courier New', monospace; font-weight: bold; margin-left: 40px;"><span style="color: #007f00;"><font color="#007F00">&#160;"unprotect_shapes" &#160;&#160;&#160;</font></span>: <span style="color: #ff7f00;"><font color="#FF7F00">false</font></span>,</p>
+<p style="font-family: 'Courier New', monospace; font-weight: bold; margin-left: 40px;">&#160;<span style="color: #007f00;"><font color="#007F00">"unprotect_wires" &#160;&#160;&#160;&#160;</font></span>: <span style="color: #ff7f00;"><font color="#FF7F00">true</font></span>,</p>
+<p style="font-family: 'Courier New', monospace; font-weight: bold; margin-left: 40px;">&#160;<span style="color: #007f00;"><font color="#007F00">"unprotect_ports" &#160;&#160;&#160;&#160;</font></span>: <span style="color: #ff7f00;"><font color="#FF7F00">true</font></span>,</p>
+<p style="font-family: 'Courier New', monospace; font-weight: bold; margin-left: 40px;"><span style="color: #007f00;"><font color="#007F00">&#160;"unprotect_materials"</font></span> : <span style="color: #ff7f00;"><font color="#FF7F00">false</font></span></p>
+<p style="font-family: 'Courier New', monospace; font-weight: bold; margin-left: 0px;">}</p>
+</td>
+</tr>
+</table>
+<p class="Tip-Note-Heading">&#160;</p>
+<p class="Tip-Note-Heading">See also</p>
+<p style="margin-left: 40px;"><a href="../mergedProjects/3D/common_view/common_view_protect_project.htm">Protect Project</a>, <a href="commandlineoptions.htm">Command Line Options</a>, <a href="vbaapplicationobject.htm">VBA Application Object</a></p>
+<?rh-p style="margin-bottom: 0px; text-align: Right; margin-left: 18px; 
+                 margin-right: 18px; margin-top: 18px;" ?>
+<div style="width: 100%; position: relative;" id="footer">
+<p style="border-bottom: Solid 1px #dddddd; text-align: Left; margin-left: 0px; font-family: Arial, sans-serif; line-height: Normal; margin-top: 9px; margin-right: 0px; margin-bottom: 6px; border-left-width: 1px; border-top-width: 1px; border-right-width: 1px;"><span style="text-align: Left; font-family: Arial, sans-serif; line-height: Normal;">&#160;</span></p>
+<table cellspacing="0" width="100%">
+<col style="width: 50%;" />
+<col style="width: 50%;" />
+<tr>
+<td style="vertical-align: Top;"><span style="font-family: Arial, sans-serif; line-height: Normal; font-size: 8pt;"><font size="1" style="font-size:8pt;">CST Studio Suite 2026</font></span></td>
+<td style="vertical-align: Top;">
+<p style="text-align: right;">&#160;</p>
+</td>
+</tr>
+</table>
+<p>&#160;</p>
+</div>
+<script type="text/javascript" language="javascript1.2">
+//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+        writeIntopicBar(0);
+
+
+highlightSearch();
+//-->
+//]]>
+</script>
+</body>
+</html>

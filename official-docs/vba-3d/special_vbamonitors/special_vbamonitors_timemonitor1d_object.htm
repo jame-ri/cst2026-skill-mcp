@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="Adobe RoboHelp 11" />
+<title>TimeMonitor1D Object</title>
+<link rel="StyleSheet" href="../online_help_vba.css" type="text/css" />
+<style type="text/css">
+/*<![CDATA[*/
+<!--
+body { border-bottom-style:None; }
+-->
+/*]]>*/
+</style>
+
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+        origWidth = innerWidth;
+        origHeight = innerHeight;
+        onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+/*<![CDATA[*/
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+-->
+/*]]>*/
+</style>
+
+<script type="text/javascript" language="javascript1.2" src="../whmsg.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript" src="../whver.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript1.2" src="../whutils.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript1.2" src="../whproxy.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript1.2" src="../whlang.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript1.2" src="../whtopic.js" charset="utf-8">
+</script>
+</head>
+<body>
+<script type="text/javascript" language="javascript1.2">
+//<![CDATA[
+<!--
+if (window.gbWhTopic)
+{
+        var strUrl = document.location.href;
+        var bc = 0;
+        var n = strUrl.toLowerCase().indexOf("bc-");
+        if(n != -1)
+        {
+                document.location.replace(strUrl.substring(0, n));
+                bc = strUrl.substring(n+3);
+        }
+
+        if (window.addTocInfo)
+        {
+        addTocInfo("3D Simulation VBA\nVBA Objects\nMonitors\nTime\nTimeMonitor1D");
+
+        }
+        if (window.writeBtnStyle)
+                writeBtnStyle();
+
+        if (window.writeIntopicBar)
+                writeIntopicBar(0);
+
+        
+        document.write("<p style=\"font-family: Tahoma; font-size: 9pt; font-weight: 400;  font-style:normal; color: rgb(0, 0, 0); text-decoration:none; text-align: left\"> ");
+AddMasterBreadcrumbs("../index.htm", "font-family: Tahoma; font-size: 9pt; font-weight: 400;  font-style:normal; color: rgb(0, 0, 0); text-decoration:none; text-align: left", "|", "Home", "../special_vbaobjects/special_vbaobjects_vbaobjects.htm");
+document.write("<a style=\"font-family: Tahoma; font-size: 9pt; font-weight: 400;  font-style:normal; color: rgb(0, 0, 0); text-decoration:none; text-align: left\" href=\"../special_vbaobjects/special_vbaobjects_vbaobjects.htm\">3D Simulation VBA<\/a> | <a style=\"font-family: Tahoma; font-size: 9pt; font-weight: 400;  font-style:normal; color: rgb(0, 0, 0); text-decoration:none; text-align: left\" href=\"../special_vbaobjects/special_vbaobjects_vbaobjects.htm\">VBA Objects<\/a> | <a style=\"font-family: Tahoma; font-size: 9pt; font-weight: 400;  font-style:normal; color: rgb(0, 0, 0); text-decoration:none; text-align: left\" href=\"special_vbamonitors_monitor_object.htm\">Monitors<\/a> | <a style=\"font-family: Tahoma; font-size: 9pt; font-weight: 400;  font-style:normal; color: rgb(0, 0, 0); text-decoration:none; text-align: left\" href=\"special_vbamonitors_timemonitor_object.htm\">Time<\/a> | TimeMonitor1D<\/p>");
+
+}
+else
+        if (window.gbIE4)
+                document.location.reload();
+
+onLoadHandler = function()
+{
+  if (window.setRelStartPage)
+        {
+        setTimeout("setRelStartPage('../index.htm');", 1)
+
+    setTimeout("UpdateBreadCrumbsMarker();", 1);
+        }
+}
+
+if (window.addEventListener){  
+        window.addEventListener('load', onLoadHandler, false);   
+} else if (window.attachEvent){  
+        window.attachEvent('onload', onLoadHandler);  
+}
+
+function onSetStartPage()
+{
+  autoSync(1);
+  sendSyncInfo();
+  sendAveInfoOut();
+}
+//-->
+//]]>
+</script><script type="text/javascript" src="../ehlpdhtm.js" language="JavaScript1.2">
+</script>
+<table cellspacing="0" width="100%">
+<col style="width: 50%;" />
+<col style="width: 50%;" />
+<tr>
+<td style="vertical-align: middle; padding-top: 5px; padding-bottom: 5px;">
+<p style="margin-top: 0px; margin-bottom: 0px;"><img src="../3ds.png" alt="" style="border: none;" border="0" /></p>
+</td>
+<td style="vertical-align: middle;">
+<p style="text-align: right;"><a href="https://www.3ds.com/products-services/3dexperience/" target="_blank"><img src="../3dexp.png" alt="" style="border: none;" width="32" height="32" border="0" /></a></p>
+</td>
+</tr>
+</table>
+<p class="VBA-Heading-Object">TimeMonitor1D Object</p>
+<p class="VBA-Text">Defines a functional monitor which evaluates a field along a specified chain of edges or curves.</p>
+<ul>
+<li class="p-VBA-Index-Category">
+<p class="VBA-Index-Category"><a href="#Methods">Methods</a></p>
+</li>
+<li class="p-VBA-Index-Category">
+<p class="VBA-Index-Category"><a href="#Defaults">Default Settings</a></p>
+</li>
+<li class="p-VBA-Index-Category">
+<p class="VBA-Index-Category"><a href="#Example">Examples</a></p>
+</li>
+</ul>
+<p class="VBA-Heading-Category"><a name="Methods" id="Methods"></a>Methods</p>
+<p class="VBA-Heading-Method">Reset</p>
+<p class="VBA-Text-Indent">Resets all internal values to their default settings.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">Name ( <a href="../common_vbageneral/common_general_name.htm" id="a1" style="font-weight: normal; font-style: normal;" name="a1">name</a> <span style="font-style: italic;"><i>monitorName</i></span> )</p>
+<p class="VBA-Text-Indent">Sets the name of the monitor.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">Rename ( <a href="../common_vbageneral/common_general_name.htm" id="a2" style="font-weight: normal; font-style: normal;" name="a2">name</a> <span style="font-style: italic;"><i>oldName</i></span>, <a href="../common_vbageneral/common_general_name.htm" id="a4" style="font-weight: normal; font-style: normal;" name="a4">name</a> <span style="font-style: italic;"><i>newName</i></span> )</p>
+<p class="VBA-Text-Indent">Renames the monitor named <span style="font-style: italic;"><i>oldName</i></span> to <span style="font-style: italic;"><i>newName</i></span>.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">Delete ( <a href="../common_vbageneral/common_general_name.htm" id="a5" style="font-weight: normal; font-style: normal;" name="a5">name</a> <span style="font-style: italic;"><i>monitorName</i></span> )</p>
+<p class="VBA-Text-Indent">Deletes the monitor named <span style="font-style: italic;"><i>monitorName</i></span>.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">Create</p>
+<p class="VBA-Text-Indent">Creates the monitor with the previously applied settings.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">FieldType ( <a href="../common_vbageneral/common_general_enum.htm" id="a6" style="font-weight: normal; font-style: normal;" name="a6">enum</a> <span style="font-style: italic;"><i>fType</i></span> )</p>
+<p class="VBA-Text-Indent">Sets what field is to be monitored.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Text-Indent"><span style="font-style: italic;"><i>fType</i></span> can have one of the following values:</p>
+<table style="margin-left: 24px;" cellspacing="0" width="90%">
+<col width="77" />
+<col width="591" />
+<tr style="vertical-align: top;">
+<td style="border: Solid 1px #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;" width="77">
+<p>”voltage”</p>
+</td>
+<td style="border-top: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;" width="591">
+<p>The voltage along the prescribed path will be monitored.</p>
+</td>
+</tr>
+</table>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">UsePickedEdges ( <a href="../common_vbageneral/common_general_bool_data_type.htm" id="a7" style="font-weight: normal; font-style: normal;" name="a7">bool</a> <span style="font-style: italic;"><i>bFlag</i></span> )</p>
+<p class="VBA-Text-Indent">If <span style="font-style: italic;"><i>bFlag</i></span> is True the previously picked edges will be used for monitoring. To define a valid monitor, these edges have to be connected and must not be self-intersecting.</p>
+<p class="VBA-Heading-Method">&#160;</p>
+<p class="VBA-Heading-Method">UsePickedEdgeFromId ( <a href="../common_vbageneral/common_general_string.htm" id="a81" style="font-weight: normal; font-style: normal;" name="a81">string</a> <span style="font-style: italic;"><i>shapeName</i></span>, <a href="../common_vbageneral/common_general_integer.htm" id="a82" style="font-weight: normal; font-style: normal;" name="a82">int</a> <span style="font-style: italic;"><i>edge_id</i></span> , <a href="../common_vbageneral/common_general_integer.htm" id="a137" style="font-weight: normal; font-style: normal;" name="a137">int</a> &#160;<span style="font-style: italic;"><i>vertex_id</i></span> )</p>
+<p class="VBA-Text-Indent">For consistency reasons you need to specify the edges to be used by a solid to which it belongs (<span style="font-style: italic;"><i>shapeName</i></span>), and identification number of the edge (<span style="font-style: italic;"><i>edge_id</i></span>) and the id of its start vertex (<span style="font-style: italic;"><i>vertex_id</i></span>). These values can be obtained from the <a href="../common_vbapicko/common_vbapicko_pick_object.htm#PickEdgesFromSolids(IdBased)">Pick Object</a> command <span style="font-style: italic;"><i>PickEdgeFromId.</i></span></p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">UseSelectedCurves ( <a href="../common_vbageneral/common_general_bool_data_type.htm" id="a3" style="font-weight: normal; font-style: normal;" name="a3">bool</a> <span style="font-style: italic;"><i>bFlag</i></span> )</p>
+<p class="VBA-Text-Indent">If <span style="font-style: italic;"><i>bFlag</i></span> is True the specified curve items will be used for monitoring. To define a valid monitor, these curves have to be connected and must not be self-intersecting.</p>
+<p class="VBA-Heading-Method">&#160;</p>
+<p class="VBA-Heading-Method">UseCurve ( <a href="../common_vbageneral/common_general_string.htm" id="a8" style="font-weight: normal; font-style: normal;" name="a8">string</a> <span style="font-style: italic;"><i>curveitemName</i></span> )</p>
+<p class="VBA-Text-Indent">Defines a curve to be used by the monitor, where <span style="font-style: italic;"><i>curveitemName</i></span> is the name of a previously defined curve item.</p>
+<p class="VBA-Heading-Method">&#160;</p>
+<p class="VBA-Heading-Method">InvertOrientation ( <a href="../common_vbageneral/common_general_bool_data_type.htm" id="a9" style="font-weight: normal; font-style: normal;" name="a9">bool</a> <span style="font-style: italic;"><i>bFlag</i></span> )</p>
+<p class="VBA-Text-Indent">The orientation of the first edge or curve in a chain specifies a direction which influences the result when the monitor is evaluated along this chain. If <span style="font-style: italic;"><i>bFlag</i></span> is True, this orientation (direction) is inverted.</p>
+<p class="VBA-Heading-Category"><a name="Defaults" id="Defaults"></a>Default Settings</p>
+<p class="VBA-Text-Example">UsePickedEdge (False)</p>
+<p class="VBA-Text-Example">UseSelectedCurves (False)</p>
+<p class="VBA-Text-Example">InvertOrientation (False)</p>
+<p class="VBA-Heading-Category"><a name="Example" id="Example"></a>Examples</p>
+<p class="VBA-Text-Example" style="color: #008000;">' creates a time domain magnetic field monitor at the origin</p>
+<p class="VBA-Text-Example">With TimeMonitor1D</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.Reset</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.Name "voltage-monitor at curves"</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.FieldType "voltage"</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.UseSelectedCurves "True"</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.UseCurve "curve1:line1"</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.UseCurve "curve1:line2"</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.UseCurve "curve2:line1"</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.InvertOrientation "True"</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.Create</p>
+<p class="VBA-Text-Example">End With</p>
+<?rh-p style="margin-bottom: 0px; text-align: Right; margin-left: 18px; 
+                 margin-right: 18px; margin-top: 18px;" ?>
+<div style="width: 100%; position: relative;" id="footer">
+<p style="border-bottom: Solid 1px #dddddd; text-align: Left; margin-left: 0px; font-family: Arial, sans-serif; line-height: Normal; margin-top: 9px; margin-right: 0px; margin-bottom: 6px; border-left-width: 1px; border-top-width: 1px; border-right-width: 1px;"><span style="text-align: Left; font-family: Arial, sans-serif; line-height: Normal;">&#160;</span></p>
+<table cellspacing="0" width="100%">
+<col style="width: 50%;" />
+<col style="width: 50%;" />
+<tr>
+<td style="vertical-align: Top;"><span style="font-family: Arial, sans-serif; line-height: Normal; font-size: 8pt;"><font size="1" style="font-size:8pt;">CST Studio Suite 2026</font></span></td>
+<td style="vertical-align: Top;">
+<p style="text-align: right;">&#160;</p>
+</td>
+</tr>
+</table>
+<p>&#160;</p>
+</div>
+<script type="text/javascript" language="javascript1.2">
+//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+        writeIntopicBar(0);
+
+
+highlightSearch();
+//-->
+//]]>
+</script>
+</body>
+</html>

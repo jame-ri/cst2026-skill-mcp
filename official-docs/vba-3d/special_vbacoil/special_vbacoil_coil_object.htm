@@ -1,0 +1,572 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="Adobe RoboHelp 11" />
+<title>Coil Object</title>
+<link rel="StyleSheet" href="../online_help_vba.css" type="text/css" />
+<style type="text/css">
+/*<![CDATA[*/
+<!--
+body { border-bottom-style:None; }
+-->
+/*]]>*/
+</style>
+
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+        origWidth = innerWidth;
+        origHeight = innerHeight;
+        onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+/*<![CDATA[*/
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+-->
+/*]]>*/
+</style>
+
+<script type="text/javascript" language="javascript1.2" src="../whmsg.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript" src="../whver.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript1.2" src="../whutils.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript1.2" src="../whproxy.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript1.2" src="../whlang.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript1.2" src="../whtopic.js" charset="utf-8">
+</script>
+</head>
+<body>
+<script type="text/javascript" language="javascript1.2">
+//<![CDATA[
+<!--
+if (window.gbWhTopic)
+{
+        var strUrl = document.location.href;
+        var bc = 0;
+        var n = strUrl.toLowerCase().indexOf("bc-");
+        if(n != -1)
+        {
+                document.location.replace(strUrl.substring(0, n));
+                bc = strUrl.substring(n+3);
+        }
+
+        if (window.addTocInfo)
+        {
+        addTocInfo("3D Simulation VBA\nVBA Objects\nSources and Ports\nLow Frequency\nCoil");
+
+        }
+        if (window.writeBtnStyle)
+                writeBtnStyle();
+
+        if (window.writeIntopicBar)
+                writeIntopicBar(0);
+
+        
+        document.write("<p style=\"font-family: Tahoma; font-size: 9pt; font-weight: 400;  font-style:normal; color: rgb(0, 0, 0); text-decoration:none; text-align: left\"> ");
+AddMasterBreadcrumbs("../index.htm", "font-family: Tahoma; font-size: 9pt; font-weight: 400;  font-style:normal; color: rgb(0, 0, 0); text-decoration:none; text-align: left", "|", "Home", "../special_vbaobjects/special_vbaobjects_vbaobjects.htm");
+document.write("<a style=\"font-family: Tahoma; font-size: 9pt; font-weight: 400;  font-style:normal; color: rgb(0, 0, 0); text-decoration:none; text-align: left\" href=\"../special_vbaobjects/special_vbaobjects_vbaobjects.htm\">3D Simulation VBA<\/a> | <a style=\"font-family: Tahoma; font-size: 9pt; font-weight: 400;  font-style:normal; color: rgb(0, 0, 0); text-decoration:none; text-align: left\" href=\"../special_vbaobjects/special_vbaobjects_vbaobjects.htm\">VBA Objects<\/a> | <a style=\"font-family: Tahoma; font-size: 9pt; font-weight: 400;  font-style:normal; color: rgb(0, 0, 0); text-decoration:none; text-align: left\" href=\"../special_vbasignals/special_vbasignals_timesignal_object.htm\">Sources and Ports<\/a> | <a style=\"font-family: Tahoma; font-size: 9pt; font-weight: 400;  font-style:normal; color: rgb(0, 0, 0); text-decoration:none; text-align: left\" href=\"../special_vbasourcefield/special_vbasourcefield_sourcefield_object.htm\">Low Frequency<\/a> | Coil<\/p>");
+
+}
+else
+        if (window.gbIE4)
+                document.location.reload();
+
+onLoadHandler = function()
+{
+  if (window.setRelStartPage)
+        {
+        setTimeout("setRelStartPage('../index.htm');", 1)
+
+    setTimeout("UpdateBreadCrumbsMarker();", 1);
+        }
+}
+
+if (window.addEventListener){  
+        window.addEventListener('load', onLoadHandler, false);   
+} else if (window.attachEvent){  
+        window.attachEvent('onload', onLoadHandler);  
+}
+
+function onSetStartPage()
+{
+  autoSync(1);
+  sendSyncInfo();
+  sendAveInfoOut();
+}
+//-->
+//]]>
+</script><script type="text/javascript" src="../ehlpdhtm.js" language="JavaScript1.2">
+</script>
+<table cellspacing="0" width="100%">
+<col style="width: 50%;" />
+<col style="width: 50%;" />
+<tr>
+<td style="vertical-align: middle; padding-top: 5px; padding-bottom: 5px;">
+<p style="margin-top: 0px; margin-bottom: 0px;"><img src="../3ds.png" alt="" style="border: none;" border="0" /></p>
+</td>
+<td style="vertical-align: middle;">
+<p style="text-align: right;"><a href="https://www.3ds.com/products-services/3dexperience/" target="_blank"><img src="../3dexp.png" alt="" style="border: none;" width="32" height="32" border="0" /></a></p>
+</td>
+</tr>
+</table>
+<p class="VBA-Heading-Object">Coil Object</p>
+<p class="VBA-Text">Defines a new coil or a coil segment.</p>
+<ul>
+<li class="p-VBA-Index-Category">
+<p class="VBA-Index-Category"><a href="#Methods">Methods</a></p>
+</li>
+<li class="p-VBA-Index-Category">
+<p class="VBA-Index-Category"><a href="#Default" style="font-weight: bold;">Default Settings</a></p>
+</li>
+<li class="p-VBA-Index-Category">
+<p class="VBA-Index-Category"><a href="#Example">Examples</a></p>
+</li>
+</ul>
+<p class="VBA-Heading-Category"><a name="Methods" id="Methods"></a>Methods</p>
+<p class="VBA-Heading-Method">Reset</p>
+<p class="VBA-Text-Indent">Resets the default values.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">Name ( <a href="../common_vbageneral/common_general_name.htm" id="a29" style="font-weight: normal; font-style: normal;" name="a29">name</a> &#160;<span style="font-style: italic;"><i>name</i></span> )</p>
+<p class="VBA-Text-Indent">Sets the name of the new charge source.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">ProjectProfileToPathAdvanced ( <span><a href="../common_vbageneral/common_general_bool_data_type.htm" id="a28" style="font-weight: normal; font-style: normal;" name="a28">bool</a></span> <span style="font-style: italic;"><i>value</i></span> )</p>
+<p class="VBA-Text-Indent">If activated, the profile curve is projected onto the path curve by aligning the profile curve with &#160;the face normal defined by the path curve.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">Type ( <a href="../common_vbageneral/common_general_string.htm" id="a351" style="font-weight: normal; font-style: normal;" name="a351">string</a> <span style="font-style: italic;"><i>type</i></span> )</p>
+<p class="VBA-Text-Indent">Specifies the type of a source, which can be "Coil" or "Coil Segment".</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">OperationMode ( <a href="../common_vbageneral/common_general_string.htm" id="a3511" style="font-weight: normal; font-style: normal;" name="a3511">string</a> <span style="font-style: italic;"><i>mode</i></span> )</p>
+<p class="VBA-Text-Indent">Specifies the excitation nature of a source, which can be "Current" or "Voltage".</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">ConductorModel ( <a href="../common_vbageneral/common_general_string.htm" id="a35111" style="font-weight: normal; font-style: normal;" name="a35111">string</a> <span style="font-style: italic;"><i>model</i></span> )</p>
+<p class="VBA-Text-Indent">Specifies the conductor mode of a source, which can be "Stranded", "Solid", "Solid Eddy Current Free" &#160;or "Litz Wire".</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">ToolType ( <a href="../common_vbageneral/common_general_enum.htm" id="a81" style="font-weight: normal; font-style: normal;" name="a81">enum</a> type )</p>
+<p class="VBA-Text-Indent">Coils and coil segments can be created in various ways. The <span style="font-style: italic;"><i>ToolType</i></span> specifies which items where used for the construction.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Text-Indent">&#160;For the coils and coil segments created using a profile and a path or height &#160;valid types are:</p>
+<table style="vertical-align: top; margin-left: 15.10pt;" cellspacing="0" width="69.728%">
+<col style="width: 22.192%;" />
+<col style="width: 77.808%;" />
+<tr style="vertical-align: top;">
+<td style="border: Solid 1px #000000; width: 22.192%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text-Indent">"<span style="font-style: italic;"><i>CurveCurve</i></span>"</p>
+</td>
+<td style="border-top: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 77.808%; padding-right: 10px; padding-left: 10px;">
+<p>if a profile curve (<span style="font-style: italic;"><i>ProfileName</i></span>) and a path curve (<span style="font-style: italic;"><i>PathName</i></span>) is specified.<br />
+The path curve must be closed for coils, whereas it must not be closed for coil segments.<br />
+The profile curve has to be closed in either case.</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 22.192%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text-Indent">"<span style="font-style: italic;"><i>FaceCurve</i></span>"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 77.808%; padding-right: 10px; padding-left: 10px;">
+<p>if a face pick is used to define the profile and a curve is used to define the path.<br />
+The face needs to be picked beforehand via the <a href="../common_vbapicko/common_vbapicko_pick_object.htm#PickFaces">Pick</a> command.<br />
+The path curve must be closed for coils, whereas it must not be closed for coil segments.</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 22.192%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text-Indent">"<span style="font-style: italic;"><i>CurveHeight</i></span>"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 77.808%; padding-right: 10px; padding-left: 10px;">
+<p>if the profile is defined via a curve (<span style="font-style: italic;"><i>ProfileName</i></span>) and an extrusion height (<span style="font-style: italic;"><i>Height</i></span>) is specified in addition.<br />
+This type can be used <span style="font-style: italic;"><i>only for the construction of coil segments</i></span>.</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 22.192%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text-Indent">"<span style="font-style: italic;"><i>FaceHeight</i></span>"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 77.808%; padding-right: 10px; padding-left: 10px;">
+<p>if a face pick is used to define the profile and the extrusion height (<span style="font-style: italic;"><i>Height</i></span>) is specified in addition.<br />
+The face needs to be picked beforehand via the <a href="../common_vbapicko/common_vbapicko_pick_object.htm#PickFaces">Pick</a> command.<br />
+This type can be used <span style="font-style: italic;"><i>only for the construction of coil segments</i></span>.</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 22.192%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text-Indent">"<span style="font-style: italic;"><i>CurvePointPick</i></span>"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 77.808%; padding-right: 10px; padding-left: 10px;">
+<p>if the profile is defined via a curve (<span style="font-style: italic;"><i>ProfileName</i></span>) and the extrusion height is specified via a point pick.<br />
+The point needs to be picked beforehand via the <a href="../common_vbapicko/common_vbapicko_pick_object.htm#PickPointsFromCurves_CoordBased_">Pick</a> command.<br />
+This type can be used <span style="font-style: italic;"><i>only for the construction of coil segments</i></span>.</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 22.192%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text-Indent">"<span style="font-style: italic;"><i>FacePointPick</i></span>"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 77.808%; padding-right: 10px; padding-left: 10px;">
+<p>if a face pick is used to define the profile and the extrusion height is specified via a point pick.<br />
+The face as well as the point need to be picked beforehand via the <a href="../common_vbapicko/common_vbapicko_pick_object.htm">Pick</a> command.<br />
+This type can be used <span style="font-style: italic;"><i>only for the construction of coil segments</i></span>.</p>
+</td>
+</tr>
+</table>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Text-Indent"><span style="font-weight: bold;">&#160;</span>For the coils and coil segments created from solids valid types are:</p>
+<table style="vertical-align: top; margin-left: 15.10pt;" cellspacing="0" width="69.728%">
+<col style="width: 22.192%;" />
+<col style="width: 77.808%;" />
+<tr style="vertical-align: top;">
+<td style="border: Solid 1px #000000; width: 22.192%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text-Indent">"<span style="font-style: italic;"><i>CoilFromSolid</i></span>"</p>
+</td>
+<td style="border-top: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 77.808%; padding-right: 10px; padding-left: 10px;">
+<p>A closed coil is created from a previously defined solid.</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 22.192%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text-Indent">"<span style="font-style: italic;"><i>CoilSegmentFromSolid</i></span>"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 77.808%; padding-right: 10px; padding-left: 10px;">
+<p>A coil segment is created from a previously defined solid.</p>
+</td>
+</tr>
+</table>
+<p class="Topic-Text-Indent">&#160;</p>
+<p class="Topic-Text-Indent"><span style="font-weight: bold;">Note:</span> Currently not all Type /Operation mode/ Conductor mode combinations are supported.</p>
+<p class="Topic-Text-Indent">The following table summarizes this information for the sources which are created using a profile and a path or height :</p>
+<table style="vertical-align: top; margin-left: 15.10pt;" cellspacing="0" width="35.534%">
+<col style="width: 44.242%;" />
+<col style="width: 19.515%;" />
+<col style="width: 18.121%;" />
+<col style="width: 18.121%;" />
+<tr style="vertical-align: top;">
+<td style="border: Solid 1px #000000; padding-right: 10px; padding-left: 10px;">
+<p>&#160;</p>
+</td>
+<td style="border-top: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-right: 10px; padding-left: 10px;">
+<p style="text-align: center;">Stranded</p>
+</td>
+<td style="border-top: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-right: 10px; padding-left: 10px;">
+<p style="text-align: center;">Solid</p>
+</td>
+<td style="border-top: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-right: 10px; padding-left: 10px;">
+<p style="text-align: center;">Litz Wire</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text-Indent">Current Coil</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-right: 10px; padding-left: 10px;">
+<p style="color: #008000; font-weight: bold; text-align: center;">yes</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-right: 10px; padding-left: 10px;">
+<p style="color: #008000; font-weight: bold; text-align: center;"><span style="color: #ff0000;"><font color="red">no</font></span></p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-right: 10px; padding-left: 10px;">
+<p style="color: #ff0000; font-family: Arial, sans-serif; font-weight: bold; text-align: center;">no</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text-Indent">Voltage Coil</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-right: 10px; padding-left: 10px;">
+<p style="color: #008000; font-weight: bold; text-align: center;">yes</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-right: 10px; padding-left: 10px;">
+<p style="font-weight: bold; text-align: center; color: #008000;">yes</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-right: 10px; padding-left: 10px;">
+<p style="color: #ff0000; font-family: Arial, sans-serif; font-weight: bold; text-align: center;">no</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text-Indent">Current Coil Segment</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-right: 10px; padding-left: 10px;">
+<p style="color: #008000; font-weight: bold; text-align: center;">yes</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-right: 10px; padding-left: 10px;">
+<p style="color: #ff0000; font-weight: bold; text-align: center;">no</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-right: 10px; padding-left: 10px;">
+<p style="color: #008000; font-family: Arial, sans-serif; font-weight: bold; text-align: center;">yes</p>
+</td>
+</tr>
+</table>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Text-Indent">A stranded conductor creates a homogeneous current density in the coil's cross section whereas a solid conductor has a constant voltage drop for all turns.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="Topic-Text-Indent">The second &#160;table summarizes this information for the sources which are created using solids:</p>
+<table style="vertical-align: top; margin-left: 15.10pt;" cellspacing="0" width="34.153%">
+<col style="width: 49.717%;" />
+<col style="width: 34.04%;" />
+<col style="width: 16.242%;" />
+<tr style="vertical-align: top;">
+<td style="border: Solid 1px #000000; padding-right: 10px; padding-left: 10px;">
+<p>&#160;</p>
+</td>
+<td style="border-top: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-right: 10px; padding-left: 10px;">
+<p style="text-align: center;">Solid Eddy Current Free</p>
+</td>
+<td style="border-top: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-right: 10px; padding-left: 10px;">
+<p style="text-align: center;">Solid</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text-Indent">Current Coil from Solid</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-right: 10px; padding-left: 10px;">
+<p style="color: #008000; font-weight: bold; text-align: center;">yes</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-right: 10px; padding-left: 10px;">
+<p style="color: #008000; font-weight: bold; text-align: center;">yes</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text-Indent">Current Coil Segment from Solid</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-right: 10px; padding-left: 10px;">
+<p style="color: #008000; font-weight: bold; text-align: center;">yes</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-right: 10px; padding-left: 10px;">
+<p style="font-weight: bold; text-align: center; color: #008000;">yes</p>
+</td>
+</tr>
+</table>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">ProfileName ( <span style="font-weight: normal;"><a href="../common_vbageneral/common_general_name.htm" id="a5" style="font-weight: normal; font-style: normal;" name="a5">name</a> &#160;</span><span style="font-style: italic;"><i>curvename</i></span> )</p>
+<p class="VBA-Text-Indent">If the profile of the coil or the coil segment is defined via a curve (<span style="font-style: italic;"><i>ToolType</i></span> "<span style="font-style: italic;"><i>CurveCurve"</i></span>, "<span style="font-style: italic;"><i>CurveHeight"</i></span> or "<span style="font-style: italic;"><i>CurvePointPick"</i></span>), the name of the curve has to be specified here. The profile curve has to be closed for a proper definition.</p>
+<p class="vba-text-indent">&#160;</p>
+<p class="VBA-Heading-Method">PathName ( <a href="../common_vbageneral/common_general_name.htm" id="a30" style="font-weight: normal; font-style: normal;" name="a30">name</a> &#160;<span style="font-style: italic;"><i>curvename</i></span> )</p>
+<p class="VBA-Text-Indent">If the path along which along which the profile is swept is defined via a curve (<span style="font-style: italic;"><i>ToolType</i></span> "<span style="font-style: italic;"><i>CurveCurve"</i></span>, or "<span style="font-style: italic;"><i>FaceCurve"</i></span>), the name of the curve has to be specified here. The path curve must be closed for coils, whereas it must not be closed for coil segments.</p>
+<p class="VBA-Heading-Method">&#160;</p>
+<p class="VBA-Heading-Method">Height ( <a href="../common_vbageneral/common_general_double.htm" id="a9" style="font-weight: normal; font-style: normal;" name="a9">double</a> &#160;<span style="font-style: italic;"><i>height</i></span> )</p>
+<p class="VBA-Text-Indent">If a coil segment is created without point pick or path curve, the <span style="font-style: italic;"><i>Height</i></span> needs to be specified. This value is used to extrude the profile along its plane normal.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">AddSolid ( <a href="../common_vbageneral/common_general_string.htm" id="a351111" style="font-weight: normal; font-style: normal;" name="a351111">string</a> solid )</p>
+<p class="VBA-Text-Indent">If a coil or coil segment is created from a previously defined solid, the name of this solid has to be specified.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">Port0 ( <a href="../common_vbageneral/common_general_string.htm" id="a3511111" style="font-weight: normal; font-style: normal;" name="a3511111">string</a> solid )</p>
+<p class="VBA-Text-Indent">If a &#160;coil segment is created from a previously defined solid, the name of the face through which the current enters a coil segment has to be specified.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">Port1 ( <a href="../common_vbageneral/common_general_string.htm" id="a35111111" style="font-weight: normal; font-style: normal;" name="a35111111">string</a> solid )</p>
+<p class="VBA-Text-Indent">If a &#160;coil segment is created from a previously defined solid, the name of the face through which the current leaves a coil segment has to be specified.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">ProfileCenter ( <a href="../common_vbageneral/common_general_double.htm" id="a151" style="font-weight: normal; font-style: normal;" name="a151">double</a> &#160;<span style="font-style: italic;"><i>x</i></span>, <a href="../common_vbageneral/common_general_double.htm" id="a161" style="font-weight: normal; font-style: normal;" name="a161">double</a> &#160;<span style="font-style: italic;"><i>y</i></span>, <a href="../common_vbageneral/common_general_double.htm" id="a171" style="font-weight: normal; font-style: normal;" name="a171">double</a> &#160;<span style="font-style: italic;"><i>z</i></span>)</p>
+<p class="VBA-Text-Indent">For a closed coil created from a previously defined soild, this setting specifies the coordinates of the profile center.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">ProfileNormal ( <a href="../common_vbageneral/common_general_double.htm" id="a1511" style="font-weight: normal; font-style: normal;" name="a1511">double</a> &#160;<span style="font-style: italic;"><i>x</i></span>, <a href="../common_vbageneral/common_general_double.htm" id="a1611" style="font-weight: normal; font-style: normal;" name="a1611">double</a> &#160;<span style="font-style: italic;"><i>y</i></span>, <a href="../common_vbageneral/common_general_double.htm" id="a1711" style="font-weight: normal; font-style: normal;" name="a1711">double</a> &#160;<span style="font-style: italic;"><i>z</i></span>)</p>
+<p class="VBA-Text-Indent">For a closed coil created from a previously defined soild, this setting specifies the coordinates of the profile normal.</p>
+<p class="vba-text-indent">&#160;</p>
+<p class="VBA-Heading-Method">Value ( <a href="../common_vbageneral/common_general_double.htm" id="a26" style="font-weight: normal; font-style: normal;" name="a26">double</a> &#160;<span style="font-style: italic;"><i>value</i></span> )</p>
+<p class="VBA-Text-Indent"><span lang="EN-US" xml:lang="EN-US">Sets the current or voltage value for the source.</span> For frequency domain calculations it can be specified in the <a href="../special_vbastaticsolver/special_vbastaticsolver_lfsolver_object.htm">LF Frequency Domain Solver Settings</a>, whether the source value is to be interpreted as peak- or RMS-value. With the default settings, the prescribed current or voltage is interpreted as <span style="font-style: italic;"><i>RMS</i></span> value, i.e. as the root-mean-square values.</p>
+<p class="VBA-Text-Indent">The voltage is prescribed in Volt. The current is given in Ampere for one winding. The total current inside a profile is determined by: <span style="font-style: italic;"><i>Value</i></span> * <span style="font-style: italic;"><i>NTurns</i></span>.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">Phase ( <a href="../common_vbageneral/common_general_double.htm" id="a6" style="font-weight: normal; font-style: normal;" name="a6">double</a> &#160;<span style="font-style: italic;"><i>phase</i></span> )</p>
+<p class="VBA-Text-Indent">Sets the phase of the source value in degrees. This setting affects only the simulation for frequency domain problems.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">NTurns ( <a href="../common_vbageneral/common_general_integer.htm" id="a7" style="font-weight: normal; font-style: normal;" name="a7">int</a> &#160;<span style="font-style: italic;"><i>nturns</i></span> )</p>
+<p class="VBA-Text-Indent">Sets &#160;the number of windings for the coil.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">Resistance ( <span style="font-weight: normal;"><a href="../common_vbageneral/common_general_double.htm" id="a39" style="font-weight: normal; font-style: normal;" name="a39">double</a> &#160;</span><span style="font-style: italic;"><i>resistance</i></span> )</p>
+<p class="VBA-Text-Indent">Specifies the Ohmic resistance for the coil.</p>
+<p class="VBA-Text-Indent"><span lang="EN-US" xml:lang="EN-US" style="font-weight: bold;">Note</span><span lang="EN-US" xml:lang="EN-US">: If voltage driven coils are used for magnetostatic calculations, the</span> <span lang="EN-US" xml:lang="EN-US" style="font-style: italic;"><i>Resistance</i></span> <span lang="EN-US" xml:lang="EN-US">value must not be zero.</span></p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">Conductivity ( <span style="font-weight: normal;"><a href="../common_vbageneral/common_general_double.htm" id="a391" style="font-weight: normal; font-style: normal;" name="a391">double</a></span> <span style="font-style: italic;"><i>&#160;conductivity</i></span> )</p>
+<p class="VBA-Text-Indent">Specifies the conductivity &#160;for the coil.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">NStrands ( <a href="../common_vbageneral/common_general_integer.htm" id="a71" style="font-weight: normal; font-style: normal;" name="a71">int</a> &#160;<span style="font-style: italic;"><i>nstrands</i></span> )</p>
+<p class="VBA-Text-Indent">Sets &#160;the number of strands for the &#160;sources featuring "Litz Wire" ConductorMode. For all other &#160;conductor modes, this setting is ignored.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">StrandDiameter ( <span style="font-weight: normal;"><a href="../common_vbageneral/common_general_double.htm" id="a39111" style="font-weight: normal; font-style: normal;" name="a39111">double</a></span> &#160;<span style="font-style: italic;"><i>&#160;stranddiameter</i></span> )</p>
+<p class="VBA-Text-Indent">Sets the strand diameter &#160;for the sources featuring "Litz Wire" ConductorMode. For all other &#160;conductor modes, this setting is ignored.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">LengthExtension ( <span style="font-weight: normal;"><a href="../common_vbageneral/common_general_double.htm" id="a3911" style="font-weight: normal; font-style: normal;" name="a3911">double</a></span> &#160;&#160;<span style="font-style: italic;"><i>lengthextension</i></span> )</p>
+<p class="VBA-Text-Indent">Sets &#160;the length extension for the &#160;sources featuring "Litz Wire" ConductorMode. For all other &#160;conductor modes, this setting is ignored.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">CurrentDirection ( <a href="../common_vbageneral/common_general_string.htm" id="a3511112" style="font-weight: normal; font-style: normal;" name="a3511112">string</a> <span style="font-style: italic;"><i>solid</i></span> )</p>
+<p class="VBA-Text-Indent">Defines a "Regular" or "Inverted" current direction in a source.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">ProjectProfileToPathAdvanced ( <a href="../common_vbageneral/common_general_string.htm" id="a35111121" style="font-weight: normal; font-style: normal;" name="a35111121">bool</a> <span style="font-style: italic;"><i>flag</i></span> )</p>
+<p class="VBA-Text-Indent">This setting specifies if a profile curve is to be projected on a path curve and effects only the coils and segments created via a path and a profile. For the coils and segments created from solids, this setting is ignored.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">TerminationType ( <a href="../common_vbageneral/common_general_string.htm" id="a35111122" style="font-weight: normal; font-style: normal;" name="a35111122">string</a> <span style="font-style: italic;"><i>type</i></span>)</p>
+<p class="VBA-Text-Indent">For coil segments, this setting defines &#160;termination type which can be &#160;"PEC" or "Open".</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">Create</p>
+<p class="VBA-Text-Indent">Creates the coil source with the previously made settings.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">Import</p>
+<p class="VBA-Text-Indent">This command is used if a coil was created by a subproject import - it should not be used in a macro.</p>
+<p class="vba-text-indent">&#160;</p>
+<p class="VBA-Heading-Method">Delete ( <a href="../common_vbageneral/common_general_name.htm" id="a2" style="font-weight: normal; font-style: normal;" name="a2">name</a> &#160;<span style="font-style: italic;"><i>name</i></span> )</p>
+<p class="VBA-Text-Indent">Deletes the specified coil.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">Change</p>
+<p class="VBA-Text-Indent">Changes the settings for a name specified coil.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">Rename ( <a href="../common_vbageneral/common_general_name.htm" id="a3" style="font-weight: normal; font-style: normal;" name="a3">name</a> &#160;<span style="font-style: italic;"><i>oldname</i></span>, <a href="../common_vbageneral/common_general_name.htm" id="a4" style="font-weight: normal; font-style: normal;" name="a4">name</a> &#160;<span style="font-style: italic;"><i>newname</i></span> )</p>
+<p class="VBA-Text-Indent">Renames the specified coil.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">SetAutomeshFixpoints &#160;( <a href="../common_vbageneral/common_general_name.htm" id="a1" style="font-weight: normal; font-style: normal;" name="a1">name</a> &#160;<span style="font-style: italic;"><i>name,</i></span> <a href="../common_vbageneral/common_general_bool_data_type.htm" id="a136" style="font-weight: normal; font-style: normal;" name="a136">bool</a> <span style="font-style: italic;"><i>flag</i></span> )</p>
+<p class="VBA-Text-Indent">This method determines if the specified coil should be considered by the automatic mesh generation or not. If the coil is unimportant for the mesh generation the setting <span style="font-style: italic;"><i>flag</i></span> =False makes sure that the coil does not have any influence on the mesh. No fix- or density points will be created for this coil.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">SetPriority ( <a href="../common_vbageneral/common_general_name.htm" id="a41" style="font-weight: normal; font-style: normal;" name="a41">name</a> &#160;<span style="font-style: italic;"><i>name, <a href="../common_vbageneral/common_general_double.htm" id="a42" style="font-weight: normal; font-style: normal;" name="a42">double</a> priority</i></span>, <a href="../common_vbageneral/common_general_bool_data_type.htm" id="a43" style="font-weight: normal; font-style: normal;" name="a43">bool</a> <span style="font-style: italic;"><i>flag</i></span> )</p>
+<p class="VBA-Text-Indent">This method specifies how the specified coil should be treated by the automatic mesh generation. The priority factor (0 is neutral) can be increased to assign a higher importance value to the coil. In the case that two fixpoints are so close to each other that the ratiolimit prohibits a mesh line for each point, the mesh lines will be merged. However if one of the fixpoints has been created by a coil of higher priority the mesh lines will be placed on this fixpoint.</p>
+<p class="vba-text-indent">&#160;</p>
+<p class="VBA-Heading-Method">SetMeshRefinement ( <a href="../common_vbageneral/common_general_name.htm" id="a10" style="font-weight: normal; font-style: normal;" name="a10">name</a> &#160;<span style="font-style: italic;"><i>name</i></span>, <a href="../common_vbageneral/common_general_bool_data_type.htm" id="a25" style="font-weight: normal; font-style: normal;" name="a25">bool</a> &#160;<span style="font-style: italic;"><i>edge_ref</i></span>, <a href="../common_vbageneral/common_general_double.htm" id="a12" style="font-weight: normal; font-style: normal;" name="a12">double</a> &#160;<span style="font-style: italic;"><i>edgefactor</i></span>, <a href="../common_vbageneral/common_general_bool_data_type.htm" id="a11" style="font-weight: normal; font-style: normal;" name="a11">bool</a> &#160;<span style="font-style: italic;"><i>vo_lref</i></span>, <a href="../common_vbageneral/common_general_double.htm" id="a13" style="font-weight: normal; font-style: normal;" name="a13">double</a> &#160;<span style="font-style: italic;"><i>volfactor</i></span> )</p>
+<p class="VBA-Text-Indent">This command sets &#160;the refinement values for a coil specified by its name.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<table style="vertical-align: top; margin-left: 15.10pt;" cellspacing="0" width="52.334%">
+<col style="width: 37.76%;" />
+<col style="width: 62.24%;" />
+<tr style="vertical-align: top;">
+<td style="border: Solid 1px #000000; width: 37.76%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text-Indent">edge_ref</p>
+</td>
+<td style="border-top: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 62.24%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text-Indent">This flag determines whether to use a edge refinement or not.</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 37.76%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text-Indent">edgefactor</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 62.24%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text-Indent">The mesh on the edge is refined by this value.</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 37.76%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text-Indent">vol_ref</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 62.24%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text-Indent">This flag determines whether to use a volume refinement or not.</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 37.76%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text-Indent">volfactor</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 62.24%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text-Indent">The mesh inside the coil volume is refined by this value.</p>
+</td>
+</tr>
+</table>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">SetMeshStepwidth ( <a href="../common_vbageneral/common_general_name.htm" id="a18" style="font-weight: normal; font-style: normal;" name="a18">name</a> &#160;<span style="font-style: italic;"><i>name</i></span>, <a href="../common_vbageneral/common_general_double.htm" id="a19" style="font-weight: normal; font-style: normal;" name="a19">double</a> &#160;<span style="font-style: italic;"><i>dx</i></span>, <a href="../common_vbageneral/common_general_double.htm" id="a20" style="font-weight: normal; font-style: normal;" name="a20">double</a> &#160;<span style="font-style: italic;"><i>dy</i></span>, <a href="../common_vbageneral/common_general_double.htm" id="a21" style="font-weight: normal; font-style: normal;" name="a21">double</a> &#160;<span style="font-style: italic;"><i>dz</i></span> )</p>
+<p class="VBA-Text-Indent">Instead of defining volume or edge refinement factors, one can also</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">SetMeshStepwidthTet ( <a href="../common_vbageneral/common_general_name.htm" id="a27" style="font-weight: normal; font-style: normal;" name="a27">name</a> &#160;<span style="font-style: italic;"><i>name</i></span>, <a href="../common_vbageneral/common_general_double.htm" id="a31" style="font-weight: normal; font-style: normal;" name="a31">double</a> &#160;<span style="font-style: italic;"><i>stepwidth</i></span> )</p>
+<p class="VBA-Text-Indent">The prescribed step width is an absolute value. The automatic mesh generator will not exceed this step width for this structure element. If a zero value is specified (default), it &#160;will be ignored and the mesh size will be controlled by the global setting.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">SetMeshStepwidthSrf ( <a href="../common_vbageneral/common_general_name.htm" id="a36" style="font-weight: normal; font-style: normal;" name="a36">name</a> &#160;<span style="font-style: italic;"><i>name</i></span>, <a href="../common_vbageneral/common_general_double.htm" id="a37" style="font-weight: normal; font-style: normal;" name="a37">double</a> &#160;<span style="font-style: italic;"><i>stepwidth</i></span> )</p>
+<p class="VBA-Text-Indent">The prescribed step width is an absolute value. The automatic mesh generator will not exceed this step width for this structure element. If a zero value is specified (default), it &#160;will be ignored and the mesh size will be controlled by the global setting.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">SetMeshExtendwidth ( <a href="../common_vbageneral/common_general_name.htm" id="a14" style="font-weight: normal; font-style: normal;" name="a14">name</a> &#160;<span style="font-style: italic;"><i>name</i></span>, <a href="../common_vbageneral/common_general_double.htm" id="a15" style="font-weight: normal; font-style: normal;" name="a15">double</a> &#160;<span style="font-style: italic;"><i>xextend</i></span>, <a href="../common_vbageneral/common_general_double.htm" id="a16" style="font-weight: normal; font-style: normal;" name="a16">double</a> &#160;<span style="font-style: italic;"><i>yextend</i></span>, <a href="../common_vbageneral/common_general_double.htm" id="a17" style="font-weight: normal; font-style: normal;" name="a17">double</a> &#160;<span style="font-style: italic;"><i>zextend</i></span> )</p>
+<p class="VBA-Text-Indent">This command defines additional space around a coil, where the refinement settings should be applied.</p>
+<p class="VBA-Heading-Method">&#160;</p>
+<p class="VBA-Heading-Method">SetUseForSimulation ( <a href="../common_vbageneral/common_general_name.htm" id="a22" style="font-weight: normal; font-style: normal;" name="a22">name</a> &#160;<span style="font-style: italic;"><i>name,</i></span> <a href="../common_vbageneral/common_general_bool_data_type.htm" id="a23" style="font-weight: normal; font-style: normal;" name="a23">bool</a> <span style="font-style: italic;"><i>flag</i></span> )</p>
+<p class="VBA-Text-Indent">Specifies whether or not the coil should be considered by the calculation.</p>
+<p class="VBA-Heading-Method">&#160;</p>
+<p class="VBA-Heading-Method">SetUseForBoundingBox &#160;( <a href="../common_vbageneral/common_general_name.htm" id="a24" style="font-weight: normal; font-style: normal;" name="a24">name</a> &#160;<span style="font-style: italic;"><i>name,</i></span> <a href="../common_vbageneral/common_general_bool_data_type.htm" id="a33" style="font-weight: normal; font-style: normal;" name="a33">bool</a> <span style="font-style: italic;"><i>flag</i></span> )</p>
+<p class="VBA-Text-Indent">Specifies whether or not the coil should be considered by the bounding box calculation.</p>
+<p class="VBA-Heading-Method">&#160;</p>
+<p class="VBA-Heading-Method">DoesItemExist &#160;( <a href="../common_vbageneral/common_general_name.htm" id="a34" style="font-weight: normal; font-style: normal;" name="a34">name</a> &#160;<span style="font-style: italic;"><i>name</i></span>) <a href="../common_vbageneral/common_general_bool_data_type.htm" id="a38" style="font-weight: normal; font-style: normal;" name="a38">bool</a></p>
+<p class="VBA-Text-Indent">Returns whether a coil with the specified name exists.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">GetValue &#160;( <a href="../common_vbageneral/common_general_name.htm" id="a341" style="font-weight: normal; font-style: normal;" name="a341">name</a> &#160;<span style="font-style: italic;"><i>name</i></span>) <a href="../common_vbageneral/common_general_bool_data_type.htm" id="a381" style="font-weight: normal; font-style: normal;" name="a381">double</a></p>
+<p class="VBA-Text-Indent">Returns a current or voltage value for a coil with the specified name.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">GetPhase &#160;( <a href="../common_vbageneral/common_general_name.htm" id="a3411" style="font-weight: normal; font-style: normal;" name="a3411">name</a> &#160;<span style="font-style: italic;"><i>name</i></span>) <a href="../common_vbageneral/common_general_bool_data_type.htm" id="a3811" style="font-weight: normal; font-style: normal;" name="a3811">double</a></p>
+<p class="VBA-Text-Indent">Returns a phase for a coil with the specified name.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">GetNumberOfCoils &#160;( <a href="../common_vbageneral/common_general_name.htm" id="a34111" style="font-weight: normal; font-style: normal;" name="a34111">name</a> &#160;<span style="font-style: italic;"><i>name</i></span>) <a href="../common_vbageneral/common_general_bool_data_type.htm" id="a38111" style="font-weight: normal; font-style: normal;" name="a38111">int</a></p>
+<p class="VBA-Text-Indent">Returns a number of coils.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">GetNameFromIndex &#160;( <a href="../common_vbageneral/common_general_name.htm" id="a341111" style="font-weight: normal; font-style: normal;" name="a341111">int</a> &#160;<span style="font-style: italic;"><i>index</i></span>) <a href="../common_vbageneral/common_general_bool_data_type.htm" id="a381111" style="font-weight: normal; font-style: normal;" name="a381111">string</a></p>
+<p class="VBA-Text-Indent">Returns a number of coils.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">GetVolume &#160;( <a href="../common_vbageneral/common_general_name.htm" id="a34112" style="font-weight: normal; font-style: normal;" name="a34112">name</a> &#160;<span style="font-style: italic;"><i>name</i></span>) <a href="../common_vbageneral/common_general_bool_data_type.htm" id="a38112" style="font-weight: normal; font-style: normal;" name="a38112">double</a></p>
+<p class="VBA-Text-Indent">Returns a volume for a coil with the specified name.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">GetVolumeCenter &#160;( <a href="../common_vbageneral/common_general_name.htm" id="a341121" style="font-weight: normal; font-style: normal;" name="a341121">name</a> &#160;<span style="font-style: italic;"><i>name,</i></span> <a href="../common_vbageneral/common_general_double_ref.htm" id="a211" style="font-weight: normal;" name="a211">double_ref</a> &#160;&#160;<span style="font-style: italic;"><i>x</i></span>, <span><a href="../common_vbageneral/common_general_double_ref.htm" id="a2111" style="font-weight: normal;" name="a2111">double_ref</a></span> &#160;<span style="font-style: italic;"><i>y</i></span>, <span><a href="../common_vbageneral/common_general_double_ref.htm" id="a2112" style="font-weight: normal;" name="a2112">double_ref</a></span> &#160;<span style="font-style: italic;"><i>z</i></span> ) <a href="../common_vbageneral/common_general_bool_data_type.htm" id="a382" style="font-weight: normal; font-style: normal;" name="a382">bool</a></p>
+<p class="VBA-Text-Indent">Returns a volume center coordinates for a coil with the specified name. The coordinates are stored in the parameters <span style="font-style: italic;"><i>x,</i></span> <span style="font-style: italic;"><i>y</i></span>, <span style="font-style: italic;"><i>z</i></span>, respectively. The return value specifies if coordinates could have been computed.</p>
+<p class="VBA-Heading-Category"><a name="Default" id="Default"></a>Default Settings</p>
+<p class="VBA-Text-Example">Value("0.0")</p>
+<p class="VBA-Text-Example">Phase ("0.0")</p>
+<p class="VBA-Text-Example">NTurns ("1")</p>
+<p class="VBA-Text-Example">NStrands ("120")</p>
+<p class="VBA-Text-Example">StrandDiameter("0.05")</p>
+<p class="VBA-Text-Example">LengthExtension ("1.2")</p>
+<p class="VBA-Text-Example">ProjectProfileToPathAdvanced("True")</p>
+<p class="VBA-Text-Example">&#160;</p>
+<p class="VBA-Heading-Category"><a name="Example" id="Example"></a>Example</p>
+<p class="VBA-Text-Example">With Coil</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.Reset</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.Name "primary_coil1"</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.Type "Coil"</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.OperationMode "Current"</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.ConductorMode "Stranded"</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.ToolType "CurveCurve"</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.Value "34.0"</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.Phase "45.0"</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.NTurns "100"</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.CurrentDirection "Inverted"</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.ProjectProfileToPathAdvanced "True"</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.Create</p>
+<p class="VBA-Text-Example">End With</p>
+<p class="StandardNeu">&#160;</p>
+<?rh-p style="margin-bottom: 0px; text-align: Right; margin-left: 18px; 
+                 margin-right: 18px; margin-top: 18px;" ?>
+<div style="width: 100%; position: relative;" id="footer">
+<p style="border-bottom: Solid 1px #dddddd; text-align: Left; margin-left: 0px; font-family: Arial, sans-serif; line-height: Normal; margin-top: 9px; margin-right: 0px; margin-bottom: 6px; border-left-width: 1px; border-top-width: 1px; border-right-width: 1px;"><span style="text-align: Left; font-family: Arial, sans-serif; line-height: Normal;">&#160;</span></p>
+<table cellspacing="0" width="100%">
+<col style="width: 50%;" />
+<col style="width: 50%;" />
+<tr>
+<td style="vertical-align: Top;"><span style="font-family: Arial, sans-serif; line-height: Normal; font-size: 8pt;"><font size="1" style="font-size:8pt;">CST Studio Suite 2026</font></span></td>
+<td style="vertical-align: Top;">
+<p style="text-align: right;">&#160;</p>
+</td>
+</tr>
+</table>
+<p>&#160;</p>
+</div>
+<script type="text/javascript" language="javascript1.2">
+//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+        writeIntopicBar(0);
+
+
+highlightSearch();
+//-->
+//]]>
+</script>
+</body>
+</html>

@@ -1,0 +1,384 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="Adobe RoboHelp 11" />
+<title>ResultMap Object</title>
+<link rel="StyleSheet" href="../online_help_vba.css" type="text/css" />
+<style type="text/css">
+/*<![CDATA[*/
+<!--
+body { border-bottom-style:None; }
+-->
+/*]]>*/
+</style>
+
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+        origWidth = innerWidth;
+        origHeight = innerHeight;
+        onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+/*<![CDATA[*/
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+-->
+/*]]>*/
+</style>
+
+<script type="text/javascript" language="javascript1.2" src="../whmsg.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript" src="../whver.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript1.2" src="../whutils.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript1.2" src="../whproxy.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript1.2" src="../whlang.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript1.2" src="../whtopic.js" charset="utf-8">
+</script>
+</head>
+<body>
+<script type="text/javascript" language="javascript1.2">
+//<![CDATA[
+<!--
+if (window.gbWhTopic)
+{
+        var strUrl = document.location.href;
+        var bc = 0;
+        var n = strUrl.toLowerCase().indexOf("bc-");
+        if(n != -1)
+        {
+                document.location.replace(strUrl.substring(0, n));
+                bc = strUrl.substring(n+3);
+        }
+
+        if (window.addTocInfo)
+        {
+        addTocInfo("3D Simulation VBA\nVBA Objects\nPost Processing\nResultMap");
+
+        }
+        if (window.writeBtnStyle)
+                writeBtnStyle();
+
+        if (window.writeIntopicBar)
+                writeIntopicBar(0);
+
+        
+        document.write("<p style=\"font-family: Tahoma; font-size: 9pt; font-weight: 400;  font-style:normal; color: rgb(0, 0, 0); text-decoration:none; text-align: left\"> ");
+AddMasterBreadcrumbs("../index.htm", "font-family: Tahoma; font-size: 9pt; font-weight: 400;  font-style:normal; color: rgb(0, 0, 0); text-decoration:none; text-align: left", "|", "Home", "../special_vbaobjects/special_vbaobjects_vbaobjects.htm");
+document.write("<a style=\"font-family: Tahoma; font-size: 9pt; font-weight: 400;  font-style:normal; color: rgb(0, 0, 0); text-decoration:none; text-align: left\" href=\"../special_vbaobjects/special_vbaobjects_vbaobjects.htm\">3D Simulation VBA<\/a> | <a style=\"font-family: Tahoma; font-size: 9pt; font-weight: 400;  font-style:normal; color: rgb(0, 0, 0); text-decoration:none; text-align: left\" href=\"../special_vbaobjects/special_vbaobjects_vbaobjects.htm\">VBA Objects<\/a> | <a style=\"font-family: Tahoma; font-size: 9pt; font-weight: 400;  font-style:normal; color: rgb(0, 0, 0); text-decoration:none; text-align: left\" href=\"special_vbapostproc_type_method.htm\">Post Processing<\/a> | ResultMap<\/p>");
+
+}
+else
+        if (window.gbIE4)
+                document.location.reload();
+
+onLoadHandler = function()
+{
+  if (window.setRelStartPage)
+        {
+        setTimeout("setRelStartPage('../index.htm');", 1)
+
+    setTimeout("UpdateBreadCrumbsMarker();", 1);
+        }
+}
+
+if (window.addEventListener){  
+        window.addEventListener('load', onLoadHandler, false);   
+} else if (window.attachEvent){  
+        window.attachEvent('onload', onLoadHandler);  
+}
+
+function onSetStartPage()
+{
+  autoSync(1);
+  sendSyncInfo();
+  sendAveInfoOut();
+}
+//-->
+//]]>
+</script><script type="text/javascript" src="../ehlpdhtm.js" language="JavaScript1.2">
+</script>
+<table cellspacing="0" width="100%">
+<col style="width: 50%;" />
+<col style="width: 50%;" />
+<tr>
+<td style="vertical-align: middle; padding-top: 5px; padding-bottom: 5px;">
+<p style="margin-top: 0px; margin-bottom: 0px;"><img src="../3ds.png" alt="" style="border: none;" border="0" /></p>
+</td>
+<td style="vertical-align: middle;">
+<p style="text-align: right;"><a href="https://www.3ds.com/products-services/3dexperience/" target="_blank"><img src="../3dexp.png" alt="" style="border: none;" width="32" height="32" border="0" /></a></p>
+</td>
+</tr>
+</table>
+<p class="VBA-Heading-Object">ResultMap Object ( String sTreePath )</p>
+<p class="VBA-Text">The object is used to select or browse result file map items.</p>
+<p class="VBA-Text">&#160;</p>
+<p class="VBA-Text">If &lt;sTreePath&gt; is empty, then the current tree selection is loaded.</p>
+<ul>
+<li class="p-VBA-Index-Category">
+<p class="VBA-Index-Category"><a href="#Methods">Methods</a></p>
+</li>
+<li class="p-VBA-Index-Category">
+<p class="VBA-Index-Category"><a href="#Example">Example</a></p>
+</li>
+</ul>
+<p class="VBA-Heading-Category"><a name="Methods" id="Methods"></a>Methods</p>
+<p class="VBA-Text"><span style="font-weight: bold;">Construction</span></p>
+<p class="VBA-Text-Indent">A ResultMap object can be created as follows:</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Text-Example" style="margin-left: 40px;">dim objName as object</p>
+<p class="VBA-Text-Example" style="margin-left: 40px;">set objName = ResultMap("2D/3D Results\Fields\e-field [1]")</p>
+<p class="VBA-Text-Example" style="margin-left: 40px;">&#160;</p>
+<p class="VBA-Text-Indent">”2D/3D Results\Fields\e-field [1]” is the treepath of the selected result map. The currently selected result item is used if the provided treepath is empty.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">Reset</p>
+<p class="VBA-Text-Indent">Resets all internal settings to their initial values.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">Load ( <a href="../common_vbageneral/common_general_name.htm" id="a3" style="font-weight: normal; font-style: normal;" name="a3">name</a> <span style="font-style: italic;"><i>sResultFileMapFile</i></span> )</p>
+<p class="VBA-Text-Indent">Load the result map data.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">IsValid ( ) <a href="../common_vbageneral/common_general_bool_data_type.htm" style="font-weight: normal;">BOOL</a></p>
+<p class="VBA-Text-Indent">Checks if a valid result map data is loaded.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">GetContentDescription ( <span style="font-style: italic;"><i>&#160;</i></span>) <span style="font-weight: normal;"><a href="../common_vbageneral/common_general_string.htm">String</a></span></p>
+<p class="VBA-Text-Indent">Returns a description of the result map type.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<table style="vertical-align: top; margin-left: 15.10pt; left: 0px; top: 642px;" cellspacing="0" width="90%">
+<col style="width: 20.542%;" />
+<col style="width: 79.458%;" />
+<tr style="vertical-align: top;">
+<td style="border: Solid 1px #000000; width: 20.542%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text">"Invalid"</p>
+</td>
+<td style="border-top: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 79.458%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text">Result map is not valid.</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 20.542%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text">"Hex-Portmodes"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 79.458%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text">Port mode (hexahedral mesh)</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 20.542%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text">"Tet-Portmodes"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 79.458%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text">Port mode (tetrahedral mesh)</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 20.542%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text">"Hex-3DMonitor"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 79.458%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text">3D vector field monitor (hexahedral mesh)</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 20.542%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text">"Tet-3DMonitor"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 79.458%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text">3D vector field monitor (tetrahedral mesh)</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 20.542%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text">"Hex-ScalarMonitor"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 79.458%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text">Scalar field monitor &#160;(hexahedral mesh)</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 20.542%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text">"Tet-ScalarMonitor"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 79.458%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text">Scalar field monitor (tetrahedral mesh)</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 20.542%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text">&#160;"Hex-SurfaceField"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 79.458%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text">Surface vector field &#160;(hexahedral mesh)</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 20.542%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text">"Tet-SurfaceField"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 79.458%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text">Surface vector field &#160;(tetrahedral mesh)</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 20.542%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text">"Int-SurfaceField"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 79.458%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text">Surface vector field &#160;(surface mesh)</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 20.542%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text">&#160;"Hex-SurfaceScalarField"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 79.458%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text">Scalar surface field &#160;(hexahedral mesh)</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 20.542%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text">"Tet-SurfaceScalarField"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 79.458%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text">Scalar surface field &#160;(tetrahedral mesh)</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 20.542%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text">"Int-SurfaceScalarField"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 79.458%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text">Scalar surface field &#160;(surface mesh)</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 20.542%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text">&#160;"S-Linear"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 79.458%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text">S-Parameter result (linear scaling)</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 20.542%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text">&#160;"S-dB"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 79.458%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text">S-Parameter result (log. scale)</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 20.542%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text">"arg(S)"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 79.458%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text">S-Parameter result (phase)</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 20.542%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text">"Residual"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 79.458%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text">Residual result</p>
+</td>
+</tr>
+</table>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">GetItemCount ( ) <span style="font-weight: normal;"><a href="../common_vbageneral/common_general_integer.htm">Integer</a></span></p>
+<p class="VBA-Text-Indent">Returns the number of available result items.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">GetItemFilename (<span style="font-weight: normal;"><a href="../common_vbageneral/common_general_integer.htm">Integer</a></span> id) <span style="font-weight: normal;"><a href="../common_vbageneral/common_general_string.htm">String</a></span></p>
+<p class="VBA-Text-Indent">Returns the filename of item at position 'id'.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">GetItemParameters (<span style="font-weight: normal;"><a href="../common_vbageneral/common_general_integer.htm">Integer</a></span> id) <span style="font-weight: normal;">&#160;<a href="../common_vbageneral/common_general_string.htm">String</a></span></p>
+<p class="VBA-Text-Indent">Returns the parameters and values of the item at position 'id'. The return string has the following form: 'name1=value1;name2=value2'</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">BeginSearch</p>
+<p class="VBA-Text-Indent">Resets the search for the matching results.</p>
+<p class="vba-text-indent">&#160;</p>
+<p class="VBA-Heading-Method">AddSearchParameter ( <span style="font-weight: normal;"><a href="../common_vbageneral/common_general_string.htm">String</a> s</span>Param, <span style="font-weight: normal;"><a href="../common_vbageneral/common_general_string.htm">String</a></span> sValue, <span style="font-weight: normal;"><a href="../common_vbageneral/common_general_string.htm">String</a></span> sTolerance )</p>
+<p class="VBA-Text-Indent">Define the search for the result according to a specific value of the result map parameter within a given tolerance.</p>
+<p class="VBA-Text-Indent">Only result items which match all search parameters are returned.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">FindItem ( ) <span style="font-weight: normal;"><a href="../common_vbageneral/common_general_integer.htm">Integer</a></span></p>
+<p class="VBA-Text-Indent">Returns the id of the first item matching all search parameters.</p>
+<p class="vba-text-indent">&#160;</p>
+<p class="VBA-Heading-Method">SelectItem (<span style="font-weight: normal;"><a href="../common_vbageneral/common_general_integer.htm">Integer</a></span> &#160;iItem)</p>
+<p class="VBA-Text-Indent">Selected a result item specified by the integer id given. Use FindItem to obtain the id.</p>
+<p class="VBA-Heading-Category"><a name="Example" id="Example"></a>Example</p>
+<p class="VBA-Text-Example">Dim count As Long</p>
+<p class="VBA-Text-Example">Dim i As Integer</p>
+<p class="VBA-Text-Example">Debug.Clear</p>
+<p class="VBA-Text-Example">With ResultMap("")</p>
+<p class="VBA-Text-Example" style="margin-left: 40px;">If .IsValid Then</p>
+<p class="VBA-Text-Example" style="margin-left: 40px;">&#160;</p>
+<p class="VBA-Text-Example" style="margin-left: 80px;">' Write filenames and parameters to the debug output window</p>
+<p class="VBA-Text-Example" style="margin-left: 80px;">count = .GetItemCount()</p>
+<p class="VBA-Text-Example" style="margin-left: 80px;">&#160;</p>
+<p class="VBA-Text-Example" style="margin-left: 80px;">For i = 1 To count</p>
+<p class="VBA-Text-Example" style="margin-left: 120px;">Debug.Print .GetItemFilename(i)</p>
+<p class="VBA-Text-Example" style="margin-left: 120px;">Debug.Print .GetItemParameters(i)</p>
+<p class="VBA-Text-Example" style="margin-left: 80px;">Next i</p>
+<p class="VBA-Text-Example" style="margin-left: 80px;">&#160;</p>
+<p class="VBA-Text-Example" style="margin-left: 80px;">' Search for an item at 9 GHz</p>
+<p class="VBA-Text-Example" style="margin-left: 80px;">.BeginSearch</p>
+<p class="VBA-Text-Example" style="margin-left: 80px;">.AddSearchParameter "Frequency", 9e9, 1</p>
+<p class="VBA-Text-Example" style="margin-left: 80px;">i = .FindItem</p>
+<p class="VBA-Text-Example" style="margin-left: 80px;">&#160;</p>
+<p class="VBA-Text-Example" style="margin-left: 80px;">If 0 &lt; i Then</p>
+<p class="VBA-Text-Example" style="margin-left: 120px;">.SelectItem i</p>
+<p class="VBA-Text-Example" style="margin-left: 120px;">MsgBox "Result item was found at 9 GHz."</p>
+<p class="VBA-Text-Example" style="margin-left: 80px;">Else</p>
+<p class="VBA-Text-Example" style="margin-left: 120px;">MsgBox "No result item was found at 9 GHz."</p>
+<p class="VBA-Text-Example" style="margin-left: 80px;">End If</p>
+<p class="VBA-Text-Example" style="margin-left: 40px;">Else</p>
+<p class="VBA-Text-Example" style="margin-left: 80px;">MsgBox "Result map is invalid, or none has been selected."</p>
+<p class="VBA-Text-Example" style="margin-left: 40px;">End If</p>
+<p class="VBA-Text-Example">End With</p>
+<?rh-p style="margin-bottom: 0px; text-align: Right; margin-left: 18px; 
+                 margin-right: 18px; margin-top: 18px;" ?>
+<div style="width: 100%; position: relative;" id="footer">
+<p style="border-bottom: Solid 1px #dddddd; text-align: Left; margin-left: 0px; font-family: Arial, sans-serif; line-height: Normal; margin-top: 9px; margin-right: 0px; margin-bottom: 6px; border-left-width: 1px; border-top-width: 1px; border-right-width: 1px;"><span style="text-align: Left; font-family: Arial, sans-serif; line-height: Normal;">&#160;</span></p>
+<table cellspacing="0" width="100%">
+<col style="width: 50%;" />
+<col style="width: 50%;" />
+<tr>
+<td style="vertical-align: Top;"><span style="font-family: Arial, sans-serif; line-height: Normal; font-size: 8pt;"><font size="1" style="font-size:8pt;">CST Studio Suite 2026</font></span></td>
+<td style="vertical-align: Top;">
+<p style="text-align: right;">&#160;</p>
+</td>
+</tr>
+</table>
+<p>&#160;</p>
+</div>
+<script type="text/javascript" language="javascript1.2">
+//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+        writeIntopicBar(0);
+
+
+highlightSearch();
+//-->
+//]]>
+</script>
+</body>
+</html>

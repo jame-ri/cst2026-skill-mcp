@@ -1,0 +1,1366 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="Adobe RoboHelp 11" />
+<title>Project Object</title>
+<link rel="StyleSheet" href="../online_help_vba.css" type="text/css" />
+<style type="text/css">
+/*<![CDATA[*/
+<!--
+body { border-bottom-style:None; }
+-->
+/*]]>*/
+</style>
+
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+        origWidth = innerWidth;
+        origHeight = innerHeight;
+        onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+/*<![CDATA[*/
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+-->
+/*]]>*/
+</style>
+
+<script type="text/javascript" language="javascript1.2" src="../whmsg.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript" src="../whver.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript1.2" src="../whutils.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript1.2" src="../whproxy.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript1.2" src="../whlang.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript1.2" src="../whtopic.js" charset="utf-8">
+</script>
+</head>
+<body>
+<script type="text/javascript" language="javascript1.2">
+//<![CDATA[
+<!--
+if (window.gbWhTopic)
+{
+        var strUrl = document.location.href;
+        var bc = 0;
+        var n = strUrl.toLowerCase().indexOf("bc-");
+        if(n != -1)
+        {
+                document.location.replace(strUrl.substring(0, n));
+                bc = strUrl.substring(n+3);
+        }
+
+        if (window.addTocInfo)
+        {
+        addTocInfo("Circuits & Systems VBA\nProject\nProject");
+
+        }
+        if (window.writeBtnStyle)
+                writeBtnStyle();
+
+        if (window.writeIntopicBar)
+                writeIntopicBar(0);
+
+        
+        document.write("<p style=\"font-family: Tahoma; font-size: 9pt; font-weight: 400;  font-style:normal; color: rgb(0, 0, 0); text-decoration:none; text-align: left\"> ");
+AddMasterBreadcrumbs("../index.htm", "font-family: Tahoma; font-size: 9pt; font-weight: 400;  font-style:normal; color: rgb(0, 0, 0); text-decoration:none; text-align: left", "|", "Home", "../special_vbaobjects/cstdesignstudiovbaobjects.htm");
+document.write("<a style=\"font-family: Tahoma; font-size: 9pt; font-weight: 400;  font-style:normal; color: rgb(0, 0, 0); text-decoration:none; text-align: left\" href=\"../special_vbaobjects/cstdesignstudiovbaobjects.htm\">Circuits & Systems VBA<\/a> | <a style=\"font-family: Tahoma; font-size: 9pt; font-weight: 400;  font-style:normal; color: rgb(0, 0, 0); text-decoration:none; text-align: left\" href=\"projectobject.htm\">Project<\/a> | Project<\/p>");
+
+}
+else
+        if (window.gbIE4)
+                document.location.reload();
+
+onLoadHandler = function()
+{
+  if (window.setRelStartPage)
+        {
+        setTimeout("setRelStartPage('../index.htm');", 1)
+
+    setTimeout("UpdateBreadCrumbsMarker();", 1);
+        }
+}
+
+if (window.addEventListener){  
+        window.addEventListener('load', onLoadHandler, false);   
+} else if (window.attachEvent){  
+        window.attachEvent('onload', onLoadHandler);  
+}
+
+function onSetStartPage()
+{
+  autoSync(1);
+  sendSyncInfo();
+  sendAveInfoOut();
+}
+//-->
+//]]>
+</script><script type="text/javascript" src="../ehlpdhtm.js" language="JavaScript1.2">
+</script>
+<table cellspacing="0" width="100%">
+<col style="width: 50%;" />
+<col style="width: 50%;" />
+<tr>
+<td style="vertical-align: middle; padding-top: 5px; padding-bottom: 5px;">
+<p style="margin-top: 0px; margin-bottom: 0px;"><img src="../3ds.png" alt="" style="border: none;" border="0" /></p>
+</td>
+<td style="vertical-align: middle;">
+<p style="text-align: right;"><a href="https://www.3ds.com/products-services/3dexperience/" target="_blank"><img src="../3dexp.png" alt="" style="border: none;" width="32" height="32" border="0" /></a></p>
+</td>
+</tr>
+</table>
+<h1>Project Object</h1>
+<p class="VBA-Text">The Project Object offers miscellaneous functions concerning the program in general.</p>
+<ul>
+<li class="p-VBA-Index-Category">
+<p class="VBA-Index-Category"><a href="#General Methods">General Methods</a></p>
+</li>
+<li class="p-VBA-Index-Category">
+<p class="VBA-Index-Category"><a href="#File_Handling">File Handling</a></p>
+</li>
+<li class="p-VBA-Index-Category">
+<p class="VBA-Index-Category"><a href="#Parameter_Handling">Parameter Handling</a></p>
+</li>
+<li class="p-VBA-Index-Category">
+<p class="VBA-Index-Category"><a href="#Simulation">Simulation</a></p>
+</li>
+<li class="p-VBA-Index-Category">
+<p class="VBA-Index-Category"><a href="#Global_Data_Cache">Global Data Cache</a></p>
+</li>
+<li class="p-VBA-Index-Category">
+<p class="VBA-Index-Category"><a href="#Global_Data_Storage">Global Data Storage</a></p>
+</li>
+<li class="p-VBA-Index-Category">
+<p class="VBA-Index-Category"><a href="#Mathematical_Functions">Mathematical Functions / Constants</a></p>
+</li>
+<li class="p-VBA-Index-Category">
+<p class="VBA-Index-Category"><a href="#Result_Templates">Result Templates</a></p>
+</li>
+<li class="p-VBA-Index-Category">
+<p class="VBA-Index-Category"><a href="#Macros">Macros</a></p>
+</li>
+<li class="p-VBA-Index-Category">
+<p class="VBA-Index-Category"><a href="#Result_Curve_Handling">Result Curve Handling</a></p>
+</li>
+<li class="p-VBA-Index-Category">
+<p class="VBA-Index-Category"><a href="#Result_Data_Access">Result Data Access</a></p>
+</li>
+<li class="p-VBA-Index-Category">
+<p class="VBA-Index-Category"><a href="#Queries">Queries</a></p>
+</li>
+<li class="p-VBA-Index-Category">
+<p class="VBA-Index-Category"><a href="#Result_Plotting">Result Plotting</a></p>
+</li>
+<li class="p-VBA-Index-Category">
+<p class="VBA-Index-Category"><a href="#View">View</a></p>
+</li>
+</ul>
+<p class="VBA-Heading-Category"><a name="General Methods"></a>General Methods</p>
+<p class="VBA-Heading-Method">SelectTreeItem ( <a href="../common_vbageneral/common_general_string.htm" id="a1" style="font-weight: normal; font-style: normal;" name="a1">string</a> &#160;<span style="font-style: italic;"><i>itemname</i></span> ) <a href="../common_vbageneral/common_general_bool_data_type.htm" id="a5" style="font-weight: normal; font-style: normal;" name="a5">bool</a></p>
+<p class="VBA-Text-Indent">Selects the tree Item, specified by name. The view will be updated according to the selection or a different view will be activated. A tree Item is specified by the full path, e.g. <span style="font-style: italic;"><i>SelectTreeItem ("Tasks\SPara1")</i></span>. The return value is True if the selection was successful.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">GetSelectedTreeItem <a href="../common_vbageneral/common_general_string.htm" id="a28" style="font-weight: normal; font-style: normal;" name="a28">string</a></p>
+<p class="VBA-Text-Indent">Returns the path name of the currently selected tree item or folder with regard to the root of the tree. E.g. if the task "SPara1" is selected, the returned path name will be "Tasks\SPara1".</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">SetAssemblyProject ( <a href="../common_vbageneral/common_general_bool_data_type.htm" id="a123" style="font-weight: normal; font-style: normal;" name="a123">bool</a> &#160;<span style="font-style: italic;"><i>assembly</i></span> )</p>
+<p class="VBA-Text-Indent">Sets the project type. If <span style="font-style: italic;"><i>assembly</i></span> is true, the project is opened with assembly view activated. Otherwise only the schematic view is shown when the project is opened.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">ActivateSchematicView</p>
+<p class="VBA-Text-Indent">Activate the schematic view of the project.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">ActivateAssemblyView</p>
+<p class="VBA-Text-Indent">Activate the assembly view of the project.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">ZoomToFit</p>
+<p class="VBA-Text-Indent">Resets the schematic view to drawing.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">TouchstoneExport ( <a href="../common_vbageneral/common_general_string.htm" id="a105" style="font-weight: normal; font-style: normal;" name="a105">string</a> &#160;<span style="font-style: italic;"><i>itemname,</i></span> <a href="../common_vbageneral/common_general_filename.htm" id="a111" style="font-weight: normal; font-style: normal;" name="a111">filename</a> &#160;<span style="font-style: italic;"><i>filename,</i></span> &#160;<a href="../common_vbageneral/common_general_string.htm" id="a112" style="font-weight: normal; font-style: normal;" name="a112">string</a> &#160;impedance) <a href="../common_vbageneral/common_general_bool_data_type.htm" id="a106" style="font-weight: normal; font-style: normal;" name="a106">bool</a></p>
+<p class="VBA-Text-Indent">Performs a Touchstone export of S-, Y-, or Z-Parameter results. '<span style="font-style: italic;"><i>itemname' &#160;</i></span>is a tree item specified by name<span style="font-style: italic;"><i>.</i></span> &#160;It must contain S-, Y-, or Z-Parameters for the Touchstone export to be successfull. '<span style="font-style: italic;"><i>filename'</i></span> is the name of the Touchstone file to be generated without extension. An appropriate extension, .s*p, .y*p, or .z*p, will be automatically appended. &#160;&#160;'<span style="font-style: italic;"><i>impedance' &#160;</i></span>is the reference impedance, to which the N-Port parameters will be normalised. It is applied to all ports. The return type indicates whether the Touchstone export was successful.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">ImportSPICEFromFile ( <a href="../common_vbageneral/common_general_filename.htm" id="a111" style="font-weight: normal; font-style: normal;" name="a111">filename</a> &#160;<span style="font-style: italic;"><i>netlistFile,</i></span> <a href="../common_vbageneral/common_general_string.htm" id="a105" style="font-weight: normal; font-style: normal;" name="a105">string</a> &#160;<span style="font-style: italic;"><i>subcircuitName,</i></span> &#160;<a href="../common_vbageneral/common_general_string.htm" id="a112" style="font-weight: normal; font-style: normal;" name="a112">string</a> &#160;<span style="font-style: italic;"><i>dialect)</i></span></p>
+<p class="VBA-Text-Indent">Imports a SPICE netlist from a SPICE file to the schematic and represents it as a single new block on the schematic. Subcircuit hierarchies are maintained on the schematic by representing subcircuit instances by <span style="font-style: italic;"><i>CST DESIGN STUDIO project blocks</i></span> or, alternatively if not parameterized, as <span style="font-style: italic;"><i>clone blocks</i></span>. Unsupported circuit elements are represented as SPICE blocks on the schematic. Supported circuit elements are represented as the corresponding block type in CST Design Studio.</p>
+<p class="VBA-Text-Indent"><span style="font-style: italic;"><i>netlistFile:</i></span> Is the name of a valid SPICE file. Its path is either absolute or relative to the project path.<br />
+<span style="font-style: italic;"><i>subcircuitName</i></span>: Is the name of a toplevel subcircuit of that SPICE file that is to be represented on the schematic as a CST DESIGN STUDIO project block. If this string argument is empty, the first toplevel subcircuit of the SPICE netlist is represented. If "<span style="font-style: italic;"><i>subcircuitName</i></span>" does already exist on the schematic as block name, the name of the generated block is made unique by appending an integer counter.<br />
+<span style="font-style: italic;"><i>dialect</i></span>: Specifies the SPICE format of the SPICE netlist file, offering those formats that are supported by &#160;<a href="../../DES/components/block/import/spiceimportblock.htm" style="font-weight: normal; font-style: normal;">SPICE block</a> in CST Design Studio. It may assume one of the values "SPICE3f5", "PSPICE", "HSPICE", or "Combined". <span style="font-style: italic;"><i>:</i></span></p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method"><span style="font-style: italic;"><i>ImportSPICEFromString ( <a href="../common_vbageneral/common_general_string.htm" id="a105" style="font-weight: normal; font-style: normal;" name="a105">string</a> &#160;<span style="font-style: italic;"><i>netlist,</i></span> <a href="../common_vbageneral/common_general_string.htm" id="a105" style="font-weight: normal; font-style: normal;" name="a105">string</a> &#160;<span style="font-style: italic;"><i>subcircuitName,</i></span> &#160;<a href="../common_vbageneral/common_general_string.htm" id="a112" style="font-weight: normal; font-style: normal;" name="a112">string</a> &#160;<span style="font-style: italic;"><i>dialect)</i></span></i></span></p>
+<p class="VBA-Text-Indent" style="font-style: normal;">Imports a SPICE netlist to the schematic and represents it as a single new block on the schematic. Subcircuit hierarchies are maintained on the schematic by representing subcircuit instances by <span style="font-style: italic;"><i>CST DESIGN STUDIO</i></span> project blocks or, alternatively if not parameterized, as clone blocks. Unsupported circuit elements are represented as SPICE blocks on the schematic. Supported circuit elements are represented as the corresponding block type in CST Design Studio.</p>
+<p class="VBA-Text-Indent" style="font-style: normal;"><span style="font-style: italic;"><i>netlist</i></span>: Is a VBA string containing the SPICE netlist. The netlist needs to be selfcontained, i.e., it must not feature any include or library statements. <span style="font-style: normal;"><br /></span><span style="font-style: italic;"><i>subcircuitName</i></span><span style="font-style: normal;">: Is the name of a toplevel subcircuit of that SPICE file that is to be represented on the schematic as a CST DESIGN STUDIO project block. If this string argument is empty, the first toplevel subcircuit of the SPICE netlist is represented. If "</span><span style="font-style: italic;"><i>subcircuitName</i></span><span style="font-style: normal;">" does already exist on the schematic as block name, the name of the generated block is made unique by appending an integer counter.<br /></span> <span style="font-style: italic;"><i>dialect</i></span><span style="font-style: normal;">: Specifies the SPICE format of the SPICE netlist file, offering those formats that are supported by &#160;<a href="../../DES/components/block/import/spiceimportblock.htm" style="font-weight: normal; font-style: normal;">SPICE block</a> in CST Design Studio. It may assume one of the values "SPICE3f5", "PSPICE", "HSPICE", or "Combined".</span> <span style="font-style: italic;"><i>:</i></span> <span style="font-style: normal;"><br />
+<br />
+Example:</span> <span style="font-style: italic;"><i><br />
+ImportSPICEFromString("Title" &amp; vbCrLf &amp; ".subckt one 1 2" &amp; vbCrLf &amp; "R1 1 2 1." &amp; vbCrLf &amp; ".ends one" &amp; vbCrLf &amp; ".end" &amp; vbCrLf", "", "Combined")</i></span></p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method"><span style="font-style: italic;"><i>G</i></span>etBlockModeler(<a href="../common_vbageneral/common_general_string.htm" id="a1052" style="font-weight: normal; font-style: normal;" name="a1052">string</a> &#160;<span style="font-style: italic;"><i>blockName</i></span>) <span style="font-weight: normal;">object</span></p>
+<p class="VBA-Text-Indent">Opens the CST Microwave Studio project, referenced by the MWS block <span style="font-style: italic;"><i>blockName</i></span> and returns the 3D modeler COM <span style="font-style: italic;"><i>handle</i></span> to it. This handle can be used for sending commands to the corresponding VBA engine.<br />
+If <span style="font-style: italic;"><i>blockName</i></span> is of any other block type than <span style="font-style: italic;"><i>CSTMWS</i></span> or <span style="font-style: italic;"><i>CSTMWSFile</i></span>, this function does nothing and returns an empty handle.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method" style="font-style: italic;">CopySelectionToClipboard</p>
+<p class="VBA-Text-Indent"><span><span style="font-style: italic;"><i>Copies the currently selected items to the clipboard.</i></span></span></p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method"><span><span style="font-style: italic;"><i>CutSelectionToClipboard&#160;( <a href="../common_vbageneral/common_general_bool_data_type.htm" id="a1231" style="font-weight: normal; font-style: normal;" name="a1231">bool</a> &#160;<span style="font-style: italic;"><i>keepconnectors</i></span> )</i></span></span></p>
+<p class="VBA-Text-Indent"><span><span style="font-style: italic;"><i>Cuts all selected components to the clipboard.&#160;If <span style="font-style: italic;"><i>keepconnectors</i></span> is false, all connectors which are connected to one of the cut components are cut as well. Otherwise they are kept.</i></span></span></p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method"><span><span style="font-style: italic;"><i>PasteComponents</i></span></span></p>
+<p class="VBA-Text-Indent"><span><span style="font-style: italic;"><i>Paste components from clipboard.</i></span></span></p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method"><span><span style="font-style: italic;"><i>SelectComponent (&#160;<a href="../common_vbageneral/common_general_string.htm" id="a133" style="font-weight: normal; font-style: normal;" name="a133">string</a> &#160;<span style="font-style: italic;"><i>type,</i></span> &#160;<span><a href="../common_vbageneral/common_general_string.htm" id="a1331" style="font-weight: normal; font-style: normal;" name="a1331">string</a></span> <span style="font-style: italic;"><i>name</i></span> )</i></span></span></p>
+<p class="VBA-Text-Indent"><span style="font-style: italic;"><i>Selects the component with the specified type and name on the schematic.</i></span></p>
+<p class="VBA-Text-Indent">&#160;</p>
+<table style="margin-left: 24px; left: 0px; top: 325px;" cellspacing="0" width="206">
+<col style="width: 77.67%;" />
+<col width="46" />
+<tr style="vertical-align: top;">
+<th style="border: Solid 1px #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;">
+<p class="VBA-Text">Component</p>
+</th>
+<th style="border-top: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;">
+<p class="VBA-Text">type</p>
+</th>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;">
+<p class="VBA-Text">Block</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;">
+<p class="VBA-Text">"B"</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;">
+<p class="VBA-Text">External Port</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;">
+<p class="VBA-Text">"P"</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;">
+<p class="VBA-Text">Probe</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;">
+<p class="VBA-Text">"O"</p>
+</td>
+</tr>
+</table>
+<p class="VBA-Heading-Method">&#160;</p>
+<p class="VBA-Heading-Method"><span style="font-style: italic;"><i>DeselectComponent (&#160;<a href="../common_vbageneral/common_general_string.htm" id="a1332" style="font-weight: normal; font-style: normal;" name="a1332">string</a> &#160;<span style="font-style: italic;"><i>type,</i></span> &#160;<a href="../common_vbageneral/common_general_string.htm" id="a13311" style="font-weight: normal; font-style: normal;" name="a13311">string</a> <span style="font-style: italic;"><i>name</i></span>)</i></span></p>
+<p class="VBA-Text-Indent"><span style="font-style: italic;"><i>Deselects the component&#160;with the specified type and name on the schematic.</i></span></p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method"><span style="font-style: italic;"><i>SelectAllComponents</i></span></p>
+<p class="VBA-Text-Indent"><span style="font-style: italic;"><i>Selects all components on the schematic.</i></span></p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method"><span style="font-style: italic;"><i>ClearComponentSelection</i></span></p>
+<p class="VBA-Text-Indent"><span style="font-style: italic;"><i>Deselects all components on the schematic.</i></span></p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method"><span style="font-style: italic;"><i>DeleteSelectedComponents ( <a href="../common_vbageneral/common_general_bool_data_type.htm" id="a123" style="font-weight: normal; font-style: normal;" name="a123">bool</a> &#160;<span style="font-style: italic;"><i>keepconnectors</i></span> )</i></span></p>
+<p class="VBA-Text-Indent"><span style="font-style: italic;"><i>Deletes all selected components. If <span style="font-style: italic;"><i>keepconnectors</i></span> is false, all connectors which are connected to one of the deleted components are deleted as well. Otherwise they are kept.</i></span></p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method"><span style="font-style: italic;"><i>GetBBoxAllComponents( <a href="../common_vbageneral/common_general_string.htm" id="a127" style="font-weight: normal; font-style: normal;" name="a127">string</a> opMode, &#160;<a href="../common_vbageneral/common_general_long_ref.htm" id="a128" style="font-weight: normal; font-style: normal;" name="a128">long_ref</a> &#160;nXMin, &#160;<a href="../common_vbageneral/common_general_long_ref.htm" id="a129" style="font-weight: normal; font-style: normal;" name="a129">long_ref</a> nXMax, <a href="../common_vbageneral/common_general_long_ref.htm" id="a130" style="font-weight: normal; font-style: normal;" name="a130">long_ref</a> nYMin, &#160;<a href="../common_vbageneral/common_general_long_ref.htm" id="a131" style="font-weight: normal; font-style: normal;" name="a131">long_ref</a> nYMax)</i></span></p>
+<p class="VBA-Text-Indent"><span style="font-style: italic;"><i>Gets the bounding box of all existing components on a schematic. You may restrict the bounding box calculation to specific component types by specifying first argument <span style="font-style: italic;"><i>opMode</i></span>:</i></span></p>
+<p class="VBA-Text-Indent">&#160;</p>
+<table style="vertical-align: top; margin-left: 24px;" cellspacing="0" width="65.069%">
+<col style="width: 30.37%;" />
+<col style="width: 69.63%;" />
+<tr style="vertical-align: top;">
+<td style="border: Solid 1px #000000; width: 30.37%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text">"all"</p>
+</td>
+<td style="border-top: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 69.63%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text">All component types are considered</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 30.37%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text">"no labels"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 69.63%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text">Only components but labels are considered</p>
+</td>
+</tr>
+</table>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Text-Indent"><span style="font-style: italic;"><i>NOTE: The positive coordinate directions of the schematic go like this: from Left to Right and from Top to Bottom. However, <span style="font-style: italic;"><i>nYmin</i></span> specifies the bottom of the bounding box and <span style="font-style: italic;"><i>nYmax</i></span> specifies the top of the bounding box.</i></span></p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method"><span style="font-style: italic;"><i>EnableSchematicBlockPins ( <a href="../common_vbageneral/common_general_bool_data_type.htm" id="a142" style="font-weight: normal; font-style: normal;" name="a142">bool</a> &#160;<span style="font-style: italic;"><i>enable</i></span> )</i></span></p>
+<p class="VBA-Text-Indent"><span style="font-style: italic;"><i>Enables or disables the creation of pins for the automatically created schematic block. This can only be called for 3D projects, since no schematic block exists in pure CST DS projects. Disabling the pins can improve performance for projects with many sources in the 3D part, but this should only be done if the schematic part is not needed.</i></span></p>
+<p class="VBA-Heading-Method">&#160;</p>
+<p class="VBA-Heading-Method"><span style="font-style: italic;"><i>CreateProjectTemplate ( <a href="../common_vbageneral/common_general_string.htm" id="a1051" style="font-weight: normal; font-style: normal;" name="a1051">string</a> <span style="font-style: italic;"><i>application,</i></span> <span style="font-weight: normal;"><a href="../common_vbageneral/common_general_string.htm" id="a10512" style="font-weight: normal; font-style: normal;" name="a10512">string</a></span> <span style="font-style: italic;"><i>workflow</i></span> ) <span><a href="../common_vbageneral/common_general_string.htm" id="a10511" style="font-weight: normal; font-style: normal;" name="a10511">string</a></span></i></span></p>
+<p class="VBA-Text-Indent">Creates a project template for the specified application ("MW&#160;&amp;&#160;RF&#160;&amp;&#160;Optical", "EDA&#160;/&#160;Electronics", "EMC&#160;/&#160;EMI", "Charged&#160;Particle&#160;Dynamics" or "Statics&#160;and&#160;Low&#160;Frequency") and workflow (needs to match the name shown in the project template wizard). The function returns the name of the project template. If a project template for the workflow does already exist no new template is created and the name of the existing template is returned.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">EnableSParameterCache ( <a href="../common_vbageneral/common_general_bool_data_type.htm" id="a1421" style="font-weight: normal; font-style: normal;" name="a1421">bool</a> &#160;<span style="font-style: italic;"><i>enable</i></span> )</p>
+<p class="VBA-Text-Indent">Enables or disables the caching of scattering parameters from MWS projects.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">CreateDeviceLibrary(&#160;&#160;<a href="../common_vbageneral/common_general_string.htm" id="a10513" style="font-weight: normal; font-style: normal;" name="a10513">string</a> <span style="font-style: italic;"><i>inputPath,</i></span> <span style="font-weight: normal;"><a href="../common_vbageneral/common_general_string.htm" id="a105121" style="font-weight: normal; font-style: normal;" name="a105121">string</a></span> <span style="font-style: italic;"><i>outputPath,</i></span> <a href="../common_vbageneral/common_general_bool_data_type.htm" id="a14211" style="font-weight: normal; font-style: normal;" name="a14211">bool</a> &#160;<span style="font-style: italic;"><i>readOnly,</i></span> &#160;<a href="../common_vbageneral/common_general_bool_data_type.htm" id="a142111" style="font-weight: normal; font-style: normal;" name="a142111">bool</a> encryptModels)</p>
+<p class="VBA-Text-Indent">Converts subcircuit definitions in given SPICE files into a data structure suitable for the CST Studio Suite Device library.<br /></p>
+<table style="margin-left: 24px; left: 0px; top: 2076px; border-collapse: separate; border-collapse: separate;" cellspacing="0" width="818" border="1">
+<col style="width: 12.745%;" />
+<col style="width: 87.255%;" />
+<tr>
+<td>
+<p class="VBA-Text" style="font-style: italic;">inputPath:</p>
+</td>
+<td>
+<p class="VBA-Text">Contains the to be converted SPICE files. This directory is scanned recursively for interpretable SPICE files. Every interpretable SPICE file is then converted into a CST Studio Suite suitable format and stored into the <span style="font-style: italic;"><i>outputPath</i></span>.<br />
+The library creator only consideres .subcircuit definitions within the input SPICE files. .model statements are ignored.</p>
+<p class="VBA-Text">Needs to contain a <span style="font-style: italic;"><i>DeviceLibData.json</i></span> file</p>
+</td>
+</tr>
+<tr>
+<td>
+<p class="VBA-Text" style="font-style: italic;">readOnly:</p>
+</td>
+<td>
+<p class="VBA-Text">If this flag is true, a read only library is created.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p class="VBA-Text"><span style="font-style: italic;"><i>encryptModels</i></span>:</p>
+</td>
+<td>
+<p class="VBA-Text">&#160;If this flag is true, all input SPICE files will be converted into encrypted SPICE files. These file can then be distributed without disclosing valuable IP.</p>
+<p class="VBA-Text">&#160;</p>
+</td>
+</tr>
+</table>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Text-Indent">Together with the SPICE model definitions, the device library creator requires some additional information about the to be converted models. This meta data can be specified in one or more JSON files. Parallel to the <span style="font-style: italic;"><i>inputPath</i></span>, a <span style="font-style: italic;"><i>DeviceLibData.json</i></span> file needs to be located, where at least the device type and the vendor of all devices in <span style="font-style: italic;"><i>inputPath</i></span> is specified. The information in this .json file can be overwritten by locating different <span style="font-style: italic;"><i>DeviceLibData.json</i></span> files in corresponding sub directories, or by locating an individual .json file for each SPICE file. The individual .json files need to have the same name as the SPICE file. For instance, if the SPICE file is called <span style="font-style: italic;"><i>MyModel.cir,</i></span> the .json file needs to be called <span style="font-style: italic;"><i>MyModel.json</i></span>.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Text-Indent">The syntax of the .json files is as follows:</p>
+<p class="VBA-Text-Indent">---------------------------------</p>
+<p class="VBA-Text-Indent">{</p>
+<p class="VBA-Text-Indent">&#160;&#160;&#160;&#160;"Data Format Version": "1.0",</p>
+<p class="VBA-Text-Indent">&#160;&#160;&#160;&#160;"Spice Dialect": "PSPICE",</p>
+<p class="VBA-Text-Indent">&#160;&#160;&#160;&#160;"Datasets": [</p>
+<p class="VBA-Text-Indent">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;{</p>
+<p class="VBA-Text-Indent">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;"Description": "",</p>
+<p class="VBA-Text-Indent">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;"Device Model Name": "",</p>
+<p class="VBA-Text-Indent">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;"Device Type": "",</p>
+<p class="VBA-Text-Indent">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;"Manufacturer": ""</p>
+<p class="VBA-Text-Indent">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;}</p>
+<p class="VBA-Text-Indent">&#160;&#160;&#160;&#160;]</p>
+<p class="VBA-Text-Indent">}</p>
+<p class="VBA-Text-Indent">---------------------------------</p>
+<p class="VBA-Text-Indent">The given keys can have the following values:</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<table style="margin-left: 24px; left: 0px; top: 2605px; border-collapse: separate; border-collapse: separate;" cellspacing="0" width="820" border="1">
+<col style="width: 11.82%;" />
+<col style="width: 27.142%;" />
+<col style="width: 9.801%;" />
+<col style="width: 51.236%;" />
+<tr>
+<td>
+<p class="VBA-Text">Data Format Version:</p>
+</td>
+<td>
+<p class="VBA-Text">1.0</p>
+</td>
+<td>
+<p class="VBA-Text">Device Model Name:</p>
+</td>
+<td>
+<p class="VBA-Text">Free text, specifying the model name. If left empty, the subcircuit name is used as model name.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p class="VBA-Text">Spice Dialect:</p>
+</td>
+<td>
+<p class="VBA-Text"><span>One of these types:</span><br />
+<span style="font-style: italic;"><i>SPICE3</i></span>, <span style="font-style: italic;"><i>PSPICE</i></span>, <span style="font-style: italic;"><i>LTSpice</i></span></p>
+</td>
+<td>
+<p class="VBA-Text">Device Type:</p>
+</td>
+<td>
+<p class="VBA-Text">One of these types:<br />
+<span style="font-style: italic;"><i>Res, Cap, Ind</i></span></p>
+</td>
+</tr>
+<tr>
+<td>
+<p class="VBA-Text">Description:</p>
+</td>
+<td>
+<p class="VBA-Text">Free text, describing the device</p>
+</td>
+<td>
+<p class="VBA-Text">Manufacturer:</p>
+</td>
+<td>
+<p class="VBA-Text">Free text, specifying the vendor name of the device.</p>
+</td>
+</tr>
+</table>
+<p class="VBA-Text">&#160;</p>
+<p class="VBA-Text-Indent">Currently, only two pin devices are supported.</p>
+<p class="VBA-Heading-Category"><a name="File_Handling" id="File_Handling"></a>File Handling</p>
+<p class="VBA-Heading-Method">Quit</p>
+<p class="VBA-Text-Indent">Closes the project without saving.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">Save</p>
+<p class="VBA-Text-Indent">Saves the current state of the project.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">SaveAs ( <a href="../common_vbageneral/common_general_filename.htm" id="a7" style="font-weight: normal; font-style: normal;" name="a7">filename</a> &#160;<span style="font-style: italic;"><i>filename</i></span>, <a href="../common_vbageneral/common_general_bool_data_type.htm" id="a12" style="font-weight: normal; font-style: normal;" name="a12">bool</a> &#160;<span style="font-style: italic;"><i>include_results</i></span> )</p>
+<p class="VBA-Text-Indent">Saves the current state of the project under the file name specified by the parameter <span style="font-style: italic;"><i>filename.</i></span> Results will be included if <span style="font-style: italic;"><i>include_results</i></span> <span>is set to</span> <span style="font-style: italic;"><i>True.</i></span></p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">UpdateFileReferences</p>
+<p class="VBA-Text-Indent">Updates all file blocks that are outdated.</p>
+<p class="VBA-Heading-Method" style="margin-left: 24px; text-indent: -24px;">&#160;</p>
+<p class="VBA-Heading-Method" style="margin-left: 24px; text-indent: -24px;"><a name="cmd_ClearIbisData_projectwide" id="cmd_ClearIbisData_projectwide"></a>ClearIbisData</p>
+<p class="VBA-Text-Indent">Deletes the volatile data of all IBIS blocks (as defined in the <a href="../../DES/components/block/import/ibisreferenceblock.htm#IBIS_data_storage_policy">IBIS data storage policy</a>) in the entire project, including IBIS blocks in simulation projects and DesignStudio blocks. There is also a <a href="blockobject.htm#ClearIbisData">command</a> to delete the data of specific blocks.</p>
+<p class="VBA-Heading-Category"><a name="Parameter_Handling" id="Parameter_Handling"></a>Parameter Handling</p>
+<p class="VBA-Heading-Method">DeleteParameter ( <a href="../common_vbageneral/common_general_string.htm" id="a13" style="font-weight: normal; font-style: normal;" name="a13">string</a> &#160;<span style="font-style: italic;"><i>name</i></span> )</p>
+<p class="VBA-Text-Indent">Deletes an existing parameter with the specified name.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">DoesParameterExist ( <a href="../common_vbageneral/common_general_string.htm" id="a132" style="font-weight: normal; font-style: normal;" name="a132">string</a> &#160;<span style="font-style: italic;"><i>name</i></span> ) <a href="../common_vbageneral/common_general_bool_data_type.htm" id="a12101" style="font-weight: normal; font-style: normal;" name="a12101">bool</a></p>
+<p class="VBA-Text-Indent">Returns if a parameter with the given name exists.</p>
+<p class="VBA-Heading-Method">&#160;</p>
+<p class="VBA-Heading-Method">GetNumberOfParameters <a href="../common_vbageneral/common_general_long.htm" id="a17" style="font-weight: normal; font-style: normal;" name="a17">long</a></p>
+<p class="VBA-Text-Indent">Returns the number of parameters defined so far.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">GetParameterName ( <a href="../common_vbageneral/common_general_long.htm" id="a18" style="font-weight: normal; font-style: normal;" name="a18">long</a> &#160;<span style="font-style: italic;"><i>index</i></span> ) <a href="../common_vbageneral/common_general_string.htm" id="a19" style="font-weight: normal; font-style: normal;" name="a19">string</a></p>
+<p class="VBA-Text-Indent">Returns the name of the parameter referenced by the given index. The first parameter is reference by the index 0.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">GetParameterNValue ( <a href="../common_vbageneral/common_general_long.htm" id="a20" style="font-weight: normal; font-style: normal;" name="a20">long</a> &#160;<span style="font-style: italic;"><i>index</i></span> ) <a href="../common_vbageneral/common_general_double.htm" id="a21" style="font-weight: normal; font-style: normal;" name="a21">double</a></p>
+<p class="VBA-Text-Indent">Returns the value of the double parameter referenced by the given index. The first parameter is referenced by the index 0.</p>
+<p class="VBA-Heading-Method">&#160;</p>
+<p class="VBA-Heading-Method">GetParameterSValue ( <a href="../common_vbageneral/common_general_long.htm" id="a2" style="font-weight: normal; font-style: normal;" name="a2">long</a> &#160;<span style="font-style: italic;"><i>index</i></span> ) <span><a href="../common_vbageneral/common_general_string.htm" id="a8" style="font-weight: normal; font-style: normal;" name="a8">string</a></span></p>
+<p class="VBA-Text-Indent">Returns the numerical expression for the parameter referenced by the given index. The first parameter is referenced by the index 0.</p>
+<p class="vba-text-indent">&#160;</p>
+<p class="VBA-Heading-Method">RenameParameter ( <a href="../common_vbageneral/common_general_string.htm" id="a144" style="font-weight: normal; font-style: normal;" name="a144">string</a> &#160;<span style="font-style: italic;"><i>oldName,</i></span> <a href="../common_vbageneral/common_general_string.htm" id="a1441" style="font-weight: normal; font-style: normal;" name="a1441">string</a> &#160;<span style="font-style: italic;"><i>newName</i></span> &#160;)</p>
+<p class="VBA-Text-Indent">Change the name of existing parameter <span style="font-style: italic;"><i>'oldName'</i></span> to <span style="font-style: italic;"><i>'newName'</i></span>.</p>
+<p class="VBA-Heading-Method">&#160;</p>
+<p class="VBA-Heading-Method">RestoreParameter ( <a href="../common_vbageneral/common_general_string.htm" id="a14" style="font-weight: normal; font-style: normal;" name="a14">string</a> &#160;<span style="font-style: italic;"><i>name</i></span> ) <a href="../common_vbageneral/common_general_string.htm" id="a24" style="font-weight: normal; font-style: normal;" name="a24">string</a></p>
+<p class="VBA-Text-Indent">Gets the value of the specified string parameter.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">RestoreDoubleParameter ( <a href="../common_vbageneral/common_general_string.htm" id="a15" style="font-weight: normal; font-style: normal;" name="a15">string</a> &#160;<span style="font-style: italic;"><i>name</i></span> ) <a href="../common_vbageneral/common_general_double.htm" id="a16" style="font-weight: normal; font-style: normal;" name="a16">double</a></p>
+<p class="VBA-Text-Indent">Gets the value of a specified double parameter.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">RestoreParameterExpression ( <a href="../common_vbageneral/common_general_string.htm" id="a32" style="font-weight: normal; font-style: normal;" name="a32">string</a> &#160;<span style="font-style: italic;"><i>name</i></span> ) <a href="../common_vbageneral/common_general_string.htm" id="a33" style="font-weight: normal; font-style: normal;" name="a33">string</a></p>
+<p class="VBA-Text-Indent">Gets the numerical expression for the specified string parameter.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">StoreParameterWithDescription ( <a href="../common_vbageneral/common_general_string.htm" id="a261" style="font-weight: normal; font-style: normal;" name="a261">string</a> &#160;<span style="font-style: italic;"><i>name</i></span>, <a href="../common_vbageneral/common_general_string.htm" id="a262" style="font-weight: normal; font-style: normal;" name="a262">string</a> &#160;<span style="font-style: italic;"><i>value</i></span>, <a href="../common_vbageneral/common_general_string.htm" id="a263" style="font-weight: normal; font-style: normal;" name="a263">string</a> &#160;<span style="font-style: italic;"><i>description</i></span> &#160;)</p>
+<p class="VBA-Text-Indent">Creates a new string parameter or changes an existing one, with the specified string value and the description.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">StoreParameter ( <a href="../common_vbageneral/common_general_string.htm" id="a22" style="font-weight: normal; font-style: normal;" name="a22">string</a> &#160;<span style="font-style: italic;"><i>name</i></span>, <a href="../common_vbageneral/common_general_string.htm" id="a23" style="font-weight: normal; font-style: normal;" name="a23">string</a> &#160;<span style="font-style: italic;"><i>value</i></span> )</p>
+<p class="VBA-Text-Indent">Creates a new string parameter or changes an existing one, with the specified string value.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">StoreParameters ( <a href="../common_vbageneral/common_general_string_array_data_type.htm" id="a671" style="font-weight: normal; font-style: normal;" name="a671">string array</a> names, <a href="../common_vbageneral/common_general_string_array_data_type.htm" id="a672" style="font-weight: normal; font-style: normal;" name="a672">string array</a> values )</p>
+<p class="VBA-Text-Indent">Adds or modifies an arbitrary number of parameters in one go. For bulk changes of many parameters this method can be considerably faster than changing parameters one after another in a loop.<br />
+The parameters are allowed to arbitrarily depend on each other or on other already existing parameters.</p>
+<p class="VBA-Text-Indent">Example:</p>
+<p class="VBA-Text-Indent" style="font-family: 'Courier New', monospace;">Dim names(1 To 2) As String, values(1 To 2) As String<br />
+names(1) = "a"</p>
+<p class="VBA-Text-Indent" style="font-family: 'Courier New', monospace;">names(2) = "b"</p>
+<p class="VBA-Text-Indent" style="font-family: 'Courier New', monospace;">values(1) = "5*b"</p>
+<p class="VBA-Text-Indent" style="font-family: 'Courier New', monospace;">values(2) = "2"</p>
+<p class="VBA-Text-Indent" style="font-family: 'Courier New', monospace;">StoreParameters(names, values)</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">StoreDoubleParameter ( <a href="../common_vbageneral/common_general_string.htm" id="a9" style="font-weight: normal; font-style: normal;" name="a9">string</a> &#160;<span style="font-style: italic;"><i>name</i></span>, <a href="../common_vbageneral/common_general_double.htm" id="a10" style="font-weight: normal; font-style: normal;" name="a10">double</a> &#160;<span style="font-style: italic;"><i>value</i></span> )</p>
+<p class="VBA-Text-Indent">Creates a new double parameter or changes an existing one, with the specified double value.</p>
+<p class="VBA-Text-Indent">Example: <span style="font-style: italic;"><i>StoreDoubleParameter ( "test", 100.22 )</i></span></p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">MakeSureParameterExists ( <a href="../common_vbageneral/common_general_string.htm" id="a159" style="font-weight: normal; font-style: normal;" name="a159">string</a> &#160;<span style="font-style: italic;"><i>name</i></span>, <a href="../common_vbageneral/common_general_string.htm" id="a160" style="font-weight: normal; font-style: normal;" name="a160">string</a> &#160;<span style="font-style: italic;"><i>value</i></span> )</p>
+<p class="VBA-Text-Indent">Makes sure that the parameter <span style="font-style: italic;"><i>name</i></span> is available. If it is already defined it is left unchanged. If there is no parameter <span style="font-style: italic;"><i>name</i></span>, it is created with the specified <span style="font-style: italic;"><i>value</i></span>.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">SetParameterDescription &#160;( <a href="../common_vbageneral/common_general_string.htm" id="a187" style="font-weight: normal; font-style: normal;" name="a187">string</a> &#160;<span style="font-style: italic;"><i>name</i></span>, <a href="../common_vbageneral/common_general_string.htm" id="a188" style="font-weight: normal; font-style: normal;" name="a188">string</a> &#160;<span style="font-style: italic;"><i>description</i></span> )</p>
+<p class="VBA-Text-Indent">Defines the <span style="font-style: italic;"><i>description</i></span> for a given parameter, which is specified by its <span style="font-style: italic;"><i>name</i></span>.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">GetParameterDescription ( <a href="../common_vbageneral/common_general_string.htm" id="a189" style="font-weight: normal; font-style: normal;" name="a189">string</a> &#160;<span style="font-style: italic;"><i>name</i></span> ) <a href="../common_vbageneral/common_general_string.htm" id="a190" style="font-weight: normal; font-style: normal;" name="a190">string</a></p>
+<p class="VBA-Text-Indent">Returns the description of a given parameter, which is specified by its <span style="font-style: italic;"><i>name</i></span>.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">GetParameterCombination( <a href="../common_vbageneral/common_general_string.htm" id="a29" style="font-weight: normal; font-style: normal;" name="a29">string</a> &#160;<span style="font-style: italic;"><i>resultID</i></span>, <a href="../common_vbageneral/common_general_variant_ref.htm" id="a89" style="font-weight: normal; font-style: normal;" name="a89">variant</a> <span style="font-style: italic;"><i>parameterNames,</i></span> <a href="../common_vbageneral/common_general_variant_ref.htm" id="a90" style="font-weight: normal; font-style: normal;" name="a90">variant</a> &#160;<span style="font-style: italic;"><i>parameterValues</i></span> &#160;) <a href="../common_vbageneral/common_general_bool_data_type.htm" id="a1210" style="font-weight: normal; font-style: normal;" name="a1210">bool</a></p>
+<p class="VBA-Text-Indent">Fills the variant <span style="font-style: italic;"><i>'parameterValues'</i></span> &#160;with an array of double values that correspond to the parameter combination <span style="font-style: italic;"><i>'resultID'</i></span> . The variant <span style="font-style: italic;"><i>'parameterNames'</i></span> &#160;is filled with an array containing the parameter names. In case the parameter combination does not exist, the variants will not be modified and the method returns false. The string <span style="font-style: italic;"><i>'resultID'</i></span> &#160;corresponds to an existing nonzero Run ID and is of the format "<span style="font-family: 'Courier New', monospace;">Schematic:RunID:1</span>." Existing Result IDs can be queried using the command <span style="font-style: italic;"><i>GetResultIDsFromTreeItem</i></span> of the <a href="result_tree_object.htm">ResultTree Object</a>. The method returns an error for Result IDs of invalid format. Note that this command cannot be used to resolve Run ID 0: Current Run. The following example prints parameter names and parameter values to the message window:</p>
+<p class="VBA-Text-Indent" style="font-family: 'Courier New', monospace;">Dim names As Variant, values As Variant, resolved As Boolean</p>
+<p class="VBA-Text-Indent" style="font-family: 'Courier New', monospace;">resolved = DS.GetParameterCombination( "Schematic:RunID:1", names, values )</p>
+<p class="VBA-Text-Indent" style="font-family: 'Courier New', monospace;">If Not resolved Then</p>
+<p class="VBA-Text-Indent" style="font-family: 'Courier New', monospace; margin-left: 64px;">DS.ReportInformationToWindow( "Cannot resolve parameter combination." &#160;)</p>
+<p class="VBA-Text-Indent" style="font-family: 'Courier New', monospace;">Else</p>
+<p class="VBA-Text-Indent" style="font-family: 'Courier New', monospace; margin-left: 64px;">Dim N As Long</p>
+<p class="VBA-Text-Indent" style="font-family: 'Courier New', monospace; margin-left: 64px;">For N = 0 To UBound( values )</p>
+<p class="VBA-Text-Indent" style="font-family: 'Courier New', monospace; margin-left: 104px;">DS.ReportInformationToWindow( names( N ) &#160;+ ": " + CStr( values( N ) ) )</p>
+<p class="VBA-Text-Indent" style="font-family: 'Courier New', monospace; margin-left: 64px;">Next</p>
+<p class="VBA-Text-Indent" style="font-family: 'Courier New', monospace;">End If</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">GetProjectParameters( <a href="../common_vbageneral/common_general_string.htm" id="a1400" style="font-weight: normal; font-style: normal;" name="a1400">string</a> <span style="font-style: italic;"><i>filename</i></span>, <span><a href="../common_vbageneral/common_general_string_array_data_type.htm" id="a6721" style="font-weight: normal; font-style: normal;" name="a6721">string array</a></span> <span style="font-style: italic;"><i>names,</i></span> <span><a href="../common_vbageneral/common_general_string_array_data_type.htm" id="a6722" style="font-weight: normal; font-style: normal;" name="a6722">string array</a></span> <span style="font-style: italic;"><i>expressions,</i></span> <span><a href="../common_vbageneral/common_general_double.htm" id="a731" style="font-weight: normal; font-style: normal;" name="a731">double</a></span> <span style="font-style: italic;"><i>values,</i></span> <span><a href="../common_vbageneral/common_general_string_array_data_type.htm" id="a6723" style="font-weight: normal; font-style: normal;" name="a6723">string array</a></span> <span style="font-style: italic;"><i>descriptions</i></span> ) <a href="../common_vbageneral/common_general_long.htm" id="a1405" style="font-weight: normal; font-style: normal;" name="a1405">long</a></p>
+<p class="VBA-Text-Indent">Reads parameters from project <span style="font-style: italic;"><i>'filename'</i></span> and returns the number of parameters. This is intended to be used for closed projects: The parameters are read from disk. Use the methods described above (<span style="font-weight: bold;">GetParameterName</span> etc) to access parameters of open projects. The parameters are returned as follows:</p>
+<table style="vertical-align: top; margin-left: 24px;" cellspacing="0" width="65.069%">
+<col style="width: 30.37%;" />
+<col style="width: 69.63%;" />
+<tr style="vertical-align: top;">
+<td style="border: Solid 1px #000000; width: 30.37%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text">names</p>
+</td>
+<td style="border-top: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 69.63%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text">string array of parameter names</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border: Solid 1px #000000; width: 30.37%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text">expressions</p>
+</td>
+<td style="border-top: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 69.63%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text">string array of parameter expressions</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border: Solid 1px #000000; width: 30.37%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text">values</p>
+</td>
+<td style="border-top: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 69.63%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text">double array of parameter values</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border: Solid 1px #000000; width: 30.37%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text">descriptions</p>
+</td>
+<td style="border-top: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 69.63%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text">string array of parameter descriptions</p>
+</td>
+</tr>
+</table>
+<p class="VBA-Heading-Category"><a name="Simulation" id="Simulation"></a>Simulation</p>
+<p class="VBA-Heading-Method">UpdateResults <a href="../common_vbageneral/common_general_string.htm" id="a1021" style="font-weight: normal; font-style: normal;" name="a1021">string</a></p>
+<p class="VBA-Text-Indent">Starts the simulator for all tasks (Update all tasks)</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">ConvertSParameterToY ( <a href="../common_vbageneral/common_general_string.htm" id="a101" style="font-weight: normal; font-style: normal;" name="a101">string</a> &#160;<span style="font-style: italic;"><i>source</i></span>, <a href="../common_vbageneral/common_general_string.htm" id="a102" style="font-weight: normal; font-style: normal;" name="a102">string</a> &#160;<span style="font-style: italic;"><i>task</i></span> )</p>
+<p class="VBA-Text-Indent">Converts the S-Parameters of a block or the complete circuit and a task to admittance parameters and adds them to the result tree. The S-Parameters must already exist.</p>
+<p class="VBA-Text-Indent">Example (using the S-parameters of the whole circuit): <span style="font-style: italic;"><i>ConvertSParameterToY ( "Design", "S-Parameters1" )</i></span></p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">ConvertSParameterToZ ( <a href="../common_vbageneral/common_general_string.htm" id="a103" style="font-weight: normal; font-style: normal;" name="a103">string</a> &#160;<span style="font-style: italic;"><i>source</i></span>, <a href="../common_vbageneral/common_general_string.htm" id="a104" style="font-weight: normal; font-style: normal;" name="a104">string</a> &#160;<span style="font-style: italic;"><i>task</i></span> )</p>
+<p class="VBA-Text-Indent">Converts the S-Parameters of a block or the complete circuit and a task to impedance parameters and adds them to the result tree. The S-Parameters must already exist.</p>
+<p class="VBA-Text-Indent">Example (using the S-parameters of block "MWS1"): <span style="font-style: italic;"><i>ConvertSParameterToZ ( "MWS1", "S-Parameters1" )</i></span></p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">ConvertSParameterToVSWR ( <a href="../common_vbageneral/common_general_string.htm" id="a107" style="font-weight: normal; font-style: normal;" name="a107">string</a> &#160;<span style="font-style: italic;"><i>source</i></span>, <a href="../common_vbageneral/common_general_string.htm" id="a108" style="font-weight: normal; font-style: normal;" name="a108">string</a> &#160;<span style="font-style: italic;"><i>task</i></span> )</p>
+<p class="VBA-Text-Indent">Converts the S-Parameters of a block or the complete circuit and a task to voltage standing wave ratios and adds them to the result tree. The S-Parameters must already exist.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">ConvertSParameterToPseudoWaveS ( <a href="../common_vbageneral/common_general_string.htm" id="a109" style="font-weight: normal; font-style: normal;" name="a109">string</a> &#160;<span style="font-style: italic;"><i>source</i></span>, <a href="../common_vbageneral/common_general_string.htm" id="a110" style="font-weight: normal; font-style: normal;" name="a110">string</a> &#160;<span style="font-style: italic;"><i>task</i></span> )</p>
+<p class="VBA-Text-Indent">Converts the S-Parameters of a block or the complete circuit and a task to <a href="../../DES/theory/smatrix.htm">pseudo wave S-Parameters</a> and adds them to the result tree. The S-Parameters must already exist.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">CalculatePassivityMeasure( <a href="../common_vbageneral/common_general_name.htm" id="a121" style="font-weight: normal; font-style: normal;" name="a121">name</a> &#160;<span style="font-style: italic;"><i>S-ParameterContainerPath</i></span> ) <a href="../common_vbageneral/common_general_bool_data_type.htm" id="a471" style="font-weight: normal; font-style: normal;" name="a471">bool</a></p>
+<p class="VBA-Text-Indent">Calculates a <a href="../../DES/theory/passivity_measure.htm">Passivity Measure</a> of S-Parameter data from the <a href="../../DES/userinterface/uielemente/navigationtree.htm" id="a122" name="a122">Navigation Tree</a> and inserts it into the Navigation Tree. S-Parameters are passive, if the matrix [I]-[S]*Transjugate{[S]} is semi-positive definite. Here, [I] is the unity matrix and [S] is the S-Matrix. The calculated passivity measure is the minimum eigenvalue of [I]-[S]*Transjugate{[S]} as a function of frequency. S-Parameters are non-passive, if the passivity measure is negative. <span style="font-style: italic;"><i>S-ParameterContainerPath</i></span> is the path of the S-Parameter container in the Navigation Tree, for which the passivity measure is to be calculated, e.g., "Tasks\SPara1\S-Parameters" for the results of a default S-Parameter task.</p>
+<p class="VBA-Heading-Category"><a name="Global_Data_Cache" id="Global_Data_Cache"></a>Global Data Cache</p>
+<p class="VBA-Text-Indent">The following methods are only valid for result templates and return an error if used in macros, block settings, task settings or project parameters.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">ClearGlobalDataValues</p>
+<p class="VBA-Text-Indent">Clear all global data values.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">DeleteGlobalDataValue ( <a href="../common_vbageneral/common_general_string.htm" id="a43" style="font-weight: normal; font-style: normal;" name="a43">string</a> &#160;<span style="font-style: italic;"><i>name</i></span> )</p>
+<p class="VBA-Text-Indent">Delete a global data value with a given name.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">RestoreGlobalDataValue ( <a href="../common_vbageneral/common_general_string.htm" id="a44" style="font-weight: normal; font-style: normal;" name="a44">string</a> &#160;<span style="font-style: italic;"><i>name</i></span> ) <a href="../common_vbageneral/common_general_string.htm" id="a38" style="font-weight: normal; font-style: normal;" name="a38">string</a></p>
+<p class="VBA-Text-Indent">Returnes a global data value with a given name.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">StoreGlobalDataValue ( <a href="../common_vbageneral/common_general_string.htm" id="a39" style="font-weight: normal; font-style: normal;" name="a39">string</a> &#160;<span style="font-style: italic;"><i>name</i></span>, <a href="../common_vbageneral/common_general_string.htm" id="a40" style="font-weight: normal; font-style: normal;" name="a40">string</a> &#160;<span style="font-style: italic;"><i>value</i></span> )</p>
+<p class="VBA-Text-Indent">Creates a new global data value with a given name and value or changes an existing one.</p>
+<p class="VBA-Heading-Category"><a name="Global_Data_Storage" id="Global_Data_Storage"></a>Global Data Storage</p>
+<p class="VBA-Text-Indent">The global data storage can be used to store named settings in projects.</p>
+<p class="VBA-Text-Indent"><span style="font-weight: bold;">Caution</span>: It is very easy to use the global data storage in a way that introduces very hard to find result inconsistencies. It is strongly advised to be used by experienced users only. If possible, project parameters should be used instead.</p>
+<p class="VBA-Text-Indent">The global data storage has the following properties:</p>
+<ul>
+<li class="p-VBA-Text">
+<p class="VBA-Text">It is shared between simulation projects and master projects, i.e. a setting stored in a simulation project will be visible in the master and other simulation projects. This is even true for simulation projects with disabled "Link geometry to master" flag.</p>
+</li>
+<li class="p-VBA-Text">
+<p class="VBA-Text">Names and values of settings can be arbitrary strings, but line breaks are forbidden.</p>
+</li>
+<li class="p-VBA-Text">
+<p class="VBA-Text">The standard dependency and result invalidation mechanisms of project parameters are not applied to the global data storage. Changing a value that is used in the history list of 3D projects or in a block or task setting on the schematic does neither prompt for a history rebuild, nor does it cause an invalidation of task results, the assembly or simulation projects. The user of the global data storage is responsible for any re-calculations and/or history rebuilds which might be needed.</p>
+</li>
+<li class="p-VBA-Text">
+<p class="VBA-Text">Global Data storage settings must not be used in value expressions of project parameters. This would break the parametric result management.</p>
+</li>
+<li class="p-VBA-Text">
+<p class="VBA-Text">When opening an existing project that uses <span style="font-style: italic;"><i>GetGlobalData</i></span>, it is impossible to tell whether the current state (3D geometry, task settings, block settings, results etc.) was obtained with the current result of <span style="font-style: italic;"><i>GetGlobalData</i></span>. The only way to find this out is to rebuild all 3D blocks and to run all 3D solvers and simulation tasks again.</p>
+</li>
+</ul>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">ResetGlobalDataStorage</p>
+<p class="VBA-Text-Indent">Clear all global data storage settings.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">SetGlobalData ( <a href="../common_vbageneral/common_general_string.htm" id="a87" style="font-weight: normal; font-style: normal;" name="a87">string</a> &#160;<span style="font-style: italic;"><i>name</i></span>, <a href="../common_vbageneral/common_general_string.htm" id="a88" style="font-weight: normal; font-style: normal;" name="a88">string</a> &#160;<span style="font-style: italic;"><i>value</i></span> )</p>
+<p class="VBA-Text-Indent">Creates a new global data storage setting with a given name and value or changes an existing one. For storing floating point numbers it is recommended to use an explicit conversion first to double and then to string to avoid errors caused by locale dependent decimal separators:</p>
+<p class="VBA-Text-Example" style="margin-left: 24px;">SetGlobalData(name, CStr(Cdbl(value)))</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">GetGlobalData ( <a href="../common_vbageneral/common_general_string.htm" id="a135" style="font-weight: normal; font-style: normal;" name="a135">string</a> &#160;<span style="font-style: italic;"><i>name</i></span> ) <a href="../common_vbageneral/common_general_string.htm" id="a136" style="font-weight: normal; font-style: normal;" name="a136">string</a></p>
+<p class="VBA-Text-Indent">Returns a global data storage setting.</p>
+<p class="VBA-Heading-Category"><a name="Mathematical_Functions" id="Mathematical_Functions"></a>Mathematical Functions / Constants</p>
+<p class="VBA-Heading-Method">ACos ( <a href="../common_vbageneral/common_general_double.htm" id="a72" style="font-weight: normal; font-style: normal;" name="a72">double</a> &#160;<span style="font-style: italic;"><i>value</i></span> ) <a href="../common_vbageneral/common_general_double.htm" id="a73" style="font-weight: normal; font-style: normal;" name="a73">double</a></p>
+<p class="VBA-Text-Indent">Returns the arc cosine of the input parameter as a radian value.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">ACosD ( <a href="../common_vbageneral/common_general_double.htm" id="a83" style="font-weight: normal; font-style: normal;" name="a83">double</a> &#160;<span style="font-style: italic;"><i>value</i></span> ) <a href="../common_vbageneral/common_general_double.htm" id="a84" style="font-weight: normal; font-style: normal;" name="a84">double</a></p>
+<p class="VBA-Text-Indent">Returns the arc cosine of the input parameter in degree.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">ASin ( <a href="../common_vbageneral/common_general_double.htm" id="a45" style="font-weight: normal; font-style: normal;" name="a45">double</a> &#160;<span style="font-style: italic;"><i>value</i></span> ) <a href="../common_vbageneral/common_general_double.htm" id="a46" style="font-weight: normal; font-style: normal;" name="a46">double</a></p>
+<p class="VBA-Text-Indent">Returns the arc sine of the input parameter as a radian value.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">ASinD ( <a href="../common_vbageneral/common_general_double.htm" id="a41" style="font-weight: normal; font-style: normal;" name="a41">double</a> &#160;<span style="font-style: italic;"><i>value</i></span> ) <a href="../common_vbageneral/common_general_double.htm" id="a42" style="font-weight: normal; font-style: normal;" name="a42">double</a></p>
+<p class="VBA-Text-Indent">Returns the arc sine of the input parameter in degree.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">ATnD ( <a href="../common_vbageneral/common_general_double.htm" id="a70" style="font-weight: normal; font-style: normal;" name="a70">double</a> &#160;value ) <a href="../common_vbageneral/common_general_double.htm" id="a71" style="font-weight: normal; font-style: normal;" name="a71">double</a></p>
+<p class="VBA-Text-Indent">Returns the arc tangent of the input parameter in degree.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">ATn2 ( <a href="../common_vbageneral/common_general_double.htm" id="a68" style="font-weight: normal; font-style: normal;" name="a68">double</a> &#160;<span style="font-style: italic;"><i>value1</i></span>, <a href="../common_vbageneral/common_general_double.htm" id="a85" style="font-weight: normal; font-style: normal;" name="a85">double</a> &#160;<span style="font-style: italic;"><i>value2</i></span> ) <a href="../common_vbageneral/common_general_double.htm" id="a69" style="font-weight: normal; font-style: normal;" name="a69">double</a></p>
+<p class="VBA-Text-Indent">Returns the arc tangent of the relation of <span style="font-style: italic;"><i>value1</i></span> to <span style="font-style: italic;"><i>value2</i></span> as a radian value.</p>
+<table style="vertical-align: top; margin-left: 24px;" cellspacing="0" width="65.069%">
+<col style="width: 30.37%;" />
+<col style="width: 69.63%;" />
+<tr style="vertical-align: top;">
+<td style="border: Solid 1px #000000; width: 30.37%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text">value1</p>
+</td>
+<td style="border-top: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 69.63%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text"><span style="font-weight: normal;">Numerator of the arc tangent calculation.</span></p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 30.37%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text">value2</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 69.63%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text">Denominator of the arc tangent calculation.</p>
+</td>
+</tr>
+</table>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">ATn2D ( <a href="../common_vbageneral/common_general_double.htm" id="a65" style="font-weight: normal; font-style: normal;" name="a65">double</a> &#160;<span style="font-style: italic;"><i>value1</i></span>, <a href="../common_vbageneral/common_general_double.htm" id="a66" style="font-weight: normal; font-style: normal;" name="a66">double</a> &#160;<span style="font-style: italic;"><i>value2</i></span> ) <a href="../common_vbageneral/common_general_double.htm" id="a67" style="font-weight: normal; font-style: normal;" name="a67">double</a></p>
+<p class="VBA-Text-Indent">Returns the arc tangent of the relation of <span style="font-style: italic;"><i>value1</i></span> to <span style="font-style: italic;"><i>value2</i></span> in degree.</p>
+<table style="vertical-align: top; margin-left: 24px;" cellspacing="0" width="65.069%">
+<col style="width: 30.37%;" />
+<col style="width: 69.63%;" />
+<tr style="vertical-align: top;">
+<td style="border: Solid 1px #000000; width: 30.37%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text">value1</p>
+</td>
+<td style="border-top: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 69.63%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text"><span style="font-weight: normal;">Numerator of the arc tangent calculation.</span></p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 30.37%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text">value2</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 69.63%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text">Denominator of the arc tangent calculation.</p>
+</td>
+</tr>
+</table>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">clight <a href="../common_vbageneral/common_general_double.htm" id="a25" style="font-weight: normal; font-style: normal;" name="a25">double</a></p>
+<p class="VBA-Text-Indent">Returns the constant value for the speed of light in vacuum.</p>
+<p>&#160;</p>
+<p class="VBA-Heading-Method">CosD ( <a href="../common_vbageneral/common_general_double.htm" id="a62" style="font-weight: normal; font-style: normal;" name="a62">double</a> &#160;<span style="font-style: italic;"><i>value</i></span> ) <a href="../common_vbageneral/common_general_double.htm" id="a63" style="font-weight: normal; font-style: normal;" name="a63">double</a></p>
+<p class="VBA-Text-Indent">Returns the cosine of the input parameter in degree.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">Eps0 <a href="../common_vbageneral/common_general_double.htm" id="a4" style="font-weight: normal; font-style: normal;" name="a4">double</a></p>
+<p class="VBA-Text-Indent">Returns the constant value for the permittivity of vacuum.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">Evaluate ( <a href="../common_vbageneral/common_general_string.htm" id="a61" style="font-weight: normal; font-style: normal;" name="a61">string</a> &#160;<span style="font-style: italic;"><i>expression</i></span> ) <a href="../common_vbageneral/common_general_double.htm" id="a60" style="font-weight: normal; font-style: normal;" name="a60">double</a></p>
+<p class="VBA-Text-Indent">Evaluates and returns the numerical double result of a string expression.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">im ( <span><a href="../common_vbageneral/common_general_string.htm" id="a611" style="font-weight: normal; font-style: normal;" name="a611">string</a></span> &#160;<span style="font-style: italic;"><i>amplitude</i></span>, <span><a href="../common_vbageneral/common_general_string.htm" id="a612" style="font-weight: normal; font-style: normal;" name="a612">string</a></span>&#160;<span style="font-style: italic;"><i>phase</i></span> ) <a href="../common_vbageneral/common_general_double.htm" id="a64" style="font-weight: normal; font-style: normal;" name="a64">double</a></p>
+<p class="VBA-Text-Indent">Calculates the imaginary part of a complex number defined by its amplitude and phase.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">mu0 <a href="../common_vbageneral/common_general_double.htm" id="a27" style="font-weight: normal; font-style: normal;" name="a27">double</a></p>
+<p class="VBA-Text-Indent">Returns the constant value for the permeability of vacuum.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">pi <a href="../common_vbageneral/common_general_double.htm" id="a55" style="font-weight: normal; font-style: normal;" name="a55">double</a></p>
+<p class="VBA-Text-Indent">Returns the constant value of Pi.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">re ( <span><a href="../common_vbageneral/common_general_string.htm" id="a613" style="font-weight: normal; font-style: normal;" name="a613">string</a></span> &#160;<span style="font-style: italic;"><i>amplitude</i></span>, <span><a href="../common_vbageneral/common_general_string.htm" id="a614" style="font-weight: normal; font-style: normal;" name="a614">string</a></span>&#160;<span style="font-style: italic;"><i>phase</i></span> ) <a href="../common_vbageneral/common_general_double.htm" id="a57" style="font-weight: normal; font-style: normal;" name="a57">double</a> &#160;</p>
+<p class="VBA-Text-Indent">Calculates the real part of a complex number defined by its amplitude and phase.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">SinD ( <a href="../common_vbageneral/common_general_double.htm" id="a51" style="font-weight: normal; font-style: normal;" name="a51">double</a> &#160;<span style="font-style: italic;"><i>value</i></span> ) <a href="../common_vbageneral/common_general_double.htm" id="a52" style="font-weight: normal; font-style: normal;" name="a52">double</a></p>
+<p class="VBA-Text-Indent">Returns the sine of the input parameter in degree.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">TanD ( <a href="../common_vbageneral/common_general_double.htm" id="a49" style="font-weight: normal; font-style: normal;" name="a49">double</a> &#160;<span style="font-style: italic;"><i>value</i></span> ) <a href="../common_vbageneral/common_general_double.htm" id="a50" style="font-weight: normal; font-style: normal;" name="a50">double</a></p>
+<p class="VBA-Text-Indent">Returns the tangent of the input parameter in degree.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">ChargeElementary <a href="../common_vbageneral/common_general_double.htm" id="a120" style="font-weight: normal; font-style: normal;" name="a120">double</a></p>
+<p class="VBA-Text-Indent">Returns the constant value of the elementary charge.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">MassElectron <a href="../common_vbageneral/common_general_double.htm" id="a124" style="font-weight: normal; font-style: normal;" name="a124">double</a></p>
+<p class="VBA-Text-Indent">Returns the constant value of the mass of an electron.</p>
+<p class="vba-text-indent">&#160;</p>
+<p class="VBA-Heading-Method">MassProton <a href="../common_vbageneral/common_general_double.htm" id="a125" style="font-weight: normal; font-style: normal;" name="a125">double</a></p>
+<p class="VBA-Text-Indent">Returns the constant value of the mass of a proton.</p>
+<p class="vba-text-indent">&#160;</p>
+<p class="VBA-Heading-Method">ConstantBoltzmann <a href="../common_vbageneral/common_general_double.htm" id="a126" style="font-weight: normal; font-style: normal;" name="a126">double</a></p>
+<p class="VBA-Text-Indent">Returns the constant value of the Stefan-Boltzmann constant.</p>
+<p class="VBA-Heading-Category"><a name="Result_Templates" id="Result_Templates"></a>Result Templates</p>
+<p class="VBA-Heading-Method">ActivateScriptSettings ( <a href="../common_vbageneral/common_general_bool_data_type.htm" id="a47" style="font-weight: normal; font-style: normal;" name="a47">bool</a> &#160;<span style="font-style: italic;"><i>switch</i></span> )</p>
+<p class="VBA-Text-Indent">This method activates (<span style="font-style: italic;"><i>switch</i></span> = "True") or deactivates (<span style="font-style: italic;"><i>switch</i></span> = "False") &#160;the script settings of a customized result item.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">ClearScriptSettings</p>
+<p class="VBA-Text-Indent">This method clears the internal settings of a previously customized result item.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">GetLast0DResult ( <a href="../common_vbageneral/common_general_string.htm" id="a48" style="font-weight: normal; font-style: normal;" name="a48">string</a> &#160;<span style="font-style: italic;"><i>name</i></span> ) <a href="../common_vbageneral/common_general_double.htm" id="a53" style="font-weight: normal; font-style: normal;" name="a53">double</a></p>
+<p class="VBA-Text-Indent">This method returns the last 0D result of the selected result template. <span style="font-style: italic;"><i>'name'</i></span> is the name of a previously defined result template.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">GetLast1DResult ( <a href="../common_vbageneral/common_general_string.htm" id="a74" style="font-weight: normal; font-style: normal;" name="a74">string</a> &#160;<span style="font-style: italic;"><i>name</i></span> ) <a href="result1dobject.htm" style="font-weight: normal;">Result1D</a></p>
+<p class="VBA-Text-Indent">This method returns the last 1D result of the selected result template. <span style="font-style: italic;"><i>'name'</i></span> is the name of a previously defined result template.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">GetLast1DComplexResult ( <a href="../common_vbageneral/common_general_string.htm" id="a91" style="font-weight: normal; font-style: normal;" name="a91">string</a> &#160;<span style="font-style: italic;"><i>name</i></span> ) <span style="font-weight: normal;"><a href="result1dcomplex_object.htm">Result1DComplex</a></span></p>
+<p class="VBA-Text-Indent">This method returns the last complex 1D result of the selected result template. <span style="font-style: italic;"><i>'name'</i></span> is the name of a previously defined result template.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">GetLastResultID <span><a href="../common_vbageneral/common_general_string.htm" id="a911" style="font-weight: normal; font-style: normal;" name="a911">string</a></span></p>
+<p class="VBA-Text-Indent">This method returns the Result ID which identifies the last result. It allows access to the last 1D or 0D result via DSResulttree.GetResultFromTreeItem, e.g.:</p>
+<p class="vba-text-indent" style="font-family: 'Courier New', monospace;">Dim o As Object</p>
+<p class="vba-text-indent" style="font-family: 'Courier New', monospace;"><span style="font-family: 'Courier New', monospace;">Set o = DSResultTree.GetResultFromTreeItem("Tasks\SPara1\S-Parameters\S1,1", DS.GetLastResultID())</span></p>
+<p class="vba-text-indent" style="font-family: 'Courier New', monospace;">DS.ReportInformationToWindow("Last 1D/0D result object type: " + o.GetResultObjectType())</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">GetScriptSetting ( <a href="../common_vbageneral/common_general_string.htm" id="a80" style="font-weight: normal; font-style: normal;" name="a80">string</a> &#160;<span style="font-style: italic;"><i>name</i></span>, <a href="../common_vbageneral/common_general_string.htm" id="a81" style="font-weight: normal; font-style: normal;" name="a81">string</a> &#160;<span style="font-style: italic;"><i>default_value</i></span> ) <a href="../common_vbageneral/common_general_string.htm" id="a82" style="font-weight: normal; font-style: normal;" name="a82">string</a></p>
+<p class="VBA-Text-Indent">This function is only active if a result template is currently in process. It returns the internal settings of the previously customized result item using the StoreScriptSetting method. In case that no settings has been stored, the default value will be returned.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">StoreScriptSetting ( <a href="../common_vbageneral/common_general_string.htm" id="a77" style="font-weight: normal; font-style: normal;" name="a77">string</a> &#160;<span style="font-style: italic;"><i>name</i></span>, <a href="../common_vbageneral/common_general_string.htm" id="a78" style="font-weight: normal; font-style: normal;" name="a78">string</a> &#160;<span style="font-style: italic;"><i>value</i></span> )</p>
+<p class="VBA-Text-Indent">This function is only active if a result template is currently in process. It offers the possibility to customize the corresponding result item with help of internal settings, which can be recalled using the GetScriptSetting function. <span style="font-style: italic;"><i>'name'</i></span> is the name defining the internal setting. <span style="font-style: italic;"><i>'value'</i></span> is the value of the setting.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">GetTreeNameScriptSetting ( <a href="../common_vbageneral/common_general_string.htm" id="a115" style="font-weight: normal; font-style: normal;" name="a115">string</a> &#160;<span style="font-style: italic;"><i>name</i></span>, <a href="../common_vbageneral/common_general_string.htm" id="a116" style="font-weight: normal; font-style: normal;" name="a116">string</a> &#160;<span style="font-style: italic;"><i>default_value</i></span> ) <a href="../common_vbageneral/common_general_string.htm" id="a117" style="font-weight: normal; font-style: normal;" name="a117">string</a></p>
+<p class="VBA-Text-Indent">This function is only active if a result template is currently in process. It returns the internal settings of the previously customized result item using the StoreTreeNameScriptSetting method. In case that no settings has been stored, the default value will be returned. This function should be used instead of GetScriptSetting for all settings that correspond to tree items. It should recieve a full tree path, e.g. "Tasks\S-Parameters1". Settings stored with this method will be automatically adjusted if the corresponding tree item is renamed or moved, so that they still refer to the same object. This also includes the case when a template using this setting is part of a task hierarchy that is moved. If a template using this setting is part of a task hierarchy that is copied, and the referenced object is copied as well, then the template setting will also be adjusted to point to the copied object. It will not be adjusted if the referenced object is not copied. The following items will be automatically adjusted: Blocks, tasks, external ports and probes.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">StoreTreeNameScriptSetting ( <a href="../common_vbageneral/common_general_string.htm" id="a118" style="font-weight: normal; font-style: normal;" name="a118">string</a> &#160;<span style="font-style: italic;"><i>setting</i></span>, <a href="../common_vbageneral/common_general_string.htm" id="a119" style="font-weight: normal; font-style: normal;" name="a119">string</a> &#160;<span style="font-style: italic;"><i>value</i></span> )</p>
+<p class="VBA-Text-Indent">This function is only active if a result template is currently in process. It offers the possibility to customize the corresponding result item with help of internal settings, which can be recalled using the GetTreeNameScriptSetting function. <span style="font-style: italic;"><i>'name'</i></span> is the name defining the internal setting. <span style="font-style: italic;"><i>'value'</i></span> is the value of the setting. See the description of GetTreeNameScriptSetting for details about the differences to StoreScriptSetting.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">StoreTemplateSetting ( <a href="../common_vbageneral/common_general_string.htm" id="a249" style="font-weight: normal; font-style: normal;" name="a249">string</a> &#160;<span style="font-style: italic;"><i>setting</i></span>, <a href="../common_vbageneral/common_general_string.htm" id="a250" style="font-weight: normal; font-style: normal;" name="a250">string</a> &#160;<span style="font-style: italic;"><i>value</i></span> )</p>
+<p class="VBA-Text-Indent">This function is only active if a result template is processed. It defines the type of the template and needs to be set in the define method of every result template. The variable <span style="font-style: italic;"><i>'setting'</i></span> has to be the string <span style="font-style: italic;"><i>"TemplateType"</i></span>. The variable <span style="font-style: italic;"><i>'value'</i></span> can be"0D", "1D", "1DC", "M0D", "M1D" or "M1DC". The choice of the template type determines which evaluation method of the template is called when being processed and what return type is expected. More details can be found on the Post-Processing Template Layout help page.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">SetApplicationName ( <a href="../common_vbageneral/common_general_string.htm" id="a94" style="font-weight: normal; font-style: normal;" name="a94">string</a> &#160;<span style="font-style: italic;"><i>name</i></span> )</p>
+<p class="VBA-Text-Indent">Sets the application name ("EMS", "PS", "MWS", "MS", &#160;"DS for MWS", "DS for PCBS", "DS for CS", "DS for MS", "DS"). Use this function for developing a result template.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">ResetApplicationName</p>
+<p class="VBA-Text-Indent">Reset the application name to the default name. Use this function for developing a result template.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">ResetTemplateIterator</p>
+<p class="VBA-Text-Indent">Resets the template iterator to the beginning of the list of defined result templates and clears all template filters. Please note that this method refers to the currently running Postprocessing task. If no task is running, an error is returned.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">SetTemplateFilter( <a href="../common_vbageneral/common_general_string.htm" id="a232" style="font-weight: normal; font-style: normal;" name="a232">string</a> <span style="font-style: italic;"><i>filtername,</i></span> <a href="../common_vbageneral/common_general_string.htm" id="a233" style="font-weight: normal; font-style: normal;" name="a233">string</a> <span style="font-style: italic;"><i>value</i></span>)</p>
+<p class="VBA-Text-Indent">Sets a filter for the template iterator which iterates over the list of defined result templates. Allowed values for <span style="font-style: italic;"><i>'filtername'</i></span> are "resultname", "type", "templatename" and "folder". If <span style="font-style: italic;"><i>'filtername'</i></span> is set to 'type' , then <span style="font-style: italic;"><i>'value' &#160;</i></span>can be "0D", "1D", "1DC", "M0D", "M1D", or "M1DC". For all other filternames, '<span style="font-style: italic;"><i>value'</i></span> can be an arbitrary string.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">GetNextTemplate( <a href="../common_vbageneral/common_general_string_ref.htm" id="a92" style="font-weight: normal; font-style: normal;" name="a92">string_ref</a> <span style="font-style: italic;"><i>resultname</i></span>, <a href="../common_vbageneral/common_general_string_ref.htm" id="a93" style="font-weight: normal; font-style: normal;" name="a93">string_ref</a> <span style="font-style: italic;"><i>type,</i></span> <a href="../common_vbageneral/common_general_string_ref.htm" id="a96" style="font-weight: normal; font-style: normal;" name="a96">string_ref</a> <span style="font-style: italic;"><i>templatename,</i></span> <a href="../common_vbageneral/common_general_string_ref.htm" id="a97" style="font-weight: normal; font-style: normal;" name="a97">string_ref</a> <span style="font-style: italic;"><i>folder</i></span>) <span><a href="../common_vbageneral/common_general_bool_data_type.htm" id="a98" style="font-weight: normal; font-style: normal;" name="a98">bool</a></span></p>
+<p class="VBA-Text-Indent">Fills the parameter variables with the data of the next template of the list of defined result templates. The variable <span style="font-style: italic;"><i>"resultname"</i></span> will be filled with the result name of the defined template, e.g. "S11". The variable <span style="font-style: italic;"><i>"type"</i></span> will be filled with the type of the current result template and can be "0D", "1D", "1DC", "M0D", "M1D" or "M1DC". The variable <span style="font-style: italic;"><i>"templatename"</i></span> will be filled with the name of the template definition file, e.g. "S-Parameter (1D)". The variable <span style="font-style: italic;"><i>"folder"</i></span> will be filled with the relative folder where the template definition file is located (e.g. "Farfield and Antenna Properties"). If a filter was defined (see SetTemplateFilter) the method only returns the data of templates that match the filter. If the end of the template list is reached or no more templates are present that meet the defined filter, the method returns false. The method requires ResetTemplateIterator to be called in advance.</p>
+<p class="VBA-Text-Indent">The following example shows all defined 0D Templates:</p>
+<p class="vba-text-indent" style="font-family: 'Courier New', monospace;">Dim Resultname As String, Templatetype As String, Templatename As String, Folder As String</p>
+<p class="vba-text-indent" style="font-family: 'Courier New', monospace;">ResetTemplateIterator</p>
+<p class="vba-text-indent" style="font-family: 'Courier New', monospace;">SetTemplateFilter("type","0D")</p>
+<p class="vba-text-indent" style="font-family: 'Courier New', monospace;">While (GetNextTemplate( Resultname, Templatetype, Templatename, Folder) = True)</p>
+<p class="vba-text-indent" style="font-family: 'Courier New', monospace; margin-left: 64px;">MsgBox(Resultname &amp; vbNewLine &amp; Templatetype &amp; vbNewLine &amp; Templatename &amp; vbNewLine &amp; Folder)</p>
+<p class="vba-text-indent" style="font-family: 'Courier New', monospace;">Wend</p>
+<p class="VBA-Heading-Method">GetFileType( <a href="../common_vbageneral/common_general_string.htm" id="a251" style="font-weight: normal; font-style: normal;" name="a251">string</a> <span style="font-style: italic;"><i>filename</i></span>) <a href="../common_vbageneral/common_general_string.htm" id="a252" style="font-weight: normal; font-style: normal;" name="a252">string</a></p>
+<p class="VBA-Text-Indent">Checks the file type of the file with absolute path specified in the variable <span style="font-style: italic;"><i>'filename'</i></span>. If the file is a complex signal file, the string "complex" will be returned. If the file is a real-valued signal file, the string "real" will be returned. If the file is a real-valued 0D file, the string "real0D" will be returned. If the file is a complex-valued 0D file, the string "complex0D" will be returned. If the file type is unknown or the file can not be found, "unknown" will be returned.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">GetImpedanceFromTreeItem( <a href="../common_vbageneral/common_general_string.htm" id="a260" style="font-weight: normal; font-style: normal;" name="a260">string</a> <span style="font-style: italic;"><i>treename</i></span> ) <span style="font-weight: normal;"><a href="result1dcomplex_object.htm">Result1DComplex</a></span></p>
+<p class="VBA-Text-Indent">If the 1D tree item with the name '<span style="font-style: italic;"><i>treename'</i></span> can be visualized as a Smith Chart, this method returns a Result1DComplex object filled with the corresponding impedance data. If no impedance data is available, this method returns an empty Result1DComplex object.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">GetFirstTableResult( <a href="../common_vbageneral/common_general_string.htm" id="a253" style="font-weight: normal; font-style: normal;" name="a253">string</a> <span style="font-style: italic;"><i>resultname</i></span>) <a href="../common_vbageneral/common_general_string.htm" id="a254" style="font-weight: normal; font-style: normal;" name="a254">string</a></p>
+<p class="VBA-Text-Indent">Returns the name of the table that was created on evaluation of the template with the name <span style="font-style: italic;"><i>'resultname'</i></span> or an empty string.</p>
+<p class="vba-text-indent">&#160;</p>
+<p class="VBA-Heading-Method">GetNextTableResult( <a href="../common_vbageneral/common_general_string.htm" id="a255" style="font-weight: normal; font-style: normal;" name="a255">string</a> <span style="font-style: italic;"><i>resultname</i></span>) <a href="../common_vbageneral/common_general_string.htm" id="a256" style="font-weight: normal; font-style: normal;" name="a256">string</a></p>
+<p class="VBA-Text-Indent">If the template created more than one table on evaluation, this method returns the names of next table that was created on evaluation of the template with the name <span style="font-style: italic;"><i>'resultname'</i></span>. If no more table names are available, this method returns an empty string. Please note that GetFirstTableName needs to be called before and that this method needs to be called with the same value for parameter <span style="font-style: italic;"><i>'resultname'.</i></span></p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method"><span style="font-style: italic;"><i>G</i></span>etTemplateAborted <span><a href="../common_vbageneral/common_general_bool_data_type.htm" id="a113" style="font-weight: normal; font-style: normal;" name="a113">bool</a></span></p>
+<p class="VBA-Text-Indent">Returns true if the user aborted the template based post-processing evaluation, otherwise false.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">GetActivePostprocessingTask <a href="../common_vbageneral/common_general_string.htm" id="a26" style="font-weight: normal; font-style: normal;" name="a26">string</a></p>
+<p class="VBA-Text-Indent">Returns the tree path of the running Post-Processing task or an empty string.</p>
+<p class="VBA-Heading-Category"><a name="Macros" id="Macros"></a>Macros</p>
+<p class="VBA-Heading-Method">GetMacroPath <a href="../common_vbageneral/common_general_string.htm" id="a86" style="font-weight: normal; font-style: normal;" name="a86">string</a></p>
+<p class="VBA-Text-Indent">Returns the directory, that has been set as preferential location for globally defined macros.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">GetMacroPathFromIndex ( <a href="../common_vbageneral/common_general_integer.htm" id="a6" style="font-weight: normal; font-style: normal;" name="a6">int</a> &#160;<span style="font-style: italic;"><i>index</i></span> ) <a href="../common_vbageneral/common_general_string.htm" id="a3" style="font-weight: normal; font-style: normal;" name="a3">string</a></p>
+<p class="VBA-Text-Indent">Returns the <span style="font-style: italic;"><i>index</i></span>th directory, that has been set as location for globally defined macros.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">RunAndWait ( <a href="../common_vbageneral/common_general_string.htm" id="a75" style="font-weight: normal; font-style: normal;" name="a75">string</a> &#160;<span style="font-style: italic;"><i>command</i></span> )</p>
+<p class="VBA-Text-Indent">Executes a <span style="font-style: italic;"><i>'command'</i></span> and waits with the execution of the current VBA-Script until <span style="font-style: italic;"><i>'command'</i></span> has finished. The VBA-command shell in contrast, executes a command in a second thread such that the execution of the script continues. <span style="font-style: italic;"><i>'command'</i></span> is the command to be executed. For instance every properly installed program on the current computer can be started.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">RunMacro ( <a href="../common_vbageneral/common_general_string.htm" id="a76" style="font-weight: normal; font-style: normal;" name="a76">string</a> &#160;<span style="font-style: italic;"><i>macroname</i></span> )</p>
+<p class="VBA-Text-Indent">Starts the execution of a macro.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">RunScript ( <a href="../common_vbageneral/common_general_string.htm" id="a79" style="font-weight: normal; font-style: normal;" name="a79">string</a> &#160;<span style="font-style: italic;"><i>scriptname</i></span> )</p>
+<p class="VBA-Text-Indent">Reads the script input of a file.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">ReportInformationToWindow ( <a href="../common_vbageneral/common_general_string.htm" id="a156" style="font-weight: normal; font-style: normal;" name="a156">string</a> &#160;<span style="font-style: italic;"><i>message</i></span> )</p>
+<p class="VBA-Text-Indent">Reports an information message to the user. This is either be done in the solver's logfile (if a solver is currently running) or in a message box.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">ReportWarningToWindow ( <a href="../common_vbageneral/common_general_string.htm" id="a157" style="font-weight: normal; font-style: normal;" name="a157">string</a> &#160;<span style="font-style: italic;"><i>message</i></span> )</p>
+<p class="VBA-Text-Indent">Reports a warning message to the user. This is either be done in the solver's logfile (if a solver is currently running) or in a message box.</p>
+<p class="vba-text-indent">&#160;</p>
+<p class="VBA-Heading-Method">ReportError ( <a href="../common_vbageneral/common_general_string.htm" id="a158" style="font-weight: normal; font-style: normal;" name="a158">string</a> &#160;<span style="font-style: italic;"><i>message</i></span> )</p>
+<p class="VBA-Text-Indent">Reports an error message to the user. This is either be done in the solver's logfile (if a solver is currently running) or in a message box. The currently active VBA command evaluation will be stopped immediately. An On Error Goto statement will be able to catch this error.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">SetMacroMode ( <a href="../common_vbageneral/common_general_bool_data_type.htm" id="a1131" style="font-weight: normal; font-style: normal;" name="a1131">bool</a> &#160;<span style="font-style: italic;"><i>enable</i></span> ) <span><a href="../common_vbageneral/common_general_bool_data_type.htm" id="a11311" style="font-weight: normal; font-style: normal;" name="a11311">bool</a></span></p>
+<p class="VBA-Text-Indent">Activates or deactivates the macro mode. When <span style="font-style: italic;"><i>SetMacroMode( True )</i></span> is called, the macro mode is activated and parts of the interactive GUI updates are paused: Connectors on the schematic will not be displayed and the automatic snapping of Microstrip and Stripline blocks in the Assembly view is deferred. When running complex macro to set up a model with many blocks, such as a Microstrip filter, this can help to improve performance and avoids fixing the Assembly position of more blocks than required. The macro mode must be manually disabled again by calling <span style="font-style: italic;"><i>SetMacroMode( False ).</i></span></p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Category"><a name="Result_Curve_Handling" id="Result_Curve_Handling"></a>Result Curve Handling</p>
+<p class="VBA-Text">&#160;</p>
+<p class="VBA-Heading-Method">StoreCurvesInASCIIFile ( <a href="../common_vbageneral/common_general_string.htm" id="a95" style="font-weight: normal; font-style: normal;" name="a95">string</a> &#160;<span style="font-style: italic;"><i>file_name</i></span> )</p>
+<p class="VBA-Text-Indent">Stores the selected 1D or 2D plot in the specified filename as ASCII data.</p>
+<p class="VBA-Text">&#160;</p>
+<p class="VBA-Heading-Method">StoreCurvesInClipboard</p>
+<p class="VBA-Text-Indent">Stores the selected 1D or 2D plot in the clipboard.</p>
+<p class="VBA-Heading-Category"><a name="Result_Data_Access" id="Result_Data_Access"></a>Result Data Access</p>
+<p class="VBA-Heading-Method">Result1D ( <a href="../common_vbageneral/common_general_string.htm" id="a30" style="font-weight: normal; font-style: normal;" name="a30">string</a> &#160;<span style="font-style: italic;"><i>file_name</i></span> ) <a href="result1dobject.htm" style="font-weight: normal;">Result1D</a></p>
+<p class="VBA-Text-Indent">Creates a <a href="result1dobject.htm" style="font-weight: normal;">Result1D</a> object with the given file. If <span style="font-style: italic;"><i>file_name</i></span> is empty, an empty object is created.</p>
+<p class="VBA-Heading-Method">&#160;</p>
+<p class="VBA-Heading-Method">CalculateFourierComplex ( <a href="result1dcomplex_object.htm" style="font-weight: normal;">Result1DComplex</a> <span style="font-style: italic;"><i>Input</i></span>, <a href="../common_vbageneral/common_general_string.htm" style="font-weight: normal;">string</a> <span style="font-style: italic;"><i>InputUnit</i></span>, <a href="result1dcomplex_object.htm" style="font-weight: normal;">Result1DComplex</a> <span style="font-style: italic;"><i>Output</i></span>, <a href="../common_vbageneral/common_general_string.htm" style="font-weight: normal;">string</a> <span style="font-style: italic;"><i>OutputUnit</i></span>, <span><a href="../common_vbageneral/common_general_string.htm" id="a304" style="font-weight: normal; font-style: normal;" name="a304">string</a></span> <span style="font-style: italic;"><i>isign</i></span>, <span><a href="../common_vbageneral/common_general_string.htm" id="a303" style="font-weight: normal; font-style: normal;" name="a303">string</a></span> <span style="font-style: italic;"><i>normalization</i></span>, <span><a href="../common_vbageneral/common_general_string.htm" id="a302" style="font-weight: normal; font-style: normal;" name="a302">string</a></span> <span style="font-style: italic;"><i>vMin</i></span>, <span><a href="../common_vbageneral/common_general_string.htm" id="a301" style="font-weight: normal; font-style: normal;" name="a301">string</a></span> <span style="font-style: italic;"><i>vMax</i></span>, <span><a href="../common_vbageneral/common_general_string.htm" id="a305" style="font-weight: normal; font-style: normal;" name="a305">string</a></span> <span style="font-style: italic;"><i>vSamples</i></span> )</p>
+<p class="VBA-Text-Indent">This VBA command computes the integral:</p>
+<p class="VBA-Text-Indent"><img src="../image/fourierintegral.png" alt="" style="border: none;" width="785" height="77" border="0" /></p>
+<p class="VBA-Text-Indent" style="font-style: italic;">f(u) <span style="font-style: normal;">represents an arbitrarily sampled input signal Input</span><span style="font-weight: bold; font-style: normal;">.</span> <span style="font-style: normal;">The meaning of</span> u <span style="font-style: normal;">and</span> v <span style="font-style: normal;">abscissas depends on the values specified via</span> InputUnit <span style="font-style: normal;">and</span> OutputUnit<span style="font-style: normal;">. Allowed values and the corresponding project units are:</span></p>
+<p class="VBA-Text-Indent" style="font-style: italic;">&#160;</p>
+<table style="vertical-align: top; margin-left: 25px;" cellspacing="0">
+<col width="200" />
+<col width="200" />
+<tr style="vertical-align: top;">
+<td style="border: Solid 1px #000000; padding-right: 10px; padding-left: 10px;" width="200">
+<p>Unit string value</p>
+</td>
+<td style="border-top: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-right: 10px; padding-left: 10px;" width="200">
+<p>Unit</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-right: 10px; padding-left: 10px;" width="200">
+<p>"time"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-right: 10px; padding-left: 10px;" width="200">
+<p>TIME UNIT</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-right: 10px; padding-left: 10px;" width="200">
+<p>"frequency"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-right: 10px; padding-left: 10px;" width="200">
+<p>FREQUENCY UNIT</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-right: 10px; padding-left: 10px;" width="200">
+<p>"angularfrequency"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-right: 10px; padding-left: 10px;" width="200">
+<p>RADIAN x FREQUENCY UNIT</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-right: 10px; padding-left: 10px;" width="200">
+<p>"space"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-right: 10px; padding-left: 10px;" width="200">
+<p>LENGTH UNIT</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-right: 10px; padding-left: 10px;" width="200">
+<p>"wavenumber"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-right: 10px; padding-left: 10px;" width="200">
+<p>1/LENGTH UNIT</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-right: 10px; padding-left: 10px;" width="200">
+<p>"angularwavenumber"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-right: 10px; padding-left: 10px;" width="200">
+<p>RADIAN/LENGTH UNIT</p>
+</td>
+</tr>
+</table>
+<p class="VBA-Text-Indent" style="font-style: normal;">&#160;</p>
+<p class="VBA-Text-Indent" style="font-style: normal;"><span style="font-style: italic;"><i>vMin</i></span> and <span style="font-style: italic;"><i>vMax</i></span> speficy the desired data interval in transformed coordinates and <span style="font-style: italic;"><i>vSamples</i></span> defines the desired number of equidistant samples. Only time-frequency and space-wavenumber space transforms are supported. Frequency and wavenumber functions are related as follows to their angular frequency/wavenumber counterparts:</p>
+<p class="VBA-Text-Indent"><img src="../image/spectrumdefinitions.png" alt="" style="border: none;" width="262" height="88" border="0" /></p>
+<p class="VBA-Text-Indent">No further scaling is applied. <span style="font-style: italic;"><i>isign</i></span> controls the sign of the exponent to affect a forward or a backward transform. The argument <span style="font-style: italic;"><i>normalization</i></span> may assume any value, depending on the employed normalization convention. However, forward and backward transform normalizations must always guarantee:</p>
+<p class="VBA-Text-Indent"><img src="../image/fouriernormalization.png" alt="" style="border: none;" width="585" height="71" border="0" /></p>
+<p class="VBA-Text-Indent">Fourier transform conventions adopted by &#160;CST&#160;Microwave Studio® are:</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Text-Example" style="margin-left: 24px;">CalculateFourierComplex(Signal, "time", Spectrum, "frequency", "-1", "1.0", ...)</p>
+<p class="VBA-Text-Example" style="margin-left: 24px;">CalculateFourierComplex(Spectrum, "frequency", Signal, "time", "+1", "1.0/(2.0*Pi)", ...)</p>
+<p class="VBA-Heading-Method">&#160;</p>
+<p class="VBA-Heading-Method">CalculateCONV ( <a href="result1dobject.htm" style="font-weight: normal;">Result1D</a> <span style="font-style: italic;"><i>sequence_a</i></span>, <a href="result1dobject.htm" style="font-weight: normal;">Result1D</a> <span style="font-style: italic;"><i>sequence_b</i></span>, <a href="result1dobject.htm" style="font-weight: normal;">Result1D</a> <span style="font-style: italic;"><i>sequence_conv</i></span> )</p>
+<p class="VBA-Text-Indent">This method calculates the convolution of two sequences. All signals are given as<a href="result1dobject.htm" style="font-weight: normal;">Result1D</a> objects.</p>
+<table style="margin-left: 24px;" cellspacing="0" width="472">
+<col width="98" />
+<col width="363" />
+<tr style="vertical-align: top;">
+<td style="border: Solid 1px #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;" width="98">
+<p class="VBA-Text">sequence_a</p>
+</td>
+<td style="border-top: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;" width="363">
+<p class="VBA-Text">First sequence to be convoluted.</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;" width="98">
+<p>sequence_b</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;" width="363">
+<p class="VBA-Text">Second sequence to be convoluted.</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;" width="98">
+<p>sequence_conv</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;" width="363">
+<p>Convolution of sequence_a and sequence_b</p>
+</td>
+</tr>
+</table>
+<p class="VBA-Text">&#160;</p>
+<p class="VBA-Heading-Method">&#160;</p>
+<p class="VBA-Heading-Method">CalculateCROSSCOR ( <span><a href="result1dobject.htm" style="font-weight: normal;">Result1D</a></span> <span style="font-style: italic;"><i>a</i></span>, <span><a href="result1dobject.htm" style="font-weight: normal;">Result1D</a></span> <span style="font-style: italic;"><i>b</i></span>, <a href="result1dobject.htm" style="font-weight: normal;">Result1D</a> <span style="font-style: italic;"><i>corr,</i></span> <span><a href="../common_vbageneral/common_general_bool_data_type.htm" id="a219" style="font-weight: normal;" name="a219">bool</a></span> <span style="font-style: italic;"><i>bNorm</i></span> )</p>
+<p class="VBA-Text-Indent">This method calculates the cross correlation sequence of two sequences. All signals are given as <a href="result1dobject.htm">Result1D</a> objects. If "<span style="font-style: italic;"><i>bNorm"</i></span> is "<span style="font-style: italic;"><i>False" &#160;</i></span>then the standard cross correlation sequence is calculated by the following equation.</p>
+<p class="VBA-Text-Indent" style="text-align: center;"><img src="../image/corrformular001.png" alt="" style="border: none;" width="241" height="57" border="0" /></p>
+<p class="VBA-Text-Indent">For "<span style="font-style: italic;"><i>bNorm = True"</i></span> a normed correlation sequence is determined. The resulting sequence will have values in the interval [-1,1] and will be independent to scalar multiplication of the sequences <span style="font-style: italic;"><i>"a"</i></span> and <span style="font-style: italic;"><i>"b"</i></span>. &#160;This normed sequence is derived from the term below.</p>
+<p class="VBA-Text-Indent" style="text-align: center;">&#160;<img src="../image/corrformular002.png" alt="" style="border: none;" width="547" height="128" border="0" /></p>
+<p class="VBA-Text-Indent">Please note that <span style="font-style: italic;"><i>"corr"</i></span> may have a different sampling than <span style="font-style: italic;"><i>"a"</i></span> and <span style="font-style: italic;"><i>"b".</i></span> An internal resampling is done to assure compatibility of the x-values of the processed sequences.</p>
+<table style="margin-left: 24px;" cellspacing="0" width="472">
+<col width="98" />
+<col width="363" />
+<tr style="vertical-align: top;">
+<td style="border: Solid 1px #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;" width="98">
+<p class="VBA-Text">a</p>
+</td>
+<td style="border-top: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;" width="363">
+<p>First sequence to be correlated.</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;" width="98">
+<p>b</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;" width="363">
+<p>Second sequence to be correlated.</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;" width="98">
+<p class="VBA-Text">corr</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;" width="363">
+<p>Sequence of correlation coefficients of the sequences above.</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;" width="98">
+<p>bNorm</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;" width="363">
+<p>Flag if normed or standard correlation is calculated.</p>
+</td>
+</tr>
+</table>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">ApplyWindow ( <span><a href="result1dobject.htm" style="font-weight: normal;">Result1D</a></span> <span style="font-style: italic;"><i>timeSignal</i></span>, <a href="../common_vbageneral/common_general_string.htm" id="a34" style="font-weight: normal; font-style: normal;" name="a34">string</a> &#160;<span style="font-style: italic;"><i>windowType</i></span>, <a href="../common_vbageneral/common_general_string.htm" id="a34" style="font-weight: normal; font-style: normal;" name="a34">string</a> &#160;<span style="font-style: italic;"><i>startTime</i></span>, <a href="../common_vbageneral/common_general_string.htm" id="a34" style="font-weight: normal; font-style: normal;" name="a34">string</a> &#160;<span style="font-style: italic;"><i>stopTime</i></span>, <a href="../common_vbageneral/common_general_string.htm" id="a34" style="font-weight: normal; font-style: normal;" name="a34">string</a> &#160;<span style="font-style: italic;"><i>normalization</i></span>) <span><a href="result1dobject.htm" style="font-weight: normal;">Result1D</a></span></p>
+<p class="VBA-Text-Indent">This method performs a windowing on an input time signal "<span style="font-style: italic;"><i>timeSignal"</i></span>. The windowed signal is returned as a <a href="result1dobject.htm">Result1D</a> object. By appropriate windowing, undesired spectral leakage effects, that overlay the true output spectrum can be reduced. For more information on theoretical aspects of windowing please refer to <a href="../../DES/analysis/simulation/tasks/transienttask/from_time_domain_to_frequency_domain.htm#Windowing">From Time Domain To Frequency Domain</a>.</p>
+<p class="VBA-Text-Indent">"<span style="font-style: italic;"><i>windowType"</i></span> specifies the type of windowing function, applied on the input signal. The following window types are supported: "<span style="font-style: italic;"><i>Uniform"</i></span>, "<span style="font-style: italic;"><i>Bartlett"</i></span>, "<span style="font-style: italic;"><i>Hanning"</i></span>, "<span style="font-style: italic;"><i>Hamming"</i></span>, "<span style="font-style: italic;"><i>KaiserBessel"</i></span>, "<span style="font-style: italic;"><i>Blackman"</i></span>, "<span style="font-style: italic;"><i>FlatTop"</i></span>, and "<span style="font-style: italic;"><i>Gaussian"</i></span>. The spectral properties of these window types are summarized in the following table:</p>
+<table style="margin-left: 24px;" cellspacing="0" width="722">
+<col width="98" />
+<col width="613" />
+<tr style="vertical-align: top;">
+<td style="border: Solid 1px #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;" width="98">
+<p class="VBA-Text">Uniform window</p>
+</td>
+<td style="border-top: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;" width="563">
+<p>Characterized by a narrow main lobe but large side lobes. Use this if a good frequency resolution is important and spectral leakage is not so critical.</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border: Solid 1px #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;" width="98">
+<p class="VBA-Text">Bartlett window</p>
+</td>
+<td style="border-top: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;" width="563">
+<p>The Bartlett window can be interpreted as a convolution between uniform windows. It still suffers high side lobes and strong spectral leakage but not as extreme as for the uniform window. The main lobe is broader and the frequency resolution is not as good as for the uniform window.</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border: Solid 1px #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;" width="98">
+<p class="VBA-Text">Hanning window</p>
+</td>
+<td style="border-top: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;" width="563">
+<p>Spectral properties (main lobe width, side lobe levels, sampling amplitude error) are well balanced. This results in a good general-purpose window that is often appropriate.</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border: Solid 1px #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;" width="98">
+<p class="VBA-Text">Hamming window</p>
+</td>
+<td style="border-top: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;" width="563">
+<p>The Hamming window is similar to the Hanning windows. The window coefficients are a bit different and have been optimized to suppress the first side lobe. Because of that the Hamming window is useful to resolve multitone signals where two tones are closely spaced. On the downside, the window does not taper down to zero at the edges, resulting in some small contribution to spectral leakage due to window edge effects if the time signal is not truely periodic.</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border: Solid 1px #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;" width="98">
+<p class="VBA-Text">Kaiser-Bessel window</p>
+</td>
+<td style="border-top: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;" width="563">
+<p>Optimized for very low side lobes at the cost of a wider main lobe. Use this for well-separated multitone signals with high dynamic range.</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border: Solid 1px #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;" width="98">
+<p class="VBA-Text">Blackman window</p>
+</td>
+<td style="border-top: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;" width="563">
+<p>Characterized by very low sidelobe levels, similar as for the Kaiser-Bessel window. The frequency resolution is slightly better than for the Kaiser-Bessel window. In summary, the spectral properties of the Blackman and the Kaiser-Bessel window are quite comparable.</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border: Solid 1px #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;" width="98">
+<p class="VBA-Text">Flat-Top window</p>
+</td>
+<td style="border-top: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;" width="563">
+<p>Optimized for a very low amplitude error but with a relatively wide main lobe resulting in poor frequency resolution. Also used by spectrum analyzers for measuring single amplitudes. Use this if amplitude accuracy is important and tones are not too close in multitone signals.</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border: Solid 1px #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;" width="98">
+<p class="VBA-Text">Gaussian window</p>
+</td>
+<td style="border-top: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;" width="563">
+<p>The Gaussian window is characterized by a Gaussian bell curve in both, time- and frequency domain. It is well confined and without side lobes in both domains. The support of a Gaussian function extends to infinity. It is therefore truncated at the edges of the window at a reasonably low level of -100dB in relation to its maximum.</p>
+</td>
+</tr>
+</table>
+<p class="VBA-Text-Indent">"<span style="font-style: italic;"><i>startTime"</i></span> and "<span style="font-style: italic;"><i>stopTime"</i></span> define the lower and upper bound of a subinterval of the input signal's abscissa, on which the windowing is performed. This allows for a convenient scaling of the windowed signal in frequency domain. Outside the interval ["<span style="font-style: italic;"><i>startTime"</i></span>, "<span style="font-style: italic;"><i>stopTime"]</i></span> the windowed signal is identically zero.</p>
+<p class="VBA-Text-Indent">"<span style="font-style: italic;"><i>normalization"</i></span> defines how the window function is normalized in time domain. Typically, the user has certain expectations on the maximum amplitude of the windowed signal or on the maximum amplitude of the spectrum of the windowed signal (when applying a Fourier transform after windowing) when comparing these to the case where no windowing is performed. This might involve the so-called coherent power gain compensation, that compensates the the tapering-off of the window function towards the window edges to make the spectrum of the windowed signal independent of the window shape. The following normalizations are supported:</p>
+<table style="margin-left: 24px;" cellspacing="0" width="722">
+<col width="98" />
+<col width="613" />
+<tr style="vertical-align: top;">
+<td style="border: Solid 1px #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;" width="98">
+<p class="VBA-Text">"MAXIMUM"</p>
+</td>
+<td style="border-top: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;" width="563">
+<p>The maximum of the window function is normalized to one. This results in the spectrum of the windowed signal being strongly dependent on the window shape, making it hard to compare spectral results for different window types. This option is more useful in the inverse direction, when appling a filtering of a spectrum in frequency domain.</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border: Solid 1px #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;" width="98">
+<p class="VBA-Text">"AREA</p>
+</td>
+<td style="border-top: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;" width="563">
+<p>The maximum of the window function is normalized such that the area of the window, i.e., the time integral of the window function from startTime to StopTime, is one. Choose this option, if you want to compensate the coherent power gain of the window in relation to no windowing and want to use a universal, signal-independent normalization of one in a follow-up Fourier transform to calculate the spectrum.</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border: Solid 1px #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;" width="98">
+<p class="VBA-Text">"AVERAGE"</p>
+</td>
+<td style="border-top: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;" width="563">
+<p>The maximum of the window function is normalized such that the average of the the window function, is one. This is a pure window shape compensation, i.e., the maximum is lifted to compensate the tapering off towards the window edges. Choose this option, if the comparibility of different window types is most important for you. With this normalization, the absoulte spectral amplitudes will, however, change if you make the window narrower or broader.</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border: Solid 1px #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;" width="98">
+<p class="VBA-Text">"GAIN_COMPENSATION"</p>
+</td>
+<td style="border-top: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;" width="563">
+<p>The maximum of the window function is normalized such that coherent power gain compensation is applied. Choose this option, if you want to compensate the coherent power gain of the window in relation to no windowing and want to apply the standard normalization " one divided by signal length " in a follow-up Fourier transform.</p>
+</td>
+</tr>
+</table>
+<br />
+<p>The following figure illustrates how different normalizations go together with the corresponding normalization of a follow-up Fourier transform.</p>
+<p>&#160;</p>
+<p><span style="mso-no-proof: yes;"><img src="../image/windownormalization.png" alt="" width="678" height="336" border="0" /></span></p>
+<p>&#160;</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">DeleteResults</p>
+<p class="VBA-Text-Indent">Deletes all results of the actual project.</p>
+<p class="VBA-Heading-Category"><a name="Queries" id="Queries"></a>Queries</p>
+<p class="VBA-Heading-Method">GetApplicationName <a href="../common_vbageneral/common_general_string.htm" id="a162" style="font-weight: normal; font-style: normal;" name="a162">string</a></p>
+<p class="VBA-Text-Indent">Returns the application name.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">GetApplicationVersion <a href="../common_vbageneral/common_general_string.htm" id="a99" style="font-weight: normal; font-style: normal;" name="a99">string</a></p>
+<p class="VBA-Text-Indent">Returns the current version number as a string.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">GetInstallPath <a href="../common_vbageneral/common_general_string.htm" id="a100" style="font-weight: normal; font-style: normal;" name="a100">string</a></p>
+<p class="VBA-Text-Indent">Returns the path where the program is installed.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">GetProjectPathName ( <a href="../common_vbageneral/common_general_string.htm" id="a34" style="font-weight: normal; font-style: normal;" name="a34">string</a> &#160;<span style="font-style: italic;"><i>path_id</i></span> ) &#160;<a href="../common_vbageneral/common_general_string.htm" id="a137" style="font-weight: normal; font-style: normal;" name="a137">string</a></p>
+<p class="VBA-Text-Indent">Returns the path to the project's sub-folder specified by <span style="font-style: italic;"><i>path_id.</i></span> Valid settings for <span style="font-style: italic;"><i>path_id</i></span> are:</p>
+<table style="vertical-align: top; margin-left: 24px;" cellspacing="0" width="55.796%">
+<col style="width: 32.09%;" />
+<col style="width: 67.91%;" />
+<tr style="vertical-align: top;">
+<td style="border: Solid 1px #000000; width: 32.09%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text">"Root"</p>
+</td>
+<td style="border-top: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 67.91%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text">Returns the path to the folder where the project file is stored, e.g. <span>"c:\test" for a project stored under "c:\test\project.cst".</span></p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 32.09%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text">"Project"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 67.91%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text">Returns the path to the project's main folder, e.g. "c:\test\project" for a project stored under "c:\test\project.cst".</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 32.09%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text">"Model3D"</p>
+<p class="vba-text">&#160;</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 67.91%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text">Returns the path to the sub-folder where all 3D model information is stored.</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 32.09%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text">"ModelDS"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 67.91%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text">Returns the path to the sub-folder where all model information is stored. Any project settings can be restored with the files located there.</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 32.09%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text">"ModelCacheDS"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 67.91%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text">Returns the path to the sub-folder where additional model information is stored that is used to speed up some updates, etc.</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 32.09%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text">"ResultDS"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 67.91%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text">Returns the path to the sub-folder where result data are stored that have been generated while executing the simulation tasks or added by a parameter sweep or by the template based post-processing.</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 32.09%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text">"ResultDSGeneric"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 67.91%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text">Returns the path to the sub-folder where result data are stored that have been added by the user.</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 32.09%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text">"TempDS"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 67.91%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text">Returns the path to a temporary sub-folder where temporary data is stored for the current session.</p>
+</td>
+</tr>
+</table>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">GetOwnProject <span style="font-weight: normal;">object</span></p>
+<p class="VBA-Text-Indent">Returns the COM interface of the current project.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">GetSimulationProject ( <a href="../common_vbageneral/common_general_string.htm" id="a311" style="font-weight: normal; font-style: normal;" name="a311">string</a> <span style="font-style: italic;"><i>name</i></span> ) <span style="font-weight: normal;">object</span></p>
+<p class="VBA-Text-Indent">Returns the COM interface of the simulation project.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">GetParentOfSimulationProject ( ) <span style="font-weight: normal;">object</span></p>
+<p class="VBA-Text-Indent">Returns the COM interface of the parent project if the current project is a simulation project.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">GetBlockModeler ( <a href="../common_vbageneral/common_general_string.htm" id="a312" style="font-weight: normal; font-style: normal;" name="a312">string</a> <span style="font-style: italic;"><i>name</i></span> ) <span style="font-weight: normal;">object</span></p>
+<p class="VBA-Text-Indent">Returns the COM interface of a CST Studio Suite Block, a CST Studio Suite File block or a CST Studio Suite Schematic Block.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">GetLicenseHostId <a href="../common_vbageneral/common_general_string.htm" id="a114" style="font-weight: normal; font-style: normal;" name="a114">string</a></p>
+<p class="VBA-Text-Indent">Gets the host id for the currently used license (hardlock). This information may be useful for support purposes.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">GetLicenseCustomerNumber <a href="../common_vbageneral/common_general_string.htm" id="a140" style="font-weight: normal; font-style: normal;" name="a140">string</a></p>
+<p class="VBA-Text-Indent">Gets the current customer number from the license. This information may be useful for support purposes.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">SchematicBlockPinsEnabled <a href="../common_vbageneral/common_general_bool_data_type.htm" id="a143" style="font-weight: normal; font-style: normal;" name="a143">bool</a></p>
+<p class="VBA-Text-Indent">Gets whether the pins of the schematic block are enabled. This can only be called for 3D projects, since no schematic block exists in pure CST DS projects.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method"><a name="cmd_ToplevelSubckts" id="cmd_ToplevelSubckts"></a>GetToplevelSubcircuits ( <span style="font-weight: normal;"><a href="../common_vbageneral/common_general_filename.htm">filename</a></span> <span style="font-style: italic;"><i>filename</i></span>, <a href="../common_vbageneral/common_general_string.htm" id="a1403" style="font-weight: normal; font-style: normal;" name="a1403">string</a> <span style="font-style: italic;"><i>dialect</i></span> ) <a href="../common_vbageneral/common_general_variant.htm" style="font-weight: normal;">variant</a></p>
+<p class="VBA-Text-Indent">Returns a list of subcircuit names. This list includes the names of all toplevel subcircuits (i.e., exluding local subcircuits) of the Spice netlist stored as file under "filename". Possible non-encrypted includes of the Spice file are taken into account. "dialect" specifies the SPICE dialect of the netlist. Currently, the types "SPICE3", "PSPICE", "HSPICE", and "AUTOMATIC" are supported. The latter is a combination of SPICE3f4 and a subset of PSPICE, where SPICE3f4 takes precedence over PSPICE, if conflicts occur.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Category"><a name="Result_Plotting" id="Result_Plotting"></a>Result Plotting</p>
+<p class="VBA-Heading-Method">ResultNavigatorRequest ( <a href="../common_vbageneral/common_general_string.htm" id="a1401" style="font-weight: normal; font-style: normal;" name="a1401">string</a> <span style="font-style: italic;"><i>request,</i></span> <a href="../common_vbageneral/common_general_string.htm" id="a1403" style="font-weight: normal; font-style: normal;" name="a1403">string</a> <span style="font-style: italic;"><i>parameter</i></span> ) <a href="../common_vbageneral/common_general_string.htm" id="a1402" style="font-weight: normal; font-style: normal;" name="a1402">string</a></p>
+<p class="VBA-Text-Indent">Sends modification requests or queries to the Result Navigator. Allowed strings for <span style="font-style: italic;"><i>request</i></span> are <span style="font-style: italic;"><i>"set selection", "get selection", "reset selection"</i></span>. The expected format of the string <span style="font-style: italic;"><i>parameter</i></span> and the return value of the function depend on the request. The function requires a preselected 1D or 0D result in the Navigation Tree, which can be achieved by a preceding call of <span style="font-weight: bold;">SelectTreeItem</span><span style="font-style: italic;"><i>.</i></span> If no 1D Plot is selected, the method will return an error.</p>
+<p class="VBA-Text-Indent">The request <span style="font-style: italic;"><i>"set selection"</i></span> allows modifying the selection state of the Result Navigator and expects <span style="font-style: italic;"><i>parameter</i></span> to be a string containing a whitespace separated list of non-negative integers which correspond to Run IDs to be selected. The return value of the function will be an empty string. The following example shows how to select and plot parametric s-parameters from the Navigation Tree:</p>
+<p class="VBA-Text-Example" style="margin-left: 64px;">SelectTreeItem("Tasks\SPara1\S-Parameters")</p>
+<p class="VBA-Text-Example" style="margin-left: 64px;">Dim selection As String</p>
+<p class="VBA-Text-Example" style="margin-left: 64px;">selection = Join(Array(0,1,5)) <span style="color: #008000;"><font color="green">'selection = "0 1 5"</font></span></p>
+<p class="VBA-Text-Example" style="margin-left: 64px;">ResultNavigatorRequest("set selection",selection)</p>
+<p class="VBA-Text-Indent">The request <span style="font-style: italic;"><i>"get selection"</i></span> queries the current selection state of the Result Navigator and returns a string containing a whitespace separated list of integers which correspond to the selected Run IDs. The variable <span style="font-style: italic;"><i>parameter</i></span> is ignored. The following example shows how to query the selected parametric results and print the selection to the message window:</p>
+<p class="VBA-Text-Example" style="margin-left: 64px;">SelectTreeItem("Tasks\SPara1\S-Parameters")</p>
+<p class="VBA-Text-Example" style="margin-left: 64px;">ReportInformationToWindow( ResultNavigatorRequest("get selection","") )<span style="color: #008000;"><font color="green">'print current selection to message window</font></span></p>
+<p class="VBA-Text-Indent">The request <span style="font-style: italic;"><i>"reset selection"</i></span> resets the selection state of the Result Navigator to default behavior (similar to "Reset Selection" in the context menu). The variable <span style="font-style: italic;"><i>parameter</i></span> is ignored and the return value of the function will be an empty string. The following example shows how to reset the selection in the Result Navigator:</p>
+<p class="VBA-Text-Example" style="margin-left: 64px;">SelectTreeItem("Tasks\SPara1\S-Parameters")</p>
+<p class="VBA-Text-Example" style="margin-left: 64px;">ResultNavigatorRequest("reset selection","") <span style="color: #008000;"><font color="green">'reset Result Navigator selection state to default behavior</font></span></p>
+<p class="VBA-Heading-Method">&#160;</p>
+<p class="VBA-Heading-Method">SetPlotStyleForTreeItem( <a href="../common_vbageneral/common_general_string.htm" id="a14011" style="font-weight: normal; font-style: normal;" name="a14011">string</a> <span style="font-style: italic;"><i>treepath,</i></span> <a href="../common_vbageneral/common_general_string.htm" id="a14031" style="font-weight: normal; font-style: normal;" name="a14031">string</a> <span style="font-style: italic;"><i>settings</i></span> ) <a href="../common_vbageneral/common_general_string.htm" id="a140111" style="font-weight: normal; font-style: normal;" name="a140111">string</a></p>
+<p class="VBA-Text-Indent">This command allows modifying plot styles of 1D curves such as curve color, line style, etc. The modifications behave like modifications which are done in the Curve Style Dialog. It is not required to have any open 1D Plot to use this command. However, existing open 1D Plots will not be updated automatically; consider using the Plot1D object in this case. The parameter <span style="font-style: italic;"><i>treepath</i></span> is expected to be a navigation tree path to a 1D leaf item, that is a tree item which represents a single curve, e.g. "Tasks\SPara1\S-Parameters\S1,1". If the tree item does not exist or is a folder, an error is reported. This check can be deactivated (see parameter <span style="font-style: italic;"><i>settings</i></span> ).</p>
+<p class="VBA-Text-Indent">The parameter <span style="font-style: italic;"><i>settings</i></span> is expected to be a whitespace separated list of the following strings:</p>
+<table style="margin-left: 24px;" cellspacing="0" width="928">
+<col style="width: 10.989%;" />
+<col width="715" />
+<col width="111" />
+<tr style="vertical-align: top;">
+<td style="border: Solid 1px #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;">
+<p class="VBA-Text" style="font-style: italic;">Keyword</p>
+</td>
+<td style="border-top: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;">
+<p class="VBA-Text" style="font-style: italic;">Setting</p>
+</td>
+<td style="border-top: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;">
+<p class="VBA-Text" style="font-style: italic;">Example</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;">
+<p class="VBA-Text" style="font-style: normal;">nocheck</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;">
+<p class="VBA-Text">Disables the existence check for the provided tree path. This allows modifying plot styles a priori to a solver run.</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;">
+<p class="VBA-Text">&#160;</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;">
+<p class="VBA-Text">runid=...</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;">
+<p class="VBA-Text">Allows controlling the plot styles of a parametric curve. If no runid is provided, runid=0 is assumed. No existence check is done.</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;">
+<p class="VBA-Text" style="font-style: italic;">runid=0</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;">
+<p class="VBA-Text">color=...</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;">
+<p class="VBA-Text">Specifies the desired curve color in semicolon separated list of RGB values in the range [0,255].</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;">
+<p class="VBA-Text" style="font-style: italic;">color=255;255;0</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;">
+<p class="VBA-Text" style="font-style: normal;">linewidth=...</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;">
+<p class="VBA-Text">Accepts an integer in the range [1,8] and specifies the line thickness.</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;">
+<p class="VBA-Text" style="font-style: italic;">linewidth=3</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;">
+<p class="VBA-Text" style="font-style: normal;"><span style="font-style: normal;">linetype=...</span></p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;">
+<p class="VBA-Text">Can be used to specify the line style, which can be one of the options <span style="font-style: italic;"><i>"Solid"</i></span>, <span style="font-style: italic;"><i>"Dashed"</i></span>, <span style="font-style: italic;"><i>"Dotted"</i></span>, <span style="font-style: italic;"><i>"Dashdotted"</i></span>.</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;">
+<p class="VBA-Text" style="font-style: italic;">linetype=Solid</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;">
+<p class="VBA-Text"><span style="font-size: 9pt; font-family: Arial, sans-serif;"><font size="1" style="font-size:9pt;">markerstyle=...</font></span></p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;">
+<p class="VBA-Text">Can be used to specify the marker style, which can be one of the options <span style="font-style: italic;"><i>"Auto", "Additional", "Marksonly", &#160;"Nomarks"</i></span>.</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;">
+<p class="VBA-Text" style="font-style: italic;">markershape=Auto</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;">
+<p class="VBA-Text"><span style="font-size: 9pt; font-family: Arial, sans-serif;"><font size="1" style="font-size:9pt;">markersize=...</font></span></p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;">
+<p class="VBA-Text">Accepts an integer in the range [1,8] and specifies the marker size.</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;">
+<p class="VBA-Text" style="font-family: Arial, sans-serif; font-style: italic;">markersize=5</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;">
+<p class="VBA-Text" style="font-style: normal;">clear</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;">
+<p class="VBA-Text">Removes all configured plot styles and sets it back to default values.</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;">
+<p class="VBA-Text">&#160;</p>
+</td>
+</tr>
+</table>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Text-Indent">The following example shows how a plot style can be modified:</p>
+<p class="VBA-Text-Indent" style="font-family: 'Courier New', monospace; margin-left: 64px;">SetPlotStyleForTreeItem("Tasks\SPara1\S-Parameters\S1,1","color=177;1;165 linetype=Dotted linewidth=8")</p>
+<p class="VBA-Heading-Category"><a name="View" id="View"></a>View</p>
+<p class="VBA-Heading-Method" style="font-style: normal;"><span style="font-style: normal;">ExportImageToFile( <span style="font-weight: normal;"><a href="../../VBA_3D/common_vbageneral/common_general_string.htm" id="a411" style="font-style: normal;" name="a411">string</a></span> name, <span style="font-weight: normal;">&#160;<a href="../../VBA_3D/common_vbageneral/common_general_integer.htm" style="font-weight: normal;">int</a></span> width, <span style="font-weight: normal;">&#160;<a href="../../VBA_3D/common_vbageneral/common_general_integer.htm" style="font-weight: normal;">int</a></span> height)</span></p>
+<p class="VBA-Text-Indent">Creates a screenshot &#160;with the specified size of the current active plot and stores it in the given file. The string filename is expected to be an absolute file path. Supported file formats are bmp and png.</p>
+<p class="VBA-Text-Indent">If width and height is set to zero the current window size is used.</p>
+<p class="VBA-Text-Indent">Examples:</p>
+<p class="VBA-Text-Example" style="margin-left: 40px;">ExportImageToFile ("D:\image.bmp", 1024, 768) <span style="color: #007f00;"><font color="#007F00">'exports screenshot to D:\image.bmp with resolution 1024x768.</font></span></p>
+<p class="VBA-Text-Example" style="margin-left: 40px;">ExportImageToFile ("D:\image.png", 0, 0) <span style="color: #007f00;"><font color="#007F00">'exports screenshot to D:\image.png with the current window size.</font></span></p>
+<p class="VBA-Heading-Method" style="font-style: normal;">&#160;</p>
+<p class="VBA-Heading-Method" style="font-style: normal;">ExportImageToClipboard( <span style="font-weight: normal;"><a href="../../VBA_3D/common_vbageneral/common_general_string.htm" id="a4111" style="font-style: normal;" name="a4111">string</a></span> name, <span style="font-weight: normal;">&#160;<a href="../../VBA_3D/common_vbageneral/common_general_integer.htm" style="font-weight: normal;">int</a></span> width, <span style="font-weight: normal;">&#160;<a href="../../VBA_3D/common_vbageneral/common_general_integer.htm" style="font-weight: normal;">int</a></span> height)</p>
+<p class="VBA-Text-Indent">Creates a screenshot &#160;with the specified size of the current active plot and copies it to clipboard. If width and height is set to zero the current window size is used.</p>
+<p class="VBA-Text-Indent">Examples:</p>
+<p class="VBA-Text-Example" style="margin-left: 40px;">ExportImageToClipboard (1024, 768) <span style="color: #007f00;"><font color="#007F00">'copies screenshot to clipboard with resolution 1024x768.</font></span></p>
+<p class="VBA-Text-Example" style="margin-left: 40px;">ExportImageToClipboard (0, 0) <span style="color: #007f00;"><font color="#007F00">'exports screenshot to clipboard with the current window size.</font></span></p>
+<p class="VBA-Text-Example" style="margin-left: 40px;">&#160;</p>
+<?rh-p style="margin-bottom: 0px; text-align: Right; margin-left: 18px; 
+                 margin-right: 18px; margin-top: 18px;" ?>
+<div style="width: 100%; position: relative;" id="footer">
+<p style="border-bottom: Solid 1px #dddddd; text-align: Left; margin-left: 0px; font-family: Arial, sans-serif; line-height: Normal; margin-top: 9px; margin-right: 0px; margin-bottom: 6px; border-left-width: 1px; border-top-width: 1px; border-right-width: 1px;"><span style="text-align: Left; font-family: Arial, sans-serif; line-height: Normal;">&#160;</span></p>
+<table cellspacing="0" width="100%">
+<col style="width: 50%;" />
+<col style="width: 50%;" />
+<tr>
+<td style="vertical-align: Top;"><span style="font-family: Arial, sans-serif; line-height: Normal; font-size: 8pt;"><font size="1" style="font-size:8pt;">CST Studio Suite 2026</font></span></td>
+<td style="vertical-align: Top;">
+<p style="text-align: right;">&#160;</p>
+</td>
+</tr>
+</table>
+<p>&#160;</p>
+</div>
+<script type="text/javascript" language="javascript1.2">
+//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+        writeIntopicBar(0);
+
+
+highlightSearch();
+//-->
+//]]>
+</script>
+</body>
+</html>

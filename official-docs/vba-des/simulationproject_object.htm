@@ -1,0 +1,383 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="Adobe RoboHelp 11" />
+<title>SimulationProject Object</title>
+<link rel="StyleSheet" href="online_help_vba.css" type="text/css" />
+<style type="text/css">
+/*<![CDATA[*/
+<!--
+body { border-bottom-style:None; }
+-->
+/*]]>*/
+</style>
+
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+        origWidth = innerWidth;
+        origHeight = innerHeight;
+        onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+/*<![CDATA[*/
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+-->
+/*]]>*/
+</style>
+
+<script type="text/javascript" language="javascript1.2" src="whmsg.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript" src="whver.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript1.2" src="whutils.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript1.2" src="whproxy.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript1.2" src="whlang.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript1.2" src="whtopic.js" charset="utf-8">
+</script>
+</head>
+<body>
+<script type="text/javascript" language="javascript1.2">
+//<![CDATA[
+<!--
+if (window.gbWhTopic)
+{
+        var strUrl = document.location.href;
+        var bc = 0;
+        var n = strUrl.toLowerCase().indexOf("bc-");
+        if(n != -1)
+        {
+                document.location.replace(strUrl.substring(0, n));
+                bc = strUrl.substring(n+3);
+        }
+
+        if (window.addTocInfo)
+        {
+        addTocInfo("Circuits & Systems VBA\nSimulation\nSimulationProject");
+
+        }
+        if (window.writeBtnStyle)
+                writeBtnStyle();
+
+        if (window.writeIntopicBar)
+                writeIntopicBar(0);
+
+        
+        document.write("<p style=\"font-family: Tahoma; font-size: 9pt; font-weight: 400;  font-style:normal; color: rgb(0, 0, 0); text-decoration:none; text-align: left\"> ");
+AddMasterBreadcrumbs("index.htm", "font-family: Tahoma; font-size: 9pt; font-weight: 400;  font-style:normal; color: rgb(0, 0, 0); text-decoration:none; text-align: left", "|", "Home", "special_vbaobjects/cstdesignstudiovbaobjects.htm");
+document.write("<a style=\"font-family: Tahoma; font-size: 9pt; font-weight: 400;  font-style:normal; color: rgb(0, 0, 0); text-decoration:none; text-align: left\" href=\"special_vbaobjects/cstdesignstudiovbaobjects.htm\">Circuits & Systems VBA<\/a> | <a style=\"font-family: Tahoma; font-size: 9pt; font-weight: 400;  font-style:normal; color: rgb(0, 0, 0); text-decoration:none; text-align: left\" href=\"special_vbacommands/simulationtaskobject.htm\">Simulation<\/a> | SimulationProject<\/p>");
+
+}
+else
+        if (window.gbIE4)
+                document.location.reload();
+
+onLoadHandler = function()
+{
+  if (window.setRelStartPage)
+        {
+        setTimeout("setRelStartPage('index.htm');", 1)
+
+    setTimeout("UpdateBreadCrumbsMarker();", 1);
+        }
+}
+
+if (window.addEventListener){  
+        window.addEventListener('load', onLoadHandler, false);   
+} else if (window.attachEvent){  
+        window.attachEvent('onload', onLoadHandler);  
+}
+
+function onSetStartPage()
+{
+  autoSync(1);
+  sendSyncInfo();
+  sendAveInfoOut();
+}
+//-->
+//]]>
+</script><script type="text/javascript" src="./ehlpdhtm.js" language="JavaScript1.2">
+</script>
+<table cellspacing="0" width="100%">
+<col style="width: 50%;" />
+<col style="width: 50%;" />
+<tr>
+<td style="vertical-align: middle; padding-top: 5px; padding-bottom: 5px;">
+<p style="margin-top: 0px; margin-bottom: 0px;"><img src="3ds.png" alt="" style="border: none;" border="0" /></p>
+</td>
+<td style="vertical-align: middle;">
+<p style="text-align: right;"><a href="https://www.3ds.com/products-services/3dexperience/" target="_blank"><img src="3dexp.png" alt="" style="border: none;" width="32" height="32" border="0" /></a></p>
+</td>
+</tr>
+</table>
+<h1>SimulationProject Object</h1>
+<p class="VBA-Text">Allows to manage and create simulation projects.</p>
+<ul>
+<li class="p-VBA-Index-Category">
+<p class="VBA-Index-Category"><a href="#Methods">General Methods</a></p>
+</li>
+<li class="p-VBA-Index-Category">
+<p class="VBA-Index-Category"><a href="#MethodsArrayTask">Methods Concerning Array Tasks</a></p>
+</li>
+<li class="p-VBA-Index-Category">
+<p class="VBA-Index-Category"><a href="#Queries">Queries</a></p>
+</li>
+<li class="p-VBA-Index-Category">
+<p class="VBA-Index-Category"><a href="#Example">Example</a></p>
+</li>
+</ul>
+<p class="VBA-Heading-Category"><a name="Methods" id="Methods"></a>General Methods</p>
+<p class="VBA-Heading-Method">Reset</p>
+<p class="VBA-Text-Indent">Resets all settings to the default values. Call this before doing any specific settings for simulation project creation, otherwise the values of the last simulation poject created in the currently running instance will be used.</p>
+<p class="VBA-Heading-Method">&#160;</p>
+<p class="VBA-Heading-Method">Open ( <a href="common_vbageneral/common_general_name.htm" id="a16" style="font-weight: normal; font-style: normal;" name="a16">name</a> <span style="font-style: italic;"><i>name</i></span> )</p>
+<p class="VBA-Text-Indent">Opens an existing simulation project specified by its <span style="font-style: italic;"><i>name</i></span>.</p>
+<p class="VBA-Heading-Method">&#160;</p>
+<p class="VBA-Heading-Method">Close ( <a href="common_vbageneral/common_general_name.htm" id="a13" style="font-weight: normal; font-style: normal;" name="a13">name</a> <span style="font-style: italic;"><i>name,</i></span> <span style="font-weight: normal;"><a href="common_vbageneral/common_general_bool_data_type.htm">bool</a></span> <span style="font-style: italic;"><i>discard</i></span> )</p>
+<p class="VBA-Text-Indent">Closes an open simulation project specified by its name. The <span style="font-style: italic;"><i>discard</i></span> flag specifies whether potentially unsaved project modifications shall be ignored.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">Delete ( <span><a href="common_vbageneral/common_general_name.htm" id="a21" style="font-weight: normal; font-style: normal;" name="a21">name</a></span> <span style="font-style: italic;"><i>name</i></span> )</p>
+<p class="VBA-Text-Indent">Deletes an existing simulation project specified by its <span style="font-style: italic;"><i>name</i></span>. If the simulation project is open it will be automatically closed first, discarding any unsaved project modifications.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">Rename ( <a href="common_vbageneral/common_general_name.htm" id="a22" style="font-weight: normal; font-style: normal;" name="a22">name</a> <span style="font-style: italic;"><i>oldname,</i></span> &#160;<a href="common_vbageneral/common_general_name.htm" id="a23" style="font-weight: normal; font-style: normal;" name="a23">name</a> <span style="font-style: italic;"><i>newname</i></span> )</p>
+<p class="VBA-Text-Indent">Renames an existing simulation project.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">Run ( <span><a href="common_vbageneral/common_general_name.htm" id="a5" style="font-weight: normal; font-style: normal;" name="a5">name</a></span> <span style="font-style: italic;"><i>name</i></span> )</p>
+<p class="VBA-Text-Indent">Runs the solver associated with an existing simulation project specified by its <span style="font-style: italic;"><i>name</i></span>.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">ResetComponents</p>
+<p class="VBA-Text-Indent">Resets all stored information for component types. Components without a valid type will not be considered during the creation of a new simulation project.</p>
+<p class="VBA-Heading-Method">&#160;</p>
+<p class="VBA-Heading-Method">SetBlock ( <span><a href="common_vbageneral/common_general_name.htm" id="a6" style="font-weight: normal; font-style: normal;" name="a6">name</a></span> <span style="font-style: italic;"><i>name,</i></span> <span><a href="common_vbageneral/common_general_enum.htm" id="a18" style="font-weight: normal;" name="a18">enum</a></span> <span style="font-style: italic;"><i>type</i></span> )</p>
+<p class="VBA-Text-Indent">Sets the <span style="font-style: italic;"><i>type</i></span> of a block specified by its <span style="font-style: italic;"><i>name</i></span>. Currently, the following types are supported:</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<table style="margin-left: 24px; left: 0px; top: 325px;" cellspacing="0" width="599">
+<col />
+<col width="489" />
+<tr style="vertical-align: top;">
+<td style="border: Solid 1px #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;" width="110">
+<p class="VBA-Text">"3D"</p>
+</td>
+<td style="border-top: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;" width="489">
+<p class="VBA-Text">Use the 3D representation of this component when creating the simulation project. If the component does not have a 3D model associated with it, the SCHEMATIC representation will be automatically chosen.</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;" width="110">
+<p class="VBA-Text">"SCHEMATIC"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;" width="489">
+<p class="VBA-Text">Use the schematic (circuit) representation of this component when creating the simulation project.</p>
+</td>
+</tr>
+</table>
+<p class="vba-text-indent">&#160;</p>
+<p class="VBA-Heading-Method">SetAllBlocks ( <span><a href="common_vbageneral/common_general_enum.htm" id="a8" style="font-weight: normal;" name="a8">enum</a></span> <span style="font-style: italic;"><i>type</i></span> )</p>
+<p class="VBA-Text-Indent">Sets the <span style="font-style: italic;"><i>type</i></span> of all blocks. Please refer to the documentation of the <span style="font-style: italic;"><i>SetBlock</i></span> function for a description of the available types.</p>
+<p class="vba-text-indent">&#160;</p>
+<p class="VBA-Heading-Method">SetPort ( <span><a href="common_vbageneral/common_general_name.htm" id="a7" style="font-weight: normal; font-style: normal;" name="a7">name</a></span> <span style="font-style: italic;"><i>name,</i></span> <span><a href="common_vbageneral/common_general_enum.htm" id="a9" style="font-weight: normal;" name="a9">enum</a></span> <span style="font-style: italic;"><i>type</i></span> )</p>
+<p class="VBA-Text-Indent">Sets the <span style="font-style: italic;"><i>type</i></span> of a port specified by its <span style="font-style: italic;"><i>name</i></span>. Currently, only the type "SCHEMATIC" is supported for ports.</p>
+<p class="VBA-Heading-Method">&#160;</p>
+<p class="VBA-Heading-Method">SetAllPorts ( <span><a href="common_vbageneral/common_general_enum.htm" id="a11" style="font-weight: normal;" name="a11">enum</a></span> <span style="font-style: italic;"><i>type</i></span> )</p>
+<p class="VBA-Text-Indent">Sets the <span style="font-style: italic;"><i>type</i></span> of all ports. Currently, only the type "SCHEMATIC" is supported for ports.</p>
+<p class="VBA-Heading-Method">&#160;</p>
+<p class="VBA-Heading-Method">SetSolverType ( <a href="common_vbageneral/common_general_enum.htm" id="a14" style="font-weight: normal;" name="a14">enum</a> <span style="font-style: italic;"><i>type</i></span> )</p>
+<p class="VBA-Text-Indent">Sets the solver type which will then be associated with the simulation project. This solver will be called whenever the simulation project gets updated as a result of a simulation task execution. In addition, this solver type will also be started by the <span style="font-style: italic;"><i>Run</i></span> function. This function is only valid during simulation project creation (in between Create and EndCreation calls).</p>
+<p class="VBA-Text-Indent">Currently, the follwing solver types are supported: CANVAS, HF_TLM, HF_EIGENMODE, HF_ASYMPTOTIC, HF_TRANSIENT, HF_FREQUENCYDOMAIN, NETWORKEXTRACTION, STATIC_ESTATIC, THERMAL_STATIONARY, THERMAL_TRANSIENT, MECHANICAL, STATIC_JSTATIC, STATIC_MSTATIC, LF_FULLWAVE, LF_EQS, LF_MQS, PARTIAL_RLC, DRIFTDIFFUSION, PARTICLE_TRACKING, LF_MQSTRANSIENT, PARTICLE_ESTATIC, PARTICLE_MSTATIC, PARTICLE_WAKEFIELD, PARTICLE_PIC, HF_INTEGRALEQUATION, HF_MULTILAYER, PARAMETERSWEEP.</p>
+<p class="VBA-Heading-Method">&#160;</p>
+<p class="VBA-Heading-Method">SetTemplateName ( <span><a href="common_vbageneral/common_general_name.htm" id="a12" style="font-weight: normal; font-style: normal;" name="a12">name</a></span> <span style="font-style: italic;"><i>name</i></span> )</p>
+<p class="VBA-Text-Indent">Sets the <span style="font-style: italic;"><i>name</i></span> of a project template which will be used to adjust the default settings when a new simulation project is created.</p>
+<p class="VBA-Heading-Method">&#160;</p>
+<p class="VBA-Heading-Method">SetUseAssemblyInformation ( <span style="font-weight: normal;"><a href="common_vbageneral/common_general_bool_data_type.htm">bool</a></span> <span style="font-style: italic;"><i>use</i></span> )</p>
+<p class="VBA-Text-Indent">Sets whether assembly (layout) placement information shall be taken into account if available when creating a new simulation project. The default setting for this flag is true which means that the assembly information will be used.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">LoadReferenceDataFromBlock ( <span><a href="common_vbageneral/common_general_name.htm" id="a15" style="font-weight: normal; font-style: normal;" name="a15">name</a></span> <span style="font-style: italic;"><i>name</i></span> )</p>
+<p class="VBA-Text-Indent">Sets the <span style="font-style: italic;"><i>name</i></span> of a schematic block which will be used for inheriting non-geometric settings to the newly created simulation project. The block name must be specified with a preceding "Block: ", for instance "Block: MWSSCHEM1". Settings can also be inherited from other simulation projects by adding a preceding &#160;"SP: ", followed by the name of the simulation project, e.g. "SP: SP1".</p>
+<p class="VBA-Text-Indent">Please note that the reference data will only be actually used for creating a new simulation project if the <span style="font-style: italic;"><i>SetUseReferenceData</i></span> function gets called previously with the argument "true".</p>
+<p class="VBA-Text-Indent">This function must be called before <span style="font-style: italic;"><i>Create</i></span> is called.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">SetReferenceCategoryUse ( <span><a href="common_vbageneral/common_general_name.htm" id="a17" style="font-weight: normal; font-style: normal;" name="a17">name</a></span> <span style="font-style: italic;"><i>name,</i></span> <span style="font-weight: normal;"><a href="common_vbageneral/common_general_bool_data_type.htm">bool</a></span> <span style="font-style: italic;"><i>used</i></span> )</p>
+<p class="VBA-Text-Indent">Once a reference block or project has been specified by the <span style="font-style: italic;"><i>LoadReferenceDataFromBlock</i></span> function, the inheritance of a particular type of settings can be turned on or off. This function allows you to set a flag whether a category <span style="font-style: italic;"><i>name</i></span> shall be <span style="font-style: italic;"><i>used</i></span> (true) or not (false).</p>
+<p class="VBA-Text-Indent">Currently, the following categories are supported:</p>
+<p class="VBA-Text-Indent" style="margin-left: 64px;">Analytic Source Fields</p>
+<p class="VBA-Text-Indent" style="margin-left: 64px;">Antenna Array Settings</p>
+<p class="VBA-Text-Indent" style="margin-left: 64px;">Background Material</p>
+<p class="VBA-Text-Indent" style="margin-left: 64px;">Boundary Conditions</p>
+<p class="VBA-Text-Indent" style="margin-left: 64px;">Excitation Signals</p>
+<p class="VBA-Text-Indent" style="margin-left: 64px;">Frequency Range</p>
+<p class="VBA-Text-Indent" style="margin-left: 64px;">Global Mesh Settings</p>
+<p class="VBA-Text-Indent" style="margin-left: 64px;">Magnetic Source Field</p>
+<p class="VBA-Text-Indent" style="margin-left: 64px;">Monitors</p>
+<p class="VBA-Text-Indent" style="margin-left: 64px;">Plane Wave</p>
+<p class="VBA-Text-Indent" style="margin-left: 64px;">Post-Processing</p>
+<p class="VBA-Text-Indent" style="margin-left: 64px;">Project Templates</p>
+<p class="VBA-Text-Indent" style="margin-left: 64px;">Result Templates</p>
+<p class="VBA-Text-Indent" style="margin-left: 64px;">Sensitivity Information</p>
+<p class="VBA-Text-Indent" style="margin-left: 64px;">Solver Settings</p>
+<p class="VBA-Text-Indent" style="margin-left: 64px;">Subvolume Settings</p>
+<p class="VBA-Heading-Method">&#160;</p>
+<p class="VBA-Heading-Method">SetUseReferenceData ( <span style="font-weight: normal;"><a href="common_vbageneral/common_general_bool_data_type.htm">bool</a></span> <span style="font-style: italic;"><i>use</i></span> )</p>
+<p class="VBA-Text-Indent">Sets whether reference data which was previously loaded by calling <span style="font-style: italic;"><i>LoadReferenceDataFromBlock</i></span> shall be taken into account when creating a new simulation project. The default setting for this flag is false which means that the reference data information will not be used.</p>
+<p class="VBA-Text-Indent">This function must be called before <span style="font-style: italic;"><i>Create</i></span> is called.</p>
+<p class="vba-text-indent">&#160;</p>
+<p class="VBA-Heading-Method">SetUseReferenceBlockCoordinateSystem ( <span style="font-weight: normal;"><a href="common_vbageneral/common_general_bool_data_type.htm">bool</a></span> <span style="font-style: italic;"><i>use</i></span> )</p>
+<p class="VBA-Text-Indent">Sets whether the reference block's coordinate system shall be used for creating the simulation project. If this option is selected, the location of the reference block's geometry will stay the same as in the original model.</p>
+<p class="vba-text-indent">&#160;</p>
+<p class="VBA-Heading-Method">SetLinkGeometry ( <span style="font-weight: normal;"><a href="common_vbageneral/common_general_bool_data_type.htm">bool</a></span> <span style="font-style: italic;"><i>link</i></span> )</p>
+<p class="VBA-Text-Indent">This options sets whether the simulation project's geometry shall be automatically updated whenever the reference model changes. Turning off this option de-couples the corresponding simulation project from the reference model.</p>
+<p class="vba-text-indent">&#160;</p>
+<p class="VBA-Heading-Method">Create (<a href="common_vbageneral/common_general_enum.htm" id="a19" style="font-weight: normal;" name="a19">enum</a> <span style="font-style: italic;"><i>type,</i></span> <a href="common_vbageneral/common_general_name.htm" id="a20" style="font-weight: normal; font-style: normal;" name="a20">name</a> <span style="font-style: italic;"><i>name</i></span> )</p>
+<p class="VBA-Text-Indent">This function creates a new simulation project of the given <span style="font-style: italic;"><i>type</i></span> and with the specified <span style="font-style: italic;"><i>name</i></span>. Once this function got called, handles to the new project's 3D modeler or the corresponding schematic can be retrieved by using the functions <span style="font-style: italic;"><i>Get3D</i></span> and <span style="font-style: italic;"><i>GetSchematic</i></span>. The simulation project creation is finally ended by calling the function <span style="font-style: italic;"><i>EndCreation</i></span>.</p>
+<p class="VBA-Text-Indent">Currently, the following project types are supported: MWS, EMS, PS, MPS, CS, PCBS and DS.</p>
+<p class="vba-text-indent">&#160;</p>
+<p class="VBA-Heading-Method">EndCreation</p>
+<p class="VBA-Text-Indent">This function ends the creation of a new simulation project. The <span style="font-style: italic;"><i>Get3D</i></span> and <span style="font-style: italic;"><i>GetSchematic</i></span> functions are no longer valid afterwards.</p>
+<p class="vba-text-indent">&#160;</p>
+<p class="VBA-Heading-Method">InteractiveTypeDefinitionMode <span style="font-weight: normal;"><a href="common_vbageneral/common_general_bool_data_type.htm">bool</a></span></p>
+<p class="VBA-Text-Indent">This function starts an interactive mode for defining component types. The mode can be ended by choosing either "Cancel block type definition" (function return value = false) or by choosing "End block type definition" (function return value = true).</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">LinkParameters (&#160;<a href="common_vbageneral/common_general_name.htm" id="a110" style="font-weight: normal; font-style: normal;" name="a110">name</a> <span style="font-style: italic;"><i>spName,</i></span> <a href="common_vbageneral/common_general_name.htm" id="a201" style="font-weight: normal; font-style: normal;" name="a201">name</a> <span style="font-style: italic;"><i>spParam,</i></span> <a href="common_vbageneral/common_general_name.htm" id="a202" style="font-weight: normal; font-style: normal;" name="a202">name</a> <span style="font-style: italic;"><i>masterParam,</i></span> <span style="font-weight: normal;"><a href="common_vbageneral/common_general_bool_data_type.htm">bool</a></span> <span style="font-style: italic;"><i>createNonExisting</i></span> )</p>
+<p class="VBA-Text-Indent">Synchronizes the values of the parameter <span style="font-style: italic;"><i>spParam</i></span> in the simulation project <span style="font-style: italic;"><i>spName</i></span> and the master project parameter <span style="font-style: italic;"><i>masterParam</i></span>. An empty string can be given for <span style="font-style: italic;"><i>masterParam</i></span> in order to remove existing synchronization for the given <span style="font-style: italic;"><i>spParam</i></span>.</p>
+<p class="VBA-Text-Indent">Note that it is not allowed to synchronize multiple simulation project parameters of a single simulation project to the same master project parameter.</p>
+<p class="VBA-Text-Indent">If <span style="font-style: italic;"><i>createNonExisting</i></span> is true and any of the given parameters do not exist yet, they will be created before the link is established.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">GetLinkedMasterParameter (&#160;<a href="common_vbageneral/common_general_name.htm" id="a1103" style="font-weight: normal; font-style: normal;" name="a1103">name</a> <span style="font-style: italic;"><i>spName,</i></span> <a href="common_vbageneral/common_general_name.htm" id="a2013" style="font-weight: normal; font-style: normal;" name="a2013">name</a> <span style="font-style: italic;"><i>spParam</i></span> ) <a href="common_vbageneral/common_general_string.htm" id="a28" style="font-weight: normal; font-style: normal;" name="a28">string</a></p>
+<p class="VBA-Text-Indent">If the parameter <span style="font-style: italic;"><i>spParam</i></span> <span>in the simulation project</span> <span style="font-style: italic;"><i>spName</i></span> <span>is linked to exactly one master parameter, its name is returned. Note that the link is not valid and disabled if multiple simulation project parameters are linked to a single master project parameter. In this case, an empty string is returned.</span></p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">GetLinkedSPParameter (&#160;<a href="common_vbageneral/common_general_name.htm" id="a1104" style="font-weight: normal; font-style: normal;" name="a1104">name</a> <span style="font-style: italic;"><i>spName,</i></span> <a href="common_vbageneral/common_general_name.htm" id="a2024" style="font-weight: normal; font-style: normal;" name="a2024">name</a> <span style="font-style: italic;"><i>masterParam</i></span> ) <a href="common_vbageneral/common_general_string.htm" id="a281" style="font-weight: normal; font-style: normal;" name="a281">string</a></p>
+<p class="VBA-Text-Indent">If the master project parameter <span style="font-style: italic;"><i>masterParam</i></span>&#160;is linked to a simulation project parameter in <span style="font-style: italic;"><i>spName</i></span>, the name of the linked simulation project parameter is returned. Note that the link is not valid and disabled if multiple simulation project parameters are linked to a single master project parameter. In this case, an empty string is returned.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">GetTaskParameterDescription (&#160;<a href="common_vbageneral/common_general_name.htm" id="a1101" style="font-weight: normal; font-style: normal;" name="a1101">name</a> <span style="font-style: italic;"><i>spName,</i></span> <a href="common_vbageneral/common_general_name.htm" id="a2011" style="font-weight: normal; font-style: normal;" name="a2011">name</a> <span style="font-style: italic;"><i>spParam</i></span> ) <a href="common_vbageneral/common_general_string.htm" id="a282" style="font-weight: normal; font-style: normal;" name="a282">string</a></p>
+<p class="VBA-Text-Indent">Returns the description of the simulation project parameter&#160;(task parameter) <span style="font-style: italic;"><i>spParam</i></span> in the simulation project given by <span style="font-style: italic;"><i>spName</i></span>. Does not require the simulation project to be open.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">GetTaskParameterExpression (&#160;<a href="common_vbageneral/common_general_name.htm" id="a1102" style="font-weight: normal; font-style: normal;" name="a1102">name</a> <span style="font-style: italic;"><i>spName,</i></span> <a href="common_vbageneral/common_general_name.htm" id="a2012" style="font-weight: normal; font-style: normal;" name="a2012">name</a> <span style="font-style: italic;"><i>spParam</i></span> ) <a href="common_vbageneral/common_general_string.htm" id="a283" style="font-weight: normal; font-style: normal;" name="a283">string</a></p>
+<p class="VBA-Text-Indent">Returns the expression (value) of the simulation project parameter (task parameter) <span style="font-style: italic;"><i>spParam</i></span> <span>in the simulation project given by</span> <span style="font-style: italic;"><i>spName</i></span><span>. Does not require the simulation project to be open.</span></p>
+<p class="VBA-Heading-Category"><a name="MethodsArrayTask" id="MethodsArrayTask"></a>Method Concerning Array Tasks</p>
+<p class="VBA-Heading-Method">SetArrayAddPhaseForScanning(<span style="font-weight: normal;"><a href="common_vbageneral/common_general_bool_data_type.htm">bool</a></span> <span style="font-style: italic;"><i>add</i></span>)</p>
+<p class="VBA-Text-Indent">Specifies whether to add the phase for scanning in the simulation project.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">SetArrayPhaseShiftsAsTimeDelays(<span style="font-weight: normal;"><a href="common_vbageneral/common_general_bool_data_type.htm">bool</a></span> <span style="font-style: italic;"><i>use</i></span>)</p>
+<p class="VBA-Text-Indent">Specifies whether to use the phase shifts as time delays in the simulation project.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">SetArrayExcitationType(<a href="common_vbageneral/common_general_string.htm" id="a27" style="font-weight: normal; font-style: normal;" name="a27">string</a> <span style="font-style: italic;"><i>type</i></span>)</p>
+<p class="VBA-Text-Indent">Sets the array excitation type of the simulation project. Valid choices are: <span style="font-style: italic;"><i>Simultaneous</i></span>, <span style="font-style: italic;"><i>Sequential</i></span> and <span style="font-style: italic;"><i>Sequential_group</i></span>.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">SetUseInsertArrayElements(<span style="font-weight: normal;"><a href="common_vbageneral/common_general_bool_data_type.htm">bool</a></span> flag<span style="font-style: italic;"><i>, <a href="common_vbageneral/common_general_string.htm" id="a2711" style="font-weight: normal; font-style: normal;" name="a2711">string</a> sExcludeComponent</i></span>)</p>
+<p class="VBA-Text-Indent">Sets the flag whether to use the insert of array elements in the simulation project.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">CreateUnitCellSP(<span style="font-weight: normal;"><a href="common_vbageneral/common_general_name.htm" id="a11021" style="font-weight: normal; font-style: normal;" name="a11021">name</a></span> <span style="font-style: italic;"><i>spName</i></span><span style="font-weight: normal;">, <a href="common_vbageneral/common_general_name.htm" id="a68" style="font-weight: normal; font-style: normal;" name="a68">name</a></span> <span style="font-style: italic;"><i>taskname</i></span><span style="font-weight: normal;">, <a href="common_vbageneral/common_general_name.htm" id="a682" style="font-weight: normal; font-style: normal;" name="a682">name</a></span> solver)</p>
+<p class="VBA-Text-Indent">Creates a unit cell simulation project for an array task and for the specified solver. Valid choices for the solver are: <span style="font-style: italic;"><i>HF_FREQUENCYDOMAIN</i></span></p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">CreateFullArray(<span style="font-weight: normal;"><a href="common_vbageneral/common_general_name.htm" id="a11022" style="font-weight: normal; font-style: normal;" name="a11022">name</a></span> <span style="font-style: italic;"><i>spName</i></span><span style="font-weight: normal;">, <a href="common_vbageneral/common_general_name.htm" id="a681" style="font-weight: normal; font-style: normal;" name="a681">name</a></span> <span style="font-style: italic;"><i>taskname</i></span><span style="font-weight: normal;">, <a href="common_vbageneral/common_general_name.htm" id="a683" style="font-weight: normal; font-style: normal;" name="a683">name</a></span> solver)</p>
+<p class="VBA-Text-Indent">Creates a full array simulation project for an array task and for the specified solver.&#160;Valid choices for the solver are: <span style="font-style: italic;"><i>HF_FREQUENCYDOMAIN and HF_TRANSIENT</i></span></p>
+<p class="VBA-Heading-Category"><a name="Queries" id="Queries"></a>Queries</p>
+<p class="VBA-Heading-Method">&#160;</p>
+<p class="VBA-Heading-Method">DoesExist ( <a href="common_vbageneral/common_general_name.htm" id="a1" style="font-weight: normal; font-style: normal;" name="a1">name</a> <span style="font-style: italic;"><i>name</i></span> ) <span style="font-weight: normal;"><a href="common_vbageneral/common_general_bool_data_type.htm">bool</a></span></p>
+<p class="VBA-Text-Indent">Check whether a simulation project with the given <span style="font-style: italic;"><i>name</i></span> exists. The function returns true if the simulation project exists and false otherwise.</p>
+<p class="vba-text-indent">&#160;</p>
+<p class="VBA-Heading-Method">IsOpen ( <a href="common_vbageneral/common_general_name.htm" id="a2" style="font-weight: normal; font-style: normal;" name="a2">name</a> <span style="font-style: italic;"><i>name</i></span> ) <span style="font-weight: normal;"><a href="common_vbageneral/common_general_bool_data_type.htm">bool</a></span></p>
+<p class="VBA-Text-Indent">Check whether a simulation project with the given <span style="font-style: italic;"><i>name</i></span> is currently open. The function returns true if the simulation project is open and false otherwise.</p>
+<p class="vba-text-indent">&#160;</p>
+<p class="VBA-Heading-Method">GetNewProjectName <span><a href="common_vbageneral/common_general_name.htm" id="a3" style="font-weight: normal; font-style: normal;" name="a3">name</a></span></p>
+<p class="VBA-Text-Indent">Get a valid <span style="font-style: italic;"><i>name</i></span> for creating a new simulation project. The function ensures that no simulation project currently exists with the given name.</p>
+<p class="vba-text-indent">&#160;</p>
+<p class="VBA-Heading-Method"><span>Get3D</span> <span style="font-weight: normal;">object</span></p>
+<p class="VBA-Text-Indent">Get the COM <span style="font-style: italic;"><i>handle</i></span> to the 3D modeler for the newly created simulation project This handle can be used for sending commands to the corresponding VBA engine. This function is only valid during simulation project creation (in between <span style="font-style: italic;"><i>Create</i></span> and <span style="font-style: italic;"><i>EndCreation</i></span> calls).</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">GetSchematic <span style="font-weight: normal;">object</span></p>
+<p class="VBA-Text-Indent">Get the COM <span style="font-style: italic;"><i>handle</i></span> to the schematic for the newly created simulation project This handle can be used for sending commands to the corresponding VBA engine. This function is only valid during simulation project creation (in between <span style="font-style: italic;"><i>Create</i></span> and <span style="font-style: italic;"><i>EndCreation</i></span> calls).</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">StartSimulationProjectIteration <a href="common_vbageneral/common_general_integer.htm" id="a24" style="font-weight: normal; font-style: normal;" name="a24">int</a></p>
+<p class="VBA-Text-Indent">This function initializes the iteration over currently available simulation projects and returns the number of simulation projects. The simulation project names can then be retrieved by subsequent calls to <span style="font-style: italic;"><i>GetNextSimulationProjectName</i></span>.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">GetNextSimulationProjectName <a href="common_vbageneral/common_general_name.htm" id="a4" style="font-weight: normal; font-style: normal;" name="a4">name</a></p>
+<p class="VBA-Text-Indent">This function returns the next simulation project <span style="font-style: italic;"><i>name</i></span> during an iteration over all available simulation projects. The <span style="font-style: italic;"><i>StartSimulationProjectIteration</i></span> needs to be called first in order to initialize the iteration. The function indicates the end of the list of simulation projects by returning an empty string.</p>
+<p class="VBA-Heading-Category"><a name="Example" id="Example"></a>Example</p>
+<p class="VBA-Text-Example">Dim sName As String</p>
+<p class="VBA-Text-Example">sName = SimulationProject.GetNewProjectName</p>
+<p class="VBA-Text-Example">&#160;</p>
+<p class="VBA-Text-Example">With SimulationProject</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;.ResetComponents</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;.SetAllBlocks "3D"</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;.SetAllPorts "SCHEMATIC"</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;If (.InteractiveTypeDefinitionMode) Then</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;.Create "MWS", sName</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;.SetSolverType "HF_TRANSIENT"</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;.Get3D.AddToHistory "define frequency range", "Solver.FrequencyRange ""0.0"", ""10"" "</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;.EndCreation</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;End If</p>
+<p class="VBA-Text-Example">End With</p>
+<p class="VBA-Text-Example">&#160;</p>
+<p class="VBA-Text-Example">'Example: create full array simulation project from an array task</p>
+<p class="VBA-Text-Example">&#160;</p>
+<p class="VBA-Text-Example">Dim sSPName As String</p>
+<p class="VBA-Text-Example">sSPName = "FullArraySP"</p>
+<p class="VBA-Text-Example">&#160;</p>
+<p class="VBA-Text-Example">With SimulationProject</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;If .DoesExist(sSPName) Then</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;&#160;&#160;.Delete(sSPName)</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;End If</p>
+<p class="VBA-Text-Example">End With</p>
+<p class="VBA-Text-Example">&#160;</p>
+<p class="VBA-Text-Example">SelectTreeItem("Tasks\ArrayTask1")</p>
+<p class="VBA-Text-Example">&#160;</p>
+<p class="VBA-Text-Example">With SimulationProject</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;.ResetComponents</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;.SetAllComponents "3d"</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;.SetAllPorts "schematic"</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;.SetUseAssemblyInformation(True)</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;.SetUseReferenceData True</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;.LoadReferenceDataFromBlock("Block: MWSSCHEM1")</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;.SetArrayAddPhaseForScanning True</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;.SetArrayExcitationType "Simultaneous"</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;.CreateFullArray(sSPName, "ArrayTask1", "HF_TRANSIENT")</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;.EndCreation</p>
+<p class="VBA-Text-Example">End With</p>
+<p class="VBA-Text-Example">&#160;</p>
+<?rh-p style="margin-bottom: 0px; text-align: Right; margin-left: 18px; 
+                 margin-right: 18px; margin-top: 18px;" ?>
+<div style="width: 100%; position: relative;" id="footer">
+<p style="border-bottom: Solid 1px #dddddd; text-align: Left; margin-left: 0px; font-family: Arial, sans-serif; line-height: Normal; margin-top: 9px; margin-right: 0px; margin-bottom: 6px; border-left-width: 1px; border-top-width: 1px; border-right-width: 1px;"><span style="text-align: Left; font-family: Arial, sans-serif; line-height: Normal;">&#160;</span></p>
+<table cellspacing="0" width="100%">
+<col style="width: 50%;" />
+<col style="width: 50%;" />
+<tr>
+<td style="vertical-align: Top;"><span style="font-family: Arial, sans-serif; line-height: Normal; font-size: 8pt;"><font size="1" style="font-size:8pt;">CST Studio Suite 2026</font></span></td>
+<td style="vertical-align: Top;">
+<p style="text-align: right;">&#160;</p>
+</td>
+</tr>
+</table>
+<p>&#160;</p>
+</div>
+<script type="text/javascript" language="javascript1.2">
+//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+        writeIntopicBar(0);
+
+
+highlightSearch();
+//-->
+//]]>
+</script>
+</body>
+</html>

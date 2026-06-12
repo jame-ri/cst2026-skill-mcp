@@ -1,0 +1,259 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="Adobe RoboHelp 11" />
+<title>Wakefield Postprocessor</title>
+<link rel="StyleSheet" href="../online_help_vba.css" type="text/css" />
+<style type="text/css">
+/*<![CDATA[*/
+<!--
+body { border-bottom-style:None; }
+-->
+/*]]>*/
+</style>
+
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+        origWidth = innerWidth;
+        origHeight = innerHeight;
+        onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+/*<![CDATA[*/
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+-->
+/*]]>*/
+</style>
+
+<script type="text/javascript" language="javascript1.2" src="../whmsg.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript" src="../whver.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript1.2" src="../whutils.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript1.2" src="../whproxy.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript1.2" src="../whlang.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript1.2" src="../whtopic.js" charset="utf-8">
+</script>
+</head>
+<body>
+<script type="text/javascript" language="javascript1.2">
+//<![CDATA[
+<!--
+if (window.gbWhTopic)
+{
+        var strUrl = document.location.href;
+        var bc = 0;
+        var n = strUrl.toLowerCase().indexOf("bc-");
+        if(n != -1)
+        {
+                document.location.replace(strUrl.substring(0, n));
+                bc = strUrl.substring(n+3);
+        }
+
+        if (window.addTocInfo)
+        {
+        
+        }
+        if (window.writeBtnStyle)
+                writeBtnStyle();
+
+        if (window.writeIntopicBar)
+                writeIntopicBar(0);
+
+        
+        document.write("<p style=\"font-family: Tahoma; font-size: 9pt; font-weight: 400;  font-style:normal; color: rgb(0, 0, 0); text-decoration:none; text-align: left\"> ");
+AddMasterBreadcrumbs("../index.htm", "font-family: Tahoma; font-size: 9pt; font-weight: 400;  font-style:normal; color: rgb(0, 0, 0); text-decoration:none; text-align: left", "|", "Home", "../special_vbaobjects/special_vbaobjects_vbaobjects.htm");
+document.write("Wakefield Postprocessor<\/p>");
+
+}
+else
+        if (window.gbIE4)
+                document.location.reload();
+
+onLoadHandler = function()
+{
+  if (window.setRelStartPage)
+        {
+        setTimeout("setRelStartPage('../index.htm');", 1)
+
+    setTimeout("UpdateBreadCrumbsMarker();", 1);
+        }
+}
+
+if (window.addEventListener){  
+        window.addEventListener('load', onLoadHandler, false);   
+} else if (window.attachEvent){  
+        window.attachEvent('onload', onLoadHandler);  
+}
+
+function onSetStartPage()
+{
+  autoSync(1);
+  sendSyncInfo();
+  sendAveInfoOut();
+}
+//-->
+//]]>
+</script><script type="text/javascript" src="../ehlpdhtm.js" language="JavaScript1.2">
+</script>
+<table cellspacing="0" width="100%">
+<col style="width: 50%;" />
+<col style="width: 50%;" />
+<tr>
+<td style="vertical-align: middle; padding-top: 5px; padding-bottom: 5px;">
+<p style="margin-top: 0px; margin-bottom: 0px;"><img src="../3ds.png" alt="" style="border: none;" border="0" /></p>
+</td>
+<td style="vertical-align: middle;">
+<p style="text-align: right;"><a href="https://www.3ds.com/products-services/3dexperience/" target="_blank"><img src="../3dexp.png" alt="" style="border: none;" width="32" height="32" border="0" /></a></p>
+</td>
+</tr>
+</table>
+<h1>Wakefield Postprocessor</h1>
+<p class="VBA-Text">This Object is used to compute secondary results from previously computed wake-functions.</p>
+<ul>
+<li class="p-VBA-Index-Category">
+<p class="VBA-Index-Category"><a href="#Methods">Methods</a></p>
+</li>
+<li class="p-VBA-Index-Category">
+<p class="VBA-Index-Category" style="font-weight: bold;"><a href="#Default_Settings">Default Settings</a></p>
+</li>
+<li class="p-VBA-Index-Category">
+<p class="VBA-Index-Category"><a href="#Examples">Example</a></p>
+</li>
+</ul>
+<p class="VBA-Heading-Category"><a name="Methods" id="Methods"></a>Methods</p>
+<p class="VBA-Heading-Method">Reset</p>
+<p class="VBA-Text-Indent">Resets all internal settings to their default values.</p>
+<p class="vba-text-indent">&#160;</p>
+<p class="VBA-Heading-Method">Resultname (<span><a href="../common_vbageneral/common_general_name.htm" id="a3" style="font-weight: normal; font-style: normal;" name="a3">name</a></span> &#160;<span style="font-style: italic;"><i>name</i></span> )</p>
+<p class="VBA-Text-Indent">Name for the new post-processing result.</p>
+<p class="vba-text-indent">&#160;</p>
+<p class="VBA-Heading-Method">UseFFT (<span style="font-weight: normal;"><a href="../common_vbageneral/common_general_bool_data_type.htm">bool</a></span> flag)</p>
+<p class="vba-text-indent">Allows to use a FFT instead of a DFT for the fourier transformation of the wake signals. The FFT is much faster but less flexible than the DFT.</p>
+<p class="vba-text-indent">&#160;</p>
+<p class="VBA-Heading-Method">UseZeroPadding (<span style="font-weight: normal;"><a href="../common_vbageneral/common_general_bool_data_type.htm">bool</a></span> flag)</p>
+<p class="Topic-Text-Indent" style="margin-top: 0pt; text-align: justify; font-family: Arial; font-size: 9pt; margin-bottom: 3pt; font-weight: 400; margin-left: 15pt; color: rgb(0, 0, 0); font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; letter-spacing: normal; orphans: 2; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial;"><span style="font-family: Arial; font-size: 9pt; font-weight: 400; color: rgb(0, 0, 0); font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; letter-spacing: normal; orphans: 2; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial;"><font size="1" style="font-size:9pt;">This setting is active only for the FFT transformation type. It allows to get more samples within the frequency range of interest.</font></span></p>
+&#160;
+<p class="VBA-Heading-Method">RelativeZeroPaddingLength (<a href="../common_vbageneral/common_general_double.htm" id="a11" style="font-weight: normal; font-style: normal;" name="a11">double</a> &#160;<span style="font-style: italic;"><i>value</i></span>)</p>
+<p class="VBA-Text-Indent" style="font-variant-ligatures: normal; font-variant-caps: normal;"><span style="orphans: 2; widows: 2; -webkit-text-stroke-width: 0px; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial;">If a relative length of 0.5 was defined, a signal with N time samples will be extended to a signal with 1.5 * N time samples. The last 0.5 * N time samples contain only zero values.</span></p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">ParticleBeam (<a href="../common_vbageneral/common_general_name.htm" id="a18" style="font-weight: normal; font-style: normal;" name="a18">name</a> &#160;<span style="font-style: italic;"><i>name</i></span> )</p>
+<p class="VBA-Text-Indent">Selects a wake-function for a certain particle beam source.</p>
+<p class="vba-text-indent">&#160;</p>
+<p class="VBA-Heading-Method">Fmin (<a href="../common_vbageneral/common_general_double.htm" id="a1" style="font-weight: normal; font-style: normal;" name="a1">double</a> &#160;<span style="font-style: italic;"><i>value</i></span>)</p>
+<p class="VBA-Text-Indent">Sets the minimum frequency value for a wake-impedance spectrum calculation. Only active if <span style="font-weight: bold;">UseFFT</span> is set to "False".</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">Fmax (<a href="../common_vbageneral/common_general_double.htm" id="a2" style="font-weight: normal; font-style: normal;" name="a2">double</a> <span style="font-style: italic;"><i>&#160;value</i></span>)</p>
+<p class="VBA-Text-Indent">Sets the maximum frequency value for a wake-impedance spectrum calculation. Only active if <span style="font-weight: bold;">UseFFT</span> is set to "False".</p>
+<p class="vba-text-indent">&#160;</p>
+<p class="VBA-Heading-Method">FrequencySteps (<a href="../common_vbageneral/common_general_integer_ref.htm" style="font-weight: normal;">int</a> <span style="font-style: italic;"><i>&#160;steps</i></span>)</p>
+<p class="VBA-Text-Indent">Sets the number of frequency samples for a wake-impedance calculation. Only active if <span style="font-weight: bold;">UseFFT</span> is set to "False".</p>
+<p class="vba-text-indent">&#160;</p>
+<p class="VBA-Heading-Method">Filter (<span style="font-weight: normal;"><a href="../common_vbageneral/common_general_enum.htm" id="a4" style="font-weight: normal;" name="a4">enum</a> &#160;</span><span style="font-style: italic;"><i>type</i></span>)</p>
+<p class="VBA-Text-Indent">Sets the type of pre-filtering for a wake impedance calculation. Currently "<span style="font-style: italic;"><i>None</i></span>" and "<span style="font-style: italic;"><i>Cos2</i></span>" is available.</p>
+<p class="vba-text-indent">&#160;</p>
+<p class="VBA-Heading-Method">FilterParameter (<span style="font-weight: normal;"><a href="../common_vbageneral/common_general_integer_ref.htm" style="font-weight: normal;">int</a> &#160;</span><span style="font-style: italic;"><i>parameterindex,</i></span> <a href="../common_vbageneral/common_general_double.htm" id="a7" style="font-weight: normal; font-style: normal;" name="a7">double</a> &#160;<span style="font-style: italic;"><i>value</i></span><span style="font-style: italic;"><i>)</i></span></p>
+<p class="VBA-Text-Indent">Sets the filter parameters for a certain type of pre-filter.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<table style="vertical-align: top; left: 0px; top: 672px; margin-left: 40px;" cellspacing="0" width="389">
+<col style="width: 24.24%;" />
+<col style="width: 75.76%;" />
+<tr style="vertical-align: top;">
+<td style="border: Solid 1px #000000; width: 24.24%; padding-right: 10px; padding-left: 10px;">
+<p style="font-weight: bold;">Filtertype</p>
+</td>
+<td style="border-top: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 75.76%; padding-right: 10px; padding-left: 10px;">
+<p style="font-weight: bold;">Parameters</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 24.24%; padding-right: 10px; padding-left: 10px;">
+<p style="font-style: italic;">None</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 75.76%; padding-right: 10px; padding-left: 10px;">
+<p>---</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 24.24%; padding-right: 10px; padding-left: 10px;">
+<p style="font-style: italic;">Cos2</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 75.76%; padding-right: 10px; padding-left: 10px;">
+<p>#1: The rolloff-factor with a range from 0 to 1.</p>
+</td>
+</tr>
+</table>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Text-Indent"><span style="font-weight: bold;">Note</span>: The parameter-index must be equal or larger than one.</p>
+<p class="vba-text-indent">&#160;</p>
+<p class="VBA-Heading-Method">Calculate (<a href="../common_vbageneral/common_general_enum.htm" id="a10" style="font-weight: normal;" name="a10">enum</a> &#160;calculationtype)</p>
+<p class="vba-text-indent">Sets the type of the wake post-processing step. Currently only "<span style="font-style: italic;"><i>ImpedanceSpectrum</i></span>" is available.</p>
+<p class="VBA-Heading-Category" style="font-size: 12pt;"><a name="Default_Settings" id="Default_Settings"></a>Default Settings</p>
+<p class="VBA-Text-Example">ResultName ""</p>
+<p class="VBA-Text-Example">ParticleBeam ""</p>
+<p class="VBA-Text-Example">Fmin ""</p>
+<p class="VBA-Text-Example">Fmax ""</p>
+<p class="VBA-Text-Example">FrequencySteps "1000"</p>
+<p class="VBA-Text-Example">Filter "None"</p>
+<p class="VBA-Text-Example">UseZeroPadding "False"</p>
+<p class="VBA-Text-Example">RelativeZeroPaddingLength "0.0"</p>
+<p class="VBA-Heading-Category"><a name="Examples" id="Examples"></a>Examples</p>
+<p class="VBA-Text-Example">With WakefieldPostprocessor</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.Reset</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.ResultName "FirstResonance"</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.Fmin "1.3e9"</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.Fmax "1.35e9"</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.FrequencySteps "2000"</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.Filter "Cos2"</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.FilterParameter "1", "0.2"</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.Calculate "ImpedanceSpectrum"</p>
+<p class="VBA-Text-Example">End With</p>
+<p class="vba-text-example">&#160;</p>
+<?rh-p style="margin-bottom: 0px; text-align: Right; margin-left: 18px; 
+                 margin-right: 18px; margin-top: 18px;" ?>
+<div style="width: 100%; position: relative;" id="footer">
+<p style="border-bottom: Solid 1px #dddddd; text-align: Left; margin-left: 0px; font-family: Arial, sans-serif; line-height: Normal; margin-top: 9px; margin-right: 0px; margin-bottom: 6px; border-left-width: 1px; border-top-width: 1px; border-right-width: 1px;"><span style="text-align: Left; font-family: Arial, sans-serif; line-height: Normal;">&#160;</span></p>
+<table cellspacing="0" width="100%">
+<col style="width: 50%;" />
+<col style="width: 50%;" />
+<tr>
+<td style="vertical-align: Top;"><span style="font-family: Arial, sans-serif; line-height: Normal; font-size: 8pt;"><font size="1" style="font-size:8pt;">CST Studio Suite 2026</font></span></td>
+<td style="vertical-align: Top;">
+<p style="text-align: right;">&#160;</p>
+</td>
+</tr>
+</table>
+<p>&#160;</p>
+</div>
+<script type="text/javascript" language="javascript1.2">
+//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+        writeIntopicBar(0);
+
+
+highlightSearch();
+//-->
+//]]>
+</script>
+</body>
+</html>

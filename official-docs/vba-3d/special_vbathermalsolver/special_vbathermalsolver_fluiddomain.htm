@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="Adobe RoboHelp 11" />
+<title>FluidDomain Object</title>
+<link rel="StyleSheet" href="../online_help_vba.css" type="text/css" />
+<style type="text/css">
+/*<![CDATA[*/
+<!--
+body { border-bottom-style:None; }
+-->
+/*]]>*/
+</style>
+
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+        origWidth = innerWidth;
+        origHeight = innerHeight;
+        onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+/*<![CDATA[*/
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+-->
+/*]]>*/
+</style>
+
+<script type="text/javascript" language="javascript1.2" src="../whmsg.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript" src="../whver.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript1.2" src="../whutils.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript1.2" src="../whproxy.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript1.2" src="../whlang.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript1.2" src="../whtopic.js" charset="utf-8">
+</script>
+</head>
+<body>
+<script type="text/javascript" language="javascript1.2">
+//<![CDATA[
+<!--
+if (window.gbWhTopic)
+{
+        var strUrl = document.location.href;
+        var bc = 0;
+        var n = strUrl.toLowerCase().indexOf("bc-");
+        if(n != -1)
+        {
+                document.location.replace(strUrl.substring(0, n));
+                bc = strUrl.substring(n+3);
+        }
+
+        if (window.addTocInfo)
+        {
+        addTocInfo("3D Simulation VBA\nVBA Objects\nSources and Ports\nThermal\nFluidDomain Object");
+
+        }
+        if (window.writeBtnStyle)
+                writeBtnStyle();
+
+        if (window.writeIntopicBar)
+                writeIntopicBar(0);
+
+        
+        document.write("<p style=\"font-family: Tahoma; font-size: 9pt; font-weight: 400;  font-style:normal; color: rgb(0, 0, 0); text-decoration:none; text-align: left\"> ");
+AddMasterBreadcrumbs("../index.htm", "font-family: Tahoma; font-size: 9pt; font-weight: 400;  font-style:normal; color: rgb(0, 0, 0); text-decoration:none; text-align: left", "|", "Home", "../special_vbaobjects/special_vbaobjects_vbaobjects.htm");
+document.write("<a style=\"font-family: Tahoma; font-size: 9pt; font-weight: 400;  font-style:normal; color: rgb(0, 0, 0); text-decoration:none; text-align: left\" href=\"../special_vbaobjects/special_vbaobjects_vbaobjects.htm\">3D Simulation VBA<\/a> | <a style=\"font-family: Tahoma; font-size: 9pt; font-weight: 400;  font-style:normal; color: rgb(0, 0, 0); text-decoration:none; text-align: left\" href=\"../special_vbaobjects/special_vbaobjects_vbaobjects.htm\">VBA Objects<\/a> | <a style=\"font-family: Tahoma; font-size: 9pt; font-weight: 400;  font-style:normal; color: rgb(0, 0, 0); text-decoration:none; text-align: left\" href=\"../special_vbasignals/special_vbasignals_timesignal_object.htm\">Sources and Ports<\/a> | <a style=\"font-family: Tahoma; font-size: 9pt; font-weight: 400;  font-style:normal; color: rgb(0, 0, 0); text-decoration:none; text-align: left\" href=\"special_vbathermalsolver_compactthermalmodel_object.htm\">Thermal<\/a> | FluidDomain Object<\/p>");
+
+}
+else
+        if (window.gbIE4)
+                document.location.reload();
+
+onLoadHandler = function()
+{
+  if (window.setRelStartPage)
+        {
+        setTimeout("setRelStartPage('../index.htm');", 1)
+
+    setTimeout("UpdateBreadCrumbsMarker();", 1);
+        }
+}
+
+if (window.addEventListener){  
+        window.addEventListener('load', onLoadHandler, false);   
+} else if (window.attachEvent){  
+        window.attachEvent('onload', onLoadHandler);  
+}
+
+function onSetStartPage()
+{
+  autoSync(1);
+  sendSyncInfo();
+  sendAveInfoOut();
+}
+//-->
+//]]>
+</script><script type="text/javascript" src="../ehlpdhtm.js" language="JavaScript1.2">
+</script>
+<table cellspacing="0" width="100%">
+<col style="width: 50%;" />
+<col style="width: 50%;" />
+<tr>
+<td style="vertical-align: middle; padding-top: 5px; padding-bottom: 5px;">
+<p style="margin-top: 0px; margin-bottom: 0px;"><img src="../3ds.png" alt="" style="border: none;" border="0" /></p>
+</td>
+<td style="vertical-align: middle;">
+<p style="text-align: right;"><a href="https://www.3ds.com/products-services/3dexperience/" target="_blank"><img src="../3dexp.png" alt="" style="border: none;" width="32" height="32" border="0" /></a></p>
+</td>
+</tr>
+</table>
+<h1>FluidDomain Object</h1>
+<p class="VBA-Text">This object is used to specify a domain (cavity) for a (not explicitly modeled) fluid for the <a href="special_vbathermalsolver_chtsolver.htm">Conjugate Heat Transfer Solver</a>.</p>
+<p class="VBA-Text">If a fluid domain is not closed, each open part must be closed by a <a href="special_vbathermalsolver_interiorboundary.htm">lid</a>.</p>
+<ul>
+<li class="p-VBA-Index-Category">
+<p class="VBA-Index-Category"><a href="#Methods">Methods</a></p>
+</li>
+<li class="p-VBA-Index-Category">
+<p class="VBA-Index-Category"><a href="#Example">Example</a></p>
+</li>
+</ul>
+<p class="VBA-Heading-Category"><a name="Methods" id="Methods"></a>Methods</p>
+<p class="VBA-Heading-Method">Reset</p>
+<p class="VBA-Text-Indent">Resets all internal settings of the fluid domain to their default values.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">Name ( <span style="font-style: italic;"><i><a href="../common_vbageneral/common_general_string.htm" id="a6" style="font-weight: normal; font-style: normal;" name="a6">string</a> name</i></span> )</p>
+<p class="VBA-Text-Indent">Specifies the <span style="font-style: italic;"><i>name</i></span> of the fluid domain. Each fluid domain must have a unique name.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">Folder ( <a href="../common_vbageneral/common_general_name.htm" style="font-weight: normal;">name</a> <span style="font-style: italic;"><i>foldername</i></span> )</p>
+<p class="VBA-Text-Indent">Sets the name of the folder for the new fluid domain. If the name is empty, then the fluid domain does not belong to a folder.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">Enable( <span style="font-weight: normal;"><a href="../common_vbageneral/common_general_bool_data_type.htm" style="font-weight: normal;">bool</a></span> <span style="font-style: italic;"><i>flag</i></span> )</p>
+<p class="VBA-Text-Indent">Enables or disables the fluid domain being created. If <span style="font-style: italic;"><i>flag</i></span> <span>is</span> <span style="font-style: italic;"><i>false,</i></span> <span>the fluid domain won't be considered for simulation and the underlying geometry along with the material will be considered instead.</span></p>
+<p class="VBA-Text-Indent">default: <span style="font-style: italic;"><i>value = True</i></span></p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">EnableItem( <span style="font-weight: normal;"><a href="../common_vbageneral/common_general_name.htm" id="a22" name="a22">name</a> &#160;</span><span style="font-style: italic;"><i>name</i></span>, &#160;<a href="../common_vbageneral/common_general_bool_data_type.htm" style="font-weight: normal;">bool</a> <span style="font-style: italic;"><i>flag</i></span> )</p>
+<p class="VBA-Text-Indent">Enables or disables the (existing) fluid domain with the given <span style="font-style: italic;"><i>name</i></span> depending on <span style="font-style: italic;"><i>flag</i></span>. If <span style="font-style: italic;"><i>flag</i></span> is <span style="font-style: italic;"><i>false,</i></span> the fluid domain will not be considered for simulation.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="vba-text-indent" style="margin-left: 0px;"><span style="font-weight: bold;">CavityMaterial (</span> <span style="font-style: italic;"><i><a href="../common_vbageneral/common_general_string.htm" id="a61" style="font-weight: normal; font-style: normal;" name="a61">string</a></i></span> <span style="font-style: italic; font-weight: bold;"><i>materialname</i></span> <span style="font-weight: bold;">)</span></p>
+<p class="VBA-Text-Indent">Specifies the material of fluid inside the fluid domain. The <span style="font-style: italic;"><i>materialname</i></span> should be a name of a material that exists in the active project.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">AddFace ( <span style="font-weight: normal;"><a href="../common_vbageneral/common_general_solid_names.htm">solidname</a></span> <span style="font-style: italic;"><i>solidname,</i></span> <span style="font-weight: normal;"><a href="../common_vbageneral/common_general_integer.htm">int</a></span> <span style="font-style: italic;"><i>faceid</i></span> &#160;)</p>
+<p class="VBA-Text-Indent">Defines a face inside the fluid domain cavity. For a complex cavities, consisting of multiple connected solids, it is sufficient to specify only one interior face.</p>
+<p class="VBA-Text-Indent">In order to define multiple disjoint domains with the same properties, multiple faces can be defined.<br />
+Each face describing the fluid domain must be specified by its <span style="font-style: italic;"><i>faceid</i></span> of the solid with name <span style="font-style: italic;"><i>solidname</i></span>.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">UsePickedFace (<a href="../common_vbageneral/common_general_bool_data_type.htm" id="a14" style="font-weight: normal;" name="a14">bool</a> &#160;<span style="font-style: italic;"><i>usePickedFace</i></span>)</p>
+<p class="vba-text-indent">Defines if a face which was picked before the tool activation is used for the definition instead of faces selected by the <span style="font-weight: bold;">AddFace</span> command. If more than one face was selected, the first one in the list will be used.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="vba-text-indent" style="margin-left: 0px;"><span style="font-weight: bold;">InvertNormal (</span> <a href="../common_vbageneral/common_general_bool_data_type.htm">bool</a> <span style="font-style: italic; font-weight: bold;"><i>flag</i></span> <span style="font-weight: bold;">)</span></p>
+<p class="VBA-Text-Indent">Usually, the fluid domain is considered the domain into which the normal vector of the picked face is pointing. In general, this is the background material side of the face.</p>
+<p class="VBA-Text-Indent">In order to change this direction, i.e. the side of the picked face, the <span style="font-style: italic;"><i>flag</i></span> should be set <span style="font-style: italic;"><i>True</i></span>.</p>
+<p class="VBA-Text-Indent">default: <span style="font-style: italic;"><i>value = False</i></span></p>
+<p class="VBA-Heading-Method">&#160;</p>
+<p class="VBA-Heading-Method">Create</p>
+<p class="VBA-Text-Indent">Creates the fluid domain with its previously made settings.</p>
+<p class="vba-text-indent">&#160;</p>
+<p class="VBA-Heading-Method">Delete ( <span style="font-style: italic;"><i><a href="../common_vbageneral/common_general_string.htm" id="a2" style="font-weight: normal; font-style: normal;" name="a2">string</a> name</i></span> )</p>
+<p class="VBA-Text-Indent">Deletes the fluid domain with the given <span style="font-style: italic;"><i>name</i></span>.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">Rename &#160;( <span style="font-style: italic;"><i><a href="../common_vbageneral/common_general_string.htm" id="a3" style="font-weight: normal; font-style: normal;" name="a3">string</a> oldname,</i></span> &#160;<span style="font-style: italic;"><i><a href="../common_vbageneral/common_general_string.htm" id="a4" style="font-weight: normal; font-style: normal;" name="a4">string</a> newname</i></span> &#160;)</p>
+<p class="VBA-Text-Indent">Renames the fluid domain with the given <span style="font-style: italic;"><i>oldname</i></span> to the defined <span style="font-style: italic;"><i>newname</i></span>.</p>
+<p class="vba-text-indent">&#160;</p>
+<p class="VBA-Heading-Method">NewFolder ( <span style="font-style: italic;"><i><a href="../common_vbageneral/common_general_string.htm" id="a611" style="font-style: normal; font-weight: normal;" name="a611">string</a> foldername</i></span> )</p>
+<p class="vba-text-indent">Creates a new folder with the given name.</p>
+<p class="vba-text-indent">&#160;</p>
+<p class="VBA-Heading-Method">RenameFolder ( <span style="font-style: italic;"><i><a href="../common_vbageneral/common_general_string.htm" id="a62" style="font-style: normal; font-weight: normal;" name="a62">string</a> oldFoldername,</i></span> <span style="font-style: italic;"><i><a href="../common_vbageneral/common_general_string.htm" id="a621" style="font-style: normal; font-weight: normal;" name="a621">string</a> newFoldername</i></span>)</p>
+<p class="vba-text-indent">Changes the name of an existing folder.</p>
+<p class="vba-text-indent">&#160;</p>
+<p class="VBA-Heading-Method">DeleteFolder ( <span style="font-style: italic;"><i><a href="../common_vbageneral/common_general_string.htm" id="a611" style="font-style: normal; font-weight: normal;" name="a611">string</a> foldername</i></span> )</p>
+<p class="vba-text-indent">Deletes an existing folder and all the contained elements.</p>
+<p class="VBA-Heading-Category"><a name="Example" id="Example"></a>Example</p>
+<p class="VBA-Text-Example">With FluidDomain</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.Reset</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.Name "fluiddomain_water"</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.CavityMaterial "Water"</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.AddFace "component1:pipe", "352"</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.InvertNormal "False"</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.Create</p>
+<p class="VBA-Text-Example">End With</p>
+<p class="VBA-Text-Example">&#160;</p>
+<?rh-p style="margin-bottom: 0px; text-align: Right; margin-left: 18px; 
+                 margin-right: 18px; margin-top: 18px;" ?>
+<div style="width: 100%; position: relative;" id="footer">
+<p style="border-bottom: Solid 1px #dddddd; text-align: Left; margin-left: 0px; font-family: Arial, sans-serif; line-height: Normal; margin-top: 9px; margin-right: 0px; margin-bottom: 6px; border-left-width: 1px; border-top-width: 1px; border-right-width: 1px;"><span style="text-align: Left; font-family: Arial, sans-serif; line-height: Normal;">&#160;</span></p>
+<table cellspacing="0" width="100%">
+<col style="width: 50%;" />
+<col style="width: 50%;" />
+<tr>
+<td style="vertical-align: Top;"><span style="font-family: Arial, sans-serif; line-height: Normal; font-size: 8pt;"><font size="1" style="font-size:8pt;">CST Studio Suite 2026</font></span></td>
+<td style="vertical-align: Top;">
+<p style="text-align: right;">&#160;</p>
+</td>
+</tr>
+</table>
+<p>&#160;</p>
+</div>
+<script type="text/javascript" language="javascript1.2">
+//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+        writeIntopicBar(0);
+
+
+highlightSearch();
+//-->
+//]]>
+</script>
+</body>
+</html>

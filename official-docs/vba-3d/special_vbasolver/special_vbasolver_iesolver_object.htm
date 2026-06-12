@@ -1,0 +1,316 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="Adobe RoboHelp 11" />
+<title>IESolver Object</title>
+<link rel="StyleSheet" href="../online_help_vba.css" type="text/css" />
+<style type="text/css">
+/*<![CDATA[*/
+<!--
+body { border-bottom-style:None; }
+-->
+/*]]>*/
+</style>
+
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+        origWidth = innerWidth;
+        origHeight = innerHeight;
+        onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+/*<![CDATA[*/
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+-->
+/*]]>*/
+</style>
+
+<script type="text/javascript" language="javascript1.2" src="../whmsg.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript" src="../whver.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript1.2" src="../whutils.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript1.2" src="../whproxy.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript1.2" src="../whlang.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript1.2" src="../whtopic.js" charset="utf-8">
+</script>
+</head>
+<body>
+<script type="text/javascript" language="javascript1.2">
+//<![CDATA[
+<!--
+if (window.gbWhTopic)
+{
+        var strUrl = document.location.href;
+        var bc = 0;
+        var n = strUrl.toLowerCase().indexOf("bc-");
+        if(n != -1)
+        {
+                document.location.replace(strUrl.substring(0, n));
+                bc = strUrl.substring(n+3);
+        }
+
+        if (window.addTocInfo)
+        {
+        addTocInfo("3D Simulation VBA\nVBA Objects\nSolver\nHigh Frequency\nIESolver");
+
+        }
+        if (window.writeBtnStyle)
+                writeBtnStyle();
+
+        if (window.writeIntopicBar)
+                writeIntopicBar(0);
+
+        
+        document.write("<p style=\"font-family: Tahoma; font-size: 9pt; font-weight: 400;  font-style:normal; color: rgb(0, 0, 0); text-decoration:none; text-align: left\"> ");
+AddMasterBreadcrumbs("../index.htm", "font-family: Tahoma; font-size: 9pt; font-weight: 400;  font-style:normal; color: rgb(0, 0, 0); text-decoration:none; text-align: left", "|", "Home", "../special_vbaobjects/special_vbaobjects_vbaobjects.htm");
+document.write("<a style=\"font-family: Tahoma; font-size: 9pt; font-weight: 400;  font-style:normal; color: rgb(0, 0, 0); text-decoration:none; text-align: left\" href=\"../special_vbaobjects/special_vbaobjects_vbaobjects.htm\">3D Simulation VBA<\/a> | <a style=\"font-family: Tahoma; font-size: 9pt; font-weight: 400;  font-style:normal; color: rgb(0, 0, 0); text-decoration:none; text-align: left\" href=\"../special_vbaobjects/special_vbaobjects_vbaobjects.htm\">VBA Objects<\/a> | <a style=\"font-family: Tahoma; font-size: 9pt; font-weight: 400;  font-style:normal; color: rgb(0, 0, 0); text-decoration:none; text-align: left\" href=\"special_vbasolver_background_object.htm\">Solver<\/a> | <a style=\"font-family: Tahoma; font-size: 9pt; font-weight: 400;  font-style:normal; color: rgb(0, 0, 0); text-decoration:none; text-align: left\" href=\"special_vbasolver_solver_object.htm\">High Frequency<\/a> | IESolver<\/p>");
+
+}
+else
+        if (window.gbIE4)
+                document.location.reload();
+
+onLoadHandler = function()
+{
+  if (window.setRelStartPage)
+        {
+        setTimeout("setRelStartPage('../index.htm');", 1)
+
+    setTimeout("UpdateBreadCrumbsMarker();", 1);
+        }
+}
+
+if (window.addEventListener){  
+        window.addEventListener('load', onLoadHandler, false);   
+} else if (window.attachEvent){  
+        window.attachEvent('onload', onLoadHandler);  
+}
+
+function onSetStartPage()
+{
+  autoSync(1);
+  sendSyncInfo();
+  sendAveInfoOut();
+}
+//-->
+//]]>
+</script><script type="text/javascript" src="../ehlpdhtm.js" language="JavaScript1.2">
+</script>
+<table cellspacing="0" width="100%">
+<col style="width: 50%;" />
+<col style="width: 50%;" />
+<tr>
+<td style="vertical-align: middle; padding-top: 5px; padding-bottom: 5px;">
+<p style="margin-top: 0px; margin-bottom: 0px;"><img src="../3ds.png" alt="" style="border: none;" border="0" /></p>
+</td>
+<td style="vertical-align: middle;">
+<p style="text-align: right;"><a href="https://www.3ds.com/products-services/3dexperience/" target="_blank"><img src="../3dexp.png" alt="" style="border: none;" width="32" height="32" border="0" /></a></p>
+</td>
+</tr>
+</table>
+<p class="VBA-Heading-Object">IESolver Object</p>
+<p class="VBA-Text">This object together with the <a href="special_vbasolver_fdsolver_object.htm">FDSolver Object</a> controls the integral equation solver and multilayer solver.</p>
+<p class="VBA-Text" style="font-weight: bold; margin-left: 21px;">&#160;</p>
+<p class="VBA-Text" style="margin-left: 21px; font-weight: bold;">Integral Equation Solver Settings</p>
+<ul>
+<li class="p-VBA-Index-Category">
+<p class="VBA-Index-Category"><a href="#IE_General">General</a></p>
+</li>
+<li class="p-VBA-Index-Category">
+<p class="VBA-Index-Category"><a href="#IE_Defaults">Defaults</a></p>
+</li>
+</ul>
+<p class="VBA-Heading-Category"><a name="IE_General" id="IE_General"></a>Integral Equation Solver General</p>
+<p class="VBA-Heading-Method">Reset</p>
+<p class="VBA-Text-Indent">Resets all previously made settings concerning the solver to the default values.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">SetAccuracySetting ( <a href="../common_vbageneral/common_general_enum.htm" id="a187" style="font-weight: normal;" name="a187">enum</a><span style="font-weight: normal;">{"Custom" , "Low", "Medium", "High"}</span> <span style="font-style: italic;"><i>key</i></span> )</p>
+<p class="VBA-Text-Indent">This command makes it easy to control the solver accuracy. <span lang="EN-US" xml:lang="EN-US">Please see below a description of the sets. If a predefined set (Low, Medium or High) is used, the specific user-defined settings in the</span> IESolver and <a href="special_vbasolver_fdsolver_object.htm">FDSolver</a> objects are ignored for the settings mentioned below. <span lang="EN-US" xml:lang="EN-US">For Medium and High only the changes from one level below are listed.</span></p>
+<ul style="list-style: disc;">
+<li class="p-Topic-Text-Indent">
+<p class="Topic-Text-Indent" style="font-weight: bold;">Custom:<span style="font-weight: normal;"><br />
+Settings from the IESolver and <a href="special_vbasolver_fdsolver_object.htm">FDSolver</a> objects are used.</span></p>
+</li>
+<li class="p-Topic-Text-Indent">
+<p class="Topic-Text-Indent"><span style="font-weight: bold;">Low Accuracy:</span><br />
+First order,<br />
+Single precision,<br />
+Disabled low frequency stabilization,<br />
+PEC solid handling: CFIE ,<br />
+Matrix type: Auto,<br />
+MLFMM Accuracy: Low,<br />
+Minimum Box size: 0.20 lambda,<br />
+ACA accuracy: 0.0001,<br />
+Iterative solver stopping criteria: 1e-3</p>
+</li>
+<li class="p-Topic-Text-Indent">
+<p class="Topic-Text-Indent"><span style="font-weight: bold;">Medium:</span><br />
+PEC solid handling: alternative CFIE,<br />
+MLFMM Accuracy: Medium,<br />
+Minimum Box size: 0.3 lambda,</p>
+</li>
+<li class="p-Topic-Text-Indent">
+<p class="Topic-Text-Indent"><span style="font-weight: bold;">High:</span><br />
+Double precision,<br />
+MLFMM Accuracy: High,<br />
+Minimum Box size: 0.50 lambda,</p>
+</li>
+</ul>
+<p class="VBA-Heading-Method">UseFastFrequencySweep &#160;( <a href="../common_vbageneral/common_general_bool_data_type.htm" id="a32" style="font-weight: normal;" name="a32">bool</a> <span style="font-style: italic;"><i>flag</i></span> )</p>
+<p class="VBA-Text-Indent">Activates (<span style="font-style: italic;"><i>flag</i></span> = True) or deactivates (<span style="font-style: italic;"><i>flag</i></span> = False) the broadband frequency sweep for the solver.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">UseIEGroundPlane &#160;( <a href="../common_vbageneral/common_general_bool_data_type.htm" id="a90" style="font-weight: normal;" name="a90">bool</a> <span style="font-style: italic;"><i>flag</i></span> )</p>
+<p class="VBA-Text-Indent">Activates (<span style="font-style: italic;"><i>flag</i></span> = True) or deactivates (<span style="font-style: italic;"><i>flag</i></span> = False) the infinite ground plane formulation for an electric boundary condition at ZMin.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">SetRealGroundMaterialName (<span style="font-weight: normal;">&#160;<a href="../common_vbageneral/common_general_string.htm" id="a81" style="font-weight: normal; font-style: normal;" name="a81">string</a></span> <span style="font-style: italic;"><i>name )</i></span></p>
+<p class="VBA-Text-Indent">Specifies the material of the real ground for an open boundary condition at ZMin. If no material is specified (name = ""), real ground plane calculation is deactivated.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">CalcFarFieldInRealGround &#160;( <a href="../common_vbageneral/common_general_bool_data_type.htm" id="a901" style="font-weight: normal;" name="a901">bool</a> <span style="font-style: italic;"><i>flag</i></span> )</p>
+<p class="VBA-Text-Indent">Activates (<span style="font-style: italic;"><i>flag</i></span> = True) or deactivates (<span style="font-style: italic;"><i>flag</i></span> = False) calculation of the far field in the real ground.</p>
+<p class="VBA-Heading-Method">&#160;</p>
+<p class="VBA-Heading-Method">RealGroundModelType ( <a href="../common_vbageneral/common_general_enum.htm" id="a282" style="font-weight: normal;" name="a282">enum</a><span style="font-weight: normal;">{"Auto", "Type 1", "Type 2"}</span> <span style="font-style: italic;"><i>key</i></span> )</p>
+<p class="VBA-Text-Indent">Sets the model type for real ground (only relevant in the presence of objects touching the real ground plane).</p>
+<ul style="list-style: disc;">
+<li class="p-Topic-Text-Indent">
+<p class="Topic-Text-Indent" style="font-weight: bold;">Auto:<span style="font-weight: normal;"><br />
+The model type is determined automatically taking into account the material properties of the real ground.</span></p>
+</li>
+<li class="p-Topic-Text-Indent">
+<p class="Topic-Text-Indent"><span style="font-weight: bold;">Type 1:</span><br />
+This model type is well suited for a real ground material with low electrical conductivity (low imaginary part of the permittivity).</p>
+</li>
+<li class="p-Topic-Text-Indent">
+<p class="Topic-Text-Indent"><span style="font-weight: bold;">Type 2:</span><br />
+This model type is well suited for a real ground material with high electrical conductivity (high imaginary part of the permittivity). This model type may also lead to be a better solver convergence compared to "Type 1".</p>
+</li>
+</ul>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">PreconditionerType &#160;( <a href="../common_vbageneral/common_general_enum.htm" id="a28" style="font-weight: normal;" name="a28">enum</a><span style="font-weight: normal;">{"Auto", "Type 1", "Type 2", "Type 3"}</span> <span style="font-style: italic;"><i>key</i></span> )</p>
+<p class="VBA-Text-Indent">Sets the preconditioner type.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">LowFrequencyStabilization &#160;( <a href="../common_vbageneral/common_general_bool_data_type.htm" id="a1" style="font-weight: normal;" name="a1">bool</a> <span style="font-style: italic;"><i>flag</i></span> )</p>
+<p class="VBA-Text-Indent">This option controls the low frequency stabilization for the iterative and direct MoM solver. If enabled the accuracy for electrically small models or models with small triangles compared to the wavelength will increase.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">LowFrequencyStabilizationML &#160;( <a href="../common_vbageneral/common_general_bool_data_type.htm" id="a2" style="font-weight: normal;" name="a2">bool</a> <span style="font-style: italic;"><i>flag</i></span> )</p>
+<p class="VBA-Text-Indent">This Multilayer solver option controls the low frequency stabilization for the iterative and direct MoM solver. If enabled the accuracy for electrically small models or models with small triangles compared to the wavelength will increase.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">Multilayer &#160;( <a href="../common_vbageneral/common_general_bool_data_type.htm" id="a3" style="font-weight: normal;" name="a3">bool</a> <span style="font-style: italic;"><i>flag</i></span> )</p>
+<p class="VBA-Text-Indent">Activates (<span style="font-style: italic;"><i>flag</i></span> = True) or deactivates (<span style="font-style: italic;"><i>flag</i></span> = False) the multilayer solver.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">SetiMoMACC_I ( <a href="../common_vbageneral/common_general_double.htm" id="a4" style="font-weight: normal;" name="a4">double</a> <span style="font-style: italic;"><i>value</i></span> )</p>
+<p class="VBA-Text-Indent">This accuracy determines the accuracy of the <span style="font-weight: bold;">Iterative MoM</span> system matrix for the <span style="font-weight: bold;">Integral equation solver</span>. A lower accuracy leads to lower memory requirement but also to a lower accuracy.</p>
+<p class="VBA-Heading-Method">&#160;</p>
+<p class="VBA-Heading-Method">SetiMoMACC_M ( <a href="../common_vbageneral/common_general_double.htm" id="a77" style="font-weight: normal;" name="a77">double</a> <span style="font-style: italic;"><i>value</i></span> )</p>
+<p class="VBA-Text-Indent">This accuracy determines the accuracy of the <span style="font-weight: bold;">Iterative MoM</span> system matrix for the <span style="font-weight: bold;">Multilayer solver</span>. A lower accuracy leads to lower memory requirement but also to a lower accuracy.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method"><a name="SetCFIEAlpha" id="SetCFIEAlpha"></a>SetCFIEAlpha ( <a href="../common_vbageneral/common_general_double.htm" id="a5" style="font-weight: normal;" name="a5">double</a> <span style="font-style: italic;"><i>value</i></span> )</p>
+<p class="VBA-Text-Indent">If the option <a href="special_vbasolver_fdsolver_object.htm#UseCFIEForCPECIntEq">UseCFIEForCPECIntEq</a> is enabled and the CFIE alpha is set to 1 the Electric Field Integral Equation will be used. This is an option if you are sure there will be no spurious resonances inside the PEC solids e.g. for electrically small PEC solids. The default value is 0.5.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">DeembedExternalPorts ( <a href="../common_vbageneral/common_general_bool_data_type.htm" id="a6" style="font-weight: normal;" name="a6">bool</a> <span style="font-style: italic;"><i>flag</i></span> )</p>
+<p class="VBA-Text-Indent">Activates the automatic deembedding of external ports as multipin ports.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">SetOpenBC_XY ( <a href="../common_vbageneral/common_general_bool_data_type.htm" id="a7" style="font-weight: normal;" name="a7">bool</a> <span style="font-style: italic;"><i>flag</i></span> )</p>
+<p class="VBA-Text-Indent">This command is used to control the handling of boundary conditions in x- and y-direction for the <span style="font-weight: bold;">Multilayer Solver</span>. &#160;If <span style="font-style: italic;"><i>flag</i></span> is set to "True" the boundary conditions in x- and y-directions will be set to open. If <span style="font-style: italic;"><i>flag</i></span> is set to "False" the boundary conditions in x- and y-directions will be set as defined with the methods of the <a href="special_vbasolver_boundary_object.htm">Boundary Object</a>.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">ModeTrackingCMA (&#160;<a href="../common_vbageneral/common_general_bool_data_type.htm" id="a71" style="font-weight: normal;" name="a71">bool</a> <span style="font-style: italic;"><i>flag</i></span> )</p>
+<p class="VBA-Text-Indent">Activates automatic mode tracking for the characteristic mode analysis.</p>
+<p class="VBA-Heading-Method">&#160;</p>
+<p class="VBA-Heading-Method">NumberOfModesCMA ( <span style="font-weight: normal;"><a href="../common_vbageneral/common_general_integer.htm" id="a79" style="font-weight: normal;" name="a79">int</a></span> <span style="font-style: italic;"><i>nModes</i></span> <span style="font-weight: normal;">)</span></p>
+<p class="VBA-Text-Indent">Specifies the number of modes for the characteristic mode analysis.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">StartFrequencyCMA ( <span style="font-weight: normal;">&#160;<a href="../common_vbageneral/common_general_double.htm" id="a41" style="font-weight: normal;" name="a41">double</a></span> <span style="font-style: italic;"><i>value</i></span> <span style="font-weight: normal;">)</span></p>
+<p class="VBA-Text-Indent">Specifies the frequency for sorting of the modes according to their modal significance for the characteristic mode analysis. If this value has not been specified before (<span style="font-style: italic;"><i>value</i></span> = "-1.0"), the minimal frequency of the simulation frequency range is chosen.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">SetAccuracySettingCMA ( <span style="font-weight: normal;">&#160;<a href="../common_vbageneral/common_general_enum.htm" id="a1871" style="font-weight: normal;" name="a1871">enum</a>{"Default", "Custom"}</span> <span style="font-style: italic;"><i>key</i></span> <span style="font-weight: normal;">)</span></p>
+<p class="VBA-Text-Indent">Specifies the accuracy settings for the characteristic mode analysis. <span lang="EN-US" xml:lang="EN-US">Please see below a description of the sets.</span></p>
+<ul style="list-style: disc;">
+<li>
+<p class="VBA-Text-Indent"><span style="font-weight: bold;">Default:</span><br />
+Default settings are used.</p>
+</li>
+<li>
+<p class="VBA-Text-Indent"><span style="font-weight: bold;">Custom:</span><br />
+Settings from the IESolver and <a href="special_vbasolver_fdsolver_object.htm">FDSolver</a> objects are used.</p>
+</li>
+</ul>
+<p class="VBA-Heading-Method">FrequencySamplesCMA ( <span style="font-weight: normal;"><a href="../common_vbageneral/common_general_integer.htm" id="a791" style="font-weight: normal;" name="a791">int</a></span> <span style="font-style: italic;"><i>nSamples</i></span> <span style="font-weight: normal;">)</span></p>
+<p class="VBA-Text-Indent">Specifies the number of samples for the characteristic mode analysis with mode tracking. By default (<span style="font-style: italic;"><i>nSamples</i></span> = "0") this number is determined automatically.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">SetMemSettingCMA ( <a href="../common_vbageneral/common_general_enum.htm" id="a281" style="font-weight: normal;" name="a281">enum</a><span style="font-weight: normal;">{"Auto", "Low", "Medium", "High"}</span> <span style="font-style: italic;"><i>key</i></span> )</p>
+<p class="VBA-Text-Indent">Sets the memory setting for the characteristic mode analysis with mode tracking. By default ("Auto") the memory setting is determined automatically taking into account the available main memory.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">CalculateModalWeightingCoefficientsCMA(&#160;<a href="../common_vbageneral/common_general_bool_data_type.htm" id="a711" style="font-weight: normal;" name="a711">bool</a> <span style="font-style: italic;"><i>flag</i></span> )</p>
+<p class="VBA-Text-Indent">Activates the calculation of modal weighting coefficients for the characteristic mode analysis.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Category"><a name="IE_Defaults" id="IE_Defaults"></a>Integral Equation Solver Defaults</p>
+<p class="VBA-Text-Example">SetAccuracySetting ( "Low" )</p>
+<p class="VBA-Text-Example">UseFastFrequencySweep &#160;( False )</p>
+<p class="VBA-Text-Example">UseIEGroundPlane &#160;( False )</p>
+<p class="VBA-Text-Example">SetRealGroundMaterialName ( "" )</p>
+<p class="VBA-Text-Example">CalcFarFieldInRealGround ( False )</p>
+<p class="VBA-Text-Example">RealGroundModelType ( "Auto" )</p>
+<p class="VBA-Text-Example">PreconditionerType ( "Auto" )</p>
+<p class="VBA-Text-Example">LowFrequencyStabilization ( False )</p>
+<p class="VBA-Text-Example">LowFrequencyStabilizationML( True )</p>
+<p class="VBA-Text-Example">Multilayer ( FALSE )</p>
+<p class="VBA-Text-Example">SetiMoMACC_I ( 0.0001 )</p>
+<p class="VBA-Text-Example">SetiMoMACC_M ( 0.0001 )</p>
+<p class="VBA-Text-Example">SetCFIEAlpha ( 0.5 )</p>
+<p class="VBA-Text-Example">DeembedExternalPorts ( False )</p>
+<p class="VBA-Text-Example">IgnoreBC_XY_And_Set_To_Open ( True )</p>
+<p class="VBA-Text-Example">ModeTrackingCMA ( True )</p>
+<p class="VBA-Text-Example">NumberOfModesCMA ( 3 )</p>
+<p class="VBA-Text-Example">StartFrequencyCMA ( -1.0 )</p>
+<p class="VBA-Text-Example">SetAccuracySettingCMA ( "Default" )</p>
+<p class="VBA-Text-Example">FrequencySamplesCMA ( 0 )</p>
+<p class="VBA-Text-Example">SetMemSettingCMA ( "Auto" )</p>
+<p class="VBA-Text-Example">CalculateModalWeightingCoefficientsCMA ( True )</p>
+<?rh-p style="margin-bottom: 0px; text-align: Right; margin-left: 18px; 
+                 margin-right: 18px; margin-top: 18px;" ?>
+<div style="width: 100%; position: relative;" id="footer">
+<p style="border-bottom: Solid 1px #dddddd; text-align: Left; margin-left: 0px; font-family: Arial, sans-serif; line-height: Normal; margin-top: 9px; margin-right: 0px; margin-bottom: 6px; border-left-width: 1px; border-top-width: 1px; border-right-width: 1px;"><span style="text-align: Left; font-family: Arial, sans-serif; line-height: Normal;">&#160;</span></p>
+<table cellspacing="0" width="100%">
+<col style="width: 50%;" />
+<col style="width: 50%;" />
+<tr>
+<td style="vertical-align: Top;"><span style="font-family: Arial, sans-serif; line-height: Normal; font-size: 8pt;"><font size="1" style="font-size:8pt;">CST Studio Suite 2026</font></span></td>
+<td style="vertical-align: Top;">
+<p style="text-align: right;">&#160;</p>
+</td>
+</tr>
+</table>
+<p>&#160;</p>
+</div>
+<script type="text/javascript" language="javascript1.2">
+//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+        writeIntopicBar(0);
+
+
+highlightSearch();
+//-->
+//]]>
+</script>
+</body>
+</html>

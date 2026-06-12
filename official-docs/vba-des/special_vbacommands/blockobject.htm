@@ -1,0 +1,1215 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="Adobe RoboHelp 11" />
+<title>Block Object</title>
+<link rel="StyleSheet" href="../online_help_vba.css" type="text/css" />
+<style type="text/css">
+/*<![CDATA[*/
+<!--
+body { border-bottom-style:None; }
+-->
+/*]]>*/
+</style>
+
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function ehlp_showtip(current,e,text)
+{
+  if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == 'Netscape'))
+  {
+    document.tooltip.document.write("<layer bgColor='yellow' style='border:1px solid black;font-size:12px;'>"+ text + "<\/layer>");
+    document.tooltip.document.close();
+    document.tooltip.left=e.pageX+5;
+    document.tooltip.top=e.pageY+5;
+    document.tooltip.visibility="show";
+  }
+}
+function ehlp_hidetip()
+{
+  document.tooltip.visibility="hidden";
+}
+//]]>
+</script>
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+        origWidth = innerWidth;
+        origHeight = innerHeight;
+        onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+/*<![CDATA[*/
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+-->
+/*]]>*/
+</style>
+
+<script type="text/javascript" language="javascript1.2" src="../whmsg.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript" src="../whver.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript1.2" src="../whutils.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript1.2" src="../whproxy.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript1.2" src="../whlang.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript1.2" src="../whtopic.js" charset="utf-8">
+</script>
+</head>
+<body>
+<script type="text/javascript" language="javascript1.2">
+//<![CDATA[
+<!--
+if (window.gbWhTopic)
+{
+        var strUrl = document.location.href;
+        var bc = 0;
+        var n = strUrl.toLowerCase().indexOf("bc-");
+        if(n != -1)
+        {
+                document.location.replace(strUrl.substring(0, n));
+                bc = strUrl.substring(n+3);
+        }
+
+        if (window.addTocInfo)
+        {
+        addTocInfo("Circuits & Systems VBA\nComponent/Modeling\nBlock");
+
+        }
+        if (window.writeBtnStyle)
+                writeBtnStyle();
+
+        if (window.writeIntopicBar)
+                writeIntopicBar(0);
+
+        
+        document.write("<p style=\"font-family: Tahoma; font-size: 9pt; font-weight: 400;  font-style:normal; color: rgb(0, 0, 0); text-decoration:none; text-align: left\"> ");
+AddMasterBreadcrumbs("../index.htm", "font-family: Tahoma; font-size: 9pt; font-weight: 400;  font-style:normal; color: rgb(0, 0, 0); text-decoration:none; text-align: left", "|", "Home", "../special_vbaobjects/cstdesignstudiovbaobjects.htm");
+document.write("<a style=\"font-family: Tahoma; font-size: 9pt; font-weight: 400;  font-style:normal; color: rgb(0, 0, 0); text-decoration:none; text-align: left\" href=\"../special_vbaobjects/cstdesignstudiovbaobjects.htm\">Circuits & Systems VBA<\/a> | <a style=\"font-family: Tahoma; font-size: 9pt; font-weight: 400;  font-style:normal; color: rgb(0, 0, 0); text-decoration:none; text-align: left\" href=\"blockobject.htm\">Component/Modeling<\/a> | Block<\/p>");
+
+}
+else
+        if (window.gbIE4)
+                document.location.reload();
+
+onLoadHandler = function()
+{
+  if (window.setRelStartPage)
+        {
+        setTimeout("setRelStartPage('../index.htm');", 1)
+
+    setTimeout("UpdateBreadCrumbsMarker();", 1);
+        }
+}
+
+if (window.addEventListener){  
+        window.addEventListener('load', onLoadHandler, false);   
+} else if (window.attachEvent){  
+        window.attachEvent('onload', onLoadHandler);  
+}
+
+function onSetStartPage()
+{
+  autoSync(1);
+  sendSyncInfo();
+  sendAveInfoOut();
+}
+//-->
+//]]>
+</script><script type="text/javascript" src="../ehlpdhtm.js" language="JavaScript1.2">
+</script>
+<table cellspacing="0" width="100%">
+<col style="width: 50%;" />
+<col style="width: 50%;" />
+<tr>
+<td style="vertical-align: middle; padding-top: 5px; padding-bottom: 5px;">
+<p style="margin-top: 0px; margin-bottom: 0px;"><img src="../3ds.png" alt="" style="border: none;" border="0" /></p>
+</td>
+<td style="vertical-align: middle;">
+<p style="text-align: right;"><a href="https://www.3ds.com/products-services/3dexperience/" target="_blank"><img src="../3dexp.png" alt="" style="border: none;" width="32" height="32" border="0" /></a></p>
+</td>
+</tr>
+</table>
+<h1>Block Object</h1>
+<p class="VBA-Text">Object referring to a block. Use this object to create or to manipulate a block.</p>
+<ul>
+<li class="p-VBA-Index-Category">
+<p class="VBA-Index-Category"><a href="#General_Methods">Methods</a></p>
+</li>
+<li style="list-style: none; display: inline">
+<ul>
+<li class="p-VBA-Index-Category">
+<p class="VBA-Index-Category"><a href="#General_Methods">General Methods</a></p>
+</li>
+<li class="p-VBA-Index-Category">
+<p class="VBA-Index-Category"><a href="#Identification">Identification</a></p>
+</li>
+<li class="p-VBA-Index-Category">
+<p class="VBA-Index-Category"><a href="#Getter">Getter</a></p>
+</li>
+<li class="p-VBA-Index-Category">
+<p class="VBA-Index-Category"><a href="#Setter">Setter</a></p>
+</li>
+<li class="p-VBA-Index-Category">
+<p class="VBA-Index-Category"><a href="#Iteration">Iteration</a></p>
+</li>
+<li class="p-VBA-Index-Category">
+<p class="VBA-Index-Category"><a href="#Positioning">Positioning</a></p>
+</li>
+</ul>
+</li>
+<li class="p-VBA-Index-Category">
+<p class="VBA-Index-Category"><a href="#Special_Methods">Special Methods</a></p>
+</li>
+<li style="list-style: none; display: inline">
+<ul>
+<li class="p-VBA-Index-Category">
+<p class="VBA-Index-Category"><a href="#IBIS">IBIS</a></p>
+</li>
+<li class="p-VBA-Index-Category">
+<p class="VBA-Index-Category"><a href="#Interpolation">Interpolation</a></p>
+</li>
+<li class="p-VBA-Index-Category">
+<p class="VBA-Index-Category"><a href="#Monitor">Monitor</a></p>
+</li>
+<li class="p-VBA-Index-Category">
+<p class="VBA-Index-Category"><a href="#MOR">Vector Fitting</a></p>
+</li>
+<li class="p-VBA-Index-Category">
+<p class="VBA-Index-Category"><a href="#Properties">Properties</a></p>
+</li>
+<li class="p-VBA-Index-Category">
+<p class="VBA-Index-Category"><a href="#Layout">Layout</a></p>
+</li>
+<li class="p-VBA-Index-Category">
+<p class="VBA-Index-Category"><a href="#vba_block_assembly">Assembly</a></p>
+</li>
+</ul>
+</li>
+<li class="p-VBA-Index-Category">
+<p class="VBA-Index-Category"><a href="#Default_Settings">Default Settings</a></p>
+</li>
+<li class="p-VBA-Index-Category">
+<p class="VBA-Index-Category"><a href="#Examples">Examples</a></p>
+</li>
+<li style="list-style: none; display: inline">
+<ul>
+<li class="p-VBA-Index-Category">
+<p class="VBA-Index-Category"><a href="#Creation">Create a block</a></p>
+</li>
+<li class="p-VBA-Index-Category">
+<p class="VBA-Index-Category"><a href="#Modification" title="Create a new external port" onmouseover="if ((parseInt(navigator.appVersion) == 4) &amp;&amp; (navigator.appName == 'Netscape')) ehlp_showtip(this,event,'Create a new external port');" onmouseout="if ((parseInt(navigator.appVersion) == 4) &amp;&amp; (navigator.appName == 'Netscape')) ehlp_hidetip();">Modify an existing block's position and some solver settings</a></p>
+</li>
+<li class="p-VBA-Index-Category">
+<p class="VBA-Index-Category"><a href="#SetProperty" title="Create a new external port" onmouseover="if ((parseInt(navigator.appVersion) == 4) &amp;&amp; (navigator.appName == 'Netscape')) ehlp_showtip(this,event,'Create a new external port');" onmouseout="if ((parseInt(navigator.appVersion) == 4) &amp;&amp; (navigator.appName == 'Netscape')) ehlp_hidetip();">Set property "Model Type"</a></p>
+</li>
+<li class="p-VBA-Index-Category">
+<p class="VBA-Index-Category"><a href="#Example_FindPortsWithLabel">Find all ports with label 'MyLabel'</a></p>
+</li>
+<li class="p-VBA-Index-Category">
+<p class="VBA-Index-Category" style="font-family: Arial, sans-serif;"><a href="#Example_GetBusPortNames" style="font-family: Arial, sans-serif;">Get ports inside a bus pin 0</a></p>
+</li>
+<li class="p-VBA-Index-Category">
+<p class="VBA-Index-Category"><a href="#Example_ChangeLayout">Change the layout of the block</a></p>
+</li>
+</ul>
+</li>
+</ul>
+<p class="VBA-Heading-Category"><a name="General_Methods" id="General_Methods"></a>General Methods</p>
+<p class="VBA-Heading-Method">Create</p>
+<p class="VBA-Text-Indent">Creates a new block. Before a block's creation, its <a href="#cmd_Type">Type</a> has to be specified. Some block types require additional properties to be <a href="#Setter">set</a> before the block creation (e. g. a file name). If block's the name has not been set, a default name for the specified block type will be used.</p>
+<p class="VBA-Heading-Method">&#160;</p>
+<p class="VBA-Heading-Method">Delete</p>
+<p class="VBA-Text-Indent">Deletes the currently selected block.</p>
+<p class="VBA-Heading-Method">&#160;</p>
+<p class="VBA-Heading-Method">DoesExist <a href="../common_vbageneral/common_general_bool_data_type.htm" id="a38" style="font-weight: normal; font-style: normal;" name="a38">bool</a></p>
+<p class="VBA-Text-Indent">Checks if a block with the currently selected name <span>already exists.</span></p>
+<p class="VBA-Heading-Method">&#160;</p>
+<p class="VBA-Heading-Method">Reset</p>
+<p class="VBA-Text-Indent">Resets all internal settings to their default values.</p>
+<p class="VBA-Heading-Category"><a name="Identification" id="Identification"></a>Identification</p>
+<p class="VBA-Heading-Method">Name ( <a href="../common_vbageneral/common_general_name.htm" id="a9" style="font-weight: normal; font-style: normal;" name="a9">name</a> <span style="font-style: italic;"><i>blockname</i></span> )</p>
+<p class="VBA-Text-Indent" style="text-align: justify;">This method is used to select an existing block of your model using its name. Furthermore, it sets the name of a block to <span style="font-style: italic;"><i>blockname</i></span> if not created yet.</p>
+<p class="VBA-Heading-Category"><a name="Getter" id="Getter"></a>Getter</p>
+<p class="VBA-Heading-Method"><span lang="EN-US" xml:lang="EN-US" style="color: #1F497D; mso-ansi-language: EN-US;"><font color="#1F497D">&#160;</font></span>GetTypeName <a href="../common_vbageneral/common_general_string.htm" id="a78" style="font-weight: normal; font-style: normal;" name="a78">string</a></p>
+<p class="VBA-Text-Indent">Returns the "type" name of a block. For example the type name of a resistor would be "resistor".</p>
+<p class="VBA-Heading-Method">&#160;</p>
+<p class="VBA-Heading-Method">GetTypeShortName <a href="../common_vbageneral/common_general_string.htm" id="a77" style="font-weight: normal; font-style: normal;" name="a77">string</a></p>
+<p class="VBA-Text-Indent">Returns the short "type" name of a block. For example the short type name of a resistor would be "RES".</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">GetFile&#160;<a href="../common_vbageneral/common_general_string.htm" id="a7815" style="font-weight: normal; font-style: normal;" name="a7815">string</a></p>
+<p class="VBA-Text-Indent">Returns the name of the file associated with the block. (For blocks without file the string is empty.)</p>
+<p class="VBA-Heading-Method">&#160;</p>
+<p class="VBA-Heading-Method">GetFilePath<span lang="EN-US" xml:lang="EN-US">(</span>&#160;<a href="../common_vbageneral/common_general_integer.htm" id="a27111" style="font-weight: normal; font-style: normal;" name="a27111">int</a> <span style="font-style: italic;"><i>index</i></span> <span lang="EN-US" xml:lang="EN-US">)</span><span style="font-weight: normal;">&#160;<a href="../common_vbageneral/common_general_string.htm" id="a781511" style="font-weight: normal; font-style: normal;" name="a781511">string</a></span></p>
+<p class="VBA-Text-Indent" style="mso-ansi-language: EN-US;"><span lang="EN-US" xml:lang="EN-US">Returns the name of the file associated with the block for the given file index.</span></p>
+<p class="VBA-Heading-Method">&#160;</p>
+<p class="VBA-Heading-Method">GetNumberOfFiles&#160;<a href="../common_vbageneral/common_general_integer.htm" id="a83" style="font-weight: normal; font-style: normal;" name="a83">int</a></p>
+<p class="VBA-Text-Indent" style="mso-ansi-language: EN-US;"><span lang="EN-US" xml:lang="EN-US">Returns the number of files used by the block.</span></p>
+<p class="VBA-Heading-Method">&#160;</p>
+<p class="VBA-Heading-Method"><span lang="EN-US" xml:lang="EN-US" style="mso-ansi-language: EN-US;">GetSpiceFilter</span>&#160;<a href="../common_vbageneral/common_general_string.htm" id="a781" style="font-weight: normal; font-style: normal;" name="a781">string</a></p>
+<p class="VBA-Text-Indent" style="mso-ansi-language: EN-US;"><span lang="EN-US" xml:lang="EN-US">This method can only be applied to SPICE- or SPICE file blocks. It returns the SPICE dialect being applied to the block. &#160;For possible return values see the description of the <a href="#cmd_SetSpiceFilter">SetSpiceFilter</a> command.</span></p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">GetSpiceModel&#160;<a href="../common_vbageneral/common_general_string.htm" id="a7815" style="font-weight: normal; font-style: normal;" name="a7815">string</a></p>
+<p class="VBA-Text-Indent">This method can only be applied to SPICE- or SPICE file blocks. It returns the name of the currently selected Spice model aka toplevel subcircuit of the Spice file that is represented by the block.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method"><span lang="EN-US" xml:lang="EN-US" style="mso-ansi-language: EN-US;">GetPackage</span>&#160;<a href="../common_vbageneral/common_general_string.htm" id="a7812" style="font-weight: normal; font-style: normal;" name="a7812">string</a></p>
+<p class="VBA-Text-Indent" style="mso-ansi-language: EN-US;"><span lang="EN-US" xml:lang="EN-US">&#160;It returns the package name specified in the selected block. For possible return values see the description of the <a href="#cmd_SetPackage">SetPackage</a> command. If no package was specified the function returns an empty string.</span></p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method"><a name="cmd_GetAllPackages" id="cmd_GetAllPackages"></a>GetAllPackages <a href="../common_vbageneral/common_general_variant.htm" style="font-weight: normal;">variant</a></p>
+<p class="VBA-Text-Indent" style="mso-ansi-language: EN-US;"><span lang="EN-US" xml:lang="EN-US">This method returns all possible package names specified for the selected block. The query can be used as an input for the <a href="#cmd_SetPackage">SetPackage</a> command.</span></p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method"><span lang="EN-US" xml:lang="EN-US"><span lang="EN-US" xml:lang="EN-US" style="mso-ansi-language: EN-US;">GetPackageLengthMM</span>&#160;<a href="../common_vbageneral/common_general_double.htm" id="a7813" style="font-weight: normal; font-style: normal;" name="a7813">double</a></span></p>
+<p class="VBA-Text-Indent" style="mso-ansi-language: EN-US;"><span lang="EN-US" xml:lang="EN-US"><span lang="EN-US" xml:lang="EN-US">&#160;It returns the package length of the selected block in mm. If no package was specified the function returns zero.</span></span></p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method"><span lang="EN-US" xml:lang="EN-US"><span lang="EN-US" xml:lang="EN-US" style="mso-ansi-language: EN-US;">GetPackageWidthMM</span>&#160;<a href="../common_vbageneral/common_general_double.htm" id="a78131" style="font-weight: normal; font-style: normal;" name="a78131">double</a></span></p>
+<p class="VBA-Text-Indent" style="mso-ansi-language: EN-US;"><span lang="EN-US" xml:lang="EN-US"><span lang="EN-US" xml:lang="EN-US">&#160;It returns the package width of the selected block in mm. If no package was specified the function returns zero.</span></span></p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method"><span lang="EN-US" xml:lang="EN-US"><span lang="EN-US" xml:lang="EN-US" style="mso-ansi-language: EN-US;">GetPackageHeightMM</span>&#160;<a href="../common_vbageneral/common_general_double.htm" id="a781311" style="font-weight: normal; font-style: normal;" name="a781311">double</a></span></p>
+<p class="VBA-Text-Indent" style="mso-ansi-language: EN-US;"><span lang="EN-US" xml:lang="EN-US"><span lang="EN-US" xml:lang="EN-US">&#160;It returns the package height of the selected block in mm. If no package was specified the function returns zero.</span></span></p>
+<p class="VBA-Heading-Method">&#160;</p>
+<p class="VBA-Heading-Method"><span lang="EN-US" xml:lang="EN-US"><span lang="EN-US" xml:lang="EN-US" style="mso-ansi-language: EN-US;">GetReferenceName</span>&#160;<a href="../common_vbageneral/common_general_string.htm" id="a7811" style="font-weight: normal; font-style: normal;" name="a7811">string</a></span></p>
+<p class="VBA-Text-Indent" style="mso-ansi-language: EN-US;"><span lang="EN-US" xml:lang="EN-US">Returns the name of block's reference block (or an empty string if the block has no reference block).</span></p>
+<p class="VBA-Heading-Method">&#160;</p>
+<p class="VBA-Heading-Method"><span lang="EN-US" xml:lang="EN-US">GetNextUnusedName ( <a href="../common_vbageneral/common_general_name.htm" id="a95" style="font-weight: normal; font-style: normal;" name="a95">name</a></span> <span lang="EN-US" xml:lang="EN-US" style="font-style: italic;"><i>basename</i></span> <span lang="EN-US" xml:lang="EN-US">)</span> <span style="font-weight: normal;"><a href="../common_vbageneral/common_general_string.htm">string</a></span></p>
+<p class="VBA-Text-Indent" style="mso-ansi-language: EN-US;"><span lang="EN-US" xml:lang="EN-US">searches the model for the named blocks 'base name + index' and returns the block name with this base + first index that is not used.</span></p>
+<p class="VBA-Heading-Method">&#160;</p>
+<p class="VBA-Heading-Method"><span lang="EN-US" xml:lang="EN-US">IsCachingFiles</span>&#160;<a href="../common_vbageneral/common_general_bool_data_type.htm" id="a382" style="font-weight: normal; font-style: normal;" name="a382">bool</a></p>
+<p class="VBA-Text-Indent" style="mso-ansi-language: EN-US;"><span lang="EN-US" xml:lang="EN-US">Returns true if the block is caching its referenced files, otherwise false.</span> Works only for blocks of type Touchstone file block.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method"><span lang="EN-US" xml:lang="EN-US">GetSimulationTask</span> <span style="font-weight: normal;"><a href="../common_vbageneral/common_general_string.htm">string</a></span></p>
+<p class="VBA-Text-Indent">Returns the referenced simulation task for simulation project reference blocks and hybrid solver reference blocks.</p>
+<p class="VBA-Heading-Category"><span lang="EN-US" xml:lang="EN-US"><a name="Setter" id="Setter"></a>Setter</span></p>
+<p class="VBA-Heading-Method"><span lang="EN-US" xml:lang="EN-US"><a name="cmd_Type" id="cmd_Type"></a>Type ( <span style="font-weight: normal;"><a href="../common_vbageneral/common_general_string.htm">string</a></span> <span style="font-style: italic;"><i>type</i></span> )</span></p>
+<p class="VBA-Text-Indent"><span lang="EN-US" xml:lang="EN-US">Sets the type for a block. This setting must be made before calling <span style="font-style: italic;"><i>Create</i></span>. The type can not be modified after the creation. The list of <a href="blocktypes.htm">block types</a> contains all valid options.</span></p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method"><span lang="EN-US" xml:lang="EN-US">SetName ( <a href="../common_vbageneral/common_general_name.htm" id="a16" style="font-weight: normal; font-style: normal;" name="a16">name</a> <span style="font-style: italic;"><i>blockname</i></span> )</span></p>
+<p class="VBA-Text-Indent"><span lang="EN-US" xml:lang="EN-US">Modifies the name of an existing block.</span></p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method"><span lang="EN-US" xml:lang="EN-US">SetFile ( <span style="font-weight: normal;"><a href="../common_vbageneral/common_general_filename.htm">filename</a></span> <span style="font-style: italic;"><i>filename</i></span> )</span></p>
+<p class="VBA-Text-Indent"><span lang="EN-US" xml:lang="EN-US">Sets the file for a block. This is only possible for block types that reference external data (file blocks) and for project blocks. In case of project blocks the specified file is copied into the project directory.</span></p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method"><span lang="EN-US" xml:lang="EN-US">AddFile(</span> <span lang="EN-US" xml:lang="EN-US" style="font-weight: normal;"><a href="../common_vbageneral/common_general_filename.htm">filename</a></span> <span lang="EN-US" xml:lang="EN-US" style="font-style: italic;"><i>filename</i></span> <span lang="EN-US" xml:lang="EN-US">)</span></p>
+<p class="VBA-Text-Indent"><span lang="EN-US" xml:lang="EN-US">Appends a file to the list of files used by the block.</span> Works only for blocks of type Touchstone file block/Touchstone block.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method"><span lang="EN-US" xml:lang="EN-US">ChangeFile(&#160;<a href="../common_vbageneral/common_general_integer.htm" id="a261" style="font-weight: normal; font-style: normal;" name="a261">int</a></span> <span style="font-style: italic;"><i>index,</i></span> <span lang="EN-US" xml:lang="EN-US" style="font-weight: normal;"><a href="../common_vbageneral/common_general_filename.htm">filename</a></span> <span lang="EN-US" xml:lang="EN-US" style="font-style: italic;"><i>filename</i></span> <span lang="EN-US" xml:lang="EN-US">)</span></p>
+<p class="VBA-Text-Indent"><span lang="EN-US" xml:lang="EN-US">Modifies the file entry of the given index in the list of files used by the block.</span></p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method"><span lang="EN-US" xml:lang="EN-US">RemoveFile(</span>&#160;<a href="../common_vbageneral/common_general_integer.htm" id="a271" style="font-weight: normal; font-style: normal;" name="a271">int</a> <span style="font-style: italic;"><i>index</i></span> <span lang="EN-US" xml:lang="EN-US">)</span></p>
+<p class="VBA-Text-Indent"><span lang="EN-US" xml:lang="EN-US">Removes the file with the given index from the list of files used by the block.</span> Works only for blocks of type Touchstone file block/Touchstone block.</p>
+<p class="VBA-Heading-Method">&#160;</p>
+<p class="VBA-Heading-Method"><span lang="EN-US" xml:lang="EN-US">SetGlobalUnitForProperty ( <a href="../common_vbageneral/common_general_name.htm" id="a13" style="font-weight: normal; font-style: normal;" name="a13">name</a> <span style="font-style: italic;"><i>propertyname</i></span> )</span></p>
+<p class="VBA-Text-Indent"><span lang="EN-US" xml:lang="EN-US">Sets the global unit for the specified property.</span></p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method"><span lang="EN-US" xml:lang="EN-US">SetLocalUnitForProperty ( <a href="../common_vbageneral/common_general_name.htm" id="a12" style="font-weight: normal; font-style: normal;" name="a12">name</a> <span style="font-style: italic;"><i>propertyname,</i></span> <span style="font-weight: normal;"><a href="../common_vbageneral/common_general_string.htm">string</a></span> <span style="font-style: italic;"><i>unit</i></span> )</span></p>
+<p class="VBA-Text-Indent"><span lang="EN-US" xml:lang="EN-US">Sets the given unit for the specified property, i.e. the property's value will not refer to the project's global unit any more but to this local unit.</span></p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method"><span lang="EN-US" xml:lang="EN-US"><a name="cmd_SetLibraryModel" id="cmd_SetLibraryModel"></a>SetLibraryModel ( <span style="font-weight: normal;"><a href="../common_vbageneral/common_general_name.htm">name</a></span> <span style="font-style: italic;"><i>model</i></span> )</span></p>
+<p class="VBA-Text-Indent"><span lang="EN-US" xml:lang="EN-US">Sets the library model for a block. This is only possible for block types that support the device model library. The name is the tree path in the device model library which is also displayed in the "Model name" field of the block property page. See also <span lang="EN-US" xml:lang="EN-US"><a href="#cmd_ImportLibraryModel">ImportLibraryModel</a></span> command if you want to import a new model.</span></p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method"><span lang="EN-US" xml:lang="EN-US">SetRelativePath ( <a href="../common_vbageneral/common_general_bool_data_type.htm" id="a46" style="font-weight: normal; font-style: normal;" name="a46">bool</a> <span style="font-style: italic;"><i>relative</i></span> )</span></p>
+<p class="VBA-Text-Indent"><span lang="EN-US" xml:lang="EN-US">Specifies a relative file name. This is only possible for some types of blocks.</span></p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method"><span lang="EN-US" xml:lang="EN-US">SetSimulationModel ( <a href="../common_vbageneral/common_general_enum.htm" id="a48" style="font-weight: normal; font-style: normal;" name="a48">enum</a> <span style="font-style: italic;"><i>model,</i></span> <span style="font-weight: normal;">&#160;<a href="../common_vbageneral/common_general_bool_data_type.htm" id="a49" style="font-weight: normal; font-style: normal;" name="a49">bool</a></span> <span style="font-style: italic;"><i>othersolverincaseoffailure</i></span> )</span></p>
+<p class="VBA-Text-Indent"><span lang="EN-US" xml:lang="EN-US">Sets the simulation model for a block.<br />
+This is only possible for some types of blocks.</span></p>
+<p class="VBA-Text-Indent"><span lang="EN-US" xml:lang="EN-US">Set</span> <span style="font-style: italic;"><i>othersolverincaseoffailure</i></span> <span lang="EN-US" xml:lang="EN-US">if you don't want the simulation to stop if the selected solver is not supported for the current parameter set.</span><br />
+(only supported for some microstrip and stripline blocks)</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Text-Indent"><span lang="EN-US" xml:lang="EN-US"><span style="font-style: italic;"><i>model</i></span> may have the following settings:</span></p>
+<table style="margin-left: 24px; left: 0px; top: 325px;" width="470" cellspacing="0">
+<col />
+<col width="360" />
+<tr style="vertical-align: top;">
+<td style="border: Solid 1px #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;" width="110">
+<p class="VBA-Text">"Standard"</p>
+</td>
+<td style="border-top: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;">
+<p class="VBA-Text">Standard model</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;" width="110">
+<p class="VBA-Text">"Fast2D"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;">
+<p class="VBA-Text">Fast 2D EM based model<br />
+(only available for some microstrip and stripline blocks)</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;" width="110">
+<p class="VBA-Text">"2D"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;">
+<p class="VBA-Text">Enhanced 2D EM based model<br />
+(only available for microstrip and stripline blocks)</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;" width="110">
+<p class="VBA-Text">"3D"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;">
+<p class="VBA-Text">3D calculation performed by CST Microwave Studio<br />
+(only available for microstrip, stripline and waveguide blocks)</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;" width="110">
+<p class="VBA-Text">"Dispersive"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;">
+<p class="VBA-Text">Dispersive model<br />
+(only available for CS, PCBS and ideal transmissionline blocks)</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;" width="110">
+<p class="VBA-Text">"Nonlinear"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;">
+<p class="VBA-Text">Nonlinear model based on state space interpolation<br />
+(only available for EMS blocks with M-Statics solver option)</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;" width="110">
+<p class="VBA-Text">"3D_Combined_Cable"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;">
+<p class="VBA-Text">Enables fully coupled cable - 3D EM field simulation.<br />
+(only available for CST Cable Studio blocks)</p>
+</td>
+</tr>
+</table>
+<p class="VBA-Heading-Method">&#160;</p>
+<p class="VBA-Heading-Method"><span lang="EN-US" xml:lang="EN-US"><a name="cmd_SetSpiceFilter" id="cmd_SetSpiceFilter"></a>SetSpiceFilter ( <span style="font-weight: normal;"><a href="../common_vbageneral/common_general_string.htm">string</a></span> type <span style="font-weight: normal;">)</span></span></p>
+<p class="VBA-Text-Indent" style="mso-ansi-language: EN-US;"><span lang="EN-US" xml:lang="EN-US">This method can only be applied to SPICE- or SPICE file blocks.</span></p>
+<p class="VBA-Text-Indent" style="mso-ansi-language: EN-US;"><span lang="EN-US" xml:lang="EN-US">It specifies the SPICE dialect being applied. Currently, the types</span> <span lang="EN-US" xml:lang="EN-US" style="font-style: italic;"><i>SPICE3, PSPICE, HSPICE, AUTOMATIC</i></span> <span lang="EN-US" xml:lang="EN-US">are supported.</span> <span lang="EN-US" xml:lang="EN-US" style="font-style: italic;"><i>AUTOMATIC</i></span> <span lang="EN-US" xml:lang="EN-US">&#160;is a combination of</span> <span lang="EN-US" xml:lang="EN-US" style="font-style: italic;"><i>SPICE3</i></span> <span lang="EN-US" xml:lang="EN-US">(version 3f4) and a subset of</span> <span lang="EN-US" xml:lang="EN-US" style="font-style: italic;"><i>PSPICE</i></span><span lang="EN-US" xml:lang="EN-US">, where</span> <span lang="EN-US" xml:lang="EN-US" style="font-style: italic;"><i>SPICE3</i></span> <span lang="EN-US" xml:lang="EN-US">takes precedence over PSPICE, if conflicts occur.</span></p>
+<p class="VBA-Heading-Method">&#160;</p>
+<p class="VBA-Heading-Method"><span lang="EN-US" xml:lang="EN-US"><a name="cmd_SetSpiceModel" id="cmd_SetSpiceModel"></a>SetSpiceModel ( <span><a href="../common_vbageneral/common_general_string.htm" id="a7815" style="font-weight: normal; font-style: normal;" name="a7815">string</a></span> <span style="font-style: italic;"><i>model</i></span> )</span></p>
+<p class="VBA-Text-Indent"><span lang="EN-US" xml:lang="EN-US">This method can only be applied to SPICE- or SPICE file blocks. It specifies the Spice model aka subcircuit of the Spice file that is to be represented by the block. This subcircuit is selected and the schematic is updated according to the possibly changed block pins. "model" is the name of a toplevel subcircuit (i.e., not a local subcircuit) of the Spice netlist. On non-existence, an error is generated.<br />
+<br />
+Note that the available Spice models can be queried via the VBA method <a href="projectobject.htm#cmd_ToplevelSubckts">GetToplevelSubcircuits</a>.<br />
+<br />
+Note that this method needs to be called after block creation. The method is useful to select individual Spice models of Spice files that contain more than one subcircuit.</span></p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method"><span lang="EN-US" xml:lang="EN-US"><a name="cmd_SetPackage" id="cmd_SetPackage"></a>SetPackage ( <span style="font-weight: normal;"><a href="../common_vbageneral/common_general_string.htm">string</a></span> type <span style="font-weight: normal;">)</span></span></p>
+<p class="VBA-Text-Indent" style="mso-ansi-language: EN-US;"><span lang="EN-US" xml:lang="EN-US"><span lang="EN-US" xml:lang="EN-US">This method specifies the package of a block used during the assembly of complex structures in the "Assembly View". It can only be applied to blocks, which have the possibility to carry package information, for example, circuit elements or Touchstone blocks. Please refer to the command <a href="#cmd_GetAllPackages">GetAllPackages</a> in order to get an overview of the available packages. In general "type" corresponds to the entries of the "Package" drop-down list within the block parameter list. To unset a package please hand over an empty string or "None".</span></span></p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method"><span lang="EN-US" xml:lang="EN-US"><span lang="EN-US" xml:lang="EN-US"><span lang="EN-US" xml:lang="EN-US" style="mso-ansi-language: EN-US;">S</span>etReferenceBlock ( <a href="../common_vbageneral/common_general_name.htm" id="a14" style="font-weight: normal; font-style: normal;" name="a14">name</a> <span style="font-style: italic;"><i>blockname</i></span> )</span></span></p>
+<p class="VBA-Text-Indent"><span lang="EN-US" xml:lang="EN-US"><span lang="EN-US" xml:lang="EN-US">Sets the reference block for a block. This is only possible for some types of blocks.</span></span></p>
+<p class="VBA-Heading-Method">&#160;</p>
+<p class="VBA-Heading-Method"><span lang="EN-US" xml:lang="EN-US">SetAsDefaultReference (<a href="../common_vbageneral/common_general_bool_data_type.htm" id="a502" style="font-weight: normal; font-style: normal;" name="a502">bool</a></span> <span lang="EN-US" xml:lang="EN-US" style="font-style: italic;"><i>bDef</i></span> <span lang="EN-US" xml:lang="EN-US">)</span></p>
+<p class="VBA-Text-Indent"><span lang="EN-US" xml:lang="EN-US"><span lang="EN-US" xml:lang="EN-US">Makes a reference block the project's default reference block.</span></span></p>
+<p class="VBA-Heading-Method">&#160;</p>
+<p class="VBA-Heading-Method"><span lang="EN-US" xml:lang="EN-US"><span lang="EN-US" xml:lang="EN-US">SetClonedBlock ( <a href="../common_vbageneral/common_general_name.htm" id="a19" style="font-weight: normal; font-style: normal;" name="a19">name</a> <span style="font-style: italic;"><i>blockname</i></span> )</span></span></p>
+<p class="VBA-Text-Indent"><span lang="EN-US" xml:lang="EN-US"><span lang="EN-US" xml:lang="EN-US">Sets the cloned block for a clone block.</span></span></p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method"><span lang="EN-US" xml:lang="EN-US">SetInheritParameterValues (</span> <a href="../common_vbageneral/common_general_bool_data_type.htm" id="a501" name="a501"><span style="font-weight: normal; font-style: normal;">bool</span></a> <span lang="EN-US" xml:lang="EN-US" style="font-style: italic;"><i>inherit</i></span> <span lang="EN-US" xml:lang="EN-US">)</span></p>
+<p class="VBA-Text-Indent"><span lang="EN-US" xml:lang="EN-US">This options only applies for clone blocks and defines if parameters are inherited from cloned block. If set to false individual parameters for the clone block can be defined.</span></p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method"><span lang="EN-US" xml:lang="EN-US">SetDeembedded (</span> <a href="../common_vbageneral/common_general_bool_data_type.htm" id="a50" style="font-weight: normal; font-style: normal;" name="a50">bool</a> <span style="font-style: italic;"><i>deembed</i></span> <span lang="EN-US" xml:lang="EN-US">)</span></p>
+<p class="VBA-Text-Indent"><span lang="EN-US" xml:lang="EN-US">Sets the de-embedding property for a block, i.e. the inverse S-matrix will be considered for that block then.</span></p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method"><span lang="EN-US" xml:lang="EN-US">SetDefineProbes( <span><a href="../common_vbageneral/common_general_bool_data_type.htm" id="a55" style="font-weight: normal; font-style: normal;" name="a55">bool</a></span> <span style="font-style: italic;"><i>bFlag</i></span> )</span></p>
+<p class="VBA-Text-Indent">Activates probes on block ports for blocks that define probes.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method"><span lang="EN-US" xml:lang="EN-US">SetCacheFiles( <a href="../common_vbageneral/common_general_bool_data_type.htm" id="a551" style="font-weight: normal; font-style: normal;" name="a551">bool</a></span> <span lang="EN-US" xml:lang="EN-US" style="font-style: italic;"><i>bFlag</i></span> <span lang="EN-US" xml:lang="EN-US">)</span></p>
+<p class="VBA-Text-Indent">Enables/disables file caching for file reference blocks. Works only for blocks of type Touchstone file block.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method"><span lang="EN-US" xml:lang="EN-US">SetSimulationTask(&#160;</span><span style="font-weight: normal;"><a href="../common_vbageneral/common_general_string.htm">string</a></span> <span lang="EN-US" xml:lang="EN-US">taskfullname)</span></p>
+<p class="VBA-Text-Indent">Sets the referenced simulation task. This is only supported for simulation project reference blocks (task must be a project simulation task) and hybrid solver reference blocks (task must be a hybrid solver task).</p>
+<p class="VBA-Heading-Category"><a name="Iteration" id="Iteration"></a>Iteration</p>
+<p class="VBA-Heading-Method">StartBlockNameIteration <a href="../common_vbageneral/common_general_integer.htm" id="a2" style="font-weight: normal; font-style: normal;" name="a2">int</a></p>
+<p class="VBA-Text-Indent">Resets the iterator for the blocks and returns the number of blocks.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">GetNextBlockName <a href="../common_vbageneral/common_general_name.htm" id="a5" style="font-weight: normal; font-style: normal;" name="a5">name</a></p>
+<p class="VBA-Text-Indent">Returns the next block's name. Call <span style="font-style: italic;"><i>StartBlockNameIteration</i></span> before the first call of this method.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">StartPropertyIteration</p>
+<p class="VBA-Text-Indent">Resets the iterator for the properties of a block.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">GetNextProperty ( <span style="font-weight: normal;"><a href="../common_vbageneral/common_general_string_ref.htm">string_ref</a></span> <span style="font-style: italic;"><i>propertyname,</i></span> <a href="../common_vbageneral/common_general_string_ref.htm" style="font-weight: normal;">string_ref</a> <span style="font-style: italic;"><i>type</i></span>, <span style="font-weight: normal;"><a href="../common_vbageneral/common_general_string_ref.htm">string_ref</a></span> <span style="font-style: italic;"><i>value</i></span> )</p>
+<p class="VBA-Text-Indent">Returns the name, type and value of the next property. Call <span style="font-style: italic;"><i>StartPropertyIteration</i></span> before the first call of this method. An empty name is returned if the property iterator is positioned at the end.</p>
+<p class="VBA-Heading-Category"><a name="Positioning" id="Positioning"></a>Positioning</p>
+<p class="VBA-Heading-Method">FlipHorizontal</p>
+<p class="VBA-Text-Indent">Horizontally flips a block. If this setting is made before calling <span style="font-style: italic;"><i>Create</i></span>, the flip is only stored. It will then be done in <span style="font-style: italic;"><i>Create</i></span> (before any rotation is applied).</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">FlipVertical</p>
+<p class="VBA-Text-Indent">Vertically flips a block. If this setting is made before calling <span style="font-style: italic;"><i>Create</i></span>, the flip is only stored. It will then be done in <span style="font-style: italic;"><i>Create</i></span> (before any rotation is applied).</p>
+<p class="VBA-Heading-Method">&#160;</p>
+<p class="VBA-Heading-Method">GetPinPositionX ( <a href="../common_vbageneral/common_general_integer.htm" id="a26" style="font-weight: normal; font-style: normal;" name="a26">int</a> <span style="font-style: italic;"><i>index</i></span> ) <a href="../common_vbageneral/common_general_integer.htm" id="a8" style="font-weight: normal; font-style: normal;" name="a8">int</a></p>
+<p class="VBA-Text-Indent">Returns he horizontal position of a block pin specified by the given index. Index must be an integer between 0 and <span style="font-style: italic;"><i>GetNumberOfPins()</i></span>-1.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">GetPinPositionY ( <a href="../common_vbageneral/common_general_integer.htm" id="a27" style="font-weight: normal; font-style: normal;" name="a27">int</a> <span style="font-style: italic;"><i>index</i></span> ) <a href="../common_vbageneral/common_general_integer.htm" id="a25" style="font-weight: normal; font-style: normal;" name="a25">int</a></p>
+<p class="VBA-Text-Indent">Returns he vertical position of a block pin specified by the given index. Index must be an integer between 0 and <span style="font-style: italic;"><i>GetNumberOfPins()</i></span>-1.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">GetPositionX <a href="../common_vbageneral/common_general_integer.htm" id="a6" style="font-weight: normal; font-style: normal;" name="a6">int</a></p>
+<p class="VBA-Text-Indent">Returns the horizontal position of the center point of a block.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">GetPositionY <a href="../common_vbageneral/common_general_integer.htm" id="a7" style="font-weight: normal; font-style: normal;" name="a7">int</a></p>
+<p class="VBA-Text-Indent">Returns the vertical position of the center point of a block.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">Move ( <a href="../common_vbageneral/common_general_string.htm" id="a322" style="font-weight: normal; font-style: normal;" name="a322">string</a> <span style="font-style: italic;"><i>x</i></span>, <a href="../common_vbageneral/common_general_string.htm" id="a323" style="font-weight: normal; font-style: normal;" name="a323">string</a> <span style="font-style: italic;"><i>y</i></span> )</p>
+<p class="VBA-Text-Indent">Moves a block by the given offset. Note that the schematic size is given by 0 &lt; x, y &lt;100000. Use <span style="font-style: italic;"><i>Position</i></span> to specify a certain location. It is always ensured that the block is aligned with the grid, therefore the specified offset might get adjusted slightly. This setting must not be made before calling <span style="font-style: italic;"><i>Create</i></span>.</p>
+<p class="VBA-Heading-Method">&#160;</p>
+<p class="VBA-Heading-Method">Position ( <span><a href="../common_vbageneral/common_general_string.htm" id="a3221" style="font-weight: normal; font-style: normal;" name="a3221">string</a></span> <span style="font-style: italic;"><i>x</i></span>, <span><a href="../common_vbageneral/common_general_string.htm" id="a3222" style="font-weight: normal; font-style: normal;" name="a3222">string</a></span> <span style="font-style: italic;"><i>y</i></span> )</p>
+<p class="VBA-Text-Indent">Specifies the position of the block. This setting must be made before calling <span style="font-style: italic;"><i>Create</i></span>. Furthermore, it can be used to modify a block's position. Possible values are 0 &lt; x, y &lt;100000, i.e. (50000, 50000) is the center of the schematic. It is always ensured that the block is aligned with the grid, therefore the specified position might get adjusted slightly.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">Rotate ( <a href="../common_vbageneral/common_general_string.htm" id="a32211" style="font-weight: normal; font-style: normal;" name="a32211">string</a> <span style="font-style: italic;"><i>angle</i></span> )</p>
+<p class="VBA-Text-Indent">Rotates the block by the given angle in degrees around its center point. If this setting is made before calling <span style="font-style: italic;"><i>Create</i></span>, the angle is only stored. The rotation will then be done in <span style="font-style: italic;"><i>Create</i></span> (after any horizontal or vertical flip was applied).</p>
+<p class="VBA-Heading-Category"><a name="Special_Methods" id="Special_Methods"></a>Special Methods</p>
+<p class="Tip-Note-Heading">ConvertToReferenceFileBlock ( <a href="../common_vbageneral/common_general_string_array_data_type.htm" id="a632" style="font-weight: normal; font-style: normal;" name="a632">string array</a> <span lang="EN-US" xml:lang="EN-US" style="font-style: italic;"><i>paths</i></span><span style="font-style: italic;"><i>,</i></span>&#160;<span style="font-weight: normal;"><a href="../common_vbageneral/common_general_bool_data_type.htm" id="a3811" style="font-weight: normal; font-style: normal;" name="a3811">bool</a></span> <span style="font-style: italic;"><i>relative</i></span> )</p>
+<p class="Topic-Text-Indent">For some file blocks only.<br />
+Converts a project file block into a reference file block. For that, the file(s) used by the block are be copied to the given paths and then referenced. The file(s) inside the project which were used by the original block will be deleted after conversion.</p>
+<p class="Topic-Text-Indent">&#160;</p>
+<p class="Tip-Note-Heading">ConvertToProjectFileBlock</p>
+<p class="Topic-Text-Indent">For some reference blocks only.<br />
+Converts a reference file block into a project file block. A copy of the referenced files is moved into the block and the referenced files remain unchanged.</p>
+<p class="Topic-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method"><a name="cmd_ImportLibraryModel" id="cmd_ImportLibraryModel"></a>ImportLibraryModel (<span style="font-weight: normal;"><a href="../common_vbageneral/common_general_filename.htm">filename</a></span> <span style="font-style: italic;"><i>filename,</i></span>&#160;<a href="../common_vbageneral/common_general_string.htm" id="a321" style="font-weight: normal; font-style: normal;" name="a321">string</a> <span style="font-style: italic;"><i>path</i></span> ) <a href="../common_vbageneral/common_general_string.htm" id="a7814" style="font-weight: normal; font-style: normal;" name="a7814">string</a></p>
+<p class="VBA-Text-Indent">Imports a new model form a spice or touchstone file into the device model library. The imported model must be compatible with the current block. The path parameter can be used to import the device model to a specific path in the device model library, pass an empty string if the model should be imported into the device base path. If a library model with the same name and path is already present in the device model library it will be overwritten. Use the command <span lang="EN-US" xml:lang="EN-US"><a href="#cmd_LibraryModelExists">LibraryModelExists</a></span> to check the existence of a model before import. The return value is the tree path in the device model library which can be used together with the&#160;<span lang="EN-US" xml:lang="EN-US"><a href="#cmd_SetLibraryModel">SetLibraryModel</a></span> command.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method"><a name="cmd_LibraryModelExists" id="cmd_LibraryModelExists"></a>LibraryModelExists ( <span style="font-weight: normal;"><a href="../common_vbageneral/common_general_name.htm">name</a></span> <span style="font-style: italic;"><i>model</i></span> )&#160;<a href="../common_vbageneral/common_general_bool_data_type.htm" id="a381" style="font-weight: normal; font-style: normal;" name="a381">bool</a></p>
+<p class="VBA-Text-Indent">Checks if a model exists in device model library. The name is the tree path in the device model library.</p>
+<p class="Topic-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">UpdateModel <a href="../common_vbageneral/common_general_bool_data_type.htm" id="a461" style="font-weight: normal; font-style: normal;" name="a461">bool</a></p>
+<p class="VBA-Text-Indent">Updates the model of block. Returns True if the block was updated.<br />
+Note: Currently used only for reloading IBIS-models.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">GetSchematic <a href="../common_vbageneral/common_general_variant.htm" style="font-weight: normal;">variant</a></p>
+<p class="VBA-Text-Indent">Opens the schematic sheet of an Array Block and returns a dispatch to it. Further VBA-commands can be executed in the corresponding document using the returned dispatch.</p>
+<p class="VBA-Text-Example" style="margin-left: 40px;">Dim ARRAY1DISPATCH As Variant</p>
+<p class="VBA-Text-Example" style="margin-left: 40px;">With Block</p>
+<p class="VBA-Text-Example" style="margin-left: 80px;">.Reset</p>
+<p class="VBA-Text-Example" style="margin-left: 80px;">.Name ("ARRAY1")</p>
+<p class="VBA-Text-Example" style="margin-left: 80px;">.Type ("ARRAY")</p>
+<p class="VBA-Text-Example" style="margin-left: 80px;">.Create</p>
+<p class="VBA-Text-Example" style="margin-left: 80px;">Set ARRAY1DISPATCH = .GetSchematic</p>
+<p class="VBA-Text-Example" style="margin-left: 80px;">With ARRAY1DISPATCH.ExternalPort</p>
+<p class="VBA-Text-Example" style="margin-left: 120px;">.Reset</p>
+<p class="VBA-Text-Example" style="margin-left: 120px;">.Name "1"</p>
+<p class="VBA-Text-Example" style="margin-left: 120px;">.Create</p>
+<p class="VBA-Text-Example" style="margin-left: 80px;">End With</p>
+<p class="VBA-Text-Example" style="margin-left: 40px;">End With</p>
+<p class="VBA-Heading-Method">&#160;</p>
+<p class="VBA-Heading-Method">Close</p>
+<p class="VBA-Text-Indent">Closes the corresponding schematic sheet after saving. Once closed, any dispatch obtained using GetSchematic becomes obsolete.</p>
+<p class="VBA-Heading-Category"><a name="IBIS" id="IBIS"></a>IBIS</p>
+<p class="VBA-Heading-Method" style="margin-left: 24px; text-indent: -24px;"><a name="ClearIbisData" id="ClearIbisData"></a>ClearIbisData</p>
+<p class="VBA-Text-Indent">Deletes the block's volatile data to release memory as described in the <a href="../../DES/components/block/import/ibisreferenceblock.htm#IBIS_data_storage_policy">IBIS data storage policy</a>. This command works with IBIS reference blocks only. Note that there is also a <a href="projectobject.htm#cmd_ClearIbisData_projectwide">command</a> to delete the volatile data of all IBIS blocks in the project.</p>
+<p class="VBA-Text-Indent" style="text-indent: -24px;">&#160;</p>
+<p class="VBA-Heading-Method" style="margin-left: 24px; text-indent: -24px;">GetIbisComponentName <a href="../common_vbageneral/common_general_string.htm" id="a90151111" style="font-weight: normal; font-style: normal;" name="a90151111">string</a></p>
+<p class="VBA-Text-Indent">Returns the name of the selected IBIS component.</p>
+<p class="VBA-Text-Indent" style="text-indent: -24px;">&#160;</p>
+<p class="VBA-Heading-Method" style="margin-left: 24px; text-indent: -24px;">GetIbisPackageName <a href="../common_vbageneral/common_general_string.htm" id="a90151112" style="font-weight: normal; font-style: normal;" name="a90151112">string</a></p>
+<p class="VBA-Text-Indent">Returns the name of the selected IBIS package.</p>
+<p class="VBA-Text-Indent" style="text-indent: -24px;">&#160;</p>
+<p class="VBA-Heading-Method" style="margin-left: 24px; text-indent: -24px;">GetIbisPinName( <a href="../common_vbageneral/common_general_integer.htm" style="font-weight: normal;">int</a> <span style="font-style: italic;"><i>pin_type</i></span> ) <a href="../common_vbageneral/common_general_string.htm" id="a90151113" style="font-weight: normal; font-style: normal;" name="a90151113">string</a></p>
+<p class="VBA-Text-Indent">Returns the name of the selected IBIS pin. <span style="font-style: italic;"><i>pin_type</i></span> may be 0 or 1 to refer to the plain or the inverting, respectively.</p>
+<p class="VBA-Text-Indent" style="text-indent: -24px;">&#160;</p>
+<p class="VBA-Heading-Method" style="margin-left: 24px; text-indent: -24px;"><a name="GetIbisBufferName" id="GetIbisBufferName"></a>GetIbisBufferName( <a href="../common_vbageneral/common_general_integer.htm" id="a90154" style="font-weight: normal; font-style: normal;" name="a90154">int</a> <span style="font-style: italic;"><i>pin_type</i></span>, <a href="../common_vbageneral/common_general_integer.htm" id="a901541" style="font-weight: normal; font-style: normal;" name="a901541">int</a> <span style="font-style: italic;"><i>index</i></span> ) <a href="../common_vbageneral/common_general_string.htm" id="a90151114" style="font-weight: normal; font-style: normal;" name="a90151114">string</a></p>
+<p class="VBA-Text-Indent">Returns the name of the selected IBIS buffer. <span style="font-style: italic;"><i>pin_type</i></span> may be 0 or 1 to refer to the plain or the inverting, respectively. <span style="font-style: italic;"><i>index</i></span> is an identifier, as returned by <a href="#GetIbisBufferIndices">GetIbisBufferIndices</a>.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method" style="margin-left: 24px; text-indent: -24px;"><a name="GetIbisBufferIndices" id="GetIbisBufferIndices"></a>GetIbisBufferIndices <span style="font-weight: normal;"><a href="../common_vbageneral/common_general_string_array_data_type.htm" id="a90131" style="font-weight: normal; font-style: normal;" name="a90131">string[]</a></span></p>
+<p class="VBA-Text-Indent">Returns a list of the indices associated with the block's selected buffers. These indices serve as identifiers for <a href="parametersweepobject.htm">parameter sweeps</a> and the <a href="#GetIbisBufferName">GetIbisBufferName</a> command.</p>
+<p class="VBA-Text-Indent" style="text-indent: -24px;">&#160;</p>
+<p class="VBA-Heading-Method" style="margin-left: 24px; text-indent: -24px;">GetIbisBufferParam <a href="../common_vbageneral/common_general_string.htm" id="a90151115" style="font-weight: normal; font-style: normal;" name="a90151115">string</a></p>
+<p class="VBA-Text-Indent">Returns the parameter string.</p>
+<p class="VBA-Text-Indent" style="text-indent: -24px;">&#160;</p>
+<p class="VBA-Heading-Method" style="margin-left: 24px; text-indent: -24px;">GetIbisBufferParamActive&#160;<a href="../common_vbageneral/common_general_bool_data_type.htm" id="a46124" style="font-weight: normal; font-style: normal;" name="a46124">bool</a></p>
+<p class="VBA-Text-Indent">Tells whether the buffer parametrization is active.</p>
+<p class="VBA-Text-Indent" style="text-indent: -24px;">&#160;</p>
+<p class="VBA-Heading-Method" style="margin-left: 24px; text-indent: -24px;">GetIbisCorner <a href="../common_vbageneral/common_general_integer.htm" id="a90152" style="font-weight: normal; font-style: normal;" name="a90152">int</a></p>
+<p class="VBA-Text-Indent">Returns the value of the selected corner (0 for typical, 1 for fast, 2 for slow).</p>
+<p class="VBA-Text-Indent" style="text-indent: -24px;">&#160;</p>
+<p class="VBA-Heading-Method" style="margin-left: 24px; text-indent: -24px;">GetIbisCornerParam <a href="../common_vbageneral/common_general_string.htm" id="a90151116" style="font-weight: normal; font-style: normal;" name="a90151116">string</a></p>
+<p class="VBA-Text-Indent">Returns the corner parameter string.</p>
+<p class="VBA-Text-Indent" style="text-indent: -24px;">&#160;</p>
+<p class="VBA-Heading-Method" style="margin-left: 24px; text-indent: -24px;">GetIbisCornerParamActive&#160;<a href="../common_vbageneral/common_general_bool_data_type.htm" id="a46123" style="font-weight: normal; font-style: normal;" name="a46123">bool</a></p>
+<p class="VBA-Text-Indent">Tells whether the corner parametrization is active.</p>
+<p class="VBA-Text-Indent" style="text-indent: -24px;">&#160;</p>
+<p class="VBA-Heading-Method" style="margin-left: 24px; text-indent: -24px;">GetIbisInternalPower&#160;<a href="../common_vbageneral/common_general_bool_data_type.htm" id="a46122" style="font-weight: normal; font-style: normal;" name="a46122">bool</a></p>
+<p class="VBA-Text-Indent">Tells whether the IBIS block is powered internally.</p>
+<p class="VBA-Text-Indent" style="text-indent: -24px;">&#160;</p>
+<p class="VBA-Heading-Method" style="margin-left: 24px; text-indent: -24px;">GetDefineProbes&#160;<a href="../common_vbageneral/common_general_bool_data_type.htm" id="a46121" style="font-weight: normal; font-style: normal;" name="a46121">bool</a></p>
+<p class="VBA-Text-Indent">Tells whether the block probes are enabled.</p>
+<p class="VBA-Heading-Method" style="margin-left: 24px; text-indent: -24px;">&#160;</p>
+<p class="VBA-Heading-Method"><a name="cmd_SetIbisComponent" id="cmd_SetIbisComponent"></a>SetIbisComponent( <a href="../common_vbageneral/common_general_string.htm" id="a90151" style="font-weight: normal; font-style: normal;" name="a90151">string</a> <span style="font-style: italic;"><i>component</i></span> )&#160;<a href="../common_vbageneral/common_general_bool_data_type.htm" id="a4612" style="font-weight: normal; font-style: normal;" name="a4612">bool</a></p>
+<p class="VBA-Text-Indent">Sets the component of an IBIS reference block. The argument must match a name listed under the [Component] keyword in the block's IBIS file.</p>
+<p class="VBA-Text-Indent">Returns True if no error occurred.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">SetIbisPackage( <a href="../common_vbageneral/common_general_string.htm" id="a901511" style="font-weight: normal; font-style: normal;" name="a901511">string</a> <span style="font-style: italic;"><i>packageType,</i></span> <a href="../common_vbageneral/common_general_string.htm" id="a9015111" style="font-weight: normal; font-style: normal;" name="a9015111">string</a> <span style="font-style: italic;"><i>packageName</i></span> )&#160;<a href="../common_vbageneral/common_general_bool_data_type.htm" id="a4613" style="font-weight: normal; font-style: normal;" name="a4613">bool</a></p>
+<p class="VBA-Text-Indent">Sets the package model of an IBIS reference block. The first argument must be one of '<span style="font-weight: bold;">None</span>', '<span style="font-weight: bold;">Global</span>', '<span style="font-weight: bold;">Pinwise</span>', or '<span style="font-weight: bold;">Named</span>'. If the latter is used, then a package model with the name given as second argument is sought. Otherwise the second argument is ignored.</p>
+<p class="VBA-Text-Indent">Returns True if no error occurred.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method"><a name="SetIbisBuffer" id="SetIbisBuffer"></a>SetIbisBuffer( <a href="../common_vbageneral/common_general_string.htm" id="a901" style="font-weight: normal; font-style: normal;" name="a901">string</a> <span style="font-style: italic;"><i>pin,</i></span> <a href="../common_vbageneral/common_general_string.htm" id="a9011" style="font-weight: normal; font-style: normal;" name="a9011">string</a> <span style="font-style: italic;"><i>invPin</i></span>,&#160;<a href="../common_vbageneral/common_general_string_array_data_type.htm" id="a9012" style="font-weight: normal; font-style: normal;" name="a9012">string[]</a> <span style="font-style: italic;"><i>models</i></span>, <a href="../common_vbageneral/common_general_string_array_data_type.htm" id="a9013" style="font-weight: normal; font-style: normal;" name="a9013">string[]</a> <span style="font-style: italic;"><i>invModels</i></span>, <a href="../common_vbageneral/common_general_string.htm" id="a9014" style="font-weight: normal; font-style: normal;" name="a9014">string</a> <span style="font-style: italic;"><i>modelParameter</i></span> )&#160;<a href="../common_vbageneral/common_general_bool_data_type.htm" id="a4614" style="font-weight: normal; font-style: normal;" name="a4614">bool</a></p>
+<p class="VBA-Text-Indent">Sets the properties of an IBIS buffer block. The arguments are pin name, name of inverting pin (for differential buffers), a list of model names, a list of model names for the inverting pin and a parameter name for parameterized models.</p>
+<p class="VBA-Text-Indent">The inverting pin name and the model parameter name may be empty strings. The pin name, inverting pin name (unless empty) and model names must match pin and model names, respectively, defined for the chosen IBIS component. Only pin-buffer combinations that are specified in the IBIS file are permitted. Differential buffers can only be set if a valid pair of differential pins is given.</p>
+<p class="VBA-Text-Indent">The model parameter can be used to select models from the given model list in simulation control tasks like <a href="parametersweepobject.htm">parameter sweeps</a>.</p>
+<p class="VBA-Text-Indent">Returns True if no error occurred.</p>
+<p class="VBA-Text-Indent">An <a href="#Create_and_configure_an_IBIS_reference_block">example</a> for the use of this and other IBIS specific commands is provided in the <a href="#Examples">examples section</a>.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method"><a name="SetIbisCorner" id="SetIbisCorner"></a>SetIbisCorner( <a href="../common_vbageneral/common_general_integer.htm" id="a9015" style="font-weight: normal; font-style: normal;" name="a9015">int</a> <span style="font-style: italic;"><i>index</i></span>, &#160;<a href="../common_vbageneral/common_general_string.htm" id="a90141" style="font-weight: normal; font-style: normal;" name="a90141">string</a> <span style="font-style: italic;"><i>cornerParameter</i></span> )&#160;<a href="../common_vbageneral/common_general_bool_data_type.htm" id="a4615" style="font-weight: normal; font-style: normal;" name="a4615">bool</a></p>
+<p class="VBA-Text-Indent">Sets the corner settings of an IBIS buffer block. The index can be 0 (typical), 1 (fast) or 2 (slow). The parameter can be used to parameterize the corner setting. If a non-empty string is passed, the parameter overrides the index.</p>
+<p class="VBA-Text-Indent">Returns True if no error occurred.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method"><a name="SetIbisSupplyMode" id="SetIbisSupplyMode"></a>SetIbisSupplyMode( <a href="../common_vbageneral/common_general_bool_data_type.htm" id="a4611" style="font-weight: normal; font-style: normal;" name="a4611">string</a> <span style="font-style: italic;"><i>mode</i></span> )</p>
+<p class="VBA-Text-Indent">Sets the IBIS buffer block's power supply and ground reference mode. Valid modes are <span style="font-style: italic;"><i>internal</i></span>, <span style="font-style: italic;"><i>external</i></span>, and <span style="font-style: italic;"><i>merged</i></span>. In the internal mode, ideal references for the pull-up, pull-down, power clamp and ground clamp elements with the appropriate voltages are incorporated into the buffer model. Contrarily, in the external mode, the buffer block is endowed with four pins to connect external devices. The merged mode differs from external in that the pin for the pull-up element is merged with the power clamp's pin, and the pull-down element's pin is merged with the ground clamp's pin. The description of the IBIS buffer block provides a more detailed <a href="../../DES/components/block/import/ibisimportblock.htm#Reference_voltages">explanation</a>.</p>
+<p class="VBA-Heading-Method">&#160;</p>
+<p class="VBA-Heading-Method">GetIbisSupplyMode&#160;<a href="../common_vbageneral/common_general_bool_data_type.htm" id="a46111211" style="font-weight: normal; font-style: normal;" name="a46111211">string</a></p>
+<p class="VBA-Text-Indent">Tells the IBIS buffer bock's supply mode. Possible modes are <span style="font-style: italic;"><i>internal</i></span>, <span style="font-style: italic;"><i>external</i></span>, and <span style="font-style: italic;"><i>merged</i></span>. See <a href="#SetIbisSupplyMode">SetIbisSupplyMode</a> for an explanation of the modes.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">EnableAutomaticProbeNaming( <a href="../common_vbageneral/common_general_bool_data_type.htm" id="a461114" style="font-weight: normal; font-style: normal;" name="a461114">bool</a> enable )</p>
+<p class="VBA-Heading-Method">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;<span style="font-weight: normal;">&#160;Activates or deactivates the automatic naming of the internal probe of the IBIS buffer block.</span> &#160;</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">IsAutomaticProbeNamingEnabled <a href="../common_vbageneral/common_general_bool_data_type.htm" id="a4611131" style="font-weight: normal; font-style: normal;" name="a4611131">bool</a></p>
+<p class="VBA-Text-Indent">Tells whether the automatic naming of the IBIS buffer block is enabled.</p>
+<p class="VBA-Heading-Method">&#160;</p>
+<p class="VBA-Heading-Method">SetProbeName( <a href="../common_vbageneral/common_general_bool_data_type.htm" id="a4611112" style="font-weight: normal; font-style: normal;" name="a4611112">string</a> probeName )</p>
+<p class="VBA-Text-Indent">Sets the name of the internal probe of the IBIS buffer block. This command will only work if the automatic probe naming of the IBIS block buffers is disabled. &#160;</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">GetProbeName&#160;<a href="../common_vbageneral/common_general_bool_data_type.htm" id="a46111212" style="font-weight: normal; font-style: normal;" name="a46111212">string</a></p>
+<p class="VBA-Text-Indent">Returns the name of the internal probe of the IBIS buffer block.</p>
+<p class="VBA-Heading-Method">&#160;</p>
+<p class="VBA-Heading-Method">SetIbisEnableWindowing( <a href="../common_vbageneral/common_general_bool_data_type.htm" id="a46111" style="font-weight: normal; font-style: normal;" name="a46111">bool</a> enableWindowing )</p>
+<p class="VBA-Text-Indent">Enables or disables the truncation of waveforms.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">GetIbisEnableWindowing <a href="../common_vbageneral/common_general_bool_data_type.htm" id="a461113" style="font-weight: normal; font-style: normal;" name="a461113">bool</a></p>
+<p class="VBA-Text-Indent">Tells whether waveform windowing is enabled.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">SetIbisExplWindowStart(&#160;<a href="../common_vbageneral/common_general_bool_data_type.htm" id="a4611132" style="font-weight: normal; font-style: normal;" name="a4611132">bool</a> explicit )</p>
+<p class="VBA-Text-Indent">The argument determines whether the start time of a window is specified explicitly (through SetIbisWindowStart) or implicitly (through SetIbisHeadTolerance).</p>
+<p class="VBA-Heading-Method">&#160;</p>
+<p class="VBA-Heading-Method">GetIbisExplWindowStart <a href="../common_vbageneral/common_general_bool_data_type.htm" id="a46111321" style="font-weight: normal; font-style: normal;" name="a46111321">bool</a></p>
+<p class="VBA-Text-Indent">Tells whether a window's start is specified explicitly.</p>
+<p class="VBA-Heading-Method">&#160;</p>
+<p class="VBA-Heading-Method">SetIbisExplWindowEnd(<span style="font-weight: normal;">&#160;<a href="../common_vbageneral/common_general_bool_data_type.htm" id="a4611133" style="font-weight: normal; font-style: normal;" name="a4611133">bool</a></span> explicit )</p>
+<p class="VBA-Text-Indent">The argument determines whether the end time of a window is specified explicitly (through SetIbisWindowEnd) or implicitly (through SetIbisTailTolerance).</p>
+<p class="VBA-Heading-Method">&#160;</p>
+<p class="VBA-Heading-Method">GetIbisExplWindowEnd <a href="../common_vbageneral/common_general_bool_data_type.htm" id="a46111322" style="font-weight: normal; font-style: normal;" name="a46111322">bool</a></p>
+<p class="VBA-Text-Indent">Tells whether a window's end is specified explicitly.</p>
+<p class="VBA-Heading-Method">&#160;</p>
+<p class="VBA-Heading-Method">SetIbisWindowStart( <a href="../common_vbageneral/common_general_bool_data_type.htm" id="a4611114" style="font-weight: normal; font-style: normal;" name="a4611114">string</a> start )</p>
+<p class="VBA-Text-Indent">Sets an expression that is evaluated to determine the start time of a window if an explicit start time is selected (through SetIbisExplWindowStart). The unit is assumed to be seconds.</p>
+<p class="VBA-Heading-Method">&#160;</p>
+<p class="VBA-Heading-Method">GetIbisWindowStart <a href="../common_vbageneral/common_general_bool_data_type.htm" id="a46111141" style="font-weight: normal; font-style: normal;" name="a46111141">string</a></p>
+<p class="VBA-Text-Indent">Returns the expression specifying a window's start if an explicit start time is chosen.</p>
+<p class="VBA-Heading-Method">&#160;</p>
+<p class="VBA-Heading-Method">SetIbisWindowEnd( <a href="../common_vbageneral/common_general_bool_data_type.htm" id="a46111142" style="font-weight: normal; font-style: normal;" name="a46111142">string</a> end )</p>
+<p class="VBA-Text-Indent">Sets an expression that is evaluated to determine the end time of a window if an explicit end time is selected (through SetIbisExplWindowEnd).&#160;The unit is assumed to be seconds.</p>
+<p class="VBA-Heading-Method">&#160;</p>
+<p class="VBA-Heading-Method">GetIbisWindowEnd <a href="../common_vbageneral/common_general_bool_data_type.htm" id="a46111143" style="font-weight: normal; font-style: normal;" name="a46111143">string</a></p>
+<p class="VBA-Text-Indent">Returns the expression specifying a window's end if an explicit end time is chosen.</p>
+<p class="VBA-Heading-Method">&#160;</p>
+<p class="VBA-Heading-Method">GetIbisWindowLossStart <a href="../common_vbageneral/common_general_bool_data_type.htm" id="a461111431" style="font-weight: normal; font-style: normal;" name="a461111431">double</a></p>
+<p class="VBA-Text-Indent">Returns the relative loss of information at the begin of a waveform due to windowing. It is defined as the ratio of the absolute difference between the signal's initial value and the value at the window's start with to the signal's amplitude. It is equal to the head tolerance if the window's start is determined implicitly.</p>
+<p class="VBA-Heading-Method">&#160;</p>
+<p class="VBA-Heading-Method">GetIbisWindowLossEnd <a href="../common_vbageneral/common_general_bool_data_type.htm" id="a461111432" style="font-weight: normal; font-style: normal;" name="a461111432">double</a></p>
+<p class="VBA-Text-Indent">Returns the relative loss of information at the end of a waveform due to windowing. It is defined as the ratio of the absolute difference between the signal's final value and the value at the window's end with to the signal's amplitude. It is equal to the tail tolerance if the window's end is determined implicitly.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">SetIbisHeadTolerance( <a href="../common_vbageneral/common_general_bool_data_type.htm" id="a461111" style="font-weight: normal; font-style: normal;" name="a461111">string</a> headTolerance )</p>
+<p class="VBA-Text-Indent">Sets a threshold for the variation of the waveforms's head. Variations less than the tolerance will be ignored in simulations (if windowing is enabled). The expression must evaluate to a value in the range from 0 to 0.1, or an error is raised.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">GetIbisHeadTolerance&#160;<a href="../common_vbageneral/common_general_bool_data_type.htm" id="a4611121" style="font-weight: normal; font-style: normal;" name="a4611121">string</a></p>
+<p class="VBA-Text-Indent">Returns the expression specifying the tolerance for waveform windowing at the waveforms head.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">GetIbisHeadTruncationTime( <a href="../common_vbageneral/common_general_bool_data_type.htm" id="a46111213" style="font-weight: normal; font-style: normal;" name="a46111213">string</a> waveform ) <span lang="EN-US" xml:lang="EN-US"><a href="../common_vbageneral/common_general_double.htm" id="a78132" style="font-weight: normal; font-style: normal;" name="a78132">double</a></span></p>
+<p class="VBA-Text-Indent">Tells the start time of a waveform window in seconds. It is determined implicitly through the head tolerance (set with SetIbisHeadTolerance) or explicitly through the start time (set with SetIbisWindowStart), depending on the explicit start setting (set with SetIbisExplWindowStart).</p>
+<p class="VBA-Heading-Method">&#160;</p>
+<p class="VBA-Heading-Method">SetIbisTailTolerance( <a href="../common_vbageneral/common_general_bool_data_type.htm" id="a461112" style="font-weight: normal; font-style: normal;" name="a461112">string</a> tailTolerance )</p>
+<p class="VBA-Text-Indent">Sets a threshold for the variation of the waveforms's tail. Variations less than the tolerance will be ignored in simulations (if windowing is enabled). The expression must evaluate to a value in the range from 0 to 0.1, or an error is raised.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">GetIbisTailTolerance&#160;<a href="../common_vbageneral/common_general_bool_data_type.htm" id="a4611122" style="font-weight: normal; font-style: normal;" name="a4611122">string</a></p>
+<p class="VBA-Text-Indent">Returns the expression specifying the tolerance for waveform windowing at the waveform's tail.</p>
+<p class="VBA-Heading-Method">&#160;</p>
+<p class="VBA-Heading-Method">GetIbisTailTruncationTime (<a href="../common_vbageneral/common_general_bool_data_type.htm" id="a461112131" style="font-weight: normal; font-style: normal;" name="a461112131">string</a> waveform) &#160;<span lang="EN-US" xml:lang="EN-US"><a href="../common_vbageneral/common_general_double.htm" id="a78133" style="font-weight: normal; font-style: normal;" name="a78133">double</a></span></p>
+<p class="VBA-Text-Indent">Tells the end time of a waveform window in seconds. It is determined implicitly through the tail tolerance (set with SetIbisTailTolerance) or explicitly through the end time (set with SetIbisWindowEnd), depending on the explicit end setting (set with SetIbisExplWindowEnd).</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">SetIbisCustomTrigger( <a href="../common_vbageneral/common_general_bool_data_type.htm" id="a4611123" style="font-weight: normal; font-style: normal;" name="a4611123">bool</a> customize )</p>
+<p class="VBA-Text-Indent">Enables or disables the custom trigger thresholds.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">SetIbisHighThreshold( <a href="../common_vbageneral/common_general_bool_data_type.htm" id="a4611111" style="font-weight: normal; font-style: normal;" name="a4611111">string</a> threshold )</p>
+<p class="VBA-Text-Indent">Sets the higher trigger threshold.&#160;This setting takes effect only if custom trigger thresholds are enabled.</p>
+<p class="VBA-Heading-Method">&#160;</p>
+<p class="VBA-Heading-Method">SetIbisLowThreshold( <a href="../common_vbageneral/common_general_bool_data_type.htm" id="a46111111" style="font-weight: normal; font-style: normal;" name="a46111111">string</a> threshold )</p>
+<p class="VBA-Text-Indent">Sets the lower trigger threshold.&#160;This setting takes effect only if custom trigger thresholds are enabled.</p>
+<p class="VBA-Heading-Method">&#160;</p>
+<p class="VBA-Heading-Method">GetIbisCustomTrigger <span lang="EN-US" xml:lang="EN-US"><a href="../common_vbageneral/common_general_double.htm" id="a781331" style="font-weight: normal; font-style: normal;" name="a781331">bool</a></span></p>
+<p class="VBA-Text-Indent">Tells whether custom trigger thresholds are enabled. If custom trigger thresholds are disabled, the default values are used. The default value for both the lower and the higher threshold is half the reference voltage.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">GetIbisHighThreshold <span lang="EN-US" xml:lang="EN-US"><a href="../common_vbageneral/common_general_double.htm" id="a78133111" style="font-weight: normal; font-style: normal;" name="a78133111">string</a></span></p>
+<p class="VBA-Text-Indent">Returns the expression set for the higher trigger threshold. This setting takes effect only if custom trigger thresholds are enabled.</p>
+<p class="VBA-Heading-Method">&#160;</p>
+<p class="VBA-Heading-Method">GetIbisLowThreshold <span lang="EN-US" xml:lang="EN-US"><a href="../common_vbageneral/common_general_double.htm" id="a7813311" style="font-weight: normal; font-style: normal;" name="a7813311">string</a></span></p>
+<p class="VBA-Text-Indent">Returns the expression set for the lower trigger threshold. This setting takes effect only if custom trigger thresholds are enabled.</p>
+<p class="VBA-Heading-Category"><a name="Interpolation" id="Interpolation"></a>Interpolation</p>
+<p class="VBA-Heading-Method">CanSelectInterpolationMethod <span><a href="../common_vbageneral/common_general_bool_data_type.htm" id="a74" style="font-weight: normal; font-style: normal;" name="a74">bool</a></span></p>
+<p class="VBA-Text-Indent">Checks if the user can select between different interpolation methods for the given block. Currently, this is only possible for Touchstone blocks. Hence, the return value indicates, whether the set-methods SetUseHigherOrderInterpolation(), SetHigherOrderInterpolationAccuracy()&#160;and the get-methods GetUseHigherOrderInterpolation(), GetHigherOrderInterpolationAccuracy() can be called.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">CopyInterpolationDataToProject</p>
+<p class="VBA-Text-Indent">Sets the block's interpolation data for all blocks of the same type that are contained in your model. This is only possible for some types of blocks.</p>
+<p class="VBA-Heading-Method">&#160;</p>
+<p class="VBA-Heading-Method">GetUseHigherOrderInterpolation <a href="../common_vbageneral/common_general_bool_data_type.htm" id="a75" style="font-weight: normal; font-style: normal;" name="a75">bool</a></p>
+<p class="VBA-Text-Indent">The return value indicates whether higher-order interpolation is used for the S-Parameter data of the block or linear interpolation. The method can only be applied to blocks that able to switch between different interpolation methods. This can be queried by the method CanSelectInterpolationMethod().</p>
+<p class="VBA-Heading-Method">&#160;</p>
+<p class="VBA-Heading-Method">GetHigherOrderInterpolationAccuracy <span lang="EN-US" xml:lang="EN-US"><a href="../common_vbageneral/common_general_double.htm" id="a781331111" style="font-weight: normal; font-style: normal;" name="a781331111">string</a></span></p>
+<p class="VBA-Text-Indent">Returns the desired accuracy applied on a rational fit for higher-order interpolation of the S-Parameter data of the block. The method can only be applied to blocks that able to switch between different interpolation methods. This can be queried by the method CanSelectInterpolationMethod().</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">SetInterpolation ( <a href="../common_vbageneral/common_general_bool_data_type.htm" id="a47" style="font-weight: normal; font-style: normal;" name="a47">bool</a> <span style="font-style: italic;"><i>interpolate</i></span> )</p>
+<p class="VBA-Text-Indent">Switches on/off interpolation for a block. This is only possible for some types of blocks.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">SetInterpolationDataForProperty ( <a href="../common_vbageneral/common_general_name.htm" id="a20" style="font-weight: normal; font-style: normal;" name="a20">name</a> <span style="font-style: italic;"><i>propertyname,</i></span> <span lang="EN-US" xml:lang="EN-US"><a href="../common_vbageneral/common_general_double.htm" id="a7813311112" style="font-weight: normal; font-style: normal;" name="a7813311112">string</a></span> <span style="font-style: italic;"><i>min,</i></span> <span lang="EN-US" xml:lang="EN-US"><a href="../common_vbageneral/common_general_double.htm" id="a7813311113" style="font-weight: normal; font-style: normal;" name="a7813311113">string</a></span> <span style="font-style: italic;"><i>max,</i></span> <span lang="EN-US" xml:lang="EN-US"><a href="../common_vbageneral/common_general_double.htm" id="a7813311114" style="font-weight: normal; font-style: normal;" name="a7813311114">string</a></span> <span style="font-style: italic;"><i>samples</i></span> )</p>
+<p class="VBA-Text-Indent">Sets the interval for a block's property inside that interpolation will be performed with a given number of samples. This is only possible for some types of blocks.</p>
+<p class="VBA-Heading-Method">&#160;</p>
+<p class="VBA-Heading-Method">SetUseHigherOrderInterpolation( <a href="../common_vbageneral/common_general_bool_data_type.htm" id="a76" style="font-weight: normal; font-style: normal;" name="a76">bool</a> <span style="font-style: italic;"><i>bFlag</i></span> )</p>
+<p class="VBA-Text-Indent">The flag specifies whether higher-order interpolation is to be used for the S-Parameter data of the block or linear interpolation. The method can only be applied to blocks that able to switch between different interpolation methods. This can be queried by the method CanSelectInterpolationMethod().</p>
+<p class="VBA-Heading-Method">&#160;</p>
+<p class="VBA-Heading-Method">SetHigherOrderInterpolationAccuracy( <span lang="EN-US" xml:lang="EN-US"><a href="../common_vbageneral/common_general_double.htm" id="a7813311111" style="font-weight: normal; font-style: normal;" name="a7813311111">string</a></span> <span style="font-style: italic;"><i>accuracy</i></span> )</p>
+<p class="VBA-Text-Indent">Sets the desired accuracy applied on a rational fit for higher-order interpolation of the S-Parameter data of the block. The method can only be applied to blocks that able to switch between different interpolation methods. This can be queried by the method CanSelectInterpolationMethod().</p>
+<p class="VBA-Heading-Category"><a name="Layout" id="Layout"></a>Layout</p>
+<p class="VBA-Heading-Method">FindPortsWithLabel ( <a href="../common_vbageneral/common_general_name.htm" id="a58" style="font-weight: normal; font-style: normal;" name="a58">name</a> <span style="font-style: italic;"><i>labelname, <a href="../common_vbageneral/common_general_variant_ref.htm" style="font-weight: normal;">variant_ref</a> portNames_strArray</i></span> ) <a href="../common_vbageneral/common_general_integer.htm" id="a59" style="font-weight: normal; font-style: normal;" name="a59">int</a></p>
+<p class="VBA-Text-Indent">Finds the block ports with a given label. Since labels are not unique, there may exist more than one port for the given name. The number of found ports is returned.<br />
+<span style="font-family: 'Courier New', monospace;">(See <a href="#Example_FindPortsWithLabel">Example</a></span>)</p>
+<p class="VBA-Heading-Method">&#160;</p>
+<p class="VBA-Heading-Method">GetBusSize &#160;( <a href="../common_vbageneral/common_general_integer.htm" id="a291" style="font-weight: normal; font-style: normal;" name="a291">int</a> <span style="font-style: italic;"><i>pinindex</i></span> ) <a href="../common_vbageneral/common_general_integer.htm" id="a121" style="font-weight: normal; font-style: normal;" name="a121">int</a></p>
+<p class="VBA-Text-Indent">Returns the bus size of the block pin specified by <span style="font-weight: bold; font-style: italic;"><i>pinindex</i></span>. Bus size is the number of electrical connections that the block pin carries. Non bus block pins have the bus size 1.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">GetBusPortNames(<a href="../common_vbageneral/common_general_integer.htm" id="a292211" style="font-weight: normal; font-style: normal;" name="a292211">int</a> <span style="font-style: italic;"><i>pinindex,</i></span> <span style="font-style: italic;"><i><a href="../common_vbageneral/common_general_variant_ref.htm" style="font-weight: normal;">variant_ref</a></i></span> <span style="font-style: italic;"><i>portNames_strArray</i></span> ) &#160;<a href="../common_vbageneral/common_general_bool_data_type.htm" id="a911" style="font-weight: normal; font-style: normal;" name="a911">bool</a></p>
+<p class="VBA-Text-Indent">Returns the block ports inside a bus pin. true is returned if the operation was successful.<br />
+<span style="font-family: 'Courier New', monospace;">(See <a href="#Example_GetBusPortNames">Example</a></span>)</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">GetNumberOfNonReferencePorts <a href="../common_vbageneral/common_general_integer.htm" id="a73" style="font-weight: normal; font-style: normal;" name="a73">int</a></p>
+<p class="VBA-Text-Indent">Returns a block's number of ports (without reference ports).</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method"><a name="cmd_GetNumberOfPins" id="cmd_GetNumberOfPins"></a>GetNumberOfPins <a href="../common_vbageneral/common_general_integer.htm" id="a4" style="font-weight: normal; font-style: normal;" name="a4">int</a></p>
+<p class="VBA-Text-Indent">Returns the block's number of pins (including reference pins).</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method"><a name="cmd_GetNumberOfPorts" id="cmd_GetNumberOfPorts"></a>GetNumberOfPorts <a href="../common_vbageneral/common_general_integer.htm" id="a410" style="font-weight: normal; font-style: normal;" name="a410">int</a></p>
+<p class="VBA-Text-Indent">Returns the block's number of ports (including reference ports).</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">GetPinLayout ( <span><a href="../common_vbageneral/common_general_integer.htm" id="a2923" style="font-weight: normal; font-style: normal;" name="a2923">int</a></span> <span style="font-style: italic;"><i>pinindex,</i></span> <span style="font-weight: normal;"><a href="../common_vbageneral/common_general_string_ref.htm">string_ref</a></span> <span style="font-style: italic;"><i>edge,</i></span> <span style="font-weight: normal;"><a href="../common_vbageneral/common_general_integer_ref.htm">int_ref</a></span> edge<span style="font-style: italic;"><i>index</i></span> &#160;)</p>
+<p class="VBA-Text-Indent">Queries how the layout of the block pin with the specified pin index is defined. Writes one of the edges listed for <span style="font-style: italic;"><i><a href="#cmd_SetPinLayout">SetPinLayout</a>()</i></span> into the variable <span style="font-style: italic; font-weight: bold;"><i>edge</i></span> and the index of the pin on that edge into the variable <span style="font-style: italic; font-weight: bold;"><i>edgeindex</i></span>. Edge indexing is from top to bottom and from left to right.</p>
+<p class="VBA-Text-Indent"><span style="font-family: 'Courier New', monospace;">(See <a href="#Example_ChangeLayout">Example</a></span>)</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">GetPinLayoutType <a href="../common_vbageneral/common_general_enum.htm" id="a951" style="font-weight: normal; font-style: normal;" name="a951">enum</a></p>
+<p class="VBA-Text-Indent">Queries how the pin layout of a block is defined. "fixed" is returned for blocks that do not support different pin layout settings. For all other blocks one of the types listed for <span style="font-style: italic;"><i><a href="#cmd_SetPinLayoutType">SetPinLayoutType</a>()</i></span> is returned.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">GetDifferentialCablePorts <a href="../common_vbageneral/common_general_bool_data_type.htm" id="a91" style="font-weight: normal; font-style: normal;" name="a91">bool</a></p>
+<p class="VBA-Text-Indent">Queries whether differential ports for a block using cable models are set.</p>
+<p class="VBA-Heading-Method">&#160;</p>
+<p class="VBA-Heading-Method">GetDifferentialPorts <a href="../common_vbageneral/common_general_bool_data_type.htm" id="a85" style="font-weight: normal; font-style: normal;" name="a85">bool</a></p>
+<p class="VBA-Text-Indent">Queries whether differential ports are set for a block.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">GetPinName ( <a href="../common_vbageneral/common_general_integer.htm" id="a292" style="font-weight: normal; font-style: normal;" name="a292">int</a> <span style="font-style: italic;"><i>pinindex</i></span> ) <span style="font-weight: normal;"><a href="../common_vbageneral/common_general_string.htm">string</a></span></p>
+<p class="VBA-Text-Indent">Returns the name of a block pin specified by the given <span style="font-style: italic; font-weight: bold;"><i>index</i></span>. Index must be an integer between 0 and <span style="font-style: italic;"><i><a href="#cmd_GetNumberOfPins">GetNumberOfPins</a>()</i></span>-1.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">SetPinName ( <a href="../common_vbageneral/common_general_integer.htm" id="a293" style="font-weight: normal; font-style: normal;" name="a293">int</a> <span style="font-style: italic;"><i>pinindex</i></span>, <a href="../common_vbageneral/common_general_name.htm" id="a294" style="font-weight: normal; font-style: normal;" name="a294">name</a> <span style="font-style: italic;"><i>pinname</i></span> )</p>
+<p class="VBA-Text-Indent">Set the name of a block pin specified by the given <span style="font-style: italic; font-weight: bold;"><i>index</i></span>. Index must be an integer between 0 and <span style="font-style: italic;"><i><a href="#cmd_GetNumberOfPins">GetNumberOfPins</a>()</i></span>-1. Specifying an empty name resets the pin name to the default name.</p>
+<p class="VBA-Text-Indent"><span style="font-weight: bold;">Note:</span> call <span style="font-weight: bold;">ApplyPinLayout</span> to apply changes made by this command</p>
+<p class="VBA-Text-Indent"><span style="font-family: 'Courier New', monospace;">(See <a href="#Example_ChangeLayout">Example</a></span>)</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">GetPinIndex ( <a href="../common_vbageneral/common_general_name.htm" id="a5811" style="font-weight: normal; font-style: normal;" name="a5811">name</a> <span style="font-style: italic;"><i>pinname</i></span> ) <a href="../common_vbageneral/common_general_integer.htm" id="a5711" style="font-weight: normal; font-style: normal;" name="a5711">int</a></p>
+<p class="VBA-Text-Indent">Returns the index of a block pin specified by the given <span style="font-weight: bold; font-style: italic;"><i>pinname</i></span>. If a pin was found the returned index is an integer between 0 and <span style="font-style: italic;"><i><a href="#cmd_GetNumberOfPins">GetNumberOfPins</a></i></span><span style="font-style: italic;"><i>()</i></span>-1. The function throws an error and returns -1 if no pin was found.</p>
+<p class="VBA-Heading-Method">&#160;</p>
+<p class="VBA-Heading-Method">GetPortIndex ( <a href="../common_vbageneral/common_general_name.htm" id="a581" style="font-weight: normal; font-style: normal;" name="a581">name</a> <span style="font-style: italic;"><i>portname</i></span> ) <a href="../common_vbageneral/common_general_integer.htm" id="a571" style="font-weight: normal; font-style: normal;" name="a571">int</a></p>
+<p class="VBA-Text-Indent">Returns the index of a block port specified by the given <span style="font-style: italic; font-weight: bold;"><i>portname</i></span>. If a port was found the returned index is an integer between 0 and <span style="font-style: italic;"><i><a href="#cmd_GetNumberOfPorts">GetNumberOfPorts</a>()</i></span>-1. The function throws an error and returns -1 if no port was found.</p>
+<p class="VBA-Text-Indent"><span style="font-family: 'Courier New', monospace;">(See <a href="#Example_FindPortsWithLabel">Example</a></span>)</p>
+<p class="VBA-Heading-Method">&#160;</p>
+<p class="VBA-Heading-Method">GetPortLabel ( <a href="../common_vbageneral/common_general_integer.htm" id="a57" style="font-weight: normal; font-style: normal;" name="a57">int</a> <span style="font-style: italic;"><i>portindex</i></span> ) <span style="font-weight: normal;"><a href="../common_vbageneral/common_general_string.htm">string</a></span></p>
+<p class="VBA-Text-Indent">Returns the label of a block port specified by the given <span style="font-style: italic; font-weight: bold;"><i>portindex</i></span>. Since not all blocks support port labels, this function may return an empty string. Index must be an integer between 0 and <span style="font-style: italic;"><i><a href="#cmd_GetNumberOfPorts">GetNumberOfPorts</a></i></span><span style="font-style: italic;"><i>()</i></span>-1.</p>
+<p class="VBA-Text-Indent"><span style="font-family: 'Courier New', monospace;">(See <a href="#Example_FindPortsWithLabel">Example</a></span>)</p>
+<p class="VBA-Heading-Method">&#160;</p>
+<p class="VBA-Heading-Method">GetPortName ( <a href="../common_vbageneral/common_general_integer.htm" id="a29" style="font-weight: normal; font-style: normal;" name="a29">int</a> <span style="font-style: italic;"><i>portindex</i></span> ) <span style="font-weight: normal;"><a href="../common_vbageneral/common_general_string.htm">string</a></span></p>
+<p class="VBA-Text-Indent">Returns the name of a block port specified by the given <span style="font-style: italic; font-weight: bold;"><i>portindex</i></span> that must be an integer between 0 and <span style="font-style: italic;"><i><a href="#cmd_GetNumberOfPorts">GetNumberOfPorts</a></i></span><span style="font-style: italic;"><i>()</i></span>-1.</p>
+<p class="VBA-Text-Indent"><span style="font-family: 'Courier New', monospace;">(See <a href="#Example_FindPortsWithLabel">Example</a></span>)</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">IsPinConnected( <a href="../common_vbageneral/common_general_integer.htm" id="a28" style="font-weight: normal; font-style: normal;" name="a28">int</a> <span style="font-style: italic;"><i>pinindex</i></span>) <a href="../common_vbageneral/common_general_bool_data_type.htm" id="a61" style="font-weight: normal; font-style: normal;" name="a61">bool</a></p>
+<p class="VBA-Text-Indent">Checks if the specified pin of this block is connected. <span style="font-weight: bold; font-style: italic;"><i>pinindex</i></span> must be an integer between 0 and <span style="font-style: italic;"><i><a href="#cmd_GetNumberOfPins">GetNumberOfPins</a></i></span><span style="font-style: italic;"><i>()</i></span>-1.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">ApplyPinLayout() <a href="../common_vbageneral/common_general_bool_data_type.htm" id="a611" style="font-weight: normal; font-style: normal;" name="a611">bool</a></p>
+<p class="VBA-Text-Indent">To improve performance manual layout setter commands like <span style="font-weight: bold;">SetPinName</span> and <span style="font-weight: bold;">SetPinLayout</span> are saved in the background until this command is called to apply them.</p>
+<p class="VBA-Text-Indent">Automatic layout setter commands like <span style="font-weight: bold;">SetPinLayoutType</span> and <span style="font-weight: bold;">SetDifferentialPorts</span> change the block directly and don't need to call this function afterwards.</p>
+<p class="VBA-Text-Indent"><span style="font-family: 'Courier New', monospace;">(See <a href="#Example_ChangeLayout">Example</a></span>)</p>
+<p class="VBA-Heading-Method">&#160;</p>
+<p class="VBA-Heading-Method"><a name="cmd_SetPinLayout" id="cmd_SetPinLayout"></a>SetPinLayout ( <a href="../common_vbageneral/common_general_integer.htm" id="a2922" style="font-weight: normal; font-style: normal;" name="a2922">int</a> <span style="font-style: italic;"><i>pinindex,</i></span> <span style="font-weight: normal;"><a href="../common_vbageneral/common_general_string.htm">string</a></span> <span style="font-style: italic;"><i>edge,</i></span> <a href="../common_vbageneral/common_general_integer.htm" id="a2921" style="font-weight: normal; font-style: normal;" name="a2921">int</a> edge<span style="font-style: italic;"><i>index</i></span> &#160;)</p>
+<p class="VBA-Text-Indent">Sets the location of a block pin specified by <span style="font-weight: bold; font-style: italic;"><i>pinindex</i></span> (i.e. 0,LEFT,1 =&gt; moves the pin with index 0 to be the second pin on left). This is only possible for <a href="../common_vbageneral/common_general_blocks_supporting_layout_changes.htm">some types of blocks</a>. 0 based edge indexing is from top to bottom and from left to right. The following edges can be set:</p>
+<table style="margin-left: 24px; left: 0px; top: 325px;" cellspacing="0" width="237">
+<col style="width: 58.65%;" />
+<col style="width: 41.35%;" />
+<tr style="vertical-align: top;">
+<td style="border: Solid 1px #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;">
+<p class="VBA-Text">"BOTTOM"</p>
+</td>
+<td style="border-top: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;">
+<p>Bottom edge.</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;">
+<p class="VBA-Text">"LEFT"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;">
+<p class="VBA-Text">Left edge.</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;">
+<p class="VBA-Text">"RIGHT"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;">
+<p>Right edge.</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;">
+<p class="VBA-Text">"TOP"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;">
+<p class="VBA-Text">Top edge.</p>
+</td>
+</tr>
+</table>
+<p class="VBA-Text-Indent"><span style="font-weight: bold;"><span style="font-family: 'Courier New', monospace;">N</span>ote:</span> call <span style="font-weight: bold;">ApplyPinLayout</span> to apply changes made by this command.</p>
+<p class="VBA-Text-Indent"><span style="font-family: 'Courier New', monospace;">(See <a href="#Example_ChangeLayout">Example</a></span>)</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method"><a name="cmd_SetPinLayoutType" id="cmd_SetPinLayoutType"></a>SetPinLayoutType ( <a href="../common_vbageneral/common_general_enum.htm" id="a94" style="font-weight: normal; font-style: normal;" name="a94">enum</a> <span style="font-style: italic;"><i>type</i></span> )</p>
+<p class="VBA-Text-Indent">Sets how the pin layout of a block is defined, i.e. the position of each pin. This is only possible for <a href="../common_vbageneral/common_general_blocks_supporting_layout_changes.htm">some types of blocks</a>. The following types are supported:</p>
+<table style="margin-left: 24px; left: 0px; top: 325px;" cellspacing="0" width="564">
+<col width="134" />
+<col width="419" />
+<tr style="vertical-align: top;">
+<td style="border: Solid 1px #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;">
+<p class="VBA-Text">"manual"</p>
+</td>
+<td style="border-top: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;">
+<p class="VBA-Text">The pins are manually positioned.</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;">
+<p class="VBA-Text">"left right clockwise"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;">
+<p class="VBA-Text">The pins are distributed on the left and right edges in clockwise order.</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;">
+<p class="VBA-Text">"left right anticlockwise"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;">
+<p class="VBA-Text">The pins are distributed on the left and right edges in anticlockwise order.</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;">
+<p class="VBA-Text">"left right alternating"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;">
+<p class="VBA-Text">The pins are distributed on the left and right edges in alternating order.</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;">
+<p class="VBA-Text">"left right downward"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;">
+<p class="VBA-Text">The first half of the pins is located on the left edge from top to bottom, and the second half of the pins is located on the right edge from top to bottom.</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;">
+<p class="VBA-Text">"clockwise"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;">
+<p class="VBA-Text">The pins are distributed on all four edges in clockwise order.</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;">
+<p class="VBA-Text">"anticlockwise"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;">
+<p class="VBA-Text">The pins are distributed on all four edges in anticlockwise order.</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;">
+<p class="VBA-Text">"automatic"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;">
+<p class="VBA-Text">The pins are distributed for optimal connector routing.</p>
+</td>
+</tr>
+</table>
+<p class="VBA-Text-Indent" style="font-family: Arial, sans-serif;"><span style="font-weight: bold;">Note:</span> this command overwrites changes made by <span style="font-weight: bold;">SetPinName</span> and <span style="font-weight: bold;">SetPinLayout</span>.</p>
+<p class="VBA-Text-Indent"><span style="font-family: 'Courier New', monospace;">(See <a href="#Example_ChangeLayout">Example</a></span>)</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">SetDifferentialCablePorts ( <span><a href="../common_vbageneral/common_general_bool_data_type.htm" id="a72" style="font-weight: normal; font-style: normal;" name="a72">bool</a></span> <span style="font-style: italic;"><i>differential</i></span> )</p>
+<p class="VBA-Text-Indent">Sets differential ports for a block using cable models, i.e. its reference pins can also be accessed. This is only possible for SimLab TL/PEEC file blocks and CST Cable Studio blocks.</p>
+<p class="VBA-Text-Indent" style="font-family: Arial, sans-serif;"><span style="font-weight: bold;">Note:</span> this command overwrites changes made by <span style="font-weight: bold;">SetPinName</span> and <span style="font-weight: bold;">SetPinLayout</span>.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">SetDifferentialPorts ( <span><a href="../common_vbageneral/common_general_bool_data_type.htm" id="a51" style="font-weight: normal; font-style: normal;" name="a51">bool</a></span> <span style="font-style: italic;"><i>differential</i></span> )</p>
+<p class="VBA-Text-Indent">Sets differential ports for a block, i.e. its reference pins can also be accessed. This is only possible for some types of blocks.</p>
+<p class="VBA-Text-Indent" style="font-family: Arial, sans-serif;"><span style="font-family: Arial, sans-serif;"><span style="font-weight: bold;">Note:</span> this command overwrites changes made by <span style="font-weight: bold;">SetPinName</span> and <span style="font-weight: bold;">SetPinLayout</span>.</span></p>
+<p class="VBA-Heading-Category"><a name="MOR" id="MOR"></a>Vector Fitting</p>
+<p class="VBA-Heading-Method"><a name="cmd_CanUseMOR" id="cmd_CanUseMOR"></a>CanUseMOR <a href="../common_vbageneral/common_general_bool_data_type.htm" id="a30" style="font-weight: normal; font-style: normal;" name="a30">bool</a></p>
+<p class="VBA-Text-Indent">Checks if a block can use model order reduction (MOR) in transient simulation. MOR is implemented via a Vector Fitting algorithm. It is applied to blocks that are represented by dispersive S-Parameters. Hence, the return value indicates, whether</p>
+<p class="VBA-Text-Indent">the get-methods:<br />
+&#160;&#160;<a href="#cmd_GetConvolutionFmax">GetConvolutionFmax</a>, <a href="#cmd_GetMOR_AccuracyAbs">GetMOR_AccuracyAbs</a>, <a href="#cmd_GetMOR_InitialPoles">GetMOR_InitialPoles</a>, <a href="#cmd_GetMOR_MaximumPoles">GetMOR_MaximumPoles</a>, <a href="#cmd_GetMOR_PassivateToInfinity">GetMOR_PassivateToInfinity</a>, <a href="#cmd_GetMOR_PoleIncrement">GetMOR_PoleIncrement</a>, <a href="#cmd_GetUseNaturalImpedances">GetUseNaturalImpedances</a>, <a href="#cmd_GetMOR_RenormalizationImpedance">GetMOR_RenormalizationImpedance</a>, <a href="#cmd_GetVectorFittingMethod">GetVectorFittingMethod</a></p>
+<p class="VBA-Text-Indent">and the set-methods:<br />
+&#160;&#160;<a href="#cmd_SetConvolutionFmax">SetConvolutionFmax</a>, <a href="#cmd_SetMOR_AccuracyAbs">SetMOR_AccuracyAbs</a>, <a href="#cmd_SetMOR_InitialPoles">SetMOR_InitialPoles</a>, <a href="#cmd_SetMOR_MaximumPoles">SetMOR_MaximumPoles</a>, <a href="#cmd_SetMOR_PassivateToInfinity">SetMOR_PassivateToInfinity</a>, <a href="#cmd_SetMOR_PoleIncrement">SetMOR_PoleIncrement</a>, <a href="#cmd_SetUseNaturalImpedances">SetUseNaturalImpedances</a>, <a href="#cmd_SetMOR_RenormalizationImpedance">SetMOR_RenormalizationImpedance</a>, <a href="#cmd_SetVectorFittingMethod">SetVectorFittingMethod</a>, can be called.<br /></p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method"><span lang="EN-US" xml:lang="EN-US" style="mso-ansi-language: EN-US;">DeleteMORCache</span></p>
+<p class="VBA-Text-Indent" style="mso-ansi-language: EN-US;"><span lang="EN-US" xml:lang="EN-US">The MOR cache caches the poles and residues of a reduced order model for efficiency reasons since the Vector Fitting of a block can sometimes be costly and should not be repeated in every transient simulation. By this method, all cache entries for the block can be deleted. The method can only be applied to blocks that use Vector Fitting to represent dispersive data. This can be queried by the method <a href="#cmd_CanUseMOR" id="a81" name="a81">CanUseMOR</a>.</span></p>
+<p class="VBA-Heading-Method">&#160;</p>
+<p class="VBA-Heading-Method"><span lang="EN-US" xml:lang="EN-US"><span lang="EN-US" xml:lang="EN-US"><a name="cmd_StartIdEM" id="cmd_StartIdEM"></a>StartIdEM( <span style="font-weight: normal;"><a href="../common_vbageneral/common_general_string.htm">string</a></span> <span style="font-style: italic;"><i>fmax</i></span> , <span style="font-weight: normal;"><a href="../common_vbageneral/common_general_string.htm">string</a></span> <span style="font-style: italic;"><i>task</i></span> )</span></span></p>
+<p class="VBA-Text-Indent"><span lang="EN-US" xml:lang="EN-US"><span lang="EN-US" xml:lang="EN-US">&#160;Starts our specialized tool for macro model generation IdEM in an interactive mode with the frequency domain representation of the block used as input. The interactive mode is such that all relevant macro modelling techniques can be applied to the input data and generated macro models can be exported to Design Studio. Doing this, macro modelling results and the applied vector fitting settings of the block are stored internally in the Design Studio project.<br />
+<br />
+The arguments of the method specify the frequency range over which the data is fitted:<br />
+If both arguments are empty strings, the block frequency limits are applied, provided the block has frequency limits.<br />
+If <span style="font-weight: bold;">fmax</span> is an empty string, the frequency range of the circuit simulation task <span style="font-weight: bold;">task</span> is applied.<br />
+If <span style="font-weight: bold;">task</span> is an empty string, the frequency range between DC and <span style="font-weight: bold;">fmax</span> in project frequency units is applied.<br />
+<br />
+The method can only be applied to blocks that are represented by a single N-Port matrix and have native port impedances. This is a subset of all blocks, employing Vector Fitting, and does not include Cable Studio and PCB Studio blocks.</span></span></p>
+<p class="VBA-Heading-Method">&#160;</p>
+<p class="VBA-Heading-Method"><span lang="EN-US" xml:lang="EN-US"><span lang="EN-US" xml:lang="EN-US"><span lang="EN-US" xml:lang="EN-US"><span lang="EN-US" xml:lang="EN-US"><a name="cmd_StartIdEM" id="cmd_StartIdEM"></a>ExtractStateSpaceModel( <span style="font-weight: normal;"><a href="../common_vbageneral/common_general_string.htm">string</a></span> <span style="font-style: italic;"><i>fmax</i></span> , <span style="font-weight: normal;"><a href="../common_vbageneral/common_general_string.htm">string</a></span> <span style="font-style: italic;"><i>task</i></span> )</span></span></span></span></p>
+<p class="VBA-Text-Indent"><span lang="EN-US" xml:lang="EN-US"><span lang="EN-US" xml:lang="EN-US"><span lang="EN-US" xml:lang="EN-US"><span lang="EN-US" xml:lang="EN-US">&#160;&#160;Performs a Vector Fitting on the block, based on the frequency range defined by the arguments of the method, and calculates a state space representation from vector fitting results. The ABCD state space matrices are then exported in csv format together with a logfile that describes the format of the state space representation together with relevant meta data. The files are exported into the "ABCD" subfolder of the general "Export" folder of the project. The naming convention is such that all exported files carry the name of the block and have a suitable extension. In addition ABCD matrices carry a postfix "_A" to "_D", respectively.<br />
+<br />
+The arguments of the method specify the frequency range over which the data is fitted:<br />
+If both arguments are empty strings, the block frequency limits are applied, provided the block has frequency limits.<br />
+If <span style="font-weight: bold;">fmax</span> is an empty string, the frequency range of the transient-, AC-, or S-Parameter task <span style="font-weight: bold;">task</span> is applied.<br />
+If <span style="font-weight: bold;">task</span> is an empty string, the frequency range between DC and <span style="font-weight: bold;">fmax</span> in project frequency units is applied.<br />
+<br />
+The method can only be applied to blocks that are represented by a single N-Port matrix and have native port impedances. This is a subset of all frequency-dependent blocks and does not include Cable Studio and PCB Studio blocks.</span></span></span></span></p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method"><span lang="EN-US" xml:lang="EN-US"><a name="cmd_GetMOR_AccuracyAbs" id="cmd_GetMOR_AccuracyAbs"></a>GetMOR_AccuracyAbs</span> <span style="font-weight: normal;"><a href="../common_vbageneral/common_general_string.htm">string</a></span></p>
+<p class="VBA-Text-Indent"><span lang="EN-US" xml:lang="EN-US"><span lang="EN-US" xml:lang="EN-US"><span lang="EN-US" xml:lang="EN-US"><span lang="EN-US" xml:lang="EN-US"><span lang="EN-US" xml:lang="EN-US"><span lang="EN-US" xml:lang="EN-US">Returns the desired approximation accuracy of S-Parameters in Vector Fitting. The accuracy is specified as an absolute value. The method can only be applied to blocks that use Vector Fitting to represent dispersive data. This can be queried by the method <span lang="EN-US" xml:lang="EN-US"><a href="#cmd_CanUseMOR" id="a8127" name="a8127">CanUseMOR</a></span>.</span></span></span></span></span></span></p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method"><span lang="EN-US" xml:lang="EN-US"><span lang="EN-US" xml:lang="EN-US"><span lang="EN-US" xml:lang="EN-US"><span lang="EN-US" xml:lang="EN-US"><a name="cmd_GetMOR_EnhanceAccuracyAtDC" id="cmd_GetMOR_EnhanceAccuracyAtDC"></a>GetMOR_EnhanceAccuracyAtDC <a href="../common_vbageneral/common_general_bool_data_type.htm" id="a87" style="font-weight: normal; font-style: normal;" name="a87">bool</a> </span></span></span></span></p>
+<p class="VBA-Text-Indent"><span lang="EN-US" xml:lang="EN-US"><span lang="EN-US" xml:lang="EN-US"><span lang="EN-US" xml:lang="EN-US"><span lang="EN-US" xml:lang="EN-US">Indicates whether the accuracy of Vector Fitting is to be enhanced at DC to improve the steady-state behavior of the model in transient simulation. The method can only be applied to blocks that use Vector Fitting to represent dispersive data. This can be queried by the method <span lang="EN-US" xml:lang="EN-US"><a href="#cmd_CanUseMOR" id="a812" name="a812">CanUseMOR</a></span>.</span></span></span></span></p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method"><span lang="EN-US" xml:lang="EN-US"><span lang="EN-US" xml:lang="EN-US"><span lang="EN-US" xml:lang="EN-US"><span lang="EN-US" xml:lang="EN-US"><a name="cmd_GetMOR_ErrorNorm" id="cmd_GetMOR_ErrorNorm"></a>GetMOR_ErrorNorm <a href="../common_vbageneral/common_general_string.htm" id="a60" style="font-weight: normal; font-style: normal;" name="a60">string</a></span></span></span></span></p>
+<p class="VBA-Text-Indent"><span lang="EN-US" xml:lang="EN-US"><span lang="EN-US" xml:lang="EN-US"><span lang="EN-US" xml:lang="EN-US"><span lang="EN-US" xml:lang="EN-US">Returns the type of Error norm applied to the vector Fitting algorithm. The return value can assume values "Max" or "L2". The method can only be applied to blocks that use Vector Fitting to represent dispersive data. This can be queried by the method <span lang="EN-US" xml:lang="EN-US"><a href="#cmd_CanUseMOR" id="a8121" name="a8121">CanUseMOR</a></span>.</span></span></span></span></p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method"><span lang="EN-US" xml:lang="EN-US"><a name="cmd_GetMOR_InitialPoles" id="cmd_GetMOR_InitialPoles"></a>GetMOR_InitialPoles <a href="../common_vbageneral/common_general_string.htm" id="a602" style="font-weight: normal; font-style: normal;" name="a602">string</a></span></p>
+<p class="VBA-Text-Indent"><span lang="EN-US" xml:lang="EN-US"><span lang="EN-US" xml:lang="EN-US"><span lang="EN-US" xml:lang="EN-US"><span lang="EN-US" xml:lang="EN-US">Returns the initial number of poles used in Vector Fitting. A return value of 0 indicates that the required number of poles will be calculated automatically. The method can only be applied to blocks that use Vector Fitting to represent dispersive data. This can be queried by the method <span lang="EN-US" xml:lang="EN-US"><a href="#cmd_CanUseMOR" id="a8122" name="a8122">CanUseMOR</a></span>.</span></span></span></span></p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method"><span lang="EN-US" xml:lang="EN-US"><span lang="EN-US" xml:lang="EN-US"><span lang="EN-US" xml:lang="EN-US"><span lang="EN-US" xml:lang="EN-US"><span style="mso-ansi-language: EN-US;"><a name="cmd_GetMOR_ManualPoleChoice" id="cmd_GetMOR_ManualPoleChoice"></a></span><span lang="EN-US" xml:lang="EN-US" style="mso-ansi-language: EN-US;">GetMOR_ManualPoleChoice</span><span style="font-style: italic;"><i>&#160;</i></span><a href="../common_vbageneral/common_general_bool_data_type.htm" id="a871" style="font-weight: normal; font-style: normal;" name="a871">bool</a></span></span></span></span></p>
+<p class="VBA-Text-Indent"><span lang="EN-US" xml:lang="EN-US"><span lang="EN-US" xml:lang="EN-US"><span lang="EN-US" xml:lang="EN-US"><span lang="EN-US" xml:lang="EN-US"><span lang="EN-US" xml:lang="EN-US">The return value indicates whether the initial number of poles and/or the pole increment, used in Vector Fitting, have been specified manually by the user and are applied in transient simulation. The method can only be applied to blocks that use Vector Fitting to represent dispersive data. This can be queried by the method <a href="#cmd_CanUseMOR" id="a8123" name="a8123">CanUseMOR</a></span>.</span></span></span></span></p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method"><span lang="EN-US" xml:lang="EN-US"><a name="cmd_GetMOR_MaximumPoles" id="cmd_GetMOR_MaximumPoles"></a>GetMOR_MaximumPoles <a href="../common_vbageneral/common_general_string.htm" id="a6021" style="font-weight: normal; font-style: normal;" name="a6021">string</a></span></p>
+<p class="VBA-Text-Indent"><span lang="EN-US" xml:lang="EN-US"><span lang="EN-US" xml:lang="EN-US"><span lang="EN-US" xml:lang="EN-US"><span lang="EN-US" xml:lang="EN-US">Returns the maximum number of poles used in Vector Fitting. A return value of 0 indicates that the required number of poles will be calculated automatically. The method can only be applied to blocks that use Vector Fitting to represent dispersive data. This can be queried by the method <span lang="EN-US" xml:lang="EN-US"><a href="#cmd_CanUseMOR" id="a8124" name="a8124">CanUseMOR</a></span>.</span></span></span></span></p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method"><span lang="EN-US" xml:lang="EN-US"><a name="cmd_GetMOR_PoleIncrement" id="cmd_GetMOR_PoleIncrement"></a>GetMOR_PoleIncrement <a href="../common_vbageneral/common_general_string.htm" id="a60211" style="font-weight: normal; font-style: normal;" name="a60211">string</a></span></p>
+<p class="VBA-Text-Indent"><span lang="EN-US" xml:lang="EN-US"><span lang="EN-US" xml:lang="EN-US"><span lang="EN-US" xml:lang="EN-US"><span lang="EN-US" xml:lang="EN-US">Returns the pole increment used in Vector Fitting. A return value of 0 indicates that the pole increment will be calculated internally by the Vector Fitting algorithm. The method can only be applied to blocks that use Vector Fitting to represent dispersive data. This can be queried by the method <span lang="EN-US" xml:lang="EN-US"><a href="#cmd_CanUseMOR" id="a8125" name="a8125">CanUseMOR</a></span>.</span></span></span></span></p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method"><span lang="EN-US" xml:lang="EN-US"><span lang="EN-US" xml:lang="EN-US"><span lang="EN-US" xml:lang="EN-US"><span lang="EN-US" xml:lang="EN-US"><span lang="EN-US" xml:lang="EN-US"><span lang="EN-US" xml:lang="EN-US"><a name="cmd_GetMOR_PassivateToInfinity" id="cmd_GetMOR_PassivateToInfinity"></a>GetMOR_PassivateToInfinity &#160;<a href="../common_vbageneral/common_general_bool_data_type.htm" id="a82" style="font-weight: normal; font-style: normal;" name="a82">bool</a></span></span></span></span></span></span></p>
+<p class="VBA-Text-Indent"><span lang="EN-US" xml:lang="EN-US"><span lang="EN-US" xml:lang="EN-US"><span lang="EN-US" xml:lang="EN-US"><span lang="EN-US" xml:lang="EN-US"><span lang="EN-US" xml:lang="EN-US"><span lang="EN-US" xml:lang="EN-US">Indicates whether passivity is enforced to an infinite frequency during Vector Fitting. The method can only be applied to blocks that use Vector Fitting to represent dispersive data. This can be queried by the method <span lang="EN-US" xml:lang="EN-US"><a href="#cmd_CanUseMOR" id="a8126" name="a8126">CanUseMOR</a></span>.</span></span></span></span></span></span></p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method"><span lang="EN-US" xml:lang="EN-US"><span lang="EN-US" xml:lang="EN-US"><span lang="EN-US" xml:lang="EN-US"><span lang="EN-US" xml:lang="EN-US"><a name="cmd_GetUseNaturalImpedances" id="cmd_GetUseNaturalImpedances"></a>GetUseNaturalImpedances <a href="../common_vbageneral/common_general_bool_data_type.htm" id="a56" style="font-weight: normal; font-style: normal;" name="a56">bool</a></span></span></span></span></p>
+<p class="VBA-Text-Indent"><span lang="EN-US" xml:lang="EN-US"><span lang="EN-US" xml:lang="EN-US"><span lang="EN-US" xml:lang="EN-US"><span lang="EN-US" xml:lang="EN-US">The return value indicates whether the natural port impedances of the block or a fixed impedance, applied to all ports, are used as reference for the convolution in transient simulation. The method can only be applied to blocks that use Vector Fitting to represent dispersive data. This can be queried by the method CanUseMOR().</span></span></span></span></p>
+<p class="VBA-Heading-Method">&#160;</p>
+<p class="VBA-Heading-Method"><span lang="EN-US" xml:lang="EN-US"><a name="cmd_GetConvolutionFmax" id="cmd_GetConvolutionFmax"></a>GetConvolutionFmax <a href="../common_vbageneral/common_general_string.htm" id="a601" style="font-weight: normal; font-style: normal;" name="a601">string</a></span></p>
+<p class="VBA-Text-Indent"><span lang="EN-US" xml:lang="EN-US"><span lang="EN-US" xml:lang="EN-US"><span lang="EN-US" xml:lang="EN-US"><span lang="EN-US" xml:lang="EN-US">Returns the maximum frequency to which S-Parameters are fitted in Vector Fitting. A return value of 0 indicates that the maximum frequency is calculated automatically, based on the transient excitation. The method can only be applied to blocks that use Vector Fitting to represent dispersive data. This can be queried by the method <a href="#cmd_CanUseMOR">CanUseMOR</a>.</span></span></span></span></p>
+<p class="VBA-Heading-Method">&#160;</p>
+<p class="VBA-Heading-Method"><span lang="EN-US" xml:lang="EN-US"><a name="cmd_GetMOR_RenormalizationImpedance" id="cmd_GetMOR_RenormalizationImpedance"></a>GetMOR_RenormalizationImpedance &#160;<a href="../common_vbageneral/common_general_string.htm" id="a6011" style="font-weight: normal; font-style: normal;" name="a6011">string</a></span></p>
+<p class="VBA-Text-Indent"><span lang="EN-US" xml:lang="EN-US"><span lang="EN-US" xml:lang="EN-US"><span lang="EN-US" xml:lang="EN-US"><span lang="EN-US" xml:lang="EN-US">Returns a positive resistance in Ohms to which all ports impedances are renormalized when S-Parameters are fitted via Vector Fitting. Note that the renormalization is only carried out if no natural port impedances are used. The method can only be applied to blocks that use Vector Fitting to represent dispersive data. This can be queried by the method <a href="#cmd_CanUseMOR">CanUseMOR</a>.</span></span></span></span></p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method"><span lang="EN-US" xml:lang="EN-US"><span lang="EN-US" xml:lang="EN-US"><span lang="EN-US" xml:lang="EN-US"><span lang="EN-US" xml:lang="EN-US"><a name="cmd_GetVectorFittingMethod" id="cmd_GetVectorFittingMethod"></a>GetVectorFittingMethod <a href="../common_vbageneral/common_general_string.htm" id="a60" style="font-weight: normal; font-style: normal;" name="a60">string</a></span></span></span></span></p>
+<p class="VBA-Text-Indent"><span lang="EN-US" xml:lang="EN-US"><span lang="EN-US" xml:lang="EN-US"><span lang="EN-US" xml:lang="EN-US"><span lang="EN-US" xml:lang="EN-US">Returns the kind of method applied for Vector Fitting. The return value can assume values "BUILT-IN" or "IDEM". The method can only be applied to blocks that use Vector Fitting to represent dispersive data. This can be queried by the method <span lang="EN-US" xml:lang="EN-US"><a href="#cmd_CanUseMOR" id="a8121" name="a8121">CanUseMOR</a></span>.</span></span></span></span></p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method"><span lang="EN-US" xml:lang="EN-US"><a name="cmd_SetMOR_AccuracyAbs" id="cmd_SetMOR_AccuracyAbs"></a>SetMOR_AccuracyAbs( <a href="../common_vbageneral/common_general_string.htm" id="a603" style="font-weight: normal; font-style: normal;" name="a603">string</a></span> <span style="font-style: italic;"><i>value</i></span> <span lang="EN-US" xml:lang="EN-US">)</span></p>
+<p class="VBA-Text-Indent"><span lang="EN-US" xml:lang="EN-US"><span lang="EN-US" xml:lang="EN-US"><span lang="EN-US" xml:lang="EN-US"><span lang="EN-US" xml:lang="EN-US"><span lang="EN-US" xml:lang="EN-US"><span lang="EN-US" xml:lang="EN-US"><span style="font-style: italic;"><i>value</i></span> specifies the desired approximation accuracy of S-Parameters in Vector Fitting. The accuracy is specified as an absolute value. The method can only be applied to blocks that use Vector Fitting to represent dispersive data. This can be queried by the method <span lang="EN-US" xml:lang="EN-US"><a href="#cmd_CanUseMOR" id="a8127" name="a8127">CanUseMOR</a></span>.</span></span></span></span></span></span></p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method"><span lang="EN-US" xml:lang="EN-US"><span lang="EN-US" xml:lang="EN-US"><span lang="EN-US" xml:lang="EN-US"><span lang="EN-US" xml:lang="EN-US"><span lang="EN-US" xml:lang="EN-US"><span lang="EN-US" xml:lang="EN-US"><a name="cmd_SetMOR_EnhanceAccuracyAtDC" id="cmd_SetMOR_EnhanceAccuracyAtDC"></a>SetMOR_EnhanceAccuracyAtDC ( <a href="../common_vbageneral/common_general_bool_data_type.htm" id="a84" style="font-weight: normal; font-style: normal;" name="a84">bool</a> <span style="font-style: italic;"><i>enhance</i></span> )</span></span></span></span></span></span></p>
+<p class="VBA-Text-Indent"><span lang="EN-US" xml:lang="EN-US"><span lang="EN-US" xml:lang="EN-US"><span lang="EN-US" xml:lang="EN-US"><span lang="EN-US" xml:lang="EN-US"><span lang="EN-US" xml:lang="EN-US"><span lang="EN-US" xml:lang="EN-US">By this method, the vector Fitting algorithm can be induced to put more emphasis on the model accuracy at DC to improve the steady-state behavior of the model. But note that the overall accuracy of the model might be decreased when demanding high accuracy at DC. Note also that it might not be possible to achieve a high accuracy at DC if there are strong passivity violations of the input data at DC. The method can only be applied to blocks that use Vector Fitting to represent dispersive data. This can be queried by the method <span lang="EN-US" xml:lang="EN-US"><a href="#cmd_CanUseMOR" id="a8128" name="a8128">CanUseMOR</a></span>.</span></span></span></span></span></span></p>
+<p class="VBA-Heading-Method">&#160;</p>
+<p class="VBA-Heading-Method"><span lang="EN-US" xml:lang="EN-US"><span lang="EN-US" xml:lang="EN-US"><span lang="EN-US" xml:lang="EN-US"><span lang="EN-US" xml:lang="EN-US"><span lang="EN-US" xml:lang="EN-US"><span lang="EN-US" xml:lang="EN-US"><a name="cmd_SetMOR_ErrorNorm" id="cmd_SetMOR_ErrorNorm"></a>SetMOR_ErrorNorm( <span style="font-weight: normal;"><a href="../common_vbageneral/common_general_string.htm">string</a></span> <span style="font-style: italic;"><i>method</i></span> )</span></span></span></span></span></span></p>
+<p class="VBA-Text-Indent"><span lang="EN-US" xml:lang="EN-US"><span lang="EN-US" xml:lang="EN-US"><span lang="EN-US" xml:lang="EN-US"><span lang="EN-US" xml:lang="EN-US"><span lang="EN-US" xml:lang="EN-US"><span lang="EN-US" xml:lang="EN-US">Specifies the kind of error norm applied by the Vector Fitting algorithm. The argument can assume the values "Max" or "L2". The maximum norm considers the maximum error within the frequency range of interest while the L2 norm averages the error over the frequency range. The method can only be applied to blocks that use Vector Fitting to represent dispersive data. This can be queried by the method <span lang="EN-US" xml:lang="EN-US"><a href="#cmd_CanUseMOR" id="a8129" name="a8129">CanUseMOR</a></span>.</span></span></span></span></span></span></p>
+<p class="VBA-Heading-Method">&#160;</p>
+<p class="VBA-Heading-Method"><span lang="EN-US" xml:lang="EN-US"><a name="cmd_SetMOR_InitialPoles" id="cmd_SetMOR_InitialPoles"></a>SetMOR_InitialPoles(</span> <span style="font-weight: normal;"><a href="../common_vbageneral/common_general_string.htm">string</a></span> <span style="font-style: italic;"><i>poles</i></span> <span lang="EN-US" xml:lang="EN-US">)</span></p>
+<p class="VBA-Text-Indent"><span lang="EN-US" xml:lang="EN-US"><span lang="EN-US" xml:lang="EN-US"><span lang="EN-US" xml:lang="EN-US"><span lang="EN-US" xml:lang="EN-US"><span lang="EN-US" xml:lang="EN-US"><span lang="EN-US" xml:lang="EN-US">Specifies the initial number of poles used in Vector Fitting. If the argument is zero by value, the required number of poles is estimated automatically in the MOR algorithm. The method can only be applied to blocks that use Vector Fitting to represent dispersive data. This can be queried by the method <span lang="EN-US" xml:lang="EN-US"><a href="#cmd_CanUseMOR" id="a81210" name="a81210">CanUseMOR</a></span>.</span></span></span></span></span></span></p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method"><span lang="EN-US" xml:lang="EN-US"><span lang="EN-US" xml:lang="EN-US"><span lang="EN-US" xml:lang="EN-US"><span lang="EN-US" xml:lang="EN-US"><span lang="EN-US" xml:lang="EN-US"><span lang="EN-US" xml:lang="EN-US"><span style="mso-ansi-language: EN-US;"><a name="cmd_SetMOR_ManualPoleChoice_" id="cmd_SetMOR_ManualPoleChoice_"></a></span><span lang="EN-US" xml:lang="EN-US" style="mso-ansi-language: EN-US;">SetMOR_ManualPoleChoice (</span> <a href="../common_vbageneral/common_general_bool_data_type.htm" id="a821" style="font-weight: normal; font-style: normal;" name="a821">bool</a> <span lang="EN-US" xml:lang="EN-US" style="mso-ansi-language: EN-US; font-style: italic;"><i>choice</i></span> <span lang="EN-US" xml:lang="EN-US" style="mso-ansi-language: EN-US;">)</span></span></span></span></span></span></span></p>
+<p class="VBA-Text-Indent"><span lang="EN-US" xml:lang="EN-US"><span lang="EN-US" xml:lang="EN-US"><span lang="EN-US" xml:lang="EN-US"><span lang="EN-US" xml:lang="EN-US"><span lang="EN-US" xml:lang="EN-US"><span lang="EN-US" xml:lang="EN-US"><span lang="EN-US" xml:lang="EN-US" style="mso-ansi-language: EN-US;">The argument choice indicates whether the initial number of poles and/or the pole increment, used in Vector Fitting, are derived from manual user settings or calculated automatically, disregarding settings by the user, during transient simulation. If choice is true, the initial number of poles and the pole increment can subsequently be set via the methods <a href="#cmd_SetMOR_InitialPoles">SetMOR_InitialPoles</a> and <a href="#cmd_SetMOR_PoleIncrement">SetMOR_PoleIncrement</a>, respectively. The method can only be applied to blocks that use Vector Fitting to represent dispersive data. This can be queried by the method</span> <span lang="EN-US" xml:lang="EN-US"><a href="#cmd_CanUseMOR" id="a812121" name="a812121">CanUseMOR</a></span>.</span></span></span></span></span></span></p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method"><span lang="EN-US" xml:lang="EN-US"><a name="cmd_SetMOR_MaximumPoles" id="cmd_SetMOR_MaximumPoles"></a></span><span lang="EN-US" xml:lang="EN-US" style="color: #1F497D; mso-ansi-language: EN-US;"><font color="#1F497D">&#160;</font></span><span lang="EN-US" xml:lang="EN-US">SetMOR_MaximumPoles(</span> <span style="font-weight: normal;"><a href="../common_vbageneral/common_general_string.htm">string</a></span> <span lang="EN-US" xml:lang="EN-US" style="font-style: italic;"><i>poles</i></span> <span lang="EN-US" xml:lang="EN-US">)</span></p>
+<p class="VBA-Text-Indent"><span lang="EN-US" xml:lang="EN-US"><span lang="EN-US" xml:lang="EN-US"><span lang="EN-US" xml:lang="EN-US"><span lang="EN-US" xml:lang="EN-US"><span lang="EN-US" xml:lang="EN-US"><span lang="EN-US" xml:lang="EN-US">Specifies the maximum number of poles used in Vector Fitting. If the argument is zero by value, the required number of poles is estimated automatically in the Vector Fitting algorithm. The method can only be applied to blocks that use Vector Fitting to represent dispersive data. This can be queried by the method <span lang="EN-US" xml:lang="EN-US"><a href="#cmd_CanUseMOR" id="a81212" name="a81212">CanUseMOR</a></span>.</span></span></span></span></span></span></p>
+<p class="VBA-Heading-Method">&#160;</p>
+<p class="VBA-Heading-Method"><span lang="EN-US" xml:lang="EN-US"><span lang="EN-US" xml:lang="EN-US"><span lang="EN-US" xml:lang="EN-US"><span lang="EN-US" xml:lang="EN-US"><span lang="EN-US" xml:lang="EN-US"><span lang="EN-US" xml:lang="EN-US"><span style="mso-ansi-language: EN-US;"><a name="cmd_SetMOR_PassivateToInfinity" id="cmd_SetMOR_PassivateToInfinity"></a></span>SetMOR_PassivateToInfinity( <a href="../common_vbageneral/common_general_bool_data_type.htm" id="a86" style="font-weight: normal; font-style: normal;" name="a86">bool</a> <span style="font-style: italic;"><i>passivatetoinfinity</i></span> )</span></span></span></span></span></span></p>
+<p class="VBA-Text-Indent"><span lang="EN-US" xml:lang="EN-US"><span lang="EN-US" xml:lang="EN-US"><span lang="EN-US" xml:lang="EN-US"><span lang="EN-US" xml:lang="EN-US"><span lang="EN-US" xml:lang="EN-US"><span lang="EN-US" xml:lang="EN-US">Specifies whether S-Parameters are to be passivated to an infinite frequency in Vector Fitting. This guaranties absolute stability of the reduced order model, but it might reduce the accuracy of the approximated S-Parameters in the frequency range of interest. The method can only be applied to blocks that use Vector Fitting to represent dispersive data. This can be queried by the method <span lang="EN-US" xml:lang="EN-US"><a href="#cmd_CanUseMOR" id="a81213" name="a81213">CanUseMOR</a></span>.</span></span></span></span></span></span></p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method"><span lang="EN-US" xml:lang="EN-US"><a name="cmd_SetMOR_PoleIncrement" id="cmd_SetMOR_PoleIncrement"></a>SetMOR_PoleIncrement(</span> <span style="font-weight: normal;"><a href="../common_vbageneral/common_general_string.htm">string</a></span> <span lang="EN-US" xml:lang="EN-US" style="font-style: italic;"><i>increment</i></span> <span lang="EN-US" xml:lang="EN-US">)</span></p>
+<p class="VBA-Text-Indent"><span lang="EN-US" xml:lang="EN-US"><span lang="EN-US" xml:lang="EN-US"><span lang="EN-US" xml:lang="EN-US"><span lang="EN-US" xml:lang="EN-US"><span lang="EN-US" xml:lang="EN-US"><span lang="EN-US" xml:lang="EN-US">Specifies the increment in the number of poles used in Vector Fitting. In the algorithm the number of poles is increased by the increment from iteration to iteration, starting at the initial number of poles. If the argument is zero by value, an appropriate pole increment is calculated automatically by the Vector Fitting algorithm. The method can only be applied to blocks that use Vector Fitting to represent dispersive data. This can be queried by the method <span lang="EN-US" xml:lang="EN-US"><a href="#cmd_CanUseMOR" id="a81214" name="a81214">CanUseMOR</a></span>.</span></span></span></span></span></span></p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method"><span lang="EN-US" xml:lang="EN-US"><span lang="EN-US" xml:lang="EN-US"><span lang="EN-US" xml:lang="EN-US"><span lang="EN-US" xml:lang="EN-US"><a name="cmd_SetUseNaturalImpedances" id="cmd_SetUseNaturalImpedances"></a>SetUseNaturalImpedances( <a href="../common_vbageneral/common_general_bool_data_type.htm" id="a54" style="font-weight: normal; font-style: normal;" name="a54">bool</a> <span style="font-style: italic;"><i>bFlag</i></span> )</span></span></span></span></p>
+<p class="VBA-Text-Indent"><span lang="EN-US" xml:lang="EN-US"><span lang="EN-US" xml:lang="EN-US"><span lang="EN-US" xml:lang="EN-US"><span lang="EN-US" xml:lang="EN-US">The flag specifies whether natural port impedances are used as reference for the convolution of a Vector Fitting model, used in transient simulation or, if false, whether a fixed impedance is used as reference impedance for all ports. Natural port impedances are advantageous, because they tend to lead to shorter impulse responses and to a lower number of significant poles. The method can only be applied to blocks that use Vector Fitting to represent dispersive data. This can be queried by the method CanUseMOR().</span></span></span></span></p>
+<p class="VBA-Heading-Method">&#160;</p>
+<p class="VBA-Heading-Method"><span lang="EN-US" xml:lang="EN-US"><a name="cmd_SetMOR_RenormalizationImpedance" id="cmd_SetMOR_RenormalizationImpedance"></a>SetMOR_RenormalizationImpedance(</span> <span style="font-weight: normal;"><a href="../common_vbageneral/common_general_string.htm">string</a></span> <span style="font-style: italic;"><i>resistance</i></span> <span lang="EN-US" xml:lang="EN-US">)</span></p>
+<p class="VBA-Text-Indent"><span lang="EN-US" xml:lang="EN-US"><span lang="EN-US" xml:lang="EN-US"><span lang="EN-US" xml:lang="EN-US"><span lang="EN-US" xml:lang="EN-US">Specifies a positive resistance to which all ports impedances are renormalized when S-Parameters are supplied to the Vector Fitting. The argument is in Ohms. Note that the renormalization is only carried out if no natural port impedances are used. This managed by the method <a href="#cmd_SetUseNaturalImpedances">SetUseNaturalImpedances</a>. The method can only be applied to blocks that use Vector Fitting to represent dispersive data. This can be queried by the method <a href="#cmd_CanUseMOR">CanUseMOR</a>.</span></span></span></span></p>
+<p class="VBA-Heading-Method">&#160;</p>
+<p class="VBA-Heading-Method"><span lang="EN-US" xml:lang="EN-US"><a name="cmd_SetConvolutionFmax" id="cmd_SetConvolutionFmax"></a>SetConvolutionFmax(</span> <span style="font-weight: normal;"><a href="../common_vbageneral/common_general_string.htm">string</a></span> <span style="font-style: italic;"><i>fmax</i></span> <span lang="EN-US" xml:lang="EN-US">)</span></p>
+<p class="VBA-Text-Indent"><span lang="EN-US" xml:lang="EN-US"><span lang="EN-US" xml:lang="EN-US"><span lang="EN-US" xml:lang="EN-US"><span lang="EN-US" xml:lang="EN-US">Specifies the maximum frequency to which S-Parameters are fitted in Vector Fitting. The argument is in frequency units. If the argument is zero by value, the maximum frequency is calculated automatically, based on the transient excitation. The method can only be applied to blocks that can use convolution via MOR or IFT. This can be queried by the method <a href="#cmd_CanUseMOR">CanUseMOR</a>.</span></span></span></span></p>
+<p class="VBA-Heading-Method">&#160;</p>
+<p class="VBA-Heading-Method"><span lang="EN-US" xml:lang="EN-US"><span lang="EN-US" xml:lang="EN-US"><span lang="EN-US" xml:lang="EN-US"><span lang="EN-US" xml:lang="EN-US"><span lang="EN-US" xml:lang="EN-US"><span lang="EN-US" xml:lang="EN-US"><a name="cmd_SetVectorFittingMethod" id="cmd_SetVectorFittingMethod"></a>SetVectorFittingMethod( <span style="font-weight: normal;"><a href="../common_vbageneral/common_general_string.htm">string</a></span> <span style="font-style: italic;"><i>method</i></span> )</span></span></span></span></span></span></p>
+<p class="VBA-Text-Indent"><span lang="EN-US" xml:lang="EN-US"><span lang="EN-US" xml:lang="EN-US"><span lang="EN-US" xml:lang="EN-US"><span lang="EN-US" xml:lang="EN-US"><span lang="EN-US" xml:lang="EN-US"><span lang="EN-US" xml:lang="EN-US">Specifies the kind of method applied for Vector Fitting. The argument can assume the values "BUILT-IN" or "IDEM" where BUILT-IN is our legacy pole relocation vector fitting method and IDEM is the vector fitting technique used by our specialized tool for macromodel generation. The method can only be applied to blocks that use Vector Fitting to represent dispersive data. This can be queried by the method <span lang="EN-US" xml:lang="EN-US"><a href="#cmd_CanUseMOR" id="a8129" name="a8129">CanUseMOR</a></span>.</span></span></span></span></span></span></p>
+<p class="VBA-Heading-Category"><span lang="EN-US" xml:lang="EN-US"><span lang="EN-US" xml:lang="EN-US"><span lang="EN-US" xml:lang="EN-US"><span lang="EN-US" xml:lang="EN-US"><span lang="EN-US" xml:lang="EN-US"><span lang="EN-US" xml:lang="EN-US"><span lang="EN-US" xml:lang="EN-US"><span lang="EN-US" xml:lang="EN-US"><a name="Properties" id="Properties"></a>Properties</span></span></span></span></span></span></span></span></p>
+<p class="VBA-Heading-Method"><span lang="EN-US" xml:lang="EN-US"><span lang="EN-US" xml:lang="EN-US"><span lang="EN-US" xml:lang="EN-US"><span lang="EN-US" xml:lang="EN-US"><span lang="EN-US" xml:lang="EN-US">PropertyExists ( <a href="../common_vbageneral/common_general_name.htm" id="a110" style="font-weight: normal; font-style: normal;" name="a110">name</a></span> <span style="font-style: italic;"><i>propertyname</i></span> <span lang="EN-US" xml:lang="EN-US">)&#160;&#160;<a href="../common_vbageneral/common_general_bool_data_type.htm" id="a822" style="font-weight: normal; font-style: normal;" name="a822">bool</a></span></span></span></span></span></p>
+<p class="VBA-Text-Indent"><span lang="EN-US" xml:lang="EN-US"><span lang="EN-US" xml:lang="EN-US"><span lang="EN-US" xml:lang="EN-US"><span lang="EN-US" xml:lang="EN-US"><span lang="EN-US" xml:lang="EN-US">C</span>hecks if a block property with specified name exists.</span></span></span></span></p>
+<p class="VBA-Heading-Method">&#160;</p>
+<p class="VBA-Heading-Method"><span lang="EN-US" xml:lang="EN-US"><span lang="EN-US" xml:lang="EN-US"><span lang="EN-US" xml:lang="EN-US"><span lang="EN-US" xml:lang="EN-US"><span lang="EN-US" xml:lang="EN-US"><span lang="EN-US" xml:lang="EN-US">G</span>etProperty( <a href="../common_vbageneral/common_general_name.htm" id="a110111" style="font-weight: normal; font-style: normal;" name="a110111">name</a></span> <span style="font-style: italic;"><i>propertyname</i></span> <span lang="EN-US" xml:lang="EN-US">)&#160;&#160;<a href="../common_vbageneral/common_general_bool_data_type.htm" id="a822111" style="font-weight: normal; font-style: normal;" name="a822111">string</a></span></span></span></span></span></p>
+<p class="VBA-Text-Indent"><span lang="EN-US" xml:lang="EN-US">Returns the specified value for the property.</span></p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method"><span lang="EN-US" xml:lang="EN-US">GetUnitForProperty( <a href="../common_vbageneral/common_general_name.htm" id="a1101111" style="font-weight: normal; font-style: normal;" name="a1101111">name</a> <span style="font-style: italic;"><i>propertyname</i></span> )&#160;&#160;<a href="../common_vbageneral/common_general_bool_data_type.htm" id="a8221111" style="font-weight: normal; font-style: normal;" name="a8221111">string</a></span></p>
+<p class="VBA-Text-Indent">Returns the unit for the property. In case the property doesn't have an unit an empty string is returned.</p>
+<p class="VBA-Heading-Method">&#160;</p>
+<p class="VBA-Heading-Method"><span lang="EN-US" xml:lang="EN-US"><span lang="EN-US" xml:lang="EN-US"><span lang="EN-US" xml:lang="EN-US"><span lang="EN-US" xml:lang="EN-US"><span lang="EN-US" xml:lang="EN-US">SetDoubleProperty ( <a href="../common_vbageneral/common_general_name.htm" id="a1" style="font-weight: normal; font-style: normal;" name="a1">name</a></span> <span style="font-style: italic;"><i>propertyname,</i></span> <a href="../common_vbageneral/common_general_string.htm" id="a37" style="font-weight: normal; font-style: normal;" name="a37">string</a> <span style="font-style: italic;"><i>value</i></span> <span lang="EN-US" xml:lang="EN-US">)</span></span></span></span></span></p>
+<p class="VBA-Heading-Method"><span lang="EN-US" xml:lang="EN-US"><span lang="EN-US" xml:lang="EN-US"><span lang="EN-US" xml:lang="EN-US"><span lang="EN-US" xml:lang="EN-US"><span lang="EN-US" xml:lang="EN-US"><span lang="EN-US" xml:lang="EN-US"><span lang="EN-US" xml:lang="EN-US">SetIntegerProperty ( <a href="../common_vbageneral/common_general_name.htm" id="a3" style="font-weight: normal; font-style: normal;" name="a3">name</a> <span style="font-style: italic;"><i>propertyname,</i></span> <span><a href="../common_vbageneral/common_general_string.htm" id="a15" style="font-weight: normal; font-style: normal;" name="a15">string</a></span> <span style="font-style: italic;"><i>value</i></span> )</span></span></span></span></span></span></span></p>
+<p class="VBA-Heading-Method"><span lang="EN-US" xml:lang="EN-US"><span lang="EN-US" xml:lang="EN-US"><span lang="EN-US" xml:lang="EN-US"><span lang="EN-US" xml:lang="EN-US"><span lang="EN-US" xml:lang="EN-US">SetBoolProperty ( <a href="../common_vbageneral/common_general_name.htm" id="a33" style="font-weight: normal; font-style: normal;" name="a33">name</a> <span style="font-style: italic;"><i>propertyname,</i></span> <span><a href="../common_vbageneral/common_general_string.htm" id="a34" style="font-weight: normal; font-style: normal;" name="a34">string</a></span> <span style="font-style: italic;"><i>value</i></span> )</span></span></span></span></span></p>
+<p class="VBA-Heading-Method"><span lang="EN-US" xml:lang="EN-US"><span lang="EN-US" xml:lang="EN-US"><span lang="EN-US" xml:lang="EN-US">SetStringProperty ( <a href="../common_vbageneral/common_general_name.htm" id="a35" style="font-weight: normal; font-style: normal;" name="a35">name</a> <span style="font-style: italic;"><i>propertyname,</i></span> <a href="../common_vbageneral/common_general_string.htm" id="a36" style="font-weight: normal; font-style: normal;" name="a36">string</a> <span style="font-style: italic;"><i>value</i></span> )</span></span></span></p>
+<p class="VBA-Heading-Method"><span lang="EN-US" xml:lang="EN-US"><span lang="EN-US" xml:lang="EN-US"><span lang="EN-US" xml:lang="EN-US">SetDoubleArrayProperty ( <a href="../common_vbageneral/common_general_name.htm" id="a62" style="font-weight: normal; font-style: normal;" name="a62">name</a> <span style="font-style: italic;"><i>propertyname, <a href="../common_vbageneral/common_general_string_array_data_type.htm" id="a63" style="font-weight: normal; font-style: normal;" name="a63">string array</a></i></span> <span style="font-style: italic;"><i>value</i></span> )</span></span></span></p>
+<p class="VBA-Heading-Method"><span lang="EN-US" xml:lang="EN-US"><span lang="EN-US" xml:lang="EN-US"><span lang="EN-US" xml:lang="EN-US">SetIntegerArrayProperty ( <a href="../common_vbageneral/common_general_name.htm" id="a66" style="font-weight: normal; font-style: normal;" name="a66">name</a> <span style="font-style: italic;"><i>propertyname, <a href="../common_vbageneral/common_general_string_array_data_type.htm" id="a67" style="font-weight: normal; font-style: normal;" name="a67">string array</a></i></span> <span style="font-style: italic;"><i>value</i></span> )</span></span></span></p>
+<p class="VBA-Heading-Method"><span lang="EN-US" xml:lang="EN-US"><span lang="EN-US" xml:lang="EN-US"><span lang="EN-US" xml:lang="EN-US">SetStringArrayProperty ( <a href="../common_vbageneral/common_general_name.htm" id="a661" style="font-weight: normal; font-style: normal;" name="a661">name</a> <span style="font-style: italic;"><i>propertyname, <a href="../common_vbageneral/common_general_string_array_data_type.htm" id="a671" style="font-weight: normal; font-style: normal;" name="a671">string array</a></i></span> <span style="font-style: italic;"><i>value</i></span> )</span></span></span></p>
+<p class="VBA-Text-Indent"><span lang="EN-US" xml:lang="EN-US"><span lang="EN-US" xml:lang="EN-US"><span lang="EN-US" xml:lang="EN-US">Sets the given value for the specified property. The list of properties available is individual for each type of block.</span></span></span></p>
+<p class="VBA-Text-Indent"><span lang="EN-US" xml:lang="EN-US">Note: Use</span> <span lang="EN-US" xml:lang="EN-US" style="font-weight: bold;">SetIntegerProperty</span><span lang="EN-US" xml:lang="EN-US">( <a href="../common_vbageneral/common_general_name.htm" id="a92" style="font-weight: normal; font-style: normal;" name="a92">name</a></span> <span lang="EN-US" xml:lang="EN-US" style="font-style: italic;"><i>propertyname,</i></span> <span lang="EN-US" xml:lang="EN-US"><a href="../common_vbageneral/common_general_string.htm" id="a93" style="font-weight: normal; font-style: normal;" name="a93">string</a></span> <span lang="EN-US" xml:lang="EN-US" style="font-style: italic;"><i>value</i></span> <span lang="EN-US" xml:lang="EN-US">) to specifiy enum properties, characterized by a drop-down list. Each entry is numbered consecutively starting from "0". Setting the enum property "Model Type" skips the first entry "Device Library" (which can be set by the standalone method</span> <span style="font-size: 12px; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 700; orphans: 2; widows: 2; -webkit-text-stroke-width: 0px; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; display: inline ! important ; float: none;">SetLibraryModel</span><span lang="EN-US" xml:lang="EN-US">). Please take a look at the examples below to get further information.</span></p>
+<p class="VBA-Heading-Category"><span lang="EN-US" xml:lang="EN-US"><span lang="EN-US" xml:lang="EN-US"><span lang="EN-US" xml:lang="EN-US"><a name="vba_block_assembly" id="vba_block_assembly"></a>Assembly</span></span></span></p>
+<p class="VBA-Heading-Method"><span lang="EN-US" xml:lang="EN-US"><span lang="EN-US" xml:lang="EN-US"><span lang="EN-US" xml:lang="EN-US">SnapAnchorPoints</span> <span lang="EN-US" xml:lang="EN-US">(</span> <a href="../common_vbageneral/common_general_string.htm" id="a1516" style="font-weight: normal; font-style: normal;" name="a1516">string</a> <span lang="EN-US" xml:lang="EN-US" style="font-style: italic;"><i>block1,</i></span> <a href="../common_vbageneral/common_general_string.htm" id="a15114" style="font-weight: normal; font-style: normal;" name="a15114">string</a> <span lang="EN-US" xml:lang="EN-US" style="font-style: italic;"><i>anchor1,</i></span> <a href="../common_vbageneral/common_general_string.htm" id="a15124" style="font-weight: normal; font-style: normal;" name="a15124">string</a> <span lang="EN-US" xml:lang="EN-US" style="font-style: italic;"><i>block2,</i></span> <a href="../common_vbageneral/common_general_string.htm" id="a151241" style="font-weight: normal; font-style: normal;" name="a151241">string</a> <span lang="EN-US" xml:lang="EN-US" style="font-style: italic;"><i>anchor2,</i></span> <a href="../common_vbageneral/common_general_string.htm" id="a151242" style="font-weight: normal; font-style: normal;" name="a151242">string</a> <span lang="EN-US" xml:lang="EN-US" style="font-style: italic;"><i>rotation,</i></span> <a href="../common_vbageneral/common_general_string.htm" id="a151243" style="font-weight: normal; font-style: normal;" name="a151243">string</a> <span lang="EN-US" xml:lang="EN-US" style="font-style: italic;"><i>distance</i></span><span lang="EN-US" xml:lang="EN-US" style="font-weight: normal; font-style: italic;"><i>,</i></span> <a href="../common_vbageneral/common_general_bool_data_type.htm" id="a531" style="font-weight: normal; font-style: normal;" name="a531">bool</a> <span style="font-style: italic;"><i>flip</i></span> <span lang="EN-US" xml:lang="EN-US">)</span></span></span></p>
+<p class="VBA-Text-Indent"><span lang="EN-US" xml:lang="EN-US"><span lang="EN-US" xml:lang="EN-US"><span lang="EN-US" xml:lang="EN-US">Snaps</span> <span lang="EN-US" xml:lang="EN-US" style="font-style: italic;"><i>block2</i></span><span lang="EN-US" xml:lang="EN-US">'s anchor point</span> <span lang="EN-US" xml:lang="EN-US" style="font-style: italic;"><i>anchor2</i></span> <span lang="EN-US" xml:lang="EN-US">to</span> <span lang="EN-US" xml:lang="EN-US" style="font-style: italic;"><i>block1</i></span><span lang="EN-US" xml:lang="EN-US">'s anchor point</span> <span lang="EN-US" xml:lang="EN-US" style="font-style: italic;"><i>anchor1</i></span> <span lang="EN-US" xml:lang="EN-US">(i.e.</span> <span lang="EN-US" xml:lang="EN-US" style="font-style: italic;"><i>block1</i></span> <span lang="EN-US" xml:lang="EN-US">remains in place while</span> <span lang="EN-US" xml:lang="EN-US" style="font-style: italic;"><i>block2</i></span> <span lang="EN-US" xml:lang="EN-US">is moved). A relative</span> <span lang="EN-US" xml:lang="EN-US" style="font-style: italic;"><i>rotation</i></span> <span lang="EN-US" xml:lang="EN-US">angle and a longitudinal</span> <span lang="EN-US" xml:lang="EN-US" style="font-style: italic;"><i>distance</i></span> <span lang="EN-US" xml:lang="EN-US">between the anchor points can be specified as parameterized expressions. The parameter</span> <span lang="EN-US" xml:lang="EN-US" style="font-style: italic;"><i>flip</i></span> <span lang="EN-US" xml:lang="EN-US">can be used to reverse the facing of the blocks.</span></span></span></p>
+<p class="VBA-Heading-Method" style="font-weight: normal; font-style: italic;">&#160;</p>
+<p class="VBA-Heading-Method"><span lang="EN-US" xml:lang="EN-US"><span lang="EN-US" xml:lang="EN-US"><span lang="EN-US" xml:lang="EN-US">SnapAnchorPointsEx</span> <span lang="EN-US" xml:lang="EN-US">(</span> <a href="../common_vbageneral/common_general_string.htm" id="a1516" style="font-weight: normal; font-style: normal;" name="a1516">string</a> <span lang="EN-US" xml:lang="EN-US" style="font-style: italic;"><i>block1,</i></span> <a href="../common_vbageneral/common_general_string.htm" id="a15114" style="font-weight: normal; font-style: normal;" name="a15114">string</a> <span lang="EN-US" xml:lang="EN-US" style="font-style: italic;"><i>anchor1,</i></span> <a href="../common_vbageneral/common_general_string.htm" id="a15124" style="font-weight: normal; font-style: normal;" name="a15124">string</a> <span lang="EN-US" xml:lang="EN-US" style="font-style: italic;"><i>block2,</i></span> <a href="../common_vbageneral/common_general_string.htm" id="a151241" style="font-weight: normal; font-style: normal;" name="a151241">string</a> <span lang="EN-US" xml:lang="EN-US" style="font-style: italic;"><i>anchor2,</i></span> <a href="../common_vbageneral/common_general_string.htm" id="a151242" style="font-weight: normal; font-style: normal;" name="a151242">string</a> <span lang="EN-US" xml:lang="EN-US" style="font-style: italic;"><i>rotation,</i></span> <a href="../common_vbageneral/common_general_string.htm" id="a151243" style="font-weight: normal; font-style: normal;" name="a151243">string</a> <span lang="EN-US" xml:lang="EN-US" style="font-style: italic;"><i>u,</i></span> <a href="../common_vbageneral/common_general_string.htm" id="a151243" style="font-weight: normal; font-style: normal;" name="a151243">string</a> <span lang="EN-US" xml:lang="EN-US" style="font-style: italic;"><i>v,</i></span> <a href="../common_vbageneral/common_general_string.htm" id="a151243" style="font-weight: normal; font-style: normal;" name="a151243">string</a> <span lang="EN-US" xml:lang="EN-US" style="font-style: italic;"><i>distance</i></span><span lang="EN-US" xml:lang="EN-US" style="font-weight: normal; font-style: italic;"><i>,</i></span> <a href="../common_vbageneral/common_general_bool_data_type.htm" id="a531" style="font-weight: normal; font-style: normal;" name="a531">bool</a> <span style="font-style: italic;"><i>flip</i></span> <span lang="EN-US" xml:lang="EN-US">)</span></span></span></p>
+<p class="VBA-Text-Indent"><span lang="EN-US" xml:lang="EN-US"><span lang="EN-US" xml:lang="EN-US"><span lang="EN-US" xml:lang="EN-US">Snaps</span> <span lang="EN-US" xml:lang="EN-US" style="font-style: italic;"><i>block2</i></span><span lang="EN-US" xml:lang="EN-US">'s anchor point</span> <span lang="EN-US" xml:lang="EN-US" style="font-style: italic;"><i>anchor2</i></span> <span lang="EN-US" xml:lang="EN-US">to</span> <span lang="EN-US" xml:lang="EN-US" style="font-style: italic;"><i>block1</i></span><span lang="EN-US" xml:lang="EN-US">'s anchor point</span> <span lang="EN-US" xml:lang="EN-US" style="font-style: italic;"><i>anchor1</i></span> <span lang="EN-US" xml:lang="EN-US">(i.e.</span> <span lang="EN-US" xml:lang="EN-US" style="font-style: italic;"><i>block1</i></span> <span lang="EN-US" xml:lang="EN-US">remains in place while</span> <span lang="EN-US" xml:lang="EN-US" style="font-style: italic;"><i>block2</i></span> <span lang="EN-US" xml:lang="EN-US">is moved). A relative</span> <span lang="EN-US" xml:lang="EN-US" style="font-style: italic;"><i>rotation</i></span> <span lang="EN-US" xml:lang="EN-US">angle, a horizontal shift <span lang="EN-US" xml:lang="EN-US" style="font-style: italic;"><i>u</i></span>, a vertical shuft <span lang="EN-US" xml:lang="EN-US" style="font-style: italic;"><i>v</i></span> and a longitudinal</span> <span lang="EN-US" xml:lang="EN-US" style="font-style: italic;"><i>distance</i></span> <span lang="EN-US" xml:lang="EN-US">between the anchor points can be specified as parameterized expressions. The parameter</span> <span lang="EN-US" xml:lang="EN-US" style="font-style: italic;"><i>flip</i></span> <span lang="EN-US" xml:lang="EN-US">can be used to reverse the facing of the blocks.</span></span></span></p>
+<p class="VBA-Heading-Method" style="font-weight: normal; font-style: italic;">&#160;</p>
+<p class="VBA-Heading-Method"><span lang="EN-US" xml:lang="EN-US"><span lang="EN-US" xml:lang="EN-US"><span lang="EN-US" xml:lang="EN-US">ReleaseSnappedAnchorPoints</span> <span lang="EN-US" xml:lang="EN-US">( &#160;</span><span><a href="../common_vbageneral/common_general_string.htm" id="a15161" style="font-weight: normal; font-style: normal;" name="a15161">string</a></span> <span lang="EN-US" xml:lang="EN-US" style="font-style: italic;"><i>block1,</i></span> <span><a href="../common_vbageneral/common_general_string.htm" id="a151244" style="font-weight: normal; font-style: normal;" name="a151244">string</a></span> <span lang="EN-US" xml:lang="EN-US" style="font-style: italic;"><i>block2</i></span> <span lang="EN-US" xml:lang="EN-US">)</span></span></span></p>
+<p class="VBA-Text-Indent"><span lang="EN-US" xml:lang="EN-US">Releases any snapped anchor points between the blocks</span> <span lang="EN-US" xml:lang="EN-US" style="font-style: italic;"><i>block1</i></span> <span lang="EN-US" xml:lang="EN-US">and</span> <span lang="EN-US" xml:lang="EN-US" style="font-style: italic;"><i>block2</i></span><span lang="EN-US" xml:lang="EN-US">.</span></p>
+<p class="VBA-Heading-Method" style="font-weight: normal; font-style: italic;">&#160;</p>
+<p class="VBA-Heading-Method"><span lang="EN-US" xml:lang="EN-US">GetAnchorPointsList ( &#160;</span><a href="../common_vbageneral/common_general_string.htm" id="a151611" style="font-weight: normal; font-style: normal;" name="a151611">string</a> <span lang="EN-US" xml:lang="EN-US" style="font-style: italic;"><i>blockname</i></span> <span lang="EN-US" xml:lang="EN-US">)</span> <a href="../common_vbageneral/common_general_string_array_data_type.htm" id="a6314" style="font-weight: normal; font-style: normal;" name="a6314">string array</a></p>
+<p class="VBA-Text-Indent">Returns a list with the names of all anchor points defined for the specified block.</p>
+<p class="VBA-Text-Example" style="margin-left: 40px;">Dim anchorNames() As String</p>
+<p class="VBA-Text-Example" style="margin-left: 40px;">anchorNames = Block.GetAnchorPointsList("myBlock_1")</p>
+<p class="VBA-Text-Example" style="margin-left: 40px;">Dim N As Integer</p>
+<p class="VBA-Text-Example" style="margin-left: 40px;">For N = 0 To UBound(anchorNames)</p>
+<p class="VBA-Text-Example" style="margin-left: 40px;">ReportInformation(anchorNames(N))</p>
+<p class="VBA-Text-Example" style="margin-left: 40px;">Next</p>
+<p class="VBA-Heading-Category"><span lang="EN-US" xml:lang="EN-US">All following methods in this section operate on an already existing Block object.</span></p>
+<p class="VBA-Heading-Method"><span lang="EN-US" xml:lang="EN-US">GetGlobalTranslationInAssembly</span> <a href="../common_vbageneral/common_general_string_array_data_type.htm" id="a631" style="font-weight: normal; font-style: normal;" name="a631">string array</a></p>
+<p class="VBA-Text-Indent">Returns the block translation vector with respect to the global assembly coordinate system, comprising the (potentially parameterized) expressions for x, y, and z translation.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method"><span lang="EN-US" xml:lang="EN-US">GetGlobalTranslationInAssemblyValues</span> <a href="../common_vbageneral/common_general_variant.htm" id="a6311" style="font-weight: normal; font-style: normal;" name="a6311">double_array</a></p>
+<p class="VBA-Text-Indent">Returns the block translation vector with respect to the global assembly coordinate system, comprising the numerical values for x, y, and z translation.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method"><span lang="EN-US" xml:lang="EN-US">GetLocalTranslationInAssembly</span> <a href="../common_vbageneral/common_general_string_array_data_type.htm" id="a6312" style="font-weight: normal; font-style: normal;" name="a6312">string array</a></p>
+<p class="VBA-Text-Indent">Returns the block translation vector in the assembly model with respect to the block's local coordinate system, comprising the (potentially parameterized) expressions for x, y, and z translation.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method"><span lang="EN-US" xml:lang="EN-US">GetLocalTranslationInAssemblyValues</span> <a href="../common_vbageneral/common_general_variant.htm" id="a63111" style="font-weight: normal; font-style: normal;" name="a63111">double_array</a></p>
+<p class="VBA-Text-Indent">Returns the block translation vector in the assembly model with respect to the block's local coordinate system, comprising the numerical values for x, y, and z translation.</p>
+<p class="VBA-Heading-Method">&#160;</p>
+<p class="VBA-Heading-Method"><span lang="EN-US" xml:lang="EN-US">GetRotationAnglesInAssembly</span> <a href="../common_vbageneral/common_general_string_array_data_type.htm" id="a6313" style="font-weight: normal; font-style: normal;" name="a6313">string array</a></p>
+<p class="VBA-Text-Indent">Returns the block rotation angles (Euler angles) in the assembly model, comprising the (potentially parameterized) expressions for the angles around the x-, y-, and z-axes.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method"><span lang="EN-US" xml:lang="EN-US">GetRotationAnglesInAssemblyValues</span> <a href="../common_vbageneral/common_general_variant.htm" id="a63112" style="font-weight: normal; font-style: normal;" name="a63112">double_array</a></p>
+<p class="VBA-Text-Indent">Returns the block rotation angles (Euler angles) in the assembly model, comprising the numerical values for the angles around the x-, y-, and z-axes.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method"><span lang="EN-US" xml:lang="EN-US">GetRotationCenterInAssembly</span> <a href="../common_vbageneral/common_general_string_array_data_type.htm" id="a63131" style="font-weight: normal; font-style: normal;" name="a63131">string array</a></p>
+<p class="VBA-Text-Indent">Returns the block rotation center (pivot offset) with respect to the block's local coordinate system in the assembly model, comprising the (potentially parameterized) expressions for x, y, and z offset.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method"><span lang="EN-US" xml:lang="EN-US">GetRotationCenterInAssemblyValues</span> <a href="../common_vbageneral/common_general_variant.htm" id="a631121" style="font-weight: normal; font-style: normal;" name="a631121">double_array</a></p>
+<p class="VBA-Text-Indent">Returns the block rotation center (pivot offset) with respect to the block's local coordinate system in the assembly model, comprising the numerical values for x, y, and z offset.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method"><span lang="EN-US" xml:lang="EN-US">SetFixedPositionInAssembly</span> <span lang="EN-US" xml:lang="EN-US">(</span> <a href="../common_vbageneral/common_general_bool_data_type.htm" id="a521" style="font-weight: normal; font-style: normal;" name="a521">bool</a> <span lang="EN-US" xml:lang="EN-US" style="font-style: italic;"><i>fixed</i></span> <span lang="EN-US" xml:lang="EN-US">)</span></p>
+<p class="VBA-Text-Indent">Sets whether the block position in the assembly shall be fixed. Non-fixed blocks can be moved by snapping operations (snapped connectors or anchor points).</p>
+<p class="VBA-Text-Indent">Only fixed blocks are guaranteed to keep the position set by other transformation operations (e.g. via <span style="font-style: italic;"><i>SetGlobalTranslationInAssembly</i></span>).</p>
+<p class="VBA-Heading-Method">&#160;</p>
+<p class="VBA-Heading-Method"><span lang="EN-US" xml:lang="EN-US">SetGlobalTranslationInAssembly</span> <span lang="EN-US" xml:lang="EN-US">(</span> <a href="../common_vbageneral/common_general_string.htm" id="a151" style="font-weight: normal; font-style: normal;" name="a151">string</a> <span lang="EN-US" xml:lang="EN-US" style="font-style: italic;"><i>x,</i></span> <a href="../common_vbageneral/common_general_string.htm" id="a1511" style="font-weight: normal; font-style: normal;" name="a1511">string</a> <span lang="EN-US" xml:lang="EN-US" style="font-style: italic;"><i>y,</i></span> <a href="../common_vbageneral/common_general_string.htm" id="a1512" style="font-weight: normal; font-style: normal;" name="a1512">string</a> <span lang="EN-US" xml:lang="EN-US" style="font-style: italic;"><i>z</i></span> <span lang="EN-US" xml:lang="EN-US">)</span></p>
+<p class="VBA-Text-Indent">Sets the translation vector with respect to the global assembly coordinate system in the assembly model. The coordinates can contain parameterized expressions.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method"><span lang="EN-US" xml:lang="EN-US">SetLocalTranslationInAssembly</span><span lang="EN-US" xml:lang="EN-US" style="font-weight: normal;">&#160;</span><span lang="EN-US" xml:lang="EN-US">(</span> <span><a href="../common_vbageneral/common_general_string.htm" id="a1513" style="font-weight: normal; font-style: normal;" name="a1513">string</a></span> <span lang="EN-US" xml:lang="EN-US" style="font-style: italic;"><i>x,</i></span> <span><a href="../common_vbageneral/common_general_string.htm" id="a15111" style="font-weight: normal; font-style: normal;" name="a15111">string</a></span> <span lang="EN-US" xml:lang="EN-US" style="font-style: italic;"><i>y,</i></span> <span><a href="../common_vbageneral/common_general_string.htm" id="a15121" style="font-weight: normal; font-style: normal;" name="a15121">string</a></span> <span lang="EN-US" xml:lang="EN-US" style="font-style: italic;"><i>z</i></span> <span lang="EN-US" xml:lang="EN-US">)</span></p>
+<p class="VBA-Text-Indent">Sets the translation vector with respect to the local block coordinate system in the assembly model. The coordinates can contain parameterized expressions.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method"><span lang="EN-US" xml:lang="EN-US">SetRotationAnglesInAssembly</span><span lang="EN-US" xml:lang="EN-US" style="font-weight: normal;">&#160;</span><span lang="EN-US" xml:lang="EN-US">(</span> <span><a href="../common_vbageneral/common_general_string.htm" id="a1514" style="font-weight: normal; font-style: normal;" name="a1514">string</a></span> <span lang="EN-US" xml:lang="EN-US">r</span><span lang="EN-US" xml:lang="EN-US" style="font-style: italic;"><i>x,</i></span> <span><a href="../common_vbageneral/common_general_string.htm" id="a15112" style="font-weight: normal; font-style: normal;" name="a15112">string</a></span> <span lang="EN-US" xml:lang="EN-US">r</span><span lang="EN-US" xml:lang="EN-US" style="font-style: italic;"><i>y,</i></span> <span><a href="../common_vbageneral/common_general_string.htm" id="a15122" style="font-weight: normal; font-style: normal;" name="a15122">string</a></span> <span lang="EN-US" xml:lang="EN-US">r</span><span lang="EN-US" xml:lang="EN-US" style="font-style: italic;"><i>z</i></span> <span lang="EN-US" xml:lang="EN-US">)</span></p>
+<p class="VBA-Text-Indent">Sets the rotation angles (Euler angles) for the block in the assembly model. The angles can contain parameterized expressions.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method"><span lang="EN-US" xml:lang="EN-US">SetRotationCenterInAssembly</span><span lang="EN-US" xml:lang="EN-US" style="font-weight: normal;">&#160;</span><span lang="EN-US" xml:lang="EN-US">(</span> <span><a href="../common_vbageneral/common_general_string.htm" id="a1515" style="font-weight: normal; font-style: normal;" name="a1515">string</a></span> <span lang="EN-US" xml:lang="EN-US" style="font-style: italic;"><i>x,</i></span> <span><a href="../common_vbageneral/common_general_string.htm" id="a15113" style="font-weight: normal; font-style: normal;" name="a15113">string</a></span> <span lang="EN-US" xml:lang="EN-US" style="font-style: italic;"><i>y,</i></span> <span><a href="../common_vbageneral/common_general_string.htm" id="a15123" style="font-weight: normal; font-style: normal;" name="a15123">string</a></span> <span lang="EN-US" xml:lang="EN-US" style="font-style: italic;"><i>z</i></span> <span lang="EN-US" xml:lang="EN-US">)</span></p>
+<p class="VBA-Text-Indent">Sets the rotation center (pivot offset) with respect to the local block coordinate system in the assembly model. The offset coordinates can contain parameterized expressions.</p>
+<p class="VBA-Heading-Category"><a name="Default_Settings" id="Default_Settings"></a>Default Settings</p>
+<p class="VBA-Text-Example">Position (50000, 50000)</p>
+<p class="VBA-Text-Example">SetRelativePath (True)</p>
+<p class="VBA-Heading-Category"><a name="Examples" id="Examples"></a>Examples</p>
+<p class="VBA-Text-Example"><a name="Creation" id="Creation"></a>'Create a block</p>
+<p class="VBA-Text-Example">&#160;</p>
+<p class="VBA-Text-Example">With Block</p>
+<p class="VBA-Text-Example" style="margin-left: 40px;">.Reset</p>
+<p class="VBA-Text-Example" style="margin-left: 40px;">.Type ("MicrostripCoupledLinesIrregular")</p>
+<p class="VBA-Text-Example" style="margin-left: 40px;">.Name ("MC2")</p>
+<p class="VBA-Text-Example" style="margin-left: 40px;">Dim sWidth(0 To 3) As String</p>
+<p class="VBA-Text-Example" style="margin-left: 40px;">sWidth(0) = "0.5"</p>
+<p class="VBA-Text-Example" style="margin-left: 40px;">sWidth(1) = "1.1"</p>
+<p class="VBA-Text-Example" style="margin-left: 40px;">sWidth(2) = "2.2"</p>
+<p class="VBA-Text-Example" style="margin-left: 40px;">sWidth(3) = "3.3"</p>
+<p class="VBA-Text-Example" style="margin-left: 40px;">.SetIntegerProperty("Number Of Lines", 4)</p>
+<p class="VBA-Text-Example" style="margin-left: 40px;">.SetDoubleArrayProperty("Widths", sWidth)</p>
+<p class="VBA-Text-Example" style="margin-left: 40px;">.Position(51050, 51000)</p>
+<p class="VBA-Text-Example" style="margin-left: 40px;">.Create</p>
+<p class="VBA-Text-Example">End With</p>
+<p class="VBA-Text-Example">&#160;</p>
+<p class="VBA-Text-Example"><a name="Modification" id="Modification"></a>'Modify an existing block's position and some solver settings</p>
+<p class="VBA-Text-Example">&#160;</p>
+<p class="VBA-Text-Example">With Block</p>
+<p class="VBA-Text-Example" style="margin-left: 40px;">.Reset</p>
+<p class="VBA-Text-Example" style="margin-left: 40px;">.Name ("MyTLine")</p>
+<p class="VBA-Text-Example" style="margin-left: 40px;">.Position(57000, 50000)</p>
+<p class="VBA-Text-Example" style="margin-left: 40px;">.Rotate (90)</p>
+<p class="VBA-Text-Example" style="margin-left: 40px;">.SetDeembedded (True)</p>
+<p class="VBA-Text-Example">End With</p>
+<p class="VBA-Text-Example">&#160;</p>
+<p class="VBA-Text-Example" style="margin-left: 0px;"><a name="SetProperty" id="SetProperty"></a>'Set the enum property "Model Type" of a resistor named "RES1" to "Parasitic (1st Order)" (entries of the drop-down list are numbered from 0 - (n-1) beginning with "Ideal").</p>
+<p class="VBA-Text-Example" style="margin-left: 0px;">&#160;</p>
+<p class="VBA-Text-Example" style="margin-left: 0px;">With Block</p>
+<p class="VBA-Text-Example" style="margin-left: 40px;">.name("RES1")</p>
+<p class="VBA-Text-Example" style="margin-left: 40px;">.Type("CircuitBasic\Resistor")</p>
+<p class="VBA-Text-Example" style="margin-left: 40px;">.SetIntegerProperty("Model Type", "1")</p>
+<p class="VBA-Text-Example" style="margin-left: 0px;">End With</p>
+<p class="VBA-Text-Example" style="margin-left: 0px;">&#160;</p>
+<p class="VBA-Text-Indent" style="margin-left: 0px; font-family: 'Courier New', monospace;"><span style="font-family: 'Courier New', monospace;"><a name="Example_FindPortsWithLabel" id="Example_FindPortsWithLabel"></a>'Find all ports with label 'MyLabel'</span></p>
+<p class="VBA-Text-Indent" style="font-family: 'Courier New', monospace; margin-left: 0px;">Dim <span style="font-style: italic;"><i>portNames</i></span> As Variant</p>
+<p class="VBA-Text-Indent" style="font-family: 'Courier New', monospace; margin-left: 0px;">Dim <span style="font-style: italic;"><i>numberOfPorts</i></span> As Long</p>
+<p class="VBA-Text-Indent" style="font-family: 'Courier New', monospace; margin-left: 0px;">Dim <span style="font-style: italic;"><i>iPortIndex</i></span> As Integer</p>
+<p class="VBA-Text-Indent" style="font-family: 'Courier New', monospace; margin-left: 0px;">With Block</p>
+<p class="VBA-Text-Indent" style="font-family: 'Courier New', monospace; margin-left: 0px;">&#160;&#160;&#160;.Reset</p>
+<p class="VBA-Text-Indent" style="font-family: 'Courier New', monospace; margin-left: 0px;">&#160;&#160;&#160;.Name "MyBlock"</p>
+<p class="VBA-Text-Indent" style="font-family: 'Courier New', monospace; margin-left: 0px;">&#160;&#160;&#160;<span style="font-style: italic;"><i>numberOfPorts</i></span> = .FindPortsWithLabel( "MyLabel", portNames )</p>
+<p class="VBA-Text-Indent" style="font-family: 'Courier New', monospace; margin-left: 0px;">&#160;&#160;&#160;If <span style="font-style: italic;"><i>IsEmpty(</i></span>portNames<span style="font-style: italic;"><i>)</i></span> Then</p>
+<p class="VBA-Text-Indent" style="font-family: 'Courier New', monospace; margin-left: 0px;">&#160;&#160;&#160;&#160;&#160;&#160;DS.ReportInformation "Port with label 'MyLabel' does not exist."</p>
+<p class="VBA-Text-Indent" style="font-family: 'Courier New', monospace; margin-left: 0px;">&#160;&#160;&#160;Else</p>
+<p class="VBA-Text-Indent" style="font-family: 'Courier New', monospace; margin-left: 0px;">&#160;&#160;&#160;&#160;&#160;&#160;Dim N As Long</p>
+<p class="VBA-Text-Indent" style="margin-left: 0px; font-family: 'Courier New', monospace;">&#160;&#160;&#160;&#160;&#160;&#160;For N = 0 To UBound( portNames )</p>
+<p class="VBA-Text-Indent" style="font-family: 'Courier New', monospace; margin-left: 0px;">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;iPortIndex = .GetPortIndex(portNames(N))</p>
+<p class="VBA-Text-Indent" style="font-family: 'Courier New', monospace; margin-left: 0px;">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;DS.ReportInformation( .GetPortName(iPortIndex)+" ("+.GetPortLabel(iPortIndex)+")" )</p>
+<p class="VBA-Text-Indent" style="font-family: 'Courier New', monospace; margin-left: 0px;">&#160;&#160;&#160;&#160;&#160;&#160;Next</p>
+<p class="VBA-Text-Indent" style="font-family: 'Courier New', monospace; margin-left: 0px;">&#160;&#160;&#160;End If</p>
+<p class="VBA-Text-Indent" style="font-family: 'Courier New', monospace; margin-left: 0px;">End With</p>
+<p class="VBA-Text-Indent" style="font-family: 'Courier New', monospace; margin-left: 0px;">&#160;</p>
+<p class="VBA-Text-Indent" style="margin-left: 0px; font-family: 'Courier New', monospace;"><a name="Example_GetBusPortNames" id="Example_GetBusPortNames"></a>'Get ports inside a bus pin 0</p>
+<p class="VBA-Text-Indent" style="font-family: 'Courier New', monospace; margin-left: 0px;">Dim <span style="font-style: italic;"><i>portNames</i></span> As Variant</p>
+<p class="VBA-Text-Indent" style="font-family: 'Courier New', monospace; margin-left: 0px;">Dim <span style="font-style: italic;"><i>exists</i></span> As Boolean</p>
+<p class="VBA-Text-Indent" style="font-family: 'Courier New', monospace; margin-left: 0px;"><span style="font-family: 'Courier New', monospace;">Dim <span style="font-style: italic;"><i>iPortIndex</i></span> As Integer</span></p>
+<p class="VBA-Text-Indent" style="font-family: 'Courier New', monospace; margin-left: 0px;">With Block</p>
+<p class="VBA-Text-Indent" style="font-family: 'Courier New', monospace; margin-left: 0px;">&#160;&#160;&#160;.Reset</p>
+<p class="VBA-Text-Indent" style="font-family: 'Courier New', monospace; margin-left: 0px;">&#160;&#160;&#160;.Name "MyBlock"</p>
+<p class="VBA-Text-Indent" style="font-family: 'Courier New', monospace; margin-left: 0px;">&#160;&#160;&#160;<span style="font-style: italic;"><i>exists</i></span> = .GetBusPortNames( 0, portNames )</p>
+<p class="VBA-Text-Indent" style="font-family: 'Courier New', monospace; margin-left: 0px;">&#160;&#160;&#160;If Not <span style="font-style: italic;"><i>exists</i></span> Then</p>
+<p class="VBA-Text-Indent" style="font-family: 'Courier New', monospace; margin-left: 0px;">&#160;&#160;&#160;&#160;&#160;&#160;DS.ReportInformation "Pin is not a bus pin."</p>
+<p class="VBA-Text-Indent" style="font-family: 'Courier New', monospace; margin-left: 0px;">&#160;&#160;&#160;Else</p>
+<p class="VBA-Text-Indent" style="font-family: 'Courier New', monospace; margin-left: 0px;">&#160;&#160;&#160;&#160;&#160;&#160;Dim N As Long</p>
+<p class="VBA-Text-Indent" style="margin-left: 0px; font-family: 'Courier New', monospace;">&#160;&#160;&#160;&#160;&#160;&#160;For N = 0 To UBound( portNames )</p>
+<p class="VBA-Text-Indent" style="font-family: 'Courier New', monospace; margin-left: 0px;">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;iPortIndex = .GetPortIndex(portNames(N))</p>
+<p class="VBA-Text-Indent" style="font-family: 'Courier New', monospace; margin-left: 0px;">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;DS.ReportInformation( .GetPortName(iPortIndex)+" ("+.GetPortLabel(iPortIndex)+")" )</p>
+<p class="VBA-Text-Indent" style="font-family: 'Courier New', monospace; margin-left: 0px;">&#160;&#160;&#160;&#160;&#160;&#160;Next</p>
+<p class="VBA-Text-Indent" style="font-family: 'Courier New', monospace; margin-left: 0px;">&#160;&#160;&#160;End If</p>
+<p class="VBA-Text-Indent" style="font-family: 'Courier New', monospace; margin-left: 0px;">End With</p>
+<p class="VBA-Text-Indent" style="font-family: 'Courier New', monospace; margin-left: 0px;">&#160;</p>
+<p class="VBA-Text-Indent" style="margin-left: 0px; font-family: 'Courier New', monospace;"><a name="Example_ChangeLayout" id="Example_ChangeLayout"></a>'Change the layout of the block</p>
+<p class="VBA-Text-Indent" style="font-family: 'Courier New', monospace; margin-left: 0px;"><span style="font-family: 'Courier New', monospace;">'Precondition: block 'MyBlock' have at least 2 pins on the left and 2 pins on the right</span></p>
+<p class="VBA-Text-Indent" style="font-family: 'Courier New', monospace; margin-left: 0px;">Dim edge As String</p>
+<p class="VBA-Text-Indent" style="font-family: 'Courier New', monospace; margin-left: 0px;">Dim edgeindex As Long</p>
+<p class="VBA-Text-Indent" style="font-family: 'Courier New', monospace; margin-left: 0px;">With Block</p>
+<p class="VBA-Text-Indent" style="font-family: 'Courier New', monospace; margin-left: 0px;">&#160;&#160;&#160;.Reset</p>
+<p class="VBA-Text-Indent" style="font-family: 'Courier New', monospace; margin-left: 0px;">&#160;&#160;&#160;.Name "MyBlock"</p>
+<p class="VBA-Text-Indent" style="font-family: 'Courier New', monospace; margin-left: 0px;">&#160;</p>
+<p class="VBA-Text-Indent" style="font-family: 'Courier New', monospace; margin-left: 0px;">&#160;&#160;&#160;.SetPinLayoutType( "clockwise" ) 'The pins are distributed on all four edges in clockwise order.</p>
+<p class="VBA-Text-Indent" style="font-family: 'Courier New', monospace; margin-left: 0px;">&#160;&#160;&#160;'Layout is automatically applied.</p>
+<p class="VBA-Text-Indent" style="font-family: 'Courier New', monospace; margin-left: 0px;">&#160;</p>
+<p class="VBA-Text-Indent" style="font-family: 'Courier New', monospace; margin-left: 0px;">&#160;&#160;&#160;.SetDifferentialPorts(True) 'Sets differential ports For a Block.</p>
+<p class="VBA-Text-Indent" style="font-family: 'Courier New', monospace; margin-left: 0px;">&#160;&#160;&#160;'Layout is automatically applied.</p>
+<p class="VBA-Text-Indent" style="font-family: 'Courier New', monospace; margin-left: 0px;">&#160;</p>
+<p class="VBA-Text-Indent" style="font-family: 'Courier New', monospace; margin-left: 0px;">&#160;&#160;&#160;.SetPinName( 0, "pin1" ) ' sets the name of pin 0</p>
+<p class="VBA-Text-Indent" style="font-family: 'Courier New', monospace; margin-left: 0px;">&#160;&#160;&#160;.SetPinName( 1, "pin2" ) ' sets the name of pin 1</p>
+<p class="VBA-Text-Indent" style="font-family: 'Courier New', monospace; margin-left: 0px;">&#160;&#160;&#160;.ApplyPinLayout() 'Apply layout changes that were made in the background.</p>
+<p class="VBA-Text-Indent" style="font-family: 'Courier New', monospace; margin-left: 0px;">&#160;</p>
+<p class="VBA-Text-Indent" style="font-family: 'Courier New', monospace; margin-left: 0px;">&#160;&#160;&#160;.GetPinLayout( 0, edge, edgeindex ) ' gets the location of pin 0</p>
+<p class="VBA-Text-Indent" style="font-family: 'Courier New', monospace; margin-left: 0px;">&#160;</p>
+<p class="VBA-Text-Indent" style="font-family: 'Courier New', monospace; margin-left: 0px;">&#160;&#160;&#160;.SetPinLayout( 0, edge, edgeindex+1 ) ' moves the pin 0 down on the same edge</p>
+<p class="VBA-Text-Indent" style="font-family: 'Courier New', monospace; margin-left: 0px;">&#160;&#160;&#160;.ApplyPinLayout() 'Apply layout changes that were made in the background.</p>
+<p class="VBA-Text-Indent" style="font-family: 'Courier New', monospace; margin-left: 0px;">&#160;</p>
+<p class="VBA-Text-Indent" style="font-family: 'Courier New', monospace; margin-left: 0px;">&#160;&#160;&#160;.SetPinLayout( 0, "TOP", 0 ) ' moves the pin 0 to be the first pin on the top.</p>
+<p class="VBA-Text-Indent" style="font-family: 'Courier New', monospace; margin-left: 0px;">&#160;&#160;&#160;.SetPinLayout( 1, "LEFT", 0 ) ' moves the pin 0 to be the first pin on the left.</p>
+<p class="VBA-Text-Indent" style="font-family: 'Courier New', monospace; margin-left: 0px;">&#160;&#160;&#160;.ApplyPinLayout() ' Apply layout changes that were made in the background.</p>
+<p class="VBA-Text-Indent" style="font-family: 'Courier New', monospace; margin-left: 0px;">End With</p>
+<p class="VBA-Text-Indent" style="font-family: 'Courier New', monospace; margin-left: 0px;">&#160;</p>
+<p class="VBA-Text-Indent" style="font-family: 'Courier New', monospace; margin-left: 0px;"><a name="Create_and_configure_an_IBIS_reference_block" id="Create_and_configure_an_IBIS_reference_block">'Create and configure an IBIS reference block</a></p>
+<p class="VBA-Text-Indent" style="font-family: 'Courier New', monospace; margin-left: 0px;">'It is assumed that an IBIS reference block exists and refers to an IBIS file in which the specified pins and buffers are defined</p>
+<p class="VBA-Text-Indent" style="font-family: 'Courier New', monospace; margin-left: 0px;">With Block</p>
+<p class="VBA-Text-Indent" style="font-family: 'Courier New', monospace; margin-left: 0px;">&#160;&#160;&#160;.Reset</p>
+<p class="VBA-Text-Indent" style="font-family: 'Courier New', monospace; margin-left: 0px;">&#160;&#160;&#160;.Type("IBISImport")</p>
+<p class="VBA-Text-Indent" style="font-family: 'Courier New', monospace; margin-left: 0px;">&#160;&#160;&#160;.Name("IBISFILE1")</p>
+<p class="VBA-Text-Indent" style="font-family: 'Courier New', monospace; margin-left: 0px;">&#160;&#160;&#160;.Create</p>
+<p class="VBA-Text-Indent" style="font-family: 'Courier New', monospace; margin-left: 0px;">&#160;&#160;&#160;.SetIbisInternalPower(True)</p>
+<p class="VBA-Text-Indent" style="font-family: 'Courier New', monospace; margin-left: 0px;">&#160;&#160;&#160;Dim pin1 As String</p>
+<p class="VBA-Text-Indent" style="font-family: 'Courier New', monospace; margin-left: 0px;">&#160;&#160;&#160;pin1 = "14P"</p>
+<p class="VBA-Text-Indent" style="font-family: 'Courier New', monospace; margin-left: 0px;">&#160;&#160;&#160;Dim pin2 As String</p>
+<p class="VBA-Text-Indent" style="font-family: 'Courier New', monospace; margin-left: 0px;">&#160;&#160;&#160;pin2 = "14N"</p>
+<p class="VBA-Text-Indent" style="font-family: 'Courier New', monospace; margin-left: 0px;">&#160;&#160;&#160;Dim models(1) As String</p>
+<p class="VBA-Text-Indent" style="font-family: 'Courier New', monospace; margin-left: 0px;">&#160;&#160;&#160;models(0) = "BUFFER_I_P"</p>
+<p class="VBA-Text-Indent" style="font-family: 'Courier New', monospace; margin-left: 0px;">&#160;&#160;&#160;models(1) = "BUFFER_II_P"</p>
+<p class="VBA-Text-Indent" style="font-family: 'Courier New', monospace; margin-left: 0px;">&#160;&#160;&#160;Dim invModels(2) As String</p>
+<p class="VBA-Text-Indent" style="font-family: 'Courier New', monospace; margin-left: 0px;">&#160;&#160;&#160;invModels(0) = "BUFFER_I_N"</p>
+<p class="VBA-Text-Indent" style="font-family: 'Courier New', monospace; margin-left: 0px;">&#160;&#160;&#160;invModels(1) = "BUFFER_II_N"</p>
+<p class="VBA-Text-Indent" style="font-family: 'Courier New', monospace; margin-left: 0px;">&#160;&#160;&#160;Dim parameter As String</p>
+<p class="VBA-Text-Indent" style="font-family: 'Courier New', monospace; margin-left: 0px;">&#160;&#160;&#160;parameter = "models"</p>
+<p class="VBA-Text-Indent" style="font-family: 'Courier New', monospace; margin-left: 0px;">&#160;&#160;&#160;.SetIbisBuffer(pin1, pin2, models, invModels, parameter)</p>
+<p class="VBA-Text-Indent" style="font-family: 'Courier New', monospace; margin-left: 0px;">&#160;&#160;&#160;.SetIBIsCorner(1, "")</p>
+<p class="VBA-Text-Indent" style="font-family: 'Courier New', monospace; margin-left: 0px;">End With</p>
+<p class="VBA-Text-Indent" style="font-family: 'Courier New', monospace; margin-left: 0px;">&#160;</p>
+<?rh-p style="margin-bottom: 0px; text-align: Right; margin-left: 18px; 
+                 margin-right: 18px; margin-top: 18px;" ?>
+<div style="width: 100%; position: relative;" id="footer">
+<p style="border-bottom: Solid 1px #dddddd; text-align: Left; margin-left: 0px; font-family: Arial, sans-serif; line-height: Normal; margin-top: 9px; margin-right: 0px; margin-bottom: 6px; border-left-width: 1px; border-top-width: 1px; border-right-width: 1px;"><span style="text-align: Left; font-family: Arial, sans-serif; line-height: Normal;">&#160;</span></p>
+<table cellspacing="0" width="100%">
+<col style="width: 50%;" />
+<col style="width: 50%;" />
+<tr>
+<td style="vertical-align: Top;"><span style="font-family: Arial, sans-serif; line-height: Normal; font-size: 8pt;"><font size="1" style="font-size:8pt;">CST Studio Suite 2026</font></span></td>
+<td style="vertical-align: Top;">
+<p style="text-align: right;">&#160;</p>
+</td>
+</tr>
+</table>
+<p>&#160;</p>
+</div>
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+ if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == 'Netscape'))
+  document.write("<div id='tooltip' class='WebHelpPopupMenu'><\/div>");
+//]]>
+</script><script type="text/javascript" language="javascript1.2">
+//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+        writeIntopicBar(0);
+
+
+highlightSearch();
+//-->
+//]]>
+</script>
+</body>
+</html>

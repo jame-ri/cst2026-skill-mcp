@@ -1,0 +1,525 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="search-keywords" content="Global Names Objects" />
+<meta name="generator" content="Adobe RoboHelp 11" />
+<title>Global Names</title>
+<link rel="StyleSheet" href="../online_help_vba.css" type="text/css" />
+<style type="text/css">
+/*<![CDATA[*/
+<!--
+body { border-bottom-style:None; }
+-->
+/*]]>*/
+</style>
+
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+        origWidth = innerWidth;
+        origHeight = innerHeight;
+        onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+/*<![CDATA[*/
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+-->
+/*]]>*/
+</style>
+
+<script type="text/javascript" language="javascript1.2" src="../whmsg.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript" src="../whver.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript1.2" src="../whutils.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript1.2" src="../whproxy.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript1.2" src="../whlang.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript1.2" src="../whtopic.js" charset="utf-8">
+</script>
+</head>
+<body>
+<script type="text/javascript" language="javascript1.2">
+//<![CDATA[
+<!--
+if (window.gbWhTopic)
+{
+        var strUrl = document.location.href;
+        var bc = 0;
+        var n = strUrl.toLowerCase().indexOf("bc-");
+        if(n != -1)
+        {
+                document.location.replace(strUrl.substring(0, n));
+                bc = strUrl.substring(n+3);
+        }
+
+        if (window.addTocInfo)
+        {
+        
+        }
+        if (window.writeBtnStyle)
+                writeBtnStyle();
+
+        if (window.writeIntopicBar)
+                writeIntopicBar(0);
+
+        
+        document.write("<p style=\"font-family: Tahoma; font-size: 9pt; font-weight: 400;  font-style:normal; color: rgb(0, 0, 0); text-decoration:none; text-align: left\"> ");
+AddMasterBreadcrumbs("../index.htm", "font-family: Tahoma; font-size: 9pt; font-weight: 400;  font-style:normal; color: rgb(0, 0, 0); text-decoration:none; text-align: left", "|", "Home", "../special_vbaobjects/special_vbaobjects_vbaobjects.htm");
+document.write("Global Names<\/p>");
+
+}
+else
+        if (window.gbIE4)
+                document.location.reload();
+
+onLoadHandler = function()
+{
+  if (window.setRelStartPage)
+        {
+        setTimeout("setRelStartPage('../index.htm');", 1)
+
+    setTimeout("UpdateBreadCrumbsMarker();", 1);
+        }
+}
+
+if (window.addEventListener){  
+        window.addEventListener('load', onLoadHandler, false);   
+} else if (window.attachEvent){  
+        window.attachEvent('onload', onLoadHandler);  
+}
+
+function onSetStartPage()
+{
+  autoSync(1);
+  sendSyncInfo();
+  sendAveInfoOut();
+}
+//-->
+//]]>
+</script><script type="text/javascript" src="../ehlpdhtm.js" language="JavaScript1.2">
+</script>
+<table cellspacing="0" width="100%">
+<col style="width: 50%;" />
+<col style="width: 50%;" />
+<tr>
+<td style="vertical-align: middle; padding-top: 5px; padding-bottom: 5px;">
+<p style="margin-top: 0px; margin-bottom: 0px;"><img src="../3ds.png" alt="" style="border: none;" border="0" /></p>
+</td>
+<td style="vertical-align: middle;">
+<p style="text-align: right;"><a href="https://www.3ds.com/products-services/3dexperience/" target="_blank"><img src="../3dexp.png" alt="" style="border: none;" width="32" height="32" border="0" /></a></p>
+</td>
+</tr>
+</table>
+<p class="VBA-Heading-Object">Global Names</p>
+<p class="VBA-Text">Global Names are primary used in those VBA Commands that deal with different kind of objects. They are needed to be able to deal with those different kind of objects at the same time - with one VBA call. For some VBA commands, those names are mandatory, some more VBA commands support them, but also "local" names can be used.</p>
+<p class="VBA-Text">&#160;</p>
+<p class="VBA-Text">Global Names are assembled by the "local name" of an object (See also: <a href="common_general_solid_names.htm">Solid Names</a>, <a href="common_general_name.htm">Name Data Type</a>). In addition, a type specifier is prepended and a "$" sign is used to concatenate both parts.</p>
+<p class="VBA-Text" style="font-style: italic;">Most of the VBA commands that support global names only offer a <span style="font-weight: bold;">subset</span> of types to work upon.</p>
+<p class="VBA-Text">&#160;</p>
+<p class="VBA-Text">Most commonly used type specifiers:</p>
+<table style="border-collapse: separate; border-collapse: separate;" cellspacing="0" width="100%" border="1">
+<col style="width: 33.333%;" />
+<col style="width: 33.333%;" />
+<col style="width: 33.333%;" />
+<tr>
+<td>
+<p class="VBA-Text" style="font-weight: bold; text-align: center;">Type</p>
+</td>
+<td>
+<p class="VBA-Text" style="font-weight: bold; text-align: center;">Type Specifier</p>
+</td>
+<td>
+<p class="VBA-Text" style="font-weight: bold; text-align: center;">Examples</p>
+</td>
+</tr>
+<tr>
+<td>
+<p class="Topic-Text-Onestep">Anchor points</p>
+</td>
+<td>
+<p class="Topic-Text-Onestep">anchorpoint</p>
+</td>
+<td>
+<p class="Topic-Text-Onestep">anchorpoint$subfolder:anchor1</p>
+</td>
+</tr>
+<tr>
+<td>
+<p class="Topic-Text-Onestep">Coils</p>
+</td>
+<td>
+<p class="Topic-Text-Onestep">coil</p>
+</td>
+<td>
+<p class="Topic-Text-Onestep">coil$coil1</p>
+</td>
+</tr>
+<tr>
+<td>
+<p class="Topic-Text-Onestep">Field Sources</p>
+</td>
+<td>
+<p class="Topic-Text-Onestep">fieldsource</p>
+</td>
+<td>
+<p class="Topic-Text-Onestep">fieldsource$fs1</p>
+</td>
+</tr>
+<tr>
+<td>
+<p class="Topic-Text-Onestep">Groups</p>
+</td>
+<td>
+<p class="Topic-Text-Onestep">group</p>
+</td>
+<td>
+<p class="Topic-Text-Onestep">group$meshgroup1</p>
+</td>
+</tr>
+<tr>
+<td>
+<p class="Topic-Text-Onestep">Lumped Elements</p>
+</td>
+<td>
+<p class="Topic-Text-Onestep">lumpeditem</p>
+</td>
+<td>
+<p class="Topic-Text-Onestep">lumpeditem$Folder1:element1</p>
+</td>
+</tr>
+<tr>
+<td>
+<p class="Topic-Text-Onestep">Imported Mesh Shape</p>
+</td>
+<td>
+<p class="Topic-Text-Onestep">meshshape</p>
+</td>
+<td>
+<p class="Topic-Text-Onestep">meshshape$Folder1/subfolder:shape1</p>
+</td>
+</tr>
+<tr>
+<td>
+<p class="Topic-Text-Onestep">Ports (Waveguide Ports as well as Discrete Ports)</p>
+</td>
+<td>
+<p class="Topic-Text-Onestep">port</p>
+</td>
+<td>
+<p class="Topic-Text-Onestep">port$port3</p>
+</td>
+</tr>
+<tr>
+<td>
+<p class="Topic-Text-Onestep">Shapes ("Solids")</p>
+</td>
+<td>
+<p class="Topic-Text-Onestep">solid</p>
+</td>
+<td>
+<p class="Topic-Text-Onestep">solid$component1/subcomponent_1:solid1</p>
+</td>
+</tr>
+<tr>
+<td>
+<p class="Topic-Text-Onestep">Voxel Data</p>
+</td>
+<td>
+<p class="Topic-Text-Onestep">voxeldata</p>
+</td>
+<td>
+<p class="Topic-Text-Onestep">voxeldata$Laura</p>
+</td>
+</tr>
+<tr>
+<td>
+<p class="Topic-Text-Onestep">Wires</p>
+</td>
+<td>
+<p class="Topic-Text-Onestep">wireitem</p>
+</td>
+<td>
+<p class="Topic-Text-Onestep">wireitem$wire1, wireitem$Folder1/subfolder:nice_wire</p>
+</td>
+</tr>
+</table>
+<p class="VBA-Text">&#160;</p>
+<p class="VBA-Text">&#160;</p>
+<p class="VBA-Text">Further type specifiers, used less often so far, mostly for mesh and groups:</p>
+<table style="border-collapse: separate; border-collapse: separate;" cellspacing="0" width="66.758%" border="1">
+<col style="width: 50.154%;" />
+<col style="width: 49.846%;" />
+<tr>
+<td>
+<p class="VBA-Text" style="font-weight: bold; text-align: center;">Type</p>
+</td>
+<td>
+<p class="VBA-Text" style="font-weight: bold; text-align: center;">Type Specifier</p>
+</td>
+</tr>
+<tr>
+<td>
+<p class="Topic-Text-Onestep">Cable Studio Nodes</p>
+</td>
+<td>
+<p class="Topic-Text-Onestep">csnode</p>
+</td>
+</tr>
+<tr>
+<td>
+<p class="Topic-Text-Onestep">Charges</p>
+</td>
+<td>
+<p class="Topic-Text-Onestep">charge</p>
+</td>
+</tr>
+<tr>
+<td>
+<p class="Topic-Text-Onestep">Construction Faces</p>
+</td>
+<td>
+<p class="Topic-Text-Onestep">face</p>
+</td>
+</tr>
+<tr>
+<td>
+<p class="Topic-Text-Onestep">Contact Properties</p>
+</td>
+<td>
+<p class="Topic-Text-Onestep">contactproperties</p>
+</td>
+</tr>
+<tr>
+<td>
+<p class="Topic-Text-Onestep">Current Monitors</p>
+</td>
+<td>
+<p class="Topic-Text-Onestep">currentmonitor</p>
+</td>
+</tr>
+<tr>
+<td>
+<p class="Topic-Text-Onestep">Current Ports</p>
+</td>
+<td>
+<p class="Topic-Text-Onestep">currentport</p>
+</td>
+</tr>
+<tr>
+<td>
+<p class="Topic-Text-Onestep">Current Wires</p>
+</td>
+<td>
+<p class="Topic-Text-Onestep">currentwire</p>
+</td>
+</tr>
+<tr>
+<td>
+<p class="Topic-Text-Onestep">Curves</p>
+</td>
+<td>
+<p class="Topic-Text-Onestep">curveitem</p>
+</td>
+</tr>
+<tr>
+<td>
+<p class="Topic-Text-Onestep">Dimensions</p>
+</td>
+<td>
+<p class="Topic-Text-Onestep">dimension</p>
+</td>
+</tr>
+<tr>
+<td>
+<p class="Topic-Text-Onestep">Displacements</p>
+</td>
+<td>
+<p class="Topic-Text-Onestep">displacement</p>
+</td>
+</tr>
+<tr>
+<td>
+<p class="Topic-Text-Onestep">Fans</p>
+</td>
+<td>
+<p class="Topic-Text-Onestep">fan</p>
+</td>
+</tr>
+<tr>
+<td>
+<p class="Topic-Text-Onestep">Farfield Sources</p>
+</td>
+<td>
+<p class="Topic-Text-Onestep">farfieldsource</p>
+</td>
+</tr>
+<tr>
+<td>
+<p class="Topic-Text-Onestep">Field Gradings</p>
+</td>
+<td>
+<p class="Topic-Text-Onestep">fieldgrading</p>
+</td>
+</tr>
+<tr>
+<td>
+<p class="Topic-Text-Onestep">Heat Sources</p>
+</td>
+<td>
+<p class="Topic-Text-Onestep">heatsource</p>
+</td>
+</tr>
+<tr>
+<td>
+<p class="Topic-Text-Onestep">Materials</p>
+</td>
+<td>
+<p class="Topic-Text-Onestep">material</p>
+</td>
+</tr>
+<tr>
+<td>
+<p class="Topic-Text-Onestep">Motion Gap Items</p>
+</td>
+<td>
+<p class="Topic-Text-Onestep">motiongapitem</p>
+</td>
+</tr>
+<tr>
+<td>
+<p class="Topic-Text-Onestep">Moving Media</p>
+</td>
+<td>
+<p class="Topic-Text-Onestep">movingmedia</p>
+</td>
+</tr>
+<tr>
+<td>
+<p class="Topic-Text-Onestep">Particle Sources</p>
+</td>
+<td>
+<p class="Topic-Text-Onestep">particlsource</p>
+</td>
+</tr>
+<tr>
+<td>
+<p class="Topic-Text-Onestep">Permanent Magnets</p>
+</td>
+<td>
+<p class="Topic-Text-Onestep">magnet</p>
+</td>
+</tr>
+<tr>
+<td>
+<p class="Topic-Text-Onestep">Potentials</p>
+</td>
+<td>
+<p class="Topic-Text-Onestep">potential</p>
+</td>
+</tr>
+<tr>
+<td>
+<p class="Topic-Text-Onestep">Probes</p>
+</td>
+<td>
+<p class="Topic-Text-Onestep">probe</p>
+</td>
+</tr>
+<tr>
+<td>
+<p class="Topic-Text-Onestep">Slots</p>
+</td>
+<td>
+<p class="Topic-Text-Onestep">slot</p>
+</td>
+</tr>
+<tr>
+<td>
+<p class="Topic-Text-Onestep">Temperatures</p>
+</td>
+<td>
+<p class="Topic-Text-Onestep">tempearture</p>
+</td>
+</tr>
+<tr>
+<td>
+<p class="Topic-Text-Onestep">Thermals Surface Properties</p>
+</td>
+<td>
+<p class="Topic-Text-Onestep">thsrfprop</p>
+</td>
+</tr>
+<tr>
+<td>
+<p class="Topic-Text-Onestep">Tractions</p>
+</td>
+<td>
+<p class="Topic-Text-Onestep">traction</p>
+</td>
+</tr>
+<tr>
+<td>
+<p class="Topic-Text-Onestep">Voltage Monitors</p>
+</td>
+<td>
+<p class="Topic-Text-Onestep">voltagemonitor</p>
+</td>
+</tr>
+<tr>
+<td>
+<p class="Topic-Text-Onestep">Voltage Wires</p>
+</td>
+<td>
+<p class="Topic-Text-Onestep">voltagewire</p>
+</td>
+</tr>
+</table>
+<p class="VBA-Text">&#160;</p>
+<p class="Topic-Text-Indent"><span style="font-weight: bold;">Note</span>: There is a VBA command to convert a name as given by <a href="../common_vbaapp/common_vbaappapplication_object.htm" style="font-style: italic;">GetSelectedTreeItem</a>, that is called <span style="font-style: italic;"><i>GetGlobalNameFromTreeName</i></span></p>
+<?rh-p style="margin-bottom: 0px; text-align: Right; margin-left: 18px; 
+                 margin-right: 18px; margin-top: 18px;" ?>
+<div style="width: 100%; position: relative;" id="footer">
+<p style="border-bottom: Solid 1px #dddddd; text-align: Left; margin-left: 0px; font-family: Arial, sans-serif; line-height: Normal; margin-top: 9px; margin-right: 0px; margin-bottom: 6px; border-left-width: 1px; border-top-width: 1px; border-right-width: 1px;"><span style="text-align: Left; font-family: Arial, sans-serif; line-height: Normal;">&#160;</span></p>
+<table cellspacing="0" width="100%">
+<col style="width: 50%;" />
+<col style="width: 50%;" />
+<tr>
+<td style="vertical-align: Top;"><span style="font-family: Arial, sans-serif; line-height: Normal; font-size: 8pt;"><font size="1" style="font-size:8pt;">CST Studio Suite 2026</font></span></td>
+<td style="vertical-align: Top;">
+<p style="text-align: right;">&#160;</p>
+</td>
+</tr>
+</table>
+<p>&#160;</p>
+</div>
+<script type="text/javascript" language="javascript1.2">
+//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+        writeIntopicBar(0);
+
+
+highlightSearch();
+//-->
+//]]>
+</script>
+</body>
+</html>

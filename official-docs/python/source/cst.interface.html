@@ -1,0 +1,911 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>cst.interface package &#8212; CST Python Libraries  documentation</title>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinxdoc.css?v=0a676766" />
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js?v=16ad857a"></script>
+    <script src="../_static/doctools.js?v=888ff710"></script>
+    <script src="../_static/sphinx_highlight.js?v=4825356b"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../main.html">CST Python Libraries  documentation</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">cst.interface package</a></li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <section id="cst-interface-package">
+<h1>cst.interface package<a class="headerlink" href="#cst-interface-package" title="Permalink to this heading">¶</a></h1>
+<p>The cst.interface module offers a general interface to the CST Studio Suite.</p>
+<section id="module-cst.interface">
+<span id="module-contents"></span><h2>Module Contents<a class="headerlink" href="#module-cst.interface" title="Permalink to this heading">¶</a></h2>
+<p>The cst.interface package provides a python interface that allows to control the CST Studio Suite.
+It is possible to connect to a running DesignEnvironnent (main screen) or start a new one.
+Once connected the package provides access to CST projects (.cst) which can be opened, closed and
+saved and provide access to the associated applications (prj.model3d).</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="cst.interface.DesignEnvironment">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">DesignEnvironment</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">mode=&lt;StartMode.New:</span> <span class="pre">0&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pid=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">options=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">gui_linux=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">process_info=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">env=None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cst.interface.DesignEnvironment" title="Permalink to this definition">¶</a></dt>
+<dd><p>This class provides an interface to the CST Studio Suite main frontend.
+It allows to connect to, and open new CST Studio Suite instances. Furthermore it allows to
+open or create .cst projects.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="cst.interface.DesignEnvironment.new">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">new</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">options</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">object</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">gui_linux</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">object</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">process_info</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">DesignEnvironment.ProcessInfo</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">env</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">object</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">object</span></span></span><a class="headerlink" href="#cst.interface.DesignEnvironment.new" title="Permalink to this definition">¶</a></dt>
+<dd><p>Opens a new DE and connects to it. A number of command line <em>options</em> may be passed as a list of strings. For a list of available options call the <a class="reference internal" href="#cst.interface.DesignEnvironment.print_command_line_options" title="cst.interface.DesignEnvironment.print_command_line_options"><code class="xref py py-meth docutils literal notranslate"><span class="pre">print_command_line_options()</span></code></a> method. Use <em>gui_linux</em> to control whether the DE should run with or without a GUI in a Linux environment.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cst.interface.DesignEnvironment.connect">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">connect</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cst.interface.DesignEnvironment.connect" title="Permalink to this definition">¶</a></dt>
+<dd><p>Overloaded function.</p>
+<p><strong>connect</strong>(<code class="docutils literal notranslate"><span class="pre">pid:</span> <span class="pre">int</span></code>) → <code class="docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Connects to an existing DE with given PID.</p>
+<p><strong>connect</strong>(<code class="docutils literal notranslate"><span class="pre">tcp_address:</span> <span class="pre">str</span></code>) → <code class="docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Connects to an existing DE listening on the given tcp address.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cst.interface.DesignEnvironment.connect_to_any">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">connect_to_any</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">object</span></span></span><a class="headerlink" href="#cst.interface.DesignEnvironment.connect_to_any" title="Permalink to this definition">¶</a></dt>
+<dd><p>Connects to any existing DE, if multiple DEs are open the connection will be built-up to a random open DE. If you want to connect to a specific DE, use the <a class="reference internal" href="#cst.interface.DesignEnvironment.connect" title="cst.interface.DesignEnvironment.connect"><code class="xref py py-meth docutils literal notranslate"><span class="pre">connect()</span></code></a> method.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cst.interface.DesignEnvironment.connect_to_any_or_new">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">connect_to_any_or_new</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">object</span></span></span><a class="headerlink" href="#cst.interface.DesignEnvironment.connect_to_any_or_new" title="Permalink to this definition">¶</a></dt>
+<dd><p>Connects to any existing DE or opens a new one if none are open.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cst.interface.DesignEnvironment.quiet_mode_enabled">
+<span class="sig-name descname"><span class="pre">quiet_mode_enabled</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#cst.interface.DesignEnvironment.quiet_mode_enabled" title="Permalink to this definition">¶</a></dt>
+<dd><p>Convenience method to turn on quiet mode with a ‘with’-statement and automatically reset it to the previous state on exiting.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cst.interface.DesignEnvironment.quiet_mode_disabled">
+<span class="sig-name descname"><span class="pre">quiet_mode_disabled</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#cst.interface.DesignEnvironment.quiet_mode_disabled" title="Permalink to this definition">¶</a></dt>
+<dd><p>Convenience method to turn off quiet mode with a ‘with’-statement and automatically reset it to the previous state on exiting.</p>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="cst.interface.DesignEnvironment.StartMode">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">StartMode</span></span><a class="headerlink" href="#cst.interface.DesignEnvironment.StartMode" title="Permalink to this definition">¶</a></dt>
+<dd><p>Members:</p>
+<p>New</p>
+<p>ExistingOrNew</p>
+<p>Existing</p>
+<dl class="py property">
+<dt class="sig sig-object py" id="cst.interface.DesignEnvironment.StartMode.name">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">name</span></span><a class="headerlink" href="#cst.interface.DesignEnvironment.StartMode.name" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cst.interface.DesignEnvironment.active_project">
+<span class="sig-name descname"><span class="pre">active_project</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">object</span></span></span><a class="headerlink" href="#cst.interface.DesignEnvironment.active_project" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the currently active project.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cst.interface.DesignEnvironment.add_library_path">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">add_library_path</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">path</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">os.PathLike</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">position</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">-1</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#cst.interface.DesignEnvironment.add_library_path" title="Permalink to this definition">¶</a></dt>
+<dd><p>Adds a path to the Library Path at the given position if that path is not already listed. To move an existing entry, first remove the path using <cite>remove_library_path</cite></p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cst.interface.DesignEnvironment.archive">
+<span class="sig-name descname"><span class="pre">archive</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">cstfile</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">os.PathLike</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">keep_all</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">keep_result1d</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">keep_farfield</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">delete_project_folder</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#cst.interface.DesignEnvironment.archive" title="Permalink to this definition">¶</a></dt>
+<dd><p>Archives a CST project including selected results.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cst.interface.DesignEnvironment.close">
+<span class="sig-name descname"><span class="pre">close</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#cst.interface.DesignEnvironment.close" title="Permalink to this definition">¶</a></dt>
+<dd><p>Closes the DesignEnvironment.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cst.interface.DesignEnvironment.get_open_project">
+<span class="sig-name descname"><span class="pre">get_open_project</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">path</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">os.PathLike</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">object</span></span></span><a class="headerlink" href="#cst.interface.DesignEnvironment.get_open_project" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns a handle to an already open project with the path given by <em>path</em>.
+Raises an exception when there is no project found corresponding to the given <em>path</em>.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cst.interface.DesignEnvironment.get_open_projects">
+<span class="sig-name descname"><span class="pre">get_open_projects</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">re_filter</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'.*'</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">list</span></span></span><a class="headerlink" href="#cst.interface.DesignEnvironment.get_open_projects" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns a list of currently open projects matching the regular expression filter <em>re_filter</em>.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cst.interface.DesignEnvironment.has_active_project">
+<span class="sig-name descname"><span class="pre">has_active_project</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="headerlink" href="#cst.interface.DesignEnvironment.has_active_project" title="Permalink to this definition">¶</a></dt>
+<dd><p>Queries whether the DesignEnvironment has an active project.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cst.interface.DesignEnvironment.in_quiet_mode">
+<span class="sig-name descname"><span class="pre">in_quiet_mode</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="headerlink" href="#cst.interface.DesignEnvironment.in_quiet_mode" title="Permalink to this definition">¶</a></dt>
+<dd><p>Queries whether message boxes are currently suppressed. Please note: Dialog boxes which require user input cannot be suppressed.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cst.interface.DesignEnvironment.is_connected">
+<span class="sig-name descname"><span class="pre">is_connected</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="headerlink" href="#cst.interface.DesignEnvironment.is_connected" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns whether this object is still connected to a live DE.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cst.interface.DesignEnvironment.list_open_projects">
+<span class="sig-name descname"><span class="pre">list_open_projects</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#cst.interface.DesignEnvironment.list_open_projects" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the paths of the currently open projects.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cst.interface.DesignEnvironment.new_cs">
+<span class="sig-name descname"><span class="pre">new_cs</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">object</span></span></span><a class="headerlink" href="#cst.interface.DesignEnvironment.new_cs" title="Permalink to this definition">¶</a></dt>
+<dd><p>Creates a new CST Cable Studio project and returns an instance of <a class="reference internal" href="#cst.interface.Project" title="cst.interface.Project"><code class="xref py py-class docutils literal notranslate"><span class="pre">Project</span></code></a> pertaining to it.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cst.interface.DesignEnvironment.new_ds">
+<span class="sig-name descname"><span class="pre">new_ds</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">object</span></span></span><a class="headerlink" href="#cst.interface.DesignEnvironment.new_ds" title="Permalink to this definition">¶</a></dt>
+<dd><p>Creates a new CST Design Studio project and returns an instance of <a class="reference internal" href="#cst.interface.Project" title="cst.interface.Project"><code class="xref py py-class docutils literal notranslate"><span class="pre">Project</span></code></a> pertaining to it.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cst.interface.DesignEnvironment.new_ems">
+<span class="sig-name descname"><span class="pre">new_ems</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">object</span></span></span><a class="headerlink" href="#cst.interface.DesignEnvironment.new_ems" title="Permalink to this definition">¶</a></dt>
+<dd><p>Creates a new CST EM Studio project and returns an instance of <a class="reference internal" href="#cst.interface.Project" title="cst.interface.Project"><code class="xref py py-class docutils literal notranslate"><span class="pre">Project</span></code></a> pertaining to it.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cst.interface.DesignEnvironment.new_fd3d">
+<span class="sig-name descname"><span class="pre">new_fd3d</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">object</span></span></span><a class="headerlink" href="#cst.interface.DesignEnvironment.new_fd3d" title="Permalink to this definition">¶</a></dt>
+<dd><p>Creates a new Filter Designer 3D project and returns an instance of <a class="reference internal" href="#cst.interface.Project" title="cst.interface.Project"><code class="xref py py-class docutils literal notranslate"><span class="pre">Project</span></code></a> pertaining to it.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cst.interface.DesignEnvironment.new_mps">
+<span class="sig-name descname"><span class="pre">new_mps</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">object</span></span></span><a class="headerlink" href="#cst.interface.DesignEnvironment.new_mps" title="Permalink to this definition">¶</a></dt>
+<dd><p>Creates a new CST Mphysics Studio project and returns an instance of <a class="reference internal" href="#cst.interface.Project" title="cst.interface.Project"><code class="xref py py-class docutils literal notranslate"><span class="pre">Project</span></code></a> pertaining to it.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cst.interface.DesignEnvironment.new_mws">
+<span class="sig-name descname"><span class="pre">new_mws</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">object</span></span></span><a class="headerlink" href="#cst.interface.DesignEnvironment.new_mws" title="Permalink to this definition">¶</a></dt>
+<dd><p>Creates a new CST Microwave Studio project and returns an instance of <a class="reference internal" href="#cst.interface.Project" title="cst.interface.Project"><code class="xref py py-class docutils literal notranslate"><span class="pre">Project</span></code></a> pertaining to it.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cst.interface.DesignEnvironment.new_pcbs">
+<span class="sig-name descname"><span class="pre">new_pcbs</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">object</span></span></span><a class="headerlink" href="#cst.interface.DesignEnvironment.new_pcbs" title="Permalink to this definition">¶</a></dt>
+<dd><p>Creates a new CST PCB Studio project and returns an instance of <a class="reference internal" href="#cst.interface.Project" title="cst.interface.Project"><code class="xref py py-class docutils literal notranslate"><span class="pre">Project</span></code></a> pertaining to it.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cst.interface.DesignEnvironment.new_project">
+<span class="sig-name descname"><span class="pre">new_project</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">project_type</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">ProjectType</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">object</span></span></span><a class="headerlink" href="#cst.interface.DesignEnvironment.new_project" title="Permalink to this definition">¶</a></dt>
+<dd><p>Opens a new project of given <em>project_type</em> and returns an instance of <a class="reference internal" href="#cst.interface.Project" title="cst.interface.Project"><code class="xref py py-class docutils literal notranslate"><span class="pre">Project</span></code></a> pertaining to it.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cst.interface.DesignEnvironment.new_ps">
+<span class="sig-name descname"><span class="pre">new_ps</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">object</span></span></span><a class="headerlink" href="#cst.interface.DesignEnvironment.new_ps" title="Permalink to this definition">¶</a></dt>
+<dd><p>Creates a new CST Particle Studio project and returns an instance of <a class="reference internal" href="#cst.interface.Project" title="cst.interface.Project"><code class="xref py py-class docutils literal notranslate"><span class="pre">Project</span></code></a> pertaining to it.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cst.interface.DesignEnvironment.open_project">
+<span class="sig-name descname"><span class="pre">open_project</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">path</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">os.PathLike</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">object</span></span></span><a class="headerlink" href="#cst.interface.DesignEnvironment.open_project" title="Permalink to this definition">¶</a></dt>
+<dd><p>Opens the project given by <em>path</em> in a new tab and returns an instance of <a class="reference internal" href="#cst.interface.Project" title="cst.interface.Project"><code class="xref py py-class docutils literal notranslate"><span class="pre">Project</span></code></a> pertaining to it.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cst.interface.DesignEnvironment.pid">
+<span class="sig-name descname"><span class="pre">pid</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="headerlink" href="#cst.interface.DesignEnvironment.pid" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the Process ID (PID) to which this DesignEnvironment is connected.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cst.interface.DesignEnvironment.print_command_line_options">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">print_command_line_options</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#cst.interface.DesignEnvironment.print_command_line_options" title="Permalink to this definition">¶</a></dt>
+<dd><p>Prints the available command line options which can be used with <a class="reference internal" href="#cst.interface.DesignEnvironment.new" title="cst.interface.DesignEnvironment.new"><code class="xref py py-meth docutils literal notranslate"><span class="pre">new()</span></code></a>.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cst.interface.DesignEnvironment.print_version">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">print_version</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#cst.interface.DesignEnvironment.print_version" title="Permalink to this definition">¶</a></dt>
+<dd><p>Prints the version string of the current DE.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cst.interface.DesignEnvironment.remove_library_path">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">remove_library_path</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">path</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">os.PathLike</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#cst.interface.DesignEnvironment.remove_library_path" title="Permalink to this definition">¶</a></dt>
+<dd><p>Removes the first occurence of the given <cite>path</cite> from the Library Paths.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cst.interface.DesignEnvironment.set_quiet_mode">
+<span class="sig-name descname"><span class="pre">set_quiet_mode</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">flag</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#cst.interface.DesignEnvironment.set_quiet_mode" title="Permalink to this definition">¶</a></dt>
+<dd><p>When <em>flag</em> is set to True message boxes are suppressed. Please note: Dialog boxes which require user input cannot be suppressed.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cst.interface.DesignEnvironment.version">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">version</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span></span></span><a class="headerlink" href="#cst.interface.DesignEnvironment.version" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the version string of the current DE.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="cst.interface.Project">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">Project</span></span><a class="headerlink" href="#cst.interface.Project" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides an interface to live CST projects. Offers capabilities to save and close projects, but also carries the associated interfaces to various applications.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="cst.interface.Project.activate">
+<span class="sig-name descname"><span class="pre">activate</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#cst.interface.Project.activate" title="Permalink to this definition">¶</a></dt>
+<dd><p>Makes this project the currently active project.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cst.interface.Project.close">
+<span class="sig-name descname"><span class="pre">close</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#cst.interface.Project.close" title="Permalink to this definition">¶</a></dt>
+<dd><p>Closes the project without saving.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cst.interface.Project.connect">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">connect</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">cst_file</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">os.PathLike</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">object</span></span></span><a class="headerlink" href="#cst.interface.Project.connect" title="Permalink to this definition">¶</a></dt>
+<dd><p>Connects to the given project file in an existing <a class="reference internal" href="#cst.interface.DesignEnvironment" title="cst.interface.DesignEnvironment"><code class="xref py py-class docutils literal notranslate"><span class="pre">DesignEnvironment</span></code></a>. Throws a <cite>UserWarning</cite> error if the project is not open or does not exist.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cst.interface.Project.connect_or_open">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">connect_or_open</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">cst_file</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">os.PathLike</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">object</span></span></span><a class="headerlink" href="#cst.interface.Project.connect_or_open" title="Permalink to this definition">¶</a></dt>
+<dd><p>Connects to the given project file in an existing <a class="reference internal" href="#cst.interface.DesignEnvironment" title="cst.interface.DesignEnvironment"><code class="xref py py-class docutils literal notranslate"><span class="pre">DesignEnvironment</span></code></a>. Throws a <cite>UserWarning</cite> error if the project does not exist.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="cst.interface.Project.design_environment">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">design_environment</span></span><a class="headerlink" href="#cst.interface.Project.design_environment" title="Permalink to this definition">¶</a></dt>
+<dd><p>The instance of the <a class="reference internal" href="#cst.interface.DesignEnvironment" title="cst.interface.DesignEnvironment"><code class="xref py py-class docutils literal notranslate"><span class="pre">DesignEnvironment</span></code></a> in which this Project is open</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cst.interface.Project.filename">
+<span class="sig-name descname"><span class="pre">filename</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span></span></span><a class="headerlink" href="#cst.interface.Project.filename" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the current filename of the project.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cst.interface.Project.folder">
+<span class="sig-name descname"><span class="pre">folder</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span></span></span><a class="headerlink" href="#cst.interface.Project.folder" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the folder pertaining to the project.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cst.interface.Project.get_messages">
+<span class="sig-name descname"><span class="pre">get_messages</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">object</span></span></span><a class="headerlink" href="#cst.interface.Project.get_messages" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns messages from the Messages Window if any.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="cst.interface.Project.model3d">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">model3d</span></span><a class="headerlink" href="#cst.interface.Project.model3d" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gives access to the 3D model (<a class="reference internal" href="#cst.interface.Model3D" title="cst.interface.Model3D"><code class="xref py py-class docutils literal notranslate"><span class="pre">Model3D</span></code></a>) associated with the project if it exists. Is <em>None</em> when there is no associated modeler.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="cst.interface.Project.modeler">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">modeler</span></span><a class="headerlink" href="#cst.interface.Project.modeler" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gives access to the modeler (<a class="reference internal" href="#cst.interface.Model3D" title="cst.interface.Model3D"><code class="xref py py-class docutils literal notranslate"><span class="pre">Model3D</span></code></a>) associated with the project if it exists. Is <em>None</em> when there is no associated modeler.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cst.interface.Project.open">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">open</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">path</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">os.PathLike</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">object</span></span></span><a class="headerlink" href="#cst.interface.Project.open" title="Permalink to this definition">¶</a></dt>
+<dd><p>Opens the given project in an existing or new <a class="reference internal" href="#cst.interface.DesignEnvironment" title="cst.interface.DesignEnvironment"><code class="xref py py-class docutils literal notranslate"><span class="pre">DesignEnvironment</span></code></a>. Throws a <cite>RuntimeError</cite> error if the project is already open.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="cst.interface.Project.pcbs">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">pcbs</span></span><a class="headerlink" href="#cst.interface.Project.pcbs" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gives access to PCBS (<a class="reference internal" href="#cst.interface.pcbs.InterfacePCBS" title="cst.interface.pcbs.InterfacePCBS"><code class="xref py py-class docutils literal notranslate"><span class="pre">cst.interface.pcbs.InterfacePCBS</span></code></a>) associated with the project if it exists. Is <em>None</em> when there is no associated PCBS.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cst.interface.Project.project_type">
+<span class="sig-name descname"><span class="pre">project_type</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">ProjectType</span></span></span><a class="headerlink" href="#cst.interface.Project.project_type" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the project type of this project.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cst.interface.Project.save">
+<span class="sig-name descname"><span class="pre">save</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">path</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">os.PathLike</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">include_results</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">allow_overwrite</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#cst.interface.Project.save" title="Permalink to this definition">¶</a></dt>
+<dd><p>Saves the project to the specified path and optionally includes the results. If no path is given (default) then the current filename will be used.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="cst.interface.Project.schematic">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">schematic</span></span><a class="headerlink" href="#cst.interface.Project.schematic" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gives access to the schematic (<a class="reference internal" href="#cst.interface.Schematic" title="cst.interface.Schematic"><code class="xref py py-class docutils literal notranslate"><span class="pre">Schematic</span></code></a>) associated with the project if it exists. Is <em>None</em> when there is no associated schematic.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="cst.interface.Model3D">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">Model3D</span></span><a class="headerlink" href="#cst.interface.Model3D" title="Permalink to this definition">¶</a></dt>
+<dd><p>This class provides an interface to the 3D Model</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="cst.interface.Model3D.abort_solver">
+<span class="sig-name descname"><span class="pre">abort_solver</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">timeout</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cst.interface.Model3D.abort_solver" title="Permalink to this definition">¶</a></dt>
+<dd><p>Aborts the currently running (or paused) solver.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cst.interface.Model3D.add_to_history">
+<span class="sig-name descname"><span class="pre">add_to_history</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">header</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">vba_code</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">/</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">timeout</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cst.interface.Model3D.add_to_history" title="Permalink to this definition">¶</a></dt>
+<dd><p>AddToHistory creates a new history block in the modeler with the given <em>header</em>-name and executes the <em>vba_code</em></p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cst.interface.Model3D.full_history_rebuild">
+<span class="sig-name descname"><span class="pre">full_history_rebuild</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">timeout</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cst.interface.Model3D.full_history_rebuild" title="Permalink to this definition">¶</a></dt>
+<dd><p>Trigger a full rebuild of the modeler history.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cst.interface.Model3D.get_active_solver_name">
+<span class="sig-name descname"><span class="pre">get_active_solver_name</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">timeout</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cst.interface.Model3D.get_active_solver_name" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the currently active solver name.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cst.interface.Model3D.get_solver_run_info">
+<span class="sig-name descname"><span class="pre">get_solver_run_info</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">timeout</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cst.interface.Model3D.get_solver_run_info" title="Permalink to this definition">¶</a></dt>
+<dd><p>Retrieves as dict containing information on the last or current solver run.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cst.interface.Model3D.get_tree_items">
+<span class="sig-name descname"><span class="pre">get_tree_items</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">timeout</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cst.interface.Model3D.get_tree_items" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns a flat list of all tree paths</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cst.interface.Model3D.is_solver_running">
+<span class="sig-name descname"><span class="pre">is_solver_running</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">timeout</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cst.interface.Model3D.is_solver_running" title="Permalink to this definition">¶</a></dt>
+<dd><p>Queries whether the solver is currently running.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cst.interface.Model3D.pause_solver">
+<span class="sig-name descname"><span class="pre">pause_solver</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">timeout</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cst.interface.Model3D.pause_solver" title="Permalink to this definition">¶</a></dt>
+<dd><p>Pause the currently running solver.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cst.interface.Model3D.resume_solver">
+<span class="sig-name descname"><span class="pre">resume_solver</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">timeout</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cst.interface.Model3D.resume_solver" title="Permalink to this definition">¶</a></dt>
+<dd><p>Resume the currently paused solver.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cst.interface.Model3D.run_solver">
+<span class="sig-name descname"><span class="pre">run_solver</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">timeout</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cst.interface.Model3D.run_solver" title="Permalink to this definition">¶</a></dt>
+<dd><p>Runs the currently selected solver and subsequent post-processing until finished. In case of an error a RunTimeError exception will be thrown.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cst.interface.Model3D.start_solver">
+<span class="sig-name descname"><span class="pre">start_solver</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">timeout</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cst.interface.Model3D.start_solver" title="Permalink to this definition">¶</a></dt>
+<dd><p>Starts the currently selected solver asynchronously and gives back control to the calling script. It does <em>not</em> wait for the solver to finish, use in combination with <a class="reference internal" href="#cst.interface.Model3D.is_solver_running" title="cst.interface.Model3D.is_solver_running"><code class="xref py py-meth docutils literal notranslate"><span class="pre">is_solver_running()</span></code></a>.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="cst.interface.Schematic">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">Schematic</span></span><a class="headerlink" href="#cst.interface.Schematic" title="Permalink to this definition">¶</a></dt>
+<dd><p>This class provides an interface to the schematic</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="cst.interface.Schematic.execute_vba_code">
+<span class="sig-name descname"><span class="pre">execute_vba_code</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">vba_code</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">/</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">timeout</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cst.interface.Schematic.execute_vba_code" title="Permalink to this definition">¶</a></dt>
+<dd><p>Executes VBA Code Snippet</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="cst.interface.pcbs.InterfacePCBS">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">InterfacePCBS</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">pcbs_api</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cst.interface.pcbs.InterfacePCBS" title="Permalink to this definition">¶</a></dt>
+<dd><p>This class offers functionality to interoperate with CST PCB Studio (PCBS)</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="cst.interface.pcbs.InterfacePCBS.set_pcb">
+<span class="sig-name descname"><span class="pre">set_pcb</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">pcb</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="cst.eda.html#cst_eda_interface.pcb_api.PCB" title="_cst_eda_interface.pcb_api.PCB"><span class="pre">PCB</span></a></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cst.interface.pcbs.InterfacePCBS.set_pcb" title="Permalink to this definition">¶</a></dt>
+<dd><p>Loads the given PCB design into the currently active PCBS project.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cst.interface.pcbs.InterfacePCBS.get_pcb">
+<span class="sig-name descname"><span class="pre">get_pcb</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="cst.eda.html#cst_eda_interface.pcb_api.PCB" title="_cst_eda_interface.pcb_api.PCB"><span class="pre">PCB</span></a></span></span><a class="headerlink" href="#cst.interface.pcbs.InterfacePCBS.get_pcb" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns a copy of the currently loaded PCB design in the PCBS project.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cst.interface.pcbs.InterfacePCBS.set_part_library">
+<span class="sig-name descname"><span class="pre">set_part_library</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">part_lib</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="cst.eda.html#cst_eda_interface.part_library.PartLibrary" title="_cst_eda_interface.part_library.PartLibrary"><span class="pre">PartLibrary</span></a></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cst.interface.pcbs.InterfacePCBS.set_part_library" title="Permalink to this definition">¶</a></dt>
+<dd><p>Loads the given PartLibrary into the currently active PCBS project.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cst.interface.pcbs.InterfacePCBS.get_part_library">
+<span class="sig-name descname"><span class="pre">get_part_library</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">workdir</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">PathLike</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="cst.eda.html#cst_eda_interface.part_library.PartLibrary" title="_cst_eda_interface.part_library.PartLibrary"><span class="pre">PartLibrary</span></a></span></span><a class="headerlink" href="#cst.interface.pcbs.InterfacePCBS.get_part_library" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get a copy of the currently loaded PartLibrary in the active PCBS project.
+Files referenced in the part library will be copied into the specified <cite>workdir</cite>,
+or if the latter is unspecified, put into an auto-created directory.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cst.interface.pcbs.InterfacePCBS.export_part_library">
+<span class="sig-name descname"><span class="pre">export_part_library</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ppt_lib_file</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">PathLike</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cst.interface.pcbs.InterfacePCBS.export_part_library" title="Permalink to this definition">¶</a></dt>
+<dd><p>Exports part library to the specified file
+ppt_lib_file - os.PathLike object as a path to the file</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cst.interface.pcbs.InterfacePCBS.import_part_library">
+<span class="sig-name descname"><span class="pre">import_part_library</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">file</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">PathLike</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">file_type</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'cst'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">action</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'add'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cst.interface.pcbs.InterfacePCBS.import_part_library" title="Permalink to this definition">¶</a></dt>
+<dd><p>Imports parts</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>file</strong> – String specifying the file to be imported</p></li>
+<li><p><strong>file_type</strong> – Specifies the type of the file to be imported. Possible types see below</p></li>
+<li><p><strong>action</strong> – Specifies the action to be performed on the imported parts. Possible types see below</p></li>
+</ul>
+</dd>
+</dl>
+<p>Possible file_types:</p>
+<ul class="simple">
+<li><p>‘csv’ - two-pin RLC from CSV-file (*.csv);</p></li>
+<li><p>‘cst’ - CST component part library file (*.ppt_lib);</p></li>
+</ul>
+<p>Possible actions:</p>
+<ul class="simple">
+<li><p>‘add’ - adds imported parts to the project;</p></li>
+<li><p>‘assign’ - assigns values to the available parts;</p></li>
+</ul>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cst.interface.pcbs.InterfacePCBS.delete_all_parts">
+<span class="sig-name descname"><span class="pre">delete_all_parts</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#cst.interface.pcbs.InterfacePCBS.delete_all_parts" title="Permalink to this definition">¶</a></dt>
+<dd><p>Deletes all parts in the currently active PCBS project.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cst.interface.pcbs.InterfacePCBS.delete_parts">
+<span class="sig-name descname"><span class="pre">delete_parts</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">partIDs</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">list</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cst.interface.pcbs.InterfacePCBS.delete_parts" title="Permalink to this definition">¶</a></dt>
+<dd><p>Deletes parts by IDs in the currently active PCBS project.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cst.interface.pcbs.InterfacePCBS.get_bom">
+<span class="sig-name descname"><span class="pre">get_bom</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#cst.interface.pcbs.InterfacePCBS.get_bom" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns a dict with the current Component-to-Partname mapping as a dict {&lt;REFDES&gt;: &lt;PARTNAME|None&gt;, …}. A partname equal to None indicates that no part is currently assigned.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cst.interface.pcbs.InterfacePCBS.set_bom">
+<span class="sig-name descname"><span class="pre">set_bom</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">bom</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">dict</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cst.interface.pcbs.InterfacePCBS.set_bom" title="Permalink to this definition">¶</a></dt>
+<dd><p>Modifies the Component-to-Partname mapping by means of a dict {&lt;REFDES&gt;: &lt;PARTNAME|None&gt;, …}. A partname equal to None will remove any assigned part.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cst.interface.pcbs.InterfacePCBS.run_solver">
+<span class="sig-name descname"><span class="pre">run_solver</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">solvername</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cst.interface.pcbs.InterfacePCBS.run_solver" title="Permalink to this definition">¶</a></dt>
+<dd><p>Starts the solver with the given name</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cst.interface.pcbs.InterfacePCBS.get_pi_solver_settings">
+<span class="sig-name descname"><span class="pre">get_pi_solver_settings</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#cst.interface.pcbs.InterfacePCBS.get_pi_solver_settings" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the PI-Solver Settings</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cst.interface.pcbs.InterfacePCBS.set_pi_solver_settings">
+<span class="sig-name descname"><span class="pre">set_pi_solver_settings</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">PIsolversettings</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">PISolverSettings</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cst.interface.pcbs.InterfacePCBS.set_pi_solver_settings" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sets the PISolverSettings</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cst.interface.pcbs.InterfacePCBS.import_layout">
+<span class="sig-name descname"><span class="pre">import_layout</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">file</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">PathLike</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cad_type</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">layout</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">stackup</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">comp_to_part_mapping</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">comp_models</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cst.interface.pcbs.InterfacePCBS.import_layout" title="Permalink to this definition">¶</a></dt>
+<dd><p>Imports a layout</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>file</strong> – String specifying the file to be imported</p></li>
+<li><p><strong>cad_type</strong> – Specifies the CAD type of the layout to be imported. Possible types see below</p></li>
+<li><p><strong>layout</strong> – Optional parameter specifies whether the layout should be reimported, defaults to True</p></li>
+<li><p><strong>stackup</strong> – Optional parameter specifies whether the stackup should be reimported, defaults to True</p></li>
+<li><p><strong>comp_to_part_mapping</strong> – Optional parameter specifies whether the component-to-part mapping should be reimported, defaults to True</p></li>
+<li><p><strong>comp_models</strong> – Optional parameter specifies whether the component models should be reimported, defaults to True</p></li>
+</ul>
+</dd>
+</dl>
+<p>Possible cad_types:</p>
+<ul class="simple">
+<li><p>‘cadence_allegro’ - Cadence (Allegro/APD/SiP);</p></li>
+<li><p>‘mentor_graphics_hyperlynx’ - Mentor Graphics HyperLynx;</p></li>
+<li><p>‘odb++’ - ODB++;</p></li>
+<li><p>‘ipc_2581’ - IPC-2581;</p></li>
+<li><p>‘zuken_cr5000’ - Zuken CR-5000/8000 ASCII;</p></li>
+<li><p>‘simlab_pcbmod’ - SimLab PCBMod;</p></li>
+<li><p>‘cst_ldb’ - CST Layout Database</p></li>
+</ul>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cst.interface.pcbs.InterfacePCBS.apply_ldf">
+<span class="sig-name descname"><span class="pre">apply_ldf</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ldf_file</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">PathLike</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cst.interface.pcbs.InterfacePCBS.apply_ldf" title="Permalink to this definition">¶</a></dt>
+<dd><p>Applies ldf-file to the project. Accepts a os.PathLike object as a path to the ldf-file
+ldf_file - String as a path to the ldf-file</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cst.interface.pcbs.InterfacePCBS.check_layer_stackup">
+<span class="sig-name descname"><span class="pre">check_layer_stackup</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#cst.interface.pcbs.InterfacePCBS.check_layer_stackup" title="Permalink to this definition">¶</a></dt>
+<dd><p>Checks the layer stackup.
+Returns an array of strings describing the problems. In case of no problems - the array is of zero length</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cst.interface.pcbs.InterfacePCBS.fix_layer_stackup">
+<span class="sig-name descname"><span class="pre">fix_layer_stackup</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#cst.interface.pcbs.InterfacePCBS.fix_layer_stackup" title="Permalink to this definition">¶</a></dt>
+<dd><p>Command to auto-fix the layer stackup.
+Returns an array of strings describing the problems if auto-fix is impossible. In case of success the array is of zero length</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cst.interface.pcbs.InterfacePCBS.get_auto_tagging">
+<span class="sig-name descname"><span class="pre">get_auto_tagging</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#cst.interface.pcbs.InterfacePCBS.get_auto_tagging" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns a dict with the current auto-tagging settings</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cst.interface.pcbs.InterfacePCBS.set_auto_tagging">
+<span class="sig-name descname"><span class="pre">set_auto_tagging</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">auto_tagging_settings</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">dict</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cst.interface.pcbs.InterfacePCBS.set_auto_tagging" title="Permalink to this definition">¶</a></dt>
+<dd><p>Applies auto-tagging settings to the project.
+auto_tagging_settings - Auto-tagging settings as dict</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cst.interface.pcbs.InterfacePCBS.export_auto_tagging">
+<span class="sig-name descname"><span class="pre">export_auto_tagging</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">settings_file</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">PathLike</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cst.interface.pcbs.InterfacePCBS.export_auto_tagging" title="Permalink to this definition">¶</a></dt>
+<dd><p>Writes auto-tagging settings to the specified file.
+settings_file - os.PathLike object as a path to the auto-tagging settings file</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cst.interface.pcbs.InterfacePCBS.apply_auto_tagging">
+<span class="sig-name descname"><span class="pre">apply_auto_tagging</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">settings_file</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">PathLike</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cst.interface.pcbs.InterfacePCBS.apply_auto_tagging" title="Permalink to this definition">¶</a></dt>
+<dd><p>Applies the specified auto-tagging settings file to the project.
+settings_file - os.PathLike object as a path to the auto-tagging settings file</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cst.interface.pcbs.InterfacePCBS.run_auto_tagging">
+<span class="sig-name descname"><span class="pre">run_auto_tagging</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">update_diff_pins</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cst.interface.pcbs.InterfacePCBS.run_auto_tagging" title="Permalink to this definition">¶</a></dt>
+<dd><p>Starts auto-tagging.
+update_diff_pins - Optional boolean parameter “Update differential pins”. Default value is False</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cst.interface.pcbs.InterfacePCBS.export_bck_rules">
+<span class="sig-name descname"><span class="pre">export_bck_rules</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">setting_file</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">PathLike</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rules</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">nets</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">comps</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cst.interface.pcbs.InterfacePCBS.export_bck_rules" title="Permalink to this definition">¶</a></dt>
+<dd><p>Writes rule &amp; net/component tagging settings to the specified file.
+settings_file - os.PathLike object as a path to the rule settings file
+rules - Optional boolean parameter specifying whether rule settings must be included into the file or not. default value is True
+nets - Optional boolean parameter specifying whether nets tagging settings must be included into the file or not. default value is True
+comps - Optional boolean parameter specifying whether components tagging settings must be included into the file or not. default value is True</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cst.interface.pcbs.InterfacePCBS.apply_bck_rules">
+<span class="sig-name descname"><span class="pre">apply_bck_rules</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">setting_file</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">PathLike</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cst.interface.pcbs.InterfacePCBS.apply_bck_rules" title="Permalink to this definition">¶</a></dt>
+<dd><p>Applies rule &amp; tagging settings to the project.
+settings_file - os.PathLike object as a path to the rule settings file</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cst.interface.pcbs.InterfacePCBS.get_bck_rule_settings">
+<span class="sig-name descname"><span class="pre">get_bck_rule_settings</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#cst.interface.pcbs.InterfacePCBS.get_bck_rule_settings" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the current rule settings as dict, where key is a rule name and value is a rule dict object.
+Each rule dict contains name, id, included flag, tags dict and a dict of parameters,
+where key is a parameter name and value is a parameter dict.
+Each parameter dict contains name, type and value.</p>
+<p>Possible parameter types:</p>
+<ul class="simple">
+<li><p>‘boolean’ - the value of Boolean type (True|False);</p></li>
+<li><p>‘integer’ - the value of Long type;</p></li>
+<li><p>‘float’ - the value of Double type;</p></li>
+<li><p>‘float_length’ - the value of Double type representing length;</p></li>
+<li><p>‘float_area’ - the value of Double type representing area;</p></li>
+<li><p>‘single_select_list’ - the value of String type representing single selection;</p></li>
+<li><p>‘multi_select_list’ - the value is array of strings representing multi-selection;</p></li>
+</ul>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cst.interface.pcbs.InterfacePCBS.set_bck_rule_settings">
+<span class="sig-name descname"><span class="pre">set_bck_rule_settings</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">bck_rule_settings</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">dict</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cst.interface.pcbs.InterfacePCBS.set_bck_rule_settings" title="Permalink to this definition">¶</a></dt>
+<dd><p>Applies rule settings to the project.
+bck_rule_settings - Rule settings as dict, where key is a rule name and value is a rule dict object.
+Each rule dict contains name, included flag and a dict of parameters,
+where key is a parameter name and value is a parameter dict.
+Each parameter dict contains name, type and value.</p>
+<p>Possible parameter types:</p>
+<ul class="simple">
+<li><p>‘boolean’ - the value of Boolean type (True|False);</p></li>
+<li><p>‘integer’ - the value of Long type;</p></li>
+<li><p>‘float’ - the value of Double type;</p></li>
+<li><p>‘float_length’ - the value of Double type representing length;</p></li>
+<li><p>‘float_area’ - the value of Double type representing area;</p></li>
+<li><p>‘single_select_list’ - the value of String type representing single selection;</p></li>
+<li><p>‘multi_select_list’ - the value is an Array of Strings representing multi-selection;</p></li>
+</ul>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cst.interface.pcbs.InterfacePCBS.get_nets_tagging">
+<span class="sig-name descname"><span class="pre">get_nets_tagging</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#cst.interface.pcbs.InterfacePCBS.get_nets_tagging" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns list of dicts with the current net-tagging settings</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cst.interface.pcbs.InterfacePCBS.set_nets_tagging">
+<span class="sig-name descname"><span class="pre">set_nets_tagging</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">net_tagging_settings</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">list</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cst.interface.pcbs.InterfacePCBS.set_nets_tagging" title="Permalink to this definition">¶</a></dt>
+<dd><p>Applies net-tagging settings to the project.
+net_tagging_settings - Net-tagging settings as list of dicts</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cst.interface.pcbs.InterfacePCBS.get_comps_tagging">
+<span class="sig-name descname"><span class="pre">get_comps_tagging</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#cst.interface.pcbs.InterfacePCBS.get_comps_tagging" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns list of dicts with the current component-tagging settings</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cst.interface.pcbs.InterfacePCBS.set_comps_tagging">
+<span class="sig-name descname"><span class="pre">set_comps_tagging</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">comp_tagging_settings</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">list</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cst.interface.pcbs.InterfacePCBS.set_comps_tagging" title="Permalink to this definition">¶</a></dt>
+<dd><p>Applies component-tagging settings to the project.
+comp_tagging_settings - Component-tagging settings as list of dicts</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cst.interface.pcbs.InterfacePCBS.run_bck">
+<span class="sig-name descname"><span class="pre">run_bck</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">rule_parameters</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cst.interface.pcbs.InterfacePCBS.run_bck" title="Permalink to this definition">¶</a></dt>
+<dd><p>Starts board checker.
+rule_parameters - Optional parameter with possible values: “custom” or “signal_spec”.
+If “rule parameters” is not specified the project’s value is used.
+Returns number of violations</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cst.interface.pcbs.InterfacePCBS.show_bck_results">
+<span class="sig-name descname"><span class="pre">show_bck_results</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#cst.interface.pcbs.InterfacePCBS.show_bck_results" title="Permalink to this definition">¶</a></dt>
+<dd><p>Shows violation view, if results are available</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cst.interface.pcbs.InterfacePCBS.export_bck_results_as_xls">
+<span class="sig-name descname"><span class="pre">export_bck_results_as_xls</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">xls_file</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">PathLike</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cst.interface.pcbs.InterfacePCBS.export_bck_results_as_xls" title="Permalink to this definition">¶</a></dt>
+<dd><p>Exports violations to the specified file
+xls_file - os.PathLike object as a path to the file</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cst.interface.pcbs.InterfacePCBS.add_bck_to_report">
+<span class="sig-name descname"><span class="pre">add_bck_to_report</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#cst.interface.pcbs.InterfacePCBS.add_bck_to_report" title="Permalink to this definition">¶</a></dt>
+<dd><p>Adds violation results to the current report</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cst.interface.pcbs.InterfacePCBS.show_decap_tool">
+<span class="sig-name descname"><span class="pre">show_decap_tool</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">show</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cst.interface.pcbs.InterfacePCBS.show_decap_tool" title="Permalink to this definition">¶</a></dt>
+<dd><p>Shows/closes EDA Decap Tool</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cst.interface.pcbs.InterfacePCBS.set_export_2d_settings">
+<span class="sig-name descname"><span class="pre">set_export_2d_settings</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">file_name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">PathLike</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">simulator</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">model_name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">''</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cst.interface.pcbs.InterfacePCBS.set_export_2d_settings" title="Permalink to this definition">¶</a></dt>
+<dd><p>Defines export 2D(TL) settings in the active PCBS project</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cst.interface.pcbs.InterfacePCBS.export_2d">
+<span class="sig-name descname"><span class="pre">export_2d</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">refresh_selection</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">run_asynchronous</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cst.interface.pcbs.InterfacePCBS.export_2d" title="Permalink to this definition">¶</a></dt>
+<dd><p>Exports 2D(TL) model of the active PCBS project</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cst.interface.pcbs.InterfacePCBS.get_selected_items">
+<span class="sig-name descname"><span class="pre">get_selected_items</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">SelectedItem</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#cst.interface.pcbs.InterfacePCBS.get_selected_items" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns a list with the currently selected items in the Navigation Tree</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cst.interface.pcbs.InterfacePCBS.get_current_item_selection">
+<span class="sig-name descname"><span class="pre">get_current_item_selection</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">str</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#cst.interface.pcbs.InterfacePCBS.get_current_item_selection" title="Permalink to this definition">¶</a></dt>
+<dd><p>The method is deprecated. Use <cite>get_selected_items(self) -&gt; List[SelectedItem]</cite> instead.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>A list with the currently selected items in the Navigation Tree.</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>list[Dict[str, str]]</p>
+</dd>
+</dl>
+<p class="rubric">Example</p>
+<p>[{‘id’: ‘U23’, ‘type’: ‘comp’}, {‘id’: ‘A6’, ‘type’: ‘net’}]</p>
+<dl class="simple">
+<dt>Each dict contains:</dt><dd><p>id (str): ID of the selected object.
+type (str): Type of the selected object. For valid values, see class <code class="xref py py-class docutils literal notranslate"><span class="pre">ItemType</span></code>.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cst.interface.pcbs.InterfacePCBS.set_selected_items">
+<span class="sig-name descname"><span class="pre">set_selected_items</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">selected</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">SelectedItem</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cst.interface.pcbs.InterfacePCBS.set_selected_items" title="Permalink to this definition">¶</a></dt>
+<dd><p>Changes current selection in the Navigation Tree to the specified items</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cst.interface.pcbs.InterfacePCBS.set_current_item_selection">
+<span class="sig-name descname"><span class="pre">set_current_item_selection</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">selected</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">str</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cst.interface.pcbs.InterfacePCBS.set_current_item_selection" title="Permalink to this definition">¶</a></dt>
+<dd><p>The method is deprecated. Use set_selected_items(self, selected: List[SelectedItem]) instead.</p>
+<p>Changes current selection in the Navigation Tree to the specified items.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>selected</strong> (<em>List</em><em>[</em><em>Dict</em><em>[</em><em>str</em><em>, </em><em>str</em><em>]</em><em>]</em>) – A list of dictionaries where each dictionary contains:
+- ‘id’ (str): The ID of the object to be selected.
+- ‘type’ (str): The type of the object to be selected. For valid values, see class <code class="xref py py-class docutils literal notranslate"><span class="pre">ItemType</span></code>.</p>
+</dd>
+</dl>
+<p class="rubric">Examples</p>
+<p>selected=[{‘id’: ‘U22’, ‘type’: ‘comp’}, {‘id’: ‘A2’, ‘type’: ‘net’}]</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cst.interface.pcbs.InterfacePCBS.get_active_solver">
+<span class="sig-name descname"><span class="pre">get_active_solver</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#cst.interface.pcbs.InterfacePCBS.get_active_solver" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the active solver</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cst.interface.pcbs.InterfacePCBS.set_active_solver">
+<span class="sig-name descname"><span class="pre">set_active_solver</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">active_solver</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cst.interface.pcbs.InterfacePCBS.set_active_solver" title="Permalink to this definition">¶</a></dt>
+<dd><p>Changes active solver to the specified value</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cst.interface.pcbs.InterfacePCBS.get_mounted_components">
+<span class="sig-name descname"><span class="pre">get_mounted_components</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#cst.interface.pcbs.InterfacePCBS.get_mounted_components" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns a dict with the current Component-to-Mounted mapping as a dict {&lt;REFDES&gt;: &lt;True|False&gt;}.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cst.interface.pcbs.InterfacePCBS.set_mounted_components">
+<span class="sig-name descname"><span class="pre">set_mounted_components</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">mounted</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">dict</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cst.interface.pcbs.InterfacePCBS.set_mounted_components" title="Permalink to this definition">¶</a></dt>
+<dd><p>Modifies the Component-to-Mounted mapping by means of a dict {&lt;REFDES&gt;: &lt;True|False&gt;}.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="cst.interface.running_design_environments">
+<span class="sig-name descname"><span class="pre">running_design_environments</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#cst.interface.running_design_environments" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns a list of process IDs (PIDs) of currently running DesignEnvironments</p>
+</dd></dl>
+
+</section>
+<section id="examples">
+<h2>Examples<a class="headerlink" href="#examples" title="Permalink to this heading">¶</a></h2>
+<p><strong>Open and close a new DesignEnvironment</strong></p>
+<blockquote>
+<div><p>The following code block shows how to open and close a DesignEnvironment (DE). The DE will start in
+quiet/script mode to block any otherwise uncontrollable dialogs from popping up.</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">cst.interface</span><span class="w"> </span><span class="kn">import</span> <span class="n">DesignEnvironment</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">de</span> <span class="o">=</span> <span class="n">DesignEnvironment</span><span class="o">.</span><span class="n">new</span><span class="p">()</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="c1"># perform your operations here</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">de</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+</pre></div>
+</div>
+</div></blockquote>
+<p><strong>Open existing project and run solver</strong></p>
+<blockquote>
+<div><p>This block of code demostrates how to open an existing 3D project an run the selected solver. Use the <a class="reference internal" href="cst.results.html#module-cst.results" title="cst.results"><code class="xref py py-mod docutils literal notranslate"><span class="pre">cst.results</span></code></a>
+module to access the results of the solver run in python.</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">cst.interface</span><span class="w"> </span><span class="kn">import</span> <span class="n">DesignEnvironment</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">de</span> <span class="o">=</span> <span class="n">DesignEnvironment</span><span class="o">.</span><span class="n">new</span><span class="p">()</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">cst_file</span> <span class="o">=</span> <span class="sa">r</span><span class="s2">&quot;C:\Path\to\cst_file.cst&quot;</span> <span class="c1"># replace with actual path on your machine</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">prj</span> <span class="o">=</span> <span class="n">de</span><span class="o">.</span><span class="n">open_project</span><span class="p">(</span><span class="n">cst_file</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">prj</span><span class="o">.</span><span class="n">model3d</span><span class="o">.</span><span class="n">run_solver</span><span class="p">()</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">prj</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">de</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+</pre></div>
+</div>
+</div></blockquote>
+</section>
+</section>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <div>
+    <h3><a href="../main.html">Table of Contents</a></h3>
+    <ul>
+<li><a class="reference internal" href="#">cst.interface package</a><ul>
+<li><a class="reference internal" href="#module-cst.interface">Module Contents</a></li>
+<li><a class="reference internal" href="#examples">Examples</a></li>
+</ul>
+</li>
+</ul>
+
+  </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../main.html">CST Python Libraries  documentation</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">cst.interface package</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+    &#169; Copyright 2009-2025 Dassault Systemes Deutschland GmbH. All rights reserved.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 7.1.2.
+    </div>
+  </body>
+</html>

@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="Adobe RoboHelp 11" />
+<title>Anchorpoint Object</title>
+<link rel="StyleSheet" href="../online_help_vba.css" type="text/css" />
+<style type="text/css">
+/*<![CDATA[*/
+<!--
+body { border-bottom-style:None; }
+-->
+/*]]>*/
+</style>
+
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+        origWidth = innerWidth;
+        origHeight = innerHeight;
+        onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+/*<![CDATA[*/
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+-->
+/*]]>*/
+</style>
+
+<script type="text/javascript" language="javascript1.2" src="../whmsg.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript" src="../whver.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript1.2" src="../whutils.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript1.2" src="../whproxy.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript1.2" src="../whlang.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript1.2" src="../whtopic.js" charset="utf-8">
+</script>
+</head>
+<body>
+<script type="text/javascript" language="javascript1.2">
+//<![CDATA[
+<!--
+if (window.gbWhTopic)
+{
+        var strUrl = document.location.href;
+        var bc = 0;
+        var n = strUrl.toLowerCase().indexOf("bc-");
+        if(n != -1)
+        {
+                document.location.replace(strUrl.substring(0, n));
+                bc = strUrl.substring(n+3);
+        }
+
+        if (window.addTocInfo)
+        {
+        addTocInfo("3D Simulation VBA\nVBA Objects\nTransformations and Picks\nAnchorpoint");
+
+        }
+        if (window.writeBtnStyle)
+                writeBtnStyle();
+
+        if (window.writeIntopicBar)
+                writeIntopicBar(0);
+
+        
+        document.write("<p style=\"font-family: Tahoma; font-size: 9pt; font-weight: 400;  font-style:normal; color: rgb(0, 0, 0); text-decoration:none; text-align: left\"> ");
+AddMasterBreadcrumbs("../index.htm", "font-family: Tahoma; font-size: 9pt; font-weight: 400;  font-style:normal; color: rgb(0, 0, 0); text-decoration:none; text-align: left", "|", "Home", "../special_vbaobjects/special_vbaobjects_vbaobjects.htm");
+document.write("<a style=\"font-family: Tahoma; font-size: 9pt; font-weight: 400;  font-style:normal; color: rgb(0, 0, 0); text-decoration:none; text-align: left\" href=\"../special_vbaobjects/special_vbaobjects_vbaobjects.htm\">3D Simulation VBA<\/a> | <a style=\"font-family: Tahoma; font-size: 9pt; font-weight: 400;  font-style:normal; color: rgb(0, 0, 0); text-decoration:none; text-align: left\" href=\"../special_vbaobjects/special_vbaobjects_vbaobjects.htm\">VBA Objects<\/a> | <a style=\"font-family: Tahoma; font-size: 9pt; font-weight: 400;  font-style:normal; color: rgb(0, 0, 0); text-decoration:none; text-align: left\" href=\"../special_vbatransformo/special_vbatransformo_align_object.htm\">Transformations and Picks<\/a> | Anchorpoint<\/p>");
+
+}
+else
+        if (window.gbIE4)
+                document.location.reload();
+
+onLoadHandler = function()
+{
+  if (window.setRelStartPage)
+        {
+        setTimeout("setRelStartPage('../index.htm');", 1)
+
+    setTimeout("UpdateBreadCrumbsMarker();", 1);
+        }
+}
+
+if (window.addEventListener){  
+        window.addEventListener('load', onLoadHandler, false);   
+} else if (window.attachEvent){  
+        window.attachEvent('onload', onLoadHandler);  
+}
+
+function onSetStartPage()
+{
+  autoSync(1);
+  sendSyncInfo();
+  sendAveInfoOut();
+}
+//-->
+//]]>
+</script><script type="text/javascript" src="../ehlpdhtm.js" language="JavaScript1.2">
+</script>
+<table cellspacing="0" width="100%">
+<col style="width: 50%;" />
+<col style="width: 50%;" />
+<tr>
+<td style="vertical-align: middle; padding-top: 5px; padding-bottom: 5px;">
+<p style="margin-top: 0px; margin-bottom: 0px;"><img src="../3ds.png" alt="" style="border: none;" border="0" /></p>
+</td>
+<td style="vertical-align: middle;">
+<p style="text-align: right;"><a href="https://www.3ds.com/products-services/3dexperience/" target="_blank"><img src="../3dexp.png" alt="" style="border: none;" width="32" height="32" border="0" /></a></p>
+</td>
+</tr>
+</table>
+<p class="VBA-Heading-Object">Anchorpoint Object</p>
+<p class="VBA-Text">Defines and operates on Anchor Points that can be used in SAM context to arrange components of an assembly and for some further workflows that rely on positioning points. Please also note the <a href="common_vbawcso_wcs_object.htm">WCS</a> (working coordinate system) object which might be a useful alternative for similar purposes.</p>
+<ul>
+<li class="p-VBA-Index-Category">
+<p class="VBA-Index-Category"><a href="#General Methods">General Methods</a></p>
+</li>
+<li class="p-VBA-Index-Category">
+<p class="VBA-Index-Category"><a href="#Queries">Queries</a></p>
+</li>
+<li class="p-VBA-Index-Category">
+<p class="VBA-Index-Category"><a href="#Example"><span style="font-weight: bold;">Examples</span></a></p>
+</li>
+</ul>
+<p class="VBA-Heading-Category"><a name="General Methods"></a>General Methods</p>
+<p class="vba-text-indent">&#160;</p>
+<p class="VBA-Heading-Method">Store ( <a href="../common_vbageneral/common_general_name.htm" id="a29" style="font-weight: normal; font-style: normal;" name="a29">name</a> <span style="font-style: italic;"><i>AnchorPointName</i></span> )</p>
+<p class="VBA-Text-Indent">Creates an Anchor Point at the current WCS position with the current WCS' orientation.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">Define ( <a href="../common_vbageneral/common_general_name.htm" id="a292" style="font-weight: normal; font-style: normal;" name="a292">name</a> <span style="font-style: italic;"><i>AnchorPointName, <a href="../common_vbageneral/common_general_double.htm" id="a510" style="font-weight: normal; font-style: normal;" name="a510">double</a> pos_x</i></span> <span style="font-style: italic;"><i>, <a href="../common_vbageneral/common_general_double.htm" id="a610" style="font-weight: normal; font-style: normal;" name="a610">double</a> pos_y, <a href="../common_vbageneral/common_general_double.htm" id="a710" style="font-weight: normal; font-style: normal;" name="a710">double</a> pos_z,</i></span> <span style="font-style: italic;"><i><a href="../common_vbageneral/common_general_double.htm" id="a511" style="font-weight: normal; font-style: normal;" name="a511">double</a> normal_x</i></span> <span style="font-style: italic;"><i>, <a href="../common_vbageneral/common_general_double.htm" id="a611" style="font-weight: normal; font-style: normal;" name="a611">double</a> normal_y, <a href="../common_vbageneral/common_general_double.htm" id="a711" style="font-weight: normal; font-style: normal;" name="a711">double</a> normal_z,</i></span> <span style="font-style: italic;"><i><a href="../common_vbageneral/common_general_double.htm" id="a512" style="font-weight: normal; font-style: normal;" name="a512">double</a> uvector_x</i></span> <span style="font-style: italic;"><i>, <a href="../common_vbageneral/common_general_double.htm" id="a612" style="font-weight: normal; font-style: normal;" name="a612">double</a> uvector_y, <a href="../common_vbageneral/common_general_double.htm" id="a712" style="font-weight: normal; font-style: normal;" name="a712">double</a> uvector_z</i></span> )</p>
+<p class="VBA-Text-Indent">Creates an Anchor Point with the attitude and position as defined by the nine values.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">UpdateToCurrentWCS ( <a href="../common_vbageneral/common_general_name.htm" id="a291" style="font-weight: normal; font-style: normal;" name="a291">name</a> <span style="font-style: italic;"><i>AnchorPointName</i></span> )</p>
+<p class="VBA-Text-Indent">Updates an existing Anchor Point to have the position and orientation of the current WCS.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">Restore ( <a href="../common_vbageneral/common_general_name.htm" id="a8" style="font-weight: normal; font-style: normal;" name="a8">name</a> <span style="font-style: italic;"><i>AnchorPointName</i></span> )</p>
+<p class="VBA-Text-Indent">Positions and orients the WCS according to the named Anchor Point.</p>
+<p class="vba-text-indent">&#160;</p>
+<p class="VBA-Heading-Method">Delete ( <a href="../common_vbageneral/common_general_name.htm" id="a9" style="font-weight: normal; font-style: normal;" name="a9">name</a> <span style="font-style: italic;"><i>AnchorPointName</i></span> )</p>
+<p class="VBA-Text-Indent">Deletes the Anchor Point with the given name.</p>
+<p class="vba-text-indent">&#160;</p>
+<p class="VBA-Heading-Method">Rename ( <a href="../common_vbageneral/common_general_name.htm" id="a10" style="font-weight: normal; font-style: normal;" name="a10">name</a> <span style="font-style: italic;"><i>oldName, <a href="../common_vbageneral/common_general_name.htm" id="a11" style="font-weight: normal; font-style: normal;" name="a11">name</a> newName&#160;</i></span>)</p>
+<p class="vba-text-indent">Changes the name of an already named Anchor Point.</p>
+<p class="vba-text-indent">&#160;</p>
+<p class="VBA-Heading-Method">NewFolder ( <a href="../common_vbageneral/common_general_name.htm" id="a91" style="font-weight: normal; font-style: normal;" name="a91">name</a> <span style="font-style: italic;"><i>Foldername</i></span> )</p>
+<p class="VBA-Text-Indent">Creates a new folder in the Anchor Point tree with the given name.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">DeleteFolder ( <a href="../common_vbageneral/common_general_name.htm" id="a92" style="font-weight: normal; font-style: normal;" name="a92">name</a> <span style="font-style: italic;"><i>Foldername</i></span> )</p>
+<p class="VBA-Text-Indent">Deletes an existing folder from the Anchor Point tree.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">RenameFolder ( <a href="../common_vbageneral/common_general_name.htm" id="a101" style="font-weight: normal; font-style: normal;" name="a101">name</a> <span style="font-style: italic;"><i>oldName, <a href="../common_vbageneral/common_general_name.htm" id="a111" style="font-weight: normal; font-style: normal;" name="a111">name</a> newName&#160;</i></span>)</p>
+<p class="vba-text-indent">Changes the name of an already existing Anchor Point folder.</p>
+<p class="VBA-Heading-Category"><a name="Queries" id="Queries"></a>Queries</p>
+<p class="VBA-Text-Indent">A general remark to Queries:</p>
+<p class="VBA-Text-Indent">The queries are currently not to be used in the history as data may not be complete during a history rebuild.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">DoesExist ( <a href="../common_vbageneral/common_general_name.htm" id="a14" style="font-weight: normal; font-style: normal;" name="a14">name</a> <span style="font-style: italic;"><i>AnchorPointName&#160;</i></span>) <a href="../common_vbageneral/common_general_bool_data_type.htm" id="a15" style="font-weight: normal; font-style: normal;" name="a15">bool</a></p>
+<p class="VBA-Text-Indent">Checks if the Anchor Point with the given name does exist.</p>
+<p class="vba-text-indent">&#160;</p>
+<p class="VBA-Heading-Method">GetOrigin ( <a href="../common_vbageneral/common_general_name.htm" id="a20" style="font-weight: normal; font-style: normal;" name="a20">name</a> <span style="font-style: italic;"><i>AnchorPointName,</i></span> <a href="../common_vbageneral/common_general_double_ref.htm" id="a16" style="font-weight: normal;" name="a16">double_ref</a> <span style="font-style: italic;"><i>x,</i></span> <a href="../common_vbageneral/common_general_double_ref.htm" id="a17" style="font-weight: normal;" name="a17">double_ref</a> <span style="font-style: italic;"><i>y,</i></span> <a href="../common_vbageneral/common_general_double_ref.htm" id="a19" style="font-weight: normal;" name="a19">double_ref</a> <span style="font-style: italic;"><i>z</i></span> ) <a href="../common_vbageneral/common_general_bool_data_type.htm" id="a51" style="font-weight: normal; font-style: normal;" name="a51">bool</a></p>
+<p class="VBA-Text-Indent">Stores the origin of the specified Anchor Point&#160;in <span style="font-weight: bold;">x</span>, <span style="font-weight: bold;">y</span> and <span style="font-weight: bold;">z</span>, returns <span style="font-style: italic;"><i>True</i></span> if successful.</p>
+<p class="vba-text-indent">&#160;</p>
+<p class="VBA-Heading-Method">GetNormal ( <a href="../common_vbageneral/common_general_name.htm" id="a22" style="font-weight: normal; font-style: normal;" name="a22">name</a> <span style="font-style: italic;"><i>AnchorPointName,</i></span> <a href="../common_vbageneral/common_general_double_ref.htm" id="a23" style="font-weight: normal;" name="a23">double_ref</a> <span style="font-style: italic;"><i>x,</i></span> <a href="../common_vbageneral/common_general_double_ref.htm" id="a24" style="font-weight: normal;" name="a24">double_ref</a> <span style="font-style: italic;"><i>y,</i></span> <a href="../common_vbageneral/common_general_double_ref.htm" id="a25" style="font-weight: normal;" name="a25">double_ref</a> <span style="font-style: italic;"><i>z</i></span> ) <a href="../common_vbageneral/common_general_bool_data_type.htm" id="a81" style="font-weight: normal; font-style: normal;" name="a81">bool</a></p>
+<p class="VBA-Text-Indent">Stores the normal of the specified Anchor Point&#160;in <span style="font-weight: bold;">x</span>, <span style="font-weight: bold;">y</span> and <span style="font-weight: bold;">z</span>, returns <span style="font-style: italic;"><i>True</i></span> if successful.</p>
+<p class="vba-text-indent">&#160;</p>
+<p class="VBA-Heading-Method">GetUVector ( <a href="../common_vbageneral/common_general_name.htm" id="a26" style="font-weight: normal; font-style: normal;" name="a26">name</a> <span style="font-style: italic;"><i>AnchorPointName,</i></span> <a href="../common_vbageneral/common_general_double_ref.htm" id="a27" style="font-weight: normal;" name="a27">double_ref</a> <span style="font-style: italic;"><i>x,</i></span> <a href="../common_vbageneral/common_general_double_ref.htm" id="a28" style="font-weight: normal;" name="a28">double_ref</a> <span style="font-style: italic;"><i>y,</i></span> <a href="../common_vbageneral/common_general_double_ref.htm" id="a30" style="font-weight: normal;" name="a30">double_ref</a> <span style="font-style: italic;"><i>z</i></span> ) <a href="../common_vbageneral/common_general_bool_data_type.htm" id="a82" style="font-weight: normal; font-style: normal;" name="a82">bool</a></p>
+<p class="VBA-Text-Indent">Stores the u-vector of the specified Anchor Point in <span style="font-weight: bold;">x</span>, <span style="font-weight: bold;">y</span> and <span style="font-weight: bold;">z</span>, returns <span style="font-style: italic;"><i>True</i></span> if successful.</p>
+<p class="VBA-Heading-Category"><a name="Example" id="Example"></a>Example:</p>
+<p class="VBA-Text-Example">Dim a_boolean_variable as Boolean</p>
+<p class="VBA-Text-Example">a_boolean_variable = Anchorpoint.DoesExist("foldername/subfolder:anchorname")</p>
+<p class="VBA-Text-Example">&#160;</p>
+<p class="VBA-Text-Example">Anchorpoint.Restore("anchorpoint_in_top_folder")</p>
+<p class="VBA-Text-Example">Anchopoint.Define("existing_folder:new_anchorpoint", "-1.0", "1.0", "0.0", "0.0", "1.0", "0.0", "1.0", "0.0", "0.0")</p>
+<p class="VBA-Text-Example">Anchorpoint.Store("a_new_anchorpoint")</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<?rh-p style="margin-bottom: 0px; text-align: Right; margin-left: 18px; 
+                 margin-right: 18px; margin-top: 18px;" ?>
+<div style="width: 100%; position: relative;" id="footer">
+<p style="border-bottom: Solid 1px #dddddd; text-align: Left; margin-left: 0px; font-family: Arial, sans-serif; line-height: Normal; margin-top: 9px; margin-right: 0px; margin-bottom: 6px; border-left-width: 1px; border-top-width: 1px; border-right-width: 1px;"><span style="text-align: Left; font-family: Arial, sans-serif; line-height: Normal;">&#160;</span></p>
+<table cellspacing="0" width="100%">
+<col style="width: 50%;" />
+<col style="width: 50%;" />
+<tr>
+<td style="vertical-align: Top;"><span style="font-family: Arial, sans-serif; line-height: Normal; font-size: 8pt;"><font size="1" style="font-size:8pt;">CST Studio Suite 2026</font></span></td>
+<td style="vertical-align: Top;">
+<p style="text-align: right;">&#160;</p>
+</td>
+</tr>
+</table>
+<p>&#160;</p>
+</div>
+<script type="text/javascript" language="javascript1.2">
+//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+        writeIntopicBar(0);
+
+
+highlightSearch();
+//-->
+//]]>
+</script>
+</body>
+</html>

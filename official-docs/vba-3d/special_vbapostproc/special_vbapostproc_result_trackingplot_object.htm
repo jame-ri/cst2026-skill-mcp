@@ -1,0 +1,400 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="Adobe RoboHelp 11" />
+<title>TrackingPlot Object</title>
+<link rel="StyleSheet" href="../online_help_vba.css" type="text/css" />
+<style type="text/css">
+/*<![CDATA[*/
+<!--
+body { border-bottom-style:None; }
+-->
+/*]]>*/
+</style>
+
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+        origWidth = innerWidth;
+        origHeight = innerHeight;
+        onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+/*<![CDATA[*/
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+-->
+/*]]>*/
+</style>
+
+<script type="text/javascript" language="javascript1.2" src="../whmsg.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript" src="../whver.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript1.2" src="../whutils.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript1.2" src="../whproxy.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript1.2" src="../whlang.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript1.2" src="../whtopic.js" charset="utf-8">
+</script>
+</head>
+<body>
+<script type="text/javascript" language="javascript1.2">
+//<![CDATA[
+<!--
+if (window.gbWhTopic)
+{
+        var strUrl = document.location.href;
+        var bc = 0;
+        var n = strUrl.toLowerCase().indexOf("bc-");
+        if(n != -1)
+        {
+                document.location.replace(strUrl.substring(0, n));
+                bc = strUrl.substring(n+3);
+        }
+
+        if (window.addTocInfo)
+        {
+        addTocInfo("3D Simulation VBA\nVBA Objects\nPost Processing\nTrackingPlot");
+
+        }
+        if (window.writeBtnStyle)
+                writeBtnStyle();
+
+        if (window.writeIntopicBar)
+                writeIntopicBar(0);
+
+        
+        document.write("<p style=\"font-family: Tahoma; font-size: 9pt; font-weight: 400;  font-style:normal; color: rgb(0, 0, 0); text-decoration:none; text-align: left\"> ");
+AddMasterBreadcrumbs("../index.htm", "font-family: Tahoma; font-size: 9pt; font-weight: 400;  font-style:normal; color: rgb(0, 0, 0); text-decoration:none; text-align: left", "|", "Home", "../special_vbaobjects/special_vbaobjects_vbaobjects.htm");
+document.write("<a style=\"font-family: Tahoma; font-size: 9pt; font-weight: 400;  font-style:normal; color: rgb(0, 0, 0); text-decoration:none; text-align: left\" href=\"../special_vbaobjects/special_vbaobjects_vbaobjects.htm\">3D Simulation VBA<\/a> | <a style=\"font-family: Tahoma; font-size: 9pt; font-weight: 400;  font-style:normal; color: rgb(0, 0, 0); text-decoration:none; text-align: left\" href=\"../special_vbaobjects/special_vbaobjects_vbaobjects.htm\">VBA Objects<\/a> | <a style=\"font-family: Tahoma; font-size: 9pt; font-weight: 400;  font-style:normal; color: rgb(0, 0, 0); text-decoration:none; text-align: left\" href=\"special_vbapostproc_type_method.htm\">Post Processing<\/a> | TrackingPlot<\/p>");
+
+}
+else
+        if (window.gbIE4)
+                document.location.reload();
+
+onLoadHandler = function()
+{
+  if (window.setRelStartPage)
+        {
+        setTimeout("setRelStartPage('../index.htm');", 1)
+
+    setTimeout("UpdateBreadCrumbsMarker();", 1);
+        }
+}
+
+if (window.addEventListener){  
+        window.addEventListener('load', onLoadHandler, false);   
+} else if (window.attachEvent){  
+        window.attachEvent('onload', onLoadHandler);  
+}
+
+function onSetStartPage()
+{
+  autoSync(1);
+  sendSyncInfo();
+  sendAveInfoOut();
+}
+//-->
+//]]>
+</script><script type="text/javascript" src="../ehlpdhtm.js" language="JavaScript1.2">
+</script>
+<table cellspacing="0" width="100%">
+<col style="width: 50%;" />
+<col style="width: 50%;" />
+<tr>
+<td style="vertical-align: middle; padding-top: 5px; padding-bottom: 5px;">
+<p style="margin-top: 0px; margin-bottom: 0px;"><img src="../3ds.png" alt="" style="border: none;" border="0" /></p>
+</td>
+<td style="vertical-align: middle;">
+<p style="text-align: right;"><a href="https://www.3ds.com/products-services/3dexperience/" target="_blank"><img src="../3dexp.png" alt="" style="border: none;" width="32" height="32" border="0" /></a></p>
+</td>
+</tr>
+</table>
+<h1>TrackingPlot Object</h1>
+<p class="Tip-Note-Text">This object offers access and manipulation functions to the trajectory plot.</p>
+<p class="Tip-Note-Text">Please not that a more efficient interface for accessing and post-processing trajectory data is available via the <a href="../special_vbamonitors/particle_reader_objects.htm#ParticleTrajectoryReader">ParticleTrajectoryReader</a> object.</p>
+<ul>
+<li class="p-VBA-Index-Category">
+<p class="VBA-Index-Category"><a href="#Methods">Methods</a></p>
+</li>
+<li class="p-VBA-Index-Category">
+<p class="VBA-Index-Category"><a href="#Mani">Particle Queries</a></p>
+</li>
+<li class="p-VBA-Index-Category">
+<p class="VBA-Index-Category"><a href="#Deprecated_Methods">Deprecated Methods</a></p>
+</li>
+<li class="p-VBA-Index-Category">
+<p class="VBA-Index-Category"><a href="#Example">Examples</a></p>
+</li>
+</ul>
+<p class="VBA-Heading-Category"><a name="Methods" id="Methods"></a>Methods</p>
+<p class="VBA-Heading-Method">Reset</p>
+<p class="Topic-Text-Indent">Resets the tracking plot object.</p>
+<p class="VBA-Heading-Method">&#160;</p>
+<p class="VBA-Heading-Method">SelectPlot (<a href="../common_vbageneral/common_general_name.htm" id="a1" style="font-weight: normal; font-style: normal;" name="a1">name</a> <span style="font-style: italic;"><i>sTrajectoryName</i></span> ) &#160;<a href="../common_vbageneral/common_general_bool_data_type.htm" id="a28" style="font-weight: normal; font-style: normal;" name="a28">bool</a></p>
+<p class="VBA-Text-Indent">Loads the selected trajectories' datafile.</p>
+<p class="VBA-Heading-Method">&#160;</p>
+<p class="VBA-Heading-Method">GetNParticles &#160;<a href="../common_vbageneral/common_general_long.htm" id="a10" style="font-weight: normal; font-style: normal;" name="a10">long</a></p>
+<p class="VBA-Text-Indent">Returns the number of displayed particles i.e. trajectory paths.</p>
+<p class="vba-text-indent">&#160;</p>
+<p class="VBA-Heading-Method"><span style="font-weight: bold;">GetNTimeSteps</span> &#160;<a href="../common_vbageneral/common_general_long.htm" id="a11" style="font-weight: normal; font-style: normal;" name="a11">long</a></p>
+<p class="VBA-Text-Indent">Returns the number of displayed timesteps.</p>
+<p class="vba-text-indent">&#160;</p>
+<p class="VBA-Heading-Method">GetTime <a href="../common_vbageneral/common_general_double.htm" id="a9" style="font-weight: normal;" name="a9">double</a></p>
+<p class="VBA-Text-Indent">Returns the actual time of the displayed plot.</p>
+<p class="VBA-Heading-Category"><a name="Mani" id="Mani"></a>Particle Queries</p>
+<p class="VBA-Heading-Method">SelectParticle &#160;( <span><a href="../common_vbageneral/common_general_long.htm" id="a12" style="font-weight: normal; font-style: normal;" name="a12">long</a></span> <span style="font-style: italic;"><i>index</i></span> ) <a href="../common_vbageneral/common_general_bool_data_type.htm" id="a13" style="font-weight: normal; font-style: normal;" name="a13">bool</a></p>
+<p class="VBA-Text-Indent">Selects a specific particle for the subsequent queries. The parameter <span style="font-style: italic;"><i>index</i></span> should be between 0 and GetNParticles()-1.</p>
+<p class="VBA-Heading-Method">&#160;</p>
+<p class="VBA-Heading-Method">GetCharge <a href="../common_vbageneral/common_general_double.htm" id="a15" style="font-weight: normal;" name="a15">double</a></p>
+<p class="VBA-Text-Indent">Returns the macro charge of the selected particle at the selected time index. Please note that due to sheet transitions, the particles' macro charge can vary with time.</p>
+<p class="VBA-Heading-Method">&#160;</p>
+<p class="VBA-Heading-Method">GetMass <a href="../common_vbageneral/common_general_double.htm" id="a16" style="font-weight: normal;" name="a16">double</a></p>
+<p class="VBA-Text-Indent">Returns the mass of the selected particle at the selected time index.</p>
+<p class="vba-text-indent">&#160;</p>
+<p class="VBA-Heading-Method">GetNParticleTimes <a href="../common_vbageneral/common_general_long.htm" id="a17" style="font-weight: normal; font-style: normal;" name="a17">long</a></p>
+<p class="VBA-Text-Indent">Returns the number of timesteps of the selected particle at the selected time index.</p>
+<p class="vba-text-indent">&#160;</p>
+<p class="VBA-Heading-Method">SelectParticleTimeIndex <span style="font-weight: normal;">( <a href="../common_vbageneral/common_general_long.htm" id="a18" style="font-weight: normal; font-style: normal;" name="a18">long</a></span> <span style="font-style: italic;"><i>index</i></span> ) <a href="../common_vbageneral/common_general_bool_data_type.htm" id="a19" style="font-weight: normal; font-style: normal;" name="a19">bool</a></p>
+<p class="VBA-Text-Indent">Selects time <span style="font-style: italic;"><i>index</i></span> for the currently selected particle. The parameter <span style="font-style: italic;"><i>index</i></span> should be between 0 and GetNParticleTimes()-1.</p>
+<p class="VBA-Heading-Method">&#160;</p>
+<p class="VBA-Heading-Method">SelectParticleTime <span style="font-weight: normal;">( <a href="../common_vbageneral/common_general_double.htm" id="a20" style="font-weight: normal;" name="a20">double</a></span> <span style="font-style: italic;"><i>time</i></span> ) <a href="../common_vbageneral/common_general_bool_data_type.htm" id="a21" style="font-weight: normal; font-style: normal;" name="a21">bool</a></p>
+<p class="VBA-Text-Indent">Select particle at the given <span style="font-style: italic;"><i>time</i></span>.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">GetParticleTime <a href="../common_vbageneral/common_general_double.htm" id="a22" style="font-weight: normal;" name="a22">double</a></p>
+<p class="VBA-Text-Indent">Returns the particle time of the selected particle at the selected time index.</p>
+<p class="VBA-Heading-Method">&#160;</p>
+<p class="VBA-Heading-Method">GetTimeStep &#160;<a href="../common_vbageneral/common_general_double.htm" id="a23" style="font-weight: normal;" name="a23">double</a></p>
+<p class="VBA-Text-Indent">Returns the particle timestep of the selected particle at the selected time index.</p>
+<p class="VBA-Heading-Method">&#160;</p>
+<p class="VBA-Heading-Method">GetPosition ( <a href="../common_vbageneral/common_general_double.htm" id="a24" style="font-weight: normal;" name="a24">double</a> <span style="font-style: italic;"><i>&amp;xpos</i></span>, <a href="../common_vbageneral/common_general_double.htm" id="a25" style="font-weight: normal;" name="a25">double</a> <span style="font-style: italic;"><i>&amp;ypos</i></span>, <a href="../common_vbageneral/common_general_double.htm" id="a27" style="font-weight: normal;" name="a27">double</a> <span style="font-style: italic;"><i>&amp;zpos</i></span> )</p>
+<p class="VBA-Text-Indent">Returns the position of the selected particle at the selected time index.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">GetMomentum ( <a href="../common_vbageneral/common_general_double.htm" id="a40" style="font-weight: normal;" name="a40">double</a> <span style="font-style: italic;"><i>&amp;ximp</i></span>, <a href="../common_vbageneral/common_general_double.htm" id="a41" style="font-weight: normal;" name="a41">double</a> <span style="font-style: italic;"><i>&amp;yimp</i></span>, <a href="../common_vbageneral/common_general_double.htm" id="a42" style="font-weight: normal;" name="a42">double</a> <span style="font-style: italic;"><i>&amp;zimp</i></span> )</p>
+<p class="VBA-Text-Indent">Returns the impulse of the selected particle at the selected time index.</p>
+<p class="VBA-Heading-Category"><a name="Deprecated_Methods" id="Deprecated_Methods"></a>Deprecated Methods</p>
+<p class="VBA-Text">Starting from CST Studio Suite 2017, the following methods are deprecated. While they still operate on trajectories generated with older versions, they are not working on newer data. The functions are still listed here for reference and to support converting older macros. They should not be used in new projects.</p>
+<p class="VBA-Heading-Method">&#160;</p>
+<p class="VBA-Heading-Method">Draw</p>
+<p class="VBA-Text-Indent">Draws the selected trajectory file.</p>
+<p class="VBA-Heading-Method">&#160;</p>
+<p class="VBA-Heading-Method">VisualizeAlive ( <a href="../common_vbageneral/common_general_bool_data_type.htm" id="a29" style="font-weight: normal; font-style: normal;" name="a29">bool</a> <span style="font-style: italic;"><i>flag</i></span> )</p>
+<p class="VBA-Text-Indent">If set to true only alive trajectory paths are visualized.</p>
+<p class="VBA-Heading-Method">&#160;</p>
+<p class="VBA-Heading-Method">SetParticleSampling ( <span><a href="../common_vbageneral/common_general_long.htm" id="a30" style="font-weight: normal; font-style: normal;" name="a30">long</a></span> <span style="font-style: italic;"><i>sampling-rate</i></span> )</p>
+<p class="VBA-Text-Indent">Defines the particle sampling rate of the plot. The value is given in %.</p>
+<p class="VBA-Heading-Method">&#160;</p>
+<p class="VBA-Heading-Method">SetTemporalSampling ( <a href="../common_vbageneral/common_general_long.htm" id="a31" style="font-weight: normal; font-style: normal;" name="a31">long</a> <span style="font-style: italic;"><i>sampling-rate</i></span> )</p>
+<p class="VBA-Text-Indent">Defines the temporal sampling rate of the plot. The value is given in %.</p>
+<p class="VBA-Heading-Method">&#160;</p>
+<p class="VBA-Heading-Method">SetPlotType ( <a href="../common_vbageneral/common_general_enum.htm" id="a32" style="font-weight: normal; font-style: normal;" name="a32">enum</a> <span style="font-style: italic;"><i>plottype</i></span> )</p>
+<p class="VBA-Text-Indent">Defines the coloring type of the trajectory-paths.</p>
+<table style="vertical-align: top; left: 0px; top: 461px; height: 88px; margin-left: 24px;" cellspacing="0" width="90%">
+<col style="width: 19.132%;" />
+<col style="width: 80.868%;" />
+<tr style="vertical-align: top;">
+<td style="border: Solid 2px #000000; width: 19.132%; padding-right: 10px; padding-left: 10px;">
+<p>Plot-Type</p>
+</td>
+<td style="border-top: Solid 2px #000000; border-right: Solid 2px #000000; border-bottom: Solid 2px #000000; width: 80.868%; padding-right: 10px; padding-left: 10px;">
+<p style="font-weight: normal;">Meaning</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 19.132%; padding-right: 10px; padding-left: 10px;">
+<p>"velocity"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 80.868%; padding-right: 10px; padding-left: 10px;">
+<p>colors the path in respect to the particle's velocity.</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 19.132%; padding-right: 10px; padding-left: 10px;">
+<p>"momentum"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 80.868%; padding-right: 10px; padding-left: 10px;">
+<p>colors the path in respect to the particle's momentum</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 19.132%; padding-right: 10px; padding-left: 10px;">
+<p>&#160;"gamma"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 80.868%; padding-right: 10px; padding-left: 10px;">
+<p>colors the path in respect to the particle's gamma</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 19.132%; padding-right: 10px; padding-left: 10px;">
+<p>"beta"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 80.868%; padding-right: 10px; padding-left: 10px;">
+<p>colors the path in respect to the particle's beta</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 19.132%; padding-right: 10px; padding-left: 10px;">
+<p>"energy""</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 80.868%; padding-right: 10px; padding-left: 10px;">
+<p>colors the path in respect to the particle's voltage.</p>
+</td>
+</tr>
+</table>
+<p class="VBA-Heading-Method">&#160;</p>
+<p class="VBA-Heading-Method">SetTime ( <a href="../common_vbageneral/common_general_double.htm" id="a33" style="font-weight: normal; font-style: normal;" name="a33">double</a> <span style="font-style: italic;"><i>time</i></span> )</p>
+<p class="VBA-Text-Indent">Sets the <span style="font-style: italic;"><i>time</i></span> at which the particle's trajectory is displayed.</p>
+<p class="VBA-Heading-Method">&#160;</p>
+<p class="VBA-Heading-Method">SetTimeIndex ( <a href="../common_vbageneral/common_general_long.htm" id="a36" style="font-weight: normal; font-style: normal;" name="a36">long</a> <span style="font-style: italic;"><i>index</i></span>)</p>
+<p class="VBA-Text-Indent">Sets the time <span style="font-style: italic;"><i>index</i></span> at which the particle's trajectory is displayed.</p>
+<p class="VBA-Heading-Method">&#160;</p>
+<p class="VBA-Heading-Method">ASCIIExport ( <a href="../common_vbageneral/common_general_name.htm" id="a37" style="font-weight: normal; font-style: normal;" name="a37">name</a> <span style="font-style: italic;"><i>filename</i></span> )</p>
+<p class="VBA-Text-Indent">Exports the trajectory data to an ASCII file with the given <span style="font-style: italic;"><i>filename</i></span>.</p>
+<p class="VBA-Text-Indent">As a replacement, please use the <a href="../common_vbaimpexp/asciiexport_object.htm">ASCIIExport</a> object (see also <a href="#Example">example</a> below).</p>
+<p class="VBA-Heading-Method">&#160;</p>
+<p class="VBA-Heading-Method">BitmapExport ( <a href="../common_vbageneral/common_general_name.htm" id="a35" style="font-weight: normal; font-style: normal;" name="a35">name</a> <span style="font-style: italic;"><i>filename</i></span> )</p>
+<p class="VBA-Text-Indent">Exports the trajectory plot as a bitmap with the given <span style="font-style: italic;"><i>filename</i></span>.</p>
+<p class="VBA-Text-Indent">As a replacement, please use the respective function of the <a href="../common_vbaplot/common_vbaplot_plot_object.htm">Plot</a> object (see also <a href="#Example">example</a> below).</p>
+<p class="VBA-Heading-Method">&#160;</p>
+<p class="VBA-Heading-Method">SetPlotMin ( <span><a href="../common_vbageneral/common_general_double.htm" id="a38" style="font-weight: normal; font-style: normal;" name="a38">double</a></span> &#160;value )</p>
+<p class="VBA-Text-Indent">Defines the minimal displayed <span style="font-style: italic;"><i>value</i></span> in the trajectory plot</p>
+<p class="VBA-Heading-Method">&#160;</p>
+<p class="VBA-Heading-Method">SetPlotMax ( <span><a href="../common_vbageneral/common_general_double.htm" id="a39" style="font-weight: normal; font-style: normal;" name="a39">double</a></span> &#160;value )</p>
+<p class="VBA-Text-Indent">Defines the maximal displayed <span style="font-style: italic;"><i>value</i></span> in the trajectory plot</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">SetScaleToRange ( <a href="../common_vbageneral/common_general_bool_data_type.htm" id="a54" style="font-weight: normal; font-style: normal;" name="a54">bool</a> <span style="font-style: italic;"><i>flag</i></span>)</p>
+<p class="VBA-Text-Indent">If set to true the coloring of the trajectory is bounded by the PlotMin/PlotMax values.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">GetMinRampValue <a href="../common_vbageneral/common_general_double.htm" id="a2" style="font-weight: normal;" name="a2">double</a></p>
+<p class="VBA-Text-Indent">Returns the minimal displayed value.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">GetMaxRampValue <a href="../common_vbageneral/common_general_double.htm" id="a8" style="font-weight: normal;" name="a8">double</a></p>
+<p class="VBA-Text-Indent">Returns the maximal displayed value.</p>
+<p class="VBA-Heading-Method">&#160;</p>
+<p class="VBA-Heading-Method">GetEField ( <a href="../common_vbageneral/common_general_double.htm" id="a43" style="font-weight: normal;" name="a43">double</a> <span style="font-style: italic;"><i>&amp;xval</i></span>, <a href="../common_vbageneral/common_general_double.htm" id="a44" style="font-weight: normal;" name="a44">double</a> <span style="font-style: italic;"><i>&amp;yval</i></span>, <a href="../common_vbageneral/common_general_double.htm" id="a45" style="font-weight: normal;" name="a45">double</a> <span style="font-style: italic;"><i>&amp;zval</i></span> )</p>
+<p class="VBA-Text-Indent">Returns the electric field vector at the position of the selected particle at the selected time index.</p>
+<p class="vba-heading-method">&#160;</p>
+<p class="VBA-Heading-Method">GetBField ( <a href="../common_vbageneral/common_general_double.htm" id="a46" style="font-weight: normal;" name="a46">double</a> <span style="font-style: italic;"><i>&amp;xval</i></span>, <a href="../common_vbageneral/common_general_double.htm" id="a47" style="font-weight: normal;" name="a47">double</a> <span style="font-style: italic;"><i>&amp;yval</i></span>, <a href="../common_vbageneral/common_general_double.htm" id="a48" style="font-weight: normal;" name="a48">double</a> <span style="font-style: italic;"><i>&amp;zval</i></span> )</p>
+<p class="VBA-Text-Indent">Returns the magnetic field vector at the position of the selected particle at the selected time index</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">GetArea <a href="../common_vbageneral/common_general_double.htm" id="a14" style="font-weight: normal;" name="a14">double</a></p>
+<p class="VBA-Text-Indent">Returns the area of the selected particle at the selected time index.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">Create ( <a href="../common_vbageneral/common_general_name.htm" id="a3" style="font-weight: normal; font-style: normal;" name="a3">name</a> <span style="font-style: italic;"><i>filename,</i></span> &#160;<a href="../common_vbageneral/common_general_long.htm" id="a4" style="font-weight: normal; font-style: normal;" name="a4">long</a> <span style="font-style: italic;"><i>nparticles</i></span>, &#160;<a href="../common_vbageneral/common_general_long.htm" id="a5" style="font-weight: normal; font-style: normal;" name="a5">long</a> &#160;<span style="font-style: italic;"><i>ntimesteps</i></span> )</p>
+<p class="VBA-Text-Indent">Creates a new trajectory plot with the given number of particles (<span style="font-style: italic;"><i>nparticles</i></span>) and each particle with the given number of timesteps (<span style="font-style: italic;"><i>ntimesteps</i></span>).</p>
+<p class="VBA-Heading-Method">&#160;&#160;&#160;</p>
+<p class="VBA-Heading-Method">SetParticleData ( <a href="../common_vbageneral/common_general_double.htm" id="a7" style="font-weight: normal;" name="a7">double</a> <span style="font-style: italic;"><i>charge</i></span>, <a href="../common_vbageneral/common_general_double.htm" id="a26" style="font-weight: normal;" name="a26">double</a> <span style="font-style: italic;"><i>mass</i></span>, <a href="../common_vbageneral/common_general_double.htm" id="a34" style="font-weight: normal;" name="a34">double</a> <span style="font-style: italic;"><i>area )</i></span></p>
+<p class="VBA-Text-Indent">&#160;Sets the characteristic data of the selected particle (<span style="font-style: italic;"><i>mass</i></span>, <span style="font-style: italic;"><i>charge</i></span>, <span style="font-style: italic;"><i>area</i></span>).</p>
+<p class="VBA-Heading-Method">&#160;&#160;</p>
+<p class="VBA-Heading-Method">SetParticleTime ( <span><a href="../common_vbageneral/common_general_double.htm" id="a6" style="font-weight: normal;" name="a6">double</a></span> <span style="font-style: italic;"><i>time</i></span> )</p>
+<p class="VBA-Text-Indent">Sets the <span style="font-style: italic;"><i>time</i></span> of the selected particle at the selected time index.</p>
+<p class="VBA-Heading-Method">&#160;</p>
+<p class="VBA-Heading-Method">SetPosition ( <a href="../common_vbageneral/common_general_double.htm" id="a49" style="font-weight: normal;" name="a49">double</a> <span style="font-style: italic;"><i>xpos</i></span>, <a href="../common_vbageneral/common_general_double.htm" id="a50" style="font-weight: normal;" name="a50">double</a> <span style="font-style: italic;"><i>ypos</i></span>, <a href="../common_vbageneral/common_general_double.htm" id="a51" style="font-weight: normal;" name="a51">double</a> <span style="font-style: italic;"><i>zpos</i></span> )</p>
+<p class="VBA-Text-Indent">Sets the position of the selected particle at the selected time index.</p>
+<p class="vba-text-indent">&#160;</p>
+<p class="VBA-Heading-Method">SetMomentum ( <a href="../common_vbageneral/common_general_double.htm" id="a52" style="font-weight: normal;" name="a52">double</a> <span style="font-style: italic;"><i>ximp,</i></span> <a href="../common_vbageneral/common_general_double.htm" id="a53" style="font-weight: normal;" name="a53">double</a> <span style="font-style: italic;"><i>yimp</i></span>, <a href="../common_vbageneral/common_general_double.htm" id="a55" style="font-weight: normal;" name="a55">double</a> <span style="font-style: italic;"><i>zimp</i></span> )</p>
+<p class="VBA-Text-Indent">Sets the impulse vector of the selected particle at the selected time index.</p>
+<p class="vba-text-indent">&#160;</p>
+<p class="VBA-Heading-Method">Save <a href="../common_vbageneral/common_general_bool_data_type.htm" id="a56" style="font-weight: normal; font-style: normal;" name="a56">bool</a></p>
+<p class="VBA-Text-Indent">Saves the constructed trajectory to file.</p>
+<p class="VBA-Heading-Category"><a name="Example" id="Example"></a>Example</p>
+<p class="VBA-Text">The following testprogram shows the application of the query commands, ASCII export and Bitmap export.</p>
+<p class="VBA-Text">&#160;</p>
+<p class="VBA-Text-Example"><span style="color: #0000ff;"><font color="blue">Sub</font></span> Main ()</p>
+<p class="VBA-Text-Example">&#160;&#160;<span style="color: #0000ff;"><font color="blue">Dim</font></span> dtest <span style="color: #0000ff;"><font color="blue">As Double</font></span>, itest <span style="color: #0000ff;"><font color="blue">As Integer</font></span></p>
+<p class="VBA-Text-Example">&#160;</p>
+<p class="VBA-Text-Example" style="color: #008000;">&#160;&#160;' Query data from the trajectories</p>
+<p class="VBA-Text-Example">&#160;&#160;<span style="color: #0000ff;"><font color="blue">With</font></span> <span style="color: #00009e;"><font color="#00009E">TrackingPlot</font></span></p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;.Reset</p>
+<p class="VBA-Text-Example" style="color: #008000;">&#160;&#160;&#160;&#160;' Select the trajectory data for particle source "particle1"</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;<span style="color: #0000ff;"><font color="blue">If</font></span> .SelectPlot(<span style="color: #800000;"><font color="maroon">"particle1"</font></span>) <span style="color: #0000ff;"><font color="blue">Then</font></span></p>
+<p class="VBA-Text-Example" style="color: #008000;">&#160;&#160;&#160;&#160;&#160;&#160;' Number of all particles</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;&#160;itest = .GetNParticles()</p>
+<p class="VBA-Text-Example" style="color: #008000;">&#160;&#160;&#160;&#160;&#160;&#160;' Number of stored timesteps</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;&#160;itest= .GetNTimeSteps()</p>
+<p class="VBA-Text-Example" style="color: #008000;">&#160;&#160;&#160;&#160;&#160;&#160;' Get time of timestep 20</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;&#160;dtest= .GetTime(20)</p>
+<p class="VBA-Text-Example">&#160;</p>
+<p class="VBA-Text-Example" style="color: #008000;">&#160;&#160;&#160;&#160;&#160;&#160;' Select particle with index 14 and query some information about it</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;&#160;<span style="color: #0000ff;"><font color="blue">If</font></span> .SelectParticle(14) <span style="color: #0000ff;"><font color="blue">Then</font></span></p>
+<p class="VBA-Text-Example" style="color: #008000;">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;' Get number of timesteps</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;itest = .GetNParticleTimes()</p>
+<p class="VBA-Text-Example" style="color: #008000;">&#160;</p>
+<p class="VBA-Text-Example" style="color: #008000;">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;' Select timeindex 157 of the selected particle</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;<span style="color: #0000ff;"><font color="blue">If</font></span> .SelectParticleTimeIndex(157) <span style="color: #0000ff;"><font color="blue">Then</font></span></p>
+<p class="VBA-Text-Example" style="color: #008000;">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;' Get mass</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;dtest = .GetMass()</p>
+<p class="VBA-Text-Example" style="color: #008000;">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;' Get charge</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;dtest = .GetCharge()</p>
+<p class="VBA-Text-Example" style="color: #008000;">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;' Get time of timeindex 157</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;dtest = .GetParticleTime()</p>
+<p class="VBA-Text-Example" style="color: #008000;">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;' Get timestep of timeindex 157</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;dtest = .GetTimeStep()</p>
+<p class="VBA-Text-Example" style="color: #008000;">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;' Get position and momentum</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;<span style="color: #0000ff;"><font color="blue">Dim</font></span> ucomp <span style="color: #0000ff;"><font color="blue">As Double</font></span>, vcomp <span style="color: #0000ff;"><font color="blue">As Double</font></span>, wcomp <span style="color: #0000ff;"><font color="blue">As Double</font></span></p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;.GetPosition (ucomp, vcomp, wcomp)</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;.GetMomentum (ucomp, vcomp, wcomp)</p>
+<p class="VBA-Text-Example" style="color: #0000ff;">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;End If</p>
+<p class="VBA-Text-Example" style="color: #0000ff;">&#160;&#160;&#160;&#160;&#160;&#160;End If</p>
+<p class="VBA-Text-Example" style="color: #0000ff;">&#160;&#160;&#160;&#160;End If</p>
+<p class="VBA-Text-Example" style="color: #0000ff;">&#160;&#160;End With</p>
+<p class="VBA-Text-Example">&#160;</p>
+<p class="VBA-Text-Example" style="color: #008000;">&#160;&#160;' Export all trajectory data to an ASCII file in the same directory as the .cst file</p>
+<p class="VBA-Text-Example">&#160;&#160;SelectTreeItem(<span style="color: #800000;"><font color="maroon">"2D/3D Results\Trajectories"</font></span>)</p>
+<p class="VBA-Text-Example">&#160;&#160;<span style="color: #0000ff;"><font color="blue">With</font></span> <span style="color: #00009e;"><font color="#00009E">ASCIIExport</font></span></p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;.Reset</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;.FileName(GetProjectPath(<span style="color: #800000;"><font color="maroon">"Root"</font></span>) + <span style="color: #800000;"><font color="maroon">"\trajectories.txt"</font></span>)</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;.Execute</p>
+<p class="VBA-Text-Example" style="color: #0000ff;">&#160;&#160;End With</p>
+<p class="VBA-Text-Example">&#160;</p>
+<p class="VBA-Text-Example" style="color: #008000;">&#160;&#160;' Export trajectory picture to a bitmap file in the same directory as the .cst file and resolution 1024x768</p>
+<p class="VBA-Text-Example">&#160;&#160;SelectTreeItem(<span style="color: #800000;"><font color="maroon">"2D/3D Results\Trajectories"</font></span>)</p>
+<p class="VBA-Text-Example">&#160;&#160;<span style="color: #00009e;"><font color="#00009E">Plot</font></span>.StoreBMPHighResolution(GetProjectPath(<span style="color: #800000;"><font color="maroon">"Root"</font></span>) + <span style="color: #800000;"><font color="maroon">"\trajectories.bmp"</font></span>, 1024, 768)</p>
+<p class="VBA-Text-Example" style="color: #0000ff;">End Sub</p>
+<?rh-p style="margin-bottom: 0px; text-align: Right; margin-left: 18px; 
+                 margin-right: 18px; margin-top: 18px;" ?>
+<div style="width: 100%; position: relative;" id="footer">
+<p style="border-bottom: Solid 1px #dddddd; text-align: Left; margin-left: 0px; font-family: Arial, sans-serif; line-height: Normal; margin-top: 9px; margin-right: 0px; margin-bottom: 6px; border-left-width: 1px; border-top-width: 1px; border-right-width: 1px;"><span style="text-align: Left; font-family: Arial, sans-serif; line-height: Normal;">&#160;</span></p>
+<table cellspacing="0" width="100%">
+<col style="width: 50%;" />
+<col style="width: 50%;" />
+<tr>
+<td style="vertical-align: Top;"><span style="font-family: Arial, sans-serif; line-height: Normal; font-size: 8pt;"><font size="1" style="font-size:8pt;">CST Studio Suite 2026</font></span></td>
+<td style="vertical-align: Top;">
+<p style="text-align: right;">&#160;</p>
+</td>
+</tr>
+</table>
+<p>&#160;</p>
+</div>
+<script type="text/javascript" language="javascript1.2">
+//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+        writeIntopicBar(0);
+
+
+highlightSearch();
+//-->
+//]]>
+</script>
+</body>
+</html>

@@ -1,0 +1,690 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="Adobe RoboHelp 11" />
+<title>Monitor Object</title>
+<link rel="StyleSheet" href="../online_help_vba.css" type="text/css" />
+<style type="text/css">
+/*<![CDATA[*/
+<!--
+body { border-bottom-style:None; }
+-->
+/*]]>*/
+</style>
+
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function ehlp_showtip(current,e,text)
+{
+  if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == 'Netscape'))
+  {
+    document.tooltip.document.write("<layer bgColor='yellow' style='border:1px solid black;font-size:12px;'>"+ text + "<\/layer>");
+    document.tooltip.document.close();
+    document.tooltip.left=e.pageX+5;
+    document.tooltip.top=e.pageY+5;
+    document.tooltip.visibility="show";
+  }
+}
+function ehlp_hidetip()
+{
+  document.tooltip.visibility="hidden";
+}
+//]]>
+</script>
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+        origWidth = innerWidth;
+        origHeight = innerHeight;
+        onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+/*<![CDATA[*/
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+-->
+/*]]>*/
+</style>
+
+<script type="text/javascript" language="javascript1.2" src="../whmsg.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript" src="../whver.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript1.2" src="../whutils.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript1.2" src="../whproxy.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript1.2" src="../whlang.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript1.2" src="../whtopic.js" charset="utf-8">
+</script>
+</head>
+<body>
+<script type="text/javascript" language="javascript1.2">
+//<![CDATA[
+<!--
+if (window.gbWhTopic)
+{
+        var strUrl = document.location.href;
+        var bc = 0;
+        var n = strUrl.toLowerCase().indexOf("bc-");
+        if(n != -1)
+        {
+                document.location.replace(strUrl.substring(0, n));
+                bc = strUrl.substring(n+3);
+        }
+
+        if (window.addTocInfo)
+        {
+        addTocInfo("3D Simulation VBA\nVBA Objects\nMonitors\nMonitor");
+addAvenueInfo("common_VBAMONITORS","","special_VBAMonitors/special_VBAMonitors_Probe_Object.htm");
+
+        }
+        if (window.writeBtnStyle)
+                writeBtnStyle();
+
+        if (window.writeIntopicBar)
+                writeIntopicBar(0);
+
+        
+        document.write("<p style=\"font-family: Tahoma; font-size: 9pt; font-weight: 400;  font-style:normal; color: rgb(0, 0, 0); text-decoration:none; text-align: left\"> ");
+AddMasterBreadcrumbs("../index.htm", "font-family: Tahoma; font-size: 9pt; font-weight: 400;  font-style:normal; color: rgb(0, 0, 0); text-decoration:none; text-align: left", "|", "Home", "../special_vbaobjects/special_vbaobjects_vbaobjects.htm");
+document.write("<a style=\"font-family: Tahoma; font-size: 9pt; font-weight: 400;  font-style:normal; color: rgb(0, 0, 0); text-decoration:none; text-align: left\" href=\"../special_vbaobjects/special_vbaobjects_vbaobjects.htm\">3D Simulation VBA<\/a> | <a style=\"font-family: Tahoma; font-size: 9pt; font-weight: 400;  font-style:normal; color: rgb(0, 0, 0); text-decoration:none; text-align: left\" href=\"../special_vbaobjects/special_vbaobjects_vbaobjects.htm\">VBA Objects<\/a> | <a style=\"font-family: Tahoma; font-size: 9pt; font-weight: 400;  font-style:normal; color: rgb(0, 0, 0); text-decoration:none; text-align: left\" href=\"special_vbamonitors_monitor_object.htm\">Monitors<\/a> | Monitor<\/p>");
+
+}
+else
+        if (window.gbIE4)
+                document.location.reload();
+
+onLoadHandler = function()
+{
+  if (window.setRelStartPage)
+        {
+        setTimeout("setRelStartPage('../index.htm');", 1)
+
+    setTimeout("UpdateBreadCrumbsMarker();", 1);
+        }
+}
+
+if (window.addEventListener){  
+        window.addEventListener('load', onLoadHandler, false);   
+} else if (window.attachEvent){  
+        window.attachEvent('onload', onLoadHandler);  
+}
+
+function onSetStartPage()
+{
+  autoSync(1);
+  sendSyncInfo();
+  sendAveInfoOut();
+}
+//-->
+//]]>
+</script><script type="text/javascript" src="../ehlpdhtm.js" language="JavaScript1.2">
+</script>
+<table cellspacing="0" width="100%">
+<col style="width: 50%;" />
+<col style="width: 50%;" />
+<tr>
+<td style="vertical-align: middle; padding-top: 5px; padding-bottom: 5px;">
+<p style="margin-top: 0px; margin-bottom: 0px;"><img src="../3ds.png" alt="" style="border: none;" border="0" /></p>
+</td>
+<td style="vertical-align: middle;">
+<p style="text-align: right;"><a href="https://www.3ds.com/products-services/3dexperience/" target="_blank"><img src="../3dexp.png" alt="" style="border: none;" width="32" height="32" border="0" /></a></p>
+</td>
+</tr>
+</table>
+<p class="VBA-Heading-Object">Monitor Object</p>
+<p class="VBA-Text">Defines 3D or 2D field monitors. Each monitor stores the field values either for a specified frequency or for a set of time samples. There are different kinds of monitors: magnetic and electric field or energy monitors as well as farfield, power flow and current monitors.</p>
+<ul>
+<li class="p-VBA-Index-Category">
+<p class="VBA-Index-Category"><a href="#Methods">Methods</a></p>
+</li>
+<li class="p-VBA-Index-Category">
+<p class="VBA-Index-Category"><a href="#Queries">Queries</a></p>
+</li>
+<li class="p-VBA-Index-Category">
+<p class="VBA-Index-Category"><a href="#Defaults">Default Settings</a></p>
+</li>
+<li class="p-VBA-Index-Category">
+<p class="VBA-Index-Category"><a href="#Example">Examples</a></p>
+</li>
+</ul>
+<p class="VBA-Heading-Category"><a name="Methods" id="Methods"></a>Methods</p>
+<p class="VBA-Heading-Method">Reset</p>
+<p class="VBA-Text-Indent">Resets all internal values to their default settings.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">Name ( <a href="../common_vbageneral/common_general_name.htm" id="a1" style="font-weight: normal; font-style: normal;" name="a1">name</a> <span style="font-style: italic;"><i>monitorName</i></span> )</p>
+<p class="VBA-Text-Indent">Sets the name of the monitor.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">Rename ( <a href="../common_vbageneral/common_general_name.htm" id="a2" style="font-weight: normal; font-style: normal;" name="a2">name</a> <span style="font-style: italic;"><i>oldName</i></span>, <a href="../common_vbageneral/common_general_name.htm" id="a4" style="font-weight: normal; font-style: normal;" name="a4">name</a> <span style="font-style: italic;"><i>newName</i></span> )</p>
+<p class="VBA-Text-Indent">Renames the monitor named <span style="font-style: italic;"><i>oldName</i></span> to <span style="font-style: italic;"><i>newName</i></span>.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">Delete ( <a href="../common_vbageneral/common_general_name.htm" id="a5" style="font-weight: normal; font-style: normal;" name="a5">name</a> <span style="font-style: italic;"><i>monitorName</i></span> )</p>
+<p class="VBA-Text-Indent">Deletes the monitor named <span style="font-style: italic;"><i>monitorName</i></span>.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">Create</p>
+<p class="VBA-Text-Indent">Creates the monitor with the previously applied settings.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">FieldType ( <a href="../common_vbageneral/common_general_enum.htm" id="a6" style="font-weight: normal; font-style: normal;" name="a6">enum</a> <span style="font-style: italic;"><i>fType</i></span> )</p>
+<p class="VBA-Text-Indent">Sets what field is to be monitored.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Text-Indent"><span style="font-style: italic;"><i>fType</i></span> can have one of the following values:</p>
+<table style="margin-left: 24px;" cellspacing="0" width="90%">
+<col width="77" />
+<col width="591" />
+<tr style="vertical-align: top;">
+<td style="border: Solid 1px #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;" width="77">
+<p class="VBA-Text">”Efield”</p>
+</td>
+<td style="border-top: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;" width="591">
+<p class="VBA-Text">The electric field will be monitored.</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;" width="77">
+<p class="VBA-Text">”Hfield”</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;" width="591">
+<p class="VBA-Text">The magnetic field and the surface current will be monitored.</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;" width="77">
+<p class="VBA-Text">”Powerflow”</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;" width="591">
+<p class="VBA-Text">The Pointing vector will be monitored.</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;" width="77">
+<p class="VBA-Text">”Current”</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;" width="591">
+<p class="VBA-Text">The current density will be monitored.</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;" width="77">
+<p class="VBA-Text">”Powerloss”</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;" width="591">
+<p class="VBA-Text">The power loss density will be monitored.</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;" width="77">
+<p class="VBA-Text">”Eenergy”</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;" width="591">
+<p class="VBA-Text">The electric energy density will be monitored.</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;" width="77">
+<p class="VBA-Text">”Henergy”</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;" width="591">
+<p class="VBA-Text">The magnetic energy density will be monitored.</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;" width="77">
+<p class="VBA-Text">”Farfield”</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;" width="591">
+<p class="VBA-Text">A monitor for the farfield will be created.</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;" width="77">
+<p class="VBA-Text">”Fieldsource”</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;" width="591">
+<p class="VBA-Text">A monitor for the field source will be created.</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;" width="77">
+<p>"Spacecharge"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;" width="591">
+<p class="VBA-Text">The space charge density, e.g. due to charged particles, will be monitored.</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;" width="77">
+<p>"Particlecurrentdensity"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;" width="591">
+<p class="VBA-Text">The particle current density will be monitored.</p>
+</td>
+</tr>
+</table>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">PlaneNormal ( <a href="../common_vbageneral/common_general_enum.htm" id="a8" style="font-weight: normal; font-style: normal;" name="a8">enum</a><span style="font-weight: normal;">{"x", "y", "z"}</span> <span style="font-style: italic;"><i>plane</i></span> )</p>
+<p class="VBA-Text-Indent">If this option is used, only fields on a cutting plane will be monitored ("2D Monitor"). The plane is defined by "x", "y" or "z" and by the additional option <span style="font-style: italic;"><i>PlanePosition</i></span>.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">PlanePosition ( <a href="../common_vbageneral/common_general_double.htm" id="a9" style="font-weight: normal; font-style: normal;" name="a9">double</a> <span style="font-style: italic;"><i>pos</i></span> )</p>
+<p class="VBA-Text-Indent">Defines the position of the two dimensional monitor. This method only applies if <span style="font-style: italic;"><i>PlaneNormal</i></span> is used. Otherwise this setting has no effect.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">Domain ( <a href="../common_vbageneral/common_general_enum.htm" id="a10" style="font-weight: normal; font-style: normal;" name="a10">enum</a><span style="font-weight: normal;">{"frequency", "time"}</span> <span style="font-style: italic;"><i>monitorDomain</i></span> )</p>
+<p class="VBA-Text-Indent">Defines whether the monitor stores time-domain or frequency-domain information. In case of a farfield monitor type, the setting "time" refers to a broadband farfield monitor offering both frequency and transient farfield information.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">Frequency ( <a href="../common_vbageneral/common_general_double.htm" id="a11" style="font-weight: normal; font-style: normal;" name="a11">double</a> <span style="font-style: italic;"><i>freq</i></span> )</p>
+<p class="VBA-Text-Indent">Sets the frequency for frequency domain monitor to <span style="font-style: italic;"><i>freq</i></span>.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">Tstart ( <a href="../common_vbageneral/common_general_double.htm" id="a12" style="font-weight: normal; font-style: normal;" name="a12">double</a> <span style="font-style: italic;"><i>startTime</i></span> )</p>
+<p class="VBA-Text-Indent">Sets starting time for a time domain monitor to <span style="font-style: italic;"><i>startTime</i></span>.</p>
+<p class="VBA-Text-Indent">In case of transient solver the command is also available for frequency domain monitors. The frequency monitor recording will be started at <span style="font-style: italic;"><i>startTime.</i></span></p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">Tstep ( <a href="../common_vbageneral/common_general_double.htm" id="a13" style="font-weight: normal; font-style: normal;" name="a13">double</a> <span style="font-style: italic;"><i>timeStep</i></span> )</p>
+<p class="VBA-Text-Indent">Sets the time increment for a time domain monitor to <span style="font-style: italic;"><i>timeStep</i></span>.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">Tend ( <a href="../common_vbageneral/common_general_double.htm" id="a14" style="font-weight: normal; font-style: normal;" name="a14">double</a> <span style="font-style: italic;"><i>stopTime</i></span> )</p>
+<p class="VBA-Text-Indent">Sets the end time for a time domain monitor to <span style="font-style: italic;"><i>stopTime</i></span>.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">UseTend ( <a href="../common_vbageneral/common_general_bool_data_type.htm" id="a15" style="font-weight: normal; font-style: normal;" name="a15">bool</a> <span style="font-style: italic;"><i>bFlag</i></span> )</p>
+<p class="VBA-Text-Indent">If <span style="font-style: italic;"><i>bFlag</i></span> is True the time domain monitor stops storing the results when the end time set with <span style="font-weight: bold;">Tend</span> is reached. Otherwise the monitor will continue until the simulation stops.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">TimeAverage ( <a href="../common_vbageneral/common_general_bool_data_type.htm" id="a47" style="font-weight: normal; font-style: normal;" name="a47">bool</a> <span style="font-style: italic;"><i>bFlag</i></span> )</p>
+<p class="VBA-Text-Indent">Setting <span style="font-style: italic;"><i>bFlag</i></span> to True allows the calculation of averaged values over time for a powerloss time domain monitor (<span style="font-weight: bold;">Domain</span> "time" and <span style="font-weight: bold;">FieldType</span> "Powerloss"). By default the monitor is integrated over time and averaged by its number of sample steps. The duration and sample step of the integration is defined by setting the values <span style="font-weight: bold;">Tstart</span>, <span style="font-weight: bold;">Tstep</span>, <span style="font-weight: bold;">Tend</span> and <span style="font-weight: bold;">UseTend</span>. However, with the command <span style="font-weight: bold;">RepetitionPeriod</span> it is possible to define a specific time interval to normalize the monitor result.</p>
+<p class="VBA-Text-Indent">Please note that this averaged powerloss time monitor can be further used for an averaged SAR calculation as well as an imported source field for the thermal solver of CST Mphysics Studio.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">RepetitionPeriod ( <a href="../common_vbageneral/common_general_double.htm" id="a55" style="font-weight: normal; font-style: normal;" name="a55">double</a> <span style="font-style: italic;"><i>timeperiod</i></span> )</p>
+<p class="VBA-Text-Indent">The value <span style="font-style: italic;"><i>timeperiod</i></span> defines the time interval which is used for normalization of the averaged powerloss monitor (activated by the flag <span style="font-weight: bold;">TimeAverage</span>). In case this value is set to zero, the time interval of the monitor (defined by &#160;<span style="font-weight: bold;">Tstart</span>, <span style="font-weight: bold;">Tstep</span>, <span style="font-weight: bold;">Tend</span> and <span style="font-weight: bold;">UseTend</span>) is used instead.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">AutomaticOrder ( <span><a href="../common_vbageneral/common_general_bool_data_type.htm" id="a26" style="font-weight: normal; font-style: normal;" name="a26">bool</a></span> <span style="font-style: italic;"><i>bFlag</i></span> )</p>
+<p class="VBA-Text-Indent">Setting for broadband farfield monitors: The solver automatically determines the necessary degree of polynomials used to represent the farfield in terms of spherical waves. If <span style="font-style: italic;"><i>bFlag</i></span> is set "False" this automatic determination is disabled and a reduced maximum order can be set by applying the method <span style="font-weight: bold;">MaxOrder</span> below.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">MaxOrder ( <a href="../common_vbageneral/common_general_integer.htm" id="a3" style="font-weight: normal;" name="a3">int</a> <span style="font-style: italic;"><i>nOrder</i></span> )</p>
+<p class="VBA-Text-Indent">Setting for broadband farfield monitors: If the automatic order detection is disabled by calling the method <span style="font-weight: bold;">AutomaticOrder</span> with "False" the solver will reduce the calculated maximum order to <span style="font-style: italic;"><i>nOrder</i></span> to save memory and computation time.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">FrequencySamples ( <a href="../common_vbageneral/common_general_integer.htm" id="a25" style="font-weight: normal;" name="a25">int</a> <span style="font-style: italic;"><i>nSamples</i></span> )</p>
+<p class="VBA-Text-Indent">Setting for broadband farfield monitors: Choose a number of equidistant frequency samples between Fmin and Fmax where frequency domain farfields are calculated. Results for any frequencies in between are interpolated to obtain broadband farfield information. For a more accurate interpolation over the frequency band increase this value e.g. to "31". An odd number assures that the result at mid frequency is not interpolated.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">TransientFarfield ( <span style="font-weight: normal;">&#160;</span><a href="../common_vbageneral/common_general_bool_data_type.htm" id="a27" style="font-weight: normal; font-style: normal;" name="a27">bool</a> <span style="font-style: italic;"><i>bFlag</i></span> &#160;)</p>
+<p class="VBA-Text-Indent">Setting for broadband farfield monitors: This method activates the additional calculation of transient farfield information which can be displayed afterwards in the post-processing. Note that in order to accurately obtain time domain farfields the computational effort is higher than for broadband farfields only.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">Accuracy ( <span><a href="../common_vbageneral/common_general_enum.htm" id="a28" style="font-weight: normal; font-style: normal;" name="a28">enum</a></span><span style="font-weight: normal;">{"1e-3", "1e-4", "1e-5"}</span> accuracy )</p>
+<p class="VBA-Text-Indent">Setting for broadband farfield monitors: Defines the desired accuracy of the farfield. Together with the Fmax and the size of the structure it determines the number of modes required to represent the farfield. Note that leaving out higher order terms by choosing a lower accuracy is equivalent to low pass filtering the farfield solution. This saves memory and computation time. However, the farfield result has usually less detail.</p>
+<p class="VBA-Text-Indent" style="margin-left: 0px;">&#160;</p>
+<p class="VBA-Heading-Method">Origin ( <a href="../common_vbageneral/common_general_enum.htm" id="a51" style="font-weight: normal; font-style: normal;" name="a51">enum</a> <span style="font-style: italic;"><i>originType</i></span> )</p>
+<p class="VBA-Text-Indent">The broadband farfield monitor is based on an expansion of the farfield in terms of spherical waves. By default the origin of the spherical wave expansion is the center of the bounding box.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Text-Indent"><span style="font-style: italic;"><i>originType</i></span> can have one of the following values:</p>
+<table style="margin-left: 24px;" cellspacing="0" width="350">
+<col width="61" />
+<col width="278" />
+<tr style="vertical-align: top;">
+<td style="border: Solid 1px #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;" width="61">
+<p class="VBA-Text">bbox</p>
+</td>
+<td style="border-top: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;" width="278">
+<p class="VBA-Text">The center of the bounding box of the structure.</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;" width="61">
+<p class="VBA-Text">zero</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;" width="278">
+<p class="VBA-Text">Origin of coordinate system.</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;" width="61">
+<p class="VBA-Text">free</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;" width="278">
+<p class="VBA-Text">Any desired point defined by <span style="font-weight: bold;">UserOrigin</span></p>
+</td>
+</tr>
+</table>
+<p class="VBA-Heading-Method">&#160;</p>
+<p class="VBA-Heading-Method">UserOrigin (<a href="../common_vbageneral/common_general_double.htm" id="a49" style="font-weight: normal; font-style: normal;" name="a49">double</a> <span style="font-style: italic;"><i>x,</i></span> <a href="../common_vbageneral/common_general_double.htm" id="a50" style="font-weight: normal; font-style: normal;" name="a50">double</a> <span style="font-style: italic;"><i>y,</i></span> <a href="../common_vbageneral/common_general_double.htm" id="a52" style="font-weight: normal; font-style: normal;" name="a52">double</a> <span style="font-style: italic;"><i>z</i></span> )</p>
+<p class="VBA-Text-Indent">Setting for broadband farfield monitors: Sets origin of the spherical wave expansion if the origin type is set to free.</p>
+<p class="VBA-Text-Indent"><span style="font-weight: bold;">Please note:</span> <span style="font-style: italic;"><i>x, y, and z</i></span> must be double values here. Any expression is <span style="font-weight: bold;">not</span> allowed.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">FrequencyRange ( <span><a href="../common_vbageneral/common_general_double.htm" id="a29" style="font-weight: normal; font-style: normal;" name="a29">double</a></span> <span style="font-style: italic;"><i>fmin,</i></span> <a href="../common_vbageneral/common_general_double.htm" id="a33" style="font-weight: normal; font-style: normal;" name="a33">double</a> <span style="font-style: italic;"><i>fmax</i></span> )</p>
+<p class="VBA-Text-Indent">Sets the frequency range for field source monitors.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">Domain (<span style="font-style: italic;"><i>&#160;</i></span><span style="font-weight: normal;"><a href="../common_vbageneral/common_general_enum.htm" id="a5111" style="font-weight: normal; font-style: normal;" name="a5111">enum</a></span> &#160;<span style="font-style: italic;"><i>eDomain</i></span> )</p>
+<p class="VBA-Text-Indent">The enum <span style="font-weight: bold; font-style: italic;"><i>eDomain</i></span> belongs to the set { "<span style="font-weight: bold; font-style: italic;"><i>Frequency</i></span>", "<span style="font-weight: bold; font-style: italic;"><i>Optical</i></span>" } and specifies if the values provided by the commands <span style="font-weight: bold;">MonitorValueList</span>, <span style="font-weight: bold;">SampleStep</span> and <span style="font-weight: bold;">MonitorValueRange</span> have to be interpreted as frequencies or wavelength, respectively.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">Samples (<span style="font-style: italic;"><i>&#160;</i></span><a href="../common_vbageneral/common_general_integer.htm" id="a2512" style="font-weight: normal;" name="a2512">int</a> <span style="font-style: italic;"><i>nSamples</i></span> )</p>
+<p class="VBA-Text-Indent">In case of Fieldsource monitor it specifies the number of frequency (wavelength) samples to be generated according to the linear or logarithmic sampling strategy (see the <span style="font-weight: bold;">SamplingStrategy</span> method).</p>
+<p class="VBA-Text-Indent">In case of transient broadband Farfield monitor it specifies the number of (linear) samples to be recorded for the broadband interpolation and multipole expansion.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">SamplingStrategy (<span style="font-style: italic;"><i>&#160;</i></span><span style="font-weight: normal;"><a href="../common_vbageneral/common_general_enum.htm" id="a511" style="font-weight: normal; font-style: normal;" name="a511">enum</a></span> &#160;<span style="font-style: italic;"><i>Strategy</i></span> )</p>
+<p class="VBA-Text-Indent">The enum <span style="font-weight: bold; font-style: italic;"><i>Strategy</i></span> belongs to the following set { "<span style="font-weight: bold; font-style: italic;"><i>Frequencies</i></span>",&#160;&#160;"<span style="font-weight: bold; font-style: italic;"><i>Steps</i></span>", "<span style="font-weight: bold; font-style: italic;"><i>Linear</i></span>", "<span style="font-weight: bold; font-style: italic;"><i>Logarithmic</i></span>" }.</p>
+<p class="VBA-Text-Indent">This method specifies, in case of Fieldsource monitor, the algorithm to generate the frequency (wavelength) samples. Its default value is set to "<span style="font-weight: bold; font-style: italic;"><i>Linear</i></span>". It has no effect on other monitor types.</p>
+<p class="VBA-Text-Indent">If Strategy is set to "<span style="font-weight: bold; font-style: italic;"><i>Frequencies</i></span>" the frequency (wavelength) samples are defined in arbitrary way by means of a frequency list with the method <span style="font-weight: bold;">MonitorValueList</span>.</p>
+<p class="VBA-Text-Indent">If Strategy is set to "<span style="font-weight: bold; font-style: italic;"><i>Steps</i></span>" the monitor frequencies (wavelengths) are linearly spaced in the range provided by the method <span style="font-weight: bold;">MonitorValueRange</span>. The width between samples is controlled with the method <span style="font-weight: bold;">SampleStep</span>.</p>
+<p class="VBA-Text-Indent">If Strategy is set to "<span style="font-weight: bold; font-style: italic;"><i>Linear</i></span>" the monitor frequencies (wavelengths) are linearly spaced in the range provided by the method <span style="font-weight: bold;">MonitorValueRange</span>. The number of samples is controlled with the method <span style="font-weight: bold;">Samples</span>.</p>
+<p class="VBA-Text-Indent">If Strategy is set to "<span style="font-weight: bold; font-style: italic;"><i>Logarithmic</i></span>" the monitor frequencies (wavelengths) are logarithmically spaced in the range provided by the method <span style="font-weight: bold;">MonitorValueRange</span>. The number of samples is controlled with the method <span style="font-weight: bold;">Samples</span>.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">MonitorValueList&#160;( <a href="../common_vbageneral/common_general_string.htm" id="a2711" style="font-weight: normal; font-style: normal;" name="a2711">string</a> <span style="font-style: italic;"><i>frequencyList</i></span> )</p>
+<p class="VBA-Text-Indent">The semicolon (";") separated list <span style="font-style: italic; font-weight: bold;"><i>frequencyList</i></span> specifies the monitor recording frequencies (wavelengths) to be generated according to the <span style="font-weight: bold;">SamplingStrategy</span> <span style="font-style: italic;"><i>"</i></span><span style="font-weight: bold; font-style: italic;"><i>Frequencies</i></span><span style="font-style: italic;"><i>"</i></span>. The command has only effect on the Fieldsource monitor type.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">SampleStep( <a href="../common_vbageneral/common_general_double.htm" id="a331111" style="font-weight: normal; font-style: normal;" name="a331111">double</a> <span style="font-style: italic;"><i>Step</i></span> <span style="font-weight: normal;">)</span></p>
+<p class="VBA-Text-Indent">Specify the width between samples according to the <span style="font-weight: bold;">SamplingStrategy</span> "<span style="font-weight: bold; font-style: italic;"><i>Steps</i></span>".The command has only effect on the Fieldsource monitor type.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">MonitorValueRange ( <span style="font-weight: normal;"><a href="../common_vbageneral/common_general_double.htm" id="a2913" style="font-weight: normal; font-style: normal;" name="a2913">double</a></span> <span style="font-style: italic;"><i>fmin,</i></span> <span style="font-weight: normal;"><a href="../common_vbageneral/common_general_double.htm" id="a3313" style="font-weight: normal; font-style: normal;" name="a3313">double</a></span> <span style="font-style: italic;"><i>fmax )</i></span></p>
+<p class="VBA-Text-Indent">Specify the minimum and maximum frequency (wavelength) range for the samples to be generated according to the <span style="font-weight: bold;">SamplingStrategy</span> "<span style="font-weight: bold; font-style: italic;"><i>Steps</i></span>", "<span style="font-weight: bold; font-style: italic;"><i>Linear</i></span>" and "<span style="font-weight: bold; font-style: italic;"><i>Logarithmic</i></span>" .The command has only effect on the Fieldsource monitor type.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">UseSubvolume ( <a href="../common_vbageneral/common_general_bool_data_type.htm" id="a30" style="font-weight: normal; font-style: normal;" name="a30">bool</a> <span style="font-style: italic;"><i>bFlag</i></span> )</p>
+<p class="VBA-Text-Indent">If <span style="font-style: italic;"><i>bFlag</i></span> is true, then the field monitor uses the subvolume which has to be defined in <span style="font-weight: bold;">SetSubvolume</span>. Otherwise the bounding box is used.</p>
+<p class="VBA-Text-Indent">Please note that this method is only available for field source monitors, single frequency farfield/RCS monitors and electric or magnetic field monitors. Furthermore, this subvolume specification is currently not supported by frequency domain solvers.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">SetSubvolume ( <span><a href="../common_vbageneral/common_general_double.htm" id="a31" style="font-weight: normal; font-style: normal;" name="a31">double</a></span> <span style="font-style: italic;"><i>xmin,</i></span> &#160;<a href="../common_vbageneral/common_general_double.htm" id="a34" style="font-weight: normal; font-style: normal;" name="a34">double</a> <span style="font-style: italic;"><i>xmax,</i></span> <span><a href="../common_vbageneral/common_general_double.htm" id="a35" style="font-weight: normal; font-style: normal;" name="a35">double</a></span> <span style="font-style: italic;"><i>ymin,</i></span> <a href="../common_vbageneral/common_general_double.htm" id="a36" style="font-weight: normal; font-style: normal;" name="a36">double</a> <span style="font-style: italic;"><i>ymax,</i></span> <span style="font-weight: normal;">&#160;<a href="../common_vbageneral/common_general_double.htm" id="a37" style="font-weight: normal; font-style: normal;" name="a37">double</a></span> <span style="font-style: italic;"><i>zmin,</i></span> <a href="../common_vbageneral/common_general_double.htm" id="a44" style="font-weight: normal; font-style: normal;" name="a44">double</a> <span style="font-style: italic;"><i>zmax</i></span> )</p>
+<p class="VBA-Text-Indent">Sets the subvolume of the field monitor. Please note that this method is only available for field source monitors, single frequency farfield/RCS monitors and electric or magnetic field monitors.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">InvertOrientation ( <a href="../common_vbageneral/common_general_bool_data_type.htm" id="a32" style="font-weight: normal; font-style: normal;" name="a32">bool</a> <span style="font-style: italic;"><i>bFlag</i></span> )</p>
+<p class="VBA-Text-Indent">Inverts orientation for field source monitors.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">ExportFarfieldSource ( <a href="../common_vbageneral/common_general_bool_data_type.htm" id="a45" style="font-weight: normal; font-style: normal;" name="a45">bool</a> <span style="font-style: italic;"><i>bFlag</i></span> )</p>
+<p class="VBA-Text-Indent">Activates the automatic generation of a farfield source from the corresponding farfield monitor after a solver run. All farfield source exports from the same excitation are collected into a single broadband farfield source file.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">EnableNearfieldCalculation ( <a href="../common_vbageneral/common_general_bool_data_type.htm" id="a451" style="font-weight: normal; font-style: normal;" name="a451">bool</a> <span style="font-style: italic;"><i>bFlag</i></span> )</p>
+<p class="VBA-Text-Indent">If <span style="font-style: italic;"><i>bFlag</i></span> is true, then the computation with this farfield monitor keeps the recorded nearfield data from the solver and makes sure that this data is combined in later post-processing steps that involve this monitor. This is required for some post-processing features but it potentially reduces the speed of subsequent "combine results" post-processing.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Text-Indent">For all frequency monitor types (with the exception of the FieldSource type) the following convenience methods are also available. They allow to generate at once a set of monitors whose frequencies are linearly or logarithmically spaced or arbitrarily defined.</p>
+<p class="VBA-Heading-Method">CreateUsingArbitraryValues ( <a href="../common_vbageneral/common_general_string.htm" id="a271" style="font-weight: normal; font-style: normal;" name="a271">string</a> <span style="font-style: italic;"><i>frequencyList</i></span> )</p>
+<p class="VBA-Text-Indent">The semicolon (";") separated list <span style="font-style: italic; font-weight: bold;"><i>frequencyList</i></span> specifies the recording frequencies of the monitors to be generated.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">CreateUsingLinearSamples ( <a href="../common_vbageneral/common_general_double.htm" id="a291" style="font-weight: normal; font-style: normal;" name="a291">double</a> <span style="font-style: italic;"><i>fmin,</i></span> <a href="../common_vbageneral/common_general_double.htm" id="a331" style="font-weight: normal; font-style: normal;" name="a331">double</a> <span style="font-style: italic;"><i>fmax,</i></span> <a href="../common_vbageneral/common_general_integer.htm" id="a251" style="font-weight: normal;" name="a251">int</a> <span style="font-style: italic;"><i>nSamples</i></span> )</p>
+<p class="VBA-Text-Indent">Generate a set of <span style="font-weight: bold; font-style: italic;"><i>nSamples</i></span> monitors whose frequencies are linearly distributed in the range provided by <span style="font-weight: bold; font-style: italic;"><i>fmin</i></span> and <span style="font-weight: bold; font-style: italic;"><i>fmax</i></span>.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">CreateUsingLinearStep ( <a href="../common_vbageneral/common_general_double.htm" id="a2911" style="font-weight: normal; font-style: normal;" name="a2911">double</a> <span style="font-style: italic;"><i>fmin,</i></span>&#160;<a href="../common_vbageneral/common_general_double.htm" id="a3311" style="font-weight: normal; font-style: normal;" name="a3311">double</a> <span style="font-style: italic;"><i>fmax,</i></span> <span><a href="../common_vbageneral/common_general_double.htm" id="a33111" style="font-weight: normal; font-style: normal;" name="a33111">double</a></span> <span style="font-style: italic;"><i>Step</i></span> )</p>
+<p class="VBA-Text-Indent">Generate a set of monitors whose frequencies are linearly spaced in the range provided by <span style="font-weight: bold; font-style: italic;"><i>fmin</i></span> and <span style="font-weight: bold; font-style: italic;"><i>fmax</i></span>. The width between samples is controlled by the <span style="font-weight: bold; font-style: italic;"><i>Step</i></span> parameter.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">CreateUsingLogSamples ( <a href="../common_vbageneral/common_general_double.htm" id="a2912" style="font-weight: normal; font-style: normal;" name="a2912">double</a> <span style="font-style: italic;"><i>fmin,</i></span> &#160;<a href="../common_vbageneral/common_general_double.htm" id="a3312" style="font-weight: normal; font-style: normal;" name="a3312">double</a> <span style="font-style: italic;"><i>fmax,</i></span> <a href="../common_vbageneral/common_general_integer.htm" id="a2511" style="font-weight: normal;" name="a2511">int</a> <span style="font-style: italic;"><i>nSamples</i></span> )</p>
+<p class="VBA-Text-Indent">Generate a set of <span style="font-weight: bold; font-style: italic;"><i>nSamples</i></span> monitors whose frequencies are logarithmically distributed in the range provided by <span style="font-weight: bold; font-style: italic;"><i>fmin</i></span> and <span style="font-weight: bold; font-style: italic;"><i>fmax</i></span>.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">Export ( <a href="../common_vbageneral/common_general_enum.htm" id="a46" style="font-weight: normal; font-style: normal;" name="a46">enum</a><span style="font-weight: normal;">{"nfs"}</span> <span style="font-style: italic;"><i>exportType, <a href="../common_vbageneral/common_general_name.htm" id="a53" style="font-weight: normal; font-style: normal;" name="a53">name</a> excitationName, <a href="../common_vbageneral/common_general_name.htm" id="a54" style="font-weight: normal; font-style: normal;" name="a54">name</a> filePath,</i></span> &#160;<a href="../common_vbageneral/common_general_bool_data_type.htm" id="a48" style="font-weight: normal; font-style: normal;" name="a48">bool</a> <span style="font-style: italic;"><i>bFlag</i></span> )</p>
+<p class="VBA-Text-Indent">Exports or converts field source monitor files in other formats. More details and examples can be found <a href="../../3D/special_overview/special_overview_plane_wave_overview.htm#Near_field_source_monitor_export_as_NFS_nearfield_scan_data_exchange_format">here</a>.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">SetSubVolumeSampling( <a href="../common_vbageneral/common_general_double.htm" id="a311" style="font-weight: normal; font-style: normal;" name="a311">double</a> <span style="font-style: italic;"><i>x,</i></span> &#160;<a href="../common_vbageneral/common_general_double.htm" id="a341" style="font-weight: normal; font-style: normal;" name="a341">double</a> <span style="font-style: italic;"><i>y,</i></span> <a href="../common_vbageneral/common_general_double.htm" id="a351" style="font-weight: normal; font-style: normal;" name="a351">double</a> <span style="font-style: italic;"><i>z</i></span>)</p>
+<p class="VBA-Text-Indent">Sets the subvolume sampling of the field monitor. Please note that this method only affects subvolume monitors for I-, A- and M-Solver. Can be used during definition of a monitor. This command is only written to the history if any sampling setting has been applied.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">ChangeSubVolumeSampling( &#160;<span style="font-weight: normal;"><a href="../common_vbageneral/common_general_name.htm" id="a1101" style="font-weight: normal; font-style: normal;" name="a1101">name</a></span> <span style="font-style: italic;"><i>monitorName,</i></span> <span style="font-weight: normal;"><a href="../common_vbageneral/common_general_double.htm" id="a3111" style="font-weight: normal; font-style: normal;" name="a3111">double</a></span> <span style="font-style: italic;"><i>x,</i></span> <span style="font-weight: normal;">&#160;<a href="../common_vbageneral/common_general_double.htm" id="a3411" style="font-weight: normal; font-style: normal;" name="a3411">double</a></span> <span style="font-style: italic;"><i>y,</i></span> <span style="font-weight: normal;"><a href="../common_vbageneral/common_general_double.htm" id="a3511" style="font-weight: normal; font-style: normal;" name="a3511">double</a></span> <span style="font-style: italic;"><i>z</i></span>)</p>
+<p class="VBA-Text-Indent">Sets the subvolume sampling of the field monitor specified by the name. Please note that this method is only available for subvolume monitors for I-, A- and M-Solver. Can be used after definition of a monitor. No history item will be created.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">ChangeSubVolumeSamplingToHistory( <span style="font-weight: normal;">&#160;</span><span style="font-weight: normal;"><a href="../common_vbageneral/common_general_name.htm" id="a11011" style="font-weight: normal; font-style: normal;" name="a11011">name</a></span> <span style="font-style: italic;"><i>monitorName,</i></span> <span style="font-weight: normal;"><a href="../common_vbageneral/common_general_double.htm" id="a31111" style="font-weight: normal; font-style: normal;" name="a31111">double</a></span> <span style="font-style: italic;"><i>x,</i></span> <span style="font-weight: normal;">&#160;<a href="../common_vbageneral/common_general_double.htm" id="a34111" style="font-weight: normal; font-style: normal;" name="a34111">double</a></span> <span style="font-style: italic;"><i>y,</i></span> <span style="font-weight: normal;"><a href="../common_vbageneral/common_general_double.htm" id="a35111" style="font-weight: normal; font-style: normal;" name="a35111">double</a></span> <span style="font-style: italic;"><i>z</i></span>)</p>
+<p class="VBA-Text-Indent">Enters the command <span style="font-weight: bold;">ChangeSubVolumeSampling</span>( &#160;<a href="../common_vbageneral/common_general_name.htm" id="a11012" style="font-weight: normal; font-style: normal;" name="a11012">name</a> <span style="font-style: italic; font-weight: bold;"><i>monitorName</i></span><span style="font-style: italic;"><i>,</i></span> <a href="../common_vbageneral/common_general_double.htm" id="a31112" style="font-weight: normal; font-style: normal;" name="a31112">double</a> <span style="font-style: italic;"><i>x,</i></span> &#160;<a href="../common_vbageneral/common_general_double.htm" id="a34112" style="font-weight: normal; font-style: normal;" name="a34112">double</a> <span style="font-style: italic;"><i>y,</i></span> <a href="../common_vbageneral/common_general_double.htm" id="a35112" style="font-weight: normal; font-style: normal;" name="a35112">double</a> <span style="font-style: italic;"><i>z</i></span>) to the history. Can be used after definition of a monitor.</p>
+<p class="VBA-Heading-Category"><a name="Queries" id="Queries"></a>Queries</p>
+<p class="VBA-Heading-Method">GetNumberOfMonitors <a href="../common_vbageneral/common_general_long.htm" id="a16" style="font-weight: normal; font-style: normal;" name="a16">long</a></p>
+<p class="VBA-Text-Indent">Returns the total number of defined monitors in the current project.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">GetMonitorNameFromIndex ( <a href="../common_vbageneral/common_general_long.htm" id="a17" style="font-weight: normal; font-style: normal;" name="a17">long</a> <span style="font-style: italic;"><i>index</i></span> ) <a href="../common_vbageneral/common_general_name.htm" id="a18" style="font-weight: normal; font-style: normal;" name="a18">name</a></p>
+<p class="VBA-Text-Indent">Returns the name of the monitor with regard to the <span style="font-style: italic;"><i>index</i></span> in the internal monitor list .</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">GetMonitorTypeFromIndex ( <a href="../common_vbageneral/common_general_long.htm" id="a19" style="font-weight: normal; font-style: normal;" name="a19">long</a> <span style="font-style: italic;"><i>index</i></span> ) <a href="../common_vbageneral/common_general_enum.htm" id="a20" style="font-weight: normal; font-style: normal;" name="a20">enum</a> &#160;<span style="font-style: italic;"><i>monType</i></span></p>
+<p class="VBA-Text-Indent">Returns the type of the monitor with regard to the <span style="font-style: italic;"><i>index</i></span> in the internal monitor list.</p>
+<p class="VBA-Text-Indent"><span style="font-style: italic;"><i>monType</i></span> can have one of the following values; depending on 2D or 3D monitors a suffix is added to the string in format of &#160;" 2D" or " 3D", respectively:</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<table style="margin-left: 24px;" cellspacing="0" width="90%">
+<col width="225" />
+<col width="691" />
+<tr style="vertical-align: top;">
+<td style="border: Solid 1px #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;" width="225">
+<p>”E-Field 3D”, ”E-Field 2D”</p>
+</td>
+<td style="border-top: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;" width="691">
+<p>The electric field has been monitored.</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;" width="225">
+<p>”H-Field 3D”, ”H-Field 2D”</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;" width="691">
+<p>The magnetic field and the surface current has been monitored.</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;" width="225">
+<p>”Powerflow 3D”</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;" width="691">
+<p>The Pointing vector has been monitored.</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;" width="225">
+<p>”Current 3D”</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;" width="691">
+<p>The current density has been monitored.</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;" width="225">
+<p>”Loss density 3D”</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;" width="691">
+<p>The power loss density has been monitored.</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;" width="225">
+<p>”E-Energy 3D”</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;" width="691">
+<p>The electric energy density has been monitored.</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;" width="225">
+<p>”H-Energy 3D”</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;" width="691">
+<p>The magnetic energy density has been monitored.</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;" width="225">
+<p>”SAR 3D”</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;" width="691">
+<p>A monitor for the SAR calculation has been created.</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;" width="225">
+<p>”Farfield”</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;" width="691">
+<p>A farfield monitor has been created.</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;" width="225">
+<p>”Fieldsource”</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;" width="691">
+<p>A field source monitor has been created.</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;" width="225">
+<p>”Adaption 3D”</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;" width="691">
+<p>A monitor for the grid adaption has been created.</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;" width="225">
+<p>"Spcace charge density 3D"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;" width="691">
+<p>A monitor for the space charge density has been created.</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;" width="225">
+<p>”Particle current density 3D”</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;" width="691">
+<p>A monitor for the particle current density has been created.</p>
+</td>
+</tr>
+</table>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">GetMonitorDomainFromIndex ( <a href="../common_vbageneral/common_general_long.htm" id="a21" style="font-weight: normal; font-style: normal;" name="a21">long</a> <span style="font-style: italic;"><i>index</i></span> ) <a href="../common_vbageneral/common_general_enum.htm" id="a22" style="font-weight: normal; font-style: normal;" name="a22">enum</a><span style="font-weight: normal;">{"frequency", "time", "static"}</span></p>
+<p class="VBA-Text-Indent" style="font-style: normal;">Returns the monitor domain with regard to the <span style="font-style: italic;"><i>index</i></span> in the internal monitor list.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">GetMonitorFrequencyFromIndex ( <a href="../common_vbageneral/common_general_long.htm" id="a23" style="font-weight: normal; font-style: normal;" name="a23">long</a> <span style="font-style: italic;"><i>index</i></span> ) <a href="../common_vbageneral/common_general_double.htm" id="a40" style="font-weight: normal; font-style: normal;" name="a40">double</a></p>
+<p class="VBA-Text-Indent">Returns the frequency value of a frequency domain monitor with regard to the <span style="font-style: italic;"><i>index</i></span> in the internal monitor list.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">GetMonitorTstartFromIndex ( <a href="../common_vbageneral/common_general_long.htm" id="a24" style="font-weight: normal; font-style: normal;" name="a24">long</a> <span style="font-style: italic;"><i>index</i></span> ) <a href="../common_vbageneral/common_general_double.htm" id="a41" style="font-weight: normal; font-style: normal;" name="a41">double</a></p>
+<p class="VBA-Text-Indent">Returns the start time of a time domain monitor with regard to the <span style="font-style: italic;"><i>index</i></span> in the internal monitor list.</p>
+<p class="vba-text-indent">&#160;</p>
+<p class="VBA-Heading-Method">GetMonitorTstepFromIndex ( <a href="../common_vbageneral/common_general_long.htm" id="a38" style="font-weight: normal; font-style: normal;" name="a38">long</a> <span style="font-style: italic;"><i>index</i></span> ) <a href="../common_vbageneral/common_general_double.htm" id="a42" style="font-weight: normal; font-style: normal;" name="a42">double</a></p>
+<p class="VBA-Text-Indent">Returns the time increment value of a time domain monitor with regard to the <span style="font-style: italic;"><i>index</i></span> in the internal monitor list.</p>
+<p class="vba-text-indent">&#160;</p>
+<p class="VBA-Heading-Method">GetMonitorTendFromIndex ( <a href="../common_vbageneral/common_general_long.htm" id="a39" style="font-weight: normal; font-style: normal;" name="a39">long</a> <span style="font-style: italic;"><i>index</i></span> ) <a href="../common_vbageneral/common_general_double.htm" id="a43" style="font-weight: normal; font-style: normal;" name="a43">double</a></p>
+<p class="VBA-Text-Indent">Returns the end time of a time domain monitor with regard to the <span style="font-style: italic;"><i>index</i></span> in the internal monitor list.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">GetSubVolumeSampling( <span style="font-weight: normal;"><a href="../common_vbageneral/common_general_name.htm" id="a110" style="font-weight: normal; font-style: normal;" name="a110">name</a></span> <span style="font-style: italic;"><i>monitorName</i></span> ) <span style="font-weight: normal;"><a href="../common_vbageneral/common_general_variant.htm">variant</a></span></p>
+<p class="VBA-Text-Indent">Returns a three dimensional vector of &#160;doubles for the subvolume setting (<span style="font-weight: bold; font-style: italic;"><i>x, y, z</i></span>) set by the command <span style="font-weight: bold;">SetSubVolumeSampling</span>(...). See also <a title="Example" href="#GetSubVolumeSampling_Example" onmouseover="if ((parseInt(navigator.appVersion) == 4) &amp;&amp; (navigator.appName == 'Netscape')) ehlp_showtip(this,event,'Example');" onmouseout="if ((parseInt(navigator.appVersion) == 4) &amp;&amp; (navigator.appName == 'Netscape')) ehlp_hidetip();">Example</a>.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Category"><a name="Defaults" id="Defaults"></a>Default Settings</p>
+<p class="VBA-Text-Example">FieldType (<span style="font-weight: normal;">"Efield"</span>)</p>
+<p class="VBA-Text-Example">PlaneNormal (<span style="font-weight: normal;">""</span>)</p>
+<p class="VBA-Text-Example">PlanePosition (<span style="font-weight: normal;">0.0</span>)</p>
+<p class="VBA-Text-Example">Domain ("frequency")</p>
+<p class="VBA-Text-Example">SamplingStrategy ("Linear")</p>
+<p class="VBA-Text-Example">Tstart (0.0)</p>
+<p class="VBA-Text-Example">Tstep (0.0)</p>
+<p class="VBA-Text-Example">Tend (0.0)</p>
+<p class="VBA-Text-Example">RepetitionPeriod (0.0)</p>
+<p class="VBA-Text-Example">UseTend (False)</p>
+<p class="VBA-Text-Example">TimeAverage (False)</p>
+<p class="VBA-Text-Example">MaxOrder (1)</p>
+<p class="VBA-Text-Example">FrequencySamples (1)</p>
+<p class="VBA-Text-Example">SampleStep (1)</p>
+<p class="VBA-Text-Example">AutomaticOrder (True)</p>
+<p class="VBA-Text-Example">TransientFarfield (False)</p>
+<p class="VBA-Text-Example">UseSubvolume (False)</p>
+<p class="VBA-Text-Example">ExportFarfieldSource (False)</p>
+<p class="VBA-Text-Example">EnableNearfieldCalculation (True)</p>
+<p class="VBA-Text-Example">SetSubVolumeSampling("", "", "")</p>
+<p class="VBA-Heading-Category"><a name="Example" id="Example"></a>Examples</p>
+<p class="VBA-Text-Example" style="color: #008000;">' creates a frequency domain electric field monitor for the entire calculation domain</p>
+<p class="VBA-Text-Example">With Monitor</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.Reset</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.Name ("e-field (f=2.5)")</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.Domain ("Frequency")</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.FieldType ("Efield")</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.Frequency (2.5)</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.Create</p>
+<p class="VBA-Text-Example">End With</p>
+<p class="VBA-Text-Example">&#160;</p>
+<p class="VBA-Text-Example" style="color: #008000;"><span style="color: #008000;"><font color="green">' creates a time domain magnetic field monitor for the plane y=37.3</font></span></p>
+<p class="vba-text-example">With Monitor</p>
+<p class="vba-text-example">&#160;&#160;&#160;&#160;&#160;.Reset</p>
+<p class="vba-text-example">&#160;&#160;&#160;&#160;&#160;.Name ("My magnetic field monitor")</p>
+<p class="vba-text-example">&#160;&#160;&#160;&#160;&#160;.Domain ("Time")</p>
+<p class="vba-text-example">&#160;&#160;&#160;&#160;&#160;.FieldType ("Hfield")</p>
+<p class="vba-text-example">&#160;&#160;&#160;&#160;&#160;.Tstart (1.0)</p>
+<p class="vba-text-example">&#160;&#160;&#160;&#160;&#160;.Tstep (0.015)</p>
+<p class="vba-text-example">&#160;&#160;&#160;&#160;&#160;.Tend (1.7)</p>
+<p class="vba-text-example">&#160;&#160;&#160;&#160;&#160;.UseTend (True)</p>
+<p class="vba-text-example">&#160;&#160;&#160;&#160;&#160;.PlaneNormal ("y")</p>
+<p class="vba-text-example">&#160;&#160;&#160;&#160;&#160;.PlanePosition ("37.3")</p>
+<p class="vba-text-example">&#160;&#160;&#160;&#160;&#160;.Create</p>
+<p class="vba-text-example">End With</p>
+<p class="vba-text-example">&#160;</p>
+<p class="VBA-Text-Example" style="color: #008000;"><span style="color: #008000;"><font color="green">' creates a 2D subvolume frequency domain electric field monitor (with sub sampling for I-, A- and M-Solver)</font></span></p>
+<p class="vba-text-example">With Monitor</p>
+<p class="vba-text-example">&#160;&#160;&#160;&#160;&#160;.Reset</p>
+<p class="vba-text-example">&#160;&#160;&#160;&#160;&#160;.Name "e-field (f=0.80;z=30)"</p>
+<p class="vba-text-example">&#160;&#160;&#160;&#160;&#160;.Domain "Frequency"</p>
+<p class="vba-text-example">&#160;&#160;&#160;&#160;&#160;.FieldType "Efield"</p>
+<p class="vba-text-example">&#160;&#160;&#160;&#160;&#160;.Frequency "0.8"</p>
+<p class="vba-text-example">&#160;&#160;&#160;&#160;&#160;.UseSubvolume "True"</p>
+<p class="vba-text-example">&#160;&#160;&#160;&#160;&#160;.Coordinates "Calculation"</p>
+<p class="vba-text-example">&#160;&#160;&#160;&#160;&#160;.SetSubvolume "-140", "140", "-100", "100", "-90", "90"</p>
+<p class="vba-text-example">&#160;&#160;&#160;&#160;&#160;.SetSubvolumeOffset "0.0", "0.0", "0.0", "0.0", "0.0", "0.0"</p>
+<p class="vba-text-example">&#160;&#160;&#160;&#160;&#160;.PlaneNormal "x"</p>
+<p class="vba-text-example">&#160;&#160;&#160;&#160;&#160;.PlanePosition "0"</p>
+<p class="vba-text-example">&#160;&#160;&#160;&#160;&#160;.SetSubVolumeSampling &#160;"10", "6", "6"</p>
+<p class="vba-text-example">&#160;&#160;&#160;&#160;&#160;.Create</p>
+<p class="vba-text-example">End With</p>
+<p class="vba-text-example">&#160;</p>
+<p class="vba-text-example" style="color: green;">' creates a field source monitor with logarithmic frequency sampling - 11 samples spaced on 8 to 10 GHz</p>
+<p class="vba-text-example" style="color: green;">' (for reference, the samples are (roughly) at: 8;8.18;8.37;8.55;8.75;8.94;9.15;9.35;9.56;9.78;10)</p>
+<p class="vba-text-example">With Monitor</p>
+<p class="vba-text-example">&#160;&#160;&#160;&#160;&#160;.Reset</p>
+<p class="vba-text-example">&#160;&#160;&#160;&#160;&#160;.Name "My_FS_Monitor"</p>
+<p class="vba-text-example">&#160;&#160;&#160;&#160;&#160;.Domain "Frequency"</p>
+<p class="vba-text-example">&#160;&#160;&#160;&#160;&#160;.FieldType "Fieldsource"</p>
+<p class="vba-text-example">&#160;&#160;&#160;&#160;&#160;.SamplingStrategy "Logarithmic"</p>
+<p class="vba-text-example">&#160;&#160;&#160;&#160;&#160;.Samples "11"</p>
+<p class="vba-text-example">&#160;&#160;&#160;&#160;&#160;.MonitorValueRange "8", "10"</p>
+<p class="vba-text-example">&#160;&#160;&#160;&#160;&#160;.UseSubvolume "False"</p>
+<p class="vba-text-example">&#160;&#160;&#160;&#160;&#160;.Create</p>
+<p class="vba-text-example">End With</p>
+<p class="vba-text-example">&#160;</p>
+<p class="VBA-Text-Example" style="color: #008000;"><a name="GetSubVolumeSampling_Example" id="GetSubVolumeSampling_Example"></a></p>
+<p class="VBA-Text-Example" style="color: #008000;">'Example for getting the sub volume sampling rate</p>
+<p class="VBA-Text-Example" style="margin-left: 0px;">Dim V As Variant</p>
+<p class="VBA-Text-Example" style="margin-left: 0px;">V = Monitor.GetSubVolumeSampling("e-field (f=0.80;z=30)")</p>
+<p class="VBA-Text-Example">&#160;</p>
+<p class="VBA-Text-Example">Debug.Print V(0)</p>
+<p class="VBA-Text-Example">Debug.Print V(1)</p>
+<p class="VBA-Text-Example">Debug.Print V(2)</p>
+<p class="VBA-Text-Example">&#160;</p>
+<p class="VBA-Text-Example">&#160;</p>
+<?rh-p style="margin-bottom: 0px; text-align: Right; margin-left: 18px; 
+                 margin-right: 18px; margin-top: 18px;" ?>
+<div style="width: 100%; position: relative;" id="footer">
+<p style="border-bottom: Solid 1px #dddddd; text-align: Left; margin-left: 0px; font-family: Arial, sans-serif; line-height: Normal; margin-top: 9px; margin-right: 0px; margin-bottom: 6px; border-left-width: 1px; border-top-width: 1px; border-right-width: 1px;"><span style="text-align: Left; font-family: Arial, sans-serif; line-height: Normal;">&#160;</span></p>
+<table cellspacing="0" width="100%">
+<col style="width: 50%;" />
+<col style="width: 50%;" />
+<tr>
+<td style="vertical-align: Top;"><span style="font-family: Arial, sans-serif; line-height: Normal; font-size: 8pt;"><font size="1" style="font-size:8pt;">CST Studio Suite 2026</font></span></td>
+<td style="vertical-align: Top;">
+<p style="text-align: right;">&#160;</p>
+</td>
+</tr>
+</table>
+<p>&#160;</p>
+</div>
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+ if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == 'Netscape'))
+  document.write("<div id='tooltip' class='WebHelpPopupMenu'><\/div>");
+//]]>
+</script><script type="text/javascript" language="javascript1.2">
+//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+        writeIntopicBar(0);
+
+
+highlightSearch();
+//-->
+//]]>
+</script>
+</body>
+</html>

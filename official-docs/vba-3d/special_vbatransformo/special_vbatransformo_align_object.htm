@@ -1,0 +1,404 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="Adobe RoboHelp 11" />
+<title>Align Object</title>
+<link rel="StyleSheet" href="../online_help_vba.css" type="text/css" />
+<style type="text/css">
+/*<![CDATA[*/
+<!--
+body { border-bottom-style:None; }
+-->
+/*]]>*/
+</style>
+
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+        origWidth = innerWidth;
+        origHeight = innerHeight;
+        onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+/*<![CDATA[*/
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+-->
+/*]]>*/
+</style>
+
+<script type="text/javascript" language="javascript1.2" src="../whmsg.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript" src="../whver.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript1.2" src="../whutils.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript1.2" src="../whproxy.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript1.2" src="../whlang.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript1.2" src="../whtopic.js" charset="utf-8">
+</script>
+</head>
+<body>
+<script type="text/javascript" language="javascript1.2">
+//<![CDATA[
+<!--
+if (window.gbWhTopic)
+{
+        var strUrl = document.location.href;
+        var bc = 0;
+        var n = strUrl.toLowerCase().indexOf("bc-");
+        if(n != -1)
+        {
+                document.location.replace(strUrl.substring(0, n));
+                bc = strUrl.substring(n+3);
+        }
+
+        if (window.addTocInfo)
+        {
+        addTocInfo("3D Simulation VBA\nVBA Objects\nTransformations and Picks\nAlign");
+
+        }
+        if (window.writeBtnStyle)
+                writeBtnStyle();
+
+        if (window.writeIntopicBar)
+                writeIntopicBar(0);
+
+        
+        document.write("<p style=\"font-family: Tahoma; font-size: 9pt; font-weight: 400;  font-style:normal; color: rgb(0, 0, 0); text-decoration:none; text-align: left\"> ");
+AddMasterBreadcrumbs("../index.htm", "font-family: Tahoma; font-size: 9pt; font-weight: 400;  font-style:normal; color: rgb(0, 0, 0); text-decoration:none; text-align: left", "|", "Home", "../special_vbaobjects/special_vbaobjects_vbaobjects.htm");
+document.write("<a style=\"font-family: Tahoma; font-size: 9pt; font-weight: 400;  font-style:normal; color: rgb(0, 0, 0); text-decoration:none; text-align: left\" href=\"../special_vbaobjects/special_vbaobjects_vbaobjects.htm\">3D Simulation VBA<\/a> | <a style=\"font-family: Tahoma; font-size: 9pt; font-weight: 400;  font-style:normal; color: rgb(0, 0, 0); text-decoration:none; text-align: left\" href=\"../special_vbaobjects/special_vbaobjects_vbaobjects.htm\">VBA Objects<\/a> | <a style=\"font-family: Tahoma; font-size: 9pt; font-weight: 400;  font-style:normal; color: rgb(0, 0, 0); text-decoration:none; text-align: left\" href=\"special_vbatransformo_align_object.htm\">Transformations and Picks<\/a> | Align<\/p>");
+
+}
+else
+        if (window.gbIE4)
+                document.location.reload();
+
+onLoadHandler = function()
+{
+  if (window.setRelStartPage)
+        {
+        setTimeout("setRelStartPage('../index.htm');", 1)
+
+    setTimeout("UpdateBreadCrumbsMarker();", 1);
+        }
+}
+
+if (window.addEventListener){  
+        window.addEventListener('load', onLoadHandler, false);   
+} else if (window.attachEvent){  
+        window.attachEvent('onload', onLoadHandler);  
+}
+
+function onSetStartPage()
+{
+  autoSync(1);
+  sendSyncInfo();
+  sendAveInfoOut();
+}
+//-->
+//]]>
+</script><script type="text/javascript" src="../ehlpdhtm.js" language="JavaScript1.2">
+</script>
+<table cellspacing="0" width="100%">
+<col style="width: 50%;" />
+<col style="width: 50%;" />
+<tr>
+<td style="vertical-align: middle; padding-top: 5px; padding-bottom: 5px;">
+<p style="margin-top: 0px; margin-bottom: 0px;"><img src="../3ds.png" alt="" style="border: none;" border="0" /></p>
+</td>
+<td style="vertical-align: middle;">
+<p style="text-align: right;"><a href="https://www.3ds.com/products-services/3dexperience/" target="_blank"><img src="../3dexp.png" alt="" style="border: none;" width="32" height="32" border="0" /></a></p>
+</td>
+</tr>
+</table>
+<h1>AlignObject</h1>
+<p class="VBA-Text">Offers a set of tools that change a solid by transformations.</p>
+<ul>
+<li class="p-VBA-Index-Category">
+<p class="VBA-Index-Category"><a href="#Methods">Methods</a></p>
+</li>
+<li class="p-VBA-Index-Category">
+<p class="VBA-Index-Category" style="font-weight: bold;"><a href="#Defaults" style="font-weight: bold;">Default Settings</a></p>
+</li>
+</ul>
+<p class="VBA-Heading-Category"><a name="Methods" id="Methods"></a>Methods</p>
+<p class="VBA-Heading-Method">Reset</p>
+<p class="VBA-Text-Indent">Resets all internal values to their defaults.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">Name ( <span><a href="../common_vbageneral/common_general_name.htm" id="a44" style="font-weight: normal; font-style: normal;" name="a44">name</a></span> <span style="font-style: italic;"><i>sObjectName</i></span> )</p>
+<p class="VBA-Text-Indent">Defines the name of the object, the alignment should be applied to.</p>
+<p class="VBA-Text-Indent">Note: for some alignments, a <a href="../common_vbageneral/common_general_global_names.htm">global name</a> may be required (mixed alignment).</p>
+<p class="VBA-Heading-Method">&#160;</p>
+<p class="VBA-Heading-Method">AddName ( <a href="../common_vbageneral/common_general_name.htm" id="a23" style="font-weight: normal; font-style: normal;" name="a23">name</a> <span style="font-style: italic;"><i>sObjectName</i></span> )</p>
+<p class="VBA-Text-Indent">Defines one more name of an additional object, in addition to the <span style="font-style: italic;"><i>previously</i></span> defined object.</p>
+<p class="VBA-Text-Indent">Note: for some alignments, a <a href="../common_vbageneral/common_general_global_names.htm">global name</a> may be required (mixed alignment).</p>
+<p class="vba-text-indent">&#160;</p>
+<p class="VBA-Heading-Method">Align ( <a href="../common_vbageneral/common_general_enum.htm" id="a27" style="font-style: normal;" name="a27"><span style="font-weight: normal;">enum</span></a> <span style="font-weight: normal;">{"Shapes", "Subproject", "Part"}</span> <span style="font-style: italic;"><i>what,</i></span> &#160;<a href="../common_vbageneral/common_general_enum.htm" id="a29" style="font-weight: normal; font-style: normal;" name="a29">enum</a> <span style="font-weight: normal;">{"Faces", "Rotate", "RotateByDegree"}</span> <span style="font-style: italic;"><i>how</i></span> )</p>
+<p class="VBA-Text-Indent">This execute a specified alignment onto the given type of objects (named via <span style="font-style: italic;"><i>Name</i></span> and <span style="font-style: italic;"><i>AddName</i></span>).</p>
+<p class="VBA-Text-Indent" style="margin-left: 64px;">&#160;</p>
+<table style="vertical-align: top; margin-left: 40px;" cellspacing="0" width="100%">
+<col style="width: 28.116%;" />
+<col style="width: 71.884%;" />
+<tr style="vertical-align: top; height: 19px;">
+<td style="border: Solid 1px #000000; width: 28.116%; padding-right: 10px; padding-left: 10px;">
+<p style="text-align: center;"><a href="../common_vbageneral/common_general_enum.htm" id="a28" style="font-style: normal;" name="a28">enum</a> <span style="font-weight: bold;">what</span></p>
+</td>
+<td style="border-top: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 71.884%; padding-right: 10px; padding-left: 10px;">
+<p style="text-align: center; font-weight: bold;">description</p>
+</td>
+</tr>
+<tr style="vertical-align: top; height: 13px;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 28.116%; padding-right: 10px; padding-left: 10px;">
+<p>Shape</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 71.884%; padding-right: 10px; padding-left: 10px;">
+<p>this aligns solids</p>
+</td>
+</tr>
+<tr style="vertical-align: top; height: 18px;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 28.116%; padding-right: 10px; padding-left: 10px;">
+<p>Subproject</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 71.884%; padding-right: 10px; padding-left: 10px;">
+<p>this aligns a previously imported subproject <span style="font-weight: bold;">or</span> a previously pasted structure</p>
+</td>
+</tr>
+<tr style="vertical-align: top; height: 18px;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 28.116%; padding-right: 10px; padding-left: 10px;">
+<p>Part</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 71.884%; padding-right: 10px; padding-left: 10px;">
+<p>this aligns a complete block in the 3D Layout View</p>
+</td>
+</tr>
+<tr style="vertical-align: top; height: 18px;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 28.116%; padding-right: 10px; padding-left: 10px;">
+<p>Mixed</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 71.884%; padding-right: 10px; padding-left: 10px;">
+<p>if a multi selection encompasses different kind of objects (e.g. wires and solids), this type of alignment is used. In this case, <a href="../common_vbageneral/common_general_global_names.htm">global names</a> need to be used for .Name and .AddName</p>
+</td>
+</tr>
+</table>
+<p class="VBA-Text-Indent" style="margin-left: 64px;">&#160;</p>
+<table style="vertical-align: top; margin-left: 40px;" cellspacing="0" width="100%">
+<col style="width: 28.014%;" />
+<col style="width: 71.986%;" />
+<tr style="vertical-align: top;">
+<td style="border: Solid 1px #000000; width: 28.014%; padding-right: 10px; padding-left: 10px;">
+<p style="text-align: center;"><a href="../common_vbageneral/common_general_enum.htm" id="a30" style="font-weight: normal; font-style: normal;" name="a30">enum</a> <span style="font-weight: bold;">how</span></p>
+</td>
+<td style="border-top: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 71.986%; padding-right: 10px; padding-left: 10px;">
+<p style="text-align: center; font-weight: bold;">description</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 28.014%; padding-right: 10px; padding-left: 10px;">
+<p>Faces</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 71.986%; padding-right: 10px; padding-left: 10px;">
+<p>This transforms the objects by rotation and translation so that two selected "faces" touch afterwards. One "face" is selected on the objects to be moved, another "face" is selected at some target object.</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 28.014%; padding-right: 10px; padding-left: 10px;">
+<p>Rotate</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 71.986%; padding-right: 10px; padding-left: 10px;">
+<p>This rotates the objects around a center of a picked "target" "face", having two picks that specify an angle, as input. For the angle, two directions need to be given: you can either pick a straight edge for a direction, or a point that will be pointed to from the center of rotation.</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 28.014%; padding-right: 10px; padding-left: 10px;">
+<p>RotateByDegree</p>
+<p>&#160;</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 71.986%; padding-right: 10px; padding-left: 10px;">
+<p>This rotates the objects around a center of a picked "target" "face. The angle needs to be specified using the command "SetNumericalValue" (see below).</p>
+</td>
+</tr>
+</table>
+<p class="VBA-Heading-Method" style="margin-left: 40px;">&#160;</p>
+<p class="VBA-Heading-Method">SetKindOfPickFor ( <a href="../common_vbageneral/common_general_enum.htm" id="a24" style="font-style: normal;" name="a24"><span style="font-weight: normal;">enum</span></a> <span style="font-weight: normal;">{"SourcePlane", "TargetPlane", "ZeroAngle", "FinalAngle"}</span> <span style="font-style: italic;"><i>what,</i></span> &#160;<a href="../common_vbageneral/common_general_enum.htm" id="a25" style="font-weight: normal; font-style: normal;" name="a25">enum</a> <span style="font-weight: normal;">{"Face", "Edge", "Point"}</span> <span style="font-style: italic;"><i>kind</i></span>)</p>
+<p class="VBA-Text-Indent">This defines what is used to determine the information for calculating an alignment step. Different steps allow a different subset of kinds of information.</p>
+<p class="VBA-Heading-Method" style="margin-left: 40px;">&#160;</p>
+<table style="vertical-align: top; margin-left: 40px;" cellspacing="0" width="100%">
+<col style="width: 16.358%;" />
+<col style="width: 63.807%;" />
+<col style="width: 19.835%;" />
+<tr style="vertical-align: top; height: 19px;">
+<td style="border: Solid 1px #000000; width: 16.358%; padding-right: 10px; padding-left: 10px;">
+<p style="text-align: center;"><a href="../common_vbageneral/common_general_enum.htm" id="a26" style="font-style: normal;" name="a26">enum</a> <span style="font-weight: bold;">what</span></p>
+</td>
+<td style="border-top: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 63.807%; padding-right: 10px; padding-left: 10px;">
+<p style="text-align: center; font-weight: bold;">description</p>
+</td>
+<td style="border-top: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 19.835%; padding-right: 10px; padding-left: 10px;">
+<p style="text-align: center; font-weight: bold;">allowed kinds</p>
+</td>
+</tr>
+<tr style="vertical-align: top; height: 18px;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 16.358%; padding-right: 10px; padding-left: 10px;">
+<p>SourcePlane</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 63.807%; padding-right: 10px; padding-left: 10px;">
+<p>This defines a normal and a center from where the object is going to be aligned.</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 19.835%; padding-right: 10px; padding-left: 10px;">
+<p>Face</p>
+</td>
+</tr>
+<tr style="vertical-align: top; height: 18px;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 16.358%; padding-right: 10px; padding-left: 10px;">
+<p>TargetPlane</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 63.807%; padding-right: 10px; padding-left: 10px;">
+<p>This defines a normal and a center on which the object will be aligned.</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 19.835%; padding-right: 10px; padding-left: 10px;">
+<p>Face</p>
+</td>
+</tr>
+<tr style="vertical-align: top; height: 18px;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 16.358%; padding-right: 10px; padding-left: 10px;">
+<p>ZeroAngle</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 63.807%; padding-right: 10px; padding-left: 10px;">
+<p>This is used to determine a direction that defines the angle zero for rotation. For the point, the direction is taken from TargetPlane center to the point.</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 19.835%; padding-right: 10px; padding-left: 10px;">
+<p>Edge, Point</p>
+</td>
+</tr>
+<tr style="vertical-align: top; height: 18px;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 16.358%; padding-right: 10px; padding-left: 10px;">
+<p>FinalAngle</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 63.807%; padding-right: 10px; padding-left: 10px;">
+<p>This defines a direction to which the angle is measured to. (From ZeroAngle)</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 19.835%; padding-right: 10px; padding-left: 10px;">
+<p>Edge, Point</p>
+</td>
+</tr>
+</table>
+<p class="VBA-Text-Indent" style="margin-left: 64px;">&#160;</p>
+<table style="vertical-align: top; margin-left: 40px;" cellspacing="0" width="100%">
+<col style="width: 16.464%;" />
+<col style="width: 83.536%;" />
+<tr style="vertical-align: top;">
+<td style="border: Solid 1px #000000; width: 16.464%; padding-right: 10px; padding-left: 10px;">
+<p style="text-align: center;"><a href="../common_vbageneral/common_general_enum.htm" id="a31" style="font-weight: normal; font-style: normal;" name="a31">enum</a> <span style="font-weight: bold;">kind</span></p>
+</td>
+<td style="border-top: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 83.536%; padding-right: 10px; padding-left: 10px;">
+<p style="text-align: center; font-weight: bold;">description</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 16.464%; padding-right: 10px; padding-left: 10px;">
+<p>Face</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 83.536%; padding-right: 10px; padding-left: 10px;">
+<p>A previously picked planar face is expected.</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 16.464%; padding-right: 10px; padding-left: 10px;">
+<p>Edge</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 83.536%; padding-right: 10px; padding-left: 10px;">
+<p>A picked linear edge is expected</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 16.464%; padding-right: 10px; padding-left: 10px;">
+<p>Point</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 83.536%; padding-right: 10px; padding-left: 10px;">
+<p>A picked point is expected</p>
+</td>
+</tr>
+</table>
+<p class="VBA-Heading-Method">&#160;</p>
+<p class="VBA-Heading-Method">SetNameToStep( <a href="../common_vbageneral/common_general_enum.htm" id="a242" style="font-style: normal;" name="a242"><span style="font-weight: normal;">enum</span></a> <span style="font-weight: normal;">{"SourcePlane", "TargetPlane", "ZeroAngle", "FinalAngle"}</span> <span style="font-style: italic;"><i>what,</i></span> <a href="../common_vbageneral/common_general_global_name_data_type.htm" id="a5111" style="font-weight: normal; font-style: normal;" name="a5111">global name</a> <span style="font-style: italic;"><i>objectname</i></span> )</p>
+<p class="VBA-Text-Indent">Some steps may require a name attached to an alignment step. This methods uses <a href="../common_vbageneral/common_general_global_names.htm">global names</a> for that. So far, only anchor points are allowed under certain circumstances.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">SetNumericalValue( <a href="../common_vbageneral/common_general_enum.htm" id="a1" style="font-style: normal;" name="a1"><span style="font-weight: normal;">enum</span></a> <span style="font-weight: normal;">{"Angle""}</span> <span style="font-style: italic;"><i>what,</i></span> <a href="../common_vbageneral/common_general_double.htm" id="a5" style="font-weight: normal; font-style: normal;" name="a5">double</a> <span style="font-style: italic;"><i>value</i></span>)</p>
+<p class="VBA-Text-Indent">This sets a value for numerical operations, so far, only "RotateByDegree" supports this command.</p>
+<p class="VBA-Heading-Method" style="margin-left: 40px;">&#160;</p>
+<table style="vertical-align: top; margin-left: 40px;" cellspacing="0">
+<col style="width: 20.405%;" />
+<col style="width: 79.595%;" />
+<tr style="vertical-align: top; height: 19px;">
+<td style="border: Solid 1px #000000; width: 20.405%; padding-right: 10px; padding-left: 10px;">
+<p style="text-align: center;"><a href="../common_vbageneral/common_general_enum.htm" id="a4" style="font-style: normal;" name="a4">enum</a> <span style="font-weight: bold;">what</span></p>
+</td>
+<td style="border-top: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 79.595%; padding-right: 10px; padding-left: 10px;">
+<p style="text-align: center; font-weight: bold;">description</p>
+</td>
+</tr>
+<tr style="vertical-align: top; height: 18px;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 20.405%; padding-right: 10px; padding-left: 10px;">
+<p>Angle</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 79.595%; padding-right: 10px; padding-left: 10px;">
+<p>This defines an angle in degree - used for the rotation by value.</p>
+</td>
+</tr>
+</table>
+<p class="VBA-Heading-Method">&#160;</p>
+<p class="VBA-Heading-Method">SetOppositeFaceOrientation( <span style="font-weight: normal;">&#160;<a href="../common_vbageneral/common_general_bool_data_type.htm" id="a241" style="font-weight: normal; font-style: normal;" name="a241">bool</a></span> <span style="font-weight: normal; font-style: italic;"><i>flippedSwitch</i></span> )</p>
+<p class="VBA-Text-Indent">If flippedSwitch is true, instead of having z-axis (of faces or anchor points) opposing each other, the normal of the picked thing on the selected objects will point along the same direction as the normal on the previously picked remaining objects. This option is for the Face-Alignement step (see above). Interactively, pushing "TAB" at the right point in time during the alignment process will yield this flag to become set.</p>
+<p class="VBA-Heading-Method">&#160;</p>
+<p class="VBA-Heading-Method">ClearSubProjectImportInfo( <a href="../common_vbageneral/common_general_bool_data_type.htm" id="a2" style="font-weight: normal; font-style: normal;" name="a2">bool</a> <span style="font-style: italic;"><i>switch</i></span> )</p>
+<p class="VBA-Text-Indent">This only concerns alignments of subproject imports. If the flag is set, the information of objects imported during the latest subproject will be cleared. This should be called be the last alignment step for a particular subproject alignment.</p>
+<p class="VBA-Heading-Category"><a name="Defaults" id="Defaults"></a>Defaults</p>
+<p class="VBA-Text-Example">ClearSubProjectImportInfo(False)</p>
+<p class="VBA-Text-Example">SetOppositeFaceOrientation(False)</p>
+<p class="VBA-Text-Example">&#160;</p>
+<?rh-p style="margin-bottom: 0px; text-align: Right; margin-left: 18px; 
+                 margin-right: 18px; margin-top: 18px;" ?>
+<div style="width: 100%; position: relative;" id="footer">
+<p style="border-bottom: Solid 1px #dddddd; text-align: Left; margin-left: 0px; font-family: Arial, sans-serif; line-height: Normal; margin-top: 9px; margin-right: 0px; margin-bottom: 6px; border-left-width: 1px; border-top-width: 1px; border-right-width: 1px;"><span style="text-align: Left; font-family: Arial, sans-serif; line-height: Normal;">&#160;</span></p>
+<table cellspacing="0" width="100%">
+<col style="width: 50%;" />
+<col style="width: 50%;" />
+<tr>
+<td style="vertical-align: Top;"><span style="font-family: Arial, sans-serif; line-height: Normal; font-size: 8pt;"><font size="1" style="font-size:8pt;">CST Studio Suite 2026</font></span></td>
+<td style="vertical-align: Top;">
+<p style="text-align: right;">&#160;</p>
+</td>
+</tr>
+</table>
+<p>&#160;</p>
+</div>
+<script type="text/javascript" language="javascript1.2">
+//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+        writeIntopicBar(0);
+
+
+highlightSearch();
+//-->
+//]]>
+</script>
+</body>
+</html>

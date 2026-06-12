@@ -1,0 +1,387 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="Adobe RoboHelp 11" />
+<title>RigidBodyMotion Object</title>
+<link rel="StyleSheet" href="../online_help_vba.css" type="text/css" />
+<style type="text/css">
+/*<![CDATA[*/
+<!--
+body { border-bottom-style:None; }
+-->
+/*]]>*/
+</style>
+
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+        origWidth = innerWidth;
+        origHeight = innerHeight;
+        onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+/*<![CDATA[*/
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+-->
+/*]]>*/
+</style>
+
+<script type="text/javascript" language="javascript1.2" src="../whmsg.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript" src="../whver.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript1.2" src="../whutils.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript1.2" src="../whproxy.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript1.2" src="../whlang.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript1.2" src="../whtopic.js" charset="utf-8">
+</script>
+</head>
+<body>
+<script type="text/javascript" language="javascript1.2">
+//<![CDATA[
+<!--
+if (window.gbWhTopic)
+{
+        var strUrl = document.location.href;
+        var bc = 0;
+        var n = strUrl.toLowerCase().indexOf("bc-");
+        if(n != -1)
+        {
+                document.location.replace(strUrl.substring(0, n));
+                bc = strUrl.substring(n+3);
+        }
+
+        if (window.addTocInfo)
+        {
+        
+        }
+        if (window.writeBtnStyle)
+                writeBtnStyle();
+
+        if (window.writeIntopicBar)
+                writeIntopicBar(0);
+
+        
+        document.write("<p style=\"font-family: Tahoma; font-size: 9pt; font-weight: 400;  font-style:normal; color: rgb(0, 0, 0); text-decoration:none; text-align: left\"> ");
+AddMasterBreadcrumbs("../index.htm", "font-family: Tahoma; font-size: 9pt; font-weight: 400;  font-style:normal; color: rgb(0, 0, 0); text-decoration:none; text-align: left", "|", "Home", "../special_vbaobjects/special_vbaobjects_vbaobjects.htm");
+document.write("RigidBodyMotion Object<\/p>");
+
+}
+else
+        if (window.gbIE4)
+                document.location.reload();
+
+onLoadHandler = function()
+{
+  if (window.setRelStartPage)
+        {
+        setTimeout("setRelStartPage('../index.htm');", 1)
+
+    setTimeout("UpdateBreadCrumbsMarker();", 1);
+        }
+}
+
+if (window.addEventListener){  
+        window.addEventListener('load', onLoadHandler, false);   
+} else if (window.attachEvent){  
+        window.attachEvent('onload', onLoadHandler);  
+}
+
+function onSetStartPage()
+{
+  autoSync(1);
+  sendSyncInfo();
+  sendAveInfoOut();
+}
+//-->
+//]]>
+</script><script type="text/javascript" src="../ehlpdhtm.js" language="JavaScript1.2">
+</script>
+<table cellspacing="0" width="100%">
+<col style="width: 50%;" />
+<col style="width: 50%;" />
+<tr>
+<td style="vertical-align: middle; padding-top: 5px; padding-bottom: 5px;">
+<p style="margin-top: 0px; margin-bottom: 0px;"><img src="../3ds.png" alt="" style="border: none;" border="0" /></p>
+</td>
+<td style="vertical-align: middle;">
+<p style="text-align: right;"><a href="https://www.3ds.com/products-services/3dexperience/" target="_blank"><img src="../3dexp.png" alt="" style="border: none;" width="32" height="32" border="0" /></a></p>
+</td>
+</tr>
+</table>
+<p class="VBA-Heading-Object">RigidBodyMotion Object</p>
+<p class="VBA-Text">Defines a new rigid body motion object.</p>
+<p class="VBA-Heading-Category">Methods</p>
+<p class="VBA-Heading-Method">Reset</p>
+<p class="VBA-Text-Indent">Resets all internal settings to their default values.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">Name (<a href="../common_vbageneral/common_general_name.htm" id="a29" style="font-weight: normal; font-style: normal;" name="a29">name</a> &#160;<span style="font-style: italic;"><i>name</i></span> )</p>
+<p class="VBA-Text-Indent">Sets the name of the new rigid body motion object that will be edited or created. Each rigid body motion object name must have a unique name.</p>
+<p class="vba-text-indent">&#160;</p>
+<p class="VBA-Heading-Method">Rename (<span style="font-weight: normal;"><a href="../common_vbageneral/common_general_name.htm" id="a10" style="font-weight: normal; font-style: normal;" name="a10">name</a> &#160;</span><span style="font-style: italic;"><i>oldname</i></span>, <a href="../common_vbageneral/common_general_name.htm" id="a11" style="font-weight: normal; font-style: normal;" name="a11">name</a> &#160;<span style="font-style: italic;"><i>newname</i></span>)</p>
+<p class="VBA-Text-Indent">Rename the specified rigid body motion object.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">Set (<a href="../common_vbageneral/common_general_string.htm" id="a1" style="font-weight: normal; font-style: normal;" name="a1">string</a> <span style="font-style: italic;"><i>keyword</i></span>, <span style="font-weight: normal;"><a href="../common_vbageneral/common_general_variant.htm">variant</a></span> value)</p>
+<p class="VBA-Text-Indent">The following keywords are supported:</p>
+<table style="vertical-align: top; margin-left: 40px;" cellspacing="0" width="53.669%">
+<col />
+<col width="540" />
+<tr style="vertical-align: top;">
+<td style="border: Solid 1px #000000; padding-right: 10px; padding-left: 10px;">
+<p style="margin-left: 0px; font-weight: bold;">Keyword</p>
+</td>
+<td style="border-top: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-right: 10px; padding-left: 10px;" width="540">
+<p style="margin-left: 0px; font-weight: bold;">Arguments</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-right: 10px; padding-left: 10px;">
+<p style="margin-left: 0px;">Type</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-right: 10px; padding-left: 10px;" width="540">
+<p style="margin-left: 0px; font-style: normal; font-weight: normal;"><a href="../common_vbageneral/common_general_string.htm" id="a13" style="font-weight: normal; font-style: normal;" name="a13">string</a> <span style="font-style: italic;"><i>type</i></span> ("Rotation" or "Translation")</p>
+<p style="margin-left: 0px; font-style: normal; font-weight: normal;"><span style="margin-left: 0px; font-style: normal; font-weight: normal;">Sets the motion type.</span></p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-right: 10px; padding-left: 10px;">
+<p style="margin-left: 0px;">Active</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-right: 10px; padding-left: 10px;" width="540">
+<p style="margin-left: 0px;"><a href="../common_vbageneral/common_general_bool_data_type.htm" id="a14" style="font-weight: normal; font-style: normal;" name="a14">bool</a> <span style="font-style: italic;"><i>state</i></span> (True or False)</p>
+<p style="margin-left: 0px;"><span>Activates or deactivates the object for further calculations.</span></p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-right: 10px; padding-left: 10px;">
+<p style="margin-left: 0px;">AxisOrigin</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-right: 10px; padding-left: 10px;" width="540">
+<p style="margin-left: 0px; font-style: normal; font-weight: normal;"><a href="../common_vbageneral/common_general_double.htm" id="a161" style="font-weight: normal; font-style: normal;" name="a161">double</a> <span style="font-style: italic;"><i>x</i></span>, <a href="../common_vbageneral/common_general_double.htm" id="a171" style="font-weight: normal; font-style: normal;" name="a171">double</a> <span style="font-style: italic;"><i>y</i></span>, <a href="../common_vbageneral/common_general_double.htm" id="a181" style="font-weight: normal; font-style: normal;" name="a181">double</a> <span style="font-style: italic;"><i>z</i></span></p>
+<p style="margin-left: 0px; font-style: normal; font-weight: normal;"><span>A point found on the rotation axis (is ignored for translation)</span></p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-right: 10px; padding-left: 10px;">
+<p style="margin-left: 0px;">AxisNormal</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-right: 10px; padding-left: 10px;" width="540">
+<p style="margin-left: 0px; font-style: normal; font-weight: normal;"><a href="../common_vbageneral/common_general_double.htm" id="a1611" style="font-weight: normal; font-style: normal;" name="a1611">double</a> <span style="font-style: italic;"><i>x</i></span>, <a href="../common_vbageneral/common_general_double.htm" id="a1711" style="font-weight: normal; font-style: normal;" name="a1711">double</a> <span style="font-style: italic;"><i>y</i></span>, <a href="../common_vbageneral/common_general_double.htm" id="a1811" style="font-weight: normal; font-style: normal;" name="a1811">double</a> <span style="font-style: italic;"><i>z</i></span></p>
+<p style="margin-left: 0px; font-style: normal; font-weight: normal;"><span>The direction of the rotation axis (for rotation) or the moving direction (for translation)</span></p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-right: 10px; padding-left: 10px;">
+<p>UVector</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-right: 10px; padding-left: 10px;" width="540">
+<p style="margin-left: 0px; font-style: normal; font-weight: normal;"><a href="../common_vbageneral/common_general_double.htm" id="a16" style="font-weight: normal; font-style: normal;" name="a16">double</a> <span style="font-style: italic;"><i>x</i></span>, <a href="../common_vbageneral/common_general_double.htm" id="a17" style="font-weight: normal; font-style: normal;" name="a17">double</a> <span style="font-style: italic;"><i>y</i></span>, <a href="../common_vbageneral/common_general_double.htm" id="a18" style="font-weight: normal; font-style: normal;" name="a18">double</a> <span style="font-style: italic;"><i>z</i></span></p>
+<p style="margin-left: 0px; font-style: normal; font-weight: normal;">The direction of the normal to the polygon definition plane for rotation and of the U Axis in the gap polygon definition plane for translation</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-right: 10px; padding-left: 10px;">
+<p style="margin-left: 0px;">MotionSamples</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-right: 10px; padding-left: 10px;" width="540">
+<p style="margin-left: 0px; font-style: normal; font-weight: normal;"><a href="../common_vbageneral/common_general_double.htm" id="a19" style="font-weight: normal; font-style: normal;" name="a19">double</a> <span style="font-style: italic;"><i>from</i></span>, <a href="../common_vbageneral/common_general_double.htm" id="a20" style="font-weight: normal; font-style: normal;" name="a20">double</a> <span style="font-style: italic;"><i>to</i></span>, <a href="../common_vbageneral/common_general_integer.htm" id="a21" style="font-weight: normal; font-style: normal;" name="a21">int</a> <span style="font-style: italic;"><i>samples</i></span></p>
+<p>Specifies the motion details. For rotations, the start and stop angle should be specified in the <span style="font-style: italic;"><i>from</i></span> and <span style="font-style: italic;"><i>to</i></span> values. The number of <span style="font-style: italic;"><i>samples</i></span> <span>describes the number of positions that will be calculated.</span></p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-right: 10px; padding-left: 10px;">
+<p style="margin-left: 0px;">MotionDefType</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-right: 10px; padding-left: 10px;" width="540">
+<p style="margin-left: 0px; font-style: normal; font-weight: normal;"><span style="font-style: normal; font-weight: normal;"><a href="../common_vbageneral/common_general_string.htm" id="a131" style="font-weight: normal; font-style: normal;" name="a131">string</a></span> <span style="font-weight: normal; font-style: italic;"><i>type</i></span> <span style="font-style: normal; font-weight: normal;">("Constant speed", "Signal" or "Equation")</span></p>
+<p style="margin-left: 0px; font-style: normal; font-weight: normal;"><span style="margin-left: 0px; font-style: normal; font-weight: normal;">Sets movement definition motion type.</span></p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-right: 10px; padding-left: 10px;">
+<p style="margin-left: 0px;">MotionSignal</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-right: 10px; padding-left: 10px;" width="540">
+<p style="margin-left: 0px; font-style: normal; font-weight: normal;"><a href="../common_vbageneral/common_general_name.htm">name</a> <span style="font-style: italic;"><i>signal</i></span></p>
+<p style="margin-left: 0px; font-style: normal; font-weight: normal;">The name of the signal used to define the movement</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-right: 10px; padding-left: 10px;">
+<p style="margin-left: 0px;">MotionSpeed</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-right: 10px; padding-left: 10px;" width="540">
+<p style="margin-left: 0px; font-style: normal; font-weight: normal;"><a href="../common_vbageneral/common_general_double.htm">double</a> <span style="font-style: italic;"><i>speed</i></span></p>
+<p style="margin-left: 0px; font-style: normal; font-weight: normal;">The constant motion angular speed (in rpm) or the velocity (in m/s)</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-right: 10px; padding-left: 10px;">
+<p style="margin-left: 0px;">MotionShift</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-right: 10px; padding-left: 10px;" width="540">
+<p style="margin-left: 0px; font-style: normal; font-weight: normal;"><a href="../common_vbageneral/common_general_double.htm">double</a> <span style="font-style: italic;"><i>shift</i></span></p>
+<p style="margin-left: 0px; font-style: normal; font-weight: normal;">The constant motion initial shift (angle in degree for rotation, distance in m for translation)</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-right: 10px; padding-left: 10px;">
+<p style="margin-left: 0px;">PeriodicityType</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-right: 10px; padding-left: 10px;" width="540">
+<p style="margin-left: 0px; font-style: normal; font-weight: normal;"><a href="../common_vbageneral/common_general_string.htm">string</a> <span style="font-style: italic;"><i>type</i></span> &#160;("Periodic" or "Antiperiodic")</p>
+<p style="margin-left: 0px; font-style: normal; font-weight: normal;">Defines the periodicity type of the touched boundaries for the translation</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-right: 10px; padding-left: 10px;">
+<p style="margin-left: 0px;">MotionEquationCoefficientMass</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-right: 10px; padding-left: 10px;" width="540">
+<p style="margin-left: 0px; font-style: normal; font-weight: normal;"><a href="../common_vbageneral/common_general_double.htm">double</a> <span style="font-style: italic;"><i>mass</i></span></p>
+<p style="margin-left: 0px; font-style: normal; font-weight: normal;">The mass (translation) or the moment of inertia (rotation) for the motion type "Equation"</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-right: 10px; padding-left: 10px;">
+<p style="margin-left: 0px;">MotionEquationCoefficientDamping</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-right: 10px; padding-left: 10px;" width="540">
+<p style="margin-left: 0px; font-style: normal; font-weight: normal;"><a href="../common_vbageneral/common_general_double.htm">double</a> <span style="font-style: italic;"><i>damping</i></span></p>
+<p style="margin-left: 0px; font-style: normal; font-weight: normal;">The damping constant for the motion type "Equation"</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-right: 10px; padding-left: 10px;">
+<p style="margin-left: 0px;">MotionEquationCoefficientSpring</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-right: 10px; padding-left: 10px;" width="540">
+<p style="margin-left: 0px; font-style: normal; font-weight: normal;"><a href="../common_vbageneral/common_general_double.htm">double</a> <span style="font-style: italic;"><i>spring</i></span></p>
+<p style="margin-left: 0px; font-style: normal; font-weight: normal;">The spring constant for the motion type "Equation"</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-right: 10px; padding-left: 10px;">
+<p style="margin-left: 0px;">MotionEquationCoefficientExtForce</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-right: 10px; padding-left: 10px;" width="540">
+<p style="margin-left: 0px; font-style: normal; font-weight: normal;"><a href="../common_vbageneral/common_general_double.htm">double</a> <span style="font-style: italic;"><i>external_force</i></span></p>
+<p style="margin-left: 0px; font-style: normal; font-weight: normal;">The external force (translation) or torque (rotation) for the motion type "Equation"</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-right: 10px; padding-left: 10px;">
+<p style="margin-left: 0px;">MotionEquationInitialPosition</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-right: 10px; padding-left: 10px;" width="540">
+<p style="margin-left: 0px; font-style: normal; font-weight: normal;"><a href="../common_vbageneral/common_general_double.htm">double</a> <span style="font-style: italic;"><i>initial_position</i></span></p>
+<p style="margin-left: 0px; font-style: normal; font-weight: normal;">The initial gap position (angle or displacement) for the motion type "Equation"</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-right: 10px; padding-left: 10px;">
+<p style="margin-left: 0px;">MotionEquationInitialSpeed</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-right: 10px; padding-left: 10px;" width="540">
+<p style="margin-left: 0px; font-style: normal; font-weight: normal;"><a href="../common_vbageneral/common_general_double.htm">double</a> <span style="font-style: italic;"><i>initial_speed</i></span></p>
+<p style="margin-left: 0px; font-style: normal; font-weight: normal;">The initial speed (velocity or rotational speed) for the motion type "Equation"</p>
+</td>
+</tr>
+</table>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">Create</p>
+<p class="VBA-Text-Indent">Creates the rigid body motion object with the previously made settings.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">Delete (<a href="../common_vbageneral/common_general_name.htm" id="a2" style="font-weight: normal; font-style: normal;" name="a2">name</a> &#160;<span style="font-style: italic;"><i>name</i></span>)</p>
+<p class="VBA-Text-Indent">Deletes the specified rigid body motion object.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">SetActiveGapItem (<a href="../common_vbageneral/common_general_name.htm" id="a22" style="font-weight: normal; font-style: normal;" name="a22">name</a> &#160;<span style="font-style: italic;"><i>name</i></span>)</p>
+<p class="VBA-Text-Indent">The specified <span style="font-style: italic;"><i>name</i></span> must be composed of the corresponding rigid body motion object name, a colon, and the name of the gap item that shall be deleted. Then the named gap item of the given motion object will be selected as the active one. Each motion object can have only one active gap item. However, it could be meaningful, e.g. for testing purposes like mesh generation, to define multiple gap items. If not gap item is set active, then the first one will be set active automatically.</p>
+<p class="VBA-Heading-Method">&#160;</p>
+<p class="VBA-Heading-Method">DeleteGapItem (<a href="../common_vbageneral/common_general_name.htm" id="a12" style="font-weight: normal; font-style: normal;" name="a12">name</a> &#160;<span style="font-style: italic;"><i>name</i></span>)</p>
+<p class="VBA-Text-Indent">The specified name must be composed of the corresponding rigid body motion object name, a colon, and the name of the gap item that shall be deleted. For example, the command</p>
+<p class="VBA-Text-Indent" style="font-style: italic; margin-left: 64px;">RigidBodyMotion.DeleteGapItem "MyRotation:MyGap"</p>
+<p class="VBA-Text-Indent">deletes the gap item <span style="font-style: italic;"><i>MyGap</i></span> from the rigid body motion object <span style="font-style: italic;"><i>MyRotation</i></span>.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">RenameGapItem (<a href="../common_vbageneral/common_general_name.htm" id="a3" style="font-weight: normal; font-style: normal;" name="a3">name</a> &#160;<span style="font-style: italic;"><i>oldname</i></span>, <a href="../common_vbageneral/common_general_name.htm" id="a4" style="font-weight: normal; font-style: normal;" name="a4">name</a> &#160;<span style="font-style: italic;"><i>newname</i></span> )</p>
+<p class="VBA-Text-Indent">Renames the specified gap item. Either name (<span style="font-style: italic;"><i>oldname</i></span> and <span style="font-style: italic;"><i>newname</i></span>) must be composed of the corresponding rigid body motion object name, a colon, and the name of the gap item that shall be renamed. For example, the command</p>
+<p class="VBA-Text-Indent" style="font-style: italic; margin-left: 64px;">RigidBodyMotion.RenameGapItem "MyRotation:MyGap", "MyRotation:Gap2" &#160;</p>
+<p class="VBA-Text-Indent">renames the gap item <span style="font-style: italic;"><i>MyGap</i></span> of the rigid body motion object <span style="font-style: italic;"><i>MyRotation</i></span> to <span style="font-style: italic;"><i>Gap2</i></span>. The rigid body motion object name must be identical for the new and the old name.</p>
+<p class="vba-text-indent">&#160;</p>
+<p class="VBA-Heading-Method">Get (<a href="../common_vbageneral/common_general_string.htm" id="a5" style="font-weight: normal; font-style: normal;" name="a5">string</a> <span style="font-style: italic;"><i>keyword</i></span> )</p>
+<p class="VBA-Text-Indent">Returns the value of the setting specified by <span style="font-style: italic;"><i>keyword</i></span> for the rigid body motion object which is previously declared with the <span style="font-style: italic;"><i>Name</i></span> command. Available keywords are listed above in the description of the <span style="font-style: italic;"><i>Set</i></span> command.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">GetStr (<a href="../common_vbageneral/common_general_string.htm" id="a6" style="font-weight: normal; font-style: normal;" name="a6">string</a> <span style="font-style: italic;"><i>keyword</i></span> )</p>
+<p class="VBA-Text-Indent">Returns the string value of the setting specified by <span style="font-style: italic;"><i>keyword</i></span> for the rigid body motion object which is previously declared with the <span style="font-style: italic;"><i>Name</i></span> command. Available keywords are listed above in the description of the <span style="font-style: italic;"><i>Set</i></span> command.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Category">Example</p>
+<p class="VBA-Text-Example">With RigidBodyMotion</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.Reset</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.Name "Rotation1"</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.Set "Type", "Rotation"</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.Set "AxisOrigin", &#160;"0.0", &#160;"0.0", &#160;"0.0"</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.Set "AxisNormal", &#160;"0.0", &#160;"0.0", &#160;"1.0"</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.Set "UVector", &#160;"1.0", &#160;"0.0", &#160;"0.0"</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.Set "Active", &#160;True</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.Set "MotionSamples", &#160;"0", &#160;"0", &#160;"2"</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.Set "MotionDefType", &#160;"Constant Speed"</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.Set "MotionSignal", &#160;"[Reference]"</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.Set "MotionSpeed", &#160;"1.0"</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.Set "MotionShift", &#160;"0.0"</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.Set "PeriodicityType", &#160;"periodic"</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.Set "MotionEquationCoefficientMass", &#160;"1.0"</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.Set "MotionEquationCoefficientDamping", &#160;"0.0"</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.Set "MotionEquationCoefficientSpring", &#160;"0.0"</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.Set "MotionEquationCoefficientExtForce", &#160;"0.0"</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.Set "MotionEquationInitialPosition", &#160;"0.0"</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.Set "MotionEquationInitialSpeed", &#160;"0.0"</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.Create</p>
+<p class="VBA-Text-Example">End With</p>
+<p class="VBA-Text-Example">&#160;</p>
+<?rh-p style="margin-bottom: 0px; text-align: Right; margin-left: 18px; 
+                 margin-right: 18px; margin-top: 18px;" ?>
+<div style="width: 100%; position: relative;" id="footer">
+<p style="border-bottom: Solid 1px #dddddd; text-align: Left; margin-left: 0px; font-family: Arial, sans-serif; line-height: Normal; margin-top: 9px; margin-right: 0px; margin-bottom: 6px; border-left-width: 1px; border-top-width: 1px; border-right-width: 1px;"><span style="text-align: Left; font-family: Arial, sans-serif; line-height: Normal;">&#160;</span></p>
+<table cellspacing="0" width="100%">
+<col style="width: 50%;" />
+<col style="width: 50%;" />
+<tr>
+<td style="vertical-align: Top;"><span style="font-family: Arial, sans-serif; line-height: Normal; font-size: 8pt;"><font size="1" style="font-size:8pt;">CST Studio Suite 2026</font></span></td>
+<td style="vertical-align: Top;">
+<p style="text-align: right;">&#160;</p>
+</td>
+</tr>
+</table>
+<p>&#160;</p>
+</div>
+<script type="text/javascript" language="javascript1.2">
+//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+        writeIntopicBar(0);
+
+
+highlightSearch();
+//-->
+//]]>
+</script>
+</body>
+</html>

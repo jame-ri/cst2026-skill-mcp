@@ -1,0 +1,815 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="Adobe RoboHelp 11" />
+<title>FarfieldCalculator Object</title>
+<link rel="StyleSheet" href="../online_help_vba.css" type="text/css" />
+<style type="text/css">
+/*<![CDATA[*/
+<!--
+body { border-bottom-style:None; }
+-->
+/*]]>*/
+</style>
+
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+        origWidth = innerWidth;
+        origHeight = innerHeight;
+        onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+/*<![CDATA[*/
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+-->
+/*]]>*/
+</style>
+
+<script type="text/javascript" language="javascript1.2" src="../whmsg.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript" src="../whver.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript1.2" src="../whutils.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript1.2" src="../whproxy.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript1.2" src="../whlang.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript1.2" src="../whtopic.js" charset="utf-8">
+</script>
+</head>
+<body>
+<script type="text/javascript" language="javascript1.2">
+//<![CDATA[
+<!--
+if (window.gbWhTopic)
+{
+        var strUrl = document.location.href;
+        var bc = 0;
+        var n = strUrl.toLowerCase().indexOf("bc-");
+        if(n != -1)
+        {
+                document.location.replace(strUrl.substring(0, n));
+                bc = strUrl.substring(n+3);
+        }
+
+        if (window.addTocInfo)
+        {
+        addTocInfo("3D Simulation VBA\nVBA Objects\nPost Processing\nFarfieldCalculator");
+
+        }
+        if (window.writeBtnStyle)
+                writeBtnStyle();
+
+        if (window.writeIntopicBar)
+                writeIntopicBar(0);
+
+        
+        document.write("<p style=\"font-family: Tahoma; font-size: 9pt; font-weight: 400;  font-style:normal; color: rgb(0, 0, 0); text-decoration:none; text-align: left\"> ");
+AddMasterBreadcrumbs("../index.htm", "font-family: Tahoma; font-size: 9pt; font-weight: 400;  font-style:normal; color: rgb(0, 0, 0); text-decoration:none; text-align: left", "|", "Home", "../special_vbaobjects/special_vbaobjects_vbaobjects.htm");
+document.write("<a style=\"font-family: Tahoma; font-size: 9pt; font-weight: 400;  font-style:normal; color: rgb(0, 0, 0); text-decoration:none; text-align: left\" href=\"../special_vbaobjects/special_vbaobjects_vbaobjects.htm\">3D Simulation VBA<\/a> | <a style=\"font-family: Tahoma; font-size: 9pt; font-weight: 400;  font-style:normal; color: rgb(0, 0, 0); text-decoration:none; text-align: left\" href=\"../special_vbaobjects/special_vbaobjects_vbaobjects.htm\">VBA Objects<\/a> | <a style=\"font-family: Tahoma; font-size: 9pt; font-weight: 400;  font-style:normal; color: rgb(0, 0, 0); text-decoration:none; text-align: left\" href=\"special_vbapostproc_type_method.htm\">Post Processing<\/a> | FarfieldCalculator<\/p>");
+
+}
+else
+        if (window.gbIE4)
+                document.location.reload();
+
+onLoadHandler = function()
+{
+  if (window.setRelStartPage)
+        {
+        setTimeout("setRelStartPage('../index.htm');", 1)
+
+    setTimeout("UpdateBreadCrumbsMarker();", 1);
+        }
+}
+
+if (window.addEventListener){  
+        window.addEventListener('load', onLoadHandler, false);   
+} else if (window.attachEvent){  
+        window.attachEvent('onload', onLoadHandler);  
+}
+
+function onSetStartPage()
+{
+  autoSync(1);
+  sendSyncInfo();
+  sendAveInfoOut();
+}
+//-->
+//]]>
+</script><script type="text/javascript" src="../ehlpdhtm.js" language="JavaScript1.2">
+</script>
+<table cellspacing="0" width="100%">
+<col style="width: 50%;" />
+<col style="width: 50%;" />
+<tr>
+<td style="vertical-align: middle; padding-top: 5px; padding-bottom: 5px;">
+<p style="margin-top: 0px; margin-bottom: 0px;"><img src="../3ds.png" alt="" style="border: none;" border="0" /></p>
+</td>
+<td style="vertical-align: middle;">
+<p style="text-align: right;"><a href="https://www.3ds.com/products-services/3dexperience/" target="_blank"><img src="../3dexp.png" alt="" style="border: none;" width="32" height="32" border="0" /></a></p>
+</td>
+</tr>
+</table>
+<p class="VBA-Heading-Object">FarfieldCalculator Object</p>
+<p class="VBA-Heading-Category"><a name="Overview" id="Overview"></a>Overview</p>
+<p class="VBA-Text">The FarfieldCalculator object provides access to farfield results without any need to reconfigure the current plot or without the necessity to trigger frontend plot operations. It is therefore well suited for the use in highly automated workflows like parameter sweeps or optimizer runs.</p>
+<p class="VBA-Text">The configuration of the FarfieldCalculator objects is separate from the current plot settings (i.e. the current settings of <a href="special_vbapostproc_farfieldploto.htm">FarfieldPlot</a> and <a href="special_vbapostproc_farfieldarray_object.htm">FarfieldArray</a>). However, the convenience function <a href="#ResetAsCurrentPlot">ResetAsCurrentPlot</a> provides a quick means to set the configuration flags of the FarfieldCalculator according to the current plot.</p>
+<p class="VBA-Text">In general, the methods of FarfieldCalculator can be classified into several groups: configuration methods, methods that trigger farfield calculations, and methods that read out the results. In the following overview, the configuration methods are subdivided in groups according to the settings that they modify. Some of the settings are important for the actual farfield calculation and others only affect the scaling and are therefore only needed during the readout of farfield results.</p>
+<ul>
+<li class="p-VBA-Index-Category">
+<p class="VBA-Index-Category"><a href="#Configuration_Methods_General">Configuration Methods (General)</a></p>
+</li>
+<li class="p-VBA-Index-Category">
+<p class="VBA-Index-Category"><a href="#Configuration_Methods_Calculation_Settings">Configuration Methods (Calculation Settings)</a></p>
+</li>
+<li class="p-VBA-Index-Category">
+<p class="VBA-Index-Category"><a href="#Configuration_Methods_Result_Scaling">Configuration Methods (Result Scaling)</a></p>
+</li>
+<li class="p-VBA-Index-Category">
+<p class="VBA-Index-Category"><a href="#Calculation_Methods">Calculation Methods</a></p>
+</li>
+<li class="p-VBA-Index-Category">
+<p class="VBA-Index-Category"><a href="#Coordinate_Transformation_Methods">Coordinate Transformation Methods</a></p>
+</li>
+<li class="p-VBA-Index-Category">
+<p class="VBA-Index-Category"><a href="#Defaults">Default Settings</a></p>
+</li>
+</ul>
+<p class="VBA-Heading-Category"><a name="Configuration_Methods_General" id="Configuration_Methods_General"></a>Configuration Methods (General)</p>
+<p class="VBA-Heading-Method"><a name="Reset" id="Reset"></a>Reset</p>
+<p class="VBA-Text-Indent">Resets the FarfieldCalculator object to its default settings and deletes all results which are currently contained in the object.</p>
+<p class="VBA-Heading-Method">&#160;</p>
+<p class="VBA-Heading-Method"><a name="ResetAsCurrentPlot" id="ResetAsCurrentPlot"></a>ResetAsCurrentPlot</p>
+<p class="VBA-Text-Indent">Deletes all results currently stored in the FarfieldCalculator object and sets the internal settings of the object according to the configuration of the current farfield plot. It also sets the array settings of the FarfieldCalculator according to the current settings of the <a href="special_vbapostproc_farfieldarray_object.htm">FarfieldArray</a> Object.</p>
+<p class="VBA-Heading-Category"><a name="Configuration_Methods_Calculation_Settings" id="Configuration_Methods_Calculation_Settings"></a>Configuration Methods (Calculation Settings)</p>
+<p class="VBA-Text">The following configuration methods affect the calculated farfield results.</p>
+<p class="VBA-Text">&#160;</p>
+<p class="VBA-Heading-Method"><a name="SetAxesType" id="SetAxesType"></a>SetAxesType ( <a href="../common_vbageneral/common_general_enum.htm" id="a210" style="font-weight: normal; font-style: normal;" name="a210">enum</a> <span style="font-style: italic;"><i>axesType</i></span> )</p>
+<p class="VBA-Text-Indent">Specifies the alignment of the farfield coordinate system. The following types are available:</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<table style="vertical-align: top; margin-left: 15.10pt; left: 0px; top: 642px;" cellspacing="0" width="90%">
+<col style="width: 13.872%;" />
+<col style="width: 86.128%;" />
+<tr style="vertical-align: top;">
+<td style="border: Solid 1px #000000; width: 13.872%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text">"xyz"</p>
+</td>
+<td style="border-top: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 86.128%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text">Alignment with the global coordinate system.</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 13.872%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text">"user"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 86.128%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text">User defined alignment using the orientation specified by Thetastart and Phistart.</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 13.872%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text">"mainlobe"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 86.128%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text">Aligns the coordinate system with the main lobe direction (z') and the PolarizationVector (y').</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 13.872%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text">"currentwcs"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 86.128%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text">The coordinate system is set to the current working coordinate system.</p>
+</td>
+</tr>
+</table>
+<p class="VBA-Heading-Method">&#160;</p>
+<p class="VBA-Heading-Method"><a name="Phistart" id="Phistart"></a>Phistart ( <a href="../common_vbageneral/common_general_double.htm" id="a410" style="font-weight: normal; font-style: normal;" name="a410">double</a> <span style="font-style: italic;"><i>x,</i></span> <a href="../common_vbageneral/common_general_double.htm" id="a51" style="font-weight: normal; font-style: normal;" name="a51">double</a> <span style="font-style: italic;"><i>y,</i></span> <a href="../common_vbageneral/common_general_double.htm" id="a61" style="font-weight: normal; font-style: normal;" name="a61">double</a> <span style="font-style: italic;"><i>z</i></span> )</p>
+<p class="VBA-Heading-Method"><a name="Thetastart" id="Thetastart"></a>Thetastart ( <a href="../common_vbageneral/common_general_double.htm" id="a4101" style="font-weight: normal; font-style: normal;" name="a4101">double</a> <span style="font-style: italic;"><i>x,</i></span> <a href="../common_vbageneral/common_general_double.htm" id="a511" style="font-weight: normal; font-style: normal;" name="a511">double</a> <span style="font-style: italic;"><i>y,</i></span> <a href="../common_vbageneral/common_general_double.htm" id="a611" style="font-weight: normal; font-style: normal;" name="a611">double</a> <span style="font-style: italic;"><i>z</i></span> )</p>
+<p class="VBA-Text-Indent">Set new origin vectors in global cartesian coordinates for the x'-axis and z'axis. The x'-axis defines the new start of the angle phi, the z'-axis defines the new start of the angle theta. Therefore <span style="font-weight: bold;">Phistart</span> is used to set the new x'-axis, <span style="font-weight: bold;">Thetastart</span> to set the new z'-axis. The resulting vectors will be normalized to 1. The x'-axis will be orthogonalized to the z'-axis. Please make sure that the axes are not parallel and that the vectors do not have zero length. The y'-axis will be determined automatically.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">PolarizationVector ( <a href="../common_vbageneral/common_general_double.htm" id="a41011" style="font-weight: normal; font-style: normal;" name="a41011">double</a> <span style="font-style: italic;"><i>x,</i></span> <a href="../common_vbageneral/common_general_double.htm" id="a5111" style="font-weight: normal; font-style: normal;" name="a5111">double</a> <span style="font-style: italic;"><i>y,</i></span> <a href="../common_vbageneral/common_general_double.htm" id="a6111" style="font-weight: normal; font-style: normal;" name="a6111">double</a> <span style="font-style: italic;"><i>z</i></span> )</p>
+<p class="VBA-Text-Indent">Set the polarization vector or y'-axis in global cartesian coordinates. You may provide a non-normalized vector, it will be automatically normalized to 1.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">Origin ( <a href="../common_vbageneral/common_general_enum.htm" id="a2101" style="font-weight: normal; font-style: normal;" name="a2101">enum</a> <span style="font-style: italic;"><i>originType</i></span> )</p>
+<p class="VBA-Text-Indent">The origin type of the farfield calculation. <span style="font-style: italic;"><i>originType</i></span> can have one of the following values:</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<table style="vertical-align: top; margin-left: 15.10pt; left: 0px; top: 642px;" cellspacing="0" width="90%">
+<col style="width: 13.872%;" />
+<col style="width: 86.128%;" />
+<tr style="vertical-align: top;">
+<td style="border: Solid 1px #000000; width: 13.872%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text">"bbox"</p>
+</td>
+<td style="border-top: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 86.128%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text">The center of the bounding box of the structure</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 13.872%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text">"zero"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 86.128%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text">Origin of coordinate system</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 13.872%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text">"free"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 86.128%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text">Any desired point defined by Userorigin</p>
+</td>
+</tr>
+</table>
+<p class="VBA-Heading-Method">&#160;</p>
+<p class="VBA-Heading-Method">Userorigin ( <a href="../common_vbageneral/common_general_double.htm" id="a410111" style="font-weight: normal; font-style: normal;" name="a410111">double</a> <span style="font-style: italic;"><i>x,</i></span> <a href="../common_vbageneral/common_general_double.htm" id="a51111" style="font-weight: normal; font-style: normal;" name="a51111">double</a> <span style="font-style: italic;"><i>y,</i></span> <a href="../common_vbageneral/common_general_double.htm" id="a61111" style="font-weight: normal; font-style: normal;" name="a61111">double</a> <span style="font-style: italic;"><i>z</i></span> )</p>
+<p class="VBA-Text-Indent">Sets origin of the farfield calculation if the origin type is set to free.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">IncludeUnitCellSidewalls ( <a href="../common_vbageneral/common_general_bool_data_type.htm" id="a111" style="font-weight: normal; font-style: normal;" name="a111">bool</a> <span style="font-style: italic;"><i>flag</i></span> )</p>
+<p class="VBA-Text-Indent">This method affects the farfield calculation for periodic and unit cell boundaries. If flag is true, the farfield integration considers periodic and unit cell boundaries like open boundaries. Otherwise, these side wall contributions are ignored, and the aperture field comprises the open and Floquet port boundaries only.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">UseArray ( <a href="../common_vbageneral/common_general_bool_data_type.htm" id="a112" style="font-weight: normal; font-style: normal;" name="a112">bool</a> <span style="font-style: italic;"><i>flag</i></span> )</p>
+<p class="VBA-Text-Indent">Activates the array pattern for farfield calculation. Note that the array settings of FarfieldCalculator are disjoint from the settings of <a href="special_vbapostproc_farfieldarray_object.htm">FarfieldArray</a>. Use <a href="#ResetAsCurrentPlot">ResetAsCurrentPlot</a> to set the settings in line with the current plot settings.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method"><a name="Arraytype" id="Arraytype"></a>Arraytype ( <a href="../common_vbageneral/common_general_enum.htm" id="a2102" style="font-weight: normal; font-style: normal;" name="a2102">enum</a> <span style="font-style: italic;"><i>arrayType</i></span> )</p>
+<p class="VBA-Text-Indent">Sets the type of the array pattern. <span style="font-style: italic;"><i>arrayType</i></span> can have one of the following values:</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<table style="vertical-align: top; margin-left: 15.10pt; left: 0px; top: 642px;" cellspacing="0" width="90%">
+<col style="width: 13.872%;" />
+<col style="width: 86.128%;" />
+<tr style="vertical-align: top;">
+<td style="border: Solid 1px #000000; width: 13.872%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text">"rectangular"</p>
+</td>
+<td style="border-top: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 86.128%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text">A rectangular array pattern (linear: 1D, planar: 2D, cubic: 3D) can be defined by setting the corresponding antenna numbers together with the space and phaseshift information using the methods <a href="#ArrayXSet">ArrayXSet</a>, <a href="#ArrayYSet">ArrayYSet</a>, and <a href="#ArrayZSet">ArrayZSet</a>. If unit cell or periodic boundaries are active, the array setup sets the unit cell geometry and the phase differences automatically.</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 13.872%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text">"edit"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 86.128%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text">This mode offers the possibility to edit the current antenna list by adding single antenna elements to the list using the method <a href="#ArrayAddToList">ArrayAddToList</a> or clearing the list by <a href="#ArrayClearList">ArrayClearList</a>.</p>
+</td>
+</tr>
+</table>
+<p class="VBA-Heading-Method">&#160;</p>
+<p class="VBA-Heading-Method"><a name="ArrayXSet" id="ArrayXSet"></a>ArrayXSet ( <a href="../common_vbageneral/common_general_long.htm" id="a4102" style="font-weight: normal; font-style: normal;" name="a4102">long</a> <span style="font-style: italic;"><i>number,</i></span> <a href="../common_vbageneral/common_general_double.htm" id="a512" style="font-weight: normal; font-style: normal;" name="a512">double</a> <span style="font-style: italic;"><i>spaceshift,</i></span> <a href="../common_vbageneral/common_general_double.htm" id="a612" style="font-weight: normal; font-style: normal;" name="a612">double</a> <span style="font-style: italic;"><i>phaseshift</i></span> )</p>
+<p class="VBA-Heading-Method"><a name="ArrayYSet" id="ArrayYSet"></a>ArrayYSet ( <a href="../common_vbageneral/common_general_long.htm" id="a41021" style="font-weight: normal; font-style: normal;" name="a41021">long</a> <span style="font-style: italic;"><i>number,</i></span> <a href="../common_vbageneral/common_general_double.htm" id="a5121" style="font-weight: normal; font-style: normal;" name="a5121">double</a> <span style="font-style: italic;"><i>spaceshift,</i></span> <a href="../common_vbageneral/common_general_double.htm" id="a6121" style="font-weight: normal; font-style: normal;" name="a6121">double</a> <span style="font-style: italic;"><i>phaseshift</i></span> )</p>
+<p class="VBA-Heading-Method"><a name="ArrayZSet" id="ArrayZSet"></a>ArrayZSet ( <a href="../common_vbageneral/common_general_long.htm" id="a41022" style="font-weight: normal; font-style: normal;" name="a41022">long</a> <span style="font-style: italic;"><i>number,</i></span> <a href="../common_vbageneral/common_general_double.htm" id="a5122" style="font-weight: normal; font-style: normal;" name="a5122">double</a> <span style="font-style: italic;"><i>spaceshift,</i></span> <a href="../common_vbageneral/common_general_double.htm" id="a6122" style="font-weight: normal; font-style: normal;" name="a6122">double</a> <span style="font-style: italic;"><i>phaseshift</i></span> )</p>
+<p class="VBA-Text-Indent">Defines a linear array pattern in the x-,y- or z-direction respectively. Thus a linear, planar or cubic antenna array structure may be created.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<table style="vertical-align: top; margin-left: 15.10pt; left: 0px; top: 642px;" cellspacing="0" width="90%">
+<col style="width: 13.872%;" />
+<col style="width: 86.128%;" />
+<tr style="vertical-align: top;">
+<td style="border: Solid 1px #000000; width: 13.872%; padding-right: 10px; padding-left: 10px;">
+<p style="font-style: italic;">number</p>
+</td>
+<td style="border-top: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 86.128%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text">The number of single antenna elements in x-,y- or z-direction</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 13.872%; padding-right: 10px; padding-left: 10px;">
+<p style="font-style: italic;">spaceshift</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 86.128%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text">The constant spaceshift between two single antenna elements in x-,y- or z-direction</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 13.872%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text" style="font-style: italic;">phaseshift</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 86.128%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text">The constant phaseshift between two single antenna elements in x-,y- or z-direction</p>
+</td>
+</tr>
+</table>
+<p class="VBA-Heading-Method">&#160;</p>
+<p class="VBA-Heading-Method"><a name="ArrayAddToList" id="ArrayAddToList"></a>ArrayAddToList ( <a href="../common_vbageneral/common_general_double.htm" id="a4101111" style="font-weight: normal; font-style: normal;" name="a4101111">double</a> <span style="font-style: italic;"><i>x,</i></span> <a href="../common_vbageneral/common_general_double.htm" id="a511111" style="font-weight: normal; font-style: normal;" name="a511111">double</a> <span style="font-style: italic;"><i>y,</i></span> <a href="../common_vbageneral/common_general_double.htm" id="a611111" style="font-weight: normal; font-style: normal;" name="a611111">double</a> <span style="font-style: italic;"><i>z,</i></span> <a href="../common_vbageneral/common_general_double.htm" id="a51221" style="font-weight: normal; font-style: normal;" name="a51221">double</a> <span style="font-style: italic;"><i>amplitude,</i></span> <a href="../common_vbageneral/common_general_double.htm" id="a61221" style="font-weight: normal; font-style: normal;" name="a61221">double</a> <span style="font-style: italic;"><i>phase</i></span> )</p>
+<p class="VBA-Text-Indent">Defines the properties of a single antenna element. This method is only applicable if the mode set by <a href="#Arraytype">Arraytype</a> is set to “edit“.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<table style="vertical-align: top; margin-left: 15.10pt; left: 0px; top: 642px;" cellspacing="0" width="90%">
+<col style="width: 13.872%;" />
+<col style="width: 86.128%;" />
+<tr style="vertical-align: top;">
+<td style="border: Solid 1px #000000; width: 13.872%; padding-right: 10px; padding-left: 10px;">
+<p style="font-style: italic;">x</p>
+</td>
+<td style="border-top: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 86.128%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text">The x-position of the single antenna element in space</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 13.872%; padding-right: 10px; padding-left: 10px;">
+<p style="font-style: italic;">y</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 86.128%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text">The y-position of the single antenna element in space</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 13.872%; padding-right: 10px; padding-left: 10px;">
+<p style="font-style: italic;"><span style="font-style: italic;"><i>z</i></span></p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 86.128%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text">The z-position of the single antenna element in space</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 13.872%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text" style="font-style: italic;"><span style="font-style: italic;"><i>amplitude</i></span></p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 86.128%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text">The amplitude value of the single antenna element</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 13.872%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text" style="font-style: italic;"><span style="font-style: italic;"><i>phase</i></span></p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 86.128%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text">The phase value of the single antenna element</p>
+</td>
+</tr>
+</table>
+<p class="VBA-Heading-Method">&#160;</p>
+<p class="VBA-Heading-Method">ArrayAutoPhaseFromBoundary ( <a href="../common_vbageneral/common_general_bool_data_type.htm" id="a1121" style="font-weight: normal; font-style: normal;" name="a1121">bool</a> <span style="font-style: italic;"><i>flag</i></span> )</p>
+<p class="VBA-Text-Indent">If <span style="font-style: italic;"><i>flag</i></span> is true, this activates the automatic configuration of the phase shift from the boundary condition setup. This only works for projects with periodic or unit cell boundary conditions and is ignored in other cases.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method"><a name="ArrayClearList" id="ArrayClearList"></a>ArrayClearList</p>
+<p class="VBA-Text-Indent">Clears the currently set list of array elements.</p>
+<p class="VBA-Heading-Category"><a name="Configuration_Methods_Result_Scaling" id="Configuration_Methods_Result_Scaling"></a>Configuration Methods (Result Scaling)</p>
+<p class="VBA-Text">The following methods affect the scaling of results retrieved by <a href="#GetList">GetList</a>/<a href="#GetListItem">GetListItem</a> methods.</p>
+<p class="VBA-Text">&#160;</p>
+<p class="VBA-Heading-Method">SetScaleLinear ( <a href="../common_vbageneral/common_general_bool_data_type.htm" id="a11211" style="font-weight: normal; font-style: normal;" name="a11211">bool</a> <span style="font-style: italic;"><i>flag</i></span> )</p>
+<p class="VBA-Text-Indent">If activated the retrieved farfield results are returned in linear scale. Otherwise the scaling is logarithmic.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">DBUnit ( <a href="../common_vbageneral/common_general_enum.htm" id="a21021" style="font-weight: normal; font-style: normal;" name="a21021">enum</a> <span style="font-style: italic;"><i>unitCode</i></span> )</p>
+<p class="VBA-Text-Indent">Sets the unit for the retrieved results. This setting affects the results in linear as well as in logarithmic mode. <span style="font-style: italic;"><i>unitCode</i></span> can have one of the following values:</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<table style="vertical-align: top; margin-left: 15.10pt; left: 0px; top: 642px;" cellspacing="0" width="100%">
+<col style="width: 7.453%;" />
+<col style="width: 46.274%;" />
+<col style="width: 46.274%;" />
+<tr style="vertical-align: top;">
+<td style="border: Solid 1px #000000; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text">"0"</p>
+</td>
+<td style="border-top: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text">V/m, A/m, W/m2</p>
+</td>
+<td style="border-top: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text">dBV/m, dBA/m, dBW/m2</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text">"60"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text">mV/m, mA/m, uW/m2</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text">dBmV/m, dBmA/m, dBpW/m2</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text">"120"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text">uV/m, uA/m, pW/m2</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text">dBuV/m, dBuA/m, dBpW/m2</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text">"-60"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text">kV/m, kA/m, MW/m2</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text">dBkV/m, dBkA/m, dBMW/m2</p>
+</td>
+</tr>
+</table>
+<p class="VBA-Heading-Method">&#160;</p>
+<p class="VBA-Heading-Method">SetLogNorm ( <a href="../common_vbageneral/common_general_double.htm" id="a41011131" style="font-weight: normal; font-style: normal;" name="a41011131">double</a> norm )</p>
+<p class="VBA-Text-Indent">Sets the logarithmic normalization, i.e., the reference value for quantities returned in dB. Set to zero (the default value) to turn off manual logarithmic normalization.</p>
+<p class="VBA-Heading-Method">&#160;</p>
+<p class="VBA-Heading-Method">SetInverseAxialRatio ( <a href="../common_vbageneral/common_general_bool_data_type.htm" id="a1" style="font-weight: normal; font-style: normal;" name="a1">bool</a> <span style="font-style: italic;"><i>flag</i></span> )</p>
+<p class="VBA-Text-Indent">If activated the inverse IEEE axial ratio is returned.</p>
+<p class="VBA-Heading-Method">&#160;</p>
+<p class="VBA-Heading-Method">SlantAngle ( <a href="../common_vbageneral/common_general_double.htm" id="a41011132" style="font-weight: normal; font-style: normal;" name="a41011132">double</a> angle )</p>
+<p class="VBA-Text-Indent">Sets the slant angle to <span style="font-style: italic;"><i>angle</i></span>. This settings is only required for the polarization type "slant".</p>
+<p class="VBA-Heading-Category"><a name="Calculation_Methods" id="Calculation_Methods"></a>Calculation Methods</p>
+<p class="VBA-Heading-Method"><a name="AddListEvaluationPoint" id="AddListEvaluationPoint"></a>AddListEvaluationPoint ( <a href="../common_vbageneral/common_general_double.htm" id="a41011111" style="font-weight: normal; font-style: normal;" name="a41011111">double</a> <span style="font-style: italic;"><i>polarAngleInDegree,</i></span> <a href="../common_vbageneral/common_general_double.htm" id="a5111111" style="font-weight: normal; font-style: normal;" name="a5111111">double</a> <span style="font-style: italic;"><i>lateralAngleInDegree,</i></span> <a href="../common_vbageneral/common_general_double.htm" id="a6111111" style="font-weight: normal; font-style: normal;" name="a6111111">double</a> <span style="font-style: italic;"><i>radiusInMeters,</i></span> &#160;<a href="../common_vbageneral/common_general_enum.htm" id="a21022" style="font-weight: normal; font-style: normal;" name="a21022">enum</a> <span style="font-style: italic;"><i>coordinateSystem, <a href="../common_vbageneral/common_general_enum.htm" id="a210221" style="font-weight: normal; font-style: normal;" name="a210221">enum</a> tf_type,</i></span> <a href="../common_vbageneral/common_general_double.htm" id="a612211" style="font-weight: normal; font-style: normal;" name="a612211">double</a> <span style="font-style: italic;"><i>freq_time</i></span> )</p>
+<p class="VBA-Text-Indent">Defines an evaluation point for <a href="#CalculateList">CalculateList</a>. The evaluation point is specified by a polar angle and a lateral angle referring to a coordinate system <span style="font-style: italic;"><i>coordinateSystem</i></span>, which may be one of the following:</p>
+<table style="vertical-align: top; margin-left: 15.10pt; left: 0px; top: 642px;" cellspacing="0" width="90%">
+<col style="width: 13.872%;" />
+<col style="width: 86.128%;" />
+<tr style="vertical-align: top;">
+<td style="border: Solid 1px #000000; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text">"spherical"</p>
+</td>
+<td style="border-top: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 86.128%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text">Spherical coordinates</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 13.872%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text">"ludwig2ae"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 86.128%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text">Ludwig2 coordinates - azimuth over elevation</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 13.872%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text">"ludwig2ea"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 86.128%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text">Ludwig2 coordinates - elevation over azimuth</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 13.872%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text">"ludwig3"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 86.128%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text">Ludwig3 coordinates</p>
+</td>
+</tr>
+</table>
+<p class="VBA-Text-Indent">The radius specifies the distance at which the farfield or nearfield should be evaluated. It is expected in meters. Use <span style="font-style: italic;"><i>tf_type</i></span> = "time" to provide an evaluation time or <span style="font-style: italic;"><i>tf_type</i></span> = "frequency" to pass an evaluation frequency via <span style="font-style: italic;"><i>freq_time</i></span>. The latter two settings are only necessary for broadband farfield monitor results and should be left empty for other farfields.</p>
+<p class="VBA-Heading-Method">&#160;</p>
+<p class="VBA-Heading-Method">AddListEvaluationPoints ( <a href="../common_vbageneral/string_array_data_type.htm" id="a410111111" style="font-weight: normal; font-style: normal;" name="a410111111">array(string)</a> <span style="font-style: italic;"><i>polarAngleInDegreeArray,</i></span> <a href="../common_vbageneral/string_array_data_type.htm" id="a4101111111" style="font-weight: normal; font-style: normal;" name="a4101111111">array(string)</a> lateral<span style="font-style: italic;"><i>AngleInDegreeArray,</i></span> <a href="../common_vbageneral/string_array_data_type.htm" id="a4101111112" style="font-weight: normal; font-style: normal;" name="a4101111112">array(string)</a> <span style="font-style: italic;"><i>radiusInMetersArray,</i></span> <a href="../common_vbageneral/string_array_data_type.htm" id="a4101111113" style="font-weight: normal; font-style: normal;" name="a4101111113">array(string)</a> coordinateSystem<span style="font-style: italic;"><i>Array,</i></span> <a href="../common_vbageneral/string_array_data_type.htm" id="a4101111114" style="font-weight: normal; font-style: normal;" name="a4101111114">array(string)</a> tf_type<span style="font-style: italic;"><i>Array,</i></span> <a href="../common_vbageneral/string_array_data_type.htm" id="a4101111115" style="font-weight: normal; font-style: normal;" name="a4101111115">array(string)</a> <span style="font-style: italic;"><i>freq_timeArray</i></span> )</p>
+<p class="VBA-Text-Indent">Similar to <a href="#AddListEvaluationPoint">AddListEvaluationPoint</a>, this method defines evaluation points for the list calculation. Using this method, many points are added to the list at once. To add N points at a time, all the arrays that are passed in the parameters need to be either of length N or of length 1. If the respective parameter array is of length 1, then this parameter value is assumed to be the same for all the N points. The arguments are expected to be string arrays that are convertible to the respective data types documented for <a href="#AddListEvaluationPoint">AddListEvaluationPoint</a>. Note that the use of this method is often much faster than the repeated call of <a href="#AddListEvaluationPoint">AddListEvaluationPoint</a> since it avoids the overhead that comes with a large number of function calls (especially if the template/macro is run from another process, e.g., from DesignStudio or from Python).</p>
+<p class="VBA-Heading-Method">&#160;</p>
+<p class="VBA-Heading-Method"><a name="CalculateList" id="CalculateList"></a>CalculateList ( <a href="../common_vbageneral/common_general_string.htm" id="a4101112" style="font-weight: normal; font-style: normal;" name="a4101112">string</a> <span style="font-style: italic;"><i>treepath,</i></span> <a href="../common_vbageneral/common_general_enum.htm" id="a210211" style="font-weight: normal; font-style: normal;" name="a210211">enum</a> <span style="font-style: italic;"><i>calculationParameters</i></span> )</p>
+<p class="VBA-Text-Indent">Calculates farfield values at the evaluation points defined by the <a href="#AddListEvaluationPoint">AddListEvaluationPoint</a> command. <span style="font-style: italic;"><i>treepath</i></span> should be a string that contains the path in the result tree of the farfield result for which the list should be evaluated. <span style="font-style: italic;"><i>calculationParameters</i></span> is a string that may contain the following tokens separated by space: “farfield”, “nearfield”, “Eonly”, “Honly”.</p>
+<p class="VBA-Text-Indent">The tokens “farfield” or “nearfield” specify whether the farfield calculation should be done with or without the farfield approximation. Exactly one of these two tokens must always be present.</p>
+<p class="VBA-Text-Indent">By default, the fields in the list are evaluated in such a way that one may freely choose any quantity of interest, e.g. “directivity” or “efield”, at the result retrieval stage later on (see “resulttype” in the documentation of <a href="#GetList">GetList</a>/<a href="#GetListItem">GetListItem</a> below). However, for nearfield computations this comes with a performance penalty. Therefore, one may explicitly opt out of this default mode by specifying the token “Eonly” or “Honly”. With “Honly”, one may later on exclusively access the “hfield” result type, while “Eonly” provides exclusive access to all other result types.</p>
+<p class="VBA-Text-Indent">Note that if the axes setting configured by <a href="#SetAxesType">SetAxesType</a> is set to “mainlobe” each point in the list is separately aligned to its own mainlobe. If the list contains a mixture of nearfield samples at different distances or points at different frequency, this may imply that a repeated mainlobe recomputation will be performed which may be computationally demanding. If instead an alignment to a fixed mainlobe direction is required, consider calculating the mainlobe for the required scenario beforehand and setting it as a fixed coordinate system using <a href="#Phistart">Phistart</a> and <a href="#Thetastart">Thetastart</a> before calling <span style="font-weight: bold;">CalculateList</span>.</p>
+<p class="VBA-Heading-Method">&#160;</p>
+<p class="VBA-Heading-Method"><a name="ClearList" id="ClearList"></a>ClearList</p>
+<p class="VBA-Text-Indent"><span style="font-weight: bold;">ClearList</span> empties the current evaluation list including associated results.</p>
+<p class="VBA-Heading-Method">&#160;</p>
+<p class="VBA-Heading-Method"><a name="GetList" id="GetList"></a>GetList ( <a href="../common_vbageneral/common_general_enum.htm" id="a410211" style="font-weight: normal; font-style: normal;" name="a410211">enum</a> <span style="font-style: italic;"><i>resultType,</i></span> <a href="../common_vbageneral/common_general_enum.htm" id="a4102111" style="font-weight: normal; font-style: normal;" name="a4102111">enum</a> <span style="font-style: italic;"><i>fieldComponent</i></span> ) <a href="../common_vbageneral/common_general_variant.htm" id="a4102113" style="font-weight: normal; font-style: normal;" name="a4102113">variant</a></p>
+<p class="VBA-Heading-Method"><a name="GetListItem" id="GetListItem"></a>GetListItem ( <a href="../common_vbageneral/common_general_long.htm" id="a4102211" style="font-weight: normal; font-style: normal;" name="a4102211">long</a> index<span style="font-style: italic;"><i>,</i></span> <a href="../common_vbageneral/common_general_enum.htm" id="a4102112" style="font-weight: normal; font-style: normal;" name="a4102112">enum</a> <span style="font-style: italic;"><i>resultType,</i></span> <a href="../common_vbageneral/common_general_enum.htm" id="a41021111" style="font-weight: normal; font-style: normal;" name="a41021111">enum</a> <span style="font-style: italic;"><i>fieldComponent</i></span> ) <a href="../common_vbageneral/common_general_double.htm" id="a512221" style="font-weight: normal; font-style: normal;" name="a512221">double</a></p>
+<p class="VBA-Text-Indent">These two commands allow to retrieve the results from a previous <a href="#CalculateList">CalculateList</a> command. The overall workflow for using these commands is the following:</p>
+<p class="VBA-Text-Indent">First, all points have to be added using <a href="#AddListEvaluationPoint">AddListEvaluationPoint</a>. After a subsequent call to <a href="#CalculateList">CalculateList</a>, the results can be inquired using the <a href="#GetListItem">GetListItem</a> command, providing the 0-based index of the points in the same order as they were added. With <a href="#GetList">GetList</a> the whole list of results can be retrieved at once, which is faster than <a href="#GetListItem">GetListItem</a> in most cases. It will return an Array of double values. Depending on the <span style="font-style: italic;"><i>fieldComponent</i></span> identifier, the point coordinates or the farfield/nearfield results can be returned.</p>
+<p class="VBA-Text-Indent">Use <a href="#ClearList">ClearList</a> or <a href="#Reset">Reset</a> to delete the point list.</p>
+<p class="VBA-Text-Indent">The actual data to be returned may be chosen by the two identifiers <span style="font-style: italic;"><i>resultType</i></span> and <span style="font-style: italic;"><i>fieldComponent</i></span>.</p>
+<p class="VBA-Text-Indent"><span style="font-style: italic;"><i>resultType</i></span> may be one of the following choices:</p>
+<table style="vertical-align: top; margin-left: 15.10pt; left: 0px; top: 642px;" cellspacing="0" width="90%">
+<col style="width: 13.872%;" />
+<col style="width: 86.128%;" />
+<tr style="vertical-align: top;">
+<td style="border: Solid 1px #000000; width: 13.872%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text">"directivity"</p>
+</td>
+<td style="border-top: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 86.128%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text">Returns the directivity</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 13.872%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text">"gain"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 86.128%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text">Returns the gain</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 13.872%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text">"realized gain"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 86.128%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text">Returns the realized gain</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 13.872%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text">"efield"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 86.128%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text">Returns the electric field</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 13.872%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text">"epattern"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 86.128%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text">Returns the electric field pattern</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 13.872%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text">"hfield"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 86.128%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text">Returns the magnetic field</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 13.872%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text">"pfield"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 86.128%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text">Returns the power pattern</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 13.872%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text">"rcs"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 86.128%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text">Returns the radar cross section (square meters)</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 13.872%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text">"rcsunits"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 86.128%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text">Returns the radar cross section (project length units squared)</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 13.872%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text">"rcssw"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 86.128%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text">Returns the radar cross section (square wavelength)</p>
+</td>
+</tr>
+</table>
+<p class="VBA-Text-Indent"><span style="font-style: italic;"><i>fieldComponent</i></span> is a concatenation of four component specifiers separated by space:</p>
+<p class="VBA-Text-Indent">fieldComponent = &lt;Coord.System&gt; +" " + &lt;Polarization&gt; +" " + &lt;Component&gt; +" " + &lt;ComplexComp.&gt;</p>
+<p class="VBA-Text-Indent">Allowed values are:</p>
+<table style="vertical-align: top; margin-left: 15.10pt; left: 0px; top: 642px;" cellspacing="0" width="90%">
+<col style="width: 13.872%;" />
+<col style="width: 86.128%;" />
+<tr style="vertical-align: top;">
+<td style="border: Solid 1px #000000; width: 13.872%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text">&lt;Coord.System&gt;</p>
+</td>
+<td style="border-top: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 86.128%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text">"spherical", "ludwig2ae", "ludwig2ea", "ludwig3"</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 13.872%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text">&lt;Polarization&gt;</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 86.128%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text">"linear", "circular", "slant", "abs"</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 13.872%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text">&lt;Component&gt;</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 86.128%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text">"radial",</p>
+<p class="VBA-Text">"comp1", "theta", "azimuth", "left", "alpha", "horizontal", "crosspolar",</p>
+<p class="VBA-Text">"comp2", "phi", "elevation", "right", "epsilon", "vertical", "copolar"</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 13.872%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text">&lt;ComplexComp.&gt;</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 86.128%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text">"abs", "phase", "re", "im"</p>
+</td>
+</tr>
+</table>
+<p class="VBA-Text-Indent">The absolute value of the field vector is accessible via:</p>
+<p class="VBA-Text-Indent">fieldComponent = &lt;Coord.System&gt; +" " + "abs"</p>
+<p class="VBA-Text-Indent">The axial ratio and the component ratios are accessible through</p>
+<p class="VBA-Text-Indent">fieldComponent = &lt;Coord.System&gt; +" " + &lt;Polarization&gt; +" " + "axialratio"</p>
+<p class="VBA-Text-Indent">fieldComponent = &lt;Coord.System&gt; +" " + &lt;Polarization&gt; +" " + "compratio12"</p>
+<p class="VBA-Text-Indent">fieldComponent = &lt;Coord.System&gt; +" " + &lt;Polarization&gt; +" " + "compratio21"</p>
+<p class="VBA-Text-Indent">where "compratio12" refers to comp1/comp2.</p>
+<p class="VBA-Text-Indent">In addition, the identifier <span style="font-style: italic;"><i>fieldComponent</i></span> may have one of the following values:</p>
+<table style="vertical-align: top; margin-left: 15.10pt; left: 0px; top: 642px;" cellspacing="0" width="90%">
+<col style="width: 13.872%;" />
+<col style="width: 86.128%;" />
+<tr style="vertical-align: top;">
+<td style="border: Solid 1px #000000; width: 13.872%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text">"Point_T"</p>
+</td>
+<td style="border-top: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 86.128%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text">The spatial theta value of the defined point</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 13.872%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text">"Point_P"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 86.128%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text">The spatial phi value of the defined point</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 13.872%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text">"Point_R"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 86.128%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text">The spatial radius value of the defined point.</p>
+</td>
+</tr>
+</table>
+<p class="VBA-Heading-Method">&#160;</p>
+<p class="VBA-Heading-Method"><a name="CalculateMainlobe" id="CalculateMainlobe"></a>CalculateMainlobe ( <a href="../common_vbageneral/common_general_string.htm" id="a41011121" style="font-weight: normal; font-style: normal;" name="a41011121">string</a> <span style="font-style: italic;"><i>treepath,</i></span> <a href="../common_vbageneral/common_general_double.htm" id="a61111111" style="font-weight: normal; font-style: normal;" name="a61111111">double</a> <span style="font-style: italic;"><i>radiusInMeters,</i></span> &#160;<span style="font-style: italic;"><i><a href="../common_vbageneral/common_general_enum.htm" id="a2102211" style="font-weight: normal; font-style: normal;" name="a2102211">enum</a> tf_type,</i></span> <a href="../common_vbageneral/common_general_double.htm" id="a6122111" style="font-weight: normal; font-style: normal;" name="a6122111">double</a> <span style="font-style: italic;"><i>freq_time</i></span> )</p>
+<p class="VBA-Text-Indent">Calculates the mainlobe result for a farfield specified by its <span style="font-style: italic;"><i>treepath</i></span>. If the mainlobe of a nearfield is desired, the radius (expected in meters) specifies the distance at which the mainlobe should be calculated. If this radius is set to 0, the mainlobe of the farfield is computed. Use <span style="font-style: italic;"><i>tf_type</i></span> = "time" to provide an evaluation time or <span style="font-style: italic;"><i>tf_type</i></span> = "frequency" to pass an evaluation frequency via <span style="font-style: italic;"><i>freq_time</i></span>. The latter two settings are only necessary for broadband farfield monitor results and should be left empty for other farfields. The result of this calculation can be retrieved by a call to <a href="#GetMainLobeVector">GetMainLobeVector</a>.</p>
+<p class="VBA-Heading-Method">&#160;</p>
+<p class="VBA-Heading-Method"><a name="GetMainLobeVector" id="GetMainLobeVector"></a>GetMainLobeVector ( <a href="../common_vbageneral/common_general_double_ref.htm" id="a410112" style="font-weight: normal; font-style: normal;" name="a410112">double_ref</a> <span style="font-style: italic;"><i>x,</i></span> <a href="../common_vbageneral/common_general_double_ref.htm" id="a51112" style="font-weight: normal; font-style: normal;" name="a51112">double_ref</a> <span style="font-style: italic;"><i>y,</i></span> <a href="../common_vbageneral/common_general_double_ref.htm" id="a61112" style="font-weight: normal; font-style: normal;" name="a61112">double_ref</a> <span style="font-style: italic;"><i>z</i></span> )</p>
+<p class="VBA-Text-Indent">Returns the direction of the 3D farfield main lobe that was calculated in a preceding <a href="#CalculateMainlobe">CalculateMainlobe</a> call</p>
+<p class="VBA-Heading-Method">&#160;</p>
+<p class="VBA-Heading-Method"><a name="CalculatePhaseCenter" id="CalculatePhaseCenter"></a>CalculatePhaseCenter ( <a href="../common_vbageneral/common_general_string.htm" id="a410111211" style="font-weight: normal; font-style: normal;" name="a410111211">string</a> <span style="font-style: italic;"><i>treepath, <a href="../common_vbageneral/common_general_enum.htm" id="a21022112" style="font-weight: normal; font-style: normal;" name="a21022112">enum</a></i></span><span style="font-style: italic; font-weight: normal;"><i>{"theta", "phi", "boresight"}</i></span> <span style="font-style: italic;"><i>component,</i></span> <a href="../common_vbageneral/common_general_enum.htm" id="a210221121" style="font-weight: normal; font-style: normal;" name="a210221121">enum</a><span style="font-style: italic; font-weight: normal;"><i>{"both", "e-plane", "h-plane"}</i></span> <span style="font-style: italic;"><i>plane,</i></span> <a href="../common_vbageneral/common_general_double.htm" id="a611111111" style="font-weight: normal; font-style: normal;" name="a611111111">double</a> <span style="font-style: italic;"><i>angleInDegrees,</i></span> &#160;<span style="font-weight: normal; font-style: italic;"><i><a href="../common_vbageneral/common_general_double.htm" id="a611111112" style="font-weight: normal; font-style: normal;" name="a611111112">double</a></i></span> <span style="font-style: italic;"><i>radiusInMeters,</i></span> <span style="font-weight: normal; font-style: italic;"><i>&#160;&#160;<a href="../common_vbageneral/common_general_double.htm" id="a61221112" style="font-weight: normal; font-style: normal;" name="a61221112">double</a></i></span> <span style="font-style: italic;"><i>userFreq</i></span> )</p>
+<p class="VBA-Text-Indent">Calculates the phase center result for a farfield specified by its <span style="font-style: italic;"><i>treepath</i></span>. <span style="font-style: italic;"><i>component</i></span> selects the desired farfield component which is used for the phase center calculation. "theta" and "phi" use the phase of the corresponding spherical components. "boresight" evaluates the farfield in +z' direction, extracts the polarization vector from this field and uses this reference to calculate the phase.</p>
+<p class="VBA-Text-Indent">The phase center is calculated in either the E-plane (x' = 0), H-plane (y' = 0) or in both planes. The desired planes may be set by the <span style="font-style: italic;"><i>plane</i></span> parameter.</p>
+<p class="VBA-Text-Indent">The phase center is calculated using the phase values around the z'axis in the x' = 0 (E-Plane) and y' = 0 (H-Plane) planes with a constant distance from the origin. To limit the area around the z'-axis taken into account for the calculation in those planes you may specify an angle using the <span style="font-style: italic;"><i>angleInDegrees</i></span> parameter.</p>
+<p class="VBA-Text-Indent">If the phase center of a nearfield is desired, the radius (expected in meters) specifies the distance at which the nearfield should be calculated. If this radius is set to 0, the phase center of the farfield is computed. Use <span style="font-style: italic;"><i>userFreq</i></span> to provide an evaluation frequency, which is only necessary for broadband farfield monitor results and should be left empty for other farfields.</p>
+<p class="VBA-Text-Indent">The result of this calculation can be retrieved by a call to <a href="#GetPhaseCenterResult">GetPhaseCenterResult</a>.</p>
+<p class="VBA-Heading-Method">&#160;</p>
+<p class="VBA-Heading-Method"><a name="GetPhaseCenterResult" id="GetPhaseCenterResult"></a>GetPhaseCenterResult ( <span><a href="../common_vbageneral/common_general_enum.htm" id="a210221122" style="font-weight: normal; font-style: normal;" name="a210221122">enum</a></span><span style="font-style: italic; font-weight: normal;"><i>{"x", "y", "z"}</i></span> <span style="font-style: italic;"><i>component,</i></span> <a href="../common_vbageneral/common_general_enum.htm" id="a2102211211" style="font-weight: normal; font-style: normal;" name="a2102211211">enum</a><span style="font-style: italic; font-weight: normal;"><i>{"avg", "e-plane", "h-plane"}</i></span> <span style="font-style: italic;"><i>mode )</i></span> <a href="../common_vbageneral/common_general_double.htm" id="a6111111111" style="font-weight: normal; font-style: normal;" name="a6111111111">double</a></p>
+<p class="VBA-Text-Indent">Returns the phase center location, which was previously calculated by calling <a href="#CalculatePhaseCenter">CalculatePhaseCenter</a>, in global coordinates for a given <span style="font-style: italic;"><i>component</i></span> and <span style="font-style: italic;"><i>mode</i></span>. The <span style="font-style: italic;"><i>component</i></span> may be either "x", "y" or "z". The <span style="font-style: italic;"><i>mode</i></span> may be either "avg" (for averaged phase center location), "e-plane" (for the phase center location calculated in the E-plane) or "h-plane" (for the phase center location calculated in the H-plane).</p>
+<p class="VBA-Heading-Method">&#160;</p>
+<p class="VBA-Heading-Method">GetPhaseCenterSigma ( <span><a href="../common_vbageneral/common_general_enum.htm" id="a2102211221" style="font-weight: normal; font-style: normal;" name="a2102211221">enum</a></span><span style="font-style: italic; font-weight: normal;"><i>{"x", "y", "z"}</i></span> <span style="font-style: italic;"><i>component,</i></span> <a href="../common_vbageneral/common_general_enum.htm" id="a21022112111" style="font-weight: normal; font-style: normal;" name="a21022112111">enum</a><span style="font-style: italic; font-weight: normal;"><i>{"avg", "e-plane", "h-plane"}</i></span> <span style="font-style: italic;"><i>mode )</i></span> <a href="../common_vbageneral/common_general_double.htm" id="a61111111111" style="font-weight: normal; font-style: normal;" name="a61111111111">double</a></p>
+<p class="VBA-Text-Indent">Returns the standard deviation of the Phase Center, which was previously calculated by calling <a href="#CalculatePhaseCenter">CalculatePhaseCenter</a>, in global coordinates for a given <span style="font-style: italic;"><i>component</i></span> and <span style="font-style: italic;"><i>mode</i></span>. The <span style="font-style: italic;"><i>component</i></span> may be either "x", "y" or "z". The <span style="font-style: italic;"><i>mode</i></span> may be either "avg" (for averaged phase center location), "e-plane" (for the phase center location calculated in the E-plane) or "h-plane" (for the phase center location calculated in the H-plane).</p>
+<p class="VBA-Heading-Method">&#160;</p>
+<p class="VBA-Heading-Method">GetTRP ( <a href="../common_vbageneral/common_general_string.htm" id="a4101112111" style="font-weight: normal; font-style: normal;" name="a4101112111">string</a> <span style="font-style: italic;"><i>treepath,</i></span> <span style="font-weight: normal;">&#160;</span><span style="font-style: italic;"><i><a href="../common_vbageneral/common_general_enum.htm" id="a21022111" style="font-weight: normal; font-style: normal;" name="a21022111">enum</a> tf_type,</i></span> <span style="font-weight: normal;"><a href="../common_vbageneral/common_general_double.htm" id="a61221111" style="font-weight: normal; font-style: normal;" name="a61221111">double</a></span> <span style="font-style: italic;"><i>freq_time</i></span> <span style="font-weight: normal;">)</span> <a href="../common_vbageneral/common_general_double.htm" id="a611111111111" style="font-weight: normal; font-style: normal;" name="a611111111111">double</a></p>
+<p class="VBA-Text-Indent">Returns the radiated power of a farfield specified by its <span style="font-style: italic;"><i>treepath</i></span>. Use <span style="font-style: italic;"><i>tf_type</i></span> = "time" to provide an evaluation time or <span style="font-style: italic;"><i>tf_type</i></span> = "frequency" to pass an evaluation frequency via <span style="font-style: italic;"><i>freq_time</i></span>. The latter two settings are only necessary for broadband farfield monitor results and should be left empty for other farfields.</p>
+<p class="VBA-Heading-Method">&#160;</p>
+<p class="VBA-Heading-Method">GetTotalRCS ( <a href="../common_vbageneral/common_general_string.htm" id="a41011121111" style="font-weight: normal; font-style: normal;" name="a41011121111">string</a> <span style="font-style: italic;"><i>treepath,</i></span> <span style="font-weight: normal;">&#160;<a href="../common_vbageneral/common_general_double.htm" id="a612211111" style="font-weight: normal; font-style: normal;" name="a612211111">double</a></span> <span style="font-style: italic;"><i>frequency,</i></span> &#160;<a href="../common_vbageneral/common_general_enum.htm" id="a210221121111" style="font-weight: normal; font-style: normal;" name="a210221121111">enum</a><span style="font-style: italic; font-weight: normal;"><i>{"m2", "units", "sw"}</i></span> <span style="font-style: italic;"><i>csunit</i></span> <span style="font-weight: normal;">&#160;)</span> <a href="../common_vbageneral/common_general_double.htm" id="a6111111111111" style="font-weight: normal; font-style: normal;" name="a6111111111111">double</a></p>
+<p class="VBA-Heading-Method">GetTotalRCS ( <a href="../common_vbageneral/common_general_string.htm" id="a410111211111" style="font-weight: normal; font-style: normal;" name="a410111211111">string</a> <span style="font-style: italic;"><i>treepath,</i></span> <span style="font-weight: normal;">&#160;<a href="../common_vbageneral/common_general_double.htm" id="a6122111111" style="font-weight: normal; font-style: normal;" name="a6122111111">double</a></span> <span style="font-style: italic;"><i>frequency,</i></span> &#160;<a href="../common_vbageneral/common_general_enum.htm" id="a2102211211111" style="font-weight: normal; font-style: normal;" name="a2102211211111">enum</a><span style="font-style: italic; font-weight: normal;"><i>{"m2", "units", "sw"}</i></span> <span style="font-style: italic;"><i>csunit</i></span> <span style="font-weight: normal;">&#160;)</span> <a href="../common_vbageneral/common_general_double.htm" id="a61111111111111" style="font-weight: normal; font-style: normal;" name="a61111111111111">double</a></p>
+<p class="VBA-Text-Indent">Returns the Total RCS/ACS of a farfield specified by its <span style="font-style: italic;"><i>treepath</i></span>. Use <span style="font-style: italic;"><i>frequency</i></span> to pass an evaluation frequency. This setting is only necessary for broadband farfield monitor results and should be left empty for other farfields. <span style="font-style: italic;"><i>csunit</i></span> specifies the unit of the expected result with</p>
+<table style="vertical-align: top; margin-left: 15.10pt; left: 0px; top: 642px;" cellspacing="0" width="90%">
+<col style="width: 13.872%;" />
+<col style="width: 86.128%;" />
+<tr style="vertical-align: top;">
+<td style="border: Solid 1px #000000; width: 13.872%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text">"m2"</p>
+</td>
+<td style="border-top: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 86.128%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text">The RCS/ACS unit is m^2</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 13.872%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text">"units"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 86.128%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text">The RCS/ACS unit is (project length unit)^2</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 13.872%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text">"sw"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 86.128%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text">The RCS/ACS unit is (wavelength)^2</p>
+</td>
+</tr>
+</table>
+<p class="VBA-Heading-Method">&#160;</p>
+<p class="VBA-Heading-Method">GetRadiationEfficiency ( <a href="../common_vbageneral/common_general_string.htm" id="a41011121112" style="font-weight: normal; font-style: normal;" name="a41011121112">string</a> <span style="font-style: italic;"><i>treepath,</i></span> <span style="font-weight: normal;">&#160;<a href="../common_vbageneral/common_general_double.htm" id="a612211112" style="font-weight: normal; font-style: normal;" name="a612211112">double</a></span> <span style="font-style: italic;"><i>frequency</i></span> <span style="font-weight: normal;">)</span> <a href="../common_vbageneral/common_general_double.htm" id="a6111111111112" style="font-weight: normal; font-style: normal;" name="a6111111111112">double</a></p>
+<p class="VBA-Heading-Method">GetTotalEfficiency ( <a href="../common_vbageneral/common_general_string.htm" id="a410111211121" style="font-weight: normal; font-style: normal;" name="a410111211121">string</a> <span style="font-style: italic;"><i>treepath,</i></span> <span style="font-weight: normal;">&#160;<a href="../common_vbageneral/common_general_double.htm" id="a6122111121" style="font-weight: normal; font-style: normal;" name="a6122111121">double</a></span> <span style="font-style: italic;"><i>frequency</i></span> <span style="font-weight: normal;">)</span> <a href="../common_vbageneral/common_general_double.htm" id="a61111111111121" style="font-weight: normal; font-style: normal;" name="a61111111111121">double</a></p>
+<p class="VBA-Heading-Method">GetSystemRadiationEfficiency ( <a href="../common_vbageneral/common_general_string.htm" id="a410111211122" style="font-weight: normal; font-style: normal;" name="a410111211122">string</a> <span style="font-style: italic;"><i>treepath,</i></span> <span style="font-weight: normal;">&#160;<a href="../common_vbageneral/common_general_double.htm" id="a6122111122" style="font-weight: normal; font-style: normal;" name="a6122111122">double</a></span> <span style="font-style: italic;"><i>frequency</i></span> <span style="font-weight: normal;">)</span> <a href="../common_vbageneral/common_general_double.htm" id="a61111111111122" style="font-weight: normal; font-style: normal;" name="a61111111111122">double</a></p>
+<p class="VBA-Heading-Method">GetSystemTotalEfficiency ( <a href="../common_vbageneral/common_general_string.htm" id="a410111211123" style="font-weight: normal; font-style: normal;" name="a410111211123">string</a> <span style="font-style: italic;"><i>treepath,</i></span> <span style="font-weight: normal;">&#160;<a href="../common_vbageneral/common_general_double.htm" id="a6122111123" style="font-weight: normal; font-style: normal;" name="a6122111123">double</a></span> <span style="font-style: italic;"><i>frequency</i></span> <span style="font-weight: normal;">)</span> <a href="../common_vbageneral/common_general_double.htm" id="a61111111111123" style="font-weight: normal; font-style: normal;" name="a61111111111123">double</a></p>
+<p class="VBA-Text-Indent">Returns the Total RCS/ACS of a farfield specified by its <span style="font-style: italic;"><i>treepath</i></span>. Use <span style="font-style: italic;"><i>frequency</i></span> to pass an evaluation frequency. This setting is only necessary for broadband farfield monitor results and should be left empty for other farfields..</p>
+<p class="VBA-Heading-Method">&#160;</p>
+<p class="VBA-Heading-Method">GetFrequency ( <a href="../common_vbageneral/common_general_string.htm" id="a4101112111231" style="font-weight: normal; font-style: normal;" name="a4101112111231">string</a> <span style="font-style: italic;"><i>treepath</i></span> <span style="font-weight: normal;">)</span> <a href="../common_vbageneral/common_general_double.htm" id="a611111111111231" style="font-weight: normal; font-style: normal;" name="a611111111111231">double</a></p>
+<p class="VBA-Text-Indent">Returns the frequency in project units associated with the farfield result specified by its <span style="font-style: italic;"><i>treepath</i></span>. It returns NAN for broadband farfield monitor results.</p>
+<p class="VBA-Heading-Method">&#160;</p>
+<p class="VBA-Heading-Method">IsBroadbandMonitor ( <a href="../common_vbageneral/common_general_string.htm" id="a41011121112311" style="font-weight: normal; font-style: normal;" name="a41011121112311">string</a> <span style="font-style: italic;"><i>treepath</i></span> <span style="font-weight: normal;">)</span> <a href="../common_vbageneral/common_general_bool_data_type.htm" id="a6111111111112311" style="font-weight: normal; font-style: normal;" name="a6111111111112311">bool</a></p>
+<p class="VBA-Text-Indent">Returns <span style="font-style: italic;"><i>True</i></span> if the farfield result specified by its <span style="font-style: italic;"><i>treepath</i></span> is a broadband farfield monitor result or <span style="font-style: italic;"><i>False</i></span> otherwise.</p>
+<p class="VBA-Heading-Category"><a name="Coordinate_Transformation_Methods" id="Coordinate_Transformation_Methods"></a>Coordinate Transformation Methods</p>
+<p class="VBA-Heading-Method">CartesianToSpherical ( <a href="../common_vbageneral/common_general_enum.htm" id="a4102114" style="font-weight: normal; font-style: normal;" name="a4102114">enum</a> coordinateSystem<span style="font-style: italic;"><i>,</i></span> <span style="font-weight: normal;"><a href="../common_vbageneral/common_general_double.htm" id="a6122111112" style="font-weight: normal; font-style: normal;" name="a6122111112">double</a></span> <span style="font-style: italic;"><i>x,</i></span> <span style="font-weight: normal;"><a href="../common_vbageneral/common_general_double.htm" id="a61221111121" style="font-weight: normal; font-style: normal;" name="a61221111121">double</a></span> <span style="font-style: italic;"><i>y,</i></span> <span style="font-weight: normal;"><a href="../common_vbageneral/common_general_double.htm" id="a61221111122" style="font-weight: normal; font-style: normal;" name="a61221111122">double</a></span> <span style="font-style: italic;"><i>z</i></span> ) <a href="../common_vbageneral/common_general_variant.htm" id="a41021131" style="font-weight: normal; font-style: normal;" name="a41021131">variant</a> (array containing radius, polarInDegrees, lateralInDegrees)</p>
+<p class="VBA-Heading-Method">SphericalToCartesian ( <a href="../common_vbageneral/common_general_enum.htm" id="a41021141" style="font-weight: normal; font-style: normal;" name="a41021141">enum</a> coordinateSystem<span style="font-style: italic;"><i>,</i></span> <span style="font-weight: normal;"><a href="../common_vbageneral/common_general_double.htm" id="a61221111123" style="font-weight: normal; font-style: normal;" name="a61221111123">double</a></span> <span style="font-style: italic;"><i>radius,</i></span> <span style="font-weight: normal;"><a href="../common_vbageneral/common_general_double.htm" id="a612211111211" style="font-weight: normal; font-style: normal;" name="a612211111211">double</a></span> <span style="font-style: italic;"><i>polarInDegrees,</i></span> <span style="font-weight: normal;"><a href="../common_vbageneral/common_general_double.htm" id="a612211111221" style="font-weight: normal; font-style: normal;" name="a612211111221">double</a></span> <span style="font-style: italic;"><i>lateralInDegrees</i></span> ) <a href="../common_vbageneral/common_general_variant.htm" id="a410211311" style="font-weight: normal; font-style: normal;" name="a410211311">variant</a> (array containing x, y, z)</p>
+<p class="VBA-Text-Indent" lang="de" xml:lang="de" style="font-family: Arial, sans-serif; font-size: 9pt;">These functions convert from cartesian coordinates to spherical coordinates (CartesianToSpherical) or vice versa (SphericalToCartesian). The cartesian direction vector is converted to one of the following spherical coordinate systems, which can be set by the <span style="font-style: italic;"><i>coordinateSystem</i></span> string with the following allowed values:</p>
+<table style="vertical-align: top; margin-left: 15.10pt; left: 0px; top: 642px;" cellspacing="0" width="90%">
+<col style="width: 13.872%;" />
+<col style="width: 86.128%;" />
+<tr style="vertical-align: top;">
+<td style="border: Solid 1px #000000; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text">"spherical"</p>
+</td>
+<td style="border-top: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 86.128%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text">Spherical coordinates</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 13.872%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text">"ludwig2ae"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 86.128%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text">Ludwig2 coordinates - azimuth over elevation</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 13.872%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text">"ludwig2ea"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 86.128%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text">Ludwig2 coordinates - elevation over azimuth</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 13.872%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text">"ludwig3"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 86.128%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text">Ludwig3 coordinates</p>
+</td>
+</tr>
+</table>
+<p lang="de" xml:lang="de" class="VBA-Text-Indent" style="font-family: Arial, sans-serif;">In the function signature, <span style="font-style: italic;"><i>radius</i></span> denotes the radial distance, <span style="font-style: italic;"><i>polarInDegrees</i></span> denotes the polar angle of the coordinate system (e.g. Theta, Elevation, or Alpha) in degrees and <span style="font-style: italic;"><i>lateralInDegrees</i></span> denotes the lateral angle of the coordinate system (e.g. Phi, Azimuth, or Epsilon) in degrees.</p>
+<p lang="de" xml:lang="de" class="VBA-Text-Indent" style="font-family: Arial, sans-serif;">&#160;</p>
+<p lang="de" xml:lang="de" class="VBA-Text-Indent" style="font-family: Arial, sans-serif;">Note that these functions do pure spherical to cartesian conversions and do not take into account any coordinate system settings of FarfieldCalculator. If in addition a conversion between global and local coordinates is required, consider combining this function with the <a href="#CartesianGlobalToLocal">CartesianGlobalToLocal</a>/<a href="#CartesianLocalToGlobal">CartesianLocalToGlobal</a> functions.</p>
+<p class="VBA-Text-Indent" style="font-family: Arial, sans-serif;">In VBA, the functions return a 3-element Variant array that contains the double values. In Python, they are returned as a tuple.</p>
+<p class="VBA-Text-Indent" style="font-family: Arial, sans-serif;">&#160;</p>
+<p class="VBA-Heading-Method"><a name="CartesianGlobalToLocal" id="CartesianGlobalToLocal"></a>CartesianGlobalToLocal ( <span style="font-weight: normal;"><a href="../common_vbageneral/common_general_double.htm" id="a61221111124" style="font-weight: normal; font-style: normal;" name="a61221111124">double</a></span> <span style="font-style: italic;"><i>x_global,</i></span> <span style="font-weight: normal;"><a href="../common_vbageneral/common_general_double.htm" id="a612211111212" style="font-weight: normal; font-style: normal;" name="a612211111212">double</a></span> <span style="font-style: italic;"><i>y_global,</i></span> <span style="font-weight: normal;"><a href="../common_vbageneral/common_general_double.htm" id="a612211111222" style="font-weight: normal; font-style: normal;" name="a612211111222">double</a></span> <span style="font-style: italic;"><i>z_global</i></span> ) <a href="../common_vbageneral/common_general_variant.htm" id="a410211312" style="font-weight: normal; font-style: normal;" name="a410211312">variant</a> (array containing x_local, y_local, z_local)</p>
+<p class="VBA-Heading-Method"><a name="CartesianLocalToGlobal" id="CartesianLocalToGlobal"></a>CartesianLocalToGlobal ( <span style="font-weight: normal;"><a href="../common_vbageneral/common_general_double.htm" id="a612211111231" style="font-weight: normal; font-style: normal;" name="a612211111231">double</a></span> <span style="font-style: italic;"><i>x_local,</i></span> <span style="font-weight: normal;"><a href="../common_vbageneral/common_general_double.htm" id="a6122111112111" style="font-weight: normal; font-style: normal;" name="a6122111112111">double</a></span> <span style="font-style: italic;"><i>y_local,</i></span> <span style="font-weight: normal;"><a href="../common_vbageneral/common_general_double.htm" id="a6122111112211" style="font-weight: normal; font-style: normal;" name="a6122111112211">double</a></span> <span style="font-style: italic;"><i>z_local</i></span> ) <a href="../common_vbageneral/common_general_variant.htm" id="a4102113111" style="font-weight: normal; font-style: normal;" name="a4102113111">variant</a> (array containing x_global, y_global, z_global)</p>
+<p class="VBA-Text-Indent" lang="de" xml:lang="de" style="font-size: 9pt; font-family: Arial, sans-serif;">These functions convert cartesian direction vectors from global to local coordinates (CartesianGlobalToLocal) or vice versa (CartesianLocalToGlobal). The local coordinate system that is used for the transformation is configured by the <a href="#SetAxesType">SetAxesType</a> and the <a href="#Phistart">Phistart</a>/<a href="#Thetastart">Thetastart</a> methods. Note that the axes type "mainlobe" is not supported for coordinate transformations.</p>
+<p class="VBA-Text-Indent" style="font-family: Arial, sans-serif;">In VBA, the functions return a 3-element Variant array that contains the double values. In Python, they are returned as a tuple.</p>
+<p class="VBA-Heading-Category"><a name="Defaults" id="Defaults"></a>Default Settings</p>
+<p class="VBA-Text">The following default settings of FarfieldCalculator are restored upon a call to <a href="#Reset">Reset</a>:</p>
+<p class="VBA-Text">&#160;</p>
+<p class="VBA-Text-Example">SetAxesType(“user”)</p>
+<p class="VBA-Text-Example">Phistart (1.0, 0.0, 0.0)</p>
+<p class="VBA-Text-Example">Thetastart (0.0, 0.0, 1.0)</p>
+<p class="VBA-Text-Example">PolarizationVector (0.0, 1.0, 0.0)</p>
+<p class="VBA-Text-Example">Origin ("bbox")</p>
+<p class="VBA-Text-Example">Userorigin (0.0, 0.0, 0.0)</p>
+<p class="VBA-Text-Example">IncludeUnitCellSidewalls (True)</p>
+<p class="VBA-Text-Example">UseArray (False)</p>
+<p class="VBA-Text-Example">Arraytype (“rectangular”)</p>
+<p class="VBA-Text-Example">ArrayXSet (1, 0.0, 0.0)</p>
+<p class="VBA-Text-Example">ArrayYSet (1, 0.0, 0.0)</p>
+<p class="VBA-Text-Example">ArrayZSet (1, 0.0, 0.0)</p>
+<p class="VBA-Text-Example">SetScaleLinear (False)</p>
+<p class="VBA-Text-Example">DBUnit ("0")</p>
+<p class="VBA-Text-Example">SetLogNorm (0.0)</p>
+<p class="VBA-Text-Example">SetInverseAxialRatio (False)</p>
+<p class="VBA-Text-Example">SlantAngle (0.0)</p>
+<?rh-p style="margin-bottom: 0px; text-align: Right; margin-left: 18px; 
+                 margin-right: 18px; margin-top: 18px;" ?>
+<div style="width: 100%; position: relative;" id="footer">
+<p style="border-bottom: Solid 1px #dddddd; text-align: Left; margin-left: 0px; font-family: Arial, sans-serif; line-height: Normal; margin-top: 9px; margin-right: 0px; margin-bottom: 6px; border-left-width: 1px; border-top-width: 1px; border-right-width: 1px;"><span style="text-align: Left; font-family: Arial, sans-serif; line-height: Normal;">&#160;</span></p>
+<table cellspacing="0" width="100%">
+<col style="width: 50%;" />
+<col style="width: 50%;" />
+<tr>
+<td style="vertical-align: Top;"><span style="font-family: Arial, sans-serif; line-height: Normal; font-size: 8pt;"><font size="1" style="font-size:8pt;">CST Studio Suite 2026</font></span></td>
+<td style="vertical-align: Top;">
+<p style="text-align: right;">&#160;</p>
+</td>
+</tr>
+</table>
+<p>&#160;</p>
+</div>
+<script type="text/javascript" language="javascript1.2">
+//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+        writeIntopicBar(0);
+
+
+highlightSearch();
+//-->
+//]]>
+</script>
+</body>
+</html>

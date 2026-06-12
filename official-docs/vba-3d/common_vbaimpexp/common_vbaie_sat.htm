@@ -1,0 +1,257 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="Adobe RoboHelp 11" />
+<title>SAT Object</title>
+<link rel="StyleSheet" href="../online_help_vba.css" type="text/css" />
+<style type="text/css">
+/*<![CDATA[*/
+<!--
+body { border-bottom-style:None; }
+-->
+/*]]>*/
+</style>
+
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+        origWidth = innerWidth;
+        origHeight = innerHeight;
+        onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+/*<![CDATA[*/
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+-->
+/*]]>*/
+</style>
+
+<script type="text/javascript" language="javascript1.2" src="../whmsg.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript" src="../whver.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript1.2" src="../whutils.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript1.2" src="../whproxy.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript1.2" src="../whlang.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript1.2" src="../whtopic.js" charset="utf-8">
+</script>
+</head>
+<body>
+<script type="text/javascript" language="javascript1.2">
+//<![CDATA[
+<!--
+if (window.gbWhTopic)
+{
+        var strUrl = document.location.href;
+        var bc = 0;
+        var n = strUrl.toLowerCase().indexOf("bc-");
+        if(n != -1)
+        {
+                document.location.replace(strUrl.substring(0, n));
+                bc = strUrl.substring(n+3);
+        }
+
+        if (window.addTocInfo)
+        {
+        addTocInfo("3D Simulation VBA\nVBA Objects\nImport/Export\nSAT");
+addAvenueInfo("common_VBAIMP_EXP","common_VBAImpExp/common_VBAIE_IGES.htm","common_VBAImpExp/common_VBAIE_DXF.htm");
+
+        }
+        if (window.writeBtnStyle)
+                writeBtnStyle();
+
+        if (window.writeIntopicBar)
+                writeIntopicBar(0);
+
+        
+        document.write("<p style=\"font-family: Tahoma; font-size: 9pt; font-weight: 400;  font-style:normal; color: rgb(0, 0, 0); text-decoration:none; text-align: left\"> ");
+AddMasterBreadcrumbs("../index.htm", "font-family: Tahoma; font-size: 9pt; font-weight: 400;  font-style:normal; color: rgb(0, 0, 0); text-decoration:none; text-align: left", "|", "Home", "../special_vbaobjects/special_vbaobjects_vbaobjects.htm");
+document.write("<a style=\"font-family: Tahoma; font-size: 9pt; font-weight: 400;  font-style:normal; color: rgb(0, 0, 0); text-decoration:none; text-align: left\" href=\"../special_vbaobjects/special_vbaobjects_vbaobjects.htm\">3D Simulation VBA<\/a> | <a style=\"font-family: Tahoma; font-size: 9pt; font-weight: 400;  font-style:normal; color: rgb(0, 0, 0); text-decoration:none; text-align: left\" href=\"../special_vbaobjects/special_vbaobjects_vbaobjects.htm\">VBA Objects<\/a> | <a style=\"font-family: Tahoma; font-size: 9pt; font-weight: 400;  font-style:normal; color: rgb(0, 0, 0); text-decoration:none; text-align: left\" href=\"../special_vbaimpexp/adscomponentexport.htm\">Import/Export<\/a> | SAT<\/p>");
+
+}
+else
+        if (window.gbIE4)
+                document.location.reload();
+
+onLoadHandler = function()
+{
+  if (window.setRelStartPage)
+        {
+        setTimeout("setRelStartPage('../index.htm');", 1)
+
+    setTimeout("UpdateBreadCrumbsMarker();", 1);
+        }
+}
+
+if (window.addEventListener){  
+        window.addEventListener('load', onLoadHandler, false);   
+} else if (window.attachEvent){  
+        window.attachEvent('onload', onLoadHandler);  
+}
+
+function onSetStartPage()
+{
+  autoSync(1);
+  sendSyncInfo();
+  sendAveInfoOut();
+}
+//-->
+//]]>
+</script><script type="text/javascript" src="../ehlpdhtm.js" language="JavaScript1.2">
+</script>
+<table cellspacing="0" width="100%">
+<col style="width: 50%;" />
+<col style="width: 50%;" />
+<tr>
+<td style="vertical-align: middle; padding-top: 5px; padding-bottom: 5px;">
+<p style="margin-top: 0px; margin-bottom: 0px;"><img src="../3ds.png" alt="" style="border: none;" border="0" /></p>
+</td>
+<td style="vertical-align: middle;">
+<p style="text-align: right;"><a href="https://www.3ds.com/products-services/3dexperience/" target="_blank"><img src="../3dexp.png" alt="" style="border: none;" width="32" height="32" border="0" /></a></p>
+</td>
+</tr>
+</table>
+<p class="VBA-Heading-Object">SAT Object</p>
+<p class="VBA-Text">This command offers SAT file import. With this feature you can import data from any other ACIS based CAD system.</p>
+<p>If possible use this interface for 3D data import instead of IGES / STL import, because this is the programs native format.</p>
+<ul>
+<li class="p-VBA-Index-Category">
+<p class="VBA-Index-Category"><a href="#Methods">Methods</a></p>
+</li>
+<li class="p-VBA-Index-Category">
+<p class="VBA-Index-Category"><a href="#Default">Default Settings</a></p>
+</li>
+<li class="p-VBA-Index-Category">
+<p class="VBA-Index-Category"><a href="#Example">Example</a></p>
+</li>
+</ul>
+<p class="VBA-Heading-Category"><a name="Methods" id="Methods"></a>Methods</p>
+<p class="VBA-Heading-Method">Reset</p>
+<p class="VBA-Text-Indent">Resets the import options to the default.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">FileName ( <span><a href="../common_vbageneral/common_general_filename.htm" id="a31" style="font-weight: normal; font-style: normal;" name="a31">filename</a></span> <span style="font-style: italic;"><i>filename</i></span> )</p>
+<p class="VBA-Text-Indent">Sets the name of the imported file or the file to be exported to.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Text-Indent" style="margin-left: 0px;"><span style="font-weight: bold;">GetID (</span> <a href="../common_vbageneral/common_general_filename.htm" id="a311" style="font-weight: normal; font-style: normal;" name="a311">filename</a> <span style="font-style: italic; font-weight: bold;"><i>filename</i></span> <span style="font-weight: bold;">)</span> <a href="../common_vbageneral/common_general_string.htm" id="a281" style="font-weight: normal; font-style: normal;" name="a281">string</a></p>
+<p class="VBA-Text-Indent">This method returns the unique ID for the target file name.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">Id ( <a href="../common_vbageneral/common_general_integer.htm" id="a17" style="font-weight: normal; font-style: normal;" name="a17">int</a> <span style="font-style: italic;"><i>id</i></span> )</p>
+<p class="VBA-Text-Indent">A CAD file may be imported more than once into the same project with different settings of import options. In order to improve the performance of structure rebuilds, an intermediate sat file is stored during the import process which allows to quickly re-read the data during rebuilds in case that the original CAD file has not been modified. The naming convention of the intermediate sat file has to be unique for each individual import step. Therefore, in case that the same file is imported more than once or a file with the same name is imported into the project, the Id setting needs to be increased. The Id will then be incorporated into the file name which ensures unique file names for every import. Method <span style="font-weight: bold;">GetID (</span> <a href="../common_vbageneral/common_general_filename.htm" id="a3111" style="font-weight: normal; font-style: normal;" name="a3111">filename</a> <span style="font-style: italic; font-weight: bold;"><i>filename</i></span> <span style="font-weight: bold;">)</span> can be used to obtain the unique ID for the file to be imported.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">Version ( <a href="../common_vbageneral/common_general_double.htm" id="a20" style="font-weight: normal; font-style: normal;" name="a20">double</a> <span style="font-style: italic;"><i>version</i></span> )</p>
+<p class="VBA-Text-Indent">Sets the version of the import filter, since the behavior of the import may slightly change from version to version. This setting is available for backward compatibility reasons and should ensure that later versions of the import can exactly reproduce the behavior of earlier versions. The most recent version of the import is 9.0.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">SubProjectName2D ( <span><a href="../common_vbageneral/common_general_filename.htm" id="a1" style="font-weight: normal; font-style: normal;" name="a1">filename</a></span> <span style="font-style: italic;"><i>filename</i></span> )</p>
+<p class="VBA-Text-Indent">The SAT import is also used for the import of sub-projects. This function sets the name of the 2D sub-project including the path.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">SubProjectName3D ( <span><a href="../common_vbageneral/common_general_filename.htm" id="a3" style="font-weight: normal; font-style: normal;" name="a3">filename</a></span> <span style="font-style: italic;"><i>filename</i></span> )</p>
+<p class="VBA-Text-Indent">The SAT import is also used for the import of sub-projects. This function sets the name of the 3D sub-project including the path.</p>
+<p class="vba-text-indent">&#160;</p>
+<p class="VBA-Heading-Method">SubProjectScaleFactor ( <span><a href="../common_vbageneral/common_general_double.htm" id="a5" style="font-weight: normal; font-style: normal;" name="a5">double</a></span> <span style="font-style: italic;"><i>factor</i></span> )</p>
+<p class="VBA-Text-Indent">Defines the scale factor of the sub-project. ( 1.0 means m, 0.1 means dm, 0.01 means cm, ... )</p>
+<p class="vba-text-indent">&#160;</p>
+<p class="VBA-Heading-Method">SubProjectLocalWCS ( <span><a href="../common_vbageneral/common_general_double.htm" id="a6" style="font-weight: normal; font-style: normal;" name="a6">double</a></span> <span style="font-style: italic;"><i>x,</i></span> <span><a href="../common_vbageneral/common_general_double.htm" id="a7" style="font-weight: normal; font-style: normal;" name="a7">double</a></span> <span style="font-style: italic;"><i>y,</i></span> <span><a href="../common_vbageneral/common_general_double.htm" id="a8" style="font-weight: normal; font-style: normal;" name="a8">double</a></span> <span style="font-style: italic;"><i>z,</i></span></p>
+<p class="VBA-Heading-Method"><span style="font-style: italic;"><i>&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;</i></span><a href="../common_vbageneral/common_general_double.htm" id="a9" style="font-weight: normal; font-style: normal;" name="a9">double</a> <span style="font-style: italic;"><i>nx,</i></span> <span><a href="../common_vbageneral/common_general_double.htm" id="a10" style="font-weight: normal; font-style: normal;" name="a10">double</a></span> <span style="font-style: italic;"><i>ny,</i></span> <span><a href="../common_vbageneral/common_general_double.htm" id="a11" style="font-weight: normal; font-style: normal;" name="a11">double</a></span> <span style="font-style: italic;"><i>nz,</i></span></p>
+<p class="VBA-Heading-Method"><span style="font-style: italic;"><i>&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;</i></span><a href="../common_vbageneral/common_general_double.htm" id="a12" style="font-weight: normal; font-style: normal;" name="a12">double</a> <span style="font-style: italic;"><i>ux,</i></span> <span><a href="../common_vbageneral/common_general_double.htm" id="a13" style="font-weight: normal; font-style: normal;" name="a13">double</a></span> <span style="font-style: italic;"><i>uy,</i></span> <span><a href="../common_vbageneral/common_general_double.htm" id="a14" style="font-weight: normal; font-style: normal;" name="a14">double</a></span> <span style="font-style: italic;"><i>uz</i></span> )</p>
+<p class="VBA-Text-Indent">Defines the local coordinate system of the sub-project. <span style="font-style: italic;"><i>x</i></span>, <span style="font-style: italic;"><i>y</i></span> and <span style="font-style: italic;"><i>z</i></span> defines the origin. <span style="font-style: italic;"><i>nx</i></span>, <span style="font-style: italic;"><i>ny</i></span> and <span style="font-style: italic;"><i>nz</i></span> defines the normal. <span style="font-style: italic;"><i>ux</i></span>, <span style="font-style: italic;"><i>uy</i></span> and <span style="font-style: italic;"><i>uz</i></span> defines the u-vector.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">SaveVersion ( <span><a href="../common_vbageneral/common_general_enum.htm" id="a32" style="font-weight: normal; font-style: normal;" name="a32">enum</a></span> <span style="font-style: italic;"><i>version</i></span> )</p>
+<p class="VBA-Text-Indent">Saves the current model as a SAT file correspondant to the specified version number. Valid versions are "1.0", "2.0", "3.0", ..., "12.0". You may also omit this setting.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">ScaleToUnit ( <span><a href="../common_vbageneral/common_general_bool_data_type.htm" id="a15" style="font-weight: normal; font-style: normal;" name="a15">bool</a></span> <span style="font-style: italic;"><i>switch</i></span> )</p>
+<p class="VBA-Text-Indent">If set to <a href="../common_vbageneral/common_general_true_keyword.htm" id="a16" name="a16">True</a> the imported model is scaled to the currently active unit. If not activated the import feature uses the source units. In such a case, no scaling occurs.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">ImportToActiveCoordinateSystem ( <span><a href="../common_vbageneral/common_general_bool_data_type.htm" id="a2" style="font-weight: normal; font-style: normal;" name="a2">bool</a></span> <span style="font-style: italic;"><i>switch</i></span> )</p>
+<p class="VBA-Text-Indent">Import the CAD data relative to the active coordinate system.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">ExportFromActiveCoordinateSystem( <a href="../common_vbageneral/common_general_bool_data_type.htm" id="a22" style="font-weight: normal; font-style: normal;" name="a22">bool</a> <span style="font-style: italic;"><i>switch</i></span> )</p>
+<p class="VBA-Text-Indent">If an active coordinate system is enabled and this flag is set, the coordinate system is used to calculate a transformation that is applied to the geometry before exporting. Importing that file will position the geometry to the global coordinates in that way that it was positioned and oriented to the active coordinate system while exporting.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">Curves ( <a href="../common_vbageneral/common_general_bool_data_type.htm" id="a4" style="font-weight: normal; font-style: normal;" name="a4">bool</a> &#160;<span style="font-style: italic;"><i>switch</i></span> )</p>
+<p class="VBA-Text-Indent">Identifies if curves should be imported as curves or as solids.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">Wires ( <a href="../common_vbageneral/common_general_bool_data_type.htm" id="a18" style="font-weight: normal; font-style: normal;" name="a18">bool</a> &#160;<span style="font-style: italic;"><i>switch</i></span> )</p>
+<p class="VBA-Text-Indent">Identifies if thin and solid wires should be imported. &#160;At the moment only used for sub-project import.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">SolidWiresAsSolids ( <a href="../common_vbageneral/common_general_bool_data_type.htm" id="a19" style="font-weight: normal; font-style: normal;" name="a19">bool</a> &#160;<span style="font-style: italic;"><i>switch</i></span> )</p>
+<p class="VBA-Text-Indent">Identifies if solid wires should be imported as wires or as solids. At the moment only used for sub-project import, to be backward compatible to older projects.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">Read</p>
+<p class="VBA-Text-Indent">Starts the actual import of the file.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">Write ( <a href="../common_vbageneral/common_general_name.htm" id="a21" style="font-weight: normal;" name="a21">name</a> <span style="font-style: italic;"><i>shapeOrComponentName</i></span> )</p>
+<p class="VBA-Text-Indent">Performs the export for one shape or for all shapes of the specified component.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">WriteAll</p>
+<p class="VBA-Text-Indent">Exports all data.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">WriteSelectedSolids</p>
+<p class="VBA-Text-Indent">Exports all selected solids to a SAT or SAB file.</p>
+<p class="VBA-Heading-Category"><a name="Default" id="Default"></a>Default Settings</p>
+<p class="VBA-Text-Example">FileName ("")</p>
+<p class="VBA-Text-Example">SaveVersion ("")</p>
+<p class="VBA-Text-Example">ImportToActiveCoordinateSystem (False)</p>
+<p class="VBA-Text-Example">ExportFromActiveCoordinateSystem (False)</p>
+<p class="VBA-Text-Example">ImportCurves (True)</p>
+<p class="VBA-Heading-Category"><a name="Example" id="Example"></a>Example</p>
+<p class="VBA-Text-Example">With SAT</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;.Reset</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;.FileName (".\example.sat")</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;.ImportToActiveCoordinateSystem (False)</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;.ImportCurves (True)</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;.Read</p>
+<p class="VBA-Text-Example">End With</p>
+<p class="VBA-Text-Example">&#160;</p>
+<p class="VBA-Text-Example">With SAT</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;.Reset</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;.FileName (".\export.sat")</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;.ExportFromActiveCoordinateSystem (True)</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;.Write ("component1/component2:solid1")</p>
+<p class="VBA-Text-Example">End With</p>
+<?rh-p style="margin-bottom: 0px; text-align: Right; margin-left: 18px; 
+                 margin-right: 18px; margin-top: 18px;" ?>
+<div style="width: 100%; position: relative;" id="footer">
+<p style="border-bottom: Solid 1px #dddddd; text-align: Left; margin-left: 0px; font-family: Arial, sans-serif; line-height: Normal; margin-top: 9px; margin-right: 0px; margin-bottom: 6px; border-left-width: 1px; border-top-width: 1px; border-right-width: 1px;"><span style="text-align: Left; font-family: Arial, sans-serif; line-height: Normal;">&#160;</span></p>
+<table cellspacing="0" width="100%">
+<col style="width: 50%;" />
+<col style="width: 50%;" />
+<tr>
+<td style="vertical-align: Top;"><span style="font-family: Arial, sans-serif; line-height: Normal; font-size: 8pt;"><font size="1" style="font-size:8pt;">CST Studio Suite 2026</font></span></td>
+<td style="vertical-align: Top;">
+<p style="text-align: right;">&#160;</p>
+</td>
+</tr>
+</table>
+<p>&#160;</p>
+</div>
+<script type="text/javascript" language="javascript1.2">
+//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+        writeIntopicBar(0);
+
+
+highlightSearch();
+//-->
+//]]>
+</script>
+</body>
+</html>

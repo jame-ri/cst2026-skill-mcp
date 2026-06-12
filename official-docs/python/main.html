@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>CST Python Libraries &#8212; CST Python Libraries  documentation</title>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinxdoc.css?v=0a676766" />
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js?v=16ad857a"></script>
+    <script src="_static/doctools.js?v=888ff710"></script>
+    <script src="_static/sphinx_highlight.js?v=4825356b"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="nav-item nav-item-0"><a href="#">CST Python Libraries  documentation</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">CST Python Libraries</a></li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <section id="cst-python-libraries">
+<h1>CST Python Libraries<a class="headerlink" href="#cst-python-libraries" title="Permalink to this heading">¶</a></h1>
+<p>Some features of the CST Studio Suite tools can be controlled via CST Python Libraries.</p>
+<section id="overview">
+<h2>Overview<a class="headerlink" href="#overview" title="Permalink to this heading">¶</a></h2>
+<p>The cst package provides a Python interface to the CST Studio Suite.</p>
+<ul class="simple">
+<li><p><a class="reference external" href="source/cst.interface.html">cst.interface</a> - Allows controlling a running CST Studio Suite.</p></li>
+<li><p><a class="reference external" href="source/cst.results.html">cst.results</a> - Provides access to 0D/1D Results and 2D (Colormap) Results of a cst file.</p></li>
+<li><p><a class="reference external" href="source/cst.eda.html">cst.eda</a> - Provides an interface to a Printed Circuit Board (PCB).</p></li>
+<li><p><a class="reference external" href="source/cst.asymptotic.html">cst.asymptotic</a> - Provides an interface to the Asymptotic Solver.</p></li>
+<li><p><a class="reference external" href="source/cst.radar.html">cst.radar</a> - Provides routines for automotive RADAR post processing.</p></li>
+<li><p><a class="reference external" href="source/cst.units.html">cst.units</a> - Provides methods to work with units supported by CST Studio Suite.</p></li>
+</ul>
+</section>
+<section id="what-s-new-in-this-version">
+<h2>What’s New in This Version<a class="headerlink" href="#what-s-new-in-this-version" title="Permalink to this heading">¶</a></h2>
+<ul class="simple">
+<li><p>Added support for Python 3.13 (64-bit).</p></li>
+<li><p>Upgraded bundled python to 3.12 and moved to new location <cite>&lt;CST_STUDIO_SUITE_FOLDER&gt;/Python</cite>.</p></li>
+<li><p>Removed support for Python 3.8 (64-bit)</p></li>
+<li><p>Support for Python 3.9.x (64-bit) is deprecated and will be removed in the next CST Studio Suite release.</p></li>
+<li><p><a class="reference external" href="source/cst.results.html">cst.results</a> opens project files generated with CST Studio Suite 2025 or CST Studio Suite 2026.</p></li>
+</ul>
+</section>
+<section id="setup">
+<h2>Setup<a class="headerlink" href="#setup" title="Permalink to this heading">¶</a></h2>
+<section id="bundled-python-interpreter">
+<h3>Bundled Python interpreter<a class="headerlink" href="#bundled-python-interpreter" title="Permalink to this heading">¶</a></h3>
+<p>The CST Studio Suite installation comes with Python 3.12 (64-bit), which requires no further setup to start using it with the
+CST Python Libraries. Various packages like <cite>numpy</cite> and <cite>scipy</cite> are pre-installed. A complete list of installed packages can be found in <cite>&lt;CST_STUDIO_SUITE_FOLDER&gt;/Python/requirements-freeze.txt</cite></p>
+</section>
+<section id="custom-python-interpreter">
+<h3>Custom Python interpreter<a class="headerlink" href="#custom-python-interpreter" title="Permalink to this heading">¶</a></h3>
+<p>The CST Python Libraries can also be used from external Python environments. We strive to support all the Python versions that have not reached the end-of-life as indicated <a class="reference external" href="https://devguide.python.org/versions/">here</a> and were released before the release of this CST Studio Suite version. The items marked as deprecated in the list below will be removed in the next CST Studio Suite release. Please upgrade your Python interpreter accordingly and avoid using the deprecated versions.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<dl class="simple">
+<dt>Supported Python versions:</dt><dd><ul class="simple">
+<li><p>Python 3.13.x (64-bit)</p></li>
+<li><p>Python 3.12.x (64-bit)</p></li>
+<li><p>Python 3.11.x (64-bit)</p></li>
+<li><p>Python 3.10.x (64-bit)</p></li>
+<li><p>Python 3.9.x (64-bit) (deprecated)</p></li>
+</ul>
+</dd>
+</dl>
+<p>32-bit versions of Python are not supported.</p>
+</div>
+<p>To make sure your interpreter is able to load the CST Python Libraries, a minimal package can be installed that links to the actual CST Studio Suite installation:</p>
+<div class="highlight-winbatch notranslate"><div class="highlight"><pre><span></span>pip install --editable <span class="s2">&quot;&lt;CST_STUDIO_SUITE_FOLDER_BIN64&gt;/python_cst_libraries&quot;</span>
+</pre></div>
+</div>
+<p>where &lt;CST_STUDIO_SUITE_FOLDER_BIN64&gt; should be replaced with the path to the subfolder “AMD64” for Windows and “LinuxAMD64” for Linux in the CST Studio Suite installation on your system.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Although not recommended, but if desired, instead of installing the <code class="docutils literal notranslate"><span class="pre">cst-studio-suite-link</span></code> package, you can add or modify the <code class="docutils literal notranslate"><span class="pre">PYTHONPATH</span></code> system environment variable to include:</p>
+<ul class="simple">
+<li><p>Windows: <code class="docutils literal notranslate"><span class="pre">&lt;CST_STUDIO_SUITE_FOLDER&gt;\AMD64\python_cst_libraries</span></code></p></li>
+<li><p>Linux: <code class="docutils literal notranslate"><span class="pre">&lt;CST_STUDIO_SUITE_FOLDER&gt;/LinuxAMD64/python_cst_libraries</span></code></p></li>
+</ul>
+<p>It is discouraged to set <code class="docutils literal notranslate"><span class="pre">PYTHONPATH</span></code> as a global environment variable (i.e. in your system settings) as it applies to all python interpreters on your system.</p>
+<p>Another way is to add it in-script via:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span><span class="w"> </span><span class="nn">sys</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">sys</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="sa">r</span><span class="s2">&quot;&lt;CST_STUDIO_SUITE_FOLDER_BIN64&gt;/python_cst_libraries&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Please replace <code class="docutils literal notranslate"><span class="pre">&lt;CST_STUDIO_SUITE_FOLDER_BIN64&gt;</span></code> with the system dependent paths indicated above.</p>
+<p>This is also discouraged as it makes your scripts non-portable and would require editing the scripts for each new release.</p>
+</div>
+<p>You have succesfully set up your Python environment when you are able to execute the following code without error:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span><span class="w"> </span><span class="nn">cst</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">cst</span><span class="o">.</span><span class="vm">__file__</span><span class="p">)</span> <span class="c1"># should print &#39;&lt;PATH_TO_CST_AMD64&gt;\python_cst_libraries\cst\__init__.py&#39;</span>
+</pre></div>
+</div>
+<div class="toctree-wrapper compound">
+</div>
+</section>
+</section>
+</section>
+<section id="indices-and-tables">
+<h1>Indices and Tables<a class="headerlink" href="#indices-and-tables" title="Permalink to this heading">¶</a></h1>
+<ul class="simple">
+<li><p><a class="reference internal" href="genindex.html"><span class="std std-ref">Index</span></a></p></li>
+<li><p><a class="reference internal" href="py-modindex.html"><span class="std std-ref">Module Index</span></a></p></li>
+<li><p><a class="reference internal" href="search.html"><span class="std std-ref">Search Page</span></a></p></li>
+</ul>
+</section>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <div>
+    <h3><a href="#">Table of Contents</a></h3>
+    <ul>
+<li><a class="reference internal" href="#">CST Python Libraries</a><ul>
+<li><a class="reference internal" href="#overview">Overview</a></li>
+<li><a class="reference internal" href="#what-s-new-in-this-version">What’s New in This Version</a></li>
+<li><a class="reference internal" href="#setup">Setup</a><ul>
+<li><a class="reference internal" href="#bundled-python-interpreter">Bundled Python interpreter</a></li>
+<li><a class="reference internal" href="#custom-python-interpreter">Custom Python interpreter</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a class="reference internal" href="#indices-and-tables">Indices and Tables</a></li>
+</ul>
+
+  </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="nav-item nav-item-0"><a href="#">CST Python Libraries  documentation</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">CST Python Libraries</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+    &#169; Copyright 2009-2025 Dassault Systemes Deutschland GmbH. All rights reserved.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 7.1.2.
+    </div>
+  </body>
+</html>

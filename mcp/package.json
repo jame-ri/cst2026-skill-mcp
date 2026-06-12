@@ -1,0 +1,18 @@
+{
+  "name": "cst2026-mcp",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "MCP server for CST automation references, macro search, CST helper execution, and design records.",
+  "bin": {
+    "cst2026-mcp": "src/server.js"
+  },
+  "scripts": {
+    "start": "node src/server.js",
+    "check": "node --check src/server.js"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "dependencies": {}
+}

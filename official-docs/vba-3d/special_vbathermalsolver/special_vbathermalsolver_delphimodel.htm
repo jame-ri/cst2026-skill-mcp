@@ -1,0 +1,584 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="Adobe RoboHelp 11" />
+<title>DelphiModel Object</title>
+<link rel="StyleSheet" href="../online_help_vba.css" type="text/css" />
+<style type="text/css">
+/*<![CDATA[*/
+<!--
+body { border-bottom-style:None; }
+-->
+/*]]>*/
+</style>
+
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+        origWidth = innerWidth;
+        origHeight = innerHeight;
+        onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+/*<![CDATA[*/
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+-->
+/*]]>*/
+</style>
+
+<script type="text/javascript" language="javascript1.2" src="../whmsg.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript" src="../whver.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript1.2" src="../whutils.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript1.2" src="../whproxy.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript1.2" src="../whlang.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript1.2" src="../whtopic.js" charset="utf-8">
+</script>
+</head>
+<body>
+<script type="text/javascript" language="javascript1.2">
+//<![CDATA[
+<!--
+if (window.gbWhTopic)
+{
+        var strUrl = document.location.href;
+        var bc = 0;
+        var n = strUrl.toLowerCase().indexOf("bc-");
+        if(n != -1)
+        {
+                document.location.replace(strUrl.substring(0, n));
+                bc = strUrl.substring(n+3);
+        }
+
+        if (window.addTocInfo)
+        {
+        addTocInfo("3D Simulation VBA\nVBA Objects\nSources and Ports\nThermal\nDelphiModel Object");
+
+        }
+        if (window.writeBtnStyle)
+                writeBtnStyle();
+
+        if (window.writeIntopicBar)
+                writeIntopicBar(0);
+
+        
+        document.write("<p style=\"font-family: Tahoma; font-size: 9pt; font-weight: 400;  font-style:normal; color: rgb(0, 0, 0); text-decoration:none; text-align: left\"> ");
+AddMasterBreadcrumbs("../index.htm", "font-family: Tahoma; font-size: 9pt; font-weight: 400;  font-style:normal; color: rgb(0, 0, 0); text-decoration:none; text-align: left", "|", "Home", "../special_vbaobjects/special_vbaobjects_vbaobjects.htm");
+document.write("<a style=\"font-family: Tahoma; font-size: 9pt; font-weight: 400;  font-style:normal; color: rgb(0, 0, 0); text-decoration:none; text-align: left\" href=\"../special_vbaobjects/special_vbaobjects_vbaobjects.htm\">3D Simulation VBA<\/a> | <a style=\"font-family: Tahoma; font-size: 9pt; font-weight: 400;  font-style:normal; color: rgb(0, 0, 0); text-decoration:none; text-align: left\" href=\"../special_vbaobjects/special_vbaobjects_vbaobjects.htm\">VBA Objects<\/a> | <a style=\"font-family: Tahoma; font-size: 9pt; font-weight: 400;  font-style:normal; color: rgb(0, 0, 0); text-decoration:none; text-align: left\" href=\"../special_vbasignals/special_vbasignals_timesignal_object.htm\">Sources and Ports<\/a> | <a style=\"font-family: Tahoma; font-size: 9pt; font-weight: 400;  font-style:normal; color: rgb(0, 0, 0); text-decoration:none; text-align: left\" href=\"special_vbathermalsolver_compactthermalmodel_object.htm\">Thermal<\/a> | DelphiModel Object<\/p>");
+
+}
+else
+        if (window.gbIE4)
+                document.location.reload();
+
+onLoadHandler = function()
+{
+  if (window.setRelStartPage)
+        {
+        setTimeout("setRelStartPage('../index.htm');", 1)
+
+    setTimeout("UpdateBreadCrumbsMarker();", 1);
+        }
+}
+
+if (window.addEventListener){  
+        window.addEventListener('load', onLoadHandler, false);   
+} else if (window.attachEvent){  
+        window.attachEvent('onload', onLoadHandler);  
+}
+
+function onSetStartPage()
+{
+  autoSync(1);
+  sendSyncInfo();
+  sendAveInfoOut();
+}
+//-->
+//]]>
+</script><script type="text/javascript" src="../ehlpdhtm.js" language="JavaScript1.2">
+</script>
+<table cellspacing="0" width="100%">
+<col style="width: 50%;" />
+<col style="width: 50%;" />
+<tr>
+<td style="vertical-align: middle; padding-top: 5px; padding-bottom: 5px;">
+<p style="margin-top: 0px; margin-bottom: 0px;"><img src="../3ds.png" alt="" style="border: none;" border="0" /></p>
+</td>
+<td style="vertical-align: middle;">
+<p style="text-align: right;"><a href="https://www.3ds.com/products-services/3dexperience/" target="_blank"><img src="../3dexp.png" alt="" style="border: none;" width="32" height="32" border="0" /></a></p>
+</td>
+</tr>
+</table>
+<h1>DelphiModel Object</h1>
+<p class="VBA-Text">This object is used to create new &#160;Delphi model sources for the <a href="special_vbathermalsolver_chtsolver.htm">Conjugate Heat Transfer Solver</a>.</p>
+<p class="VBA-Text"><span style="font-size: 12px; font-variant-ligatures: normal; font-variant-caps: normal; orphans: 2; text-align: justify; text-indent: 12px; widows: 2; -webkit-text-stroke-width: 0px; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; display: inline ! important ; float: none;">The Delphi compact thermal model can be used to approximate the thermal behavior of single-die packages that can be effectively represented by a thermal resistance network. It</span>&#160;<span style="font-size: 12px; font-variant-ligatures: normal; font-variant-caps: normal; orphans: 2; text-align: justify; text-indent: 12px; widows: 2; -webkit-text-stroke-width: 0px; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial;">is based on the Delphi methodology JESD15-4 described in the Delphi Compact Thermal Model Guideline published by the JEDEC standard Committee on Thermal Characterization.</span></p>
+<ul>
+<li class="p-VBA-Index-Category">
+<p class="VBA-Index-Category"><a href="#Methods">Methods</a></p>
+</li>
+<li class="p-VBA-Index-Category">
+<p class="VBA-Index-Category"><a href="#Defaults">Default Settings</a></p>
+</li>
+<li class="p-VBA-Index-Category">
+<p class="VBA-Index-Category"><a href="#Example">Example</a></p>
+</li>
+</ul>
+<p class="VBA-Heading-Category"><a name="Methods" id="Methods"></a>Methods</p>
+<p class="VBA-Heading-Method">Reset</p>
+<p class="VBA-Text-Indent">Resets all internal settings to their default values.</p>
+<p class="VBA-Heading-Method">&#160;</p>
+<p class="VBA-Heading-Method">Name ( <span style="font-weight: normal;"><a href="../common_vbageneral/common_general_name.htm" id="a9" name="a9">name</a> &#160;</span><span style="font-style: italic;"><i>name</i></span> )</p>
+<p class="VBA-Text-Indent">Sets the <span style="font-style: italic;"><i>name</i></span> of the Delphi model source. <span lang="EN-US" xml:lang="EN-US">Each source must have a unique name.</span></p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">Rename ( <span style="font-weight: normal;"><a href="../common_vbageneral/common_general_name.htm" id="a2" name="a2">name</a> &#160;</span><span style="font-style: italic;"><i>oldname</i></span>, &#160;<span style="font-weight: normal;"><a href="../common_vbageneral/common_general_name.htm" id="a3" name="a3">name</a></span> <span style="font-style: italic;"><i>newname</i></span> )</p>
+<p class="VBA-Text-Indent">Renames the Delphi model with the given <span style="font-style: italic;"><i>oldname</i></span> to the defined <span style="font-style: italic;"><i>newname</i></span>. A model with the new name must not already exist.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">Folder ( <a href="../common_vbageneral/common_general_name.htm" style="font-weight: normal;">name</a> <span style="font-style: italic;"><i>foldername</i></span> )</p>
+<p class="VBA-Text-Indent">Sets the name of the folder for the Delphi model under creation. The folder will be created if it does not exist. &#160;If the name is empty, then the Delphi model does not belong to a folder.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">NewFolder ( <a href="../common_vbageneral/common_general_name.htm" style="font-weight: normal;">name</a> <span style="font-style: italic;"><i>foldername</i></span> )</p>
+<p class="VBA-Text-Indent">Creates a new folder for Delphi models with the given name. The name of the new folder (<span style="font-style: italic;"><i>foldername</i></span>) must be unique. Otherwise no new folder will be created.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">RenameFolder ( <span style="font-weight: normal;"><a href="../common_vbageneral/common_general_name.htm" id="a21" name="a21">name</a> &#160;</span><span style="font-style: italic;"><i>oldname</i></span>, &#160;<span style="font-weight: normal;"><a href="../common_vbageneral/common_general_name.htm" id="a31" name="a31">name</a></span> <span style="font-style: italic;"><i>newname</i></span> )</p>
+<p class="VBA-Text-Indent">Renames an existing Delphi model folder from <span style="font-style: italic;"><i>oldname</i></span> to <span style="font-style: italic;"><i>newname</i></span>, if a folder with <span style="font-style: italic;"><i>newname</i></span> does not already exist. All items below the renamed folder will remain below the folder with the new name.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">DeleteFolder ( <span style="font-style: italic;"><i><a href="../common_vbageneral/common_general_string.htm" id="a611" style="font-style: normal; font-weight: normal;" name="a611">string</a> foldername</i></span> )</p>
+<p class="VBA-Text-Indent">Deletes an existing folder and all the contained elements.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">Enable( <a href="../common_vbageneral/common_general_bool_data_type.htm" style="font-weight: normal;">bool</a> <span style="font-style: italic;"><i>flag</i></span> )</p>
+<p class="VBA-Text-Indent">Enables or disables the Delphi model under creation depending on <span style="font-style: italic;"><i>flag</i></span>. If <span style="font-style: italic;"><i>flag</i></span> is <span style="font-style: italic;"><i>false,</i></span> the Delphi model won't be considered for simulation.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">EnableItem( <span style="font-weight: normal;"><a href="../common_vbageneral/common_general_name.htm" id="a22" name="a22">name</a> &#160;</span><span style="font-style: italic;"><i>name</i></span>, &#160;<a href="../common_vbageneral/common_general_bool_data_type.htm" style="font-weight: normal;">bool</a> <span style="font-style: italic;"><i>flag</i></span> )</p>
+<p class="VBA-Text-Indent">Enables or disables the (existing) Delphi model with the given <span style="font-style: italic;"><i>name</i></span> depending on <span style="font-style: italic;"><i>flag</i></span>. If <span style="font-style: italic;"><i>flag</i></span> is <span style="font-style: italic;"><i>false,</i></span> the Delphi model won't be considered for simulation.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">Delete ( <span style="font-weight: normal;"><a href="../common_vbageneral/common_general_expression.htm" id="a1" name="a1">name</a> &#160;</span><span style="font-style: italic;"><i>name</i></span> )</p>
+<p class="VBA-Text-Indent">Deletes the Delphi model with the given <span style="font-style: italic;"><i>name</i></span>.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">Set ( <a href="../common_vbageneral/common_general_string.htm" id="a6111" style="font-style: normal; font-weight: normal;" name="a6111">string</a> <span style="font-style: italic;"><i>parameterName,</i></span> <a href="../common_vbageneral/common_general_variant.htm" style="color: rgb(0, 0, 255); font-family: Arial; font-size: 12px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: left; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px;">variant</a> <span style="font-style: italic;"><i>paramterValues, ...</i></span> )</p>
+<p class="VBA-Text-Indent">To define special parameters for a Delphi model, the command <span style="font-style: italic;"><i>Set</i></span> can be used. Available <span style="font-style: italic;"><i>parameterName</i></span>s are listed below. All settings must be made before the <span style="font-style: italic;"><i>Create</i></span> command is called.</p>
+<table style="margin-left: 40px; left: 0px; top: 1623px; border-collapse: separate; border-collapse: separate;" cellspacing="0" width="1057" border="1">
+<col style="width: 14.664%;" />
+<col style="width: 21.141%;" />
+<col style="width: 18.948%;" />
+<col style="width: 43.016%;" />
+<tr>
+<td>
+<p style="font-weight: bold;">parameterName</p>
+</td>
+<td>
+<p style="font-weight: bold;">parameterValues</p>
+</td>
+<td>
+<p style="font-weight: bold;">Default</p>
+</td>
+<td>
+<p style="font-weight: bold;">Meaning</p>
+</td>
+</tr>
+<tr>
+<td>
+<p>"Name"</p>
+</td>
+<td>
+<p class="VBA-Heading-Method" style="font-weight: normal;"><a href="../common_vbageneral/common_general_name.htm" style="font-style: normal;">name</a> <span style="font-style: italic;"><i>itemName</i></span></p>
+</td>
+<td>
+<p>&lt;empty / invalid&gt;</p>
+</td>
+<td>
+<p>Specifies the name of the Delphi model under creation (same as ".Name" command)</p>
+</td>
+</tr>
+<tr>
+<td>
+<p>"Face"</p>
+</td>
+<td>
+<p class="VBA-Heading-Method"><span style="font-weight: normal;"><a href="../common_vbageneral/common_general_solid_names.htm">solidname</a></span> <span style="font-style: italic; font-weight: normal;"><i>solidName,</i></span> <span style="font-weight: normal;"><a href="../common_vbageneral/common_general_integer.htm">int</a></span> <span style="font-style: italic; font-weight: normal;"><i>faceId</i></span></p>
+</td>
+<td>
+<p class="VBA-Heading-Method" style="font-weight: normal;">&lt;empty / invalid&gt;</p>
+</td>
+<td>
+<p>The top surface of the Delphi model package must be a planar face of an existing solid (brick). This solid is specified by <span style="font-style: italic;"><i>solidName</i></span> and the top surface is indicated by <span style="font-style: italic;"><i>faceId</i></span> which is the id of the face in the list of faces belonging to the specified solid.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p>"OverwriteCaseEmissivity"</p>
+<p>&#160;</p>
+<p>"CaseEmissivity"</p>
+</td>
+<td>
+<p><a href="../common_vbageneral/common_general_bool_data_type.htm" style="font-weight: normal;">bool</a> <span style="font-style: italic;"><i>flag</i></span></p>
+<p>&#160;</p>
+<p style="font-style: italic;"><a href="../common_vbageneral/common_general_double.htm" style="font-style: normal;">double</a> emissivity</p>
+</td>
+<td>
+<p style="font-style: italic;">False</p>
+<p style="font-style: italic;">&#160;</p>
+<p style="font-style: italic;">0.0</p>
+</td>
+<td><span style="font-family: Arial; font-size: 12px; font-variant-ligatures: normal; font-variant-caps: normal; orphans: 2; text-align: justify; widows: 2; -webkit-text-stroke-width: 0px; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; display: inline ! important ; float: none;">When enabled (</span><span style="font-family: Arial; font-size: 12px; font-variant-ligatures: normal; font-variant-caps: normal; orphans: 2; text-align: justify; widows: 2; -webkit-text-stroke-width: 0px; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; display: inline ! important ; float: none; font-style: italic;"><i>flag = True</i></span><span style="font-family: Arial; font-size: 12px; font-variant-ligatures: normal; font-variant-caps: normal; orphans: 2; text-align: justify; widows: 2; -webkit-text-stroke-width: 0px; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; display: inline ! important ; float: none;">), the user-defined</span> <span style="font-family: Arial; font-size: 12px; font-variant-ligatures: normal; font-variant-caps: normal; orphans: 2; text-align: justify; widows: 2; -webkit-text-stroke-width: 0px; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; display: inline ! important ; float: none; font-style: italic;"><i>emissivity</i></span> <span style="font-family: Arial; font-size: 12px; font-variant-ligatures: normal; font-variant-caps: normal; orphans: 2; text-align: justify; widows: 2; -webkit-text-stroke-width: 0px; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; display: inline ! important ; float: none;">is used to specify the upper package surface emissivity. Otherwise (</span><span style="font-family: Arial; font-size: 12px; font-variant-ligatures: normal; font-variant-caps: normal; orphans: 2; text-align: justify; widows: 2; -webkit-text-stroke-width: 0px; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; display: inline ! important ; float: none; font-style: italic;"><i>flag = False</i></span><span style="font-family: Arial; font-size: 12px; font-variant-ligatures: normal; font-variant-caps: normal; orphans: 2; text-align: justify; widows: 2; -webkit-text-stroke-width: 0px; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; display: inline ! important ; float: none;">), the emissivity of the material assigned to the package (</span><a href="../special_vbalayer/special_vbalayerolayer_object.htm#Thermal_Material_Properties" style="font-size: 12px; font-family: Arial, sans-serif; font-weight: 400; font-style: normal; color: rgb(0, 0, 160); font-variant-ligatures: normal; font-variant-caps: normal; letter-spacing: normal; orphans: 2; text-align: justify; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px;">Thermal</a><span style="font-family: Arial; font-size: 12px; font-variant-ligatures: normal; font-variant-caps: normal; orphans: 2; text-align: justify; widows: 2; -webkit-text-stroke-width: 0px; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; display: inline ! important ; float: none;">) is used and the value of "</span><span style="font-family: Arial; font-size: 12px; font-variant-ligatures: normal; font-variant-caps: normal; orphans: 2; text-align: justify; widows: 2; -webkit-text-stroke-width: 0px; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; display: inline ! important ; float: none; font-style: italic;"><i>CaseEmissivity</i></span><span style="font-family: Arial; font-size: 12px; font-variant-ligatures: normal; font-variant-caps: normal; orphans: 2; text-align: justify; widows: 2; -webkit-text-stroke-width: 0px; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; display: inline ! important ; float: none;">" is ignored..</span></td>
+</tr>
+<tr>
+<td>
+<p>&#160;</p>
+</td>
+<td>
+<p>&#160;</p>
+</td>
+<td>
+<p>&#160;</p>
+</td>
+<td>
+<p style="text-align: center;"><img src="../image/delphi_package_geometry.png" alt="" style="border: none;" width="400" height="183" border="0" /></p>
+</td>
+</tr>
+<tr>
+<td>
+<p>"TopInnerSurfaceArea"</p>
+</td>
+<td>
+<p style="font-style: italic;"><span style="font-style: italic;"><i><a href="../common_vbageneral/common_general_double.htm" style="font-style: normal;">double</a> areaPercentage</i></span></p>
+</td>
+<td>
+<p style="font-style: italic;">25</p>
+</td>
+<td>
+<p>The top inner surface is a <span style="font-size: 12px; font-variant-ligatures: normal; font-variant-caps: normal; orphans: 2; text-align: justify; text-indent: 12px; widows: 2; -webkit-text-stroke-width: 0px; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; display: inline ! important ; float: none;">rectangular and centered patch on the upper package surface. It is defined by its surface area as a percentage of the</span> top surface of the Delphi model package.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p>"UseDifferentBottomSurfaceArea"</p>
+<p>&#160;</p>
+<p>"BottomInnerSurfaceArea"</p>
+</td>
+<td>
+<p><a href="../common_vbageneral/common_general_bool_data_type.htm" style="font-weight: normal;">bool</a> <span style="font-style: italic;"><i>flag</i></span></p>
+<p>&#160;</p>
+<p><span style="font-style: italic;"><i><a href="../common_vbageneral/common_general_double.htm" style="font-style: normal;">double</a> areaPercentage</i></span></p>
+</td>
+<td>
+<p style="font-style: italic;">True</p>
+<p style="font-style: italic;">&#160;</p>
+<p style="font-style: italic;">25</p>
+</td>
+<td>
+<p>The bottom inner surface is a <span style="font-size: 12px; font-variant-ligatures: normal; font-variant-caps: normal; orphans: 2; text-align: justify; text-indent: 12px; widows: 2; -webkit-text-stroke-width: 0px; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; display: inline ! important ; float: none;">rectangular and centered patch on the bottom package surface (opposite of the top surface).</span> If <span style="font-style: italic;"><i>flag = False</i></span>, the bottom inner surface will have the same size as the top inner surface, as equal sizes are expected for top and bottom package surfaces. If <span style="font-style: italic;"><i>flag = True</i></span>, the bottom inner surface area is defined as a percentage of the bottom surface of the Delphi Model package.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p>"ICPackagingType"</p>
+<p>&#160;</p>
+</td>
+<td>
+<p><a href="../common_vbageneral/common_general_enum.htm" style="font-weight: normal;">enum</a> <span style="font-style: italic;"><i>type</i></span></p>
+<p style="font-style: italic;">{ "None", "Peripheral leaded", "Area arrays" }</p>
+</td>
+<td>
+<p>"<span style="font-style: italic;"><i>None</i></span>"</p>
+</td>
+<td>
+<p style="margin-top: 0pt; margin-bottom: 3px; font-variant-ligatures: normal; font-variant-caps: normal; orphans: 2; widows: 2; -webkit-text-stroke-width: 0px; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial;">If the <span style="font-style: italic;"><i>type</i></span> "<span style="font-style: italic;"><i>None</i></span>" is specified, leads or metal alloy balls (area arrays) must be modeled by the customer.</p>
+<p style="margin-top: 0pt; text-align: justify; margin-bottom: 3px; font-variant-ligatures: normal; font-variant-caps: normal; orphans: 2; widows: 2; -webkit-text-stroke-width: 0px; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial;">If the <span style="font-style: italic;"><i>type</i></span> “<span style="font-style: italic;"><i>Peripheral leaded</i></span>” is specified, the leads will be represented by blocks (associated to the lead node) whose dimensions are entered in further commands ("<span style="font-style: italic;"><i>LeadLength</i></span>", "<span style="font-style: italic;"><i>LeadHeight</i></span>", &#160;"<span style="font-style: italic;"><i>LeadWidth</i></span>").</p>
+<p style="margin-top: 0pt; text-align: justify; margin-bottom: 3px; font-variant-ligatures: normal; font-variant-caps: normal; orphans: 2; widows: 2; -webkit-text-stroke-width: 0px; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial;">If the <span style="font-style: italic;"><i>type</i></span> “<span style="font-style: italic;"><i>Area arrays</i></span>” is specified, the area arrays will be represented by blocks (associated to the lead node) whose dimensions are entered in further commands ("<span style="font-style: italic;"><i>AreaArrayCx</i></span>", "<span style="font-style: italic;"><i>AreaArrayCy</i></span>", "<span style="font-style: italic;"><i>AreaArrayMx</i></span>", "<span style="font-style: italic;"><i>AreaArrayMy</i></span>", "<span style="font-style: italic;"><i>AreaArrayPx</i></span>", "<span style="font-style: italic;"><i>AreaArrayPy</i></span>", "<span style="font-style: italic;"><i>AreaArrayHz</i></span>").</p>
+</td>
+</tr>
+<tr>
+<td>
+<p>&#160;</p>
+</td>
+<td>
+<p>&#160;</p>
+</td>
+<td>
+<p>&#160;</p>
+</td>
+<td>
+<p style="margin-top: 0pt; margin-bottom: 3px; font-variant-ligatures: normal; font-variant-caps: normal; orphans: 2; widows: 2; -webkit-text-stroke-width: 0px; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; text-align: center;"><img src="../image/delphi_peripheral_leads.png" alt="" style="border: none;" border="0" />Peripheral leaded</p>
+</td>
+</tr>
+<tr>
+<td>
+<p style="font-style: normal;"><span style="font-variant-ligatures: normal; font-variant-caps: normal; orphans: 2; widows: 2; -webkit-text-stroke-width: 0px; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial;">"</span>LeadLength<span style="font-variant-ligatures: normal; font-variant-caps: normal; orphans: 2; widows: 2; -webkit-text-stroke-width: 0px; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial;">"</span></p>
+<p style="font-style: normal;"><span style="font-variant-ligatures: normal; font-variant-caps: normal; orphans: 2; widows: 2; -webkit-text-stroke-width: 0px; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial;">"</span>LeadHeight<span style="font-variant-ligatures: normal; font-variant-caps: normal; orphans: 2; widows: 2; -webkit-text-stroke-width: 0px; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial;">"</span></p>
+<p style="font-style: normal;"><span style="font-variant-ligatures: normal; font-variant-caps: normal; orphans: 2; widows: 2; -webkit-text-stroke-width: 0px; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial;">"</span>LeadWidth<span style="font-variant-ligatures: normal; font-variant-caps: normal; orphans: 2; widows: 2; -webkit-text-stroke-width: 0px; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial;">"</span></p>
+</td>
+<td>
+<p style="font-style: italic;"><span style="font-style: italic;"><i><a href="../common_vbageneral/common_general_double.htm" style="font-style: normal;">double</a> lengthPercentage</i></span></p>
+<p style="font-style: italic;"><span style="font-style: italic;"><i><a href="../common_vbageneral/common_general_double.htm" style="font-style: normal;">double</a> heightPercentage</i></span></p>
+<p style="font-style: italic;"><span style="font-style: italic;"><i><a href="../common_vbageneral/common_general_double.htm" style="font-style: normal;">double</a> width</i></span></p>
+</td>
+<td>
+<p style="font-style: italic;">70</p>
+<p style="font-style: italic;">5</p>
+<p style="font-style: italic;">0.05</p>
+</td>
+<td>
+<p style="margin-top: 0pt; margin-bottom: 3px; font-variant-ligatures: normal; font-variant-caps: normal; orphans: 2; widows: 2; -webkit-text-stroke-width: 0px; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial;">The length and the height of a lead block are defined as a percentage of the length and the height of the adjacent package side. The width is the depth of the lead block. This value is &#160;considered only if the <span style="font-style: italic;"><i>ICPackagingType</i></span> is "<span style="font-style: italic;"><i>Peripheral leaded</i></span>" and if <span style="font-style: italic;"><i>"LeadImprintOnly"</i></span> is set to <span style="font-style: italic;"><i>False</i></span>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p style="font-style: normal;">"LeadImprintOnly"</p>
+</td>
+<td>
+<p style="font-style: italic;"><a href="../common_vbageneral/common_general_bool_data_type.htm" style="font-weight: normal;">bool</a> flag</p>
+</td>
+<td>
+<p style="font-style: italic;">False</p>
+</td>
+<td>
+<p style="margin-top: 0pt; margin-bottom: 3px; font-variant-ligatures: normal; font-variant-caps: normal; orphans: 2; widows: 2; -webkit-text-stroke-width: 0px; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial;"><span style="font-size: 12px; text-align: justify; display: inline ! important ; float: none;">If</span> <span style="font-size: 12px; text-align: justify; display: inline ! important ; float: none; font-style: italic;"><i>flag = False</i></span><span style="font-size: 12px; text-align: justify; display: inline ! important ; float: none;">, the blocks representing the leads will be built according to the dimensions entered by the user. In this case, the blocks will be associated to the lead node and will be part of the simulation, therefore they must receive a material assignment.</span><br style="color: rgb(0, 0, 0); font-family: Arial; font-size: 12px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: justify; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial;" />
+<span style="font-size: 12px; text-align: justify; display: inline ! important ; float: none;">If</span> <span style="font-size: 12px; text-align: justify; display: inline ! important ; float: none; font-style: italic;"><i>flag = True</i></span><span style="font-size: 12px; text-align: justify; display: inline ! important ; float: none;">, the blocks representing the leads will be built according to the dimensions entered by the user and imprinted on the package to create the lead node on the package surface. The blocks will be deleted after their imprinting.</span></p>
+<p style="margin-top: 0pt; margin-bottom: 3px; font-variant-ligatures: normal; font-variant-caps: normal; orphans: 2; widows: 2; -webkit-text-stroke-width: 0px; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial;">This setting is relevant only for the <span style="font-style: italic;"><i>ICPackagingType</i></span> "<span style="font-style: italic;"><i>Peripheral leaded</i></span>".</p>
+</td>
+</tr>
+<tr>
+<td>
+<p style="font-style: normal;">&#160;</p>
+</td>
+<td>
+<p style="font-style: italic;">&#160;</p>
+</td>
+<td>
+<p style="font-style: italic;">&#160;</p>
+</td>
+<td>
+<p style="margin-top: 0pt; margin-bottom: 3px; font-variant-ligatures: normal; font-variant-caps: normal; orphans: 2; widows: 2; -webkit-text-stroke-width: 0px; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; text-align: center;"><img src="../image/delphi_area_arrays.png" alt="" style="border: none;" border="0" />Area arrays</p>
+</td>
+</tr>
+<tr>
+<td>
+<p style="font-style: normal;"><span style="font-variant-ligatures: normal; font-variant-caps: normal; orphans: 2; widows: 2; -webkit-text-stroke-width: 0px; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial;">"</span>AreaArrayCx<span style="font-variant-ligatures: normal; font-variant-caps: normal; orphans: 2; widows: 2; -webkit-text-stroke-width: 0px; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial;">"</span></p>
+<p style="font-style: normal;"><span style="font-variant-ligatures: normal; font-variant-caps: normal; orphans: 2; widows: 2; -webkit-text-stroke-width: 0px; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial;">"</span>AreaArrayCy<span style="font-variant-ligatures: normal; font-variant-caps: normal; orphans: 2; widows: 2; -webkit-text-stroke-width: 0px; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial;">"</span></p>
+<p style="font-style: normal;"><span style="font-variant-ligatures: normal; font-variant-caps: normal; orphans: 2; widows: 2; -webkit-text-stroke-width: 0px; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial;">"</span>AreaArrayMx<span style="font-variant-ligatures: normal; font-variant-caps: normal; orphans: 2; widows: 2; -webkit-text-stroke-width: 0px; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial;">"</span></p>
+<p style="font-style: normal;"><span style="font-variant-ligatures: normal; font-variant-caps: normal; orphans: 2; widows: 2; -webkit-text-stroke-width: 0px; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial;">"</span>AreaArrayMy<span style="font-variant-ligatures: normal; font-variant-caps: normal; orphans: 2; widows: 2; -webkit-text-stroke-width: 0px; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial;">"</span></p>
+<p style="font-style: normal;"><span style="font-variant-ligatures: normal; font-variant-caps: normal; orphans: 2; widows: 2; -webkit-text-stroke-width: 0px; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial;">"</span>AreaArrayPx<span style="font-variant-ligatures: normal; font-variant-caps: normal; orphans: 2; widows: 2; -webkit-text-stroke-width: 0px; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial;">"</span></p>
+<p style="font-style: normal;"><span style="font-variant-ligatures: normal; font-variant-caps: normal; orphans: 2; widows: 2; -webkit-text-stroke-width: 0px; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial;">"</span>AreaArrayPy<span style="font-variant-ligatures: normal; font-variant-caps: normal; orphans: 2; widows: 2; -webkit-text-stroke-width: 0px; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial;">"</span></p>
+<p style="font-style: normal;"><span style="font-variant-ligatures: normal; font-variant-caps: normal; orphans: 2; widows: 2; -webkit-text-stroke-width: 0px; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial;">"</span>AreaArrayHz<span style="font-variant-ligatures: normal; font-variant-caps: normal; orphans: 2; widows: 2; -webkit-text-stroke-width: 0px; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial;">"</span></p>
+</td>
+<td>
+<p style="font-style: italic;"><a href="../common_vbageneral/common_general_double.htm" style="font-style: normal;">double</a> Cx</p>
+<p style="font-style: italic;"><span style="font-style: italic;"><i><a href="../common_vbageneral/common_general_double.htm" style="font-style: normal;">double</a> Cy</i></span></p>
+<p style="font-style: italic;"><span style="font-style: italic;"><i><a href="../common_vbageneral/common_general_double.htm" style="font-style: normal;">double</a> Mx</i></span></p>
+<p style="font-style: italic;"><span style="font-style: italic;"><i><a href="../common_vbageneral/common_general_double.htm" style="font-style: normal;">double</a> My</i></span></p>
+<p style="font-style: italic;"><span style="font-style: italic;"><i><a href="../common_vbageneral/common_general_double.htm" style="font-style: normal;">double</a> Px</i></span></p>
+<p style="font-style: italic;"><span style="font-style: italic;"><i><a href="../common_vbageneral/common_general_double.htm" style="font-style: normal;">double</a> Py</i></span></p>
+<p style="font-style: italic;"><span style="font-style: italic;"><i><a href="../common_vbageneral/common_general_double.htm" style="font-style: normal;">double</a> Hz</i></span></p>
+</td>
+<td>
+<p style="font-style: italic;">0</p>
+<p style="font-style: italic;">0</p>
+<p style="font-style: italic;">0</p>
+<p style="font-style: italic;">0</p>
+<p style="font-style: italic;">0</p>
+<p style="font-style: italic;">0</p>
+<p style="font-style: italic;">0</p>
+</td>
+<td>
+<p style="margin-top: 0pt; margin-bottom: 3px; font-variant-ligatures: normal; font-variant-caps: normal; orphans: 2; widows: 2; -webkit-text-stroke-width: 0px; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial;">If the alloy balls are modeled as area arrays, i.e. if <span style="font-style: italic;"><i>ICPackagingType</i></span> is "<span style="font-style: italic;"><i>Area arrays</i></span>", the corresponding dimensions of these two thin rectangular layers can be described as depicted in the picture above:</p>
+<p style="margin-top: 0pt; margin-bottom: 3px; font-variant-ligatures: normal; font-variant-caps: normal; orphans: 2; widows: 2; -webkit-text-stroke-width: 0px; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial;"><span style="font-style: italic;"><i>Px x Py</i></span> and <span style="font-style: italic;"><i>Mx x My</i></span> are the outer and inner dimensions of the outer array, respectively, and <span style="font-style: italic;"><i>Cx x Cy</i></span> is the dimension of the inner array. <span style="font-style: italic;"><i>Hz</i></span> describes the thickness of these layers.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p style="font-style: normal;">"ICPackagingMaterial"</p>
+</td>
+<td>
+<p style="font-style: italic;"><a href="../common_vbageneral/common_general_name.htm" style="font-style: normal;">name</a> materialName</p>
+</td>
+<td>
+<p style="font-style: italic;">"Copper (annealed)"</p>
+</td>
+<td>
+<p style="margin-top: 0pt; margin-bottom: 3px; font-variant-ligatures: normal; font-variant-caps: normal; orphans: 2; widows: 2; -webkit-text-stroke-width: 0px; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial;">Defines the material of the blocks representing the lead node (lead or area arrays).</p>
+<p style="margin-top: 0pt; margin-bottom: 3px; font-variant-ligatures: normal; font-variant-caps: normal; orphans: 2; widows: 2; -webkit-text-stroke-width: 0px; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial;">This setting will be considered only if <span style="font-style: italic;"><i>ICPackagingType</i></span> is "<span style="font-style: italic;"><i>Peripheral leaded</i></span>" and "<span style="font-style: italic;"><i>LeadImprintOnly</i></span>" is <span style="font-style: italic;"><i>False</i></span> or if <span style="font-style: italic;"><i>ICPackagingType</i></span> is "<span style="font-style: italic;"><i>Area arrays</i></span>".</p>
+</td>
+</tr>
+<tr>
+<td>
+<p style="font-style: normal;">&#160;</p>
+</td>
+<td>
+<p style="font-style: italic;">&#160;</p>
+</td>
+<td>
+<p style="font-style: italic;">&#160;</p>
+</td>
+<td>
+<p style="margin-top: 0pt; margin-bottom: 3px; font-variant-ligatures: normal; font-variant-caps: normal; orphans: 2; widows: 2; -webkit-text-stroke-width: 0px; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; text-align: center;"><img src="../image/delphi_network.png" alt="" style="border: none;" border="0" />Network</p>
+<p style="margin-top: 0pt; margin-bottom: 3px; font-variant-ligatures: normal; font-variant-caps: normal; orphans: 2; widows: 2; -webkit-text-stroke-width: 0px; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; font-size: 12px; text-align: justify; display: inline ! important ;">The <span style="font-weight: bold;">junction</span> node of the Delphi model is an internal node which doesn't interact with the package environment. The <span style="font-weight: bold;">top inner</span>, <span style="font-weight: bold;">top outer</span>, <span style="font-weight: bold;">bottom inner</span>, <span style="font-weight: bold;">bottom outer</span> and <span style="font-weight: bold;">side</span> nodes of the Delphi model are called surface or external nodes because they are associated to certain physical regions or patches located on the package surface, allowing them to interact with the package environment. The <span style="font-weight: bold;">lead</span> node is included in the network as external node if the <span style="font-style: italic;"><i>ICPackagingType</i></span> is "<span style="font-style: italic;"><i>Peripheral leaded</i></span>". Further <span style="text-indent: 12px;">internal nodes can be added if necessary by adding additional nodes to the node / resistance table.</span></p>
+</td>
+</tr>
+<tr>
+<td>
+<p style="font-style: normal;"><span style="font-style: normal;">"NetworkNodeName"</span></p>
+</td>
+<td>
+<p style="font-style: italic;"><a href="../common_vbageneral/common_general_integer.htm" id="a2911" style="font-weight: normal; font-style: normal;" name="a2911">int</a> nodeIndex, <a href="../common_vbageneral/common_general_string.htm" id="a6112" style="font-style: normal; font-weight: normal;" name="a6112">string</a> nodeName</p>
+</td>
+<td>
+<p style="font-style: italic;">1, "Junction"</p>
+<p style="font-style: italic;">2, "Top inner"</p>
+<p style="font-style: italic;">3, "Bottom inner"</p>
+<p style="font-style: italic;">4, "Top outer"</p>
+<p style="font-style: italic;">5, "Bottom outer"</p>
+<p style="font-style: italic;">6, "Side"</p>
+<p style="font-style: italic;">7, "Lead"</p>
+<p style="font-style: italic;">8-20, "Internal node"</p>
+</td>
+<td>
+<p style="margin-top: 0pt; margin-bottom: 3px; font-variant-ligatures: normal; font-variant-caps: normal; orphans: 2; widows: 2; -webkit-text-stroke-width: 0px; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial;">Defines the name of the node with the given <span style="font-style: italic;"><i>nodeIndex</i></span>. The <span style="font-style: italic;"><i>nodeIndex</i></span> is an integer number between 1 and 20 indicating to which node the setting refers. Mind that the names of the junction and of the external nodes are fixed. They are automatically assigned to the indices 1 to 7, where <span style="font-style: italic;"><i>nodeIndex = 1</i></span> belongs to <span style="font-style: italic;"><i>nodeName = "Junction"</i></span>, <span style="font-style: italic;"><i>nodeIndex = 2</i></span> belongs to the <span style="font-style: italic;"><i>nodeName = "Top inner"</i></span> etc. The name specification for these default nodes can be omitted. All further user-defined nodes will have the default name "<span style="font-style: italic;"><i>Internal node</i></span>" if not specified otherwise. Please note that maximum 13 additional inner nodes can be defined, i.e. maximum 20 nodes in total.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p style="font-style: normal;">"NetworkNodeCapacitance"</p>
+</td>
+<td>
+<p style="font-style: normal;"><span style="font-style: italic;"><i><a href="../common_vbageneral/common_general_integer.htm" id="a29111" style="font-weight: normal; font-style: normal;" name="a29111">int</a> nodeIndex,</i></span> <a href="../common_vbageneral/common_general_double.htm" style="font-style: normal;">double</a> <span style="font-style: italic;"><i>nodeCapacitance</i></span></p>
+</td>
+<td>
+<p style="font-style: italic;">0</p>
+</td>
+<td>
+<p style="margin-top: 0pt; margin-bottom: 3px; font-variant-ligatures: normal; font-variant-caps: normal; orphans: 2; widows: 2; -webkit-text-stroke-width: 0px; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial;">Defines the capacitance of the node with the given <span style="font-style: italic;"><i>nodeIndex</i></span>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p style="font-style: normal;">"NetworkNodePower"</p>
+</td>
+<td>
+<p style="font-style: italic;"><a href="../common_vbageneral/common_general_integer.htm" id="a291111" style="font-weight: normal; font-style: normal;" name="a291111">int</a> nodeIndex, <span><a href="../common_vbageneral/common_general_double.htm" style="font-style: normal;">double</a></span> nodePower</p>
+</td>
+<td>
+<p style="font-style: italic;">0</p>
+</td>
+<td>
+<p style="margin-top: 0pt; margin-bottom: 3px; font-variant-ligatures: normal; font-variant-caps: normal; orphans: 2; widows: 2; -webkit-text-stroke-width: 0px; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial;"><span style="font-variant-ligatures: normal; font-variant-caps: normal; orphans: 2; widows: 2; -webkit-text-stroke-width: 0px; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial;">Defines the power of the node with the given</span> <span style="font-variant-ligatures: normal; font-variant-caps: normal; orphans: 2; widows: 2; -webkit-text-stroke-width: 0px; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; font-style: italic;"><i>nodeIndex</i></span><span style="font-variant-ligatures: normal; font-variant-caps: normal; orphans: 2; widows: 2; -webkit-text-stroke-width: 0px; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial;">. The power for external nodes (index 2 to 7) will ignored and can be omitted.</span></p>
+</td>
+</tr>
+<tr>
+<td>
+<p style="font-style: normal;">"NetworkResistance"</p>
+</td>
+<td>
+<p style="font-style: italic;"><a href="../common_vbageneral/common_general_integer.htm" id="a2911111" style="font-weight: normal; font-style: normal;" name="a2911111">int</a> nodeIndex1, <a href="../common_vbageneral/common_general_integer.htm" id="a2911112" style="font-weight: normal; font-style: normal;" name="a2911112">int</a> nodeIndex2, <a href="../common_vbageneral/common_general_double.htm" style="font-style: normal;">double</a> resistance</p>
+</td>
+<td>
+<p style="font-style: italic;">&lt;unset / no connection&gt;</p>
+</td>
+<td>
+<p style="margin-top: 0pt; margin-bottom: 3px; font-variant-ligatures: normal; font-variant-caps: normal; orphans: 2; widows: 2; -webkit-text-stroke-width: 0px; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial;">Defines the <span style="font-style: italic;"><i>resistance</i></span> between the node pair (<span style="font-style: italic;"><i>nodeIindex1, nodeIndex2</i></span>). The node / resistance table is assumed to be symmetric, so it is not necessary to repeat the same settings for node pair (<span style="font-style: italic;"><i>nodeIindex2, nodeIndex1</i></span>). If redundant settings are made, the last one wins over the previous ones.</p>
+</td>
+</tr>
+</table>
+<p class="VBA-Text-Indent" style="font-weight: normal;">&#160;</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">Create</p>
+<p class="VBA-Text-Indent">Creates a Delphi model source. All required settings for this object have to be made before the <span style="font-style: italic;"><i>Create</i></span> command is called and will be checked for correctness and consistency during the creation state.</p>
+<p class="VBA-Heading-Category"><a name="Defaults" id="Defaults"></a>Default Settings</p>
+<p class="VBA-Text-Example">Name ("")</p>
+<p class="VBA-Text-Example">Set "Face" ("", 0)</p>
+<p class="VBA-Text-Example">Set "OverwriteCaseEmissivity" (False)</p>
+<p class="VBA-Text-Example">Set "TopInnerSurfaceAre" ("25")</p>
+<p class="VBA-Text-Example">Set "UseDifferentBottomSurfaceArea" (False)</p>
+<p class="VBA-Text-Example">Set "ICPackagingType" ("None")</p>
+<p class="VBA-Text-Example">Enable (True)</p>
+<p class="VBA-Text-Example">Folder ("")</p>
+<p class="VBA-Heading-Category"><a name="Example" id="Example"></a>Example</p>
+<p class="VBA-Text-Example">With DelphiModel</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.Reset</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.Set "Name", "delphi model 1"</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.Folder ""</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.Enable "True"</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.Set "Face", "component1:delphi block 1", "1"</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.Set "OverwriteCaseEmissivity", "False"</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.Set "CaseEmissivity", "0"</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.Set "TopInnerSurfaceArea", "15"</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.Set "UseDifferentBottomSurfaceArea", "True"</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.Set "BottomInnerSurfaceArea", "35"</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.Set "ICPackagingType", "Peripheral leaded"</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.Set "LeadImprintOnly", "False"</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.Set "LeadLength", "70"</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.Set "LeadHeight", "15"</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.Set "LeadWidth", "0.21"</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.Set "ICPackagingMaterial", "Copper (annealed)"</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.Set "NetworkNodeName", "1", "Junction"</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.Set "NetworkNodeCapacitance", "1", "0"</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.Set "NetworkNodePower", "1", "0"</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.Set "NetworkNodeName", "2", "Top inner"</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.Set "NetworkNodeCapacitance", "2", "5"</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.Set "NetworkNodeName", "3", "Bottom inner"</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.Set "NetworkNodeCapacitance", "3", "0"</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.Set "NetworkNodeName", "4", "Top outer"</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.Set "NetworkNodeCapacitance", "4", "0"</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.Set "NetworkNodeName", "5", "Bottom outer"</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.Set "NetworkNodeCapacitance", "5", "0"</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.Set "NetworkNodeName", "6", "Side"</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.Set "NetworkNodeCapacitance", "6", "0"</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.Set "NetworkNodeName", "7", "Leads"</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.Set "NetworkNodeCapacitance", "7", "0"</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.Set "NetworkNodeName", "8", "Internal node 1"</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.Set "NetworkNodeCapacitance", "8", "0"</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.Set "NetworkNodePower", "8", "8.1"</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.Set "NetworkNodeName", "10", "Another node"</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.Set "NetworkNodeCapacitance", "10", "0"</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.Set "NetworkNodePower", "10", "10.1"</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.Create</p>
+<p class="VBA-Text-Example">End With</p>
+<p class="VBA-Text-Example">&#160;</p>
+<?rh-p style="margin-bottom: 0px; text-align: Right; margin-left: 18px; 
+                 margin-right: 18px; margin-top: 18px;" ?>
+<div style="width: 100%; position: relative;" id="footer">
+<p style="border-bottom: Solid 1px #dddddd; text-align: Left; margin-left: 0px; font-family: Arial, sans-serif; line-height: Normal; margin-top: 9px; margin-right: 0px; margin-bottom: 6px; border-left-width: 1px; border-top-width: 1px; border-right-width: 1px;"><span style="text-align: Left; font-family: Arial, sans-serif; line-height: Normal;">&#160;</span></p>
+<table cellspacing="0" width="100%">
+<col style="width: 50%;" />
+<col style="width: 50%;" />
+<tr>
+<td style="vertical-align: Top;"><span style="font-family: Arial, sans-serif; line-height: Normal; font-size: 8pt;"><font size="1" style="font-size:8pt;">CST Studio Suite 2026</font></span></td>
+<td style="vertical-align: Top;">
+<p style="text-align: right;">&#160;</p>
+</td>
+</tr>
+</table>
+<p>&#160;</p>
+</div>
+<script type="text/javascript" language="javascript1.2">
+//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+        writeIntopicBar(0);
+
+
+highlightSearch();
+//-->
+//]]>
+</script>
+</body>
+</html>

@@ -1,0 +1,306 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="Adobe RoboHelp 11" />
+<title>CablePort Object</title>
+<link rel="StyleSheet" href="../online_help_vba.css" type="text/css" />
+<style type="text/css">
+/*<![CDATA[*/
+<!--
+body { border-bottom-style:None; }
+-->
+/*]]>*/
+</style>
+
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+        origWidth = innerWidth;
+        origHeight = innerHeight;
+        onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+/*<![CDATA[*/
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+-->
+/*]]>*/
+</style>
+
+<script type="text/javascript" language="javascript1.2" src="../whmsg.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript" src="../whver.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript1.2" src="../whutils.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript1.2" src="../whproxy.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript1.2" src="../whlang.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript1.2" src="../whtopic.js" charset="utf-8">
+</script>
+</head>
+<body>
+<script type="text/javascript" language="javascript1.2">
+//<![CDATA[
+<!--
+if (window.gbWhTopic)
+{
+        var strUrl = document.location.href;
+        var bc = 0;
+        var n = strUrl.toLowerCase().indexOf("bc-");
+        if(n != -1)
+        {
+                document.location.replace(strUrl.substring(0, n));
+                bc = strUrl.substring(n+3);
+        }
+
+        if (window.addTocInfo)
+        {
+        addTocInfo("3D Simulation VBA\nVBA Objects\nSources and Ports\nHigh Frequency\nCablePort");
+
+        }
+        if (window.writeBtnStyle)
+                writeBtnStyle();
+
+        if (window.writeIntopicBar)
+                writeIntopicBar(0);
+
+        
+        document.write("<p style=\"font-family: Tahoma; font-size: 9pt; font-weight: 400;  font-style:normal; color: rgb(0, 0, 0); text-decoration:none; text-align: left\"> ");
+AddMasterBreadcrumbs("../index.htm", "font-family: Tahoma; font-size: 9pt; font-weight: 400;  font-style:normal; color: rgb(0, 0, 0); text-decoration:none; text-align: left", "|", "Home", "../special_vbaobjects/special_vbaobjects_vbaobjects.htm");
+document.write("<a style=\"font-family: Tahoma; font-size: 9pt; font-weight: 400;  font-style:normal; color: rgb(0, 0, 0); text-decoration:none; text-align: left\" href=\"../special_vbaobjects/special_vbaobjects_vbaobjects.htm\">3D Simulation VBA<\/a> | <a style=\"font-family: Tahoma; font-size: 9pt; font-weight: 400;  font-style:normal; color: rgb(0, 0, 0); text-decoration:none; text-align: left\" href=\"../special_vbaobjects/special_vbaobjects_vbaobjects.htm\">VBA Objects<\/a> | <a style=\"font-family: Tahoma; font-size: 9pt; font-weight: 400;  font-style:normal; color: rgb(0, 0, 0); text-decoration:none; text-align: left\" href=\"../special_vbasignals/special_vbasignals_timesignal_object.htm\">Sources and Ports<\/a> | <a style=\"font-family: Tahoma; font-size: 9pt; font-weight: 400;  font-style:normal; color: rgb(0, 0, 0); text-decoration:none; text-align: left\" href=\"../special_vbasignals/special_vbasignals_timesignal_object.htm\">High Frequency<\/a> | CablePort<\/p>");
+
+}
+else
+        if (window.gbIE4)
+                document.location.reload();
+
+onLoadHandler = function()
+{
+  if (window.setRelStartPage)
+        {
+        setTimeout("setRelStartPage('../index.htm');", 1)
+
+    setTimeout("UpdateBreadCrumbsMarker();", 1);
+        }
+}
+
+if (window.addEventListener){  
+        window.addEventListener('load', onLoadHandler, false);   
+} else if (window.attachEvent){  
+        window.attachEvent('onload', onLoadHandler);  
+}
+
+function onSetStartPage()
+{
+  autoSync(1);
+  sendSyncInfo();
+  sendAveInfoOut();
+}
+//-->
+//]]>
+</script><script type="text/javascript" src="../ehlpdhtm.js" language="JavaScript1.2">
+</script>
+<table cellspacing="0" width="100%">
+<col style="width: 50%;" />
+<col style="width: 50%;" />
+<tr>
+<td style="vertical-align: middle; padding-top: 5px; padding-bottom: 5px;">
+<p style="margin-top: 0px; margin-bottom: 0px;"><img src="../3ds.png" alt="" style="border: none;" border="0" /></p>
+</td>
+<td style="vertical-align: middle;">
+<p style="text-align: right;"><a href="https://www.3ds.com/products-services/3dexperience/" target="_blank"><img src="../3dexp.png" alt="" style="border: none;" width="32" height="32" border="0" /></a></p>
+</td>
+</tr>
+</table>
+<p class="VBA-Heading-Object">CablePort Object</p>
+<p class="VBA-Text">Use this object to define cable ports. Beside <a href="special_vbaports_port_object.htm">waveguide ports</a> or <a href="special_vbaports_planewave_object.htm">plane waves</a> the cable ports offers another possibility to feed the calculation domain with power.</p>
+<p class="VBA-Text">Different types of cable ports are available, considering the excitation as a current source, voltage source or as an impedance element which also absorb some power and enables S-parameter calculation.</p>
+<ul>
+<li class="p-VBA-Index-Category">
+<p class="VBA-Index-Category"><a href="#Methods" target="_self">Methods</a></p>
+</li>
+<li class="p-VBA-Index-Category">
+<p class="VBA-Index-Category"><a href="#Defaults">Default Settings</a></p>
+</li>
+<li class="p-VBA-Index-Category">
+<p class="VBA-Index-Category"><a href="#Examples">Example</a></p>
+</li>
+</ul>
+<p class="VBA-Heading-Category"><a name="Methods" id="Methods"></a>Methods</p>
+<p class="VBA-Heading-Method"><span style="font-weight: bold;">Reset</span></p>
+<p class="VBA-Text-Indent">Resets all internal values to their default settings.</p>
+<p>&#160;</p>
+<p class="VBA-Heading-Method">Create</p>
+<p class="VBA-Text-Indent">Creates a new cable port. All necessary settings have to be made previously.</p>
+<p>&#160;</p>
+<p class="VBA-Heading-Method">Modify</p>
+<p class="VBA-Text-Indent">Modifies an existing cable port. Only none geometrical settings which were made previously are changed.</p>
+<p>&#160;</p>
+<p class="VBA-Heading-Method">AddTerminalPort ( <a href="../common_vbageneral/common_general_string.htm" style="font-weight: normal; font-style: normal;">string</a> <span style="font-style: italic;"><i>port name</i></span>, <a href="../common_vbageneral/common_general_string.htm" style="font-weight: normal; font-style: normal;">string</a> <span style="font-style: italic;"><i>port type</i></span>, <a href="../common_vbageneral/common_general_string.htm" style="font-weight: normal; font-style: normal;">string</a> <span style="font-style: italic;"><i>port value</i></span>, <a href="../common_vbageneral/common_general_bool_data_type.htm" style="font-weight: normal; font-style: normal;">bool</a> <span style="font-style: italic;"><i>monitor</i></span>, <a href="../common_vbageneral/common_general_string.htm" style="font-weight: normal; font-style: normal;">string</a> <span style="font-style: italic;"><i>node1</i></span> , <a href="../common_vbageneral/common_general_string.htm" style="font-weight: normal; font-style: normal;">string</a> <span style="font-style: italic;"><i>terminal1</i></span>, <a href="../common_vbageneral/common_general_string.htm" style="font-weight: normal; font-style: normal;">string</a> <span style="font-style: italic;"><i>node2</i></span>, <a href="../common_vbageneral/common_general_string.htm" style="font-weight: normal; font-style: normal;">string</a> <span style="font-style: italic;"><i>terminal2</i></span>, <a href="../common_vbageneral/common_general_string.htm" style="font-weight: normal; font-style: normal;">string</a> <span style="font-style: italic;"><i>sub folder</i></span>, <a href="../common_vbageneral/common_general_string.htm" style="font-weight: normal; font-style: normal;">string</a> <span style="font-style: italic;"><i>port label</i></span> )</p>
+<p class="VBA-Text-Indent">Provides the parameters to create the wire terminal type cable port.</p>
+<p>&#160;</p>
+<p class="VBA-Text-Indent">port name: String containing the unique name for the new port</p>
+<p class="VBA-Text-Indent">port type: One of 'sparameter', 'voltage' or 'current'</p>
+<p class="VBA-Text-Indent">port value: the corresponding value for the port type, sparameter (50 Ohm default), voltage (1V default) or current (1A default)</p>
+<p class="VBA-Text-Indent">monitor: Boolean value to control whether to create a monitor at this port, one of true or false</p>
+<p class="VBA-Text-Indent">connector1, connector2: String containing the id of the nodes, node2 is optional, used only for differential ports</p>
+<p class="VBA-Text-Indent">terminal1, terminal2: String containing the id of the wire terminals, terminal2 is optional, used only for differential ports</p>
+<p class="VBA-Text-Indent">sub folder: String containing the name of the folder in the navigation tree the port to be is located in</p>
+<p class="VBA-Text-Indent">port label: A unique label for the port in the result folder</p>
+<p>&#160;</p>
+<p class="VBA-Heading-Method">AddPinPort ( <a href="../common_vbageneral/common_general_string.htm" style="font-weight: normal; font-style: normal;">string</a> <span style="font-style: italic;"><i>port name</i></span>, <a href="../common_vbageneral/common_general_string.htm" style="font-weight: normal; font-style: normal;">string</a> <span style="font-style: italic;"><i>port type</i></span>, <a href="../common_vbageneral/common_general_string.htm" style="font-weight: normal; font-style: normal;">string</a> <span style="font-style: italic;"><i>port value</i></span>, <a href="../common_vbageneral/common_general_bool_data_type.htm" style="font-weight: normal; font-style: normal;">bool</a> <span style="font-style: italic;"><i>monitor</i></span>, <a href="../common_vbageneral/common_general_string.htm" style="font-weight: normal; font-style: normal;">string</a> <span style="font-style: italic;"><i>connector1</i></span> , <a href="../common_vbageneral/common_general_string.htm" style="font-weight: normal; font-style: normal;">string</a> <span style="font-style: italic;"><i>plugin1</i></span> , <a href="../common_vbageneral/common_general_string.htm" style="font-weight: normal; font-style: normal;">string</a> <span style="font-style: italic;"><i>pin1</i></span>, <a href="../common_vbageneral/common_general_string.htm" style="font-weight: normal; font-style: normal;">string</a> <span style="font-style: italic;"><i>connector2</i></span>, <a href="../common_vbageneral/common_general_string.htm" style="font-weight: normal; font-style: normal;">string</a> <span style="font-style: italic;"><i>plugin2</i></span>, <a href="../common_vbageneral/common_general_string.htm" style="font-weight: normal; font-style: normal;">string</a> <span style="font-style: italic;"><i>pin2</i></span>, <a href="../common_vbageneral/common_general_string.htm" style="font-weight: normal; font-style: normal;">string</a> <span style="font-style: italic;"><i>sub folder</i></span>, <a href="../common_vbageneral/common_general_string.htm" style="font-weight: normal; font-style: normal;">string</a> <span style="font-style: italic;"><i>port label</i></span> )</p>
+<p class="VBA-Text-Indent">Provides the parameters to create the connector pin type cable port.</p>
+<p>&#160;</p>
+<p class="VBA-Text-Indent">port name: String containing the unique name for the new port</p>
+<p class="VBA-Text-Indent">port type: One of sparameter, voltage or current</p>
+<p class="VBA-Text-Indent">port value: String containing the corresponding value for the port type, sparameter (50 Ohm default), voltage (1V default) or current (1A default)</p>
+<p class="VBA-Text-Indent">monitor: Boolean value to control whether to create a monitor at this port, one of true or false.</p>
+<p class="VBA-Text-Indent">connector1, connector2: String containing the id of the connectors, connector2 is optional, used only for differential ports</p>
+<p class="VBA-Text-Indent">plugin1, plugin2: String containing the id of the connector plugins, plugin2 is optional, used only for differential ports</p>
+<p class="VBA-Text-Indent">pin1, pin2: String containing the id of the connector pins, pin2 is optional, used only for differential ports</p>
+<p class="VBA-Text-Indent">sub folder: String containing the name of the folder in the navigation tree the port to be is located in</p>
+<p class="VBA-Text-Indent">port label: A unique label for the port in the result folder</p>
+<p>&#160;</p>
+<p class="VBA-Heading-Method">.AddStringArgument(<a href="../common_vbageneral/common_general_string.htm" style="font-weight: normal; font-style: normal;">string</a> <span style="font-style: italic;"><i>commandId</i></span>, <a href="../common_vbageneral/common_general_string.htm" style="font-weight: normal; font-style: normal;">string</a> <span style="font-style: italic;"><i>parameter</i></span>)</p>
+<p class="VBA-Text-Indent">commandId: one of 'name' (with the port name as parameter) and one of 'param' (with one of the commands below as parameter) to query the given param of the given port.</p>
+<p class="VBA-Text-Indent">parameter: one of the following options.</p>
+<p>&#160;</p>
+<p class="VBA-Heading-Method">.GetString("QueryPortProperty")</p>
+<p class="VBA-Text-Indent">Queries the following properties of the cable port specified by commandId 'name' and parameter 'portnumber'.</p>
+<p class="VBA-Text-Indent">CommandId param with parameter 'Type' returns one of the following strings: "sparameter", "voltage" or "current".</p>
+<p class="VBA-Text-Indent">CommandId param with parameter 'Label' will return the label of the port.</p>
+<p>&#160;</p>
+<p class="VBA-Heading-Method">.GetLong("QueryPortProperty")</p>
+<p class="VBA-Text-Indent">Queries the following property of the cable port specified by commandId 'name' and parameter 'portnumber'.</p>
+<p class="VBA-Text-Indent">CommandId param with parameter 'id' returns the id of the port.</p>
+<p>&#160;</p>
+<p class="VBA-Heading-Method">.GetBool("QueryPortProperty")</p>
+<p class="VBA-Text-Indent">Queries the following property of the cable port specified by commandId 'name' and parameter 'portnumber'.</p>
+<p class="VBA-Text-Indent">CommandId param with parameter 'is_differential' returns one of the strings "True" or "False".</p>
+<p>&#160;</p>
+<p class="VBA-Heading-Method">.SelectPort(<a href="../common_vbageneral/common_general_string.htm" style="font-weight: normal; font-style: normal;">string</a> <span style="font-style: italic;"><i>commandId</i></span>)</p>
+<p class="VBA-Text-Indent">Selects the cable port specified by commandId.</p>
+<p class="VBA-Text-Indent">CommandId param specifies the index of the port, e.g. port 1 is '1'.</p>
+<p>&#160;</p>
+<p class="VBA-Heading-Method">.SetData(<a href="../common_vbageneral/common_general_string.htm" style="font-weight: normal; font-style: normal;">string</a> <span style="font-style: italic;"><i>type,</i></span> <a href="../common_vbageneral/common_general_string.htm" style="font-weight: normal; font-style: normal;">string</a> <span style="font-style: italic;"><i>value,</i></span> <a href="../common_vbageneral/common_general_string.htm" style="font-weight: normal; font-style: normal;">string</a> <span style="font-style: italic;"><i>addMonitor</i></span>)</p>
+<p class="VBA-Text-Indent">Sets data for the selected port (using SelectPort).</p>
+<p class="VBA-Text-Indent">type is one of current or 'sparameter', 'voltage' or 'current'</p>
+<p class="VBA-Text-Indent">value is a numeric value for Ohm (type sparameter), Volt (type voltage) or Ampere (type current)</p>
+<p class="VBA-Text-Indent">Parameter addMonitor is one of 'True' or 'False'. It specifies whether to add a monitor as well.</p>
+<p>&#160;</p>
+<p class="VBA-Heading-Method">.Invert(<a href="../common_vbageneral/common_general_string.htm" style="font-weight: normal; font-style: normal;">string</a> <span style="font-style: italic;"><i>value</i></span>)</p>
+<p class="VBA-Text-Indent">Inverts the direction of the currently selected port. Parameter value is one of 'True' or 'False'.</p>
+<p class="VBA-Heading-Category"><a name="Defaults" id="Defaults"></a>Default Settings</p>
+<p class="VBA-Text-Example">Port name (1)</p>
+<p class="VBA-Text-Example">Label ("")</p>
+<p class="VBA-Text-Example">Type ("SParameter")</p>
+<p class="VBA-Text-Example">Impedance (50.0)</p>
+<p class="VBA-Text-Example">Voltage (1.0)</p>
+<p class="VBA-Text-Example">Current (1.0)</p>
+<p class="VBA-Text-Example">Monitor (False)</p>
+<p>&#160;</p>
+<p class="VBA-Heading-Category"><a name="Examples" id="Examples"></a>Example</p>
+<p class="VBA-Text-Example" style="color: #008000;">' Define a cable port using a terminal</p>
+<p class="VBA-Text-Example">With CablePort</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.Reset</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.AddTerminalPort("42", "sparameter", "51", "true", "N1", "N1_SW_1", "N5", "N5_RC_1_1", "MyFolder", "MyLabel")</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.Create</p>
+<p class="VBA-Text-Example">End With</p>
+<p>&#160;</p>
+<p class="VBA-Text-Example" style="color: #008000;">' Define a cable port using connector pins</p>
+<p class="VBA-Text-Example">With CablePort</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.Reset</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.AddPinPort("13", "current", "1.2", "false", "Connector", "Plugin_1", "Pin_1", "Connector", "Plugin_1", "Pin_2", "MyFolder", "MyOtherLabel")</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.Create</p>
+<p class="VBA-Text-Example">End With</p>
+<p>&#160;</p>
+<p class="VBA-Text-Example" style="color: #008000;">'Delete cable ports</p>
+<p class="VBA-Text-Example">With CablePort</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;.Reset</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;.SelectPort 13</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;.SelectPort 42</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;.Delete</p>
+<p class="VBA-Text-Example">End With</p>
+<p class="VBA-Text-Example">&#160;</p>
+<p class="VBA-Text-Example" style="color: #008000;">'Examples of reading properties from an existing cable port</p>
+<p>&#160;</p>
+<p class="VBA-Text-Example">Dim sResult As String</p>
+<p class="VBA-Text-Example">With CableStudio</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;.Reset</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;.AddStringArgument("name", "port14")</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;.AddStringArgument("param", "type")</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;sResult = .GetString("QueryPortProperty")</p>
+<p class="VBA-Text-Example">End With</p>
+<p>&#160;</p>
+<p class="VBA-Text-Example">Dim stype As String</p>
+<p class="VBA-Text-Example">With CableStudio</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;.Reset</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;.AddStringArgument("name", "port14")</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;.AddStringArgument("param", "label")</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;sResult = .GetString("QueryPortProperty")</p>
+<p class="VBA-Text-Example">End With</p>
+<p>&#160;</p>
+<p class="VBA-Text-Example">Dim nId As Long</p>
+<p class="VBA-Text-Example">With CableStudio</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;.Reset</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;.AddStringArgument("name", "port14")</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;.AddStringArgument("param", "id")</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;nId = .GetLong("QueryPortProperty")</p>
+<p class="VBA-Text-Example">End With</p>
+<p>&#160;</p>
+<p class="VBA-Text-Example">Dim bRes As String</p>
+<p class="VBA-Text-Example">With CableStudio</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;.Reset</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;.AddStringArgument("name", "port14")</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;.AddStringArgument("param", "is_differential")</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;bRes = .GetBool("QueryPortProperty")</p>
+<p class="VBA-Text-Example">End With</p>
+<p>&#160;</p>
+<p>&#160;</p>
+<p>&#160;</p>
+<p>&#160;</p>
+<?rh-p style="margin-bottom: 0px; text-align: Right; margin-left: 18px; 
+                 margin-right: 18px; margin-top: 18px;" ?>
+<div style="width: 100%; position: relative;" id="footer">
+<p style="border-bottom: Solid 1px #dddddd; text-align: Left; margin-left: 0px; font-family: Arial, sans-serif; line-height: Normal; margin-top: 9px; margin-right: 0px; margin-bottom: 6px; border-left-width: 1px; border-top-width: 1px; border-right-width: 1px;"><span style="text-align: Left; font-family: Arial, sans-serif; line-height: Normal;">&#160;</span></p>
+<table cellspacing="0" width="100%">
+<col style="width: 50%;" />
+<col style="width: 50%;" />
+<tr>
+<td style="vertical-align: Top;"><span style="font-family: Arial, sans-serif; line-height: Normal; font-size: 8pt;"><font size="1" style="font-size:8pt;">CST Studio Suite 2026</font></span></td>
+<td style="vertical-align: Top;">
+<p style="text-align: right;">&#160;</p>
+</td>
+</tr>
+</table>
+<p>&#160;</p>
+</div>
+<script type="text/javascript" language="javascript1.2">
+//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+        writeIntopicBar(0);
+
+
+highlightSearch();
+//-->
+//]]>
+</script>
+</body>
+</html>

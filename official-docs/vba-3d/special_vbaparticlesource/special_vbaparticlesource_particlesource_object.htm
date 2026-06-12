@@ -1,0 +1,874 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="Adobe RoboHelp 11" />
+<title>ParticleSource Object</title>
+<link rel="StyleSheet" href="../online_help_vba.css" type="text/css" />
+<script type="text/javascript" language="JavaScript1.2">
+//<![CDATA[
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+//]]>
+</script>
+<script type="text/javascript" id="MathJax-script" async="" src="../mathjax/es5/tex-svg.js" language="JavaScript1.2">
+</script>
+<style type="text/css">
+/*<![CDATA[*/
+<!--
+body { border-bottom-style:None; }
+-->
+/*]]>*/
+</style>
+
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+        origWidth = innerWidth;
+        origHeight = innerHeight;
+        onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+/*<![CDATA[*/
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+-->
+/*]]>*/
+</style>
+
+<script type="text/javascript" language="javascript1.2" src="../whmsg.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript" src="../whver.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript1.2" src="../whutils.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript1.2" src="../whproxy.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript1.2" src="../whlang.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript1.2" src="../whtopic.js" charset="utf-8">
+</script>
+</head>
+<body>
+<script type="text/javascript" language="javascript1.2">
+//<![CDATA[
+<!--
+if (window.gbWhTopic)
+{
+        var strUrl = document.location.href;
+        var bc = 0;
+        var n = strUrl.toLowerCase().indexOf("bc-");
+        if(n != -1)
+        {
+                document.location.replace(strUrl.substring(0, n));
+                bc = strUrl.substring(n+3);
+        }
+
+        if (window.addTocInfo)
+        {
+        addTocInfo("3D Simulation VBA\nVBA Objects\nSources and Ports\nParticles\nParticle Source");
+
+        }
+        if (window.writeBtnStyle)
+                writeBtnStyle();
+
+        if (window.writeIntopicBar)
+                writeIntopicBar(0);
+
+        
+        document.write("<p style=\"font-family: Tahoma; font-size: 9pt; font-weight: 400;  font-style:normal; color: rgb(0, 0, 0); text-decoration:none; text-align: left\"> ");
+AddMasterBreadcrumbs("../index.htm", "font-family: Tahoma; font-size: 9pt; font-weight: 400;  font-style:normal; color: rgb(0, 0, 0); text-decoration:none; text-align: left", "|", "Home", "../special_vbaobjects/special_vbaobjects_vbaobjects.htm");
+document.write("<a style=\"font-family: Tahoma; font-size: 9pt; font-weight: 400;  font-style:normal; color: rgb(0, 0, 0); text-decoration:none; text-align: left\" href=\"../special_vbaobjects/special_vbaobjects_vbaobjects.htm\">3D Simulation VBA<\/a> | <a style=\"font-family: Tahoma; font-size: 9pt; font-weight: 400;  font-style:normal; color: rgb(0, 0, 0); text-decoration:none; text-align: left\" href=\"../special_vbaobjects/special_vbaobjects_vbaobjects.htm\">VBA Objects<\/a> | <a style=\"font-family: Tahoma; font-size: 9pt; font-weight: 400;  font-style:normal; color: rgb(0, 0, 0); text-decoration:none; text-align: left\" href=\"../special_vbasignals/special_vbasignals_timesignal_object.htm\">Sources and Ports<\/a> | <a style=\"font-family: Tahoma; font-size: 9pt; font-weight: 400;  font-style:normal; color: rgb(0, 0, 0); text-decoration:none; text-align: left\" href=\"special_vbaparticlesource_particleinterface_object.htm\">Particles<\/a> | Particle Source<\/p>");
+
+}
+else
+        if (window.gbIE4)
+                document.location.reload();
+
+onLoadHandler = function()
+{
+  if (window.setRelStartPage)
+        {
+        setTimeout("setRelStartPage('../index.htm');", 1)
+
+    setTimeout("UpdateBreadCrumbsMarker();", 1);
+        }
+}
+
+if (window.addEventListener){  
+        window.addEventListener('load', onLoadHandler, false);   
+} else if (window.attachEvent){  
+        window.attachEvent('onload', onLoadHandler);  
+}
+
+function onSetStartPage()
+{
+  autoSync(1);
+  sendSyncInfo();
+  sendAveInfoOut();
+}
+//-->
+//]]>
+</script><script type="text/javascript" src="../ehlpdhtm.js" language="JavaScript1.2">
+</script>
+<table cellspacing="0" width="100%">
+<col style="width: 50%;" />
+<col style="width: 50%;" />
+<tr>
+<td style="vertical-align: middle; padding-top: 5px; padding-bottom: 5px;">
+<p style="margin-top: 0px; margin-bottom: 0px;"><img src="../3ds.png" alt="" style="border: none;" border="0" /></p>
+</td>
+<td style="vertical-align: middle;">
+<p style="text-align: right;"><a href="https://www.3ds.com/products-services/3dexperience/" target="_blank"><img src="../3dexp.png" alt="" style="border: none;" width="32" height="32" border="0" /></a></p>
+</td>
+</tr>
+</table>
+<p class="VBA-Heading-Object">Particle Source Object</p>
+<p class="VBA-Text">The Object is used to create a new Particle Source for the tracking and the PIC solvers.</p>
+<ul>
+<li class="p-VBA-Index-Category">
+<p class="VBA-Index-Category"><a href="#Methods">General Settings</a></p>
+</li>
+<li class="p-VBA-Index-Category">
+<p class="VBA-Index-Category"><a href="#Tracking_emission_model">Tracking emission model settings</a></p>
+</li>
+<li class="p-VBA-Index-Category">
+<p class="VBA-Index-Category"><a href="#PointSource">Single point source settings</a></p>
+</li>
+<li class="p-VBA-Index-Category">
+<p class="VBA-Index-Category"><a href="#Circular_source_settings">Circular source settings</a></p>
+</li>
+<li class="p-VBA-Index-Category">
+<p class="VBA-Index-Category"><a href="#Triangularization">Triangulation</a></p>
+</li>
+<li class="p-VBA-Index-Category">
+<p class="VBA-Index-Category"><a href="#PIC_emission_model">Particle in cell emission model settings</a></p>
+</li>
+<li class="p-VBA-Index-Category">
+<p class="VBA-Index-Category"><a href="#Queries">Queries</a></p>
+</li>
+<li class="p-VBA-Index-Category">
+<p class="VBA-Index-Category" style="font-weight: bold;"><a href="#Default" style="font-weight: bold;">Default Settings</a></p>
+</li>
+<li class="p-VBA-Index-Category">
+<p class="VBA-Index-Category"><a href="#Example">Examples</a></p>
+</li>
+</ul>
+<p class="VBA-Heading-Category"><a name="Methods" id="Methods"></a>General Settings</p>
+<p class="VBA-Heading-Method"><span style="font-weight: bold;">Reset</span></p>
+<p class="VBA-Text-Indent">Resets all internal settings to their default values.</p>
+<p class="StandardNeu" style="margin-left: 40px; font-style: italic;">&#160;</p>
+<p class="VBA-Heading-Method">Name (<span style="font-weight: normal;"><a href="../common_vbageneral/common_general_name.htm" id="a9" name="a9">name</a> &#160;</span><span style="font-style: italic;"><i>name</i></span>)</p>
+<p class="VBA-Text-Indent">Sets the name of the particle source.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">Create</p>
+<p class="VBA-Text-Indent">Creates a new particle source. All necessary settings for this object have to be made previously.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">Rename (<span style="font-weight: normal;"><a href="../common_vbageneral/common_general_name.htm" id="a77" name="a77">name</a></span> <span style="font-style: italic;"><i>oldname</i></span><span style="font-weight: normal;">, <a href="../common_vbageneral/common_general_name.htm" id="a78" name="a78">name</a></span> <span style="font-style: italic;"><i>newname</i></span>)</p>
+<p class="VBA-Text-Indent">Changes the name of an existing particle source.</p>
+<p class="StandardNeu" style="font-weight: bold;">&#160;</p>
+<p class="VBA-Heading-Method">Delete (<span style="font-weight: normal;"><a href="../common_vbageneral/common_general_name.htm" id="a79" name="a79">name</a></span> <span style="font-style: italic;"><i>name</i></span>)</p>
+<p class="Topic-Text-Indent">Deletes the particle source with the given name.</p>
+<p class="standardneu">&#160;</p>
+<p class="VBA-Heading-Method"><span style="font-weight: bold;">ParticleType</span> <span style="font-weight: bold;">(<a href="../common_vbageneral/common_general_enum.htm" id="a3" style="font-weight: normal;" name="a3">enum</a> &#160;</span><span style="font-style: italic; font-weight: bold;"><i>typename</i></span><span style="font-weight: bold;">)</span></p>
+<p class="VBA-Text-Indent">Type of the emitted particles.</p>
+<table style="vertical-align: top; margin-left: 25px;" cellspacing="0" width="93.03%">
+<col style="width: 25.938%;" />
+<col style="width: 74.062%;" />
+<tr style="vertical-align: top;">
+<td style="border: Solid 2px #000000; width: 25.938%; padding-right: 10px; padding-left: 10px; vertical-align: center;">
+<p><span style="font-style: italic;"><i>typename (</i></span><a href="../common_vbageneral/common_general_enum.htm" id="a4" style="font-weight: normal;" name="a4">enum</a> )</p>
+</td>
+<td style="border-top: Solid 2px #000000; border-right: Solid 2px #000000; border-bottom: Solid 2px #000000; width: 74.062%; padding-right: 10px; padding-left: 10px; vertical-align: center;">
+<p>meaning</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 25.938%; padding-right: 10px; padding-left: 10px;">
+<p>"Userdefined"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 74.062%; padding-right: 10px; padding-left: 10px;">
+<p>a particle which has to &#160;be defined by the charge and mass methods.</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 25.938%; padding-right: 10px; padding-left: 10px;">
+<p>"Electron"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 74.062%; padding-right: 10px; padding-left: 10px;">
+<p>particle with charge and mass properties of an electron.</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 25.938%; padding-right: 10px; padding-left: 10px;">
+<p>"Proton"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 74.062%; padding-right: 10px; padding-left: 10px;">
+<p>particle with charge and mass properties of a proton.</p>
+</td>
+</tr>
+</table>
+<p class="VBA-Heading-Method">&#160;</p>
+<p class="VBA-Heading-Method">SourceType (<a href="../common_vbageneral/common_general_enum.htm" id="a2" name="a2">enum</a> &#160;<span style="font-style: italic;"><i>type</i></span>)</p>
+<p class="VBA-Text-Indent">Set the source type. Possible values are:</p>
+<ul style="list-style: disc;">
+<li class="p-VBA-Text-Indent">
+<p class="VBA-Text-Indent">Faces</p>
+</li>
+<li class="p-VBA-Text-Indent">
+<p class="VBA-Text-Indent">SinglePoint</p>
+</li>
+<li class="p-VBA-Text-Indent">
+<p class="VBA-Text-Indent">Circle</p>
+</li>
+</ul>
+<p class="VBA-Heading-Method">Charge (<span style="font-weight: normal;"><a href="../common_vbageneral/common_general_double.htm" id="a5" name="a5">double</a> &#160;</span><span style="font-style: italic;"><i>charge</i></span>)</p>
+<p class="VBA-Text-Indent">Value of the charge (C).</p>
+<p class="VBA-Heading-Method">&#160;</p>
+<p class="VBA-Heading-Method">Mass (<span style="font-weight: normal;"><a href="../common_vbageneral/common_general_double.htm" id="a6" name="a6">double</a> &#160;</span><span style="font-style: italic;"><i>mass</i></span>)</p>
+<p class="VBA-Text-Indent">Value of the mass (kg).</p>
+<p class="VBA-Heading-Category"><a name="Tracking_emission_model" id="Tracking_emission_model"></a>Tracking emission model settings</p>
+<p class="VBA-Heading-Method">TrkEmissionModel( <span><a href="../common_vbageneral/common_general_enum.htm" id="a10" style="font-weight: normal;" name="a10">enum</a></span> model )</p>
+<p class="VBA-Text-Indent">Describes the emission model of the particle source.</p>
+<table style="vertical-align: top; margin-left: 25px; left: 0px; top: 1057px; height: 102px;" cellspacing="0" width="92.603%">
+<col style="width: 23.745%;" />
+<col style="width: 76.255%;" />
+<tr style="vertical-align: top;">
+<td style="border: Solid 2px #000000; width: 23.745%; padding-right: 10px; padding-left: 10px; vertical-align: center;">
+<p><span style="font-style: italic;"><i>model (</i></span><a href="../common_vbageneral/common_general_enum.htm" id="a11" name="a11">enum</a>)</p>
+</td>
+<td style="border-top: Solid 2px #000000; border-right: Solid 2px #000000; border-bottom: Solid 2px #000000; width: 76.255%; padding-right: 10px; padding-left: 10px; vertical-align: center;">
+<p style="font-style: italic;">meaning</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 23.745%; padding-right: 10px; padding-left: 10px;">
+<p>"Fixed"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 76.255%; padding-right: 10px; padding-left: 10px;">
+<p>Fixed kinetic emission energy.</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 23.745%; padding-right: 10px; padding-left: 10px;">
+<p>"Space charge"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 76.255%; padding-right: 10px; padding-left: 10px;">
+<p>Space charge limited emission model.</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 23.745%; padding-right: 10px; padding-left: 10px;">
+<p>"Thermionic"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 76.255%; padding-right: 10px; padding-left: 10px;">
+<p>Temperature dependent emission model.</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 23.745%; padding-right: 10px; padding-left: 10px;">
+<p>"Field-induced"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 76.255%; padding-right: 10px; padding-left: 10px;">
+<p>Field-induced emission model.</p>
+</td>
+</tr>
+</table>
+<p class="StandardNeu" style="font-weight: bold;">&#160;</p>
+<p class="VBA-Heading-Method">TrkKinetic( <a href="../common_vbageneral/common_general_enum.htm" id="a12" style="font-weight: normal;" name="a12">enum</a> type, <a href="../common_vbageneral/common_general_name.htm" id="a13" style="font-weight: normal; font-style: normal;" name="a13">name</a> distribution, <a href="../common_vbageneral/common_general_double.htm" id="a22" name="a22"><span style="font-weight: normal;">double</span></a> value, <a href="../common_vbageneral/common_general_double.htm" id="a23" name="a23"><span style="font-weight: normal;">double</span></a> spreadKinetic, <a href="../common_vbageneral/common_general_double.htm" id="a25" name="a25"><span style="font-weight: normal;">double</span></a> spreadAngle, <a href="../common_vbageneral/common_general_double.htm" id="a26" name="a26"><span style="font-weight: normal;">double</span></a> maxwellTemp, <a href="../common_vbageneral/common_general_double.htm" id="a39" name="a39"><span style="font-weight: normal;">double</span></a> maxwellBins )</p>
+<p class="VBA-Text-Indent">Kinetic settings of the emission model. The kinetic type has to be one of the following values.</p>
+<table style="vertical-align: top; margin-left: 25px;" cellspacing="0" width="91.026%">
+<col style="width: 23.922%;" />
+<col style="width: 35.234%;" />
+<col style="width: 40.845%;" />
+<tr style="vertical-align: top;">
+<td style="border: Solid 2px #000000; width: 23.922%; padding-right: 10px; padding-left: 10px; vertical-align: center;">
+<p><span style="font-style: italic;"><i>type (</i></span><a href="../common_vbageneral/common_general_enum.htm" id="a14" style="font-weight: normal;" name="a14">enum</a>)</p>
+</td>
+<td style="border-top: Solid 2px #000000; border-right: Solid 2px #000000; border-bottom: Solid 2px #000000; width: 35.234%; padding-right: 10px; padding-left: 10px; vertical-align: center;">
+<p style="font-style: italic;">meaning</p>
+</td>
+<td style="border-top: Solid 2px #000000; border-right: Solid 2px #000000; border-bottom: Solid 2px #000000; width: 40.845%; padding-right: 10px; padding-left: 10px; vertical-align: center;">
+<p>&#160;</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 23.922%; padding-right: 10px; padding-left: 10px; vertical-align: center;">
+<p>"Normed Momentum"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 35.234%; padding-right: 10px; padding-left: 10px; vertical-align: center;">
+<p style="vertical-align: center;">normed momentum</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 40.845%; padding-right: 10px; padding-left: 10px; vertical-align: center;">
+<p style="vertical-align: center; text-align: center;">$$ u = \beta\gamma , \qquad \left[u\right] = 1$$</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 23.922%; padding-right: 10px; padding-left: 10px; vertical-align: center;">
+<p>"Gamma"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 35.234%; padding-right: 10px; padding-left: 10px; vertical-align: center;">
+<p style="vertical-align: center;">relativistic factor</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 40.845%; padding-right: 10px; padding-left: 10px; vertical-align: center;">
+<p style="vertical-align: center; text-align: center;">$$ \gamma = \frac{1}{\sqrt{1-\beta^2}} , \qquad \left[\gamma\right] = 1 $$</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 23.922%; padding-right: 10px; padding-left: 10px; vertical-align: center;">
+<p>"Beta"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 35.234%; padding-right: 10px; padding-left: 10px; vertical-align: center;">
+<p style="vertical-align: center;">velocity relative to speed of light</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 40.845%; padding-right: 10px; padding-left: 10px; vertical-align: center;">
+<p style="vertical-align: center; text-align: center;">$$ \beta = \frac{v}{c}, \qquad \left[\beta\right] = 1 $$</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 23.922%; padding-right: 10px; padding-left: 10px; vertical-align: center;">
+<p>"Energy"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 35.234%; padding-right: 10px; padding-left: 10px; vertical-align: center;">
+<p>kinetic particle energy</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 40.845%; padding-right: 10px; padding-left: 10px; vertical-align: center;">
+<p style="text-align: center;">$$ U = \left(\gamma-1\right)m_0\frac{c^2}{e} , \qquad \left[U\right] = \mathrm{eV} $$</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 23.922%; padding-right: 10px; padding-left: 10px; vertical-align: center;">
+<p>"Temperature"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 35.234%; padding-right: 10px; padding-left: 10px; vertical-align: center;">
+<p style="vertical-align: center;">temperature (instead velocity)</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 40.845%; padding-right: 10px; padding-left: 10px; vertical-align: center;">
+<p style="vertical-align: center; text-align: center;">$$ T = \frac{m_0v^2}{3k_{\rm B}} , \qquad \left[T\right] = \mathrm{K} $$</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 23.922%; padding-right: 10px; padding-left: 10px; vertical-align: center;">
+<p>"Velocity"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 35.234%; padding-right: 10px; padding-left: 10px; vertical-align: center;">
+<p style="vertical-align: center;">velocity</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 40.845%; padding-right: 10px; padding-left: 10px; vertical-align: center;">
+<p style="vertical-align: center; text-align: center;">$$ v, \qquad \left[v\right] = \frac{\mathrm{m}}{\mathrm{s}}$$</p>
+</td>
+</tr>
+</table>
+<p class="StandardNeu" style="margin-left: 40px; font-size: 8pt;">&#160;</p>
+<p class="VBA-Text-Indent" style="font-size: 8pt;">with $c :$ speed of light, $q :$ charge of particle and $m_0 :$ rest mass of particle.</p>
+<ul style="list-style: disc;">
+<li class="p-VBA-Text-Indent">
+<p class="VBA-Text-Indent">The kinetic distribution can be "Uniform" or "Maxwell".</p>
+</li>
+<li class="p-VBA-Text-Indent">
+<p class="VBA-Text-Indent">Value is the value for the entered kinetic type.</p>
+</li>
+<li class="p-VBA-Text-Indent">
+<p class="VBA-Text-Indent">The kinetic spread has to be specified in percent.</p>
+</li>
+<li class="p-VBA-Text-Indent">
+<p class="VBA-Text-Indent">An emission angle distribution can be defined by entering a non-zero angle spread.</p>
+</li>
+<li class="p-VBA-Text-Indent">
+<p class="VBA-Text-Indent">If the distribution is set to Maxwell", the Maxwell temperature will be used to calculate the kinetic start settings.</p>
+</li>
+<li class="p-VBA-Text-Indent">
+<p class="VBA-Text-Indent">Enter the number of Maxwell bins of the Maxwell distribution.</p>
+</li>
+</ul>
+<p class="VBA-Heading-Method">TrkField( <a href="../common_vbageneral/common_general_double.htm" id="a15" name="a15"><span style="font-weight: normal;">double</span></a> linear, <a href="../common_vbageneral/common_general_double.htm" id="a16" name="a16"><span style="font-weight: normal;">double</span></a> exponential )</p>
+<p class="VBA-Text-Indent">Defines the linear and the exponential parameters for the field emission model.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">TrkFixed( <a href="../common_vbageneral/common_general_double.htm" id="a17" name="a17"><span style="font-weight: normal;">double</span></a> currentParameter, <span style="font-weight: normal;"><a href="../common_vbageneral/common_general_bool_data_type.htm" id="a43" name="a43">bool</a></span> useCurrentDensity )</p>
+<p class="VBA-Text-Indent">Defines the current of the current density for the fixed emission model. If useCurrentDensity is true, currentParameter &#160;represents a current density. Otherwise, it represents a current.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">TrkOblique( <span style="font-weight: normal;"><a href="../common_vbageneral/common_general_double.htm" id="a48" name="a48">double</a></span> angleTheta, <span style="font-weight: normal;"><a href="../common_vbageneral/common_general_double.htm" id="a49" name="a49">double</a></span> anglePhi )</p>
+<p class="VBA-Text-Indent">Defines the angles theta and phi for the oblique emission feature in the fixed emission model.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">TrkSCL( <span style="font-weight: normal;"><a href="../common_vbageneral/common_general_bool_data_type.htm" id="a42" name="a42">bool</a></span> calcKineticAuto, <a href="../common_vbageneral/common_general_name.htm" id="a46" style="font-weight: normal; font-style: normal;" name="a46">name</a> emitPotName, <a href="../common_vbageneral/common_general_double.htm" id="a18" name="a18"><span style="font-weight: normal;">double</span></a> emitPotValue, <a href="../common_vbageneral/common_general_name.htm" id="a45" style="font-weight: normal; font-style: normal;" name="a45">name</a> refPotName, <a href="../common_vbageneral/common_general_double.htm" id="a19" name="a19"><span style="font-weight: normal;">double</span></a> refPotValue, <a href="../common_vbageneral/common_general_double.htm" id="a20" name="a20"><span style="font-weight: normal;">double</span></a> virtualDistance )</p>
+<p class="VBA-Text-Indent">Defines the model parameters for the space charge limited emission model.</p>
+<ul style="list-style: disc;">
+<li class="p-VBA-Text-Indent">
+<p class="VBA-Text-Indent">If calcKineticAuto is true, the kinetic start settings will be automatically calculated by the solver (based on the emission model).</p>
+</li>
+<li class="p-VBA-Text-Indent">
+<p class="VBA-Text-Indent">Enter the potential names in emitPotName and refPotName. If a name is "User defined", the potential value has to be entered. Otherwise the value must be an empty string.</p>
+</li>
+<li class="p-VBA-Text-Indent">
+<p class="VBA-Text-Indent">The last parameter virtualDistance defines the virtual gap extension</p>
+</li>
+</ul>
+<p class="VBA-Heading-Method">TrkTherm( <a href="../common_vbageneral/common_general_double.htm" id="a21" name="a21"><span style="font-weight: normal;">double</span></a> temperature, <a href="../common_vbageneral/common_general_double.htm" id="a40" name="a40"><span style="font-weight: normal;">double</span></a> workFunction, <a href="../common_vbageneral/common_general_double.htm" id="a41" name="a41"><span style="font-weight: normal;">double</span></a> richardsonConst, <span style="font-weight: normal;"><a href="../common_vbageneral/common_general_bool_data_type.htm" id="a44" name="a44">bool</a></span> calcRichardsonConst, <a href="../common_vbageneral/common_general_enum.htm" id="a101" style="font-weight: normal;" name="a101">enum</a> model)</p>
+<p class="VBA-Text-Indent">Defines the model parameters for the thermionic emission model. If calcRichardsonConst is true, the Richardson constant will be automatically calculated by the solver. The work function has to be entered in eV, the temperature in Kelvin. The model parameter sets the emission model of a thermionic particle source:</p>
+<table style="vertical-align: top; margin-left: 25px; left: 0px; top: 1057px; height: 61.2px;" cellspacing="0" width="92.603%">
+<col style="width: 23.745%;" />
+<col style="width: 76.255%;" />
+<tr style="vertical-align: top;">
+<td style="border: Solid 2px #000000; width: 23.745%; padding-right: 10px; padding-left: 10px; vertical-align: center;">
+<p><span style="font-style: italic;"><i>model (</i></span><a href="../common_vbageneral/common_general_enum.htm" id="a112" name="a112">enum</a>)</p>
+</td>
+<td style="border-top: Solid 2px #000000; border-right: Solid 2px #000000; border-bottom: Solid 2px #000000; width: 76.255%; padding-right: 10px; padding-left: 10px; vertical-align: center;">
+<p style="font-style: italic;">meaning</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 23.745%; padding-right: 10px; padding-left: 10px;">
+<p>"Child's Law"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 76.255%; padding-right: 10px; padding-left: 10px;">
+<p>Use Child's Law to compute thermionic emission</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 23.745%; padding-right: 10px; padding-left: 10px;">
+<p>"Langmuir-Fry"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 76.255%; padding-right: 10px; padding-left: 10px;">
+<p>Use the Langmuir-Fry model to compute thermionic emission</p>
+</td>
+</tr>
+</table>
+<p class="VBA-Heading-Category"><a name="PointSource" id="PointSource"></a>Single point source settings</p>
+<p class="VBA-Heading-Method">UsePick(<span style="font-weight: normal;"><a href="../common_vbageneral/common_general_bool_data_type.htm" id="a7" name="a7">bool</a></span> bPick)</p>
+<p class="VBA-Text-Indent"><span style="font-weight: bold;">Deprecated</span>: Use <a href="#UsePickPoint">UsePickPoint</a> instead.</p>
+<p class="VBA-Text-Indent">Select if a pick point is used or not.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method"><a name="UsePickPoint" id="UsePickPoint"></a>UsePickPoint(<span style="font-weight: normal;"><a href="../common_vbageneral/common_general_bool_data_type.htm" id="a710" name="a710">bool</a></span> bPick)</p>
+<p class="VBA-Text-Indent">Select if a pick point is used or not.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">StartPoint(<span style="font-weight: normal;"><a href="../common_vbageneral/common_general_double.htm" id="a8" name="a8">double</a> &#160;</span><span style="font-style: italic;"><i>x,</i></span> <span style="font-weight: normal;"><a href="../common_vbageneral/common_general_double.htm" id="a37" name="a37">double</a> &#160;</span><span style="font-style: italic;"><i>y,</i></span> <span style="font-weight: normal;"><a href="../common_vbageneral/common_general_double.htm" id="a38" name="a38">double</a> &#160;</span><span style="font-style: italic;"><i>z</i></span>)</p>
+<p class="VBA-Text-Indent">Set the emission point of the particle.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">StartNormal(<span style="font-weight: normal;"><a href="../common_vbageneral/common_general_double.htm" id="a60" name="a60">double</a> &#160;</span><span style="font-style: italic;"><i>vx,</i></span> <span style="font-weight: normal;"><a href="../common_vbageneral/common_general_double.htm" id="a61" name="a61">double</a> &#160;</span><span style="font-style: italic;"><i>vy,</i></span> <span style="font-weight: normal;"><a href="../common_vbageneral/common_general_double.htm" id="a62" name="a62">double</a> &#160;</span><span style="font-style: italic;"><i>vz</i></span>)</p>
+<p class="VBA-Text-Indent">Set the start normal for the particle.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">StartArea (<span style="font-weight: normal;"><a href="../common_vbageneral/common_general_double.htm" id="a63" name="a63">double</a> &#160;</span><span style="font-style: italic;"><i>area</i></span>)</p>
+<p class="VBA-Text-Indent">Set the start area to calculate the current density.</p>
+<p class="VBA-Heading-Category"><a name="Circular_source_settings" id="Circular_source_settings">Circular source settings</a></p>
+<p class="VBA-Heading-Method">UsePickCircle ( <span style="font-weight: normal;"><a href="../common_vbageneral/common_general_bool_data_type.htm" id="a65" name="a65">bool</a></span> <span style="font-style: italic;"><i>bPick</i></span> )</p>
+<p class="VBA-Text-Indent">Selects if a pick face or edge is used or not.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">InvertPickedCircleNormal ( <span style="font-weight: normal;"><a href="../common_vbageneral/common_general_bool_data_type.htm" id="a80" name="a80">bool</a></span> &#160;<span style="font-style: italic;"><i>bPickInvert</i></span> )</p>
+<p class="VBA-Text-Indent">If a pick is used to define the circular source, then this parameter, if true, inverts the source normal.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">CircleCenterPoint( <span style="font-weight: normal;"><a href="../common_vbageneral/common_general_double.htm" id="a52" name="a52">double</a></span> <span style="font-style: italic;"><i>x</i></span>, <span style="font-weight: normal;"><a href="../common_vbageneral/common_general_double.htm" id="a53" name="a53">double</a></span> <span style="font-style: italic;"><i>y</i></span>, <span style="font-weight: normal;"><a href="../common_vbageneral/common_general_double.htm" id="a54" name="a54">double</a></span> <span style="font-style: italic;"><i>z</i></span> )</p>
+<p class="VBA-Text-Indent">Sets the circle center coordinates.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">CircleNormal( <span style="font-weight: normal;"><a href="../common_vbageneral/common_general_double.htm" id="a55" name="a55">double</a></span> <span style="font-style: italic;"><i>x</i></span>, <span style="font-weight: normal;"><a href="../common_vbageneral/common_general_double.htm" id="a56" name="a56">double</a></span> <span style="font-style: italic;"><i>y</i></span>, <span style="font-weight: normal;"><a href="../common_vbageneral/common_general_double.htm" id="a57" name="a57">double</a></span> <span style="font-style: italic;"><i>z</i></span> )</p>
+<p class="VBA-Text-Indent">Sets the coordinates of the surface normal.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">CircleRadius( <span style="font-weight: normal;"><a href="../common_vbageneral/common_general_double.htm" id="a58" name="a58">double</a></span> <span style="font-style: italic;"><i>value</i></span> )</p>
+<p class="VBA-Text-Indent">Sets the outer radius of the circular emission area.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">CircleRadiusInner ( <span style="font-weight: normal;"><a href="../common_vbageneral/common_general_double.htm" id="a59" name="a59">double</a></span> <span style="font-style: italic;"><i>value</i></span> )</p>
+<p class="VBA-Text-Indent">Sets the inner radius of the circular emission area.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">CircleRadiusLines ( <span style="font-weight: normal;"><a href="../common_vbageneral/common_general_integer.htm" id="a81" name="a81">integer</a></span> <span style="font-style: italic;"><i>value</i></span> )</p>
+<p class="VBA-Text-Indent">Sets the number of concentric equidistant circles lying between the outer and the inner radius, along which the emission points are uniformly distributed.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">RadialFunction(<a href="../common_vbageneral/common_general_string.htm" id="a761" style="font-weight: normal;" name="a761">enum</a> <span style="font-style: italic;"><i>type</i></span>)</p>
+<p class="VBA-Text-Indent">Sets the type of the emitted charge profile as a function of the radius. For non-constant profiles, the command RadialFunctionParameter must be set too. The parameters c<span style="vertical-align: Sub;">scale</span> and c<span style="vertical-align: Sub;">2</span> are derived automatically by the condition that the emitted current is consistent with the chosen emission model.</p>
+<table style="vertical-align: top; margin-left: 25px; left: 0px; top: 1057px; height: 150px;" cellspacing="0" width="100%">
+<col style="width: 7.536%;" />
+<col style="width: 31.506%;" />
+<col style="width: 19.169%;" />
+<col style="width: 19.169%;" />
+<col style="width: 19.132%;" />
+<tr style="vertical-align: top;">
+<td style="border: Solid 2px #000000; padding-right: 10px; padding-left: 10px; vertical-align: center;">
+<p><span style="font-style: italic;"><i>type(</i></span><a href="../common_vbageneral/common_general_enum.htm" id="a111" name="a111">enum</a>)</p>
+</td>
+<td style="border-top: Solid 2px #000000; border-right: Solid 2px #000000; border-bottom: Solid 2px #000000; padding-right: 10px; padding-left: 10px; vertical-align: center;">
+<p style="font-style: italic;">Description</p>
+</td>
+<td style="border-top: Solid 2px #000000; border-right: Solid 2px #000000; border-bottom: Solid 2px #000000; padding-right: 10px; padding-left: 10px; vertical-align: center;">
+<p style="font-style: italic;">Equation</p>
+</td>
+<td style="border-top: Solid 2px #000000; border-right: Solid 2px #000000; border-bottom: Solid 2px #000000; padding-right: 10px; padding-left: 10px; vertical-align: center;">
+<p style="font-style: italic;">Parameter 1</p>
+</td>
+<td style="border-top: Solid 2px #000000; border-right: Solid 2px #000000; border-bottom: Solid 2px #000000; padding-right: 10px; padding-left: 10px; vertical-align: center;">
+<p style="font-style: italic;">Parameter 2</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-right: 10px; padding-left: 10px; vertical-align: middle;">
+<p>"constant"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-right: 10px; padding-left: 10px; vertical-align: middle;">
+<p>Constant as a function of radius.</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-right: 10px; padding-left: 10px;">
+<p>&#160;</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-right: 10px; padding-left: 10px; vertical-align: middle;">
+<p>&#160;</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-right: 10px; padding-left: 10px; vertical-align: middle;">
+<p>&#160;</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-right: 10px; padding-left: 10px; vertical-align: middle;">
+<p>"gaussian_no_offset"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-right: 10px; padding-left: 10px; vertical-align: middle;">
+<p>Simple gaussian profile. &#160;</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-right: 10px; padding-left: 10px;">
+<p>$$ f(r) = c_\mathrm{scale} \exp\left( - \frac{r^2}{2 \sigma^2} \right)$$</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-right: 10px; padding-left: 10px; vertical-align: middle;">
+<p>Standard deviation</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-right: 10px; padding-left: 10px; vertical-align: middle;">&#160;</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-right: 10px; padding-left: 10px; vertical-align: middle;">
+<p>"polynomial"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-right: 10px; padding-left: 10px; vertical-align: middle;">
+<p>Polynomial dependency with offset.</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-right: 10px; padding-left: 10px;">
+<p>$$f(r) = c_\mathrm{off} + c_\mathrm{scale} \, r^n$$</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-right: 10px; padding-left: 10px; vertical-align: middle;">
+<p>Offset (profile value at r=0)</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-right: 10px; padding-left: 10px; vertical-align: middle;">
+<p>Polynomial degree</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-right: 10px; padding-left: 10px; vertical-align: middle;">
+<p>"gaussian"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-right: 10px; padding-left: 10px; vertical-align: middle;">
+<p>Profile used for version prior to 2018. Only available via VBA.</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-right: 10px; padding-left: 10px;">
+<p>$$f(r) = c_\mathrm{off} + c_\mathrm{scale} \left[\exp \left( - \frac{r^2}{2\sigma^2}\right) -1 \right]$$</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-right: 10px; padding-left: 10px; vertical-align: middle;">
+<p>Offset (profile value at r=0)</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-right: 10px; padding-left: 10px; vertical-align: middle;">
+<p>Standard deviation</p>
+</td>
+</tr>
+</table>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">RadialFunctionParameter (<a href="../common_vbageneral/common_general_integer.htm" id="a110" style="font-weight: normal;" name="a110">int</a> <span style="font-style: italic;"><i>index,</i></span> <span style="font-weight: normal;"><a href="../common_vbageneral/common_general_double.htm" id="a731" name="a731">double</a> &#160;</span><span style="font-style: italic;"><i>value</i></span>)</p>
+<p class="VBA-Text-Indent">Sets the value of a single parameter for the type of the radial profile specified via RadialFunction. Index must start from 0. Example of defining a radial profile via VBA:</p>
+<p class="VBA-Text-Indent">.Radial Function "gaussian_no_offset"</p>
+<p class="VBA-Text-Indent">.RadialFunctionParameter "0", "1.5"</p>
+<p class="VBA-Heading-Method">&#160;</p>
+<p class="VBA-Heading-Category"><a name="Triangularization" id="Triangularization"></a>Triangulation settings</p>
+<p class="VBA-Heading-Method">PECSurface (<span style="font-weight: normal;"><a href="../common_vbageneral/common_general_bool_data_type.htm" id="a27" name="a27">bool</a></span> <span style="font-style: italic;"><i>PEC_Surface</i></span>)</p>
+<p class="VBA-Text-Indent">Sets the material type of the emitting surface: <span style="font-style: italic;"><i>True</i></span> for PEC, <span style="font-style: italic;"><i>False</i></span> for arbitrary material.</p>
+<p class="StandardNeu" style="margin-left: 40px;">&#160;</p>
+<p class="VBA-Heading-Method">ScaleTriangularizationToMesh <span style="font-weight: normal;">(<a href="../common_vbageneral/common_general_bool_data_type.htm" id="a28" style="font-weight: normal;" name="a28">bool</a></span> <span style="font-style: italic;"><i>scale_to_mesh</i></span>)</p>
+<p class="VBA-Text-Indent">When <span style="font-style: italic;"><i>scale_to_mesh = True,</i></span> the density of the emission points is adapted to the computational mesh. For emission models other than "Fixed", it is recommended to set this flag to <span style="font-style: italic;"><i>True</i></span>".</p>
+<p class="standardneu">&#160;</p>
+<p class="VBA-Heading-Method">FacetOptions ( <a href="../common_vbageneral/common_general_integer.htm" id="a1" style="font-weight: normal;" name="a1">int</a> <span style="font-style: italic;"><i>density,</i></span> <a href="../common_vbageneral/common_general_integer.htm" id="a47" style="font-weight: normal;" name="a47">int</a> <span style="font-style: italic;"><i>scale</i></span> )</p>
+<p class="VBA-Text-Indent"><span style="font-style: italic;"><i>Density</i></span> can have values between 0 and 90. A <span style="font-style: italic;"><i>density</i></span> of 0 leads to a coarse triangulation, a value of 90 leads to a fine triangulation. To get very fine triangulations, the scale can be increased. Possible scale values are 1, 10 and 100.</p>
+<p class="VBA-Heading-Method">&#160;</p>
+<p class="VBA-Heading-Method">AddFace (<a href="../common_vbageneral/common_general_solid_names.htm" id="a30" style="font-weight: normal; font-style: normal;" name="a30">s<span style="font-weight: normal; font-style: normal;">olidname</span></a> <span style="font-style: italic;"><i>&#160;name</i></span><span style="font-weight: normal;">, <a href="../common_vbageneral/common_general_integer.htm" id="a24" style="font-weight: normal;" name="a24">int</a></span> <span style="font-style: italic;"><i>&#160;faceid</i></span>)</p>
+<p class="Topic-Text-Indent">Add a new surface of a solid &#160;to a particle source definition.</p>
+<p class="VBA-Heading-Category"><a name="PIC_emission_model" id="PIC_emission_model"></a>Particle-in-Cell emission model settings</p>
+<p class="VBA-Heading-Method">PICEmissionModel (<a href="../common_vbageneral/common_general_enum.htm" id="a64" style="font-weight: normal;" name="a64">enum</a> &#160;<span style="font-style: italic;"><i>model</i></span>)</p>
+<p class="VBA-Text-Indent">Describes the PIC emission model of the particle source.</p>
+<table style="vertical-align: top; margin-left: 25px;" cellspacing="0" width="92.603%">
+<col style="width: 23.745%;" />
+<col style="width: 76.255%;" />
+<tr style="vertical-align: top;">
+<td style="border: Solid 2px #000000; width: 23.745%; padding-right: 10px; padding-left: 10px; vertical-align: center;">
+<p><span style="font-style: italic;"><i>model (</i></span><a href="../common_vbageneral/common_general_enum.htm" id="a66" name="a66">enum</a> )</p>
+</td>
+<td style="border-top: Solid 2px #000000; border-right: Solid 2px #000000; border-bottom: Solid 2px #000000; width: 76.255%; padding-right: 10px; padding-left: 10px; vertical-align: center;">
+<p>meaning</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 23.745%; padding-right: 10px; padding-left: 10px;">
+<p>"Gauss"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 76.255%; padding-right: 10px; padding-left: 10px;">
+<p>Particles are emitted in pulses/bunches of a Gaussian charge distribution..</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 23.745%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text-Indent" style="margin-left: 0px;">"DC"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 76.255%; padding-right: 10px; padding-left: 10px;">
+<p>Emitted particles form a continuous current.</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 23.745%; padding-right: 10px; padding-left: 10px;">
+<p>"Field"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 76.255%; padding-right: 10px; padding-left: 10px;">
+<p>Field emission model based on Fowler-Nordheim equations.</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 23.745%; padding-right: 10px; padding-left: 10px;">
+<p>"Explosive"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 76.255%; padding-right: 10px; padding-left: 10px;">
+<p>Explosive emission model.</p>
+</td>
+</tr>
+</table>
+<p class="VBA-Heading-Method">&#160;</p>
+<p class="VBA-Heading-Method">PICEnergy (<span style="font-weight: normal;"><a href="../common_vbageneral/common_general_double.htm" id="a74" name="a74">double</a> &#160;</span><span style="font-style: italic;"><i>value,</i></span> <a href="../common_vbageneral/common_general_string.htm" id="a75" style="font-weight: normal;" name="a75">enum</a> &#160;<span style="font-style: italic;"><i>type</i></span>)</p>
+<p class="VBA-Text-Indent">Sets the kinetic emission type and its value for the beam emission model. Possible values for the type are:</p>
+<ul style="list-style: disc;">
+<li class="p-VBA-Text-Indent">
+<p class="VBA-Text-Indent">Normed Momentum</p>
+</li>
+<li class="p-VBA-Text-Indent">
+<p class="VBA-Text-Indent">Energy</p>
+</li>
+<li class="p-VBA-Text-Indent">
+<p class="VBA-Text-Indent">Gamma</p>
+</li>
+<li class="p-VBA-Text-Indent">
+<p class="VBA-Text-Indent">Beta</p>
+</li>
+<li class="p-VBA-Text-Indent">
+<p class="VBA-Text-Indent">Velocity</p>
+</li>
+</ul>
+<p class="VBA-Heading-Method">PICBunchCharge (<span style="font-weight: normal;"><a href="../common_vbageneral/common_general_double.htm" id="a73" name="a73">double</a> &#160;</span><span style="font-style: italic;"><i>value</i></span>)</p>
+<p class="VBA-Text-Indent">Sets the bunch charge for the Gaussian emission model.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">PICBunchDefinitionType (<a href="../common_vbageneral/common_general_string.htm" id="a76" style="font-weight: normal;" name="a76">enum</a> <span style="font-style: italic;"><i>type</i></span>)</p>
+<p class="VBA-Text-Indent">Sets the state, if the emission bunch is defined in time or space for the Gaussian emission model. Possible values for <span style="font-style: italic;"><i>type</i></span> are "Time" and "Length".</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">PICBunchSigma (<span style="font-weight: normal;"><a href="../common_vbageneral/common_general_double.htm" id="a72" name="a72">double</a> &#160;</span><span style="font-style: italic;"><i>value</i></span>)</p>
+<p class="VBA-Text-Indent">Sets the variance of the Gaussian pulse for the Gaussian emission model.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">PICBunchCutoffLength (<span style="font-weight: normal;"><a href="../common_vbageneral/common_general_double.htm" id="a71" name="a71">double</a> &#160;</span><span style="font-style: italic;"><i>value</i></span>)</p>
+<p class="VBA-Text-Indent">Sets the cutoff length of the Gaussian pulse for the Gaussian emission model.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">PICBunchOffset (<span style="font-weight: normal;"><a href="../common_vbageneral/common_general_double.htm" id="a70" name="a70">double</a> &#160;</span><span style="font-style: italic;"><i>value</i></span>)</p>
+<p class="VBA-Text-Indent">Sets the offset of the Gaussian beam for the Gaussian emission model.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">PICNBunches (<span style="font-weight: normal;"><a href="../common_vbageneral/common_general_double.htm" id="a69" name="a69">double</a> &#160;</span><span style="font-style: italic;"><i>value</i></span>)</p>
+<p class="VBA-Text-Indent">Sets the number of Gaussian pulses for the Gaussian emission model.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">PICBunchDistances (<span style="font-weight: normal;"><a href="../common_vbageneral/common_general_double.htm" id="a67" name="a67">double</a> &#160;</span><span style="font-style: italic;"><i>value</i></span>)</p>
+<p class="VBA-Text-Indent">Sets the distance between two successive Gaussian pulses for the Gaussian emission model.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">PICCurrentDC (<span style="font-weight: normal;"><a href="../common_vbageneral/common_general_double.htm" id="a68" name="a68">double</a> &#160;</span><span style="font-style: italic;"><i>value</i></span>)</p>
+<p class="VBA-Text-Indent">Sets the emitted current of the particle source for the DC emission model.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">PICEnergyDC (<span style="font-weight: normal;"><a href="../common_vbageneral/common_general_double.htm" id="a85" name="a85">double</a> &#160;</span><span style="font-style: italic;"><i>value,</i></span> <a href="../common_vbageneral/common_general_string.htm" id="a86" style="font-weight: normal;" name="a86">enum</a> &#160;<span style="font-style: italic;"><i>type</i></span>)</p>
+<p class="VBA-Text-Indent">Sets the kinetic emission type and its value for the DC emission model. Possible values for <span style="font-style: italic;"><i>type</i></span> are:</p>
+<ul style="list-style: disc;">
+<li class="p-VBA-Text-Indent">
+<p class="VBA-Text-Indent">Normed Momentum</p>
+</li>
+<li class="p-VBA-Text-Indent">
+<p class="VBA-Text-Indent">Energy (eV)</p>
+</li>
+<li class="p-VBA-Text-Indent">
+<p class="VBA-Text-Indent">Gamma</p>
+</li>
+<li class="p-VBA-Text-Indent">
+<p class="VBA-Text-Indent">Beta</p>
+</li>
+<li class="p-VBA-Text-Indent">
+<p class="VBA-Text-Indent">Velocity (m/s)</p>
+</li>
+<li class="p-VBA-Text-Indent">
+<p class="VBA-Text-Indent">Temperature (K)</p>
+</li>
+</ul>
+<p class="VBA-Heading-Method">PICRiseTimeDC (<span style="font-weight: normal;"><a href="../common_vbageneral/common_general_double.htm" id="a87" name="a87">double</a> &#160;</span><span style="font-style: italic;"><i>value</i></span>)</p>
+<p class="VBA-Text-Indent">Sets the time-span of the rise function, until the steady state current is reached. This applies to the DC emission model.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">PICOblique( <span style="font-weight: normal;"><a href="../common_vbageneral/common_general_double.htm" id="a50" name="a50">double</a></span> angleTheta, <span style="font-weight: normal;"><a href="../common_vbageneral/common_general_double.htm" id="a82" name="a82">double</a></span> anglePhi )</p>
+<p class="VBA-Text-Indent">Sets the angles theta and phi (in degrees) for the oblique emission feature in the DC emission model.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">PICEnergyFieldEmission (<span style="font-weight: normal;"><a href="../common_vbageneral/common_general_double.htm" id="a88" name="a88">double</a> &#160;</span><span style="font-style: italic;"><i>value,</i></span> <a href="../common_vbageneral/common_general_string.htm" id="a89" style="font-weight: normal;" name="a89">enum</a> &#160;<span style="font-style: italic;"><i>type</i></span>)</p>
+<p class="VBA-Text-Indent">Sest the kinetic emission type and its value for the field emission model. Possible values for <span style="font-style: italic;"><i>type</i></span> are:</p>
+<ul style="list-style: disc;">
+<li class="p-VBA-Text-Indent">
+<p class="VBA-Text-Indent">Normed Momentum</p>
+</li>
+<li class="p-VBA-Text-Indent">
+<p class="VBA-Text-Indent">Energy (eV)</p>
+</li>
+<li class="p-VBA-Text-Indent">
+<p class="VBA-Text-Indent">Gamma</p>
+</li>
+<li class="p-VBA-Text-Indent">
+<p class="VBA-Text-Indent">Beta</p>
+</li>
+<li class="p-VBA-Text-Indent">
+<p class="VBA-Text-Indent">Velocity (m/s)</p>
+</li>
+<li class="p-VBA-Text-Indent">
+<p class="VBA-Text-Indent">Temperature (K)</p>
+</li>
+</ul>
+<p class="VBA-Heading-Method">PICScaleFactorFieldEmission (<span style="font-weight: normal;"><a href="../common_vbageneral/common_general_double.htm" id="a90" name="a90">double</a> &#160;</span><span style="font-style: italic;"><i>value</i></span>)</p>
+<p class="VBA-Text-Indent">Sets the linear parameter for the field emission model.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">PICExpFactorFieldEmission(<span style="font-weight: normal;"><a href="../common_vbageneral/common_general_double.htm" id="a91" name="a91">double</a> &#160;</span><span style="font-style: italic;"><i>value</i></span>)</p>
+<p class="VBA-Text-Indent">Sets the exponential parameter for the field emission model.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">PICRiseTimeExplosive(<a href="../common_vbageneral/common_general_double.htm" id="a901" style="font-weight: bold;" name="a901">double</a> &#160;<span style="font-style: italic;"><i>value</i></span>)</p>
+<p class="VBA-Text-Indent">Explosive emission model: sets the rise time.</p>
+<p class="VBA-Text-Indent" style="margin-left: 0px;">&#160;</p>
+<p class="VBA-Heading-Method">PICThresholdFieldExplosive(<a href="../common_vbageneral/common_general_double.htm" id="a902" style="font-weight: bold;" name="a902">double</a> &#160;<span style="font-style: italic;"><i>value</i></span>)</p>
+<p class="VBA-Text-Indent">Explosive emission model: sets the threshold field.</p>
+<p class="VBA-Text-Indent" style="margin-left: 0px;">&#160;</p>
+<p class="VBA-Heading-Method">PICResidualFieldExplosive(<a href="../common_vbageneral/common_general_double.htm" id="a903" style="font-weight: bold;" name="a903">double</a> &#160;<span style="font-style: italic;"><i>value</i></span>)</p>
+<p class="VBA-Text-Indent">Explosive emission model: sets the residual field.</p>
+<p class="VBA-Text-Indent" style="margin-left: 0px;">&#160;</p>
+<p class="VBA-Heading-Method">PICCutoffFactorExplosive(<a href="../common_vbageneral/common_general_double.htm" id="a904" style="font-weight: bold;" name="a904">double</a> &#160;<span style="font-style: italic;"><i>value</i></span>)</p>
+<p class="VBA-Text-Indent">Explosive emission model: sets the factor the filter cut-off frequency. Default value is 2.</p>
+<p class="VBA-Heading-Category"><a name="Queries" id="Queries"></a>Queries</p>
+<p class="VBA-Heading-Method">GetNumberOfParticleSources <a href="../common_vbageneral/common_general_long.htm" id="a35" style="font-weight: normal;" name="a35">long</a></p>
+<p class="VBA-Text-Indent">Returns the number of all defined particle sources.</p>
+<p class="vba-text-indent">&#160;</p>
+<p class="VBA-Heading-Method">GetNameofParticleSource( <span style="font-weight: normal;">&#160;<a href="../common_vbageneral/common_general_integer.htm" id="a36" style="font-weight: normal;" name="a36">int</a></span> <span style="font-weight: normal;">&#160;</span><span style="font-style: italic;"><i>index</i></span>) <span style="font-weight: normal;"><a href="../common_vbageneral/common_general_name.htm" id="a34" name="a34">name</a></span></p>
+<p class="VBA-Text-Indent">Returns the name of the particle source with the specified index number.</p>
+<p class="VBA-Heading-Category"><a name="Default" id="Default"></a>Default Settings</p>
+<p class="VBA-Text-Example">ParticleType ("Userdefined")</p>
+<p class="VBA-Text-Example">Charge (1.602177e-019)</p>
+<p class="VBA-Text-Example">Mass (9.109390e-031)</p>
+<p class="VBA-Text-Example">Density (0.8)</p>
+<p class="VBA-Text-Example">PECSurface (TRUE)</p>
+<p class="VBA-Text-Example">ScaleTriangularizationToMesh (TRUE)</p>
+<p class="VBA-Text-Example">EmissionModel ("Fixed")</p>
+<p class="VBA-Text-Example">Energy (0, "Energy")</p>
+<p class="VBA-Heading-Category"><a name="Example" id="Example"></a>Example</p>
+<p class="VBA-Text">To illustrate the use of the particle source VBA commands, the following VBA-script is provided. Prior to the particle source creation, a PEC cylinder is created inside a vacuum box. The particle source is defined on one of the faces of the PEC cylinder and the fixed emission model of the tracking solver is used. To test it, open a new CST Particle Studio module in the CST Studio Suite, create a new VBA macro, copy the script into it and run the macro.</p>
+<p class="VBA-Text">&#160;</p>
+<p class="VBA-Text" style="font-family: 'Courier New', monospace;">' new component: component1</p>
+<p class="VBA-Text" style="font-family: 'Courier New', monospace;">Component.New "component1"</p>
+<p class="VBA-Text" style="font-family: 'Courier New', monospace;">&#160;</p>
+<p class="VBA-Text" style="font-family: 'Courier New', monospace;">' define brick: component1:vacuum_box</p>
+<p class="VBA-Text" style="font-family: 'Courier New', monospace;">With Brick</p>
+<p class="VBA-Text" style="font-family: 'Courier New', monospace;">&#160;&#160;&#160;&#160;&#160;.Reset</p>
+<p class="VBA-Text" style="font-family: 'Courier New', monospace;">&#160;&#160;&#160;&#160;&#160;.Name "vacuum_box"</p>
+<p class="VBA-Text" style="font-family: 'Courier New', monospace;">&#160;&#160;&#160;&#160;&#160;.Component "component1"</p>
+<p class="VBA-Text" style="font-family: 'Courier New', monospace;">&#160;&#160;&#160;&#160;&#160;.Material "Vacuum"</p>
+<p class="VBA-Text" style="font-family: 'Courier New', monospace;">&#160;&#160;&#160;&#160;&#160;.Xrange "-1", "1"</p>
+<p class="VBA-Text" style="font-family: 'Courier New', monospace;">&#160;&#160;&#160;&#160;&#160;.Yrange "-1", "1"</p>
+<p class="VBA-Text" style="font-family: 'Courier New', monospace;">&#160;&#160;&#160;&#160;&#160;.Zrange "-1", "1"</p>
+<p class="VBA-Text" style="font-family: 'Courier New', monospace;">&#160;&#160;&#160;&#160;&#160;.Create</p>
+<p class="VBA-Text" style="font-family: 'Courier New', monospace;">End With</p>
+<p class="VBA-Text" style="font-family: 'Courier New', monospace;">&#160;</p>
+<p class="VBA-Text" style="font-family: 'Courier New', monospace;">' define cylinder: component1:pec_cylinder</p>
+<p class="VBA-Text" style="font-family: 'Courier New', monospace;">With Cylinder</p>
+<p class="VBA-Text" style="font-family: 'Courier New', monospace;">&#160;&#160;&#160;&#160;&#160;.Reset</p>
+<p class="VBA-Text" style="font-family: 'Courier New', monospace;">&#160;&#160;&#160;&#160;&#160;.Name "pec_cylinder"</p>
+<p class="VBA-Text" style="font-family: 'Courier New', monospace;">&#160;&#160;&#160;&#160;&#160;.Component "component1"</p>
+<p class="VBA-Text" style="font-family: 'Courier New', monospace;">&#160;&#160;&#160;&#160;&#160;.Material "PEC"</p>
+<p class="VBA-Text" style="font-family: 'Courier New', monospace;">&#160;&#160;&#160;&#160;&#160;.OuterRadius "0.5"</p>
+<p class="VBA-Text" style="font-family: 'Courier New', monospace;">&#160;&#160;&#160;&#160;&#160;.InnerRadius "0.0"</p>
+<p class="VBA-Text" style="font-family: 'Courier New', monospace;">&#160;&#160;&#160;&#160;&#160;.Axis "z"</p>
+<p class="VBA-Text" style="font-family: 'Courier New', monospace;">&#160;&#160;&#160;&#160;&#160;.Zrange "-0.5", "0"</p>
+<p class="VBA-Text" style="font-family: 'Courier New', monospace;">&#160;&#160;&#160;&#160;&#160;.Xcenter "0"</p>
+<p class="VBA-Text" style="font-family: 'Courier New', monospace;">&#160;&#160;&#160;&#160;&#160;.Ycenter "0"</p>
+<p class="VBA-Text" style="font-family: 'Courier New', monospace;">&#160;&#160;&#160;&#160;&#160;.Segments "0"</p>
+<p class="VBA-Text" style="font-family: 'Courier New', monospace;">&#160;&#160;&#160;&#160;&#160;.Create</p>
+<p class="VBA-Text" style="font-family: 'Courier New', monospace;">End With</p>
+<p class="VBA-Text" style="font-family: 'Courier New', monospace;">&#160;</p>
+<p class="VBA-Text" style="font-family: 'Courier New', monospace;">' pick face</p>
+<p class="VBA-Text" style="font-family: 'Courier New', monospace;">Pick.PickFaceFromId "component1:pec_cylinder", "3"</p>
+<p class="VBA-Text" style="font-family: 'Courier New', monospace;">&#160;</p>
+<p class="VBA-Text" style="font-family: 'Courier New', monospace;">' define particle source: particle1</p>
+<p class="VBA-Text" style="font-family: 'Courier New', monospace;">With ParticleSource</p>
+<p class="VBA-Text" style="font-family: 'Courier New', monospace;">&#160;&#160;&#160;&#160;&#160;.Reset</p>
+<p class="VBA-Text" style="font-family: 'Courier New', monospace;">&#160;&#160;&#160;&#160;&#160;.Name "particle1"</p>
+<p class="VBA-Text" style="font-family: 'Courier New', monospace;">&#160;&#160;&#160;&#160;&#160;.ParticleType "electron"</p>
+<p class="VBA-Text" style="font-family: 'Courier New', monospace;">&#160;&#160;&#160;&#160;&#160;.Charge "-1.602177e-019"</p>
+<p class="VBA-Text" style="font-family: 'Courier New', monospace;">&#160;&#160;&#160;&#160;&#160;.Mass "9.109390e-031"</p>
+<p class="VBA-Text" style="font-family: 'Courier New', monospace;">&#160;&#160;&#160;&#160;&#160;.SourceType "Circle"</p>
+<p class="VBA-Text" style="font-family: 'Courier New', monospace;">&#160;&#160;&#160;&#160;&#160;.UsePickCircle "False"</p>
+<p class="VBA-Text" style="font-family: 'Courier New', monospace;">&#160;&#160;&#160;&#160;&#160;.CircleCenterPoint "0", "0", "0"</p>
+<p class="VBA-Text" style="font-family: 'Courier New', monospace;">&#160;&#160;&#160;&#160;&#160;.CircleNormal "0", "0", "1"</p>
+<p class="VBA-Text" style="font-family: 'Courier New', monospace;">&#160;&#160;&#160;&#160;&#160;.CircleRadius "0.5"</p>
+<p class="VBA-Text" style="font-family: 'Courier New', monospace;">&#160;&#160;&#160;&#160;&#160;.CircleRadiusInner "0.3"</p>
+<p class="VBA-Text" style="font-family: 'Courier New', monospace;">&#160;&#160;&#160;&#160;&#160;.CircleRadiusLines "3"</p>
+<p class="VBA-Text" style="font-family: 'Courier New', monospace;">&#160;&#160;&#160;&#160;&#160;.PECSurface "False"</p>
+<p class="VBA-Text" style="font-family: 'Courier New', monospace;">&#160;&#160;&#160;&#160;&#160;.RadialFunction "Constant"</p>
+<p class="VBA-Text" style="font-family: 'Courier New', monospace;">&#160;&#160;&#160;&#160;&#160;.TrkEmissionModel "Fixed"</p>
+<p class="VBA-Text" style="font-family: 'Courier New', monospace;">&#160;&#160;&#160;&#160;&#160;.TrkKinetic "Energy", "Uniform", "100", "0", "0", "300", "100"</p>
+<p class="VBA-Text" style="font-family: 'Courier New', monospace;">&#160;&#160;&#160;&#160;&#160;.TrkFixed "1", "False"</p>
+<p class="VBA-Text" style="font-family: 'Courier New', monospace;">&#160;&#160;&#160;&#160;&#160;.TrkOblique "0.0", "0.0"</p>
+<p class="VBA-Text" style="font-family: 'Courier New', monospace;">&#160;&#160;&#160;&#160;&#160;.PICEmissionModel "Gauss"</p>
+<p class="VBA-Text" style="font-family: 'Courier New', monospace;">&#160;&#160;&#160;&#160;&#160;.PICEnergy "0.0", "Energy"</p>
+<p class="VBA-Text" style="font-family: 'Courier New', monospace;">&#160;&#160;&#160;&#160;&#160;.PICBunchCharge "0.0"</p>
+<p class="VBA-Text" style="font-family: 'Courier New', monospace;">&#160;&#160;&#160;&#160;&#160;.PICBunchDefinitionType "Time"</p>
+<p class="VBA-Text" style="font-family: 'Courier New', monospace;">&#160;&#160;&#160;&#160;&#160;.PICBunchSigma "0.0"</p>
+<p class="VBA-Text" style="font-family: 'Courier New', monospace;">&#160;&#160;&#160;&#160;&#160;.PICBunchCutoffLength "0.0"</p>
+<p class="VBA-Text" style="font-family: 'Courier New', monospace;">&#160;&#160;&#160;&#160;&#160;.PICBunchOffset "0.0"</p>
+<p class="VBA-Text" style="font-family: 'Courier New', monospace;">&#160;&#160;&#160;&#160;&#160;.PICNBunches "1"</p>
+<p class="VBA-Text" style="font-family: 'Courier New', monospace;">&#160;&#160;&#160;&#160;&#160;.PICBunchDistances "0.0"</p>
+<p class="VBA-Text" style="font-family: 'Courier New', monospace;">&#160;&#160;&#160;&#160;&#160;.PICAngleSpreadBunchEmission "0.0"</p>
+<p class="VBA-Text" style="font-family: 'Courier New', monospace;">&#160;&#160;&#160;&#160;&#160;.PICKineticSpreadBunchEmission "0.0"</p>
+<p class="VBA-Text" style="font-family: 'Courier New', monospace;">&#160;&#160;&#160;&#160;&#160;.Create</p>
+<p class="VBA-Text" style="font-family: 'Courier New', monospace;">End With</p>
+<?rh-p style="margin-bottom: 0px; text-align: Right; margin-left: 18px; 
+                 margin-right: 18px; margin-top: 18px;" ?>
+<div style="width: 100%; position: relative;" id="footer">
+<p style="border-bottom: Solid 1px #dddddd; text-align: Left; margin-left: 0px; font-family: Arial, sans-serif; line-height: Normal; margin-top: 9px; margin-right: 0px; margin-bottom: 6px; border-left-width: 1px; border-top-width: 1px; border-right-width: 1px;"><span style="text-align: Left; font-family: Arial, sans-serif; line-height: Normal;">&#160;</span></p>
+<table cellspacing="0" width="100%">
+<col style="width: 50%;" />
+<col style="width: 50%;" />
+<tr>
+<td style="vertical-align: Top;"><span style="font-family: Arial, sans-serif; line-height: Normal; font-size: 8pt;"><font size="1" style="font-size:8pt;">CST Studio Suite 2026</font></span></td>
+<td style="vertical-align: Top;">
+<p style="text-align: right;">&#160;</p>
+</td>
+</tr>
+</table>
+<p>&#160;</p>
+</div>
+<script type="text/javascript" language="javascript1.2">
+//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+        writeIntopicBar(0);
+
+
+highlightSearch();
+//-->
+//]]>
+</script>
+</body>
+</html>

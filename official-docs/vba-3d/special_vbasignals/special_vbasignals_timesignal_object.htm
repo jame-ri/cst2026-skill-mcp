@@ -1,0 +1,444 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="Adobe RoboHelp 11" />
+<title>TimeSignal Object</title>
+<link rel="StyleSheet" href="../online_help_vba.css" type="text/css" />
+<style type="text/css">
+/*<![CDATA[*/
+<!--
+body { border-bottom-style:None; }
+-->
+/*]]>*/
+</style>
+
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+        origWidth = innerWidth;
+        origHeight = innerHeight;
+        onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+/*<![CDATA[*/
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+-->
+/*]]>*/
+</style>
+
+<script type="text/javascript" language="javascript1.2" src="../whmsg.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript" src="../whver.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript1.2" src="../whutils.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript1.2" src="../whproxy.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript1.2" src="../whlang.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript1.2" src="../whtopic.js" charset="utf-8">
+</script>
+</head>
+<body>
+<script type="text/javascript" language="javascript1.2">
+//<![CDATA[
+<!--
+if (window.gbWhTopic)
+{
+        var strUrl = document.location.href;
+        var bc = 0;
+        var n = strUrl.toLowerCase().indexOf("bc-");
+        if(n != -1)
+        {
+                document.location.replace(strUrl.substring(0, n));
+                bc = strUrl.substring(n+3);
+        }
+
+        if (window.addTocInfo)
+        {
+        addTocInfo("3D Simulation VBA\nVBA Objects\nSources and Ports\nHigh Frequency\nTimeSignal Object");
+
+        }
+        if (window.writeBtnStyle)
+                writeBtnStyle();
+
+        if (window.writeIntopicBar)
+                writeIntopicBar(0);
+
+        
+        document.write("<p style=\"font-family: Tahoma; font-size: 9pt; font-weight: 400;  font-style:normal; color: rgb(0, 0, 0); text-decoration:none; text-align: left\"> ");
+AddMasterBreadcrumbs("../index.htm", "font-family: Tahoma; font-size: 9pt; font-weight: 400;  font-style:normal; color: rgb(0, 0, 0); text-decoration:none; text-align: left", "|", "Home", "../special_vbaobjects/special_vbaobjects_vbaobjects.htm");
+document.write("<a style=\"font-family: Tahoma; font-size: 9pt; font-weight: 400;  font-style:normal; color: rgb(0, 0, 0); text-decoration:none; text-align: left\" href=\"../special_vbaobjects/special_vbaobjects_vbaobjects.htm\">3D Simulation VBA<\/a> | <a style=\"font-family: Tahoma; font-size: 9pt; font-weight: 400;  font-style:normal; color: rgb(0, 0, 0); text-decoration:none; text-align: left\" href=\"../special_vbaobjects/special_vbaobjects_vbaobjects.htm\">VBA Objects<\/a> | <a style=\"font-family: Tahoma; font-size: 9pt; font-weight: 400;  font-style:normal; color: rgb(0, 0, 0); text-decoration:none; text-align: left\" href=\"special_vbasignals_timesignal_object.htm\">Sources and Ports<\/a> | <a style=\"font-family: Tahoma; font-size: 9pt; font-weight: 400;  font-style:normal; color: rgb(0, 0, 0); text-decoration:none; text-align: left\" href=\"special_vbasignals_timesignal_object.htm\">High Frequency<\/a> | TimeSignal Object<\/p>");
+
+}
+else
+        if (window.gbIE4)
+                document.location.reload();
+
+onLoadHandler = function()
+{
+  if (window.setRelStartPage)
+        {
+        setTimeout("setRelStartPage('../index.htm');", 1)
+
+    setTimeout("UpdateBreadCrumbsMarker();", 1);
+        }
+}
+
+if (window.addEventListener){  
+        window.addEventListener('load', onLoadHandler, false);   
+} else if (window.attachEvent){  
+        window.attachEvent('onload', onLoadHandler);  
+}
+
+function onSetStartPage()
+{
+  autoSync(1);
+  sendSyncInfo();
+  sendAveInfoOut();
+}
+//-->
+//]]>
+</script><script type="text/javascript" src="../ehlpdhtm.js" language="JavaScript1.2">
+</script>
+<table cellspacing="0" width="100%">
+<col style="width: 50%;" />
+<col style="width: 50%;" />
+<tr>
+<td style="vertical-align: middle; padding-top: 5px; padding-bottom: 5px;">
+<p style="margin-top: 0px; margin-bottom: 0px;"><img src="../3ds.png" alt="" style="border: none;" border="0" /></p>
+</td>
+<td style="vertical-align: middle;">
+<p style="text-align: right;"><a href="https://www.3ds.com/products-services/3dexperience/" target="_blank"><img src="../3dexp.png" alt="" style="border: none;" width="32" height="32" border="0" /></a></p>
+</td>
+</tr>
+</table>
+<p class="VBA-Heading-Object">TimeSignal Object</p>
+<ul>
+<li class="p-VBA-Index-Category">
+<p class="VBA-Index-Category"><a href="#Methods">Methods</a></p>
+</li>
+<li class="p-VBA-Index-Category">
+<p class="VBA-Index-Category"><a href="#Defaults">Default Settings</a></p>
+</li>
+<li class="p-VBA-Index-Category">
+<p class="VBA-Index-Category"><a href="#Example">Examples</a></p>
+</li>
+</ul>
+<p class="VBA-Heading-Category"><a name="Methods" id="Methods"></a>Methods</p>
+<p class="VBA-Heading-Method">Reset</p>
+<p class="VBA-Text-Indent">Resets all internal values to their default settings.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">Name ( <a href="../common_vbageneral/common_general_name.htm" id="a1" style="font-weight: normal; font-style: normal;" name="a1">name</a> <span style="font-style: italic;"><i>signalName</i></span> )</p>
+<p class="VBA-Text-Indent">Sets the name of the time signal.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">Id( <a href="../common_vbageneral/common_general_integer.htm" id="a31" style="font-weight: normal; font-style: normal;" name="a31">int</a> <span style="font-style: italic;"><i>id</i></span> )</p>
+<p class="VBA-Text-Indent">Sets a unique identifier for the imported ASCII signal data. Therefore signals pointing to the same imported data (e.g. created via transform and copy) share the same id. Please use <span style="font-style: italic;"><i>GetNextId</i></span> to retrieve a free id.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">Rename ( <a href="../common_vbageneral/common_general_name.htm" id="a2" style="font-weight: normal; font-style: normal;" name="a2">name</a> <span style="font-style: italic;"><i>oldName</i></span>, <a href="../common_vbageneral/common_general_name.htm" id="a4" style="font-weight: normal; font-style: normal;" name="a4">name</a> <span style="font-style: italic;"><i>newName</i></span>, <a href="../common_vbageneral/common_general_name.htm" id="a13" style="font-weight: normal; font-style: normal;" name="a13">name</a> <span style="font-style: italic;"><i>problemType</i></span> )</p>
+<p class="VBA-Text-Indent">Renames the time signal named <span style="font-style: italic;"><i>oldName</i></span> to <span style="font-style: italic;"><i>newName</i></span>. The third parameter characterizes the problem type to which the signal belongs. Admissible values for <span style="font-style: italic;"><i>problemType</i></span> are "High Frequency" or "Low Frequency".</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">Delete ( <a href="../common_vbageneral/common_general_name.htm" id="a5" style="font-weight: normal; font-style: normal;" name="a5">name</a> <span style="font-style: italic;"><i>signalName</i></span>, <a href="../common_vbageneral/common_general_name.htm" id="a14" style="font-weight: normal; font-style: normal;" name="a14">name</a> <span style="font-style: italic;"><i>problemType</i></span> )</p>
+<p class="VBA-Text-Indent">Deletes an existing time signal named <span style="font-style: italic;"><i>signalName</i></span>. The second parameter characterizes the problem type to which the signal belongs. Admissible values for <span style="font-style: italic;"><i>problemType</i></span> are "High Frequency" or "Low Frequency".</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">Create</p>
+<p class="VBA-Text-Indent">Creates the time signal with the previously applied settings.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">FileName ( <span style="font-style: italic;"><i><a href="../common_vbageneral/common_general_string.htm" id="a24" style="font-weight: normal; font-style: normal;" name="a24">string</a> name</i></span> )</p>
+<p class="VBA-Text-Indent"><span style="font-style: italic;"><i>name</i></span> specifies the ASCII signal file and path.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">UseCopyOnly ( <a href="../common_vbageneral/common_general_bool_data_type.htm" id="a79" style="font-weight: normal; font-style: normal;" name="a79">bool</a> <span style="font-style: italic;"><i>flag</i></span> )</p>
+<p class="VBA-Text-Indent">The ASCII signal file is copied once into the project folder. Hence changes of the originally imported file do not affect the defined signal.</p>
+<p class="VBA-Heading-Method">&#160;</p>
+<p class="VBA-Heading-Method">Fmin ( <a href="../common_vbageneral/common_general_double.htm" id="a59" style="font-weight: normal;" name="a59">double</a> <span style="font-style: italic;"><i>fmin</i></span> )</p>
+<p class="VBA-Heading-Method">Fmax ( <a href="../common_vbageneral/common_general_double.htm" id="a3" style="font-weight: normal;" name="a3">double</a> <span style="font-style: italic;"><i>fmax</i></span> )</p>
+<p class="VBA-Text-Indent">Sets the frequency range for a Gaussian excitation function. To ensure accurate results the signal's frequency range has to fit inside the project's frequency range.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">Ttotal ( <a href="../common_vbageneral/common_general_double.htm" id="a62" style="font-weight: normal;" name="a62">double</a> <span style="font-style: italic;"><i>ttotal</i></span> )</p>
+<p class="VBA-Text-Indent">Sets the total duration of the time signal.</p>
+<p class="VBA-Text-Indent">This setting is used for the "Rectangular", "Smooth step", "Sine step" and "User" defined signal and ignored for "Gaussian" impulses and for "Import" signal types.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">Trise ( <a href="../common_vbageneral/common_general_double.htm" id="a7" style="font-weight: normal;" name="a7">double</a> <span style="font-style: italic;"><i>trise</i></span> )</p>
+<p class="VBA-Text-Indent">Sets the duration in which the time signal rises to its maximum. This setting is used only for the "Rectangular" signal type.</p>
+<p class="VBA-Heading-Method">&#160;</p>
+<p class="VBA-Heading-Method">Thold ( <a href="../common_vbageneral/common_general_double.htm" id="a8" style="font-weight: normal;" name="a8">double</a> <span style="font-style: italic;"><i>thold</i></span> )</p>
+<p class="VBA-Text-Indent">Sets the duration in which the time signal holds its maximum value. This setting is used only for the "Rectangular" signal type.</p>
+<p class="VBA-Heading-Method">&#160;</p>
+<p class="VBA-Heading-Method">Tfall ( <a href="../common_vbageneral/common_general_double.htm" id="a9" style="font-weight: normal;" name="a9">double</a> <span style="font-style: italic;"><i>tfall</i></span> )</p>
+<p class="VBA-Text-Indent">Sets the duration in which the time signal falls from its maximum value to zero. This setting is used only for the "Rectangular" signal type.</p>
+<p class="VBA-Text-Indent" style="text-align: center;"><img src="../image/signal_rect.png" alt="" style="border: none;" width="253" height="173" border="0" /></p>
+<p class="VBA-Text-Indent" style="text-align: center;">Rectangular signal type</p>
+<p class="vba-text-indent">&#160;</p>
+<p class="VBA-Heading-Method">Voffset ( <a href="../common_vbageneral/common_general_double.htm" id="a10" name="a10">double</a> <span style="font-style: italic;"><i>voffset</i></span> )</p>
+<p class="VBA-Text-Indent">Sets the vertical offset of the time signal. This setting is used only for the sine function (signal type "Sine").</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">AmplitudeRisePercent ( <a href="../common_vbageneral/common_general_double.htm" id="a17" style="font-weight: normal;" name="a17">double</a> <span style="font-style: italic;"><i>amplituderisepercent</i></span> )</p>
+<p class="VBA-Text-Indent">Sets the amplitude rise (in per cent notation) of the time signal, which completely defines the slope and grow rate of the signal together with the Trise parameter. This setting is used only for the smooth step function (signal type "Smooth step").</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">RiseFactor ( <a href="../common_vbageneral/common_general_double.htm" id="a18" style="font-weight: normal;" name="a18">double</a> <span style="font-style: italic;"><i>risefactor</i></span> )</p>
+<p class="VBA-Text-Indent">Sets the duration in which the time signal rises to its maximum. This setting is used only for the "Smooth step" and "Sine step" signal type.</p>
+<p class="vba-text-indent">&#160;</p>
+<p class="VBA-Heading-Method">ChirpRate ( <a href="../common_vbageneral/common_general_double.htm" id="a26" style="font-weight: normal;" name="a26">double</a> <span style="font-style: italic;"><i>chirp_rate</i></span> )</p>
+<p class="VBA-Text-Indent">Sets the rate of frequency increase (or decrease, if negative) to define a linearly varying instantaneous frequency. The chirp rate is therefore expressed in <span style="font-style: italic;"><i>frequency unit / time unit</i></span>. This setting is used only for the "Sine step" signal type.</p>
+<p class="vba-text-indent">&#160;</p>
+<p class="VBA-Heading-Method">Frequency ( <a href="../common_vbageneral/common_general_double.htm" id="a11" style="font-weight: normal;" name="a11">double</a> <span style="font-style: italic;"><i>frq</i></span>)</p>
+<p class="VBA-Text-Indent">Sets the frequency of the sine function (depending on the predefined frequency unit). This setting is used only for signal type "Sine", "Sine step".</p>
+<p class="VBA-Heading-Method">&#160;</p>
+<p class="VBA-Heading-Method">Phase ( <a href="../common_vbageneral/common_general_double.htm" id="a25" style="font-weight: normal;" name="a25">double</a> <span style="font-style: italic;"><i>phase</i></span> )</p>
+<p class="VBA-Text-Indent">Sets the phase of the sine step function.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">Amplitude ( <a href="../common_vbageneral/common_general_double.htm" id="a21" style="font-weight: normal;" name="a21">double</a> <span style="font-style: italic;"><i>amplitude</i></span> )</p>
+<p class="VBA-Text-Indent">Sets the amplitude of the double exponential function.</p>
+<p class="VBA-Heading-Method">&#160;</p>
+<p class="VBA-Heading-Method">StartAmplitude ( <a href="../common_vbageneral/common_general_double.htm" id="a22" style="font-weight: normal;" name="a22">double</a> <span style="font-style: italic;"><i>astart</i></span> )</p>
+<p class="VBA-Heading-Method">EndAmplitude ( <a href="../common_vbageneral/common_general_double.htm" id="a23" style="font-weight: normal;" name="a23">double</a> <span style="font-style: italic;"><i>aend</i></span> )</p>
+<p class="VBA-Text-Indent">Sets the start and end amplitude of the exponential step function. This type is available only for low frequency simulations.</p>
+<p class="VBA-Heading-Method">&#160;</p>
+<p class="VBA-Heading-Method">SignalType ( <a href="../common_vbageneral/common_general_enum.htm" id="a6" style="font-weight: normal; font-style: normal;" name="a6">enum</a> <span style="font-style: italic;"><i>sType</i></span> )</p>
+<p class="VBA-Text-Indent">Sets the type of the signal.</p>
+<p class="VBA-Text-Indent"><span style="font-style: italic;"><i>sType</i></span> can have one of the following values:</p>
+<table style="margin-left: 24px;" cellspacing="0" width="90%">
+<col width="101" />
+<col width="450" />
+<tr style="vertical-align: top;">
+<td style="border: Solid 1px #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;" width="101">
+<p>”Gaussian”</p>
+</td>
+<td style="border-top: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;" width="450">
+<p>Gaussian excitation function within the given frequency range: Please note that for proper broadband S-Parameter calculations the Gaussian pulse should always be used. To ensure accurate results the signal's frequency range has to fit inside the project's frequency range. Relevant only for high frequency calculations.</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;" width="101">
+<p>”Rectangular”</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;" width="450">
+<p>Rectangular excitation function: Please note that for proper broadband S-Parameter calculations the Gaussian pulse should always be used. To ensure accurate results the signal's timing settings has to fit inside the project's frequency range.</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;" width="101">
+<p>"Sine step"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;" width="450">
+<p>Sine function with smoothed transition phase from 0 to maximum amplitude value. A signal in which the instantaneous frequency linearly varies with time (linear chirp) is also possible specifying the chirp rate (CR), i.e. the rate of frequency increase (or decrease, if negative).</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;" width="101">
+<p>"Sine"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;" width="450">
+<p>Sine function.</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;" width="101">
+<p>"Smooth step"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;" width="450">
+<p>Smoothed step (with controlled slope) excitation function: Please note that for proper broadband S-Parameter calculations the Gaussian pulse should always be used. To ensure accurate results the signal's timing settings has to fit inside the project's frequency range.</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;" width="101">
+<p>"Constant"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;" width="450">
+<p>Constant excitation function: This signal type yields the same constant value at each time point.</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;" width="101">
+<p>"Double exponential"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;" width="450">
+<p>Enables you to define a double exponential excitation using the following expression.</p>
+<p>f (t) = A (exp (-t / B) - exp (-t / C))</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;" width="101">
+<p>"Impulse"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;" width="450">
+<p>Enables you to define an impulse excitation.</p>
+<p>A highest required output frequency (Fmax) should be specified to define the shape of this signal.</p>
+<p>This signal is centred about zero. It starts at t = -6.25 / Fmax and ends at 6.25 / Fmax. Outside this range, the signal is zero.</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;" width="101">
+<p>"User"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;" width="450">
+<p>User defined excitation function: A user defined function can be created by writing a VBA-function with the name ExcitationFunction inside a file named Projectname\Model\3D\signal_name.usf for an arbitrary signal name or Projectname\Model\3D\Model.usf for the reference signal name. Please note that for proper broadband S-Parameter calculations the Gaussian pulse should always be used. To ensure accurate results the signal's timing settings has to fit inside the project's frequency range.</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;" width="101">
+<p>"Import"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;" width="450">
+<p>Import of an ASCII table: The ASCII file containing a table of time and signal values has to be stored in a file named Projectname\Model\3D\signal_name.isf.</p>
+</td>
+</tr>
+</table>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">MinUserSignalSamples ( <a href="../common_vbageneral/common_general_integer.htm" id="a19" style="font-weight: normal;" name="a19">int</a> <span style="font-style: italic;"><i>minsamples</i></span> )</p>
+<p class="VBA-Text-Indent">Sets the minimum number of samples to be generated for the user defined excitation function. This number should be a positive one and smaller (for algorithmic reason) than 30000.</p>
+<p class="vba-text-indent">&#160;</p>
+<p class="VBA-Heading-Method">Periodic ( <a href="../common_vbageneral/common_general_bool_data_type.htm" id="a20" style="font-weight: normal;" name="a20">bool</a> <span style="font-style: italic;"><i>bPeriodic</i></span> )</p>
+<p class="VBA-Text-Indent">Relevant only for imported ASCII tables. Set <span style="font-style: italic;"><i>bPeriodic</i></span> to <span style="font-style: italic;"><i>True</i></span> to apply the imported ASCII table periodically.</p>
+<p class="vba-text-indent">&#160;</p>
+<p class="VBA-Heading-Method">ProblemType ( <a href="../common_vbageneral/common_general_enum.htm" id="a12" style="font-weight: normal; font-style: normal;" name="a12">enum</a> <span style="font-style: italic;"><i>sType</i></span> )</p>
+<p class="VBA-Text-Indent">Specifies the application where the signal belongs to.</p>
+<p class="VBA-Text-Indent"><span style="font-style: italic;"><i>sType</i></span> can have the value "High Frequency" or "Low Frequency".</p>
+<p class="VBA-Heading-Method">&#160;</p>
+<p class="VBA-Heading-Method">ExcitationSignalAsReference ( <a href="../common_vbageneral/common_general_name.htm" id="a68" style="font-weight: normal;" name="a68">name</a> <span style="font-style: italic;"><i>signalName, <a href="../common_vbageneral/common_general_name.htm" id="a15" style="font-weight: normal; font-style: normal;" name="a15">name</a> problemType</i></span> )</p>
+<p class="VBA-Text-Indent">Selects the given excitation signal <span style="font-style: italic;"><i>signalName</i></span> als default / reference signal for all following simulations. The second parameter characterizes the problem type to which the signal belongs. Admissible values for <span style="font-style: italic;"><i>problemType</i></span> are "High Frequency" or "Low Frequency".</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">ExcitationSignalResample ( <a href="../common_vbageneral/common_general_name.htm" id="a72" style="font-weight: normal;" name="a72">name</a> <span style="font-style: italic;"><i>signalName,</i></span></p>
+<p class="VBA-Heading-Method" style="margin-left: 158px;"><a href="../common_vbageneral/common_general_double.htm" id="a73" style="font-weight: normal;" name="a73">double</a> <span style="font-style: italic;"><i>tmin,</i></span> <a href="../common_vbageneral/common_general_double.htm" id="a74" style="font-weight: normal;" name="a74">double</a> <span style="font-style: italic;"><i>tmax,</i></span></p>
+<p class="VBA-Heading-Method" style="margin-left: 158px;"><a href="../common_vbageneral/common_general_double.htm" id="a75" style="font-weight: normal;" name="a75">double</a> <span style="font-style: italic;"><i>tstep</i></span>, <a href="../common_vbageneral/common_general_name.htm" id="a16" style="font-weight: normal; font-style: normal;" name="a16">name</a> <span style="font-style: italic;"><i>problemType</i></span> )</p>
+<p class="VBA-Text-Indent">Generates a signal file Projectname\Results\<span style="font-style: italic;"><i>signalName</i></span>.sig within the adressed time intervall sampled with the given timestep <span style="font-style: italic;"><i>tstep</i></span>. The last parameter characterizes the problem type to which the signal belongs. Admissible values for <span style="font-style: italic;"><i>problemType</i></span> are "High Frequency" or "Low Frequency".</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method" style="font-style: normal;"><span style="font-style: normal;">GetNextId <a href="../common_vbageneral/common_general_integer.htm" style="font-weight: normal;">integer</a></span></p>
+<p class="VBA-Text-Indent">Returns the next free unique ID to for a new signal source.</p>
+<p class="VBA-Heading-Category"><a name="Defaults" id="Defaults"></a>Default Settings</p>
+<p class="VBA-Text-Example">Ttotal (0.0)</p>
+<p class="VBA-Text-Example">Trise (0.0)</p>
+<p class="VBA-Text-Example">Thold (0.0)</p>
+<p class="VBA-Text-Example">Tfall (0.0)</p>
+<p class="VBA-Text-Example">Fmin (0.0)</p>
+<p class="VBA-Text-Example">Fmax (0.0)</p>
+<p class="VBA-Text-Example">Voffset (0.0)</p>
+<p class="VBA-Text-Example">AmplitudeRisePercent (0.0)</p>
+<p class="VBA-Text-Example">ChirpRate (0.0)</p>
+<p class="VBA-Text-Example">RiseFactor (0.0)</p>
+<p class="VBA-Text-Example">Frequency (5.0)</p>
+<p class="VBA-Heading-Category"><a name="Example" id="Example"></a>Examples</p>
+<p class="VBA-Text-Example" style="color: #008000;">' creates a Gaussian excitation function</p>
+<p class="VBA-Text-Example">With TimeSignal</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.Reset</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.Name "GaussianSignal"</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.SignalType "Gaussian"</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.ProblemType "High Frequency"</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.Fmin "0.0"</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.Fmax "1000.0"</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.Create</p>
+<p class="VBA-Text-Example">End With</p>
+<p class="VBA-Text-Example" style="color: #008000;">&#160;</p>
+<p class="VBA-Text-Example" style="color: #008000;">' creates a (rectangular) step function</p>
+<p class="VBA-Text-Example">With TimeSignal</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.Reset</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.Name "signal1"</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.SignalType "Rectangular"</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.ProblemType "High Frequency"</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.Ttotal "2.0"</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.Trise &#160;"0.0"</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.Thold &#160;"1.0"</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.Tfall &#160;"0.0"</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.Create</p>
+<p class="VBA-Text-Example">End With</p>
+<p class="VBA-Text-Example" style="color: #008000;">&#160;</p>
+<p class="VBA-Text-Example" style="color: #008000;">' creates a sine function with frequency f=3.0 and vertical offset v=1.0</p>
+<p class="VBA-Text-Example">With TimeSignal</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.Reset</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.Name "sine_signal"</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.SignalType "Sine"</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.ProblemType "Low Frequency"</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.Ttotal "10.0"</p>
+<p class="VBA-Text-Example" style="margin-left: 40px;">&#160;&#160;&#160;&#160;&#160;.Voffset "1.0"</p>
+<p class="VBA-Text-Example" style="margin-left: 40px;">&#160;&#160;&#160;&#160;&#160;.Frequency "3.0"</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.Create</p>
+<p class="VBA-Text-Example">End With</p>
+<p>&#160;</p>
+<p class="VBA-Text-Example" style="color: #008000;">' creates a sine step function with frequency f=3.0</p>
+<p class="VBA-Text-Example">With TimeSignal</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.Reset</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.Name "mysignal"</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.SignalType "Sine step"</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.ProblemType "High Frequency"</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.Ttotal "10.0"</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.Phase "90"</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.Frequency "3.0"</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.RiseFactor "5"</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.Create</p>
+<p class="VBA-Text-Example">End With</p>
+<p>&#160;</p>
+<p class="VBA-Text-Example" style="color: #008000;">' creates a smoothed step function with 80% rise amplitude</p>
+<p class="VBA-Text-Example">With TimeSignal</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.Reset</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.Name "mysignal"</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.SignalType "Smooth step"</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.ProblemType "High Frequency"</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.Ttotal "10.0"</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.AmplitudeRisePercent "80.0"</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.RiseFactor "2"</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.Create</p>
+<p class="VBA-Text-Example">End With</p>
+<p class="VBA-Text-Example">&#160;</p>
+<p class="VBA-Text-Example" style="color: #008000;">' creates a user-defined excitation function</p>
+<p class="VBA-Text-Example">With TimeSignal</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.Reset</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.Name "mysignal"</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.SignalType "User"</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.ProblemType "Low Frequency"</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.Ttotal "2.0"</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.Create</p>
+<p class="VBA-Text-Example">End With</p>
+<p>&#160;</p>
+<p class="VBA-Text-Example" style="color: #008000;">' creates an imported excitation function</p>
+<p class="VBA-Text-Example">With TimeSignal</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.Reset</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.Name "imported_signal"</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.SignalType "Import"</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.ProblemType "High Frequency"</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.Create</p>
+<p class="VBA-Text-Example">End With</p>
+<p class="vba-text-example">&#160;</p>
+<?rh-p style="margin-bottom: 0px; text-align: Right; margin-left: 18px; 
+                 margin-right: 18px; margin-top: 18px;" ?>
+<div style="width: 100%; position: relative;" id="footer">
+<p style="border-bottom: Solid 1px #dddddd; text-align: Left; margin-left: 0px; font-family: Arial, sans-serif; line-height: Normal; margin-top: 9px; margin-right: 0px; margin-bottom: 6px; border-left-width: 1px; border-top-width: 1px; border-right-width: 1px;"><span style="text-align: Left; font-family: Arial, sans-serif; line-height: Normal;">&#160;</span></p>
+<table cellspacing="0" width="100%">
+<col style="width: 50%;" />
+<col style="width: 50%;" />
+<tr>
+<td style="vertical-align: Top;"><span style="font-family: Arial, sans-serif; line-height: Normal; font-size: 8pt;"><font size="1" style="font-size:8pt;">CST Studio Suite 2026</font></span></td>
+<td style="vertical-align: Top;">
+<p style="text-align: right;">&#160;</p>
+</td>
+</tr>
+</table>
+<p>&#160;</p>
+</div>
+<script type="text/javascript" language="javascript1.2">
+//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+        writeIntopicBar(0);
+
+
+highlightSearch();
+//-->
+//]]>
+</script>
+</body>
+</html>

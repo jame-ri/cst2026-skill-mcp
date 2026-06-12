@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>cst.asymptotic package &#8212; CST Python Libraries  documentation</title>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinxdoc.css?v=0a676766" />
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js?v=16ad857a"></script>
+    <script src="../_static/doctools.js?v=888ff710"></script>
+    <script src="../_static/sphinx_highlight.js?v=4825356b"></script>
+    <script async="async" src="../_static/MathJax/es5/tex-chtml-full.js?v=9687c051"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../main.html">CST Python Libraries  documentation</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">cst.asymptotic package</a></li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <section id="module-cst.asymptotic">
+<span id="cst-asymptotic-package"></span><h1>cst.asymptotic package<a class="headerlink" href="#module-cst.asymptotic" title="Permalink to this heading">¶</a></h1>
+<p>Collection of tools related to the Asymptotic solver.</p>
+<section id="modules">
+<h2>Modules<a class="headerlink" href="#modules" title="Permalink to this heading">¶</a></h2>
+</section>
+<section id="module-cst.asymptotic.raydata">
+<span id="cst-asymptotic-raydata"></span><h2><a class="reference internal" href="#module-cst.asymptotic.raydata" title="cst.asymptotic.raydata"><code class="xref py py-mod docutils literal notranslate"><span class="pre">cst.asymptotic.raydata</span></code></a><a class="headerlink" href="#module-cst.asymptotic.raydata" title="Permalink to this heading">¶</a></h2>
+<p>Collection of methods to read and manipulate ray data created by the
+Asymptotic solver.</p>
+<p>Ray data is stored in an <a class="reference external" href="https://www.hdfgroup.org/solutions/hdf5/.">HDF5</a>
+file. A viewer for HDF5 files can be obtained on that website.</p>
+<p>To create ray data in the Asymptotic solver, you’ll need to activate ray export
+(Solver dialog -&gt; Settings… -&gt; Ray storage -&gt; Ray export).</p>
+<p>The module provided here takes care of converting the data in the file into
+Python data structures.</p>
+<p>The documentation given here should also be sufficient to understand the file
+format and implement a reader in another programming language.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>To use this module you will need to install the modules <cite>h5py</cite> (tested
+version: 3.6.0) and <cite>numpy</cite> (tested version: 1.21.4) in your Python
+environment.</p>
+</div>
+<dl class="py function">
+<dt class="sig sig-object py" id="cst.asymptotic.raydata.read">
+<span class="sig-name descname"><span class="pre">read</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">filename</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cst.asymptotic.raydata.read" title="Permalink to this definition">¶</a></dt>
+<dd><p>Read HDF5-file with ray data.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Instance of <code class="docutils literal notranslate"><span class="pre">RayData</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="cst.asymptotic.raydata.RayData">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">RayData</span></span><a class="headerlink" href="#cst.asymptotic.raydata.RayData" title="Permalink to this definition">¶</a></dt>
+<dd><p>Structure for storing ray data.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Variables<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>version</strong> – Version of the data format.</p></li>
+<li><p><strong>sources</strong> – List of ray path collections, each one represented by a <code class="docutils literal notranslate"><span class="pre">RaySource</span></code>.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="cst.asymptotic.raydata.RaySource">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">RaySource</span></span><a class="headerlink" href="#cst.asymptotic.raydata.RaySource" title="Permalink to this definition">¶</a></dt>
+<dd><p>Represents a source of rays.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Variables<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>category</strong> – Type of source</p></li>
+<li><p><strong>name</strong> – Identifier for this source</p></li>
+<li><p><strong>frequencies</strong> – List of frequencies defining the sampling for frequency
+dependent quantities (electric fields, in particular) within this
+<code class="docutils literal notranslate"><span class="pre">RaySource</span></code>.</p></li>
+<li><p><strong>trees</strong> – List of ray trees stored for this source. Each element is a
+<code class="docutils literal notranslate"><span class="pre">RaySegment</span></code> representing the root-node of a ray tree.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="cst.asymptotic.raydata.RayTree">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">RayTree</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">parent</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cst.asymptotic.raydata.RayTree" title="Permalink to this definition">¶</a></dt>
+<dd><p>Binary tree for representing a ray tree.</p>
+<p>A ray tree consists of several ray segments. Each instance of this class
+represents a segment of the entire ray tree, with reflected and transmitted
+segments branching from it. In effect, the entire ray tree can be reached
+from its root segment. This class provides routines to iterate over all
+segments or all possible paths.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Example<span class="colon">:</span></dt>
+<dd class="field-odd"><p></p></dd>
+</dl>
+<p>Scenario: Ray segments for a single ray impinging on a dielectric slab,
+maximum number of intersections set to 2:</p>
+<a class="reference internal image-reference" href="../_images/raystorage-scene.svg"><img alt="Ray segments for a dielectric slab" height="303" src="../_images/raystorage-scene.svg" width="520" /></a>
+<p>In a graph-theoretical sense each segment represents a node in a binary
+tree. The corresponding <code class="docutils literal notranslate"><span class="pre">RayTree</span></code>-graph for this scenario is illustrated
+in the following image; also indicated is the code to reach the segments
+from <code class="docutils literal notranslate"><span class="pre">root</span></code>:</p>
+<a class="reference internal image-reference" href="../_images/raystorage-tree.svg"><img alt="Ray tree for the scenario shown above" height="232" src="../_images/raystorage-tree.svg" width="546" /></a>
+<dl class="field-list simple">
+<dt class="field-odd">Variables<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>data</strong> – Data stored for this segment.</p></li>
+<li><p><strong>reflected</strong> – Reflected segment branching from this segment; <code class="docutils literal notranslate"><span class="pre">None</span></code> if
+absent.</p></li>
+<li><p><strong>transmitted</strong> – Transmitted segment branching from this segment; <code class="docutils literal notranslate"><span class="pre">None</span></code>
+if absent.</p></li>
+<li><p><strong>parent</strong> – Parent segment of this segment; <code class="docutils literal notranslate"><span class="pre">None</span></code> if this is the root
+segment.</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="cst.asymptotic.raydata.RayTree.is_leaf">
+<span class="sig-name descname"><span class="pre">is_leaf</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#cst.asymptotic.raydata.RayTree.is_leaf" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return True if segment has no child segments.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cst.asymptotic.raydata.RayTree.segments">
+<span class="sig-name descname"><span class="pre">segments</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#cst.asymptotic.raydata.RayTree.segments" title="Permalink to this definition">¶</a></dt>
+<dd><p>Iterate over binary tree depth-first, yield segments pre-order.</p>
+<p>The <code class="docutils literal notranslate"><span class="pre">reflected</span></code> segments are processed before <code class="docutils literal notranslate"><span class="pre">transmitted</span></code>
+segments.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cst.asymptotic.raydata.RayTree.paths">
+<span class="sig-name descname"><span class="pre">paths</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#cst.asymptotic.raydata.RayTree.paths" title="Permalink to this definition">¶</a></dt>
+<dd><p>Iterate over all possible ray paths, yield lists of segments.</p>
+<p>Every possible sequence of segments connecting the root-segment with a
+leaf segment is yielded. The sequences are sorted from root segment
+(first) to leaf segment (last).</p>
+<p>For the example from above, the following 3 ray paths are possible (highlighted in green):</p>
+<a class="reference internal image-reference" href="../_images/raystorage-scene-path0.svg"><img alt="Path 1" height="126" src="../_images/raystorage-scene-path0.svg" width="216" /></a>
+<a class="reference internal image-reference" href="../_images/raystorage-scene-path1.svg"><img alt="Path 2" height="126" src="../_images/raystorage-scene-path1.svg" width="216" /></a>
+<a class="reference internal image-reference" href="../_images/raystorage-scene-path2.svg"><img alt="Path 3" height="126" src="../_images/raystorage-scene-path2.svg" width="216" /></a>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="cst.asymptotic.raydata.Provenance">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">Provenance</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">names=&lt;not</span> <span class="pre">given&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">*values</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">module=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">qualname=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">type=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">start=1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">boundary=None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cst.asymptotic.raydata.Provenance" title="Permalink to this definition">¶</a></dt>
+<dd><p>Origin of the RaySegment.</p>
+<p>Possible values: 0 (Incident); 1 (Reflected); 2 (Transmitted).</p>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="cst.asymptotic.raydata.Termination">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">Termination</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">names=&lt;not</span> <span class="pre">given&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">*values</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">module=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">qualname=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">type=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">start=1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">boundary=None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cst.asymptotic.raydata.Termination" title="Permalink to this definition">¶</a></dt>
+<dd><p>Termination of RaySegment.</p>
+<p>0 (<code class="docutils literal notranslate"><span class="pre">No</span></code>): Not terminated, ray path continues; 1 (<code class="docutils literal notranslate"><span class="pre">Exitray</span></code>): Ray has arrived at bounding box or at its final destination (e.g. receiver source); 2 (<code class="docutils literal notranslate"><span class="pre">Deadend</span></code>): Solver reached maximum number of intersections for this path.</p>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="cst.asymptotic.raydata.RaySegment">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">RaySegment</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">parent</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cst.asymptotic.raydata.RaySegment" title="Permalink to this definition">¶</a></dt>
+<dd><p>Interface to <code class="docutils literal notranslate"><span class="pre">RayTree</span></code> and to data stored for each ray segment.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="cst.asymptotic.raydata.RaySegment.provenance">
+<span class="sig-name descname"><span class="pre">provenance</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#cst.asymptotic.raydata.RaySegment.provenance" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provenance of the segment.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Value as specified in <code class="docutils literal notranslate"><span class="pre">Provenance</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cst.asymptotic.raydata.RaySegment.termination">
+<span class="sig-name descname"><span class="pre">termination</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#cst.asymptotic.raydata.RaySegment.termination" title="Permalink to this definition">¶</a></dt>
+<dd><p>Termination behavior of the segment.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Value as specified in <code class="docutils literal notranslate"><span class="pre">Termination</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cst.asymptotic.raydata.RaySegment.hitorder">
+<span class="sig-name descname"><span class="pre">hitorder</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#cst.asymptotic.raydata.RaySegment.hitorder" title="Permalink to this definition">¶</a></dt>
+<dd><p>Number of intersections before this segment.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cst.asymptotic.raydata.RaySegment.epsilon">
+<span class="sig-name descname"><span class="pre">epsilon</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#cst.asymptotic.raydata.RaySegment.epsilon" title="Permalink to this definition">¶</a></dt>
+<dd><p>Relative electric permittivity in the background medium.</p>
+<p>Assumed to be constant over frequency.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cst.asymptotic.raydata.RaySegment.mue">
+<span class="sig-name descname"><span class="pre">mue</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#cst.asymptotic.raydata.RaySegment.mue" title="Permalink to this definition">¶</a></dt>
+<dd><p>Relative magnetic permeability in the background medium.</p>
+<p>Assumed to be constant over frequency.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cst.asymptotic.raydata.RaySegment.area1">
+<span class="sig-name descname"><span class="pre">area1</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#cst.asymptotic.raydata.RaySegment.area1" title="Permalink to this definition">¶</a></dt>
+<dd><p>Ray tube cross section area at start point of segment.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cst.asymptotic.raydata.RaySegment.area2">
+<span class="sig-name descname"><span class="pre">area2</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#cst.asymptotic.raydata.RaySegment.area2" title="Permalink to this definition">¶</a></dt>
+<dd><p>Ray tube cross section area at end point of segment.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cst.asymptotic.raydata.RaySegment.position1">
+<span class="sig-name descname"><span class="pre">position1</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#cst.asymptotic.raydata.RaySegment.position1" title="Permalink to this definition">¶</a></dt>
+<dd><p>Position at start point of segment.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cst.asymptotic.raydata.RaySegment.position2">
+<span class="sig-name descname"><span class="pre">position2</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#cst.asymptotic.raydata.RaySegment.position2" title="Permalink to this definition">¶</a></dt>
+<dd><p>Position at end point of segment.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cst.asymptotic.raydata.RaySegment.normal1">
+<span class="sig-name descname"><span class="pre">normal1</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#cst.asymptotic.raydata.RaySegment.normal1" title="Permalink to this definition">¶</a></dt>
+<dd><p>Surface normal of intersected geometry at start point of segment.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cst.asymptotic.raydata.RaySegment.normal2">
+<span class="sig-name descname"><span class="pre">normal2</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#cst.asymptotic.raydata.RaySegment.normal2" title="Permalink to this definition">¶</a></dt>
+<dd><p>Surface normal of intersected geometry at end point of segment.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cst.asymptotic.raydata.RaySegment.efield1">
+<span class="sig-name descname"><span class="pre">efield1</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#cst.asymptotic.raydata.RaySegment.efield1" title="Permalink to this definition">¶</a></dt>
+<dd><p>Complex electric field vectors over frequency at start point of segment.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cst.asymptotic.raydata.RaySegment.efield2">
+<span class="sig-name descname"><span class="pre">efield2</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#cst.asymptotic.raydata.RaySegment.efield2" title="Permalink to this definition">¶</a></dt>
+<dd><p>Complex electric field vectors over frequency at end point of segment.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cst.asymptotic.raydata.RaySegment.areas">
+<span class="sig-name descname"><span class="pre">areas</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#cst.asymptotic.raydata.RaySegment.areas" title="Permalink to this definition">¶</a></dt>
+<dd><p>Ray tube cross section areas at start and end point of segment.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cst.asymptotic.raydata.RaySegment.positions">
+<span class="sig-name descname"><span class="pre">positions</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#cst.asymptotic.raydata.RaySegment.positions" title="Permalink to this definition">¶</a></dt>
+<dd><p>Positions at start and end point of segment.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cst.asymptotic.raydata.RaySegment.normals">
+<span class="sig-name descname"><span class="pre">normals</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#cst.asymptotic.raydata.RaySegment.normals" title="Permalink to this definition">¶</a></dt>
+<dd><p>Surface normals of intersected geometry at start and end point of segment.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cst.asymptotic.raydata.RaySegment.efields">
+<span class="sig-name descname"><span class="pre">efields</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#cst.asymptotic.raydata.RaySegment.efields" title="Permalink to this definition">¶</a></dt>
+<dd><p>Complex electric field vectors over frequency at start and end point of segment.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cst.asymptotic.raydata.RaySegment.length">
+<span class="sig-name descname"><span class="pre">length</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#cst.asymptotic.raydata.RaySegment.length" title="Permalink to this definition">¶</a></dt>
+<dd><p>Length of segment.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cst.asymptotic.raydata.RaySegment.direction">
+<span class="sig-name descname"><span class="pre">direction</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#cst.asymptotic.raydata.RaySegment.direction" title="Permalink to this definition">¶</a></dt>
+<dd><p>Normalized direction of ray.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="cst.asymptotic.raydata.compute_powerflows">
+<span class="sig-name descname"><span class="pre">compute_powerflows</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">segment</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cst.asymptotic.raydata.compute_powerflows" title="Permalink to this definition">¶</a></dt>
+<dd><p>Compute powerflow <span class="math notranslate nohighlight">\(P\)</span> through the end faces of a <code class="docutils literal notranslate"><span class="pre">RaySegment</span></code> according to:</p>
+<p><span class="math notranslate nohighlight">\(P = \frac{A |\vec{E}|^2 |\hat{n}\cdot\hat{s}|}{Z_0 \sqrt{\mu_{\text{rel}} \epsilon_{\text{rel}}}}\)</span></p>
+<p>where:</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(A\)</span>: Area of ray tube cross section</p></li>
+<li><p><span class="math notranslate nohighlight">\(\vec{E}\)</span>: Complex electric field vector</p></li>
+<li><p><span class="math notranslate nohighlight">\(\hat{n}\)</span>: Normal vector of ray tube cross section surface</p></li>
+<li><p><span class="math notranslate nohighlight">\(\hat{s}\)</span>: Ray direction</p></li>
+<li><p><span class="math notranslate nohighlight">\(Z_0\)</span>: Impedance of free space</p></li>
+<li><p><span class="math notranslate nohighlight">\(\mu_{\text{rel}}\)</span>: Relative magnetic permeability</p></li>
+<li><p><span class="math notranslate nohighlight">\(\epsilon_{\text{rel}}\)</span>: Relative electric permittivity</p></li>
+</ul>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Tuple of powerflow values at start and end point of ray segment</p>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+<section id="data-layout-of-ray-storage-in-hdf5-files">
+<h2>Data layout of ray storage in HDF5-files<a class="headerlink" href="#data-layout-of-ray-storage-in-hdf5-files" title="Permalink to this heading">¶</a></h2>
+<p>A single HDF5-file can contain ray data for multiple sources. For each source, the ray data is organized in 3 datasets:</p>
+<ul>
+<li><p>The dataset <code class="docutils literal notranslate"><span class="pre">segments</span></code> contains the data associated to each ray segment,
+like e.g. hitorder, positions, or field values.</p></li>
+<li><p>The dataset <code class="docutils literal notranslate"><span class="pre">frequencies</span></code> contains the frequency list for frequency
+dependent quantities as e.g. field values.</p></li>
+<li><p>The dataset <code class="docutils literal notranslate"><span class="pre">hierarchy</span></code> describes the connection of the ray segments to ray
+trees. The indices correspond to the position of a ray segment in the dataset
+<code class="docutils literal notranslate"><span class="pre">segments</span></code>. The layout of the indices in the list is defined by traversing a
+binary tree in depth-first search order. Index values of -1 represent
+non-existent <code class="docutils literal notranslate"><span class="pre">reflected</span></code> or <code class="docutils literal notranslate"><span class="pre">transmitted</span></code> child segments. If both
+<code class="docutils literal notranslate"><span class="pre">reflected</span></code> and <code class="docutils literal notranslate"><span class="pre">transmitted</span></code> do not exist, the segment is a <cite>leaf</cite> in the
+ray tree. This is the case if the ray has left the ray tracing scene or if the
+maximum number of intersections has been reached in the solver.</p>
+<p>The following sketch illustrates the connection between the indices and the
+binary <code class="docutils literal notranslate"><span class="pre">RayTree</span></code>, with its nodes represented by red circles. The green line
+defines the order in which the indices are layed-out in the
+<code class="docutils literal notranslate"><span class="pre">hierachy</span></code>-dataset:</p>
+<a class="reference internal image-reference" href="../_images/raystorage-tree-construction.svg"><img alt="Construction of ray tree from HDF5 file" height="339" src="../_images/raystorage-tree-construction.svg" width="337" /></a>
+</li>
+</ul>
+</section>
+<section id="example-code">
+<h2>Example Code<a class="headerlink" href="#example-code" title="Permalink to this heading">¶</a></h2>
+<p>The following example script can be found at
+<code class="docutils literal notranslate"><span class="pre">&lt;PATH_TO_CST_AMD64&gt;/python_cst_libraries/cst/asymptotic/examples/raydata_example.py</span></code>.
+It illustrates some basic concepts for working with the <code class="docutils literal notranslate"><span class="pre">raydata</span></code>-module. The
+script will show some statistics of the rays in an HDF5-raydata file and plot a
+subset of the ray paths.</p>
+<p>The script can be called without any arguments. It will then read an example
+file shipped with the installation.</p>
+<p>Alternatively you can specify as 1st argument an HDF5-file to be read and
+optionally as 2nd argument a sampling factor for plotting only a subset of the
+rays. Example to plot every 10th ray from a given HDF5 file:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">python</span> <span class="n">raydata_example</span><span class="o">.</span><span class="n">py</span> <span class="n">path</span><span class="o">/</span><span class="n">to</span><span class="o">/</span><span class="n">raydata</span><span class="o">.</span><span class="n">h5</span> <span class="mi">10</span>
+</pre></div>
+</div>
+<p>Please see the comments in the script for further details.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="ch">#!/usr/bin/env python3</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">sys</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">os</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">mpl</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plt</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">cst.asymptotic</span><span class="w"> </span><span class="kn">import</span> <span class="n">raydata</span>  <span class="c1"># make sure you&#39;ve set your PYTHONPATH</span>
+
+
+<span class="k">def</span><span class="w"> </span><span class="nf">main</span><span class="p">():</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Example routine to analyze ray data in HDF5 file.&quot;&quot;&quot;</span>
+    <span class="c1"># Define file to read</span>
+    <span class="c1"># Use commandline argument, if specified</span>
+    <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">sys</span><span class="o">.</span><span class="n">argv</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">1</span><span class="p">:</span>
+        <span class="n">filePath</span> <span class="o">=</span> <span class="n">sys</span><span class="o">.</span><span class="n">argv</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">dirname</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">dirname</span><span class="p">(</span><span class="vm">__file__</span><span class="p">))</span>
+        <span class="n">filePath</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">dirname</span><span class="p">,</span> <span class="s2">&quot;data&quot;</span><span class="p">,</span> <span class="s2">&quot;raystorage-all-0.h5&quot;</span><span class="p">)</span>
+
+    <span class="c1"># Plot only some raypaths to keep the plot clean</span>
+    <span class="c1"># Use commandline argument, if specified</span>
+    <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">sys</span><span class="o">.</span><span class="n">argv</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">2</span><span class="p">:</span>
+        <span class="n">everynth</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">sys</span><span class="o">.</span><span class="n">argv</span><span class="p">[</span><span class="mi">2</span><span class="p">])</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">everynth</span> <span class="o">=</span> <span class="mi">1</span>
+
+    <span class="c1"># Read raydata file</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Reading raydata file... &quot;</span><span class="p">)</span>
+    <span class="n">rd</span> <span class="o">=</span> <span class="n">raydata</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="n">filePath</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Number of sources in file: </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">rd</span><span class="o">.</span><span class="n">sources</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+    <span class="c1"># Operate on first source</span>
+    <span class="n">sourceID</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="n">source</span> <span class="o">=</span> <span class="n">rd</span><span class="o">.</span><span class="n">sources</span><span class="p">[</span><span class="n">sourceID</span><span class="p">]</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Showing data for source </span><span class="si">{</span><span class="n">source</span><span class="o">.</span><span class="n">name</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Total number of rays: </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">source</span><span class="o">.</span><span class="n">trees</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+    <span class="c1"># Get average number of segments in trees</span>
+    <span class="n">nsegments</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">average</span><span class="p">([</span><span class="nb">len</span><span class="p">(</span><span class="nb">list</span><span class="p">(</span><span class="n">tree</span><span class="o">.</span><span class="n">segments</span><span class="p">()))</span>
+                            <span class="k">for</span> <span class="n">tree</span> <span class="ow">in</span> <span class="n">source</span><span class="o">.</span><span class="n">trees</span><span class="p">])</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Average number of segments: </span><span class="si">{</span><span class="n">nsegments</span><span class="si">:</span><span class="s2">.1f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+    <span class="c1"># Get maximum hitorder for color normalisation</span>
+    <span class="n">maxhitorder</span> <span class="o">=</span> <span class="nb">max</span><span class="p">(</span><span class="nb">max</span><span class="p">(</span><span class="n">s</span><span class="o">.</span><span class="n">hitorder</span><span class="p">()</span> <span class="k">for</span> <span class="n">s</span> <span class="ow">in</span> <span class="n">tree</span><span class="o">.</span><span class="n">segments</span><span class="p">())</span>
+                      <span class="k">for</span> <span class="n">tree</span> <span class="ow">in</span> <span class="n">source</span><span class="o">.</span><span class="n">trees</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Maximum hitorder: </span><span class="si">{</span><span class="n">maxhitorder</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+    <span class="c1"># Count segments of any hitorder</span>
+    <span class="n">hitorders</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="n">maxhitorder</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">tree</span> <span class="ow">in</span> <span class="n">source</span><span class="o">.</span><span class="n">trees</span><span class="p">:</span>
+        <span class="k">for</span> <span class="n">s</span> <span class="ow">in</span> <span class="n">tree</span><span class="o">.</span><span class="n">segments</span><span class="p">():</span>
+            <span class="n">hitorders</span><span class="p">[</span><span class="n">s</span><span class="o">.</span><span class="n">hitorder</span><span class="p">()]</span> <span class="o">+=</span> <span class="mi">1</span>
+    <span class="k">for</span> <span class="n">order</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">maxhitorder</span> <span class="o">+</span> <span class="mi">1</span><span class="p">):</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Segments with hit order </span><span class="si">{</span><span class="n">order</span><span class="si">}</span><span class="s2">: </span><span class="si">{</span><span class="n">hitorders</span><span class="p">[</span><span class="n">order</span><span class="p">]</span><span class="si">:</span><span class="s2">.0f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+    <span class="c1"># Compute average length over all possible ray paths</span>
+    <span class="n">avg_pathlength</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">average</span><span class="p">([</span>
+        <span class="n">np</span><span class="o">.</span><span class="n">average</span><span class="p">([</span><span class="nb">sum</span><span class="p">(</span><span class="n">s</span><span class="o">.</span><span class="n">length</span><span class="p">()</span> <span class="k">for</span> <span class="n">s</span> <span class="ow">in</span> <span class="n">path</span><span class="p">)</span>
+                    <span class="k">for</span> <span class="n">path</span> <span class="ow">in</span> <span class="n">tree</span><span class="o">.</span><span class="n">paths</span><span class="p">()])</span>
+        <span class="k">for</span> <span class="n">tree</span> <span class="ow">in</span> <span class="n">source</span><span class="o">.</span><span class="n">trees</span><span class="p">])</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Average pathlength: </span><span class="si">{</span><span class="n">avg_pathlength</span><span class="si">:</span><span class="s2">.2f</span><span class="si">}</span><span class="s2">m&quot;</span><span class="p">)</span>
+
+    <span class="c1"># Initialize plotting</span>
+    <span class="n">fig</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">()</span>
+    <span class="n">ax</span> <span class="o">=</span> <span class="n">fig</span><span class="o">.</span><span class="n">add_subplot</span><span class="p">(</span><span class="mi">111</span><span class="p">,</span> <span class="n">projection</span><span class="o">=</span><span class="s1">&#39;3d&#39;</span><span class="p">)</span>
+    <span class="n">norm</span> <span class="o">=</span> <span class="n">mpl</span><span class="o">.</span><span class="n">colors</span><span class="o">.</span><span class="n">Normalize</span><span class="p">(</span><span class="n">vmin</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">vmax</span><span class="o">=</span><span class="n">maxhitorder</span><span class="p">)</span>
+    <span class="n">cmap</span> <span class="o">=</span> <span class="n">mpl</span><span class="o">.</span><span class="n">cm</span><span class="o">.</span><span class="n">plasma</span>
+    <span class="n">mapper</span> <span class="o">=</span> <span class="n">mpl</span><span class="o">.</span><span class="n">cm</span><span class="o">.</span><span class="n">ScalarMappable</span><span class="p">(</span><span class="n">norm</span><span class="o">=</span><span class="n">norm</span><span class="p">,</span> <span class="n">cmap</span><span class="o">=</span><span class="n">cmap</span><span class="p">)</span>
+    <span class="n">plottrees</span> <span class="o">=</span> <span class="n">source</span><span class="o">.</span><span class="n">trees</span><span class="p">[::</span><span class="n">everynth</span><span class="p">]</span>
+
+    <span class="c1"># Plot initial hits</span>
+    <span class="n">pos1</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="n">tree</span><span class="o">.</span><span class="n">position2</span><span class="p">()</span> <span class="k">for</span> <span class="n">tree</span> <span class="ow">in</span> <span class="n">plottrees</span><span class="p">])</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">scatter3D</span><span class="p">(</span><span class="o">*</span><span class="n">pos1</span><span class="o">.</span><span class="n">T</span><span class="p">,</span> <span class="n">depthshade</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">marker</span><span class="o">=</span><span class="s1">&#39;.&#39;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mf">0.8</span><span class="p">])</span>
+
+    <span class="c1"># Plot raypath segments; color by hitorder</span>
+    <span class="k">for</span> <span class="n">tree</span> <span class="ow">in</span> <span class="n">plottrees</span><span class="p">:</span>
+        <span class="k">for</span> <span class="n">path</span> <span class="ow">in</span> <span class="n">tree</span><span class="o">.</span><span class="n">paths</span><span class="p">():</span>
+            <span class="c1"># only show rays with exit path</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="nb">any</span><span class="p">(</span><span class="n">s</span><span class="o">.</span><span class="n">termination</span><span class="p">()</span> <span class="o">==</span> <span class="n">raydata</span><span class="o">.</span><span class="n">Termination</span><span class="o">.</span><span class="n">Exitray</span>
+                       <span class="k">for</span> <span class="n">s</span> <span class="ow">in</span> <span class="n">path</span><span class="p">):</span>
+                <span class="k">continue</span>
+            <span class="k">for</span> <span class="n">s</span> <span class="ow">in</span> <span class="n">path</span><span class="p">:</span>
+                <span class="n">ax</span><span class="o">.</span><span class="n">plot3D</span><span class="p">(</span><span class="o">*</span><span class="n">s</span><span class="o">.</span><span class="n">positions</span><span class="p">()</span><span class="o">.</span><span class="n">T</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="n">mapper</span><span class="o">.</span><span class="n">to_rgba</span><span class="p">(</span><span class="n">s</span><span class="o">.</span><span class="n">hitorder</span><span class="p">()))</span>
+
+    <span class="c1"># Plot a legend</span>
+    <span class="n">patches</span> <span class="o">=</span> <span class="p">[</span><span class="n">mpl</span><span class="o">.</span><span class="n">patches</span><span class="o">.</span><span class="n">Patch</span><span class="p">(</span><span class="n">color</span><span class="o">=</span><span class="n">mapper</span><span class="o">.</span><span class="n">to_rgba</span><span class="p">(</span>
+        <span class="n">hitorder</span><span class="p">),</span> <span class="n">label</span><span class="o">=</span><span class="n">hitorder</span><span class="p">)</span> <span class="k">for</span> <span class="n">hitorder</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">maxhitorder</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)]</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">title</span><span class="o">=</span><span class="s2">&quot;Hitorder&quot;</span><span class="p">,</span> <span class="n">handles</span><span class="o">=</span><span class="n">patches</span><span class="p">)</span>
+
+    <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+
+
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s1">&#39;__main__&#39;</span><span class="p">:</span>
+    <span class="n">main</span><span class="p">()</span>
+</pre></div>
+</div>
+</section>
+</section>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <div>
+    <h3><a href="../main.html">Table of Contents</a></h3>
+    <ul>
+<li><a class="reference internal" href="#">cst.asymptotic package</a><ul>
+<li><a class="reference internal" href="#modules">Modules</a></li>
+<li><a class="reference internal" href="#module-cst.asymptotic.raydata"><code class="xref py py-mod docutils literal notranslate"><span class="pre">cst.asymptotic.raydata</span></code></a></li>
+<li><a class="reference internal" href="#data-layout-of-ray-storage-in-hdf5-files">Data layout of ray storage in HDF5-files</a></li>
+<li><a class="reference internal" href="#example-code">Example Code</a></li>
+</ul>
+</li>
+</ul>
+
+  </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../main.html">CST Python Libraries  documentation</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">cst.asymptotic package</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+    &#169; Copyright 2009-2025 Dassault Systemes Deutschland GmbH. All rights reserved.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 7.1.2.
+    </div>
+  </body>
+</html>

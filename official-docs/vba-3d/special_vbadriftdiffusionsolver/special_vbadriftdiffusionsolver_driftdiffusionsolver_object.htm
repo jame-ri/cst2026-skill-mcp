@@ -1,0 +1,302 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="Adobe RoboHelp 11" />
+<title>Drift-Diffusion Solver Object</title>
+<link rel="StyleSheet" href="../online_help_vba.css" type="text/css" />
+<style type="text/css">
+/*<![CDATA[*/
+<!--
+body { border-bottom-style:None; }
+-->
+/*]]>*/
+</style>
+
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+        origWidth = innerWidth;
+        origHeight = innerHeight;
+        onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+/*<![CDATA[*/
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+-->
+/*]]>*/
+</style>
+
+<script type="text/javascript" language="javascript1.2" src="../whmsg.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript" src="../whver.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript1.2" src="../whutils.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript1.2" src="../whproxy.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript1.2" src="../whlang.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript1.2" src="../whtopic.js" charset="utf-8">
+</script>
+</head>
+<body>
+<script type="text/javascript" language="javascript1.2">
+//<![CDATA[
+<!--
+if (window.gbWhTopic)
+{
+        var strUrl = document.location.href;
+        var bc = 0;
+        var n = strUrl.toLowerCase().indexOf("bc-");
+        if(n != -1)
+        {
+                document.location.replace(strUrl.substring(0, n));
+                bc = strUrl.substring(n+3);
+        }
+
+        if (window.addTocInfo)
+        {
+        addTocInfo("3D Simulation VBA\nVBA Objects\nSolver\nLow Frequency\nDrift-Diffusion Solver Object");
+
+        }
+        if (window.writeBtnStyle)
+                writeBtnStyle();
+
+        if (window.writeIntopicBar)
+                writeIntopicBar(0);
+
+        
+        document.write("<p style=\"font-family: Tahoma; font-size: 9pt; font-weight: 400;  font-style:normal; color: rgb(0, 0, 0); text-decoration:none; text-align: left\"> ");
+AddMasterBreadcrumbs("../index.htm", "font-family: Tahoma; font-size: 9pt; font-weight: 400;  font-style:normal; color: rgb(0, 0, 0); text-decoration:none; text-align: left", "|", "Home", "../special_vbaobjects/special_vbaobjects_vbaobjects.htm");
+document.write("<a style=\"font-family: Tahoma; font-size: 9pt; font-weight: 400;  font-style:normal; color: rgb(0, 0, 0); text-decoration:none; text-align: left\" href=\"../special_vbaobjects/special_vbaobjects_vbaobjects.htm\">3D Simulation VBA<\/a> | <a style=\"font-family: Tahoma; font-size: 9pt; font-weight: 400;  font-style:normal; color: rgb(0, 0, 0); text-decoration:none; text-align: left\" href=\"../special_vbaobjects/special_vbaobjects_vbaobjects.htm\">VBA Objects<\/a> | <a style=\"font-family: Tahoma; font-size: 9pt; font-weight: 400;  font-style:normal; color: rgb(0, 0, 0); text-decoration:none; text-align: left\" href=\"../special_vbasolver/special_vbasolver_background_object.htm\">Solver<\/a> | <a style=\"font-family: Tahoma; font-size: 9pt; font-weight: 400;  font-style:normal; color: rgb(0, 0, 0); text-decoration:none; text-align: left\" href=\"../special_vbasolver/special_vba_ems_solver_object.htm\">Low Frequency<\/a> | Drift-Diffusion Solver Object<\/p>");
+
+}
+else
+        if (window.gbIE4)
+                document.location.reload();
+
+onLoadHandler = function()
+{
+  if (window.setRelStartPage)
+        {
+        setTimeout("setRelStartPage('../index.htm');", 1)
+
+    setTimeout("UpdateBreadCrumbsMarker();", 1);
+        }
+}
+
+if (window.addEventListener){  
+        window.addEventListener('load', onLoadHandler, false);   
+} else if (window.attachEvent){  
+        window.attachEvent('onload', onLoadHandler);  
+}
+
+function onSetStartPage()
+{
+  autoSync(1);
+  sendSyncInfo();
+  sendAveInfoOut();
+}
+//-->
+//]]>
+</script><script type="text/javascript" src="../ehlpdhtm.js" language="JavaScript1.2">
+</script>
+<table cellspacing="0" width="100%">
+<col style="width: 50%;" />
+<col style="width: 50%;" />
+<tr>
+<td style="vertical-align: middle; padding-top: 5px; padding-bottom: 5px;">
+<p style="margin-top: 0px; margin-bottom: 0px;"><img src="../3ds.png" alt="" style="border: none;" border="0" /></p>
+</td>
+<td style="vertical-align: middle;">
+<p style="text-align: right;"><a href="https://www.3ds.com/products-services/3dexperience/" target="_blank"><img src="../3dexp.png" alt="" style="border: none;" width="32" height="32" border="0" /></a></p>
+</td>
+</tr>
+</table>
+<p class="VBA-Heading-Object">Drift-Diffusion Solver Object</p>
+<p class="VBA-Text">The Object is used to define the drift-diffusion solver parameters.</p>
+<ul>
+<li class="p-VBA-Index-Category">
+<p class="VBA-Index-Category"><a href="#Methods">Methods</a></p>
+</li>
+<li class="p-VBA-Index-Category">
+<p class="VBA-Index-Category" style="font-weight: bold;"><a href="#Default" style="font-weight: bold;">Default Settings</a></p>
+</li>
+<li class="p-VBA-Index-Category">
+<p class="VBA-Index-Category"><a href="#Example">Example</a></p>
+</li>
+</ul>
+<p class="VBA-Heading-Category" style="font-size: 12pt; color: #000000;"><a name="Methods" id="Methods" style="font-size: 12pt;"><span style="color: #000000;"><font color="black">Methods</font></span></a></p>
+<p class="VBA-Heading-Method">Reset</p>
+<p class="VBA-Text-Indent">Resets all internal settings to their default values.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">SetSolverMode &#160;(<span><a href="../common_vbageneral/common_general_enum.htm" id="a441" style="font-weight: normal;" name="a441">string</a></span> &#160;solvermode)</p>
+<p class="VBA-Text-Indent">Adds a static field of type <span style="font-style: italic;"><i>fieldtype</i></span>, scaled by <span style="font-style: italic;"><i>factor</i></span> that will influence the particles' trajectories. If recalculate is set to true, the fields will be recalculated before the tracking solver starts.</p>
+<p class="VBA-Text-Indent">Note that a factor of "0" leaves the field unconsidered for the tracking process.</p>
+<table style="vertical-align: top; margin-left: 50px;" cellspacing="0" width="74.761%">
+<col style="width: 22.02%;" />
+<col style="width: 77.98%;" />
+<tr style="vertical-align: top;">
+<td style="border: Solid 1px #000000; width: 22.02%; padding-right: 10px; padding-left: 10px;">
+<p><span style="font-style: italic;"><i>solvermode(</i></span><span style="font-style: italic;"><i><a href="../common_vbageneral/common_general_enum.htm" id="a461" style="font-weight: normal;" name="a461">string</a></i></span> )</p>
+</td>
+<td style="border-top: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 77.98%; padding-right: 10px; padding-left: 10px;">
+<p>meaning</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 22.02%; padding-right: 10px; padding-left: 10px;">
+<p>"Poisson"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 77.98%; padding-right: 10px; padding-left: 10px;">
+<p>Solve for the non-linear potential.</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 22.02%; padding-right: 10px; padding-left: 10px;">
+<p>"Continuity"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 77.98%; padding-right: 10px; padding-left: 10px;">
+<p>Solve for the non-linear potential and carrier densities. The problem is decoupled.</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 22.02%; padding-right: 10px; padding-left: 10px;">
+<p>"Gummel-Map"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 77.98%; padding-right: 10px; padding-left: 10px;">
+<p>Solve the coupled problem of potential and carrier densities iteratively.</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 22.02%; padding-right: 10px; padding-left: 10px;">
+<p>"Mesh"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 77.98%; padding-right: 10px; padding-left: 10px;">
+<p>Generates the mesh and stops. No solution is computed.</p>
+</td>
+</tr>
+</table>
+<p class="VBA-Heading-Method">&#160;</p>
+<p class="VBA-Heading-Method">AmbientTemperature &#160;&#160;(<a href="../common_vbageneral/common_general_double.htm" id="a381" style="font-weight: normal;" name="a381">double</a> &#160;temperature)</p>
+<p class="VBA-Text-Indent">Sets ambient temperature in Kelvin.</p>
+<p class="StandardNeu" style="margin-left: 40px;">&#160;</p>
+<p class="VBA-Heading-Method">NewtonAccuracy (<a href="../common_vbageneral/common_general_double.htm" id="a382" style="font-weight: normal;" name="a382">double</a> &#160;accuracy)</p>
+<p class="VBA-Text-Indent">Sets the accuracy of &#160;the Newton method used within the Poisson solver.</p>
+<p class="StandardNeu" style="margin-left: 40px;">&#160;</p>
+<p class="VBA-Heading-Method">Accuracy &#160;(<a href="../common_vbageneral/common_general_double.htm" id="a383" style="font-weight: normal;" name="a383">double</a> &#160;<span style="font-style: italic;"><i>accuracy</i></span>)</p>
+<p class="VBA-Text-Indent">Defines the accuracy of the coupled iteration to solve the potential and carrier densities.</p>
+<p class="StandardNeu" style="margin-left: 40px;">&#160;</p>
+<p class="VBA-Heading-Method">MaxIteration &#160;(<a href="../common_vbageneral/common_general_integer.htm" id="a341" style="font-weight: normal;" name="a341">int</a> &#160;<span style="font-style: italic;"><i>iteration</i></span>)</p>
+<p class="VBA-Text-Indent">Defines the maximum number of iterations of the coupled computation.</p>
+<p class="StandardNeu" style="font-weight: bold;">&#160;</p>
+<p class="VBA-Heading-Method">EnableNormalization &#160;(<a href="../common_vbageneral/common_general_bool_data_type.htm" id="a371" style="font-weight: normal;" name="a371">bool</a> &#160;<span style="font-style: italic;"><i>normalize</i></span>)</p>
+<p class="VBA-Text-Indent">Activates the normalization of the equation system. If disabled, the solver computes the problem in SI units.</p>
+<p class="VBA-Heading-Method">&#160;</p>
+<p class="VBA-Heading-Method">TetMeshAdaption &#160;(<a href="../common_vbageneral/common_general_bool_data_type.htm" id="a372" style="font-weight: normal;" name="a372">bool</a> &#160;mesh<span style="font-style: italic;"><i>adaption</i></span>)</p>
+<p class="VBA-Text-Indent">Activates the mesh refinement based on the error-estimate of the solution quantities. This option is only available for these two solver modes: "Gummel-Map" and "Mesh".</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">TetCellSizeToDebyeLengthRatio &#160;(<a href="../common_vbageneral/common_general_double.htm" id="a384" style="font-weight: normal;" name="a384">double</a> <span style="font-style: italic;"><i>cellsizeratio</i></span>)</p>
+<p class="VBA-Text-Indent">If the adaptive mesh refinement is enabled, this setting allows refining a coarse mesh to this ratio prior to simulation start. A cell is refined until it's characteristic length to Debye length ratio is below this threshold. The Debye length is computed using the local doping density. Please note, that this setting might lead to a fast increase in the number of mesh cells. Please start from a rather well resolved mesh.</p>
+<p class="StandardNeu" style="font-weight: bold;">&#160;</p>
+<p class="VBA-Heading-Method">MonitorJunctionCapacitance &#160;(<span><a href="../common_vbageneral/common_general_bool_data_type.htm" id="a351" style="font-weight: normal;" name="a351">bool</a></span> <span style="font-style: italic;"><i>junction_capacitance</i></span>)</p>
+<p class="VBA-Text-Indent">Enables the computation of the junction capacitance using a finite-different approximation.</p>
+<p class="standardneu">&#160;</p>
+<p class="VBA-Heading-Method">MonitorPlasmaFrequency &#160;(<a href="../common_vbageneral/common_general_bool_data_type.htm" id="a35" style="font-weight: normal;" name="a35">bool</a> <span style="font-style: italic;"><i>plasma_frequency</i></span>)</p>
+<p class="VBA-Text-Indent">Legacy command. Please use monitor definition. Computes the plasma frequency as a result after the solver run. The plasma frequency is depending on the carrier densities.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">UseMaxNumberOfThreads &#160;(<a href="../common_vbageneral/common_general_bool_data_type.htm" id="a352" style="font-weight: normal;" name="a352">bool</a> parallelization)</p>
+<p class="VBA-Text-Indent">Uses all allowed threads for a parallel computation.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">MaxNumberOfThreads &#160;(<span><a href="../common_vbageneral/common_general_integer.htm" id="a411" style="font-weight: normal;" name="a411">int</a></span> numberofthreads)</p>
+<p class="VBA-Text-Indent">Uses up to the defined number of threads.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">MaximumNumberOfCPUDevices &#160;(<a href="../common_vbageneral/common_general_integer.htm" id="a4111" style="font-weight: normal;" name="a4111">int</a> numberofcpus)</p>
+<p class="VBA-Text-Indent">Uses up to the defined number of CPUs.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">UseDistributedComputing &#160;(<a href="../common_vbageneral/common_general_bool_data_type.htm" id="a3521" style="font-weight: normal;" name="a3521">bool</a> dcomputing)</p>
+<p class="VBA-Text-Indent">Enables a DC computation.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Category" style="font-weight: bold; font-size: 12pt; font-style: italic;"><a name="Default" id="Default"></a>Default Settings</p>
+<p class="VBA-Text-Example">SetSolverMode "Gummel-Map"</p>
+<p class="VBA-Text-Example">AmbientTemperature "300"</p>
+<p class="VBA-Text-Example">NewtonAccuracy "1e-9"</p>
+<p class="VBA-Text-Example">Accuracy "1e-5"</p>
+<p class="VBA-Text-Example">MaxIteration "30"</p>
+<p class="VBA-Text-Example">EnableNormalization "True"</p>
+<p class="VBA-Text-Example">TetMeshAdaption "False"</p>
+<p class="VBA-Text-Example">TetCellSizeToDebyeLengthRatio "0"</p>
+<p class="VBA-Text-Example">MonitorJunctionCapacitance "False"</p>
+<p class="VBA-Text-Example">MonitorPlasmaFrequency "False"</p>
+<p class="VBA-Text-Example">UseMaxNumberOfThreads "True"</p>
+<p class="VBA-Text-Example">MaxNumberOfThreads "1024"</p>
+<p class="VBA-Text-Example">MaximumNumberOfCPUDevices "2"</p>
+<p class="VBA-Text-Example">UseDistributedComputing "False"</p>
+<p class="VBA-Text-Example">&#160;</p>
+<p class="VBA-Text-Example">&#160;</p>
+<p class="VBA-Heading-Category" style="font-size: 12pt;"><a name="Example" id="Example"></a>Example</p>
+<p class="VBA-Text-Example">With DriftDiffusionSolver</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.Reset</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.SetSolverMode "Gummel-Map"</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.AmbientTemperature "300"</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.NewtonAccuracy "1e-9"</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.Accuracy "1e-5"</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.MaxIteration "30"</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.EnableNormalization "True"</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.TetMeshAdaption "False"</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.TetCellSizeToDebyeLengthRatio "0"</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.MonitorJunctionCapacitance "True"</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.MonitorPlasmaFrequency "False"</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.UseMaxNumberOfThreads "True"</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.MaxNumberOfThreads "1024"</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.MaximumNumberOfCPUDevices "2"</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.UseDistributedComputing "False"</p>
+<p class="VBA-Text-Example">End With</p>
+<p class="VBA-Text-Example">&#160;</p>
+<p class="VBA-Text-Example">&#160;</p>
+<p class="VBA-Text-Example">&#160;</p>
+<?rh-p style="margin-bottom: 0px; text-align: Right; margin-left: 18px; 
+                 margin-right: 18px; margin-top: 18px;" ?>
+<div style="width: 100%; position: relative;" id="footer">
+<p style="border-bottom: Solid 1px #dddddd; text-align: Left; margin-left: 0px; font-family: Arial, sans-serif; line-height: Normal; margin-top: 9px; margin-right: 0px; margin-bottom: 6px; border-left-width: 1px; border-top-width: 1px; border-right-width: 1px;"><span style="text-align: Left; font-family: Arial, sans-serif; line-height: Normal;">&#160;</span></p>
+<table cellspacing="0" width="100%">
+<col style="width: 50%;" />
+<col style="width: 50%;" />
+<tr>
+<td style="vertical-align: Top;"><span style="font-family: Arial, sans-serif; line-height: Normal; font-size: 8pt;"><font size="1" style="font-size:8pt;">CST Studio Suite 2026</font></span></td>
+<td style="vertical-align: Top;">
+<p style="text-align: right;">&#160;</p>
+</td>
+</tr>
+</table>
+<p>&#160;</p>
+</div>
+<script type="text/javascript" language="javascript1.2">
+//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+        writeIntopicBar(0);
+
+
+highlightSearch();
+//-->
+//]]>
+</script>
+</body>
+</html>

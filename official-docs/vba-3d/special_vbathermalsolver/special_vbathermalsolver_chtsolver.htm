@@ -1,0 +1,1074 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="Adobe RoboHelp 11" />
+<title>CHTSolver Object</title>
+<link rel="StyleSheet" href="../online_help_vba.css" type="text/css" />
+<style type="text/css">
+/*<![CDATA[*/
+<!--
+body { border-bottom-style:None; }
+-->
+/*]]>*/
+</style>
+
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+        origWidth = innerWidth;
+        origHeight = innerHeight;
+        onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+/*<![CDATA[*/
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+-->
+/*]]>*/
+</style>
+
+<script type="text/javascript" language="javascript1.2" src="../whmsg.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript" src="../whver.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript1.2" src="../whutils.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript1.2" src="../whproxy.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript1.2" src="../whlang.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript1.2" src="../whtopic.js" charset="utf-8">
+</script>
+</head>
+<body>
+<script type="text/javascript" language="javascript1.2">
+//<![CDATA[
+<!--
+if (window.gbWhTopic)
+{
+        var strUrl = document.location.href;
+        var bc = 0;
+        var n = strUrl.toLowerCase().indexOf("bc-");
+        if(n != -1)
+        {
+                document.location.replace(strUrl.substring(0, n));
+                bc = strUrl.substring(n+3);
+        }
+
+        if (window.addTocInfo)
+        {
+        addTocInfo("3D Simulation VBA\nVBA Objects\nSolver\nThermal\nCHTSolver");
+
+        }
+        if (window.writeBtnStyle)
+                writeBtnStyle();
+
+        if (window.writeIntopicBar)
+                writeIntopicBar(0);
+
+        
+        document.write("<p style=\"font-family: Tahoma; font-size: 9pt; font-weight: 400;  font-style:normal; color: rgb(0, 0, 0); text-decoration:none; text-align: left\"> ");
+AddMasterBreadcrumbs("../index.htm", "font-family: Tahoma; font-size: 9pt; font-weight: 400;  font-style:normal; color: rgb(0, 0, 0); text-decoration:none; text-align: left", "|", "Home", "../special_vbaobjects/special_vbaobjects_vbaobjects.htm");
+document.write("<a style=\"font-family: Tahoma; font-size: 9pt; font-weight: 400;  font-style:normal; color: rgb(0, 0, 0); text-decoration:none; text-align: left\" href=\"../special_vbaobjects/special_vbaobjects_vbaobjects.htm\">3D Simulation VBA<\/a> | <a style=\"font-family: Tahoma; font-size: 9pt; font-weight: 400;  font-style:normal; color: rgb(0, 0, 0); text-decoration:none; text-align: left\" href=\"../special_vbaobjects/special_vbaobjects_vbaobjects.htm\">VBA Objects<\/a> | <a style=\"font-family: Tahoma; font-size: 9pt; font-weight: 400;  font-style:normal; color: rgb(0, 0, 0); text-decoration:none; text-align: left\" href=\"../special_vbasolver/special_vbasolver_background_object.htm\">Solver<\/a> | <a style=\"font-family: Tahoma; font-size: 9pt; font-weight: 400;  font-style:normal; color: rgb(0, 0, 0); text-decoration:none; text-align: left\" href=\"special_vbathermalsolver_chtsolver.htm\">Thermal<\/a> | CHTSolver<\/p>");
+
+}
+else
+        if (window.gbIE4)
+                document.location.reload();
+
+onLoadHandler = function()
+{
+  if (window.setRelStartPage)
+        {
+        setTimeout("setRelStartPage('../index.htm');", 1)
+
+    setTimeout("UpdateBreadCrumbsMarker();", 1);
+        }
+}
+
+if (window.addEventListener){  
+        window.addEventListener('load', onLoadHandler, false);   
+} else if (window.attachEvent){  
+        window.attachEvent('onload', onLoadHandler);  
+}
+
+function onSetStartPage()
+{
+  autoSync(1);
+  sendSyncInfo();
+  sendAveInfoOut();
+}
+//-->
+//]]>
+</script><script type="text/javascript" src="../ehlpdhtm.js" language="JavaScript1.2">
+</script>
+<table cellspacing="0" width="100%">
+<col style="width: 50%;" />
+<col style="width: 50%;" />
+<tr>
+<td style="vertical-align: middle; padding-top: 5px; padding-bottom: 5px;">
+<p style="margin-top: 0px; margin-bottom: 0px;"><img src="../3ds.png" alt="" style="border: none;" border="0" /></p>
+</td>
+<td style="vertical-align: middle;">
+<p style="text-align: right;"><a href="https://www.3ds.com/products-services/3dexperience/" target="_blank"><img src="../3dexp.png" alt="" style="border: none;" width="32" height="32" border="0" /></a></p>
+</td>
+</tr>
+</table>
+<h1>CHTSolver Object</h1>
+<p class="VBA-Text">This object is used to calculate conjugate heat transfer problems. The corresponding models can be excited by different source types: <a href="special_vbathermalsolver_fan.htm">fan</a>, <a href="special_vbathermalsolver_heatsource.htm">heat</a> or &#160;<a href="special_vbathermalsolver_temperaturesource.htm">temperature</a> sources or as well by special thermal boundary settings. <a href="special_vbathermalsolver_thermalsurfaceproperty.htm">Thermal surface properties</a> enable the definition of radiation or convection of certain shape faces.</p>
+<ul>
+<li class="p-VBA-Index-Category">
+<p class="VBA-Index-Category"><a href="#Methods">Methods</a></p>
+</li>
+<li class="p-VBA-Index-Category">
+<p class="VBA-Index-Category"><a href="#Defaults">Default Settings</a></p>
+</li>
+<li class="p-VBA-Index-Category">
+<p class="VBA-Index-Category"><a href="#Example">Example</a></p>
+</li>
+</ul>
+<p class="VBA-Heading-Category"><a name="Methods" id="Methods"></a>Methods</p>
+<p class="VBA-Heading-Method">Reset</p>
+<p class="VBA-Text-Indent">Resets all internal settings of the conjugate heat transfer solver to their default values.</p>
+<p class="vba-text-indent">&#160;</p>
+<p class="VBA-Heading-Method"><a name="Accuracy" id="Accuracy"></a>Accuracy ( <a href="../common_vbageneral/common_general_double.htm">double</a> <span style="font-style: italic;"><i>value</i></span> )</p>
+<p class="VBA-Text-Indent">Specifies the desired accuracy <span style="font-style: italic;"><i>value</i></span> for the CHT solver run equation residuals. This setting is considered only, it the <span style="font-style: italic;"><i><a href="#UseGlobalAccuracy">UseGlobalAccuracy</a></i></span> parameter is True, which is the default. In this case, the detailed accuracy settings for pressure (<span style="font-style: italic;"><i><a href="#ContinuityResidual">ContinuityResidual</a>)</i></span>, momentum (<span style="font-style: italic;"><i><a href="#MomentumResidual">MomentumResidual</a></i></span>) and heat transfer (<span style="font-style: italic;"><i><a href="#HeatTransferResidual">HeatTransferResidual</a></i></span>) will be ignored.</p>
+<p class="VBA-Text-Indent">default: <span style="font-style: italic;"><i>value = 0.001</i></span></p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method"><a name="UseGlobalAccuracy" id="UseGlobalAccuracy"></a>UseGlobalAccuracy ( <a href="../common_vbageneral/common_general_bool_data_type.htm" id="a41" style="font-weight: bold;" name="a41">bool</a> &#160;<span style="font-style: italic;"><i>flag</i></span> )</p>
+<p class="VBA-Text-Indent">Specifies if the overall <span style="font-style: italic;"><i>Accuracy</i></span> value is to be taken into account (<span style="font-style: italic;"><i>flag=True</i></span>, default), of if the detailed prescriptions of single accuracy values (<span style="font-style: italic;"><i><a href="#ContinuityResidual">ContinuityResidual</a>, <a href="#MomentumResidual">MomentumResidual</a>, <a href="#HeatTransferResidual">HeatTransferResidual</a></i></span>) shall be used instead (<span style="font-style: italic;"><i>flag=False</i></span>).</p>
+<p class="VBA-Text-Indent">default: <span style="font-style: italic;"><i>flag = True</i></span></p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method"><a name="ContinuityResidual" id="ContinuityResidual"></a>ContinuityResidual ( <a href="../common_vbageneral/common_general_double.htm">double</a> <span style="font-style: italic;"><i>value</i></span> )</p>
+<p class="VBA-Text-Indent">Specifies if the desired equation residual <span style="font-style: italic;"><i>value</i></span> for the pressure. This setting will be considered only, it the <span style="font-style: italic;"><i><a href="#UseGlobalAccuracy">UseGlobalAccuracy</a></i></span> flag is <span style="font-style: italic;"><i>False</i></span>.</p>
+<p class="VBA-Text-Indent">default: <span style="font-style: italic;"><i>value = 0.001</i></span></p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method"><a name="MomentumResidual" id="MomentumResidual"></a>MomentumResidual ( <a href="../common_vbageneral/common_general_double.htm">double</a> <span style="font-style: italic;"><i>value</i></span> &#160;)</p>
+<p class="VBA-Text-Indent">Specifies if the desired equation residual for the momentum. This setting will be considered only, it the <span style="font-style: italic;"><i><a href="#UseGlobalAccuracy">UseGlobalAccuracy</a></i></span> flag is <span style="font-style: italic;"><i>False</i></span>.</p>
+<p class="VBA-Text-Indent">default: <span style="font-style: italic;"><i>value = 0.001</i></span></p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method"><a name="HeatTransferResidual" id="HeatTransferResidual"></a>HeatTransferResidual ( <a href="../common_vbageneral/common_general_double.htm">double</a> <span style="font-style: italic;"><i>value</i></span> &#160;)</p>
+<p class="VBA-Text-Indent">Specifies if the desired equation residual for the heat transfer. This setting will be considered only, it the <span style="font-style: italic;"><i><a href="#UseGlobalAccuracy">UseGlobalAccuracy</a></i></span> flag is <span style="font-style: italic;"><i>False</i></span>.</p>
+<p class="VBA-Text-Indent">default: <span style="font-style: italic;"><i>value = 0.001</i></span></p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method"><a name="GlobalEquationBalance" id="GlobalEquationBalance"></a>GlobalEquationBalance ( <a href="../common_vbageneral/common_general_double.htm">double</a> <span style="font-style: italic;"><i>value</i></span> )</p>
+<p class="VBA-Text-Indent">Specifies the desired accuracy <span style="font-style: italic;"><i>value</i></span> for the CHT solver run equation balances. This setting is considered only, it the <span style="font-style: italic;"><i><a href="#UseGlobalEquationBalance">UseGlobalEquationBalance</a></i></span> parameter is True, which is the default. In this case, the detailed settings for mass flow (<span style="font-style: italic;"><i><a href="#MassFlowResidual">MassFlowResidual</a></i></span><span style="font-style: italic;"><i>)</i></span>, fluid heat flux (<span style="font-style: italic;"><i><a href="#FluidHeatFluxResidual">FluidHeatFluxResidual</a></i></span>) and solid heat flux (<span style="font-style: italic;"><i><a href="#SolidHeatFluxResidual">SolidHeatFluxResidual</a></i></span>) will be ignored.</p>
+<p class="VBA-Text-Indent">default: <span style="font-style: italic;"><i>value = 0.01</i></span></p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method"><a name="UseGlobalEquationBalance" id="UseGlobalEquationBalance"></a>UseGlobalEquationBalance ( <a href="../common_vbageneral/common_general_bool_data_type.htm" id="a41121" style="font-weight: bold;" name="a41121">bool</a> &#160;<span style="font-style: italic;"><i>flag</i></span> )</p>
+<p class="VBA-Text-Indent">Specifies if the overall <span style="font-style: italic;"><i>Accuracy</i></span> value is to be taken into account (<span style="font-style: italic;"><i>flag=True</i></span>, default), of if the detailed prescriptions of single accuracy values (<span style="font-style: italic;"><i><a href="#MassFlowResidual">MassFlowResidual</a>,</i></span> <span style="font-style: italic;"><i><a href="#FluidHeatFluxResidual">FluidHeatFluxResidual</a></i></span><span style="font-style: italic;"><i>, <a href="#SolidHeatFluxResidual">SolidHeatFluxResidual</a></i></span>) shall be used instead (<span style="font-style: italic;"><i>flag=False</i></span>).</p>
+<p class="VBA-Text-Indent">default: <span style="font-style: italic;"><i>flag = True</i></span></p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method"><a name="MassFlowResidual" id="MassFlowResidual"></a>MassFlowResidual ( <a href="../common_vbageneral/common_general_double.htm">double</a> <span style="font-style: italic;"><i>value</i></span> &#160;)</p>
+<p class="VBA-Text-Indent">Specifies if the desired equation balance for the mass flow. This setting will be considered only, it the <span style="font-style: italic;"><i><a href="#UseGlobalEquationBalance">UseGlobalEquationBalance</a></i></span> flag is <span style="font-style: italic;"><i>False</i></span>.</p>
+<p class="VBA-Text-Indent">default: <span style="font-style: italic;"><i>value = 0.01</i></span></p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method"><a name="FluidHeatFluxResidual" id="FluidHeatFluxResidual"></a>FluidHeatFluxResidual ( <a href="../common_vbageneral/common_general_double.htm">double</a> <span style="font-style: italic;"><i>value</i></span> &#160;)</p>
+<p class="VBA-Text-Indent">Specifies if the desired equation balance for the fluid heat flux. This setting will be considered only, it the <span style="font-style: italic;"><i><a href="#UseGlobalEquationBalance">UseGlobalEquationBalance</a></i></span> flag is <span style="font-style: italic;"><i>False</i></span>.</p>
+<p class="VBA-Text-Indent">default: <span style="font-style: italic;"><i>value = 0.01</i></span></p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method"><a name="SolidHeatFluxResidual" id="SolidHeatFluxResidual"></a>SolidHeatFluxResidual ( <a href="../common_vbageneral/common_general_double.htm">double</a> <span style="font-style: italic;"><i>value</i></span> &#160;)</p>
+<p class="VBA-Text-Indent">Specifies if the desired equation balance for the solid heat flux. This setting will be considered only, it the <span style="font-style: italic;"><i><a href="#UseGlobalEquationBalance">UseGlobalEquationBalance</a></i></span> flag is <span style="font-style: italic;"><i>False</i></span>.</p>
+<p class="VBA-Text-Indent">default: <span style="font-style: italic;"><i>value = 0.01</i></span></p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method"><a name="UseMaximumNumberOfIterations" id="UseMaximumNumberOfIterations"></a>UseMaximumNumberOfIterations( <a href="../common_vbageneral/common_general_bool_data_type.htm" id="a411214" style="font-weight: bold;" name="a411214">bool</a> &#160;<span style="font-style: italic;"><i>flag</i></span> )</p>
+<p class="VBA-Text-Indent">If flag=True, the number of iterations performed by the linear solver will be limited by <a href="#MaximumNumberOfIterations">MaximumNumberOfIterations</a> If flag=False, the solver will iterate until the defined solver accuracy is reached.</p>
+<p class="VBA-Text-Indent">default: <span style="font-style: italic;"><i>flag = False</i></span></p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method"><a name="MaximumNumberOfIterations" id="MaximumNumberOfIterations"></a>MaximumNumberOfIterations ( <a href="../common_vbageneral/common_general_integer.htm" id="a291" style="font-weight: bold;" name="a291">int</a> &#160;<span style="font-style: italic;"><i>value</i></span> )</p>
+<p class="VBA-Text-Indent" style="font-weight: normal;">The number of iterations performed by the linear solver is automatically limited by a number depending on the desired solver accuracy. This is equivalent to setting the <span style="font-style: italic;"><i>value</i></span> to "<span style="font-style: italic;"><i>0</i></span>". If you would like to prescribe a fixed upper limit for number of linear iterations, then specify the corresponding <span style="font-style: italic;"><i>value</i></span> here. Please note that this value will only be taken into account if the <a href="#UseMaximumNumberOfIterations">UseMaximumNumberOfIterations</a> is True.</p>
+<p class="VBA-Text-Indent" style="font-weight: normal;">default: <span style="font-style: italic;"><i>value = 0</i></span></p>
+<p class="VBA-Text-Indent" style="font-weight: normal;">&#160;</p>
+<p class="VBA-Heading-Method"><a name="UseMinimumNumberOfIterations" id="UseMinimumNumberOfIterations"></a>UseMinimumNumberOfIterations( <a href="../common_vbageneral/common_general_bool_data_type.htm" id="a4112141" style="font-weight: bold;" name="a4112141">bool</a> &#160;<span style="font-style: italic;"><i>flag</i></span> )</p>
+<p class="VBA-Text-Indent">&#160;If flag=True, the minimum number of iterations performed by the linear solver will be given by <a href="#MinimumNumberOfIterations">MinimumNumberOfIterations</a>.</p>
+<p class="VBA-Text-Indent">default: <span style="font-style: italic;"><i>flag = True</i></span></p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method"><a name="MinimumNumberOfIterations" id="MinimumNumberOfIterations"></a>MinimumNumberOfIterations ( <a href="../common_vbageneral/common_general_integer.htm" id="a2912" style="font-weight: bold;" name="a2912">int</a> &#160;<span style="font-style: italic;"><i>value</i></span> )</p>
+<p class="VBA-Text-Indent" style="font-weight: normal;">A calculation will perform at least one iteration of the linear solver. To set a lower limit for the number of iterations, specify the corresponding <span style="font-style: italic;"><i>value</i></span> here. By default, the lower limit is set to six iterations. Please note that this value will only be taken into account if the <a href="#UseMinimumNumberOfIterations">UseMinimumNumberOfIterations</a> is True.</p>
+<p class="VBA-Text-Indent" style="font-weight: normal;">default: <span style="font-style: italic;"><i>value = 6</i></span></p>
+<p class="VBA-Heading-Method">&#160;</p>
+<p class="VBA-Heading-Method">EnableSuspendSolverRun ( <a href="../common_vbageneral/common_general_bool_data_type.htm" id="a4112131" style="font-weight: bold;" name="a4112131">bool</a> &#160;<span style="font-style: italic;"><i>flag</i></span> )</p>
+<p class="VBA-Text-Indent" style="font-weight: normal;">If the solver has not converged after the specified maximum number of iterations, the simulation can be suspended (<span style="font-style: italic;"><i>flag = True</i></span>). This means that the solver pauses; a dialog box will be opened to require from the user how to continue (perform additional iterations or stop and save or discard results). In order to end the simulation normally without pause in case of unconverged results, this flag should be set <span style="font-style: italic;"><i>False</i></span>.</p>
+<p class="VBA-Text-Indent" style="font-weight: normal;">default: flag = True</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method"><a name="UseRelativeVelocityUpdate" id="UseRelativeVelocityUpdate"></a>UseRelativeVelocityUpdate ( <a href="../common_vbageneral/common_general_bool_data_type.htm" id="a411213" style="font-weight: bold;" name="a411213">bool</a> &#160;<span style="font-style: italic;"><i>flag</i></span> )</p>
+<p class="VBA-Text-Indent">Specifies if the <a href="#RelativeVelocityUpdate">relative velocity update</a> is to be taken into account as a convergence criterion. Note that all conditions including <a href="#GlobalEquationBalance">equation balances</a>, <a href="#Accuracy">residuals</a>, and <a href="#AddConvergenceCriterion">custom stop criteria</a> have to be fulfilled to stop the solver.</p>
+<p class="VBA-Text-Indent" style="font-weight: normal;">default: <span style="font-style: italic;"><i>flag = True</i></span></p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method"><a name="RelativeVelocityUpdate" id="RelativeVelocityUpdate"></a>RelativeVelocityUpdate ( <a href="../common_vbageneral/common_general_double.htm">double</a> <span style="font-style: italic;"><i>value</i></span> &#160;)</p>
+<p class="VBA-Text-Indent">Sets the maximum relative change in the velocity vector field allowed to reach convergence. Note that this value will be taken into account only, if the <span style="font-style: italic;"><i><a href="#UseRelativeVelocityUpdate">UseRelativeVelocityUpdate</a></i></span> flag is <span style="font-style: italic;"><i>False</i></span>.</p>
+<p class="VBA-Text-Indent">default: <span style="font-style: italic;"><i>value = 0.01</i></span></p>
+<p class="VBA-Heading-Method" style="margin-left: 40px;">&#160;</p>
+<p class="VBA-Heading-Method"><a name="TransientResPressure" id="TransientResPressure"></a>TransientResPressure ( <a href="../common_vbageneral/common_general_double.htm">double</a> <span style="font-style: italic;"><i>value</i></span> &#160;)</p>
+<p class="VBA-Text-Indent"><span style="font-size: 12px; font-variant-ligatures: normal; font-variant-caps: normal; orphans: 2; text-align: justify; widows: 2; -webkit-text-stroke-width: 0px; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; display: inline ! important ; float: none;">Controls the global convergence of the continuity equation of the Navier-Stokes equations.</span></p>
+<p class="VBA-Text-Indent">default: <span style="font-style: italic;"><i>value =</i></span> <span style="font-size: 12px; font-variant-ligatures: normal; font-variant-caps: normal; orphans: 2; text-align: justify; widows: 2; -webkit-text-stroke-width: 0px; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; display: inline ! important ; float: none;">1e-9.</span></p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method"><a name="TransientResPressurePerCell" id="TransientResPressurePerCell"></a>TransientResPressurePerCell ( <a href="../common_vbageneral/common_general_double.htm">double</a> <span style="font-style: italic;"><i>value</i></span> &#160;)</p>
+<p class="VBA-Text-Indent"><span style="font-size: 12px; font-variant-ligatures: normal; font-variant-caps: normal; orphans: 2; text-align: justify; widows: 2; -webkit-text-stroke-width: 0px; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; display: inline ! important ; float: none;">Controls the local (per cell) convergence of the continuity equation of the Navier-Stokes equations.</span></p>
+<p class="VBA-Text-Indent">default: <span style="font-style: italic;"><i>value =</i></span> <span style="font-size: 12px; font-variant-ligatures: normal; font-variant-caps: normal; orphans: 2; text-align: justify; widows: 2; -webkit-text-stroke-width: 0px; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; display: inline ! important ; float: none;">1e-4.</span></p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method"><span style="font-weight: normal;"><a name="TransientUseMaxIterationsSIMPLE" id="TransientUseMaxIterationsSIMPLE"></a></span>TransientUseMaxIterationsSIMPLE ( <a href="../common_vbageneral/common_general_bool_data_type.htm" id="a4112132" style="font-weight: bold;" name="a4112132">bool</a> &#160;<span style="font-style: italic;"><i>flag</i></span> )</p>
+<p class="VBA-Text-Indent">If flag=True, the maximum number of SIMPLE iterations will be limited by <a href="#TransientMaxIterationsSIMPLE">TransientMaxIterationsSIMPLE</a> If flag=False, the solver will iterate until the defined solver accuracy is reached.</p>
+<p class="VBA-Text-Indent" style="font-weight: normal;">default: <span style="font-style: italic;"><i>flag = True</i></span></p>
+<p class="VBA-Text-Indent" style="font-weight: normal;">&#160;</p>
+<p class="VBA-Heading-Method"><span style="font-weight: normal;"><a name="TransientUseMinIterationsSIMPLE" id="TransientUseMinIterationsSIMPLE"></a></span>TransientUseMinIterationsSIMPLE ( <a href="../common_vbageneral/common_general_bool_data_type.htm" id="a4112133" style="font-weight: bold;" name="a4112133">bool</a> &#160;<span style="font-style: italic;"><i>flag</i></span> )</p>
+<p class="VBA-Text-Indent">&#160;If flag=True, the minimum number of SIMPLE iterations will be given by <a href="#TransientMinIterationsSIMPLE">TransientMinIterationsSIMPLE</a></p>
+<p class="VBA-Text-Indent" style="font-weight: normal;">default: <span style="font-style: italic;"><i>flag = True</i></span></p>
+<p class="VBA-Heading-Method">&#160;</p>
+<p class="VBA-Heading-Method"><span style="font-weight: normal;"><a name="TransientUseIterationsTurbulenceSolver" id="TransientUseIterationsTurbulenceSolver"></a></span>TransientUseIterationsTurbulenceSolver ( <a href="../common_vbageneral/common_general_bool_data_type.htm" id="a4112134" style="font-weight: bold;" name="a4112134">bool</a> &#160;<span style="font-style: italic;"><i>flag</i></span> )</p>
+<p class="VBA-Text-Indent">&#160;If flag=True, a fix number of iterations for the turbulence solver will be used. The number of iterations will be given by <a href="#TransientIterationsTurbulenceSolver">TransientIterationsTurbulenceSolver</a></p>
+<p class="VBA-Text-Indent" style="font-weight: normal;">default: <span style="font-style: italic;"><i>flag = True</i></span></p>
+<p class="VBA-Text-Indent" style="font-weight: normal;">&#160;</p>
+<p class="VBA-Heading-Method"><span style="font-weight: normal;"><a name="TransientMaxIterationsSIMPLE" id="TransientMaxIterationsSIMPLE"></a></span>TransientMaxIterationsSIMPLE ( <a href="../common_vbageneral/common_general_integer.htm" id="a29121" style="font-weight: bold;" name="a29121">int</a> &#160;<span style="font-style: italic;"><i>value</i></span> )</p>
+<p class="VBA-Text-Indent" style="font-weight: normal;">The maximum number of SIMPLE iterations can be specified here. Please note that this value will only be taken into account if the flag <a href="#TransientUseMaxIterationsSIMPLE">TransientUseMaxIterationsSIMPLE</a> is True.</p>
+<p class="VBA-Text-Indent" style="font-weight: normal;">default: <span style="font-style: italic;"><i>value = 10</i></span></p>
+<p class="VBA-Text-Indent" style="font-weight: normal;">&#160;</p>
+<p class="VBA-Heading-Method"><span style="font-weight: normal;"><a name="TransientMinIterationsSIMPLE" id="TransientMinIterationsSIMPLE"></a></span>TransientMinIterationsSIMPLE ( <a href="../common_vbageneral/common_general_integer.htm" id="a29122" style="font-weight: bold;" name="a29122">int</a> &#160;<span style="font-style: italic;"><i>value</i></span> )</p>
+<p class="VBA-Text-Indent" style="font-weight: normal;">The minimum number of SIMPLE iterations can be specified here. Please note that this value will only be taken into account if the <a href="#TransientUseMinIterationsSIMPLE">TransientUseMinIterationsSIMPLE</a> &#160;is True.</p>
+<p class="VBA-Text-Indent" style="font-weight: normal;">default: <span style="font-style: italic;"><i>value = 2</i></span></p>
+<p class="VBA-Text-Indent" style="font-weight: normal;">&#160;</p>
+<p class="VBA-Heading-Method"><span style="font-weight: normal;"><a name="TransientIterationsTurbulenceSolver" id="TransientIterationsTurbulenceSolver"></a></span>TransientIterationsTurbulenceSolver ( <a href="../common_vbageneral/common_general_integer.htm" id="a29123" style="font-weight: bold;" name="a29123">int</a> &#160;<span style="font-style: italic;"><i>value</i></span> )</p>
+<p class="VBA-Text-Indent" style="font-weight: normal;">A fix number of iterations for the turbulence solver can be set here. &#160;Please note that this value will only be taken into account if the <a href="#TransientUseIterationsTurbulenceSolver">TransientUseIterationsTurbulenceSolver</a> is True.</p>
+<p class="VBA-Text-Indent" style="font-weight: normal;">default: <span style="font-style: italic;"><i>value = 1</i></span></p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method"><a name="AddConvergenceCriterion" id="AddConvergenceCriterion"></a>AddConvergenceCriterion ( <a href="../common_vbageneral/common_general_name.htm">name</a> <span style="font-style: italic;"><i>name</i></span>, <a href="../common_vbageneral/common_general_integer.htm" id="a2911" style="font-weight: bold;" name="a2911">int</a> <span style="font-style: italic;"><i>dim</i></span>, <a href="../common_vbageneral/common_general_double.htm">double</a> <span style="font-style: italic;"><i>threshold</i></span>, <a href="../common_vbageneral/common_general_double.htm">double</a> <span style="font-style: italic;"><i>numchecks</i></span>, <a href="../common_vbageneral/common_general_bool_data_type.htm" id="a411212" style="font-weight: bold;" name="a411212">bool</a> <span style="font-style: italic;"><i>active=True</i></span> )</p>
+<p class="VBA-Text-Indent" style="font-weight: normal;">In addition to the residual and equation balance settings, goal oriented convergence criteria can be defined. Such a custom stop criterion is based on a <a href="../special_vbamonitors/special_vbamonitors_timemonitor0d_object.htm">point monitor</a> (<span style="font-style: italic;"><i>dim=0</i></span>) or on a <a href="../special_vbamonitors/special_vbamonitors_timemonitor2d_object.htm">face monitor</a> (<span style="font-style: italic;"><i>dim=2</i></span>). With the parameters <span style="font-style: italic;"><i>name</i></span> and <span style="font-style: italic;"><i>dim</i></span> the monitor is selected, where <span style="font-style: italic;"><i>dim = 0</i></span> stands for monitors at points and <span style="font-style: italic;"><i>dim = 2</i></span> stands for monitors on faces. If no appropriate monitor with the given <span style="font-style: italic;"><i>name</i></span> has been defined before, an error message will be printed.</p>
+<p class="VBA-Text-Indent" style="font-weight: normal;">The parameter <span style="font-style: italic;"><i>threshold</i></span> sets the criterion for the maximum relative change between two iterations. This number must be given in percent, i.e. a value between 0 and 100.</p>
+<p class="VBA-Text-Indent" style="font-weight: normal;">The parameter <span style="font-style: italic;"><i>numchecks</i></span> specifies, in how many successive iterations the convergence criterion must be fulfilled.</p>
+<p class="VBA-Text-Indent" style="font-weight: normal;">The last argument <span style="font-style: italic;"><i>active</i></span> is optional and <span style="font-style: italic;"><i>True</i></span> by default. The convergence criterion can be deactivated for the solver run by setting this flag to <span style="font-style: italic;"><i>False</i></span>.</p>
+<p class="VBA-Text-Indent" style="font-weight: normal;">Note that all conditions including <a href="#RelativeVelocityUpdate">relative update</a> (if turned on) , <a href="#GlobalEquationBalance">equation balances</a>, <a href="#Accuracy">residuals</a>, and <a href="#AddConvergenceCriterion">custom stop criteria</a> have to be fulfilled to stop the solver.</p>
+<p class="VBA-Text-Indent" style="font-weight: normal;">&#160;</p>
+<p class="VBA-Heading-Method">SetSolutionLimit ( <a href="../common_vbageneral/common_general_enum.htm" style="font-weight: bold;">enum</a> <span style="font-style: italic;"><i>type</i></span>, <a href="../common_vbageneral/common_general_bool_data_type.htm" id="a41121211" style="font-weight: bold;" name="a41121211">bool</a> <span style="font-style: italic;"><i>stop_solver</i></span>, <a href="../common_vbageneral/common_general_double.htm">double</a> <span style="font-style: italic;"><i>lower_bound</i></span>, <a href="../common_vbageneral/common_general_double.htm">double</a> <span style="font-style: italic;"><i>upper_bound</i></span>, <a href="../common_vbageneral/common_general_enum.htm" style="font-weight: bold;">enum</a> <span style="font-style: italic;"><i>unit</i></span> )</p>
+<p class="VBA-Text-Indent" style="font-weight: normal;">When the simulation seems to diverge, it can be aborted, before the maximum number of iterations is reached. The range in which a quantity (given by <span style="font-style: italic;"><i>type</i></span>) may vary for intermediate solutions during the simulation can be set by the values <span style="font-style: italic;"><i>lower_bound</i></span> and <span style="font-style: italic;"><i>upper_bound</i></span>. Supported quantities are</p>
+<table style="margin-left: 40px; left: 0px; top: 1623px;" cellspacing="0" width="75.175%">
+<col />
+<col />
+<col />
+<col />
+<col />
+<col width="260" />
+<tr>
+<td style="border-bottom-width: 1px; border-bottom-style: Solid; border-right-width: 1px; border-right-style: Solid; border-left-width: 1px; border-left-style: Solid; border-top-width: 1px; border-top-style: Solid;">
+<p><span style="font-weight: bold; font-style: italic;"><i><a href="../common_vbageneral/common_general_enum.htm" style="font-weight: bold; font-style: italic;">enum</a></i></span> <span style="font-weight: bold; font-style: italic;"><i>type</i></span></p>
+</td>
+<td style="border-bottom-width: 1px; border-bottom-style: Solid; border-right-width: 1px; border-right-style: Solid; border-top-width: 1px; border-top-style: Solid;">
+<p><span style="font-weight: bold;">meaning</span></p>
+</td>
+<td style="border-bottom-width: 1px; border-bottom-style: Solid; border-right-width: 1px; border-right-style: Solid; border-top-width: 1px; border-top-style: Solid;">
+<p><span style="font-weight: bold;">Default<br />
+lower bound</span></p>
+</td>
+<td style="border-bottom-width: 1px; border-bottom-style: Solid; border-right-width: 1px; border-right-style: Solid; border-top-width: 1px; border-top-style: Solid;">
+<p><span style="font-weight: bold;">Default<br />
+upper bound</span></p>
+</td>
+<td style="border-bottom-width: 1px; border-bottom-style: Solid; border-right-width: 1px; border-right-style: Solid; border-top-width: 1px; border-top-style: Solid;">
+<p><span style="font-weight: bold;">Default<br />
+unit</span></p>
+</td>
+<td style="border-bottom-width: 1px; border-bottom-style: Solid; border-top-width: 1px; border-top-style: Solid; border-right-width: 1px; border-right-style: Solid;">
+<p><span style="font-weight: bold;">Default<br />
+stop solver</span></p>
+</td>
+</tr>
+<tr>
+<td style="border-bottom-width: 1px; border-bottom-style: Solid; border-right-width: 1px; border-right-style: Solid; border-left-width: 1px; border-left-style: Solid;">
+<p>"Velocity"</p>
+</td>
+<td style="border-bottom-width: 1px; border-bottom-style: Solid; border-right-width: 1px; border-right-style: Solid;">
+<p>Velocity</p>
+</td>
+<td style="border-bottom-width: 1px; border-bottom-style: Solid; border-right-width: 1px; border-right-style: Solid;">
+<p>-200</p>
+</td>
+<td style="border-bottom-width: 1px; border-bottom-style: Solid; border-right-width: 1px; border-right-style: Solid;">
+<p>200</p>
+</td>
+<td style="border-bottom-width: 1px; border-bottom-style: Solid; border-right-width: 1px; border-right-style: Solid;">
+<p>m/s</p>
+</td>
+<td style="border-bottom-width: 1px; border-bottom-style: Solid; border-right-width: 1px; border-right-style: Solid;">
+<p>True</p>
+</td>
+</tr>
+<tr>
+<td style="border-bottom-width: 1px; border-bottom-style: Solid; border-right-width: 1px; border-right-style: Solid; border-left-width: 1px; border-left-style: Solid;">
+<p>"PressureDensityRatio"</p>
+</td>
+<td style="border-bottom-width: 1px; border-bottom-style: Solid; border-right-width: 1px; border-right-style: Solid;">
+<p>Ratio pressure / background density</p>
+</td>
+<td style="border-bottom-width: 1px; border-bottom-style: Solid; border-right-width: 1px; border-right-style: Solid;">
+<p>-5000</p>
+</td>
+<td style="border-bottom-width: 1px; border-bottom-style: Solid; border-right-width: 1px; border-right-style: Solid;">
+<p>5000</p>
+</td>
+<td style="border-bottom-width: 1px; border-bottom-style: Solid; border-right-width: 1px; border-right-style: Solid;">
+<p>m²/s²</p>
+</td>
+<td style="border-bottom-width: 1px; border-bottom-style: Solid; border-right-width: 1px; border-right-style: Solid;">
+<p>True</p>
+</td>
+</tr>
+<tr>
+<td style="border-bottom-width: 1px; border-bottom-style: Solid; border-right-width: 1px; border-right-style: Solid; border-left-width: 1px; border-left-style: Solid;">
+<p>"Temperature"</p>
+</td>
+<td style="border-bottom-width: 1px; border-bottom-style: Solid; border-right-width: 1px; border-right-style: Solid;">
+<p>Temperature</p>
+</td>
+<td style="border-bottom-width: 1px; border-bottom-style: Solid; border-right-width: 1px; border-right-style: Solid;">
+<p>0</p>
+</td>
+<td style="border-bottom-width: 1px; border-bottom-style: Solid; border-right-width: 1px; border-right-style: Solid;">
+<p>5000</p>
+</td>
+<td style="border-bottom-width: 1px; border-bottom-style: Solid; border-right-width: 1px; border-right-style: Solid;">
+<p>Kelvin</p>
+</td>
+<td style="border-bottom-width: 1px; border-bottom-style: Solid; border-right-width: 1px; border-right-style: Solid;">
+<p>True</p>
+</td>
+</tr>
+<tr>
+<td style="border-right-width: 1px; border-right-style: Solid; border-left-width: 1px; border-left-style: Solid; border-bottom-width: 1px; border-bottom-style: Solid;">
+<p>"Viscosity"</p>
+</td>
+<td style="border-right-width: 1px; border-right-style: Solid; border-bottom-width: 1px; border-bottom-style: Solid;">
+<p>Turbulence viscosity ratio (turbulence viscosity / laminar viscosity)</p>
+</td>
+<td style="border-right-width: 1px; border-right-style: Solid; border-bottom-width: 1px; border-bottom-style: Solid;">
+<p>0</p>
+</td>
+<td style="border-right-width: 1px; border-right-style: Solid; border-bottom-width: 1px; border-bottom-style: Solid;">
+<p>1e5</p>
+</td>
+<td style="border-right-width: 1px; border-right-style: Solid; border-bottom-width: 1px; border-bottom-style: Solid;">
+<p>&#160;</p>
+</td>
+<td style="border-bottom-width: 1px; border-bottom-style: Solid; border-right-width: 1px; border-right-style: Solid;">
+<p>False</p>
+</td>
+</tr>
+</table>
+<p class="VBA-Text-Indent" style="font-weight: normal;">&#160;</p>
+<p class="VBA-Text-Indent" style="font-weight: normal;">If the flag <span style="font-style: italic;"><i>stop_solver</i></span> is <span style="font-style: italic;"><i>True</i></span>, the solver will stop when the given quantity exceeds the specified range. If the flag is <span style="font-style: italic;"><i>False</i></span>, a warning will be printed and the solver will continue.</p>
+<p class="VBA-Text-Indent" style="font-weight: normal;">The optional parameter <span style="font-style: italic;"><i>unit</i></span> specifies the unit in which the "<span style="font-style: italic;"><i>Velocity</i></span>" or "<span style="font-style: italic;"><i>Temperature</i></span>" limits are given. By default, "m/s" or "Kelvin" are assumed, respectively. This setting will be ignored for the "<span style="font-style: italic;"><i>PressureDensityRatio</i></span>" and "<span style="font-style: italic;"><i>Viscosity</i></span>" types. Available velocity units are "<span style="font-style: italic;"><i>m/s</i></span>" and "<span style="font-style: italic;"><i>km/h"</i></span>. Available temperature units are&#160;"<span style="font-style: italic;"><i>Celsiu</i></span>s", "<span style="font-style: italic;"><i>Fahrenheit</i></span>" and "<span style="font-style: italic;"><i>Kelvin</i></span>".</p>
+<p class="VBA-Text-Indent" style="font-weight: normal;">&#160;</p>
+<p class="VBA-Heading-Method"><a name="FanUnderRelaxationFactor" id="FanUnderRelaxationFactor"></a>FanUnderRelaxationFactor( <a href="../common_vbageneral/common_general_double.htm">double</a> <span style="font-style: italic;"><i>value</i></span> &#160;)</p>
+<p class="VBA-Text-Indent">&#160;This factor controls the under-relaxation of the fan(s) used in the simulation. It applies only to fans with fan curves having at least two points and limits the pressure change &#160;from the previous to the current volume flow. A value of 0 indicates that the default under-relaxation factor is used by the solver. The default relaxation factor is 1 which means that there is no under-relaxation.</p>
+<p class="VBA-Text-Indent">&#160;default: <span style="font-style: italic;"><i>value = 1.0</i></span></p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method"><a name="CellFractionRecursionDepth" id="CellFractionRecursionDepth"></a>CellFractionRecursionDepth( <a href="../common_vbageneral/common_general_double.htm">int</a> &#160;<span style="font-style: italic;"><i>value</i></span> &#160;)</p>
+<p class="Topic-Text-Indent" style="margin-top: 0pt; text-align: justify; font-family: Arial; font-size: 9pt; margin-bottom: 3pt; font-weight: 400; margin-left: 15pt; color: rgb(0, 0, 0); font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; letter-spacing: normal; orphans: 2; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial;">Controls the accuracy of the averaging process of the material properties in the solid fraction of the cells. A value of 0 &#160;indicates that no recursion is performed, therefore the material properties of the cell correspond exactly to the material properties of the solid&#160;<span style="font-weight: bold;">closest</span>&#160;to the cell center. An integer value n strictly larger than 0&#160;indicates that the cell will be recursively split n times in the three directions to calculate the volume and area fractions of all shapes intersecting it.</p>
+<p class="Topic-Text-Indent" style="margin-top: 0pt; text-align: justify; font-family: Arial; font-size: 9pt; margin-bottom: 3pt; font-weight: 400; margin-left: 15pt; color: rgb(0, 0, 0); font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; letter-spacing: normal; orphans: 2; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial;">&#160;default: <span style="font-style: italic;"><i>value = 3</i></span></p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">AmbientTemperatureUnit ( <a href="../common_vbageneral/common_general_double.htm">double</a> <span style="font-style: italic;"><i>value,</i></span> &#160;<a href="../common_vbageneral/common_general_enum.htm" style="font-weight: bold;">enum</a> <span style="font-style: italic;"><i>unit</i></span>&#160;)</p>
+<p class="VBA-Text-Indent">Sets the background temperature <span style="font-style: italic;"><i>value</i></span> and the corresponding temperature <span style="font-style: italic;"><i>unit</i></span>. Available units are "Celsius", "Fahrenheit" and "Kelvin".</p>
+<p class="VBA-Text-Indent">default: <span style="font-style: italic;"><i>value = 293.15, unit = Kelvin</i></span></p>
+<p class="VBA-Heading-Method">&#160;</p>
+<p class="VBA-Heading-Method">AmbientRadiationTemperatureUnit ( <a href="../common_vbageneral/common_general_double.htm">double</a> <span style="font-style: italic;"><i>value,</i></span> &#160;<a href="../common_vbageneral/common_general_enum.htm" style="font-weight: bold;">enum</a> <span style="font-style: italic;"><i>unit</i></span>&#160;)</p>
+<p class="VBA-Text-Indent">Sets the solar temperature <span style="font-style: italic;"><i>value</i></span> and the corresponding temperature <span style="font-style: italic;"><i>unit</i></span>. Available units are "Celsius", "Fahrenheit" and "Kelvin".</p>
+<p class="VBA-Text-Indent">default: <span style="font-style: italic;"><i>value = 293.15, unit = Kelvin</i></span></p>
+<p class="VBA-Heading-Method">&#160;</p>
+<p class="VBA-Heading-Method"><a name="SetCavityLimit" id="SetCavityLimit"></a>SetCavityLimit(&#160;<a href="../common_vbageneral/common_general_enum.htm" style="font-weight: bold;">enum</a> <span style="font-style: italic;"><i>type,</i></span> &#160;<a href="../common_vbageneral/common_general_double.htm">double</a> <span style="font-style: italic;"><i>value</i></span>&#160;)</p>
+<p class="Topic-Text-Indent" style="margin-top: 0pt; text-align: justify; font-family: Arial; font-size: 9pt; margin-bottom: 3pt; font-weight: 400; margin-left: 15pt; color: rgb(0, 0, 0); font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; letter-spacing: normal; orphans: 2; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial;">Filters out cavities on the computational domain whose volume is below a threshold &#160;in model units. The available options for the <span style="font-style: italic;"><i>type unit</i></span> are "AutoVolume" and "Volume". If <span style="font-style: italic;"><i>unit = "AutoVolume",</i></span> the threshold will be automatically calculated based on the model geometry. If &#160;<span style="font-style: italic;"><i>type= "Volume",</i></span> the threshold value will be given by <span style="font-style: italic;"><i>value.</i></span></p>
+<p class="Topic-Text-Indent" style="margin-top: 0pt; text-align: justify; font-family: Arial; font-size: 9pt; margin-bottom: 3pt; font-weight: 400; margin-left: 15pt; color: rgb(0, 0, 0); font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; letter-spacing: normal; orphans: 2; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial;">default: <span style="font-style: italic;"><i>&#160;type= "AutoVolume"</i></span></p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method"><a name="TurbulenceModel1" id="TurbulenceModel1"></a>PerformancePriority( <a href="../common_vbageneral/common_general_enum.htm" style="font-weight: bold;">enum</a> <span style="font-style: italic;"><i>type</i></span>)</p>
+<p class="VBA-Text-Indent"><span style="font-size: 12px; font-variant-ligatures: normal; font-variant-caps: normal; orphans: 2; text-align: justify; widows: 2; -webkit-text-stroke-width: 0px; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; display: inline ! important ; float: none;">Controls the solver performance settings.</span>. The following modes are supported:</p>
+<table style="vertical-align: top; margin-left: 50px;" width="74.435%" cellspacing="0">
+<col style="width: 29.127%;" />
+<col style="width: 70.873%;" />
+<tr style="vertical-align: top;">
+<td style="border: Solid 1px #000000; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text-Indent" style="margin-left: 0px; font-weight: bold;"><span style="font-style: italic;"><i>type (</i></span><a href="../common_vbageneral/common_general_enum.htm" id="a212" style="font-weight: bold;" name="a212">enum</a> )</p>
+</td>
+<td style="border-top: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text-Indent" style="margin-left: 0px; font-weight: bold;">meaning</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-right: 10px; padding-left: 10px;">
+<p>"Speed"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text-Indent" style="font-size: 12px; font-variant-ligatures: normal; font-variant-caps: normal; display: inline ! important ; margin-left: 0px;"><span style="orphans: 2; widows: 2; -webkit-text-stroke-width: 0px; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial;">T</span><span style="orphans: 2; widows: 2; -webkit-text-stroke-width: 0px; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial;">he fastest solver settings are selected</span></p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-right: 10px; padding-left: 10px;">
+<p>"Memory"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text-Indent" style="margin-left: 0px;"><span style="font-size: 12px; font-variant-ligatures: normal; font-variant-caps: normal; orphans: 2; text-align: justify; widows: 2; -webkit-text-stroke-width: 0px; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; display: inline ! important ; float: none;">The settings leading to the smallest memory usage are selected. Note that this will generally lead to a longer simulation time.</span></p>
+</td>
+</tr>
+</table>
+<p class="VBA-Text-Indent">default: <span style="font-style: italic;"><i>type= "Speed"</i></span></p>
+<p style="margin-top: 0px; margin-bottom: 0px; margin-left: 0px; margin-right: 0px; -qt-block-indent: 0; text-indent: 0px;">&#160;</p>
+<p class="VBA-Heading-Method"><a name="SolverMode" id="SolverMode"></a>SolverMode( <a href="../common_vbageneral/common_general_enum.htm" style="font-weight: bold;">enum</a> <span style="font-style: italic;"><i>mode</i></span>)</p>
+<p class="VBA-Text-Indent">Determines the simulation regime. The enum <span style="font-style: italic;"><i>mode can be either "</i></span>Steady-state" or "Transient".</p>
+<p class="VBA-Text-Indent">default: <span style="font-style: italic;"><i>mode= "Steady-state"</i></span></p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method"><a name="TransientSolverDuration" id="TransientSolverDuration"></a>TransientSolverDuration( <a href="../common_vbageneral/common_general_variant.htm">double</a> time)</p>
+<p class="VBA-Text-Indent">Specifies the duration of the transient simulation, in model units.</p>
+<p class="VBA-Text-Indent">default: <span style="font-style: italic;"><i>time = 0.0</i></span></p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">SetTimeStep( <a href="../common_vbageneral/common_general_enum.htm" style="font-weight: bold;">enum</a> <span style="font-style: italic;"><i>property</i></span>, <span style="font-style: italic;"><i><a href="../common_vbageneral/common_general_variant.htm">variant</a></i></span> value)</p>
+<p class="VBA-Text-Indent" style="font-weight: normal;">Set different properties for the transient state simulation. Each <span style="font-style: italic;"><i>property</i></span> has to be defined with its respective <span style="font-style: italic;"><i>value. The properties are:</i></span></p>
+<table style="margin-left: 40px; left: 0px; top: 1623px;" cellspacing="0">
+<col width="167" />
+<col width="177" />
+<col width="824" />
+<tr>
+<td style="border-bottom-width: 1px; border-bottom-style: Solid; border-right-width: 1px; border-right-style: Solid; border-left-width: 1px; border-left-style: Solid; border-top-width: 1px; border-top-style: Solid;">
+<p style="font-style: italic; font-weight: bold;">property (<a href="../common_vbageneral/common_general_enum.htm" style="font-style: italic; font-weight: bold;">enum</a>)</p>
+</td>
+<td style="border-bottom-width: 1px; border-bottom-style: Solid; border-right-width: 1px; border-right-style: Solid; border-top-width: 1px; border-top-style: Solid;">
+<p style="font-weight: bold;"><a href="../common_vbageneral/common_general_variant.htm" style="font-weight: bold;">variant</a> type</p>
+</td>
+<td style="border-bottom-width: 1px; border-bottom-style: Solid; border-top-width: 1px; border-top-style: Solid; border-right-width: 1px; border-right-style: Solid;">
+<p style="font-weight: bold;">meaning</p>
+</td>
+</tr>
+<tr>
+<td style="border-bottom-width: 1px; border-bottom-style: Solid; border-right-width: 1px; border-right-style: Solid; border-left-width: 1px; border-left-style: Solid;">
+<p>"Method"</p>
+</td>
+<td style="border-bottom-width: 1px; border-bottom-style: Solid; border-right-width: 1px; border-right-style: Solid;">
+<p style="font-style: italic; font-weight: normal;"><a href="../common_vbageneral/common_general_enum.htm" style="font-style: italic; font-weight: normal;">enum</a></p>
+</td>
+<td style="border-bottom-width: 1px; border-bottom-style: Solid; border-right-width: 1px; border-right-style: Solid;">
+<p>Method for time step definition. The available methods are "Adaptive" and "Fixed". default: "value = "Adaptive"</p>
+</td>
+</tr>
+<tr>
+<td style="border-bottom-width: 1px; border-bottom-style: Solid; border-right-width: 1px; border-right-style: Solid; border-left-width: 1px; border-left-style: Solid;">
+<p>"ConstNumSamples"</p>
+</td>
+<td style="border-bottom-width: 1px; border-bottom-style: Solid; border-right-width: 1px; border-right-style: Solid;">
+<p><a href="../common_vbageneral/common_general_variant.htm">double</a></p>
+</td>
+<td style="border-bottom-width: 1px; border-bottom-style: Solid; border-right-width: 1px; border-right-style: Solid;">
+<p><span style="font-size: 12px; font-variant-ligatures: normal; font-variant-caps: normal; orphans: 2; text-align: justify; widows: 2; -webkit-text-stroke-width: 0px; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; display: inline ! important ; float: none;">Defines the total number of time steps to be performed.</span> Only relevant if a Fixed time step is being used. default: value = 0</p>
+</td>
+</tr>
+<tr>
+<td style="border-bottom-width: 1px; border-bottom-style: Solid; border-right-width: 1px; border-right-style: Solid; border-left-width: 1px; border-left-style: Solid;">
+<p>"ConstStepWidth"</p>
+</td>
+<td style="border-bottom-width: 1px; border-bottom-style: Solid; border-right-width: 1px; border-right-style: Solid;">
+<p><a href="../common_vbageneral/common_general_variant.htm">double</a></p>
+</td>
+<td style="border-bottom-width: 1px; border-bottom-style: Solid; border-right-width: 1px; border-right-style: Solid;">
+<p><span style="font-size: 12px; font-variant-ligatures: normal; font-variant-caps: normal; orphans: 2; text-align: justify; widows: 2; -webkit-text-stroke-width: 0px; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; display: inline ! important ; float: none;">Width of the time steps to be used during the entire simulation process.</span> Only relevant if a Fixed time step is being used. default: value = 1e-2</p>
+</td>
+</tr>
+<tr>
+<td style="border-bottom-width: 1px; border-bottom-style: Solid; border-right-width: 1px; border-right-style: Solid; border-left-width: 1px; border-left-style: Solid;">
+<p>"AdaptiveCFL"</p>
+</td>
+<td style="border-bottom-width: 1px; border-bottom-style: Solid; border-right-width: 1px; border-right-style: Solid;">
+<p><a href="../common_vbageneral/common_general_variant.htm">double</a></p>
+</td>
+<td style="border-bottom-width: 1px; border-bottom-style: Solid; border-right-width: 1px; border-right-style: Solid;">
+<p>Corresponds to the CFL value, which is a multiplication factor used to adjust the first transient time step. Only relevant if an Adaptive time step is being used. default: value = 1</p>
+</td>
+</tr>
+<tr>
+<td style="border-bottom-width: 1px; border-bottom-style: Solid; border-right-width: 1px; border-right-style: Solid; border-left-width: 1px; border-left-style: Solid;">
+<p>"AdaptiveMinStep"</p>
+</td>
+<td style="border-bottom-width: 1px; border-bottom-style: Solid; border-right-width: 1px; border-right-style: Solid;">
+<p><a href="../common_vbageneral/common_general_variant.htm">double</a></p>
+</td>
+<td style="border-bottom-width: 1px; border-bottom-style: Solid; border-right-width: 1px; border-right-style: Solid;">
+<p><span style="font-variant-ligatures: normal; font-variant-caps: normal; orphans: 2; widows: 2; -webkit-text-stroke-width: 0px; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial;">The minimum time step width allowed to perform the time integration.</span> Only relevant if an Adaptive time step is being used. default: value = 1e-6</p>
+</td>
+</tr>
+<tr>
+<td style="border-bottom-width: 1px; border-bottom-style: Solid; border-right-width: 1px; border-right-style: Solid; border-left-width: 1px; border-left-style: Solid;">
+<p>"AdaptiveMaxStep"</p>
+</td>
+<td style="border-bottom-width: 1px; border-bottom-style: Solid; border-right-width: 1px; border-right-style: Solid;">
+<p><a href="../common_vbageneral/common_general_variant.htm">double</a></p>
+</td>
+<td style="border-bottom-width: 1px; border-bottom-style: Solid; border-right-width: 1px; border-right-style: Solid;">
+<p><span style="font-variant-ligatures: normal; font-variant-caps: normal; orphans: 2; widows: 2; -webkit-text-stroke-width: 0px; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial;">The maximum time step width allowed to perform the time integration</span> Only relevant if an Adaptive time step is being used. default: value = 1e-2</p>
+</td>
+</tr>
+<tr>
+<td style="border-right-width: 1px; border-right-style: Solid; border-left-width: 1px; border-left-style: Solid; border-bottom-width: 1px; border-bottom-style: Solid;">
+<p>"AdaptiveMaxGrowth"</p>
+</td>
+<td style="border-right-width: 1px; border-right-style: Solid; border-bottom-width: 1px; border-bottom-style: Solid;">
+<p><a href="../common_vbageneral/common_general_variant.htm">double</a></p>
+</td>
+<td style="border-bottom-width: 1px; border-bottom-style: Solid; border-right-width: 1px; border-right-style: Solid;">
+<p><span style="font-variant-ligatures: normal; font-variant-caps: normal; orphans: 2; widows: 2; -webkit-text-stroke-width: 0px; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial;">The maximum relative excitation signal change allowed between two successive time steps</span> Only relevant if an Adaptive time step is being used. default: value = 10</p>
+</td>
+</tr>
+</table>
+<p class="VBA-Text-Indent" style="font-weight: normal;">&#160;</p>
+<p class="VBA-Heading-Method"><a name="FluidFlow" id="FluidFlow"></a>FluidFlow( <a href="../common_vbageneral/common_general_bool_data_type.htm" id="a4112112" style="font-weight: bold;" name="a4112112">bool</a> &#160;<span style="font-style: italic;"><i>flag</i></span> )</p>
+<p class="VBA-Text-Indent" style="font-weight: normal; font-style: normal; text-decoration: none;"><i style="font-style: normal;"><span style="font-size: 12px; font-variant-ligatures: normal; font-variant-caps: normal; orphans: 2; text-align: justify; widows: 2; -webkit-text-stroke-width: 0px; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; font-style: normal;">If</span> <span style="font-size: 12px; font-variant-ligatures: normal; font-variant-caps: normal; orphans: 2; text-align: justify; widows: 2; -webkit-text-stroke-width: 0px; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; font-style: italic;"><i>flag</i></span> <span style="font-size: 12px; font-variant-ligatures: normal; font-variant-caps: normal; orphans: 2; text-align: justify; widows: 2; -webkit-text-stroke-width: 0px; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; font-style: normal;">is set to</span> <span style="font-size: 12px; font-variant-ligatures: normal; font-variant-caps: normal; orphans: 2; text-align: justify; widows: 2; -webkit-text-stroke-width: 0px; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; font-style: italic;"><i>True</i></span></i>&#160;<span style="font-size: 12px; font-variant-ligatures: normal; font-variant-caps: normal; orphans: 2; text-align: justify; widows: 2; -webkit-text-stroke-width: 0px; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; display: inline ! important ; float: none;">the fluid flow is simulated and the flow pressure and velocity distributions are calculated.</span> Note that if <span style="font-style: italic;"><i><a href="#FluidFlow">FluidFlow</a></i></span> is set to <span style="font-style: italic;"><i>False and</i></span> &#160;<a href="#ThermalConduction">ThermalConduction</a> is set to <span style="font-style: italic;"><i>True, t</i></span><span style="font-size: 12px; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; orphans: 2; text-align: justify; widows: 2; -webkit-text-stroke-width: 0px; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; display: inline ! important ; float: none;">he fluid temperature distribution is calculated assuming a stagnant fluid (no flow).</span> <span style="font-style: italic;"><i>&#160;</i></span>&#160;</p>
+<p class="VBA-Text-Indent">default: <span style="font-style: italic;"><i>flag = True</i></span></p>
+<p style="margin-top: 0px; margin-bottom: 0px; margin-left: 0px; margin-right: 0px; -qt-block-indent: 0; text-indent: 0px;">&#160;</p>
+<p class="VBA-Heading-Method"><a name="Gravity" id="Gravity"></a>Gravity ( <a href="../common_vbageneral/common_general_double.htm">double</a> <span style="font-style: italic;"><i>X,</i></span> <a href="../common_vbageneral/common_general_double.htm">double</a> <span style="font-style: italic;"><i>Y,</i></span> <a href="../common_vbageneral/common_general_double.htm">double</a> <span style="font-style: italic;"><i>Z</i></span> )</p>
+<p class="VBA-Text-Indent">Specifies the gravitation vector in global <span style="font-style: italic;"><i>X, Y, Z</i></span> coordinates in m/s². This setting is taken into account only, if the <span style="font-style: italic;"><i><a href="#UseGravity">UseGravity</a></i></span> flag is set to <span style="font-style: italic;"><i>True</i></span>. By default, the gravity is ignored in a CHT calculation.</p>
+<p class="VBA-Text-Indent">default: <span style="font-style: italic;"><i>X = 0, Y = 0, Z = -9.81</i></span></p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method"><a name="UseGravity" id="UseGravity"></a>UseGravity ( <a href="../common_vbageneral/common_general_bool_data_type.htm" id="a411211" style="font-weight: bold;" name="a411211">bool</a> &#160;<span style="font-style: italic;"><i>flag</i></span> )</p>
+<p class="VBA-Text-Indent">Specifies if the <span style="font-style: italic;"><i><a href="#Gravity">Gravity</a></i></span> setting shall be taken into account (<span style="font-style: italic;"><i>flag=True</i></span>) by the solver. By default, the gravity setting is ignored.</p>
+<p class="VBA-Text-Indent">default: <span style="font-style: italic;"><i>flag = False</i></span></p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method"><a name="FreezeFlow" id="FreezeFlow"></a>FreezeFlow ( <a href="../common_vbageneral/common_general_bool_data_type.htm" id="a41121111" style="font-weight: bold;" name="a41121111">bool</a> &#160;<span style="font-style: italic;"><i>flag</i></span> )</p>
+<p class="VBA-Text-Indent">If this setting is activated (<span style="font-style: italic;"><i>flag=True</i></span>), flow and thermal conduction will not be simulated. In this case, the <span style="font-style: italic;"><i><a href="#ThermalConductionOnly">ThermalConduction</a></i></span> flag will be set to <span style="font-style: italic;"><i>False</i></span>, internally.<br />
+<span style="font-weight: bold;">Please note that, this setting is not yet supported by the CHT solver.</span><br />
+Please note that a later command wins over previous settings.</p>
+<p class="VBA-Text-Indent">default: <span style="font-style: italic;"><i>flag = False</i></span></p>
+<p class="VBA-Heading-Method">&#160;</p>
+<p class="VBA-Heading-Method"><a name="ThermalConduction" id="ThermalConduction"></a>ThermalConduction ( <a href="../common_vbageneral/common_general_bool_data_type.htm" id="a411211111" style="font-weight: bold;" name="a411211111">bool</a> &#160;<span style="font-style: italic;"><i>flag</i></span> )</p>
+<p class="VBA-Text-Indent">If this setting is activated (<span style="font-style: italic;"><i>flag=True</i></span>), heat conduction/diffusion in fluids and solids will be simulated. In this case, the <a href="#FreezeFlow" style="font-style: italic;">FreezeFlow</a> flag will be set to <span style="font-style: italic;"><i>False</i></span>, internally. Radiation can be defined in addition. &#160;</p>
+<p class="VBA-Text-Indent">default: <span style="font-style: italic;"><i>flag = False</i></span></p>
+<p class="VBA-Heading-Method">&#160;</p>
+<p class="VBA-Heading-Method"><a name="Radiation" id="Radiation"></a>Radiation ( <a href="../common_vbageneral/common_general_bool_data_type.htm" id="a411211112" style="font-weight: bold;" name="a411211112">bool</a> &#160;<span style="font-style: italic;"><i>flag</i></span> )</p>
+<p class="VBA-Text-Indent">If this setting is activated (<span style="font-style: italic;"><i>flag=True</i></span>), the contribution of heat radiation will be added to the heat transfers. Only thermal surface properties, isothermal walls and the surfaces of solids with a non-zero emissivity are taken into account.</p>
+<p class="VBA-Text-Indent">default: <span style="font-style: italic;"><i>flag = False</i></span></p>
+<p class="VBA-Heading-Method">&#160;</p>
+<p class="VBA-Heading-Method"><a name="SolarRadiation" id="SolarRadiation"></a>SolarRadiation ( <a href="../common_vbageneral/common_general_bool_data_type.htm" id="a411211113" style="font-weight: bold;" name="a411211113">bool</a> &#160;<span style="font-style: italic;"><i>flag</i></span> )</p>
+<p class="VBA-Text-Indent">If this setting is activated (<span style="font-style: italic;"><i>flag=True</i></span>), solar radiation will be taken into account.&#160;</p>
+<p class="VBA-Text-Indent">default: <span style="font-style: italic;"><i>flag = False</i></span></p>
+<p style="margin-top: 0px; margin-bottom: 0px; margin-left: 0px; margin-right: 0px; -qt-block-indent: 0; text-indent: 0px;">&#160;</p>
+<p class="VBA-Heading-Method"><span style="-qt-block-indent: 0;"><a name="TurbulenceModelChoice" id="TurbulenceModelChoice"></a>TurbulenceModelChoice</span>(&#160;<a href="../common_vbageneral/common_general_enum.htm" style="font-weight: bold;">enum</a> <span style="font-style: italic;"><i>model &#160;</i></span>)</p>
+<p class="VBA-Text-Indent">Specifies how turbulence is defined in the solver.</p>
+<table style="vertical-align: top; margin-left: 50px;" cellspacing="0" width="74.761%">
+<col style="width: 29%;" />
+<col style="width: 71%;" />
+<tr style="vertical-align: top;">
+<td style="border: Solid 1px #000000; width: 29%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text-Indent" style="margin-left: 0px;"><span style="font-style: italic;"><i>model (</i></span><a href="../common_vbageneral/common_general_enum.htm" id="a213" style="font-weight: normal;" name="a213">enum</a> )</p>
+</td>
+<td style="border-top: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 71%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text-Indent">meaning</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 29%; padding-right: 10px; padding-left: 10px;">
+<p>"Automatic"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 71%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text-Indent">The model will be selected by the solver, either laminar or zero-equation turbulent, depending on the model and further solver setup.</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 29%; padding-right: 10px; padding-left: 10px;">
+<p>"Custom"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 71%; padding-right: 10px; padding-left: 10px;">
+<p style="text-indent: 24px;">The model can be selected by the user for each fluid domain.</p>
+</td>
+</tr>
+</table>
+<p class="VBA-Text-Indent">default:<span style="font-style: italic;"><i>, model = "Automatic"</i></span></p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method"><a name="SetTurbulenceModelForFluidDomain" id="SetTurbulenceModelForFluidDomain"></a>SetTurbulenceModelForFluidDomain (<span style="font-style: italic;"><i>&#160;<a href="../common_vbageneral/common_general_string.htm" id="a612" style="font-style: normal; font-weight: bold;" name="a612">string</a> domain_name,</i></span> &#160;<a href="../common_vbageneral/common_general_enum.htm" style="font-weight: bold;">enum</a> <span style="font-style: italic;"><i>model &#160;</i></span>)</p>
+<p class="VBA-Text-Indent">Specifies how turbulence is defined in the solver for each fluid domain. One <span style="font-style: italic;"><i>model can be assigned to each domain_name,</i></span> The following models are supported:</p>
+<table style="vertical-align: top; margin-left: 50px;" cellspacing="0" width="74.761%">
+<col style="width: 29%;" />
+<col style="width: 71%;" />
+<tr style="vertical-align: top;">
+<td style="border: Solid 1px #000000; width: 29%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text-Indent" style="margin-left: 0px;"><span style="font-style: italic;"><i>model (</i></span><a href="../common_vbageneral/common_general_enum.htm" id="a21" style="font-weight: normal;" name="a21">enum</a> )</p>
+</td>
+<td style="border-top: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 71%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text-Indent">meaning</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 29%; padding-right: 10px; padding-left: 10px;">
+<p>"Automatic"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 71%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text-Indent">The model will be selected by the solver, either laminar or zero-equation turbulent, depending on the model and further solver setup.</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 29%; padding-right: 10px; padding-left: 10px;">
+<p>"Laminar"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 71%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text-Indent">No turbulence will be taken into account.</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 29%; padding-right: 10px; padding-left: 10px;">
+<p>"Zero-Equation"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 71%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text-Indent">The zero-equation turbulence model will be used.</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 29%; padding-right: 10px; padding-left: 10px;">
+<p>"Two-Equation"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 71%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text-Indent">The two-equation turbulence model will be used. Further parameters can be specified, see <span style="font-style: italic;"><i><a href="#TurbulenceDefault">TurbulenceDefault</a></i></span> and <span style="font-style: italic;"><i><a href="#TurbulenceProperties">TurbulenceProperties</a></i></span>.</p>
+</td>
+</tr>
+</table>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Text-Indent">default: <span style="font-style: italic;"><i>domain_name = "$background", model = "Automatic"</i></span></p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">ResetTurbulenceProperties</p>
+<p class="VBA-Text-Indent"><span lang="EN-US" xml:lang="EN-US">For the "Two-Equation" <a href="#TurbulenceModel">Turbulence Model</a>, further parameters can be defined. It is recommended to reset all previous turbulence parameter definitions before providing a new set of turbulence properties. This can be done by calling this command. For other turbulence models this call is irrelevant.</span></p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method"><a name="TurbulenceDefault" id="TurbulenceDefault"></a>TurbulenceDefault (&#160;<a href="../common_vbageneral/common_general_enum.htm" style="font-weight: bold;">enum</a> <span style="font-style: italic;"><i>coeff1_type, <a href="../common_vbageneral/common_general_double.htm">double</a> coeff1_value, <a href="../common_vbageneral/common_general_enum.htm" style="font-weight: bold;">enum</a></i></span> <span style="font-style: italic;"><i>coeff2_type, <a href="../common_vbageneral/common_general_double.htm">double</a> coeff2_value</i></span> )</p>
+<p class="VBA-Text-Indent">For the "Two-Equation" <a href="#TurbulenceModel">Turbulence Model</a>, the equation coefficients can be specified for inlets. An inlet is an opening which <span xml:lang="EN-US" lang="EN-US">allows flow entering the calculation domain, see also <a href="#TurbulenceProperties" style="font-style: italic;">TurbulenceProperties</a></span>.</p>
+<p class="VBA-Text-Indent">Inlets without any specification inherit default settings, usually an intensity value of 1% and an eddy length scale value of 10%. These default settings can be modified here. Available coefficient types are:</p>
+<table style="vertical-align: top; margin-left: 50px;" cellspacing="0" width="74.761%">
+<col style="width: 29%;" />
+<col style="width: 71%;" />
+<tr style="vertical-align: top;">
+<td style="border: Solid 1px #000000; width: 29%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text-Indent" style="margin-left: 0px;"><span style="font-style: italic;"><i>coeff1_type/coeff2_type (</i></span><a href="../common_vbageneral/common_general_enum.htm" id="a211" style="font-weight: normal;" name="a211">enum</a> )</p>
+</td>
+<td style="border-top: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 71%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text-Indent">meaning</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 29%; padding-right: 10px; padding-left: 10px;">
+<p>"Intensity"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 71%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text-Indent">The following <span style="font-style: italic;"><i>coeff_value</i></span> will specify the turbulent intensity I in %.</p>
+<p class="VBA-Text-Indent">A positive number between 0 and 100 is expected for <span style="font-style: italic;"><i>coeff_value</i></span>.</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 29%; padding-right: 10px; padding-left: 10px;">
+<p>"Length"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 71%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text-Indent">The following <span style="font-style: italic;"><i>coeff_value</i></span> &#160;will specify <span style="font-family: Tahoma, sans-serif;"><font style="font-size: 10pt;" size="2">the eddy length L in % as a percentage of the characteristic</font></span> <span style="font-family: Tahoma, sans-serif; font-style: italic;"><i><font style="font-size: 10pt;" size="2"><i>dimension</i></font></i></span> <span style="font-family: Tahoma, sans-serif;"><font style="font-size: 10pt;" size="2">of the inlet, which depends on the geometry and computes from the ratio of inlet area and inlet perimeter multiplied by a factor 4.</font></span></p>
+<p class="VBA-Text-Indent">A positive number between 0 and 100 is expected for <span style="font-style: italic;"><i>coeff_value</i></span>.</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 29%; padding-right: 10px; padding-left: 10px;">
+<p>"Energy"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 71%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text-Indent">The following <span style="font-style: italic;"><i>coeff_value</i></span> will specify .the turbulent kinetic energy K in J/kg.</p>
+<p class="VBA-Text-Indent">A positive number is expected for <span style="font-style: italic;"><i>coeff_value</i></span>.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 29%; padding-right: 10px; padding-left: 10px;">
+<p>"Dissipation"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 71%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text-Indent">The following <span style="font-style: italic;"><i>coeff_value</i></span> will specify <span style="font-family: Tahoma, sans-serif;"><font style="font-size: 10pt;" size="2">the turbulent kinetic dissipation rate Eps in J/kg.</font></span></p>
+<p class="VBA-Text-Indent">A positive number is expected for <span style="font-style: italic;"><i>coeff_value</i></span>.</p>
+</td>
+</tr>
+</table>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Text-Indent">Please note that only "Intensity" and "Length" can be combined for coeff1_type and coeff2_type or "Energy" and "Dissipation", respectively; no mixed combinations.</p>
+<p class="VBA-Text-Indent">Please note that this setting is not relevant for other <a href="#TurbulenceModel">turbulence models</a> than the "Two-Equation" model.</p>
+<p class="VBA-Text-Indent">default: <span style="font-style: italic;"><i>coeff1_type = "Intensity", coeff1_value = 1.0, coeff2_type = "Length", coeff2_value = 10</i></span></p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method"><a name="TurbulenceProperties" id="TurbulenceProperties"></a>TurbulenceProperties ( <a href="../common_vbageneral/common_general_enum.htm" style="font-weight: bold;">enum</a> <span style="font-style: italic;"><i>inlet_type, <a href="../common_vbageneral/common_general_string.htm" id="a61" style="font-style: normal; font-weight: bold;" name="a61">string</a> inlet_name,</i></span> <a href="../common_vbageneral/common_general_enum.htm" style="font-weight: bold;">enum</a> <span style="font-style: italic;"><i>coeff1_type, <a href="../common_vbageneral/common_general_double.htm">double</a> coeff1_value, <a href="../common_vbageneral/common_general_enum.htm" style="font-weight: bold;">enum</a></i></span> <span style="font-style: italic;"><i>coeff2_type, <a href="../common_vbageneral/common_general_double.htm">double</a> coeff2_value</i></span> )</p>
+<p class="VBA-Text-Indent">For the "Two-Equation" <a href="#TurbulenceModel">Turbulence Model</a>, the equation coefficients can be specified for inlets. An inlet is an opening which <span xml:lang="EN-US" lang="EN-US">allows flow entering the calculation domain, as characterized in the following table:</span></p>
+<table style="vertical-align: top; margin-left: 50px;" cellspacing="0" width="74.761%">
+<col style="width: 29%;" />
+<col style="width: 71%;" />
+<tr style="vertical-align: top;">
+<td style="border: Solid 1px #000000; width: 29%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text-Indent" style="margin-left: 0px;"><span style="font-style: italic;"><i>inlet_type (</i></span><a href="../common_vbageneral/common_general_enum.htm" id="a2111" style="font-weight: normal;" name="a2111">enum</a> )</p>
+</td>
+<td style="border-top: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 71%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text-Indent">considered for turbulence setup if...</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 29%; padding-right: 10px; padding-left: 10px;">
+<p>"Fan"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 71%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text-Indent">- entry face is planar and aligned with a boundary of the calculation domain</p>
+<p class="VBA-Text-Indent">- the flow enters the computational domain</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 29%; padding-right: 10px; padding-left: 10px;">
+<p>"Boundary"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 71%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text-Indent">- flow quantity is "Velocity" and the velocity vector points into the <span style="font-family: Arial, sans-serif;">calculation domain<br />
+or<br />
+- no velocity-based</span> <span style="font-size: 10pt; font-family: Arial, sans-serif;"><font size="2" style="font-size:10pt;">boundary is defined and<br />
+- boundary has the highest gauge pressure value<br />
+- but not all pressure-based boundaries have the same value</font></span></p>
+</td>
+</tr>
+</table>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Text-Indent"><span xml:lang="EN-US" lang="EN-US">If the</span> <span xml:lang="EN-US" lang="EN-US" style="font-style: italic;"><i>inlet_type</i></span> <span xml:lang="EN-US" lang="EN-US">is "Fan", &#160;the</span> <span xml:lang="EN-US" lang="EN-US" style="font-style: italic;"><i>inlet_name</i></span> <span xml:lang="EN-US" lang="EN-US">is the fan name. If the</span> <span xml:lang="EN-US" lang="EN-US" style="font-style: italic;"><i>inlet_type</i></span> <span xml:lang="EN-US" lang="EN-US">is "Boundary", the</span> <span xml:lang="EN-US" lang="EN-US" style="font-style: italic;"><i>inlet_name</i></span> <span xml:lang="EN-US" lang="EN-US">should be "Xmin", "Xmax", "Ymin", "YMax", "Zmin" or "Zmax" depending on the position of the boundary in the calculation domain.</span></p>
+<p class="VBA-Text-Indent"><span xml:lang="EN-US" lang="EN-US">Please note that depending on the geometry and setup of the model, the validity of an inlet can change. It is possible to define parameters for all boundaries and fans. Only the settings for the valid ones (according to the above table) will be taken into account for the calculation.</span></p>
+<p class="VBA-Text-Indent"><span xml:lang="EN-US" lang="EN-US">For each inlet, the <a href="#TurbulenceDefault">default</a> setting can be overwritten by specifying a pair of coefficient types (</span><span xml:lang="EN-US" lang="EN-US" style="font-style: italic;"><i>coeff1_type, coeff2_type</i></span><span xml:lang="EN-US" lang="EN-US">) each followed by the corresponding value (</span><span xml:lang="EN-US" lang="EN-US" style="font-style: italic;"><i>coeff1_value, coeff2_value</i></span><span xml:lang="EN-US" lang="EN-US">). Valid coefficient types and values are explained for the <a href="#TurbulenceDefault">TurbulenceDefault</a> command.</span></p>
+<p class="VBA-Text-Indent"><span xml:lang="EN-US" lang="EN-US">P</span>lease note that only "Intensity" and "Length" can be combined for coeff1_type and coeff2_type or "Energy" and "Dissipation", respectively; no mixed combinations.</p>
+<p class="VBA-Text-Indent">Please note that this setting is not relevant for other <a href="#TurbulenceModel">turbulence models</a> than the "Two-Equation" model.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">AdaptiveSteadyStateCFL ( <a href="../common_vbageneral/common_general_double.htm">double</a> <span style="font-style: italic;"><i>value</i></span>&#160;)</p>
+<p class="VBA-Text-Indent">A stability factor (Courant-Friedrichs-Lewy number) can be defined, which influences the stability limit of internal numerical calculations. If the calculation process shows slight effects of instability, a small reduction of the stability factor might recover a stable state. Note: Choosing a factor greater than one is not advisable and will likely produce instability. By default, the stability factor is determined automatically which is equivalent to the <span style="font-style: italic;"><i>value=0</i></span>.</p>
+<p class="VBA-Text-Indent">default: <span style="font-style: italic;"><i>value = 0</i></span></p>
+<p class="VBA-Heading-Method">&#160;</p>
+<p class="VBA-Heading-Method"><a name="OverwriteBackgroundMaterial" id="OverwriteBackgroundMaterial"></a>OverwriteBackgroundMaterial( <a href="../common_vbageneral/common_general_bool_data_type.htm" id="a151" name="a151">bool</a> &#160;<span style="font-style: italic;"><i>flag</i></span> )</p>
+<p class="VBA-Text-Indent"><span lang="EN-US" xml:lang="EN-US">The background is usually defined by the background properties and ambient conditions. Usually the background is air at mean sea level. To simulate air at a higher <a href="#Altitude">altitude</a>, this</span> <span lang="EN-US" xml:lang="EN-US" style="font-style: italic;"><i>flag</i></span> <span lang="EN-US" xml:lang="EN-US">must be set to</span> <span lang="EN-US" xml:lang="EN-US" style="font-style: italic;"><i>True</i></span><span lang="EN-US" xml:lang="EN-US">. Please mind that the density setting of the background material will be overwritten in this case. Please avoid activating this flag for non-air background material.</span></p>
+<p class="VBA-Text-Indent"><span lang="EN-US" xml:lang="EN-US">default:</span> <span lang="EN-US" xml:lang="EN-US" style="font-style: italic;"><i>flag = False</i></span></p>
+<p class="VBA-Heading-Method">&#160;</p>
+<p class="VBA-Heading-Method"><a name="Altitude" id="Altitude"></a>Altitude ( <a href="../common_vbageneral/common_general_double.htm">double</a> <span style="font-style: italic;"><i>value</i></span>&#160;)</p>
+<p class="VBA-Text-Indent">This <span style="font-style: italic;"><i>value</i></span> specifies the geometric altitude above mean see level for background simulated as air. The atmospheric pressure as well as the atmospheric density will be calculated automatically.</p>
+<p class="VBA-Text-Indent">Please not that this setting will be ignored, if the <span style="font-style: italic;"><i><a href="#OverwriteBackgroundMaterial">OverwriteBackgroundMaterial</a></i></span> flag is <span style="font-style: italic;"><i>False</i></span>.</p>
+<p class="VBA-Text-Indent">default: <span style="font-style: italic;"><i>value = 0</i></span></p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">ApplyAltitudeCorrectionToFans( <a href="../common_vbageneral/common_general_bool_data_type.htm" id="a1511" name="a1511">bool</a> &#160;<span style="font-style: italic;"><i>flag</i></span> )</p>
+<p class="VBA-Text-Indent"><span lang="EN-US" xml:lang="EN-US">If the background material is overwritten, i.e. the</span> <span style="font-style: italic;"><i><a href="#OverwriteBackgroundMaterial">OverwriteBackgroundMaterial</a></i></span> <span lang="EN-US" xml:lang="EN-US">flag is</span> <span style="font-style: italic;"><i>True</i></span><span lang="EN-US" xml:lang="EN-US">, the <a href="#Altitude">altitude</a> correction can be taken into account also for the fan curves. The given fan curve settings will then be corrected automatically in the solver with respect to the given <a href="#Altitude">altitude</a> value. If the fan curve data is already provided in the corrected form, the</span> <span lang="EN-US" xml:lang="EN-US" style="font-style: italic;"><i>ApplyAltitudeCorrectionToFans</i></span> <span lang="EN-US" xml:lang="EN-US">flag must be set to</span> <span lang="EN-US" xml:lang="EN-US" style="font-style: italic;"><i>False</i></span><span lang="EN-US" xml:lang="EN-US">.</span></p>
+<p class="VBA-Text-Indent">Please note: This setting will be ignored, if the <span style="font-style: italic;"><i><a href="#OverwriteBackgroundMaterial">OverwriteBackgroundMaterial</a></i></span> flag is <span style="font-style: italic;"><i>False</i></span>.</p>
+<p class="VBA-Text-Indent"><span lang="EN-US" xml:lang="EN-US">default:</span> <span lang="EN-US" xml:lang="EN-US" style="font-style: italic;"><i>flag = True</i></span></p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">UseDistributedComputing( <a href="../common_vbageneral/common_general_bool_data_type.htm" id="a15" name="a15">bool</a> &#160;<span style="font-style: italic;"><i>flag</i></span> )</p>
+<p class="VBA-Text-Indent"><span lang="EN-US" xml:lang="EN-US">If</span> <span style="font-style: italic;"><i>flag</i></span> <span lang="EN-US" xml:lang="EN-US">is set to</span> <span lang="EN-US" xml:lang="EN-US" style="font-style: italic;"><i>True,</i></span> <span lang="EN-US" xml:lang="EN-US">this method enables the distributed calculation of different solver runs across the network.</span></p>
+<p class="VBA-Text-Indent"><span lang="EN-US" xml:lang="EN-US">default:</span> <span lang="EN-US" xml:lang="EN-US" style="font-style: italic;"><i>flag = False</i></span></p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">UseMaxNumberOfThreads( <a href="../common_vbageneral/common_general_bool_data_type.htm" id="a152" name="a152">bool</a> &#160;<span style="font-style: italic;"><i>flag</i></span> )</p>
+<p class="VBA-Text-Indent">This flag should be set to True to activate take advantage of the functionality of a multi-socket, multi-CPU device machine. The calculation will be split into corresponding parts and will run parallel on the different devices and different threads to save simulation time. The desired number of CPU devices and number of threads can provided in the MaxNumberOfThreads and MaximumNumberOfCPUDevices commands.</p>
+<p class="VBA-Text-Indent">default: flag = True</p>
+<p class="vba-text-indent">&#160;</p>
+<p class="VBA-Heading-Method"><a name="MaximumNumberOfCPUDevices" id="MaximumNumberOfCPUDevices"></a>MaximumNumberOfCPUDevices ( <a href="../common_vbageneral/common_general_integer.htm">int</a> <span style="font-style: italic;"><i>number</i></span> )</p>
+<p class="VBA-Text-Indent"><span lang="EN-US" xml:lang="EN-US">Defines the maximum</span> <span style="font-style: italic;"><i>number</i></span> <span lang="EN-US" xml:lang="EN-US">of devices to which the calculation will be split. This setting will be taken into account only if the</span> <span lang="EN-US" xml:lang="EN-US" style="font-style: italic;"><i><a href="#UseMaxNumberOfThreads">UseMaxNumberOfThreads</a></i></span> <span lang="EN-US" xml:lang="EN-US">flag is</span> <span lang="EN-US" xml:lang="EN-US" style="font-style: italic;"><i>True</i></span><span lang="EN-US" xml:lang="EN-US">.</span></p>
+<p class="VBA-Text-Indent"><span lang="EN-US" xml:lang="EN-US">default:</span> <span lang="EN-US" xml:lang="EN-US" style="font-style: italic;"><i>number = 2</i></span></p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method"><a name="MaxNumberOfThreads" id="MaxNumberOfThreads"></a>MaxNumberOfThreads ( <a href="../common_vbageneral/common_general_integer.htm">int</a> <span style="font-style: italic;"><i>number</i></span> )</p>
+<p class="VBA-Text-Indent"><span lang="EN-US" xml:lang="EN-US">Defines the maximum</span> <span style="font-style: italic;"><i>number</i></span> <span lang="EN-US" xml:lang="EN-US">of parallel threads to be used for the conjugate heat transfer solver run. This setting will be taken into account only if the</span> <span lang="EN-US" xml:lang="EN-US" style="font-style: italic;"><i><a href="#UseMaxNumberOfThreads">UseMaxNumberOfThreads</a></i></span> <span lang="EN-US" xml:lang="EN-US">flag is</span> <span lang="EN-US" xml:lang="EN-US" style="font-style: italic;"><i>True</i></span><span lang="EN-US" xml:lang="EN-US">.</span></p>
+<p class="VBA-Text-Indent"><span lang="EN-US" xml:lang="EN-US">default:</span> <span lang="EN-US" xml:lang="EN-US" style="font-style: italic;"><i>number = 4</i></span></p>
+<p class="vba-text-indent">&#160;</p>
+<p class="VBA-Heading-Method"><a name="HardwareAcceleration" id="HardwareAcceleration"></a>HardwareAcceleration ( <a href="../common_vbageneral/common_general_bool_data_type.htm" id="a76" style="font-weight: bold;" name="a76">bool</a> <span style="font-style: italic;"><i>flag</i></span> )</p>
+<p class="VBA-Text-Indent">If <span style="font-style: italic;"><i>flag</i></span> is set to <span style="font-style: italic;"><i>True</i></span>, hardware acceleration for the conjugate heat transfer solver is activated. Please note, that a hardware acceleration card has to be inserted into your computer in order to profit from this setting.</p>
+<p class="VBA-Text-Indent">default: <span style="font-style: italic;"><i>flag = False</i></span></p>
+<p class="VBA-Heading-Method">&#160;</p>
+<p class="VBA-Heading-Method">MaximumNumberOfGPUs ( <a href="../common_vbageneral/common_general_integer.htm">int</a> <span style="font-style: italic;"><i>number</i></span> )</p>
+<p class="VBA-Text-Indent"><span lang="EN-US" xml:lang="EN-US">Defines the maximum</span> <span style="font-style: italic;"><i>number</i></span> <span lang="EN-US" xml:lang="EN-US">of GPUs to be used for the conjugate heat transfer solver run. Please not that this setting takes effect only, if a hardware acceleration card has to be inserted into your computer and if the</span> <span lang="EN-US" xml:lang="EN-US" style="font-style: italic;"><i><a href="#HardwareAcceleration">HardwareAcceleration</a></i></span> <span lang="EN-US" xml:lang="EN-US">flag is</span> <span lang="EN-US" xml:lang="EN-US" style="font-style: italic;"><i>True</i></span><span lang="EN-US" xml:lang="EN-US">.</span></p>
+<p class="VBA-Text-Indent"><span lang="EN-US" xml:lang="EN-US">default:</span> <span lang="EN-US" xml:lang="EN-US" style="font-style: italic;"><i>number = 4</i></span></p>
+<p class="VBA-Heading-Method">&#160;</p>
+<p class="VBA-Heading-Method">MinimumNumberOfRays ( <a href="../common_vbageneral/common_general_integer.htm">int</a> <span style="font-style: italic;"><i>number</i></span> )</p>
+<p class="VBA-Text-Indent"><span lang="EN-US" xml:lang="EN-US">Defines the minimum</span> <span style="font-style: italic;"><i>number</i></span> <span lang="EN-US" xml:lang="EN-US">of rays used for view factor calculation.</span></p>
+<p class="VBA-Text-Indent"><span lang="EN-US" xml:lang="EN-US">default:</span> <span lang="EN-US" xml:lang="EN-US" style="font-style: italic;"><i>number = 32</i></span></p>
+<p class="VBA-Heading-Method">&#160;</p>
+<p class="VBA-Heading-Method">MaximumNumberOfRays ( <a href="../common_vbageneral/common_general_integer.htm">int</a> <span style="font-style: italic;"><i>number</i></span> )</p>
+<p class="VBA-Text-Indent"><span lang="EN-US" xml:lang="EN-US">Defines the maximum number of rays used for view factor calculation.</span></p>
+<p class="VBA-Text-Indent"><span lang="EN-US" xml:lang="EN-US">default:</span> <span lang="EN-US" xml:lang="EN-US" style="font-style: italic;"><i>number = 512</i></span></p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">UseSolarCalculator( <a href="../common_vbageneral/common_general_bool_data_type.htm" id="a1521" name="a1521">bool</a> &#160;<span style="font-style: italic;"><i>flag</i></span> )</p>
+<p class="VBA-Text-Indent">If <span style="font-style: italic;"><i>flag</i></span> is set to <span style="font-style: italic;"><i>True</i></span>, the direct, diffuse and reflected solar irradiation components and the solar direction are calculated based on the parameters defined by <span style="font-style: italic;"><i>&#160;<a href="#Day">Day</a>, <a href="#Month">Month</a>, <a href="#Hour">Hour</a>, <a href="#Minute">Minute</a>, <a href="#Latitude">Latitude</a>, <a href="#Longitude">Longitude</a>, <a href="#Timezone">Timezone</a>, <a href="#SolarAltitude">SolarAltitude</a>, <a href="#GeographicalSouth">GeographicalSouth</a>, <a href="#GroundReflectivity">GroundReflectivity</a> and <a href="#CloudinessFactor">CloudinessFactor</a>.</i></span></p>
+<p class="VBA-Text-Indent">If <span style="font-style: italic;"><i>flag</i></span> is set to <span style="font-style: italic;"><i>False</i></span>, the direct, diffuse and reflected solar irradiation components and the solar direction are defined by <a href="#SolarDirection">SolarDirection</a>, <a href="#DirectSolarIrradiation">DirectSolarIrradiation</a>, <a href="#DiffuseIrradiation">DiffuseIrradiation</a> and <a href="#ReflectedIrradiation">ReflectedIrradiation</a>.</p>
+<p class="VBA-Text-Indent">Note that solar radiation will only be accounted in the simulation if <a href="#SolarRadiation">SolarRadiation</a> is <span style="font-style: italic;"><i>True</i></span>.</p>
+<p class="VBA-Text-Indent">default: <span style="font-style: italic;"><i>flag=True</i></span></p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method"><a name="SolarDirection" id="SolarDirection"></a>SolarDirection ( <a href="../common_vbageneral/common_general_double.htm">double</a> <span style="font-style: italic;"><i>X,</i></span> <a href="../common_vbageneral/common_general_double.htm">double</a> <span style="font-style: italic;"><i>Y,</i></span> <a href="../common_vbageneral/common_general_double.htm">double</a> <span style="font-style: italic;"><i>Z</i></span> )</p>
+<p class="VBA-Text-Indent">Specifies the solar vector in global <span style="font-style: italic;"><i>X, Y, Z</i></span> coordinates.</p>
+<p class="VBA-Text-Indent">default: <span style="font-style: italic;"><i>X = 0.870988, Y = 0.252885, Z = 0.421223</i></span></p>
+<p class="VBA-Heading-Method">&#160;</p>
+<p class="VBA-Heading-Method"><a name="DirectSolarIrradiation" id="DirectSolarIrradiation"></a>DirectSolarIrradiation ( <a href="../common_vbageneral/common_general_double.htm">double</a> <span style="font-style: italic;"><i>value</i></span>&#160;)</p>
+<p class="VBA-Text-Indent">This <span style="font-style: italic;"><i>value</i></span> specifies the <span style="font-size: 12px; font-variant-ligatures: normal; font-variant-caps: normal; orphans: 2; widows: 2; -webkit-text-stroke-width: 0px; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; display: inline ! important ; float: none;">direct irradiation received by a surface whose normal is parallel to the direction of the sun,</span> <span style="font-size: 12px; font-variant-ligatures: normal; font-variant-caps: normal; orphans: 2; widows: 2; -webkit-text-stroke-width: 0px; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; display: inline ! important ; float: none;">given in [W/m²].</span></p>
+<p class="VBA-Text-Indent">default: <span style="font-style: italic;"><i>value =</i></span> 892.809</p>
+<p class="VBA-Heading-Method">&#160;</p>
+<p class="VBA-Heading-Method"><a name="DiffuseIrradiation" id="DiffuseIrradiation"></a>DiffuseIrradiation ( <a href="../common_vbageneral/common_general_double.htm">double</a> <span style="font-style: italic;"><i>value</i></span>&#160;)</p>
+<p class="VBA-Text-Indent"><span style="font-size: 12px; font-variant-ligatures: normal; font-variant-caps: normal; orphans: 2; widows: 2; -webkit-text-stroke-width: 0px; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; display: inline ! important ; float: none;">Corresponds to the diffuse irradiation received by horizontal surface given in [W/m²].</span></p>
+<p class="VBA-Text-Indent">default: <span style="font-style: italic;"><i>value =</i></span> 46.1405</p>
+<p class="VBA-Heading-Method">&#160;</p>
+<p class="VBA-Heading-Method"><a name="ReflectedIrradiation" id="ReflectedIrradiation"></a>ReflectedIrradiation ( <a href="../common_vbageneral/common_general_double.htm">double</a> <span style="font-style: italic;"><i>value</i></span>&#160;)</p>
+<p class="VBA-Text-Indent"><span style="font-size: 12px; font-variant-ligatures: normal; font-variant-caps: normal; orphans: 2; widows: 2; -webkit-text-stroke-width: 0px; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; display: inline ! important ; float: none;">Corresponds to the reflected radiation received by horizontal surface facing down given in [W/m²].</span></p>
+<p class="VBA-Text-Indent">default: <span style="font-style: italic;"><i>value =</i></span> 84.4424</p>
+<p class="VBA-Text-Indent" style="margin-left: 0px;">&#160;</p>
+<p class="VBA-Heading-Method"><a name="Day" id="Day"></a>Day( <a href="../common_vbageneral/common_general_integer.htm">int</a> &#160;<span style="font-style: italic;"><i>value</i></span>&#160;)</p>
+<p class="VBA-Text-Indent"><span style="font-size: 12px; font-variant-ligatures: normal; font-variant-caps: normal; orphans: 2; widows: 2; -webkit-text-stroke-width: 0px; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; display: inline ! important ; float: none;">Day of the month The gregorian calendar is used.</span></p>
+<p class="VBA-Text-Indent">default: <span style="font-style: italic;"><i>value =</i></span> 23</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method"><a name="Month" id="Month"></a>Month ( <a href="../common_vbageneral/common_general_integer.htm">int</a> &#160;<span style="font-style: italic;"><i>value</i></span>&#160;)</p>
+<p class="VBA-Text-Indent">&#160;<span style="font-size: 12px; font-variant-ligatures: normal; font-variant-caps: normal; orphans: 2; widows: 2; -webkit-text-stroke-width: 0px; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; display: inline ! important ; float: none;">Month of the year. The gregorian calendar is used.</span></p>
+<p class="VBA-Text-Indent">default: <span style="font-style: italic;"><i>value = 1</i></span></p>
+<p class="VBA-Text-Indent" style="margin-left: 0px;">&#160;</p>
+<p class="VBA-Heading-Method"><a name="Hour" id="Hour"></a>Hour ( <a href="../common_vbageneral/common_general_integer.htm">int</a> &#160;<span style="font-style: italic;"><i>value</i></span>&#160;)</p>
+<p class="VBA-Text-Indent"><span style="font-size: 12px; font-variant-ligatures: normal; font-variant-caps: normal; orphans: 2; widows: 2; -webkit-text-stroke-width: 0px; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; display: inline ! important ; float: none;">Time in 24 hour format.</span></p>
+<p class="VBA-Text-Indent">default: <span style="font-style: italic;"><i>value = 12</i></span></p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method"><a name="Minute" id="Minute"></a>Minute ( <a href="../common_vbageneral/common_general_integer.htm">int</a> &#160;<span style="font-style: italic;"><i>value</i></span>&#160;)</p>
+<p class="VBA-Text-Indent"><span style="font-size: 12px; font-variant-ligatures: normal; font-variant-caps: normal; orphans: 2; widows: 2; -webkit-text-stroke-width: 0px; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; display: inline ! important ; float: none;">Minute of the hour between 0 and 59.</span></p>
+<p class="VBA-Text-Indent">default: <span style="font-style: italic;"><i>value = 0</i></span></p>
+<p class="VBA-Text-Indent" style="margin-left: 0px;">&#160;</p>
+<p class="VBA-Heading-Method"><a name="Latitude" id="Latitude"></a>Latitude ( <a href="../common_vbageneral/common_general_double.htm">double</a> &#160;<span style="font-style: italic;"><i>value</i></span>&#160;)</p>
+<p class="VBA-Text-Indent" style="font-size: 12px; font-variant-ligatures: normal; font-variant-caps: normal;"><span style="orphans: 2; widows: 2; -webkit-text-stroke-width: 0px; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; display: inline ! important ; float: none;">Latitude where the studied model is located. Value must be between -90 and +90</span></p>
+<p class="VBA-Text-Indent">default: <span style="font-style: italic;"><i>value =</i></span> 43.7872</p>
+<p class="VBA-Text-Indent" style="margin-left: 0px;">&#160;</p>
+<p class="VBA-Heading-Method"><a name="Longitude" id="Longitude"></a>Longitude&#160;( <a href="../common_vbageneral/common_general_double.htm">double</a> <span style="font-style: italic;"><i>value</i></span>&#160;)</p>
+<p class="VBA-Text-Indent"><span style="font-size: 12px; font-variant-ligatures: normal; font-variant-caps: normal; orphans: 2; widows: 2; -webkit-text-stroke-width: 0px; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; display: inline ! important ; float: none;">Longitude where the studied model is located. Value must be between-180 and +180.</span></p>
+<p class="VBA-Text-Indent">default: <span style="font-style: italic;"><i>value =</i></span> 2.2112</p>
+<p class="VBA-Text-Indent" style="margin-left: 0px;">&#160;</p>
+<p class="VBA-Heading-Method"><a name="TimeZone" id="TimeZone"></a>TimeZone&#160;( <a href="../common_vbageneral/common_general_double.htm">double</a> <span style="font-style: italic;"><i>value</i></span>&#160;)</p>
+<p class="VBA-Text-Indent"><span style="font-size: 12px; font-variant-ligatures: normal; font-variant-caps: normal; orphans: 2; widows: 2; -webkit-text-stroke-width: 0px; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; display: inline ! important ; float: none;">Time zone of the model as decimal number (e.g. for UTC+5:30 use 5.5).</span></p>
+<p class="VBA-Text-Indent">default: <span style="font-style: italic;"><i>value = 1.0</i></span></p>
+<p class="VBA-Text-Indent" style="margin-left: 0px;">&#160;</p>
+<p class="VBA-Heading-Method"><a name="SolarAltitude" id="SolarAltitude"></a>SolarAltitude ( <a href="../common_vbageneral/common_general_double.htm">double</a> <span style="font-style: italic;"><i>value</i></span>&#160;)</p>
+<p class="VBA-Text-Indent" style="font-size: 12px; font-variant-ligatures: normal; font-variant-caps: normal;"><span style="orphans: 2; widows: 2; -webkit-text-stroke-width: 0px; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; display: inline ! important ; float: none;">Altitude of the model with respect to sea level, in meter.</span></p>
+<p class="VBA-Text-Indent">default: <span style="font-style: italic;"><i>value = 182</i></span></p>
+<p class="VBA-Text-Indent" style="margin-left: 0px;">&#160;</p>
+<p class="VBA-Heading-Method"><a name="Nadir" id="Nadir"></a>Nadir ( <a href="../common_vbageneral/common_general_double.htm">double</a> <span style="font-style: italic;"><i>X,</i></span> <a href="../common_vbageneral/common_general_double.htm">double</a> <span style="font-style: italic;"><i>Y,</i></span> <a href="../common_vbageneral/common_general_double.htm">double</a> <span style="font-style: italic;"><i>Z</i></span> )</p>
+<p class="VBA-Text-Indent" style="font-size: 12px; font-variant-ligatures: normal; font-variant-caps: normal;"><span style="orphans: 2; widows: 2; -webkit-text-stroke-width: 0px; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; display: inline ! important ; float: none;">Coordinates of the Nadir (the vertical direction pointing downwards from the model), in global</span> <span style="font-style: italic;"><i>X, Y, Z</i></span> <span style="orphans: 2; widows: 2; -webkit-text-stroke-width: 0px; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; display: inline ! important ; float: none;">coordinates.</span></p>
+<p class="VBA-Text-Indent">default: <span style="font-style: italic;"><i>X = 0, Y =0 , Z = -1</i></span></p>
+<p class="VBA-Text-Indent" style="margin-left: 0px;">&#160;</p>
+<p class="VBA-Heading-Method"><a name="GeographicalSouth_" id="GeographicalSouth_"></a>GeographicalSouth &#160;( <a href="../common_vbageneral/common_general_double.htm">double</a> <span style="font-style: italic;"><i>X,</i></span> <a href="../common_vbageneral/common_general_double.htm">double</a> <span style="font-style: italic;"><i>Y,</i></span> <a href="../common_vbageneral/common_general_double.htm">double</a> <span style="font-style: italic;"><i>Z</i></span> )</p>
+<p class="VBA-Text-Indent" style="font-size: 12px; font-variant-ligatures: normal; font-variant-caps: normal;"><span style="orphans: 2; widows: 2; -webkit-text-stroke-width: 0px; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; display: inline ! important ; float: none;">Coordinates of the geographical south, in global</span> <span style="font-style: italic;"><i>X, Y, Z</i></span> <span style="orphans: 2; widows: 2; -webkit-text-stroke-width: 0px; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; display: inline ! important ; float: none;">coordinates. .</span></p>
+<p class="VBA-Text-Indent">default: <span style="font-style: italic;"><i>X = 1, Y = 0, Z = 0</i></span></p>
+<p class="VBA-Text-Indent" style="margin-left: 0px;">&#160;</p>
+<p class="VBA-Heading-Method"><a name="GroundReflectivity" id="GroundReflectivity"></a>GroundReflectivity ( <a href="../common_vbageneral/common_general_double.htm">double</a> <span style="font-style: italic;"><i>value</i></span>&#160;)</p>
+<p class="VBA-Text-Indent"><span style="font-size: 12px; font-variant-ligatures: normal; font-variant-caps: normal; orphans: 2; widows: 2; -webkit-text-stroke-width: 0px; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; display: inline ! important ; float: none;">Coefficient of reflectivity of the ground used in the calculation of reflected irradiation. Must be between 0 and 1 (both extrema included).</span></p>
+<p class="VBA-Text-Indent">default: <span style="font-style: italic;"><i>value = 0.2</i></span></p>
+<p class="VBA-Text-Indent" style="margin-left: 0px;">&#160;</p>
+<p class="VBA-Heading-Method"><a name="CloudinessFactor" id="CloudinessFactor"></a>CloudinessFactor ( <a href="../common_vbageneral/common_general_double.htm">double</a> <span style="font-style: italic;"><i>value</i></span>&#160;)</p>
+<p class="VBA-Text-Indent"><span style="font-size: 12px; font-variant-ligatures: normal; font-variant-caps: normal; orphans: 2; widows: 2; -webkit-text-stroke-width: 0px; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; display: inline ! important ; float: none;">Factor between 0 and 1 (both extrema included), representing cloudiness. 0 means clear sky conditions and 1 means totally cloudy sky.</span></p>
+<p class="VBA-Text-Indent">default: <span style="font-style: italic;"><i>value = 0.0</i></span></p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method"><span style="font-style: italic;"><i><a name="SolarRadiation1" id="SolarRadiation1"></a>StoreResultInCache</i></span> ( <a href="../common_vbageneral/common_general_bool_data_type.htm" id="a4112111131" style="font-weight: bold;" name="a4112111131">bool</a> &#160;<span style="font-style: italic;"><i>flag</i></span> )</p>
+<p class="VBA-Text-Indent">If this setting is activated (<span style="font-style: italic;"><i>flag=True</i></span>), the solver results are stored in the data cache after the simulation.</p>
+<p class="VBA-Text-Indent">default: <span style="font-style: italic;"><i>flag = False</i></span></p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method"><span style="font-style: italic;"><i><a name="SolarRadiation11" id="SolarRadiation11"></a>LoadResultFromCache</i></span> ( <a href="../common_vbageneral/common_general_bool_data_type.htm" id="a41121111311" style="font-weight: bold;" name="a41121111311">bool</a> &#160;<span style="font-style: italic;"><i>flag</i></span> )</p>
+<p class="VBA-Text-Indent">If this setting is activated (<span style="font-style: italic;"><i>flag=True</i></span>), the solver attempts to resume the simulation using data from the last cached run as initial conditions.</p>
+<p class="VBA-Text-Indent">default: <span style="font-style: italic;"><i>flag = False</i></span></p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">Start <a href="../common_vbageneral/common_general_integer.htm" id="a56" name="a56">int</a></p>
+<p class="VBA-Text-Indent">Starts the conjugate heat transfer simulation with the current settings and returns 0 if the calculation is successfully finished and an error code &gt;0 otherwise.</p>
+<p class="VBA-Heading-Category"><a name="Defaults" id="Defaults"></a>Default Settings</p>
+<p class="VBA-Text-Example">Accuracy (0.001)</p>
+<p class="VBA-Text-Example">UseGlobalAccuracy (True)</p>
+<p class="VBA-Text-Example">ContinuityResidual (0.001)</p>
+<p class="VBA-Text-Example">MomentumResidual (0.001)</p>
+<p class="VBA-Text-Example">HeatTransferResidual (0.001)</p>
+<p class="VBA-Text-Example">GlobalEquationBalance (0.01)</p>
+<p class="VBA-Text-Example">UseGlobalEquationBalance (True)</p>
+<p class="VBA-Text-Example">MassFlowResidual (0.01)</p>
+<p class="VBA-Text-Example">FluidHeatFluxResidual (0.01)</p>
+<p class="VBA-Text-Example">SolidHeatFluxResidual (0.01)</p>
+<p class="VBA-Text-Example">UseMaximumNumberOfIterations (False)</p>
+<p class="VBA-Text-Example">MaximumNumberOfIterations (0)</p>
+<p class="VBA-Text-Example">UseMinimumNumberOfIterations (True)</p>
+<p class="VBA-Text-Example">MinimumNumberOfIterations (6)</p>
+<p class="VBA-Text-Example">EnableSuspendSolverRun (True)</p>
+<p class="VBA-Text-Example">UseRelativeVelocityUpdate (True)</p>
+<p class="VBA-Text-Example">RelativeVelocityUpdate (0.01)</p>
+<p class="VBA-Text-Example">TransientResPressure (1e-9)</p>
+<p class="VBA-Text-Example">TransientResPressurePerCell (1e-4)</p>
+<p class="VBA-Text-Example">TransientUseMaxIterationsSIMPLE (True)</p>
+<p class="VBA-Text-Example">TransientUseMinIterationsSIMPLE (True)</p>
+<p class="VBA-Text-Example">TransientUseIterationsTurbulenceSolver (True)</p>
+<p class="VBA-Text-Example">TransientMaxIterationsSIMPLE (10)</p>
+<p class="VBA-Text-Example">TransientMinIterationsSIMPLE (2)</p>
+<p class="VBA-Text-Example">TransientIterationsTurbulenceSolver (1)</p>
+<p class="VBA-Text-Example">FanUnderRelaxationFactor (1.0)</p>
+<p class="VBA-Text-Example">CellFractionRecursionDepth (3)</p>
+<p class="VBA-Text-Example">AmbientTemperatureUnit (293.15, "Kelvin")</p>
+<p class="VBA-Text-Example">AmbientRadiationTemperatureUnit (293.15, "Kelvin")</p>
+<p class="VBA-Text-Example">SetCavityLimit ("AutoVolume")</p>
+<p class="VBA-Text-Example">PerformancePriority ("Speed")</p>
+<p class="VBA-Text-Example">SolverMode ("Steady-state")</p>
+<p class="VBA-Text-Example">TransientSolverDuration (0.0)</p>
+<p class="VBA-Text-Example">SetTimeStep (enumproperty, variantvalue)</p>
+<p class="VBA-Text-Example">FluidFlow (True)</p>
+<p class="VBA-Text-Example">Gravity (0.0, 0.0, -9.81)</p>
+<p class="VBA-Text-Example">UseGravity (False)</p>
+<p class="VBA-Text-Example">FlowOnly (False)</p>
+<p class="VBA-Text-Example">FreezeFlow (False)</p>
+<p class="VBA-Text-Example">ThermalConduction (False)</p>
+<p class="VBA-Text-Example">Radiation (False)</p>
+<p class="VBA-Text-Example">SolarRadiation (False)</p>
+<p class="VBA-Text-Example">TurbulenceModelChoice ("Automatic")</p>
+<p class="VBA-Text-Example">AdaptiveSteadyStateCFL (0)</p>
+<p class="VBA-Text-Example">OverwriteBackgroundMaterial (False)</p>
+<p class="VBA-Text-Example">Altitude (0)</p>
+<p class="VBA-Text-Example">ApplyAltitudeCorrectionToFans (True)</p>
+<p class="VBA-Text-Example">UseDistributedComputing (False)</p>
+<p class="VBA-Text-Example">UseMaxNumberOfThreads (True)</p>
+<p class="VBA-Text-Example">MaximumNumberOfCPUDevices (2)</p>
+<p class="VBA-Text-Example">MaxNumberOfThreads (4)</p>
+<p class="VBA-Text-Example">HardwareAcceleration (False)</p>
+<p class="VBA-Text-Example">MaximumNumberOfGPUs (4)</p>
+<p class="VBA-Text-Example">MinimumNumberOfRays (32)</p>
+<p class="VBA-Text-Example">MaximumNumberOfRays (512)</p>
+<p class="VBA-Text-Example">SolarDirection (0.870988, 0.252885, 0.421223)</p>
+<p class="VBA-Text-Example">DirectSolarIrradiation (892.809)</p>
+<p class="VBA-Text-Example">DiffuseIrradiation (46.1405)</p>
+<p class="VBA-Text-Example">ReflectedIrradiation (84.4424)</p>
+<p class="VBA-Text-Example">UseSolarCalculator (True)</p>
+<p class="VBA-Text-Example">SolarDirection (0.870988, &#160;0.252885, &#160;0.421223)</p>
+<p class="VBA-Text-Example">DirectSolarIrradiation (892.809)</p>
+<p class="VBA-Text-Example">DiffuseIrradiation (46.1405)</p>
+<p class="VBA-Text-Example">ReflectedIrradiation (84.4424)</p>
+<p class="VBA-Text-Example">Day (23)</p>
+<p class="VBA-Text-Example">Month (1)</p>
+<p class="VBA-Text-Example">Hour (12)</p>
+<p class="VBA-Text-Example">Minute (0)</p>
+<p class="VBA-Text-Example">Latitude (43.7872)</p>
+<p class="VBA-Text-Example">Longitude (2.2112)</p>
+<p class="VBA-Text-Example">TimeZone (1.0)</p>
+<p class="VBA-Text-Example">SolarAltitude (182)</p>
+<p class="VBA-Text-Example">Nadir (0.0, &#160;0.0, &#160;-1.0)</p>
+<p class="VBA-Text-Example">GeographicalSouth (1.0, &#160;0.0, &#160;0.0)</p>
+<p class="VBA-Text-Example">GroundReflectivity (0.2)</p>
+<p class="VBA-Text-Example">CloudinessFactor (0.0)</p>
+<p class="VBA-Text-Example">StoreResultInCache (False)</p>
+<p class="VBA-Text-Example">LoadResultFromCache (False)</p>
+<p class="VBA-Heading-Category"><a name="Example" id="Example"></a>Example</p>
+<p class="VBA-Text-Example">With CHTSolver</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.SolverMode "Transient"</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.FluidFlow "True"</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.UseGravity "True"</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.Gravity "0", "0", "-9.81"</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.TurbulenceModelChoice "Automatic"</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.ThermalConduction "True"</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.AmbientTemperatureUnit "293.15", "K"</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.Radiation &#160;"True"</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.SolarRadiation &#160;"True"</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.AmbientRadiationTemperatureUnit "293.15", "K"</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.TransientSolverDuration "1"</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.SetTimeStep "Method", "Fixed"</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.InitialSteadyStateRelax "0"</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.TurbulenceLVELMaxViscosity "0"</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.TurbulenceRelaxation "0"</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.TurbulenceKEpsMaxViscosity "0"</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.TurbulenceRampIt "100"</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.NarrowChannelToAmbient "0", "0", "0", "0", "0", "0"</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.UseMaxNumberOfThreads "True"</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.MaxNumberOfThreads "4"</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.MaximumNumberOfCPUDevices "3"</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.UseDistributedComputing "False"</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.HardwareAcceleration "False"</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.MaximumNumberOfGPUs "1"</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.UseGlobalAccuracy "True"</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.Accuracy "0.001"</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.ContinuityResidual "0.001"</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.MomentumResidual "0.001"</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.HeatTransferResidual "0.001"</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.UseGlobalEquationBalance "True"</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.GlobalEquationBalance "0.01"</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.MassFlowResidual "0.01"</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.FluidHeatFluxResidual "0.01"</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.SolidHeatFluxResidual "0.01"</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.UseMaximumNumberOfIterations "False"</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.MaximumNumberOfIterations "0"</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.UseMinimumNumberOfIterations "True"</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.MinimumNumberOfIterations "6"</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.EnableSuspendSolverRun "True"</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.UseRelativeVelocityUpdate "True"</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.RelativeVelocityUpdate "0.01"</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.TransientResPressure "1e-9"</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.TransientResPressurePerCell "1e-4"</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.TransientUseMaxIterationsSIMPLE "True"</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.TransientMaxIterationsSIMPLE "10"</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.TransientUseMinIterationsSIMPLE "True"</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.TransientMinIterationsSIMPLE "2"</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.TransientUseIterationsTurbulenceSolver "True"</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.TransientIterationsTurbulenceSolver "1"</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.SetSolutionLimit "Velocity", "True", "-200", "200", "m/s"</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.SetSolutionLimit "PressureDensityRatio", "True", "-5000", "5000"</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.SetSolutionLimit "Temperature", "True", "0", "5000", "K"</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.SetSolutionLimit "Viscosity", "False", "0", "100000"</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.SetTurbulenceModelForFluidDomain "$background", "Automatic"</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.FanUnderRelaxationFactor "0"</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.AdaptiveSteadyStateCFL "0"</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.SetCavityLimit "AutoVolume"</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.OverwriteBackgroundMaterial &#160;"False"</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.ApplyAltitudeCorrectionToFans "True"</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.Altitude "0", "m"</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.CellFractionRecursionDepth "4"</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.PerformancePriority "Speed"</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.MinimumNumberOfRays "64"</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.MaximumNumberOfRays "512"</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.TransientSolverDuration "1"</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.SetTimeStep "Method", "Fixed"</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.SetTimeStep "ConstStepWidth", "0.01"</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.SetTimeStep "ConstNumSamples", "100"</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.SetTimeStep "AdaptiveCFL", "1"</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.SetTimeStep "AdaptiveMinStep", "1e-6"</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.SetTimeStep "AdaptiveMaxStep", "1e-2"</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.SetTimeStep "AdaptiveMaxGrowth", "10"</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.UseSolarCalculator "True"</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.SolarDirection &#160;"0.905209", "0.248926", "0.34443"</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.DirectSolarIrradiation "830.794"</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.DiffuseIrradiation "42.9355"</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.ReflectedIrradiation "65.8171"</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.Nadir &#160;"0", "0", "-1"</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.Day "23"</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.Month "01"</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.Hour "12"</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.Minute "00"</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.Latitude "48.7872"</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.Longitude "2.2112"</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.TimeZone "1"</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.SolarAltitude "182"</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.GeographicalSouth &#160;"1", "0", "0"</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.GroundReflectivity "0.2"</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.CloudinessFactor "0"</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.StoreResultInCache "False"</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.LoadResultFromCache "True"</p>
+<p class="VBA-Text-Example">End With</p>
+<p class="VBA-Text-Example">&#160;</p>
+<?rh-p style="margin-bottom: 0px; text-align: Right; margin-left: 18px; 
+                 margin-right: 18px; margin-top: 18px;" ?>
+<div style="width: 100%; position: relative;" id="footer">
+<p style="border-bottom: Solid 1px #dddddd; text-align: Left; margin-left: 0px; font-family: Arial, sans-serif; line-height: Normal; margin-top: 9px; margin-right: 0px; margin-bottom: 6px; border-left-width: 1px; border-top-width: 1px; border-right-width: 1px;"><span style="text-align: Left; font-family: Arial, sans-serif; line-height: Normal;">&#160;</span></p>
+<table cellspacing="0" width="100%">
+<col style="width: 50%;" />
+<col style="width: 50%;" />
+<tr>
+<td style="vertical-align: Top;"><span style="font-family: Arial, sans-serif; line-height: Normal; font-size: 8pt;"><font size="1" style="font-size:8pt;">CST Studio Suite 2026</font></span></td>
+<td style="vertical-align: Top;">
+<p style="text-align: right;">&#160;</p>
+</td>
+</tr>
+</table>
+<p>&#160;</p>
+</div>
+<script type="text/javascript" language="javascript1.2">
+//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+        writeIntopicBar(0);
+
+
+highlightSearch();
+//-->
+//]]>
+</script>
+</body>
+</html>

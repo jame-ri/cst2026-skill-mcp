@@ -1,0 +1,287 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="Adobe RoboHelp 11" />
+<title>Yield Analysis Object</title>
+<link rel="StyleSheet" href="../online_help_vba.css" type="text/css" />
+<style type="text/css">
+/*<![CDATA[*/
+<!--
+body { border-bottom-style:None; }
+-->
+/*]]>*/
+</style>
+
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+        origWidth = innerWidth;
+        origHeight = innerHeight;
+        onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+/*<![CDATA[*/
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+-->
+/*]]>*/
+</style>
+
+<script type="text/javascript" language="javascript1.2" src="../whmsg.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript" src="../whver.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript1.2" src="../whutils.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript1.2" src="../whproxy.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript1.2" src="../whlang.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript1.2" src="../whtopic.js" charset="utf-8">
+</script>
+</head>
+<body>
+<script type="text/javascript" language="javascript1.2">
+//<![CDATA[
+<!--
+if (window.gbWhTopic)
+{
+        var strUrl = document.location.href;
+        var bc = 0;
+        var n = strUrl.toLowerCase().indexOf("bc-");
+        if(n != -1)
+        {
+                document.location.replace(strUrl.substring(0, n));
+                bc = strUrl.substring(n+3);
+        }
+
+        if (window.addTocInfo)
+        {
+        
+        }
+        if (window.writeBtnStyle)
+                writeBtnStyle();
+
+        if (window.writeIntopicBar)
+                writeIntopicBar(0);
+
+        
+        document.write("<p style=\"font-family: Tahoma; font-size: 9pt; font-weight: 400;  font-style:normal; color: rgb(0, 0, 0); text-decoration:none; text-align: left\"> ");
+AddMasterBreadcrumbs("../index.htm", "font-family: Tahoma; font-size: 9pt; font-weight: 400;  font-style:normal; color: rgb(0, 0, 0); text-decoration:none; text-align: left", "|", "Home", "../special_vbaobjects/special_vbaobjects_vbaobjects.htm");
+document.write("Yield Analysis Object<\/p>");
+
+}
+else
+        if (window.gbIE4)
+                document.location.reload();
+
+onLoadHandler = function()
+{
+  if (window.setRelStartPage)
+        {
+        setTimeout("setRelStartPage('../index.htm');", 1)
+
+    setTimeout("UpdateBreadCrumbsMarker();", 1);
+        }
+}
+
+if (window.addEventListener){  
+        window.addEventListener('load', onLoadHandler, false);   
+} else if (window.attachEvent){  
+        window.attachEvent('onload', onLoadHandler);  
+}
+
+function onSetStartPage()
+{
+  autoSync(1);
+  sendSyncInfo();
+  sendAveInfoOut();
+}
+//-->
+//]]>
+</script><script type="text/javascript" src="../ehlpdhtm.js" language="JavaScript1.2">
+</script>
+<table cellspacing="0" width="100%">
+<col style="width: 50%;" />
+<col style="width: 50%;" />
+<tr>
+<td style="vertical-align: middle; padding-top: 5px; padding-bottom: 5px;">
+<p style="margin-top: 0px; margin-bottom: 0px;"><img src="../3ds.png" alt="" style="border: none;" border="0" /></p>
+</td>
+<td style="vertical-align: middle;">
+<p style="text-align: right;"><a href="https://www.3ds.com/products-services/3dexperience/" target="_blank"><img src="../3dexp.png" alt="" style="border: none;" width="32" height="32" border="0" /></a></p>
+</td>
+</tr>
+</table>
+<h1>Yield Analysis Object</h1>
+<p class="VBA-Text">This object offers the possibility to calculate a yield analysis.</p>
+<ul>
+<li class="p-VBA-Index-Category">
+<p class="VBA-Index-Category"><a href="#Methods">Methods</a></p>
+</li>
+<li class="p-VBA-Index-Category">
+<p class="VBA-Index-Category" style="font-weight: bold;"><a href="#Default" style="font-weight: bold;">Default Settings</a></p>
+</li>
+<li class="p-VBA-Index-Category">
+<p class="VBA-Index-Category"><a href="#Example">Examples</a></p>
+</li>
+</ul>
+<p class="VBA-Heading-Category"><a name="General" id="General"></a>General Methods</p>
+<p class="VBA-Heading-Method">GetYield <a href="../common_vbageneral/common_general_double.htm" style="font-weight: normal; font-style: normal;" id="a10" name="a10">double</a></p>
+<p class="VBA-Text-Indent">Returns the value of the yield after a yield analysis calculation.</p>
+<p class="VBA-Heading-Category"><a name="Methods" id="Methods"></a>Methods Concerning Design Parameters</p>
+<p class="VBA-Heading-Method">InitDesignParameters</p>
+<p class="VBA-Text-Indent">Only the parameters which have been used for the sensitivity analysis can be considered as design parameters for the yield analysis. Though, the active sensitivity analysis parameters are initialized with the already defined design parameter.</p>
+<p class="VBA-Text">&#160;</p>
+<p class="VBA-Heading-Method">SelectDesignParameter ( <a href="../common_vbageneral/common_general_name.htm" style="font-weight: normal; font-style: normal;" id="a3" name="a3">name</a> <span style="font-style: italic;"><i>paraName</i></span>, <a href="../common_vbageneral/common_general_bool_data_type.htm" style="font-weight: normal; font-style: normal;" id="a5" name="a5">bool</a> <span style="font-style: italic;"><i>bFlag</i></span> )</p>
+<p class="VBA-Text-Indent">Select the design parameter specified by its name <span style="font-style: italic;"><i>paraName</i></span>. If <span style="font-style: italic;"><i>bFlag</i></span> is True the design parameter named <span style="font-style: italic;"><i>paraName</i></span> is chosen to be used for the yield analysis.</p>
+<p class="VBA-Text">&#160;</p>
+<p class="VBA-Heading-Method">SetDesignParameterStatisticalDistribution( <a href="../common_vbageneral/common_general_enum.htm" style="font-weight: normal; font-style: normal;" id="a7" name="a7">enum</a> <span style="font-style: italic;"><i>distributionType</i></span> )</p>
+<p class="VBA-Text-Indent">Set the statistical distribution for the currently selected design parameter. You must select a design parameter using the <span style="font-weight: bold;">SelectDesignParameter</span> method before you can apply this method.</p>
+<p class="VBA-Text-Indent"><span style="font-style: italic;"><i>distributionType</i></span> can have the value "Gaussian" or "Uniform".</p>
+<p class="VBA-Text">&#160;</p>
+<p class="VBA-Heading-Method">SetDesignParameterStandardDeviation ( <a href="../common_vbageneral/common_general_double.htm" style="font-weight: normal; font-style: normal;" id="a12" name="a12">double</a> <span style="font-style: italic;"><i>value</i></span> )</p>
+<p class="VBA-Text-Indent">Set the standard deviation value for the currently selected design parameter. You must select a design parameter using the <span style="font-weight: bold;">SelectDesignParameter</span> method before you can apply this method.</p>
+<p class="VBA-Heading-Category"><a name="Methods1" id="Methods1"></a>Methods Concerning Performance Specifications</p>
+<p class="VBA-Heading-Method">AddPerformanceSpecification ( <a href="../common_vbageneral/common_general_enum.htm" style="font-weight: normal; font-style: normal;" id="a9" name="a9">enum</a> <span style="font-style: italic;"><i>perfSpecificationType</i></span> ) <a href="../common_vbageneral/common_general_long.htm" style="font-weight: normal; font-style: normal;" id="a20" name="a20">long</a></p>
+<p class="VBA-Text-Indent">Creates a new performance specification and adds it to the internal list of performance specifications. Upon creation an ID is created for each performance specification which is returned by this function. The newly defined performance specification is selected automatically for use with the yield analysis.</p>
+<p class="VBA-Text-Indent"><span style="font-style: italic;"><i>perfSpecificationType</i></span> can so far only have the following value "S Bound".</p>
+<p class="VBA-Text">&#160;</p>
+<p class="VBA-Heading-Method">SelectPerformanceSpecification ( <a href="../common_vbageneral/common_general_long.htm" style="font-weight: normal; font-style: normal;" id="a6" name="a6">long</a> <span style="font-style: italic;"><i>id</i></span>, <a href="../common_vbageneral/common_general_bool_data_type.htm" style="font-weight: normal; font-style: normal;" id="a14" name="a14">bool</a> <span style="font-style: italic;"><i>bFlag</i></span> )</p>
+<p class="VBA-Text-Indent">Selects the performance specification specified by its ID <span style="font-style: italic;"><i>id.</i></span> The ID is returned when the performance specification is created using the <span style="font-weight: bold;">AddPerformanceSpecification</span> function. It is necessary to call this method before many other methods may be called because these other methods apply to a previously selected performance specification.</p>
+<p class="VBA-Text-Indent">&#160;If <span style="font-style: italic;"><i>bFlag</i></span> is True the selected performance specification is used for the yield analysis else it is ignored.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">DeletePerformanceSpecification ( <a href="../common_vbageneral/common_general_long.htm" style="font-weight: normal; font-style: normal;" id="a4" name="a4">long</a> <span style="font-style: italic;"><i>id</i></span> )</p>
+<p class="VBA-Text-Indent">Deletes the specified performance specification. To specify the performance specification use the ID that is returned by the <span style="font-weight: bold;">AddPerformanceSpecification</span> function when the performance specification is created.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">DeleteAllPerformanceSpecifications</p>
+<p class="VBA-Text-Indent">Deletes all performance specification that were previously created.</p>
+<p class="VBA-Text">&#160;</p>
+<p class="VBA-Heading-Method">SetPerformanceSpecificationType ( <span style="font-weight: normal;"><a href="../common_vbageneral/common_general_enum.htm" style="font-weight: normal; font-style: normal;" id="a1" name="a1">enum</a></span> <span style="font-style: italic;"><i>{"linear", "phase"} boundType</i></span> )</p>
+<p class="VBA-Text-Indent">For a previously selected S-parameter bound, you can choose which part of the S-parameter data is used for the evaluation of this performance specification. You may choose between the S-parameter magnitude in linear representation and the S-parameter phase. You must select a previously defined performance specification using the <span style="font-weight: bold;">SelectPerformanceSpecification</span> method before you can apply this method.</p>
+<p class="VBA-Text">&#160;</p>
+<p class="VBA-Heading-Method">SetPerformanceSpecificationOperator ( <a href="../common_vbageneral/common_general_enum.htm" style="font-weight: normal; font-style: normal;" id="a23" name="a23">enum</a> <span style="font-style: italic;"><i>operatorType</i></span> &#160;)</p>
+<p class="VBA-Text-Indent">Every performance specification needs a bound operator that indicates how to evaluate the bound function value. The operators &#160;"&lt;", "&gt;" indicate that a bound function should be lowered under or raised upon a certain value.</p>
+<p class="VBA-Text-Indent"><span style="font-style: italic;"><i>operatorType</i></span> can have one of the following values:</p>
+<table style="vertical-align: top; height: 59px; margin-left: 24px; left: 0px; top: 2407px;" cellspacing="0" width="723">
+<col style="width: 13.214%;" />
+<col style="width: 35.906%;" />
+<col style="width: 50.88%;" />
+<tr style="vertical-align: top;">
+<td style="border: Solid 1px #000000;width: 13.214%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text">&lt;</p>
+</td>
+<td style="border-top: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 35.906%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text">lower bound function value under a given target value</p>
+</td>
+<td style="border-top: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 50.88%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text">S-parameter bound</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 13.214%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text">&gt;</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 35.906%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text">raise bound function value upon a given target value</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 50.88%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text">S-parameter bound</p>
+<p class="vba-text">&#160;</p>
+</td>
+</tr>
+</table>
+<p class="VBA-Heading-Method">&#160;</p>
+<p class="VBA-Heading-Method">SetPerformanceSpecificationBound ( <a href="../common_vbageneral/common_general_double.htm" style="font-weight: normal; font-style: normal;" id="a21" name="a21">double</a> <span style="font-style: italic;"><i>value</i></span> )</p>
+<p class="VBA-Text-Indent">Sets a bound value for a previously defined performance specification. You must select a previously defined performance specification using the <span style="font-weight: bold;">SelectPerformanceSpecification</span> method before you can apply this method.</p>
+<p class="VBA-Text">&#160;</p>
+<p class="VBA-Heading-Method">SetPerformanceSpecificationRange ( <span><a href="../common_vbageneral/common_general_double.htm" style="font-weight: normal; font-style: normal;" id="a8" name="a8">double</a></span> <span style="font-style: italic;"><i>fmin,</i></span> <span style="font-weight: normal;">&#160;<a href="../common_vbageneral/common_general_double.htm" style="font-weight: normal; font-style: normal;" id="a13" name="a13">double</a></span> <span style="font-style: italic;"><i>fmax</i></span> )</p>
+<p class="VBA-Text-Indent">Set a frequency range for a previously selected S-parameter bound. You must select a previously defined S-parameter bound using the <span style="font-weight: bold;">SelectPerformanceSpecification</span> method before you can apply this method.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">SetPerformanceSpecificationPortModes ( <span style="font-weight: normal;">&#160;<a href="../common_vbageneral/common_general_long.htm" style="font-weight: normal; font-style: normal;" id="a2" name="a2">long</a></span> <span style="font-style: italic;"><i>outPort,</i></span> <span style="font-weight: normal;"><a href="../common_vbageneral/common_general_long.htm" style="font-weight: normal; font-style: normal;" id="a11" name="a11">long</a></span> <span style="font-style: italic;"><i>outMode,</i></span> <span><a href="../common_vbageneral/common_general_long.htm" style="font-weight: normal; font-style: normal;" id="a15" name="a15">long</a></span> <span style="font-style: italic;"><i>stimPort,</i></span> <span><a href="../common_vbageneral/common_general_long.htm" style="font-weight: normal; font-style: normal;" id="a16" name="a16">long</a></span> <span style="font-style: italic;"><i>stimMode</i></span> )</p>
+<p class="VBA-Text-Indent">Set the port modes used for a previously defined S-parameter bound. You must select a previously defined S-parameter bound using the <span style="font-weight: bold;">SelectPerformanceSpecification</span> method before you can apply this method.</p>
+<p class="VBA-Heading-Category"><a name="Default" id="Default"></a>Default Settings</p>
+<p class="VBA-Heading-Category"><a name="Example" id="Example"></a>Example</p>
+<p class="VBA-Text-Example">With YieldAnalysis</p>
+<p class="VBA-Text-Example" style="margin-left: 40px;">.InitDesignParameters</p>
+<p class="VBA-Text-Example" style="margin-left: 40px;">.SelectDesignParameter ("face_distance", True)</p>
+<p class="VBA-Text-Example" style="margin-left: 40px;">.SetDesignParameterStatisticalDistribution ("Gaussian")</p>
+<p class="VBA-Text-Example" style="margin-left: 40px;">.SetDesignParameterStandardDeviation (1.0)</p>
+<p class="VBA-Text-Example" style="margin-left: 40px;">.SelectDesignParameter ("face_radius", True)</p>
+<p class="VBA-Text-Example" style="margin-left: 40px;">.SetDesignParameterStatisticalDistribution ("Uniform")</p>
+<p class="VBA-Text-Example" style="margin-left: 40px;">.SetDesignParameterStandardDeviation (2.0)</p>
+<p class="VBA-Text-Example" style="margin-left: 40px;">boundID = .AddPerformanceSpecification ("S Bound" )</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;&#160;.SelectPerformanceSpecification (boundID , True)</p>
+<p class="VBA-Text-Example" style="margin-left: 40px;">.SetPerformanceSpecificationType ("linear")</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;&#160;.SetPerformanceSpecificationOperator ("&lt;")</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;&#160;.SetPerformanceSpecificationBound &#160;(0.0)</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;&#160;.SetPerformanceSpecificationRange (0, 5)</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;&#160;.SetPerformanceSpecificationPortModes (1, 1, 2, 1)</p>
+<p class="VBA-Text-Example">End With</p>
+<p class="VBA-Text-Example">&#160;</p>
+<script type="text/javascript" language="JavaScript1.2">
+//<![CDATA[
+        if( typeof( FilePopupInit ) != 'function' ) FilePopupInit = new Function();
+        FilePopupInit('a10');
+        FilePopupInit('a3');
+        FilePopupInit('a5');
+        FilePopupInit('a7');
+        FilePopupInit('a12');
+        FilePopupInit('a9');
+        FilePopupInit('a20');
+        FilePopupInit('a6');
+        FilePopupInit('a14');
+        FilePopupInit('a4');
+        FilePopupInit('a1');
+        FilePopupInit('a23');
+        FilePopupInit('a21');
+        FilePopupInit('a8');
+        FilePopupInit('a13');
+        FilePopupInit('a2');
+        FilePopupInit('a11');
+        FilePopupInit('a15');
+        FilePopupInit('a16');
+//]]>
+</script><?rh-p style="margin-bottom: 0px; text-align: Right; margin-left: 18px; 
+                 margin-right: 18px; margin-top: 18px;" ?>
+<div style="width: 100%; position: relative;" id="footer">
+<p style="border-bottom: Solid 1px #dddddd; text-align: Left; margin-left: 0px; font-family: Arial, sans-serif; line-height: Normal; margin-top: 9px; margin-right: 0px; margin-bottom: 6px; border-left-width: 1px; border-top-width: 1px; border-right-width: 1px;"><span style="text-align: Left; font-family: Arial, sans-serif; line-height: Normal;">&#160;</span></p>
+<table cellspacing="0" width="100%">
+<col style="width: 50%;" />
+<col style="width: 50%;" />
+<tr>
+<td style="vertical-align: Top;"><span style="font-family: Arial, sans-serif; line-height: Normal; font-size: 8pt;"><font size="1" style="font-size:8pt;">CST Studio Suite 2026</font></span></td>
+<td style="vertical-align: Top;">
+<p style="text-align: right;">&#160;</p>
+</td>
+</tr>
+</table>
+<p>&#160;</p>
+</div>
+<script type="text/javascript" language="javascript1.2">
+//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+        writeIntopicBar(0);
+
+
+highlightSearch();
+//-->
+//]]>
+</script>
+</body>
+</html>

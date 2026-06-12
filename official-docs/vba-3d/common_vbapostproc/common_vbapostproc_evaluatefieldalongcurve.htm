@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="Adobe RoboHelp 11" />
+<title>EvaluateFieldAlongCurve Object</title>
+<link rel="StyleSheet" href="../online_help_vba.css" type="text/css" />
+<style type="text/css">
+/*<![CDATA[*/
+<!--
+body { border-bottom-style:None; }
+-->
+/*]]>*/
+</style>
+
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+        origWidth = innerWidth;
+        origHeight = innerHeight;
+        onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+/*<![CDATA[*/
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+-->
+/*]]>*/
+</style>
+
+<script type="text/javascript" language="javascript1.2" src="../whmsg.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript" src="../whver.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript1.2" src="../whutils.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript1.2" src="../whproxy.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript1.2" src="../whlang.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript1.2" src="../whtopic.js" charset="utf-8">
+</script>
+</head>
+<body>
+<script type="text/javascript" language="javascript1.2">
+//<![CDATA[
+<!--
+if (window.gbWhTopic)
+{
+        var strUrl = document.location.href;
+        var bc = 0;
+        var n = strUrl.toLowerCase().indexOf("bc-");
+        if(n != -1)
+        {
+                document.location.replace(strUrl.substring(0, n));
+                bc = strUrl.substring(n+3);
+        }
+
+        if (window.addTocInfo)
+        {
+        addTocInfo("3D Simulation VBA\nVBA Objects\nPost Processing\nEvaluateFieldAlongCurve");
+
+        }
+        if (window.writeBtnStyle)
+                writeBtnStyle();
+
+        if (window.writeIntopicBar)
+                writeIntopicBar(0);
+
+        
+        document.write("<p style=\"font-family: Tahoma; font-size: 9pt; font-weight: 400;  font-style:normal; color: rgb(0, 0, 0); text-decoration:none; text-align: left\"> ");
+AddMasterBreadcrumbs("../index.htm", "font-family: Tahoma; font-size: 9pt; font-weight: 400;  font-style:normal; color: rgb(0, 0, 0); text-decoration:none; text-align: left", "|", "Home", "../special_vbaobjects/special_vbaobjects_vbaobjects.htm");
+document.write("<a style=\"font-family: Tahoma; font-size: 9pt; font-weight: 400;  font-style:normal; color: rgb(0, 0, 0); text-decoration:none; text-align: left\" href=\"../special_vbaobjects/special_vbaobjects_vbaobjects.htm\">3D Simulation VBA<\/a> | <a style=\"font-family: Tahoma; font-size: 9pt; font-weight: 400;  font-style:normal; color: rgb(0, 0, 0); text-decoration:none; text-align: left\" href=\"../special_vbaobjects/special_vbaobjects_vbaobjects.htm\">VBA Objects<\/a> | <a style=\"font-family: Tahoma; font-size: 9pt; font-weight: 400;  font-style:normal; color: rgb(0, 0, 0); text-decoration:none; text-align: left\" href=\"../special_vbapostproc/special_vbapostproc_type_method.htm\">Post Processing<\/a> | EvaluateFieldAlongCurve<\/p>");
+
+}
+else
+        if (window.gbIE4)
+                document.location.reload();
+
+onLoadHandler = function()
+{
+  if (window.setRelStartPage)
+        {
+        setTimeout("setRelStartPage('../index.htm');", 1)
+
+    setTimeout("UpdateBreadCrumbsMarker();", 1);
+        }
+}
+
+if (window.addEventListener){  
+        window.addEventListener('load', onLoadHandler, false);   
+} else if (window.attachEvent){  
+        window.attachEvent('onload', onLoadHandler);  
+}
+
+function onSetStartPage()
+{
+  autoSync(1);
+  sendSyncInfo();
+  sendAveInfoOut();
+}
+//-->
+//]]>
+</script><script type="text/javascript" src="../ehlpdhtm.js" language="JavaScript1.2">
+</script>
+<table cellspacing="0" width="100%">
+<col style="width: 50%;" />
+<col style="width: 50%;" />
+<tr>
+<td style="vertical-align: middle; padding-top: 5px; padding-bottom: 5px;">
+<p style="margin-top: 0px; margin-bottom: 0px;"><img src="../3ds.png" alt="" style="border: none;" border="0" /></p>
+</td>
+<td style="vertical-align: middle;">
+<p style="text-align: right;"><a href="https://www.3ds.com/products-services/3dexperience/" target="_blank"><img src="../3dexp.png" alt="" style="border: none;" width="32" height="32" border="0" /></a></p>
+</td>
+</tr>
+</table>
+<h1>EvaluateFieldAlongCurve Object</h1>
+<p class="VBA-Text">Evaluate a 2D/3D field, previously selected in the Navigation Tree, along a specified curve. The field values can be analyzed as a 1D result.</p>
+<p class="VBA-Heading-Category">Methods</p>
+<p class="VBA-Heading-Method">GetField1D ( <a href="../common_vbageneral/common_general_name.htm" id="a44" style="font-weight: normal; font-style: normal;" name="a44">name</a> <span style="font-style: italic;"><i>sCurveName</i></span>, <a href="../common_vbageneral/common_general_enum.htm" id="a1" style="font-weight: normal; font-style: normal;" name="a1">enum</a><span style="font-weight: normal;">{"x", "y", "z", "abs", "tangential"}</span> <span style="font-style: italic;"><i>component</i></span>, <a href="../common_vbageneral/common_general_enum.htm" id="a1" style="font-weight: normal; font-style: normal;" name="a1">enum</a><span style="font-weight: normal;">{"real", "imaginary", "magnitude", "phase", "complex"}</span> <span style="font-style: italic;"><i>complexType</i></span> ) <a href="../special_vbapostproc/special_vbapostprocres1do.htm" style="font-weight: normal;">Result1D Object</a></p>
+<p class="VBA-Text-Indent">Creates a Result1D object of the selected field component / absolute value and complex type along the curve named by sCurveName.</p>
+<p class="VBA-Text" style="text-decoration: none;">&#160;</p>
+<p class="VBA-Heading-Method">GetCoordinates1D ( <a href="../common_vbageneral/common_general_name.htm" id="a44" style="font-weight: normal; font-style: normal;" name="a44">name</a> <span style="font-style: italic;"><i>sCurveName</i></span>, <a href="../common_vbageneral/common_general_enum.htm" id="a1" style="font-weight: normal; font-style: normal;" name="a1">enum</a><span style="font-weight: normal;">{"x", "y", "z"}</span> <span style="font-style: italic;"><i>component</i></span>) <a href="../special_vbapostproc/special_vbapostprocres1do.htm" style="font-weight: normal;">Result1D Object</a></p>
+<p class="VBA-Text-Indent">Creates a Result1D object of the coordinates along the curve named by sCurveName.</p>
+<p class="VBA-Text" style="text-decoration: none;">&#160;</p>
+<p class="VBA-Heading-Method">CalculateIntegral ( <a href="../common_vbageneral/common_general_name.htm" id="a2" style="font-weight: normal; font-style: normal;" name="a2">name</a> &#160;<span style="font-style: italic;"><i>sCurveName</i></span>, <a href="../common_vbageneral/common_general_enum.htm" id="a5" style="font-weight: normal; font-style: normal;" name="a5">enum</a><span style="font-weight: normal;">{"x", "y", "z", "abs", "tangential"}</span> <span style="font-style: italic;"><i>component</i></span>, &#160;<a href="../common_vbageneral/common_general_enum.htm" id="a11" style="font-weight: normal; font-style: normal;" name="a11">enum</a><span style="font-weight: normal;">{"real", "imaginary", "magnitude", "phase", "complex"}</span> <span style="font-style: italic;"><i>complexType,</i></span> <a href="../common_vbageneral/common_general_double_ref.htm" id="a50" style="font-weight: normal;" name="a50">double_ref</a> &#160;<span style="font-style: italic;"><i>dIntReal</i></span>, <a href="../common_vbageneral/common_general_double_ref.htm" id="a3" style="font-weight: normal;" name="a3">double_ref</a> &#160;&#160;<span style="font-style: italic;"><i>dIntImag</i></span> )</p>
+<p class="VBA-Text-Indent">Integrates the selected field component / absolute value depending on the chosen complex type along the curve named by sCurveName. The integrals are returned in the double variables dIntReal and dIntImag. Scalar results returned in the dIntReal variable and dIntImag is set to zero. Alone for the complex type "complex", the dIntImag variable is set accordingly.</p>
+<p class="VBA-Text" style="color: #000000; text-decoration: none;">&#160;</p>
+<p class="VBA-Heading-Method">FitCurveToGridForPlot ( <a href="../common_vbageneral/common_general_bool_data_type.htm" id="a8" style="font-weight: normal; font-style: normal;" name="a8">bool</a> &#160;<span style="font-style: italic;"><i>switch</i></span> )</p>
+<p class="VBA-Text-Indent">If <span style="font-style: italic;"><i>switch</i></span> is set to True, the field is evaulated along a curve path which is fitted to the mesh cells. Else, the field is interpolated on the exact curve positions for the plot.</p>
+<p class="VBA-Text" style="color: #000000; text-decoration: none;">&#160;</p>
+<p class="VBA-Heading-Method">FitCurveToGridForIntegration ( <a href="../common_vbageneral/common_general_bool_data_type.htm" id="a9" style="font-weight: normal; font-style: normal;" name="a9">bool</a> &#160;<span style="font-style: italic;"><i>switch</i></span> )</p>
+<p class="VBA-Text-Indent">If <span style="font-style: italic;"><i>switch</i></span> is set to True, the field is integrated along a curve path which is fitted to the mesh cells. Set to False to interpolate the field on the exact curve positions for the integration.</p>
+<p class="VBA-Text">&#160;</p>
+<p class="VBA-Heading-Method">EvaluateOnSurface ( <a href="../common_vbageneral/common_general_bool_data_type.htm" id="a91" style="font-weight: normal; font-style: normal;" name="a91">bool</a> &#160;<span style="font-style: italic;"><i>switch</i></span> )</p>
+<p class="VBA-Text-Indent">If <span style="font-style: italic;"><i>switch</i></span> is set to True, the field is evaluated on the nearest surface to the curve path, disregarding volume results. This can be used to avoid zero result values, if the curve path is defined on a surface bordering a volume with zero field values (e.g. PEC).</p>
+<p class="VBA-Heading-Category">Default Settings</p>
+<p class="VBA-Text-Example">FitCurveToGridForPlot (False)</p>
+<p class="VBA-Text-Example">FitCurveToGridForIntegration (True)</p>
+<p class="VBA-Text-Example">EvaluateOnSurface (False)</p>
+<p class="VBA-Heading-Category">Example</p>
+<p class="VBA-Text-Example">Dim dIntReal as Double, dIntImag as Double</p>
+<p class="VBA-Text-Example">Dim obj as Object</p>
+<p class="VBA-Text-Example">EvaluateFieldAlongCurve.FitCurveToGridForIntegration (True)</p>
+<p class="VBA-Text-Example">EvaluateFieldAlongCurve.CalculateIntegral ("curve1", "tangential", "complex", dIntReal, dIntImag)</p>
+<p class="VBA-Text-Example">MsgBox Str$(dIntReal)+"+i("+Str$(dIntImag)+")"</p>
+<p class="VBA-Text-Example">Set obj = EvaluateFieldAlongCurve.GetField1D ("curve1", "tangential", "magnitude")</p>
+<p class="vba-text-example">&#160;</p>
+<p class="vba-text">&#160;</p>
+<?rh-p style="margin-bottom: 0px; text-align: Right; margin-left: 18px; 
+                 margin-right: 18px; margin-top: 18px;" ?>
+<div style="width: 100%; position: relative;" id="footer">
+<p style="border-bottom: Solid 1px #dddddd; text-align: Left; margin-left: 0px; font-family: Arial, sans-serif; line-height: Normal; margin-top: 9px; margin-right: 0px; margin-bottom: 6px; border-left-width: 1px; border-top-width: 1px; border-right-width: 1px;"><span style="text-align: Left; font-family: Arial, sans-serif; line-height: Normal;">&#160;</span></p>
+<table cellspacing="0" width="100%">
+<col style="width: 50%;" />
+<col style="width: 50%;" />
+<tr>
+<td style="vertical-align: Top;"><span style="font-family: Arial, sans-serif; line-height: Normal; font-size: 8pt;"><font size="1" style="font-size:8pt;">CST Studio Suite 2026</font></span></td>
+<td style="vertical-align: Top;">
+<p style="text-align: right;">&#160;</p>
+</td>
+</tr>
+</table>
+<p>&#160;</p>
+</div>
+<script type="text/javascript" language="javascript1.2">
+//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+        writeIntopicBar(0);
+
+
+highlightSearch();
+//-->
+//]]>
+</script>
+</body>
+</html>

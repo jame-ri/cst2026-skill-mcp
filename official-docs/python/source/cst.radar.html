@@ -1,0 +1,1599 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>cst.radar package &#8212; CST Python Libraries  documentation</title>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinxdoc.css?v=0a676766" />
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js?v=16ad857a"></script>
+    <script src="../_static/doctools.js?v=888ff710"></script>
+    <script src="../_static/sphinx_highlight.js?v=4825356b"></script>
+    <script async="async" src="../_static/MathJax/es5/tex-chtml-full.js?v=9687c051"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../main.html">CST Python Libraries  documentation</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">cst.radar package</a></li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <section id="cst-radar-package">
+<h1>cst.radar package<a class="headerlink" href="#cst-radar-package" title="Permalink to this heading">¶</a></h1>
+<section id="topics">
+<h2>Topics<a class="headerlink" href="#topics" title="Permalink to this heading">¶</a></h2>
+<ul class="simple">
+<li><p><a class="reference internal" href="#general-notes">General Notes</a></p></li>
+<li><p><a class="reference internal" href="#theory-of-radar-models">Theory of RADAR Models</a></p></li>
+<li><p><a class="reference internal" href="#theory-of-angle-detection">Theory of Angle Detection</a></p></li>
+<li><p><a class="reference internal" href="#examples">Examples</a></p></li>
+<li><p><a class="reference internal" href="#module-contents">Module Contents</a></p></li>
+</ul>
+</section>
+<section id="general-notes">
+<h2>General Notes<a class="headerlink" href="#general-notes" title="Permalink to this heading">¶</a></h2>
+<p>This package provides functionalities to extract <em>range</em> and <em>angle</em> data as perceived by an automotive RADAR sensor from <cite>Studio</cite> simulations. Furthermore, plotting
+routines for conveniently calculating <em>2d range-angle</em> maps are provided.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>To use this package please install the modules <cite>scipy</cite> (tested version: 1.5.4), <cite>numpy</cite> (tested version: 1.19.5)
+and <cite>matplotlib</cite> (tested version: 3.3.4) in your <cite>Python</cite> environment.</p>
+</div>
+<p>For the calculation of <em>ranges</em> two RADAR models are provided: A simple <em>impulse based RADAR</em> model and a <em>linear FMCW-RADAR</em> model. For a <em>MIMO RADAR</em> it is also
+possible to calculate <em>angles</em> based on phase differences between different channels of the <em>MIMO RADAR</em>. Finally, the range and angle calculation can be combined to
+a range-angle calculation for a <em>MIMO RADAR</em>.</p>
+</section>
+<section id="theory-of-radar-models">
+<h2>Theory of RADAR Models<a class="headerlink" href="#theory-of-radar-models" title="Permalink to this heading">¶</a></h2>
+<p>The package provides two idealized basic RADAR models, an <em>impulse based RADAR</em> model and a <em>linear FMCW-RADAR</em> model.</p>
+<p>The <em>impulse based RADAR</em> model consists of a smoothed <em>Dirac impulse</em> that the RADAR Tx antennas are sending, which is then received by the Rx antennas. Hence, the distance
+of an object is simply estimated by the run time of transmitting and receiving the impulse.</p>
+<p>Another RADAR model is provided by the <em>linear FMCW-RADAR</em> model. The following schematic drawing explains the idealized model:</p>
+<figure class="align-default" id="id5">
+<a class="reference internal image-reference" href="../_images/FMCWRadarModel.svg"><img alt="../_images/FMCWRadarModel.svg" height="147" src="../_images/FMCWRadarModel.svg" width="281" /></a>
+<figcaption>
+<p><span class="caption-text">FMCW RADAR Model</span><a class="headerlink" href="#id5" title="Permalink to this image">¶</a></p>
+</figcaption>
+</figure>
+<p>The model is defined by the following parameters:</p>
+<ul class="simple">
+<li><p>The linear chirp characterized by <span class="math notranslate nohighlight">\(s(t)=cos(2\pi [f_0 t + \frac{f1 - f0}{2 T_c}t^2])\)</span> for <span class="math notranslate nohighlight">\(t \in [-\frac{T}{2},\frac{T}{2}]\)</span></p>
+<ul>
+<li><p>Lower frequency <span class="math notranslate nohighlight">\(f_0\)</span></p></li>
+<li><p>Upper frequency <span class="math notranslate nohighlight">\(f_1\)</span></p></li>
+<li><p>Rise time <span class="math notranslate nohighlight">\(T_c\)</span></p></li>
+</ul>
+</li>
+<li><p>Model for mixer</p>
+<ul>
+<li><p>Real</p></li>
+<li><p>Complex mixer (complex baseband architecture)</p></li>
+</ul>
+</li>
+<li><p>Cufoff frequency ideal low pass <span class="math notranslate nohighlight">\(f_c\)</span></p></li>
+<li><p>Sampling rate of analog-to-digital converter  <span class="math notranslate nohighlight">\(f_s=1/T_s\)</span></p></li>
+</ul>
+<p>In this model a linear chirp signal is sent by the Tx antenna, at the Rx antenna the received signal is mixed with the sent chirp signal and an idealized low-pass filter is applied.
+The intermediate frequency signal is extracted and an analog-to-digital converter provides a signal amenable to the digital signal processing.
+The distance is calculated by a Fourier transform of the signal after the DSP converter.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The idealized RADAR models neglect any multiplexing details that in reality are required in order to separate on the receiver side from which sender
+the received signal originated. This is possible as in the simulation the respective transmitter and receiver for each F-parameter is known. Furthermore, the
+amplifiers at the sender and receiver side are neglected in the models as well. A final note regarding the mixer and low pass model: The analytical formulation for the mixer
+already is rejecting the higher sideband and directly gives the low sideband signal. This low sideband signal is fed into the low pass filter and the output is the
+intermediate frequency signal (IF). The analog-to-digital converter  then transforms the IF signal into the discrete samples.</p>
+</div>
+</section>
+<section id="theory-of-angle-detection">
+<h2>Theory of Angle Detection<a class="headerlink" href="#theory-of-angle-detection" title="Permalink to this heading">¶</a></h2>
+<p>In case of a MIMO RADAR the direction of arrival is calculated by the estimated covariance matrix</p>
+<p><span class="math notranslate nohighlight">\(\hat{\bf{R}} = \frac{1}{N}\sum_{i=1}^N \bf{X}_i \bf{X}_i^H\)</span></p>
+<p>with</p>
+<blockquote>
+<div><p><span class="math notranslate nohighlight">\(\hat{\bf{R}} \in \mathbb{C}^{k \times k}\)</span> estimated covariance matrix</p>
+<p><span class="math notranslate nohighlight">\(k\)</span> number of MIMO RADAR channels</p>
+<p><span class="math notranslate nohighlight">\(N\)</span> number of snapshots (simulations)</p>
+<p><span class="math notranslate nohighlight">\(\bf{X}_i \in \mathbb{C}^k\)</span> snapshot of channel vector</p>
+<p><span class="math notranslate nohighlight">\(i\)</span> snapshot (simulation) index</p>
+</div></blockquote>
+<p>The estimated covariance matrix is calculated from snapshots of the moving objects by performing <em>N</em> simulations. Hence, as a consequence of this method it is necessary to setup a parametrized simulation
+where the objects are moving in order to ensure uncorrelated signals between snapshots and avoid a singular estimated covariance matrix.</p>
+<dl class="simple">
+<dt>Currently the package provides angle-of-arrival estimation algorithms based on beamforming:</dt><dd><ul class="simple">
+<li><p>Bartlett <a class="reference internal" href="#bartlett48" id="id1"><span>[Bartlett48]</span></a></p></li>
+<li><p>MVDR (Minimum Variance Distortion less Response) <a class="reference internal" href="#capone69" id="id2"><span>[Capone69]</span></a></p></li>
+<li><p>MUSIC (Multiple Signal Classification) <a class="reference internal" href="#schmid86" id="id3"><span>[Schmid86]</span></a></p></li>
+</ul>
+</dd>
+</dl>
+<p>A more detailed overview regarding the physical signal models and the listed methods for angle of arrival can be found in <a class="reference internal" href="#krim96" id="id4"><span>[Krim96]</span></a>.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The maximum number of objects that can be detected by the described methods for a given covariance matrix is limited by the number of channels <span class="math notranslate nohighlight">\(k\)</span>
+by <span class="math notranslate nohighlight">\(k - 1\)</span>. Moreover, in order to ensure a non-singular estimate of the covariance matrix, at least <span class="math notranslate nohighlight">\(k\)</span> snapshots (simulations) are required.</p>
+</div>
+<p>The output of each algorithm is a pseudo-spectrum obtained from scanning along predefined directions where the detection of an object is associated to the local maximas of the pseudo-spectrum.
+For an unambiguous definition of the scanning direction the package provides appropriate coordinate systems. The coordinate system has to be specified by the
+user such that the scanning is conducted in the correct direction. The following figure shows a linear antenna array of far field sources (FFS) and an
+appropriately defined local coordinate system for scanning:</p>
+<figure class="align-default" id="id6">
+<a class="reference internal image-reference" href="../_images/CoordinateSystemWithAntennas.svg"><img alt="../_images/CoordinateSystemWithAntennas.svg" height="228" src="../_images/CoordinateSystemWithAntennas.svg" width="307" /></a>
+<figcaption>
+<p><span class="caption-text">Scanning of the covariance matrix along a direction. Coordinate system is aligned with the sensor.</span><a class="headerlink" href="#id6" title="Permalink to this image">¶</a></p>
+</figcaption>
+</figure>
+<p>Therefore, the correct interpretation of any angle calculated by the algorithms depends on the specified coordinate system for scanning.</p>
+<p class="rubric">References</p>
+<div role="list" class="citation-list">
+<div class="citation" id="bartlett48" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id1">Bartlett48</a><span class="fn-bracket">]</span></span>
+<p>Bartlett, M.S.: Smoothing Periodograms from Time-Series with Continuous Spectra. In: Nature, vol. 161, 1948, pp. 686–687</p>
+</div>
+<div class="citation" id="capone69" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id2">Capone69</a><span class="fn-bracket">]</span></span>
+<p>Capon, J.: High-resolution frequency-wavenumber spectrum analysis. In: Proceedings of the IEEE, vol. 57, no. 8, 1969, pp. 1408-1418</p>
+</div>
+<div class="citation" id="schmid86" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id3">Schmid86</a><span class="fn-bracket">]</span></span>
+<p>Schmidt, R.: Multiple emitter location and signal parameter estimation. In: IEEE Trans. Antennas Propag., no. 34, 1986, pp. 276–280</p>
+</div>
+<div class="citation" id="krim96" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id4">Krim96</a><span class="fn-bracket">]</span></span>
+<p>Krim, H. and Viberg M.: Two decades of array signal processing research: the parametric approach. In: IEEE Signal Processing Magazine, vol. 13, no. 4, 1996, pp. 67-94</p>
+</div>
+</div>
+</section>
+<section id="examples">
+<h2>Examples<a class="headerlink" href="#examples" title="Permalink to this heading">¶</a></h2>
+<p>The first example demonstrates the calculation of the direction of arrival only. The covariance matrix is calculated directly from the F parameters without any
+specific RADAR model. This method is suitable to give a brief first impression of the performance of the MIMO RADAR with <em>minimal</em> simulation time. In the simulation
+the motion of two corner reflectors is a rotation around their respective center of mass. Hence, the snapshots are the F-parameters for different rotation angles of
+the corner reflector. The accuracy of the angle-of-arrival estimation depends on the chosen algorithms, which is shown in the following plot:</p>
+<figure class="align-default" id="id7">
+<a class="reference internal image-reference" href="../_images/angles_only.svg"><img alt="../_images/angles_only.svg" height="276" src="../_images/angles_only.svg" width="368" /></a>
+<figcaption>
+<p><span class="caption-text">Performance of different detection algorithms.</span><a class="headerlink" href="#id7" title="Permalink to this image">¶</a></p>
+</figcaption>
+</figure>
+<p>The plot is created by the following script:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">pathlib</span><span class="w"> </span><span class="kn">import</span> <span class="n">Path</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">pickle</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plt</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">cst.radar.physical_constants</span><span class="w"> </span><span class="kn">import</span> <span class="n">c0</span><span class="p">,</span> <span class="n">freqHz_to_k0</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">cst.radar.spectral_algorithms</span><span class="w"> </span><span class="kn">import</span> <span class="n">MVDRAlgorithm</span><span class="p">,</span> <span class="n">MUSICAlgorithm</span><span class="p">,</span> <span class="n">BartlettAlgorithm</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">cst.radar.spectral_algorithms</span><span class="w"> </span><span class="kn">import</span> <span class="n">create_virtual_antenna_matrix</span><span class="p">,</span> <span class="n">assemble_covariancematrix_single_frequency</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">cst.radar.coordinate_systems</span><span class="w"> </span><span class="kn">import</span> <span class="n">SensorCoordinateSystem1</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">cst.radar.channel_tensor</span><span class="w"> </span><span class="kn">import</span> <span class="n">ChannelTensor</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">cst.radar.channel_tensor</span><span class="w"> </span><span class="kn">import</span> <span class="n">get_antenna_positions_from_model</span>
+
+
+<span class="k">def</span><span class="w"> </span><span class="nf">annotate_corner_positions</span><span class="p">(</span><span class="n">ax</span><span class="p">,</span> <span class="n">sensor_coordinate_system</span><span class="p">,</span> <span class="n">ypos</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Mark the center of mass of the corner reflectors in the plot&quot;&quot;&quot;</span>
+    <span class="n">corner_pos1</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">5</span><span class="p">])</span>
+    <span class="n">theta1</span><span class="p">,</span> <span class="n">phi1</span><span class="p">,</span> <span class="n">_</span> <span class="o">=</span> <span class="n">sensor_coordinate_system</span><span class="o">.</span><span class="n">get_theta_phi_r</span><span class="p">(</span><span class="n">corner_pos1</span><span class="p">)</span>
+    <span class="n">corner_pos2</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">3</span><span class="p">,</span> <span class="mf">0.00400</span><span class="p">,</span> <span class="mi">3</span><span class="p">])</span>
+
+    <span class="n">theta2</span><span class="p">,</span> <span class="n">phi2</span><span class="p">,</span> <span class="n">_</span> <span class="o">=</span> <span class="n">sensor_coordinate_system</span><span class="o">.</span><span class="n">get_theta_phi_r</span><span class="p">(</span><span class="n">corner_pos2</span><span class="p">)</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">annotate</span><span class="p">(</span><span class="s1">&#39;object 1&#39;</span><span class="p">,</span>
+                <span class="n">xy</span><span class="o">=</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">rad2deg</span><span class="p">(</span><span class="n">theta1</span><span class="p">),</span> <span class="n">ypos</span><span class="p">),</span>
+                <span class="n">xytext</span><span class="o">=</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">rad2deg</span><span class="p">(</span><span class="n">theta1</span><span class="p">),</span> <span class="n">ypos</span><span class="p">),</span>
+                <span class="n">arrowprops</span><span class="o">=</span><span class="nb">dict</span><span class="p">(</span><span class="n">facecolor</span><span class="o">=</span><span class="s1">&#39;black&#39;</span><span class="p">,</span> <span class="n">shrink</span><span class="o">=</span><span class="mf">0.05</span><span class="p">))</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">annotate</span><span class="p">(</span><span class="s1">&#39;object 2&#39;</span><span class="p">,</span>
+                <span class="n">xy</span><span class="o">=</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">rad2deg</span><span class="p">(</span><span class="n">theta2</span><span class="p">),</span> <span class="n">ypos</span><span class="p">),</span>
+                <span class="n">xytext</span><span class="o">=</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">rad2deg</span><span class="p">(</span><span class="n">theta2</span><span class="p">),</span> <span class="n">ypos</span><span class="p">),</span>
+                <span class="n">arrowprops</span><span class="o">=</span><span class="nb">dict</span><span class="p">(</span><span class="n">facecolor</span><span class="o">=</span><span class="s1">&#39;black&#39;</span><span class="p">,</span> <span class="n">shrink</span><span class="o">=</span><span class="mf">0.05</span><span class="p">))</span>
+
+
+<span class="k">def</span><span class="w"> </span><span class="nf">angles_from_single_frequency</span><span class="p">():</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Demonstrate how to calculate the angles from a simulation with a single frequency</span>
+<span class="sd">       or a small number of frequencies that are not sufficient to calculate a range as</span>
+<span class="sd">       well. This approach give an idea about the optimal RADAR performance at a specific</span>
+<span class="sd">       frequency.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="c1">#</span>
+    <span class="c1"># Create a channel tensor from the simulation</span>
+    <span class="c1">#</span>
+    <span class="n">use_pickled_data</span> <span class="o">=</span> <span class="kc">True</span>
+    <span class="k">if</span> <span class="n">use_pickled_data</span><span class="p">:</span>
+        <span class="c1"># load precalculated data from pickled data</span>
+        <span class="n">model_dir</span> <span class="o">=</span> <span class="n">Path</span><span class="p">(</span><span class="vm">__file__</span><span class="p">)</span><span class="o">.</span><span class="n">parent</span>
+        <span class="n">data_file</span> <span class="o">=</span> <span class="n">model_dir</span> <span class="o">/</span> <span class="n">Path</span><span class="p">(</span><span class="s1">&#39;data&#39;</span><span class="p">)</span> <span class="o">/</span> <span class="n">Path</span><span class="p">(</span><span class="s1">&#39;rotating_corner_reflectors_angles_only.pkl&#39;</span><span class="p">)</span>
+        <span class="n">channel_tensor</span> <span class="o">=</span> <span class="n">ChannelTensor</span><span class="o">.</span><span class="n">from_pickle_file</span><span class="p">(</span><span class="n">data_file</span><span class="p">)</span>
+        <span class="c1"># specify transmitter names and positions</span>
+        <span class="n">tx_dict</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;Tx1&#39;</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mf">0.</span><span class="p">,</span> <span class="mf">0.</span><span class="p">,</span> <span class="mf">0.</span><span class="p">]),</span>
+                   <span class="s1">&#39;Tx2&#39;</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mf">0.00197368</span><span class="p">,</span> <span class="mf">0.</span><span class="p">,</span> <span class="mf">0.</span><span class="p">])}</span>
+        <span class="c1"># specify receiver names and positions</span>
+        <span class="n">rx_dict</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;Rx1&#39;</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mf">0.00592105</span><span class="p">,</span> <span class="mf">0.</span><span class="p">,</span> <span class="mf">0.</span><span class="p">]),</span>
+                   <span class="s1">&#39;Rx2&#39;</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mf">0.00986842</span><span class="p">,</span> <span class="mf">0.</span><span class="p">,</span> <span class="mf">0.</span><span class="p">]),</span>
+                   <span class="s1">&#39;Rx3&#39;</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mf">0.01381579</span><span class="p">,</span> <span class="mf">0.</span><span class="p">,</span> <span class="mf">0.</span><span class="p">]),</span>
+                   <span class="s1">&#39;Rx4&#39;</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mf">0.01776316</span><span class="p">,</span> <span class="mf">0.</span><span class="p">,</span> <span class="mf">0.</span><span class="p">]),</span>
+                   <span class="s1">&#39;Rx5&#39;</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mf">0.02171053</span><span class="p">,</span> <span class="mf">0.</span><span class="p">,</span> <span class="mf">0.</span><span class="p">]),</span>
+                   <span class="s1">&#39;Rx6&#39;</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mf">0.02565789</span><span class="p">,</span> <span class="mf">0.</span><span class="p">,</span> <span class="mf">0.</span><span class="p">])}</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="c1"># load the data from a CST simulation</span>
+        <span class="n">model_dir</span> <span class="o">=</span> <span class="n">Path</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;.&#39;</span><span class="p">)</span>
+        <span class="n">cst_file_name</span> <span class="o">=</span> <span class="n">model_dir</span> <span class="o">/</span> <span class="sa">r</span><span class="s1">&#39;rotating_corner_reflectors_angles_only.cst&#39;</span>
+        <span class="n">txs</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Tx1&#39;</span><span class="p">,</span> <span class="s1">&#39;Tx2&#39;</span><span class="p">]</span>  <span class="c1"># names transmitter FFS in model</span>
+        <span class="n">rxs</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Rx1&#39;</span><span class="p">,</span> <span class="s1">&#39;Rx2&#39;</span><span class="p">,</span> <span class="s1">&#39;Rx3&#39;</span><span class="p">,</span> <span class="s1">&#39;Rx4&#39;</span><span class="p">,</span> <span class="s1">&#39;Rx5&#39;</span><span class="p">,</span> <span class="s1">&#39;Rx6&#39;</span><span class="p">]</span>  <span class="c1"># names receiver FFS in model</span>
+        <span class="n">channel_tensor</span> <span class="o">=</span> <span class="n">ChannelTensor</span><span class="o">.</span><span class="n">from_cst_file</span><span class="p">(</span><span class="n">cst_file_name</span><span class="p">,</span> <span class="n">txs</span><span class="p">,</span> <span class="n">rxs</span><span class="p">)</span>
+        <span class="c1"># In the model the positions are defined as parameters and we can retrieve them</span>
+        <span class="c1"># in this case automatically.</span>
+        <span class="n">tx_dict</span><span class="p">,</span> <span class="n">rx_dict</span> <span class="o">=</span> <span class="n">get_antenna_positions_from_model</span><span class="p">(</span><span class="n">cst_file_name</span><span class="p">,</span> <span class="n">rxs</span><span class="p">,</span> <span class="n">txs</span><span class="p">)</span>
+    <span class="c1">#</span>
+    <span class="c1"># Calculate a covariance matrix from channel tensor from a single frequency</span>
+    <span class="c1"># in order to judge the RADAR MIMO setup performance for angle detection</span>
+    <span class="c1">#</span>
+    <span class="n">Rhat</span> <span class="o">=</span> <span class="n">assemble_covariancematrix_single_frequency</span><span class="p">(</span><span class="n">channel_tensor</span><span class="p">,</span> <span class="n">ifreq</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+
+    <span class="c1">#</span>
+    <span class="c1"># Use covariance matrix to determine angle</span>
+    <span class="c1">#</span>
+
+    <span class="c1"># first define the correct scan coordinate system for the MIMO array</span>
+    <span class="c1"># in the model. In this specific case the FFS are located on the x-axis.</span>
+    <span class="n">Origin</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">])</span>
+    <span class="n">Uhat</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">])</span>
+    <span class="n">Vhat</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">])</span>
+    <span class="n">What</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">])</span>
+    <span class="n">sensor_coordinate_system</span> <span class="o">=</span> <span class="n">SensorCoordinateSystem1</span><span class="p">(</span><span class="n">Uhat</span><span class="p">,</span> <span class="n">Vhat</span><span class="p">,</span> <span class="n">What</span><span class="p">,</span> <span class="n">Origin</span><span class="p">)</span>
+    <span class="c1"># than setup the MVDR algorithm</span>
+    <span class="n">f0design</span> <span class="o">=</span> <span class="mf">77e+9</span>  <span class="c1"># array spacing in model is designed for this frequency</span>
+    <span class="n">lambda0</span> <span class="o">=</span> <span class="n">c0</span><span class="o">/</span><span class="n">f0design</span>
+    <span class="n">channel_dict</span> <span class="o">=</span> <span class="n">channel_tensor</span><span class="o">.</span><span class="n">get_channel_dict</span><span class="p">()</span>  <span class="c1"># connection channel number with Tx/Rx pair</span>
+    <span class="n">virtual_array_positions</span> <span class="o">=</span> <span class="n">create_virtual_antenna_matrix</span><span class="p">(</span><span class="n">tx_dict</span><span class="p">,</span> <span class="n">rx_dict</span><span class="p">,</span> <span class="n">channel_dict</span><span class="p">,</span> <span class="n">scale</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;virtual array positions in term of design wavelength </span><span class="se">\n</span><span class="s1"> </span><span class="si">{}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">real</span><span class="p">(</span><span class="n">virtual_array_positions</span><span class="p">)</span><span class="o">/</span><span class="n">lambda0</span><span class="p">))</span>
+    <span class="n">k0</span> <span class="o">=</span> <span class="n">freqHz_to_k0</span><span class="o">*</span><span class="n">f0design</span>
+    <span class="n">FoV</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">deg2rad</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="o">-</span><span class="mi">85</span><span class="p">,</span> <span class="mi">85</span><span class="p">]))</span>  <span class="c1"># set field of view</span>
+    <span class="c1"># Apply Bartlett algorithm</span>
+    <span class="n">algorithm</span> <span class="o">=</span> <span class="n">BartlettAlgorithm</span><span class="p">(</span><span class="n">kind</span><span class="o">=</span><span class="s2">&quot;theta&quot;</span><span class="p">,</span>
+                                  <span class="n">vmin</span><span class="o">=</span><span class="n">FoV</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span>
+                                  <span class="n">vmax</span><span class="o">=</span><span class="n">FoV</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span>
+                                  <span class="n">nsamples</span><span class="o">=</span><span class="mi">360</span><span class="p">,</span>
+                                  <span class="n">virtual_array_positions</span><span class="o">=</span><span class="n">virtual_array_positions</span><span class="p">,</span>
+                                  <span class="n">k0</span><span class="o">=</span><span class="n">k0</span><span class="p">,</span>
+                                  <span class="n">second_dim_angle</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span>
+                                  <span class="n">coordinate_system</span><span class="o">=</span><span class="n">sensor_coordinate_system</span><span class="p">)</span>
+    <span class="n">pseudo_spectrum</span> <span class="o">=</span> <span class="n">algorithm</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="n">Rhat</span><span class="p">)</span>
+    <span class="n">angle</span> <span class="o">=</span> <span class="n">algorithm</span><span class="o">.</span><span class="n">get_scan_vars_degree</span><span class="p">()</span>
+    <span class="c1"># Plot results</span>
+    <span class="n">fig</span><span class="p">,</span> <span class="p">(</span><span class="n">ax1</span><span class="p">,</span> <span class="n">ax2</span><span class="p">,</span> <span class="n">ax3</span><span class="p">)</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
+    <span class="n">ax1</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">angle</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">abs</span><span class="p">(</span><span class="n">pseudo_spectrum</span><span class="p">))</span>
+    <span class="n">ax1</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s1">&#39;Bartlett&#39;</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">pad</span><span class="o">=-</span><span class="mi">14</span><span class="p">)</span>
+    <span class="n">ax1</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="n">xlabel</span><span class="o">=</span><span class="s1">&#39;angle / deg&#39;</span><span class="p">,</span> <span class="n">ylabel</span><span class="o">=</span><span class="s1">&#39;spectrum / a.u.&#39;</span><span class="p">,</span> <span class="n">yscale</span><span class="o">=</span><span class="s1">&#39;log&#39;</span><span class="p">)</span>
+    <span class="n">annotate_corner_positions</span><span class="p">(</span><span class="n">ax1</span><span class="p">,</span> <span class="n">sensor_coordinate_system</span><span class="p">,</span> <span class="n">ypos</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">amin</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">abs</span><span class="p">(</span><span class="n">pseudo_spectrum</span><span class="p">)))</span>
+    <span class="c1"># Apply MVDR algorithm</span>
+    <span class="n">algorithm</span> <span class="o">=</span> <span class="n">MVDRAlgorithm</span><span class="p">(</span><span class="n">kind</span><span class="o">=</span><span class="s2">&quot;theta&quot;</span><span class="p">,</span>
+                              <span class="n">vmin</span><span class="o">=</span><span class="n">FoV</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span>
+                              <span class="n">vmax</span><span class="o">=</span><span class="n">FoV</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span>
+                              <span class="n">nsamples</span><span class="o">=</span><span class="mi">360</span><span class="p">,</span>
+                              <span class="n">virtual_array_positions</span><span class="o">=</span><span class="n">virtual_array_positions</span><span class="p">,</span>
+                              <span class="n">k0</span><span class="o">=</span><span class="n">k0</span><span class="p">,</span>
+                              <span class="n">second_dim_angle</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span>
+                              <span class="n">coordinate_system</span><span class="o">=</span><span class="n">sensor_coordinate_system</span><span class="p">)</span>
+    <span class="n">algorithm</span><span class="o">.</span><span class="n">set_sigma_regularization_factor</span><span class="p">(</span><span class="mf">1e-20</span><span class="p">)</span>  <span class="c1"># good choice is crucial for accurate results</span>
+    <span class="n">pseudo_spectrum</span> <span class="o">=</span> <span class="n">algorithm</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="n">Rhat</span><span class="p">)</span>
+    <span class="n">angle</span> <span class="o">=</span> <span class="n">algorithm</span><span class="o">.</span><span class="n">get_scan_vars_degree</span><span class="p">()</span>
+    <span class="c1"># Plot results</span>
+    <span class="n">ax2</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">angle</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">abs</span><span class="p">(</span><span class="n">pseudo_spectrum</span><span class="p">))</span>
+    <span class="n">ax2</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s1">&#39;MVDR&#39;</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">pad</span><span class="o">=-</span><span class="mi">14</span><span class="p">)</span>
+    <span class="n">ax2</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="n">xlabel</span><span class="o">=</span><span class="s1">&#39;angle / deg&#39;</span><span class="p">,</span> <span class="n">ylabel</span><span class="o">=</span><span class="s1">&#39;spectrum / a.u.&#39;</span><span class="p">,</span> <span class="n">yscale</span><span class="o">=</span><span class="s1">&#39;log&#39;</span><span class="p">)</span>
+    <span class="n">annotate_corner_positions</span><span class="p">(</span><span class="n">ax2</span><span class="p">,</span> <span class="n">sensor_coordinate_system</span><span class="p">,</span> <span class="n">ypos</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">amin</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">abs</span><span class="p">(</span><span class="n">pseudo_spectrum</span><span class="p">)))</span>
+    <span class="c1"># Apply MUSIC algorithm</span>
+    <span class="c1"># note that for MUSIC the number of objects have to be specified in advance</span>
+    <span class="n">algorithm</span> <span class="o">=</span> <span class="n">MUSICAlgorithm</span><span class="p">(</span><span class="n">kind</span><span class="o">=</span><span class="s2">&quot;theta&quot;</span><span class="p">,</span>
+                               <span class="n">vmin</span><span class="o">=</span><span class="n">FoV</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span>
+                               <span class="n">vmax</span><span class="o">=</span><span class="n">FoV</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span>
+                               <span class="n">nsamples</span><span class="o">=</span><span class="mi">360</span><span class="p">,</span>
+                               <span class="n">virtual_array_positions</span><span class="o">=</span><span class="n">virtual_array_positions</span><span class="p">,</span>
+                               <span class="n">k0</span><span class="o">=</span><span class="n">k0</span><span class="p">,</span>
+                               <span class="n">second_dim_angle</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span>
+                               <span class="n">coordinate_system</span><span class="o">=</span><span class="n">sensor_coordinate_system</span><span class="p">,</span>
+                               <span class="n">number_objects</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
+    <span class="n">pseudo_spectrum</span> <span class="o">=</span> <span class="n">algorithm</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="n">Rhat</span><span class="p">)</span>
+    <span class="c1"># Plot results</span>
+    <span class="n">angle</span> <span class="o">=</span> <span class="n">algorithm</span><span class="o">.</span><span class="n">get_scan_vars_degree</span><span class="p">()</span>
+    <span class="n">ax3</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">angle</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">abs</span><span class="p">(</span><span class="n">pseudo_spectrum</span><span class="p">))</span>
+    <span class="n">ax3</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s1">&#39;MUSIC&#39;</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">pad</span><span class="o">=-</span><span class="mi">14</span><span class="p">)</span>
+    <span class="n">ax3</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="n">xlabel</span><span class="o">=</span><span class="s1">&#39;angle / deg&#39;</span><span class="p">,</span> <span class="n">ylabel</span><span class="o">=</span><span class="s1">&#39;spectrum / a.u.&#39;</span><span class="p">,</span> <span class="n">yscale</span><span class="o">=</span><span class="s1">&#39;log&#39;</span><span class="p">)</span>
+    <span class="c1"># Mark exact object positions</span>
+    <span class="n">annotate_corner_positions</span><span class="p">(</span><span class="n">ax3</span><span class="p">,</span> <span class="n">sensor_coordinate_system</span><span class="p">,</span> <span class="n">ypos</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">amin</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">abs</span><span class="p">(</span><span class="n">pseudo_spectrum</span><span class="p">)))</span>
+    <span class="c1"># Now plot everything</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+
+
+<span class="k">def</span><span class="w"> </span><span class="nf">main</span><span class="p">():</span>
+    <span class="n">angles_from_single_frequency</span><span class="p">()</span>
+
+
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s1">&#39;__main__&#39;</span><span class="p">:</span>
+    <span class="n">main</span><span class="p">()</span>
+</pre></div>
+</div>
+<p>In the second example the range-angle map is created from the <em>pulsed RADAR</em> model. The first graph shows the radial distance estimated from the first channel
+and from the first snapshot of the RADAR:</p>
+<figure class="align-default" id="id8">
+<a class="reference internal image-reference" href="../_images/range_map00.png"><img alt="../_images/range_map00.png" src="../_images/range_map00.png" style="width: 384.0px; height: 288.0px;" /></a>
+<figcaption>
+<p><span class="caption-text">Range estimation.</span><a class="headerlink" href="#id8" title="Permalink to this image">¶</a></p>
+</figcaption>
+</figure>
+<p>In the second graph the range-angle map is calculated considering all channels and all snapshots of the MIMO RADAR:</p>
+<figure class="align-default" id="id9">
+<a class="reference internal image-reference" href="../_images/range_angle_3dview.png"><img alt="../_images/range_angle_3dview.png" src="../_images/range_angle_3dview.png" style="width: 601.1999999999999px; height: 540.6px;" /></a>
+<figcaption>
+<p><span class="caption-text">Terrain plot of obtained range-angle map.</span><a class="headerlink" href="#id9" title="Permalink to this image">¶</a></p>
+</figcaption>
+</figure>
+<p>Next, marking the exact position of the objects by red discs, the intensity map is drawn:</p>
+<figure class="align-default" id="id10">
+<a class="reference internal image-reference" href="../_images/range_angle_xy_targets.png"><img alt="../_images/range_angle_xy_targets.png" src="../_images/range_angle_xy_targets.png" style="width: 384.0px; height: 288.0px;" /></a>
+<figcaption>
+<p><span class="caption-text">Range angle plot with exact target positions marked as red discs.</span><a class="headerlink" href="#id10" title="Permalink to this image">¶</a></p>
+</figcaption>
+</figure>
+<p>The final graph shows the same intensity map in a RADAR plot:</p>
+<figure class="align-default" id="id11">
+<a class="reference internal image-reference" href="../_images/range_angle_radar_plot.png"><img alt="../_images/range_angle_radar_plot.png" src="../_images/range_angle_radar_plot.png" style="width: 384.0px; height: 288.0px;" /></a>
+<figcaption>
+<p><span class="caption-text">Performance of different detection algorithms.</span><a class="headerlink" href="#id11" title="Permalink to this image">¶</a></p>
+</figcaption>
+</figure>
+<p>All range angle plots are created by the following script:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="sd">&quot;&quot;&quot;A simple example showing how to calculate the range and angle of two corner reflectors from an</span>
+<span class="sd">asymptotic solver simulation.</span>
+<span class="sd">&quot;&quot;&quot;</span>
+
+<span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plt</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">pathlib</span><span class="w"> </span><span class="kn">import</span> <span class="n">Path</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">cst.radar.channel_tensor</span><span class="w"> </span><span class="kn">import</span> <span class="n">get_antenna_positions_from_model</span><span class="p">,</span> <span class="n">ChannelTensor</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">cst.radar.coordinate_systems</span><span class="w"> </span><span class="kn">import</span> <span class="n">SphericalCoordinateSystem</span><span class="p">,</span> <span class="n">SensorCoordinateSystem1</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">cst.radar.spectral_algorithms</span><span class="w"> </span><span class="kn">import</span> <span class="n">BartlettAlgorithm</span><span class="p">,</span> <span class="n">MVDRAlgorithm</span><span class="p">,</span> <span class="n">MUSICAlgorithm</span><span class="p">,</span> <span class="n">create_virtual_antenna_matrix</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">cst.radar.range_angle</span><span class="w"> </span><span class="kn">import</span> <span class="n">angle_range_map</span><span class="p">,</span> <span class="n">angle_range_map_limited_range</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">cst.radar.range</span><span class="w"> </span><span class="kn">import</span> <span class="n">range_map_from_channeltensor_pulsed_radar</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">cst.radar.physical_constants</span><span class="w"> </span><span class="kn">import</span> <span class="n">c0</span><span class="p">,</span> <span class="n">freqHz_to_k0</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">cst.radar.plot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">tls</span>
+
+
+<span class="k">def</span><span class="w"> </span><span class="nf">generate_target_list_from_exact_positions</span><span class="p">(</span><span class="n">sensor_coordinate_system</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot; Calcualte the desired target positions from the center of mass</span>
+<span class="sd">        of the analyically known corner reflector position in the sensor</span>
+<span class="sd">        coordinate system</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">corner_reflector_1</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">5</span><span class="p">])</span>
+    <span class="n">corner_reflector_2</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">3</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">3</span><span class="p">])</span>
+    <span class="n">corner_list</span> <span class="o">=</span> <span class="p">[</span><span class="n">corner_reflector_1</span><span class="p">,</span> <span class="n">corner_reflector_2</span><span class="p">]</span>
+    <span class="n">target_list_range</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="n">target_list_angle</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">for</span> <span class="n">corner_pos</span> <span class="ow">in</span> <span class="n">corner_list</span><span class="p">:</span>
+        <span class="n">theta</span><span class="p">,</span> <span class="n">_</span><span class="p">,</span> <span class="n">r</span> <span class="o">=</span> <span class="n">sensor_coordinate_system</span><span class="o">.</span><span class="n">get_theta_phi_r</span><span class="p">(</span><span class="n">corner_pos</span><span class="p">)</span>
+        <span class="n">r_meter</span> <span class="o">=</span> <span class="n">r</span>
+        <span class="n">theta_deg</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">rad2deg</span><span class="p">(</span><span class="n">theta</span><span class="p">)</span>
+        <span class="n">target_list_range</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">r_meter</span><span class="p">)</span>
+        <span class="n">target_list_angle</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">theta_deg</span><span class="p">)</span>
+    <span class="k">return</span> <span class="p">(</span><span class="n">target_list_range</span><span class="p">,</span> <span class="n">target_list_angle</span><span class="p">)</span>
+
+
+<span class="k">def</span><span class="w"> </span><span class="nf">calculate_range_angle_map</span><span class="p">():</span>
+    <span class="n">use_pickled_data</span> <span class="o">=</span> <span class="kc">True</span>
+    <span class="k">if</span> <span class="n">use_pickled_data</span><span class="p">:</span>
+        <span class="c1"># load precalculated data from pickled data</span>
+        <span class="n">model_dir</span> <span class="o">=</span> <span class="n">Path</span><span class="p">(</span><span class="vm">__file__</span><span class="p">)</span><span class="o">.</span><span class="n">parent</span>
+        <span class="n">data_file</span> <span class="o">=</span> <span class="n">model_dir</span> <span class="o">/</span> <span class="n">Path</span><span class="p">(</span><span class="s1">&#39;data&#39;</span><span class="p">)</span> <span class="o">/</span> <span class="n">Path</span><span class="p">(</span><span class="s1">&#39;corner_reflectors_range_angle.pkl&#39;</span><span class="p">)</span>
+        <span class="n">channel_tensor</span> <span class="o">=</span> <span class="n">ChannelTensor</span><span class="o">.</span><span class="n">from_pickle_file</span><span class="p">(</span><span class="n">data_file</span><span class="p">)</span>
+        <span class="c1"># specify transmitter names and positions manually</span>
+        <span class="n">tx_dict</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;Tx1&#39;</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mf">0.</span><span class="p">,</span> <span class="mf">0.</span><span class="p">,</span> <span class="mf">0.</span><span class="p">]),</span>
+                   <span class="s1">&#39;Tx2&#39;</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mf">0.00197368</span><span class="p">,</span> <span class="mf">0.</span><span class="p">,</span> <span class="mf">0.</span><span class="p">])}</span>
+        <span class="c1"># specify receiver names and positions</span>
+        <span class="n">rx_dict</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;Rx1&#39;</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mf">0.00592105</span><span class="p">,</span> <span class="mf">0.</span><span class="p">,</span> <span class="mf">0.</span><span class="p">]),</span>
+                   <span class="s1">&#39;Rx2&#39;</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mf">0.00986842</span><span class="p">,</span> <span class="mf">0.</span><span class="p">,</span> <span class="mf">0.</span><span class="p">]),</span>
+                   <span class="s1">&#39;Rx3&#39;</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mf">0.01381579</span><span class="p">,</span> <span class="mf">0.</span><span class="p">,</span> <span class="mf">0.</span><span class="p">])}</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="c1">#  load the parametric F-parameters of the simulation and organize them in the `ChannelTensor`</span>
+        <span class="n">model_dir</span> <span class="o">=</span> <span class="n">Path</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;./&#39;</span><span class="p">)</span>
+        <span class="n">cst_file_name</span> <span class="o">=</span> <span class="n">model_dir</span> <span class="o">/</span> <span class="sa">r</span><span class="s1">&#39;corner_reflectors_range_angle.cst&#39;</span>
+        <span class="n">txs</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Tx1&#39;</span><span class="p">,</span> <span class="s1">&#39;Tx2&#39;</span><span class="p">]</span>  <span class="c1"># specify the name of the transmitter FFS</span>
+        <span class="n">rxs</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Rx1&#39;</span><span class="p">,</span> <span class="s1">&#39;Rx2&#39;</span><span class="p">,</span> <span class="s1">&#39;Rx3&#39;</span><span class="p">]</span>  <span class="c1"># specify the name of the receiver FFS</span>
+        <span class="n">channel_tensor</span> <span class="o">=</span> <span class="n">ChannelTensor</span><span class="o">.</span><span class="n">from_cst_file</span><span class="p">(</span><span class="n">cst_file_name</span><span class="p">,</span> <span class="n">txs</span><span class="p">,</span> <span class="n">rxs</span><span class="p">)</span>
+        <span class="c1"># load the antenna positions from Parameter file</span>
+        <span class="c1"># specify those manually when you have not parametrized the source position</span>
+        <span class="n">tx_dict</span><span class="p">,</span> <span class="n">rx_dict</span> <span class="o">=</span> <span class="n">get_antenna_positions_from_model</span><span class="p">(</span><span class="n">cst_file_name</span><span class="p">,</span> <span class="n">rxs</span><span class="p">,</span> <span class="n">txs</span><span class="p">)</span>
+
+    <span class="c1"># calculate the range_tensor from this data assuming a pulsed RADAR signal</span>
+    <span class="n">range_axis_vals</span><span class="p">,</span> <span class="n">range_tensor</span> <span class="o">=</span> <span class="n">range_map_from_channeltensor_pulsed_radar</span><span class="p">(</span><span class="n">channel_tensor</span><span class="p">,</span>
+                                                                            <span class="n">max_range</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span>
+                                                                            <span class="n">Nbins</span><span class="o">=</span><span class="mi">1024</span><span class="p">,</span>
+                                                                            <span class="n">window_order</span><span class="o">=</span><span class="mi">8</span><span class="p">,</span>
+                                                                            <span class="n">window_amplitude_correction</span><span class="o">=</span><span class="kc">True</span>
+                                                                            <span class="p">)</span>
+    <span class="c1"># for the first parameter sweep and channel number 0 plot the range map</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">range_axis_vals</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">abs</span><span class="p">(</span><span class="n">range_tensor</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="p">:]))</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">yscale</span><span class="p">(</span><span class="s1">&#39;log&#39;</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">xlim</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">10</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Pulsed RADAR - Estimated Ranges Sweep 0 Channel 0&#39;</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;distance / m&#39;</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;signal strenght / a.u.&#39;</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+    <span class="c1"># organize the virtual array positions and order them according to the channel dictionary</span>
+    <span class="n">channel_dict</span> <span class="o">=</span> <span class="n">channel_tensor</span><span class="o">.</span><span class="n">get_channel_dict</span><span class="p">()</span>
+    <span class="n">virtual_array_positions</span> <span class="o">=</span> <span class="n">create_virtual_antenna_matrix</span><span class="p">(</span><span class="n">tx_dict</span><span class="p">,</span> <span class="n">rx_dict</span><span class="p">,</span> <span class="n">channel_dict</span><span class="p">,</span> <span class="n">scale</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+    <span class="c1">#</span>
+    <span class="n">f0design</span> <span class="o">=</span> <span class="mf">76e+9</span>  <span class="c1"># reference frequency for angle of arrival algorithm</span>
+    <span class="n">k0</span> <span class="o">=</span> <span class="n">freqHz_to_k0</span><span class="o">*</span><span class="n">f0design</span>
+    <span class="n">FoV</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">deg2rad</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="o">-</span><span class="mi">85</span><span class="p">,</span> <span class="mi">85</span><span class="p">]))</span>  <span class="c1"># field of view settings</span>
+    <span class="c1"># specify sensor scan coordiante system</span>
+    <span class="n">Uhat</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">])</span>
+    <span class="n">Vhat</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">])</span>
+    <span class="n">What</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">])</span>
+    <span class="n">origin</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mf">0.00592105</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">])</span>
+    <span class="n">sensor_coordinate_system</span> <span class="o">=</span> <span class="n">SensorCoordinateSystem1</span><span class="p">(</span><span class="n">Uhat</span><span class="p">,</span> <span class="n">Vhat</span><span class="p">,</span> <span class="n">What</span><span class="p">,</span> <span class="n">origin</span><span class="p">)</span>
+    <span class="c1"># setup the angle of arrival detection algorithm</span>
+    <span class="n">mvdr_algorithm</span> <span class="o">=</span> <span class="n">MVDRAlgorithm</span><span class="p">(</span><span class="n">kind</span><span class="o">=</span><span class="s2">&quot;theta&quot;</span><span class="p">,</span>
+                                <span class="n">vmin</span><span class="o">=</span><span class="n">FoV</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span>
+                                <span class="n">vmax</span><span class="o">=</span><span class="n">FoV</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span>
+                                <span class="n">nsamples</span><span class="o">=</span><span class="mi">720</span><span class="p">,</span>
+                                <span class="n">virtual_array_positions</span><span class="o">=</span><span class="n">virtual_array_positions</span><span class="p">,</span>
+                                <span class="n">k0</span><span class="o">=</span><span class="n">k0</span><span class="p">,</span>
+                                <span class="n">second_dim_angle</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span>
+                                <span class="n">coordinate_system</span><span class="o">=</span><span class="n">sensor_coordinate_system</span><span class="p">)</span>
+    <span class="n">mvdr_algorithm</span><span class="o">.</span><span class="n">set_sigma_regularization_factor</span><span class="p">(</span><span class="mf">1e-15</span><span class="p">)</span>  <span class="c1"># loading factor for the covariance matrix</span>
+    <span class="c1"># run the mvdr_algorithm over each range bin</span>
+    <span class="n">new_range</span><span class="p">,</span> <span class="n">Zz</span> <span class="o">=</span> <span class="n">angle_range_map_limited_range</span><span class="p">(</span><span class="n">mvdr_algorithm</span><span class="p">,</span> <span class="n">range_tensor</span><span class="p">,</span> <span class="n">range_axis_vals</span><span class="p">,</span> <span class="n">max_range</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span>
+    <span class="n">angle</span> <span class="o">=</span> <span class="n">mvdr_algorithm</span><span class="o">.</span><span class="n">get_scan_vars_degree</span><span class="p">()</span>
+    <span class="c1"># visualize the resulting range-angle map</span>
+    <span class="n">X</span><span class="p">,</span> <span class="n">Y</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">meshgrid</span><span class="p">(</span><span class="n">new_range</span><span class="p">,</span> <span class="n">angle</span><span class="p">)</span>
+    <span class="n">Z</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">abs</span><span class="p">(</span><span class="n">Zz</span><span class="p">))</span>
+    <span class="n">tls</span><span class="o">.</span><span class="n">visualize_map3d</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">Y</span><span class="p">,</span> <span class="n">Z</span><span class="p">,</span> <span class="n">xlabel</span><span class="o">=</span><span class="s1">&#39;range/m&#39;</span><span class="p">,</span> <span class="n">ylabel</span><span class="o">=</span><span class="s1">&#39;angle/deg&#39;</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">pcolormesh</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">Y</span><span class="p">,</span> <span class="n">Z</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;range / m&#39;</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;theta / deg&#39;</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Pulsed RADAR - MVDR&#39;</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">colorbar</span><span class="p">()</span>
+    <span class="n">target_list_range</span><span class="p">,</span> <span class="n">target_list_angle</span> <span class="o">=</span> <span class="n">generate_target_list_from_exact_positions</span><span class="p">(</span><span class="n">sensor_coordinate_system</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">target_list_range</span><span class="p">,</span> <span class="n">target_list_angle</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;r&#39;</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.5</span><span class="p">,</span> <span class="n">edgecolors</span><span class="o">=</span><span class="s1">&#39;none&#39;</span><span class="p">,</span> <span class="n">marker</span><span class="o">=</span><span class="s1">&#39;o&#39;</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+    <span class="n">tls</span><span class="o">.</span><span class="n">visualize_map_polar</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">new_range</span><span class="p">),</span> <span class="n">angle</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">abs</span><span class="p">(</span><span class="n">Zz</span><span class="p">)),</span> <span class="n">angle_in_deg</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+
+<span class="k">def</span><span class="w"> </span><span class="nf">main</span><span class="p">():</span>
+    <span class="n">calculate_range_angle_map</span><span class="p">()</span>
+
+
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s1">&#39;__main__&#39;</span><span class="p">:</span>
+    <span class="n">main</span><span class="p">()</span>
+</pre></div>
+</div>
+</section>
+<section id="module-contents">
+<h2>Module Contents<a class="headerlink" href="#module-contents" title="Permalink to this heading">¶</a></h2>
+</section>
+<section id="module-cst.radar.channel_tensor">
+<span id="cst-radar-channel-tensor"></span><h2><a class="reference internal" href="#module-cst.radar.channel_tensor" title="cst.radar.channel_tensor"><code class="xref py py-mod docutils literal notranslate"><span class="pre">cst.radar.channel_tensor</span></code></a><a class="headerlink" href="#module-cst.radar.channel_tensor" title="Permalink to this heading">¶</a></h2>
+<p>This module provides a convenient way of representing F/S parameters from a simulation in a compact form.
+The ChannelTensor object is created from simulation data and facilitates a convenient data representation.
+Several methods to extract data from a CST Asymptotic solver simulation are provided.</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="cst.radar.channel_tensor.ChannelTensor">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">ChannelTensor</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">channel_dict</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">{}</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">run_id_dict</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">{}</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">frequencies</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">[]</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tensor</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">number_of_channels</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">number_of_frequencies</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">number_of_snapshots</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">all_run_id_parameter_combinations</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">[]</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cst.radar.channel_tensor.ChannelTensor" title="Permalink to this definition">¶</a></dt>
+<dd><p>F-parameter data tensor (snapshot,channel,frequency) and related quanties</p>
+<dl class="simple">
+<dt>bare f-parameter data tensor: array(complex) tensor rank 3</dt><dd><p>indicies are (snapshot,channel,frequency)</p>
+</dd>
+<dt>run_id_dict: dict(int,int)</dt><dd><p>maps snapshot number to run id</p>
+</dd>
+<dt>channel_dict: dict(int,(str,str))</dt><dd><p>maps channel number to Tx/Rx pairs</p>
+</dd>
+<dt>frequencies: array(float)</dt><dd><p>solver frequencies corresponding to frequency index</p>
+</dd>
+</dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="cst.radar.channel_tensor.ChannelTensor.get_tensor">
+<span class="sig-name descname"><span class="pre">get_tensor</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#cst.radar.channel_tensor.ChannelTensor.get_tensor" title="Permalink to this definition">¶</a></dt>
+<dd><p>get bare f-parameter data tensor, indicies are (snapshot,channel,frequency)</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cst.radar.channel_tensor.ChannelTensor.get_frequencies">
+<span class="sig-name descname"><span class="pre">get_frequencies</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#cst.radar.channel_tensor.ChannelTensor.get_frequencies" title="Permalink to this definition">¶</a></dt>
+<dd><p>frequencies in Hz</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cst.radar.channel_tensor.ChannelTensor.get_number_of_channels">
+<span class="sig-name descname"><span class="pre">get_number_of_channels</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#cst.radar.channel_tensor.ChannelTensor.get_number_of_channels" title="Permalink to this definition">¶</a></dt>
+<dd><p>number of channels = number Tx* number Rx antennas</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cst.radar.channel_tensor.ChannelTensor.get_number_of_frequencies">
+<span class="sig-name descname"><span class="pre">get_number_of_frequencies</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#cst.radar.channel_tensor.ChannelTensor.get_number_of_frequencies" title="Permalink to this definition">¶</a></dt>
+<dd><p>number of simulated frequencies</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cst.radar.channel_tensor.ChannelTensor.get_number_of_snapshots">
+<span class="sig-name descname"><span class="pre">get_number_of_snapshots</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#cst.radar.channel_tensor.ChannelTensor.get_number_of_snapshots" title="Permalink to this definition">¶</a></dt>
+<dd><p>number of snapshots from parameter sweep</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cst.radar.channel_tensor.ChannelTensor.get_run_id_dict">
+<span class="sig-name descname"><span class="pre">get_run_id_dict</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#cst.radar.channel_tensor.ChannelTensor.get_run_id_dict" title="Permalink to this definition">¶</a></dt>
+<dd><p>dictionary mapping the snapshot number to the solver run id</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cst.radar.channel_tensor.ChannelTensor.get_channel_dict">
+<span class="sig-name descname"><span class="pre">get_channel_dict</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#cst.radar.channel_tensor.ChannelTensor.get_channel_dict" title="Permalink to this definition">¶</a></dt>
+<dd><p>dictionary mapping the channel number to the Tx/Rx pair name</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cst.radar.channel_tensor.ChannelTensor.get_time_data">
+<span class="sig-name descname"><span class="pre">get_time_data</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">time_sweep_parameter_name</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cst.radar.channel_tensor.ChannelTensor.get_time_data" title="Permalink to this definition">¶</a></dt>
+<dd><p>list of time instances from specified parameter name</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cst.radar.channel_tensor.ChannelTensor.serialize_to_pickle_file">
+<span class="sig-name descname"><span class="pre">serialize_to_pickle_file</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">filename</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cst.radar.channel_tensor.ChannelTensor.serialize_to_pickle_file" title="Permalink to this definition">¶</a></dt>
+<dd><p>Serialize the channel tensor to file by Python pickle module.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cst.radar.channel_tensor.ChannelTensor.from_pickle_file">
+<em class="property"><span class="pre">classmethod</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">from_pickle_file</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">filename</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cst.radar.channel_tensor.ChannelTensor.from_pickle_file" title="Permalink to this definition">¶</a></dt>
+<dd><p>Deserialize the channel tensor from file by Python pickle module.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cst.radar.channel_tensor.ChannelTensor.from_cst_result3d">
+<em class="property"><span class="pre">classmethod</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">from_cst_result3d</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">result3d</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">txs</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rxs</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">skip_nonparametric</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">broad_band_result</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">include_run_ids</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">[]</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cst.radar.channel_tensor.ChannelTensor.from_cst_result3d" title="Permalink to this definition">¶</a></dt>
+<dd><p>create channel tensor from cst project</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>file_name</strong> (<em>str</em>) – name of cst file including file extension</p></li>
+<li><p><strong>txs</strong> (<em>list</em><em>(</em><em>str</em><em>)</em>) – list of active transmitter names in cst model</p></li>
+<li><p><strong>rxs</strong> (<em>list</em><em>(</em><em>str</em><em>)</em>) – list of relevant receiver names in cst model</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cst.radar.channel_tensor.ChannelTensor.from_cst_file">
+<em class="property"><span class="pre">classmethod</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">from_cst_file</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">file_name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">txs</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rxs</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">skip_nonparametric</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">broad_band_result</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">include_run_ids</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">[]</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cst.radar.channel_tensor.ChannelTensor.from_cst_file" title="Permalink to this definition">¶</a></dt>
+<dd><p>create channel tensor from cst project from file <cite>my_fancy_project.cst</cite></p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>file_name</strong> (<em>str</em>) – name of cst file including file extension</p></li>
+<li><p><strong>txs</strong> (<em>list</em><em>(</em><em>str</em><em>)</em>) – list of active transmitter names in cst model</p></li>
+<li><p><strong>rxs</strong> (<em>list</em><em>(</em><em>str</em><em>)</em>) – list of relevant receiver names in cst model</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="cst.radar.channel_tensor.get_antenna_positions_from_model">
+<span class="sig-name descname"><span class="pre">get_antenna_positions_from_model</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">model_file_name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rxs</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">txs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cst.radar.channel_tensor.get_antenna_positions_from_model" title="Permalink to this definition">¶</a></dt>
+<dd><p>retrieve antenna position from the ‘Parameters.json’ file of the model</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>model_file_name</strong> (<em>str</em>) – path to cst model file</p></li>
+<li><p><strong>rxs</strong> (<em>list</em><em>(</em><em>str</em><em>)</em>) – list of Rx antenna names</p></li>
+<li><p><strong>txs</strong> (<em>list</em><em>(</em><em>str</em><em>)</em>) – list of Tx antenna names</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>rx_dict : dict(str,array(3)) antenna name and position vector
+tx_dict : dict(str,array(3)) antenna name and position vector</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>tuple(rx_dict, tx_dict)</p>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+<section id="module-cst.radar.spectral_algorithms">
+<span id="cst-radar-spectral-algorithms"></span><h2><a class="reference internal" href="#module-cst.radar.spectral_algorithms" title="cst.radar.spectral_algorithms"><code class="xref py py-mod docutils literal notranslate"><span class="pre">cst.radar.spectral_algorithms</span></code></a><a class="headerlink" href="#module-cst.radar.spectral_algorithms" title="Permalink to this heading">¶</a></h2>
+<p>This module contains the one-dimensional (pseudo) spectral angle-of-arrival finding algorithms
+and some helper routines.</p>
+<dl class="py function">
+<dt class="sig sig-object py" id="cst.radar.spectral_algorithms.create_virtual_antenna_matrix">
+<span class="sig-name descname"><span class="pre">create_virtual_antenna_matrix</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">tx_dict</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rx_dict</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">channel_dict</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">scale</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cst.radar.spectral_algorithms.create_virtual_antenna_matrix" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create matrix of virtual antenna array positions consistent with the enumeration of the channels
+in the channel tensor.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>tx_dict</strong> (<em>dict</em><em>(</em><em>str</em><em>,</em><em>np.array</em><em>(</em><em>3</em><em>)</em><em>)</em>) – Dictionary mapping antenna names to antenna positions</p></li>
+<li><p><strong>rx_dict</strong> (<em>dict</em><em>(</em><em>str</em><em>,</em><em>np.array</em><em>(</em><em>3</em><em>)</em><em>)</em>) – Dictionary mapping antenna names to antenna positions</p></li>
+<li><p><strong>channel_dict</strong> (<em>dict</em><em>(</em><em>(</em><em>str</em><em>,</em><em>str</em><em>)</em><em>,</em><em>int</em><em>)</em>) – Dictionary mapping the pair of Rx/Tx name to the channel number as obtained from the channel tensor</p></li>
+<li><p><strong>scale</strong> (<em>float</em>) – Scale the resulting positions to take possible units into account</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>antenna_matrix</strong> – Height = 3, Width = number channels
+the column vectors are the virtual antenna position for a specific channel</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>float array</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="cst.radar.spectral_algorithms.assemble_covariancematrix_single_frequency">
+<span class="sig-name descname"><span class="pre">assemble_covariancematrix_single_frequency</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">channel_tensor</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ifreq</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cst.radar.spectral_algorithms.assemble_covariancematrix_single_frequency" title="Permalink to this definition">¶</a></dt>
+<dd><p>Calculate the covariance matrix for a single frequency of the channel tensor</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>channel_tensor</strong> (<em>class ChannelTensor</em>) – Channel tensor object from a simulation</p></li>
+<li><p><strong>ifreq</strong> (<em>int</em>) – Frequency index</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>Rhat</strong> – covariance matrix estimated from channel tensor</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>np.array((2, 2), float)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="cst.radar.spectral_algorithms.MUSICAlgorithm">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">MUSICAlgorithm</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">kind</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">vmin</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">vmax</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">nsamples</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">virtual_array_positions</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">k0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">second_dim_angle</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">number_objects</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">threshhold=0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">coordinate_system=&lt;cst.radar.coordinate_systems.SphericalCoordinateSystem</span> <span class="pre">object&gt;</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cst.radar.spectral_algorithms.MUSICAlgorithm" title="Permalink to this definition">¶</a></dt>
+<dd><p>Implemetation of MUSIC spectral algorithm in order to determine pseudo spectrum of objects’ locations by calculating
+spectra using a sub-space method.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>kind</strong> (<em>string</em>) – “theta” or “phi”</p></li>
+<li><p><strong>vmin</strong> (<em>float</em>) – minimal scan angle in rad</p></li>
+<li><p><strong>vmax</strong> (<em>float</em>) – maximal scan angle in rad</p></li>
+<li><p><strong>nsamples</strong> (<em>int</em>) – number of angles</p></li>
+<li><p><strong>virtual_array_positions</strong> (<em>2Darray</em><em>(</em><em>float</em><em>)</em>) – position vectors of virtual array consistent with setup used for calculation of correlation matrix</p></li>
+<li><p><strong>k0</strong> (<em>float</em>) – base frequency for RADAR</p></li>
+<li><p><strong>second_dim_angle</strong> (<em>float</em>) – value of second angle of line along which scan is conducted.
+This angle is kept constant during the scan.</p></li>
+<li><p><strong>number_objects</strong> (<em>int</em>) – number of objects the algorithm shall detect</p></li>
+<li><p><strong>coordinate_system</strong> (<em>Coordinate system object</em>) – Coordinate system used for definition of scan angles.</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="cst.radar.spectral_algorithms.MUSICAlgorithm.compile">
+<span class="sig-name descname"><span class="pre">compile</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#cst.radar.spectral_algorithms.MUSICAlgorithm.compile" title="Permalink to this definition">¶</a></dt>
+<dd><p>Compile scan angles and scan directions according to the specified information in construcor.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cst.radar.spectral_algorithms.MUSICAlgorithm.execute_loop_svd">
+<span class="sig-name descname"><span class="pre">execute_loop_svd</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">Rhat</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cst.radar.spectral_algorithms.MUSICAlgorithm.execute_loop_svd" title="Permalink to this definition">¶</a></dt>
+<dd><p>loop version for debugging and verification - SVD based</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cst.radar.spectral_algorithms.MUSICAlgorithm.execute_loop">
+<span class="sig-name descname"><span class="pre">execute_loop</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">Rhat</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cst.radar.spectral_algorithms.MUSICAlgorithm.execute_loop" title="Permalink to this definition">¶</a></dt>
+<dd><p>loop version for debugging and verification</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cst.radar.spectral_algorithms.MUSICAlgorithm.execute_vectorized">
+<span class="sig-name descname"><span class="pre">execute_vectorized</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">Rhat</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cst.radar.spectral_algorithms.MUSICAlgorithm.execute_vectorized" title="Permalink to this definition">¶</a></dt>
+<dd><p>vectorized version for performance</p>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-cst.radar.coordinate_systems">
+<span id="cst-radar-coordinate-systems"></span><h2><a class="reference internal" href="#module-cst.radar.coordinate_systems" title="cst.radar.coordinate_systems"><code class="xref py py-mod docutils literal notranslate"><span class="pre">cst.radar.coordinate_systems</span></code></a><a class="headerlink" href="#module-cst.radar.coordinate_systems" title="Permalink to this heading">¶</a></h2>
+<p>This module provides 3d coordinate systems to describe the sensor orientation and the respective scan directions
+for MIMO RADARs. The coordinate systems have to be specified in order to determinte the scan direction for the angle of
+arrival algorithms.</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="cst.radar.coordinate_systems.CoordinateSystem">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">CoordinateSystem</span></span><a class="headerlink" href="#cst.radar.coordinate_systems.CoordinateSystem" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="py method">
+<dt class="sig sig-object py" id="cst.radar.coordinate_systems.CoordinateSystem.get_unit_vector">
+<span class="sig-name descname"><span class="pre">get_unit_vector</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">theta</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">phi</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Type</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.typing.NDArray.numpy.float64</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#cst.radar.coordinate_systems.CoordinateSystem.get_unit_vector" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns unit vector corresponding to parametrization in spherical
+coordinate system.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>theta</strong> (<em>float</em>) – Theta coordinate of vector in spherical coordinate system</p></li>
+<li><p><strong>phi</strong> (<em>float</em>) – Phi coordinate of vector in spherical coordinate system</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>vec</strong> – unit vector</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>array(float)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cst.radar.coordinate_systems.CoordinateSystem.get_vector">
+<span class="sig-name descname"><span class="pre">get_vector</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">theta</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">phi</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">r</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Type</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.typing.NDArray.numpy.float64</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#cst.radar.coordinate_systems.CoordinateSystem.get_vector" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns cartesian vector corresponding to parametrization in spherical
+coordinate system.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>theta</strong> (<em>float</em>) – Theta coordinate of vector in spherical coordinate system</p></li>
+<li><p><strong>phi</strong> (<em>float</em>) – Phi coordinate of vector in spherical coordinate system</p></li>
+<li><p><strong>r</strong> (<em>float</em>) – Radial coordinate of vector in spherical coordinate system</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>vec</strong> – Input vector reparametrized in cartesian coordinates of
+underlying orthonormal coordinate system ([Uhat, Vhat, What]).</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>array(float)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cst.radar.coordinate_systems.CoordinateSystem.get_unit_vector_component">
+<span class="sig-name descname"><span class="pre">get_unit_vector_component</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">i</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">theta</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">phi</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">float</span></span></span><a class="headerlink" href="#cst.radar.coordinate_systems.CoordinateSystem.get_unit_vector_component" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns i-th cartesian component of vector given in the
+Elevation-over-Azimuth coordinate system representation by
+(theta_x, theta_y, r)</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>i</strong> (<em>int</em>) – index of component that should be returned</p></li>
+<li><p><strong>theta</strong> (<em>float</em>) – theta vector component in Elevation-over-Azimuth coordinate system representation</p></li>
+<li><p><strong>phi</strong> (<em>float</em>) – phi vector component in Elevation-over-Azimuth coordinate system representation</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>i-th cartesian component of vector</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>float</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cst.radar.coordinate_systems.CoordinateSystem.get_theta_phi_r">
+<span class="sig-name descname"><span class="pre">get_theta_phi_r</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">vec3</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Type</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.typing.NDArray.numpy.float64</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">phi_0_to_2pi</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cst.radar.coordinate_systems.CoordinateSystem.get_theta_phi_r" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the spherical coordinates of a cartesian vector.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>vec3</strong> (<em>array</em><em>(</em><em>float</em><em>)</em>) – Cartesian vector</p></li>
+<li><p><strong>phi_0_to_2pi</strong> (<em>bool</em>) – measuring phi angle from [0,2pi) else [-pi,pi]</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Local coordinates (theta, phi, r) of vector vec3</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>tuple</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="cst.radar.coordinate_systems.SphericalCoordinateSystem">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">SphericalCoordinateSystem</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">Uhat</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">numpy.array</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Vhat</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">numpy.array</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">What</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">numpy.array</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">origin</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">numpy.array</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cst.radar.coordinate_systems.SphericalCoordinateSystem" title="Permalink to this definition">¶</a></dt>
+<dd><p>Implementation of a spherical coordinate system with orthonormal axis
+vectors Uhat, Vhat and What.
+Angle “Theta” is defined as the inverse cosine between position vector and
+What-axis, angle “Phi” is defined in plane perpendicular to What-axis.</p>
+<figure class="align-default" id="id12">
+<a class="reference internal image-reference" href="../_images/KOS_spherical.svg"><img alt="../_images/KOS_spherical.svg" height="283" src="../_images/KOS_spherical.svg" width="385" /></a>
+<figcaption>
+<p><span class="caption-text">Spherical coordinate systems</span><a class="headerlink" href="#id12" title="Permalink to this image">¶</a></p>
+</figcaption>
+</figure>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>Uhat</strong> (<em>array</em><em>(</em><em>float</em><em>)</em>) – first dimension basis vector</p></li>
+<li><p><strong>Uhat</strong> – second dimension basis vector</p></li>
+<li><p><strong>Uhat</strong> – third dimension basis vector</p></li>
+<li><p><strong>origin</strong> (<em>array</em><em>(</em><em>float</em><em>)</em>) – vector of origin of coordinate system with respect to standard
+coordinate systen</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="cst.radar.coordinate_systems.SphericalCoordinateSystem.get_unit_vector">
+<span class="sig-name descname"><span class="pre">get_unit_vector</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">theta</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">phi</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cst.radar.coordinate_systems.SphericalCoordinateSystem.get_unit_vector" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns unit vector corresponding to parametrization in spherical
+coordinate system.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>theta</strong> (<em>float</em>) – Theta coordinate of vector in spherical coordinate system</p></li>
+<li><p><strong>phi</strong> (<em>float</em>) – Phi coordinate of vector in spherical coordinate system</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>vec</strong> – unit vector</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>array(float)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cst.radar.coordinate_systems.SphericalCoordinateSystem.get_vector">
+<span class="sig-name descname"><span class="pre">get_vector</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">theta</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">phi</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">r</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cst.radar.coordinate_systems.SphericalCoordinateSystem.get_vector" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns cartesian vector corresponding to parametrization in spherical
+coordinate system.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>theta</strong> (<em>float</em>) – Theta coordinate of vector in spherical coordinate system</p></li>
+<li><p><strong>phi</strong> (<em>float</em>) – Phi coordinate of vector in spherical coordinate system</p></li>
+<li><p><strong>r</strong> (<em>float</em>) – Radial coordinate of vector in spherical coordinate system</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>vec</strong> – Input vector reparametrized in cartesian coordinates of
+underlying orthonormal coordinate system ([Uhat, Vhat, What]).</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>array(float)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cst.radar.coordinate_systems.SphericalCoordinateSystem.get_unit_vector_component">
+<span class="sig-name descname"><span class="pre">get_unit_vector_component</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">i</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">theta</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">phi</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cst.radar.coordinate_systems.SphericalCoordinateSystem.get_unit_vector_component" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns i-th cartesian component of the unit vector given in the
+spherical coordinate system representation by (theta, phi)</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>i</strong> (<em>int</em>) – index of component that should be returned</p></li>
+<li><p><strong>theta</strong> (<em>array</em><em>(</em><em>float</em><em>)</em>) – array of theta angles</p></li>
+<li><p><strong>phi</strong> (<em>array</em><em>(</em><em>float</em><em>)</em>) – array of phi angles</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>vector of i-th component</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>array(float)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cst.radar.coordinate_systems.SphericalCoordinateSystem.get_theta_phi_r">
+<span class="sig-name descname"><span class="pre">get_theta_phi_r</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">vec3</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">phi_0_to_2pi</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cst.radar.coordinate_systems.SphericalCoordinateSystem.get_theta_phi_r" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the spherical coordinates of a cartesian vector.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>vec3</strong> (<em>array</em><em>(</em><em>float</em><em>)</em>) – Cartesian vector</p></li>
+<li><p><strong>phi_0_to_2pi</strong> (<em>bool</em>) – measuring phi angle from [0,2pi) else [-pi,pi]</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Local coordinates (theta, phi, r) of vector vec3</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>tuple</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="cst.radar.coordinate_systems.ElOverAzCoordinateSystem">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">ElOverAzCoordinateSystem</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">Uhat</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">numpy.array</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Vhat</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">numpy.array</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">What</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">numpy.array</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">origin</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">numpy.array</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cst.radar.coordinate_systems.ElOverAzCoordinateSystem" title="Permalink to this definition">¶</a></dt>
+<dd><p>Elevation-over-Azimuth coordinate system in which the pole is not located
+along the z-axis but along the y-axis. Theta angle is defined as the
+arcsin(v/r). Mind that in the drawing the angle is displayed in the v-w-plane
+, however, it should not be confused as being being defined in this plane.
+Unlike in the case of the sensor coordinate system, where the angles are defined in
+the respective planes, in the Elevation-Over-Azimuth Coordinate System,
+points of equal angles of Theta will lie along a spherical arc around the
+coordinate origin. Phi angle is defined as the arctan(u/w).</p>
+<figure class="align-default" id="id13">
+<a class="reference internal image-reference" href="../_images/KOS_ElOverAz.svg"><img alt="../_images/KOS_ElOverAz.svg" height="321" src="../_images/KOS_ElOverAz.svg" width="415" /></a>
+<figcaption>
+<p><span class="caption-text">Elevation-over-Azimuth coordinate systems</span><a class="headerlink" href="#id13" title="Permalink to this image">¶</a></p>
+</figcaption>
+</figure>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>Uhat</strong> (<em>array</em><em>(</em><em>float</em><em>)</em>) – first dimension basis vector</p></li>
+<li><p><strong>Uhat</strong> – second dimension basis vector</p></li>
+<li><p><strong>Uhat</strong> – third dimension basis vector</p></li>
+<li><p><strong>origin</strong> (<em>array</em><em>(</em><em>float</em><em>)</em>) – vector of origin of coordinate system with respect to global
+cartesian coordinate system</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="cst.radar.coordinate_systems.ElOverAzCoordinateSystem.get_unit_vector">
+<span class="sig-name descname"><span class="pre">get_unit_vector</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">theta</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">phi</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cst.radar.coordinate_systems.ElOverAzCoordinateSystem.get_unit_vector" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns cartesian vector corresponding to parametrization in
+Elevation-over-Azimuth coordinate system.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>theta</strong> (<em>float</em>) – Theta coordinate of vector in Elevation-over-Azimuth coordinate
+system</p></li>
+<li><p><strong>phi</strong> (<em>float</em>) – Phi coordinate of vector in Elevation-over-Azimuth coordinate
+system</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>vec</strong> – Input vector reparametrized in cartesian coordinates of
+underlying orthonormal coordinate system ([Uhat, Vhat, What]).</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>array(float)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cst.radar.coordinate_systems.ElOverAzCoordinateSystem.get_vector">
+<span class="sig-name descname"><span class="pre">get_vector</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">theta</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">phi</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">r</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cst.radar.coordinate_systems.ElOverAzCoordinateSystem.get_vector" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns cartesian vector corresponding to parametrization in
+Elevation-over-Azimuth coordinate system.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>theta</strong> (<em>float</em>) – Theta coordinate of vector in Elevation-over-Azimuth coordinate
+system</p></li>
+<li><p><strong>phi</strong> (<em>float</em>) – Phi coordinate of vector in Elevation-over-Azimuth coordinate
+system</p></li>
+<li><p><strong>r</strong> (<em>float</em>) – Radial coordinate of vector in Elevation-over-Azimuth coordinate
+system</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>vec</strong> – Input vector reparametrized in cartesian coordinates of
+underlying orthonormal coordinate system ([Uhat, Vhat, What]).</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>array(float)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cst.radar.coordinate_systems.ElOverAzCoordinateSystem.get_unit_vector_component">
+<span class="sig-name descname"><span class="pre">get_unit_vector_component</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">i</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">theta</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">phi</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cst.radar.coordinate_systems.ElOverAzCoordinateSystem.get_unit_vector_component" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns i-th cartesian component of vector given in the
+Elevation-over-Azimuth coordinate system representation by
+(theta_x, theta_y, r)</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>i</strong> (<em>int</em>) – index of component that should be returned</p></li>
+<li><p><strong>theta</strong> (<em>float</em>) – theta vector component in Elevation-over-Azimuth coordinate system representation</p></li>
+<li><p><strong>phi</strong> (<em>float</em>) – phi vector component in Elevation-over-Azimuth coordinate system representation</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>i-th cartesian component of vector</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>float</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cst.radar.coordinate_systems.ElOverAzCoordinateSystem.get_theta_phi_r">
+<span class="sig-name descname"><span class="pre">get_theta_phi_r</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">vec3</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cst.radar.coordinate_systems.ElOverAzCoordinateSystem.get_theta_phi_r" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the ElOverAzCoordinateSystem coordinates of a cartesian vector.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>vec3</strong> (<em>array</em><em>(</em><em>float</em><em>)</em>) – Cartesian vector</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Local coordinates (El, Az, r) of vector vec3</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>tuple</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="cst.radar.coordinate_systems.SensorCoordinateSystem1">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">SensorCoordinateSystem1</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">Uhat</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">numpy.array</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Vhat</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">numpy.array</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">What</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">numpy.array</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">origin</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">numpy.array</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cst.radar.coordinate_systems.SensorCoordinateSystem1" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sensor-Centric Coordinate System in which the antennas extend in the U-V-plane, hence the look ahead normal is
+located along the W-axis.
+Theta angle is defined as arctan(u/w) in the projection into the U-W-plane.
+Phi angle is defined as arctan(v/w) in the projection into the V-W-plane.</p>
+<figure class="align-default" id="id14">
+<a class="reference internal image-reference" href="../_images/KOS_sensor.svg"><img alt="../_images/KOS_sensor.svg" height="279" src="../_images/KOS_sensor.svg" width="400" /></a>
+<figcaption>
+<p><span class="caption-text">Sensor coordinate system.</span><a class="headerlink" href="#id14" title="Permalink to this image">¶</a></p>
+</figcaption>
+</figure>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>Uhat</strong> (<em>array</em><em>(</em><em>float</em><em>)</em>) – first dimension basis vector</p></li>
+<li><p><strong>Uhat</strong> – second dimension basis vector</p></li>
+<li><p><strong>Uhat</strong> – third dimension basis vector</p></li>
+<li><p><strong>origin</strong> (<em>array</em><em>(</em><em>float</em><em>)</em>) – vector of origin of coordinate system with respect to standard coordinate system</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="cst.radar.coordinate_systems.SensorCoordinateSystem1.get_unit_vector">
+<span class="sig-name descname"><span class="pre">get_unit_vector</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">theta</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">phi</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cst.radar.coordinate_systems.SensorCoordinateSystem1.get_unit_vector" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return cartesian vector corresponding to parametrization in Sensor coordinate system.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>theta</strong> (<em>float</em>) – Theta coordinate of vector in Sensor coordinate system</p></li>
+<li><p><strong>phi</strong> (<em>float</em>) – Phi coordinate of vector in Sensor coordinate system</p></li>
+<li><p><strong>r</strong> (<em>float</em>) – Radial coordinate of vector in Sensor coordinate system</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>vec</strong> – Input vector reparametrized in cartesian coordinates of
+underlying orthonormal coordinate system ([Uhat, Vhat, What]).</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>array(float)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cst.radar.coordinate_systems.SensorCoordinateSystem1.get_vector">
+<span class="sig-name descname"><span class="pre">get_vector</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">theta</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">phi</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">r</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cst.radar.coordinate_systems.SensorCoordinateSystem1.get_vector" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return cartesian vector corresponding to parametrization in Sensor coordinate system.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>theta</strong> (<em>float</em>) – Theta coordinate of vector in Sensor coordinate system</p></li>
+<li><p><strong>phi</strong> (<em>float</em>) – Phi coordinate of vector in Sensor coordinate system</p></li>
+<li><p><strong>r</strong> (<em>float</em>) – Radial coordinate of vector in Sensor coordinate system</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>vec</strong> – Input vector reparametrized in cartesian coordinates of
+underlying orthonormal coordinate system ([Uhat, Vhat, What]).</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>array(float)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cst.radar.coordinate_systems.SensorCoordinateSystem1.get_unit_vector_component">
+<span class="sig-name descname"><span class="pre">get_unit_vector_component</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">i</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">theta</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">phi</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cst.radar.coordinate_systems.SensorCoordinateSystem1.get_unit_vector_component" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns i-th cartesian component of vector given in the sensor coordinate
+system representation by (theta, phi, r)</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>i</strong> (<em>int</em>) – Index of component that should be returned</p></li>
+<li><p><strong>theta</strong> (<em>float</em>) – Theta vector component in sensor coordinate system representation</p></li>
+<li><p><strong>phi</strong> (<em>float</em>) – Phi vector component in sensor coordinate system representation</p></li>
+<li><p><strong>r</strong> (<em>float</em>) – Radial vector component in sensor coordinate system representation</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>i-th cartesian component of vector</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>float</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cst.radar.coordinate_systems.SensorCoordinateSystem1.get_theta_phi_r">
+<span class="sig-name descname"><span class="pre">get_theta_phi_r</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">vec3</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cst.radar.coordinate_systems.SensorCoordinateSystem1.get_theta_phi_r" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the SensorCoordinateSystem1 coordinates of a cartesian vector.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>vec3</strong> (<em>array</em><em>(</em><em>float</em><em>)</em>) – Cartesian vector</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Local coordinates (theta, phi, r) of vector vec3</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>tuple</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="cst.radar.coordinate_systems.rotate_vector_3d">
+<span class="sig-name descname"><span class="pre">rotate_vector_3d</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">u</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">axis</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">angle</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cst.radar.coordinate_systems.rotate_vector_3d" title="Permalink to this definition">¶</a></dt>
+<dd><p>Rotate 3d vector u around axis with angle in counterclockwise direction</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="cst.radar.coordinate_systems.rotate_coordinate_system">
+<span class="sig-name descname"><span class="pre">rotate_coordinate_system</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">coordinate_system</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">axis</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">angle</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rotate_origin</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cst.radar.coordinate_systems.rotate_coordinate_system" title="Permalink to this definition">¶</a></dt>
+<dd><p>Rotate the U, V, W vectors of a coordinate system and optionally the origin</p>
+</dd></dl>
+
+</section>
+<section id="module-cst.radar.range">
+<span id="cst-radar-range"></span><h2><a class="reference internal" href="#module-cst.radar.range" title="cst.radar.range"><code class="xref py py-mod docutils literal notranslate"><span class="pre">cst.radar.range</span></code></a><a class="headerlink" href="#module-cst.radar.range" title="Permalink to this heading">¶</a></h2>
+<p>This module contains algorithms for calculating the range map.</p>
+<dl class="py function">
+<dt class="sig sig-object py" id="cst.radar.range.apply_range_transformation">
+<span class="sig-name descname"><span class="pre">apply_range_transformation</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">channel_tensor</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">range_transformation</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cst.radar.range.apply_range_transformation" title="Permalink to this definition">¶</a></dt>
+<dd><p>transform the frequency dimension of the channel_tensor into a range dimension</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>channel_tensor</strong> (<em>ChannelTensor object</em>) – channel tensor carrying the information and correlatons of the received signal</p></li>
+<li><p><strong>range_transformation</strong> (<em>callable object</em><em>, </em><em>function</em>) – performs the 1d range transformation</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>tuple</strong> – first array contains range axis, second array contains range tensor[isweep, ichannel, irange]</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>(array, 3D array)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="cst.radar.range.range_map_pulsed_radar">
+<span class="sig-name descname"><span class="pre">range_map_pulsed_radar</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">frequencies</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Fpara</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">max_range</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">min_range</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Nbins</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">256</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">window_order</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">16</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Noversample</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">5</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">amplitude_correction</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cst.radar.range.range_map_pulsed_radar" title="Permalink to this definition">¶</a></dt>
+<dd><p>calculate the range map for a given set of F-parameters by an windowed impulse</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>frequencies</strong> (<em>array</em><em>(</em><em>float</em><em>)</em>) – frequencies for F-parameters, expect a homogeneous spacing</p></li>
+<li><p><strong>Fparameters</strong> (<em>array</em><em>(</em><em>complex</em><em>)</em>) – F-parameters, same order as frequencies</p></li>
+<li><p><strong>max_range</strong> (<em>float &gt; 0</em>) – maximum range</p></li>
+<li><p><strong>min_range</strong> (<em>float &gt; 0 and min_range &lt; max_range</em>) – minimum range</p></li>
+<li><p><strong>Nbins</strong> (<em>int &gt; 0</em>) – number of range bins</p></li>
+<li><p><strong>window_order</strong> (<em>int &gt;= 0</em>) – order of Kaiser filter</p></li>
+<li><p><strong>Noversample</strong> (<em>int &gt;= 1</em>) – zero padding the F-parameter frequency data as [Noversample*len(Fpara),Fpara,Noversample*len(Fpara)]</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>tuple</strong> – first array contains range axis, second array contains information to fill range tensor for specific
+sweep and specific channel</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>(array, array)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="cst.radar.range.range_map_from_channeltensor_pulsed_radar">
+<span class="sig-name descname"><span class="pre">range_map_from_channeltensor_pulsed_radar</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">channel_tensor</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">max_range</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">min_range</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Nbins</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">256</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">window_order</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">16</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Noversample</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">5</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">amplitude_correction</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cst.radar.range.range_map_from_channeltensor_pulsed_radar" title="Permalink to this definition">¶</a></dt>
+<dd><p>transform the frequency dimension of the channel_tensor into a range dimension</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>channel_tensor</strong> (<em>ChannelTensor object</em>) – channel tensor carrying the information and correlatons of the received signal</p></li>
+<li><p><strong>max_range</strong> (<em>float &gt; 0</em>) – maximum range</p></li>
+<li><p><strong>min_range</strong> (<em>float &gt; 0 and min_range &lt; max_range</em>) – minimum range</p></li>
+<li><p><strong>Nbins</strong> (<em>int &gt; 0</em>) – number of range bins</p></li>
+<li><p><strong>window_order</strong> (<em>int &gt;= 0</em>) – order of Kaiser filter</p></li>
+<li><p><strong>Noversample</strong> (<em>int &gt;= 1</em>) – zero padding the F-parameter frequency data as [Noversample*len(Fpara),Fpara,Noversample*len(Fpara)]</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>tuple</strong> – first array contains range axis, second array contains range tensor[isweep, ichannel, irange]</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>(array, 3D array)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="cst.radar.range.compute_analog_digital_converter">
+<span class="sig-name descname"><span class="pre">compute_analog_digital_converter</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">t</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">adc_t0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">adc_t1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">adc_dt</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">kind</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'linear'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cst.radar.range.compute_analog_digital_converter" title="Permalink to this definition">¶</a></dt>
+<dd><p>simple analog to digtial converter model for time samples using interpolation to calculate ADC signal</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>t</strong> (<em>array</em><em>(</em><em>float</em><em>)</em>) – time axis data to sample by adc</p></li>
+<li><p><strong>y</strong> (<em>array</em><em>(</em><em>complex</em><em>)</em>) – signal to sample by adc</p></li>
+<li><p><strong>adc_t0</strong> (<em>float</em>) – start time adc</p></li>
+<li><p><strong>adc_t1</strong> (<em>float</em>) – end time adc</p></li>
+<li><p><strong>kind</strong> (<em>categorical str</em>) – linear, quadratic, cubic</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><ul class="simple">
+<li><p><strong>tuple</strong> (<em>(t_adc, y_adc)</em>)</p></li>
+<li><p><strong>t_adc</strong> (<em>array(float)</em>) – time axis adc</p></li>
+<li><p><em>y_adc</em> – sampled signal</p></li>
+</ul>
+</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="cst.radar.range.range_map_from_channeltensor_fmcw_radar">
+<span class="sig-name descname"><span class="pre">range_map_from_channeltensor_fmcw_radar</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">channel_tensor</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fmcw_radar</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">window_type</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'kaiser'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">window_order</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">16</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Noversample</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">5</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">raw_output</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">oversample_type</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'zeropadding'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dumpFparaDataDir</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">amplitude_correction</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cst.radar.range.range_map_from_channeltensor_fmcw_radar" title="Permalink to this definition">¶</a></dt>
+<dd><p>transform the frequency dimension of the channel_tensor into a range dimension</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>channel_tensor</strong> (<em>ChannelTensor object</em>) – channel tensor carrying the information and correlatons of the received signal</p></li>
+<li><p><strong>fmcw_radar</strong> (<em>FMCWRadar</em>) – fmcw radar model parameters</p></li>
+<li><p><strong>Noversample</strong> (<em>int &gt;= 1</em>) – zero padding the F-parameter frequency data as [Noversample*len(Fpara),Fpara,Noversample*len(Fpara)]</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>tuple</strong> – first array contains range axis, second array contains range tensor[isweep, ichannel, irange]</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>(array, 3D array)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="cst.radar.range.range_map_from_channeltensor_fmcw_radar_legacy">
+<span class="sig-name descname"><span class="pre">range_map_from_channeltensor_fmcw_radar_legacy</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">radar</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">channel_tensor</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">filter</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">{}</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">debug</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cst.radar.range.range_map_from_channeltensor_fmcw_radar_legacy" title="Permalink to this definition">¶</a></dt>
+<dd><p>transform the frequency dimension of the channel_tensor into a range dimension</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>radar</strong> (<em>radar object</em>) – radar object containing setup used for data generation as well as relevant parameters</p></li>
+<li><p><strong>channel_tensor</strong> (<em>ChannelTensor object</em>) – channel tensor containing correlation information between the signals received at antennas</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><ul class="simple">
+<li><p><strong>range_axis_vals</strong> (<em>array(float)</em>) – new nodes of range axis obtaining throgh transformation from frequency axis</p></li>
+<li><p><strong>range_tensor</strong> (<em>3D-array(complex)</em>) – new channel tensor with transformed range domain instead of frequency domain</p></li>
+</ul>
+</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="cst.radar.range.range_map_from_channeltensor_fmcw_radar_legacy_v2">
+<span class="sig-name descname"><span class="pre">range_map_from_channeltensor_fmcw_radar_legacy_v2</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">radar</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">channel_tensor</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">filter</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">{}</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">debug</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cst.radar.range.range_map_from_channeltensor_fmcw_radar_legacy_v2" title="Permalink to this definition">¶</a></dt>
+<dd><p>transform the frequency dimension of the channel_tensor into a range dimension</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>radar</strong> (<em>radar object</em>) – radar object containing setup used for data generation as well as relevant parameters</p></li>
+<li><p><strong>channel_tensor</strong> (<em>ChannelTensor object</em>) – channel tensor containing correlation information between the signals received at antennas</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><ul class="simple">
+<li><p><strong>range_axis_vals</strong> (<em>array(float)</em>) – new nodes of range axis obtaining throgh transformation from frequency axis</p></li>
+<li><p><strong>range_tensor</strong> (<em>3D-array(complex)</em>) – new channel tensor with transformed range domain instead of frequency domain</p></li>
+</ul>
+</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="cst.radar.range.if_signal_fmcw_radar_chirp_cpugpu">
+<span class="sig-name descname"><span class="pre">if_signal_fmcw_radar_chirp_cpugpu</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">frequencies</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">H</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">f0c</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">f1c</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Tc</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">adc_dt</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">adc_t0</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">adc_nbins</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">f_IF_cutoff</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">numpy.finfo.max</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">complex_mixer</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">plot_intermediate_results</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cst.radar.range.if_signal_fmcw_radar_chirp_cpugpu" title="Permalink to this definition">¶</a></dt>
+<dd><p>Calculates the ADC sampled IF signal</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>frequencies</strong> (<em>array</em><em>(</em><em>float</em><em>)</em>) – transfer function frequencies &gt; 0, sorted in ascending order in Hz</p></li>
+<li><p><strong>H</strong> (<em>array</em><em>(</em><em>complex</em><em>)</em>) – transfer function for positive spectrum</p></li>
+<li><p><strong>f0c</strong> (<em>float</em>) – chirp lowest frequency</p></li>
+<li><p><strong>f1c</strong> (<em>float</em>) – chirp highest frequency</p></li>
+<li><p><strong>Tc</strong> (<em>float</em>) – chirp rise time</p></li>
+<li><p><strong>adc_dt</strong> (<em>float</em>) – analog to digital converter sampling time step</p></li>
+<li><p><strong>adc_t0</strong> (<em>float</em>) – start time adc sampling</p></li>
+<li><p><strong>adc_nbins</strong> (<em>int &gt; 0</em>) – number of sampling bins</p></li>
+<li><p><strong>f_IF_cutoff</strong> (<em>float</em>) – ideal low pass cut off frequency in Hz</p></li>
+<li><p><strong>complex_mixer</strong> (<em>bool</em>) – mixer architecture</p></li>
+<li><p><strong>Out</strong> (<em>tuple</em><em>(</em><em>array</em><em>(</em><em>float</em><em>)</em><em>, </em><em>array</em><em>(</em><em>complex</em><em>)</em><em>)</em>) – t time
+yif_t sampled IF signal at time t</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="cst.radar.range.range_map_from_channeltensor_fmcw_radar_new">
+<span class="sig-name descname"><span class="pre">range_map_from_channeltensor_fmcw_radar_new</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">channel_tensor</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fmcw_radar</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">nbins</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">if_signal_window</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cst.radar.range.range_map_from_channeltensor_fmcw_radar_new" title="Permalink to this definition">¶</a></dt>
+<dd><p>transform the frequency dimension of the channel_tensor into a range dimension</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>channel_tensor</strong> (<em>ChannelTensor object</em>) – channel tensor carrying the information and correlatons of the received signal</p></li>
+<li><p><strong>fmcw_radar</strong> (<em>FMCWRadar</em>) – fmcw radar model parameters</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>tuple</strong> – first array contains range axis, second array contains range tensor[isweep, ichannel, irange]</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>(array, 3D array)</p>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+<section id="module-cst.radar.range_angle">
+<span id="cst-radar-range-angle"></span><h2><a class="reference internal" href="#module-cst.radar.range_angle" title="cst.radar.range_angle"><code class="xref py py-mod docutils literal notranslate"><span class="pre">cst.radar.range_angle</span></code></a><a class="headerlink" href="#module-cst.radar.range_angle" title="Permalink to this heading">¶</a></h2>
+<p>This module contains the relevant functions to execute the angle of arrival algorithms
+based on covariance matrices and the range tensor.</p>
+<dl class="py function">
+<dt class="sig sig-object py" id="cst.radar.range_angle.angle_range_map">
+<span class="sig-name descname"><span class="pre">angle_range_map</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">algorithm</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">range_tensor</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sigma</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1e-22</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cst.radar.range_angle.angle_range_map" title="Permalink to this definition">¶</a></dt>
+<dd><p>Method which executes the spectral algorithm on each range bin given in the range tensor. The resulting tensor
+represents a 2D map of the range-angle distribution of the targets.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>algorithm</strong> (<em>SpectralAlgorithm object</em>) – SpectralAlgorithm object (carrying specifications and parameters) that is used to calculate the
+(pseudo) spectrum of the angular position of the targets</p></li>
+<li><p><strong>range_tensor</strong> (<em>3D array</em><em>(</em><em>complex float</em><em>)</em>) – Range tensor obtained from range tensor calculations, used as input to algorithm</p></li>
+<li><p><strong>sigma</strong> (<em>float</em>) – Diagonal loading factor for covariance matrix preventing singularities</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Tensor containing information on targets’ angular and range locations</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>2D array</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="cst.radar.range_angle.angle_range_map_limited_range">
+<span class="sig-name descname"><span class="pre">angle_range_map_limited_range</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">algorithm</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">range_tensor</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">arange</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">max_range</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">10</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sigma</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1e-22</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cst.radar.range_angle.angle_range_map_limited_range" title="Permalink to this definition">¶</a></dt>
+<dd><p>Method which executes the spectral algorithm on each range bin given in the range tensor up to the maximum range
+specified as a parameter. The resulting tensor represents a 2D map of the range-angle distribution of the targets.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>algorithm</strong> (<em>SpectralAlgorithm object</em>) – SpectralAlgorithm object (carrying specifications and parameters) that is used to calculate the
+likelihood of the angular position of the targets</p></li>
+<li><p><strong>range_tensor</strong> (<em>3D array</em><em>(</em><em>complex float</em><em>)</em>) – Range tensor obtained from range tensor calculations, used as input to algorithm</p></li>
+<li><p><strong>max_range</strong> (<em>float</em>) – maximum range up to which the range bins should be considered</p></li>
+<li><p><strong>sigma</strong> (<em>float</em>) – Diagonal loading factor for covariance matrix preventing singularities</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>tuple</strong> – First entry contains new range axis after cutting the range information for ranges higher than max_range.
+Second entry is tensor containing information on targets’ angular and range locations.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>(array, 2D array)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="cst.radar.range_angle.angle_range_map_limited_range_single_snapshot">
+<span class="sig-name descname"><span class="pre">angle_range_map_limited_range_single_snapshot</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">algorithm</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">range_tensor</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">arange</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">max_range</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">10</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">isnapshot</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cst.radar.range_angle.angle_range_map_limited_range_single_snapshot" title="Permalink to this definition">¶</a></dt>
+<dd><p>Method which executes the spectral algorithm on each range bin given in the range tensor up to the maximum range
+specified as a parameter. The resulting tensor represents a 2D map of the range-angle distribution of the targets.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>algorithm</strong> (<em>SpectralAlgorithm object</em>) – SpectralAlgorithm object (carrying specifications and parameters) that is used to calculate the
+likelihood of the angular position of the targets</p></li>
+<li><p><strong>range_tensor</strong> (<em>3D array</em><em>(</em><em>complex float</em><em>)</em>) – Range tensor obtained from range tensor calculations, used as input to algorithm</p></li>
+<li><p><strong>max_range</strong> (<em>float</em>) – maximum range up to which the range bins should be considered</p></li>
+<li><p><strong>sigma</strong> (<em>float</em>) – Diagonal loading factor for covariance matrix preventing singularities</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>tuple</strong> – First entry contains new range axis after cutting the range information for ranges higher than max_range.
+Second entry is tensor containing information on targets’ angular and range locations.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>(array, 2D array)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="cst.radar.range_angle.velocity_angle_range_map_limited_range_single_snapshot">
+<span class="sig-name descname"><span class="pre">velocity_angle_range_map_limited_range_single_snapshot</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">algorithm</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">range_tensor</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">arange</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">max_range</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">isnapshot</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cst.radar.range_angle.velocity_angle_range_map_limited_range_single_snapshot" title="Permalink to this definition">¶</a></dt>
+<dd><p>Method which executes the spectral algorithm on each range bin given in the range tensor up to the maximum range
+specified as a parameter. The resulting tensor represents a 2D map of the range-angle distribution of the targets.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>algorithm</strong> (<em>SpectralAlgorithm object</em>) – SpectralAlgorithm object (carrying specifications and parameters) that is used to calculate the
+likelihood of the angular position of the targets</p></li>
+<li><p><strong>range_tensor</strong> (<em>3D array</em><em>(</em><em>complex float</em><em>)</em>) – Range tensor obtained from range tensor calculations, used as input to algorithm</p></li>
+<li><p><strong>max_range</strong> (<em>float</em>) – maximum range up to which the range bins should be considered</p></li>
+<li><p><strong>sigma</strong> (<em>float</em>) – Diagonal loading factor for covariance matrix preventing singularities</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>tuple</strong> – First entry contains new range axis after cutting the range information for ranges higher than max_range.
+Second entry is tensor containing information on targets’ angular and range locations.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>(array, 2D array)</p>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+<section id="module-cst.radar.plot">
+<span id="cst-radar-plot"></span><h2><a class="reference internal" href="#module-cst.radar.plot" title="cst.radar.plot"><code class="xref py py-mod docutils literal notranslate"><span class="pre">cst.radar.plot</span></code></a><a class="headerlink" href="#module-cst.radar.plot" title="Permalink to this heading">¶</a></h2>
+<p>This module contains routines for plotting range-angle and range-doppler maps.</p>
+<dl class="py function">
+<dt class="sig sig-object py" id="cst.radar.plot.visualize_map">
+<span class="sig-name descname"><span class="pre">visualize_map</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">X</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Y</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Z</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">xname</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'range</span> <span class="pre">m'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">yname</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'velocity</span> <span class="pre">m/s'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">log_scale</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cst.radar.plot.visualize_map" title="Permalink to this definition">¶</a></dt>
+<dd><p>Plot 2D heat map of spectrum returned by radar post-processing algorithm (i.e MVDR, MUSICS etc.)</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>X</strong> (<em>array</em><em>(</em><em>float</em><em>)</em>) – grid positions along first axis</p></li>
+<li><p><strong>Y</strong> (<em>array</em><em>(</em><em>float</em><em>)</em>) – grid positions along second axis</p></li>
+<li><p><strong>Z</strong> (<em>2D array</em><em>(</em><em>float</em><em>)</em>) – output of radar algorithm on two-dimensional scan grid</p></li>
+<li><p><strong>xname</strong> (<em>string</em>) – label on x-axis</p></li>
+<li><p><strong>yname</strong> (<em>string</em>) – label on y-axis</p></li>
+<li><p><strong>log_scale</strong> (<em>bool</em>) – Choose if log-scale should be used in plot. Log scale used if “True”, linear scale if “False”</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="cst.radar.plot.visualize_map3d">
+<span class="sig-name descname"><span class="pre">visualize_map3d</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">X</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Y</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Z</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">xlabel</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'range'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ylabel</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'angle'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">showPlotImmediately</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cst.radar.plot.visualize_map3d" title="Permalink to this definition">¶</a></dt>
+<dd><p>Plot 3D surface plot of spectrum returned by radar post-processing algorithm (i.e MVDR, MUSICS etc.)</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>X</strong> (<em>array</em><em>(</em><em>float</em><em>)</em>) – grid positions along first axis</p></li>
+<li><p><strong>Y</strong> (<em>array</em><em>(</em><em>float</em><em>)</em>) – grid positions along second axis</p></li>
+<li><p><strong>Z</strong> (<em>2D array</em><em>(</em><em>float</em><em>)</em>) – output of radar algorithm on two-dimensional scan grid</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="cst.radar.plot.map3d">
+<span class="sig-name descname"><span class="pre">map3d</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">X</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Y</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Z</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cst.radar.plot.map3d" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns plt and axis for 3D surface plot of spectrum returned by radar post-processing algorithm (i.e MVDR, MUSICS etc.)</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>X</strong> (<em>array</em><em>(</em><em>float</em><em>)</em>) – grid positions along first axis</p></li>
+<li><p><strong>Y</strong> (<em>array</em><em>(</em><em>float</em><em>)</em>) – grid positions along second axis</p></li>
+<li><p><strong>Z</strong> (<em>2D array</em><em>(</em><em>float</em><em>)</em>) – output of radar algorithm on two-dimensional scan grid</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="cst.radar.plot.visualize_map_polar">
+<span class="sig-name descname"><span class="pre">visualize_map_polar</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ranges</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">angles</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">values</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">angle_in_deg</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cst.radar.plot.visualize_map_polar" title="Permalink to this definition">¶</a></dt>
+<dd><p>Plot 2D heat map of spectrum returned by radar post-processing algorithm (i.e MVDR, MUSICS etc.)</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>ranges</strong> (<em>array</em><em>(</em><em>float</em><em>)</em>) – grid positions along radial axis</p></li>
+<li><p><strong>angles</strong> (<em>array</em><em>(</em><em>float</em><em>)</em>) – grid positions along angle axis in radians</p></li>
+<li><p><strong>values</strong> (<em>2D array</em><em>(</em><em>float</em><em>)</em>) – output of radar algorithm on two-dimensional scan grid</p></li>
+<li><p><strong>angle_in_deg</strong> (<em>bool</em>) – Choose if angle should be displayed in degrees pr in radians in plot.
+Degrees used if “True”, radians if “False”</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+</section>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <div>
+    <h3><a href="../main.html">Table of Contents</a></h3>
+    <ul>
+<li><a class="reference internal" href="#">cst.radar package</a><ul>
+<li><a class="reference internal" href="#topics">Topics</a></li>
+<li><a class="reference internal" href="#general-notes">General Notes</a></li>
+<li><a class="reference internal" href="#theory-of-radar-models">Theory of RADAR Models</a></li>
+<li><a class="reference internal" href="#theory-of-angle-detection">Theory of Angle Detection</a></li>
+<li><a class="reference internal" href="#examples">Examples</a></li>
+<li><a class="reference internal" href="#module-contents">Module Contents</a></li>
+<li><a class="reference internal" href="#module-cst.radar.channel_tensor"><code class="xref py py-mod docutils literal notranslate"><span class="pre">cst.radar.channel_tensor</span></code></a></li>
+<li><a class="reference internal" href="#module-cst.radar.spectral_algorithms"><code class="xref py py-mod docutils literal notranslate"><span class="pre">cst.radar.spectral_algorithms</span></code></a></li>
+<li><a class="reference internal" href="#module-cst.radar.coordinate_systems"><code class="xref py py-mod docutils literal notranslate"><span class="pre">cst.radar.coordinate_systems</span></code></a></li>
+<li><a class="reference internal" href="#module-cst.radar.range"><code class="xref py py-mod docutils literal notranslate"><span class="pre">cst.radar.range</span></code></a></li>
+<li><a class="reference internal" href="#module-cst.radar.range_angle"><code class="xref py py-mod docutils literal notranslate"><span class="pre">cst.radar.range_angle</span></code></a></li>
+<li><a class="reference internal" href="#module-cst.radar.plot"><code class="xref py py-mod docutils literal notranslate"><span class="pre">cst.radar.plot</span></code></a></li>
+</ul>
+</li>
+</ul>
+
+  </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../main.html">CST Python Libraries  documentation</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">cst.radar package</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+    &#169; Copyright 2009-2025 Dassault Systemes Deutschland GmbH. All rights reserved.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 7.1.2.
+    </div>
+  </body>
+</html>

@@ -1,0 +1,502 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="Adobe RoboHelp 11" />
+<title>AsymptoticSolver Object</title>
+<link rel="StyleSheet" href="../online_help_vba.css" type="text/css" />
+<style type="text/css">
+/*<![CDATA[*/
+<!--
+body { border-bottom-style:None; }
+-->
+/*]]>*/
+</style>
+
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+        origWidth = innerWidth;
+        origHeight = innerHeight;
+        onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+/*<![CDATA[*/
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+-->
+/*]]>*/
+</style>
+
+<script type="text/javascript" language="javascript1.2" src="../whmsg.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript" src="../whver.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript1.2" src="../whutils.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript1.2" src="../whproxy.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript1.2" src="../whlang.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript1.2" src="../whtopic.js" charset="utf-8">
+</script>
+</head>
+<body>
+<script type="text/javascript" language="javascript1.2">
+//<![CDATA[
+<!--
+if (window.gbWhTopic)
+{
+        var strUrl = document.location.href;
+        var bc = 0;
+        var n = strUrl.toLowerCase().indexOf("bc-");
+        if(n != -1)
+        {
+                document.location.replace(strUrl.substring(0, n));
+                bc = strUrl.substring(n+3);
+        }
+
+        if (window.addTocInfo)
+        {
+        addTocInfo("3D Simulation VBA\nVBA Objects\nSolver\nHigh Frequency\nAsymptoticSolver");
+
+        }
+        if (window.writeBtnStyle)
+                writeBtnStyle();
+
+        if (window.writeIntopicBar)
+                writeIntopicBar(0);
+
+        
+        document.write("<p style=\"font-family: Tahoma; font-size: 9pt; font-weight: 400;  font-style:normal; color: rgb(0, 0, 0); text-decoration:none; text-align: left\"> ");
+AddMasterBreadcrumbs("../index.htm", "font-family: Tahoma; font-size: 9pt; font-weight: 400;  font-style:normal; color: rgb(0, 0, 0); text-decoration:none; text-align: left", "|", "Home", "../special_vbaobjects/special_vbaobjects_vbaobjects.htm");
+document.write("<a style=\"font-family: Tahoma; font-size: 9pt; font-weight: 400;  font-style:normal; color: rgb(0, 0, 0); text-decoration:none; text-align: left\" href=\"../special_vbaobjects/special_vbaobjects_vbaobjects.htm\">3D Simulation VBA<\/a> | <a style=\"font-family: Tahoma; font-size: 9pt; font-weight: 400;  font-style:normal; color: rgb(0, 0, 0); text-decoration:none; text-align: left\" href=\"../special_vbaobjects/special_vbaobjects_vbaobjects.htm\">VBA Objects<\/a> | <a style=\"font-family: Tahoma; font-size: 9pt; font-weight: 400;  font-style:normal; color: rgb(0, 0, 0); text-decoration:none; text-align: left\" href=\"special_vbasolver_background_object.htm\">Solver<\/a> | <a style=\"font-family: Tahoma; font-size: 9pt; font-weight: 400;  font-style:normal; color: rgb(0, 0, 0); text-decoration:none; text-align: left\" href=\"special_vbasolver_solver_object.htm\">High Frequency<\/a> | AsymptoticSolver<\/p>");
+
+}
+else
+        if (window.gbIE4)
+                document.location.reload();
+
+onLoadHandler = function()
+{
+  if (window.setRelStartPage)
+        {
+        setTimeout("setRelStartPage('../index.htm');", 1)
+
+    setTimeout("UpdateBreadCrumbsMarker();", 1);
+        }
+}
+
+if (window.addEventListener){  
+        window.addEventListener('load', onLoadHandler, false);   
+} else if (window.attachEvent){  
+        window.attachEvent('onload', onLoadHandler);  
+}
+
+function onSetStartPage()
+{
+  autoSync(1);
+  sendSyncInfo();
+  sendAveInfoOut();
+}
+//-->
+//]]>
+</script><script type="text/javascript" src="../ehlpdhtm.js" language="JavaScript1.2">
+</script>
+<table cellspacing="0" width="100%">
+<col style="width: 50%;" />
+<col style="width: 50%;" />
+<tr>
+<td style="vertical-align: middle; padding-top: 5px; padding-bottom: 5px;">
+<p style="margin-top: 0px; margin-bottom: 0px;"><img src="../3ds.png" alt="" style="border: none;" border="0" /></p>
+</td>
+<td style="vertical-align: middle;">
+<p style="text-align: right;"><a href="https://www.3ds.com/products-services/3dexperience/" target="_blank"><img src="../3dexp.png" alt="" style="border: none;" width="32" height="32" border="0" /></a></p>
+</td>
+</tr>
+</table>
+<p class="VBA-Heading-Object">AsymptoticSolver Object</p>
+<p class="VBA-Text">This object controls the asymptotic high frequency solver. Use the 'Start' command to run the solver.</p>
+<p class="VBA-Text" style="font-weight: bold; margin-left: 21px;">&#160;</p>
+<p class="VBA-Text" style="margin-left: 21px; font-weight: bold;">Asymptotic Solver Settings</p>
+<ul>
+<li class="p-VBA-Index-Category">
+<p class="VBA-Index-Category"><a href="#General">General</a></p>
+</li>
+<li class="p-VBA-Index-Category">
+<p class="VBA-Index-Category"><a href="#Detailed solver control options">Detailed solver control options</a></p>
+</li>
+<li class="p-VBA-Index-Category">
+<p class="VBA-Index-Category"><a href="#Detailed_Solver_Control_Options_(SBR_RAYTUBES_Solver)">Detailed solver control options specific to SBR_RAYTUBES</a></p>
+</li>
+<li class="p-VBA-Index-Category">
+<p class="VBA-Index-Category"><a href="#Detailed_Solver_Control_Options__SBR">Detailed solver control options specific to SBR</a></p>
+</li>
+</ul>
+<p class="VBA-Heading-Category"><a name="General" id="General"></a>Asymptotic Solver General</p>
+<p class="VBA-Heading-Method">SetSolverType ( <a href="../common_vbageneral/common_general_enum.htm" id="a19" style="font-weight: normal;" name="a19">enum</a><span style="font-weight: normal;">{"SBR", "SBR_RAYTUBES"}</span> <span style="font-style: italic;"><i>type</i></span> )</p>
+<p class="VBA-Text-Indent">This selection specifies whether the solver should use independent rays (SBR) or raytubes (SBR_RAYTUBES). Independent rays are generally more robust for complex geometries, but the performance of the raytube solver is better at higher frequencies for large and relatively smooth objects.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">SetSolverMode ( <a href="../common_vbageneral/common_general_enum.htm" id="a62" style="font-weight: normal;" name="a62">enum</a><span style="font-weight: normal;">{"MONOSTATIC_SCATTERING", "BISTATIC_SCATTERING","FIELD_SOURCES","RANGE_PROFILES"}</span> <span style="font-style: italic;"><i>type</i></span> )</p>
+<p class="VBA-Text-Indent">This selection specifies whether the solver should run in Monostatic or Bistatic Scattering, Field source or Range profile mode. For monostatic calculations, the observation angles are identical to the excitation angles. Therefore, for this mode the specification of an observation angle sweep is required only. For bistatic calculations, the excitation and observation angles do not need to be the same. As a consequence, an additional excitation angle sweep needs to be defined when the solver is used in bistatic mode. For field source calculations, no incident plane wave is required, therefore the definition of an observation angle sweep is sufficient. The range profile mode uses similar observation angle definitions as the monostatic mode, but only either single point or single angle sweeps are supported. In case of a single observation point definition, a one dimensional range profile is calculated whereas for two dimensional sweep definitions, a sinogram (range vs. angle) will be generated.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">SetAccuracyLevel ( <a href="../common_vbageneral/common_general_enum.htm" id="a20" style="font-weight: normal;" name="a20">enum</a><span style="font-weight: normal;">{"LOW", "MEDIUM", "HIGH", "CUSTOM"}</span> <span style="font-style: italic;"><i>type</i></span> )</p>
+<p class="VBA-Text-Indent">This setting allows you to choose from one of the predefined accuracy configurations such as <span style="font-style: italic;"><i>Low</i></span>, &#160;<span style="font-style: italic;"><i>Medium</i></span> or <span style="font-style: italic;"><i>High</i></span>. <span style="font-style: italic;"><i>Low</i></span> accuracy means that the simulation settings will be optimized for fast simulations whereas <span style="font-style: italic;"><i>High</i></span> accuracy implies settings optimized for obtaining very accurate results. Typically the <span style="font-style: italic;"><i>Medium</i></span> accuracy default provides a good compromise between accuracy and simulation speed. In addition to these default configurations, you may also choose <span style="font-style: italic;"><i>Custom</i></span> which allows specifying more detailed solver options by using the detailed solver control options.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">SetSolverStoreResultsAsTablesOnly ( <span style="font-weight: normal;"><a href="../common_vbageneral/common_general_bool_data_type.htm" id="a911" style="font-weight: normal; font-style: normal;" name="a911">bool</a></span> <span style="font-style: italic;"><i>flag</i></span> )</p>
+<p class="VBA-Text-Indent">If this option is turned on, the farfield results for all angular points and frequency samples are stored together in an ASCII table rather than in individual graphs for each angle sweep definition. This option is useful if large quantities of results are to be computed, which will then be further processed in other tools. Typical applications include ISAR imaging, etc. Please note that one result table is written for each polarization setting. The result tables can be accessed from the corresponding Navigation Tree item located in <span style="font-style: italic;"><i>2D/3D Results &gt; ASCII Data</i></span>. The data files named farfield_&lt;polarization&gt;.txt are stored in the <span style="font-style: italic;"><i>Result</i></span> folder.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">CalculateRCSMapFor1DSweeps (&#160;<span style="font-weight: normal;"><a href="../common_vbageneral/common_general_bool_data_type.htm" id="a9111" style="font-weight: normal; font-style: normal;" name="a9111">bool</a></span> <span style="font-style: italic;"><i>flag</i></span> )</p>
+<p class="VBA-Text-Indent">This parameter is only available for <span style="font-style: italic;"><i>Monostatic</i></span> <span style="font-style: italic;"><i>Scattering</i></span> mode. It specifies how one-dimensional angular observation angle sweeps (either sweeping phi or theta) will store the computation results. If this option is turned off, individual farfield results will be computed for every computation frequency. If this option is activated, RCS maps will be calculated instead where each one-dimensional sweep definition will correspond to one set of RCS maps (magnitude, phase) regardless of the number of computation frequencies. The RCS maps therefore contain magnitude or phase information as a function of incident angle and frequency.</p>
+<p class="VBA-Heading-Method">&#160;</p>
+<p class="VBA-Heading-Method">Set ( "CalculateMonitors",<span style="font-weight: normal;">&#160;<a href="../common_vbageneral/common_general_bool_data_type.htm" id="a7511" style="font-weight: normal;" name="a7511">bool</a></span> <span style="font-style: italic;"><i>flag</i></span> )</p>
+<p class="Topic-Text-Indent">Activate calculation of monitors on 2D Planes (E-Field / H-Field).</p>
+<p class="Topic-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">ResetPolarizations</p>
+<p class="VBA-Text-Indent">Resets the current excitation polarization list</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">AddHorizontalPolarization ( <a href="../common_vbageneral/common_general_double.htm" id="a14" style="font-weight: normal;" name="a14">double</a> <span style="font-style: italic;"><i>value</i></span> )</p>
+<p class="VBA-Text-Indent">This method allows you to add a new horizontal plane wave polarization to the list of excitations. The amplitude of the plane wave electric field vector in V/m is given as an argument.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">AddVerticalPolarization ( <a href="../common_vbageneral/common_general_double.htm" id="a15" style="font-weight: normal;" name="a15">double</a> <span style="font-style: italic;"><i>value</i></span> )</p>
+<p class="VBA-Text-Indent">This method allows you to add a new vertical plane wave polarization to the list of excitations. The amplitude of the plane wave electric field vector in V/m is given as an argument.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">AddLHCPolarization ( <a href="../common_vbageneral/common_general_double.htm" id="a16" style="font-weight: normal;" name="a16">double</a> <span style="font-style: italic;"><i>value</i></span> )</p>
+<p class="VBA-Text-Indent">This method allows you to add a new left hand side circular plane wave polarization to the list of excitations. The amplitude of the plane wave electric field vector in V/m is given as an argument.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">AddRHCPolarization ( <a href="../common_vbageneral/common_general_double.htm" id="a13" style="font-weight: normal;" name="a13">double</a> <span style="font-style: italic;"><i>value</i></span> )</p>
+<p class="VBA-Text-Indent">This method allows you to add a new right hand side circular plane wave polarization to the list of excitations. The amplitude of the plane wave electric field vector in V/m is given as an argument.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">AddCustomPolarization( <span><a href="../common_vbageneral/common_general_double.htm" id="a39" style="font-weight: normal;" name="a39">double</a></span> <span style="font-style: italic;"><i>ethetare,</i></span> <a href="../common_vbageneral/common_general_double.htm" id="a40" style="font-weight: normal;" name="a40">double</a> <span style="font-style: italic;"><i>ethetaim,</i></span> <a href="../common_vbageneral/common_general_double.htm" id="a41" style="font-weight: normal;" name="a41">double</a> <span style="font-style: italic;"><i>ephire,</i></span> <a href="../common_vbageneral/common_general_double.htm" id="a42" style="font-weight: normal;" name="a42">double</a> <span style="font-style: italic;"><i>ephiim</i></span> )</p>
+<p class="VBA-Text-Indent">This method allows you to add a new custom polarization to the list of excitations. The complex amplitudes of the plane wave electric field vector components in V/m are given as arguments.</p>
+<p class="vba-text-indent">&#160;</p>
+<p class="VBA-Heading-Method">SetSolverMaximumNumberOfReflections ( <a href="../common_vbageneral/common_general_integer.htm" id="a12" style="font-weight: normal;" name="a12">int</a> <span style="font-style: italic;"><i>value</i></span> )</p>
+<p class="VBA-Text-Indent">This parameter specifies the maximum number of ray reflections which will be taken into account for the ray tracing computation.</p>
+<p class="VBA-Heading-Method">&#160;</p>
+<p class="VBA-Heading-Method">SetSolverRangeProfilesCenterFrequency ( <a href="../common_vbageneral/common_general_double.htm" id="a73" style="font-weight: normal;" name="a73">double</a> <span style="font-style: italic;"><i>value</i></span> )</p>
+<p class="VBA-Text-Indent">This method allows you to specify the center frequency for the range profile and sinogram calculation. Please note that this setting is only effective for the <span style="font-style: italic;"><i>Range profile</i></span> computation mode.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">SetSolverRangeProfilesAutomatic ( <span style="font-weight: normal;"><a href="../common_vbageneral/common_general_bool_data_type.htm" id="a91" style="font-weight: normal; font-style: normal;" name="a91">bool</a></span> <span style="font-style: italic;"><i>flag</i></span> )</p>
+<p class="VBA-Text-Indent">This method allows you to specify if the range extend or bandwidth settings will be determined automatically or whether the values set by the respective methods will be taken. Please note that this setting is only effective for the <span style="font-style: italic;"><i>Range profile</i></span> computation mode.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">SetSolverRangeProfilesNumberOfSamples (<span style="font-weight: normal;">&#160;<a href="../common_vbageneral/common_general_integer.htm" id="a92" style="font-weight: normal;" name="a92">int</a></span> <span style="font-style: italic;"><i>value</i></span> )</p>
+<p class="VBA-Text-Indent">This method allows you to specify the number of spectral samples for the range profile or sinogram computation. This value needs to be a power of two larger or equal 16. Please note that this setting is only effective for the <span style="font-style: italic;"><i>Range profile</i></span> computation mode.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">SetSolverRangeProfilesWindowFunction ( <span style="font-weight: normal;">&#160;<a href="../common_vbageneral/common_general_enum.htm" id="a93" style="font-weight: normal;" name="a93">enum</a></span><span style="font-weight: normal;">{"RECTANGULAR", "HANNING", "HAMMING", "BLACKMAN"}</span> <span style="font-style: italic;"><i>type</i></span> )</p>
+<p class="VBA-Text-Indent">This method allows you to specify the spectral window function being used for calculating range profiles or sinograms. Please note that this setting is only effective for the <span style="font-style: italic;"><i>Range profile</i></span> computation mode.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">SetSolverRangeProfilesSpecMode ( <span style="font-weight: normal;">&#160;<a href="../common_vbageneral/common_general_enum.htm" id="a94" style="font-weight: normal;" name="a94">enum</a></span><span style="font-weight: normal;">{"RANGE_EXTEND", "BANDWIDTH"}</span> <span style="font-style: italic;"><i>type</i></span> )</p>
+<p class="VBA-Text-Indent">This method allows you to specify whether the resolution of the range profile or sinogram calculation shall be specified by either specifying the maximum range extend or by setting the calculation bandwidth around the center frequency. Please note that this setting is only effective for the <span style="font-style: italic;"><i>Range profile</i></span> computation mode.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">SetSolverRangeProfilesRangeExtend ( <a href="../common_vbageneral/common_general_double.htm" id="a95" style="font-weight: normal;" name="a95">double</a> <span style="font-style: italic;"><i>value</i></span> )</p>
+<p class="VBA-Text-Indent">This method allows you to specify the maximum range extend for the range profile and sinogram calculation if the specification mode is set to <span style="font-style: italic;"><i>RANGE_EXTEND</i></span>. Please note that this setting is only effective for the <span style="font-style: italic;"><i>Range profile</i></span> computation mode.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">SetSolverRangeProfilesBandwidth ( <a href="../common_vbageneral/common_general_double.htm" id="a96" style="font-weight: normal;" name="a96">double</a> <span style="font-style: italic;"><i>value</i></span> )</p>
+<p class="VBA-Text-Indent">This method allows you to specify the bandwidth for the range profile and sinogram calculation if the specification mode is set to <span style="font-style: italic;"><i>BANDWIDTH</i></span>. Please note that this setting is only effective for the <span style="font-style: italic;"><i>Range profile</i></span> computation mode.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">ResetFrequencyList</p>
+<p class="VBA-Text-Indent">Resets the current frequency sweep list.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">AddFrequencySweep ( <a href="../common_vbageneral/common_general_double.htm" id="a1" style="font-weight: normal;" name="a1">double</a> <span style="font-style: italic;"><i>fmin</i></span><span style="font-weight: normal;">,</span> <a href="../common_vbageneral/common_general_double.htm" id="a2" style="font-weight: normal;" name="a2">double</a> <span style="font-style: italic;"><i>fmax</i></span><span style="font-weight: normal;">,</span> <a href="../common_vbageneral/common_general_double.htm" id="a6" style="font-weight: normal;" name="a6">double</a> <span style="font-style: italic;"><i>fstep</i></span> )</p>
+<p class="VBA-Text-Indent">This method allows you to add a new frequency sweep definition to the list of frequency sweeps. Each sweep is defined by its lower and upper bounds as well as a step width. You can specify a single frequency point by setting the lower and upper bounds to the same value. Please note that the step width must match with the frequency range such that an integer number of frequency points will be defined.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">ResetExcitationAngleList</p>
+<p class="VBA-Text-Indent">Resets the current excitation angle sweep list.</p>
+<p class="vba-text-indent">&#160;</p>
+<p class="VBA-Heading-Method">AddExcitationAngleSweep ( <a href="../common_vbageneral/common_general_enum.htm" id="a27" style="font-weight: normal;" name="a27">enum</a><span style="font-weight: normal;">{"POINT", "THETA", "PHI", "BOTH"}</span> <span style="font-style: italic;"><i>type</i></span><span style="font-weight: normal;">,</span> <a href="../common_vbageneral/common_general_double.htm" id="a21" style="font-weight: normal;" name="a21">double</a> <span style="font-style: italic;"><i>thetamin</i></span><span style="font-weight: normal;">,</span> <a href="../common_vbageneral/common_general_double.htm" id="a22" style="font-weight: normal;" name="a22">double</a> <span style="font-style: italic;"><i>thetamax</i></span><span style="font-weight: normal;">,</span> <a href="../common_vbageneral/common_general_double.htm" id="a23" style="font-weight: normal;" name="a23">double</a> <span style="font-style: italic;"><i>thetastep</i></span><span style="font-weight: normal;">,</span> <a href="../common_vbageneral/common_general_double.htm" id="a24" style="font-weight: normal;" name="a24">double</a> <span style="font-style: italic;"><i>phimin</i></span><span style="font-weight: normal;">,</span> <a href="../common_vbageneral/common_general_double.htm" id="a25" style="font-weight: normal;" name="a25">double</a> <span style="font-style: italic;"><i>phimax</i></span><span style="font-weight: normal;">,</span> <a href="../common_vbageneral/common_general_double.htm" id="a26" style="font-weight: normal;" name="a26">double</a> <span style="font-style: italic;"><i>phistep</i></span> )</p>
+<p class="VBA-Text-Indent">This method allows you to add a new angular sweep definition to the list of excitation angle sweeps. The meaning of the angular parameters depends on the <span style="font-style: italic;"><i>type</i></span> setting:</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<table style="vertical-align: top; margin-left: 24px;" cellspacing="0" width="62.199%">
+<col style="width: 18.959%;" />
+<col style="width: 81.041%;" />
+<tr style="vertical-align: top;">
+<td style="border: Solid 1px #000000; width: 18.959%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text">"POINT"</p>
+</td>
+<td style="border-top: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 81.041%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text">Specify a single angular point for this sweep definition. In this case, <span style="font-style: italic;"><i>thetamin</i></span> must be set equal to <span style="font-style: italic;"><i>thetamax</i></span> and <span style="font-style: italic;"><i>phimin</i></span> must be set equal to <span style="font-style: italic;"><i>phimax</i></span>. The settings for <span style="font-style: italic;"><i>thetastep</i></span> and <span style="font-style: italic;"><i>phistep</i></span> have no effect.</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 18.959%; padding-right: 10px; padding-left: 10px;">
+<p>"THETA"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 81.041%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text">Specify a one dimensional sweep for the theta angle while keeping the phi angle fixed. In this case, <span style="font-style: italic;"><i>phimin</i></span> must be set equal to <span style="font-style: italic;"><i>phimax</i></span>. The setting for <span style="font-style: italic;"><i>phistep</i></span> has no effect.</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 18.959%; padding-right: 10px; padding-left: 10px;">
+<p>"PHI"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 81.041%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text">Specify a one dimensional sweep for the phi angle while keeping the theta angle fixed. In this case, <span style="font-style: italic;"><i>thetamin</i></span> must be set equal to <span style="font-style: italic;"><i>thetamax</i></span>. The setting for <span style="font-style: italic;"><i>thetastep</i></span> has no effect.</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 18.959%; padding-right: 10px; padding-left: 10px;">
+<p>"BOTH"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 81.041%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text">Specify a two dimension sweep for both angles theta and phi. For each angle, lower and upper bounds need to be defined. The corresponding step widths must match with the range definition such that an integer number of angular sampling points will be defined.</p>
+</td>
+</tr>
+</table>
+<p class="vba-text-indent">&#160;</p>
+<p class="VBA-Heading-Method">AddExcitationAngleSweepWithRays ( <a href="../common_vbageneral/common_general_enum.htm" id="a47" style="font-weight: normal;" name="a47">enum</a><span style="font-weight: normal;">{"POINT", "THETA", "PHI", "BOTH"}</span> <span style="font-style: italic;"><i>type</i></span><span style="font-weight: normal;">,</span> <a href="../common_vbageneral/common_general_double.htm" id="a48" style="font-weight: normal;" name="a48">double</a> <span style="font-style: italic;"><i>thetamin</i></span><span style="font-weight: normal;">,</span> <a href="../common_vbageneral/common_general_double.htm" id="a49" style="font-weight: normal;" name="a49">double</a> <span style="font-style: italic;"><i>thetamax</i></span><span style="font-weight: normal;">,</span> <a href="../common_vbageneral/common_general_double.htm" id="a50" style="font-weight: normal;" name="a50">double</a> <span style="font-style: italic;"><i>thetastep</i></span><span style="font-weight: normal;">,</span> <a href="../common_vbageneral/common_general_double.htm" id="a51" style="font-weight: normal;" name="a51">double</a> <span style="font-style: italic;"><i>phimin</i></span><span style="font-weight: normal;">,</span> <a href="../common_vbageneral/common_general_double.htm" id="a52" style="font-weight: normal;" name="a52">double</a> <span style="font-style: italic;"><i>phimax</i></span><span style="font-weight: normal;">,</span> <a href="../common_vbageneral/common_general_double.htm" id="a53" style="font-weight: normal;" name="a53">double</a> <span style="font-style: italic;"><i>phistep</i></span> )</p>
+<p class="VBA-Text-Indent">This method has the same effect as <span style="font-style: italic;"><i>AddExcitationAngleSweep</i></span>, but in addition the solver will store the rays for each excitation direction for visualization. Please refer to the description of the <span style="font-style: italic;"><i>AddExcitationAngleSweep</i></span> method for more information. For more information on ray storage, please refer to the asymptotic solver control dialog box description in the online documentation.</p>
+<p class="VBA-Heading-Method">&#160;</p>
+<p class="VBA-Heading-Method">ResetFieldSources</p>
+<p class="VBA-Text-Indent">Resets the current field source excitation list.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">SetFieldSourceActive ( <a href="../common_vbageneral/common_general_string.htm" id="a441" style="font-weight: normal; font-style: normal;" name="a441">string</a> fieldsourcename, <a href="../common_vbageneral/common_general_bool_data_type.htm" id="a451" style="font-weight: normal;" name="a451">bool</a> <span style="font-style: italic;"><i>flag</i></span> )</p>
+<p class="VBA-Text-Indent">This method allows you to specify whether the field source should be used for calculation. If the flag is set to <span style="font-style: italic;"><i>False</i></span>, the field source will not take part in any computation.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">SetFieldSourcePhasor ( <a href="../common_vbageneral/common_general_string.htm" id="a81" style="font-weight: normal; font-style: normal;" name="a81">string</a> fieldsourcename, <a href="../common_vbageneral/common_general_double.htm" id="a37" style="font-weight: normal;" name="a37">double</a> <span style="font-style: italic;"><i>amplitude</i></span>, <a href="../common_vbageneral/common_general_double.htm" id="a38" style="font-weight: normal;" name="a38">double</a> <span style="font-style: italic;"><i>phase</i></span> )</p>
+<p class="VBA-Text-Indent">This method allows you to define the amplitude and phase shift which should be applied to a previously defined field source.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">SetFieldSourceRays ( <a href="../common_vbageneral/common_general_string.htm" id="a44" style="font-weight: normal; font-style: normal;" name="a44">string</a> fieldsourcename,&#160;<a href="../common_vbageneral/common_general_bool_data_type.htm" id="a45" style="font-weight: normal;" name="a45">bool</a> <span style="font-style: italic;"><i>flag</i></span> )</p>
+<p class="VBA-Text-Indent">This method allows you to specify whether the rays should be stored for a previously defined field source. For more information on ray storage, please refer to the asymptotic solver control dialog box description in the online documentation.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">SimultaneousFieldSourceExcitation( <a href="../common_vbageneral/common_general_bool_data_type.htm" id="a76" style="font-weight: normal;" name="a76">bool</a> <span style="font-style: italic;"><i>flag</i></span> )</p>
+<p class="VBA-Text-Indent">If this flag is set to <span style="font-style: italic;"><i>True</i></span>, all field sources are excited simultaneously. In this case only one farfield result will be calculated which contains the superposition of all field sources. If this flag is set to <span style="font-style: italic;"><i>False</i></span>, a sequence of calculations will be performed where only one field source is active for each run. The default setting is to perform a simultaneous excitation.</p>
+<p class="vba-text-indent">&#160;</p>
+<p class="VBA-Heading-Method">Set ( "CalculateSParameters",<span style="font-weight: normal;">&#160;<a href="../common_vbageneral/common_general_bool_data_type.htm" id="a751" style="font-weight: normal;" name="a751">bool</a></span> <span style="font-style: italic;"><i>flag</i></span> )</p>
+<p class="Topic-Text-Indent">Check this option to calculate antenna coupling coefficients between activated nearfield or farfield sources. The results are calculated as F-Parameters as described in farfield source and nearfield source. Note that this option is only available for sequential field source excitation.</p>
+<p class="Topic-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">ResetObservationAngleList</p>
+<p class="VBA-Text-Indent">Resets the current observation angle sweep list.</p>
+<p class="VBA-Heading-Method">&#160;</p>
+<p class="VBA-Heading-Method">AddObservationAngleSweep ( <a href="../common_vbageneral/common_general_enum.htm" id="a28" style="font-weight: normal;" name="a28">enum</a><span style="font-weight: normal;">{"POINT", "THETA", "PHI", "BOTH"}</span> <span style="font-style: italic;"><i>type</i></span><span style="font-weight: normal;">,</span> <a href="../common_vbageneral/common_general_double.htm" id="a29" style="font-weight: normal;" name="a29">double</a> <span style="font-style: italic;"><i>thetamin</i></span><span style="font-weight: normal;">,</span> <a href="../common_vbageneral/common_general_double.htm" id="a30" style="font-weight: normal;" name="a30">double</a> <span style="font-style: italic;"><i>thetamax</i></span><span style="font-weight: normal;">,</span> <a href="../common_vbageneral/common_general_double.htm" id="a31" style="font-weight: normal;" name="a31">double</a> <span style="font-style: italic;"><i>thetastep</i></span><span style="font-weight: normal;">,</span> <a href="../common_vbageneral/common_general_double.htm" id="a32" style="font-weight: normal;" name="a32">double</a> <span style="font-style: italic;"><i>phimin</i></span><span style="font-weight: normal;">,</span> <a href="../common_vbageneral/common_general_double.htm" id="a33" style="font-weight: normal;" name="a33">double</a> <span style="font-style: italic;"><i>phimax</i></span><span style="font-weight: normal;">,</span> <a href="../common_vbageneral/common_general_double.htm" id="a34" style="font-weight: normal;" name="a34">double</a> <span style="font-style: italic;"><i>phistep</i></span> )</p>
+<p class="VBA-Text-Indent">This method allows you to add a new angular sweep definition to the list of observation angle sweeps. The meaning of the angular parameters depends on the <span style="font-style: italic;"><i>type</i></span> setting:</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<table style="vertical-align: top; margin-left: 24px;" cellspacing="0" width="62.199%">
+<col style="width: 18.959%;" />
+<col style="width: 81.041%;" />
+<tr style="vertical-align: top;">
+<td style="border: Solid 1px #000000; width: 18.959%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text">"POINT"</p>
+</td>
+<td style="border-top: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 81.041%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text">Specify a single angular point for this sweep definition. In this case, <span style="font-style: italic;"><i>thetamin</i></span> must be set equal to <span style="font-style: italic;"><i>thetamax</i></span> and <span style="font-style: italic;"><i>phimin</i></span> must be set equal to <span style="font-style: italic;"><i>phimax</i></span>. The settings for <span style="font-style: italic;"><i>thetastep</i></span> and <span style="font-style: italic;"><i>phistep</i></span> have no effect.</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 18.959%; padding-right: 10px; padding-left: 10px;">
+<p>"THETA"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 81.041%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text">Specify a one dimensional sweep for the theta angle while keeping the phi angle fixed. In this case, <span style="font-style: italic;"><i>phimin</i></span> must be set equal to <span style="font-style: italic;"><i>phimax</i></span>. The setting for <span style="font-style: italic;"><i>phistep</i></span> has no effect.</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 18.959%; padding-right: 10px; padding-left: 10px;">
+<p>"PHI"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 81.041%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text">Specify a one dimensional sweep for the phi angle while keeping the theta angle fixed. In this case, <span style="font-style: italic;"><i>thetamin</i></span> must be set equal to <span style="font-style: italic;"><i>thetamax</i></span>. The setting for <span style="font-style: italic;"><i>thetastep</i></span> has no effect.</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 18.959%; padding-right: 10px; padding-left: 10px;">
+<p>"BOTH"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 81.041%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text">Specify a two dimension sweep for both angles theta and phi. For each angle, lower and upper bounds need to be defined. The corresponding step widths must match with the range definition such that an integer number of angular sampling points will be defined.</p>
+</td>
+</tr>
+</table>
+<p class="vba-text-indent">&#160;</p>
+<p class="VBA-Heading-Method">AddObservationAngleSweepWithRays ( <a href="../common_vbageneral/common_general_enum.htm" id="a54" style="font-weight: normal;" name="a54">enum</a><span style="font-weight: normal;">{"POINT", "THETA", "PHI", "BOTH"}</span> <span style="font-style: italic;"><i>type</i></span><span style="font-weight: normal;">,</span> <a href="../common_vbageneral/common_general_double.htm" id="a55" style="font-weight: normal;" name="a55">double</a> <span style="font-style: italic;"><i>thetamin</i></span><span style="font-weight: normal;">,</span> <a href="../common_vbageneral/common_general_double.htm" id="a56" style="font-weight: normal;" name="a56">double</a> <span style="font-style: italic;"><i>thetamax</i></span><span style="font-weight: normal;">,</span> <a href="../common_vbageneral/common_general_double.htm" id="a57" style="font-weight: normal;" name="a57">double</a> <span style="font-style: italic;"><i>thetastep</i></span><span style="font-weight: normal;">,</span> <a href="../common_vbageneral/common_general_double.htm" id="a59" style="font-weight: normal;" name="a59">double</a> <span style="font-style: italic;"><i>phimin</i></span><span style="font-weight: normal;">,</span> <a href="../common_vbageneral/common_general_double.htm" id="a60" style="font-weight: normal;" name="a60">double</a> <span style="font-style: italic;"><i>phimax</i></span><span style="font-weight: normal;">,</span> <a href="../common_vbageneral/common_general_double.htm" id="a61" style="font-weight: normal;" name="a61">double</a> <span style="font-style: italic;"><i>phistep</i></span> )</p>
+<p class="VBA-Text-Indent">This method has the same effect as <span style="font-style: italic;"><i>AddObservationAngleSweep</i></span>, but in addition the solver will store the rays for each excitation direction for visualization. Please refer to the description of the <span style="font-style: italic;"><i>AddObservationAngleSweep</i></span> method for more information. For more information on ray storage, please refer to the asymptotic solver control dialog box description in the online documentation.</p>
+<p class="VBA-Heading-Method">&#160;</p>
+<p class="VBA-Heading-Method">UseParallelization &#160;( <a href="../common_vbageneral/common_general_bool_data_type.htm" id="a58" style="font-weight: normal;" name="a58">bool</a> <span style="font-style: italic;"><i>flag</i></span> )</p>
+<p class="VBA-Text-Indent">Enable or disable parallelization (multithreading) for the asymptotic solver. &#160;</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">MaximumNumberOfThreads ( <span style="font-style: italic;"><i><a href="../common_vbageneral/common_general_integer.htm" id="a86" style="font-weight: normal; font-style: normal;" name="a86">int</a> number</i></span> )</p>
+<p class="VBA-Text-Indent">Define the maximum <span style="font-style: italic;"><i>number</i></span> of parallel threads to be used for the asymptotic solver run.</p>
+<p class="vba-heading-method">&#160;</p>
+<p class="VBA-Heading-Method" style="font-style: normal;"><span><span style="font-style: normal;">RemoteCalculation &#160;( <a href="../common_vbageneral/common_general_bool_data_type.htm" id="a161" style="font-weight: normal; font-style: normal;" name="a161">bool</a> &#160;<span style="font-style: italic;"><i>flag</i></span> )</span></span></p>
+<p class="VBA-Text-Indent">Enable or disable remote calculation for the asymptotic solver. When enabled, an asymptotic solver run is submitted to the network instead of performing the calculation locally. Please note that activating remote calculation turns off other distributed computing options. The setting does not influence parameter sweeps and optimizer runs with distributed computing.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method" style="font-style: normal;">DistributedComputing( <a href="../common_vbageneral/common_general_bool_data_type.htm" id="a35" style="font-weight: normal; font-style: normal;" name="a35">bool</a> &#160;<span style="font-style: italic;"><i>flag</i></span> )</p>
+<p class="VBA-Text-Indent">Enable or disable distributed computing for the asymptotic solver. When enabled, an asymptotic solver run will be subdivided into a number of distributed computing jobs as specified by the <span style="font-style: italic;"><i>DistributedComputingNodes</i></span> setting. Each job will then handle a certain subset of excitation directions. &#160;Please note that activating distributed computing turns off other remote calculation options. The setting does not influence parameter sweeps and optimizer runs with distributed computing.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method" style="font-style: normal;">DistributedComputingNodes( <span style="font-style: italic;"><i><a href="../common_vbageneral/common_general_integer.htm" id="a36" style="font-weight: normal; font-style: normal;" name="a36">int</a> number</i></span> )</p>
+<p class="VBA-Text-Indent">Define the maximum <span style="font-style: italic;"><i>number</i></span> of computing nodes to be used for distributed computing of excitation directions. This setting will also determine the number of jobs to be submitted for a single asymptotic solver run.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">Start <a href="../common_vbageneral/common_general_integer.htm" id="a159" style="font-weight: normal;" name="a159">int</a></p>
+<p class="VBA-Text-Indent">Starts the solver with the current settings and returns 1 if the calculation is successfully finished and 0 if it failed.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Category"><a name="Detailed solver control options"></a>Detailed Solver Control Options</p>
+<p class="VBA-Text" style="font-style: normal;">Please note that these settings will only take effect if the <span style="font-style: italic;"><i>AccuracyLevel</i></span> is set to <span style="font-style: italic;"><i>Custom</i></span>. Otherwise these settings will be overridden by the values given by the predefined accuracy levels.</p>
+<p class="VBA-Text" style="font-style: normal;">&#160;</p>
+<p class="VBA-Heading-Method">&#160;</p>
+<p class="VBA-Heading-Method">SetSolverIncludeMetallicEdgeDiffraction ( <a href="../common_vbageneral/common_general_bool_data_type.htm" id="a18" style="font-weight: normal;" name="a18">bool</a> <span style="font-style: italic;"><i>flag</i></span> )</p>
+<p class="VBA-Text-Indent">This option specifies whether diffraction at edges should be included in the simulation which will improve the accuracy at the expense of longer simulation times. It is generally recommended to turn this option on for more accurate results.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">Set ( "MeshMaxWedgeLengthPerLambda",<span style="font-weight: normal;">&#160;<a href="../common_vbageneral/common_general_double.htm" id="a834" style="font-weight: normal;" name="a834">double</a></span> <span style="font-style: italic;"><i>value</i></span> )</p>
+<p class="Topic-Text-Indent">This option controls the maximum length of the generated segments for edge diffraction. Smaller values increase the accuracy of the edge diffraction contributions but also lead to a longer runtime. This option is only available if the option <span style="font-style: italic;"><i>SetSolverIncludeMetallicEdgeDiffraction</i></span> is activated.</p>
+<p class="Topic-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method"><span style="font-style: normal;">S</span>etSolverExitBlockageCheck ( <a href="../common_vbageneral/common_general_bool_data_type.htm" id="a17" style="font-weight: normal;" name="a17">bool</a> <span style="font-style: italic;"><i>flag</i></span> )</p>
+<p class="VBA-Text-Indent">This option specifies whether the visibility of a reflection point for a particular ray from the current observation point will be checked or not. For better accuracy it is recommended to turn this option on. In some cases it may be useful to turn this option off in order to quickly obtain potentially less accurate results.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method" style="font-style: normal;">StoreResultsInCache ( <a href="../common_vbageneral/common_general_bool_data_type.htm" id="a119" style="font-weight: normal; font-style: normal;" name="a119">bool</a> <span style="font-style: italic;"><i>flag</i></span> )</p>
+<p class="VBA-Text-Indent" style="font-style: normal;">Stores results of the asymptotic solver in the result cache.</p>
+<p class="VBA-Heading-Method">&#160;</p>
+<p class="VBA-Heading-Method">StorePOResults ( <a href="../common_vbageneral/common_general_bool_data_type.htm" id="a43" style="font-weight: normal; font-style: normal;" name="a43">bool</a> <span style="font-style: italic;"><i>flag</i></span> )</p>
+<p class="VBA-Text-Indent">This option controls whether the first order PO farfields are calculated in addition to the total farfields including all multiple reflection and diffraction effects. Comparing the two sets of results can be used for checking the influence of the higher order effects on the solution. This option is only available for the <span style="font-style: italic;"><i>Monostatic</i></span> and <span style="font-style: italic;"><i>Bistatic</i></span> scattering modes.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">SetMeshCurved ( <a href="../common_vbageneral/common_general_bool_data_type.htm" id="a3" style="font-weight: normal;" name="a3">bool</a> <span style="font-style: italic;"><i>flag</i></span> )</p>
+<p class="VBA-Text-Indent">This setting specifies whether the mesh triangles will be curved for a better representation of non-planar geometries. If this option is set to <span style="font-style: italic;"><i>false</i></span>, the mesh will be created such that it consists of planar triangles only. Using curved triangles will usually improve accuracy, at the expense of a little bit higher memory consumption and longer simulation times.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">Set ( "MeshUseCurvatureExtraction",<span style="font-weight: normal;">&#160;<a href="../common_vbageneral/common_general_bool_data_type.htm" id="a7512" style="font-weight: normal;" name="a7512">bool</a></span> <span style="font-style: italic;"><i>flag</i></span> )</p>
+<p class="Topic-Text-Indent">This setting specifies whether the curvature information should be extracted out of the input data. This is especially helpful when the model has been imported from a file format that does not provide surface normal information like, e.g., NASTRAN or STL. This option is only available if the option <span style="font-style: italic;"><i>SetMeshCurved</i></span> is activated.</p>
+<p class="Topic-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">SetMeshNormalTolerance ( <a href="../common_vbageneral/common_general_double.htm" id="a4" style="font-weight: normal;" name="a4">double</a> <span style="font-style: italic;"><i>value</i></span> )</p>
+<p class="VBA-Text-Indent">This parameter specifies the maximum allowable tolerance of the (planar) triangle normals as compared to the true normals of the structure's geometry. Lower settings will lead to a more accurate geometrical representation at the expense of generating more triangles. If this parameter is set to zero, no constraint concerning the normal tolerance will be applied during the mesh generation.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">SetMeshSurfaceTolerance ( <a href="../common_vbageneral/common_general_double.htm" id="a5" style="font-weight: normal;" name="a5">double</a> <span style="font-style: italic;"><i>value</i></span> )</p>
+<p class="VBA-Text-Indent">This parameter specifies the maximum allowable deviation of the (planar) triangle from the actual geometry in model dimensions. Lower settings will lead to a more accurate geometrical representation at the expense of generating more triangles. If this parameter is set to zero, no constraint concerning the surface tolerance will be applied during the mesh generation.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">SetMeshMaxEdgeLengthPerLambda ( <a href="../common_vbageneral/common_general_double.htm" id="a7" style="font-weight: normal;" name="a7">double</a> <span style="font-style: italic;"><i>value</i></span> )</p>
+<p class="VBA-Text-Indent">This setting specifies the maximum allowable length of the triangle edges as compared to the wave length of the upper frequency limit as it is specified globally. This parameter has a strong influence on the number of triangles generated for a particular mesh. The solver run time will suffer from drastically varying triangle sizes, so extreme settings should be avoided.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">SetMeshMaxEdgeLengthPerDiagonal ( <a href="../common_vbageneral/common_general_double.htm" id="a8" style="font-weight: normal;" name="a8">double</a> <span style="font-style: italic;"><i>value</i></span> )</p>
+<p class="VBA-Text-Indent">This setting specifies the maximum allowable length of the triangle edges as compared to the size of the structure (bounding box diagonal). This parameter has a strong influence on the number of triangles generated for a particular mesh. The solver run time will suffer from drastically varying triangle sizes, so extreme settings should be avoided.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="Tip-Note-Heading">SetSolverAllowStorageOfIncidentRays ( <a href="../common_vbageneral/common_general_bool_data_type.htm" id="a75" style="font-weight: normal;" name="a75">bool</a> <span style="font-style: italic;"><i>flag</i></span> )</p>
+<p class="Topic-Text-Indent">This option controls whether the incident rays will be stored if the corresponding rays option is set for the excitation. If this option is turned off, ray storage will be suppressed for all incident rays.</p>
+<p class="Topic-Text-Indent">&#160;</p>
+<p class="Tip-Note-Heading">SetSolverAllowStorageOfInitialHits ( <a href="../common_vbageneral/common_general_bool_data_type.htm" id="a77" style="font-weight: normal;" name="a77">bool</a> <span style="font-style: italic;"><i>flag</i></span> )</p>
+<p class="Topic-Text-Indent">This option controls whether the points where the incident rays hit the structure will be stored if the corresponding rays option is set for the excitation. If this option is turned off, the initial hit point storage will be suppressed for all incident rays.</p>
+<p class="Topic-Text-Indent">&#160;</p>
+<p class="Tip-Note-Heading">SetSolverAllowStorageOfObservedRays ( <a href="../common_vbageneral/common_general_bool_data_type.htm" id="a78" style="font-weight: normal;" name="a78">bool</a> <span style="font-style: italic;"><i>flag</i></span> )</p>
+<p class="Topic-Text-Indent">This option controls whether the scattered rays will be stored if the corresponding rays option is set for the excitation as well as the observation direction. If this option is turned off, scattered ray storage will be suppressed.</p>
+<p class="Topic-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">SetSolverMaximumNumberOfIncidentRaysOutput ( <a href="../common_vbageneral/common_general_integer.htm" id="a79" style="font-weight: normal;" name="a79">int</a> <span style="font-style: italic;"><i>value</i></span> )</p>
+<p class="Topic-Text-Indent">This option allows you to set an upper limit for the number of incident rays being stored per direction and per reflection level. This option is important in order to avoid storing huge files which may slow down the computation tremendously. Please note that this limit is set for each reflection level independently. Therefore, a limit of e.g. 1000 means that up to 1000 rays will be stored which do not intersect with the structure, another up to 1000 rays will be stored which are reflected once and so on.</p>
+<p class="Topic-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">SetSolverMaximumNumberOfInitialHitsOutput ( <a href="../common_vbageneral/common_general_integer.htm" id="a80" style="font-weight: normal;" name="a80">int</a> <span style="font-style: italic;"><i>value</i></span> )</p>
+<p class="Topic-Text-Indent">This option allows you to set an upper limit for the number of points where the incident rays hit the structure being stored per excitation.</p>
+<p class="Topic-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">SetSolverMaximumNumberOfObservedRaysOutput ( <a href="../common_vbageneral/common_general_integer.htm" id="a82" style="font-weight: normal;" name="a82">int</a> <span style="font-style: italic;"><i>value</i></span> )</p>
+<p class="Topic-Text-Indent">This option allows you to set an upper limit for the number of scattered rays being stored per incident direction and per reflection level. This option is important in order to avoid storing huge files which may slow down the computation tremendously. Please note that this limit is set for each incident direction and reflection level independently.</p>
+<p class="Topic-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">SetSolverObservedRaysAngleTolerance ( <a href="../common_vbageneral/common_general_double.htm" id="a83" style="font-weight: normal;" name="a83">double</a> <span style="font-style: italic;"><i>value</i></span> )</p>
+<p class="Topic-Text-Indent">This option allows you to set an angular tolerance for the scattered rays which will be used for assigning these rays to a particular observation angle. This setting will only be considered when the <span style="font-style: italic;"><i>AccuracyLevel</i></span> is set to <span style="font-style: italic;"><i>Custom</i></span>.</p>
+<p class="Topic-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">Set ( "SolverRayOutputAmplitude",<span style="font-weight: normal;">&#160;<a href="../common_vbageneral/common_general_bool_data_type.htm" id="a7514" style="font-weight: normal;" name="a7514">bool</a></span> <span style="font-style: italic;"><i>flag</i></span> )</p>
+<p class="Topic-Text-Indent">This option enables computation of ray amplitudes along the visualized ray paths. The ray amplitudes are computed at the intersection points between ray path and object according to the laws of geometrical optics. In the region between two intersection points the ray amplitude is linearly interpolated and thus incorrect - please note that the focus of the generated results is merely on giving an overview of a ray path's importance. Please use nearfield monitors or field probes to obtain proper field values in free space.</p>
+<p class="Topic-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">Set ( "SolverShowEntireRayPath",<span style="font-weight: normal;">&#160;<a href="../common_vbageneral/common_general_bool_data_type.htm" id="a75141" style="font-weight: normal;" name="a75141">bool</a></span> <span style="font-style: italic;"><i>flag</i></span> )</p>
+<p class="Topic-Text-Indent">This option enables storage of entire ray paths. If this option is deactivated, only the transmitted ray path is stored at transparent material boundaries, as it is usually the one that carries most of the ray's energy. If this option is activated, all reflected and transmitted ray paths will be stored.</p>
+<p class="VBA-Heading-Method">&#160;</p>
+<p class="VBA-Heading-Method">SetSolverAllowHotspots ( <span style="font-weight: normal;"><a href="../common_vbageneral/common_general_bool_data_type.htm" id="a7514111" style="font-weight: normal;" name="a7514111">bool</a></span> <span style="font-style: italic;"><i>flag</i></span> )</p>
+<p class="Topic-Text-Indent">This checkbox specifies whether contributions stemming from direct ray-reflections are considered for the hotspot calculation. Toghether with the next option, <i>consider higher order contributions</i>, this allows you to gain a detailed insight where hotspot contributions are coming from.</p>
+<p class="VBA-Heading-Method">&#160;</p>
+<p class="VBA-Heading-Method">SetSolverAllowHOHotspots ( <span style="font-weight: normal;"><a href="../common_vbageneral/common_general_bool_data_type.htm" id="a751411" style="font-weight: normal;" name="a751411">bool</a></span> <span style="font-style: italic;"><i>flag</i></span> )</p>
+<p class="Topic-Text-Indent">This checkbox specifies whether higher-order contributions, stemming from multiple ray-reflections, are considered for hotspot calculations.</p>
+<p class="VBA-Heading-Method">&#160;</p>
+<p class="VBA-Heading-Method">SetSolverHotspotNumberOfPixels ( <span style="font-weight: normal;"><a href="../common_vbageneral/common_general_integer.htm" id="a791" style="font-weight: normal;" name="a791">int</a></span> <span style="font-style: italic;"><i>value</i></span> )</p>
+<p class="Topic-Text-Indent">This value sets the resolution for the visualization image, i.e. the number of pixels in each spatial direction.</p>
+<p class="VBA-Heading-Method">&#160;</p>
+<p class="VBA-Heading-Method">SetSolverHotspotAngularRange ( <span style="font-weight: normal;"><a href="../common_vbageneral/common_general_double.htm" id="a8311" style="font-weight: normal;" name="a8311">double</a></span> <span style="font-style: italic;"><i>value</i></span> )</p>
+<p class="Topic-Text-Indent">This value sets the maximum angular range (angle between observation direction and reflected ray) for which specular contributions will be evaluated. This allows you to hide contributions that don't originate from reflections in the observers' direction. Its effect resembles that of an aperture. A small value (greater than 0°) only selects contributions going in the observer's direction. A setting of 180° includes all contributions, resembling an open aperture.</p>
+<p class="VBA-Heading-Method">&#160;</p>
+<p class="VBA-Heading-Method">SetSolverHotspotWeightingExponent ( <span style="font-weight: normal;"><a href="../common_vbageneral/common_general_integer.htm" id="a792" style="font-weight: normal;" name="a792">int</a></span> <span style="font-style: italic;"><i>value</i></span> )</p>
+<p class="Topic-Text-Indent">This factor pronounces specular contributions that originate from reflections going in the observers' direction and diminishes those from reflections in other directions. This option allows you to fine-tune the image-contrast. When set to 0, no contrast enhancement is performed, higher values lead to a more pronounced contrast. To highlight hotspots in the observer's direction a value of 5 is a good choice.</p>
+<p class="VBA-Heading-Method">&#160;</p>
+<p class="VBA-Heading-Method">SetSolverHotspotHOAngularRange ( <span style="font-weight: normal;"><a href="../common_vbageneral/common_general_double.htm" id="a8312" style="font-weight: normal;" name="a8312">double</a></span> <span style="font-style: italic;"><i>value</i></span> )</p>
+<p class="Topic-Text-Indent">This value sets the maximum angular range (angle between observation direction and reflected ray) for which higher-order contributions will be evaluated. This allows you to hide contributions that don't originate from reflections in the observers' direction. Its effect resembles that of an aperture. A small value (greater than 0°) only selects contributions going in the observer's direction. A setting of 180° includes all contributions, resembling an open aperture.</p>
+<p class="VBA-Heading-Method">&#160;</p>
+<p class="VBA-Heading-Method">SetSolverHotspotHOWeightingExponent( <span style="font-weight: normal;"><a href="../common_vbageneral/common_general_integer.htm" id="a793" style="font-weight: normal;" name="a793">int</a></span> <span style="font-style: italic;"><i>value</i></span> )</p>
+<p class="Topic-Text-Indent">This factor pronounces higher-order contributions that originate from reflections going in the observers' direction and diminishes those from reflections in other directions. This option allows you to fine-tune the image-contrast. When set to 0, no contrast enhancement is performed, higher values lead to a more pronounced contrast. To highlight hotspots in the observer's direction a value of 5 is a good choice.</p>
+<p class="VBA-Heading-Method">&#160;</p>
+<p class="VBA-Heading-Method">Set ( "NearfieldPartitioningAccuracy",<span style="font-weight: normal;">&#160;<a href="../common_vbageneral/common_general_double.htm" id="a831" style="font-weight: normal;" name="a831">double</a></span> <span style="font-style: italic;"><i>value</i></span> )</p>
+<p class="Topic-Text-Indent">This setting specifies how sub sources are chosen for illumination of the scattering object: the size of the sub sources used to illuminate a particular part of the scattering object is adjusted to fulfil the farfield criterion R &gt; accuracy*2*D²/λ, where <span style="font-style: italic;"><i>accuracy</i></span> is the current setting. If this value is set to zero, sub sources are not used. Instead, the whole field distribution is modeled as a single point source.</p>
+<p class="Topic-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">Set ( "NearfieldRadiatedPowerInaccuracy",<span style="font-weight: normal;">&#160;<a href="../common_vbageneral/common_general_double.htm" id="a833" style="font-weight: normal;" name="a833">double</a></span> <span style="font-style: italic;"><i>value</i></span> )</p>
+<p class="Topic-Text-Indent">To save computation time, a certain amount of sub sources can be neglected for scattered field calculation. This value specifies the tolerated error as a fraction of the power radiated by the nearfield source.</p>
+<p class="Topic-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">Set ( "NearfieldPartitionSize",<span style="font-weight: normal;">&#160;<a href="../common_vbageneral/common_general_double.htm" id="a832" style="font-weight: normal;" name="a832">double</a></span> <span style="font-style: italic;"><i>value</i></span> )</p>
+<p class="Topic-Text-Indent">This value sets the smallest possible diameter of the sub sources in terms of the smallest simulated wavelength. A smaller value results in a more accurate representation of the total nearfield distribution at the expense of increased runtime.</p>
+<p class="Topic-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">Set ( "NearfieldDoNearfieldEvaluations",<span style="font-weight: normal;">&#160;<a href="../common_vbageneral/common_general_bool_data_type.htm" id="a751422" style="font-weight: normal;" name="a751422">bool</a></span> <span style="font-style: italic;"><i>flag</i></span> )</p>
+<p class="Topic-Text-Indent">With this option, portions of the field source very close to the scattering target (closer than λ) are not simply represented by their farfield pattern: the radial parts of the field impinging on the scatterer are also considered. This considerably increases accuracy in the shadow zones. Please note that this option may strongly increase simulation time.</p>
+<p class="Topic-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">Set ( "NearfieldExclusionBoundaries",<span style="font-weight: normal;">&#160;<a href="../common_vbageneral/common_general_bool_data_type.htm" id="a7514222" style="font-weight: normal;" name="a7514222">bool</a></span> <span style="font-style: italic;"><i>flag</i></span> )</p>
+<p class="Topic-Text-Indent">This value is useful to include blockage effects of the structure inside the NFS bounding box <span style="font-style: italic;"><i>(internal structure)</i></span>. The internal structure is only illuminated by the field that is scattered back from the external structure. Please be aware that this option does only work as expected if the NFS bounding box does not touch or cross any materials.</p>
+<p class="Topic-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Category"><a name="Detailed_Solver_Control_Options_(SBR_RAYTUBES_Solver)"></a>Detailed Solver Control Options specific to SBR_RAYTUBES Solver</p>
+<p class="VBA-Text">Please note that these settings will only take effect if the <span style="font-style: italic;"><i>AccuracyLevel</i></span> is set to <span style="font-style: italic;"><i>Custom</i></span>. Otherwise these settings will be overridden by the values given by the predefined accuracy levels.</p>
+<p class="VBA-Text">&#160;</p>
+<p class="VBA-Heading-Method">SetSolverRaySpacingRT ( <a href="../common_vbageneral/common_general_double.htm" id="a68" style="font-weight: normal;" name="a68">double</a> <span style="font-style: italic;"><i>value</i></span> )</p>
+<p class="VBA-Text-Indent">This parameter specifies the distance in between the rays launched in wavelengths. This setting will only be considered when the <span style="font-style: italic;"><i>AccuracyLevel</i></span> is set to <span style="font-style: italic;"><i>Custom</i></span>. Please note that this setting is only valid for the SBR_RAYTUBES solver.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">SetSolverAdaptiveRaySubdivisionRT ( <a href="../common_vbageneral/common_general_bool_data_type.htm" id="a63" style="font-weight: normal;" name="a63">bool</a> <span style="font-style: italic;"><i>flag</i></span> )</p>
+<p class="VBA-Text-Indent">This option specifies whether the ray tubes shall be automatically refined when needed. The actual refinement is controlled by the two parameters <span style="font-style: italic;"><i>SetSolverMaximumRayDistanceRT</i></span> and <span style="font-style: italic;"><i>SetSolverMinimumRayDistanceRT</i></span>. This setting will only be considered when the <span style="font-style: italic;"><i>AccuracyLevel</i></span> is set to <span style="font-style: italic;"><i>Custom</i></span>. Please note that this setting is only valid for the SBR_RAYTUBES solver.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">SetSolverMaximumRayDistanceRT ( <a href="../common_vbageneral/common_general_double.htm" id="a69" style="font-weight: normal;" name="a69">double</a> <span style="font-style: italic;"><i>value</i></span> )</p>
+<p class="VBA-Text-Indent">This parameter controls the maximum edge length of a ray tube before it gets automatically refined. This setting will only be considered when the <span style="font-style: italic;"><i>AccuracyLevel</i></span> is set to <span style="font-style: italic;"><i>Custom</i></span> and the <span style="font-style: italic;"><i>SetSolverAdaptiveRaySubdivisionRT</i></span> option is active. Please note that this setting is only valid for the SBR_RAYTUBES solver.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">SetSolverMinimumRayDistanceRT ( <a href="../common_vbageneral/common_general_double.htm" id="a74" style="font-weight: normal;" name="a74">double</a> <span style="font-style: italic;"><i>value</i></span> )</p>
+<p class="VBA-Text-Indent">This parameter controls the minimum edge length of a ray tube which can be further refined automatically. This setting is needed in order to avoid excessive refinement of ray tubes at discontinuities. This setting will only be considered when the <span style="font-style: italic;"><i>AccuracyLevel</i></span> is set to <span style="font-style: italic;"><i>Custom</i></span> and the <span style="font-style: italic;"><i>SetSolverAdaptiveRaySubdivisionRT</i></span> option is active. Please note that this setting is only valid for the SBR_RAYTUBES solver.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">SetSolverMinimumNumberOfRaysRT ( <a href="../common_vbageneral/common_general_integer.htm" id="a70" style="font-weight: normal;" name="a70">int</a> <span style="font-style: italic;"><i>value</i></span> )</p>
+<p class="VBA-Text-Indent">For electrically smaller structures, there may be too few rays launched due to the Ray density / wavelength setting. In order to ensure that a reasonable number of rays are launched to properly illuminate all regions of the structure, this parameter defines a lower bound for the number of rays. For more accurate simulations of electrically not very large structures you may need to increase this parameter. This setting will only be considered when the <span style="font-style: italic;"><i>AccuracyLevel</i></span> is set to <span style="font-style: italic;"><i>Custom</i></span>. Please note that this setting is only valid for the SBR_RAYTUBES solver.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Category"><a name="Detailed_Solver_Control_Options__SBR" id="Detailed_Solver_Control_Options__SBR"></a>Detailed Solver Control Options specific to SBR Solver</p>
+<p class="VBA-Text">Please note that these settings will only take effect if the <span style="font-style: italic;"><i>AccuracyLevel</i></span> is set to <span style="font-style: italic;"><i>Custom</i></span>. Otherwise these settings will be overridden by the values given by the predefined accuracy levels.</p>
+<p class="VBA-Text">&#160;</p>
+<p class="VBA-Heading-Method">SetSolverRayDensityPerLambda ( <a href="../common_vbageneral/common_general_double.htm" id="a9" style="font-weight: normal;" name="a9">double</a> <span style="font-style: italic;"><i>value</i></span> )</p>
+<p class="VBA-Text-Indent">This parameter specifies the number of rays which are launched per wavelength of the actual simulation frequency. For electrically smaller structures, this parameter may need to be increased in order to achieve a better accuracy. Typical values are in between 10 for electrically very large structures and 40 or more for electrically not very large structures. This parameter is the main parameter to vary for controlling solver accuracy and performance. This setting will only be considered when the <span style="font-style: italic;"><i>AccuracyLevel</i></span> is set to <span style="font-style: italic;"><i>Custom</i></span>. Please note that this setting is only valid for the SBR solver.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">SetSolverMaxAreaOfRayTube ( <a href="../common_vbageneral/common_general_double.htm" id="a10" style="font-weight: normal;" name="a10">double</a> <span style="font-style: italic;"><i>value</i></span> )</p>
+<p class="VBA-Text-Indent">This parameter controls the maximum ray tube cross section for consideration of a particular beam for the scattered field computation. The scattering results become inaccurate for beams with very large cross sections, therefore it makes sense not to consider these beams since their contribution will be very small anyway. This setting will only be considered when the <span style="font-style: italic;"><i>AccuracyLevel</i></span> is set to <span style="font-style: italic;"><i>Custom</i></span>. Please note that this setting is only valid for the SBR solver.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">SetSolverMinimumNumberOfRays ( <a href="../common_vbageneral/common_general_integer.htm" id="a11" style="font-weight: normal;" name="a11">int</a> <span style="font-style: italic;"><i>value</i></span> )</p>
+<p class="VBA-Text-Indent">For electrically smaller structures, there may be too few rays launched due to the Ray density / wavelength setting. In order to ensure that a reasonable number of rays are launched to properly illuminate all regions of the structure, this parameter defines a lower bound for the number of rays. For more accurate simulations of electrically not very large structures you may need to increase this parameter. This setting will only be considered when the <span style="font-style: italic;"><i>AccuracyLevel</i></span> is set to <span style="font-style: italic;"><i>Custom</i></span>. Please note that this setting is only valid for the SBR solver.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<?rh-p style="margin-bottom: 0px; text-align: Right; margin-left: 18px; 
+                 margin-right: 18px; margin-top: 18px;" ?>
+<div style="width: 100%; position: relative;" id="footer">
+<p style="border-bottom: Solid 1px #dddddd; text-align: Left; margin-left: 0px; font-family: Arial, sans-serif; line-height: Normal; margin-top: 9px; margin-right: 0px; margin-bottom: 6px; border-left-width: 1px; border-top-width: 1px; border-right-width: 1px;"><span style="text-align: Left; font-family: Arial, sans-serif; line-height: Normal;">&#160;</span></p>
+<table cellspacing="0" width="100%">
+<col style="width: 50%;" />
+<col style="width: 50%;" />
+<tr>
+<td style="vertical-align: Top;"><span style="font-family: Arial, sans-serif; line-height: Normal; font-size: 8pt;"><font size="1" style="font-size:8pt;">CST Studio Suite 2026</font></span></td>
+<td style="vertical-align: Top;">
+<p style="text-align: right;">&#160;</p>
+</td>
+</tr>
+</table>
+<p>&#160;</p>
+</div>
+<script type="text/javascript" language="javascript1.2">
+//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+        writeIntopicBar(0);
+
+
+highlightSearch();
+//-->
+//]]>
+</script>
+</body>
+</html>

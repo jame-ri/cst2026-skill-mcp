@@ -1,0 +1,1004 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="Adobe RoboHelp 11" />
+<title>Command Line Options</title>
+<link rel="StyleSheet" href="../online_help.css" type="text/css" />
+<link rel="StyleSheet" href="../online_help.css" type="text/css" />
+<style type="text/css">
+/*<![CDATA[*/
+<!--
+body { border-bottom-style:None; }
+-->
+/*]]>*/
+</style>
+
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+        origWidth = innerWidth;
+        origHeight = innerHeight;
+        onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+/*<![CDATA[*/
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+-->
+/*]]>*/
+</style>
+
+<script type="text/javascript" language="javascript1.2" src="../whmsg.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript" src="../whver.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript1.2" src="../whutils.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript1.2" src="../whproxy.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript1.2" src="../whlang.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript1.2" src="../whtopic.js" charset="utf-8">
+</script>
+</head>
+<body>
+<script type="text/javascript" language="javascript1.2">
+//<![CDATA[
+<!--
+if (window.gbWhTopic)
+{
+        var strUrl = document.location.href;
+        var bc = 0;
+        var n = strUrl.toLowerCase().indexOf("bc-");
+        if(n != -1)
+        {
+                document.location.replace(strUrl.substring(0, n));
+                bc = strUrl.substring(n+3);
+        }
+
+        if (window.addTocInfo)
+        {
+        addTocInfo("General Features\nCommand Line Options");
+addAvenueInfo("Untitled","general/common_overview_shortcuts.htm","advanced/environment_variables.htm");
+
+        }
+        if (window.writeBtnStyle)
+                writeBtnStyle();
+
+        if (window.writeIntopicBar)
+                writeIntopicBar(0);
+
+        
+        document.write("<p style=\"font-family: Tahoma; font-size: 9pt; font-weight: 400;  font-style:normal; color: rgb(0, 0, 0); text-decoration:none; text-align: left\"> ");
+AddMasterBreadcrumbs("../cst_studio_suite_help.htm", "font-family: Tahoma; font-size: 9pt; font-weight: 400;  font-style:normal; color: rgb(0, 0, 0); text-decoration:none; text-align: left", "|", "Home", "../general/welcome_de.htm");
+document.write("<a style=\"font-family: Tahoma; font-size: 9pt; font-weight: 400;  font-style:normal; color: rgb(0, 0, 0); text-decoration:none; text-align: left\" href=\"../general/userinterfaceoverview.htm\">General Features<\/a> | Command Line Options<\/p>");
+
+}
+else
+        if (window.gbIE4)
+                document.location.reload();
+
+onLoadHandler = function()
+{
+  if (window.setRelStartPage)
+        {
+        setTimeout("setRelStartPage('../cst_studio_suite_help.htm');", 1)
+
+    setTimeout("UpdateBreadCrumbsMarker();", 1);
+        }
+}
+
+if (window.addEventListener){  
+        window.addEventListener('load', onLoadHandler, false);   
+} else if (window.attachEvent){  
+        window.attachEvent('onload', onLoadHandler);  
+}
+
+function onSetStartPage()
+{
+  autoSync(1);
+  sendSyncInfo();
+  sendAveInfoOut();
+}
+//-->
+//]]>
+</script><script type="text/javascript" src="../ehlpdhtm.js" language="JavaScript1.2">
+</script>
+<table cellspacing="0" width="100%">
+<col style="width: 50%;" />
+<col style="width: 50%;" />
+<tr>
+<td style="vertical-align: middle; padding-top: 5px; padding-bottom: 5px;">
+<p style="margin-top: 0px; margin-bottom: 0px;"><img src="../3ds.png" alt="" style="border: none;" border="0" /></p>
+</td>
+<td style="vertical-align: middle;">
+<p style="text-align: right;"><a href="https://www.3ds.com/products-services/3dexperience/" target="_blank"><img src="../3dexp.png" alt="" style="border: none;" width="32" height="32" border="0" /></a></p>
+</td>
+</tr>
+</table>
+<h1>Command Line Options</h1>
+<h3>It is possible to run CST Studio Suite in batch mode.</h3>
+<ul style="list-style: disc;">
+<li class="h3">
+<h3><span style="font-weight: bold;">On Windows:</span><br />
+"&lt;Installation Path&gt;\CST DESIGN ENVIRONMENT.exe" &lt;options&gt; "&lt;full path of cst file&gt;"</h3>
+</li>
+<li class="h3">
+<h3><span style="font-weight: bold;">On Linux:</span><br />
+"&lt;Installation Path&gt;/cst_design_environment" &lt;options&gt; "&lt;full path of cst file&gt;"<br />
+<span style="font-weight: bold;">Please note:</span> For the supported features on Linux please read the <span style="font-weight: bold;">Linux_Installation_Guide.pdf</span></h3>
+</li>
+</ul>
+<p style="font-style: normal; font-weight: bold;">Please note that the quotation marks are mandatory!</p>
+<p style="font-style: normal; font-weight: bold;">&#160;</p>
+<p style="font-style: normal; font-weight: normal;">In the following only the most important command line options are listed. For a full list of supported command line options please run:</p>
+<ul style="list-style: disc;">
+<li class="h3">
+<h3><span style="font-weight: bold;">On Windows:</span><br />
+"&lt;Installation Path&gt;\CST DESIGN ENVIRONMENT.exe" -help</h3>
+</li>
+<li class="h3">
+<h3><span style="font-weight: bold;">On Linux:</span><br />
+"&lt;Installation Path&gt;/cst_design_environment_gui" -help</h3>
+</li>
+</ul>
+<p style="font-style: normal; font-weight: normal;">&#160;</p>
+<p style="font-style: normal; font-weight: normal;">In addition to the command line options listed below also <a href="environment_variables.htm">environment variables</a> are available.</p>
+<p style="font-style: normal; font-weight: bold;">&#160;</p>
+<p style="font-style: normal; font-weight: normal;">CST Studio Suite will return an exit code when started in batch mode. Please find an overview of the exit code in the following overview:</p>
+<table>
+<tr>
+<td>
+<p class="Tip-Note-Text"><span lang="EN-US" xml:lang="EN-US" style="font-family: 'Courier New';">0 = EXITCODE_SUCCESS</span></p>
+</td>
+<td>
+<p class="Tip-Note-Text">CST Studio Suite shutdown properly without any error.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p class="Tip-Note-Text"><span lang="EN-US" xml:lang="EN-US" style="font-family: 'Courier New';">1 = EXITCODE_FAILED</span></p>
+</td>
+<td>
+<p class="Tip-Note-Text">A general error occured on startup of CST Studio Suite (e.g. invalid installation directory or working directory).</p>
+</td>
+</tr>
+<tr>
+<td>
+<p class="Tip-Note-Text"><span lang="EN-US" xml:lang="EN-US" style="font-family: 'Courier New';">2 = EXITCODE_ABORTEDBYUSER</span></p>
+</td>
+<td>
+<p class="Tip-Note-Text">The solver was aborted by the user.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p class="Tip-Note-Text"><span lang="EN-US" xml:lang="EN-US" style="font-family: 'Courier New';">3 = EXITCODE_NOLICENSE</span></p>
+</td>
+<td>
+<p class="Tip-Note-Text">The requested license was not available.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p class="Tip-Note-Text"><span lang="EN-US" xml:lang="EN-US" style="font-family: 'Courier New';">4 = EXITCODE_FAILED_TO_OPEN</span></p>
+</td>
+<td>
+<p class="Tip-Note-Text">The project could not be opened.</p>
+</td>
+</tr>
+</table>
+<p style="font-style: normal; font-weight: bold;">&#160;</p>
+<p style="margin-top: 6pt;"><span style="font-weight: bold;">Please note:</span> All options are accessible by using -&lt;option&gt; or - -&lt;option&gt;: e. g. both is valid <span style="font-style: italic; font-weight: bold;"><i>-help</i></span> and <span style="font-weight: bold; font-style: italic;"><i>- -help.</i></span></p>
+<p style="margin-top: 6pt;">To start a specific module, open a help project or perform some basic settings, the following command line options are available</p>
+<table cellspacing="0" width="561">
+<col style="width: 29.412%;" />
+<col style="width: 70.588%;" />
+<tr style="vertical-align: top;">
+<td style="width: 29.412%; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;">
+<p style="font-weight: bold;">Options</p>
+</td>
+<td style="width: 70.588%; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;">
+<p><span style="font-weight: bold;">Description</span></p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="width: 29.412%; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;">
+<p>-m</p>
+</td>
+<td style="width: 70.588%; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;">
+<p>Starts CST Microwave Studio</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="width: 29.412%; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;">
+<p>-s</p>
+</td>
+<td style="width: 70.588%; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;">
+<p>Starts CST EM Studio</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="width: 29.412%; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;">
+<p style="margin-top: 0; margin-bottom: 0;">-t</p>
+</td>
+<td style="width: 70.588%; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;">
+<p style="margin-top: 0; margin-bottom: 0;">Starts CST Particle Studio</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="width: 29.412%; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;">
+<p>-mp</p>
+</td>
+<td style="width: 70.588%; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;">
+<p>Starts CST Mphysics Studio</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="width: 29.412%; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;">
+<p>-c</p>
+</td>
+<td style="width: 70.588%; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;">
+<p>Starts CST Design Studio</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="width: 29.412%; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;">
+<p>-cs</p>
+</td>
+<td style="width: 70.588%; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;">
+<p>Starts CST Cable Studio</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="width: 29.412%; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;">
+<p>-pcbs</p>
+</td>
+<td style="width: 70.588%; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;">
+<p>Starts CST PCB Studio</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="width: 29.412%; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;">
+<p>-chip_interface</p>
+</td>
+<td style="width: 70.588%; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;">
+<p>Starts CST Chip Interface</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="width: 29.412%; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;">
+<p>-fest3d&#160;</p>
+</td>
+<td style="width: 70.588%; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;">
+<p>Starts Fest3D</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="width: 29.412%; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;">
+<p>-spark3d</p>
+</td>
+<td style="width: 70.588%; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;">
+<p>Starts SPARK3D</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="width: 29.412%; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;">
+<p>-idem</p>
+</td>
+<td style="width: 70.588%; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;">
+<p>Starts IdEM</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="width: 29.412%; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;">
+<p>-idemstudio</p>
+</td>
+<td style="width: 70.588%; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;">
+<p>Starts IdEM Studio</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="width: 29.412%; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;">
+<p>-? or -help</p>
+</td>
+<td style="width: 70.588%; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;">
+<p>Shows the help text in command window</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="width: 29.412%; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;">
+<p>-d</p>
+</td>
+<td style="width: 70.588%; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;">
+<p>Uses <span style="font-style: italic;"><i>filename</i></span> relative to the installation directory</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="width: 29.412%; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;">
+<p>-hide</p>
+</td>
+<td style="width: 70.588%; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;">
+<p>Starts the application in the background without interaction possible</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="width: 29.412%; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;">
+<p>-i</p>
+</td>
+<td style="width: 70.588%; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;">
+<p>Starts the application in the iconified state</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="width: 29.412%; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;">-protect</td>
+<td style="width: 70.588%; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;">
+<p>Protect the specified CST file or folder</p>
+</td>
+</tr>
+</table>
+<p style="margin-top: 6pt;">&#160;</p>
+<p style="margin-top: 6pt;">In general, the following extensions are valid for <span style="font-style: italic;"><i>filename</i></span></p>
+<table cellspacing="0" width="635">
+<col width="161" />
+<col width="466" />
+<tr style="vertical-align: top;">
+<td style="padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;" width="161">
+<p style="font-weight: bold; font-style: normal;">Extension</p>
+</td>
+<td style="padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;" width="466">
+<p><span style="font-weight: bold;">Description</span></p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;" width="161">
+<p>.bas</p>
+</td>
+<td style="padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;" width="466">
+<p>Executes the BASIC file; &#160;-m, -s, -t or -c must be specified</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;" width="161">
+<p>.cst</p>
+</td>
+<td style="padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;" width="466">
+<p>Loads the CST Studio Suite project file; -m, -s, -t, -mp or -c must be specified</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;" width="161">
+<p>.mod</p>
+</td>
+<td style="padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;" width="466">
+<p>Loads the CST Microwave Studio project file; -m, -s, -t, -mp or -c must be specified</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;" width="161">
+<p style="margin-top: 0; margin-bottom: 0;">.ems</p>
+</td>
+<td style="padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;" width="466">
+<p style="margin-top: 0; margin-bottom: 0;">Loads the CST EM Studio project file; -m, -s, -t, -mp or -c must be specified</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;" width="161">
+<p style="margin-top: 0; margin-bottom: 0;">.psf</p>
+</td>
+<td style="padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;" width="466">
+<p style="margin-top: 0; margin-bottom: 0;">Loads the CST Particle Studio project file; -m, -s, -t, -mp or -c must be specified</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;" width="161">
+<p style="margin-top: 0; margin-bottom: 0;">.mpf</p>
+</td>
+<td style="padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;" width="466">
+<p style="margin-top: 0; margin-bottom: 0;">Loads the CST Mphysics Studio project file; -m, -s, -t, -mp or -c must be specified</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;" width="161">
+<p style="margin-top: 0; margin-bottom: 0;">.des</p>
+</td>
+<td style="padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;" width="466">
+<p style="margin-top: 0; margin-bottom: 0;">Loads the CST Design Studio project file; -c must be specified</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;" width="161">
+<p>&#160;</p>
+</td>
+<td style="padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;" width="466">
+<p style="margin-top: 0; margin-bottom: 0;">&#160;</p>
+</td>
+</tr>
+</table>
+<p style="margin-bottom: 3pt; margin-top: 6pt;">&#160;</p>
+<p style="margin-bottom: 3pt; margin-top: 6pt;">The following options start a calculation after loading a project (and are only valid with a given project file)</p>
+<table style="left: 0px; top: 781px;" cellspacing="0" width="681">
+<col width="279" />
+<col width="394" />
+<tr style="vertical-align: top;">
+<td style="padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;" width="279">
+<p><span style="font-weight: bold;">Options</span></p>
+</td>
+<td style="padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;" width="394">
+<p><span style="font-weight: bold;">Description</span></p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;" width="279">
+<p>-as</p>
+</td>
+<td style="padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;" width="394">
+<p>Starts the active solver for the saved project.</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;" width="279">
+<p>-p</p>
+</td>
+<td style="padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;" width="394">
+<p>Starts a parameter sweep with the active solver</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;" width="279">
+<p>-o</p>
+</td>
+<td style="padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;" width="394">
+<p>Starts the optimizer with the active solver</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;" width="279">
+<p>-n</p>
+</td>
+<td style="padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;" width="394">
+<p>Starts a network parameter extraction; only valid for -m or -c</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;" width="279">
+<p>-f</p>
+</td>
+<td style="padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;" width="394">
+<p>Starts the frequency domain solver; only valid for -m</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;" width="279">
+<p>-r</p>
+</td>
+<td style="padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;" width="394">
+<p>Starts the time domain solver; only valid for -m</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;" width="279">
+<p>-e</p>
+</td>
+<td style="padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;" width="394">
+<p>Starts the eigenmode solver; only valid for -m</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;" width="279">
+<p>-q</p>
+</td>
+<td style="padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;" width="394">
+<p>Starts the integral equation solver; only valid for -m</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;" width="279">
+<p>-a</p>
+</td>
+<td style="padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;" width="394">
+<p>Starts the asymptotic solver; only valid for -m</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;" width="279">
+<p>-ml</p>
+</td>
+<td style="padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;" width="394">
+<p>Starts the multilayer solver; only valid for -m</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;" width="279">
+<p>-sdd</p>
+</td>
+<td style="padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;" width="394">
+<p>Starts the stationary drift-diffusion solver; only valid for -s</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;" width="279">
+<p>-se</p>
+</td>
+<td style="padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;" width="394">
+<p>Starts the electric field solver; only valid for -s</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;" width="279">
+<p>-sh</p>
+</td>
+<td style="padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;" width="394">
+<p>Starts the magnetic field solver; only valid for -s</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;" width="279">
+<p>-sj</p>
+</td>
+<td style="padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;" width="394">
+<p>Starts the stationary current field solver; only valid for -s</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;" width="279">
+<p>-lf</p>
+</td>
+<td style="padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;" width="394">
+<p>Starts the LF frequency domain solver (magnetoquasistatic or fullwave); only valid for -s</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;" width="279">
+<p>-lfeqs</p>
+</td>
+<td style="padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;" width="394">
+<p>Starts the LF frequency domain solver (electroquasistatic); only valid for -s</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;" width="279">
+<p>-ltmqs</p>
+</td>
+<td style="padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;" width="394">
+<p>Starts the LF time domain solver (magnetoquasistatic); only valid for -s</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;" width="279">
+<p>-prlc</p>
+</td>
+<td style="padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;" width="394">
+<p>Starts the partial rlc solver; only valid for -s</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;" width="279">
+<p>-ht</p>
+</td>
+<td style="padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;" width="394">
+<p>Starts the stationary thermal solver; only valid for -mp</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;" width="279">
+<p>-httd</p>
+</td>
+<td style="padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;" width="394">
+<p>Starts the transient thermal solver; only valid for -mp</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;" width="279">
+<p>-mech</p>
+</td>
+<td style="padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;" width="394">
+<p>Starts the structural mechanics solver, only valid for -mp</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;" width="279">
+<p>-cht</p>
+</td>
+<td style="padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;" width="394">
+<p>Starts the conjugate heat transfer solver, only valid for -mp</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;" width="279">
+<p>-tp</p>
+</td>
+<td style="padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;" width="394">
+<p>Starts the particle tracking solver; only valid for -t</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;" width="279">
+<p>-te</p>
+</td>
+<td style="padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;" width="394">
+<p>Starts the electric field solver; only valid for -t</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;" width="279">
+<p>-th</p>
+</td>
+<td style="padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;" width="394">
+<p>Starts the magnetic field solver; only valid for -t</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;" width="279">
+<p>-tw</p>
+</td>
+<td style="padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;" width="394">
+<p>Starts the wakefield solver; only valid for -t</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;" width="279">
+<p>-pic</p>
+</td>
+<td style="padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;" width="394">
+<p>Starts the particle in cell solver; only valid for -t</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;" width="279">
+<p>-espic</p>
+</td>
+<td style="padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;" width="394">
+<p>Starts the electrostatic particle in cell solver; only valid for -t</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;" width="279">
+<p>-cs_tl</p>
+</td>
+<td style="padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;" width="394">
+<p>Starts the 2D (TL) model creation; implies -cs</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;" width="279">
+<p>-cs_impedcalc</p>
+</td>
+<td style="padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;" width="394">
+<p>Starts the cable line impedance solver; implies -cs</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;" width="279">
+<p>-pcbs_sitd</p>
+</td>
+<td style="padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;" width="394">
+<p>Starts the SI TD solver; implies -pcbs</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;" width="279">
+<p>-pcbs_sifd</p>
+</td>
+<td style="padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;" width="394">
+<p>Starts the SI FD solver; implies -pcbs</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;" width="279">
+<p>-pcbs_irdrop</p>
+</td>
+<td style="padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;" width="394">
+<p>Starts the IR Drop solver; implies -pcbs</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;" width="279">
+<p>-pcbs_pi</p>
+</td>
+<td style="padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;" width="394">
+<p>Starts the PI solver; implies -pcbs</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;" width="279">
+<p>-pcbs_ddr4</p>
+</td>
+<td style="padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;" width="394">
+<p>Starts the DDR4 wizard; implies -pcbs</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;" width="279">
+<p>-pcbs_bck</p>
+</td>
+<td style="padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;" width="394">
+<p>Starts the Boardcheck rule checker; implies -pcbs</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;" width="279">
+<p>-pcbs_impedcalc</p>
+</td>
+<td style="padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;" width="394">
+<p>Starts the impedance calculator; implies -pcbs</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;" width="279">
+<p>-pcbs_lineimped</p>
+</td>
+<td style="padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;" width="394">
+<p>Starts the line impedance calculator; implies -pcbs</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;" width="279">
+<p>-pcbs_vio_analysis</p>
+</td>
+<td style="padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;" width="394">
+<p>Starts Violation Analysis; implies -pcbs</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;" width="279">
+<p>-u</p>
+</td>
+<td style="padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;" width="394">
+<p>Updates the results in CST Design Studio, only valid for -c</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;" width="279">
+<p>-dump &lt;n&gt;</p>
+</td>
+<td style="padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;" width="394">
+<p>Update results every n minutes when a solver is running.</p>
+<p>Only valid for -m, -s, -t, -mp, -cs or -as</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;" width="279">
+<p>-b</p>
+<p>&#160;</p>
+</td>
+<td style="padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;" width="394">
+<p>Executes the script file "<span style="font-style: italic;"><i>Model.run</i></span>" that has to be located in the "<span style="font-style: italic;"><i>Model/3D/</i></span>" folder of the corresponding project; only valid for -m, -s or -t</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;" width="279">
+<p>-par &lt;filename&gt;</p>
+</td>
+<td style="padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;" width="394">
+<p>Imports parameters from a file. The parameters can be defined like this:<br />
+variablename=value<br />
+or<br />
+variablename="value" "description"<br />
+For example:<br />
+<span style="font-style: italic;"><i>var1=20<br />
+var2=12.3*sin(45)<br />
+var3=var1+var2<br />
+var4="var1 + var2" "some \"fancy\" description"</i></span><br />
+Literal quotes and backslashes need to be escaped with a backslash when using the second form, as shown in the last example. The encoding of the file is UTF-8.</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;" width="279">
+<p>-rebuild</p>
+</td>
+<td style="padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;" width="394">
+<p>Performs a complete history rebuild; only valid for -m, -s, -t, -mp or -cs</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;" width="279">
+<p>-adjust_picks</p>
+</td>
+<td style="padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;" width="394">
+<p>Adjusts the picks in the project to a newer ACIS version.</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;" width="279">
+<p>-withdc</p>
+<p>-withdc=maincontroller:port</p>
+<p>&#160;</p>
+</td>
+<td style="padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;" width="394">
+<p>Starts the specified solver with distributed computing. If no main controller is specified, the main controller from the global or project dependent settings are taken. Otherwise the specified main controller is used.</p>
+<p>Also supported by <a href="../general/job_control_center.htm">Job Control Center</a>.</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;" width="279">
+<p>-dc<span style="font-style: italic;"><i>n</i></span></p>
+</td>
+<td style="padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;" width="394">
+<p>This option sets the distributed excitations or frequency samples to <span style="font-style: italic;"><i>n</i></span>.</p>
+<p>To request remote calculation for time domain solvers, please specify -dc0.<br />
+Only valid for -withdc and -r, -f, and -q.</p>
+<p>Example: -dc6</p>
+<p>Also supported by <a href="../general/job_control_center.htm">Job Control Center</a>.</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;" width="279">
+<p>-dcpar<span style="font-style: italic;"><i>n</i></span></p>
+</td>
+<td style="padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;" width="394">
+<p>Sets the number of distributed parameter sets to <span style="font-style: italic;"><i>n</i></span>. Only valid for -withdc and -p and -o.</p>
+<p>When used with -dc<span style="font-style: italic;"><i>n</i></span> and a transient simulation, then the ports are also distributed. To request remote calculation for time domain solvers, please specify -dc0.</p>
+<p>Example: -dcpar10</p>
+<p>Also supported by <a href="../general/job_control_center.htm">Job Control Center</a>.</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;" width="279">
+<p>-0D1D-results</p>
+</td>
+<td style="padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;" width="394">
+<p>Consider only 0D/1D results for MPI and DC. To save merge/download time and to improve the total simulation run time, 2D/3D results are skipped.</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;" width="279">
+<p>-withmpi</p>
+</td>
+<td style="padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;" width="394">
+<p>Enables MPI computing. Also a machinefile must be specified, when using MPI; only valid for CST Microwave Studio (-m) and either the &#160;transient solver (-r), the frequency domain solver (-f) or the integral equation solver (-q) as well as for CST Particle Studio (-t) and the wakefield solver (-tw).</p>
+<p>See introduction for <a href="mpi_queuing_system.htm">Queuing System and MPI</a> for the detailed command description and also an overview of Queuing system.</p>
+<p>Also supported by <a href="../general/job_control_center.htm">Job Control Center</a>.</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;" width="279">
+<p>-machinefile "mach_file"</p>
+</td>
+<td style="padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;" width="394">
+<p>Defines the location of the Machine file path (mach_file), in order to use MPI simulation jointly with a given queuing system launcher.</p>
+<p>Machine file path should be enclosed in "" pair.</p>
+<p>Must be used with -withmpi and can be used with -withdc</p>
+<p>Also supported by <a href="../general/job_control_center.htm">Job Control Center</a>.</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;" width="279">
+<p>-autompi</p>
+</td>
+<td style="padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;" width="394">
+<p>Enable automatic MPI simulations for huge meshes, greater than 2 billions mesh cells. Only valid for CST MICROWAVE STUDIO (-m) and the transient solver (-r), as well as for CST PARTICLE STUDIO (-t) and the wakefield solver (-tw).</p>
+<p>Also supported by <a href="../general/job_control_center.htm">Job Control Center</a>.</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;" width="279">
+<p>-queuesys "qs_tag"</p>
+</td>
+<td style="padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;" width="394">
+<p>Defines the queueing system. Currently available queuing system tags (qs_tag) are {CST, MPI, SGE, OGE, PBS, LSF, LSF_MCPU}.</p>
+<p>Also supported by <a href="../general/job_control_center.htm">Job Control Center</a>.</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;" width="279">
+<p>-withgpu=&lt;<span style="font-style: italic;"><i>#n</i></span>&gt;</p>
+</td>
+<td style="padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;" width="394">
+<p>Specifies the number of GPU devices to be used for the simulation. The number of selected GPUs devices can be 1 ... 8.</p>
+<p>Also supported by <a href="../general/job_control_center.htm">Job Control Center</a>.</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;" width="279">
+<p>-simunit "lc_tag"</p>
+</td>
+<td style="padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;" width="394">
+<p>Defines the DSLS license currency scheme. Currently available license currency tags (lc_tag) are {tokens, credits}.</p>
+<p>Also supported by <a href="../general/job_control_center.htm">Job Control Center</a>.</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;" width="279">
+<p>-num-threads=&lt;<span style="font-style: italic;"><i>#n</i></span>&gt;</p>
+<p>&#160;</p>
+</td>
+<td style="padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;" width="394">
+<p>In the environment of a standard/legacy license scheme it defines the number of threads to be used for the given simulation. In the environment of the Simulia Token/credit license scheme it defines the number of physical cores to be used for the given simulation. The number threads or physical cores will be distributed over the CPU devices defined (see -num-cpudevices option below).</p>
+<p>Also supported by <a href="../general/job_control_center.htm">Job Control Center</a>.</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;" width="279">
+<p>-num-cpudevices=&lt;<span style="font-style: italic;"><i>#n[:id0[,id1, ...]]</i></span>&gt;</p>
+<p>&#160;</p>
+</td>
+<td style="padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;" width="394">
+<p>Defines the number of CPU devices to be used for the simulation. The specified number can be 1 ... 8. If needed, specific CPU device IDs can be specified after the number #n by adding a colon and then a comma separated list of CPU device IDs.</p>
+<p>Also supported by <a href="../general/job_control_center.htm">Job Control Center</a>.</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;" width="279">
+<p>-defaultacc</p>
+</td>
+<td style="padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;" width="394">
+<p>Overwrites all <span style="font-style: italic;"><i>project specific acceleration settings</i></span> (related to threads, DC, MPI and hardware acceleration) to their default settings. All <span style="font-style: italic;"><i>command line options related to acceleration</i></span> are taken still into account, though.</p>
+<p>Also supported by <a href="../general/job_control_center.htm">Job Control Center</a>.</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;" width="279">
+<p>-protect &lt;string1&gt; &lt;string2&gt;</p>
+</td>
+<td style="padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;" width="394">
+<p><span style="font-style: italic;"><i>string1</i></span>: [Mandatory] CST project or a directory</p>
+<p><span style="font-style: italic;"><i>string2</i></span>: [Optional] <a href="protected_project_settings.htm">Protected project settings</a> file</p>
+<p>&#160;</p>
+<p>Saves a protected copy of the specified CST project. If a directory is specified, all CST projects found in the directory and its sub-directories will be saved as protected. The <a href="protected_project_settings.htm">protected project settings</a> file could be used to control which objects are marked protected.</p>
+<p>&#160;</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;" width="279">
+<p>-shared-dir</p>
+<p>-shared-dir=path1;path2</p>
+<p>&#160;</p>
+</td>
+<td style="padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;" width="394">
+<p>Specifies the directories which can be accessed by remote machines separated by ';'. Only valid for -withdc and -withmpi.</p>
+<p>If no path is given the current project dir is used.</p>
+</td>
+</tr>
+</table>
+<p style="margin-top: 0; margin-bottom: 0;">&#160;</p>
+<p class="Tip-Note-Heading">Example</p>
+<p class="Tip-Note-Text">To open a project and solve it using the transient solver, use:</p>
+<p class="Tip-Note-Text">"&lt;Installation Path&gt;\CST DESIGN ENVIRONMENT.exe" -m -r "C:\My Work\MyProject.cst"</p>
+<p class="Tip-Note-Text">&#160;</p>
+<p>If any other setting is necessary, it can be accomplished by executing an appropriate Visual Basic file. &#160;Each module can be controlled through Visual Basic commands.</p>
+<p class="Tip-Note-Heading">See also</p>
+<p style="margin-left: 40px;"><a href="environment_variables.htm">Environment Variables</a>, <a href="vbaapplicationobject.htm">VBA Application Object</a></p>
+<?rh-p style="margin-bottom: 0px; text-align: Right; margin-left: 18px; 
+                 margin-right: 18px; margin-top: 18px;" ?>
+<div style="width: 100%; position: relative;" id="footer">
+<p style="border-bottom: Solid 1px #dddddd; text-align: Left; margin-left: 0px; font-family: Arial, sans-serif; line-height: Normal; margin-top: 9px; margin-right: 0px; margin-bottom: 6px; border-left-width: 1px; border-top-width: 1px; border-right-width: 1px;"><span style="text-align: Left; font-family: Arial, sans-serif; line-height: Normal;">&#160;</span></p>
+<table cellspacing="0" width="100%">
+<col style="width: 50%;" />
+<col style="width: 50%;" />
+<tr>
+<td style="vertical-align: Top;"><span style="font-family: Arial, sans-serif; line-height: Normal; font-size: 8pt;"><font size="1" style="font-size:8pt;">CST Studio Suite 2026</font></span></td>
+<td style="vertical-align: Top;">
+<p style="text-align: right;">&#160;</p>
+</td>
+</tr>
+</table>
+<p>&#160;</p>
+</div>
+<script type="text/javascript" language="javascript1.2">
+//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+        writeIntopicBar(0);
+
+
+highlightSearch();
+//-->
+//]]>
+</script>
+</body>
+</html>

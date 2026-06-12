@@ -1,0 +1,340 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="Adobe RoboHelp 11" />
+<title>TOUCHSTONE</title>
+<link rel="StyleSheet" href="../online_help_vba.css" type="text/css" />
+<style type="text/css">
+/*<![CDATA[*/
+<!--
+body { border-bottom-style:None; }
+-->
+/*]]>*/
+</style>
+
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+        origWidth = innerWidth;
+        origHeight = innerHeight;
+        onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+/*<![CDATA[*/
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+-->
+/*]]>*/
+</style>
+
+<script type="text/javascript" language="javascript1.2" src="../whmsg.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript" src="../whver.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript1.2" src="../whutils.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript1.2" src="../whproxy.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript1.2" src="../whlang.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript1.2" src="../whtopic.js" charset="utf-8">
+</script>
+</head>
+<body>
+<script type="text/javascript" language="javascript1.2">
+//<![CDATA[
+<!--
+if (window.gbWhTopic)
+{
+        var strUrl = document.location.href;
+        var bc = 0;
+        var n = strUrl.toLowerCase().indexOf("bc-");
+        if(n != -1)
+        {
+                document.location.replace(strUrl.substring(0, n));
+                bc = strUrl.substring(n+3);
+        }
+
+        if (window.addTocInfo)
+        {
+        addTocInfo("3D Simulation VBA\nVBA Objects\nImport/Export\nTOUCHSTONE");
+addAvenueInfo("common_VBAIMP_EXP","common_VBAImpExp/common_VBAImp_Exp_GERBER.htm","common_VBAImpExp/common_VBAImp_Exp_HumanModel.htm");
+
+        }
+        if (window.writeBtnStyle)
+                writeBtnStyle();
+
+        if (window.writeIntopicBar)
+                writeIntopicBar(0);
+
+        
+        document.write("<p style=\"font-family: Tahoma; font-size: 9pt; font-weight: 400;  font-style:normal; color: rgb(0, 0, 0); text-decoration:none; text-align: left\"> ");
+AddMasterBreadcrumbs("../index.htm", "font-family: Tahoma; font-size: 9pt; font-weight: 400;  font-style:normal; color: rgb(0, 0, 0); text-decoration:none; text-align: left", "|", "Home", "../special_vbaobjects/special_vbaobjects_vbaobjects.htm");
+document.write("<a style=\"font-family: Tahoma; font-size: 9pt; font-weight: 400;  font-style:normal; color: rgb(0, 0, 0); text-decoration:none; text-align: left\" href=\"../special_vbaobjects/special_vbaobjects_vbaobjects.htm\">3D Simulation VBA<\/a> | <a style=\"font-family: Tahoma; font-size: 9pt; font-weight: 400;  font-style:normal; color: rgb(0, 0, 0); text-decoration:none; text-align: left\" href=\"../special_vbaobjects/special_vbaobjects_vbaobjects.htm\">VBA Objects<\/a> | <a style=\"font-family: Tahoma; font-size: 9pt; font-weight: 400;  font-style:normal; color: rgb(0, 0, 0); text-decoration:none; text-align: left\" href=\"adscomponentexport.htm\">Import/Export<\/a> | TOUCHSTONE<\/p>");
+
+}
+else
+        if (window.gbIE4)
+                document.location.reload();
+
+onLoadHandler = function()
+{
+  if (window.setRelStartPage)
+        {
+        setTimeout("setRelStartPage('../index.htm');", 1)
+
+    setTimeout("UpdateBreadCrumbsMarker();", 1);
+        }
+}
+
+if (window.addEventListener){  
+        window.addEventListener('load', onLoadHandler, false);   
+} else if (window.attachEvent){  
+        window.attachEvent('onload', onLoadHandler);  
+}
+
+function onSetStartPage()
+{
+  autoSync(1);
+  sendSyncInfo();
+  sendAveInfoOut();
+}
+//-->
+//]]>
+</script><script type="text/javascript" src="../ehlpdhtm.js" language="JavaScript1.2">
+</script>
+<table cellspacing="0" width="100%">
+<col style="width: 50%;" />
+<col style="width: 50%;" />
+<tr>
+<td style="vertical-align: middle; padding-top: 5px; padding-bottom: 5px;">
+<p style="margin-top: 0px; margin-bottom: 0px;"><img src="../3ds.png" alt="" style="border: none;" border="0" /></p>
+</td>
+<td style="vertical-align: middle;">
+<p style="text-align: right;"><a href="https://www.3ds.com/products-services/3dexperience/" target="_blank"><img src="../3dexp.png" alt="" style="border: none;" width="32" height="32" border="0" /></a></p>
+</td>
+</tr>
+</table>
+<p class="VBA-Heading-Object">TOUCHSTONE Object</p>
+<p class="VBA-Text">This command offers TOUCHSTONE file compatible export for the S-parameters. The extensions of the exported files names are specified by ”.sNp” where N stands for the number of ports in your model (e.g. ”.s3p”).</p>
+<p>The TOUCHSTONE file contains a fixed reference impedance. During the export process, usually the S-parameters will be automatically normed to this impedance, if necessary. In some rare cases it may also be useful to export the S-parameters as they are (without renorming), but nevertheless specifying a reference impedance in the TOUCHSTONE file.</p>
+<ul>
+<li class="p-VBA-Index-Category">
+<p class="VBA-Index-Category"><a href="#Methods">Methods</a></p>
+</li>
+<li class="p-VBA-Index-Category">
+<p class="VBA-Index-Category"><a href="#Default">Default Settings</a></p>
+</li>
+<li class="p-VBA-Index-Category">
+<p class="VBA-Index-Category"><a href="#Example">Example</a></p>
+</li>
+</ul>
+<p class="VBA-Heading-Category"><a name="Methods" id="Methods"></a>Methods</p>
+<p class="VBA-Heading-Method">Reset</p>
+<p class="VBA-Text-Indent">Resets the export options to the default.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">FileName ( <span><a href="../common_vbageneral/common_general_filename.htm" style="font-weight: normal; font-style: normal;" id="a31" name="a31">filename</a></span> <span style="font-style: italic;"><i>filename</i></span> )</p>
+<p class="VBA-Text-Indent">Sets the name of the exported file.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">GetFileName <a href="../common_vbageneral/common_general_string.htm" style="font-weight: normal; font-style: normal;" id="a9" name="a9">string</a></p>
+<p class="VBA-Text-Indent">Returns the full filename of the stored touchstone file including the automatically generated extension.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">UserPrefix ( <a href="../common_vbageneral/common_general_name.htm" style="font-weight: normal; font-style: normal;" id="a8" name="a8">name</a> <span style="font-style: italic;"><i>name</i></span> )</p>
+<p class="VBA-Text-Indent">Set prefix for the S-parameter input files. The expected filename will be i.e. "project^prefix^a1(1)1(1).sig". Renormalization is disabled in this case. Use this before ".Write". Prefix will be reset to "" after ".Write".</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">Impedance ( <span><a href="../common_vbageneral/common_general_double.htm" style="font-weight: normal; font-style: normal;" id="a26" name="a26">double</a></span> <span style="font-style: italic;"><i>impedance</i></span> )</p>
+<p class="VBA-Text-Indent">The TOUCHSTONE file contains a fixed reference impedance. During the export process the S-parameters will be automatically normed to the impedance specified by this method.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">FrequencyRange ( <span><a href="../common_vbageneral/common_general_enum.htm" style="font-weight: normal; font-style: normal;" id="a32" name="a32">enum</a></span> <span style="font-style: italic;"><i>type</i></span> )</p>
+<p class="VBA-Text-Indent">Sets the Frequency range to "Full" or "Limited".</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Text-Indent"><span style="font-style: italic;"><i>type</i></span> can have one of the following values:</p>
+<table style="vertical-align: top; margin-left: 24px;" cellspacing="0" width="61.936%">
+<col style="width: 21.2%;" />
+<col style="width: 78.8%;" />
+<tr style="vertical-align: top;">
+<td style="border: Solid 1px #000000;width: 21.2%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text-Indent">"Full"</p>
+</td>
+<td style="border-top: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 78.8%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text-Indent">Full frequency range export</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 21.2%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text-Indent">"Limited"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 78.8%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text-Indent">Limited frequency range export. This requires <span style="font-weight: bold;">Fmin</span> and <span style="font-weight: bold;">Fmax</span> to be set.</p>
+</td>
+</tr>
+</table>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">Fmin ( <span><a href="../common_vbageneral/common_general_double.htm" style="font-weight: normal; font-style: normal;" id="a6" name="a6">double</a></span> <span style="font-style: italic;"><i>fmin</i></span> )</p>
+<p class="VBA-Text-Indent">Sets the minimum for the frequency range. This is required if you want to export a limited frequency range.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">Fmax ( <span><a href="../common_vbageneral/common_general_double.htm" style="font-weight: normal; font-style: normal;" id="a7" name="a7">double</a></span> <span style="font-style: italic;"><i>fmax</i></span> )</p>
+<p class="VBA-Text-Indent">Sets the maximum for the frequency range. This is required if you want to export a limited frequency range.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">ExportType ( <span><a href="../common_vbageneral/common_general_enum.htm" style="font-weight: normal; font-style: normal;" id="a10" name="a10">enum</a></span> <span style="font-style: italic;"><i>type</i></span> )</p>
+<p class="VBA-Text-Indent">Sets the N-Port matrix type. The N-port parameters will be converted to the desired type if the types differ.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Text-Indent"><span style="font-style: italic;"><i>type</i></span> can have one of the following values:</p>
+<table style="vertical-align: top; margin-left: 24px;" cellspacing="0" width="61.936%">
+<col style="width: 21.2%;" />
+<col style="width: 78.8%;" />
+<tr style="vertical-align: top;">
+<td style="border: Solid 1px #000000;width: 21.2%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text-Indent">"S"</p>
+</td>
+<td style="border-top: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 78.8%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text-Indent">Export S-parameters</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 21.2%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text-Indent">"Y"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 78.8%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text-Indent">Export admittance parameters.</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 21.2%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text-Indent">"Z"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 78.8%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text-Indent">Export impedance parameters.</p>
+</td>
+</tr>
+</table>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">Format ( <span><a href="../common_vbageneral/common_general_enum.htm" style="font-weight: normal; font-style: normal;" id="a11" name="a11">enum</a></span> <span style="font-style: italic;"><i>type</i></span> )</p>
+<p class="VBA-Text-Indent">Sets the number format of complex values.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Text-Indent"><span style="font-style: italic;"><i>type</i></span> can have one of the following values:</p>
+<table style="vertical-align: top; margin-left: 24px;" cellspacing="0" width="61.936%">
+<col style="width: 21.2%;" />
+<col style="width: 78.8%;" />
+<tr style="vertical-align: top;">
+<td style="border: Solid 1px #000000;width: 21.2%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text-Indent">"MA"</p>
+</td>
+<td style="border-top: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 78.8%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text-Indent">Complex numbers are written as magnitude (linear) and phase (in deg).</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 21.2%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text-Indent">"DB"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 78.8%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text-Indent">Complex numbers are written as magnitude (in dB) and phase (in deg).</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 21.2%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text-Indent">"RI"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 78.8%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text-Indent">Complex numbers are written as real and imaginary part.</p>
+</td>
+</tr>
+</table>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">Renormalize ( <span style="font-style: italic;"><i><a href="../common_vbageneral/common_general_bool_data_type.htm" style="font-weight: normal; font-style: normal;" id="a5" name="a5">bool</a> switch</i></span> )</p>
+<p class="VBA-Text-Indent">This method offers the possibility to disable the automatic normalization to the reference impedance. The export data is automatically renormed to the specified reference impedance (<span style="font-style: italic;"><i>switch</i></span> = <a href="../common_vbageneral/common_general_true_keyword.htm" id="a1" name="a1">True</a>), or is written as it is without renorming (<span style="font-style: italic;"><i>switch</i></span> = <a href="../common_vbageneral/common_general_false_keyword.htm" id="a2" name="a2">False</a>).</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">UseARResults ( <span><a href="../common_vbageneral/common_general_bool_data_type.htm" style="font-weight: normal; font-style: normal;" id="a28" name="a28">bool</a></span> <span style="font-style: italic;"><i>switch</i></span> )</p>
+<p class="VBA-Text-Indent">Use this method to export the S-parameter results provided by the AR-Filter analysis (<span style="font-style: italic;"><i>switch</i></span> = <a href="../common_vbageneral/common_general_true_keyword.htm" id="a3" name="a3">True</a>).</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">SetNSamples ( <a href="../common_vbageneral/common_general_integer.htm" style="font-weight: normal; font-style: normal;" id="a4" name="a4">int</a> <span style="font-style: italic;"><i>samples</i></span> )</p>
+<p class="VBA-Text-Indent">Sets the maximum number of samples stored in the touchstone file.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">Write</p>
+<p class="VBA-Text-Indent">Performs the export.</p>
+<p class="VBA-Heading-Category"><a name="Default" id="Default"></a>Default Settings</p>
+<p class="VBA-Text-Example">FileName ("")</p>
+<p class="VBA-Text-Example">Impedance (50)</p>
+<p class="VBA-Text-Example">ExportType ("S")</p>
+<p class="VBA-Text-Example">Format ("MA")</p>
+<p class="VBA-Text-Example">FrequencyRange ("Full")</p>
+<p class="VBA-Text-Example">Renormalize (True)</p>
+<p class="VBA-Text-Example">UseARResults (False)</p>
+<p class="VBA-Text-Example">SetNSamples (0)</p>
+<p class="VBA-Heading-Category"><a name="Example" id="Example"></a>Example</p>
+<p class="VBA-Text-Example">With TOUCHSTONE</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;.Reset</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;.FileName (".\example")</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;.Impedance (50)</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;.ExportType ("S")</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;.Format ("MA")</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;.FrequencyRange ("Full")</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;.Renormalize (True)</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;.UseARResults (False)</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;.SetNSamples (100)</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;.Write</p>
+<p class="VBA-Text-Example">End With</p>
+<p>&#160;</p>
+<script type="text/javascript" language="JavaScript1.2">
+//<![CDATA[
+        if( typeof( FilePopupInit ) != 'function' ) FilePopupInit = new Function();
+        FilePopupInit('a31');
+        FilePopupInit('a9');
+        FilePopupInit('a8');
+        FilePopupInit('a26');
+        FilePopupInit('a32');
+        FilePopupInit('a6');
+        FilePopupInit('a7');
+        FilePopupInit('a5');
+        FilePopupInit('a1');
+        FilePopupInit('a2');
+        FilePopupInit('a28');
+        FilePopupInit('a3');
+        FilePopupInit('a4');
+        FilePopupInit('a10');
+        FilePopupInit('a11');
+//]]>
+</script><?rh-p style="margin-bottom: 0px; text-align: Right; margin-left: 18px; 
+                 margin-right: 18px; margin-top: 18px;" ?>
+<div style="width: 100%; position: relative;" id="footer">
+<p style="border-bottom: Solid 1px #dddddd; text-align: Left; margin-left: 0px; font-family: Arial, sans-serif; line-height: Normal; margin-top: 9px; margin-right: 0px; margin-bottom: 6px; border-left-width: 1px; border-top-width: 1px; border-right-width: 1px;"><span style="text-align: Left; font-family: Arial, sans-serif; line-height: Normal;">&#160;</span></p>
+<table cellspacing="0" width="100%">
+<col style="width: 50%;" />
+<col style="width: 50%;" />
+<tr>
+<td style="vertical-align: Top;"><span style="font-family: Arial, sans-serif; line-height: Normal; font-size: 8pt;"><font size="1" style="font-size:8pt;">CST Studio Suite 2026</font></span></td>
+<td style="vertical-align: Top;">
+<p style="text-align: right;">&#160;</p>
+</td>
+</tr>
+</table>
+<p>&#160;</p>
+</div>
+<script type="text/javascript" language="javascript1.2">
+//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+        writeIntopicBar(0);
+
+
+highlightSearch();
+//-->
+//]]>
+</script>
+</body>
+</html>

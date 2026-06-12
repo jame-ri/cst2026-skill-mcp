@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="Adobe RoboHelp 11" />
+<title>Solid Edge Object</title>
+<link rel="StyleSheet" href="../online_help_vba.css" type="text/css" />
+<style type="text/css">
+/*<![CDATA[*/
+<!--
+body { border-bottom-style:None; }
+-->
+/*]]>*/
+</style>
+
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+        origWidth = innerWidth;
+        origHeight = innerHeight;
+        onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+/*<![CDATA[*/
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+-->
+/*]]>*/
+</style>
+
+<script type="text/javascript" language="javascript1.2" src="../whmsg.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript" src="../whver.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript1.2" src="../whutils.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript1.2" src="../whproxy.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript1.2" src="../whlang.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript1.2" src="../whtopic.js" charset="utf-8">
+</script>
+</head>
+<body>
+<script type="text/javascript" language="javascript1.2">
+//<![CDATA[
+<!--
+if (window.gbWhTopic)
+{
+        var strUrl = document.location.href;
+        var bc = 0;
+        var n = strUrl.toLowerCase().indexOf("bc-");
+        if(n != -1)
+        {
+                document.location.replace(strUrl.substring(0, n));
+                bc = strUrl.substring(n+3);
+        }
+
+        if (window.addTocInfo)
+        {
+        addTocInfo("3D Simulation VBA\nVBA Objects\nImport/Export\nSolidEdge");
+
+        }
+        if (window.writeBtnStyle)
+                writeBtnStyle();
+
+        if (window.writeIntopicBar)
+                writeIntopicBar(0);
+
+        
+        document.write("<p style=\"font-family: Tahoma; font-size: 9pt; font-weight: 400;  font-style:normal; color: rgb(0, 0, 0); text-decoration:none; text-align: left\"> ");
+AddMasterBreadcrumbs("../index.htm", "font-family: Tahoma; font-size: 9pt; font-weight: 400;  font-style:normal; color: rgb(0, 0, 0); text-decoration:none; text-align: left", "|", "Home", "../special_vbaobjects/special_vbaobjects_vbaobjects.htm");
+document.write("<a style=\"font-family: Tahoma; font-size: 9pt; font-weight: 400;  font-style:normal; color: rgb(0, 0, 0); text-decoration:none; text-align: left\" href=\"../special_vbaobjects/special_vbaobjects_vbaobjects.htm\">3D Simulation VBA<\/a> | <a style=\"font-family: Tahoma; font-size: 9pt; font-weight: 400;  font-style:normal; color: rgb(0, 0, 0); text-decoration:none; text-align: left\" href=\"../special_vbaobjects/special_vbaobjects_vbaobjects.htm\">VBA Objects<\/a> | <a style=\"font-family: Tahoma; font-size: 9pt; font-weight: 400;  font-style:normal; color: rgb(0, 0, 0); text-decoration:none; text-align: left\" href=\"../special_vbaimpexp/adscomponentexport.htm\">Import/Export<\/a> | SolidEdge<\/p>");
+
+}
+else
+        if (window.gbIE4)
+                document.location.reload();
+
+onLoadHandler = function()
+{
+  if (window.setRelStartPage)
+        {
+        setTimeout("setRelStartPage('../index.htm');", 1)
+
+    setTimeout("UpdateBreadCrumbsMarker();", 1);
+        }
+}
+
+if (window.addEventListener){  
+        window.addEventListener('load', onLoadHandler, false);   
+} else if (window.attachEvent){  
+        window.attachEvent('onload', onLoadHandler);  
+}
+
+function onSetStartPage()
+{
+  autoSync(1);
+  sendSyncInfo();
+  sendAveInfoOut();
+}
+//-->
+//]]>
+</script><script type="text/javascript" src="../ehlpdhtm.js" language="JavaScript1.2">
+</script>
+<table cellspacing="0" width="100%">
+<col style="width: 50%;" />
+<col style="width: 50%;" />
+<tr>
+<td style="vertical-align: middle; padding-top: 5px; padding-bottom: 5px;">
+<p style="margin-top: 0px; margin-bottom: 0px;"><img src="../3ds.png" alt="" style="border: none;" border="0" /></p>
+</td>
+<td style="vertical-align: middle;">
+<p style="text-align: right;"><a href="https://www.3ds.com/products-services/3dexperience/" target="_blank"><img src="../3dexp.png" alt="" style="border: none;" width="32" height="32" border="0" /></a></p>
+</td>
+</tr>
+</table>
+<p class="VBA-Heading-Object">SolidEdge Object</p>
+<p class="VBA-Text">Import part file (including sheet metal parts) or an entire assembly from Solid Edge.</p>
+<ul>
+<li class="p-VBA-Index-Category">
+<p class="VBA-Index-Category"><a href="#Methods">Methods</a></p>
+</li>
+<li class="p-VBA-Index-Category">
+<p class="VBA-Index-Category"><a href="#Default">Default Settings</a></p>
+</li>
+<li class="p-VBA-Index-Category">
+<p class="VBA-Index-Category"><a href="#Example">Example</a></p>
+</li>
+</ul>
+<p class="VBA-Heading-Category"><a name="Methods" id="Methods"></a>Methods</p>
+<p class="VBA-Heading-Method">Reset</p>
+<p class="VBA-Text-Indent">Resets the import options to the default.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">FileName ( <span><a href="../common_vbageneral/common_general_filename.htm" id="a31" style="font-weight: normal; font-style: normal;" name="a31">filename</a></span> <span style="font-style: italic;"><i>filename</i></span> )</p>
+<p class="VBA-Text-Indent">Sets the name of the imported file. File can represent either a part &#160;(file extension: par) or a sheet metal part (file extension: psm) or an assembly (file extension: asm).</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">Id ( <a href="../common_vbageneral/common_general_integer.htm" id="a13" style="font-weight: normal; font-style: normal;" name="a13">int</a> <span style="font-style: italic;"><i>id</i></span> )</p>
+<p class="VBA-Text-Indent">A CAD file may be imported more than once into the same project with different settings of import options. In order to improve the performance of structure rebuilds, an intermediate sat file is stored during the import process which allows to quickly re-read the data during rebuilds in case that the original CAD file has not been modified. The naming convention of the intermediate sat file has to be unique for each individual import step. Therefore, in case that the same file is imported more than once or a file with the same name is imported into the project, the Id setting needs to be increased. The Id will then be incorporated into the file name which ensures unique file names for every import.</p>
+<p class="VBA-Heading-Method">&#160;</p>
+<p class="VBA-Heading-Method">Healing ( <span><a href="../common_vbageneral/common_general_bool_data_type.htm" id="a28" style="font-weight: normal; font-style: normal;" name="a28">bool</a></span> <span style="font-style: italic;"><i>switch</i></span> )</p>
+<p class="VBA-Text-Indent">If set to <a href="../common_vbageneral/common_general_true_keyword.htm" id="a2" name="a2">True</a> structure will be healed after it is imported. Healing checks the imported structure and tries to repair it, if necessary.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">ScaleToUnit ( <span><a href="../common_vbageneral/common_general_bool_data_type.htm" id="a5" style="font-weight: normal; font-style: normal;" name="a5">bool</a></span> <span style="font-style: italic;"><i>switch</i></span> )</p>
+<p class="VBA-Text-Indent">If set to <a href="../common_vbageneral/common_general_true_keyword.htm" id="a6" name="a6">True</a> the imported model is scaled to the currently active unit. If not activated the import feature uses the source units. In such a case, no scaling occurs.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">Curves ( <a href="../common_vbageneral/common_general_bool_data_type.htm" id="a4" style="font-weight: normal; font-style: normal;" name="a4">bool</a> &#160;<span style="font-style: italic;"><i>switch</i></span> )</p>
+<p class="VBA-Text-Indent">If set to <a href="../common_vbageneral/common_general_true_keyword.htm" id="a61" name="a61">True</a> curves will be imported from the import file.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">ImportAttributes ( <a href="../common_vbageneral/common_general_bool_data_type.htm" id="a21" style="font-weight: normal; font-style: normal;" name="a21">bool</a> &#160;<span style="font-style: italic;"><i>switch</i></span> )</p>
+<p class="VBA-Text-Indent">If set to <a href="../common_vbageneral/common_general_true_keyword.htm" id="a611" name="a611">True</a> solid names, material names and material color will be read from the import file.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">ImportCurveAttributes ( <a href="../common_vbageneral/common_general_bool_data_type.htm" id="a8" style="font-weight: normal; font-style: normal;" name="a8">bool</a> &#160;<span style="font-style: italic;"><i>switch</i></span> )</p>
+<p class="VBA-Text-Indent">If set to <a href="../common_vbageneral/common_general_true_keyword.htm" id="a6111" name="a6111">True</a> curve names will be read from the import file.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">&#160;</p>
+<p class="VBA-Heading-Method">Read</p>
+<p class="VBA-Text-Indent">Starts the actual import of the file.</p>
+<p class="VBA-Heading-Category"><a name="Default" id="Default"></a>Default Settings</p>
+<p class="VBA-Text-Example">FileName ("")</p>
+<p class="VBA-Text-Example">Healing (False)</p>
+<p class="VBA-Text-Example">ScaleToUnit (False)</p>
+<p class="VBA-Text-Example">ImportAttributes (False)</p>
+<p class="VBA-Text-Example">Curves (False)</p>
+<p class="VBA-Text-Example">ImportCurveAttributes (False)</p>
+<p class="VBA-Heading-Category"><a name="Example" id="Example"></a>Example</p>
+<p class="VBA-Text-Example">With SolidEdge</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;.Reset</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;.FileName (".\example.par")</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;.ScaleToUnit (True)</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;.Id (1)</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;.ImportAttributes (True)</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;.Curves (True)</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;.ImportCurveAttributes (True)</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;.Read</p>
+<p class="VBA-Text-Example">End With</p>
+<?rh-p style="margin-bottom: 0px; text-align: Right; margin-left: 18px; 
+                 margin-right: 18px; margin-top: 18px;" ?>
+<div style="width: 100%; position: relative;" id="footer">
+<p style="border-bottom: Solid 1px #dddddd; text-align: Left; margin-left: 0px; font-family: Arial, sans-serif; line-height: Normal; margin-top: 9px; margin-right: 0px; margin-bottom: 6px; border-left-width: 1px; border-top-width: 1px; border-right-width: 1px;"><span style="text-align: Left; font-family: Arial, sans-serif; line-height: Normal;">&#160;</span></p>
+<table cellspacing="0" width="100%">
+<col style="width: 50%;" />
+<col style="width: 50%;" />
+<tr>
+<td style="vertical-align: Top;"><span style="font-family: Arial, sans-serif; line-height: Normal; font-size: 8pt;"><font size="1" style="font-size:8pt;">CST Studio Suite 2026</font></span></td>
+<td style="vertical-align: Top;">
+<p style="text-align: right;">&#160;</p>
+</td>
+</tr>
+</table>
+<p>&#160;</p>
+</div>
+<script type="text/javascript" language="javascript1.2">
+//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+        writeIntopicBar(0);
+
+
+highlightSearch();
+//-->
+//]]>
+</script>
+</body>
+</html>

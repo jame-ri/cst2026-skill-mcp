@@ -1,0 +1,356 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="Adobe RoboHelp 11" />
+<title>ResultTree Object</title>
+<link rel="StyleSheet" href="../online_help_vba.css" type="text/css" />
+<style type="text/css">
+/*<![CDATA[*/
+<!--
+body { border-bottom-style:None; }
+-->
+/*]]>*/
+</style>
+
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+        origWidth = innerWidth;
+        origHeight = innerHeight;
+        onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+/*<![CDATA[*/
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+-->
+/*]]>*/
+</style>
+
+<script type="text/javascript" language="javascript1.2" src="../whmsg.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript" src="../whver.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript1.2" src="../whutils.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript1.2" src="../whproxy.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript1.2" src="../whlang.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript1.2" src="../whtopic.js" charset="utf-8">
+</script>
+</head>
+<body>
+<script type="text/javascript" language="javascript1.2">
+//<![CDATA[
+<!--
+if (window.gbWhTopic)
+{
+        var strUrl = document.location.href;
+        var bc = 0;
+        var n = strUrl.toLowerCase().indexOf("bc-");
+        if(n != -1)
+        {
+                document.location.replace(strUrl.substring(0, n));
+                bc = strUrl.substring(n+3);
+        }
+
+        if (window.addTocInfo)
+        {
+        addTocInfo("Circuits & Systems VBA\nProject\nResultTree");
+
+        }
+        if (window.writeBtnStyle)
+                writeBtnStyle();
+
+        if (window.writeIntopicBar)
+                writeIntopicBar(0);
+
+        
+        document.write("<p style=\"font-family: Tahoma; font-size: 9pt; font-weight: 400;  font-style:normal; color: rgb(0, 0, 0); text-decoration:none; text-align: left\"> ");
+AddMasterBreadcrumbs("../index.htm", "font-family: Tahoma; font-size: 9pt; font-weight: 400;  font-style:normal; color: rgb(0, 0, 0); text-decoration:none; text-align: left", "|", "Home", "../special_vbaobjects/cstdesignstudiovbaobjects.htm");
+document.write("<a style=\"font-family: Tahoma; font-size: 9pt; font-weight: 400;  font-style:normal; color: rgb(0, 0, 0); text-decoration:none; text-align: left\" href=\"../special_vbaobjects/cstdesignstudiovbaobjects.htm\">Circuits & Systems VBA<\/a> | <a style=\"font-family: Tahoma; font-size: 9pt; font-weight: 400;  font-style:normal; color: rgb(0, 0, 0); text-decoration:none; text-align: left\" href=\"projectobject.htm\">Project<\/a> | ResultTree<\/p>");
+
+}
+else
+        if (window.gbIE4)
+                document.location.reload();
+
+onLoadHandler = function()
+{
+  if (window.setRelStartPage)
+        {
+        setTimeout("setRelStartPage('../index.htm');", 1)
+
+    setTimeout("UpdateBreadCrumbsMarker();", 1);
+        }
+}
+
+if (window.addEventListener){  
+        window.addEventListener('load', onLoadHandler, false);   
+} else if (window.attachEvent){  
+        window.attachEvent('onload', onLoadHandler);  
+}
+
+function onSetStartPage()
+{
+  autoSync(1);
+  sendSyncInfo();
+  sendAveInfoOut();
+}
+//-->
+//]]>
+</script><script type="text/javascript" src="../ehlpdhtm.js" language="JavaScript1.2">
+</script>
+<table cellspacing="0" width="100%">
+<col style="width: 50%;" />
+<col style="width: 50%;" />
+<tr>
+<td style="vertical-align: middle; padding-top: 5px; padding-bottom: 5px;">
+<p style="margin-top: 0px; margin-bottom: 0px;"><img src="../3ds.png" alt="" style="border: none;" border="0" /></p>
+</td>
+<td style="vertical-align: middle;">
+<p style="text-align: right;"><a href="https://www.3ds.com/products-services/3dexperience/" target="_blank"><img src="../3dexp.png" alt="" style="border: none;" width="32" height="32" border="0" /></a></p>
+</td>
+</tr>
+</table>
+<h1>ResultTree Object</h1>
+<h3>This object allows operations on the CST Design Studio result tree.</h3>
+<p>&#160;</p>
+<p>Instead of &#160;<span style="font-weight: bold;">ResultTree</span> you may also use &#160;<span style="font-weight: bold;">DSResultTree</span>, especially recommended in the schematic of a 3D project to avoid ambiguities with the 3D Navigation Tree.</p>
+<p class="VBA-Heading-Category"><a name="General_Methods" id="General_Methods"></a>General Methods</p>
+<p class="VBA-Heading-Method">GetNextItemName &#160;( <span style="font-weight: normal;"><a href="../common_vbageneral/common_general_string.htm" id="a1" name="a1">string</a></span> <span style="font-style: italic;"><i>treeItemName</i></span> ) &#160;<span style="font-weight: normal;"><a href="../common_vbageneral/common_general_string.htm" id="a2" name="a2">string</a></span></p>
+<p class="VBA-Text-Indent">Returns the next tree item name after "treeItemName". It does only return folder names in the same hierarchy level. If there is no next tree item the function returns an empty string.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">GetFirstChildName &#160;( <span style="font-weight: normal;"><a href="../common_vbageneral/common_general_string.htm" id="a3" name="a3">string</a></span> <span style="font-style: italic;"><i>treeItemName</i></span> ) &#160;<span style="font-weight: normal;"><a href="../common_vbageneral/common_general_string.htm" id="a4" name="a4">string</a></span></p>
+<p class="VBA-Text-Indent">Returns the first child tree item of &#160;"treeItemName". If there is no child of the specified tree item the function returns an empty string.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">GetFileFromTreeItem &#160;( <span style="font-weight: normal;"><a href="../common_vbageneral/common_general_string.htm" id="a5" name="a5">string</a></span> <span style="font-style: italic;"><i>resultTreeItemName</i></span> ) &#160;<span style="font-weight: normal;"><a href="../common_vbageneral/common_general_string.htm" id="a6" name="a6">string</a></span></p>
+<p class="VBA-Text-Indent">This function only affects tree items containing results. It returns the file name of the CST Microwave Studio compatible result file associated with this entry. If there is no result file, the return value will be an empty string.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">GetResultIDsFromTreeItem &#160;( <span style="font-weight: normal;"><a href="../common_vbageneral/common_general_string.htm">string</a></span> <span style="font-style: italic;"><i>treeItemName</i></span> ) &#160;<span style="font-weight: normal;"><a href="../common_vbageneral/common_general_variant.htm">variant</a></span></p>
+<p class="VBA-Text-Indent">Returns an array of Result IDs, which are strings are of the format "<span style="font-family: 'Courier New', monospace;">Schematic:RunID:1</span>" and correspond to the existing Run IDs for the parametric data of the specified tree item. A Result ID can be resolved to a parameter combination with the command <span style="font-style: italic;"><i>GetParameterCombination</i></span> of the <a href="projectobject.htm">Project</a> object.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">GetResultFromTreeItem ( <span style="font-weight: normal;"><a href="../common_vbageneral/common_general_string.htm">string</a></span> <span style="font-style: italic;"><i>treeItemName,</i></span> <span style="font-weight: normal;"><a href="../common_vbageneral/common_general_string.htm">string</a></span> <span style="font-style: italic;"><i>resultID</i></span> ) <span style="font-weight: normal;"><a href="../common_vbageneral/common_general_variant.htm">object</a></span></p>
+<p class="VBA-Text-Indent">Returns a result object containing the data specified by <span style="font-style: italic;"><i>'treeItemName'</i></span> and <span style="font-style: italic;"><i>'resultID'</i></span> . The return value can be a <a href="result0d_object.htm">Result0D</a>, a <a href="result1dobject.htm">Result 1D</a>, a <a href="result1dcomplex_object.htm">Result 1D Complex</a>, a <a href="../../VBA_3D/special_vbapostproc/result_2d.htm">Result2D</a> or a <a href="resultmatrix_object.htm">ResultMatrix</a> &#160;object.&#160;In case no data exists, a reference to an object is returned that is nothing. This can be queried via the VBA keyword <span style="font-style: italic;"><i>Nothing</i></span> (e.g. <span style="font-family: 'Courier New', monospace;">If(myObject Is Nothing)Then</span>...). The method returns an error, if the tree item does not exist or the Result ID is invalid.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">GetImpedanceResultFromTreeItem ( <span style="font-weight: normal;"><a href="../common_vbageneral/common_general_string.htm">string</a></span> <span style="font-style: italic;"><i>treeItemName,</i></span> <span style="font-weight: normal;"><a href="../common_vbageneral/common_general_string.htm">string</a></span> <span style="font-style: italic;"><i>resultID</i></span> ) <span style="font-weight: normal;"><a href="../common_vbageneral/common_general_variant.htm">object</a></span></p>
+<p class="VBA-Text-Indent">Returns a result object containing the reference impedance data of the tree item specified by <span style="font-style: italic;"><i>'treeItemName'</i></span> and <span style="font-style: italic;"><i>'resultID'</i></span> . The return value can be a <a href="result0d_object.htm">Result0D</a>, a <a href="result1dobject.htm">Result 1D</a> or a <a href="result1dcomplex_object.htm">Result 1D Complex</a> object. In case no data exists, a reference to an object is returned that is nothing. This can be queried via the VBA keyword <span style="font-style: italic;"><i>Nothing</i></span> (e.g. <span style="font-family: 'Courier New', monospace;">If(myObject Is Nothing)Then</span>...). The method also returns an error, if the tree item does not exist or the Result ID is invalid.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">TreeItemHasImpedance ( <span style="font-weight: normal;"><a href="../common_vbageneral/common_general_string.htm">string</a></span> <span style="font-style: italic;"><i>treeItemName,</i></span> <span style="font-weight: normal;"><a href="../common_vbageneral/common_general_string.htm">string</a></span> <span style="font-style: italic;"><i>resultID</i></span> ) <span style="font-weight: normal;"><a href="../common_vbageneral/common_general_bool_data_type.htm">bool</a></span></p>
+<p class="VBA-Text-Indent">Returns whether the data specified by <span style="font-style: italic;"><i>'treeItemName'</i></span> and <span style="font-style: italic;"><i>'resultID'</i></span> &#160;has reference impedances attached to it. This data can be accessed with <span style="font-style: italic;"><i>GetImpedanceResultFromTreeItem.</i></span> The method returns an error, if the tree item does not exist or if the Result ID is invalid.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">GetTreeResults (&#160;<a href="../../VBA_3D/common_vbageneral/common_general_name.htm" id="a321" style="font-weight: normal; font-style: normal;" name="a321">name</a> <span style="font-style: italic;"><i>rootPath,</i></span> <a href="../../VBA_3D/common_vbageneral/common_general_string.htm" id="a32111" style="font-weight: normal; font-style: normal;" name="a32111">string</a> <span style="font-style: italic;"><i>filterType</i></span><span style="font-weight: normal;">, <a href="../../VBA_3D/common_vbageneral/common_general_string.htm" id="a321111" style="font-weight: normal; font-style: normal;" name="a321111">string</a></span> <span style="font-style: italic;"><i>infoType</i></span><span style="font-weight: normal;">,</span> <span style="font-style: italic;"><i><a href="../common_vbageneral/common_general_variant_ref.htm" style="font-weight: normal;">variant_ref</a></i></span> <span style="font-style: italic;"><i>treePaths</i></span><span style="font-weight: normal;">,</span> <span style="font-style: italic;"><i><a href="../common_vbageneral/common_general_variant_ref.htm" style="font-weight: normal;">variant_ref</a></i></span> <span style="font-style: italic;"><i>resultTypes</i></span><span style="font-weight: normal;">,</span> <span style="font-style: italic;"><i><a href="../common_vbageneral/common_general_variant_ref.htm" style="font-weight: normal;">variant_ref</a></i></span> <span style="font-style: italic;"><i>fileNames</i></span><span style="font-weight: normal;">,</span> <span style="font-style: italic;"><i><a href="../common_vbageneral/common_general_variant_ref.htm" style="font-weight: normal;">variant_ref</a></i></span> <span style="font-style: italic;"><i>resultInformation</i></span> ) <a href="../../VBA_3D/common_vbageneral/common_general_long.htm" id="a3211" style="font-weight: normal; font-style: normal;" name="a3211">long</a></p>
+<p class="VBA-Text-Indent">Get result data of all children of a parent folder in the Navigation Tree. The string <span style="font-style: italic;"><i>rootPath</i></span> specifies the Navigation Tree path to the root item which is queried (typically a tree folder). The method returns an error if <span style="font-style: italic;"><i>rootPath</i></span> is empty. The string <span style="font-style: italic;"><i>filterType</i></span> specifies which types of results should be included in the list. It can be a combination of the following types: "0D/1D", "2D/3D", "farfield", "colormap", "matrix", "folder". Additionally, the string "recursive" can be used to include all sub-items recursively. If multiple types are requested, they need to be separated by white spaces, e.g. "folder 0D/1D recursive". In case the root item matches the filter, it will also be included. Please note that only Navigation Tree folders which contain 1D results are taken into account when the filter type "folder" is specified. Furthermore, please note that some Design Studio tree elements will not have an associated result type (e.g. Tasks) and therefore will not appear in the list for any filter type.</p>
+<p class="VBA-Text-Indent">The string <span style="font-style: italic;"><i>infoType</i></span> determines which additional information about the results is stored in the variant <span style="font-style: italic;"><i>resultInformation</i></span>. It can be an empty string or the string "filetype0D1D". In case "filetype0D1D" is used, the <span style="font-style: italic;"><i>resultInfomation</i></span> will contain data about the type of the 0D/1D result, which can be "complex, "real", "complex0D", "real0D" for all tree results of 0D/1D type.</p>
+<p class="VBA-Text-Indent">The return value of this method is the number of elements which are found. The variants <span style="font-style: italic;"><i>treepaths</i></span>, <span style="font-style: italic;"><i>resultTypes</i></span>, <span style="font-style: italic;"><i>fileNames</i></span>, <span style="font-style: italic;"><i>resultInformation</i></span> are filled within the method call with a list of strings which contain information about the results. The variant <span style="font-style: italic;"><i>treepath</i></span> will contain the list of Navigation Tree paths for the results. The variant <span style="font-style: italic;"><i>fileNames</i></span> will contain the list of absolute filenames normalized to the Operating System. The variant <span style="font-style: italic;"><i>resultTypes</i></span> will contain the <a href="../../VBA_3D/special_vbapostproc/special_vbapostproc_type_method.htm">Result Type</a> of the result. The variant <span style="font-style: italic;"><i>resultInfomation</i></span> will contain additional information about the result as specified by <span style="font-style: italic;"><i>infoType</i></span> or empty strings. See also the corresponding <a href="#Example1">example</a>.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">Reset</p>
+<p class="VBA-Text-Indent">Resets the current result tree item definition.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">Add / Delete</p>
+<p class="VBA-Text-Indent">Adds / deletes a previously specified tree item to / from the Navigation Tree.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">DoesTreeItemExist ( <span style="font-weight: normal;"><a href="../common_vbageneral/common_general_string.htm">string</a></span> <span style="font-style: italic;"><i>treeItemName</i></span> )&#160;<span style="font-weight: normal;"><a href="../common_vbageneral/common_general_bool_data_type.htm">bool</a></span></p>
+<p class="VBA-Text-Indent">Checks if an item called <span style="font-style: italic;"><i>treeItemName</i></span> exists in the Navigation Tree.</p>
+<p class="VBA-Heading-Category">Tree Item Methods</p>
+<p class="VBA-Heading-Method">Name ( <a href="../common_vbageneral/common_general_name.htm" style="font-weight: normal;">name</a> <span style="font-style: italic;"><i>sTreepath</i></span> )</p>
+<p class="VBA-Text-Indent">Sets the Navigation Tree path including item name for the item. User defined items are only allowed below the "Results" folder of the Navigation Tree.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">Type ( <span style="font-weight: normal;"><a href="../common_vbageneral/common_general_enum.htm">enum</a></span> <span style="font-style: italic;"><i>key</i></span> )</p>
+<p class="VBA-Text-Indent">Defines the result type of the tree item. Supported types are:</p>
+<table style="margin-left: 21px;" cellspacing="0" width="500">
+<col style="width: 30%;" />
+<col style="width: 70%;" />
+<tr>
+<td style="border: Solid 1px #000000;"><span><a href="../common_vbageneral/common_general_enum.htm" style="font-family: Arial, sans-serif; font-size: 9pt;">enum</a></span> <span style="font-style: italic; font-weight: bold; font-family: Arial, sans-serif; font-size: 9pt;"><font size="1" style="font-size:9pt;"><i>key</i></font></span></td>
+<td style="border-top: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000;"><span style="font-weight: bold; font-family: Arial, sans-serif; font-size: 9pt;"><font size="1" style="font-size:9pt;">meaning</font></span></td>
+</tr>
+<tr>
+<td style="border-left: solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000;"><span style="font-family: Arial, sans-serif; font-size: 9pt;"><font size="1" style="font-size:9pt;">"folder"</font></span></td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000;"><span style="font-family: Arial, sans-serif; font-size: 9pt;"><font size="1" style="font-size:9pt;">Folder</font></span></td>
+</tr>
+<tr>
+<td style="border-left: solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000;"><span style="font-family: Arial, sans-serif; font-size: 9pt;"><font size="1" style="font-size:9pt;">"colourmap"</font></span></td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000;"><span style="font-family: Arial, sans-serif; font-size: 9pt;"><font size="1" style="font-size:9pt;">Color map result</font></span></td>
+</tr>
+<tr>
+<td style="border-left: solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000;"><span style="font-family: Arial, sans-serif; font-size: 9pt;"><font size="1" style="font-size:9pt;">"xysignal"</font></span></td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000;"><span style="font-family: Arial, sans-serif; font-size: 9pt;"><font size="1" style="font-size:9pt;">1D or 1DC result</font></span></td>
+</tr>
+<tr>
+<td style="border-left: solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000;"><span style="font-family: Arial, sans-serif; font-size: 9pt;"><font size="1" style="font-size:9pt;">"notefile"</font></span></td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000;"><span style="font-family: Arial, sans-serif; font-size: 9pt;"><font size="1" style="font-size:9pt;">Generic ASCII text file</font></span></td>
+</tr>
+</table>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">Subtype ( <span style="font-weight: normal;"><a href="../common_vbageneral/common_general_enum.htm">enum</a></span> <span style="font-style: italic;"><i>key</i></span> )</p>
+<p class="VBA-Text-Indent">Defines the result subtype of the tree item. Supported subtypes are:</p>
+<table style="margin-left: 21px;" cellspacing="0" width="500">
+<col style="width: 30%;" />
+<col style="width: 70%;" />
+<tr>
+<td style="border: Solid 1px #000000;"><span><a href="../common_vbageneral/common_general_enum.htm" style="font-size: 9pt; font-family: Arial, sans-serif;">enum</a></span> <span style="font-style: italic; font-weight: bold; font-size: 9pt; font-family: Arial, sans-serif;"><font size="1" style="font-size:9pt;"><i>key</i></font></span></td>
+<td style="border-top: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000;"><span style="font-weight: bold; font-size: 9pt; font-family: Arial, sans-serif;"><font size="1" style="font-size:9pt;">meaning</font></span></td>
+</tr>
+<tr>
+<td style="border-left: solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000;"><span style="font-family: Arial, sans-serif; font-size: 9pt;"><font size="1" style="font-size:9pt;">"complex"</font></span></td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000;"><span style="font-family: Arial, sans-serif; font-size: 9pt;"><font size="1" style="font-size:9pt;">Complex 1D data</font></span></td>
+</tr>
+<tr>
+<td style="border-left: solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000;"><span style="font-family: Arial, sans-serif; font-size: 9pt;"><font size="1" style="font-size:9pt;">"magnitude"</font></span></td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000;"><span style="font-family: Arial, sans-serif; font-size: 9pt;"><font size="1" style="font-size:9pt;">Linear scaled real data</font></span></td>
+</tr>
+<tr>
+<td style="border-left: solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000;"><span style="font-family: Arial, sans-serif; font-size: 9pt;"><font size="1" style="font-size:9pt;">"dB"</font></span></td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000;"><span style="font-family: Arial, sans-serif; font-size: 9pt;"><font size="1" style="font-size:9pt;">Logarithmically scaled real data</font></span></td>
+</tr>
+<tr>
+<td style="border-left: solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000;"><span style="font-family: Arial, sans-serif; font-size: 9pt;"><font size="1" style="font-size:9pt;">"phase"</font></span></td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000;"><span style="font-family: Arial, sans-serif; font-size: 9pt;"><font size="1" style="font-size:9pt;">Phase data</font></span></td>
+</tr>
+<tr>
+<td style="border-left: solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000;"><span style="font-family: Arial, sans-serif; font-size: 9pt;"><font size="1" style="font-size:9pt;">"real"</font></span></td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000;"><span style="font-family: Arial, sans-serif; font-size: 9pt;"><font size="1" style="font-size:9pt;">Real data</font></span></td>
+</tr>
+</table>
+<p class="VBA-Heading-Method">&#160;</p>
+<p class="VBA-Heading-Method">Title / Xlabel / Ylabel &#160;( <a href="../common_vbageneral/common_general_name.htm" style="font-weight: normal;">name</a> <span style="font-style: italic;"><i>name</i></span> )</p>
+<p class="VBA-Text-Indent">Defines the title / x-axis / y-axis label of the item.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">File ( <a href="../common_vbageneral/common_general_name.htm" style="font-weight: normal;">name</a> s<span style="font-style: italic;"><i>ResultName</i></span> )</p>
+<p class="VBA-Text-Indent">Filename associated with the tree item. Either absolute file names or file names relative to the "Result\DS" project folder are valid.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">GetResultTypeFromItemName ( <span><a href="../../VBA_3D/common_vbageneral/common_general_name.htm" id="a11" style="font-weight: normal; font-style: normal;" name="a11">name</a></span> <span style="font-style: italic;"><i>sTreePath</i></span> ) <a href="../../VBA_3D/common_vbageneral/common_general_string.htm" id="a14" style="font-weight: normal; font-style: normal;" name="a14">string</a></p>
+<p class="VBA-Text-Indent">Returns the result type of the tree item.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">DeleteAt ( <a href="../common_vbageneral/common_general_enum.htm" style="font-weight: normal;">enum</a> <span style="font-style: italic;"><i>type</i></span> )</p>
+<p class="VBA-Text-Indent">Defines the lifetime of the item.</p>
+<table style="vertical-align: top; margin-left: 21px;" cellspacing="0" width="390">
+<tr style="vertical-align: top;">
+<td style="border: Solid 1px #000000; width: 33.42%; padding-right: 10px; padding-left: 10px;">
+<p><a href="../common_vbageneral/common_general_enum.htm">enum</a> <span style="font-weight: bold; font-style: italic;"><i>type</i></span></p>
+</td>
+<td style="border-top: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 66.58%; padding-right: 10px; padding-left: 10px;">
+<p style="font-weight: bold;">meaning</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 33.42%; padding-right: 10px; padding-left: 10px;">
+<p>"never"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 66.58%; padding-right: 10px; padding-left: 10px;">
+<p>The result will be never deleted.</p>
+</td>
+</tr>
+</table>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">SourceTreePath(&#160;<a href="../common_vbageneral/common_general_name.htm" style="font-weight: normal;">name</a> &#160;<span style="font-style: italic;"><i>treepath</i></span> )</p>
+<p class="VBA-Text-Indent">Specifies a link to the 0D/1D data of another tree item. If <span style="font-style: italic;"><i>AutomaticUpdate</i></span> is activated, the current result item acts as a link to <span style="font-style: italic;"><i>source treepath</i></span>.</p>
+<p class="VBA-Text-Indent">Otherwise <span style="font-style: italic;"><i>source treepath</i></span> is only used once after the result item creation to create a copy of <span style="font-style: italic;"><i>source treepath</i></span>.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">AutomaticUpdate ( <span style="font-weight: normal;"><a href="../common_vbageneral/common_general_bool_data_type.htm">bool</a></span> <span style="font-style: italic;"><i>flag</i></span> <span style="font-weight: normal;">)</span></p>
+<p class="VBA-Text-Indent">If <span style="font-style: italic;"><i>AutomaticUpdate</i></span> is set to <span style="font-style: italic;"><i>True</i></span>, the current tree item acts as a link to the data specified by <span style="font-style: italic;"><i>SourceTreePath</i></span>. Otherwise <span style="font-style: italic;"><i>source treepath</i></span> is only used once after the result item creation to create a copy of <span style="font-style: italic;"><i>source treepath</i></span>.</p>
+<p class="VBA-Heading-Category"><a name="Example" id="Example"></a>Example: Iterate over parametric S-Parameter data</p>
+<p class="VBA-Text">This macro demonstrates access to parametric data of an S-Parameter. The access works similar for other tree items.</p>
+<p class="VBA-Text">&#160;</p>
+<p class="VBA-Text-Example" style="margin-left: 40px;">Dim TreeItem As String</p>
+<p class="VBA-Text-Example" style="margin-left: 40px;">TreeItem = "Tasks\SPara1\S-Parameters\S1,1"</p>
+<p class="VBA-Text-Example" style="margin-left: 40px; color: #008000;">'get an array of existing result ids for this tree item</p>
+<p class="VBA-Text-Example" style="margin-left: 40px;">Dim IDs As Variant</p>
+<p class="VBA-Text-Example" style="margin-left: 40px;">IDs = DSResultTree.GetResultIDsFromTreeItem(TreeItem)</p>
+<p class="VBA-Text-Example" style="margin-left: 40px;">If IsEmpty(IDs) Then</p>
+<p class="VBA-Text-Example" style="margin-left: 80px;">DS.ReportInformationToWindow("No parametric data available.")</p>
+<p class="VBA-Text-Example" style="margin-left: 40px;">Else</p>
+<p class="VBA-Text-Example" style="margin-left: 80px;">Dim N As Long</p>
+<p class="VBA-Text-Example" style="margin-left: 80px;">For N = 0 To UBound(IDs)</p>
+<p class="VBA-Text-Example" style="margin-left: 120px;">Dim spara As Object</p>
+<p class="VBA-Text-Example" style="margin-left: 120px;">Set spara = DSResultTree.GetResultFromTreeItem(TreeItem, IDs(N))</p>
+<p class="VBA-Text-Example" style="margin-left: 120px;">If spara.GetResultObjectType() = "1DC" Then</p>
+<p class="VBA-Text-Example" style="margin-left: 160px;"><span style="color: #008000;"><font color="green">'access data of R1DC Object</font></span></p>
+<p class="VBA-Text-Example" style="margin-left: 160px;">DS.ReportInformationToWindow("First data point: "+CStr(spara.GetYRe(0))+","+CStr(spara.GetYIm(0)))</p>
+<p class="VBA-Text-Example" style="margin-left: 160px;">If DSResultTree.TreeItemHasImpedance(TreeItem, IDs(N)) Then</p>
+<p class="VBA-Text-Example" style="margin-left: 200px;">Dim ref_imp As Object</p>
+<p class="VBA-Text-Example" style="margin-left: 200px;">Set ref_imp = DSResultTree.GetImpedanceResultFromTreeItem(TreeItem, IDs(N))</p>
+<p class="VBA-Text-Example" style="margin-left: 200px; color: #008000;">'access data of R1DC Object containing ref. imp.</p>
+<p class="VBA-Text-Example" style="margin-left: 200px;">DS.ReportInformationToWindow("Ref. Imp. :" + CStr(ref_imp.GetYRe(0))+","+CStr(ref_imp.GetYIm(0)))</p>
+<p class="VBA-Text-Example" style="margin-left: 160px;">End If</p>
+<p class="VBA-Text-Example" style="margin-left: 120px;">End If</p>
+<p class="VBA-Text-Example" style="margin-left: 80px;">Next</p>
+<p class="VBA-Text-Example" style="margin-left: 40px;">End If</p>
+<p class="VBA-Heading-Category">Example: Add a Color Map Plot into Tree</p>
+<p class="VBA-Text-Example" style="margin-left: 40px;">With DSResultTree</p>
+<p class="VBA-Text-Example" style="margin-left: 80px;">.Reset</p>
+<p class="VBA-Text-Example" style="margin-left: 80px;">.Name "Results\Hotspot" &#160;<span><font color="#008000">' Entry name and its destination folder</font></span></p>
+<p class="VBA-Text-Example" style="margin-left: 80px;">.Type "colourmap" &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;</p>
+<p class="VBA-Text-Example" style="margin-left: 80px;">.File "hotspots.dat" &#160;&#160;&#160;&#160;&#160;<span style="color: #008000;"><font color="green">' file names are either absolute or relative to &lt;project&gt;\Result\DS</font></span></p>
+<p class="VBA-Text-Example" style="margin-left: 80px;">.Add</p>
+<p class="VBA-Text-Example" style="margin-left: 40px;">End With</p>
+<p class="VBA-Text-Example" style="margin-left: 40px;">&#160;</p>
+<p class="VBA-Heading-Category"><a name="Example1" id="Example1"></a>Example: List all 1D items and 1D folders below "Tasks"</p>
+<p class="VBA-Text" style="margin-left: 3.75pt;">This macro demonstrates the use of GetTreeResults. It recursively queries all 0D and 1D items and result folders below "Tasks" and prints the gathered data to the message window.</p>
+<p class="VBA-Text" style="margin-left: 3.75pt;">&#160;</p>
+<p class="VBA-Text-Example" style="margin-left: 40px;">Dim paths As Variant, types As Variant, files As Variant, info As Variant, nResults As Long</p>
+<p class="VBA-Text-Example" style="margin-left: 40px;">nResults = DSResulttree.GetTreeResults("Tasks","folder 0D/1D recursive","",paths,types,files,info)</p>
+<p class="VBA-Text-Example" style="margin-left: 40px;">Dim n As Long</p>
+<p class="VBA-Text-Example" style="margin-left: 40px;">For n = 0 To nResults-1</p>
+<p class="VBA-Text-Example" style="margin-left: 80px;">ReportInformationToWindow("path: " + CStr(paths(n)) + vbCrLf + "type: " + CStr(types(n)) + vbCrLf + "file: " + CStr(files(n)))</p>
+<p class="VBA-Text-Example" style="margin-left: 40px;">Next</p>
+<p class="VBA-Heading-Category">Example: Create a link to another 0D/1D result item</p>
+<p class="VBA-Text-Example" style="margin-left: 40px;">With DSResultTree</p>
+<p class="VBA-Text-Example" style="margin-left: 80px;">'Create a subfolder</p>
+<p class="VBA-Text-Example" style="margin-left: 80px;">.Reset</p>
+<p class="VBA-Text-Example" style="margin-left: 80px;">.Name "Results\Comparison"</p>
+<p class="VBA-Text-Example" style="margin-left: 80px;">.Type "FOLDER"</p>
+<p class="VBA-Text-Example" style="margin-left: 80px;">.Add</p>
+<p class="VBA-Text-Example" style="margin-left: 40px;">&#160;</p>
+<p class="VBA-Text-Example" style="margin-left: 80px;">'Create copy in the subfolder and result link</p>
+<p class="VBA-Text-Example" style="margin-left: 80px;">.Reset</p>
+<p class="VBA-Text-Example" style="margin-left: 80px;">.Name "Results\Result\S11"</p>
+<p class="VBA-Text-Example" style="margin-left: 80px;">.SourceTreePath "Tasks\SP1\3D Model Results\1D Results\S-Parameters\S1,1"</p>
+<p class="VBA-Text-Example" style="margin-left: 80px;">.AutomaticUpdate True</p>
+<p class="VBA-Text-Example" style="margin-left: 80px;">.Add</p>
+<p class="VBA-Text-Example" style="margin-left: 40px;">End With</p>
+<?rh-p style="margin-bottom: 0px; text-align: Right; margin-left: 18px; 
+                 margin-right: 18px; margin-top: 18px;" ?>
+<div style="width: 100%; position: relative;" id="footer">
+<p style="border-bottom: Solid 1px #dddddd; text-align: Left; margin-left: 0px; font-family: Arial, sans-serif; line-height: Normal; margin-top: 9px; margin-right: 0px; margin-bottom: 6px; border-left-width: 1px; border-top-width: 1px; border-right-width: 1px;"><span style="text-align: Left; font-family: Arial, sans-serif; line-height: Normal;">&#160;</span></p>
+<table cellspacing="0" width="100%">
+<col style="width: 50%;" />
+<col style="width: 50%;" />
+<tr>
+<td style="vertical-align: Top;"><span style="font-family: Arial, sans-serif; line-height: Normal; font-size: 8pt;"><font size="1" style="font-size:8pt;">CST Studio Suite 2026</font></span></td>
+<td style="vertical-align: Top;">
+<p style="text-align: right;">&#160;</p>
+</td>
+</tr>
+</table>
+<p>&#160;</p>
+</div>
+<script type="text/javascript" language="javascript1.2">
+//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+        writeIntopicBar(0);
+
+
+highlightSearch();
+//-->
+//]]>
+</script>
+</body>
+</html>

@@ -1,0 +1,274 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="Adobe RoboHelp 11" />
+<title>Data import</title>
+<link rel="StyleSheet" href="../../online_help_vba.css" type="text/css" />
+<style type="text/css">
+/*<![CDATA[*/
+<!--
+body { border-bottom-style:None; }
+-->
+/*]]>*/
+</style>
+
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+        origWidth = innerWidth;
+        origHeight = innerHeight;
+        onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+/*<![CDATA[*/
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+-->
+/*]]>*/
+</style>
+
+<script type="text/javascript" language="javascript1.2" src="../../whmsg.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript" src="../../whver.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript1.2" src="../../whutils.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript1.2" src="../../whproxy.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript1.2" src="../../whlang.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript1.2" src="../../whtopic.js" charset="utf-8">
+</script>
+</head>
+<body>
+<script type="text/javascript" language="javascript1.2">
+//<![CDATA[
+<!--
+if (window.gbWhTopic)
+{
+        var strUrl = document.location.href;
+        var bc = 0;
+        var n = strUrl.toLowerCase().indexOf("bc-");
+        if(n != -1)
+        {
+                document.location.replace(strUrl.substring(0, n));
+                bc = strUrl.substring(n+3);
+        }
+
+        if (window.addTocInfo)
+        {
+        addTocInfo("3D Simulation VBA\nVBA Objects\nCable Studio\nData import\nImport data");
+
+        }
+        if (window.writeBtnStyle)
+                writeBtnStyle();
+
+        if (window.writeIntopicBar)
+                writeIntopicBar(0);
+
+        
+        document.write("<p style=\"font-family: Tahoma; font-size: 9pt; font-weight: 400;  font-style:normal; color: rgb(0, 0, 0); text-decoration:none; text-align: left\"> ");
+AddMasterBreadcrumbs("../../index.htm", "font-family: Tahoma; font-size: 9pt; font-weight: 400;  font-style:normal; color: rgb(0, 0, 0); text-decoration:none; text-align: left", "|", "Home", "../../special_vbaobjects/special_vbaobjects_vbaobjects.htm");
+document.write("<a style=\"font-family: Tahoma; font-size: 9pt; font-weight: 400;  font-style:normal; color: rgb(0, 0, 0); text-decoration:none; text-align: left\" href=\"../../special_vbaobjects/special_vbaobjects_vbaobjects.htm\">3D Simulation VBA<\/a> | <a style=\"font-family: Tahoma; font-size: 9pt; font-weight: 400;  font-style:normal; color: rgb(0, 0, 0); text-decoration:none; text-align: left\" href=\"../../special_vbaobjects/special_vbaobjects_vbaobjects.htm\">VBA Objects<\/a> | <a style=\"font-family: Tahoma; font-size: 9pt; font-weight: 400;  font-style:normal; color: rgb(0, 0, 0); text-decoration:none; text-align: left\" href=\"../cst_cablestudio_objects_overview.htm\">Cable Studio<\/a> | <a style=\"font-family: Tahoma; font-size: 9pt; font-weight: 400;  font-style:normal; color: rgb(0, 0, 0); text-decoration:none; text-align: left\" href=\"import_data.htm\">Data import<\/a> | Import data<\/p>");
+
+}
+else
+        if (window.gbIE4)
+                document.location.reload();
+
+onLoadHandler = function()
+{
+  if (window.setRelStartPage)
+        {
+        setTimeout("setRelStartPage('../../index.htm');", 1)
+
+    setTimeout("UpdateBreadCrumbsMarker();", 1);
+        }
+}
+
+if (window.addEventListener){  
+        window.addEventListener('load', onLoadHandler, false);   
+} else if (window.attachEvent){  
+        window.attachEvent('onload', onLoadHandler);  
+}
+
+function onSetStartPage()
+{
+  autoSync(1);
+  sendSyncInfo();
+  sendAveInfoOut();
+}
+//-->
+//]]>
+</script><script type="text/javascript" src="../../ehlpdhtm.js" language="JavaScript1.2">
+</script>
+<table cellspacing="0" width="100%">
+<col style="width: 50%;" />
+<col style="width: 50%;" />
+<tr>
+<td style="vertical-align: middle; padding-top: 5px; padding-bottom: 5px;">
+<p style="margin-top: 0px; margin-bottom: 0px;"><img src="../../3ds.png" alt="" style="border: none;" border="0" /></p>
+</td>
+<td style="vertical-align: middle;">
+<p style="text-align: right;"><a href="https://www.3ds.com/products-services/3dexperience/" target="_blank"><img src="../../3dexp.png" alt="" style="border: none;" width="32" height="32" border="0" /></a></p>
+</td>
+</tr>
+</table>
+<h1>Import Data</h1>
+<p class="VBA-Text">The command imports external data for geometry and cable information.</p>
+<p class="VBA-Text">This includes:</p>
+<p class="VBA-Text" style="margin-left: 40px;">NASTRAN CBAR (nodes &amp; segments only)</p>
+<p class="VBA-Text" style="margin-left: 40px;">Legacy projects from SimLab CableMod</p>
+<p class="VBA-Text" style="margin-left: 40px;">KBL exchange data (geometry and optional cable data).</p>
+<p class="VBA-Text">&#160;</p>
+<ul>
+<li class="p-VBA-Index-Category">
+<p class="VBA-Index-Category"><a href="#Methods">Methods</a></p>
+</li>
+<li class="p-VBA-Index-Category">
+<p class="VBA-Index-Category"><a href="#KBL_default_cable_name_substitution">KBL default cable name substitution</a></p>
+</li>
+<li class="p-VBA-Index-Category">
+<p class="VBA-Index-Category"><a href="#KBL_mapping_file">KBL mapping file</a></p>
+</li>
+<li class="p-VBA-Index-Category">
+<p class="VBA-Index-Category"><a href="#Examples">Examples</a></p>
+</li>
+</ul>
+<p class="VBA-Heading-Category"><a name="Methods" id="Methods">Methods</a></p>
+<p class="VBA-Heading-Method" style="margin-left: 0px;">Reset</p>
+<p class="VBA-Text-Indent">Resets all internal settings for this command to their default values.</p>
+<p class="VBA-Heading-Method">AddStringArgument(<a href="../../common_vbageneral/common_general_string.htm" id="a4" name="a4">string</a> propertyId, <a href="../../common_vbageneral/common_general_string.htm" id="a41" name="a41">string</a> value)</p>
+<p class="VBA-Text-Indent">Parameter 'propertyId' with value 'Type' defines the file type to import:</p>
+<p class="VBA-Text-Indent">&#160;&#160;&#160;&#160;value 'Nastran': Nastran CBAR data exported from e.g. Catia</p>
+<p class="VBA-Text-Indent">&#160;&#160;&#160;&#160;value 'KBL': Cable exchange data (see <a href="https://ecad-wiki.prostep.org/specifications/kbl/" target="_blank">Harness Description List</a>)</p>
+<p class="VBA-Text-Indent">&#160;&#160;&#160;&#160;value 'SMLB': Legacy file format of SimLab CableMod (slh &amp; zlh format)</p>
+<p class="VBA-Text-Indent">Parameter 'propertyId' with value 'FileName' defines the full path to the file to import in 'value'.</p>
+<p class="VBA-Text-Indent">Parameter 'propertyId' with value 'CurveType' with 'value' to the following values will activate the <a href="#Default_and_Vobes_interpretation_of_curves">alternative interpretation</a> of spline curves.<br />
+&#160;&#160;&#160;Legacy: Curve data is interpreted as simple Bezier splines<br />
+&#160;&#160;&#160;Vobes: Curve data is interpreted as UNRBS (uniform non rational B-Splines)<br />
+&#160;&#160;&#160;Catia: Curve data is interpreted as NURBS (non uniform rational B-Splines).</p>
+<p class="VBA-Text-Indent">Parameter 'propertyId' with value 'MapFileName' defines the full path to the mapping file to use during import in 'value'. This value is <span style="text-decoration: underline;"><u>optional</u></span>.<br />
+This mapping file is used for the KBL import to provide the possibility to map company internal names to CST cable library names. The syntax of the file is described in more detail <a href="#KBL_mapping_file">here</a>.<br /></p>
+<p class="VBA-Heading-Method">Execute (<a href="../../common_vbageneral/common_general_string.htm" id="a42" name="a42">string</a> command)</p>
+<p style="margin-left: 40px;">Imports the given data into CST Cable Studio.</p>
+<p class="VBA-Heading-Category"><a name="Default_and_Vobes_interpretation_of_curves" id="Default_and_Vobes_interpretation_of_curves"></a><a name="KBL_default_cable_name_substitution" id="KBL_default_cable_name_substitution">Interpretation of curves</a></p>
+<p class="VBA-Text">Historically a curve in KBL is defined by using B-Splines. In recent years some vendors (namely the Vobes toolset of the VW group) extended that definition to UNRBS (uniform non rational B-Splines) which result in different curves from the point data contained in a KBL.</p>
+<p class="VBA-Text">Data from Catia system can also be in NURBS format (non uniform rational B-Splines).</p>
+<p class="VBA-Text">With the "CurveType" option the user can switch to the newer variants to match the curve data to the creating system.</p>
+<p class="VBA-Heading-Category">KBL default cable name substitution</p>
+<p class="VBA-Text">The KBL format has some deficiencies regarding the precise definition in the cross section information for more complex cables besides single wires. It is e.g. not possible to define the precise geometry for screened cables, the diameter, thickness and screen type parameters can not be specified in KBL.</p>
+<p class="VBA-Text">To overcome this limitation it is possible to specify the name of an existing CST Cable Studio cable library element which will then be used instead.</p>
+<p class="VBA-Text">The corresponding fields in a KBL harness definition file are Part_number and Wire_type.</p>
+<ul style="list-style: disc;">
+<li>
+<p class="VBA-Text">Part_number: the ID of a specific cable type like "RG58" or "20 AWG".</p>
+</li>
+<li>
+<p class="VBA-Text">Wire_type: the basic type of the cable being defined.<br />
+CST Cable Studio recognises the following "Wire_type" keywords for the basic cable types:<br />
+Singe wires: all cables with one core<br />
+Twisted cables: "twist" or "drill"<br />
+Ribbon cables: "flat" or "flach"<br />
+Coaxial cables: "coax", "koax", "screen" or "schirm"<br />
+Cable groups: all other multi-core wires</p>
+</li>
+</ul>
+<p class="VBA-Text">In case that there is a different naming scheme in place the users can either rename the elements in the CST Cable Studio cable library or use a separate <a href="#KBL_mapping_file">mapping file</a> in the import dialog to describe the name mapping</p>
+<p class="VBA-Text">&#160;</p>
+<p class="VBA-Text">Example for a KBL cable cross section definition:</p>
+<p class="VBA-Text-Example">&#160;</p>
+<p class="VBA-Text-Example">&lt;General_wire id="GW_5"&gt;</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&lt;Company_name&gt;CST AG&lt;/Company_name&gt;</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&lt;Version&gt;1.0&lt;/Version&gt;</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&lt;Abbreviation&gt;/NULL&lt;/Abbreviation&gt;</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&lt;Description&gt;Simple single wire cable&lt;/Description&gt;</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&lt;<span style="font-weight: bold;">Part_number</span>&gt;LIFY_1qmm00&lt;/Part_number&gt;</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&lt;<span style="font-weight: bold;">Wire_type</span>&gt;single&lt;/Wire_type&gt;</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&lt;Cross_section_area id="NumVal_10"&gt;</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;&#160;&lt;Value_component&gt;1.25&lt;/Value_component&gt;</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;&#160;&lt;Unit_component&gt;Unit_1&lt;/Unit_component&gt;</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&lt;/Cross_section_area&gt;</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&lt;Outside_diameter id="NumVal_11"&gt;</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;&#160;&lt;Value_component&gt;3.26&lt;/Value_component&gt;</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;&#160;&lt;Unit_component&gt;Unit_1&lt;/Unit_component&gt;</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&lt;/Outside_diameter&gt;</p>
+<p class="VBA-Text-Example">&#160;&#160;&lt;/General_wire&gt;</p>
+<p class="VBA-Heading-Category"><a name="KBL_mapping_file" id="KBL_mapping_file">KBL mapping file</a></p>
+<p class="VBA-Text">This optional mapping file can simplify the import of KBL files by delegating the mapping of company specific naming schemes and the CST Cable Studio cable library to a separate file that can be managed more easily without the need to edit and modify the internal cable library in CST Cable Studio.</p>
+<p class="VBA-Text">&#160;</p>
+<p class="VBA-Text">Syntax:</p>
+<p class="VBA-Text-Example">&lt;?xml version="1.0" encoding="UTF-8"?&gt;</p>
+<p class="VBA-Text-Example">&lt;Mappings&gt;</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&lt;Mapping importID="first screened cable" cableLibID="RG58"/&gt;</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&lt;Mapping importID="second screened cable" cableLibID="RG174"/&gt;</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&lt;Mapping importID="third screened cable" cableLibID="RG316"/&gt;</p>
+<p class="VBA-Text-Example">&lt;/Mappings&gt;</p>
+<p class="VBA-Text-Example">&#160;</p>
+<p class="VBA-Text">Mapping parameter "importID" defines the name that may occur in the imported KBL file in the Part_number field of a "General_wire" element.</p>
+<p class="VBA-Text">Mapping parameter "cableLibID" defines the name of an existing element in the CST Cable Studio cable library. All libraries will be searched and if a corresponding element is found its cross section information will be used during the import process to provide accurate cross section information.</p>
+<p class="VBA-Heading-Category"><a name="Examples" id="Examples">Examples</a></p>
+<p class="VBA-Text-Example">With CableStudio</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;.Reset</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;.AddStringArgument "Type", "KBL"</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;.AddStringArgument "MapFileName", "D:\Import\NameMapping.xml"</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;.AddStringArgument "FileName", "D:\Import\29525-2014-0004_4525320-a-v23.kbl"</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;.Execute "CableImport"</p>
+<p class="VBA-Text-Example">End With</p>
+<p class="VBA-Text-Example">&#160;</p>
+<p class="VBA-Text-Example">With CableStudio</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;.Reset</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;.AddStringArgument "Type", "Nastran"</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;.AddStringArgument "FileName", "D:\Import\Chain-new.nas"</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;.Execute "CableImport"</p>
+<p class="VBA-Text-Example">End With</p>
+<p class="VBA-Text-Example">&#160;</p>
+<p class="VBA-Text-Example">With CableStudio</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;.Reset</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;.AddStringArgument "Type", "SMLB"</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;.AddStringArgument "FileName", "D:\Import\export.zlh"</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;.Execute "CableImport"</p>
+<p class="VBA-Text-Example">End With</p>
+<?rh-p style="margin-bottom: 0px; text-align: Right; margin-left: 18px; 
+                 margin-right: 18px; margin-top: 18px;" ?>
+<div style="width: 100%; position: relative;" id="footer">
+<p style="border-bottom: Solid 1px #dddddd; text-align: Left; margin-left: 0px; font-family: Arial, sans-serif; line-height: Normal; margin-top: 9px; margin-right: 0px; margin-bottom: 6px; border-left-width: 1px; border-top-width: 1px; border-right-width: 1px;"><span style="text-align: Left; font-family: Arial, sans-serif; line-height: Normal;">&#160;</span></p>
+<table cellspacing="0" width="100%">
+<col style="width: 50%;" />
+<col style="width: 50%;" />
+<tr>
+<td style="vertical-align: Top;"><span style="font-family: Arial, sans-serif; line-height: Normal; font-size: 8pt;"><font size="1" style="font-size:8pt;">CST Studio Suite 2026</font></span></td>
+<td style="vertical-align: Top;">
+<p style="text-align: right;">&#160;</p>
+</td>
+</tr>
+</table>
+<p>&#160;</p>
+</div>
+<script type="text/javascript" language="javascript1.2">
+//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+        writeIntopicBar(0);
+
+
+highlightSearch();
+//-->
+//]]>
+</script>
+</body>
+</html>

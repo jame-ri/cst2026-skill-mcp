@@ -1,0 +1,374 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="Adobe RoboHelp 11" />
+<title>MQSTDSolver Object</title>
+<link rel="StyleSheet" href="../online_help_vba.css" type="text/css" />
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+        origWidth = innerWidth;
+        origHeight = innerHeight;
+        onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+/*<![CDATA[*/
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+-->
+/*]]>*/
+</style>
+
+<script type="text/javascript" language="javascript1.2" src="../whmsg.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript" src="../whver.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript1.2" src="../whutils.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript1.2" src="../whproxy.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript1.2" src="../whlang.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript1.2" src="../whtopic.js" charset="utf-8">
+</script>
+</head>
+<body>
+<script type="text/javascript" language="javascript1.2">
+//<![CDATA[
+<!--
+if (window.gbWhTopic)
+{
+        var strUrl = document.location.href;
+        var bc = 0;
+        var n = strUrl.toLowerCase().indexOf("bc-");
+        if(n != -1)
+        {
+                document.location.replace(strUrl.substring(0, n));
+                bc = strUrl.substring(n+3);
+        }
+
+        if (window.addTocInfo)
+        {
+        addTocInfo("3D Simulation VBA\nVBA Objects\nSolver\nLow Frequency\nLF Time Domain Solver");
+
+        }
+        if (window.writeBtnStyle)
+                writeBtnStyle();
+
+        if (window.writeIntopicBar)
+                writeIntopicBar(0);
+
+        
+        document.write("<p style=\"font-family: Tahoma; font-size: 9pt; font-weight: 400;  font-style:normal; color: rgb(0, 0, 0); text-decoration:none; text-align: left\"> ");
+AddMasterBreadcrumbs("../index.htm", "font-family: Tahoma; font-size: 9pt; font-weight: 400;  font-style:normal; color: rgb(0, 0, 0); text-decoration:none; text-align: left", "|", "Home", "../special_vbaobjects/special_vbaobjects_vbaobjects.htm");
+document.write("<a style=\"font-family: Tahoma; font-size: 9pt; font-weight: 400;  font-style:normal; color: rgb(0, 0, 0); text-decoration:none; text-align: left\" href=\"../special_vbaobjects/special_vbaobjects_vbaobjects.htm\">3D Simulation VBA<\/a> | <a style=\"font-family: Tahoma; font-size: 9pt; font-weight: 400;  font-style:normal; color: rgb(0, 0, 0); text-decoration:none; text-align: left\" href=\"../special_vbaobjects/special_vbaobjects_vbaobjects.htm\">VBA Objects<\/a> | <a style=\"font-family: Tahoma; font-size: 9pt; font-weight: 400;  font-style:normal; color: rgb(0, 0, 0); text-decoration:none; text-align: left\" href=\"../special_vbasolver/special_vbasolver_background_object.htm\">Solver<\/a> | <a style=\"font-family: Tahoma; font-size: 9pt; font-weight: 400;  font-style:normal; color: rgb(0, 0, 0); text-decoration:none; text-align: left\" href=\"../special_vbasolver/special_vba_ems_solver_object.htm\">Low Frequency<\/a> | LF Time Domain Solver<\/p>");
+
+}
+else
+        if (window.gbIE4)
+                document.location.reload();
+
+onLoadHandler = function()
+{
+  if (window.setRelStartPage)
+        {
+        setTimeout("setRelStartPage('../index.htm');", 1)
+
+    setTimeout("UpdateBreadCrumbsMarker();", 1);
+        }
+}
+
+if (window.addEventListener){  
+        window.addEventListener('load', onLoadHandler, false);   
+} else if (window.attachEvent){  
+        window.attachEvent('onload', onLoadHandler);  
+}
+
+function onSetStartPage()
+{
+  autoSync(1);
+  sendSyncInfo();
+  sendAveInfoOut();
+}
+//-->
+//]]>
+</script><script type="text/javascript" src="../ehlpdhtm.js" language="JavaScript1.2">
+</script>
+<h1>MQSTDSolver Object</h1>
+<p class="VBA-Text">This object is used to define the LF Time Domain solver settings for the magnetoquasistatic equation type.</p>
+<ul>
+<li class="p-VBA-Index-Category">
+<p class="VBA-Index-Category"><a href="#Methods">Methods</a></p>
+</li>
+<li class="p-VBA-Index-Category">
+<p class="VBA-Index-Category"><a href="#Default" style="font-weight: bold;">Default Settings</a></p>
+</li>
+<li class="p-VBA-Index-Category">
+<p class="VBA-Index-Category"><a href="#Examples">Example</a></p>
+</li>
+</ul>
+<p class="VBA-Heading-Category"><a name="Methods" id="Methods"></a>Methods</p>
+<p class="VBA-Heading-Method">Reset</p>
+<p class="VBA-Text-Indent">&#160;Resets all internal settings to their default values.</p>
+<p class="StandardNeu" style="font-weight: bold;">&#160;</p>
+<p class="StandardNeu" style="font-weight: bold;">Method (<a href="../common_vbageneral/common_general_enum.htm" style="font-weight: normal;">enum</a> solvermethod)</p>
+<p class="VBA-Text-Indent">Specifies the method used by the LF time domain solver for discretization and solution.</p>
+<p class="VBA-Text-Indent">Currently, only "Tetrahedral Mesh" is available for the magnetoquasistatic equation type.</p>
+<p class="VBA-Heading-Method">&#160;</p>
+<p class="VBA-Heading-Method">TetSolverOrder (<a href="../common_vbageneral/common_general_integer.htm" style="font-weight: normal;">int</a> <span style="font-style: italic;"><i>tetorder</i></span>)</p>
+<p class="VBA-Text-Indent"><span lang="EN-US" xml:lang="EN-US">This option allows to specify whether the tetrahedral solver uses first- or second-order accuracy. Second-order (</span><span lang="EN-US" xml:lang="EN-US" style="font-style: italic;"><i>tetorder = "2"</i></span><span lang="EN-US" xml:lang="EN-US">) is the default due to its higher accuracy. However, if the structure is geometrically complex and therefore comes along with huge memory requirements, first-order (</span><span lang="EN-US" xml:lang="EN-US" style="font-style: italic;"><i>tetorder = "1"</i></span><span lang="EN-US" xml:lang="EN-US">) is an adequate alternative.</span></p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">SystemSolverType (<a href="../common_vbageneral/common_general_enum.htm" style="font-weight: normal;">enum</a> <span style="font-style: italic;"><i>solvertype</i></span>)</p>
+<p class="VBA-Text-Indent">Specifies which solver is used to solve the linear systems of equations.</p>
+<table style="vertical-align: top; margin-left: 50px;" cellspacing="0" width="74.761%">
+<col style="width: 29%;" />
+<col style="width: 71%;" />
+<tr style="vertical-align: top;">
+<td style="border: Solid 1px #000000; width: 29%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text-Indent"><span style="font-style: italic;"><i>solvertype (</i></span><a href="../common_vbageneral/common_general_enum.htm" id="a21" style="font-weight: normal;" name="a21">enum</a>)</p>
+</td>
+<td style="border-top: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 71%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text-Indent">meaning</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 29%; padding-right: 10px; padding-left: 10px;">
+<p style="text-align: center;">"Auto"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 71%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text-Indent">choose direct or iterative solver automatically depending on the problem size</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 29%; padding-right: 10px; padding-left: 10px;">
+<p style="text-align: center;">"Iterative"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 71%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text-Indent">use the iterative solver</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 29%; padding-right: 10px; padding-left: 10px;">
+<p style="text-align: center;">"Direct"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 71%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text-Indent">use the direct solver</p>
+</td>
+</tr>
+</table>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Text-Indent">The default setting is "Auto" which defaults to the type ”r;Iterative”. Currently other options are not supported yet.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">TimeIntegrationMethod (<a href="../common_vbageneral/common_general_enum.htm" style="font-weight: normal;">enum</a> <span style="font-style: italic;"><i>timeintmethod</i></span>)</p>
+<p class="VBA-Text-Indent">Specifies which time integration method to use.</p>
+<table style="vertical-align: top; margin-left: 50px;" cellspacing="0" width="74.761%">
+<col style="width: 29%;" />
+<col style="width: 71%;" />
+<tr style="vertical-align: top;">
+<td style="border: Solid 1px #000000; width: 29%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text-Indent"><span style="font-style: italic;"><i>timeintmethod (</i></span><a href="../common_vbageneral/common_general_enum.htm" id="a11" style="font-weight: normal;" name="a11">enum</a>)</p>
+</td>
+<td style="border-top: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 71%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text-Indent">meaning</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 29%; padding-right: 10px; padding-left: 10px;">
+<p style="text-align: center;">"High order"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 71%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text-Indent">Use a high order time integration scheme with optional adaptive selection of time step size.</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 29%; padding-right: 10px; padding-left: 10px;">
+<p style="text-align: center;">"Low order"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 71%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text-Indent">Use a low order time integration scheme. Only constant time steps are supported.</p>
+</td>
+</tr>
+</table>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Text-Indent">The default option is "Low order".</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">TimeHarmonicMethod (<a href="../common_vbageneral/common_general_enum.htm" style="font-weight: normal;">enum</a> <span style="font-style: italic;"><i>timeharmonicmethod</i></span>)</p>
+<p class="VBA-Text-Indent">Specifies if a steady state special algorithm is to be used and the periodicity types of the excitation signals.</p>
+<table style="vertical-align: top; margin-left: 50px;" cellspacing="0" width="74.761%">
+<col style="width: 29%;" />
+<col style="width: 71%;" />
+<tr style="vertical-align: top;">
+<td style="border: Solid 1px #000000; width: 29%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text-Indent"><span style="font-style: italic;"><i>timeharmonicmethod (</i></span><a href="../common_vbageneral/common_general_enum.htm" id="a111" style="font-weight: normal;" name="a111">enum</a>)</p>
+</td>
+<td style="border-top: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 71%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text-Indent">meaning</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 29%; padding-right: 10px; padding-left: 10px;">
+<p style="text-align: center;">"Harmonic None"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 71%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text-Indent"><span style="font-family: Tahoma; font-size: 12px; font-variant-ligatures: normal; font-variant-caps: normal; orphans: 2; text-align: justify; widows: 2; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial; display: inline ! important ; float: none;">A transient simulation is performed</span>.</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 29%; padding-right: 10px; padding-left: 10px;">
+<p style="text-align: center;">"Harmonic"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 71%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text-Indent">The solver automatically detects the periodicity of the excitation signals and applies the steady state algorithm.</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 29%; padding-right: 10px; padding-left: 10px;">
+<p style="text-align: center;">"Harmonic Periodic"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 71%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text-Indent">Periodic time signals are assumed and the steady state algorithm is applied.</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 29%; padding-right: 10px; padding-left: 10px;">
+<p style="text-align: center;">"Harmonic Antiperiodic"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 71%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text-Indent">Anti-periodic time signals are assumed and the steady state algorithm is applied.</p>
+</td>
+</tr>
+</table>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Text-Indent">The default option is "Harmonic None". The correct length of one period or half of a period needs to be set in the <span style="font-style: italic;"><i>Simulation duration</i></span>.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">Accuracy (<a href="../common_vbageneral/common_general_double.htm" id="a9" style="font-weight: normal;" name="a9">double</a> &#160;<span style="font-style: italic;"><i>accuracy</i></span>)</p>
+<p class="VBA-Text-Indent" style="font-style: normal;">During the solver run, the relative residual norm is frequently checked against the specified <span style="font-style: italic;"><i>accuracy</i></span>. The solver stops when the desired <span style="font-style: italic;"><i>accuracy</i></span> or a maximum number of iteration steps has been reached.</p>
+<p class="StandardNeu" style="font-weight: bold;">&#160;</p>
+<p class="VBA-Heading-Method">MaxNumIter (<a href="../common_vbageneral/common_general_integer.htm" id="a23" style="font-weight: normal;" name="a23">int</a> &#160;<span style="font-style: italic;"><i>value</i></span>)</p>
+<p class="VBA-Text-Indent" style="font-weight: normal;">The number of iterations performed by the (linear or nonlinear) solver is automatically limited by a number depending on the desired solver accuracy. This is equivalent to setting the <span style="font-style: italic;"><i>value</i></span> to "<span style="font-style: italic;"><i>0</i></span>". If you would like to prescribe a fixed upper limit for number of iterations, then specify the corresponding <span style="font-style: italic;"><i>value</i></span> here.</p>
+<p class="VBA-Text-Indent" style="font-weight: normal;"><span style="font-weight: normal;">In case that nonlinear materials are defined, i.e. the nonlinear solver is running, the maximum number of iterations allowed for the linear solver steps will be determined automatically depending on the <span style="font-style: italic;"><i>value</i></span> specified here.</span></p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">SimulationDuration (<span style="font-weight: normal;"><a href="../common_vbageneral/common_general_double.htm" id="a1" style="font-weight: normal;" name="a1">double</a> &#160;</span><span style="font-style: italic;"><i>duration</i></span>)</p>
+<p class="VBA-Heading-Method" style="margin-left: 40px; font-weight: normal; text-indent: -16px;">Specifies the duration of the simulation.</p>
+<p class="vba-text-indent">&#160;</p>
+<p class="VBA-Heading-Method">StoreResultsInCache (<a href="../common_vbageneral/common_general_bool_data_type.htm" id="a7" style="font-weight: normal;" name="a7">bool</a> &#160;storeresultsincache)</p>
+<p class="VBA-Heading-Method" style="margin-left: 40px; font-weight: normal; text-indent: -16px;"><span lang="EN-US" xml:lang="EN-US">Indicates if all models and results during a &#160;parameter sweep or optimization should be stored in subfolders or not.</span></p>
+<p class="VBA-Heading-Method">&#160;</p>
+<p class="VBA-Heading-Method">TimeAdaption (<a href="../common_vbageneral/common_general_bool_data_type.htm" id="a3" style="font-weight: normal;" name="a3">bool</a> &#160;<span style="font-style: italic;"><i>enableAdaption</i></span>)</p>
+<p class="VBA-Heading-Method" style="font-weight: normal; text-indent: 24px;"><span lang="EN-US" xml:lang="EN-US">Determines whether the time step width is constant during the entire simulation (</span><span lang="EN-US" xml:lang="EN-US" style="font-style: italic;"><i>enableAdaption</i></span> <span lang="EN-US" xml:lang="EN-US">=</span> <span lang="EN-US" xml:lang="EN-US" style="font-style: italic;"><i>False</i></span><span lang="EN-US" xml:lang="EN-US">) or whether it is to be adapted during the simulation process (default;</span> <span lang="EN-US" xml:lang="EN-US" style="font-style: italic;"><i>enableAdaption</i></span> <span lang="EN-US" xml:lang="EN-US">=</span> <span lang="EN-US" xml:lang="EN-US" style="font-style: italic;"><i>True</i></span><span lang="EN-US" xml:lang="EN-US">) according to the respective calculation results. &#160;&#160;&#160;In general, the adaptive determination of the time step width is recommended. If you should encounter problems like lengthy calculations because of seemingly small or large adaptive steps, it might be useful to disable the time adaption.</span></p>
+<p class="vba-text-indent">&#160;</p>
+<p class="VBA-Heading-Method">TimeStepWidthActive (<a href="../common_vbageneral/common_general_bool_data_type.htm" id="a2" style="font-weight: normal;" name="a2">bool</a> &#160;<span style="font-style: italic;"><i>enableStepwidth</i></span>)</p>
+<p class="VBA-Heading-Method" style="font-weight: normal; text-indent: 24px;">This option is considered only for simulations with constant time step width. It determines whether a specified number of samples or a specified constant step width is to be taken into account during the simulation process. The respective other setting will be ignored. By default, <span style="font-style: italic;"><i>enableStepwidth</i></span> is <span style="font-style: italic;"><i>True</i></span>, enabling a time step witdh specification.</p>
+<p class="vba-text-indent" style="font-weight: bold;">&#160;</p>
+<p class="VBA-Heading-Method">TimeStepWidth (<span style="font-weight: normal;"><a href="../common_vbageneral/common_general_double.htm" id="a4" style="font-weight: normal;" name="a4">double</a> &#160;</span><span style="font-style: italic;"><i>stepwidth</i></span>)</p>
+<p class="VBA-Heading-Method" style="font-weight: normal; margin-left: 40px; text-indent: -16px;">Specifies the constant step width to be used during the entire simulation process. This setting will be ignored when time adaption is enabled.</p>
+<p class="VBA-Heading-Method">&#160;</p>
+<p class="VBA-Heading-Method">TimeStepSamples (<span style="font-weight: normal;"><a href="../common_vbageneral/common_general_integer.htm" id="a8" style="font-weight: normal;" name="a8">int</a> &#160;</span><span style="font-style: italic;"><i>nsamples</i></span>)</p>
+<p class="VBA-Heading-Method" style="margin-left: 40px; font-weight: normal; text-indent: -16px;"><span lang="EN-US" xml:lang="EN-US">Defines the total number of time steps to be performed</span>. This setting is ignored when time adaption is enabled.</p>
+<p class="VBA-Heading-Method">&#160;</p>
+<p class="VBA-Heading-Method">TimeStepMin (<span style="font-weight: normal;"><a href="../common_vbageneral/common_general_double.htm" id="a10" style="font-weight: normal;" name="a10">double</a> &#160;</span><span style="font-style: italic;"><i>tmin</i></span>)</p>
+<p class="VBA-Heading-Method">TimeStepMax (<span style="font-weight: normal;"><a href="../common_vbageneral/common_general_double.htm" id="a13" style="font-weight: normal;" name="a13">double</a> &#160;</span><span style="font-style: italic;"><i>tmax</i></span>)</p>
+<p class="VBA-Heading-Method" style="margin-left: 40px; font-weight: normal; text-indent: -16px;"><span lang="EN-US" xml:lang="EN-US">Specifies lower and upper bounds for the adaptive time step width. This setting is useful to prevent the time step width from becoming arbitrarily small or inappropriately large.</span> It will be ignored when time adaption is disabled.</p>
+<p class="vba-text-indent">&#160;</p>
+<p class="VBA-Heading-Method">TimeStepInit (<span style="font-weight: normal;"><a href="../common_vbageneral/common_general_double.htm" id="a5" style="font-weight: normal;" name="a5">double</a> &#160;</span><span style="font-style: italic;"><i>tinit</i></span>)</p>
+<p class="VBA-Heading-Method" style="font-weight: normal; margin-left: 40px; text-indent: -16px;"><span lang="EN-US" xml:lang="EN-US">Suggests a first time step with to be used by the solver. However, if certain error criteria are not satisfied, the solver reduces this step width.</span></p>
+<p class="VBA-Heading-Method">&#160;</p>
+<p class="VBA-Heading-Method">TimeStepTolerance (<span style="font-weight: normal;"><a href="../common_vbageneral/common_general_double.htm" id="a14" style="font-weight: normal;" name="a14">double</a> &#160;</span><span style="font-style: italic;"><i>tol</i></span>)</p>
+<p class="VBA-Heading-Method" style="font-weight: normal; margin-left: 40px; text-indent: -16px;">This is a user specified tolerance for the local error and allows to decide whether the current integration step is accepted or whether a new attempt with a smaller step size is necessary. <span lang="EN-US" xml:lang="EN-US">This setting</span> will be ignored when time adaption is disabled.</p>
+<p class="vba-text-indent" style="font-weight: bold;">&#160;</p>
+<p class="VBA-Heading-Method">SteadyStateDetectionActive(<a href="../common_vbageneral/common_general_bool_data_type.htm" id="a191" style="font-weight: normal;" name="a191">bool</a> &#160;enableSteadyStateDetection)</p>
+<p class="VBA-Heading-Method" style="font-weight: normal; margin-left: 40px; text-indent: -16px;"><span lang="EN-US" xml:lang="EN-US">Enables or disables steady state detection for planar magnetostatic problems.</span></p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">SteadyStateDetectionAccuracy (<span style="font-weight: normal;"><a href="../common_vbageneral/common_general_double.htm" id="a41" style="font-weight: normal;" name="a41">double</a> &#160;</span>accuracy)</p>
+<p class="VBA-Heading-Method" style="margin-left: 40px; font-weight: normal; text-indent: -16px;">Specifies the accuracy with which the steady state has to be detected. <span lang="EN-US" xml:lang="EN-US">This setting</span> will be ignored when steady state detection is disabled.</p>
+<p class="vba-text-indent">&#160;</p>
+<p class="VBA-Heading-Method">SteadyStateDetectionPeriod (<span style="font-weight: normal;"><a href="../common_vbageneral/common_general_double.htm" id="a411" style="font-weight: normal;" name="a411">double</a> &#160;period</span>)</p>
+<p class="VBA-Heading-Method" style="margin-left: 40px; font-weight: normal; text-indent: -16px;">Specifies a period of the solution which is supposed to reach a steady state. <span lang="EN-US" xml:lang="EN-US">This setting</span> will be ignored when steady state detection is disabled.</p>
+<p class="vba-text-indent">&#160;</p>
+<p class="VBA-Heading-Method">SteadyStateDetectionMonitor ( <a href="../common_vbageneral/common_general_name.htm" id="a29" style="font-weight: normal; font-style: normal;" name="a29">name</a> &#160;<span style="font-style: italic;"><i>name</i></span> )</p>
+<p class="VBA-Heading-Method" style="margin-left: 40px; font-weight: normal; text-indent: -16px;">Sets the name of the monitor which is used as a data source for the steady state detection. <span lang="EN-US" xml:lang="EN-US">This setting</span> will be ignored when steady state detection is disabled.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">SteadyStateDetectionFilterStartCondition (<span style="font-weight: normal;"><a href="../common_vbageneral/common_general_double.htm" id="a42" style="font-weight: normal;" name="a42">double</a> &#160;</span>filterStartCondition)</p>
+<p class="VBA-Heading-Method" style="margin-left: 40px; font-weight: normal; text-indent: -16px;">Specifies the initial value used &#160;by the filter algorithm applied for the steady state detection. <span lang="EN-US" xml:lang="EN-US">This setting</span> will be ignored when steady state detection is disabled.</p>
+<p class="vba-text-indent">&#160;</p>
+<p class="VBA-Heading-Method">SteadyStateDetectionFilterTimeConstant (<span style="font-weight: normal;"><a href="../common_vbageneral/common_general_double.htm" id="a421" style="font-weight: normal;" name="a421">double</a> &#160;</span>filterTimeConstant)</p>
+<p class="VBA-Heading-Method" style="margin-left: 40px; font-weight: normal; text-indent: -16px;">Specifies the value of a filter time constant. <span lang="EN-US" xml:lang="EN-US">This setting</span> will be ignored when steady state detection is disabled.</p>
+<p class="vba-text-indent">&#160;</p>
+<p class="VBA-Heading-Method">UseDistributedComputing(<a href="../common_vbageneral/common_general_bool_data_type.htm" id="a19" style="font-weight: normal;" name="a19">bool</a> &#160;<span style="font-style: italic;"><i>useDC</i></span>)</p>
+<p class="VBA-Text-Indent"><span lang="EN-US" xml:lang="EN-US">Enables or disables distributed computing.</span></p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">UseMaxNumberOfThreads(<a href="../common_vbageneral/common_general_bool_data_type.htm" id="a6" style="font-weight: normal;" name="a6">bool</a> &#160;<span style="font-style: italic;"><i>useMaxThreads</i></span>)</p>
+<p class="VBA-Heading-Method" style="margin-left: 40px; font-weight: normal; text-indent: -16px;">By default (<span style="font-style: italic;"><i>useMaxThreads = False</i></span>), the solver is forced to employ a particular number of threads that is defined on the basis of the current processor’s architecture and the number of the available parallel licenses. If activated (<span style="font-style: italic;"><i>useMaxThreads =True</i></span>), the solver can be forced <span lang="EN-US" xml:lang="EN-US">to use less than all available threads (see</span> <span lang="EN-US" xml:lang="EN-US" style="font-style: italic;"><i>MaxNumberOfThreads</i></span><span lang="EN-US" xml:lang="EN-US">).</span></p>
+<p class="VBA-Heading-Method">&#160;</p>
+<p class="VBA-Heading-Method">MaxNumberOfThreads (<a href="../common_vbageneral/common_general_integer.htm" style="font-weight: normal;">int</a> <span style="font-style: italic;"><i>nThreads</i></span>)</p>
+<p class="VBA-Text-Indent"><span lang="EN-US" xml:lang="EN-US">If the solver is to use less than all available threads (cf.</span> <span lang="EN-US" xml:lang="EN-US" style="font-style: italic;"><i>UseMaxNumberOfThreads</i></span><span lang="EN-US" xml:lang="EN-US">), the desired number can be specified here. The default value ”r;8” reflects the possibility of the modern processors architecture.</span></p>
+<p class="VBA-Heading-Method">&#160;</p>
+<p class="VBA-Heading-Method">Start</p>
+<p class="VBA-Text-Indent">Starts the LF time domain solver (MQS) with the prescribed settings and the currently active mesh. Returns 0 if the solver run was successful, an error code &gt;0 otherwise.</p>
+<p class="VBA-Heading-Category"><a name="Default" id="Default"></a>Default Values</p>
+<p class="VBA-Text-Example">Accuracy "1e-6"</p>
+<p class="VBA-Text-Example">MaxNumIter "0"</p>
+<p class="VBA-Text-Example">SimulationDuration "0"</p>
+<p class="VBA-Text-Example">TimeAdaption "True"</p>
+<p class="VBA-Text-Example">TimeStepWidth "1e-2"</p>
+<p class="VBA-Text-Example">TimeStepSamples "100"</p>
+<p class="VBA-Text-Example">TimeStepMin "1e-6"</p>
+<p class="VBA-Text-Example">TimeStepMax "1e-1"</p>
+<p class="VBA-Text-Example">TimeStepInit "1e-2"</p>
+<p class="VBA-Text-Example">TimeStepTolerance "1e-4"</p>
+<p class="VBA-Text-Example">UseDistributedComputing "False"</p>
+<p class="VBA-Text-Example">UseMaxNumberOfThreads "False"</p>
+<p class="VBA-Text-Example">MaxNumberOfThreads "8"</p>
+<p class="VBA-Heading-Category"><a name="Examples" id="Examples"></a>Examples</p>
+<p class="VBA-Text-Example">With MQSTDSolver</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.Reset</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.Accuracy "1e-6"</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.SimulationDuration "10"</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.TimeStepAdaptive "True"</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.TimeStepMin "1e-6"</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.TimeStepMax "1e-1"</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.TimeStepTolerance "1e-4"</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.UseDistributedComputing "False"</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.Start</p>
+<p class="VBA-Text-Example">End With</p>
+<div style="width: 100%; position: relative;" id="footer">
+<p style="border-bottom: Solid 1px #dddddd; text-align: Left; margin-left: 0px; font-family: Arial, sans-serif; line-height: Normal; margin-top: 9px; margin-right: 0px; margin-bottom: 6px; border-left-width: 1px; border-top-width: 1px; border-right-width: 1px;"><span style="text-align: Left; font-family: Arial, sans-serif; line-height: Normal;">&#160;</span></p>
+<table cellspacing="0" width="100%">
+<col style="width: 50%;" />
+<col style="width: 50%;" />
+<tr>
+<td style="vertical-align: Top;"><span style="font-family: Arial, sans-serif; line-height: Normal; font-size: 8pt;"><font size="1" style="font-size:8pt;">CST Studio Suite 2026</font></span></td>
+<td style="vertical-align: Top;">
+<p style="text-align: right;"><img src="../3ds.png" alt="" style="border: none;" border="0" /></p>
+</td>
+</tr>
+</table>
+<p>&#160;</p>
+</div>
+<script type="text/javascript" language="javascript1.2">
+//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+        writeIntopicBar(0);
+
+
+highlightSearch();
+//-->
+//]]>
+</script>
+</body>
+</html>

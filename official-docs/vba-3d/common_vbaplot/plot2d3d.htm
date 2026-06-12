@@ -1,0 +1,453 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="Adobe RoboHelp 11" />
+<title>Plot2D3D Object</title>
+<link rel="StyleSheet" href="../online_help_vba.css" type="text/css" />
+<style type="text/css">
+/*<![CDATA[*/
+<!--
+body { border-bottom-style:None; }
+-->
+/*]]>*/
+</style>
+
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+        origWidth = innerWidth;
+        origHeight = innerHeight;
+        onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+/*<![CDATA[*/
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+-->
+/*]]>*/
+</style>
+
+<script type="text/javascript" language="javascript1.2" src="../whmsg.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript" src="../whver.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript1.2" src="../whutils.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript1.2" src="../whproxy.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript1.2" src="../whlang.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript1.2" src="../whtopic.js" charset="utf-8">
+</script>
+</head>
+<body>
+<script type="text/javascript" language="javascript1.2">
+//<![CDATA[
+<!--
+if (window.gbWhTopic)
+{
+        var strUrl = document.location.href;
+        var bc = 0;
+        var n = strUrl.toLowerCase().indexOf("bc-");
+        if(n != -1)
+        {
+                document.location.replace(strUrl.substring(0, n));
+                bc = strUrl.substring(n+3);
+        }
+
+        if (window.addTocInfo)
+        {
+        addTocInfo("3D Simulation VBA\nVBA Objects\nPlot\nPlot2D3D");
+
+        }
+        if (window.writeBtnStyle)
+                writeBtnStyle();
+
+        if (window.writeIntopicBar)
+                writeIntopicBar(0);
+
+        
+        document.write("<p style=\"font-family: Tahoma; font-size: 9pt; font-weight: 400;  font-style:normal; color: rgb(0, 0, 0); text-decoration:none; text-align: left\"> ");
+AddMasterBreadcrumbs("../index.htm", "font-family: Tahoma; font-size: 9pt; font-weight: 400;  font-style:normal; color: rgb(0, 0, 0); text-decoration:none; text-align: left", "|", "Home", "../special_vbaobjects/special_vbaobjects_vbaobjects.htm");
+document.write("<a style=\"font-family: Tahoma; font-size: 9pt; font-weight: 400;  font-style:normal; color: rgb(0, 0, 0); text-decoration:none; text-align: left\" href=\"../special_vbaobjects/special_vbaobjects_vbaobjects.htm\">3D Simulation VBA<\/a> | <a style=\"font-family: Tahoma; font-size: 9pt; font-weight: 400;  font-style:normal; color: rgb(0, 0, 0); text-decoration:none; text-align: left\" href=\"../special_vbaobjects/special_vbaobjects_vbaobjects.htm\">VBA Objects<\/a> | <a style=\"font-family: Tahoma; font-size: 9pt; font-weight: 400;  font-style:normal; color: rgb(0, 0, 0); text-decoration:none; text-align: left\" href=\"common_vbaplot_plot_object.htm\">Plot<\/a> | Plot2D3D<\/p>");
+
+}
+else
+        if (window.gbIE4)
+                document.location.reload();
+
+onLoadHandler = function()
+{
+  if (window.setRelStartPage)
+        {
+        setTimeout("setRelStartPage('../index.htm');", 1)
+
+    setTimeout("UpdateBreadCrumbsMarker();", 1);
+        }
+}
+
+if (window.addEventListener){  
+        window.addEventListener('load', onLoadHandler, false);   
+} else if (window.attachEvent){  
+        window.attachEvent('onload', onLoadHandler);  
+}
+
+function onSetStartPage()
+{
+  autoSync(1);
+  sendSyncInfo();
+  sendAveInfoOut();
+}
+//-->
+//]]>
+</script><script type="text/javascript" src="../ehlpdhtm.js" language="JavaScript1.2">
+</script>
+<table cellspacing="0" width="100%">
+<col style="width: 50%;" />
+<col style="width: 50%;" />
+<tr>
+<td style="vertical-align: middle; padding-top: 5px; padding-bottom: 5px;">
+<p style="margin-top: 0px; margin-bottom: 0px;"><img src="../3ds.png" alt="" style="border: none;" border="0" /></p>
+</td>
+<td style="vertical-align: middle;">
+<p style="text-align: right;"><a href="https://www.3ds.com/products-services/3dexperience/" target="_blank"><img src="../3dexp.png" alt="" style="border: none;" width="32" height="32" border="0" /></a></p>
+</td>
+</tr>
+</table>
+<h1>Plot2D3D Object</h1>
+<p class="VBA-Text">This object allows to access different plot settings of the current 2D/3D Plot.</p>
+<ul>
+<li class="p-VBA-Index-Category">
+<p class="VBA-Index-Category"><a href="#General">General</a></p>
+</li>
+<li class="p-VBA-Index-Category">
+<p class="VBA-Index-Category"><a href="#Scaling">Scaling</a></p>
+</li>
+<li class="p-VBA-Index-Category">
+<p class="VBA-Index-Category"><a href="#Ticking">Ticking</a></p>
+</li>
+<li class="p-VBA-Index-Category">
+<p class="VBA-Index-Category"><a href="#Clamping">Special Clamping</a></p>
+</li>
+<li class="p-VBA-Index-Category">
+<p class="VBA-Index-Category"><a href="#Animation">Animation Control</a></p>
+</li>
+<li class="p-VBA-Index-Category">
+<p class="VBA-Index-Category"><a href="#CrossSection">Cross Section</a></p>
+</li>
+<li class="p-VBA-Index-Category">
+<p class="VBA-Index-Category"><a href="#Drawings">Drawings</a></p>
+</li>
+</ul>
+<p class="VBA-Heading-Category"><a name="General" id="General"></a>General</p>
+<p class="VBA-Heading-Method">SetStructureTransparent ( <a href="../common_vbageneral/common_general_bool_data_type.htm" id="a8" style="font-weight: normal; font-style: normal;" name="a8">bool</a> <span style="font-style: italic;"><i>flag</i></span> )</p>
+<p class="VBA-Text-Indent">Plots the structure transparent.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">SetHideRepetitions ( <a href="../common_vbageneral/common_general_bool_data_type.htm" id="a8" style="font-weight: normal; font-style: normal;" name="a8">bool</a> <span style="font-style: italic;"><i>flag</i></span> )</p>
+<p class="VBA-Text-Indent">Don't show any repetitions of models using any kind of symmetry, e.g. symmetry planes, rotational symmetry, unit cell, etc. Instead only show that partition of the simulation domain that has been solved by the solver. Surface plots of Hex mesh results will ignore this setting though. Field evaluation in post-processing (like "Evaluate field in arbitrary coordinates", "Evaluate Field on Curve/Face") and "Post-Processing -&gt; Import/Export -&gt; Plot Data (ASCII)" will return zero valued results outside the simulated domain, when <span style="font-style: italic;"><i>Hide repetitions</i></span> is activated. Except for I-Solver results and Surface Currents for hex based results.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">ExportImage ( <a href="../common_vbageneral/common_general_string.htm" id="a641" style="font-weight: normal; font-style: normal;" name="a641">string</a> <span style="font-style: italic;"><i>filename,</i></span> <a href="../common_vbageneral/common_general_long.htm" id="a231" name="a231"><span style="font-weight: normal;">long</span></a> <span style="font-style: italic;"><i>width</i></span>, <a href="../common_vbageneral/common_general_long.htm" id="a251" name="a251"><span style="font-weight: normal;">long</span></a> <span style="font-style: italic;"><i>height</i></span> )</p>
+<p class="VBA-Text-Indent">Creates a bitmap file of the current plot with the specified size. The string filename is expected to be an absolute file path.</p>
+<p class="VBA-Heading-Category"><a name="Scaling" id="Scaling"></a>Scaling</p>
+<p class="VBA-Heading-Method">SetScalingMode ( <a href="../common_vbageneral/common_general_enum.htm" id="a322" style="font-weight: normal; font-style: normal;" name="a322">enum</a> <span style="font-style: italic;"><i>mode</i></span> )</p>
+<p class="VBA-Text-Indent">Sets the scaling mode.</p>
+<table style="vertical-align: top; margin-left: 24px;" cellspacing="0" width="90%">
+<col style="width: 22.499%;" />
+<col style="width: 77.501%;" />
+<tr style="vertical-align: top;">
+<td style="border: Solid 1px #000000; width: 22.499%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text"><a href="../common_vbageneral/common_general_enum.htm" id="a81" style="font-weight: normal; font-style: normal;" name="a81">enum</a> <span style="font-weight: bold; font-style: italic;"><i>mode</i></span></p>
+</td>
+<td style="border-top: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 77.501%; padding-right: 10px; padding-left: 10px;">
+<p style="font-weight: bold;">scaling</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 22.499%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text">"linear" (default)</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 77.501%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text">linear scaling</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 22.499%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text">"log"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 77.501%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text">logarithmic color scaling</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 22.499%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text">"decibel"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 77.501%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text">dB scaling mode</p>
+</td>
+</tr>
+</table>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">SetClampAutoRange ( <a href="../common_vbageneral/common_general_bool_data_type.htm" id="a8" style="font-weight: normal; font-style: normal;" name="a8">bool</a> <span style="font-style: italic;"><i>on</i></span> )</p>
+<p class="VBA-Text-Indent">This method enables or disables auto-scaling of the color ramp. If <span style="font-style: italic;"><i>on</i></span> is True (default) the color ramp is auto-scaled to the maximum data range. Otherwise the range is defined by the <span style="font-weight: bold;">SetClampRange</span> settings.</p>
+<p class="VBA-Heading-Method">&#160;</p>
+<p class="VBA-Heading-Method">SetClampRange ( <a href="../common_vbageneral/common_general_double.htm" style="font-weight: normal;">double</a> <span style="font-style: italic;"><i>min</i></span>, <a href="../common_vbageneral/common_general_double.htm" style="font-weight: normal;">double</a> <span style="font-style: italic;"><i>max</i></span> )</p>
+<p class="VBA-Text-Indent">Specifies the data range for the color ramp scale. This method automatically turns the <span style="font-weight: bold;">SetClampAutoRange</span> switch off.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">SetLogStrength ( <a href="../common_vbageneral/common_general_double.htm" style="font-weight: normal;">double</a> <span style="font-style: italic;"><i>strength</i></span> )</p>
+<p class="VBA-Text-Indent">Sets the log strength if the log scaling mode is active. Values from &gt;1.0 to 100000 are allowed.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">SetdBRange ( <a href="../common_vbageneral/common_general_double.htm" style="font-weight: normal;">double</a> <span style="font-style: italic;"><i>range</i></span> )</p>
+<p class="VBA-Text-Indent">Sets the dB range used in the dB scaling mode.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">GetLogarithmicFactor <a href="../common_vbageneral/common_general_double.htm" id="a221" style="font-weight: normal;" name="a221">double</a></p>
+<p class="VBA-Text-Indent">Returns the logarithmic factor of selected result. This factor is used for dB scaling.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p style="font-weight: bold;">ResetScaling</p>
+<p class="VBA-Text-Indent">Resets internal scaling related settings to default settings.</p>
+<p class="VBA-Heading-Category"><a name="Ticking" id="Ticking"></a>Ticking</p>
+<p class="VBA-Heading-Method">SetTickMode ( <a href="../common_vbageneral/common_general_enum.htm" id="a32211" style="font-weight: normal; font-style: normal;" name="a32211">enum</a> <span style="font-style: italic;"><i>mode</i></span> )</p>
+<p class="VBA-Text-Indent">This option specifies how to distribute ticks on the color ramp range.</p>
+<table style="vertical-align: top; margin-left: 24px;" cellspacing="0" width="90%">
+<col style="width: 22.499%;" />
+<col style="width: 77.501%;" />
+<tr style="vertical-align: top;">
+<td style="border: Solid 1px #000000; width: 22.499%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text"><a href="../common_vbageneral/common_general_enum.htm" id="a8111" style="font-weight: normal; font-style: normal;" name="a8111">enum</a> <span style="font-weight: bold; font-style: italic;"><i>mode</i></span></p>
+</td>
+<td style="border-top: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 77.501%; padding-right: 10px; padding-left: 10px;">
+<p style="font-weight: bold;">distribution</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 22.499%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text">"auto" (default)</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 77.501%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text">automatic, using round values</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 22.499%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text">"fixedcount"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 77.501%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text">equidistant, using a given tick count (cf. SetNumberOfContourValues)</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 22.499%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text">"fixedstep"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 77.501%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text">equidistant, using a given tick step size(cf. SetStepSize)</p>
+</td>
+</tr>
+</table>
+<p class="VBA-Heading-Method">&#160;</p>
+<p class="VBA-Heading-Method">SetNumberOfContourValues ( <a href="../common_vbageneral/common_general_long.htm" id="a251" style="font-weight: normal; font-style: normal;" name="a251">long</a> <span style="font-style: italic;"><i>number</i></span> )</p>
+<p class="VBA-Text-Indent">Changes the number of contour values used in "fixedcount" mode. The number must be greater 2, numbers greater 99 are not recommended for normal use. A higher value results in a smoother coloring.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">SetStepSize (&#160;<a href="../common_vbageneral/common_general_double.htm" style="font-weight: normal;">double</a> <span style="font-style: italic;"><i>stepsize</i></span> )</p>
+<p class="VBA-Text-Indent">Changes the contour value step size used in "fixedstep" mode.&#160;A smaller value results in a smoother coloring.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">DrawContourLines ( <a href="../common_vbageneral/common_general_bool_data_type.htm" id="a7" style="font-weight: normal; font-style: normal;" name="a7">bool</a> <span style="font-style: italic;"><i>switch</i></span> )</p>
+<p class="VBA-Text-Indent">Outline the contour values with black lines between the color steps. Not available in "auto" mode.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">Banding ( <a href="../common_vbageneral/common_general_bool_data_type.htm" id="a71" style="font-weight: normal; font-style: normal;" name="a71">bool</a> <span style="font-style: italic;"><i>switch</i></span> )</p>
+<p class="VBA-Text-Indent">Specify whether to use a banded or continuous color map. Not available in "auto" mode.</p>
+<p class="VBA-Heading-Category"><a name="Clamping" id="Clamping"></a>Special Clamping</p>
+<p class="VBA-Heading-Method">SetClampMode ( <a href="../common_vbageneral/common_general_enum.htm" id="a3221" style="font-weight: normal; font-style: normal;" name="a3221">enum</a> <span style="font-style: italic;"><i>mode</i></span> )</p>
+<p class="VBA-Text-Indent">This option specifies which data values shall be skipped from visualization.</p>
+<table style="vertical-align: top; margin-left: 24px;" cellspacing="0" width="90%">
+<col style="width: 22.499%;" />
+<col style="width: 77.501%;" />
+<tr style="vertical-align: top;">
+<td style="border: Solid 1px #000000; width: 22.499%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text"><a href="../common_vbageneral/common_general_enum.htm" id="a811" style="font-weight: normal; font-style: normal;" name="a811">enum</a> <span style="font-weight: bold; font-style: italic;"><i>mode</i></span></p>
+</td>
+<td style="border-top: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 77.501%; padding-right: 10px; padding-left: 10px;">
+<p style="font-weight: bold;">Skip values</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 22.499%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text">"clamp" (default)</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 77.501%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text">don't skip any values</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 22.499%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text">"hideoutside"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 77.501%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text">outside clamp range</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 22.499%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text">"hideinside"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 77.501%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text">inside clamp range</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 22.499%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text">"fixedoutside"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 77.501%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text">outside clamp range and color them in a fixed color</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 22.499%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text">"fixedinside"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 77.501%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text">inside clamp range and color them in a fixed color</p>
+</td>
+</tr>
+</table>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">SetClampColor (&#160;<a href="../common_vbageneral/common_general_double.htm" id="a28" style="font-weight: normal; font-style: normal;" name="a28">double</a> <span style="font-style: italic;"><i>red,</i></span> <a href="../common_vbageneral/common_general_double.htm" id="a28" style="font-weight: normal; font-style: normal;" name="a28">double</a> <span style="font-style: italic;"><i>green,</i></span> <a href="../common_vbageneral/common_general_double.htm" id="a28" style="font-weight: normal; font-style: normal;" name="a28">double</a> <span style="font-style: italic;"><i>blue</i></span> )</p>
+<p class="VBA-Text-Indent">Set user-defined color of the clamp modes "fixedoutside" and "fixedinside". Each value needs to be in the range [0.0, 1.0].</p>
+<p class="VBA-Heading-Category"><a name="Animation" id="Animation"></a>Animation Control</p>
+<p class="VBA-Heading-Method">GetDomain <a href="../common_vbageneral/common_general_enum.htm" id="a24" style="font-weight: normal;" name="a24">enum</a></p>
+<p class="VBA-Text-Indent">Returns the domain of the monitor used, return code can have the following values:</p>
+<table style="vertical-align: top; margin-left: 24px;" cellspacing="0" width="90%">
+<col style="width: 12.656%;" />
+<col style="width: 87.344%;" />
+<tr style="vertical-align: top;">
+<td style="border: Solid 1px #000000; width: 12.656%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text">"frequency"</p>
+</td>
+<td style="border-top: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 87.344%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text">The plot is based on recordings of a frequency domain monitor.</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 12.656%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text">"time"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 87.344%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text">The plot is based on recordings of a time domain monitor.</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 12.656%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text">"static"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 87.344%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text">The plot is based on recordings of a static monitor.</p>
+</td>
+</tr>
+</table>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">GetNumberOfSamples <a href="../common_vbageneral/common_general_long.htm" id="a38" style="font-weight: normal;" name="a38">long</a></p>
+<p class="VBA-Text-Indent">Returns the total number of samples if the plot is based on recordings of a time monitor else 0.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">GetTStart <a href="../common_vbageneral/common_general_double.htm" id="a19" style="font-weight: normal;" name="a19">double</a></p>
+<p class="VBA-Text-Indent">Returns the start time of recording if the plot is based on recordings of a time monitor else 0.0.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">GetTEnd <span style="font-weight: normal;"><a href="../common_vbageneral/common_general_double.htm" id="a20" style="font-weight: normal;" name="a20">double</a></span></p>
+<p class="VBA-Text-Indent">Returns the end time of recording if the plot is based on recordings of a time monitor else 0.0.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">GetTStep <a href="../common_vbageneral/common_general_double.htm" id="a21" style="font-weight: normal;" name="a21">double</a></p>
+<p class="VBA-Text-Indent">Returns the time step width of recording if the plot is based on recordings of a time monitor else 0.0.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">SetTime ( <a href="../common_vbageneral/common_general_double.htm" id="a15" style="font-weight: normal;" name="a15">double</a> <span style="font-style: italic;"><i>time</i></span> )</p>
+<p class="VBA-Heading-Method">GetTime <a href="../common_vbageneral/common_general_double.htm" id="a22" style="font-weight: normal;" name="a22">double</a></p>
+<p class="VBA-Text-Indent">Specifies / returns the current &#160;time set of a time monitor plot.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">SetSample ( <a href="../common_vbageneral/common_general_long.htm" id="a16" style="font-weight: normal;" name="a16">long</a> <span style="font-style: italic;"><i>sample</i></span> )</p>
+<p class="VBA-Heading-Method">GetSample <span style="font-weight: normal;"><a href="../common_vbageneral/common_general_long.htm" id="a23" style="font-weight: normal;" name="a23">long</a></span></p>
+<p class="VBA-Text-Indent">Specifies / returns the current time sample number of a time monitor plot.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">PhaseValue ( <span><a href="../common_vbageneral/common_general_double.htm" id="a2" style="font-weight: normal; font-style: normal;" name="a2">double</a></span> <span style="font-style: italic;"><i>phase</i></span> )</p>
+<p class="VBA-Text-Indent">Specifies the phase of to be plotted complex field values.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">PhaseStep ( <span><a href="../common_vbageneral/common_general_double.htm" id="a4" style="font-weight: normal; font-style: normal;" name="a4">double</a></span> <span style="font-style: italic;"><i>step</i></span> )</p>
+<p class="VBA-Text-Indent">Specifies the step width used by phase increment action.</p>
+<p class="VBA-Heading-Category"><a name="CrossSection" id="CrossSection"></a>Cross Section</p>
+<p class="VBA-Heading-Method">DefineCrossSection ( <span style="font-weight: normal;"><a href="../common_vbageneral/common_general_enum.htm" id="a192" style="font-weight: normal;" name="a192">enum</a></span> {0, 1, 2, 3} id, <span style="font-weight: normal;"><a href="../common_vbageneral/common_general_double.htm" id="a12" name="a12">double</a></span> <span style="font-style: italic;"><i>nx,</i></span> <span style="font-weight: normal;"><a href="../common_vbageneral/common_general_double.htm" id="a13" name="a13">double</a></span> <span style="font-style: italic;"><i>ny,</i></span> <span style="font-weight: normal;"><a href="../common_vbageneral/common_general_double.htm" id="a14" name="a14">double</a></span> <span style="font-style: italic;"><i>nz,</i></span> <span style="font-weight: normal;"><a href="../common_vbageneral/common_general_double.htm" id="a15" name="a15">double</a></span> <span style="font-style: italic;"><i>px,</i></span> <span style="font-weight: normal;"><a href="../common_vbageneral/common_general_double.htm" id="a16" name="a16">double</a></span> <span style="font-style: italic;"><i>py,</i></span> <span style="font-weight: normal;"><a href="../common_vbageneral/common_general_double.htm" id="a17" name="a17">double</a></span> <span style="font-style: italic;"><i>pz )</i></span></p>
+<p class="VBA-Text-Indent">Defines position and orientation for one of four available Cross Sections by the normal direction and point on the plane.</p>
+<p class="vba-text-indent" style="font-style: normal;">&#160;</p>
+<p class="VBA-Heading-Method" style="font-style: normal;">ActivateCrossSection ( <span style="font-weight: normal;"><a href="../common_vbageneral/common_general_enum.htm" id="a193" style="font-weight: normal;" name="a193">enum</a></span> {0, 1, 2, 3} id, <a href="../common_vbageneral/common_general_bool_data_type.htm" id="a39" style="font-weight: normal; font-style: normal;" name="a39">bool</a> switch )</p>
+<p class="VBA-Text-Indent" style="font-style: normal;">Activates or deactivates one of four available Cross Sections. After activation, the given Cross Section will automatically be selected for manipulation.</p>
+<p class="VBA-Heading-Method" style="font-style: normal;">&#160;</p>
+<p class="VBA-Heading-Method" style="font-style: normal;">SelectCrossSection ( <span style="font-weight: normal;"><a href="../common_vbageneral/common_general_enum.htm" id="a194" style="font-weight: normal;" name="a194">enum</a></span> {0, 1, 2, 3} id )</p>
+<p class="VBA-Text-Indent" style="font-style: normal;">Selects one of four available Cross Sections for manipulation.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">DefineCutplane ( <span style="font-weight: normal;"><a href="../common_vbageneral/common_general_double.htm" id="a27" name="a27">double</a></span> <span style="font-style: italic;"><i>nx,</i></span> <span style="font-weight: normal;"><a href="../common_vbageneral/common_general_double.htm" id="a28" name="a28">double</a></span> <span style="font-style: italic;"><i>ny,</i></span> <span style="font-weight: normal;"><a href="../common_vbageneral/common_general_double.htm" id="a29" name="a29">double</a></span> <span style="font-style: italic;"><i>nz,</i></span> <span style="font-weight: normal;"><a href="../common_vbageneral/common_general_double.htm" id="a32" name="a32">double</a></span> <span style="font-style: italic;"><i>px,</i></span> <span style="font-weight: normal;"><a href="../common_vbageneral/common_general_double.htm" id="a34" name="a34">double</a></span> <span style="font-style: italic;"><i>py,</i></span> <span style="font-weight: normal;"><a href="../common_vbageneral/common_general_double.htm" id="a35" name="a35">double</a></span> <span style="font-style: italic;"><i>pz )</i></span></p>
+<p class="VBA-Text-Indent">Defines the cutplane by the normal direction and point on the plane.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method" style="font-style: normal;">ActivateCutplane ( <a href="../common_vbageneral/common_general_bool_data_type.htm" id="a7" style="font-weight: normal; font-style: normal;" name="a7">bool</a> switch )</p>
+<p class="VBA-Text-Indent" style="font-style: normal;">A cutplane can be defined to look inside a structure. This cutplane divides the structure into two parts, while only one of them will be plotted.</p>
+<p class="VBA-Heading-Category"><a name="Drawings" id="Drawings"></a>Drawings</p>
+<p class="VBA-Heading-Method">AddLines ( <a href="../common_vbageneral/common_general_variant.htm" id="a511" style="font-weight: normal; font-style: normal;" name="a511">variant</a> <span style="font-style: italic;"><i>dArray</i></span> )</p>
+<p class="VBA-Text-Indent">Add line drawing to the 2D/3D result plot.</p>
+<p class="VBA-Text-Indent">The array needs to start with index zero and is expected to contain a series of 3D points consisting of x,y,z-coordinates, where each pair of points defines a line segment (e.g. x0,y0,z0, x1,y1,z1, x2,y2,z2, x3,y3,z3 will produce two line segments p0-p1 and p2-p3).</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">DeleteLines</p>
+<p class="VBA-Text-Indent">Remove line drawing from the 2D/3D result plot.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">AddPoints ( <a href="../common_vbageneral/common_general_variant.htm" id="a511" style="font-weight: normal; font-style: normal;" name="a511">variant</a> <span style="font-style: italic;"><i>dArray</i></span> )</p>
+<p class="VBA-Text-Indent">Add marker points to the 2D/3D result plot.</p>
+<p class="VBA-Text-Indent">The array needs to start with index zero and is expected to contain a series of 3D points consisting of x,y,z-coordinates, where each point defines a marker position.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">DeletePoints</p>
+<p class="VBA-Text-Indent">Remove marker points from the 2D/3D result plot.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">SetDrawColor (&#160;<a href="../common_vbageneral/common_general_double.htm" id="a28" style="font-weight: normal; font-style: normal;" name="a28">double</a> <span style="font-style: italic;"><i>red,</i></span> <a href="../common_vbageneral/common_general_double.htm" id="a28" style="font-weight: normal; font-style: normal;" name="a28">double</a> <span style="font-style: italic;"><i>green,</i></span> <a href="../common_vbageneral/common_general_double.htm" id="a28" style="font-weight: normal; font-style: normal;" name="a28">double</a> <span style="font-style: italic;"><i>blue</i></span> )</p>
+<p class="VBA-Text-Indent">Set color of line drawing and marker points. Each value needs to be in the range [0.0, 1.0].</p>
+<p class="VBA-Text-Indent" style="font-style: normal;">&#160;</p>
+<p class="VBA-Heading-Method">SetDrawThickness ( <a href="../common_vbageneral/common_general_long.htm" id="a251" style="font-weight: normal; font-style: normal;" name="a251">long</a> <span style="font-style: italic;"><i>thickness</i></span> )</p>
+<p class="VBA-Text-Indent">Set thickness of line drawing and marker points.</p>
+<p class="VBA-Text-Indent" style="font-style: normal;">&#160;</p>
+<?rh-p style="margin-bottom: 0px; text-align: Right; margin-left: 18px; 
+                 margin-right: 18px; margin-top: 18px;" ?><?rh-p style="margin-bottom: 0px; text-align: Right; margin-left: 18px; 
+                 margin-right: 18px; margin-top: 18px;" ?>
+<div style="width: 100%; position: relative;" id="footer">
+<p style="border-bottom: Solid 1px #dddddd; text-align: Left; margin-left: 0px; font-family: Arial, sans-serif; line-height: Normal; margin-top: 9px; margin-right: 0px; margin-bottom: 6px; border-left-width: 1px; border-top-width: 1px; border-right-width: 1px;"><span style="text-align: Left; font-family: Arial, sans-serif; line-height: Normal;">&#160;</span></p>
+<table cellspacing="0" width="100%">
+<col style="width: 50%;" />
+<col style="width: 50%;" />
+<tr>
+<td style="vertical-align: Top;"><span style="font-family: Arial, sans-serif; line-height: Normal; font-size: 8pt;"><font size="1" style="font-size:8pt;">CST Studio Suite 2026</font></span></td>
+<td style="vertical-align: Top;">
+<p style="text-align: right;">&#160;</p>
+</td>
+</tr>
+</table>
+<p>&#160;</p>
+</div>
+<script type="text/javascript" language="javascript1.2">
+//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+        writeIntopicBar(0);
+
+
+highlightSearch();
+//-->
+//]]>
+</script>
+</body>
+</html>

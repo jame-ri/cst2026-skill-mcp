@@ -1,0 +1,4 @@
+refdes,partname,type,R,L,C
+C1,Cap100,C,1,2,3u
+R1,ResXY,R,123,4p,5u
+TH1,Inductiveness,L,1m,1.3n,5e-12

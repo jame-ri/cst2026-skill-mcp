@@ -1,0 +1,8 @@
+# Example Codex MCP configuration snippet.
+#
+# Add this block to the Codex config that manages local MCP servers, then
+# restart the Codex session so the new server appears in the available tools.
+
+[mcp_servers.cst2026]
+command = "D:\\cst2026-mcp\\run-cst2026-mcp.cmd"
+args = []

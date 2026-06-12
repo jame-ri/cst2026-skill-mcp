@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="Adobe RoboHelp 11" />
+<title>Dimension</title>
+<link rel="StyleSheet" href="../online_help_vba.css" type="text/css" />
+<style type="text/css">
+/*<![CDATA[*/
+<!--
+body { border-bottom-style:None; }
+-->
+/*]]>*/
+</style>
+
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+        origWidth = innerWidth;
+        origHeight = innerHeight;
+        onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+/*<![CDATA[*/
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+-->
+/*]]>*/
+</style>
+
+<script type="text/javascript" language="javascript1.2" src="../whmsg.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript" src="../whver.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript1.2" src="../whutils.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript1.2" src="../whproxy.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript1.2" src="../whlang.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript1.2" src="../whtopic.js" charset="utf-8">
+</script>
+</head>
+<body>
+<script type="text/javascript" language="javascript1.2">
+//<![CDATA[
+<!--
+if (window.gbWhTopic)
+{
+        var strUrl = document.location.href;
+        var bc = 0;
+        var n = strUrl.toLowerCase().indexOf("bc-");
+        if(n != -1)
+        {
+                document.location.replace(strUrl.substring(0, n));
+                bc = strUrl.substring(n+3);
+        }
+
+        if (window.addTocInfo)
+        {
+        addTocInfo("3D Simulation VBA\nVBA Objects\nDimensions\nDimension");
+
+        }
+        if (window.writeBtnStyle)
+                writeBtnStyle();
+
+        if (window.writeIntopicBar)
+                writeIntopicBar(0);
+
+        
+        document.write("<p style=\"font-family: Tahoma; font-size: 9pt; font-weight: 400;  font-style:normal; color: rgb(0, 0, 0); text-decoration:none; text-align: left\"> ");
+AddMasterBreadcrumbs("../index.htm", "font-family: Tahoma; font-size: 9pt; font-weight: 400;  font-style:normal; color: rgb(0, 0, 0); text-decoration:none; text-align: left", "|", "Home", "../special_vbaobjects/special_vbaobjects_vbaobjects.htm");
+document.write("<a style=\"font-family: Tahoma; font-size: 9pt; font-weight: 400;  font-style:normal; color: rgb(0, 0, 0); text-decoration:none; text-align: left\" href=\"../special_vbaobjects/special_vbaobjects_vbaobjects.htm\">3D Simulation VBA<\/a> | <a style=\"font-family: Tahoma; font-size: 9pt; font-weight: 400;  font-style:normal; color: rgb(0, 0, 0); text-decoration:none; text-align: left\" href=\"../special_vbaobjects/special_vbaobjects_vbaobjects.htm\">VBA Objects<\/a> | <a style=\"font-family: Tahoma; font-size: 9pt; font-weight: 400;  font-style:normal; color: rgb(0, 0, 0); text-decoration:none; text-align: left\" href=\"dimension.htm\">Dimensions<\/a> | Dimension<\/p>");
+
+}
+else
+        if (window.gbIE4)
+                document.location.reload();
+
+onLoadHandler = function()
+{
+  if (window.setRelStartPage)
+        {
+        setTimeout("setRelStartPage('../index.htm');", 1)
+
+    setTimeout("UpdateBreadCrumbsMarker();", 1);
+        }
+}
+
+if (window.addEventListener){  
+        window.addEventListener('load', onLoadHandler, false);   
+} else if (window.attachEvent){  
+        window.attachEvent('onload', onLoadHandler);  
+}
+
+function onSetStartPage()
+{
+  autoSync(1);
+  sendSyncInfo();
+  sendAveInfoOut();
+}
+//-->
+//]]>
+</script><script type="text/javascript" src="../ehlpdhtm.js" language="JavaScript1.2">
+</script>
+<table cellspacing="0" width="100%">
+<col style="width: 50%;" />
+<col style="width: 50%;" />
+<tr>
+<td style="vertical-align: middle; padding-top: 5px; padding-bottom: 5px;">
+<p style="margin-top: 0px; margin-bottom: 0px;"><img src="../3ds.png" alt="" style="border: none;" border="0" /></p>
+</td>
+<td style="vertical-align: middle;">
+<p style="text-align: right;"><a href="https://www.3ds.com/products-services/3dexperience/" target="_blank"><img src="../3dexp.png" alt="" style="border: none;" width="32" height="32" border="0" /></a></p>
+</td>
+</tr>
+</table>
+<h1>Dimension Object</h1>
+<p class="VBA-Text">Can be used to create and change dimensions.</p>
+<ul>
+<li class="p-VBA-Index-Category">
+<p class="VBA-Index-Category"><a href="#Methods">Methods</a></p>
+</li>
+<li class="p-VBA-Index-Category">
+<p class="VBA-Index-Category"><a href="#Default" style="font-weight: bold;">Default Settings</a></p>
+</li>
+<li class="p-VBA-Index-Category">
+<p class="VBA-Index-Category"><a href="#Example">Example</a></p>
+</li>
+</ul>
+<p class="VBA-Heading-Category"><a name="Methods" id="Methods"></a>Methods</p>
+<p class="VBA-Heading-Method">Reset</p>
+<p class="VBA-Text-Indent">Resets the default values.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">UsePicks ( <a href="../common_vbageneral/common_general_bool_data_type.htm" id="a11" name="a11"><span style="font-weight: normal;">bool</span></a> <span style="font-style: italic;"><i>use</i></span> )</p>
+<p class="VBA-Text-Indent">Deprecated and will not be used anymore</p>
+<p class="vba-text-indent">&#160;</p>
+<p class="VBA-Heading-Method">CreationType( <span><a href="../common_vbageneral/common_general_string.htm" id="a122" style="font-weight: normal; font-style: normal;" name="a122">string</a></span> &#160;type )</p>
+<p class="VBA-Text-Indent">Indicates the type of the components involved to create the dimension. Can currently only contain "cbls" (Cable Studio) and "picks".</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">SetID ( <span><a href="../common_vbageneral/common_general_string.htm" id="a1" style="font-weight: normal; font-style: normal;" name="a1">string</a></span> &#160;id )</p>
+<p class="VBA-Text-Indent">The id of the next dimension to be created. Creation for duplicated entries will fail. The ID need to be a positive integer value but can contain a valid expression.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">SetType ( <span><a href="../common_vbageneral/common_general_string.htm" id="a12" style="font-weight: normal; font-style: normal;" name="a12">string</a></span> &#160;type )</p>
+<p class="VBA-Text-Indent">Must be either "Distance" or "Angular". No other values are allowed.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">SetOrientation ( <span><a href="../common_vbageneral/common_general_string.htm" id="a121" style="font-weight: normal; font-style: normal;" name="a121">string</a></span> &#160;orientation )</p>
+<p class="VBA-Text-Indent">Only available for distance dimensions. Must be one of the following: Smart Mode, Face, X-Axis, Y-Axis, Z-Axis, Force-X, Force-Y, Force-Z, View. &#160;&#160;</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">SetOrientationFace ( <span><a href="../common_vbageneral/common_general_string.htm" id="a1211" style="font-weight: normal; font-style: normal;" name="a1211">string</a></span> &#160;faceID )</p>
+<p class="VBA-Text-Indent">Only needed if the orientation is "Face". Need to be a valid pick-id for a solid the dimension is attached to..</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">SetDistance ( <span><a href="../common_vbageneral/common_general_string.htm" id="a5" style="font-weight: normal; font-style: normal;" name="a5">string</a></span> &#160;distance )</p>
+<p class="VBA-Text-Indent">Set the distance from the dimension orthogonal to its origin (vector from start to end of the picked edge or between the two picked points) for the next dimension to be created. The distance need to be a double value but can contain a valid expression.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">SetDistance ( <span><a href="../common_vbageneral/common_general_string.htm" id="a51" style="font-weight: normal; font-style: normal;" name="a51">string</a></span> &#160;distance )</p>
+<p class="VBA-Text-Indent">Set the distance from the dimension orthogonal to its origin (vector from start to end of the picked edge or between the two picked points) for the next dimension to be created. The distance need to be a double value but can contain a valid expression.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">SetViewVector ( <a href="../common_vbageneral/common_general_string.htm" id="a6" style="font-weight: normal; font-style: normal;" name="a6">string</a> &#160;xvalue, <a href="../common_vbageneral/common_general_string.htm" id="a7" style="font-weight: normal; font-style: normal;" name="a7">string</a> &#160;yvalue, <a href="../common_vbageneral/common_general_string.htm" id="a8" style="font-weight: normal; font-style: normal;" name="a8">string</a> &#160;zvalue )</p>
+<p class="VBA-Text-Indent">Set the view vector for the next dimension to be created. The view vector is used to compute the orientation of the dimension. If no faces attached to the current picks the orientation is the cross-product of the view vector and the vector between the picks. Otherwise the direction is orthogonal to the normal of the face that is next to the viewing vector. All parameters need to be double values but can contain a valid expression.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">SetLabelPattern ( <a href="../common_vbageneral/common_general_string.htm" id="a511" style="font-weight: normal; font-style: normal;" name="a511">string</a> &#160;label )</p>
+<p class="VBA-Text-Indent">Defines a pattern for the dimension to be created/modified. "%v" is here a placeholder for the dimension value, "%e" for the dimension unit and expressions can be enclosed in the smaller "&lt;" and bigger "&gt;" symbol.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">SetConnectedElement1( <a href="../common_vbageneral/common_general_global_name_data_type.htm" id="a5111" style="font-weight: normal; font-style: normal;" name="a5111">global name</a> name)</p>
+<p class="VBA-Text-Indent"><a href="../common_vbageneral/common_general_global_names.htm">Global Name</a> for the element the first point is connected to. Can be empty.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">SetConnectedElement2( <a href="../common_vbageneral/common_general_global_name_data_type.htm" id="a51111" style="font-weight: normal; font-style: normal;" name="a51111">global name</a>&#160;name)</p>
+<p class="VBA-Text-Indent"><a href="../common_vbageneral/common_general_global_names.htm">Global Name</a> for the element the second point is connected to. Can be empty and will be ignored for Annotations.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">SetConnectedElement3( <a href="../common_vbageneral/common_general_global_name_data_type.htm" id="a51112" style="font-weight: normal; font-style: normal;" name="a51112">global name</a> name)</p>
+<p class="VBA-Text-Indent"><a href="../common_vbageneral/common_general_global_names.htm">Global Name</a> for the element the third point is connected to. Can be empty and will be ignored for Distance Dimensions and Annotations.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">SetPointRotation( <span><a href="../common_vbageneral/common_general_integer.htm" id="a51131" style="font-weight: normal; font-style: normal;" name="a51131">int</a></span> &#160;rotation)</p>
+<p class="VBA-Text-Indent">Indicator for Angular dimensions which picked point should be used as center point.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">Create</p>
+<p class="VBA-Text-Indent">Creates the dimension with the previously made settings.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">RemoveDimension ( <a href="../common_vbageneral/common_general_string.htm" id="a2" style="font-weight: normal; font-style: normal;" name="a2">string</a> <span style="font-weight: normal;">&#160;</span>id )</p>
+<p class="VBA-Text-Indent">Deletes the specified dimension. The ID need to be a positive integer value but can contain a valid expression.</p>
+<p class="VBA-Heading-Category"><a name="Default" id="Default"></a>Default Settings</p>
+<p class="VBA-Text-Example">UsePicks (true)</p>
+<p class="VBA-Text-Example">SetID ("0")</p>
+<p class="VBA-Text-Example">SetDistance ("1.0")</p>
+<p class="VBA-Text-Example">SetViewVector ("0.0", "1.0", "0.0")</p>
+<p class="VBA-Heading-Category"><a name="Example" id="Example"></a>Example</p>
+<p>With Dimension</p>
+<p>&#160;&#160;&#160;&#160;.UsePicks True</p>
+<p>&#160;&#160;&#160;&#160;.SetID "1"</p>
+<p>&#160;&#160;&#160;&#160;.SetDistance "2.0"</p>
+<p>&#160;&#160;&#160;&#160;.SetViewVector "-1.0", "0", "0"</p>
+<p>&#160;&#160;&#160;&#160;.SetLabelPattern "%v%e"</p>
+<p>&#160;&#160;&#160;&#160;.Create</p>
+<p>End With</p>
+<?rh-p style="margin-bottom: 0px; text-align: Right; margin-left: 18px; 
+                 margin-right: 18px; margin-top: 18px;" ?>
+<div style="width: 100%; position: relative;" id="footer">
+<p style="border-bottom: Solid 1px #dddddd; text-align: Left; margin-left: 0px; font-family: Arial, sans-serif; line-height: Normal; margin-top: 9px; margin-right: 0px; margin-bottom: 6px; border-left-width: 1px; border-top-width: 1px; border-right-width: 1px;"><span style="text-align: Left; font-family: Arial, sans-serif; line-height: Normal;">&#160;</span></p>
+<table cellspacing="0" width="100%">
+<col style="width: 50%;" />
+<col style="width: 50%;" />
+<tr>
+<td style="vertical-align: Top;"><span style="font-family: Arial, sans-serif; line-height: Normal; font-size: 8pt;"><font size="1" style="font-size:8pt;">CST Studio Suite 2026</font></span></td>
+<td style="vertical-align: Top;">
+<p style="text-align: right;">&#160;</p>
+</td>
+</tr>
+</table>
+<p>&#160;</p>
+</div>
+<script type="text/javascript" language="javascript1.2">
+//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+        writeIntopicBar(0);
+
+
+highlightSearch();
+//-->
+//]]>
+</script>
+</body>
+</html>

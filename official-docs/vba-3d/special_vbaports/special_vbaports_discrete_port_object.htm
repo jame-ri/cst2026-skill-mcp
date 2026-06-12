@@ -1,0 +1,299 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="Adobe RoboHelp 11" />
+<title>DiscretePort Object</title>
+<link rel="StyleSheet" href="../online_help_vba.css" type="text/css" />
+<style type="text/css">
+/*<![CDATA[*/
+<!--
+body { border-bottom-style:None; }
+-->
+/*]]>*/
+</style>
+
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+        origWidth = innerWidth;
+        origHeight = innerHeight;
+        onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+/*<![CDATA[*/
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+-->
+/*]]>*/
+</style>
+
+<script type="text/javascript" language="javascript1.2" src="../whmsg.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript" src="../whver.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript1.2" src="../whutils.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript1.2" src="../whproxy.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript1.2" src="../whlang.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript1.2" src="../whtopic.js" charset="utf-8">
+</script>
+</head>
+<body>
+<script type="text/javascript" language="javascript1.2">
+//<![CDATA[
+<!--
+if (window.gbWhTopic)
+{
+        var strUrl = document.location.href;
+        var bc = 0;
+        var n = strUrl.toLowerCase().indexOf("bc-");
+        if(n != -1)
+        {
+                document.location.replace(strUrl.substring(0, n));
+                bc = strUrl.substring(n+3);
+        }
+
+        if (window.addTocInfo)
+        {
+        addTocInfo("3D Simulation VBA\nVBA Objects\nSources and Ports\nHigh Frequency\nDiscretePort");
+
+        }
+        if (window.writeBtnStyle)
+                writeBtnStyle();
+
+        if (window.writeIntopicBar)
+                writeIntopicBar(0);
+
+        
+        document.write("<p style=\"font-family: Tahoma; font-size: 9pt; font-weight: 400;  font-style:normal; color: rgb(0, 0, 0); text-decoration:none; text-align: left\"> ");
+AddMasterBreadcrumbs("../index.htm", "font-family: Tahoma; font-size: 9pt; font-weight: 400;  font-style:normal; color: rgb(0, 0, 0); text-decoration:none; text-align: left", "|", "Home", "../special_vbaobjects/special_vbaobjects_vbaobjects.htm");
+document.write("<a style=\"font-family: Tahoma; font-size: 9pt; font-weight: 400;  font-style:normal; color: rgb(0, 0, 0); text-decoration:none; text-align: left\" href=\"../special_vbaobjects/special_vbaobjects_vbaobjects.htm\">3D Simulation VBA<\/a> | <a style=\"font-family: Tahoma; font-size: 9pt; font-weight: 400;  font-style:normal; color: rgb(0, 0, 0); text-decoration:none; text-align: left\" href=\"../special_vbaobjects/special_vbaobjects_vbaobjects.htm\">VBA Objects<\/a> | <a style=\"font-family: Tahoma; font-size: 9pt; font-weight: 400;  font-style:normal; color: rgb(0, 0, 0); text-decoration:none; text-align: left\" href=\"../special_vbasignals/special_vbasignals_timesignal_object.htm\">Sources and Ports<\/a> | <a style=\"font-family: Tahoma; font-size: 9pt; font-weight: 400;  font-style:normal; color: rgb(0, 0, 0); text-decoration:none; text-align: left\" href=\"../special_vbasignals/special_vbasignals_timesignal_object.htm\">High Frequency<\/a> | DiscretePort<\/p>");
+
+}
+else
+        if (window.gbIE4)
+                document.location.reload();
+
+onLoadHandler = function()
+{
+  if (window.setRelStartPage)
+        {
+        setTimeout("setRelStartPage('../index.htm');", 1)
+
+    setTimeout("UpdateBreadCrumbsMarker();", 1);
+        }
+}
+
+if (window.addEventListener){  
+        window.addEventListener('load', onLoadHandler, false);   
+} else if (window.attachEvent){  
+        window.attachEvent('onload', onLoadHandler);  
+}
+
+function onSetStartPage()
+{
+  autoSync(1);
+  sendSyncInfo();
+  sendAveInfoOut();
+}
+//-->
+//]]>
+</script><script type="text/javascript" src="../ehlpdhtm.js" language="JavaScript1.2">
+</script>
+<table cellspacing="0" width="100%">
+<col style="width: 50%;" />
+<col style="width: 50%;" />
+<tr>
+<td style="vertical-align: middle; padding-top: 5px; padding-bottom: 5px;">
+<p style="margin-top: 0px; margin-bottom: 0px;"><img src="../3ds.png" alt="" style="border: none;" border="0" /></p>
+</td>
+<td style="vertical-align: middle;">
+<p style="text-align: right;"><a href="https://www.3ds.com/products-services/3dexperience/" target="_blank"><img src="../3dexp.png" alt="" style="border: none;" width="32" height="32" border="0" /></a></p>
+</td>
+</tr>
+</table>
+<p class="VBA-Heading-Object">DiscretePort Object</p>
+<p class="VBA-Text">Use this object to define discrete ports. Beside <a href="special_vbaports_port_object.htm">waveguide ports</a> or <a href="special_vbaports_planewave_object.htm">plane waves</a> the discrete ports offers another possibility to feed the calculation domain with power. Three different types of discrete ports are available, considering the excitation as a voltage or current source or as an impedance element which also absorb some power and enables S-parameter calculation.</p>
+<ul>
+<li class="p-VBA-Index-Category">
+<p class="VBA-Index-Category"><a href="#Methods" target="_self">Methods</a></p>
+</li>
+<li class="p-VBA-Index-Category">
+<p class="VBA-Index-Category"><a href="#Defaults">Default Settings</a></p>
+</li>
+<li class="p-VBA-Index-Category">
+<p class="VBA-Index-Category"><a href="#Examples">Example</a></p>
+</li>
+</ul>
+<p class="VBA-Heading-Category"><a name="Methods" id="Methods"></a>Methods</p>
+<p class="VBA-Heading-Method"><span style="font-weight: bold;">Reset</span></p>
+<p class="VBA-Text-Indent">Resets all internal values to their default settings.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method"><span>Create</span></p>
+<p class="VBA-Text-Indent">Creates a new discrete port. All necessary settings have to be made previously.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">Modify</p>
+<p class="VBA-Text-Indent">Modifies an existing discrete port. Only none geometrical settings which were made previously are changed.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">PortNumber ( <a href="../common_vbageneral/common_general_integer.htm" id="a2" style="font-weight: normal; font-style: normal;" name="a2">int</a> <span style="font-style: italic;"><i>portnumber</i></span> )</p>
+<p class="VBA-Text-Indent">Chooses the discrete port by its number.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">Label ( <a href="../common_vbageneral/common_general_string.htm" id="a121" style="font-weight: normal; font-style: normal;" name="a121">string</a> <span style="font-style: italic;"><i>&#160;label</i></span> )</p>
+<p class="VBA-Text-Indent">Sets the label of the discrete port.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">Type ( <a href="../common_vbageneral/common_general_enum.htm" id="a1" style="font-weight: normal; font-style: normal;" name="a1">enum</a> <span style="font-weight: normal;">{"Sparameter", "Voltage", "Current"}</span> <span style="font-style: italic;"><i>porttype</i></span> )</p>
+<p class="VBA-Text-Indent">Defines the type of the discrete port.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">Impedance ( <a href="../common_vbageneral/common_general_double.htm" id="a5" style="font-weight: normal; font-style: normal;" name="a5">double</a> <span style="font-style: italic;"><i>value</i></span> )</p>
+<p class="VBA-Text-Indent">Specifies the input impedance of the discrete port, if it is of type "Sparameter".</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">Voltage ( <a href="../common_vbageneral/common_general_double.htm" id="a6" style="font-weight: normal; font-style: normal;" name="a6">double</a> <span style="font-style: italic;"><i>value</i></span> )</p>
+<p class="VBA-Text-Indent">Specifies the voltage amplitude of the discrete port, if it is of type "Voltage".</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">VoltagePortImpedance ( <a href="../common_vbageneral/common_general_double.htm" id="a71" style="font-weight: normal; font-style: normal;" name="a71">double</a> <span style="font-style: italic;"><i>value</i></span> )</p>
+<p class="VBA-Text-Indent">Specifies the input impedance of the discrete port, if it is of type "Voltage". This command is only supported and considered by the Transient and TLM solver.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">Current ( <a href="../common_vbageneral/common_general_double.htm" id="a7" style="font-weight: normal; font-style: normal;" name="a7">double</a> <span style="font-style: italic;"><i>value</i></span> )</p>
+<p class="VBA-Text-Indent">Specifies the current amplitude of the discrete port, if it is of type "Current".</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">CurrentPortAdmittance( <a href="../common_vbageneral/common_general_double.htm" id="a72" style="font-weight: normal; font-style: normal;" name="a72">double</a> <span style="font-style: italic;"><i>value</i></span> )</p>
+<p class="VBA-Text-Indent">Specifies the input admittance of the discrete port, if it is of type "Current". This command is only supported and considered by the Transient solver.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">Radius ( <a href="../common_vbageneral/common_general_double.htm" id="a29" style="font-weight: normal; font-style: normal;" name="a29">double</a> <span style="font-style: italic;"><i>value</i></span> )</p>
+<p class="VBA-Text-Indent">Specifies a radius for the discrete edge port.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">SetP1 / SetP2 ( <a href="../common_vbageneral/common_general_bool_data_type.htm" id="a21" style="font-weight: normal; font-style: normal;" name="a21">bool</a> <span style="font-style: italic;"><i>picked,</i></span> <a href="../common_vbageneral/common_general_double.htm" id="a25" style="font-weight: normal; font-style: normal;" name="a25">double</a> <span style="font-style: italic;"><i>x,</i></span> <a href="../common_vbageneral/common_general_double.htm" id="a26" style="font-weight: normal; font-style: normal;" name="a26">double</a> <span style="font-style: italic;"><i>y,</i></span> <a href="../common_vbageneral/common_general_double.htm" id="a27" style="font-weight: normal; font-style: normal;" name="a27">double</a> <span style="font-style: italic;"><i>z</i></span> )</p>
+<p class="VBA-Text-Indent">Define the starting / end point of the discrete port. If <span style="font-style: italic;"><i>picked</i></span> is True, the last or second-to-last picked point will be used for the coordinates of the start / end point. Otherwise the point will be defined by <span style="font-style: italic;"><i>x / y / z</i></span>.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">InvertDirection ( <a href="../common_vbageneral/common_general_bool_data_type.htm" id="a11" style="font-weight: normal; font-style: normal;" name="a11">bool</a> <span style="font-style: italic;"><i>switch</i></span> )</p>
+<p class="VBA-Text-Indent">Set <span style="font-style: italic;"><i>switch</i></span> to True to reverse the orientation of the discrete port. This swaps the definitions of SetP1 and SetP2.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">LocalCoordinates ( <a href="../common_vbageneral/common_general_bool_data_type.htm" id="a8" style="font-weight: normal; font-style: normal;" name="a8">bool</a> <span style="font-style: italic;"><i>flag</i></span> )</p>
+<p class="VBA-Text-Indent">This method decides whether local (<span style="font-style: italic;"><i>flag</i></span> = True) or global (<span style="font-style: italic;"><i>flag</i></span> = False) coordinates will be used for determining the location of the discrete port.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">Monitor ( <a href="../common_vbageneral/common_general_bool_data_type.htm" id="a22" style="font-weight: normal; font-style: normal;" name="a22">bool</a> <span style="font-style: italic;"><i>flag</i></span> )</p>
+<p class="VBA-Text-Indent">This method decides whether voltage and current of the discrete port should be monitored or not.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">Wire ( <a href="../common_vbageneral/common_general_string.htm" id="a31" style="font-weight: normal; font-style: normal;" name="a31">string</a> <span style="font-style: italic;"><i>&#160;wirename</i></span> )</p>
+<p class="VBA-Text-Indent">Defines the name of the wire, on which the discrete port is attached to.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">Position ( <a href="../common_vbageneral/common_general_string.htm" id="a32" style="font-weight: normal; font-style: normal;" name="a32">string</a> <span style="font-style: italic;"><i>&#160;name</i></span> )</p>
+<p class="VBA-Text-Indent">Defines the end of the wire, on which the discrete port is attached to. Possible values are '<span style="font-style: italic;"><i>end1</i></span>' or '<span style="font-style: italic;"><i>end2</i></span>'.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">LumpedElementName ( <a href="../common_vbageneral/common_general_name.htm" id="a441" style="font-weight: normal; font-style: normal;" name="a441">name</a> <span style="font-style: italic;"><i>name</i></span> )</p>
+<p class="VBA-Text-Indent" style="orphans: auto; display: inline ! important ; widows: 1; font-size: 12px; line-height: normal; -webkit-text-stroke-width: 0px;">If a lumped element name is set, the new discrete port will retrieve its geometry definition from an existing lumped element. Geometrical properties defined by commands like SetP1, Wire, Position, SetInvert, ... are ignored. By default, the lumped element is then deleted, so this is used for converting lumped elements into discrete ports.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">DeleteLumpedElement ( <a href="../common_vbageneral/common_general_bool_data_type.htm" id="a221" style="font-weight: normal; font-style: normal;" name="a221">bool</a> <span style="font-style: italic;"><i>flag</i></span> )</p>
+<p class="VBA-Text-Indent" style="orphans: auto; display: inline ! important ; widows: 1; font-size: 12px; line-height: normal; -webkit-text-stroke-width: 0px;">If a LumpedElementName is set, this flag decides, whether the lumped element is deleted after conversion to a discrete port or if it is kept. The default is "True", so the lumped element will be deleted.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">GetElementDirIndex ( <a href="../common_vbageneral/common_general_integer.htm" id="a10" style="font-weight: normal; font-style: normal;" name="a10">int</a> <span style="font-style: italic;"><i>portnumber,</i></span> <a href="../common_vbageneral/common_general_long_ref.htm" id="a18" style="font-weight: normal; font-style: normal;" name="a18">long_ref</a> <span style="font-style: italic;"><i>dir,</i></span> <a href="../common_vbageneral/common_general_long_ref.htm" id="a19" style="font-weight: normal; font-style: normal;" name="a19">long_ref</a> <span style="font-style: italic;"><i>index</i></span> )</p>
+<p class="VBA-Text-Indent">Gets the orientation and mesh <span style="font-style: italic;"><i>index</i></span> of a discrete port, specified by its <span style="font-style: italic;"><i>portnumber</i></span>. Please note, that in case that the discrete port is not located inside the mesh e.g. due to a defined symmetry plane, then the return values are given as -1.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">GetElement2ndIndex ( <a href="../common_vbageneral/common_general_integer.htm" id="a20" style="font-weight: normal; font-style: normal;" name="a20">int</a> <span style="font-style: italic;"><i>portnumber,</i></span> <a href="../common_vbageneral/common_general_long_ref.htm" id="a24" style="font-weight: normal; font-style: normal;" name="a24">long_ref</a> <span style="font-style: italic;"><i>index</i></span> )</p>
+<p class="VBA-Text-Indent">A discrete port is defined between two mesh points. This function returns the <span style="font-style: italic;"><i>index</i></span> of the second mesh point of the discrete port <span style="font-style: italic;"><i>portnumber</i></span>. Please note, that in case that the discrete port is not located inside the mesh e.g. due to a defined symmetry plane, then the return value is given as -1.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">GetLength ( <a href="../common_vbageneral/common_general_integer.htm" id="a3" style="font-weight: normal; font-style: normal;" name="a3">int</a> <span style="font-style: italic;"><i>portnumber</i></span> ) <a href="../common_vbageneral/common_general_double.htm" id="a12" style="font-weight: normal; font-style: normal;" name="a12">double</a></p>
+<p class="VBA-Text-Indent">Returns the exact length of the discrete port, specified by its <span style="font-style: italic;"><i>portnumber</i></span>.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">GetGridLength ( <a href="../common_vbageneral/common_general_integer.htm" id="a9" style="font-weight: normal; font-style: normal;" name="a9">int</a> <span style="font-style: italic;"><i>portnumber</i></span> ) <a href="../common_vbageneral/common_general_double.htm" id="a23" style="font-weight: normal; font-style: normal;" name="a23">double</a></p>
+<p class="VBA-Text-Indent">Returns the length in mesh representation of the discrete port, specified by its <span style="font-style: italic;"><i>portnumber</i></span>.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">GetCoordinates ( <a href="../common_vbageneral/common_general_integer.htm" id="a91" style="font-weight: normal; font-style: normal;" name="a91">int</a> <span style="font-style: italic;"><i>portnumber,</i></span> <a href="../common_vbageneral/common_general_double.htm" id="a15" style="font-weight: normal; font-style: normal;" name="a15">double</a> <span style="font-style: italic;"><i>x0,</i></span> <a href="../common_vbageneral/common_general_double.htm" id="a16" style="font-weight: normal; font-style: normal;" name="a16">double</a> <span style="font-style: italic;"><i>y0,</i></span> <a href="../common_vbageneral/common_general_double.htm" id="a17" style="font-weight: normal; font-style: normal;" name="a17">double</a> <span style="font-style: italic;"><i>z0,</i></span> <a href="../common_vbageneral/common_general_double.htm" id="a4" style="font-weight: normal; font-style: normal;" name="a4">double</a> <span style="font-style: italic;"><i>x1,</i></span> <a href="../common_vbageneral/common_general_double.htm" id="a13" style="font-weight: normal; font-style: normal;" name="a13">double</a> <span style="font-style: italic;"><i>y1,</i></span> <a href="../common_vbageneral/common_general_double.htm" id="a28" style="font-weight: normal; font-style: normal;" name="a28">double</a> <span style="font-style: italic;"><i>z1</i></span> &#160;)<span style="font-style: italic;"><i>&#160;<a href="../common_vbageneral/common_general_bool_data_type.htm" id="a91121" style="font-weight: normal; font-style: normal;" name="a91121">bool</a></i></span></p>
+<p class="VBA-Text-Indent">Queries the start and end point coordinates of a discrete port specified by its <span style="font-style: italic;"><i>portnumber</i></span>.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">GetProperties( <a href="../common_vbageneral/common_general_integer.htm" id="a911" style="font-weight: normal; font-style: normal;" name="a911">int</a> <span style="font-style: italic;"><i>portnumber, <a href="../common_vbageneral/common_general_string.htm" id="a34" style="font-weight: normal; font-style: normal;" name="a34">string</a> &#160;type,</i></span> <a href="../common_vbageneral/common_general_double.htm" id="a151" style="font-weight: normal; font-style: normal;" name="a151">double</a> <span style="font-style: italic;"><i>impedance,</i></span> <a href="../common_vbageneral/common_general_double.htm" id="a161" style="font-weight: normal; font-style: normal;" name="a161">double</a> <span style="font-style: italic;"><i>current,</i></span> <a href="../common_vbageneral/common_general_double.htm" id="a171" style="font-weight: normal; font-style: normal;" name="a171">double</a> <span style="font-style: italic;"><i>voltage,</i></span> <a href="../common_vbageneral/common_general_double.htm" id="a41" style="font-weight: normal; font-style: normal;" name="a41">double</a> <span style="font-style: italic;"><i>voltagePortImpedance,</i></span> <a href="../common_vbageneral/common_general_double.htm" id="a131" style="font-weight: normal; font-style: normal;" name="a131">double</a> <span style="font-style: italic;"><i>radius,</i></span> <span style="font-weight: normal;">&#160;<a href="../common_vbageneral/common_general_bool_data_type.htm" id="a91122" style="font-weight: normal; font-style: normal;" name="a91122">bool</a></span> monitor &#160;)&#160;<a href="../common_vbageneral/common_general_bool_data_type.htm" id="a9112" style="font-weight: normal; font-style: normal;" name="a9112">bool</a></p>
+<p class="VBA-Text-Indent">Queries the non geometrical properties of the discrete edge port specified by <span style="font-style: italic;"><i>portnumber</i></span>. <span style="font-style: italic;"><i>Type</i></span> will be either "SParameter", "Voltage" or "Current". Depending on that type, some of the properties will carry no effect.</p>
+<p class="VBA-Heading-Category"><a name="Defaults" id="Defaults"></a>Default Settings</p>
+<p class="VBA-Text-Example">PortNumber (1)</p>
+<p class="VBA-Text-Example"><span style="font-family: 'Courier New', monospace;">Label ("")</span></p>
+<p class="VBA-Text-Example">Type ("SParameter")</p>
+<p class="VBA-Text-Example">Impedance (50.0)</p>
+<p class="VBA-Text-Example">Voltage (1.0)</p>
+<p class="VBA-Text-Example">Current (1.0)</p>
+<p class="VBA-Text-Example">SetP1 (False, 0.0, 0.0, 0.0)</p>
+<p class="VBA-Text-Example">SetP2 (False, 0.0, 0.0, 0.0)</p>
+<p class="VBA-Text-Example">LumpedElementName ("")</p>
+<p class="VBA-Text-Example">DeleteLumpedElement (True)</p>
+<p class="VBA-Text-Example">InverDirection (False)</p>
+<p class="VBA-Text-Example">LocalCoordinates (False)</p>
+<p class="VBA-Text-Example">Monitor (False)</p>
+<p class="VBA-Text-Example">Radius(0.0)</p>
+<p class="VBA-Heading-Category"><a name="Examples" id="Examples"></a>Example</p>
+<p class="VBA-Text-Example" style="color: #008000;">' Define a discrete port</p>
+<p class="VBA-Text-Example">With DiscretePort</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.Reset</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.PortNumber "6"</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.Type "Current"</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.Impedance "50.0"</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.Voltage "1.0"</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.Current "2.0"</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.SetP1 "True", "4.7", "-0.7", "0"</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.SetP2 "True", "-3.9", "-1.8", "0"</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.InvertDirection "False"</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.LocalCoordinates "False"</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.Monitor "True"</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.Radius "0.01"</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.Create</p>
+<p class="VBA-Text-Example">End With</p>
+<p class="VBA-Text-Example" style="color: #008000;">&#160;</p>
+<p class="VBA-Text-Example" style="color: #008000;">'Delete the discrete port</p>
+<p class="VBA-Text-Example" style="color: #000000;">Port.Delete (1)</p>
+<p class="VBA-Text-Example" style="color: #000000;">&#160;</p>
+<p class="VBA-Text-Example" style="color: #008000;">'Example of reading properties from a discrete port</p>
+<p class="VBA-Text-Example" lang="de" xml:lang="de" style="color: #000000;"><span style="color: #000000;"><font color="black">Dim stype As String</font></span></p>
+<p class="VBA-Text-Example" style="color: #000000;">Dim impedance As Double</p>
+<p class="VBA-Text-Example" style="color: #000000;">Dim current As Double</p>
+<p class="VBA-Text-Example" style="color: #000000;">Dim voltage As Double</p>
+<p class="VBA-Text-Example" style="color: #000000;">Dim radius As Double</p>
+<p class="VBA-Text-Example" style="color: #000000;">Dim voltage_Impedance As Double</p>
+<p class="VBA-Text-Example" style="color: #000000;">Dim monitorFlag As Boolean</p>
+<p class="VBA-Text-Example" style="color: #000000;">Dim success As Boolean</p>
+<p class="VBA-Text-Example" style="color: #000000;">success = DiscretePort.GetProperties ("1", stype, impedance, current, voltage, voltage_Impedance, radius, monitorFlag)</p>
+<p class="VBA-Text-Example" style="color: #000000;">If (success) Then</p>
+<p class="VBA-Text-Example" style="color: #000000;">&#160;&#160;MsgBox("Test: " &amp; stype &amp; " " &amp; impedance &amp; " " &amp; current &amp; " " &amp; voltage &amp; " " &amp; voltage_Impedance &amp; " " &amp; radius &amp; " " &amp; monitorFlag)</p>
+<p class="VBA-Text-Example" style="color: #000000;">End If</p>
+<?rh-p style="margin-bottom: 0px; text-align: Right; margin-left: 18px; 
+                 margin-right: 18px; margin-top: 18px;" ?>
+<div style="width: 100%; position: relative;" id="footer">
+<p style="border-bottom: Solid 1px #dddddd; text-align: Left; margin-left: 0px; font-family: Arial, sans-serif; line-height: Normal; margin-top: 9px; margin-right: 0px; margin-bottom: 6px; border-left-width: 1px; border-top-width: 1px; border-right-width: 1px;"><span style="text-align: Left; font-family: Arial, sans-serif; line-height: Normal;">&#160;</span></p>
+<table cellspacing="0" width="100%">
+<col style="width: 50%;" />
+<col style="width: 50%;" />
+<tr>
+<td style="vertical-align: Top;"><span style="font-family: Arial, sans-serif; line-height: Normal; font-size: 8pt;"><font size="1" style="font-size:8pt;">CST Studio Suite 2026</font></span></td>
+<td style="vertical-align: Top;">
+<p style="text-align: right;">&#160;</p>
+</td>
+</tr>
+</table>
+<p>&#160;</p>
+</div>
+<script type="text/javascript" language="javascript1.2">
+//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+        writeIntopicBar(0);
+
+
+highlightSearch();
+//-->
+//]]>
+</script>
+</body>
+</html>

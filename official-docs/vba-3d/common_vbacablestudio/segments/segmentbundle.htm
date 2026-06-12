@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="Adobe RoboHelp 11" />
+<title>SegmentBundle</title>
+<link rel="StyleSheet" href="../../online_help_vba.css" type="text/css" />
+<style type="text/css">
+/*<![CDATA[*/
+<!--
+body { border-bottom-style:None; }
+-->
+/*]]>*/
+</style>
+
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+        origWidth = innerWidth;
+        origHeight = innerHeight;
+        onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+/*<![CDATA[*/
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+-->
+/*]]>*/
+</style>
+
+<script type="text/javascript" language="javascript1.2" src="../../whmsg.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript" src="../../whver.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript1.2" src="../../whutils.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript1.2" src="../../whproxy.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript1.2" src="../../whlang.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript1.2" src="../../whtopic.js" charset="utf-8">
+</script>
+</head>
+<body>
+<script type="text/javascript" language="javascript1.2">
+//<![CDATA[
+<!--
+if (window.gbWhTopic)
+{
+        var strUrl = document.location.href;
+        var bc = 0;
+        var n = strUrl.toLowerCase().indexOf("bc-");
+        if(n != -1)
+        {
+                document.location.replace(strUrl.substring(0, n));
+                bc = strUrl.substring(n+3);
+        }
+
+        if (window.addTocInfo)
+        {
+        addTocInfo("3D Simulation VBA\nVBA Objects\nCable Studio\nSegments\nSegmentBundle");
+
+        }
+        if (window.writeBtnStyle)
+                writeBtnStyle();
+
+        if (window.writeIntopicBar)
+                writeIntopicBar(0);
+
+        
+        document.write("<p style=\"font-family: Tahoma; font-size: 9pt; font-weight: 400;  font-style:normal; color: rgb(0, 0, 0); text-decoration:none; text-align: left\"> ");
+AddMasterBreadcrumbs("../../index.htm", "font-family: Tahoma; font-size: 9pt; font-weight: 400;  font-style:normal; color: rgb(0, 0, 0); text-decoration:none; text-align: left", "|", "Home", "../../special_vbaobjects/special_vbaobjects_vbaobjects.htm");
+document.write("<a style=\"font-family: Tahoma; font-size: 9pt; font-weight: 400;  font-style:normal; color: rgb(0, 0, 0); text-decoration:none; text-align: left\" href=\"../../special_vbaobjects/special_vbaobjects_vbaobjects.htm\">3D Simulation VBA<\/a> | <a style=\"font-family: Tahoma; font-size: 9pt; font-weight: 400;  font-style:normal; color: rgb(0, 0, 0); text-decoration:none; text-align: left\" href=\"../../special_vbaobjects/special_vbaobjects_vbaobjects.htm\">VBA Objects<\/a> | <a style=\"font-family: Tahoma; font-size: 9pt; font-weight: 400;  font-style:normal; color: rgb(0, 0, 0); text-decoration:none; text-align: left\" href=\"../cst_cablestudio_objects_overview.htm\">Cable Studio<\/a> | <a style=\"font-family: Tahoma; font-size: 9pt; font-weight: 400;  font-style:normal; color: rgb(0, 0, 0); text-decoration:none; text-align: left\" href=\"segmentdefine.htm\">Segments<\/a> | SegmentBundle<\/p>");
+
+}
+else
+        if (window.gbIE4)
+                document.location.reload();
+
+onLoadHandler = function()
+{
+  if (window.setRelStartPage)
+        {
+        setTimeout("setRelStartPage('../../index.htm');", 1)
+
+    setTimeout("UpdateBreadCrumbsMarker();", 1);
+        }
+}
+
+if (window.addEventListener){  
+        window.addEventListener('load', onLoadHandler, false);   
+} else if (window.attachEvent){  
+        window.attachEvent('onload', onLoadHandler);  
+}
+
+function onSetStartPage()
+{
+  autoSync(1);
+  sendSyncInfo();
+  sendAveInfoOut();
+}
+//-->
+//]]>
+</script><script type="text/javascript" src="../../ehlpdhtm.js" language="JavaScript1.2">
+</script>
+<table cellspacing="0" width="100%">
+<col style="width: 50%;" />
+<col style="width: 50%;" />
+<tr>
+<td style="vertical-align: middle; padding-top: 5px; padding-bottom: 5px;">
+<p style="margin-top: 0px; margin-bottom: 0px;"><img src="../../3ds.png" alt="" style="border: none;" border="0" /></p>
+</td>
+<td style="vertical-align: middle;">
+<p style="text-align: right;"><a href="https://www.3ds.com/products-services/3dexperience/" target="_blank"><img src="../../3dexp.png" alt="" style="border: none;" width="32" height="32" border="0" /></a></p>
+</td>
+</tr>
+</table>
+<h1>SegmentBundle</h1>
+<p class="VBA-Text">Create or modify a segment bundle setup. Wire positions as well as sub bundles wrapped in insulators can be defined with this command.</p>
+<p class="VBA-Text">For naming conventions and the idea behind hierarchical elements like bundles and sub-cables please refer to <a href="../cable_types/hierarchical_structure_definition.htm">Hierarchical structure definition</a>.</p>
+<ul>
+<li class="p-VBA-Index-Category">
+<p class="VBA-Index-Category"><a href="#Methods">Methods</a></p>
+</li>
+<li class="p-VBA-Index-Category">
+<p class="VBA-Index-Category"><a href="#Example">Example</a></p>
+</li>
+</ul>
+<p class="VBA-Heading-Category"><a name="Methods" id="Methods"></a>Methods</p>
+<p class="VBA-Heading-Method">Reset</p>
+<p class="Topic-Text-Indent">Resets all internal settings for this command to their default values.</p>
+<p class="VBA-Heading-Method">OutputName(<a href="../../common_vbageneral/common_general_string.htm" id="a161" name="a161">string</a> objType, <a href="../../common_vbageneral/common_general_string.htm" id="a162" name="a162">string</a> cmdId, <a href="../../common_vbageneral/common_general_string.htm" id="a163" name="a163">string</a> name)</p>
+<p class="VBA-Text-Indent">Parameter 'objType' is "CSSegment".</p>
+<p class="VBA-Text-Indent">Parameter ’cmdId' is "Name".</p>
+<p class="VBA-Text-Indent">Parameter 'value' specifies the name of the segment to be created or modified.</p>
+<p class="VBA-Heading-Method">AddInputName(<a href="../../common_vbageneral/common_general_string.htm" id="a166" name="a166">string</a> objType, <a href="../../common_vbageneral/common_general_string.htm" id="a165" name="a165">string</a> cmdId, <a href="../../common_vbageneral/common_general_string.htm" id="a164" name="a164">string</a> value)</p>
+<p class="VBA-Text-Indent">Parameter 'objType' is one of one of CSSingleWire, CSCoaxialCable, CSRibbonCable, CSTwistedCable, CSCableGroup.<br />
+&#160;&#160;This parameter is related to the CableType argument below and specifies the element from the cable library to use.</p>
+<p class="VBA-Text-Indent">Parameter 'cmdId' specifies the 'CableTypeID' for the cable library element to use.</p>
+<p class="VBA-Heading-Method">AddStringArgument(<a href="../../common_vbageneral/common_general_string.htm" id="a16" name="a16">string</a> cmdId, <a href="../../common_vbageneral/common_general_string.htm" id="a167" name="a167">string</a> value)</p>
+<p class="Topic-Text-Indent">The hierarchical parameter 'cmdId' may end with the following keywords:<br />
+&#160;"RandomBundle" with string 'true' or 'false' indicates whether the segment bundle layout may be altered by the cable mesher.</p>
+<p class="Topic-Text-Indent">&#160;&#160;&#160;&#160;"Cable" The name of a cable element to be defined in the current bundle.</p>
+<p class="Topic-Text-Indent">&#160;&#160;&#160;&#160;"CableType" one of CSSingleWire, CSCoaxialCable, CSRibbonCable, CSTwistedCable, CSCableGroup.</p>
+<p class="Topic-Text-Indent">&#160;&#160;&#160;&#160;"Index" represents the relative position of the cable towards others on the same hierarchy level.</p>
+<p class="Topic-Text-Indent">&#160;&#160;&#160;&#160;"Bundle" defines the name of a segment bundle which may hold cables or other bundles.</p>
+<p class="Topic-Text-Indent">&#160;&#160;&#160;&#160;&lt;Parent bundle name&gt; The value may be 'SegmentBundle'.</p>
+<p class="Topic-Text-Indent">&#160;&#160;&#160;&#160;"Insulator" The value specifies a new insulator element for a Bundle element.</p>
+<p class="Topic-Text-Indent">&#160;&#160;&#160;&#160;"shape" This specifies the type of shape the Insulator element may possess: See <a href="../cable_types/singlewires/singlewiredefine.htm#SpecificShapes">Shape types</a>.</p>
+<p class="Topic-Text-Indent">&#160;&#160;&#160;&#160;"material" The value of this keyword specifies a valid material id for an insulator.</p>
+<p class="Topic-Text-Indent">&#160;&#160;&#160;&#160;&lt;cable name&gt; The value of this keyword specifies the type of element. For segments this is 'SegmentBundleElement'.</p>
+<p class="VBA-Heading-Method">AddArgument(<a href="../../common_vbageneral/common_general_string.htm" id="a168" name="a168">string</a> cmdId, <a href="../../common_vbageneral/common_general_double.htm" id="a11" name="a11">double</a> value)</p>
+<p class="Topic-Text-Indent">Parameter 'cmdId' describes the hierarchical state of the element to define with the following variants:</p>
+<p class="Topic-Text-Indent">&#160;&#160;&#160;&#160;"x", "y" or "z" &#160;The value defines the relative x, y or z position of the element in question.</p>
+<p class="Topic-Text-Indent">&#160;&#160;&#160;&#160;"rotation" The value defines the rotation of the element in question.</p>
+<p class="Topic-Text-Indent">&#160;&#160;&#160;&#160;"wrap_thickness" (or the corresponding parameter from the current <a href="../cable_types/singlewires/singlewiredefine.htm#SpecificShapes">shape type</a>)</p>
+<p class="VBA-Heading-Method">Execute (<a href="../../common_vbageneral/common_general_string.htm" id="a169" name="a169">string</a> command)</p>
+<p class="Topic-Text-Indent">Create or modify a segment element with the given parameters.</p>
+<p class="VBA-Heading-Category"><a name="Example" id="Example"></a>Example</p>
+<p class="VBA-Text-Example">With CableStudio</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;.Reset</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;.OutputName "CSSegment", "Name", "N1 - N2"</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;.AddStringArgument "N1 - N2$RandomBundle", "false"</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;.AddStringArgument "N1 - N2$Cable", "SW_1"</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;.AddStringArgument "N1 - N2$SW_1", "SegmentBundleElement"</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;.AddArgument "N1 - N2$SW_1$x", "0.1232043"</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;.AddArgument "N1 - N2$SW_1$y", "-1.6019874"</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;.AddArgument "N1 - N2$SW_1$rotation", "109.4348145"</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;.AddStringArgument "N1 - N2$SW_1$CableType", "CSSingleWire"</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;.AddInputName "CSSingleWire", "N1 - N2$SW_1$CableTypeId", "LIFY_0qmm10"</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;.AddStringArgument "N1 - N2$SW_1$Index", "0"</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;.AddStringArgument "N1 - N2$Bundle", "N1 - N2_Bundle_1_1"</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;.AddStringArgument "N1 - N2$N1 - N2_Bundle_1_1", "SegmentBundle"</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;.AddArgument "N1 - N2$N1 - N2_Bundle_1_1$x", "0.5024518"</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;.AddArgument "N1 - N2$N1 - N2_Bundle_1_1$y", "0.9142455"</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;.AddArgument "N1 - N2$N1 - N2_Bundle_1_1$rotation", "255.7727051"</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;.AddStringArgument "N1 - N2$N1 - N2_Bundle_1_1$RandomBundle", "false"</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;.AddStringArgument "N1 - N2$N1 - N2_Bundle_1_1$Insulator", "N1 - N2$N1 - N2_Bundle_1_1$Insulator"</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;.AddStringArgument "N1 - N2$N1 - N2_Bundle_1_1$Insulator$Index", "0"</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;.AddStringArgument "N1 - N2$N1 - N2_Bundle_1_1$Insulator$shape", "Wrap"</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;.AddStringArgument "N1 - N2$N1 - N2_Bundle_1_1$Insulator$material", "PE"</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;.AddArgument "N1 - N2$N1 - N2_Bundle_1_1$Insulator$wrap_thickness", "0.5"</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;.AddStringArgument "N1 - N2$N1 - N2_Bundle_1_1$Cable", "SW_2"</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;.AddStringArgument "N1 - N2$N1 - N2_Bundle_1_1$SW_2", "SegmentBundleElement"</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;.AddArgument "N1 - N2$N1 - N2_Bundle_1_1$SW_2$x", "0.0"</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;.AddArgument "N1 - N2$N1 - N2_Bundle_1_1$SW_2$y", "0.0"</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;.AddArgument "N1 - N2$N1 - N2_Bundle_1_1$SW_2$rotation", "296.2133789"</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;.AddStringArgument "N1 - N2$N1 - N2_Bundle_1_1$SW_2$CableType", "CSSingleWire"</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;.AddInputName "CSSingleWire", "N1 - N2$N1 - N2_Bundle_1_1$SW_2$CableTypeId", "LIFY_0qmm75"</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;.AddStringArgument "N1 - N2$N1 - N2_Bundle_1_1$SW_2$Index", "0"</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;.AddStringArgument "N1 - N2$N1 - N2_Bundle_1_1$Index", "1"</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;.Execute "SegmentBundle"</p>
+<p class="VBA-Text-Example">End With</p>
+<p class="VBA-Text">&#160;</p>
+<p class="VBA-Text">&#160;</p>
+<?rh-p style="margin-bottom: 0px; text-align: Right; margin-left: 18px; 
+                 margin-right: 18px; margin-top: 18px;" ?>
+<div style="width: 100%; position: relative;" id="footer">
+<p style="border-bottom: Solid 1px #dddddd; text-align: Left; margin-left: 0px; font-family: Arial, sans-serif; line-height: Normal; margin-top: 9px; margin-right: 0px; margin-bottom: 6px; border-left-width: 1px; border-top-width: 1px; border-right-width: 1px;"><span style="text-align: Left; font-family: Arial, sans-serif; line-height: Normal;">&#160;</span></p>
+<table cellspacing="0" width="100%">
+<col style="width: 50%;" />
+<col style="width: 50%;" />
+<tr>
+<td style="vertical-align: Top;"><span style="font-family: Arial, sans-serif; line-height: Normal; font-size: 8pt;"><font size="1" style="font-size:8pt;">CST Studio Suite 2026</font></span></td>
+<td style="vertical-align: Top;">
+<p style="text-align: right;">&#160;</p>
+</td>
+</tr>
+</table>
+<p>&#160;</p>
+</div>
+<script type="text/javascript" language="javascript1.2">
+//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+        writeIntopicBar(0);
+
+
+highlightSearch();
+//-->
+//]]>
+</script>
+</body>
+</html>

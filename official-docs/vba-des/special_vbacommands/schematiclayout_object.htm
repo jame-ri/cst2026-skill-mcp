@@ -1,0 +1,508 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="Adobe RoboHelp 11" />
+<title>SchematicLayout Object</title>
+<link rel="StyleSheet" href="../online_help_vba.css" type="text/css" />
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+        origWidth = innerWidth;
+        origHeight = innerHeight;
+        onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+/*<![CDATA[*/
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+-->
+/*]]>*/
+</style>
+
+<script type="text/javascript" language="javascript1.2" src="../whmsg.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript" src="../whver.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript1.2" src="../whutils.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript1.2" src="../whproxy.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript1.2" src="../whlang.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript1.2" src="../whtopic.js" charset="utf-8">
+</script>
+</head>
+<body>
+<script type="text/javascript" language="javascript1.2">
+//<![CDATA[
+<!--
+if (window.gbWhTopic)
+{
+        var strUrl = document.location.href;
+        var bc = 0;
+        var n = strUrl.toLowerCase().indexOf("bc-");
+        if(n != -1)
+        {
+                document.location.replace(strUrl.substring(0, n));
+                bc = strUrl.substring(n+3);
+        }
+
+        if (window.addTocInfo)
+        {
+        addTocInfo("Circuits & Systems VBA\nComponent/Modeling\nSchematicLayout");
+
+        }
+        if (window.writeBtnStyle)
+                writeBtnStyle();
+
+        if (window.writeIntopicBar)
+                writeIntopicBar(0);
+
+        
+        document.write("<p style=\"font-family: Tahoma; font-size: 9pt; font-weight: 400;  font-style:normal; color: rgb(0, 0, 0); text-decoration:none; text-align: left\"> ");
+AddMasterBreadcrumbs("../index.htm", "font-family: Tahoma; font-size: 9pt; font-weight: 400;  font-style:normal; color: rgb(0, 0, 0); text-decoration:none; text-align: left", "|", "Home", "../special_vbaobjects/cstdesignstudiovbaobjects.htm");
+document.write("<a style=\"font-family: Tahoma; font-size: 9pt; font-weight: 400;  font-style:normal; color: rgb(0, 0, 0); text-decoration:none; text-align: left\" href=\"../special_vbaobjects/cstdesignstudiovbaobjects.htm\">Circuits & Systems VBA<\/a> | <a style=\"font-family: Tahoma; font-size: 9pt; font-weight: 400;  font-style:normal; color: rgb(0, 0, 0); text-decoration:none; text-align: left\" href=\"blockobject.htm\">Component/Modeling<\/a> | SchematicLayout<\/p>");
+
+}
+else
+        if (window.gbIE4)
+                document.location.reload();
+
+onLoadHandler = function()
+{
+  if (window.setRelStartPage)
+        {
+        setTimeout("setRelStartPage('../index.htm');", 1)
+
+    setTimeout("UpdateBreadCrumbsMarker();", 1);
+        }
+}
+
+if (window.addEventListener){  
+        window.addEventListener('load', onLoadHandler, false);   
+} else if (window.attachEvent){  
+        window.attachEvent('onload', onLoadHandler);  
+}
+
+function onSetStartPage()
+{
+  autoSync(1);
+  sendSyncInfo();
+  sendAveInfoOut();
+}
+//-->
+//]]>
+</script><script type="text/javascript" src="../ehlpdhtm.js" language="JavaScript1.2">
+</script>
+<h1>SchematicLayout Object</h1>
+<p class="VBA-Text">Use this object to arrange blocks on the schematic.</p>
+<p class="VBA-Text">&#160;</p>
+<p class="VBA-Text">A block layout consists of groups of blocks that are arranged horizontally or vertically. A special kind of layout group arranges the blocks depending on how the pins are connected. Each layouted group results in a new group that can be used in further layouts. Nested layout groups are supported.</p>
+<p class="VBA-Text">&#160;</p>
+<ul style="list-style: disc;">
+<li class="p-VBA-Index-Category">
+<p class="VBA-Index-Category">Methods</p>
+</li>
+<li style="list-style: none; display: inline">
+<ul>
+<li class="p-VBA-Index-Category">
+<p><a href="#Defining_Groups">General Methods</a></p>
+</li>
+<li class="p-VBA-Index-Category">
+<p><a href="#Defining_Groups">Defining Groups</a></p>
+</li>
+<li class="p-VBA-Index-Category">
+<p><a href="#Arranging_Groups">Arranging Groups</a></p>
+</li>
+<li class="p-VBA-Index-Category">
+<p><a href="#Block_Name_Lookup">Block Lookup</a></p>
+</li>
+</ul>
+</li>
+<li class="p-VBA-Index-Category">
+<p class="VBA-Index-Category">Examples</p>
+</li>
+<li style="list-style: none; display: inline">
+<ul>
+<li class="p-VBA-Index-Category">
+<p class="VBA-Index-Category"><a href="#Example_1">Vertical Layout</a></p>
+</li>
+<li class="p-VBA-Index-Category">
+<p class="VBA-Index-Category"><a href="#Example_2">Connection Based Layout</a></p>
+</li>
+<li class="p-VBA-Index-Category">
+<p class="VBA-Index-Category"><a href="#Example_3">Nested Layout</a></p>
+</li>
+<li class="p-VBA-Index-Category">
+<p class="VBA-Index-Category"><a href="#Example_4">Space Optimization</a></p>
+</li>
+<li class="p-VBA-Index-Category">
+<p class="VBA-Index-Category"><a href="#Example_5">Alignment</a></p>
+</li>
+</ul>
+</li>
+</ul>
+<p class="VBA-Text">&#160;</p>
+<p class="VBA-Text">&#160;</p>
+<p class="VBA-Index-Category"><a name="General_Methods" id="General_Methods"></a><span style="font-size: 10pt; font-style: italic;"><font size="2" style="font-size:10pt;"><i>General Methods</i></font></span></p>
+<p class="VBA-Text">&#160;</p>
+<p class="VBA-Heading-Method">Reset</p>
+<p class="VBA-Text-Indent">Resets all internal settings to the default state and invalidates all group ids</p>
+<p class="VBA-Text">&#160;</p>
+<p class="VBA-Heading-Method">Apply</p>
+<p class="VBA-Text-Indent">Executes all previously defined arrange commands. This will actually layout the blocks on the screen. Apply can be called multiple times, but only unprocessed arrange commands will be executed.</p>
+<p class="VBA-Text">&#160;</p>
+<p class="VBA-Text">&#160;</p>
+<p class="VBA-Index-Category"><a name="Defining_Groups" id="Defining_Groups"></a><span style="font-size: 10pt; font-style: italic;"><font size="2" style="font-size:10pt;"><i>Defining Groups</i></font></span></p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">CreateLayoutGroupByConnections( <a href="../common_vbageneral/common_general_name.htm" id="a9" style="font-weight: normal; font-style: normal;" name="a9">name</a> blockname ) <a href="../common_vbageneral/common_general_integer.htm" id="a1213" style="font-weight: normal; font-style: normal;" name="a1213">int</a></p>
+<p class="VBA-Text-Indent">Creates a new group of blocks ready to be laid out. The command assembles all blocks connected directly or indirectly to the block 'blockname' and puts them into the group.</p>
+<p class="VBA-Text-Indent">'blockname' is usually the result of one of the lookup methods, see <a href="#Block_Name_Lookup">Block Lookup Methods</a>.</p>
+<p class="VBA-Text-Indent">Returns the id of the new group.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">CreateLayoutGroupByBlocks( <span style="font-style: italic;"><i><a href="../common_vbageneral/common_general_variant.htm" style="font-weight: normal;">variant</a> blockNames_strArray ) <a href="../common_vbageneral/common_general_integer.htm" id="a121" style="font-weight: normal; font-style: normal;" name="a121">int</a></i></span></p>
+<p class="VBA-Text-Indent">Creates a new group of blocks ready to be laid out. All blocks specfied by name in 'blockNames_strArray' are included in the new group.</p>
+<p class="VBA-Text-Indent">Returns the id of the new group.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Text">&#160;</p>
+<p class="VBA-Index-Category"><a name="Arranging_Groups" id="Arranging_Groups"></a><span style="font-size: 10pt; font-style: italic;"><font size="2" style="font-size:10pt;"><i>Arranging Groups</i></font></span></p>
+<p class="VBA-Text">&#160;</p>
+<p class="VBA-Heading-Method">ArrangeLayoutGroupMembers( <a href="../common_vbageneral/common_general_integer.htm" id="a1212" style="font-weight: normal; font-style: normal;" name="a1212">int</a> groupId, <span style="font-weight: normal;"><a href="../common_vbageneral/common_general_string.htm">string</a> layoutType ) <a href="../common_vbageneral/common_general_integer.htm" id="a1211" style="font-weight: normal; font-style: normal;" name="a1211">int</a></span></p>
+<p class="VBA-Text-Indent">Schedules the members of the group identified by 'groupId' to be laid out as 'layoutType'. The following values are acceptable for 'layoutType'</p>
+<ul style="list-style: disc;">
+<li>
+<p class="VBA-Text-Indent">"Horizontal": layout the blocks in this group horizontally.</p>
+</li>
+<li>
+<p class="VBA-Text-Indent">"Vertical": layout the blocks in this group vertically.</p>
+</li>
+<li>
+<p class="VBA-Text-Indent">"ConnectionBased": layout the blocks in this group, so that connected pins face each other and the blocks are positioned closely to the ports they are connected to.</p>
+</li>
+</ul>
+<p class="VBA-Text-Indent">Returns the id of the new group.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">ArrangeLayoutGroups( <span style="font-style: italic;"><i><a href="../common_vbageneral/common_general_variant.htm" style="font-weight: normal;">variant</a> groupIds_intArray,</i></span> &#160;<span style="font-weight: normal;"><a href="../common_vbageneral/common_general_string.htm">string</a> layoutType,</span> &#160;<span style="font-weight: normal;"><a href="../common_vbageneral/common_general_string.htm">string</a> alignment,</span> <a href="../common_vbageneral/common_general_bool_data_type.htm" id="a91" style="font-weight: normal; font-style: normal;" name="a91">bool</a> spaceOptimization ) <a href="../common_vbageneral/common_general_integer.htm" id="a12111" style="font-weight: normal; font-style: normal;" name="a12111">int</a></p>
+<p class="VBA-Text-Indent">Schedules the groups identified by the ids in 'groupIds_intArray' to be laid out as 'layoutType'. The following values are acceptable for 'layoutType'</p>
+<ul style="list-style: disc;">
+<li>
+<p class="VBA-Text-Indent">"Horizontal": layout the groups horizontally.</p>
+</li>
+<li>
+<p class="VBA-Text-Indent">"Vertical": layout the groups vertically.</p>
+</li>
+</ul>
+<p class="VBA-Text-Indent">Note: In a horizontal layout the groups are distributes from left to right, in a vertical layout the groups are distributed from top to bottom.</p>
+<p class="VBA-Text">&#160;</p>
+<p class="VBA-Text-Indent">The groups can be aligned with each other using the 'alignment' parameter. The first block of a group (e.g. the block that was used to create the group) is taken as the reference block which is used to align all members of the group. The following values are acceptable for 'alignment':</p>
+<ul style="list-style: disc;">
+<li>
+<p class="VBA-Text-Indent">"None": no alignment of base blocks.</p>
+</li>
+<li>
+<p class="VBA-Text-Indent">"Top" : align the top edge of base blocks in a horizontal layout.</p>
+</li>
+<li>
+<p class="VBA-Text-Indent">"Bottom" : align the bottom edge of base blocks in a horizontal layout.</p>
+</li>
+<li>
+<p class="VBA-Text-Indent">"Left": align the left edge of base blocks in a vertical layout.</p>
+</li>
+<li>
+<p class="VBA-Text-Indent">"Right": align the right edge of base blocks in a vertical layout.</p>
+</li>
+<li>
+<p class="VBA-Text-Indent">"Center": align the center points of base blocks in both horizontal and vertical layouts.</p>
+</li>
+</ul>
+<p class="VBA-Text-Indent">If 'spaceOptimization' is set to True, the method will try to find the most compact way for the desired layout type. In effect this might result in groups that are rotated 90 degrees before applying the layout.</p>
+<p class="VBA-Text-Indent">Returns the id of the new group.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Category"><a name="Block_Name_Lookup" id="Block_Name_Lookup"></a>Block Name Lookup</p>
+<p class="VBA-Text">Blocks are addressed by name. Since blocks, probes, and external ports share the same name space (e.g. a block may have the same name as a probe) the names have to be disambiguated before use. For this purpose there are three special methods available:</p>
+<p class="VBA-Text">&#160;</p>
+<p class="VBA-Heading-Method">Block( <a href="../common_vbageneral/common_general_name.htm" id="a58" style="font-weight: normal; font-style: normal;" name="a58">name</a> blockName ) <span style="font-weight: normal;"><a href="../common_vbageneral/common_general_string.htm">string</a></span></p>
+<p class="VBA-Text-Indent">Returns a name that uniquely identifies a block.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">ExtPort( <a href="../common_vbageneral/common_general_name.htm" id="a581" style="font-weight: normal; font-style: normal;" name="a581">name</a> blockName ) <span style="font-weight: normal;"><a href="../common_vbageneral/common_general_string.htm">string</a></span></p>
+<p class="VBA-Text-Indent">Returns a name that uniquely identifies an external port.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">Probe( <a href="../common_vbageneral/common_general_name.htm" id="a582" style="font-weight: normal; font-style: normal;" name="a582">name</a> blockName ) <span style="font-weight: normal;"><a href="../common_vbageneral/common_general_string.htm">string</a></span></p>
+<p class="VBA-Text-Indent">Returns a name that uniquely identifies a probe.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Text">&#160;</p>
+<p class="VBA-Text">&#160;</p>
+<p class="VBA-Heading-Category"><a name="Example_1" id="Example_1"></a>Example 1: A simple vertical layout.</p>
+<p class="VBA-Text">We have thee blocks "RES1", "RES2", and "RES3" which can be anywhere on the schematic. This &#160;could look like this:</p>
+<p class="VBA-Text"><img src="../image1.gif" alt="" style="border: none;" border="0" /></p>
+<p class="VBA-Text">&#160;</p>
+<p class="VBA-Text">Let's start a script:</p>
+<p class="VBA-Text">&#160;</p>
+<p class="VBA-Text-Example">Sub Main</p>
+<p class="VBA-Text-Example" style="margin-left: 40px;">With SchematicLayout</p>
+<p class="VBA-Text-Example" style="margin-left: 80px;">Dim group1 As Long</p>
+<p class="VBA-Text-Example" style="margin-left: 80px;">Dim blocks(2) As String</p>
+<p class="VBA-Text-Example">&#160;</p>
+<p class="VBA-Text">Now we need to specify the blocks we want to layout:</p>
+<p class="VBA-Text">&#160;</p>
+<p class="VBA-Text-Example" style="margin-left: 80px;">blocks(0)=.Block("RES1")</p>
+<p class="VBA-Text-Example" style="margin-left: 80px;">blocks(1)=.Block("RES2")</p>
+<p class="VBA-Text-Example" style="margin-left: 80px;">blocks(2)=.Block("RES3")</p>
+<p class="VBA-Text-Example" style="margin-left: 80px;">&#160;</p>
+<p class="VBA-Text">Now create a group with these blocks and arrange the blocks vertically.</p>
+<p class="VBA-Text-Example" style="margin-left: 80px;">group = .ArrangeLayoutGroupMembers( .CreateLayoutGroupByBlocks( blocks ), <span style="font-weight: bold; font-style: italic;"><i>"Vertical"</i></span> )</p>
+<p class="VBA-Text-Example" style="margin-left: 80px;">.Apply</p>
+<p class="VBA-Text-Example">&#160;</p>
+<p class="VBA-Text">This creates two groups, one with the three blocks, and one result group, where the three blocks are arranged vertically. The id of the resulting group is stored in 'group' for later use. The three blocks are now arranged like this:</p>
+<p class="VBA-Text"><img src="../image2.gif" alt="" style="border: none;" border="0" /></p>
+<p class="VBA-Text">&#160;</p>
+<p class="VBA-Heading-Category"><a name="Example_2" id="Example_2"></a>Example 2: a simple connection based layout.</p>
+<p class="VBA-Text">We have a block ("VBA1") with some connections. Again the initial positions and orientations do not matter.</p>
+<p class="VBA-Text">&#160;</p>
+<p class="VBA-Text"><img src="../image3.gif" alt="" style="border: none;" border="0" /></p>
+<p class="VBA-Text">&#160;</p>
+<p class="VBA-Text">Continuing with our example script, we now define a connection based group and arrangement:</p>
+<p class="VBA-Text-Example" style="margin-left: 80px;">Dim group2 As Long</p>
+<p class="VBA-Text-Example" style="margin-left: 80px;">group2 = .ArrangeLayoutGroupMembers( .CreateLayoutGroupByConnections( .Block("VBA1") ), <span style="font-weight: bold; font-style: italic;"><i>"ConnectionBased"</i></span> )</p>
+<p class="VBA-Text-Example" style="margin-left: 80px;">.Apply</p>
+<p class="VBA-Text-Example" style="margin-left: 40px;">&#160;</p>
+<p class="VBA-Text">&#160;</p>
+<p class="VBA-Text">The resulting connection based layouted group is stored in 'group2'. The result looks like:</p>
+<p class="VBA-Text"><img src="../image4.gif" alt="" style="border: none;" border="0" /></p>
+<p class="VBA-Text">&#160;</p>
+<p class="VBA-Heading-Category"><a name="Example_3" id="Example_3"></a>Example 3: Nesting the layouts.</p>
+<p class="VBA-Text">The last step in our example script takes the two result groups and arranges them horizontally. To the left should be group1, then on the right side group2:</p>
+<p class="VBA-Text">&#160;</p>
+<p class="VBA-Text-Example" style="margin-left: 80px;">Dim horizontalGroups(1) As Long</p>
+<p class="VBA-Text-Example" style="margin-left: 80px;">horizontalGroups(0)=group2</p>
+<p class="VBA-Text-Example" style="margin-left: 80px;">horizontalGroups(1)=group1</p>
+<p class="VBA-Text-Example" style="margin-left: 80px;">.ArrangeLayoutGroups( horizontalGroups, "Horizontal", "None", False )</p>
+<p class="VBA-Text-Example" style="margin-left: 40px;">End With</p>
+<p class="VBA-Text-Example">End Sub</p>
+<p class="VBA-Text" style="margin-left: 0px;">&#160;</p>
+<p class="VBA-Text" style="margin-left: 0px;">In this example we did not use alignment or space optimization. If "None" is specified as alignment, the groups are aligned centered by default.</p>
+<p class="VBA-Text" style="margin-left: 0px;">The blocks in 'group2' will be on the left side because this group is referenced first in 'horizontalGroups'.</p>
+<p class="VBA-Text" style="margin-left: 0px;">&#160;</p>
+<p class="VBA-Text" style="margin-left: 0px;">The final result is:</p>
+<p class="VBA-Text" style="margin-left: 0px;"><img src="../image5.gif" alt="" style="border: none;" border="0" /></p>
+<p class="VBA-Text" style="margin-left: 0px;">&#160;</p>
+<p class="VBA-Heading-Category"><a name="Example_4" id="Example_4"></a>Example 4: Layout with space optimization</p>
+<p class="VBA-Text" style="margin-left: 0px;">Space optimization is a feature of the ArrangeLayoutGroups command that will rotate a group 90 degrees, if</p>
+<ul style="list-style: disc;">
+<li>
+<p class="VBA-Text" style="margin-left: 0px;">when doing a horizontal layout, the group width is greater than the group height</p>
+</li>
+<li>
+<p class="VBA-Text" style="margin-left: 0px;">when doing a vertical layout, the group height is greater than the group width</p>
+</li>
+</ul>
+<p class="VBA-Text" style="margin-left: 0px;">This generally leads to more compact screen space usage. Let's start over with a new script.</p>
+<p class="VBA-Text" style="margin-left: 0px;">&#160;</p>
+<p class="VBA-Text-Example">Sub Main</p>
+<p class="VBA-Text-Example" style="margin-left: 40px;">With SchematicLayout</p>
+<p class="VBA-Text-Example" style="margin-left: 80px;">Dim group1 As Long</p>
+<p class="VBA-Text-Example" style="margin-left: 80px;">Dim group2 As Long</p>
+<p class="VBA-Text-Example" style="margin-left: 80px;">Dim blocks(2) As String</p>
+<p class="VBA-Text-Example" style="margin-left: 80px;">Dim horizontalGroups(1) As Long</p>
+<p class="VBA-Text-Example" style="margin-left: 80px;">blocks(0)=.Block("RES1")</p>
+<p class="VBA-Text-Example" style="margin-left: 80px;">blocks(1)=.Block("RES2")</p>
+<p class="VBA-Text-Example" style="margin-left: 80px;">blocks(2)=.Block("RES3")</p>
+<p class="VBA-Text-Example" style="margin-left: 80px;">group1 = .ArrangeLayoutGroupMembers( .CreateLayoutGroupByBlocks( blocks ), "Vertical" )</p>
+<p class="VBA-Text-Example" style="margin-left: 80px;">group2 = .ArrangeLayoutGroupMembers( .CreateLayoutGroupByConnections( .Block("VBA1") ), "ConnectionBased" )</p>
+<p class="VBA-Text-Example" style="margin-left: 80px;">horizontalGroups(0) = group2</p>
+<p class="VBA-Text-Example" style="margin-left: 80px;">horizontalGroups(1) = group1</p>
+<p class="VBA-Text-Example" style="margin-left: 80px;">&#160;</p>
+<p class="VBA-Text">This time activate space optimization by setting the 4th parameter to 'True'</p>
+<p class="VBA-Text">&#160;</p>
+<p class="VBA-Text-Example" style="margin-left: 80px;">.ArrangeLayoutGroups( horizontalGroups, "Horizontal", "None", <span style="font-weight: bold; font-style: italic;"><i>True</i></span> )</p>
+<p class="VBA-Text-Example" style="margin-left: 80px;">.Apply</p>
+<p class="VBA-Text-Example" style="margin-left: 40px;">End With</p>
+<p class="VBA-Text-Example">End Sub</p>
+<p class="VBA-Text" style="margin-left: 0px;">&#160;</p>
+<p class="VBA-Text" style="margin-left: 0px;">The blocks of group2 are rotated 90 degrees to make the result more compact in the horizontal direction:</p>
+<p class="VBA-Text" style="margin-left: 0px;"><img src="../image6.gif" alt="" style="border: none;" border="0" /></p>
+<p class="VBA-Text" style="margin-left: 0px;">&#160;</p>
+<p class="VBA-Text" style="margin-left: 0px;">&#160;</p>
+<p class="VBA-Text" style="margin-left: 0px;">As another example of the space optimization we layout the groups again, but this time vertically:</p>
+<p class="VBA-Text" style="margin-left: 0px;">&#160;</p>
+<p class="VBA-Text-Example">Sub Main</p>
+<p class="VBA-Text-Example" style="margin-left: 40px;">With SchematicLayout</p>
+<p class="VBA-Text-Example" style="margin-left: 80px;">Dim group1 As Long</p>
+<p class="VBA-Text-Example" style="margin-left: 80px;">Dim group2 As Long</p>
+<p class="VBA-Text-Example" style="margin-left: 80px;">Dim blocks(2) As String</p>
+<p class="VBA-Text-Example" style="margin-left: 80px;">Dim horizontalGroups(1) As Long</p>
+<p class="VBA-Text-Example" style="margin-left: 80px;">blocks(0)=.Block("RES1")</p>
+<p class="VBA-Text-Example" style="margin-left: 80px;">blocks(1)=.Block("RES2")</p>
+<p class="VBA-Text-Example" style="margin-left: 80px;">blocks(2)=.Block("RES3")</p>
+<p class="VBA-Text-Example" style="margin-left: 80px;">group1 = .ArrangeLayoutGroupMembers( .CreateLayoutGroupByBlocks( blocks ), "Vertical" )</p>
+<p class="VBA-Text-Example" style="margin-left: 80px;">group2 = .ArrangeLayoutGroupMembers( .CreateLayoutGroupByConnections( .Block("VBA1") ), "ConnectionBased" )</p>
+<p class="VBA-Text-Example" style="margin-left: 80px;">horizontalGroups(0) = group2</p>
+<p class="VBA-Text-Example" style="margin-left: 80px;">horizontalGroups(1) = group1</p>
+<p class="VBA-Text-Example" style="margin-left: 80px;">&#160;</p>
+<p class="VBA-Text">Again activate space optimization by setting the 4th parameter to 'True'. This time we use "Vertical" as the layout type.</p>
+<p class="VBA-Text">&#160;</p>
+<p class="VBA-Text-Example" style="margin-left: 80px;">.ArrangeLayoutGroups( horizontalGroups, "Vertical", "None", <span style="font-weight: bold; font-style: italic;"><i>True</i></span> )</p>
+<p class="VBA-Text-Example" style="margin-left: 80px;">.Apply</p>
+<p class="VBA-Text-Example" style="margin-left: 40px;">End With</p>
+<p class="VBA-Text-Example">End Sub</p>
+<p class="VBA-Text" style="margin-left: 0px;">&#160;</p>
+<p class="VBA-Text" style="margin-left: 0px;">As a result, the three blocks in group1 are rotated 90 degrees:</p>
+<p class="VBA-Text" style="margin-left: 0px;"><img src="../image9.gif" alt="" style="border: none;" border="0" /></p>
+<p class="VBA-Text" style="margin-left: 0px;">&#160;</p>
+<p class="VBA-Text" style="margin-left: 0px;">&#160;</p>
+<p class="VBA-Heading-Category"><a name="Example_5" id="Example_5"></a>Example 5: Alignment</p>
+<p class="VBA-Text" style="margin-left: 0px;">The alignment system of the SchematicLayout object offers three alignment types per layout direction.</p>
+<p class="VBA-Text" style="margin-left: 0px;">The first block of a group is used as the 'reference' block. The alignment system uses these reference blocks to align the groups with each other. The available alignment types depend on the layout direction:</p>
+<p class="VBA-Text">&#160;</p>
+<table style="border-collapse: separate; border-collapse: separate;" cellspacing="0" width="100%" border="1">
+<col style="width: 33.333%;" />
+<col style="width: 33.333%;" />
+<col style="width: 33.333%;" />
+<tr>
+<td>
+<p class="VBA-Text" style="font-weight: bold;">Horizontal Layout Alignment</p>
+</td>
+<td>
+<p class="VBA-Text" style="font-weight: bold;">Vertical Layout Alignment</p>
+</td>
+<td>&#160;</td>
+</tr>
+<tr>
+<td>
+<p class="VBA-Text-Example">None</p>
+</td>
+<td>
+<p class="VBA-Text-Example">None</p>
+</td>
+<td>
+<p class="VBA-Text">Alignment is disabled</p>
+</td>
+</tr>
+<tr>
+<td>
+<p class="VBA-Text-Example">Top</p>
+</td>
+<td>
+<p class="VBA-Text-Example">&#160;</p>
+</td>
+<td>
+<p class="VBA-Text">The top edge of the reference blocks are aligned</p>
+</td>
+</tr>
+<tr>
+<td>
+<p class="VBA-Text-Example">Bottom</p>
+</td>
+<td>
+<p class="VBA-Text-Example">&#160;</p>
+</td>
+<td>
+<p class="VBA-Text">The bottom edge of the reference blocks are aligned</p>
+</td>
+</tr>
+<tr>
+<td>
+<p class="VBA-Text-Example">&#160;</p>
+</td>
+<td>
+<p class="VBA-Text-Example">Left</p>
+</td>
+<td>
+<p class="VBA-Text">The left edge of the reference blocks are aligned</p>
+</td>
+</tr>
+<tr>
+<td>
+<p class="VBA-Text-Example">&#160;</p>
+</td>
+<td>
+<p class="VBA-Text-Example">Right</p>
+</td>
+<td>
+<p class="VBA-Text">The right edge of the reference blocks are aligned</p>
+</td>
+</tr>
+<tr>
+<td>
+<p class="VBA-Text-Example">Center</p>
+</td>
+<td>
+<p class="VBA-Text-Example">Center</p>
+</td>
+<td>
+<p class="VBA-Text">The center of the reference blocks are aligned</p>
+</td>
+</tr>
+</table>
+<p class="VBA-Text" style="margin-left: 0px;">&#160;</p>
+<p class="VBA-Text" style="margin-left: 0px;">This example uses three blocks, each with some connections.</p>
+<p class="VBA-Text" style="margin-left: 0px;">&#160;</p>
+<p class="VBA-Text-Example">Sub Main</p>
+<p class="VBA-Text-Example" style="margin-left: 40px;">With SchematicLayout</p>
+<p class="VBA-Text-Example" style="margin-left: 80px;">Dim group(2) As Long</p>
+<p class="VBA-Text-Example" style="margin-left: 80px;">group(0) = .ArrangeLayoutGroupMembers( .CreateLayoutGroupByConnections( .Block( "VBA1" ) ), "ConnectionBased" )</p>
+<p class="VBA-Text-Example" style="margin-left: 80px;">group(1) = .ArrangeLayoutGroupMembers( .CreateLayoutGroupByConnections( .Block( "VBA2" ) ), "ConnectionBased" )</p>
+<p class="VBA-Text-Example" style="margin-left: 80px;">group(2) = .ArrangeLayoutGroupMembers( .CreateLayoutGroupByConnections( .Block( "VBA3" ) ), "ConnectionBased" )</p>
+<p class="VBA-Text-Example" style="margin-left: 80px;">&#160;</p>
+<p class="VBA-Text">Start with "None" as alignment type to see the unaligned result</p>
+<p class="VBA-Text">&#160;</p>
+<p class="VBA-Text-Example" style="margin-left: 80px;">.ArrangeLayoutGroups( group, "Vertical", <span style="font-weight: bold; font-style: italic;"><i>"None"</i></span>, False )</p>
+<p class="VBA-Text-Example" style="margin-left: 80px;">.Apply</p>
+<p class="VBA-Text-Example" style="margin-left: 40px;">End With</p>
+<p class="VBA-Text-Example">End Sub</p>
+<p class="VBA-Text-Example">&#160;</p>
+<p class="VBA-Text">This is the unaligned result:</p>
+<p class="VBA-Text" style="margin-left: 0px;">&#160;</p>
+<p class="VBA-Text" style="margin-left: 0px;"></p>
+<p class="VBA-Text" style="margin-left: 0px;">&#160;</p>
+<p class="VBA-Text" style="margin-left: 0px;">The following table shows the three alignment types with a vertical layout:</p>
+<p class="VBA-Text" style="margin-left: 0px;">&#160;</p>
+<table style="border-collapse: separate; border-collapse: separate;" cellspacing="0" border="1">
+<col />
+<col />
+<col />
+<tr>
+<td>
+<p class="VBA-Text-Example">.ArrangeLayoutGroups(group, "Vertical", <span style="font-weight: bold; font-size: 10pt; font-style: italic;"><font size="2" style="font-size:10pt;"><i>"Left"</i></font></span>, False)</p>
+</td>
+<td>
+<p class="VBA-Text-Example">.ArrangeLayoutGroups(group, "Vertical", <span style="font-weight: bold; font-size: 10pt; font-style: italic;"><font size="2" style="font-size:10pt;"><i>"Center"</i></font></span>, False)</p>
+</td>
+<td>
+<p class="VBA-Text-Example">.ArrangeLayoutGroups(group, "Vertical", <span style="font-size: 10pt; font-weight: bold; font-style: italic;"><font size="2" style="font-size:10pt;"><i>"Right"</i></font></span>, False)</p>
+</td>
+</tr>
+<tr>
+<td><img src="../image10.gif" alt="" style="border: none;" border="0" /></td>
+<td><img src="../image11.gif" alt="" style="border: none;" border="0" /></td>
+<td><img src="../image12.gif" alt="" style="border: none;" border="0" /></td>
+</tr>
+</table>
+<p class="VBA-Text" style="margin-left: 0px;">&#160;</p>
+<script type="text/javascript" language="javascript1.2">
+//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+        writeIntopicBar(0);
+
+
+highlightSearch();
+//-->
+//]]>
+</script>
+</body>
+</html>

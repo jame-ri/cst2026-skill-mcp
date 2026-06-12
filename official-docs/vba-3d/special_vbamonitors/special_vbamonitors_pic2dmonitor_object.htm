@@ -1,0 +1,418 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="Adobe RoboHelp 11" />
+<title>PIC2DMonitor Object</title>
+<link rel="StyleSheet" href="../online_help_vba.css" type="text/css" />
+<style type="text/css">
+/*<![CDATA[*/
+<!--
+body { border-bottom-style:None; }
+-->
+/*]]>*/
+</style>
+
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+        origWidth = innerWidth;
+        origHeight = innerHeight;
+        onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+/*<![CDATA[*/
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+-->
+/*]]>*/
+</style>
+
+<script type="text/javascript" language="javascript1.2" src="../whmsg.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript" src="../whver.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript1.2" src="../whutils.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript1.2" src="../whproxy.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript1.2" src="../whlang.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript1.2" src="../whtopic.js" charset="utf-8">
+</script>
+</head>
+<body>
+<script type="text/javascript" language="javascript1.2">
+//<![CDATA[
+<!--
+if (window.gbWhTopic)
+{
+        var strUrl = document.location.href;
+        var bc = 0;
+        var n = strUrl.toLowerCase().indexOf("bc-");
+        if(n != -1)
+        {
+                document.location.replace(strUrl.substring(0, n));
+                bc = strUrl.substring(n+3);
+        }
+
+        if (window.addTocInfo)
+        {
+        addTocInfo("3D Simulation VBA\nVBA Objects\nMonitors\nParticle\nPIC2DMonitor");
+
+        }
+        if (window.writeBtnStyle)
+                writeBtnStyle();
+
+        if (window.writeIntopicBar)
+                writeIntopicBar(0);
+
+        
+        document.write("<p style=\"font-family: Tahoma; font-size: 9pt; font-weight: 400;  font-style:normal; color: rgb(0, 0, 0); text-decoration:none; text-align: left\"> ");
+AddMasterBreadcrumbs("../index.htm", "font-family: Tahoma; font-size: 9pt; font-weight: 400;  font-style:normal; color: rgb(0, 0, 0); text-decoration:none; text-align: left", "|", "Home", "../special_vbaobjects/special_vbaobjects_vbaobjects.htm");
+document.write("<a style=\"font-family: Tahoma; font-size: 9pt; font-weight: 400;  font-style:normal; color: rgb(0, 0, 0); text-decoration:none; text-align: left\" href=\"../special_vbaobjects/special_vbaobjects_vbaobjects.htm\">3D Simulation VBA<\/a> | <a style=\"font-family: Tahoma; font-size: 9pt; font-weight: 400;  font-style:normal; color: rgb(0, 0, 0); text-decoration:none; text-align: left\" href=\"../special_vbaobjects/special_vbaobjects_vbaobjects.htm\">VBA Objects<\/a> | <a style=\"font-family: Tahoma; font-size: 9pt; font-weight: 400;  font-style:normal; color: rgb(0, 0, 0); text-decoration:none; text-align: left\" href=\"special_vbamonitors_monitor_object.htm\">Monitors<\/a> | <a style=\"font-family: Tahoma; font-size: 9pt; font-weight: 400;  font-style:normal; color: rgb(0, 0, 0); text-decoration:none; text-align: left\" href=\"special_vbamonitors_picpositionmonitor_object.htm\">Particle<\/a> | PIC2DMonitor<\/p>");
+
+}
+else
+        if (window.gbIE4)
+                document.location.reload();
+
+onLoadHandler = function()
+{
+  if (window.setRelStartPage)
+        {
+        setTimeout("setRelStartPage('../index.htm');", 1)
+
+    setTimeout("UpdateBreadCrumbsMarker();", 1);
+        }
+}
+
+if (window.addEventListener){  
+        window.addEventListener('load', onLoadHandler, false);   
+} else if (window.attachEvent){  
+        window.attachEvent('onload', onLoadHandler);  
+}
+
+function onSetStartPage()
+{
+  autoSync(1);
+  sendSyncInfo();
+  sendAveInfoOut();
+}
+//-->
+//]]>
+</script><script type="text/javascript" src="../ehlpdhtm.js" language="JavaScript1.2">
+</script>
+<table cellspacing="0" width="100%">
+<col style="width: 50%;" />
+<col style="width: 50%;" />
+<tr>
+<td style="vertical-align: middle; padding-top: 5px; padding-bottom: 5px;">
+<p style="margin-top: 0px; margin-bottom: 0px;"><img src="../3ds.png" alt="" style="border: none;" border="0" /></p>
+</td>
+<td style="vertical-align: middle;">
+<p style="text-align: right;"><a href="https://www.3ds.com/products-services/3dexperience/" target="_blank"><img src="../3dexp.png" alt="" style="border: none;" width="32" height="32" border="0" /></a></p>
+</td>
+</tr>
+</table>
+<h1>PIC2DMonitor Object</h1>
+<p class="VBA-Text">Defines a 2D position monitor. The monitor uses a plane to record the data of the particles of which the trajectories intersect the monitor plane.</p>
+<ul>
+<li class="p-VBA-Index-Category">
+<p class="VBA-Index-Category"><a href="#Methods">Methods</a></p>
+</li>
+<li class="p-VBA-Index-Category">
+<p class="VBA-Index-Category"><a href="#Queries">Queries</a></p>
+</li>
+<li class="p-VBA-Index-Category">
+<p class="VBA-Index-Category"><a href="#Defaults">Default Settings</a></p>
+</li>
+<li class="p-VBA-Index-Category">
+<p class="VBA-Index-Category"><a href="#Example">Examples</a></p>
+</li>
+</ul>
+<p class="VBA-Heading-Category"><a name="Methods" id="Methods"></a>Methods</p>
+<p class="VBA-Heading-Method">Reset</p>
+<p class="VBA-Text-Indent">Resets all internal values to their default settings.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">Name ( <a href="../common_vbageneral/common_general_name.htm" id="a1" style="font-weight: normal; font-style: normal;" name="a1">name</a> <span style="font-style: italic;"><i>monitorName</i></span> )</p>
+<p class="VBA-Text-Indent">Sets the name of the monitor.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">SetDirection ( <span style="font-style: italic;"><i><a href="../common_vbageneral/common_general_enum.htm" id="a3" style="font-weight: normal; font-style: normal;" name="a3">enum</a> dir</i></span>)</p>
+<p class="VBA-Text-Indent">This method defines the plane normal of the particle 2D monitor.</p>
+<p class="VBA-Text-Indent">The values for <span style="font-style: italic;"><i>dir</i></span> can be: "X", "Y" or "Z".</p>
+<p class="VBA-Text-Indent">When the plane normal is defined in the w-direction of the local uvw-coordinate system, so that the uv-plane is transverse to the plane normal, the following table applies depending on the choice of <span style="font-style: italic;"><i>dir</i></span>:</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<table style="vertical-align: top; margin-left: 40px;" cellspacing="0" width="44.208%">
+<col style="width: 43.028%;" />
+<col style="width: 27.885%;" />
+<col style="width: 29.087%;" />
+<tr style="vertical-align: top;">
+<td style="border: Solid 1px #000000; width: 43.028%; padding-right: 10px; padding-left: 10px;">
+<p style="font-weight: bold; text-align: center;"><span style="font-style: italic;"><i>dir</i></span> (w-direction)</p>
+</td>
+<td style="border-top: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 27.885%; padding-right: 10px; padding-left: 10px;">
+<p style="font-weight: bold; text-align: center;">u-direction</p>
+</td>
+<td style="border-top: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 29.087%; padding-right: 10px; padding-left: 10px;">
+<p style="font-weight: bold; text-align: center;">v-direction</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 43.028%; padding-right: 10px; padding-left: 10px;">
+<p style="text-align: center;">X</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 27.885%; padding-right: 10px; padding-left: 10px;">
+<p style="text-align: center;">Y</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 29.087%; padding-right: 10px; padding-left: 10px;">
+<p style="text-align: center;">Z</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 43.028%; padding-right: 10px; padding-left: 10px;">
+<p style="text-align: center;">Y</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 27.885%; padding-right: 10px; padding-left: 10px;">
+<p style="text-align: center;">Z</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 29.087%; padding-right: 10px; padding-left: 10px;">
+<p style="text-align: center;">X</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 43.028%; padding-right: 10px; padding-left: 10px;">
+<p style="text-align: center;">Z</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 27.885%; padding-right: 10px; padding-left: 10px;">
+<p style="text-align: center;">X</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 29.087%; padding-right: 10px; padding-left: 10px;">
+<p style="text-align: center;">Y</p>
+</td>
+</tr>
+</table>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">SetWPosition ( <a href="../common_vbageneral/common_general_double.htm" id="a8" style="font-weight: normal; font-style: normal;" name="a8">double</a> <span style="font-style: italic;"><i>wcut</i></span> )</p>
+<p class="VBA-Text-Indent">Position of the 2D monitor plane along the direction of the specified plane normal (e.g. along the Z-axis when <span style="font-style: italic;"><i>dir</i></span> = "Z").</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">Umin ( <a href="../common_vbageneral/common_general_double.htm" id="a11" style="font-weight: normal; font-style: normal;" name="a11">double</a> <span style="font-style: italic;"><i>umin</i></span> )</p>
+<p class="VBA-Text-Indent">Value of the lower transverse u-boundary. The u and v direction are defined by the plane normal (see table above).</p>
+<p class="vba-text-indent">&#160;</p>
+<p class="VBA-Heading-Method">Umax ( <a href="../common_vbageneral/common_general_double.htm" id="a6" style="font-weight: normal; font-style: normal;" name="a6">double</a> <span style="font-style: italic;"><i>umax</i></span> )</p>
+<p class="VBA-Text-Indent">Value of the upper transverse u-boundary. The u and v direction are defined by the plane normal (see table above).</p>
+<p class="vba-text-indent">&#160;</p>
+<p class="VBA-Heading-Method">Vmin ( <a href="../common_vbageneral/common_general_double.htm" id="a7" style="font-weight: normal; font-style: normal;" name="a7">double</a> <span style="font-style: italic;"><i>vmin</i></span> )</p>
+<p class="VBA-Text-Indent">Value of the lower transverse v-boundary. The u and v direction are defined by the plane normal (see table above).</p>
+<p class="vba-text-indent">&#160;</p>
+<p class="VBA-Heading-Method">Vmax ( <a href="../common_vbageneral/common_general_double.htm" id="a10" style="font-weight: normal; font-style: normal;" name="a10">double</a> <span style="font-style: italic;"><i>vmax</i></span> )</p>
+<p class="VBA-Text-Indent">Value of the upper transverse v-boundary. The u and v direction are defined by the plane normal (see table above).</p>
+<p class="VBA-Heading-Method">&#160;</p>
+<p class="VBA-Heading-Method">Tstart ( <a href="../common_vbageneral/common_general_double.htm" id="a2" style="font-weight: normal; font-style: normal;" name="a2">double</a> <span style="font-style: italic;"><i>startTime</i></span> )</p>
+<p class="VBA-Text-Indent">Sets starting time for a time domain monitor to <span style="font-style: italic;"><i>startTime</i></span>.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">Tstep ( <a href="../common_vbageneral/common_general_double.htm" id="a4" style="font-weight: normal; font-style: normal;" name="a4">double</a> <span style="font-style: italic;"><i>timeStep</i></span> )</p>
+<p class="VBA-Text-Indent">Sets the time increment for a time domain monitor to <span style="font-style: italic;"><i>timeStep</i></span>.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">Tend ( <a href="../common_vbageneral/common_general_double.htm" id="a25" style="font-weight: normal; font-style: normal;" name="a25">double</a> <span style="font-style: italic;"><i>stopTime</i></span> )</p>
+<p class="VBA-Text-Indent">Sets the end time for a time domain monitor to <span style="font-style: italic;"><i>stopTime</i></span>.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">UseTend ( <a href="../common_vbageneral/common_general_bool_data_type.htm" id="a26" style="font-weight: normal; font-style: normal;" name="a26">bool</a> <span style="font-style: italic;"><i>bFlag</i></span> )</p>
+<p class="VBA-Text-Indent">If <span style="font-style: italic;"><i>bFlag</i></span> is True the time domain monitor stops storing the results when the end time set with <span style="font-weight: bold;">Tend</span> is reached. Otherwise the monitor will continue until the simulation stops.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">Delete ( <a href="../common_vbageneral/common_general_name.htm" id="a5" style="font-weight: normal; font-style: normal;" name="a5">name</a> <span style="font-style: italic;"><i>monitorName</i></span> )</p>
+<p class="VBA-Text-Indent">Deletes the monitor named <span style="font-style: italic;"><i>monitorName</i></span>.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">Rename ( <a href="../common_vbageneral/common_general_name.htm" id="a31" style="font-weight: normal; font-style: normal;" name="a31">name</a> <span style="font-style: italic;"><i>oldname,</i></span> &#160;<a href="../common_vbageneral/common_general_name.htm" id="a32" style="font-weight: normal; font-style: normal;" name="a32">name</a> <span style="font-style: italic;"><i>newname</i></span> )</p>
+<p class="VBA-Text-Indent">Renames the monitor named <span style="font-style: italic;"><i>oldname</i></span> to <span style="font-style: italic;"><i>newname</i></span>.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">SetElementsMaxGPU ( <a href="../common_vbageneral/common_general_long.htm" id="a9" style="font-weight: normal; font-style: normal;" name="a9">long</a> <span style="font-style: italic;"><i>number</i></span> )</p>
+<p class="VBA-Text-Indent">Set the maximum number of particles that can be monitored per time step for PIC on GPU. This setting is a global setting, therefore it affects all PIC 2D monitors.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">Create</p>
+<p class="VBA-Text-Indent">Creates the monitor with the previously applied settings.</p>
+<p class="VBA-Heading-Category"><a name="Queries" id="Queries"></a><span style="font-style: italic;"><i>Queries</i></span></p>
+<p class="VBA-Heading-Method">SelectMonitor &#160;( <a href="../common_vbageneral/common_general_name.htm" id="a110" style="font-weight: normal; font-style: normal;" name="a110">name</a> <span style="font-style: italic;"><i>monitorName</i></span> )</p>
+<p class="VBA-Text-Indent">This command must be called before any of the queries below can be executed. It selects the specific monitor to be evaluated by the subsequent commands.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">GetDirection <a href="../common_vbageneral/common_general_long.htm" id="a52" style="font-weight: normal; font-style: normal;" name="a52">long</a></p>
+<p class="VBA-Text-Indent">Get the orientation (normal) of the PIC 2D monitor. The return value 0 means x, 1 means y and 2 means z-direction.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">GetWPosition <a href="../common_vbageneral/common_general_double.htm" id="a58" style="font-weight: normal; font-style: normal;" name="a58">double</a></p>
+<p class="VBA-Text-Indent">Get the pic 2D monitor plane position in normal (w-)direction.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">GetUmin <a href="../common_vbageneral/common_general_double.htm" id="a59" style="font-weight: normal; font-style: normal;" name="a59">double</a></p>
+<p class="VBA-Text-Indent">Get the left boundary (minimum value) of the pic 2D monitor plane in u-direction.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">GetUmax <a href="../common_vbageneral/common_general_double.htm" id="a60" style="font-weight: normal; font-style: normal;" name="a60">double</a></p>
+<p class="VBA-Text-Indent">Get the right boundary (maximum value) of the pic 2D monitor plane in u-direction.</p>
+<p class="vba-text-indent">&#160;</p>
+<p class="VBA-Heading-Method">GetVmin <a href="../common_vbageneral/common_general_double.htm" id="a61" style="font-weight: normal; font-style: normal;" name="a61">double</a></p>
+<p class="VBA-Text-Indent">Get the left boundary (minimum value) of the pic 2D monitor plane in v-direction.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">GetVmax <a href="../common_vbageneral/common_general_double.htm" id="a62" style="font-weight: normal; font-style: normal;" name="a62">double</a></p>
+<p class="VBA-Text-Indent">Get the right boundary (maximum value) of the pic 2D monitor plane in v-direction.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">GetNFrames <a href="../common_vbageneral/common_general_long.htm" id="a16" style="font-weight: normal; font-style: normal;" name="a16">long</a></p>
+<p class="VBA-Text-Indent">Gets the number of frames.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">GetNParticles( <a href="../common_vbageneral/common_general_long.htm" id="a12" style="font-weight: normal; font-style: normal;" name="a12">long</a> <span style="font-style: italic;"><i>iFrame</i></span> ) <a href="../common_vbageneral/common_general_long.htm" id="a13" style="font-weight: normal; font-style: normal;" name="a13">long</a></p>
+<p class="VBA-Text-Indent">Gets the number of recorded particles in one frame.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">GetCurrentPerFrame( <a href="../common_vbageneral/common_general_long.htm" id="a53" style="font-weight: normal; font-style: normal;" name="a53">long</a> <span style="font-style: italic;"><i>iFrame</i></span> ) <a href="../common_vbageneral/common_general_double.htm" id="a57" style="font-weight: normal; font-style: normal;" name="a57">double</a></p>
+<p class="VBA-Text-Indent">Get the current that is monitored in one frame. The current in the monitors' normal direction is positive weighted whereas the current in the opposite direction is negative weighted.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">GetTime( <a href="../common_vbageneral/common_general_long.htm" id="a14" style="font-weight: normal; font-style: normal;" name="a14">long</a> iFrame ) <a href="../common_vbageneral/common_general_double.htm" id="a34" style="font-weight: normal; font-style: normal;" name="a34">double</a></p>
+<p class="VBA-Text-Indent">Gets the time from the requested frame.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">GetTimeStep( <a href="../common_vbageneral/common_general_long.htm" id="a47" style="font-weight: normal; font-style: normal;" name="a47">long</a> iFrame ) <a href="../common_vbageneral/common_general_double.htm" id="a48" style="font-weight: normal; font-style: normal;" name="a48">double</a></p>
+<p class="VBA-Text-Indent">Gets the time step from the requested frame.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">GetChargeTotal( <a href="../common_vbageneral/common_general_long.htm" id="a15" style="font-weight: normal; font-style: normal;" name="a15">long</a> <span style="font-style: italic;"><i>iFrame</i></span> ) <a href="../common_vbageneral/common_general_double.htm" id="a35" style="font-weight: normal; font-style: normal;" name="a35">double</a></p>
+<p class="VBA-Text-Indent">Gets the total charge of all particles recorded in one frame. In this case all charges are just added up, the direction in that they hit the monitor's plane is not considered.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">GetChargeTotalMacro( <a href="../common_vbageneral/common_general_long.htm" id="a17" style="font-weight: normal; font-style: normal;" name="a17">long</a> <span style="font-style: italic;"><i>iFrame</i></span> ) <a href="../common_vbageneral/common_general_double.htm" id="a36" style="font-weight: normal; font-style: normal;" name="a36">double</a></p>
+<p class="VBA-Text-Indent">Gets the total macro charge of all particles recorded in one frame. In this case all charges are just added up, the direction in that they hit the monitor's plane is not considered.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">GetPosition( <a href="../common_vbageneral/common_general_long.htm" id="a18" style="font-weight: normal; font-style: normal;" name="a18">long</a> iFrame, <a href="../common_vbageneral/common_general_long.htm" id="a19" style="font-weight: normal; font-style: normal;" name="a19">long</a> <span style="font-style: italic;"><i>iParticle</i></span>, <a href="../common_vbageneral/common_general_double.htm" id="a41" style="font-weight: normal; font-style: normal;" name="a41">double</a> <span style="font-style: italic;"><i>&amp; dPosX</i></span>, <a href="../common_vbageneral/common_general_double.htm" id="a42" style="font-weight: normal; font-style: normal;" name="a42">double</a> <span style="font-style: italic;"><i>&amp; dPosY</i></span>, <a href="../common_vbageneral/common_general_double.htm" id="a43" style="font-weight: normal; font-style: normal;" name="a43">double</a> <span style="font-style: italic;"><i>&amp; dPosZ</i></span> )</p>
+<p class="VBA-Text-Indent">Gets the position of one particle in one frame.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">GetMomentumNormed( <a href="../common_vbageneral/common_general_long.htm" id="a20" style="font-weight: normal; font-style: normal;" name="a20">long</a> <span style="font-style: italic;"><i>iFrame</i></span>, <a href="../common_vbageneral/common_general_long.htm" id="a21" style="font-weight: normal; font-style: normal;" name="a21">long</a> <span style="font-style: italic;"><i>iParticle</i></span>, <a href="../common_vbageneral/common_general_double.htm" id="a44" style="font-weight: normal; font-style: normal;" name="a44">double</a> <span style="font-style: italic;"><i>&amp; dMomX</i></span>, <a href="../common_vbageneral/common_general_double.htm" id="a45" style="font-weight: normal; font-style: normal;" name="a45">double</a> <span style="font-style: italic;"><i>&amp; dMomY</i></span>, <a href="../common_vbageneral/common_general_double.htm" id="a46" style="font-weight: normal; font-style: normal;" name="a46">double</a> <span style="font-style: italic;"><i>&amp; dMomZ</i></span> )</p>
+<p class="VBA-Text-Indent">Gets the normalized momentum of one particle in one frame.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">GetMomentumNormedAbs( <a href="../common_vbageneral/common_general_long.htm" id="a49" style="font-weight: normal; font-style: normal;" name="a49">long</a> <span style="font-style: italic;"><i>iFrame</i></span>, <a href="../common_vbageneral/common_general_long.htm" id="a50" style="font-weight: normal; font-style: normal;" name="a50">long</a> <span style="font-style: italic;"><i>iParticle</i></span> ) <a href="../common_vbageneral/common_general_double.htm" id="a51" style="font-weight: normal; font-style: normal;" name="a51">double</a></p>
+<p class="VBA-Text-Indent">Gets the absolute value of the normed momentum.</p>
+<p class="vba-text-indent">&#160;</p>
+<p class="VBA-Heading-Method">GetMass( <a href="../common_vbageneral/common_general_long.htm" id="a22" style="font-weight: normal; font-style: normal;" name="a22">long</a> <span style="font-style: italic;"><i>iFrame</i></span>, <a href="../common_vbageneral/common_general_long.htm" id="a23" style="font-weight: normal; font-style: normal;" name="a23">long</a> <span style="font-style: italic;"><i>iParticle</i></span> ) <a href="../common_vbageneral/common_general_double.htm" id="a37" style="font-weight: normal; font-style: normal;" name="a37">double</a></p>
+<p class="VBA-Text-Indent">Gets the particle's mass.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">GetMassMacro( <a href="../common_vbageneral/common_general_long.htm" id="a24" style="font-weight: normal; font-style: normal;" name="a24">long</a> <span style="font-style: italic;"><i>iFrame</i></span>, <a href="../common_vbageneral/common_general_long.htm" id="a27" style="font-weight: normal; font-style: normal;" name="a27">long</a> <span style="font-style: italic;"><i>iParticle</i></span> ) <a href="../common_vbageneral/common_general_double.htm" id="a38" style="font-weight: normal; font-style: normal;" name="a38">double</a></p>
+<p class="VBA-Text-Indent">Gets the particle's macro mass.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">GetCharge( <a href="../common_vbageneral/common_general_long.htm" id="a28" style="font-weight: normal; font-style: normal;" name="a28">long</a> <span style="font-style: italic;"><i>iFrame</i></span>, <a href="../common_vbageneral/common_general_long.htm" id="a29" style="font-weight: normal; font-style: normal;" name="a29">long</a> <span style="font-style: italic;"><i>iParticle</i></span> ) <a href="../common_vbageneral/common_general_double.htm" id="a39" style="font-weight: normal; font-style: normal;" name="a39">double</a></p>
+<p class="VBA-Text-Indent">Gets the particle's charge.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">GetChargeMacro( <a href="../common_vbageneral/common_general_long.htm" id="a30" style="font-weight: normal; font-style: normal;" name="a30">long</a> <span style="font-style: italic;"><i>iFrame</i></span>, <a href="../common_vbageneral/common_general_long.htm" id="a33" style="font-weight: normal; font-style: normal;" name="a33">long</a> <span style="font-style: italic;"><i>iParticle</i></span> ) <a href="../common_vbageneral/common_general_double.htm" id="a40" style="font-weight: normal; font-style: normal;" name="a40">double</a></p>
+<p class="VBA-Text-Indent">Gets the particle's macro charge.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">GetCurrent( <a href="../common_vbageneral/common_general_long.htm" id="a54" style="font-weight: normal; font-style: normal;" name="a54">long</a> <span style="font-style: italic;"><i>iFrame</i></span>, <a href="../common_vbageneral/common_general_long.htm" id="a55" style="font-weight: normal; font-style: normal;" name="a55">long</a> <span style="font-style: italic;"><i>iParticle</i></span> ) <a href="../common_vbageneral/common_general_double.htm" id="a56" style="font-weight: normal; font-style: normal;" name="a56">double</a></p>
+<p class="VBA-Text-Indent">Gets the particle's current.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">GetMonitorEmittance( <a href="../common_vbageneral/common_general_double.htm" id="a63" style="font-weight: normal; font-style: normal;" name="a63">double</a> <span style="font-style: italic;"><i>&amp;</i></span> <span style="font-style: italic;"><i>EmittanceU</i></span>, <span><a href="../common_vbageneral/common_general_double.htm" id="a64" style="font-weight: normal; font-style: normal;" name="a64">double</a></span> <span style="font-style: italic;"><i>&amp;</i></span> <span style="font-style: italic;"><i>EmittanceV</i></span> )</p>
+<p class="VBA-Text-Indent">Calculate the transverse emittance in U and V directions for all frames. To calculate the emittance, at least two particles are required. When less than two particles are present, -1.0 is returned.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">GetFrameEmittance( <a href="../common_vbageneral/common_general_long.htm" id="a67" style="font-weight: normal; font-style: normal;" name="a67">long</a> <span style="font-style: italic;"><i>iFrame,</i></span> &#160;<a href="../common_vbageneral/common_general_double.htm" id="a65" style="font-weight: normal; font-style: normal;" name="a65">double</a> <span style="font-style: italic;"><i>&amp;</i></span> <span style="font-style: italic;"><i>EmittanceU</i></span>, <span><a href="../common_vbageneral/common_general_double.htm" id="a66" style="font-weight: normal; font-style: normal;" name="a66">double</a></span> <span style="font-style: italic;"><i>&amp;</i></span> <span style="font-style: italic;"><i>EmittanceV</i></span> )</p>
+<p class="VBA-Text-Indent">Calculate the transverse emittance in U and V directions for a given frame. To calculate the emittance, at least two particles are required. When less than two particles are present, -1.0 is returned.</p>
+<p class="VBA-Heading-Category"><a name="Defaults" id="Defaults"></a>Default Settings</p>
+<p class="VBA-Text-Example">Dir ("Z")</p>
+<p class="VBA-Text-Example">Wcut (0)</p>
+<p class="VBA-Text-Example">Umin (0)</p>
+<p class="VBA-Text-Example">Umax (0)</p>
+<p class="VBA-Text-Example">Vmin (0)</p>
+<p class="VBA-Text-Example">Vmax (0)</p>
+<p class="VBA-Text-Example">Tstart (0.0)</p>
+<p class="VBA-Text-Example">Tstep &#160;(0.0)</p>
+<p class="VBA-Text-Example">Tend &#160;&#160;(0.0)</p>
+<p class="VBA-Text-Example">UseTend (False)</p>
+<p class="VBA-Heading-Category"><a name="Example" id="Example"></a>Examples</p>
+<p class="VBA-Text-Example" style="color: #008000;"><span style="color: #008000;"><font color="green">' creates a PIC 2D Monitor</font></span></p>
+<p class="VBA-Text-Example">With PIC2DMonitor</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.Reset</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.Name "pic 2d monitor 1"</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.SetDirection "Z"</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.SetWPosition "-50"</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.Umin "-10"</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.Umax "10"</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.Vmin "-10"</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.Vmax "10"</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.Tstart "0.0"</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.Tstep "0.05"</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.Tend "0.0"</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.UseTend "False"</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.Create</p>
+<p class="VBA-Text-Example">End With</p>
+<p class="VBA-Text-Example">&#160;</p>
+<p class="VBA-Text-Example" style="color: #008000;"><span style="color: #008000;"><font color="green">' get some result data from the pic 2d monitor and prints it into a text file</font></span></p>
+<p class="VBA-Text-Example" style="margin-left: 0px;">Sub Main</p>
+<p class="VBA-Text-Example" style="margin-left: 40px;">Dim nFrames &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;As Long</p>
+<p class="VBA-Text-Example" style="margin-left: 40px;">Dim nParticles &#160;&#160;&#160;&#160;&#160;&#160;As Long</p>
+<p class="VBA-Text-Example" style="margin-left: 40px;">Dim dTime &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;As Double</p>
+<p class="VBA-Text-Example" style="margin-left: 40px;">Dim dX &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;As Double</p>
+<p class="VBA-Text-Example" style="margin-left: 40px;">Dim dY &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;As Double</p>
+<p class="VBA-Text-Example" style="margin-left: 40px;">Dim dZ &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;As Double</p>
+<p class="VBA-Text-Example" style="margin-left: 40px;">Dim dChargeMacro &#160;&#160;&#160;&#160;As Double</p>
+<p class="VBA-Text-Example" style="margin-left: 40px;">Dim dCurrentPerFrame As Double</p>
+<p class="VBA-Text-Example" style="margin-left: 40px;">&#160;</p>
+<p class="VBA-Text-Example" style="margin-left: 40px;">With PIC2DMonitor</p>
+<p class="VBA-Text-Example" style="margin-left: 80px;">SelectMonitor("pic 2d monitor 1")</p>
+<p class="VBA-Text-Example" style="margin-left: 80px;">&#160;</p>
+<p class="VBA-Text-Example" style="margin-left: 80px;">Open "pic 2d monitor 1.txt" For Output As #1</p>
+<p class="VBA-Text-Example" style="margin-left: 80px;">nFrames = .GetNFrames</p>
+<p class="VBA-Text-Example" style="margin-left: 80px;">&#160;</p>
+<p class="VBA-Text-Example" style="margin-left: 80px;">Dim iFrame As Long</p>
+<p class="VBA-Text-Example" style="margin-left: 80px;">For iFrame = 0 To nFrames - 1</p>
+<p class="VBA-Text-Example" style="margin-left: 120px;">&#160;</p>
+<p class="VBA-Text-Example" style="margin-left: 120px;">nParticles &#160;&#160;&#160;&#160;&#160;&#160;= .GetNParticles(iFrame)</p>
+<p class="VBA-Text-Example" style="margin-left: 120px;">dTime &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;= .GetTime(iFrame)</p>
+<p class="VBA-Text-Example" style="margin-left: 120px;">dCurrentPerFrame = .GetChargeTotalMacro(iFrame) / .GetTimeStep(iFrame)</p>
+<p class="VBA-Text-Example" style="margin-left: 120px;">&#160;</p>
+<p class="VBA-Text-Example" style="margin-left: 120px;">Print #1, "Time &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;: "; dTime</p>
+<p class="VBA-Text-Example" style="margin-left: 120px;">Print #1, "Number of Particles : "; nParticles</p>
+<p class="VBA-Text-Example" style="margin-left: 120px;">Print #1, "Current per Frame &#160;&#160;: "; dCurrentPerFrame</p>
+<p class="VBA-Text-Example" style="margin-left: 120px;">&#160;</p>
+<p class="VBA-Text-Example" style="margin-left: 120px;">Dim iParticle As Long</p>
+<p class="VBA-Text-Example" style="margin-left: 120px;">For iParticle = 0 To nParticles - 1</p>
+<p class="VBA-Text-Example" style="margin-left: 160px;">&#160;</p>
+<p class="VBA-Text-Example" style="margin-left: 160px;">dChargeMacro = .GetChargeMacro(iFrame, iParticle)</p>
+<p class="VBA-Text-Example" style="margin-left: 160px;">.GetPosition(iFrame, iParticle, dX, dY, dZ)</p>
+<p class="VBA-Text-Example" style="margin-left: 160px;">Print #1, "Particle data &#160;&#160;&#160;&#160;&#160;&#160;: "; iFrame; " &#160;"; iParticle; " &#160;"; dX; " &#160;"; dY; " &#160;"; dZ; " &#160;"</p>
+<p class="VBA-Text-Example" style="margin-left: 160px;">&#160;</p>
+<p class="VBA-Text-Example" style="margin-left: 120px;">Next iParticle</p>
+<p class="VBA-Text-Example" style="margin-left: 80px;">Next iFrame</p>
+<p class="VBA-Text-Example" style="margin-left: 80px;">&#160;</p>
+<p class="VBA-Text-Example" style="margin-left: 80px;">Close #1</p>
+<p class="VBA-Text-Example" style="margin-left: 40px;">End With</p>
+<p class="VBA-Text-Example">End Sub</p>
+<p class="VBA-Text-Example">&#160;</p>
+<?rh-p style="margin-bottom: 0px; text-align: Right; margin-left: 18px; 
+                 margin-right: 18px; margin-top: 18px;" ?>
+<div style="width: 100%; position: relative;" id="footer">
+<p style="border-bottom: Solid 1px #dddddd; text-align: Left; margin-left: 0px; font-family: Arial, sans-serif; line-height: Normal; margin-top: 9px; margin-right: 0px; margin-bottom: 6px; border-left-width: 1px; border-top-width: 1px; border-right-width: 1px;"><span style="text-align: Left; font-family: Arial, sans-serif; line-height: Normal;">&#160;</span></p>
+<table cellspacing="0" width="100%">
+<col style="width: 50%;" />
+<col style="width: 50%;" />
+<tr>
+<td style="vertical-align: Top;"><span style="font-family: Arial, sans-serif; line-height: Normal; font-size: 8pt;"><font size="1" style="font-size:8pt;">CST Studio Suite 2026</font></span></td>
+<td style="vertical-align: Top;">
+<p style="text-align: right;">&#160;</p>
+</td>
+</tr>
+</table>
+<p>&#160;</p>
+</div>
+<script type="text/javascript" language="javascript1.2">
+//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+        writeIntopicBar(0);
+
+
+highlightSearch();
+//-->
+//]]>
+</script>
+</body>
+</html>

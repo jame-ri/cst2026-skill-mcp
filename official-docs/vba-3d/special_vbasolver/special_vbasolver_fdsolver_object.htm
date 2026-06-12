@@ -1,0 +1,774 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="Adobe RoboHelp 11" />
+<title>FDSolver Object</title>
+<link rel="StyleSheet" href="../online_help_vba.css" type="text/css" />
+<style type="text/css">
+/*<![CDATA[*/
+<!--
+body { border-bottom-style:None; }
+-->
+/*]]>*/
+</style>
+
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+        origWidth = innerWidth;
+        origHeight = innerHeight;
+        onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+/*<![CDATA[*/
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+-->
+/*]]>*/
+</style>
+
+<script type="text/javascript" language="javascript1.2" src="../whmsg.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript" src="../whver.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript1.2" src="../whutils.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript1.2" src="../whproxy.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript1.2" src="../whlang.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript1.2" src="../whtopic.js" charset="utf-8">
+</script>
+</head>
+<body>
+<script type="text/javascript" language="javascript1.2">
+//<![CDATA[
+<!--
+if (window.gbWhTopic)
+{
+        var strUrl = document.location.href;
+        var bc = 0;
+        var n = strUrl.toLowerCase().indexOf("bc-");
+        if(n != -1)
+        {
+                document.location.replace(strUrl.substring(0, n));
+                bc = strUrl.substring(n+3);
+        }
+
+        if (window.addTocInfo)
+        {
+        addTocInfo("3D Simulation VBA\nVBA Objects\nSolver\nHigh Frequency\nFDSolver");
+
+        }
+        if (window.writeBtnStyle)
+                writeBtnStyle();
+
+        if (window.writeIntopicBar)
+                writeIntopicBar(0);
+
+        
+        document.write("<p style=\"font-family: Tahoma; font-size: 9pt; font-weight: 400;  font-style:normal; color: rgb(0, 0, 0); text-decoration:none; text-align: left\"> ");
+AddMasterBreadcrumbs("../index.htm", "font-family: Tahoma; font-size: 9pt; font-weight: 400;  font-style:normal; color: rgb(0, 0, 0); text-decoration:none; text-align: left", "|", "Home", "../special_vbaobjects/special_vbaobjects_vbaobjects.htm");
+document.write("<a style=\"font-family: Tahoma; font-size: 9pt; font-weight: 400;  font-style:normal; color: rgb(0, 0, 0); text-decoration:none; text-align: left\" href=\"../special_vbaobjects/special_vbaobjects_vbaobjects.htm\">3D Simulation VBA<\/a> | <a style=\"font-family: Tahoma; font-size: 9pt; font-weight: 400;  font-style:normal; color: rgb(0, 0, 0); text-decoration:none; text-align: left\" href=\"../special_vbaobjects/special_vbaobjects_vbaobjects.htm\">VBA Objects<\/a> | <a style=\"font-family: Tahoma; font-size: 9pt; font-weight: 400;  font-style:normal; color: rgb(0, 0, 0); text-decoration:none; text-align: left\" href=\"special_vbasolver_background_object.htm\">Solver<\/a> | <a style=\"font-family: Tahoma; font-size: 9pt; font-weight: 400;  font-style:normal; color: rgb(0, 0, 0); text-decoration:none; text-align: left\" href=\"special_vbasolver_solver_object.htm\">High Frequency<\/a> | FDSolver<\/p>");
+
+}
+else
+        if (window.gbIE4)
+                document.location.reload();
+
+onLoadHandler = function()
+{
+  if (window.setRelStartPage)
+        {
+        setTimeout("setRelStartPage('../index.htm');", 1)
+
+    setTimeout("UpdateBreadCrumbsMarker();", 1);
+        }
+}
+
+if (window.addEventListener){  
+        window.addEventListener('load', onLoadHandler, false);   
+} else if (window.attachEvent){  
+        window.attachEvent('onload', onLoadHandler);  
+}
+
+function onSetStartPage()
+{
+  autoSync(1);
+  sendSyncInfo();
+  sendAveInfoOut();
+}
+//-->
+//]]>
+</script><script type="text/javascript" src="../ehlpdhtm.js" language="JavaScript1.2">
+</script>
+<table cellspacing="0" width="100%">
+<col style="width: 50%;" />
+<col style="width: 50%;" />
+<tr>
+<td style="vertical-align: middle; padding-top: 5px; padding-bottom: 5px;">
+<p style="margin-top: 0px; margin-bottom: 0px;"><img src="../3ds.png" alt="" style="border: none;" border="0" /></p>
+</td>
+<td style="vertical-align: middle;">
+<p style="text-align: right;"><a href="https://www.3ds.com/products-services/3dexperience/" target="_blank"><img src="../3dexp.png" alt="" style="border: none;" width="32" height="32" border="0" /></a></p>
+</td>
+</tr>
+</table>
+<p class="VBA-Heading-Object">FDSolver Object</p>
+<p class="VBA-Text">This is the object that controls the time-harmonic high frequency solver and its methods, as well as the integral equation solver (see also <a href="special_vbasolver_iesolver_object.htm">IESolver Object</a>). Every setting concerning a frequency domain or integral equation solver simulation run may be defined with this object. Mesh and solver method can be chosen by calling <a href="#FD Method">SetMethod</a>. Use the <a href="#FD Start">Start</a> command to run the solver.</p>
+<p class="VBA-Text" style="font-weight: bold; margin-left: 21px;">&#160;</p>
+<p class="VBA-Text" style="margin-left: 21px; font-weight: bold;">Frequency Domain Solver Settings</p>
+<ul>
+<li class="p-VBA-Index-Category">
+<p class="VBA-Index-Category"><a href="#FD General">General</a></p>
+</li>
+<li class="p-VBA-Index-Category">
+<p class="VBA-Index-Category"><a href="#FD Defaults">Defaults</a></p>
+</li>
+</ul>
+<p class="VBA-Heading-Category"><a name="FD General"></a>Frequency Domain Solver General</p>
+<p class="VBA-Heading-Method">Reset</p>
+<p class="VBA-Text-Indent">Resets all previously made settings concerning the solver to the default values.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method"><a name="FD Start"></a>Start <a href="../common_vbageneral/common_general_integer.htm" id="a159" style="font-weight: normal;" name="a159">int</a></p>
+<p class="VBA-Text-Indent">Starts the solver with the current settings and returns 1 if the calculation is successfully finished and 0 if it failed.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">AcceleratedRestart ( <a href="../common_vbageneral/common_general_bool_data_type.htm" id="a76" style="font-weight: normal;" name="a76">bool</a> <span style="font-style: italic;"><i>flag</i></span> )</p>
+<p class="VBA-Text-Indent">If activated, the frequency domain solver with hexahedral or tetrahedral mesh stores a subset of the results from frequency samples calculated so far in order to reuse this information for an accelerated recalculation of additional frequency samples in subsequent solver runs. Since a direct equation system solver does not profit from a good initial guess to the solution, this mainly applies to the iterative solver. However, you may try to calculate some frequency samples using the direct solver, and continue with the iterative solver, thereby taking into account solutions from the direct solver to speed up the simulation.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">AccuracyTet ( <a href="../common_vbageneral/common_general_double.htm" id="a77" style="font-weight: normal;" name="a77">double</a> <span style="font-style: italic;"><i>value</i></span> )</p>
+<p class="VBA-Text-Indent">Specifies the desired accuracy for the tetrahedral frequency domain solver in terms of the relative residual norm of the linear equation system solver. The accuracy value may be chosen from the range 1e-3 down to 1e-12, where 1e-12 correspond to the highest accuracy level.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">AccuracySrf ( <a href="../common_vbageneral/common_general_double.htm" id="a1" style="font-weight: normal;" name="a1">double</a> <span style="font-style: italic;"><i>value</i></span> )</p>
+<p class="VBA-Text-Indent">Specifies the desired accuracy for the tetrahedral frequency domain solver in terms of the relative residual norm of the linear equation system solver. The accuracy value may be chosen from the range 1e-3 down to 1e-12, where 1e-12 correspond to the highest accuracy level.</p>
+<p class="VBA-Heading-Method">&#160;</p>
+<p class="VBA-Heading-Method">AccuracyHex ( <a href="../common_vbageneral/common_general_double.htm" id="a140" style="font-weight: normal;" name="a140">double</a> <span style="font-style: italic;"><i>value</i></span> )</p>
+<p class="VBA-Text-Indent">Specifies the desired accuracy for the hexahedral frequency domain solver in terms of the relative residual norm of the linear equation system solver. The accuracy value may be chosen from the range 1e-3 down to 1e-12, where 1e-12 correspond to the highest accuracy level.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">AccuracyROM ( <a href="../common_vbageneral/common_general_double.htm" id="a177" style="font-weight: normal;" name="a177">double</a> <span style="font-style: italic;"><i>value</i></span> )</p>
+<p class="VBA-Text-Indent">Specifies the desired accuracy of the reduced order model (ROM) for the tetrahedral frequency domain solver with fast reduced order model sweep. The accuracy value may be chosen from the range 1e-3 down to 1e-12, where 1e-12 correspond to the highest accuracy level.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">StoreAllResults ( <a href="../common_vbageneral/common_general_bool_data_type.htm" id="a78" style="font-weight: normal;" name="a78">bool</a> <span style="font-style: italic;"><i>flag</i></span> )</p>
+<p class="VBA-Text-Indent">If this method is activated (<span style="font-style: italic;"><i>flag</i></span> = True), field results are stored at each frequency sample. This comprises electric and magnetic fields, as well as electric and magnetic flux densities.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">StoreSolutionCoefficients ( <a href="../common_vbageneral/common_general_bool_data_type.htm" id="a162" style="font-weight: normal;" name="a162">bool</a> <span style="font-style: italic;"><i>flag</i></span> )</p>
+<p class="VBA-Text-Indent">This method is deprecated, but still available for backward compatibility. The method <span style="font-weight: bold;">SetKeepSolutionCoefficients</span> supersedes <span style="font-weight: bold;">StoreSolutionCoefficients</span>. If this method is called with <span style="font-style: italic;"><i>flag</i></span> = True, solution coefficients are stored on disk at each frequency sample and at each excitation.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">SetKeepSolutionCoefficients ( <a href="../common_vbageneral/common_general_enum.htm" id="a111" style="font-weight: normal;" name="a111">enum</a> <span style="font-weight: normal;">{"All", "None", "Monitors", "MonitorsAndMeshAdaptation"}</span> <span style="font-style: italic;"><i>mode</i></span> )</p>
+<p class="VBA-Text-Indent">Call to specify which solution coefficients should be kept, for instance to calculate additional post-processing results without running a solver again. With <span style="font-style: italic;"><i>mode</i></span> = "All", solution coefficients are stored on disk at each frequency sample and at each excitation. Other options refer to monitor frequencies, or frequencies with adaptive mesh refinement. The least amount of disk space is used with <span style="font-style: italic;"><i>mode</i></span> = "None".</p>
+<p class="VBA-Text-Indent">Note that the full set of options is available only with the general purpose or discrete samples sweep and tetrahedral mesh.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">CreateLegacy1DSignals ( <a href="../common_vbageneral/common_general_bool_data_type.htm" id="a162" style="font-weight: normal;" name="a162">bool</a> <span style="font-style: italic;"><i>flag</i></span> )</p>
+<p class="VBA-Text-Indent">Call this method with (<span style="font-style: italic;"><i>flag</i></span> = True) only if required: some result templates from previous versions do not operate on the complex 1D results directly, but expect results for amplitude, phase, and dB signals. This option is off by default for new projects due to performance reasons.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">SetOpenBCTypeHex ( <a href="../common_vbageneral/common_general_enum.htm" id="a94" style="font-weight: normal;" name="a94">enum</a><span style="font-weight: normal;">{"Default", "PML", "FreespaceSIBC"}</span> <span style="font-style: italic;"><i>type</i></span> )</p>
+<p class="VBA-Text-Indent">Chooses how the open boundary is realized in the frequency domain solver with hexahedral mesh. The default is PML. For electrically relatively small models with the open boundaries defined next to vacuum, the first order freespace open boundary condition (<span style="font-style: italic;"><i>type</i></span> = "FreespaceSIBC") might be an alternative to save memory and to speed up the iterative solver's convergence.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">SetOpenBCTypeTet ( <a href="../common_vbageneral/common_general_enum.htm" id="a97" style="font-weight: normal;" name="a97">enum</a><span style="font-weight: normal;">{"Default", "PML", "SIBC"}</span> <span style="font-style: italic;"><i>type</i></span> )</p>
+<p class="VBA-Text-Indent">Chooses how the open boundary is realized in the frequency domain solver with tetrahedral mesh, unless the problem has unit cell boundary conditions, for which the open boundary is realized by a Floquet mode "port."</p>
+<p class="VBA-Text-Indent">The default is the standard impedance boundary condition (SIBC), which shows low artificial reflection for plane waves that impinge on the open boundary perpendicularly (the field solution of course is not necessarily a plane wave, but might be considered as the superposition of various plane waves at different angles.) For "plane wave" angles closer to grazing incidence, the PML provides lower artificial reflection, but at the cost of higher memory usage and more demanding linear equation systems, which require more time to solve.</p>
+<p class="VBA-Text-Indent">Presently, SIBC without added space has the best consistency with respect to radiated power. Other combinations may need manual mesh refinement at the open boundary for high frequencies.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">SetEvaluateHFieldOnSIBC ( <a href="../common_vbageneral/common_general_bool_data_type.htm" id="a182" style="font-weight: normal;" name="a182">bool</a> <span style="font-style: italic;"><i>flag</i></span> )</p>
+<p class="VBA-Text-Indent">This method affects the field recording for farfield monitors. It is recommended to keep the new default (<span style="font-style: italic;"><i>flag</i></span> = True). In that case, the open boundary realization by SIBC without added space has the best consistency with respect to radiated power.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">AddMonitorSamples ( <a href="../common_vbageneral/common_general_bool_data_type.htm" id="a2" style="font-weight: normal;" name="a2">bool</a> <span style="font-style: italic;"><i>flag</i></span> )</p>
+<p class="VBA-Text-Indent">If this method is activated (<span style="font-style: italic;"><i>flag</i></span> = True), a solver run is performed for all monitor frequencies defined, independently of the number of other (non-monitor) frequency samples, which are specified using the <span style="font-weight: bold;">FrequencySamples</span> and <span style="font-weight: bold;">AddSampleInterval</span> methods. Please note that the total number of samples will be increased automatically in order to take into account the monitor definitions, if necessary. Otherwise (<span style="font-style: italic;"><i>flag</i></span> = False), monitors will not be calculated.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">FrequencySamples ( <a href="../common_vbageneral/common_general_integer.htm" id="a79" style="font-weight: normal;" name="a79">int</a> <span style="font-style: italic;"><i>nFSamples</i></span> )</p>
+<p class="VBA-Text-Indent">Specifies the (maximum) number of frequency samples that should be calculated in a S-parameter frequency sweep. The samples are placed adaptively in the current global frequency interval. The method <span style="font-weight: bold;">AddSampleInterval</span> allows to specify the sampling strategy more precisely.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">MeshAdaptionHex ( <a href="../common_vbageneral/common_general_bool_data_type.htm" id="a80" style="font-weight: normal;" name="a80">bool</a> <span style="font-style: italic;"><i>flag</i></span> )</p>
+<p class="VBA-Text-Indent">Activate the broadband, expert-system based adaptive mesh refinement for the hexahedral frequency domain solver.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">MeshAdaptionTet ( <a href="../common_vbageneral/common_general_bool_data_type.htm" id="a153" style="font-weight: normal;" name="a153">bool</a> <span style="font-style: italic;"><i>flag</i></span> )</p>
+<p class="VBA-Text-Indent">Activate the adaptive mesh refinement for the tetrahedral frequency domain solver. The adaptation frequency samples are defined by using the <span style="font-weight: bold;">AddSampleInterval</span> method with <span style="font-style: italic;"><i>adaptation</i></span> set to True.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">ResetSampleIntervals ( <a href="../common_vbageneral/common_general_enum.htm" id="a154" style="font-weight: normal;" name="a154">enum</a><span style="font-weight: normal;">{"all","adaptation","single","inactive","infinite"}</span> <span style="font-style: italic;"><i>key</i></span> )</p>
+<p class="VBA-Text-Indent">Removes sampling interval definitions according to the <span style="font-style: italic;"><i>key</i></span> . If used together with <span style="font-weight: bold;">AddSampleInterval</span>, a set of sampling intervals can be re-defined, for instance all adaptation frequencies.<br />
+The key "infinite" describes automatic sampling interval definitions with an unspecified number of samples.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">UseHelmholtzEquation ( <a href="../common_vbageneral/common_general_bool_data_type.htm" id="a82" style="font-weight: normal;" name="a82">bool</a> <span style="font-style: italic;"><i>flag</i></span> )</p>
+<p class="VBA-Text-Indent">If activated the Helmholtz equation is used when running the frequency domain solver with hexahedral mesh. This might lead to a faster convergence of the solver, especially for low frequency problems.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">AddSampleInterval ( <a href="../common_vbageneral/common_general_double.htm" id="a84" style="font-weight: normal;" name="a84">double</a> <span style="font-style: italic;"><i>min,</i></span> <a href="../common_vbageneral/common_general_double.htm" id="a85" style="font-weight: normal;" name="a85">double</a> <span style="font-style: italic;"><i>max,</i></span> &#160;<a href="../common_vbageneral/common_general_integer.htm" id="a86" style="font-weight: normal;" name="a86">int</a> <span style="font-style: italic;"><i>samples,</i></span> <a href="../common_vbageneral/common_general_enum.htm" id="a87" name="a87"><span style="font-weight: normal;">enum</span></a> <span style="font-weight: normal;">{"Automatic", "Single", "Equidistant", "Logarithmic"}</span> <span style="font-style: italic;"><i>key</i></span>, <a href="../common_vbageneral/common_general_bool_data_type.htm" id="a6" style="font-weight: normal;" name="a6">bool</a> <span style="font-style: italic;"><i>adaptation</i></span> )</p>
+<p class="VBA-Text-Indent">Specifies a customized frequency interval (<span style="font-style: italic;"><i>min</i></span> to <span style="font-style: italic;"><i>max</i></span>) as well as the corresponding number of frequency <span style="font-style: italic;"><i>samples</i></span> for which calculations will be performed.</p>
+<p class="VBA-Text-Indent">Depending on the <span style="font-style: italic;"><i>key</i></span> value, the samples will either be placed adaptively, or equidistantly, or with logarithmic spacing into the interval. A "Single" frequency point is defined by setting lower and upper frequency limit to the same value, or by omitting either the lower or the upper frequency. The number of <span style="font-style: italic;"><i>samples</i></span> is One for single samples, of course.</p>
+<p class="VBA-Text-Indent">The parameters <span style="font-style: italic;"><i>min</i></span> and <span style="font-style: italic;"><i>max</i></span> may be values as well as strings. You may pass an empty string "" as an argument. For equidistant, automatic and logarithmic sampling, if <span style="font-style: italic;"><i>min</i></span> = "" or <span style="font-style: italic;"><i>max</i></span> = "" this will be replaced by the corresponding global limit of the frequency range.</p>
+<p class="VBA-Text-Indent">When the number of Samples is not defined (empty string "") for an "Automatic" sampling interval, the solver stops calculating additional samples as soon as the S-parameter sweep convergence criterion is satisfied.</p>
+<p class="VBA-Text-Indent">The <span style="font-style: italic;"><i>adaptation</i></span> indicates whether or not the frequency samples should be used for the sequential adaptive tetrahedral mesh refinement.</p>
+<p class="VBA-Text-Indent">If the lower limit of the frequency interval evaluates to Zero, the samples at frequency zero will be ignored for "Equidistant" sampling intervals, and the lower limit will be replaced with some suitable value for "Automatic" and "Logarithmic" sampling interval definitions.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">AddInactiveSampleInterval ( <a href="../common_vbageneral/common_general_double.htm" id="a36" style="font-weight: normal;" name="a36">double</a> <span style="font-style: italic;"><i>min,</i></span> <a href="../common_vbageneral/common_general_double.htm" id="a37" style="font-weight: normal;" name="a37">double</a> <span style="font-style: italic;"><i>max,</i></span> &#160;<a href="../common_vbageneral/common_general_integer.htm" id="a38" style="font-weight: normal;" name="a38">int</a> <span style="font-style: italic;"><i>samples,</i></span> <a href="../common_vbageneral/common_general_enum.htm" id="a39" name="a39"><span style="font-weight: normal;">enum</span></a> <span style="font-weight: normal;">{"Automatic", "Equidistant"}</span> <span style="font-style: italic;"><i>key</i></span>, <a href="../common_vbageneral/common_general_bool_data_type.htm" id="a40" style="font-weight: normal;" name="a40">bool</a> <span style="font-style: italic;"><i>adaptation</i></span> )</p>
+<p class="VBA-Text-Indent">Specifies an inactive customized frequency interval. The parameter are the same as for <span style="font-weight: bold;">AddSampleInterval.</span></p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">MaxIterations ( <a href="../common_vbageneral/common_general_integer.htm" id="a88" style="font-weight: normal;" name="a88">int</a> <span style="font-style: italic;"><i>nIter</i></span> )</p>
+<p class="VBA-Text-Indent">Specifies the maximum number of linear equation system solver iterations the solver will use for calculating the electromagnetic field at a single frequency sample. This applies only if <span style="font-weight: bold;">LimitIterations</span> has been activated and if the iterative solver is used.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">LimitIterations ( <a href="../common_vbageneral/common_general_bool_data_type.htm" id="a89" style="font-weight: normal;" name="a89">bool</a> <span style="font-style: italic;"><i>flag</i></span> )</p>
+<p class="VBA-Text-Indent">If <span style="font-style: italic;"><i>flag</i></span> = True the solver stops if the maximum number of iterations given by the <span style="font-weight: bold;">MaxIterations</span> method is reached.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">ModesOnly ( <a href="../common_vbageneral/common_general_bool_data_type.htm" id="a91" style="font-weight: normal;" name="a91">bool</a> <span style="font-style: italic;"><i>flag</i></span> )</p>
+<p class="VBA-Text-Indent">Calculate only the port modes when using the frequency domain solver.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">SetShieldAllPorts ( <a href="../common_vbageneral/common_general_bool_data_type.htm" id="a184" style="font-weight: normal;" name="a184">bool</a> <span style="font-style: italic;"><i>flag</i></span> )</p>
+<p class="VBA-Text-Indent">The boundary of all waveguide ports is treated as a perfectly shielding (PEC) wire frame when calling this method with <span style="font-style: italic;"><i>flag</i></span> = True.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">SetPortMeshMatches3DMeshTet ( <a href="../common_vbageneral/common_general_bool_data_type.htm" id="a188" style="font-weight: normal;" name="a188">bool</a> <span style="font-style: italic;"><i>flag</i></span> )</p>
+<p class="VBA-Text-Indent">The option <span style="font-weight: bold;">SetPortMeshMatches3DMeshTet</span> only applies to the tetrahedral mesh and is disabled by default. The waveguide port mode solver operates on the planar mesh of the waveguide port and applies an adaptive port mesh refinement for this mesh. By default, the port mesh is separated from the volumetric mesh, and an overlap calculation is used to map the port mode solution onto the boundary of the volumetric mesh. However, if you call <span style="font-weight: bold;">SetPortMeshMatches3DMeshTet</span> with <span style="font-style: italic;"><i>flag</i></span> = True, the port mode solver's mesh adaptation directly refines the surface mesh of the volumetric mesh, so that no overlap calculation is required. It is recommended to let the port mesh match the 3D mesh whenever the overlap calculation fails due to geometric tolerance problems.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">SetAllowROMPortModeSolver ( <a href="../common_vbageneral/common_general_bool_data_type.htm" id="a285" style="font-weight: normal;" name="a285">bool</a> <span style="font-style: italic;"><i>flag</i></span> )</p>
+<p class="VBA-Text-Indent">Presently may affect the frequency domain solver with tetrahedral mesh and fast reduced order model sweep only. The broadband reduced order model calculates port mode data for the complete frequency range and applies a technique to track modes (the sorting of waveguide port modes by propagation constant may lead to port modes changing order at some point in the frequency range.) The fast reduced order model sweep requires a broadband representation of the port modes for inhomogeneously filled waveguide ports (mode types other than TEM, TE, or TM.) Losses will be ignored if the frequency domain solver with tetrahedral mesh and fast reduced order model sweep chooses to use the broadband reduced order model for port modes. Deactivate this option only if you want the waveguide port modes of any type other than TEM, TE or TM to be approximated by the modes at some fixed frequency throughout the whole frequency range.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">SetAllowDiscretePortSolver ( <a href="../common_vbageneral/common_general_bool_data_type.htm" id="a285" style="font-weight: normal;" name="a285">bool</a> <span style="font-style: italic;"><i>flag</i></span> )</p>
+<p class="VBA-Text-Indent">Presently may affect the frequency domain solver with tetrahedral mesh and general purpose sweep only. With the option enabled, a numerical solution will be calculated for discrete face ports. This allows to handle discrete face ports with arbitrary shape with improved accuracy, very similar to the approach taken for rectangular, cylinder barrel, and coaxial face ports. Please note that discrete ports need to be defined in between two good conductors, like PEC and lossy metal materials.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">SetUseROMPortModeSolverTet ( <a href="../common_vbageneral/common_general_bool_data_type.htm" id="a286" style="font-weight: normal;" name="a286">bool</a> <span style="font-style: italic;"><i>general_purpose</i></span>, <a href="../common_vbageneral/common_general_bool_data_type.htm" id="a287" style="font-weight: normal;" name="a287">bool</a> <span style="font-style: italic;"><i>fast_reduced_order_model</i></span> )</p>
+<p class="VBA-Text-Indent">Similar to SetAllowROMPortModeSolver, but forcing the usage of the port ROM for either the general purpose sweep or the fast reduced order model sweep.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">EnableNativeSingleEnded ( <a href="../common_vbageneral/common_general_bool_data_type.htm" id="a288" style="font-weight: normal;" name="a288">bool</a> <span style="font-style: italic;"><i>flag</i></span> )</p>
+<p class="VBA-Text-Indent">This setting affects the frequency domain solver with tetrahedral mesh and general purpose frequency sweep. With this option the "single-ended port" yields S-parameters and fields by directly exciting the single-ended modes. Under these circumstances the phase deembedding is not supported. The fast reduced order model broadband sweep with tetrahedral mesh always uses this approach.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">UseDeembeddedFields ( <a href="../common_vbageneral/common_general_bool_data_type.htm" id="a289" style="font-weight: normal;" name="a289">bool</a> <span style="font-style: italic;"><i>flag</i></span> )</p>
+<p class="VBA-Text-Indent">This setting affects the frequency domain solver with tetrahedral mesh and general purpose frequency sweep. With this option enabled, the deembedded ports will be excited with the already shifted modes. Otherwise, the deembedding operation is performed on the S-parameter matrix only.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">FreqDistAdaptMode ( <a href="../common_vbageneral/common_general_enum.htm" id="a187" style="font-weight: normal;" name="a187">enum</a><span style="font-weight: normal;">{"Local", "As_A_Whole", "Distributed"}</span> <span style="font-style: italic;"><i>key</i></span> )</p>
+<p class="VBA-Text-Indent">This option is considered by the frequency domain solver with tetrahedral mesh only. It allows selecting which strategy will be followed when the option "Distribute excitation calculation up to" is enabled in the "Distributed computing (DC) frame". Selecting "Local" adaptation frequencies will be calculated locally, selecting "As_A_Whole" all adaptation frequencies will be transferred to a single remote computer and selecting "Distributed" adaptation frequencies will be distributed separately over the remote computers. In the first iteration over the broadband mesh adaptation, the adaptation frequencies are transferred as a whole even if "Distributed" has been selected.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">SetPreferLeanOutput ( <a href="../common_vbageneral/common_general_bool_data_type.htm" id="a186" style="font-weight: normal;" name="a186">bool</a> <span style="font-style: italic;"><i>flag</i></span> )</p>
+<p class="VBA-Text-Indent">This option is considered by the frequency domain solver with tetrahedral mesh only. It allows to save some disc space and simulation time, especially in case of simulation runs with many excitations. Call with <span style="font-style: italic;"><i>flag</i></span> = True to disable the output of the linear equation system solver's relative residual curves.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">SetUseImpLineImpedanceAsReference ( <a href="../common_vbageneral/common_general_bool_data_type.htm" id="a185" style="font-weight: normal;" name="a185">bool</a> <span style="font-style: italic;"><i>flag</i></span> )</p>
+<p class="VBA-Text-Indent">Call this method with <span style="font-style: italic;"><i>flag</i></span> = True to define impedances calculated by impedance lines as the post-processing reference impedance for all port modes to which they are applied. Must be called before the solver run. The impedance lines' impedances will replace the usual line impedance for TEM and QTEM modes, and replace the wave impedances of other modes. The port mode information which is displayed when viewing a port mode is not affected.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">SetUseOrientPortWithMask ( <a href="../common_vbageneral/common_general_bool_data_type.htm" id="a189" style="font-weight: normal;" name="a189">bool</a> <span style="font-style: italic;"><i>flag</i></span> )</p>
+<p class="VBA-Text-Indent">Call this method with <span style="font-style: italic;"><i>flag</i></span> = True to switch to an alternative algorithm for the mode orientation in waveguide ports. Caution: this algorithm is not compatible with the standard one and the corresponding algorithm for hex-based solvers.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">ConsiderPortLossesTet ( <a href="../common_vbageneral/common_general_bool_data_type.htm" id="a183" style="font-weight: normal;" name="a183">bool</a> <span style="font-style: italic;"><i>flag</i></span> )</p>
+<p class="VBA-Text-Indent">Allows to define whether the port mode solver for the frequency domain solver with tetrahedral mesh considers lossy dielectrics and lossy metal or not. If <span style="font-style: italic;"><i>flag</i></span> = False, the imaginary part of both the complex permeability and the complex permittivity will be set to zero, and lossy metal will be treated as PEC in the port mode solver.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">SetStopSweepIfCriterionMet ( <a href="../common_vbageneral/common_general_bool_data_type.htm" id="a93" style="font-weight: normal;" name="a93">bool</a> <span style="font-style: italic;"><i>flag</i></span> )</p>
+<p class="VBA-Text-Indent">Activates (flag = "True") or deactivates (flag = "False") the broadband 1D result frequency sweep convergence check. This setting applies when using the general purpose broadband frequency sweep, and 1D results such as S-parameters, or field probes. &#160;The number of frequency samples needed for a broadband simulation by the solver usually decreases if the check is activated, since the solver stops calculating additional frequency samples as soon as the convergence criterion is reached, which, in addition, can be influenced by the <span style="font-weight: bold;">SweepErrorChecks</span> and <span style="font-weight: bold;">SweepMinimumSamples</span> methods.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">SetSweepThreshold ( <a href="../common_vbageneral/common_general_enum.htm" id="a28" style="font-weight: normal;" name="a28">enum</a><span style="font-weight: normal;">{"S-Parameters", "Probes"}</span> <span style="font-style: italic;"><i>type</i></span>, <a href="../common_vbageneral/common_general_double.htm" id="a93" style="font-weight: normal;" name="a93">double</a> <span style="font-style: italic;"><i>threshold</i></span> )</p>
+<p class="VBA-Text-Indent">Sets the <span style="font-style: italic;"><i>threshold</i></span> for the estimated interpolation error of the S-parameters or field probes. This setting applies when using the general purpose broadband frequency sweep.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">UseSweepThreshold ( <a href="../common_vbageneral/common_general_enum.htm" id="a28" style="font-weight: normal;" name="a28">enum</a><span style="font-weight: normal;">{"S-Parameters", "Probes"}</span> <span style="font-style: italic;"><i>type</i></span>, <a href="../common_vbageneral/common_general_bool_data_type.htm" id="a93" style="font-weight: normal;" name="a93">bool</a> <span style="font-style: italic;"><i>flag</i></span> )</p>
+<p class="VBA-Text-Indent">If the <span style="font-style: italic;"><i>flag</i></span> is False, the estimated interpolation error of the S-parameters or field probes is ignored for the convergence check. This setting applies when using the general purpose broadband frequency sweep, and allows for instance to stop the broadband sweep when the S-parameters are converged, no matter how accurate the probe results are.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">Type ( <a href="../common_vbageneral/common_general_enum.htm" id="a28" style="font-weight: normal;" name="a28">enum</a><span style="font-weight: normal;">{"Auto", "Iterative", "Direct"}</span> <span style="font-style: italic;"><i>key</i></span> )</p>
+<p class="VBA-Text-Indent">Chooses the linear equation system solver type to be used. For the integral equation solver the matrix approximation is chosen and in addition &#160;"IterativeMoM" (ACA) and "IterativeEnhanced" are available.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">StoreResultsInCache ( <a href="../common_vbageneral/common_general_bool_data_type.htm" id="a126" style="font-weight: normal;" name="a126">bool</a> <span style="font-style: italic;"><i>flag</i></span> )</p>
+<p class="VBA-Text-Indent">Stores results of the solver in the result cache. For each parameter combination in a parameter sweep, for instance, a full backup of the results is stored in a sub folder like <i>{Projectname}/Result/Cache/run000001</i>.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method"><a name="FD Method"></a>SetMethod ( <a href="../common_vbageneral/common_general_enum.htm" id="a131" style="font-weight: normal;" name="a131">enum</a><span style="font-weight: normal;">{"Hexahedral", "Tetrahedral", "Surface"}</span> <span style="font-style: italic;"><i>mesh</i></span> , <a href="../common_vbageneral/common_general_enum.htm" id="a132" style="font-weight: normal;" name="a132">enum</a><span style="font-weight: normal;">{"General purpose", "Fast reduced order model", "Discrete samples only"}</span> <span style="font-style: italic;"><i>sweep</i></span> )</p>
+<p class="VBA-Text-Indent">Allows to change the method used in the frequency domain solver as in the solver's dialog box. The type of mesh will be changed to "Hexahedral", "Tetrahedral", with either the "General purpose" or the "Fast reduced order model" broadband sweep, or "Discrete samples only" to disable the calculation of broadband results. Confer the frequency domain and integral equation solver overview in the online manual for details.</p>
+<p class="VBA-Text-Indent">You may pass empty strings "" for either <span style="font-style: italic;"><i>mesh</i></span> or <span style="font-style: italic;"><i>sweep</i></span> to retain the values from a previous call to this method.</p>
+<p class="VBA-Text-Indent">Use "Surface Mesh" with "General purpose" sweep to activate the integral equation solver.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">AutoNormImpedance ( <a href="../common_vbageneral/common_general_bool_data_type.htm" id="a133" style="font-weight: normal;" name="a133">bool</a> <span style="font-style: italic;"><i>flag</i></span> )</p>
+<p class="VBA-Text-Indent">S-Parameters are always normalized to a reference impedance. You may either select to norm them to the calculated impedance of the stimulation port or you may specify a number of your choice. &#160;If <span style="font-style: italic;"><i>flag</i></span> is False the reference impedance will be the calculated impedance of the input port.</p>
+<p class="VBA-Text-Indent">&#160;&#160;&#160;&#160;</p>
+<p class="VBA-Heading-Method">NormingImpedance ( <a href="../common_vbageneral/common_general_double.htm" id="a134" style="font-weight: normal;" name="a134">double</a> <span style="font-style: italic;"><i>value</i></span> )</p>
+<p class="VBA-Text-Indent">Specifies the impedance to be used as reference impedance for the scattering parameters. This setting will only be considered if <span style="font-weight: bold;">AutoNormImpedance</span> is set to True.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">Stimulation ( <a href="../common_vbageneral/common_general_enum.htm" id="a135" style="font-weight: normal;" name="a135">enum</a> <span style="font-style: italic;"><i>/ <a href="../common_vbageneral/common_general_integer.htm" id="a136" style="font-weight: normal; font-style: normal;" name="a136">int</a> port,</i></span> <a href="../common_vbageneral/common_general_enum.htm" id="a138" style="font-weight: normal;" name="a138">enum</a> <span style="font-style: italic;"><i>/ <a href="../common_vbageneral/common_general_integer.htm" id="a139" style="font-weight: normal; font-style: normal;" name="a139">int</a> mode</i></span> )</p>
+<p class="VBA-Text-Indent">Selects the source type to be used for excitation, such as port and mode for waveguide ports.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Text-Indent">The parameter <span style="font-style: italic;"><i>port</i></span> and <span style="font-style: italic;"><i>mode</i></span> may have one of the following values:</p>
+<table style="vertical-align: top; margin-left: 24px;" cellspacing="0" width="80.827%">
+<col style="width: 37.628%;" />
+<col style="width: 62.372%;" />
+<tr style="vertical-align: top;">
+<td style="border: Solid 1px #000000; width: 37.628%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text">"All"</p>
+</td>
+<td style="border-top: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 62.372%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text">All ports and modes will be excited, one at a time. This eventually excludes Floquet ports for unit cell calculations.</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 37.628%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text">"All+Floquet"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 62.372%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text">All ports and modes will be excited, one at a time. This includes Floquet ports for unit cell calculations.</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 37.628%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text">"Plane Wave"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 62.372%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text">A plane wave will be excited. <span style="font-style: italic; font-weight: bold;"><i>mode</i></span> needs to be set to "1".</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 37.628%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text">"List"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 62.372%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text">A list of excitations is specified. <span style="font-style: italic; font-weight: bold;"><i>port</i></span> and <span style="font-style: italic; font-weight: bold;"><i>mode</i></span> then need to be set to "List".</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 37.628%; padding-right: 10px; padding-left: 10px;">
+<p><a href="../common_vbageneral/common_general_integer.htm" id="a137" name="a137">int</a> <span style="font-style: italic; font-weight: bold;"><i>port/mode</i></span></p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 62.372%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text">The port and mode number to be used for excitation.</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 37.628%; padding-right: 10px; padding-left: 10px;">
+<p>"CMA"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 62.372%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text">Supported by integral equation solver and multilayer solver. Performs a characteristic mode analysis.</p>
+</td>
+</tr>
+</table>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">GetStimulationPort <a href="../common_vbageneral/common_general_enum.htm" id="a100" style="font-weight: normal;" name="a100">enum</a></p>
+<p class="VBA-Text-Indent">Returns the <span style="font-style: italic;"><i>port</i></span> setting which was previously passed to "Stimulation", or the current default.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">GetStimulationMode <a href="../common_vbageneral/common_general_enum.htm" id="a101" style="font-weight: normal;" name="a101">enum</a></p>
+<p class="VBA-Text-Indent">Returns the <span style="font-style: italic;"><i>mode</i></span> setting which was previously passed to "Stimulation", or the current default.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">SweepErrorChecks ( <a href="../common_vbageneral/common_general_integer.htm" id="a141" style="font-weight: normal;" name="a141">int</a> <span style="font-style: italic;"><i>nChecks</i></span> )</p>
+<p class="VBA-Text-Indent">Determines how many consecutive times the estimated S-parameter or probe interpolation error has to meet the given threshold (see <span style="font-weight: bold;">SetSweepThreshold</span>) during a broadband frequency sweep before the result is accepted to be converged.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">SweepMinimumSamples ( <a href="../common_vbageneral/common_general_integer.htm" id="a142" style="font-weight: normal;" name="a142">int</a> <span style="font-style: italic;"><i>nSamples</i></span> )</p>
+<p class="VBA-Text-Indent">Determines the minimum number of frequency samples to be calculated during a broadband S-parameter frequency sweep before the convergence of the latter is checked.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">SweepConsiderAll ( <a href="../common_vbageneral/common_general_bool_data_type.htm" id="a143" style="font-weight: normal;" name="a143">bool</a> <span style="font-style: italic;"><i>flag</i></span> )</p>
+<p class="VBA-Text-Indent">Defines wheter all S-parameters (<span style="font-style: italic;"><i>flag</i></span> = True) or selected S-parameters (<span style="font-style: italic;"><i>flag</i></span> = False, see <span style="font-weight: bold;">SweepConsiderSPar</span>) should be considered to calculate the error during the broadband frequency sweep. The option <span style="font-style: italic;"><i>flag</i></span> = False may be useful if the S-parameters of higher order modes are not of interest.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">SweepConsiderReset</p>
+<p class="VBA-Text-Indent">Empties the list of selected S-parameters (see <span style="font-weight: bold;">SweepConsiderSPar</span>) to be considered to calculate the error during the broadband frequency sweep.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">SweepConsiderSPar ( <a href="../common_vbageneral/common_general_integer.htm" id="a144" style="font-weight: normal;" name="a144">int</a> <span style="font-style: italic;"><i>port_out,</i></span> <a href="../common_vbageneral/common_general_integer.htm" id="a145" style="font-weight: normal;" name="a145">int</a> <span style="font-style: italic;"><i>mode_out,</i></span> <a href="../common_vbageneral/common_general_integer.htm" id="a146" style="font-weight: normal;" name="a146">int</a> <span style="font-style: italic;"><i>port_in,</i></span> <a href="../common_vbageneral/common_general_integer.htm" id="a147" style="font-weight: normal;" name="a147">int</a> <span style="font-style: italic;"><i>mode_in</i></span> )</p>
+<p class="VBA-Text-Indent">Adds an S-parameter to the list of S-parameters to be considered to calculate the error during the broadband frequency sweep. This option may be useful if the S-parameters of higher order modes are not of interest. The list of samples is deleted by <span style="font-weight: bold;">SweepConsiderReset</span>. All definitions are ignored if <span style="font-weight: bold;">SweepConsiderAll</span> has been set to True.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">SetNumberOfResultDataSamples ( <a href="../common_vbageneral/common_general_integer.htm" id="a148" style="font-weight: normal;" name="a148">int</a> <span style="font-style: italic;"><i>nSamples</i></span> )</p>
+<p class="VBA-Text-Indent">Specifies the resolution of the interpolated S-parameters during a broadband S-parameter frequency sweep. Increase the number of samples if a higher resolution is required, for instance due to poles which are very close.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">SetResultDataSamplingMode ( <a href="../common_vbageneral/common_general_enum.htm" id="a120" style="font-weight: normal; font-style: normal;" name="a120">enum</a> <span style="font-style: italic;"><i>mode</i></span> )</p>
+<p class="VBA-Text-Indent">Call to select the mode of evaluating the frequency axis in the general purpose broadband sweep. This affects the adaptive frequency sampling as well as for instance the S-parameter results when exported as a text file.</p>
+<p class="VBA-Text-Indent">The parameter <span style="font-style: italic;"><i>mode</i></span> may have one of the following values:</p>
+<table style="vertical-align: top; margin-left: 24px;" cellspacing="0" width="86.074%">
+<col style="width: 13.7%;" />
+<col style="width: 86.3%;" />
+<tr style="vertical-align: top;">
+<td style="border: Solid 1px #000000; width: 13.7%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text">"Automatic"</p>
+</td>
+<td style="border-top: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 86.3%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text">One of the remaining modes will be chosen automatically, depending on the solver settings, usually "Frequency (linear)" unless some logarithmic frequency samples have been definded by calling <span style="font-weight: bold;">AddSampleInterval</span> with the corresponding argument. In that case, "Frequency (logarithmic)" is used.</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 13.7%; padding-right: 10px; padding-left: 10px;">
+<p>"Frequency (linear)"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 86.3%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text">Data will be sampled equidistantly on the linear frequency axis.</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 13.7%; padding-right: 10px; padding-left: 10px;">
+<p>"Frequency (logarithmic)"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 86.3%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text">Data will be sampled equidistantly on the logarithmic frequency axis, possibly including a data point at 0 Hz.</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 13.7%; padding-right: 10px; padding-left: 10px;">
+<p>"Frequency (log-linear)"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 86.3%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text">A balanced sampling mode which is suitable for either linearly or logarithmically scaled frequency axis. The lower frequency range up to some frequency <span style="font-style: italic;"><i>f<sub>split</sub></i></span> is sampled equidistantly on the logarithmic frequency axis, and the upper frequency range is sampled equidistantly on the linear frequency axis.</p>
+<p class="VBA-Text">Half of the samples are assigned to each of the logarithmic and the linear intervals. <span style="font-style: italic;"><i>f<sub>split</sub></i></span> is equal to <span style="font-style: italic;"><i>f<sub>max</sub> /10</i></span>.</p>
+<p class="VBA-Text">We revert to the linear sampling if the frequency range is small, <span style="font-style: italic;"><i>f<sub>max</sub> &lt; 100 f<sub>min</sub></i></span> , or if the maximum frequency is at low frequency, <span style="font-style: italic;"><i>f<sub>max</sub> &lt; 20 Hz</i></span>.</p>
+<p class="VBA-Text">The lowest data point above <span style="font-style: italic;"><i>f<sub>min</sub></i></span> is at <span style="font-style: italic;"><i>1 Hz</i></span>, or <span style="font-style: italic;"><i>1e-10 f<sub>max</sub></i></span> if <span style="font-style: italic;"><i>f<sub>max</sub> &gt; 10 GHz</i></span>. A data point at 0 Hz is included if <span style="font-style: italic;"><i>f<sub>min</sub> = 0 Hz</i></span>.</p>
+</td>
+</tr>
+</table>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">ExtrudeOpenBC ( <a href="../common_vbageneral/common_general_bool_data_type.htm" id="a152" style="font-weight: normal;" name="a152">bool</a> <span style="font-style: italic;"><i>flag</i></span> )</p>
+<p class="VBA-Text-Indent">Affects the frequency domain solver with tetrahedral mesh. If activated (<span style="font-style: italic;"><i>flag</i></span> = True), additional layers of mesh cells are added outside the open boundary walls, and the boundary condition is applied further away from the structure.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">TDCompatibleMaterials ( <a href="../common_vbageneral/common_general_bool_data_type.htm" id="a29" style="font-weight: normal;" name="a29">bool</a> <span style="font-style: italic;"><i>flag</i></span> )</p>
+<p class="VBA-Text-Indent">Defines whether constant tangent delta materials should be treated as in the time domain solver, that is by using a dispersive Debye model fit (<span style="font-style: italic;"><i>flag</i></span> = True), or by a constant imaginary part of the permittivity (<span style="font-style: italic;"><i>flag</i></span> = False).</p>
+<p class="VBA-Text-Indent">The setting affects also the treatment of broadband surface impedance materials, i.e. ohmic sheet, tabulated surface impedance and corrugated wall. With the option <span style="font-style: italic;"><i>flag</i></span> = True the simulated surface impedance will be computed accordingly to the same fitting scheme used for the time domain solver. Otherwise a linear interpolation scheme of the data will be applied.</p>
+<p class="VBA-Text-Indent">The option <span style="font-style: italic;"><i>flag</i></span> = True should be used when comparing time domain and frequency domain solver results.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">CalcStatBField( <a href="../common_vbageneral/common_general_bool_data_type.htm" id="a7" style="font-weight: normal;" name="a7">bool</a> <span style="font-style: italic;"><i>flag</i></span> )</p>
+<p class="VBA-Text-Indent">Set the <span style="font-style: italic;"><i>flag</i></span> to true if you want the frequency domain solver with tetrahedral mesh to use an inhomogeneous static biasing B-field for ferrites. The static field is then calculated automatically by the magnetostatic solver before the frequency domain solver run.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">CalcPowerLoss( <a href="../common_vbageneral/common_general_bool_data_type.htm" id="a190" style="font-weight: normal;" name="a190">bool</a> <span style="font-style: italic;"><i>flag</i></span> )</p>
+<p class="VBA-Text-Indent">Set the <span style="font-style: italic;"><i>flag</i></span> to true if you want the frequency domain solver with tetrahedral mesh to calculate power losses over materials. Results will be added into the tree.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">CalcPowerLossPerComponent( <a href="../common_vbageneral/common_general_bool_data_type.htm" id="a191" style="font-weight: normal;" name="a191">bool</a> <span style="font-style: italic;"><i>flag</i></span> )</p>
+<p class="VBA-Text-Indent">Set the <span style="font-style: italic;"><i>flag</i></span> to true if you want the frequency domain solver with tetrahedral mesh to include into the tree the material losses associated to components.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">SetUseGreenSandyFerriteModel( <a href="../common_vbageneral/common_general_bool_data_type.htm" id="a41" style="font-weight: normal;" name="a41">bool</a> <span style="font-style: italic;"><i>flag</i></span> )</p>
+<p class="VBA-Text-Indent">Set the <span style="font-style: italic;"><i>flag</i></span> to true if you want the frequency domain solver with tetrahedral mesh to use Green-Sandy model for partial magnetized ferrites.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">SetGreenSandyThresholdH ( <a href="../common_vbageneral/common_general_double.htm" id="a193" style="font-weight: normal;" name="a193">double</a> <span style="font-style: italic;"><i>value</i></span> )</p>
+<p class="VBA-Text-Indent">The threshold for the H field is by default automatically derived from the saturation magnetization specified in the material properties of the ferrite. Pass an empty string to enable this automatism, or a threshold for the static magnetic field strength in A/m above which the ferrite will be assumed to be fully magnetized. Above that threshold, the Polder tensor is used only.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">ResetExcitationList</p>
+<p class="VBA-Text-Indent">Resets the current excitation list.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">AddToExcitationList ( <a href="../common_vbageneral/common_general_enum.htm" id="a57" style="font-weight: normal;" name="a57">enum</a> <span style="font-style: italic;"><i>port,</i></span> <a href="../common_vbageneral/common_general_string.htm" id="a81" style="font-weight: normal; font-style: normal;" name="a81">string</a> <span style="font-style: italic;"><i>mode)</i></span></p>
+<p class="VBA-Text-Indent">Adds ports and modes to the exciation list.</p>
+<p class="VBA-Text-Indent">The parameter <span style="font-style: italic;"><i>port</i></span> may have one of the following values:</p>
+<table style="vertical-align: top; margin-left: 24px;" cellspacing="0" width="59.428%">
+<col style="width: 27.46%;" />
+<col style="width: 72.54%;" />
+<tr style="vertical-align: top;">
+<td style="border: Solid 1px #000000; width: 27.46%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text"><a href="../common_vbageneral/common_general_integer.htm" id="a160" name="a160">int</a> <span style="font-style: italic; font-weight: bold;"><i>port</i></span></p>
+</td>
+<td style="border-top: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 72.54%; padding-right: 10px; padding-left: 10px;">
+<p>The number of the port to be excited.</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 27.46%; padding-right: 10px; padding-left: 10px;">
+<p>"zmin" / "zmax"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 72.54%; padding-right: 10px; padding-left: 10px;">
+<p>The boundary position of a Floquet port.</p>
+</td>
+</tr>
+</table>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Text-Indent">The parameter <span style="font-style: italic;"><i>mode</i></span> defines one or more modes of the chosen port, separated by semicolon.</p>
+<table style="vertical-align: top; margin-left: 24px;" cellspacing="0" width="59.428%">
+<col style="width: 27.46%;" />
+<col style="width: 72.54%;" />
+<tr style="vertical-align: top;">
+<td style="border: Solid 1px #000000; width: 27.46%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text">"1"</p>
+</td>
+<td style="border-top: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 72.54%; padding-right: 10px; padding-left: 10px;">
+<p>Setting for a discrete port.</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 27.46%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text">&#160;"1" or "1;3;4"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 72.54%; padding-right: 10px; padding-left: 10px;">
+<p>Mode numbers of a waveguide port.</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 27.46%; padding-right: 10px; padding-left: 10px;">
+<p>"TE(0,0);TM(0,0)" or "LCP;RCP"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 72.54%; padding-right: 10px; padding-left: 10px;">
+<p>Mode type of a Floquet port.</p>
+</td>
+</tr>
+</table>
+<p class="VBA-Text-Indent" style="font-style: italic;">&#160;</p>
+<p class="VBA-Heading-Method">UseParallelization ( <a href="../common_vbageneral/common_general_bool_data_type.htm" id="a83" style="font-weight: normal; font-style: normal;" name="a83">bool</a> <span style="font-style: italic;"><i>flag</i></span> )</p>
+<p class="VBA-Text-Indent">Call this method to enable or disable CPU parallelization using multiple threads on the CPU cores and sockets as defined by <span style="font-style: italic; font-weight: bold;"><i>MaxCPUs</i></span> and <span style="font-style: italic; font-weight: bold;"><i>MaximumNumberOfCPUDevices</i></span> methods.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">MaxCPUs ( <a href="../common_vbageneral/common_general_integer.htm" id="a108" style="font-weight: normal; font-style: normal;" name="a108">int</a> <span style="font-style: italic;"><i>nCPUs</i></span> )</p>
+<p class="VBA-Text-Indent">Sets the number of CPU threads to be used.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">MaximumNumberOfCPUDevices ( <a href="../common_vbageneral/common_general_integer.htm" id="a108" style="font-weight: normal; font-style: normal;" name="a108">int</a> <span style="font-style: italic;"><i>MaximumNumberOfCPUDevices</i></span> )</p>
+<p class="VBA-Text-Indent">Sets the number of CPU devices (such as CPU sockets) to be used.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">SweepWeightEvanescent ( <a href="../common_vbageneral/common_general_double.htm" id="a114" style="font-weight: normal; font-style: normal;" name="a114">double</a> <span style="font-style: italic;"><i>dWeight</i></span> )</p>
+<p class="VBA-Text-Indent">Defines a special weight factor for the S-parameter sweep calculation, which is applied to frequency ranges belonging to evanescent modes.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">LowFrequencyStabilization ( <a href="../common_vbageneral/common_general_bool_data_type.htm" id="a116" style="font-weight: normal; font-style: normal;" name="a116">bool</a> <span style="font-style: italic;"><i>flag</i></span> )</p>
+<p class="VBA-Text-Indent" style="font-style: normal;">Applies a stabilization procedure for frequencies close to zero, which might improve the convergence behavior.</p>
+<p class="VBA-Text-Indent" style="font-style: normal;">Please note, that this effects only the general purpose tetrahedral frequency domain solver.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">OrderTet ( <a href="../common_vbageneral/common_general_enum.htm" id="a120" style="font-weight: normal; font-style: normal;" name="a120">enum</a> <span style="font-style: italic;"><i>sOrder</i></span> )</p>
+<p class="VBA-Text-Indent">Select here the order of the general purpose tetrahedral frequency domain solver, with the choice between low memory or highly accurate results for a given number of mesh cells. Higher order also allows to achieve accurate results with less mesh cells and eventually less memory consumption than lower order, if the structure contains electrically large voids rather than many geometric details.</p>
+<p class="VBA-Text-Indent">If the method <span style="font-style: italic; font-weight: bold;"><i>MixedOrderTet</i></span> is called with <span style="font-style: italic;"><i>flag</i></span> = True, then <span style="font-weight: bold; font-style: italic;"><i>OrderTet</i></span> determines the maximum solver order to be used.</p>
+<p class="VBA-Text-Indent">The parameter <span style="font-style: italic;"><i>sOrder</i></span> may have one of the following values:</p>
+<table style="vertical-align: top; margin-left: 24px;" cellspacing="0" width="86.074%">
+<col style="width: 13.7%;" />
+<col style="width: 86.3%;" />
+<tr style="vertical-align: top;">
+<td style="border: Solid 1px #000000; width: 13.7%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text">"First"</p>
+</td>
+<td style="border-top: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 86.3%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text">Calculation is done with first order accuracy providing solutions with low memory effort. Especially well suited for structures with many electrically small details.</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 13.7%; padding-right: 10px; padding-left: 10px;">
+<p>"Second"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 86.3%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text">Calculation is done with second order accuracy providing highly accurate results. Well suited for most applications, and therefore the default.</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 13.7%; padding-right: 10px; padding-left: 10px;">
+<p>"Third"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 86.3%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text">Calculation is done with third order accuracy providing highest accuracy. Allows to reduce the number of mesh steps per wavelength for structures with large voids, or to even further improve the accuracy for a given mesh resolution.</p>
+</td>
+</tr>
+</table>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">MixedOrderTet ( <a href="../common_vbageneral/common_general_bool_data_type.htm" id="a180" style="font-weight: normal; font-style: normal;" name="a180">bool</a> <span style="font-style: italic;"><i>flag</i></span> )</p>
+<p class="VBA-Text-Indent">If this method is activated (<span style="font-style: italic;"><i>flag</i></span> = True), the frequency domain solver with tetrahedral mesh will automatically use variable order up to the maximum solver order, which is specified by calling <span style="font-weight: bold; font-style: italic;"><i>OrderTet</i></span>. This allows the solver to decide in which regions lowest order should be used to save memory and computational time, as well as to use higher order where required.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">OrderSrf ( <a href="../common_vbageneral/common_general_enum.htm" id="a4" style="font-weight: normal;" name="a4">enum</a> <span style="font-style: italic;"><i>sOrder</i></span> )</p>
+<p class="VBA-Text-Indent">Select here the order of the integral equation solver. If the method <span style="font-style: italic; font-weight: bold;"><i>MixedOrderSrf</i></span> is activated (<span style="font-style: italic;"><i>flag</i></span> = True), <span style="font-weight: bold; font-style: italic;"><i>OrderSrf</i></span> determines the maximum used solver order.</p>
+<p class="VBA-Text-Indent">The parameter <span style="font-style: italic;"><i>sOrder</i></span> allows to choose between low memory and highly accurate results, and may have one of the following values:</p>
+<table style="vertical-align: top; margin-left: 24px;" cellspacing="0" width="86.074%">
+<col style="width: 13.7%;" />
+<col style="width: 86.3%;" />
+<tr style="vertical-align: top;">
+<td style="border: Solid 1px #000000; width: 13.7%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text">"First"</p>
+</td>
+<td style="border-top: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 86.3%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text">Calculation is done with first order accuracy providing solutions with low memory effort.</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 13.7%; padding-right: 10px; padding-left: 10px;">
+<p>"Second"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 86.3%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text">Calculation is done with second order accuracy providing highly accurate results.</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 13.7%; padding-right: 10px; padding-left: 10px;">
+<p>"Third"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 86.3%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text">Calculation is done with third order accuracy providing highest accuracy.</p>
+</td>
+</tr>
+</table>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">MixedOrderSrf ( <a href="../common_vbageneral/common_general_bool_data_type.htm" id="a181" style="font-weight: normal; font-style: normal;" name="a181">bool</a> <span style="font-style: italic;"><i>flag</i></span> )</p>
+<p class="VBA-Text-Indent">If this method is activated (<span style="font-style: italic;"><i>flag</i></span> = True), mixed solver order will be used in the integral equation solver. Use <span style="font-weight: bold; font-style: italic;"><i>OrderSrf</i></span> to determine the maximum used solver order.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method" style="font-style: normal;">UseDistributedComputing &#160;( <a href="../common_vbageneral/common_general_bool_data_type.htm" id="a161" style="font-weight: normal; font-style: normal;" name="a161">bool</a> <span style="font-style: italic;"><i>flag</i></span> )</p>
+<p class="VBA-Text-Indent">This method allows to switch between local and remote solver runs. When enabled, a Frequency domain solver run is submitted to the network. The setting does not influence parameter sweeps and optimizer runs with distributed computing.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">NetworkComputingStrategy ( <a href="../common_vbageneral/common_general_enum.htm" id="a3" style="font-weight: normal;" name="a3">enum</a><span style="font-weight: normal;">{"RunRemote","Samples"}</span> <span style="font-style: italic;"><i>key</i></span> )</p>
+<p class="VBA-Text-Indent">A single remote calculation ("RunRemote") and a distribution of frequency samples ("Samples") are currently supported.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">NetworkComputingJobCount ( <a href="../common_vbageneral/common_general_integer.htm" id="a30" style="font-weight: normal;" name="a30">int</a> <span style="font-style: italic;"><i>value</i></span> )</p>
+<p class="VBA-Text-Indent">Specifies the number of jobs which may be submitted at once to the network computing job queue in case of an automatic frequency sampling. Increase this number to use more computers in parallel. It does not affect equidistant frequency samples, monitor frequencies and other fix points, which are submitted to the job queue at once.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method" style="font-style: normal;">UseSensitivityAnalysis ( <a href="../common_vbageneral/common_general_bool_data_type.htm" id="a10" style="font-weight: normal; font-style: normal;" name="a10">bool</a> <span style="font-style: italic;"><i>flag</i></span> )</p>
+<p class="VBA-Text-Indent">If activated the sensitivity analysis is calculated when running the frequency domain solver with tetrahedral mesh.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">UseDoublePrecision &#160;( <a href="../common_vbageneral/common_general_bool_data_type.htm" id="a5" style="font-weight: normal;" name="a5">bool</a> <span style="font-style: italic;"><i>flag</i></span> )</p>
+<p class="VBA-Text-Indent">Supported by integral equation solver. If activated the solver uses double-precision (64-bit) &#160;for representing floating-point values. Otherwise the solver uses single-precision (32-bit). The single-precision representation saves memory whereas the double-precision representation speeds up the convergence of the iterative equation system solver. Double-precision is necessary to obtain highly accurate results.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">PreconditionerAccuracyIntEq ( <a href="../common_vbageneral/common_general_double.htm" id="a9" style="font-weight: normal; font-style: normal;" name="a9">double</a> <span style="font-style: italic;"><i>value</i></span> )</p>
+<p class="VBA-Text-Indent">Supported by integral equation solver. &#160;Sets the tolerance for the preconditioner.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">MinMLFMMBoxSize ( <a href="../common_vbageneral/common_general_double.htm" id="a11" style="font-weight: normal; font-style: normal;" name="a11">double</a> <span style="font-style: italic;"><i>value</i></span> )</p>
+<p class="VBA-Text-Indent">Supported by integral equation solver. This command allows you to specify the minimum box size the MLFMM uses.</p>
+<p class="vba-text-indent">&#160;</p>
+<p class="VBA-Heading-Method">MLFMMAccuracy &#160;( <a href="../common_vbageneral/common_general_string.htm" style="font-weight: normal;">string</a> <span style="font-style: italic;"><i>value</i></span> )</p>
+<p class="VBA-Text-Indent">Supported by integral equation solver. This accuracy determines the accuracy of the coupling between the MLFMM boxes. The <span style="font-weight: bold;">value</span> must be one of the following: &#160;"VeryLowMem", &#160;"LowMem", "Default" or "HighAcc".</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method"><a name="UseCFIEForCPECIntEq" id="UseCFIEForCPECIntEq"></a>UseCFIEForCPECIntEq ( <a href="../common_vbageneral/common_general_bool_data_type.htm" id="a12" style="font-weight: normal;" name="a12">bool</a> <span style="font-style: italic;"><i>flag</i></span> )</p>
+<p class="VBA-Text-Indent">Supported by integral equation solver. If for closed PEC bodies the Combined Field Integral Equation shall be used enable this option. The faster convergence of the linear equation system solver is an advantage of this option. For electrically small or complex PEC solids it is recommended to disable this option. The accuracy for rather coarse mesh will be improved.</p>
+<p class="VBA-Text-Indent">If you enable this option and set the CFIE alpha to 1 (using the VBA command <a href="special_vbasolver_iesolver_object.htm#SetCFIEAlpha">SetCFIEAlpha</a>) the Electric Field Integral Equation will be used. This is an option if you are sure there will be no spurious resonances inside the PEC solids e.g. for electrically small PEC solids.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">UseFastRCSSweepIntEq ( <a href="../common_vbageneral/common_general_bool_data_type.htm" id="a13" style="font-weight: normal;" name="a13">bool</a> <span style="font-style: italic;"><i>flag</i></span> )</p>
+<p class="VBA-Text-Indent">Supported by integral equation solver. A fast calculation of monostatic RCS for different angles is available if a plane wave is used as excitation. To enable and disable the fast RCS calculation check and uncheck this option respectively. Please use the Command SetRCSSweepProperties to define the RCS sweep properties.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">SetMRCSSweepProperties &#160;(<a href="../common_vbageneral/common_general_double.htm" id="a14" style="font-style: normal; font-weight: normal;" name="a14"><span>double</span></a> Phi_Start, <a href="../common_vbageneral/common_general_double.htm" id="a21" style="font-weight: normal;" name="a21">double</a> Phi_End, <a href="../common_vbageneral/common_general_integer.htm" id="a16" style="font-weight: normal;" name="a16">int</a> #Phi_Steps, <a href="../common_vbageneral/common_general_double.htm" id="a15" style="font-weight: normal;" name="a15">double</a> Theta_Start, <a href="../common_vbageneral/common_general_double.htm" id="a17" style="font-weight: normal;" name="a17">double</a> Theta_End, <a href="../common_vbageneral/common_general_integer.htm" id="a18" style="font-weight: normal;" name="a18">int</a> #Theta_Steps, <a href="../common_vbageneral/common_general_double.htm" id="a19" style="font-style: normal; font-weight: normal;" name="a19"><span>double</span></a> E_inc_Theta<span style="font-weight: normal; font-style: italic;"><i>,</i></span> <a href="../common_vbageneral/common_general_double.htm" id="a32" style="font-style: normal; font-weight: normal;" name="a32"><span>double</span></a> E_inc_Phi)</p>
+<p class="VBA-Text-Indent">Supported by integral equation solver. For a fast monostatic RCS calculation the angles for the incoming direction (Phi, Theta) of the plane wave can be defined as equidistant samples. &#160;For only varying Phi &#160;please set the <span style="font-weight: bold;">Theta_Start</span> equal to <span style="font-weight: bold;">Theta_End</span> and accordingly if you only want to vary Phi.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">GetRCSSweepProperties &#160;(<a href="../common_vbageneral/common_general_double_ref.htm" id="a20" style="font-style: normal; font-weight: normal;" name="a20"><span>double_ref</span></a> Phi_Start, <a href="../common_vbageneral/common_general_double_ref.htm" id="a22" style="font-style: normal; font-weight: normal;" name="a22">double_ref</a> Phi_End, <a href="../common_vbageneral/common_general_integer_ref.htm" id="a23" style="font-weight: normal;" name="a23">int_ref</a> #Phi_Steps, <a href="../common_vbageneral/common_general_double_ref.htm" id="a24" style="font-style: normal; font-weight: normal;" name="a24">double_ref</a> Theta_Start, <a href="../common_vbageneral/common_general_double_ref.htm" id="a25" style="font-style: normal; font-weight: normal;" name="a25">double_ref</a> Theta_End, <a href="../common_vbageneral/common_general_integer_ref.htm" id="a26" style="font-weight: normal;" name="a26">int_ref</a> #Theta_Steps, <span style="font-weight: normal; font-style: italic;"><i>&#160;</i></span><a href="../common_vbageneral/common_general_double_ref.htm" id="a27" style="font-style: normal; font-weight: normal;" name="a27">double_ref</a> <span style="font-weight: normal; font-style: italic;"><i>E_inc_Theta,</i></span> <a href="../common_vbageneral/common_general_double_ref.htm" id="a33" style="font-style: normal; font-weight: normal;" name="a33">double_ref</a> <span style="font-weight: normal; font-style: italic;"><i>E_inc_Phi</i></span>, &#160;<a href="../common_vbageneral/common_general_bool_ref_data_type.htm" style="font-weight: normal;">bool_ref</a> Activation)</p>
+<p class="VBA-Text-Indent">Supported by integral equation solver. Returns the settings set by SetRCSSweepProperties and UseFastRCSSweepIntEq.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">SetCalcBlockExcitationsInParallel ( <a href="../common_vbageneral/common_general_bool_data_type.htm" id="a8" style="font-weight: normal; font-style: normal;" name="a8">bool</a> <span style="font-style: italic;"><i>enable</i></span>, <a href="../common_vbageneral/common_general_bool_data_type.htm" id="a34" style="font-weight: normal; font-style: normal;" name="a34">bool</a> <span style="font-style: italic;"><i>useblock</i></span>, <a href="../common_vbageneral/common_general_integer.htm" id="a35" style="font-weight: normal; font-style: normal;" name="a35">int</a> <span style="font-style: italic;"><i>maxparallel</i></span> )</p>
+<p class="VBA-Text-Indent"><!-- referenced by common_overview_problems_fd_solver.htm -->
+ This method toggles whether or not and how excitations will be solved in parallel if the iterative solver is used. Only applies to the Frequency Domain solver with tetrahedral mesh. The legacy version is available by setting <span style="font-style: italic;"><i>useblock</i></span> to false. It is however recommended to leave the default <span style="font-style: italic;"><i>useblock=True</i></span> as the block version usually provides better performance for simulations with a large number of tetrahedrons or many excitations. Leave <span style="font-style: italic;"><i>maxparallel</i></span> blank (pass "") to let the solver decide how many excitations to calculate in parallel. Note that hardware and license restrictions may apply and overwrite some of those settings.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">SetWrite3DFieldsForFarfieldCalc ( <a href="../common_vbageneral/common_general_bool_data_type.htm" id="a76" style="font-weight: normal;" name="a76">bool</a> <span style="font-style: italic;"><i>flag</i></span> )</p>
+<p class="VBA-Text-Indent">Since version 2021, <span style="font-style: italic;"><i>flag = False</i></span> by default, which saves disk space by just recording surface field data on open boundary conditions of the bounding box. If <span style="font-style: italic;"><i>flag = True</i></span> is chosen, the standard frequency domain solver with tetrahedral mesh may store volumetric electric and magnetic field results for the farfield calculation as in previous versions.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">SetRecordUnitCellScanFarfield ( <a href="../common_vbageneral/common_general_enum.htm" id="a194" style="font-weight: normal;" name="a194">enum</a><!-- referenced by common_overview_problems_fd_solver.htm -->
+ <span style="font-weight: normal;">{"auto", "on", "off"}</span> <span style="font-style: italic;"><i>key</i></span> )</p>
+<p class="VBA-Text-Indent">This option is considered by the frequency domain solver with tetrahedral mesh in case of unit cell boundary conditions only. It modifies the way farfield monitor data is calculated. With "on" chosen, the Floquet ports' S-parameters will be collected in a farfield representation for each scan angle theta and phi. Choose "off" to perform a farfield calculation using the fields on the boundaries of the single unit cell. The mode "auto" uses "on" for parameter sweeps over the scan angle theta and phi, and "off" without parameter sweep, that is for single solver runs.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">SetConsiderUnitCellScanFarfieldSymmetry ( <a href="../common_vbageneral/common_general_bool_data_type.htm" id="a340" style="font-weight: normal; font-style: normal;" name="a340">bool</a><!-- referenced by common_overview_problems_fd_solver.htm -->
+ <span style="font-style: italic;"><i>theta</i></span>, <a href="../common_vbageneral/common_general_bool_data_type.htm" id="a341" style="font-weight: normal; font-style: normal;" name="a341">bool</a><!-- referenced by common_overview_problems_fd_solver.htm -->
+ <span style="font-style: italic;"><i>phi</i></span> )</p>
+<p class="VBA-Text-Indent">This option is considered by the frequency domain solver with tetrahedral mesh in case of unit cell boundary conditions only, and if the method <span style="font-style: italic;"><i>SetRecordUnitCellScanFarfield</i></span> is configured such that a unit cell scan farfield is collected during a parameter sweep. The two flags for symmetry in "theta" and "phi" will cause the farfield data to be mirrored, such that only a quarter or half of the scan angle space need to be considered in the parameter sweep. This of course requires the structure to exhibit corresponding symmetries.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">SetDisableResultTemplatesDuringUnitCellScanAngleSweep ( <a href="../common_vbageneral/common_general_bool_data_type.htm" id="a345" style="font-weight: normal; font-style: normal;" name="a345">bool</a><!-- referenced by common_overview_problems_fd_solver.htm -->
+ <span style="font-style: italic;"><i>disable</i></span> )</p>
+<p class="VBA-Text-Indent">This option is considered by the frequency domain solver with tetrahedral mesh in case of unit cell boundary conditions only, and if the method <span style="font-style: italic;"><i>SetRecordUnitCellScanFarfield</i></span> is configured such that a unit cell scan farfield is collected during a parameter sweep.</p>
+<p class="VBA-Text-Indent">Template based post-processing result templates usually are evaluated after each solver run for a given parameter combination. However, farfield results and S-parameter color map plots are generated after the unit cell scan angle parameter sweep is completed. Thus, evaluating result templates which reference those results during the parameter sweep normally produces error messages, as the results do not yet exist. To prevent these error messages, which might cause the optimizer to stop, please call <span style="font-style: italic;"><i>SetDisableResultTemplatesDuringUnitCellScanAngleSweep True</i></span> before starting the simulation. This is done automatically if you use the unit cell simulation project creation.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">ExtractUnitCellScanFarfield ( <a href="../common_vbageneral/common_general_string.htm" id="a342" style="font-weight: normal; font-style: normal;" name="a342">string</a><!-- referenced by common_overview_problems_fd_solver.htm -->
+ <span style="font-style: italic;"><i>frequencies</i></span>, <a href="../common_vbageneral/common_general_string.htm" id="a343" style="font-weight: normal; font-style: normal;" name="a343">string</a><!-- referenced by common_overview_problems_fd_solver.htm -->
+ <span style="font-style: italic;"><i>names</i></span>, <a href="../common_vbageneral/common_general_integer.htm" id="a344" style="font-weight: normal; font-style: normal;" name="a344">int</a><!-- referenced by common_overview_problems_fd_solver.htm -->
+ <span style="font-style: italic;"><i>anchor</i></span> )</p>
+<p class="VBA-Text-Indent">This post-processing calculation is available for the frequency domain solver with tetrahedral mesh in case of unit cell boundary conditions only, and produces results if the method <span style="font-style: italic;"><i>SetRecordUnitCellScanFarfield</i></span> was configured such that a unit cell scan farfield is collected during a parameter sweep. It extracts farfield results at some frequencies given in Hz, and adds Navigation Tree entries with the corresponding names provided for the results. Multiple frequencies and names are separated by semicolon, and a name must be provided for each frequency. The anchor usually is 1. It defines which parametric data set is used as a reference, in case the parameter sweep had sequences changing parameters other than those used to parameterize the scan angle.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">UpdateInterpolationSettings ( <a href="../common_vbageneral/common_general_string.htm" id="a346" style="font-weight: normal; font-style: normal;" name="a346">string</a><!-- referenced by common_overview_problems_fd_solver.htm -->
+ <span style="font-style: italic;"><i>navigationtreepath</i></span> ) <a href="../common_vbageneral/common_general_string.htm" id="a347" style="font-weight: normal; font-style: normal;" name="a347">string</a><!-- referenced by common_overview_problems_fd_solver.htm --></p>
+<p class="VBA-Text-Indent">This method is available as a post-processing step for the general purpose sweep. It updates the interpolation settings of results below the given path in the Navigation Tree. <span style="font-style: italic;"><i>navigationtreepath</i></span> has slash or backslash characters as separators and is case-insensitive, for instance "1D Results/Probes". The solver's interpolation settings are then applied to some 1D results. See <span style="font-style: italic; font-weight: bold;"><i>SetNumberOfResultDataSamples</i></span> and <span style="font-style: italic; font-weight: bold;"><i>SetResultDataSamplingMode</i></span> for details. The interpolation will be removed again if <span style="font-style: italic; font-weight: bold;"><i>SetMethod</i></span> was called with "Discrete samples only". <span style="font-style: italic; font-weight: bold;"><i>UpdateInterpolationSettings</i></span> returns a string with a summary.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">ExportMORSolution ( <a href="../common_vbageneral/common_general_double.htm" id="a77" style="font-weight: normal;" name="a77">double</a> <span style="font-style: italic;"><i>frequency</i></span> )</p>
+<p class="VBA-Text-Indent">This method exports available 3D solutions at the chosen frequency to CST Particle Studio. Afterwards the exported fields can be imported in CST Particle Studio with the Predefined Field feature. Applies to the fast reduced order model sweep method only.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method" style="font-style: normal;">ForceRecalculateOldSamples &#160;( <a href="../common_vbageneral/common_general_bool_data_type.htm" id="a162" style="font-weight: normal; font-style: normal;" name="a162">bool</a> <span style="font-style: italic;"><i>flag</i></span> )</p>
+<p class="VBA-Text-Indent">The solver checks if results are already available before calculating samples, in order not to repeat any calculation. Some changes may not be recognized, however, for instance if the content of an imported source has changed. Call this method to force the recalculation in those cases. Adaptive mesh refinement will be switched off, except for the first run, for which no results exist at all.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method" style="font-style: normal;">SetAllowFloatDirectSolver &#160;( <a href="../common_vbageneral/common_general_bool_data_type.htm" id="a163" style="font-weight: normal; font-style: normal;" name="a163">bool</a> <span style="font-style: italic;"><i>flag</i></span> )</p>
+<p class="VBA-Text-Indent">The float precision direct solver has a reduced memory consumption compared to the double precision direct solver, at the expense of being less accurate. This setting only affects the frequency domain solver with general purpose sweep on tetrahedral meshes, and only if the relative residual norm threshold (see <span style="font-style: italic;"><i>AccuracyTet</i></span> above) is strictly larger (less accurate) than 1e-6.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method" style="font-style: normal;">SetAllowChangeSettingsForSchematic &#160;( <a href="../common_vbageneral/common_general_bool_data_type.htm" id="a164" style="font-weight: normal; font-style: normal;" name="a164">bool</a> <span style="font-style: italic;"><i>flag</i></span> )</p>
+<p class="VBA-Text-Indent">Some solver settings may not be appropriate for using solver results in the schematic's S-parameter or AC, Combine results tasks, for instance. Call this method with <span style="font-style: italic;"><i>flag</i></span> = True to allow temporarily changing the solver settings. Any change which is applied will be reported in the message window (for instance related to the broadband frequency sweep, modes only calculations, symmetry conditions, all ports and modes excitation.) Note that results may be inconsistent to the solver settings afterwards.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Category"><a name="FD Defaults"></a>Frequency Domain Defaults</p>
+<p class="VBA-Text-Example" style="font-style: normal;">AcceleratedRestart (True)</p>
+<p class="VBA-Text-Example" style="font-style: normal;">AccuracyTet (1e-4)</p>
+<p class="VBA-Text-Example" style="font-style: normal;">AccuracyHex (1e-6)</p>
+<p class="VBA-Text-Example" style="font-style: normal;">AccuracySrf (1e-3)</p>
+<p class="VBA-Text-Example" style="font-style: normal;">AccuracyROM (1e-4)</p>
+<p class="VBA-Text-Example" style="font-style: normal;">AddMonitorSamples (True)</p>
+<p class="VBA-Text-Example" style="font-style: normal;">FrequencySamples (20)</p>
+<p class="VBA-Text-Example" style="font-style: normal;">UseHelmholtzEquation (True)</p>
+<p class="VBA-Text-Example" style="font-style: normal;">UserFrequency (False)</p>
+<p class="VBA-Text-Example" style="font-style: normal;">MaxIterations (0)</p>
+<p class="VBA-Text-Example" style="font-style: normal;">LimitIterations (False)</p>
+<p class="VBA-Text-Example" style="font-style: normal;">ModesOnly (False)</p>
+<p class="VBA-Text-Example" style="font-style: normal;">SetShieldAllPorts (False)</p>
+<p class="VBA-Text-Example" style="font-style: normal;">SetPortMeshMatches3DMeshTet (False)</p>
+<p class="VBA-Text-Example" style="font-style: normal;">SetAllowROMPortModeSolver (True)</p>
+<p class="VBA-Text-Example" style="font-style: normal;">SetAllowDiscretePortSolver (False)</p>
+<p class="VBA-Text-Example" style="font-style: normal;">SetUseROMPortModeSolverTet (False, False)</p>
+<p class="VBA-Text-Example" style="font-style: normal;">EnableNativeSingleEnded (True)</p>
+<p class="VBA-Text-Example" style="font-style: normal;">UseDeembeddedFields (False)</p>
+<p class="VBA-Text-Example" style="font-style: normal;">SetPreferLeanOutput (True)</p>
+<p class="VBA-Text-Example" style="font-style: normal;">SetUseImpLineImpedanceAsReference (False)</p>
+<p class="VBA-Text-Example" style="font-style: normal;">ConsiderPortLossesTet (True)</p>
+<p class="VBA-Text-Example" style="font-style: normal;">SetUseOrientPortWithMask (False)</p>
+<p class="VBA-Text-Example" style="font-style: normal;">FreqDistAdaptMode("Distributed")</p>
+<p class="VBA-Text-Example" style="font-style: normal;">SetStopSweepIfCriterionMet (True)</p>
+<p class="VBA-Text-Example" style="font-style: normal;">SetSweepThreshold ("S-Parameters", 0.01)</p>
+<p class="VBA-Text-Example" style="font-style: normal;">UetSweepThreshold ("S-Parameters", True)</p>
+<p class="VBA-Text-Example" style="font-style: normal;">SetSweepThreshold ("Probes", 0.05)</p>
+<p class="VBA-Text-Example" style="font-style: normal;">UetSweepThreshold ("Probes", True)</p>
+<p class="VBA-Text-Example" style="font-style: normal;">Type ("Auto")</p>
+<p class="VBA-Text-Example" style="font-style: normal;">StoreResultsInCache (False)</p>
+<p class="VBA-Text-Example" style="font-style: normal;">SetMethod ("Tetrahedral", "General Purpose")</p>
+<p class="VBA-Text-Example" style="font-style: normal;">AutoNormImpedance (False)</p>
+<p class="VBA-Text-Example" style="font-style: normal;">NormingImpedance (50.0)</p>
+<p class="VBA-Text-Example" style="font-style: normal;">Stimulation ("All", "All")</p>
+<p class="VBA-Text-Example" style="font-style: normal;">SweepErrorChecks (2)</p>
+<p class="VBA-Text-Example" style="font-style: normal;">SweepMinimumSamples (3)</p>
+<p class="VBA-Text-Example" style="font-style: normal;">SweepConsiderAll (True)</p>
+<p class="VBA-Text-Example" style="font-style: normal;">SetNumberOfResultDataSamples (1001)</p>
+<p class="VBA-Text-Example" style="font-style: normal;">SetResultDataSamplingMode ("Automatic")</p>
+<p class="VBA-Text-Example" style="font-style: normal;">ExtrudeOpenBC (False)</p>
+<p class="VBA-Text-Example" style="font-style: normal;">TDCompatibleMaterials (True)</p>
+<p class="VBA-Text-Example" style="font-style: normal;">CalcStatBField (False)</p>
+<p class="VBA-Text-Example" style="font-style: normal;">CalcPowerLoss (True)</p>
+<p class="VBA-Text-Example" style="font-style: normal;">CalcPowerLossPerComponent (False)</p>
+<p class="VBA-Text-Example" style="font-style: normal;">SetUseGreenSandyFerriteModel (False)</p>
+<p class="VBA-Text-Example" style="font-style: normal;">SetGreenSandyThresholdH ("")</p>
+<p class="VBA-Text-Example" style="font-style: normal;">SetKeepSolutionCoefficients ("All")</p>
+<p class="VBA-Text-Example" style="font-style: normal;">CreateLegacy1DSignals (False)</p>
+<p class="VBA-Text-Example" style="font-style: normal;">MeshAdaptionHex (False)</p>
+<p class="VBA-Text-Example" style="font-style: normal;">MeshAdaptionTet (True)</p>
+<p class="VBA-Text-Example" style="font-style: normal;">SetOpenBCTypeHex ("Default")</p>
+<p class="VBA-Text-Example" style="font-style: normal;">SetOpenBCTypeTet ("Default")</p>
+<p class="VBA-Text-Example" style="font-style: normal;">ResetExcitationList (True)</p>
+<p class="VBA-Text-Example" style="font-style: normal;">AddToExcitationList ("All", "All")</p>
+<p class="VBA-Text-Example" style="font-style: normal;">UseParallelization (True)</p>
+<p class="VBA-Text-Example" style="font-style: normal;">MaxCPUs (72)</p>
+<p class="VBA-Text-Example" style="font-style: normal;">MaximumNumberOfCPUDevices (2)</p>
+<p class="VBA-Text-Example" style="font-style: normal;">SweepWeightEvanescent (1.0)</p>
+<p class="VBA-Text-Example" style="font-style: normal;">LowFrequencyStabilization (False)</p>
+<p class="VBA-Text-Example" style="font-style: normal;">OrderTet ("Second")</p>
+<p class="VBA-Text-Example" style="font-style: normal;">OrderSrf ("Second")</p>
+<p class="VBA-Text-Example" style="font-style: normal;">UseDistributedComputing (False)</p>
+<p class="VBA-Text-Example" style="font-style: normal;">NetworkComputingStrategy ("RunRemote")</p>
+<p class="VBA-Text-Example" style="font-style: normal;">NetworkComputingJobCount (3)</p>
+<p class="VBA-Text-Example" style="font-style: normal;">UseDoublePrecision(True)</p>
+<p class="VBA-Text-Example" style="font-style: normal;">MixedOrderSrf(False)</p>
+<p class="VBA-Text-Example" style="font-style: normal;">MixedOrderTet(False)</p>
+<p class="VBA-Text-Example" style="font-style: normal;">UsePreconditionerIntEq "False"</p>
+<p class="VBA-Text-Example" style="font-style: normal;">PreconditionerAccuracyIntEq "0.15"</p>
+<p class="VBA-Text-Example" style="font-style: normal;">MLFMMAccuracy "Default"</p>
+<p class="VBA-Text-Example" style="font-style: normal;">MinMLFMMBoxSize "0.2"</p>
+<p class="VBA-Text-Example" style="font-style: normal;">UseCFIEForCPECIntEq (True)</p>
+<p class="VBA-Text-Example" style="font-style: normal;">UseFastRCSSweepIntEq (True)</p>
+<p class="VBA-Text-Example" style="font-style: normal;">SetCalcBlockExcitationsInParallel (True, True, "")</p>
+<p class="VBA-Text-Example" style="font-style: normal;">SetWrite3DFieldsForFarfieldCalc (False)</p>
+<p class="VBA-Text-Example" style="font-style: normal;">SetRecordUnitCellScanFarfield ("off")</p>
+<p class="VBA-Text-Example" style="font-style: normal;">SetConsiderUnitCellScanFarfieldSymmetry (False, False)</p>
+<p class="VBA-Text-Example" style="font-style: normal;">SetDisableResultTemplatesDuringUnitCellScanAngleSweep (False)</p>
+<p class="VBA-Text-Example" style="font-style: normal;">ForceRecalculateOldSamples (False)</p>
+<p class="VBA-Text-Example" style="font-style: normal;">SetAllowFloatDirectSolver (True)</p>
+<p class="VBA-Text-Example" style="font-style: normal;">SetAllowChangeSettingsForSchematic (False)</p>
+<p class="VBA-Text-Example" style="font-style: normal;">SetEvaluateHFieldOnSIBC (True)</p>
+<!-- referenced by common_overview_problems_fd_solver.htm -->
+<?rh-p style="margin-bottom: 0px; text-align: Right; margin-left: 18px; 
+                 margin-right: 18px; margin-top: 18px;" ?>
+<div style="width: 100%; position: relative;" id="footer">
+<p style="border-bottom: Solid 1px #dddddd; text-align: Left; margin-left: 0px; font-family: Arial, sans-serif; line-height: Normal; margin-top: 9px; margin-right: 0px; margin-bottom: 6px; border-left-width: 1px; border-top-width: 1px; border-right-width: 1px;"><span style="text-align: Left; font-family: Arial, sans-serif; line-height: Normal;">&#160;</span></p>
+<table cellspacing="0" width="100%">
+<col style="width: 50%;" />
+<col style="width: 50%;" />
+<tr>
+<td style="vertical-align: Top;"><span style="font-family: Arial, sans-serif; line-height: Normal; font-size: 8pt;"><font size="1" style="font-size:8pt;">CST Studio Suite 2026</font></span></td>
+<td style="vertical-align: Top;">
+<p style="text-align: right;">&#160;</p>
+</td>
+</tr>
+</table>
+<p>&#160;</p>
+</div>
+<script type="text/javascript" language="javascript1.2">
+//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+        writeIntopicBar(0);
+
+
+highlightSearch();
+//-->
+//]]>
+</script>
+</body>
+</html>

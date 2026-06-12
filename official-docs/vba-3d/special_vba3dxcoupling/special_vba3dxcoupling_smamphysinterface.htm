@@ -1,0 +1,282 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="Adobe RoboHelp 11" />
+<title>SMAMPhysInterface Object</title>
+<link rel="StyleSheet" href="../online_help_vba.css" type="text/css" />
+<style type="text/css">
+/*<![CDATA[*/
+<!--
+body { border-bottom-style:None; }
+-->
+/*]]>*/
+</style>
+
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+        origWidth = innerWidth;
+        origHeight = innerHeight;
+        onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+/*<![CDATA[*/
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+-->
+/*]]>*/
+</style>
+
+<script type="text/javascript" language="javascript1.2" src="../whmsg.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript" src="../whver.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript1.2" src="../whutils.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript1.2" src="../whproxy.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript1.2" src="../whlang.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript1.2" src="../whtopic.js" charset="utf-8">
+</script>
+</head>
+<body>
+<script type="text/javascript" language="javascript1.2">
+//<![CDATA[
+<!--
+if (window.gbWhTopic)
+{
+        var strUrl = document.location.href;
+        var bc = 0;
+        var n = strUrl.toLowerCase().indexOf("bc-");
+        if(n != -1)
+        {
+                document.location.replace(strUrl.substring(0, n));
+                bc = strUrl.substring(n+3);
+        }
+
+        if (window.addTocInfo)
+        {
+        addTocInfo("3D Simulation VBA\nVBA Objects\n3DEXPERIENCE Interface\nSMAMPhysInterface Object");
+
+        }
+        if (window.writeBtnStyle)
+                writeBtnStyle();
+
+        if (window.writeIntopicBar)
+                writeIntopicBar(0);
+
+        
+        document.write("<p style=\"font-family: Tahoma; font-size: 9pt; font-weight: 400;  font-style:normal; color: rgb(0, 0, 0); text-decoration:none; text-align: left\"> ");
+AddMasterBreadcrumbs("../index.htm", "font-family: Tahoma; font-size: 9pt; font-weight: 400;  font-style:normal; color: rgb(0, 0, 0); text-decoration:none; text-align: left", "|", "Home", "../special_vbaobjects/special_vbaobjects_vbaobjects.htm");
+document.write("<a style=\"font-family: Tahoma; font-size: 9pt; font-weight: 400;  font-style:normal; color: rgb(0, 0, 0); text-decoration:none; text-align: left\" href=\"../special_vbaobjects/special_vbaobjects_vbaobjects.htm\">3D Simulation VBA<\/a> | <a style=\"font-family: Tahoma; font-size: 9pt; font-weight: 400;  font-style:normal; color: rgb(0, 0, 0); text-decoration:none; text-align: left\" href=\"../special_vbaobjects/special_vbaobjects_vbaobjects.htm\">VBA Objects<\/a> | <a style=\"font-family: Tahoma; font-size: 9pt; font-weight: 400;  font-style:normal; color: rgb(0, 0, 0); text-decoration:none; text-align: left\" href=\"special_vba3dxcoupling_smamphysinterface.htm\">3DEXPERIENCE Interface<\/a> | SMAMPhysInterface Object<\/p>");
+
+}
+else
+        if (window.gbIE4)
+                document.location.reload();
+
+onLoadHandler = function()
+{
+  if (window.setRelStartPage)
+        {
+        setTimeout("setRelStartPage('../index.htm');", 1)
+
+    setTimeout("UpdateBreadCrumbsMarker();", 1);
+        }
+}
+
+if (window.addEventListener){  
+        window.addEventListener('load', onLoadHandler, false);   
+} else if (window.attachEvent){  
+        window.attachEvent('onload', onLoadHandler);  
+}
+
+function onSetStartPage()
+{
+  autoSync(1);
+  sendSyncInfo();
+  sendAveInfoOut();
+}
+//-->
+//]]>
+</script><script type="text/javascript" src="../ehlpdhtm.js" language="JavaScript1.2">
+</script>
+<table cellspacing="0" width="100%">
+<col style="width: 50%;" />
+<col style="width: 50%;" />
+<tr>
+<td style="vertical-align: middle; padding-top: 5px; padding-bottom: 5px;">
+<p style="margin-top: 0px; margin-bottom: 0px;"><img src="../3ds.png" alt="" style="border: none;" border="0" /></p>
+</td>
+<td style="vertical-align: middle;">
+<p style="text-align: right;"><a href="https://www.3ds.com/products-services/3dexperience/" target="_blank"><img src="../3dexp.png" alt="" style="border: none;" width="32" height="32" border="0" /></a></p>
+</td>
+</tr>
+</table>
+<h1>SMAMPhysInterface Object</h1>
+<p style="font-family: Arial, sans-serif;"><span style="font-family: Arial, sans-serif;">Defines a 3DEXPERIENCE multi-physics interface to exchange solution results with other SIMULIA solvers.</span></p>
+<ul style="list-style: disc;">
+<li style="font-weight: bold;">
+<p style="font-family: Arial, sans-serif; font-weight: bold;"><a href="#Methods" style="font-weight: bold;">Methods</a></p>
+</li>
+<li style="font-weight: bold;">
+<p style="font-family: Arial, sans-serif; font-weight: bold;"><a href="#Examples" style="font-weight: bold;">Examples</a></p>
+</li>
+</ul>
+<p class="VBA-Heading-Category"><a name="Methods" id="Methods"></a>Methods</p>
+<p class="VBA-Heading-Method">Reset</p>
+<p class="VBA-Text-Indent">Resets all internal values to their default settings.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">PortID ( <a href="../common_vbageneral/common_general_string.htm" id="a35111122" style="font-weight: normal; font-style: normal;" name="a35111122">string</a> <span style="font-style: italic;"><i>portID</i></span> )</p>
+<p class="VBA-Text-Indent">Provides the unique ID for the port. The string must contain a hexahedral value.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">PortName ( <a href="../common_vbageneral/common_general_name.htm" id="a29" style="font-weight: normal; font-style: normal;" name="a29">name</a> <span style="font-style: italic;"><i>portName</i></span> )</p>
+<p class="VBA-Text-Indent">Provides the name of the port which will be visible in 3DEXPERIENCE infrastructure. Must be non-empty and unique.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">PortType ( <a href="../common_vbageneral/common_general_enum.htm" id="a81" style="font-weight: normal; font-style: normal;" name="a81">enum</a> <span style="font-style: italic;"><i>portType</i></span> )</p>
+<p class="VBA-Text-Indent">Provides type enum for the port. Currently only "OutLFForceMonitor" is supported.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<table style="vertical-align: top; margin-left: 15.10pt;" cellspacing="0" width="52.334%">
+<col style="width: 37.76%;" />
+<col style="width: 62.24%;" />
+<tr style="vertical-align: top;">
+<td style="border: Solid 1px #000000; width: 37.76%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text">OutLFForceMonitor</p>
+</td>
+<td style="border-top: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 62.24%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text">Output multi-physics port containing the results of an LF Force and Torque monitor.</p>
+</td>
+</tr>
+</table>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">ResultType ( <a href="../common_vbageneral/common_general_enum.htm" id="a811" style="font-weight: normal; font-style: normal;" name="a811">enum</a> <span style="font-style: italic;"><i>resultType</i></span> )</p>
+<p class="VBA-Text-Indent">Provides type enum for the result.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<table style="vertical-align: top; margin-left: 15.10pt;" cellspacing="0" width="52.334%">
+<col style="width: 37.76%;" />
+<col style="width: 62.24%;" />
+<tr style="vertical-align: top;">
+<td style="border: Solid 1px #000000; width: 37.76%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text">Signal</p>
+</td>
+<td style="border-top: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 62.24%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text">The port delivers a 0D or 1D-result.</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 37.76%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text">Distribution</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 62.24%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text">The port delivers a 2D or 3D field distribution.</p>
+</td>
+</tr>
+</table>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">AddValueType ( <a href="../common_vbageneral/common_general_enum.htm" id="a812" style="font-weight: normal; font-style: normal;" name="a812">enum</a> <span style="font-style: italic;"><i>valueType</i></span> )</p>
+<p class="VBA-Text-Indent">Adds a field value type to the list for the specific port.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<table style="vertical-align: top; margin-left: 15.10pt;" cellspacing="0" width="52.334%">
+<col style="width: 37.76%;" />
+<col style="width: 62.24%;" />
+<tr style="vertical-align: top;">
+<td style="border: Solid 1px #000000; width: 37.76%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text">Force</p>
+</td>
+<td style="border-top: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 62.24%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text">The port delivers Force values in N.</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 37.76%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text">Torque</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 62.24%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text">The port deliversTorque values in N*m.</p>
+</td>
+</tr>
+</table>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">AddFrequency ( <a href="../common_vbageneral/common_general_double.htm" id="a9" style="font-weight: normal; font-style: normal;" name="a9">double</a> <span style="font-style: italic;"><i>frequency</i></span> )</p>
+<p class="VBA-Text-Indent">Adds a frequency value to the list for the specific port.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">MonitorName (&#160;<a href="../common_vbageneral/common_general_name.htm" id="a2921" style="font-weight: normal; font-style: normal;" name="a2921">name</a> <span style="font-style: italic;"><i>monitorName</i></span> )</p>
+<p class="VBA-Text-Indent">If a port is supposed to share data for a specific monitor, provide here the monitor name. Only LF Force and Torque monitors are supported.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">CreatePort</p>
+<p class="VBA-Text-Indent">Creates a new port with the given settings. This command fails if a port with the same name exists.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">ModifyPort</p>
+<p class="VBA-Text-Indent">Modifies settings for a port with the give name. This command fails if a port with this name does not exist.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">RenamePort ( <a href="../common_vbageneral/common_general_name.htm" id="a291" style="font-weight: normal; font-style: normal;" name="a291">name</a> <span style="font-style: italic;"><i>oldName</i></span>, <a href="../common_vbageneral/common_general_name.htm" id="a292" style="font-weight: normal; font-style: normal;" name="a292">name</a> <span style="font-style: italic;"><i>newName</i></span> )</p>
+<p class="VBA-Text-Indent">Renames a port with the name <span style="font-style: italic;"><i>oldName</i></span> to <span style="font-style: italic;"><i>newName</i></span>. The command fails if no port with the name <span style="font-style: italic;"><i>oldName</i></span> exists or a port with the name <span style="font-style: italic;"><i>newName</i></span> already exists.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">ChangeMonitorNameForPortType ( <a href="../common_vbageneral/common_general_enum.htm" id="a813" style="font-weight: normal; font-style: normal;" name="a813">enum</a> <span style="font-style: italic;"><i>portType</i></span>, <a href="../common_vbageneral/common_general_name.htm" id="a293" style="font-weight: normal; font-style: normal;" name="a293">name</a> <span style="font-style: italic;"><i>oldName</i></span>, <a href="../common_vbageneral/common_general_name.htm" id="a294" style="font-weight: normal; font-style: normal;" name="a294">name</a> <span style="font-style: italic;"><i>newName</i></span> )</p>
+<p class="VBA-Text-Indent">For all the ports of type <span style="font-style: italic;"><i>portType</i></span> with the monitor name <span style="font-style: italic;"><i>oldName</i></span> assigned, changes the assigned monitor name to <span style="font-style: italic;"><i>newName</i></span>. This command is helpful if a monitor has been renamed.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">DeletePort ( <a href="../common_vbageneral/common_general_name.htm" id="a295" style="font-weight: normal; font-style: normal;" name="a295">name</a> <span style="font-style: italic;"><i>portName</i></span> )</p>
+<p class="VBA-Text-Indent">Deletes the port with the name portName.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">DeleteAllPorts</p>
+<p class="VBA-Text-Indent">Deletes all the 3DEXPERIENCE multi-physics interface ports.</p>
+<p class="VBA-Heading-Category"><a name="Examples" id="Examples"></a>Examples</p>
+<p class="VBA-Text-Indent">Create a new 3DEXPERIENCE multi-physics interface port for a Force and Torque monitor:</p>
+<p style="font-family: Arial, sans-serif;">&#160;</p>
+<p class="VBA-Text-Example">With SMAMPhysInterface</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;.Reset</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;.PortName "Force on magnet2"</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;.PortID "302d6ad1e92c4474934cbc2bc78c7ef7"</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;.PortType "OutLFForceMonitor"</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;.ResultType "Signal"</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;.AddValueType "Force"</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;.AddValueType "Torque"</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;.MonitorName "Force on magnet2"</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;.CreatePort</p>
+<p class="VBA-Text-Example">End With</p>
+<p style="font-family: Arial, sans-serif;">&#160;</p>
+<?rh-p style="margin-bottom: 0px; text-align: Right; margin-left: 18px; 
+                 margin-right: 18px; margin-top: 18px;" ?>
+<div style="width: 100%; position: relative;" id="footer">
+<p style="border-bottom: Solid 1px #dddddd; text-align: Left; margin-left: 0px; font-family: Arial, sans-serif; line-height: Normal; margin-top: 9px; margin-right: 0px; margin-bottom: 6px; border-left-width: 1px; border-top-width: 1px; border-right-width: 1px;"><span style="text-align: Left; font-family: Arial, sans-serif; line-height: Normal;">&#160;</span></p>
+<table cellspacing="0" width="100%">
+<col style="width: 50%;" />
+<col style="width: 50%;" />
+<tr>
+<td style="vertical-align: Top;"><span style="font-family: Arial, sans-serif; line-height: Normal; font-size: 8pt;"><font size="1" style="font-size:8pt;">CST Studio Suite 2026</font></span></td>
+<td style="vertical-align: Top;">
+<p style="text-align: right;">&#160;</p>
+</td>
+</tr>
+</table>
+<p>&#160;</p>
+</div>
+<script type="text/javascript" language="javascript1.2">
+//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+        writeIntopicBar(0);
+
+
+highlightSearch();
+//-->
+//]]>
+</script>
+</body>
+</html>

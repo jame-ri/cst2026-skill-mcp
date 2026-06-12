@@ -1,0 +1,345 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="Adobe RoboHelp 11" />
+<title>Circuit Probe Object</title>
+<link rel="StyleSheet" href="../online_help_vba.css" type="text/css" />
+<style type="text/css">
+/*<![CDATA[*/
+<!--
+body { border-bottom-style:None; }
+-->
+/*]]>*/
+</style>
+
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function ehlp_showtip(current,e,text)
+{
+  if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == 'Netscape'))
+  {
+    document.tooltip.document.write("<layer bgColor='yellow' style='border:1px solid black;font-size:12px;'>"+ text + "<\/layer>");
+    document.tooltip.document.close();
+    document.tooltip.left=e.pageX+5;
+    document.tooltip.top=e.pageY+5;
+    document.tooltip.visibility="show";
+  }
+}
+function ehlp_hidetip()
+{
+  document.tooltip.visibility="hidden";
+}
+//]]>
+</script>
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+        origWidth = innerWidth;
+        origHeight = innerHeight;
+        onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+/*<![CDATA[*/
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+-->
+/*]]>*/
+</style>
+
+<script type="text/javascript" language="javascript1.2" src="../whmsg.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript" src="../whver.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript1.2" src="../whutils.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript1.2" src="../whproxy.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript1.2" src="../whlang.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript1.2" src="../whtopic.js" charset="utf-8">
+</script>
+</head>
+<body>
+<script type="text/javascript" language="javascript1.2">
+//<![CDATA[
+<!--
+if (window.gbWhTopic)
+{
+        var strUrl = document.location.href;
+        var bc = 0;
+        var n = strUrl.toLowerCase().indexOf("bc-");
+        if(n != -1)
+        {
+                document.location.replace(strUrl.substring(0, n));
+                bc = strUrl.substring(n+3);
+        }
+
+        if (window.addTocInfo)
+        {
+        addTocInfo("Circuits & Systems VBA\nComponent/Modeling\nCircuitProbe");
+
+        }
+        if (window.writeBtnStyle)
+                writeBtnStyle();
+
+        if (window.writeIntopicBar)
+                writeIntopicBar(0);
+
+        
+        document.write("<p style=\"font-family: Tahoma; font-size: 9pt; font-weight: 400;  font-style:normal; color: rgb(0, 0, 0); text-decoration:none; text-align: left\"> ");
+AddMasterBreadcrumbs("../index.htm", "font-family: Tahoma; font-size: 9pt; font-weight: 400;  font-style:normal; color: rgb(0, 0, 0); text-decoration:none; text-align: left", "|", "Home", "../special_vbaobjects/cstdesignstudiovbaobjects.htm");
+document.write("<a style=\"font-family: Tahoma; font-size: 9pt; font-weight: 400;  font-style:normal; color: rgb(0, 0, 0); text-decoration:none; text-align: left\" href=\"../special_vbaobjects/cstdesignstudiovbaobjects.htm\">Circuits & Systems VBA<\/a> | <a style=\"font-family: Tahoma; font-size: 9pt; font-weight: 400;  font-style:normal; color: rgb(0, 0, 0); text-decoration:none; text-align: left\" href=\"blockobject.htm\">Component/Modeling<\/a> | CircuitProbe<\/p>");
+
+}
+else
+        if (window.gbIE4)
+                document.location.reload();
+
+onLoadHandler = function()
+{
+  if (window.setRelStartPage)
+        {
+        setTimeout("setRelStartPage('../index.htm');", 1)
+
+    setTimeout("UpdateBreadCrumbsMarker();", 1);
+        }
+}
+
+if (window.addEventListener){  
+        window.addEventListener('load', onLoadHandler, false);   
+} else if (window.attachEvent){  
+        window.attachEvent('onload', onLoadHandler);  
+}
+
+function onSetStartPage()
+{
+  autoSync(1);
+  sendSyncInfo();
+  sendAveInfoOut();
+}
+//-->
+//]]>
+</script><script type="text/javascript" src="../ehlpdhtm.js" language="JavaScript1.2">
+</script>
+<table cellspacing="0" width="100%">
+<col style="width: 50%;" />
+<col style="width: 50%;" />
+<tr>
+<td style="vertical-align: middle; padding-top: 5px; padding-bottom: 5px;">
+<p style="margin-top: 0px; margin-bottom: 0px;"><img src="../3ds.png" alt="" style="border: none;" border="0" /></p>
+</td>
+<td style="vertical-align: middle;">
+<p style="text-align: right;"><a href="https://www.3ds.com/products-services/3dexperience/" target="_blank"><img src="../3dexp.png" alt="" style="border: none;" width="32" height="32" border="0" /></a></p>
+</td>
+</tr>
+</table>
+<h1>CircuitProbe Object</h1>
+<p>Object referring to a probe. Use this object to create or to manipulate a probe.</p>
+<ul>
+<li class="p-VBA-Index-Category">
+<p class="VBA-Index-Category"><a href="#General_Methods">Methods</a></p>
+</li>
+<li style="list-style: none; display: inline">
+<ul>
+<li class="p-VBA-Index-Category">
+<p class="VBA-Index-Category"><a href="#General_Methods">General Methods</a></p>
+</li>
+<li class="p-VBA-Index-Category">
+<p class="VBA-Index-Category"><a href="#Identification">Identification</a></p>
+</li>
+<li class="p-VBA-Index-Category">
+<p class="VBA-Index-Category"><a href="#Getter">Getter</a></p>
+</li>
+<li class="p-VBA-Index-Category">
+<p class="VBA-Index-Category"><a href="#Setter">Setter</a></p>
+</li>
+<li class="p-VBA-Index-Category">
+<p class="VBA-Index-Category"><a href="#Iteration">Iteration</a></p>
+</li>
+<li class="p-VBA-Index-Category">
+<p class="VBA-Index-Category"><a href="#Direction">Direction</a></p>
+</li>
+</ul>
+</li>
+<li class="p-VBA-Index-Category">
+<p class="VBA-Index-Category"><a href="#Examples">Examples</a></p>
+</li>
+<li style="list-style: none; display: inline">
+<ul>
+<li class="p-VBA-Index-Category">
+<p class="VBA-Index-Category"><a href="#CreateNormal" title="Create a new probe" onmouseover="if ((parseInt(navigator.appVersion) == 4) &amp;&amp; (navigator.appName == 'Netscape')) ehlp_showtip(this,event,'Create a new probe');" onmouseout="if ((parseInt(navigator.appVersion) == 4) &amp;&amp; (navigator.appName == 'Netscape')) ehlp_hidetip();">Create a new normal probe</a></p>
+</li>
+<li class="p-VBA-Index-Category">
+<p class="VBA-Index-Category"><a href="#CreateDifferential" title="Create a new differential probe" onmouseover="if ((parseInt(navigator.appVersion) == 4) &amp;&amp; (navigator.appName == 'Netscape')) ehlp_showtip(this,event,'Create a new differential probe');" onmouseout="if ((parseInt(navigator.appVersion) == 4) &amp;&amp; (navigator.appName == 'Netscape')) ehlp_hidetip();">Create a new differential probe</a></p>
+</li>
+<li class="p-VBA-Index-Category">
+<p class="VBA-Index-Category"><a href="#Modification" title="Modify an existing probe" onmouseover="if ((parseInt(navigator.appVersion) == 4) &amp;&amp; (navigator.appName == 'Netscape')) ehlp_showtip(this,event,'Modify an existing probe');" onmouseout="if ((parseInt(navigator.appVersion) == 4) &amp;&amp; (navigator.appName == 'Netscape')) ehlp_hidetip();">Modify an existing probe</a></p>
+</li>
+</ul>
+</li>
+</ul>
+<p class="VBA-Heading-Category"><a name="General_Methods" id="General_Methods"></a>General Methods</p>
+<p class="VBA-Heading-Method">Create</p>
+<p class="VBA-Text-Indent">Creates a new probe. All necessary settings (a connected block pin) have to be made previously.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">Delete</p>
+<p class="VBA-Text-Indent">Deletes a probe. All necessary settings (probe name) have to be made previously.</p>
+<p class="VBA-Heading-Method">&#160;</p>
+<p class="VBA-Heading-Method">DoesExist <a href="../common_vbageneral/common_general_bool_data_type.htm" id="a8" style="font-weight: normal; font-style: normal;" name="a8">bool</a></p>
+<p class="VBA-Text-Indent">Checks if a probe with the currently defined properties (probe name) already exists.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">Reset</p>
+<p class="VBA-Text-Indent">Resets all internal settings to their default values.</p>
+<p class="VBA-Heading-Category"><a name="Identification" id="Identification"></a>Identification</p>
+<p class="VBA-Heading-Method">Name ( <a href="../common_vbageneral/common_general_name.htm" id="a5" style="font-weight: normal; font-style: normal;" name="a5">name</a> probename )</p>
+<p class="VBA-Text-Indent">Sets the name of a probe before calling Create. Furthermore, this method can be used to select an existing probe of your model prior of calling queries.</p>
+<p class="VBA-Heading-Category"><a name="Getter" id="Getter"></a>Getter</p>
+<p class="VBA-Heading-Method">GetName <a href="../common_vbageneral/common_general_name.htm" id="a2" style="font-weight: normal; font-style: normal;" name="a2">name</a></p>
+<p class="VBA-Text-Indent">Returns the name of the probe with the currently defined properties.</p>
+<p class="VBA-Heading-Method">&#160;</p>
+<p class="VBA-Heading-Method">GetType <a href="../common_vbageneral/common_general_integer.htm" id="a14" style="font-weight: normal; font-style: normal;" name="a14">int</a></p>
+<p class="Topic-Text-Indent">Returns the type of the probe with the currently defined properties. The following int values are returned:</p>
+<p class="Topic-Text-Indent" style="margin-left: 60px;">0: No probe</p>
+<p class="Topic-Text-Indent" style="margin-left: 60px;">1: normal probe</p>
+<p class="Topic-Text-Indent" style="margin-left: 60px;">2: differential probe</p>
+<p class="VBA-Heading-Category"><a name="Setter" id="Setter"></a>Setter</p>
+<p class="VBA-Heading-Method">SetName ( <a href="../common_vbageneral/common_general_name.htm" id="a16" style="font-weight: normal; font-style: normal;" name="a16">name</a> <span style="font-style: italic;"><i>probename</i></span> )</p>
+<p class="VBA-Text-Indent">Modifies the name of an existing probe.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">SetBlockPin ( <a href="../common_vbageneral/common_general_string.htm" id="a4" style="font-weight: normal; font-style: normal;" name="a4">string</a> <span style="font-style: italic;"><i>type, <a href="../common_vbageneral/common_general_name.htm" id="a10" style="font-weight: normal; font-style: normal;" name="a10">name</a></i></span> <span style="font-style: italic;"><i>componentname,</i></span> <span style="font-weight: normal;"><a href="../common_vbageneral/common_general_bool_data_type.htm">name</a></span> <span style="font-style: italic;"><i>pinname,</i></span> <span style="font-weight: normal;"><a href="../common_vbageneral/common_general_bool_data_type.htm">bool</a></span> <span style="font-style: italic;"><i>directioninwards</i></span> )</p>
+<p class="VBA-Text-Indent">Sets the probe's location by the specification of the component pin to be connected to. Furthermore, the probe's direction must be given (probe points to the component's pin if true).</p>
+<p class="VBA-Text-Indent">See table below for description of arguments.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">SetRefBlockPin ( <a href="../common_vbageneral/common_general_string.htm" id="a4" style="font-weight: normal; font-style: normal;" name="a4">string</a> <span style="font-style: italic;"><i>type, <a href="../common_vbageneral/common_general_name.htm" id="a10" style="font-weight: normal; font-style: normal;" name="a10">name</a></i></span> <span style="font-style: italic;"><i>componentname,</i></span> <span style="font-weight: normal;"><a href="../common_vbageneral/common_general_bool_data_type.htm">name</a></span> <span style="font-style: italic;"><i>pinname</i></span> )</p>
+<p class="VBA-Text-Indent">Sets the differential probe's reference location by the specification of type, componentname and pinname.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<table style="margin-left: 24px; left: 0px; top: 325px;" cellspacing="0" width="650">
+<tr style="vertical-align: top;">
+<th style="border: Solid 1px #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;" width="100">
+<p class="VBA-Text">Component</p>
+</th>
+<th style="border-top: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;" width="100">
+<p class="VBA-Text">type</p>
+</th>
+<th style="border-top: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;" width="400">
+<p class="VBA-Text">componentname</p>
+</th>
+<th style="border-top: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;" width="400">
+<p class="VBA-Text">pinname</p>
+</th>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;" width="100">
+<p class="VBA-Text">Block</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;" width="100">
+<p class="VBA-Text">"B"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;" width="100">
+<p class="VBA-Text">Name of the block as displayed in the tree.</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;" width="100">
+<p class="VBA-Text">Name of the pin as displayed in the schematic. For blocks without visible pin names (e.g. resistors or transistors) use the names that are displayed near the block icon in the online help of the corresponding block, or numbers starting with 1 if the icon does not contain pin names.</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;" width="100">
+<p class="VBA-Text">External Port</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;" width="100">
+<p class="VBA-Text">"P"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;" width="100">
+<p class="VBA-Text">Name of the external port as displayed in the tree.</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;" width="100">
+<p class="VBA-Text">Empty string to choose the main pin or "ref" (case insensitive) to choose the reference pin (only valid for differential external ports).</p>
+</td>
+</tr>
+</table>
+<p class="VBA-Heading-Category"><a name="Iteration" id="Iteration"></a>Iteration</p>
+<p class="VBA-Heading-Method">StartProbeNameIteration <a href="../common_vbageneral/common_general_integer.htm" id="a6" style="font-weight: normal; font-style: normal;" name="a6">int</a></p>
+<p class="VBA-Text-Indent">Resets the iterator for the probes and returns the number of probes.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">GetNextProbeName <a href="../common_vbageneral/common_general_name.htm" id="a7" style="font-weight: normal; font-style: normal;" name="a7">name</a></p>
+<p class="VBA-Text-Indent">Returns the next probe's name. Call <span style="font-style: italic;"><i>StartProbeNameIteration</i></span> before the first call of this method.</p>
+<p class="VBA-Heading-Category"><a name="Direction" id="Direction"></a>Direction</p>
+<p class="VBA-Heading-Method">NormalDirection <span style="font-weight: normal;"><a href="../common_vbageneral/common_general_bool_data_type.htm">bool</a></span></p>
+<p class="VBA-Text-Indent">Returns True if the direction of the probe with the currently defined properties is normal.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">ChangeDirection</p>
+<p class="VBA-Text-Indent">Changes a probe's direction, i.e. the current is considered with opposite sign.</p>
+<p class="VBA-Heading-Category"><a name="Examples" id="Examples"></a>Examples</p>
+<p class="VBA-Text-Example"><a name="CreateNormal" id="CreateNormal"></a>'Create a new normal probe</p>
+<p class="VBA-Text-Example">With CircuitProbe</p>
+<p class="VBA-Text-Example" style="margin-left: 40px;">.Reset</p>
+<p class="VBA-Text-Example" style="margin-left: 40px;">.Name ("Probe1")</p>
+<p class="VBA-Text-Example" style="margin-left: 40px;">.SetBlockPin("P", "1", "", TRUE) ' define probe location: external port 1, pointing towards the port</p>
+<p class="VBA-Text-Example" style="margin-left: 40px;">.Create ' Create normal probe 'Probe1'</p>
+<p class="VBA-Text-Example">End With</p>
+<p class="VBA-Text-Example">&#160;</p>
+<p class="VBA-Text-Example"><a name="CreateDifferential" id="CreateDifferential"></a>'Create a new differential probe</p>
+<p class="VBA-Text-Example">With CircuitProbe</p>
+<p class="VBA-Text-Example" style="margin-left: 40px;">.Reset</p>
+<p class="VBA-Text-Example" style="margin-left: 40px;">.Name ("DiffProbe")</p>
+<p class="VBA-Text-Example" style="margin-left: 40px;">.SetBlockPin("P", "2", "REF", TRUE) ' define probe location: external port 2, differential pin, pointing towards the port</p>
+<p class="VBA-Text-Example" style="margin-left: 40px;">.SetRefBlockPin("B", "RES1", "2") ' define reference probe location: block RES1-Pin2</p>
+<p class="VBA-Text-Example" style="margin-left: 40px;">.Create ' Create differential probe 'DiffProbe' between port 2 differential pin and block RES1-Pin2</p>
+<p class="VBA-Text-Example">End With</p>
+<p class="VBA-Text-Example">&#160;</p>
+<p class="VBA-Text-Example"><a name="Modification" id="Modification"></a>'Modify an existing probe</p>
+<p class="VBA-Text-Example">With CircuitProbe</p>
+<p class="VBA-Text-Example" style="margin-left: 40px;">.Reset</p>
+<p class="VBA-Text-Example" style="margin-left: 40px;">.Name ("Probe1")</p>
+<p class="VBA-Text-Example" style="margin-left: 40px;">.SetName ("NormalProbe") ' Rename</p>
+<p class="VBA-Text-Example" style="margin-left: 40px;">.ChangeDirection ' Change probe direction</p>
+<p class="VBA-Text-Example">End With</p>
+<p class="VBA-Text-Example">&#160;</p>
+<?rh-p style="margin-bottom: 0px; text-align: Right; margin-left: 18px; 
+                 margin-right: 18px; margin-top: 18px;" ?>
+<div style="width: 100%; position: relative;" id="footer">
+<p style="border-bottom: Solid 1px #dddddd; text-align: Left; margin-left: 0px; font-family: Arial, sans-serif; line-height: Normal; margin-top: 9px; margin-right: 0px; margin-bottom: 6px; border-left-width: 1px; border-top-width: 1px; border-right-width: 1px;"><span style="text-align: Left; font-family: Arial, sans-serif; line-height: Normal;">&#160;</span></p>
+<table cellspacing="0" width="100%">
+<col style="width: 50%;" />
+<col style="width: 50%;" />
+<tr>
+<td style="vertical-align: Top;"><span style="font-family: Arial, sans-serif; line-height: Normal; font-size: 8pt;"><font size="1" style="font-size:8pt;">CST Studio Suite 2026</font></span></td>
+<td style="vertical-align: Top;">
+<p style="text-align: right;">&#160;</p>
+</td>
+</tr>
+</table>
+<p>&#160;</p>
+</div>
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+ if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == 'Netscape'))
+  document.write("<div id='tooltip' class='WebHelpPopupMenu'><\/div>");
+//]]>
+</script><script type="text/javascript" language="javascript1.2">
+//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+        writeIntopicBar(0);
+
+
+highlightSearch();
+//-->
+//]]>
+</script>
+</body>
+</html>

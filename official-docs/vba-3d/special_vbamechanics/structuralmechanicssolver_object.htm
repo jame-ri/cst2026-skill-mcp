@@ -1,0 +1,363 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="Adobe RoboHelp 11" />
+<title>StructuralMechanicsSolver Object</title>
+<link rel="StyleSheet" href="../online_help_vba.css" type="text/css" />
+<style type="text/css">
+/*<![CDATA[*/
+<!--
+body { border-bottom-style:None; }
+-->
+/*]]>*/
+</style>
+
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+        origWidth = innerWidth;
+        origHeight = innerHeight;
+        onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+/*<![CDATA[*/
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+-->
+/*]]>*/
+</style>
+
+<script type="text/javascript" language="javascript1.2" src="../whmsg.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript" src="../whver.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript1.2" src="../whutils.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript1.2" src="../whproxy.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript1.2" src="../whlang.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript1.2" src="../whtopic.js" charset="utf-8">
+</script>
+</head>
+<body>
+<script type="text/javascript" language="javascript1.2">
+//<![CDATA[
+<!--
+if (window.gbWhTopic)
+{
+        var strUrl = document.location.href;
+        var bc = 0;
+        var n = strUrl.toLowerCase().indexOf("bc-");
+        if(n != -1)
+        {
+                document.location.replace(strUrl.substring(0, n));
+                bc = strUrl.substring(n+3);
+        }
+
+        if (window.addTocInfo)
+        {
+        addTocInfo("3D Simulation VBA\nVBA Objects\nSolver\nMechanics\nMechanicsSolver");
+
+        }
+        if (window.writeBtnStyle)
+                writeBtnStyle();
+
+        if (window.writeIntopicBar)
+                writeIntopicBar(0);
+
+        
+        document.write("<p style=\"font-family: Tahoma; font-size: 9pt; font-weight: 400;  font-style:normal; color: rgb(0, 0, 0); text-decoration:none; text-align: left\"> ");
+AddMasterBreadcrumbs("../index.htm", "font-family: Tahoma; font-size: 9pt; font-weight: 400;  font-style:normal; color: rgb(0, 0, 0); text-decoration:none; text-align: left", "|", "Home", "../special_vbaobjects/special_vbaobjects_vbaobjects.htm");
+document.write("<a style=\"font-family: Tahoma; font-size: 9pt; font-weight: 400;  font-style:normal; color: rgb(0, 0, 0); text-decoration:none; text-align: left\" href=\"../special_vbaobjects/special_vbaobjects_vbaobjects.htm\">3D Simulation VBA<\/a> | <a style=\"font-family: Tahoma; font-size: 9pt; font-weight: 400;  font-style:normal; color: rgb(0, 0, 0); text-decoration:none; text-align: left\" href=\"../special_vbaobjects/special_vbaobjects_vbaobjects.htm\">VBA Objects<\/a> | <a style=\"font-family: Tahoma; font-size: 9pt; font-weight: 400;  font-style:normal; color: rgb(0, 0, 0); text-decoration:none; text-align: left\" href=\"../special_vbasolver/special_vbasolver_background_object.htm\">Solver<\/a> | <a style=\"font-family: Tahoma; font-size: 9pt; font-weight: 400;  font-style:normal; color: rgb(0, 0, 0); text-decoration:none; text-align: left\" href=\"structuralmechanicssolver_object.htm\">Mechanics<\/a> | MechanicsSolver<\/p>");
+
+}
+else
+        if (window.gbIE4)
+                document.location.reload();
+
+onLoadHandler = function()
+{
+  if (window.setRelStartPage)
+        {
+        setTimeout("setRelStartPage('../index.htm');", 1)
+
+    setTimeout("UpdateBreadCrumbsMarker();", 1);
+        }
+}
+
+if (window.addEventListener){  
+        window.addEventListener('load', onLoadHandler, false);   
+} else if (window.attachEvent){  
+        window.attachEvent('onload', onLoadHandler);  
+}
+
+function onSetStartPage()
+{
+  autoSync(1);
+  sendSyncInfo();
+  sendAveInfoOut();
+}
+//-->
+//]]>
+</script><script type="text/javascript" src="../ehlpdhtm.js" language="JavaScript1.2">
+</script>
+<table cellspacing="0" width="100%">
+<col style="width: 50%;" />
+<col style="width: 50%;" />
+<tr>
+<td style="vertical-align: middle; padding-top: 5px; padding-bottom: 5px;">
+<p style="margin-top: 0px; margin-bottom: 0px;"><img src="../3ds.png" alt="" style="border: none;" border="0" /></p>
+</td>
+<td style="vertical-align: middle;">
+<p style="text-align: right;"><a href="https://www.3ds.com/products-services/3dexperience/" target="_blank"><img src="../3dexp.png" alt="" style="border: none;" width="32" height="32" border="0" /></a></p>
+</td>
+</tr>
+</table>
+<h1>StructuralMechanicsSolver Object</h1>
+<p class="VBA-Text">This object is used to calculate mechanical problems. The corresponding models are deformed by different types of boundaries. Moreover it is possible to compute deformations and stresses caused by thermal expansion.</p>
+<ul>
+<li class="p-VBA-Index-Category">
+<p class="VBA-Index-Category"><a href="#Methods">Methods</a></p>
+</li>
+<li class="p-VBA-Index-Category">
+<p class="VBA-Index-Category"><a href="#Defaults">Default Settings</a></p>
+</li>
+<li class="p-VBA-Index-Category">
+<p class="VBA-Index-Category"><a href="#Example">Example</a></p>
+</li>
+</ul>
+<p class="VBA-Heading-Category"><a name="Methods" id="Methods"></a>Methods</p>
+<p class="VBA-Heading-Method">Reset</p>
+<p class="VBA-Text-Indent">Resets all internal settings to their default values.</p>
+<p class="vba-text-indent">&#160;</p>
+<p class="VBA-Heading-Method">Accuracy ( <span style="font-weight: normal;"><a href="../common_vbageneral/common_general_double.htm">double</a></span> <span style="font-style: italic;"><i>value</i></span> )</p>
+<p class="VBA-Text-Indent">Specifies the desired accuracy <span style="font-style: italic;"><i>value</i></span> for the mechanical simulation run.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">ReferenceTemperature(<a href="../common_vbageneral/common_general_double.htm" id="a1" name="a1">double</a> &#160;<span style="font-style: italic;"><i>temperature</i></span>)</p>
+<p class="VBA-Text-Indent"><span lang="EN-US" xml:lang="EN-US">Allows to define the reference temperature value for the thermal expansion with an imported temperature field.</span></p>
+<p class="vba-text-indent">&#160;</p>
+<p class="VBA-Heading-Method">LSESolverType (<span style="font-weight: normal;"><a href="../common_vbageneral/common_general_enum.htm">enum</a></span> <span style="font-style: italic;"><i>solvertype</i></span>)</p>
+<p class="VBA-Text-Indent">Specifies which solver is used to solve linear systems of equations.</p>
+<table style="vertical-align: top; margin-left: 50px;" cellspacing="0" width="74.761%">
+<col style="width: 29%;" />
+<col style="width: 71%;" />
+<tr style="vertical-align: top;">
+<td style="border: Solid 1px #000000;width: 29%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text-Indent"><span style="font-style: italic;"><i>solvertype (</i></span><a href="../common_vbageneral/common_general_enum.htm" style="font-weight: normal;" id="a21" name="a21">enum</a> )</p>
+</td>
+<td style="border-top: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 71%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text-Indent">meaning</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 29%; padding-right: 10px; padding-left: 10px;">
+<p style="text-align: center;">"Auto"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 71%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text-Indent">choose direct or iterative solver automatically depending on the problem size</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 29%; padding-right: 10px; padding-left: 10px;">
+<p style="text-align: center;">"Iterative"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 71%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text-Indent">use the iterative solver</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 29%; padding-right: 10px; padding-left: 10px;">
+<p style="text-align: center;">"Direct"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 71%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text-Indent">use the direct solver</p>
+</td>
+</tr>
+</table>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Text-Indent">The default setting is "Auto". The <span style="font-style: italic;"><i>solvertype</i></span> setting is of interest only for the tetrahedral <a href="#Methods">solver method</a> and will be ignored otherwise.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">Preconditioner ( <a href="../common_vbageneral/common_general_enum.htm" style="font-weight: normal;">enum</a> <span style="font-weight: normal;">{ None, Jacobi, ILU }</span> <span style="font-style: italic;"><i>type</i></span> )</p>
+<p class="VBA-Text-Indent">Specifies the <span style="font-style: italic;"><i>type</i></span> of the preconditioner for the solver.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">MaxLinIterations (<a href="../common_vbageneral/common_general_integer.htm" style="font-weight: normal;" id="a29" name="a29">int</a> &#160;<span style="font-style: italic;"><i>value</i></span>)</p>
+<p class="VBA-Text-Indent" style="font-weight: normal;">The number of iterations performed by the linear solver is automatically limited by a number depending on the desired solver accuracy. This is equivalent to setting the <span style="font-style: italic;"><i>value</i></span> to "<span style="font-style: italic;"><i>0</i></span>". If you would like to prescribe a fixed upper limit for number of linear iterations, then specify the corresponding <span style="font-style: italic;"><i>value</i></span> here.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">MaxLinIter (<a href="../common_vbageneral/common_general_integer.htm" style="font-weight: normal;" id="a7" name="a7">int</a> &#160;<span style="font-style: italic;"><i>value</i></span>)</p>
+<p class="VBA-Text-Indent" style="font-weight: normal;">This command is deprecated. Please use <span style="font-weight: bold;">MaxLinIterations</span> or <span style="font-weight: bold;">MaxNonLinIterations</span> instead.</p>
+<p class="vba-text-indent">&#160;</p>
+<p class="StandardNeu" style="font-weight: bold;"><span style="font-weight: bold;">Method (<span style="font-weight: normal;"><a href="../common_vbageneral/common_general_enum.htm">enum</a></span> <span style="font-style: italic;"><i>solvermethod</i></span>)</span></p>
+<p class="VBA-Text-Indent">Specifies the method used by the mechanical solver for discretization and solution.</p>
+<table style="vertical-align: top; margin-left: 50px;" cellspacing="0" width="74.761%">
+<col style="width: 29.685%;" />
+<col style="width: 70.315%;" />
+<tr style="vertical-align: top;">
+<td style="border: Solid 1px #000000;width: 29.685%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text"><span style="font-style: italic;"><i>solvermethod (</i></span><a href="../common_vbageneral/common_general_enum.htm" style="font-weight: normal;" id="a8" name="a8">enum</a> )</p>
+</td>
+<td style="border-top: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 70.315%; padding-right: 10px; padding-left: 10px;">
+<p>meaning</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 29.685%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text">"Tetrahedral Mesh"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 70.315%; padding-right: 10px; padding-left: 10px;">
+<p>unstructured grid consisting of tetrahedral elements.</p>
+</td>
+</tr>
+</table>
+<p class="vba-text-indent">&#160;</p>
+<p class="VBA-Heading-Method">NonlinearAccuracy ( <a href="../common_vbageneral/common_general_double.htm" style="font-weight: normal;" id="a9" name="a9">double</a> &#160;<span style="font-style: italic;"><i>value</i></span> )</p>
+<p class="VBA-Text-Indent">Specifies the desired accuracy <span style="font-style: italic;"><i>value</i></span> for nonlinear iteration cycles, used e.g. for finite deformations.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">MaxNonLinIterations (<a href="../common_vbageneral/common_general_integer.htm" style="font-weight: normal;" id="a10" name="a10">int</a> &#160;<span style="font-style: italic;"><i>value</i></span>)</p>
+<p class="VBA-Text-Indent" style="font-weight: normal;">The number of iterations performed by the nonlinear solver is automatically limited by a number depending on the desired nonlinear solver accuracy. This is equivalent to setting the <span style="font-style: italic;"><i>value</i></span> to "<span style="font-style: italic;"><i>0</i></span>". If you would like to prescribe a fixed upper limit for number of nonlinear iterations, then specify the corresponding <span style="font-style: italic;"><i>value</i></span> here.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">StoreResultsInCache ( <span style="font-weight: normal;"><a href="../common_vbageneral/common_general_bool_data_type.htm">bool</a></span> <span style="font-style: italic;"><i>flag</i></span> )</p>
+<p class="VBA-Text-Indent">If the <span style="font-style: italic;"><i>flag</i></span> is set to True this method stores results of the solver in the result cache.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">TetAdaption(<a href="../common_vbageneral/common_general_bool_data_type.htm" style="font-weight: normal;" id="a5" name="a5">bool</a> &#160;<span style="font-style: italic;"><i>enableAdaption</i></span>)</p>
+<p class="VBA-Text-Indent"><span lang="EN-US" xml:lang="EN-US">Enables or diables the adaptive mesh refinement for the tetrahedral mesh method.</span></p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">TetAdaptionAccuracy(<a href="../common_vbageneral/common_general_double.htm" id="a24" name="a24">double</a> &#160;<span style="font-style: italic;"><i>accuracy</i></span>)</p>
+<p class="VBA-Text-Indent"><span lang="EN-US" xml:lang="EN-US">If the relative deviation of the energy between two passes is smaller than this error limit the mesh adaptation will terminate.</span></p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">TetAdaptionMaxCycles(<a href="../common_vbageneral/common_general_integer.htm" style="font-weight: normal;">int</a> <span style="font-style: italic;"><i>maxcycles</i></span>)</p>
+<p class="VBA-Text-Indent"><span lang="EN-US" xml:lang="EN-US">Specifies the maximum number of passes to be performed for the mesh adaption, even if the results have not sufficiently converged so far. This setting is useful to limit the total calculation time to reasonable amounts.</span></p>
+<p class="VBA-Text-Indent"><span lang="EN-US" xml:lang="EN-US">This setting is considered only for the tetrahedral mesh method and ignored otherwise. For specification of hexahedral mesh adaption properties see <a href="../special_vbamesh/special_vbamesh_meshadaption3d_object.htm">MeshAdaption3D</a></span><span lang="EN-US" xml:lang="EN-US">.</span></p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">TetAdaptionMinCycles(<a href="../common_vbageneral/common_general_integer.htm" style="font-weight: normal;">int</a> <span style="font-style: italic;"><i>mincycles</i></span>)</p>
+<p class="VBA-Text-Indent"><span lang="EN-US" xml:lang="EN-US">Sets the minimum number of passes which will be performed during the mesh adaption, even if the results do not change significantly. Sometimes the adaptive mesh refinement needs a couple of passes to figure out the location of the most important regions. Thus it might happen that the results change only marginally during the first few passes but afterwards change in order to converge to the final solution.</span></p>
+<p class="VBA-Text-Indent"><span lang="EN-US" xml:lang="EN-US">This setting is considered only for the tetrahedral mesh method and ignored otherwise. For specification of hexahedral mesh adaption properties see <a href="../special_vbamesh/special_vbamesh_meshadaption3d_object.htm">MeshAdaption3D</a></span><span lang="EN-US" xml:lang="EN-US">.</span></p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">TetAdaptionRefinementPercentage (<a href="../common_vbageneral/common_general_double.htm" id="a26" name="a26">double</a> <span style="font-style: italic;"><i>percent</i></span>)</p>
+<p class="VBA-Text-Indent">Sets the maximum percentage of mesh elements to be refined during a tetrahedral adaptation pass. The higher the specified percentage is, the stronger will the number of elements and therefore the numerical effort increase.</p>
+<p class="vba-text-indent">&#160;</p>
+<p class="VBA-Heading-Method">SnapToGeometry(<a href="../common_vbageneral/common_general_bool_data_type.htm" style="font-weight: normal;" id="a16" name="a16">bool</a> &#160;<span style="font-style: italic;"><i>snapping</i></span>)</p>
+<p class="VBA-Text-Indent"><span lang="EN-US" xml:lang="EN-US">W</span>hen <span style="font-style: italic;"><i>snapping</i></span> is <span style="font-style: italic;"><i>True</i></span>, new nodes that are generated on the surface mesh during the mesh adaption will be projected to the original geometry, so that the approximation of curved surfaces is improved after each adaptation step.</p>
+<p class="VBA-Text-Indent">If this option is disabled, the geometry will be approximated by the initial mesh. The geometric discretization error produced by this approximation will therefore not decrease, but the adaptation process might be faster.</p>
+<p class="VBA-Heading-Method">&#160;</p>
+<p class="VBA-Heading-Method">TetSolverOrder (<a href="../common_vbageneral/common_general_integer.htm" style="font-weight: normal;">int</a> <span style="font-style: italic;"><i>tetorder</i></span>)</p>
+<p class="VBA-Text-Indent"><span lang="EN-US" xml:lang="EN-US">This option allows to specify whether the tetrahedral solver uses first- or second-order accuracy. Second-order (</span><span lang="EN-US" style="font-style: italic;" xml:lang="EN-US"><i>tetorder = "2"</i></span><span lang="EN-US" xml:lang="EN-US">) is the default due to its higher accuracy. However, if the structure is geometrically complex and therefore comes along with huge memory requirements, first-order (</span><span lang="EN-US" style="font-style: italic;" xml:lang="EN-US"><i>tetorder = "1"</i></span><span lang="EN-US" xml:lang="EN-US">) is an adequate alternative.</span></p>
+<p class="VBA-Text-Indent"><span lang="EN-US" xml:lang="EN-US">This setting is considered only for the tetrahedral mesh method and ignored otherwise. For specification of hexahedral mesh adaption properties see <a href="../special_vbamesh/special_vbamesh_meshadaption3d_object.htm">MeshAdaption3D</a></span><span lang="EN-US" xml:lang="EN-US">.</span></p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">UseDistributedComputing(<a href="../common_vbageneral/common_general_bool_data_type.htm" style="font-weight: normal;" id="a15" name="a15">bool</a> &#160;<span style="font-style: italic;"><i>useDC</i></span>)</p>
+<p class="VBA-Text-Indent"><span lang="EN-US" xml:lang="EN-US">Enables or disables distributed computing.</span></p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">UseMaxNumberOfThreads(<a href="../common_vbageneral/common_general_bool_data_type.htm" style="font-weight: normal;" id="a17" name="a17">bool</a> &#160;<span style="font-style: italic;"><i>useMaxThreads</i></span>)</p>
+<p class="vba-text-indent">By default (<span style="font-style: italic;"><i>useMaxThreads = False</i></span>), the solver is forced to employ a particular number of threads that is defined on the basis of the current processor’s architecture and the number of the available parallel licenses. If activated (<span style="font-style: italic;"><i>useMaxThreads = True</i></span>), the solver can be forced <span lang="EN-US" xml:lang="EN-US">to use less than all available threads (see</span> <span lang="EN-US" style="font-style: italic;" xml:lang="EN-US"><i>MaxNumberOfThreads</i></span><span lang="EN-US" xml:lang="EN-US">).</span></p>
+<p class="VBA-Heading-Method">&#160;</p>
+<p class="VBA-Heading-Method">MaxNumberOfThreads (<a href="../common_vbageneral/common_general_integer.htm" style="font-weight: normal;">int</a> <span style="font-style: italic;"><i>nThreads</i></span>)</p>
+<p class="VBA-Text-Indent"><span lang="EN-US" xml:lang="EN-US">If the solver is to use less than all available threads (cf.</span> <span lang="EN-US" style="font-style: italic;" xml:lang="EN-US"><i>UseMaxNumberOfThreads</i></span><span lang="EN-US" xml:lang="EN-US">), the desired number can be specified here. The default value ”r;8” reflects the possibility of the modern processors architecture.</span></p>
+<p class="VBA-Heading-Method">&#160;</p>
+<p class="VBA-Heading-Method">UseGravity( <span style="font-weight: normal;"><a href="../common_vbageneral/common_general_bool_data_type.htm">bool</a></span> <span style="font-style: italic;"><i>flag</i></span> )</p>
+<p class="VBA-Text-Indent">If the <span style="font-style: italic;"><i>flag</i></span> is set to "True", the gravitation is taken into account.</p>
+<p class="vba-text-indent">&#160;</p>
+<p class="VBA-Heading-Method">SetGravityX (<a href="../common_vbageneral/common_general_double.htm" id="a2" name="a2">double</a> <span style="font-style: italic;"><i>component</i></span>)</p>
+<p class="VBA-Text-Indent">Sets the x component of the gravitation vector.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">SetGravityY (<a href="../common_vbageneral/common_general_double.htm" id="a4" name="a4">double</a> <span style="font-style: italic;"><i>component</i></span>)</p>
+<p class="VBA-Text-Indent">Sets the y component of the gravitation vector.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">SetGravityZ (<a href="../common_vbageneral/common_general_double.htm" id="a6" name="a6">double</a> <span style="font-style: italic;"><i>component</i></span>)</p>
+<p class="VBA-Text-Indent">Sets the z component of the gravitation vector.</p>
+<p class="vba-text-indent">&#160;</p>
+<p class="VBA-Heading-Method">TetAdaptionRefinementPercentage (<a href="../common_vbageneral/common_general_double.htm" id="a3" name="a3">double</a> <span style="font-style: italic;"><i>percent</i></span>)</p>
+<p class="VBA-Text-Indent">Sets the maximum percentage of mesh elements to be refined during a tetrahedral adaptation pass. The higher the specified percentage is, the stronger will the number of elements and therefore the numerical effort increase.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">UseNonlinearSolver ( <a href="../common_vbageneral/common_general_bool_data_type.htm">bool</a> <span style="font-style: italic;"><i>flag</i></span> )</p>
+<p class="VBA-Text-Indent">Enables or disables the nonlinear solver used for description of large deformations.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">UseRegularization ( <a href="../common_vbageneral/common_general_bool_data_type.htm">bool</a> <span style="font-style: italic;"><i>flag</i></span> )</p>
+<p class="VBA-Text-Indent">Enables or disables the regularization used for stabilization of the solution if no fixed displacement conditions have been defined along any cartesian axis.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">Start <a href="../common_vbageneral/common_general_long.htm" style="font-weight: normal; font-style: normal;" id="a12" name="a12">long</a></p>
+<p class="VBA-Text-Indent">Starts the structural mechanics solver &#160;with the prescribed settings and the currently active mesh. If no mesh is available, a new mesh will be generated. Returns 0 if the solver run was successful, an error code &gt;0 otherwise.</p>
+<p class="VBA-Heading-Category"><a name="Defaults" id="Defaults"></a>Default Settings</p>
+<p class="VBA-Text-Example">Accuracy (1e-4)</p>
+<p class="VBA-Text-Example">Preconditioner ("Jacobi")</p>
+<p class="VBA-Text-Example">StoreResultsInCache (False)</p>
+<p class="VBA-Text-Example">ReferenceTemperature (293)</p>
+<p class="VBA-Text-Example">TetAdaption (False)</p>
+<p class="VBA-Text-Example">TetAdaptionAccuracy (0.02)</p>
+<p class="VBA-Text-Example">TetAdaptionMinCycles (2)</p>
+<p class="VBA-Text-Example">TetAdaptionMaxCycles (6)</p>
+<p class="VBA-Text-Example">TetAdaptionRefinementPercentage (10)</p>
+<p class="VBA-Text-Example">UseMaxNumberOfThreads "False"</p>
+<p class="VBA-Text-Example">MaxNumberOfThreads "8"</p>
+<p class="VBA-Heading-Category"><a name="Example" id="Example"></a>Example</p>
+<p class="VBA-Text-Example">With StructuralMechanicsSolver</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.Reset</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.Accuracy "1e-4"</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.Preconditioner "ILU"</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.StoreResultsInCache "False"</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.BackgroundTemperature "273.1"</p>
+<p class="VBA-Text-Example">End With</p>
+<script type="text/javascript" language="JavaScript1.2">
+//<![CDATA[
+        if( typeof( FilePopupInit ) != 'function' ) FilePopupInit = new Function();
+        FilePopupInit('a1');
+        FilePopupInit('a21');
+        FilePopupInit('a29');
+        FilePopupInit('a7');
+        FilePopupInit('a8');
+        FilePopupInit('a9');
+        FilePopupInit('a10');
+        FilePopupInit('a5');
+        FilePopupInit('a24');
+        FilePopupInit('a26');
+        FilePopupInit('a16');
+        FilePopupInit('a15');
+        FilePopupInit('a17');
+        FilePopupInit('a2');
+        FilePopupInit('a4');
+        FilePopupInit('a6');
+        FilePopupInit('a3');
+        FilePopupInit('a12');
+//]]>
+</script><?rh-p style="margin-bottom: 0px; text-align: Right; margin-left: 18px; 
+                 margin-right: 18px; margin-top: 18px;" ?>
+<div style="width: 100%; position: relative;" id="footer">
+<p style="border-bottom: Solid 1px #dddddd; text-align: Left; margin-left: 0px; font-family: Arial, sans-serif; line-height: Normal; margin-top: 9px; margin-right: 0px; margin-bottom: 6px; border-left-width: 1px; border-top-width: 1px; border-right-width: 1px;"><span style="text-align: Left; font-family: Arial, sans-serif; line-height: Normal;">&#160;</span></p>
+<table cellspacing="0" width="100%">
+<col style="width: 50%;" />
+<col style="width: 50%;" />
+<tr>
+<td style="vertical-align: Top;"><span style="font-family: Arial, sans-serif; line-height: Normal; font-size: 8pt;"><font size="1" style="font-size:8pt;">CST Studio Suite 2026</font></span></td>
+<td style="vertical-align: Top;">
+<p style="text-align: right;">&#160;</p>
+</td>
+</tr>
+</table>
+<p>&#160;</p>
+</div>
+<script type="text/javascript" language="javascript1.2">
+//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+        writeIntopicBar(0);
+
+
+highlightSearch();
+//-->
+//]]>
+</script>
+</body>
+</html>

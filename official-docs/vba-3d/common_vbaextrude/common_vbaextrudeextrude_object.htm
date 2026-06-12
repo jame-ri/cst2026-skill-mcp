@@ -1,0 +1,357 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="Adobe RoboHelp 11" />
+<title>Extrude Object</title>
+<link rel="StyleSheet" href="../online_help_vba.css" type="text/css" />
+<style type="text/css">
+/*<![CDATA[*/
+<!--
+body { border-bottom-style:None; }
+-->
+/*]]>*/
+</style>
+
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+        origWidth = innerWidth;
+        origHeight = innerHeight;
+        onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+/*<![CDATA[*/
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+-->
+/*]]>*/
+</style>
+
+<script type="text/javascript" language="javascript1.2" src="../whmsg.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript" src="../whver.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript1.2" src="../whutils.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript1.2" src="../whproxy.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript1.2" src="../whlang.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript1.2" src="../whtopic.js" charset="utf-8">
+</script>
+</head>
+<body>
+<script type="text/javascript" language="javascript1.2">
+//<![CDATA[
+<!--
+if (window.gbWhTopic)
+{
+        var strUrl = document.location.href;
+        var bc = 0;
+        var n = strUrl.toLowerCase().indexOf("bc-");
+        if(n != -1)
+        {
+                document.location.replace(strUrl.substring(0, n));
+                bc = strUrl.substring(n+3);
+        }
+
+        if (window.addTocInfo)
+        {
+        addTocInfo("3D Simulation VBA\nVBA Objects\n2D-Profiles to Shapes\nExtrude");
+addAvenueInfo("EXTRUDEOBJECT","","");
+
+        }
+        if (window.writeBtnStyle)
+                writeBtnStyle();
+
+        if (window.writeIntopicBar)
+                writeIntopicBar(0);
+
+        
+        document.write("<p style=\"font-family: Tahoma; font-size: 9pt; font-weight: 400;  font-style:normal; color: rgb(0, 0, 0); text-decoration:none; text-align: left\"> ");
+AddMasterBreadcrumbs("../index.htm", "font-family: Tahoma; font-size: 9pt; font-weight: 400;  font-style:normal; color: rgb(0, 0, 0); text-decoration:none; text-align: left", "|", "Home", "../special_vbaobjects/special_vbaobjects_vbaobjects.htm");
+document.write("<a style=\"font-family: Tahoma; font-size: 9pt; font-weight: 400;  font-style:normal; color: rgb(0, 0, 0); text-decoration:none; text-align: left\" href=\"../special_vbaobjects/special_vbaobjects_vbaobjects.htm\">3D Simulation VBA<\/a> | <a style=\"font-family: Tahoma; font-size: 9pt; font-weight: 400;  font-style:normal; color: rgb(0, 0, 0); text-decoration:none; text-align: left\" href=\"../special_vbaobjects/special_vbaobjects_vbaobjects.htm\">VBA Objects<\/a> | <a style=\"font-family: Tahoma; font-size: 9pt; font-weight: 400;  font-style:normal; color: rgb(0, 0, 0); text-decoration:none; text-align: left\" href=\"common_vbaextrudeextrude_object.htm\">2D-Profiles to Shapes<\/a> | Extrude<\/p>");
+
+}
+else
+        if (window.gbIE4)
+                document.location.reload();
+
+onLoadHandler = function()
+{
+  if (window.setRelStartPage)
+        {
+        setTimeout("setRelStartPage('../index.htm');", 1)
+
+    setTimeout("UpdateBreadCrumbsMarker();", 1);
+        }
+}
+
+if (window.addEventListener){  
+        window.addEventListener('load', onLoadHandler, false);   
+} else if (window.attachEvent){  
+        window.attachEvent('onload', onLoadHandler);  
+}
+
+function onSetStartPage()
+{
+  autoSync(1);
+  sendSyncInfo();
+  sendAveInfoOut();
+}
+//-->
+//]]>
+</script><script type="text/javascript" src="../ehlpdhtm.js" language="JavaScript1.2">
+</script>
+<table cellspacing="0" width="100%">
+<col style="width: 50%;" />
+<col style="width: 50%;" />
+<tr>
+<td style="vertical-align: middle; padding-top: 5px; padding-bottom: 5px;">
+<p style="margin-top: 0px; margin-bottom: 0px;"><img src="../3ds.png" alt="" style="border: none;" border="0" /></p>
+</td>
+<td style="vertical-align: middle;">
+<p style="text-align: right;"><a href="https://www.3ds.com/products-services/3dexperience/" target="_blank"><img src="../3dexp.png" alt="" style="border: none;" width="32" height="32" border="0" /></a></p>
+</td>
+</tr>
+</table>
+<p class="VBA-Heading-Object">Extrude Object</p>
+<p class="VBA-Text">Extrudes a Profile or a selected face into a three dimensional solid.</p>
+<ul>
+<li class="p-VBA-Index-Category">
+<p class="VBA-Index-Category" style="font-weight: bold;"><a href="#Methods" style="font-weight: bold;">Methods</a></p>
+</li>
+<li class="p-VBA-Index-Category">
+<p class="VBA-Index-Category"><a href="#Default Settings">Default Settings</a></p>
+</li>
+<li class="p-VBA-Index-Category">
+<p class="VBA-Index-Category"><a href="#Example">Example</a></p>
+</li>
+</ul>
+<p class="VBA-Heading-Category"><a name="Methods" id="Methods"></a>Methods</p>
+<p class="VBA-Heading-Method">Reset</p>
+<p class="VBA-Text-Indent">Resets all internal settings.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">Name ( <a href="../common_vbageneral/common_general_name.htm" style="font-weight: normal;" id="a14" name="a14">name</a> <span style="font-style: italic;"><i>objectname</i></span> )</p>
+<p class="VBA-Text-Indent">Sets the name of the extrude Object.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">Component ( <a href="../common_vbageneral/common_general_name.htm" style="font-weight: normal;" id="a1" name="a1">name</a> <span style="font-style: italic;"><i>componentname</i></span> )</p>
+<p class="VBA-Text-Indent">Sets the component for the new Solid. The component must already exist.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">Material ( <a href="../common_vbageneral/common_general_name.htm" style="font-weight: normal;" id="a2" name="a2">name</a> <span style="font-style: italic;"><i>materialname</i></span> )</p>
+<p class="VBA-Text-Indent">Sets the material for the new Solid. The material must already exist.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">Mode ( <span style="font-weight: normal;"><a href="../common_vbageneral/common_general_enum.htm" style="font-weight: normal;" id="a18" name="a18">enum</a></span> <span style="font-style: italic;"><i>extrMode</i></span> )</p>
+<p class="VBA-Text-Indent">Selects whether a profile or a surface is to be extruded.</p>
+<p class="VBA-Text-Indent"><span style="font-style: italic;"><i>extrMode</i></span> may have the following settings:</p>
+<table style="vertical-align: Center; left: 0px; top: 428px; margin-left: 24px;" cellspacing="0" width="424">
+<col width="109" />
+<col width="304" />
+<tr style="vertical-align: top;">
+<td style="border: Solid 1px #000000;padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;" width="109">
+<p class="VBA-Text-Indent" style="margin-left: 12px;">”pointlist”</p>
+</td>
+<td style="border-top: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;" width="304">
+<p class="VBA-Text-Indent">A profile defined by points is to be extruded</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;" width="109">
+<p class="VBA-Text-Indent" style="margin-left: 12px;">”picks”</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;" width="304">
+<p class="VBA-Text-Indent">A picked face is to be extruded</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;" width="109">
+<p class="VBA-Text-Indent" style="margin-left: 12px;">"multiplepicks"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;" width="304">
+<p class="VBA-Text-Indent">multpile picked faces are to be extruded</p>
+</td>
+</tr>
+</table>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">Height ( <a href="../common_vbageneral/common_general_string.htm" style="font-weight: normal; font-style: normal;" id="a27" name="a27">string</a> <span style="font-style: italic;"><i>heightval</i></span> )</p>
+<p class="VBA-Text-Indent">Defines the height of the extruded solid.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">Origin ( <span style="font-style: italic;"><i>&#160;<a href="../common_vbageneral/common_general_double.htm" style="font-weight: normal; font-style: normal;" id="a25" name="a25">double</a> x</i></span> <span style="font-style: italic;"><i>, <a href="../common_vbageneral/common_general_double.htm" style="font-weight: normal; font-style: normal;" id="a3" name="a3">double</a> y, <a href="../common_vbageneral/common_general_double.htm" style="font-weight: normal; font-style: normal;" id="a4" name="a4">double</a> z</i></span> )</p>
+<p class="VBA-Text-Indent">Defines the location of the origin.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">Uvector ( <span style="font-style: italic;"><i><a href="../common_vbageneral/common_general_double.htm" style="font-weight: normal; font-style: normal;" id="a5" name="a5">double</a> u</i></span><span style="font-style: italic;"><i>, <a href="../common_vbageneral/common_general_double.htm" style="font-weight: normal; font-style: normal;" id="a8" name="a8">double</a> v, <a href="../common_vbageneral/common_general_double.htm" style="font-weight: normal; font-style: normal;" id="a9" name="a9">double</a> w</i></span> )</p>
+<p class="VBA-Heading-Method">Vvector ( <span style="font-style: italic;"><i><a href="../common_vbageneral/common_general_double.htm" style="font-weight: normal; font-style: normal;" id="a6" name="a6">double</a> u</i></span> <span style="font-style: italic;"><i>, <a href="../common_vbageneral/common_general_double.htm" style="font-weight: normal; font-style: normal;" id="a7" name="a7">double</a> v, <a href="../common_vbageneral/common_general_double.htm" style="font-weight: normal; font-style: normal;" id="a10" name="a10">double</a> w</i></span> )</p>
+<p class="VBA-Text-Indent">These settings define the plane on which the profile will be defined. u, v, w are related on the current working coordinate system.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">Point ( <a href="../common_vbageneral/common_general_double.htm" style="font-weight: normal; font-style: normal;" id="a12" name="a12">double</a> <span style="font-style: italic;"><i>uPt, <a href="../common_vbageneral/common_general_double.htm" style="font-weight: normal; font-style: normal;" id="a11" name="a11">double</a> vPt</i></span> )</p>
+<p class="VBA-Text-Indent">Sets the first point of the to be defined profile. This setting has an effect only if <span style="font-weight: bold;">Mode</span> is set to ”pointlist”.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">LineTo ( <a href="../common_vbageneral/common_general_double.htm" style="font-weight: normal; font-style: normal;" id="a15" name="a15">double</a> <span style="font-style: italic;"><i>u, <a href="../common_vbageneral/common_general_double.htm" style="font-weight: normal; font-style: normal;" id="a13" name="a13">double</a> v</i></span> )</p>
+<p class="VBA-Text-Indent">Sets a line from the point previously defined to the point defined by <span style="font-style: italic;"><i>u, v</i></span> here. <span style="font-style: italic;"><i>u</i></span> and <span style="font-style: italic;"><i>v</i></span> specify a location in absolute coordinates in the actual working coordinate system. This line will be a part of the profile to be rotated/extruded. To finisch a profile, the last line has to end on the values defined by the <span style="font-weight: bold;">Point</span> Method. This setting has an effect only, if <span style="font-weight: bold;">Mode</span> <font color="#FF0000">&#160;</font>is set to ”pointlist”.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">RLine ( <a href="../common_vbageneral/common_general_double.htm" style="font-weight: normal; font-style: normal;" id="a20" name="a20">double</a> <span style="font-style: italic;"><i>u, <a href="../common_vbageneral/common_general_double.htm" style="font-weight: normal; font-style: normal;" id="a19" name="a19">double</a> v</i></span> )</p>
+<p class="VBA-Text-Indent">Sets a line from the point previously defined to the point defined by <span style="font-style: italic;"><i>u, v</i></span> here. <span style="font-style: italic;"><i>u</i></span> and <span style="font-style: italic;"><i>v</i></span> specify a location relative to the previous point in the current working coordinate sytem. This line will be a part of the profile to be rotated/extruded. To finisch a profile, the last line has to end on the values defined by the <span style="font-weight: bold;">Point</span> Method. This setting has an effect only, if <span style="font-weight: bold;">Mode</span> is set to ”pointlist”.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">Taper ( <a href="../common_vbageneral/common_general_double.htm" style="font-weight: normal; font-style: normal;" id="a21" name="a21">double</a> <span style="font-style: italic;"><i>tp</i></span> )</p>
+<p class="VBA-Text-Indent">Defines a value of how much the to be extruded face is enlarged during extrusion.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">Twist ( <a href="../common_vbageneral/common_general_double.htm" style="font-weight: normal; font-style: normal;" id="a22" name="a22">double</a> <span style="font-style: italic;"><i>tw</i></span> )</p>
+<p class="VBA-Text-Indent">Twists the solid around the direction of extrusion. The parameter <span style="font-style: italic;"><i>tw</i></span> defines the angle in degree of how much the solid will be twisted.</p>
+<p class="vba-text-indent">&#160;</p>
+<p class="VBA-Heading-Method">UsePicksForHeight ( <a href="../common_vbageneral/common_general_bool_data_type.htm" style="font-weight: normal; font-style: normal;" id="a34" name="a34">bool</a> <span style="font-style: italic;"><i>flag</i></span> )</p>
+<p class="VBA-Text-Indent">Use a previously picked point for the height of the extrusion.</p>
+<p class="VBA-Heading-Method">&#160;</p>
+<p class="VBA-Heading-Method">PickHeightDeterminedByFirstFace( <a href="../common_vbageneral/common_general_bool_data_type.htm" style="font-weight: normal; font-style: normal;" id="a28" name="a28">bool</a> <span style="font-style: italic;"><i>flag</i></span> )</p>
+<p class="VBA-Text-Indent">For multiple picked faces and a picked point that is used for calculating the height: If <span style="font-style: italic;"><i>true</i></span>, the height that is calculated for the first picked face will be applied to all created shapes. If <span style="font-style: italic;"><i>false</i></span>, for each picked face, the height will be calculated to meet the picked point.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">NumberOfPickedFaces( <a href="../common_vbageneral/common_general_integer.htm" style="font-weight: normal; font-style: normal;" id="a35" name="a35">int</a> <span style="font-style: italic;"><i>nCount</i></span> )</p>
+<p class="VBA-Text-Indent">If the <span style="font-style: italic;"><i>mode</i></span> is "multiplepicks", the number of picked faces is set here.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">DeleteBaseFaceSolid ( <a href="../common_vbageneral/common_general_bool_data_type.htm" style="font-weight: normal; font-style: normal;" id="a23" name="a23">bool</a> <span style="font-style: italic;"><i>flag</i></span> )</p>
+<p class="VBA-Text-Indent">Deletes the face used for the extrusion.</p>
+<p class="vba-text-indent">&#160;</p>
+<p class="VBA-Heading-Method">ClearPickedFace ( <a href="../common_vbageneral/common_general_bool_data_type.htm" style="font-weight: normal; font-style: normal;" id="a24" name="a24">bool</a> <span style="font-style: italic;"><i>flag</i></span> )</p>
+<p class="VBA-Text-Indent">Cleares the picked face after the extrude command.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">ModifyHeight</p>
+<p class="VBA-Text-Indent">Changes the solid to the previously specified settings.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">SetSimplifyActive ( <a href="../common_vbageneral/common_general_bool_data_type.htm" style="font-weight: normal; font-style: normal;" id="a16" name="a16">bool</a> <span style="font-style: italic;"><i>switch</i></span> )</p>
+<p class="VBA-Text-Indent">Set this option to enable the polygon simplification.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">SetSimplifyMinPointsArc ( <a href="../common_vbageneral/common_general_integer.htm" style="font-weight: normal; font-style: normal;" id="a17" name="a17">int</a> <span style="font-style: italic;"><i>nCount</i></span> )</p>
+<p class="VBA-Text-Indent">Minimum number of segments needed to recognize an arc. Must be &gt;= 3.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">SetSimplifyMinPointsCircle ( <a href="../common_vbageneral/common_general_integer.htm" style="font-weight: normal; font-style: normal;" id="a26" name="a26">int</a> <span style="font-style: italic;"><i>nCount</i></span> )</p>
+<p class="VBA-Text-Indent">Minimum number of segments needed for complete circles. Must be &gt; 'SetSimplifyMinPointsArc' and at least 5.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">SetSimplifyAngle ( <a href="../common_vbageneral/common_general_double.htm" style="font-weight: normal; font-style: normal;" id="a29" name="a29">double</a> <span style="font-style: italic;"><i>angle</i></span> )</p>
+<p class="VBA-Text-Indent">The maximum angle in degrees between two adjacent segments. All smaller angles will be considered to be simplified. The angle is only used for arcs and not for circles.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">SetSimplifyAdjacentTol ( <a href="../common_vbageneral/common_general_double.htm" style="font-weight: normal; font-style: normal;" id="a30" name="a30">double</a> <span style="font-style: italic;"><i>angle</i></span> )</p>
+<p class="VBA-Text-Indent">Is only used by the simplification algorithm to find a good starting point for arcs. It means the maximum angular difference in the angle of adjacent segments. A good value for this parameter will be 1.0.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">SetSimplifyRadiusTol ( <a href="../common_vbageneral/common_general_double.htm" style="font-weight: normal; font-style: normal;" id="a31" name="a31">double</a> <span style="font-style: italic;"><i>deviation</i></span> )</p>
+<p class="VBA-Text-Indent">This means the maximum deviation in percent the distance a segment end point can have to the current definition of the simplification circle center point. The tolerance is used for circles and arcs.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">SetSimplifyAngleTang ( <a href="../common_vbageneral/common_general_double.htm" style="font-weight: normal; font-style: normal;" id="a32" name="a32">double</a> <span style="font-style: italic;"><i>angle</i></span> )</p>
+<p class="VBA-Text-Indent">Maximum angular tolerance in radians used when deciding to create the arc tangential or not to its adjacent line segments. If an angle is beneath the specified value, the arc is build tangential to the neighbor edge.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">SetSimplifyEdgeLength ( <a href="../common_vbageneral/common_general_double.htm" style="font-weight: normal; font-style: normal;" id="a33" name="a33">double</a> <span style="font-style: italic;"><i>length</i></span> )</p>
+<p class="VBA-Text-Indent">Edges smaller than the defined length will be removed. Can be used to remove tiny fragments.</p>
+<p class="vba-text-indent">&#160;</p>
+<p class="VBA-Heading-Method">Create</p>
+<p class="VBA-Text-Indent">Creates a new extruded solid. All necessary settings for this element have to be made previously.</p>
+<p class="VBA-Heading-Category"><a name="Default Settings"></a>Default Settings:</p>
+<p class="VBA-Text-Example">Mode ("pointlist")</p>
+<p class="VBA-Text-Example">UsePicksForHeight (False)</p>
+<p class="VBA-Text-Example">PickHeightDeterminedByFirstFace (True)</p>
+<p class="VBA-Text-Example">DeleteBaseFaceSolid (False)</p>
+<p class="VBA-Text-Example">ClearPickedFace (False)</p>
+<p class="VBA-Text-Example">Material ("default")</p>
+<p class="VBA-Text-Example">Component ("default")</p>
+<p class="VBA-Text-Example">SetSimplifyActive (False)</p>
+<p class="VBA-Text-Example">SetSimplifyMinPointsArc (3)</p>
+<p class="VBA-Text-Example">SetSimplifyMinPointsCircle (5)</p>
+<p class="VBA-Text-Example">SetSimplifyAngle (0.0)</p>
+<p class="VBA-Text-Example">SetSimplifyAdjacentTol (1.0)</p>
+<p class="VBA-Text-Example">SetSimplifyRadiusTol (0.0)</p>
+<p class="VBA-Text-Example">SetSimplifyAngleTang (1.0)</p>
+<p class="VBA-Text-Example">SetSimplifyEdgeLength (0.0)</p>
+<p class="VBA-Heading-Category"><a name="Example" id="Example"></a>Example:</p>
+<p class="VBA-Text-Example">With Extrude</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.Reset</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.Name ("solid2")</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.Component ("component1")</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.Material ("Vacuum")</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.Mode ("Picks")</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.Height ("2+b")</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.Twist (0.0)</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.Taper (5)</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.UsePicksForHeight (False)</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.DeleteBaseFaceSolid (False)</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.ClearPickedFace (True)</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.Create</p>
+<p class="VBA-Text-Example">End With</p>
+<script type="text/javascript" language="JavaScript1.2">
+//<![CDATA[
+        if( typeof( FilePopupInit ) != 'function' ) FilePopupInit = new Function();
+        FilePopupInit('a14');
+        FilePopupInit('a1');
+        FilePopupInit('a2');
+        FilePopupInit('a18');
+        FilePopupInit('a27');
+        FilePopupInit('a25');
+        FilePopupInit('a3');
+        FilePopupInit('a4');
+        FilePopupInit('a5');
+        FilePopupInit('a8');
+        FilePopupInit('a9');
+        FilePopupInit('a6');
+        FilePopupInit('a7');
+        FilePopupInit('a10');
+        FilePopupInit('a12');
+        FilePopupInit('a11');
+        FilePopupInit('a15');
+        FilePopupInit('a13');
+        FilePopupInit('a20');
+        FilePopupInit('a19');
+        FilePopupInit('a21');
+        FilePopupInit('a22');
+        FilePopupInit('a34');
+        FilePopupInit('a28');
+        FilePopupInit('a35');
+        FilePopupInit('a23');
+        FilePopupInit('a24');
+        FilePopupInit('a16');
+        FilePopupInit('a17');
+        FilePopupInit('a26');
+        FilePopupInit('a29');
+        FilePopupInit('a30');
+        FilePopupInit('a31');
+        FilePopupInit('a32');
+        FilePopupInit('a33');
+//]]>
+</script><?rh-p style="margin-bottom: 0px; text-align: Right; margin-left: 18px; 
+                 margin-right: 18px; margin-top: 18px;" ?>
+<div style="width: 100%; position: relative;" id="footer">
+<p style="border-bottom: Solid 1px #dddddd; text-align: Left; margin-left: 0px; font-family: Arial, sans-serif; line-height: Normal; margin-top: 9px; margin-right: 0px; margin-bottom: 6px; border-left-width: 1px; border-top-width: 1px; border-right-width: 1px;"><span style="text-align: Left; font-family: Arial, sans-serif; line-height: Normal;">&#160;</span></p>
+<table cellspacing="0" width="100%">
+<col style="width: 50%;" />
+<col style="width: 50%;" />
+<tr>
+<td style="vertical-align: Top;"><span style="font-family: Arial, sans-serif; line-height: Normal; font-size: 8pt;"><font size="1" style="font-size:8pt;">CST Studio Suite 2026</font></span></td>
+<td style="vertical-align: Top;">
+<p style="text-align: right;">&#160;</p>
+</td>
+</tr>
+</table>
+<p>&#160;</p>
+</div>
+<script type="text/javascript" language="javascript1.2">
+//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+        writeIntopicBar(0);
+
+
+highlightSearch();
+//-->
+//]]>
+</script>
+</body>
+</html>

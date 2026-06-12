@@ -1,0 +1,353 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="Adobe RoboHelp 11" />
+<title>Plot1D Object</title>
+<link rel="StyleSheet" href="../online_help_vba.css" type="text/css" />
+<style type="text/css">
+/*<![CDATA[*/
+<!--
+body { border-bottom-style:None; }
+-->
+/*]]>*/
+</style>
+
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+        origWidth = innerWidth;
+        origHeight = innerHeight;
+        onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+/*<![CDATA[*/
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+-->
+/*]]>*/
+</style>
+
+<script type="text/javascript" language="javascript1.2" src="../whmsg.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript" src="../whver.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript1.2" src="../whutils.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript1.2" src="../whproxy.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript1.2" src="../whlang.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript1.2" src="../whtopic.js" charset="utf-8">
+</script>
+</head>
+<body>
+<script type="text/javascript" language="javascript1.2">
+//<![CDATA[
+<!--
+if (window.gbWhTopic)
+{
+        var strUrl = document.location.href;
+        var bc = 0;
+        var n = strUrl.toLowerCase().indexOf("bc-");
+        if(n != -1)
+        {
+                document.location.replace(strUrl.substring(0, n));
+                bc = strUrl.substring(n+3);
+        }
+
+        if (window.addTocInfo)
+        {
+        addTocInfo("3D Simulation VBA\nVBA Objects\nPlot\nPlot1D");
+addAvenueInfo("common_VBAPLOT","common_VBAPlot/common_VBAPlot_ScalarPlot2D_Object.htm","");
+
+        }
+        if (window.writeBtnStyle)
+                writeBtnStyle();
+
+        if (window.writeIntopicBar)
+                writeIntopicBar(0);
+
+        
+        document.write("<p style=\"font-family: Tahoma; font-size: 9pt; font-weight: 400;  font-style:normal; color: rgb(0, 0, 0); text-decoration:none; text-align: left\"> ");
+AddMasterBreadcrumbs("../index.htm", "font-family: Tahoma; font-size: 9pt; font-weight: 400;  font-style:normal; color: rgb(0, 0, 0); text-decoration:none; text-align: left", "|", "Home", "../special_vbaobjects/special_vbaobjects_vbaobjects.htm");
+document.write("<a style=\"font-family: Tahoma; font-size: 9pt; font-weight: 400;  font-style:normal; color: rgb(0, 0, 0); text-decoration:none; text-align: left\" href=\"../special_vbaobjects/special_vbaobjects_vbaobjects.htm\">3D Simulation VBA<\/a> | <a style=\"font-family: Tahoma; font-size: 9pt; font-weight: 400;  font-style:normal; color: rgb(0, 0, 0); text-decoration:none; text-align: left\" href=\"../special_vbaobjects/special_vbaobjects_vbaobjects.htm\">VBA Objects<\/a> | <a style=\"font-family: Tahoma; font-size: 9pt; font-weight: 400;  font-style:normal; color: rgb(0, 0, 0); text-decoration:none; text-align: left\" href=\"common_vbaplot_plot_object.htm\">Plot<\/a> | Plot1D<\/p>");
+
+}
+else
+        if (window.gbIE4)
+                document.location.reload();
+
+onLoadHandler = function()
+{
+  if (window.setRelStartPage)
+        {
+        setTimeout("setRelStartPage('../index.htm');", 1)
+
+    setTimeout("UpdateBreadCrumbsMarker();", 1);
+        }
+}
+
+if (window.addEventListener){  
+        window.addEventListener('load', onLoadHandler, false);   
+} else if (window.attachEvent){  
+        window.attachEvent('onload', onLoadHandler);  
+}
+
+function onSetStartPage()
+{
+  autoSync(1);
+  sendSyncInfo();
+  sendAveInfoOut();
+}
+//-->
+//]]>
+</script><script type="text/javascript" src="../ehlpdhtm.js" language="JavaScript1.2">
+</script>
+<table cellspacing="0" width="100%">
+<col style="width: 50%;" />
+<col style="width: 50%;" />
+<tr>
+<td style="vertical-align: middle; padding-top: 5px; padding-bottom: 5px;">
+<p style="margin-top: 0px; margin-bottom: 0px;"><img src="../3ds.png" alt="" style="border: none;" border="0" /></p>
+</td>
+<td style="vertical-align: middle;">
+<p style="text-align: right;"><a href="https://www.3ds.com/products-services/3dexperience/" target="_blank"><img src="../3dexp.png" alt="" style="border: none;" width="32" height="32" border="0" /></a></p>
+</td>
+</tr>
+</table>
+<h1>Plot1D Object</h1>
+<p style="margin-left: 0px;"><span style="font-weight: bold;">Description:</span> This object allows to plot one dimensional curves, for example S-parameters. It also allows various modifications to the plot, such as changing the ticking, modifying the curve line style, or adding curve markers.</p>
+<ul>
+<li class="p-VBA-Index-Category">
+<p class="VBA-Index-Category"><a href="#GeneralMethods">General Methods</a></p>
+</li>
+<li class="p-VBA-Index-Category">
+<p class="VBA-Index-Category"><a href="#Markers">Markers and Measure Lines</a></p>
+</li>
+<li class="p-VBA-Index-Category">
+<p class="VBA-Index-Category"><a href="#BackgroundShapes">Background Shapes</a></p>
+</li>
+<li class="p-VBA-Index-Category">
+<p class="VBA-Index-Category"><a href="#PlotStyles">Plot Styles</a></p>
+</li>
+<li class="p-VBA-Index-Category">
+<p class="VBA-Index-Category" style="font-weight: bold;"><a href="#Queries" style="font-weight: bold;">Queries</a></p>
+</li>
+<li class="p-VBA-Index-Category">
+<p class="VBA-Index-Category" style="font-weight: bold;"><a href="#Examples" style="font-weight: bold;">Example</a></p>
+</li>
+</ul>
+<p>Please note that the corresponding tree item needs to be selected first via a <span style="font-family: 'Courier New', monospace;">SelectTreeItem</span> call before the plot can be modified, as shown in the <a href="#Examples">example</a>. Some of the cartesian plot vba commands apply to polar plots as well. In this case "<span style="font-style: italic;"><i>X</i></span>" corresponds to the polar angle and "<span style="font-style: italic;"><i>Y</i></span>" to the radius.</p>
+<p class="VBA-Heading-Category"><a name="GeneralMethods" id="GeneralMethods"></a>General Methods</p>
+<p class="VBA-Heading-Method">Plot</p>
+<p class="VBA-Text-Indent" style="font-style: normal;">Plots the field with the actual settings. Most of the following commands need a subsequent call of this method to make changes visible.</p>
+<p class="VBA-Text-Indent" style="font-style: normal;">&#160;</p>
+<p class="VBA-Heading-Method">PlotView( <a href="../common_vbageneral/common_general_string.htm" id="a64" style="font-weight: normal; font-style: normal;" name="a64">string</a> <span style="font-style: italic;"><i>type</i></span> ) <a href="../common_vbageneral/common_general_bool_data_type.htm" id="a65" style="font-weight: normal; font-style: normal;" name="a65">bool</a></p>
+<p class="VBA-Text-Indent" style="font-style: normal;">This method corresponds to selecting a certain plot of the plot toolbar. The variable <span style="font-style: italic;"><i>type</i></span> specifies the type of view that should be plotted and can be one of the following strings: <span style="font-style: italic;"><i>"real", "imaginary", "magnitude", "magnitudedb", "phase", "polar", "smith", "smithy"</i></span>. If the data could be plotted with the given view type, the method returns true, otherwise false.</p>
+<p class="VBA-Text-Indent" style="font-style: normal;">&#160;</p>
+<p class="VBA-Heading-Method">ResetView</p>
+<p class="VBA-Text-Indent">Resets the settings of the 1-dimensional plot to its default values. This does not affect the plot styles.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">SetCurveLimit(&#160;<a href="../common_vbageneral/common_general_bool_data_type.htm" style="font-weight: normal;">bool</a> <span style="font-style: italic;"><i>switch, <a href="../common_vbageneral/common_general_long.htm" style="font-weight: normal; font-style: normal;">long</a> curvelimit</i></span> )</p>
+<p class="VBA-Text-Indent" style="font-style: normal;">This command allows enabling and specifying a global limit for the number of curves that will be plotted within a single 1D plot. The variable <span style="font-style: italic;"><i>switch</i></span> specifies if the limit should be enabled, and the variable <span style="font-style: italic;"><i>curvelimit</i></span> specifies the global upper limit. These settings correspond to the setting "No. of curves" shown in the 1D Plot Ribbon. Please note that these settings are global and independent of the project, i.e. changes will affect all 1D Plots within CST Studio Suite. If curves are omitted in a plot, then a hint will be shown in the 1D plot legend. The stored settings can be queried with the <span style="font-weight: bold;">GetCurveLimit</span> command. The <span style="font-weight: bold;">Plot</span> method has to be called afterwards to make the changes visible.</p>
+<p class="VBA-Text-Indent" style="font-style: normal;">&#160;</p>
+<p class="VBA-Heading-Method">SetSmithChartZoom ( <a href="../common_vbageneral/common_general_double.htm" id="a20" style="font-weight: normal; font-style: normal;" name="a20">double</a> <span style="font-style: italic;"><i>value</i></span> )</p>
+<p class="VBA-Text-Indent" style="font-style: normal;">The Smith chart will be zoomed in a logarithmic scale in dB. This method is available only for Smith chart plots.</p>
+<p class="VBA-Text-Indent" style="font-style: normal;">&#160;</p>
+<p class="VBA-Heading-Method">ShowReferenceCircle ( <a href="../common_vbageneral/common_general_bool_data_type.htm" id="a61" style="font-weight: normal; font-style: normal;" name="a61">bool</a> <span style="font-style: italic;"><i>switch</i></span>, <a href="../common_vbageneral/common_general_double.htm" id="a62" style="font-weight: normal; font-style: normal;" name="a62">double</a> <span style="font-style: italic;"><i>radius</i></span> )</p>
+<p class="VBA-Text-Indent">In polar plots and Smith chart plots this method shows a background circle with the given radius. In polar plots, the radius unit is the same as in the current plot. In Smith charts the radius unit is a linear value. The <span style="font-weight: bold;">Plot</span> method has to be called afterwards to make the changes visible. This method is available only for polar and Smith chart plots.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">ShowPlotLegend ( <a href="../common_vbageneral/common_general_bool_data_type.htm" id="a631" style="font-weight: normal; font-style: normal;" name="a631">bool</a> <span style="font-style: italic;"><i>switch</i></span> )</p>
+<p class="VBA-Text-Indent" style="font-style: normal;">This method enables or disables the plot legend.</p>
+<p class="VBA-Text-Indent" style="font-style: normal;">&#160;</p>
+<p class="VBA-Heading-Method">UseCurveSmoothing ( <a href="../common_vbageneral/common_general_bool_data_type.htm" id="a63" style="font-weight: normal; font-style: normal;" name="a63">bool</a> <span style="font-style: italic;"><i>switch</i></span> )</p>
+<p class="VBA-Text-Indent" style="font-style: normal;">This method enables or disables automatic smoothening of curves in polar plots and Smith chart plots. The <span style="font-weight: bold;">Plot</span> method has to be called afterwards to make the changes visible. This method is available only for polar and Smith chart plots.</p>
+<p class="VBA-Text-Indent" style="font-style: normal;">&#160;</p>
+<p class="VBA-Heading-Method">SetFont ( <a href="../common_vbageneral/common_general_string.htm" id="a68" style="font-weight: normal; font-style: normal;" name="a68">string</a> <span style="font-style: italic;"><i>fontname, <a href="../common_vbageneral/common_general_string.htm" id="a69" style="font-weight: normal; font-style: normal;" name="a69">string</a> fonttype, <a href="../common_vbageneral/common_general_string.htm" id="a70" style="font-weight: normal; font-style: normal;" name="a70">string</a> fontsize</i></span> )</p>
+<p class="VBA-Text-Indent">This method modifies the font which is used in the plot. The variable <span style="font-style: italic;"><i>fontname</i></span> contains the name of the font (i.e. "Arial"). The variable <span style="font-style: italic;"><i>fonttype</i></span> can be either "bold", "italic", "bold italic" or an empty string. The variable <span style="font-style: italic;"><i>fonstsize</i></span> can be a positive integer value. The <span style="font-weight: bold;">Plot</span> method has to be called afterwards to make the changes visible.</p>
+<p class="VBA-Text-Indent" style="font-style: normal;">&#160;</p>
+<p class="VBA-Heading-Method">XAutorange ( <a href="../common_vbageneral/common_general_bool_data_type.htm" id="a1" style="font-weight: normal; font-style: normal;" name="a1">bool</a> <span style="font-style: italic;"><i>switch</i></span> )</p>
+<p class="VBA-Text-Indent">This method enables or disables auto-scaling of the x-axis. If <span style="font-style: italic;"><i>switch</i></span> is True the plot will always be auto-scaled to the maximum range. For polar and Smith chart plots this method enables or disables auto-scaling of the frequency range of the curve.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">XAutoTick ( <a href="../common_vbageneral/common_general_bool_data_type.htm" id="a57" style="font-weight: normal; font-style: normal;" name="a57">bool</a> <span style="font-style: italic;"><i>switch</i></span> )</p>
+<p class="VBA-Text-Indent">This method enables or disables automatic determination of the ticking of the x/phi-axis. If <span style="font-style: italic;"><i>switch</i></span> is True the ticking will be done automatically. See also <span style="font-weight: bold;">XTicksDistance</span>.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">XLogarithmic ( <a href="../common_vbageneral/common_general_bool_data_type.htm" id="a59" style="font-weight: normal; font-style: normal;" name="a59">bool</a> <span style="font-style: italic;"><i>switch</i></span> )</p>
+<p class="VBA-Text-Indent">This method enables or disables logarithmic plotting of the x-axis. If the lower bound of the current x-axis is non-positive, an error will be returned. Use the command <span style="font-weight: bold;">XRange</span> to change the plot range of the x-axis. The <span style="font-weight: bold;">Plot</span> method has to be called afterwards to make the changes visible. This method is available only for cartesian plots.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">XRange ( <a href="../common_vbageneral/common_general_double.htm" id="a26" style="font-weight: normal; font-style: normal;" name="a26">double</a> <span style="font-style: italic;"><i>min</i></span>, <a href="../common_vbageneral/common_general_double.htm" id="a5" style="font-weight: normal; font-style: normal;" name="a5">double</a> <span style="font-style: italic;"><i>max</i></span> )</p>
+<p class="VBA-Text-Indent">Specifies the range to be plotted for the x-axis. This method automatically turns the <span style="font-weight: bold;">XAutorange</span> switch off. For polar and Smith chart plots this method changes the frequency range of the curve.</p>
+<p style="margin-top: 0; margin-bottom: 0;">&#160;</p>
+<p class="VBA-Heading-Method">XRoundscale ( <a href="../common_vbageneral/common_general_bool_data_type.htm" id="a3" style="font-weight: normal; font-style: normal;" name="a3">bool</a> <span style="font-style: italic;"><i>switch</i></span> )</p>
+<p class="VBA-Text-Indent">This method will round the values of the x-axis min/max and tick values to be multiple of tick distance (<span style="font-style: italic;"><i>switch</i></span> = True). Otherwise the values are displayed up to four digits (<span style="font-style: italic;"><i>switch</i></span> = False). This method is available only for Cartesian plots.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">XTicks ( <a href="../common_vbageneral/common_general_integer.htm" id="a80" style="font-weight: normal; font-style: normal;" name="a80">int</a> <span style="font-style: italic;"><i>number</i></span> )</p>
+<p class="VBA-Text-Indent">Specifies the number of ticks to be displayed at the x/phi-axis. This method automatically turns the <span style="font-weight: bold;">XAutoTick</span> switch off.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">XTicksDistance ( <a href="../common_vbageneral/common_general_double.htm" id="a31" style="font-weight: normal; font-style: normal;" name="a31">double</a> <span style="font-style: italic;"><i>distance</i></span> )</p>
+<p class="VBA-Text-Indent">Specifies the distance between two successive ticks to be displayed at the x/phi-axis. This method automatically turns the <span style="font-weight: bold;">XAutoTick</span> switch off.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">YAutorange ( <a href="../common_vbageneral/common_general_bool_data_type.htm" id="a2" style="font-weight: normal; font-style: normal;" name="a2">bool</a> <span style="font-style: italic;"><i>switch</i></span> )</p>
+<p class="VBA-Text-Indent">This method enables or disables auto-scaling of the y/r-axis. If <span style="font-style: italic;"><i>switch</i></span> is True the plot will always be auto-scaled to the maximum range. For Smith chart plots this command has no effect.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">YAutoTick ( <a href="../common_vbageneral/common_general_bool_data_type.htm" id="a58" style="font-weight: normal; font-style: normal;" name="a58">bool</a> <span style="font-style: italic;"><i>switch )</i></span></p>
+<p class="VBA-Text-Indent">This method enables or disables automatic determination of the ticking of the y/r-axis. If <span style="font-style: italic;"><i>switch</i></span> is True the ticking will be done automatically. See also <span style="font-weight: bold;">YTicksDistance</span>.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">YLogarithmic ( <a href="../common_vbageneral/common_general_bool_data_type.htm" id="a60" style="font-weight: normal; font-style: normal;" name="a60">bool</a> <span style="font-style: italic;"><i>switch</i></span> )</p>
+<p class="VBA-Text-Indent">This method enables or disables logarithmic plotting of the y/r-axis. If the lower bound of the current y-axis is non-positive, an error will be returned. Use the command <span style="font-weight: bold;">YRange</span> to change the plot range of the y-axis. The <span style="font-weight: bold;">Plot</span> method has to be called afterwards to make the changes visible.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">YRange ( <a href="../common_vbageneral/common_general_double.htm" id="a6" style="font-weight: normal; font-style: normal;" name="a6">double</a> <span style="font-style: italic;"><i>min,</i></span> <a href="../common_vbageneral/common_general_double.htm" id="a8" style="font-weight: normal; font-style: normal;" name="a8">double</a> <span style="font-style: italic;"><i>max</i></span> )</p>
+<p class="VBA-Text-Indent">Specifies the range to be plotted for the y/r-axis. &#160;This method automatically turns the <span style="font-weight: bold;">YAutorange</span> switch off. For Smith chart plots this command has no effect.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">YRoundscale ( <a href="../common_vbageneral/common_general_bool_data_type.htm" id="a4" style="font-weight: normal; font-style: normal;" name="a4">bool</a> <span style="font-style: italic;"><i>switch</i></span> )</p>
+<p class="VBA-Text-Indent">This method will round the values of the y/r-axis min/max and the tick values will be multiples of tick distance. Otherwise the values are displayed up to four digits (<span style="font-style: italic;"><i>switch</i></span> = False).</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">YTicks ( <a href="../common_vbageneral/common_general_integer.htm" id="a9" style="font-weight: normal; font-style: normal;" name="a9">int</a> <span style="font-style: italic;"><i>number</i></span> )</p>
+<p class="VBA-Text-Indent">Specifies the number of ticks to be displayed at the y/r-axis.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">YTicksDistance ( <a href="../common_vbageneral/common_general_double.htm" id="a32" style="font-weight: normal; font-style: normal;" name="a32">double</a> <span style="font-style: italic;"><i>distance</i></span> )</p>
+<p class="VBA-Text-Indent">Specifies the distance between two successive ticks to be displayed at the y/r-axis. This method automatically turns the <span style="font-weight: bold;">YAutoTick</span> switch off.</p>
+<p class="VBA-Heading-Category"><a name="Markers" id="Markers"></a>Markers and Measure Lines</p>
+<p class="VBA-Heading-Method">AddMarker ( <a href="../common_vbageneral/common_general_double.htm" id="a17" style="font-weight: normal; font-style: normal;" name="a17">double</a> <span style="font-style: italic;"><i>absczissa</i></span> )</p>
+<p class="VBA-Text-Indent" style="font-style: normal;">On each curve in the selected plot a curve marker will be set at the specified abscissa. For polar or Smith chart plots the markers will be set at the specified frequency. The <span style="font-weight: bold;">Plot</span> method has to be called afterwards to show the added markers.</p>
+<p class="VBA-Text-Indent" style="font-style: normal;">&#160;</p>
+<p class="VBA-Heading-Method">AddMarkerToCurve ( <a href="../common_vbageneral/common_general_double.htm" id="a66" style="font-weight: normal; font-style: normal;" name="a66">double</a> <span style="font-style: italic;"><i>abscissa, <a href="../common_vbageneral/common_general_string.htm" id="a67" style="font-weight: normal; font-style: normal;" name="a67">int</a> curveindex</i></span> )</p>
+<p class="VBA-Text-Indent" style="font-style: normal;">A curve marker will be set at the specified abscissa to the curve with the specified curve index. The curve index is zero based. The <span style="font-weight: bold;">Plot</span> method has to be called afterwards to show the added markers.</p>
+<p class="VBA-Text-Indent" style="font-style: normal;">&#160;</p>
+<p class="VBA-Heading-Method">DeleteAllMarker</p>
+<p class="VBA-Text-Indent" style="font-style: normal;">All curve markers that have been previously defined in the selected plot will be deleted. The <span style="font-weight: bold;">Plot</span> method has to be called afterwards to make the changes visible.</p>
+<p class="VBA-Text-Indent" style="font-style: normal;">&#160;</p>
+<p class="VBA-Heading-Method">DeleteMarker ( <a href="../common_vbageneral/common_general_double.htm" id="a18" style="font-weight: normal; font-style: normal;" name="a18">double</a> <span style="font-style: italic;"><i>abscissa</i></span> )</p>
+<p class="VBA-Text-Indent" style="font-style: normal;">All curve markers that have previously been defined at the specified abscissa will be deleted. The argument corresponds with the frequency for polar or Smith chart plots. The <span style="font-weight: bold;">Plot</span> method has to be called afterwards to make the changes visible.</p>
+<p class="VBA-Text-Indent" style="font-style: normal;">&#160;</p>
+<p class="VBA-Heading-Method">MeasureLines ( <a href="../common_vbageneral/common_general_bool_data_type.htm" id="a12" style="font-weight: normal; font-style: normal;" name="a12">bool</a> <span style="font-style: italic;"><i>switch</i></span> )</p>
+<p class="VBA-Text-Indent"><span style="font-style: italic;"><i>If switch</i></span> is True four measure lines are displayed, each defining an interval on the x-axis and y-axis. The intervals can be defined using the methods <span style="font-weight: bold;">XMeasureLines</span> and <span style="font-weight: bold;">YMeasureLines</span>. The resulting widths are displayed together with the measure lines. This method is available only for cartesian plots.</p>
+<p class="VBA-Text-Indent" style="font-style: normal;">&#160;</p>
+<p class="VBA-Heading-Method">XMarker ( <a href="../common_vbageneral/common_general_bool_data_type.htm" id="a10" style="font-weight: normal; font-style: normal;" name="a10">bool</a> <span style="font-style: italic;"><i>switch</i></span> )</p>
+<p class="VBA-Text-Indent">If <span style="font-style: italic;"><i>switch</i></span> is True a marker is displayed, positioned with regard to the x-axis using <span style="font-weight: bold;">XMarkerPos</span>. In a box beside the marker axis the y-values of all curves are shown. This method is available only for cartesian plots.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">ShowMarkerAtMin</p>
+<p class="VBA-Text-Indent">Activates the marker and positions the marker at &#160;the global y-minimum of all displayed curves. This method is available only for cartesian plots.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">ShowMarkerAtMax</p>
+<p class="VBA-Text-Indent">Activates the marker and positions the marker at &#160;the global y-maximum of all displayed curves. This method is available only for cartesian plots.</p>
+<p class="vba-text-indent">&#160;</p>
+<p class="VBA-Heading-Method">XMarkerPos ( <a href="../common_vbageneral/common_general_double.htm" id="a11" style="font-weight: normal; font-style: normal;" name="a11">double</a> <span style="font-style: italic;"><i>value</i></span> )</p>
+<p class="VBA-Text-Indent">If <span style="font-weight: bold;">XMarker</span> is active, its position with respect to the x-axis will be specified here. This method is available only for cartesian plots.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">XMeasureLines ( <a href="../common_vbageneral/common_general_double.htm" id="a13" style="font-weight: normal; font-style: normal;" name="a13">double</a> <span style="font-style: italic;"><i>min,</i></span> <a href="../common_vbageneral/common_general_double.htm" id="a14" style="font-weight: normal; font-style: normal;" name="a14">double</a> <span style="font-style: italic;"><i>max</i></span> )</p>
+<p class="VBA-Text-Indent" style="font-style: normal;">If <span style="font-weight: bold;">MeasureLines</span> are active, their positions with respect to the x-axis will be specified here. This method is available only for cartesian plots.</p>
+<p class="VBA-Text-Indent" style="font-style: normal;">&#160;</p>
+<p class="VBA-Heading-Method">YMeasureLines ( <a href="../common_vbageneral/common_general_double.htm" id="a15" style="font-weight: normal; font-style: normal;" name="a15">double</a> <span style="font-style: italic;"><i>min,</i></span> <a href="../common_vbageneral/common_general_double.htm" id="a16" style="font-weight: normal; font-style: normal;" name="a16">double</a> <span style="font-style: italic;"><i>max</i></span> )</p>
+<p class="VBA-Text-Indent" style="font-style: normal;">If <span style="font-weight: bold;">MeasureLines</span> are active, their positions with respect to the y-axis will be specified here. This method is available only for cartesian plots.</p>
+<p class="VBA-Heading-Category"><a name="BackgroundShapes" id="BackgroundShapes"></a>Background Shapes</p>
+<p class="VBA-Heading-Method">AddThickBackGroundLine( <a href="../common_vbageneral/common_general_string.htm" id="a7" style="font-weight: normal; font-style: normal;" name="a7">string</a> <span style="font-style: italic;"><i>x0</i></span>, <a href="../common_vbageneral/common_general_string.htm" id="a19" style="font-weight: normal; font-style: normal;" name="a19">string</a> <span style="font-style: italic;"><i>y0</i></span>, <a href="../common_vbageneral/common_general_string.htm" id="a37" style="font-weight: normal; font-style: normal;" name="a37">string</a> <span style="font-style: italic;"><i>x1</i></span>, <a href="../common_vbageneral/common_general_string.htm" id="a38" style="font-weight: normal; font-style: normal;" name="a38">string</a> <span style="font-style: italic;"><i>y1</i></span> )</p>
+<p class="VBA-Text-Indent" style="font-style: normal;">Adds a thick background line to a cartesian plot going from (x0, y0) to (x1, y1). The points are given in data coordinates with respect to current plot. This method is available only for cartesian plots.</p>
+<p class="VBA-Text-Indent" style="font-style: normal;">&#160;</p>
+<p class="VBA-Heading-Method">AddThinBackGroundLine( <a href="../common_vbageneral/common_general_string.htm" id="a33" style="font-weight: normal; font-style: normal;" name="a33">string</a> <span style="font-style: italic;"><i>x0</i></span>, &#160;<a href="../common_vbageneral/common_general_string.htm" id="a34" style="font-weight: normal; font-style: normal;" name="a34">string</a> <span style="font-style: italic;"><i>y0</i></span>, <a href="../common_vbageneral/common_general_string.htm" id="a39" style="font-weight: normal; font-style: normal;" name="a39">string</a> <span style="font-style: italic;"><i>x1</i></span>, <a href="../common_vbageneral/common_general_string.htm" id="a40" style="font-weight: normal; font-style: normal;" name="a40">string</a> <span style="font-style: italic;"><i>y1</i></span> )</p>
+<p class="VBA-Text-Indent" style="font-style: normal;">Adds a thin background line to a cartesian plot going from (x0, y0) to (x1, y1). The points are given in data coordinates with respect to current plot. This method is available only for cartesian plots.</p>
+<p class="VBA-Text-Indent" style="font-style: normal;">&#160;</p>
+<p class="VBA-Heading-Method">DeleteAllBackGroundShapes</p>
+<p class="VBA-Text-Indent" style="font-style: normal;">Deletes all previously set background lines. This method is available only for cartesian plots.</p>
+<p class="VBA-Heading-Category"><a name="PlotStyles" id="PlotStyles"></a>Plot Styles</p>
+<p class="vba-text-indent" style="margin-left: 0px;">The parameter <span style="font-style: italic; font-weight: bold;"><i>curveindex</i></span> of the following commands is zero-based (i.e. 0 for the first curve).</p>
+<p class="vba-text-indent" style="margin-left: 0px;">&#160;</p>
+<p class="VBA-Heading-Method">SetLineColor( <a href="../common_vbageneral/common_general_string.htm" id="a46" style="font-weight: normal; font-style: normal;" name="a46">int</a> <span style="font-style: italic;"><i>curveindex</i></span>, <span><a href="../common_vbageneral/common_general_string.htm" id="a47" style="font-weight: normal; font-style: normal;" name="a47">int</a></span> <span style="font-style: italic;"><i>red</i></span>, <span><a href="../common_vbageneral/common_general_string.htm" id="a48" style="font-weight: normal; font-style: normal;" name="a48">int</a></span> <span style="font-style: italic;"><i>green,</i></span> <span><a href="../common_vbageneral/common_general_string.htm" id="a50" style="font-weight: normal; font-style: normal;" name="a50">int</a></span> <span style="font-style: italic;"><i>blue</i></span> )</p>
+<p class="VBA-Text-Indent" style="font-style: normal;">Sets the color of the curve with the given curve index to the specified RGB-value. Each parameter <span style="font-style: italic; font-weight: bold;"><i>red, green</i></span> and <span style="font-style: italic; font-weight: bold;"><i>blue</i></span> can be a value between 0 and 255. After this method has been called it is necessary to call the <span style="font-weight: bold;">Plot</span> method to make the changes visible.</p>
+<p class="VBA-Text-Indent" style="font-style: normal;">&#160;</p>
+<p class="VBA-Heading-Method">RemoveLineColor( <a href="../common_vbageneral/common_general_string.htm" id="a51" style="font-weight: normal; font-style: normal;" name="a51">int</a> <span style="font-style: italic;"><i>curveindex</i></span> )</p>
+<p class="VBA-Text-Indent" style="font-style: normal;">Sets the color of the curve with the given curve index to a default value. After this method has been called it is necessary to call the <span style="font-weight: bold;">Plot</span> method to make the changes visible.</p>
+<p class="vba-text-indent">&#160;</p>
+<p class="VBA-Heading-Method">SetLineStyle( <a href="../common_vbageneral/common_general_string.htm" id="a43" style="font-weight: normal; font-style: normal;" name="a43">int</a> <span style="font-style: italic;"><i>curveindex</i></span>, <a href="../common_vbageneral/common_general_string.htm" id="a44" style="font-weight: normal; font-style: normal;" name="a44">string</a> <span style="font-style: italic;"><i>linetype,</i></span> <a href="../common_vbageneral/common_general_string.htm" id="a45" style="font-weight: normal; font-style: normal;" name="a45">int</a> <span style="font-style: italic;"><i>linewidth</i></span> )</p>
+<p class="VBA-Text-Indent" style="font-style: normal;">Sets the line style and the line thickness of the curve with the given curve index. The parameter <span style="font-weight: bold; font-style: italic;"><i>linetype</i></span> will specify the line style of the curve and can be either <span style="font-style: italic;"><i>"solid"</i></span>, <span style="font-style: italic;"><i>"dashed"</i></span>, <span style="font-style: italic;"><i>"dotted"</i></span> or <span style="font-style: italic;"><i>"dashdotted"</i></span>. Any other string will not change the line style. The parameter <span style="font-style: italic; font-weight: bold;"><i>linewidth</i></span> specifies the line thickness and can be a value between 1 and 8. Any other value will not change the line thickness. After this method has been called it is necessary to call the <span style="font-weight: bold;">Plot</span> method to make the changes visible.</p>
+<p class="VBA-Text-Indent" style="font-style: normal;">&#160;</p>
+<p class="VBA-Heading-Method">RemoveLineStyle( <a href="../common_vbageneral/common_general_string.htm" id="a49" style="font-weight: normal; font-style: normal;" name="a49">int</a> <span style="font-style: italic;"><i>curveindex</i></span> )</p>
+<p class="VBA-Text-Indent" style="font-style: normal;">Sets the line style and line thickness of the curve with the given curve index to default values. After this method has been called it is necessary to call the <span style="font-weight: bold;">Plot</span> method to make the changes visible.</p>
+<p class="vba-text-indent">&#160;</p>
+<p class="VBA-Heading-Method">SetMarkerStyle( <a href="../common_vbageneral/common_general_string.htm" id="a52" style="font-weight: normal; font-style: normal;" name="a52">int</a> <span style="font-style: italic;"><i>curveindex</i></span>, <a href="../common_vbageneral/common_general_string.htm" id="a53" style="font-weight: normal; font-style: normal;" name="a53">string</a> <span style="font-style: italic;"><i>markertype</i></span>, <a href="../common_vbageneral/common_general_string.htm" id="a56" style="font-weight: normal; font-style: normal;" name="a56">string</a> <span style="font-style: italic;"><i>markershape,</i></span> <a href="../common_vbageneral/common_general_string.htm" id="a54" style="font-weight: normal; font-style: normal;" name="a54">int</a> <span style="font-style: italic;"><i>markersize</i></span> )</p>
+<p class="VBA-Text-Indent">Sets the style and shape of additional marks of the curve with the given curve index. &#160;The parameter <span style="font-style: italic; font-weight: bold;"><i>markertype</i></span> specifies the type of the additional marks and can be either "<span style="font-style: italic;"><i>auto</i></span>", "<span style="font-style: italic;"><i>additionalmarks</i></span>","<span style="font-style: italic;"><i>marksonly</i></span>" or "<span style="font-style: italic;"><i>nomarks</i></span>" . Any other string will not change the type of the markers. The parameter <span style="font-style: italic; font-weight: bold;"><i>markershape</i></span> specifies the shape of the markers and can be an be either <span style="font-style: italic;"><i>"auto"</i></span>, <span style="font-style: italic;"><i>"circles"</i></span>, <span style="font-style: italic;"><i>"diamonds"</i></span>, <span style="font-style: italic;"><i>"squares"</i></span>, <span style="font-style: italic;"><i>"triangle up"</i></span> or <span style="font-style: italic;"><i>"triangle down"</i></span>. Any other string will not change the shape of the markers. The parameter <span style="font-style: italic; font-weight: bold;"><i>markersize</i></span> specifies the size of the additional markers and can be a value between 1 and 8. Any other value will not change the size of the markers. After this method has been called it is necessary to call the <span style="font-weight: bold;">Plot</span> method to make the changes visible. The markers are not visible in Polar plots and Smith chart plots.</p>
+<p class="VBA-Text-Indent" style="font-style: normal;">&#160;</p>
+<p class="VBA-Heading-Method">RemoveMarkerStyle( <a href="../common_vbageneral/common_general_string.htm" id="a55" style="font-weight: normal; font-style: normal;" name="a55">int</a> <span style="font-style: italic;"><i>curveindex</i></span> )</p>
+<p class="VBA-Text-Indent" style="font-style: normal;">Sets the line style and line thickness of the curve with the given curve index to default values. After this method has been called it is necessary to call the <span style="font-weight: bold;">Plot</span> method to make the changes visible. The markers are not visible in Polar plots and Smith chart plots.</p>
+<p class="VBA-Heading-Category"><a name="Queries" id="Queries"></a>Queries</p>
+<p class="vba-text-indent" style="margin-left: 0px;">The parameter <span style="font-style: italic; font-weight: bold;"><i>curveindex</i></span> of the following commands is zero-based (i.e. 0 for the first curve).</p>
+<p class="vba-text-indent">&#160;</p>
+<p class="VBA-Heading-Method">GetCurveIndexOfCurveLabel( <a href="../common_vbageneral/common_general_string.htm" id="a36" style="font-weight: normal; font-style: normal;" name="a36">string</a> <span style="font-style: italic;"><i>curvelabel</i></span> ) <a href="../common_vbageneral/common_general_string.htm" id="a42" name="a42"><span style="font-weight: normal;">int</span></a></p>
+<p class="VBA-Text-Indent" style="font-style: normal;">Returns the index of the curve with the specified curve label. If the curve label is not found &#160;-1 will be returned. In case the curve label is not unique, the first matching index will be returned. Please note that it is the curve label which is needed, not the name of the Tree entry. In a Smith chart plot, this could be for example "<span style="font-style: italic;"><i>S1,1 (var. ref. imp.)</i></span>". Use the method <span style="font-weight: bold;">GetCurveLabelOfCurveIndex</span> to get the correct spelling of a certain curve label.</p>
+<p class="vba-text-indent">&#160;</p>
+<p class="VBA-Heading-Method">GetCurveLabelOfCurveIndex( <a href="../common_vbageneral/common_general_double.htm" id="a35" name="a35"><span style="font-weight: normal;">int</span></a> <span style="font-style: italic;"><i>curveindex</i></span> ) <a href="../common_vbageneral/common_general_string.htm" id="a41" style="font-weight: normal; font-style: normal;" name="a41">string</a></p>
+<p class="VBA-Text-Indent" style="font-style: normal;">Returns the label of the curve with the specified index. If no curve with this index is found an empty string will be returned.</p>
+<p class="VBA-Text-Indent" style="font-style: normal;">&#160;</p>
+<p class="VBA-Heading-Method">GetCurveValue( <a href="../common_vbageneral/common_general_string.htm" id="a25" style="font-weight: normal; font-style: normal;" name="a25">string</a> <span style="font-style: italic;"><i>curvelabel</i></span>, <a href="../common_vbageneral/common_general_double.htm" id="a22" style="font-weight: normal; font-style: normal;" name="a22">double</a> <span style="font-style: italic;"><i>abscissa</i></span> ) <a href="../common_vbageneral/common_general_double.htm" id="a24" style="font-weight: normal; font-style: normal;" name="a24">double</a></p>
+<p class="VBA-Text-Indent">This method returns the ordinate value of the curve specified by <span style="font-style: italic;"><i>curvelabel</i></span> at the abscissa value specified by <span style="font-style: italic;"><i>abscissa.</i></span> If the value <span style="font-style: italic;"><i>abscissa</i></span> is in between two data points, the ordinate of the closest data point is returned. This method is available only for cartesian plots.</p>
+<p class="VBA-Text-Indent" style="font-style: normal;">&#160;</p>
+<p class="VBA-Heading-Method">GetMaximumLocation( <a href="../common_vbageneral/common_general_string.htm" id="a27" style="font-weight: normal; font-style: normal;" name="a27">string</a> <span style="font-style: italic;"><i>curvlabel</i></span> ) <a href="../common_vbageneral/common_general_double.htm" id="a29" style="font-weight: normal; font-style: normal;" name="a29">double</a></p>
+<p class="VBA-Text-Indent" style="font-style: normal;">Get the maximum location of the specified curve. This method is available only for cartesian plots.</p>
+<p class="VBA-Text-Indent" style="font-style: normal;">&#160;</p>
+<p class="VBA-Heading-Method">GetMinimumLocation( <a href="../common_vbageneral/common_general_string.htm" id="a28" style="font-weight: normal; font-style: normal;" name="a28">string</a> <span style="font-style: italic;"><i>curvelabel</i></span> ) <a href="../common_vbageneral/common_general_double.htm" id="a30" style="font-weight: normal; font-style: normal;" name="a30">double</a></p>
+<p class="VBA-Text-Indent" style="font-style: normal;">Get the minimum location of the specified curve. This method is available only for cartesian plots.</p>
+<p class="VBA-Text-Indent" style="font-style: normal;">&#160;</p>
+<p class="VBA-Heading-Method">GetNumberOfCurves <a href="../common_vbageneral/common_general_double.htm" id="a21" style="font-weight: normal; font-style: normal;" name="a21">double</a></p>
+<p class="VBA-Text-Indent" style="font-style: normal;">Returns the total number of displayed curves in a 1D plot. If some curves are hidden they are not counted anymore.</p>
+<p class="VBA-Text-Indent" style="font-style: normal;">&#160;</p>
+<p class="VBA-Heading-Method">GetCurrentPlotSettings( <a href="../common_vbageneral/common_general_string.htm" id="a71" style="font-weight: normal; font-style: normal;" name="a71">string</a> <span style="font-style: italic;"><i>options</i></span> ) <a href="../common_vbageneral/common_general_string.htm" id="a72" style="font-weight: normal; font-style: normal;" name="a72">string</a></p>
+<p class="VBA-Text-Indent" style="font-style: normal;">Returns the current plot settings as a string. The parameter '<span style="font-style: italic;"><i>options'</i></span> is expected to be an empty string. The string returned by this method contains VBA commands that can be used to restore the current plot state.</p>
+<p class="VBA-Text-Indent" style="font-style: normal;">&#160;</p>
+<p class="VBA-Heading-Method">GetCurveLimit( <span style="font-weight: normal;"><a href="../common_vbageneral/common_general_bool_ref_data_type.htm">bool_ref</a></span> <span style="font-style: italic;"><i>enabled, <a href="../common_vbageneral/common_general_long_ref.htm" style="font-style: normal; font-weight: normal;">long_ref</a></i></span> &#160;<span style="font-style: italic;"><i>curvelimit</i></span> )</p>
+<p class="VBA-Text-Indent" style="font-style: normal;">This method allows querying the settings that correspond to the "No. of curves" option shown in the 1D Plot Ribbon. The variable <span style="font-style: italic;"><i>enabled</i></span> will be set to True if a global limit for the number of plotted curves is enabled, otherwise to False. The variable <span style="font-style: italic;"><i>curvelimit</i></span> will be set to the stored global limit for the number of plotted curves. Please note that these settings are global and independent of the project. The settings can be modified with the <span style="font-style: italic;"><i>SetCurveLimit</i></span> command.</p>
+<p class="VBA-Text-Indent" style="font-style: normal;">&#160;</p>
+<p class="VBA-Heading-Method">ExportImage( <a href="../common_vbageneral/common_general_string.htm" id="a23" style="font-weight: normal; font-style: normal;" name="a23">string</a> <span style="font-style: italic;"><i>filename,</i></span> <a href="../common_vbageneral/common_general_string.htm" id="a74" style="font-weight: normal; font-style: normal;" name="a74">int</a> <span style="font-style: italic;"><i>width</i></span>,&#160;<a href="../common_vbageneral/common_general_string.htm" id="a75" style="font-weight: normal; font-style: normal;" name="a75">int</a> <span style="font-style: italic;"><i>height</i></span> )</p>
+<p class="VBA-Text-Indent" style="font-style: normal;">Creates a bitmap file of the current plot with the specified size. The string <span style="font-style: italic;"><i>filename</i></span> is expected to be an absolute file path.</p>
+<p class="VBA-Heading-Category"><a name="Examples" id="Examples"></a>Example</p>
+<p class="VBA-Text-Example" style="color: #008000;">' change the plot style of S-Parameter S1,1</p>
+<p class="VBA-Text-Example">SelectTreeItem("1D Results\S-Parameters")</p>
+<p class="VBA-Text-Example">Dim index As Integer</p>
+<p class="VBA-Text-Example">With Plot1D</p>
+<p class="VBA-Text-Example" style="margin-left: 0px;">&#160;&#160;&#160;&#160;&#160;&#160;index =.GetCurveIndexOfCurveLabel("S1,1")</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.SetLineStyle(index,"dashed",8) <span style="color: #008000;"><font color="green">' thick dashed line</font></span></p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.SetLineColor(index,255,255,0) &#160;<span style="color: #008000;"><font color="green">' yellow</font></span></p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.Plot <span style="color: #008000;"><font color="green">' make changes visible</font></span></p>
+<p class="VBA-Text-Example">End With</p>
+<?rh-p style="margin-bottom: 0px; text-align: Right; margin-left: 18px; 
+                 margin-right: 18px; margin-top: 18px;" ?>
+<div style="width: 100%; position: relative;" id="footer">
+<p style="border-bottom: Solid 1px #dddddd; text-align: Left; margin-left: 0px; font-family: Arial, sans-serif; line-height: Normal; margin-top: 9px; margin-right: 0px; margin-bottom: 6px; border-left-width: 1px; border-top-width: 1px; border-right-width: 1px;"><span style="text-align: Left; font-family: Arial, sans-serif; line-height: Normal;">&#160;</span></p>
+<table cellspacing="0" width="100%">
+<col style="width: 50%;" />
+<col style="width: 50%;" />
+<tr>
+<td style="vertical-align: Top;"><span style="font-family: Arial, sans-serif; line-height: Normal; font-size: 8pt;"><font size="1" style="font-size:8pt;">CST Studio Suite 2026</font></span></td>
+<td style="vertical-align: Top;">
+<p style="text-align: right;">&#160;</p>
+</td>
+</tr>
+</table>
+<p>&#160;</p>
+</div>
+<script type="text/javascript" language="javascript1.2">
+//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+        writeIntopicBar(0);
+
+
+highlightSearch();
+//-->
+//]]>
+</script>
+</body>
+</html>

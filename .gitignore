@@ -1,5 +1,9 @@
-node_modules/
-dist/
-.env
-.DS_Store
+Thumbs.db
+Desktop.ini
 *.log
+__pycache__/
+.pytest_cache/
+node_modules/
+design-records/
+scripts/
+skills/skill-creator/

@@ -1,0 +1,349 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="Adobe RoboHelp 11" />
+<title>NetworkParameterExtraction Object</title>
+<link rel="StyleSheet" href="../online_help_vba.css" type="text/css" />
+<style type="text/css">
+/*<![CDATA[*/
+<!--
+body { border-bottom-style:None; }
+-->
+/*]]>*/
+</style>
+
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+        origWidth = innerWidth;
+        origHeight = innerHeight;
+        onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+/*<![CDATA[*/
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+-->
+/*]]>*/
+</style>
+
+<script type="text/javascript" language="javascript1.2" src="../whmsg.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript" src="../whver.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript1.2" src="../whutils.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript1.2" src="../whproxy.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript1.2" src="../whlang.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript1.2" src="../whtopic.js" charset="utf-8">
+</script>
+</head>
+<body>
+<script type="text/javascript" language="javascript1.2">
+//<![CDATA[
+<!--
+if (window.gbWhTopic)
+{
+        var strUrl = document.location.href;
+        var bc = 0;
+        var n = strUrl.toLowerCase().indexOf("bc-");
+        if(n != -1)
+        {
+                document.location.replace(strUrl.substring(0, n));
+                bc = strUrl.substring(n+3);
+        }
+
+        if (window.addTocInfo)
+        {
+        addTocInfo("3D Simulation VBA\nVBA Objects\nPost Processing\nNetworkParameterExtraction");
+
+        }
+        if (window.writeBtnStyle)
+                writeBtnStyle();
+
+        if (window.writeIntopicBar)
+                writeIntopicBar(0);
+
+        
+        document.write("<p style=\"font-family: Tahoma; font-size: 9pt; font-weight: 400;  font-style:normal; color: rgb(0, 0, 0); text-decoration:none; text-align: left\"> ");
+AddMasterBreadcrumbs("../index.htm", "font-family: Tahoma; font-size: 9pt; font-weight: 400;  font-style:normal; color: rgb(0, 0, 0); text-decoration:none; text-align: left", "|", "Home", "../special_vbaobjects/special_vbaobjects_vbaobjects.htm");
+document.write("<a style=\"font-family: Tahoma; font-size: 9pt; font-weight: 400;  font-style:normal; color: rgb(0, 0, 0); text-decoration:none; text-align: left\" href=\"../special_vbaobjects/special_vbaobjects_vbaobjects.htm\">3D Simulation VBA<\/a> | <a style=\"font-family: Tahoma; font-size: 9pt; font-weight: 400;  font-style:normal; color: rgb(0, 0, 0); text-decoration:none; text-align: left\" href=\"../special_vbaobjects/special_vbaobjects_vbaobjects.htm\">VBA Objects<\/a> | <a style=\"font-family: Tahoma; font-size: 9pt; font-weight: 400;  font-style:normal; color: rgb(0, 0, 0); text-decoration:none; text-align: left\" href=\"special_vbapostproc_type_method.htm\">Post Processing<\/a> | NetworkParameterExtraction<\/p>");
+
+}
+else
+        if (window.gbIE4)
+                document.location.reload();
+
+onLoadHandler = function()
+{
+  if (window.setRelStartPage)
+        {
+        setTimeout("setRelStartPage('../index.htm');", 1)
+
+    setTimeout("UpdateBreadCrumbsMarker();", 1);
+        }
+}
+
+if (window.addEventListener){  
+        window.addEventListener('load', onLoadHandler, false);   
+} else if (window.attachEvent){  
+        window.attachEvent('onload', onLoadHandler);  
+}
+
+function onSetStartPage()
+{
+  autoSync(1);
+  sendSyncInfo();
+  sendAveInfoOut();
+}
+//-->
+//]]>
+</script><script type="text/javascript" src="../ehlpdhtm.js" language="JavaScript1.2">
+</script>
+<table cellspacing="0" width="100%">
+<col style="width: 50%;" />
+<col style="width: 50%;" />
+<tr>
+<td style="vertical-align: middle; padding-top: 5px; padding-bottom: 5px;">
+<p style="margin-top: 0px; margin-bottom: 0px;"><img src="../3ds.png" alt="" style="border: none;" border="0" /></p>
+</td>
+<td style="vertical-align: middle;">
+<p style="text-align: right;"><a href="https://www.3ds.com/products-services/3dexperience/" target="_blank"><img src="../3dexp.png" alt="" style="border: none;" width="32" height="32" border="0" /></a></p>
+</td>
+</tr>
+</table>
+<p class="VBA-Heading-Object">NetworkParameterExtraction Object</p>
+<p class="VBA-Text">Determine an equivalent SPICE circuit which has the same behavior at the ports as the simulation model. This command represents the "Spice Extraction" in the "Signal Post-Processing" ribbon. Two different methods exist for this task. The "transmission line model" (TL) is based on a fixed topology of a network of parallel and coupled transmission lines. The other more general method is based on a "model order reduction" (MOR) and does not assume any fixed topology. The drawback of the latter approach, however, is that the derived SPICE circuit elements do not allow any physical interpretation.</p>
+<ul>
+<li class="p-VBA-Index-Category">
+<p class="VBA-Index-Category"><a href="#General">General Methods</a></p>
+</li>
+<li style="list-style: none; display: inline;">
+<div>
+<ul>
+<li class="p-VBA-Index-Category">
+<p class="VBA-Index-Category"><a href="#General_TL">Methods for Transmission Line (TL) Based Extraction</a></p>
+</li>
+<li class="p-VBA-Index-Category">
+<p class="VBA-Index-Category"><a href="#Queries_Settings_TL">Queries Concerning Settings for TL</a></p>
+</li>
+<li class="p-VBA-Index-Category">
+<p class="VBA-Index-Category"><a href="#Queries_Results_TL">Queries Concerning Results for TL</a></p>
+</li>
+</ul>
+</div>
+</li>
+<li class="p-VBA-Index-Category">
+<p class="VBA-Index-Category"><a href="#General_MOR">General Methods for Model Order Reduction (MOR)</a></p>
+</li>
+<li class="p-VBA-Index-Category">
+<p class="VBA-Index-Category"><a href="#Defaults">Default Settings</a></p>
+</li>
+<li style="list-style: none; display: inline;">
+<div>
+<ul>
+<li class="p-VBA-Index-Category">
+<p class="VBA-Index-Category"><a href="#Example_TL">Example for TL</a></p>
+</li>
+</ul>
+</div>
+</li>
+<li class="p-VBA-Index-Category">
+<p class="VBA-Index-Category"><a href="#Example_MOR">Example for MOR</a></p>
+</li>
+</ul>
+<p class="VBA-Heading-Category"><a name="General" id="General"></a>General Methods</p>
+<p class="VBA-Heading-Method">Reset</p>
+<p class="VBA-Text-Indent">Resets all internal values to their default settings.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<div>
+<p class="VBA-Heading-Method">Method ( <a href="../common_vbageneral/common_general_enum.htm" id="a1" name="a1">enum</a> {"TransmissionLine", "MOR"} <span style="font-style: italic;"><i>extractionMethod</i></span> )</p>
+<p class="VBA-Text-Indent">Selects the method to be used when running network parameter extraction.</p>
+<p class="VBA-Text-Indent" style="font-weight: bold;">&#160;</p>
+<p class="VBA-Heading-Method">GetMethod <a href="../common_vbageneral/common_general_enum.htm" id="a2" name="a2">enum</a> {"TransmissionLine", "MOR"}</p>
+<p class="VBA-Text-Indent">Returns the currently set method for extracting network parameters.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+</div>
+<p class="VBA-Heading-Method">Calculate</p>
+<p class="VBA-Text-Indent">Starts the network parameter extraction with the previously made settings.</p>
+<p class="VBA-Heading-Category"><a name="General_TL" id="General_TL"></a>Methods for Transmission Line (TL) Based Extraction</p>
+<p class="VBA-Heading-Method">AddWire ( <a href="../common_vbageneral/common_general_long.htm" id="a20" name="a20">long</a> &#160;<span style="font-style: italic;"><i>number</i></span>, <a href="../common_vbageneral/common_general_long.htm" id="a21" name="a21">long</a> &#160;<span style="font-style: italic;"><i>portA</i></span>, <a href="../common_vbageneral/common_general_long.htm" id="a22" name="a22">long</a> &#160;<span style="font-style: italic;"><i>modeA</i></span>, <a href="../common_vbageneral/common_general_long.htm" id="a23" name="a23">long</a> &#160;<span style="font-style: italic;"><i>portB</i></span>, <a href="../common_vbageneral/common_general_long.htm" id="a24" name="a24">long</a> &#160;<span style="font-style: italic;"><i>modeB</i></span> )</p>
+<p class="VBA-Text-Indent">Define a wire element between two ports to obtain the network parameters. The <span style="font-style: italic;"><i>number</i></span> denotes the number of the wire. The wire starts at port &#160;<span style="font-style: italic;"><i>portA</i></span> (<span style="font-style: italic;"><i>modeA</i></span>) and ends at port <span style="font-style: italic;"><i>portB</i></span> (<span style="font-style: italic;"><i>modeB</i></span>).</p>
+<p class="VBA-Text-Indent"><span style="font-weight: bold;">Please note:</span> all arguments must be long value here. Any expression is <span style="font-weight: bold;">not</span> allowed.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">SetFrequency ( <a href="../common_vbageneral/common_general_double.htm" id="a4" name="a4">double</a> <span style="font-style: italic;"><i>freq</i></span> )</p>
+<p class="VBA-Text-Indent">Defines the extraction frequency for the network parameter model. The calculated network model is most accurate at this frequency.</p>
+<p class="VBA-Text-Indent"><span style="font-weight: bold;">Please note:</span> <span style="font-style: italic;"><i>freq</i></span> must be a double value here. Any expression is <span style="font-weight: bold;">not</span> allowed.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">SetNCascades ( <a href="../common_vbageneral/common_general_long.htm" id="a5" name="a5">long</a> <span style="font-style: italic;"><i>number</i></span> )</p>
+<p class="VBA-Text-Indent">Defines how many network elements are cascaded to approximate the input/output behavior of the simulated structure.</p>
+<p class="VBA-Text-Indent"><span style="font-weight: bold;">Please note:</span> <span style="font-style: italic;"><i>number</i></span> must be a long integer value here. Any expression is <span style="font-weight: bold;">not</span> allowed.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">SetLimitCoupling ( <a href="../common_vbageneral/common_general_bool_data_type.htm" id="a6" name="a6">bool</a> <span style="font-style: italic;"><i>bFlag,</i></span> <a href="../common_vbageneral/common_general_double.htm" id="a7" name="a7">double</a> <span style="font-style: italic;"><i>limit</i></span> )</p>
+<p class="VBA-Text-Indent">If activated (<span style="font-style: italic;"><i>bFlag</i></span> is True) the coupling between wires is limited if a certain minimum coupling value is not reached. Then coupling elements between these wires will be omitted. Enable or disable this behavior here and set the limit value.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">SetKeepTopology ( <a href="../common_vbageneral/common_general_bool_data_type.htm" id="a13" name="a13">bool</a> <span style="font-style: italic;"><i>bFlag,</i></span> <a href="../common_vbageneral/common_general_double.htm" id="a14" name="a14">double</a> <span style="font-style: italic;"><i>minR,</i></span> <a href="../common_vbageneral/common_general_double.htm" id="a15" name="a15">double</a> <span style="font-style: italic;"><i>minG,</i></span> <a href="../common_vbageneral/common_general_double.htm" id="a16" name="a16">double</a> <span style="font-style: italic;"><i>minL,</i></span> <a href="../common_vbageneral/common_general_double.htm" id="a17" name="a17">double</a> <span style="font-style: italic;"><i>minC,</i></span> <a href="../common_vbageneral/common_general_double.htm" id="a18" name="a18">double</a> <span style="font-style: italic;"><i>minK</i></span> )</p>
+<p class="VBA-Text-Indent">if <span style="font-style: italic;"><i>bFlag</i></span> is True the topology of the extracted network will not be changed even if some elements have values close to 0. Those elements with values lower than a given limit will be set to this limit. Set the limit using the <span style="font-style: italic;"><i>minR, minG, minL, minC</i></span> and <span style="font-style: italic;"><i>minK</i></span> parameters. <span style="font-style: italic;"><i>MinR, minG, minL, minC</i></span> and <span style="font-style: italic;"><i>minK</i></span> set the limits for the resistance in Ohms, the transconductance in S the inductance in H, the capacitance in F and the couling respectively.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">GenerateSubCircuit ( <a href="../common_vbageneral/common_general_bool_data_type.htm" id="a8" name="a8">bool</a> <span style="font-style: italic;"><i>bFlag</i></span> )</p>
+<p class="VBA-Text-Indent">&#160;If <span style="font-style: italic;"><i>bFlag</i></span> is True the resulting SPICE netlist of the transmission line based network parameter extraction is enclosed in a sub-circuit. The sub-circuit begins with the ".subckt" statement and ends with the ".ends" statement.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">CreateNetList(&#160;<a href="../common_vbageneral/common_general_filename.htm" id="a741" style="font-style: normal; font-weight: bold;" name="a741">filename</a> <span style="font-style: italic;"><i>fileName</i></span> )</p>
+<p class="VBA-Text-Indent">Creates a netlist file with the name <span style="font-style: italic;"><i>fileName</i></span> for SPICE simulation after the transmission line based calculation (performed by the method <span style="font-weight: bold;">Calculate</span>) has finished.</p>
+<p class="VBA-Heading-Category"><a name="Queries_Settings_TL" id="Queries_Settings_TL"></a>Queries Concerning Settings for TL</p>
+<p class="VBA-Heading-Method">GetNWires <a href="../common_vbageneral/common_general_long.htm" id="a9" name="a9">long</a></p>
+<p class="VBA-Text-Indent">Returns the number of defined wires</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">GetWireId ( <a href="../common_vbageneral/common_general_long.htm" id="a11" name="a11">long</a> <span style="font-style: italic;"><i>index</i></span> ) <a href="../common_vbageneral/common_general_long.htm" id="a10" name="a10">long</a></p>
+<p class="VBA-Text-Indent">Returns the id of the wire. <span style="font-style: italic;"><i>Index</i></span> is a number between 0 and n-1, where n is the number of defined wires as returned by <span style="font-weight: bold;">GetNWires</span>.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">GetWirePortA ( <a href="../common_vbageneral/common_general_long.htm" id="a19" name="a19">long</a> <span style="font-style: italic;"><i>index</i></span> ) <a href="../common_vbageneral/common_general_long.htm" id="a12" name="a12">long</a></p>
+<p class="VBA-Heading-Method">GetWirePortB ( <a href="../common_vbageneral/common_general_long.htm" id="a38" name="a38">long</a> <span style="font-style: italic;"><i>index</i></span> ) <a href="../common_vbageneral/common_general_long.htm" id="a39" name="a39">long</a></p>
+<p class="VBA-Heading-Method">GetWirePortAFromId ( <a href="../common_vbageneral/common_general_long.htm" id="a40" name="a40">long</a> <span style="font-style: italic;"><i>id</i></span> ) <a href="../common_vbageneral/common_general_long.htm" id="a41" name="a41">long</a></p>
+<p class="VBA-Heading-Method">GetWirePortBFromId ( <a href="../common_vbageneral/common_general_long.htm" id="a42" name="a42">long</a> <span style="font-style: italic;"><i>id</i></span> ) <a href="../common_vbageneral/common_general_long.htm" id="a43" name="a43">long</a></p>
+<p class="VBA-Text-Indent">Returns the port number where the wire starts (<span style="font-weight: bold;">GetWirePortA</span>) or ends (<span style="font-weight: bold;">GetWirePortB</span>) respectively. <span style="font-style: italic;"><i>Index</i></span> is a number between 0 and n-1, where n is the number of defined wires as returned by <span style="font-weight: bold;">GetNWires</span>. <span style="font-style: italic;"><i>Id is the identification number of a wire. It can be determined using the</i></span> <span style="font-weight: bold;">GetWireId</span> <span style="font-style: italic;"><i>method.</i></span></p>
+<p class="vba-heading-method">&#160;</p>
+<p class="VBA-Heading-Method">GetWireModeA ( <a href="../common_vbageneral/common_general_long.htm" id="a46" name="a46">long</a> <span style="font-style: italic;"><i>index</i></span> ) <a href="../common_vbageneral/common_general_long.htm" id="a47" name="a47">long</a></p>
+<p class="VBA-Heading-Method">GetWireModeB ( <a href="../common_vbageneral/common_general_long.htm" id="a48" name="a48">long</a> <span style="font-style: italic;"><i>index</i></span> ) <a href="../common_vbageneral/common_general_long.htm" id="a49" name="a49">long</a></p>
+<p class="VBA-Heading-Method">GetWireModeAFromId ( <a href="../common_vbageneral/common_general_long.htm" id="a50" name="a50">long</a> <span style="font-style: italic;"><i>id</i></span> ) <a href="../common_vbageneral/common_general_long.htm" id="a51" name="a51">long</a></p>
+<p class="VBA-Heading-Method">GetWireModeBFromId ( <a href="../common_vbageneral/common_general_long.htm" id="a52" name="a52">long</a> <span style="font-style: italic;"><i>id</i></span> ) <a href="../common_vbageneral/common_general_long.htm" id="a53" name="a53">long</a></p>
+<p class="VBA-Text-Indent">Returns the mode number of the port where the wire starts &#160;(<span style="font-weight: bold;">GetWireModeA</span>) or ends (<span style="font-weight: bold;">GetWireModeB</span>) respectively. <span style="font-style: italic;"><i>Index</i></span> is a number between 0 and n-1, where n is the number of defined wires as returned by <span style="font-weight: bold;">GetNWires</span>. <span style="font-style: italic;"><i>Id</i></span> is the identification number of a wire. It can be determined using the <span style="font-weight: bold;">GetWireId</span> method.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">GetFrequency <a href="../common_vbageneral/common_general_double.htm" id="a44" name="a44">double</a></p>
+<p class="VBA-Text-Indent">Returns the extraction frequency for the network parameter model. The calculated network model is most accurate at this frequency.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">GetNCascades <a href="../common_vbageneral/common_general_long.htm" id="a45" name="a45">long</a></p>
+<p class="VBA-Text-Indent">Returns how many cascaded network elements have been used to approximate the input/output behavior of the simulated structure.</p>
+<p class="VBA-Heading-Category"><a name="Queries_Results_TL" id="Queries_Results_TL"></a>Queries Concerning Results for TL</p>
+<p class="VBA-Heading-Method">GetRFromId ( <a href="../common_vbageneral/common_general_long.htm" id="a54" name="a54">long</a> <span style="font-style: italic;"><i>id</i></span> ) <a href="../common_vbageneral/common_general_double.htm" id="a55" name="a55">double</a></p>
+<p class="VBA-Heading-Method">GetGFromId ( <a href="../common_vbageneral/common_general_long.htm" id="a56" name="a56">long</a> <span style="font-style: italic;"><i>id</i></span> ) <a href="../common_vbageneral/common_general_double.htm" id="a57" name="a57">double</a></p>
+<p class="VBA-Heading-Method">GetLFromId ( <a href="../common_vbageneral/common_general_long.htm" id="a58" name="a58">long</a> <span style="font-style: italic;"><i>id</i></span> ) <a href="../common_vbageneral/common_general_double.htm" id="a59" name="a59">double</a></p>
+<p class="VBA-Text-Indent">Returns the calculated resistance R, conductance G, or inductance L of the transmission line based network parameter model respectively. It is specified by the identity number <span style="font-style: italic;"><i>id</i></span> of the corresponding wire.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">GetCFromId ( <a href="../common_vbageneral/common_general_long.htm" id="a60" name="a60">long</a> <span style="font-style: italic;"><i>id1, <a href="../common_vbageneral/common_general_long.htm" id="a62" name="a62">long</a> id2</i></span> ) <a href="../common_vbageneral/common_general_double.htm" id="a61" name="a61">double</a></p>
+<p class="VBA-Text-Indent">Returns the calculated capacitance C of the transmission line based network parameter model. It is specified by the identity number of the corresponding wires <span style="font-style: italic;"><i>id1</i></span> and <span style="font-style: italic;"><i>id2</i></span>. In case that both identity numbers are identically the self capacitance of the network element results, in case of two different numbers the mutual capacitance between two elements.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">GetKFromId ( <a href="../common_vbageneral/common_general_long.htm" id="a63" name="a63">long</a> <span style="font-style: italic;"><i>id1, <a href="../common_vbageneral/common_general_long.htm" id="a64" name="a64">long</a> id2</i></span> ) <a href="../common_vbageneral/common_general_double.htm" id="a65" name="a65">double</a></p>
+<p class="VBA-Text-Indent">Returns the calculated mutual inductance K of the transmission line based network parameter model. It is specified by the identity number of the two corresponding wires <span style="font-style: italic;"><i>id1</i></span> and <span style="font-style: italic;"><i>id2</i></span>.</p>
+<p class="VBA-Heading-Category"><a name="General_MOR" id="General_MOR"></a>Methods for Model Order Reduction (MOR) Based Extraction</p>
+<p class="VBA-Heading-Method">CircuitFileName ( <a href="../common_vbageneral/common_general_filename.htm" id="a74" style="font-style: normal; font-weight: bold;" name="a74">filename</a> &#160;<span style="font-style: italic;"><i>fileName</i></span> )</p>
+<p class="VBA-Text-Indent">Sets the filename of the resulting SPICE netlist based on model order reduction to <span style="font-style: italic;"><i>fileName</i></span>.</p>
+<p class="VBA-Heading-Method">&#160;</p>
+<p class="VBA-Heading-Method">GetCircuitFileName <a href="../common_vbageneral/common_general_filename.htm" id="a90" style="font-style: normal; font-weight: bold;" name="a90">filename</a></p>
+<p class="VBA-Text-Indent">Returns the filename of the resulting SPICE netlist based on model order reduction.</p>
+<p class="VBA-Heading-Method">&#160;</p>
+<p class="VBA-Heading-Method">EnsureOutOfBandPassivity ( <a href="../common_vbageneral/common_general_bool_data_type.htm" id="a89" style="font-style: normal; font-weight: bold;" name="a89">bool</a> <span style="font-style: italic;"><i>bFlag</i></span> )</p>
+<p class="VBA-Text-Indent">If <span style="font-style: italic;"><i>bFlag</i></span> is True passivity for frequency values out of the given band is ensured, otherwise not.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">UseARFilterResults ( <a href="../common_vbageneral/common_general_bool_data_type.htm" id="a3" style="font-style: normal; font-weight: bold;" name="a3">bool</a> <span style="font-style: italic;"><i>bFlag</i></span> )</p>
+<p class="VBA-Text-Indent">If this method is activated the MOR method uses S-parameter data based on AR-Filter results if available.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">Accuracy ( <a href="../common_vbageneral/common_general_double.htm" id="a25" style="font-weight: bold;" name="a25">double</a> <span style="font-style: italic;"><i>value</i></span> )</p>
+<p class="VBA-Text-Indent">Specifies the maximum error <span style="font-style: italic;"><i>value</i></span> for the S-parameter approximation.</p>
+<p class="VBA-Text-Indent">Please note: The accuracy can be violated after performing the passivity step which is activated using the <span style="font-weight: bold;">EnsureOutOfBandPassivity</span> method.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">InitalNumberOfPoles ( <a href="../common_vbageneral/common_general_integer.htm" style="font-weight: bold;">int</a> <span style="font-style: italic;"><i>number</i></span> )</p>
+<p class="VBA-Text-Indent">Specifies the initial <span style="font-style: italic;"><i>number</i></span> of poles considered by the MOR scheme.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">MaximumNumberOfPoles ( <a href="../common_vbageneral/common_general_integer.htm" style="font-weight: bold;">int</a> <span style="font-style: italic;"><i>number</i></span> )</p>
+<p class="VBA-Text-Indent">Specifies the maximum <span style="font-style: italic;"><i>number</i></span> of poles considered by the MOR scheme.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">ApplyCouplingThreshold ( <a href="../common_vbageneral/common_general_bool_data_type.htm" id="a128" style="font-style: normal; font-weight: bold;" name="a128">bool</a> <span style="font-style: italic;"><i>bFlag</i></span> )</p>
+<p class="VBA-Text-Indent">If <span style="font-style: italic;"><i>bFlag</i></span> is True, the MOR neglects all S-Parameters below a certain threshold. This may save computation time and memory, especially, if the network has many ports.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">CouplingThreshold ( <a href="../common_vbageneral/common_general_double.htm" id="a125" style="font-weight: bold;" name="a125">double</a> <span style="font-style: italic;"><i>value</i></span> )</p>
+<p class="VBA-Text-Indent">Specifies the threshold in dB below which S-Parameters Sij are neglected by the MOR. This may save computation time and memory, especially, if the network has many ports. The threshold is activated by the <span style="font-weight: bold;">ApplyCouplingThreshold</span> method.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">DifferentialNetlist(<a href="../common_vbageneral/common_general_bool_data_type.htm" style="font-weight: bold;">bool</a> <span style="font-style: italic;"><i>bFlag</i></span>)</p>
+<p class="VBA-Text-Indent">Specifies whether the netlist should be written with differential ports</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">NetlistFormat(enum {"Berkeley SPICE", "HSPICE"} <span style="font-style: italic;"><i>format</i></span>)</p>
+<p class="VBA-Text-Indent">Specifies the output format of the netlist. "Berkeley SPICE" uses standard Berkeley SPICE notation with controlled sources while "HSPICE" uses Laplace formulation of the fitted Y parameter.</p>
+<p class="VBA-Heading-Category"><a name="Defaults" id="Defaults"></a>Default Settings</p>
+<p class="VBA-Text-Example">Method ("TransmissionLine")</p>
+<p class="VBA-Text-Example">&#160;</p>
+<p class="VBA-Text-Example" style="color: #008000;">' defaults for transmission line based network parameter extraction</p>
+<p class="VBA-Text-Example">SetFrequency (0.0)</p>
+<p class="VBA-Text-Example">SetNCascades (1)</p>
+<p class="VBA-Text-Example">SetLimitCoupling (False<span style="font-style: italic;"><i>,</i></span> 60.0)</p>
+<p class="VBA-Text-Example">SetKeepTopology (False<span style="font-style: italic;"><i>,</i></span> 1e-30<span style="font-style: italic;"><i>,</i></span> 1e-30<span style="font-style: italic;"><i>,</i></span> 1e-30<span style="font-style: italic;"><i>,</i></span> 1e-30<span style="font-style: italic;"><i>,</i></span> 1e-30)</p>
+<p class="VBA-Text-Example">GenerateSubCircuit (False)</p>
+<p class="VBA-Text-Example">&#160;</p>
+<p class="VBA-Text-Example" style="color: #008000;">' defaults for model order reduction based network parameter extraction</p>
+<p class="VBA-Text-Example">EnsureOutOfBandPassivity (True)</p>
+<p class="VBA-Text-Example">UseARFilterResults (False)</p>
+<p class="VBA-Text-Example">Accuracy ("1e-2")</p>
+<p class="VBA-Text-Example">InitalNumberOfPoles (10)</p>
+<p class="VBA-Text-Example">NetlistFormat ("Berkeley SPICE")</p>
+<p class="VBA-Heading-Category"><a name="Example_TL" id="Example_TL"></a>Example for TL</p>
+<p class="VBA-Text-Example" style="color: #008000;">' start a transmission line based network extraction</p>
+<p class="vba-text-example">&#160;</p>
+<p class="VBA-Text-Example">With NetworkParameterExtraction</p>
+<p class="VBA-Text-Example" style="margin-left: 40px;">.Method ("TransmissionLine")</p>
+<p class="VBA-Text-Example" style="margin-left: 40px;">.SetFrequency (0.9)</p>
+<p class="VBA-Text-Example" style="margin-left: 40px;">.SetNCascades (3)</p>
+<p class="VBA-Text-Example" style="margin-left: 40px;">.SetLimitCoupling (True, 30.0)</p>
+<p class="VBA-Text-Example" style="margin-left: 40px;">.SetKeepTopology (False, 1e-30, 1e-30, 1e-30, 1e-30, 1e-30)</p>
+<p class="VBA-Text-Example" style="margin-left: 40px;">.GenerateSubCircuit (True)</p>
+<p class="VBA-Text-Example" style="margin-left: 40px;">.Calculate</p>
+<p class="VBA-Text-Example">End With</p>
+<p class="VBA-Heading-Category"><a name="Example_MOR" id="Example_MOR"></a>Example for MOR</p>
+<p class="VBA-Text-Example" style="color: #008000;">' start a MOR based network extraction</p>
+<p class="VBA-Text-Example">&#160;</p>
+<p class="VBA-Text-Example" style="margin-left: 0px;">With NetworkParameterExtraction</p>
+<p class="VBA-Text-Example" style="margin-left: 40px;">.Method ("MOR")</p>
+<p class="VBA-Text-Example" style="margin-left: 40px;">.CircuitFileName ("my_netlist.net")</p>
+<p class="VBA-Text-Example" style="margin-left: 40px;">.EnsureOutOfBandPassivity (False)</p>
+<p class="VBA-Text-Example" style="margin-left: 40px;">.UseARFilterResults (False)</p>
+<p class="VBA-Text-Example" style="margin-left: 40px;">.Accuracy ("1e-2")</p>
+<p class="VBA-Text-Example" style="margin-left: 40px;">.InitalNumberOfPoles (10)</p>
+<p class="VBA-Text-Example" style="margin-left: 40px;">.DifferentialNetlist (True)</p>
+<p class="VBA-Text-Example" style="margin-left: 40px;">.NetlistFormat ("HSPICE")</p>
+<p class="VBA-Text-Example" style="margin-left: 40px;">.Calculate</p>
+<p class="VBA-Text-Example" style="margin-left: 0px;">End With</p>
+<p class="VBA-Text-Example">&#160;</p>
+<?rh-p style="margin-bottom: 0px; text-align: Right; margin-left: 18px; 
+                 margin-right: 18px; margin-top: 18px;" ?>
+<div style="width: 100%; position: relative;" id="footer">
+<p style="border-bottom: Solid 1px #dddddd; text-align: Left; margin-left: 0px; font-family: Arial, sans-serif; line-height: Normal; margin-top: 9px; margin-right: 0px; margin-bottom: 6px; border-left-width: 1px; border-top-width: 1px; border-right-width: 1px;"><span style="text-align: Left; font-family: Arial, sans-serif; line-height: Normal;">&#160;</span></p>
+<table cellspacing="0" width="100%">
+<col style="width: 50%;" />
+<col style="width: 50%;" />
+<tr>
+<td style="vertical-align: Top;"><span style="font-family: Arial, sans-serif; line-height: Normal; font-size: 8pt;"><font size="1" style="font-size:8pt;">CST Studio Suite 2026</font></span></td>
+<td style="vertical-align: Top;">
+<p style="text-align: right;">&#160;</p>
+</td>
+</tr>
+</table>
+<p>&#160;</p>
+</div>
+<script type="text/javascript" language="javascript1.2">
+//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+        writeIntopicBar(0);
+
+
+highlightSearch();
+//-->
+//]]>
+</script>
+</body>
+</html>

@@ -1,0 +1,420 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="Adobe RoboHelp 11" />
+<title>MeshAdaption3D Object</title>
+<link rel="StyleSheet" href="../online_help_vba.css" type="text/css" />
+<style type="text/css">
+/*<![CDATA[*/
+<!--
+body { border-bottom-style:None; }
+-->
+/*]]>*/
+</style>
+
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+        origWidth = innerWidth;
+        origHeight = innerHeight;
+        onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+/*<![CDATA[*/
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+-->
+/*]]>*/
+</style>
+
+<script type="text/javascript" language="javascript1.2" src="../whmsg.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript" src="../whver.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript1.2" src="../whutils.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript1.2" src="../whproxy.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript1.2" src="../whlang.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript1.2" src="../whtopic.js" charset="utf-8">
+</script>
+</head>
+<body>
+<script type="text/javascript" language="javascript1.2">
+//<![CDATA[
+<!--
+if (window.gbWhTopic)
+{
+        var strUrl = document.location.href;
+        var bc = 0;
+        var n = strUrl.toLowerCase().indexOf("bc-");
+        if(n != -1)
+        {
+                document.location.replace(strUrl.substring(0, n));
+                bc = strUrl.substring(n+3);
+        }
+
+        if (window.addTocInfo)
+        {
+        addTocInfo("3D Simulation VBA\nVBA Objects\nMesh\nMeshAdaption3D");
+
+        }
+        if (window.writeBtnStyle)
+                writeBtnStyle();
+
+        if (window.writeIntopicBar)
+                writeIntopicBar(0);
+
+        
+        document.write("<p style=\"font-family: Tahoma; font-size: 9pt; font-weight: 400;  font-style:normal; color: rgb(0, 0, 0); text-decoration:none; text-align: left\"> ");
+AddMasterBreadcrumbs("../index.htm", "font-family: Tahoma; font-size: 9pt; font-weight: 400;  font-style:normal; color: rgb(0, 0, 0); text-decoration:none; text-align: left", "|", "Home", "../special_vbaobjects/special_vbaobjects_vbaobjects.htm");
+document.write("<a style=\"font-family: Tahoma; font-size: 9pt; font-weight: 400;  font-style:normal; color: rgb(0, 0, 0); text-decoration:none; text-align: left\" href=\"../special_vbaobjects/special_vbaobjects_vbaobjects.htm\">3D Simulation VBA<\/a> | <a style=\"font-family: Tahoma; font-size: 9pt; font-weight: 400;  font-style:normal; color: rgb(0, 0, 0); text-decoration:none; text-align: left\" href=\"../special_vbaobjects/special_vbaobjects_vbaobjects.htm\">VBA Objects<\/a> | <a style=\"font-family: Tahoma; font-size: 9pt; font-weight: 400;  font-style:normal; color: rgb(0, 0, 0); text-decoration:none; text-align: left\" href=\"special_vbamesho.htm\">Mesh<\/a> | MeshAdaption3D<\/p>");
+
+}
+else
+        if (window.gbIE4)
+                document.location.reload();
+
+onLoadHandler = function()
+{
+  if (window.setRelStartPage)
+        {
+        setTimeout("setRelStartPage('../index.htm');", 1)
+
+    setTimeout("UpdateBreadCrumbsMarker();", 1);
+        }
+}
+
+if (window.addEventListener){  
+        window.addEventListener('load', onLoadHandler, false);   
+} else if (window.attachEvent){  
+        window.attachEvent('onload', onLoadHandler);  
+}
+
+function onSetStartPage()
+{
+  autoSync(1);
+  sendSyncInfo();
+  sendAveInfoOut();
+}
+//-->
+//]]>
+</script><script type="text/javascript" src="../ehlpdhtm.js" language="JavaScript1.2">
+</script>
+<table cellspacing="0" width="100%">
+<col style="width: 50%;" />
+<col style="width: 50%;" />
+<tr>
+<td style="vertical-align: middle; padding-top: 5px; padding-bottom: 5px;">
+<p style="margin-top: 0px; margin-bottom: 0px;"><img src="../3ds.png" alt="" style="border: none;" border="0" /></p>
+</td>
+<td style="vertical-align: middle;">
+<p style="text-align: right;"><a href="https://www.3ds.com/products-services/3dexperience/" target="_blank"><img src="../3dexp.png" alt="" style="border: none;" width="32" height="32" border="0" /></a></p>
+</td>
+</tr>
+</table>
+<p class="VBA-Heading-Object">MeshAdaption3D Object</p>
+<p class="VBA-Text">This object allows you to change the parameters used for the three dimensional adaptive mesh refinement. This procedure is an automatic scheme which uses the results of a performed calculation to estimate a mesh better suited for the given problem. With the refined mesh a new calculation pass will then be started. The whole procedure will be repeated until a convergence is met.</p>
+<ul>
+<li class="p-VBA-Index-Category">
+<p class="VBA-Index-Category"><a href="#Methods">Methods</a></p>
+</li>
+<li class="p-VBA-Index-Category">
+<p class="VBA-Index-Category"><a href="#Defaults">Default Settings</a></p>
+</li>
+<li class="p-VBA-Index-Category">
+<p class="VBA-Index-Category"><a href="#Example">Example</a></p>
+</li>
+</ul>
+<p class="VBA-Heading-Category"><a name="Methods" id="Methods"></a>Methods</p>
+<p class="Tip-Note-Heading">Errorlimit ( <a href="../common_vbageneral/common_general_double.htm" id="a22" style="font-weight: normal;" name="a22">double</a> <span style="font-style: italic;"><i>value</i></span> )</p>
+<p class="VBA-Text-Indent">If the relative deviation of the energy between two passes is smaller than the errorlimit the mesh adaption will terminate.</p>
+<p class="VBA-Text">&#160;&#160;&#160;&#160;</p>
+<p class="VBA-Heading-Method">AccuracyFactor ( <a href="../common_vbageneral/common_general_double.htm" id="a23" style="font-weight: normal;" name="a23"><span>double</span></a> <span style="font-style: italic;"><i>value</i></span> )</p>
+<p class="VBA-Text-Indent">Specifies an additional factor for the current accuracy setting made in the <span style="font-style: italic;"><i>transient solver control</i></span> dialog box. The change of the S-parameters between two subsequent passes must not differ by more than the given accuracy level multiplied with the defined accuracy factor.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">SetType ( <a href="../common_vbageneral/common_general_enum.htm" id="a3" style="font-weight: normal; font-style: normal;" name="a3">enum</a> <span style="font-style: italic;"><i>type</i></span> )</p>
+<p class="VBA-Text-Indent">Sets the type.</p>
+<p class="VBA-Text-Indent"><span style="font-style: italic;"><i>type</i></span> may have one of &#160;the following values:</p>
+<table style="vertical-align: top; margin-left: 24px;" cellspacing="0" width="65.705%">
+<col style="width: 8.416%;" />
+<col style="width: 29.436%;" />
+<col style="width: 17.562%;" />
+<col style="width: 23.841%;" />
+<tr style="vertical-align: top; height: 19px;">
+<td style="border: Solid 1px #000000; width: 8.416%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text">"EStatic"</p>
+</td>
+<td style="border-top: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 29.436%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text">"MStatic"</p>
+</td>
+<td style="border-top: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 17.562%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text">"JStatic"</p>
+</td>
+<td style="border-top: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 23.841%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text">"LowFrequency"</p>
+</td>
+</tr>
+<tr style="vertical-align: top; height: 14px;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 8.416%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text">"HighFrequencyHex"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 29.436%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text">"HighFrequencyTet"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 17.562%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text">"Time"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 23.841%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text">&#160;</p>
+</td>
+</tr>
+</table>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">SetAdaptionStrategy ( <span><a href="../common_vbageneral/common_general_enum.htm" id="a17" style="font-weight: normal; font-style: normal;" name="a17">enum</a></span> <span style="font-style: italic;"><i>key</i></span> )</p>
+<p class="VBA-Text-Indent">Specifies the type of mesh adaption strategy.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Text-Indent"><span style="font-style: italic;"><i>key</i></span> may have one of &#160;the following values:</p>
+<table style="vertical-align: top; margin-left: 24px;" cellspacing="0" width="61.936%">
+<col style="width: 21.2%;" />
+<col style="width: 78.8%;" />
+<tr style="vertical-align: top; height: 19px;">
+<td style="border: Solid 1px #000000; width: 21.2%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text">"ExpertSystem"</p>
+</td>
+<td style="border-top: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 78.8%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text">Refines the mesh by increasing global mesh parameters.</p>
+</td>
+</tr>
+<tr style="vertical-align: top; height: 14px;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 21.2%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text">"Energy"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 78.8%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text">Refines the mesh at locations with high field energy.</p>
+</td>
+</tr>
+</table>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">RefinementType ( <a href="../common_vbageneral/common_general_enum.htm" id="a35" style="font-weight: normal; font-style: normal;" name="a35">enum</a> <span style="font-style: italic;"><i><span style="font-weight: normal;">{"Automatic", "Bisection"}</span> type</i></span> )</p>
+<p class="VBA-Text-Indent">Specifies the method used to refine the tetrahedral mesh.</p>
+<p class="VBA-Text-Indent">"Automatic" presently selects <span style="font-style: italic;"><i>anisotropic edge refinement</i></span> and is the default method for the adaptive tetrahedral mesh refinement. Edges of the tetrahedrons are split at a position in the direction of the maximum estimated error along that edge, for instance closer to the edges of the conductor. Afterwards, the quality of the refined mesh is improved. This strategy may lead to a faster convergence than the <span style="font-style: italic;"><i>stable cell bisection</i></span> which in general produces visually "nicer" meshes as it tries to keep the quality measure of the tetrahedrons above a certain threshold.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">ErrorEstimatorType ( <a href="../common_vbageneral/common_general_enum.htm" id="a126" style="font-weight: normal; font-style: normal;" name="a126">enum</a> <span style="font-style: italic;"><i><span style="font-weight: normal;">{"Automatic"}</span> type</i></span> )</p>
+<p class="VBA-Text-Indent">Formally allowed to specify the error estimation method used to refine the tetrahedral mesh. "Automatic" is the default and recommended choice.</p>
+<p class="VBA-Heading-Method">&#160;</p>
+<p class="VBA-Heading-Method">MinPasses ( <a href="../common_vbageneral/common_general_integer.htm" id="a1" style="font-weight: normal; font-style: normal;" name="a1">int</a> <span style="font-style: italic;"><i>passes</i></span> )</p>
+<p class="VBA-Text-Indent">Specifies the minimum number of passes which will be performed for the adaptive mesh refinement, even if the results do not change significantly.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">MaxPasses ( <a href="../common_vbageneral/common_general_integer.htm" id="a2" style="font-weight: normal; font-style: normal;" name="a2">int</a> <span style="font-style: italic;"><i>passes</i></span> )</p>
+<p class="VBA-Text-Indent">Specifies the maximum number of passes to be performed for the adaptive mesh refinement, even if the results have not sufficiently converged so far. This setting is useful to limit the total calculation time to reasonable amounts.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">CellIncreaseFactor ( <span><a href="../common_vbageneral/common_general_double.htm" id="a4" style="font-weight: normal; font-style: normal;" name="a4">double</a></span> <span style="font-style: italic;"><i>factor</i></span> )</p>
+<p class="VBA-Text-Indent">Determines how many new cells are introduced between two subsequent passes of the mesh refinement. A setting of 0.5 means that the number of mesh cells increases about 50 percent from pass to pass.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">WeightE ( <span><a href="../common_vbageneral/common_general_double.htm" id="a5" style="font-weight: normal; font-style: normal;" name="a5">double</a></span> <span style="font-style: italic;"><i>weight</i></span> )</p>
+<p class="VBA-Text-Indent">Specifies the weight of the electric energy compared to the part of the magnetic energy. Sometimes a structure’s behavior is more critically coupled to changes of the electric field than to changes of the magnetic field so that it is advisable for the refinement control to take this fact into account.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">WeightB ( <a href="../common_vbageneral/common_general_double.htm" id="a6" style="font-weight: normal; font-style: normal;" name="a6">double</a> <span style="font-style: italic;"><i>weight</i></span> )</p>
+<p class="VBA-Text-Indent">Specifies the weight of the magnetic energy compared to the part of the electric energy. Sometimes a structure’s behavior is more critically coupled to changes of the magnetic field than to changes of the electric field so that it is advisable for the refinement control to take this fact into account.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">RefineX ( <span style="font-style: italic;"><i><a href="../common_vbageneral/common_general_bool_data_type.htm" id="a7" style="font-weight: normal; font-style: normal;" name="a7">bool</a> switch</i></span> )</p>
+<p class="VBA-Text-Indent">Decides whether the adaptive mesh refinement will be performed in the x-direction (<span style="font-style: italic;"><i>switch</i></span> = <a href="../common_vbageneral/common_general_true_keyword.htm" id="a8" name="a8">True</a>) or not (<span style="font-style: italic;"><i>switch</i></span>= <a href="../common_vbageneral/common_general_false_keyword.htm" id="a9" name="a9">False</a>). This option is useful to avoid refining a mesh along coordinate directions in which the structure’s fields have no dependency.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">RefineY ( <span style="font-style: italic;"><i><a href="../common_vbageneral/common_general_bool_data_type.htm" id="a10" style="font-weight: normal; font-style: normal;" name="a10">bool</a> switch</i></span> )</p>
+<p class="VBA-Text-Indent">Decides whether the adaptive mesh refinement will be performed in the y-direction (<span style="font-style: italic;"><i>switch</i></span> = <a href="../common_vbageneral/common_general_true_keyword.htm" id="a11" name="a11">True</a>) or not (<span style="font-style: italic;"><i>switch</i></span>= <a href="../common_vbageneral/common_general_false_keyword.htm" id="a12" name="a12">False</a>). This option is useful to avoid refining a mesh along coordinate directions in which the structure’s fields have no dependency.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">RefineZ ( <span style="font-style: italic;"><i><a href="../common_vbageneral/common_general_bool_data_type.htm" id="a13" style="font-weight: normal; font-style: normal;" name="a13">bool</a> switch</i></span> )</p>
+<p class="VBA-Text-Indent">Decides whether the adaptive mesh refinement will be performed in the z-direction (<span style="font-style: italic;"><i>switch</i></span> = <a href="../common_vbageneral/common_general_true_keyword.htm" id="a14" name="a14">True</a>) or not (<span style="font-style: italic;"><i>switch</i></span>= <a href="../common_vbageneral/common_general_false_keyword.htm" id="a15" name="a15">False</a>). This option is useful to avoid refining a mesh along coordinate directions in which the structure’s fields have no dependency.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">MaxDeltaS ( <a href="../common_vbageneral/common_general_double.htm" id="a16" style="font-weight: normal;" name="a16">double</a> <span style="font-style: italic;"><i>value</i></span> )</p>
+<p class="VBA-Text-Indent">The S-parameter error (Delta S) is determined as the maximal deviation of the absolute value of the complex difference of the S-parameters between two subsequent passes. Specify a value between 0.0 and 1.0. For the frequency domain solver with tetrahedral mesh, this criterion is used at discrete frequencies, while <span style="font-style: italic;"><i>AddSParameterStopCriterion</i></span> defines a criterion for the broadband S-parameters.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">ClearStopCriteria</p>
+<p class="VBA-Text-Indent">Deletes all broadband stopping criteria, which had been defined for instance by calling <span style="font-style: italic;"><i>AddSParameterStopCriterion</i></span>, <span style="font-style: italic;"><i>Add0DResultStopCriterion</i></span>, and <span style="font-style: italic;"><i>Add1DResultStopCriterion</i></span>.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">AddSParameterStopCriterion ( <a href="../common_vbageneral/common_general_bool_data_type.htm" id="a115" style="font-weight: normal;" name="a115">bool</a> <span style="font-style: italic;"><i>autofreq</i></span>, <a href="../common_vbageneral/common_general_double.htm" id="a116" style="font-weight: normal;" name="a116">double</a> <span style="font-style: italic;"><i>fmin</i></span>, <a href="../common_vbageneral/common_general_double.htm" id="a117" style="font-weight: normal;" name="a117">double</a> <span style="font-style: italic;"><i>fmax</i></span>, <a href="../common_vbageneral/common_general_double.htm" id="a118" style="font-weight: normal;" name="a118">double</a> <span style="font-style: italic;"><i>maxdelta</i></span>, <a href="../common_vbageneral/common_general_integer.htm" id="a119" style="font-weight: normal;" name="a119">int</a> <span style="font-style: italic;"><i>numchecks</i></span>, <a href="../common_vbageneral/common_general_bool_data_type.htm" id="a120" style="font-weight: normal;" name="a120">bool</a> <span style="font-style: italic;"><i>active</i></span> )</p>
+<p class="VBA-Text-Indent">The S-parameter stopping criterion measures the deviation of the broadband S-parameters between two subsequent passes. Specify a value for the threshold <span style="font-style: italic;"><i>maxdelta</i></span> between 0.0 and 1.0.</p>
+<p class="VBA-Text-Indent">The time domain solver allows to restrict the check to a frequency range from <span style="font-style: italic;"><i>fmin</i></span> to <span style="font-style: italic;"><i>fmax</i></span> (given in the currently active frequency unit) if <span style="font-style: italic;"><i>autofreq</i></span> is set to <span style="font-style: italic;"><i>False</i></span>. Otherwise, the full frequency range will be used.</p>
+<p class="VBA-Text-Indent">For the frequency domain solver with tetrahedral mesh, <span style="font-style: italic;"><i>AddSParameterStopCriterion</i></span> defines a criterion for the broadband S-parameters in the full frequency range as calculated by the solver, while <span style="font-style: italic;"><i>MaxDeltaS</i></span> is used at discrete frequencies.</p>
+<p class="VBA-Text-Indent">The threshold <span style="font-style: italic;"><i>maxdelta</i></span> needs to be met for <span style="font-style: italic;"><i>numchecks</i></span> subsequent passes until the convergence criterion is considered to be met. Setting <span style="font-style: italic;"><i>active</i></span> to <span style="font-style: italic;"><i>False</i></span> allows to deactivate the criterion while keeping its definition.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">Add0DResultStopCriterion ( <a href="../common_vbageneral/common_general_name.htm" id="a121" style="font-weight: normal;" name="a121">name</a> <span style="font-style: italic;"><i>result</i></span>, <a href="../common_vbageneral/common_general_double.htm" id="a122" style="font-weight: normal;" name="a122">double</a> <span style="font-style: italic;"><i>maxdelta</i></span>, <a href="../common_vbageneral/common_general_integer.htm" id="a123" style="font-weight: normal;" name="a123">int</a> <span style="font-style: italic;"><i>numchecks</i></span>, <a href="../common_vbageneral/common_general_bool_data_type.htm" id="a124" style="font-weight: normal;" name="a124">bool</a> <span style="font-style: italic;"><i>active</i></span> )</p>
+<p class="VBA-Text-Indent">Provide the name of a 0D <span style="font-style: italic;"><i>result</i></span> template, which then can be used to provide a stopping criterion for the adaptive mesh refinement in the time domain solver and the frequency domain solver with tetrahedral mesh.</p>
+<p class="VBA-Text-Indent">The threshold <span style="font-style: italic;"><i>maxdelta</i></span> is relative to the 0D result template's values (relative to the average of the values from the current and the last adaptive mesh refinement pass). The remaining arguments have the same meaning as described in <span style="font-style: italic;"><i>AddSParameterStopCriterion</i></span> above.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">Add1DResultStopCriterion ( <a href="../common_vbageneral/common_general_name.htm" id="a127" style="font-weight: normal;" name="a127">name</a> <span style="font-style: italic;"><i>result</i></span>, <a href="../common_vbageneral/common_general_double.htm" id="a128" style="font-weight: normal;" name="a128">double</a> <span style="font-style: italic;"><i>maxdelta</i></span>, <a href="../common_vbageneral/common_general_integer.htm" id="a129" style="font-weight: normal;" name="a129">int</a> <span style="font-style: italic;"><i>numchecks</i></span>, <a href="../common_vbageneral/common_general_bool_data_type.htm" id="a130" style="font-weight: normal;" name="a130">bool</a> <span style="font-style: italic;"><i>active</i></span>, <a href="../common_vbageneral/common_general_bool_data_type.htm" id="a131" style="font-weight: normal;" name="a131">bool</a> <span style="font-style: italic;"><i>complex</i></span> )</p>
+<p class="VBA-Text-Indent">Provide the name of a 1D <span style="font-style: italic;"><i>result</i></span> template, which then can be used to provide a stopping criterion for the adaptive mesh refinement in the frequency domain solver with tetrahedral mesh.</p>
+<p class="VBA-Text-Indent">The threshold <span style="font-style: italic;"><i>maxdelta</i></span> is global relative to the 1D result template's values (global relative to the average of the values from the current and the last adaptive mesh refinement pass). The argument <span style="font-style: italic;"><i>complex</i></span> should be <span style="font-style: italic;"><i>True</i></span> only if complex 1D <span style="font-style: italic;"><i>result</i></span> template is selected. The remaining arguments have the same meaning as described in <span style="font-style: italic;"><i>AddSParameterStopCriterion</i></span> above.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">AddStopCriterion ( <a href="../common_vbageneral/common_general_name.htm" id="a1272" style="font-weight: normal;" name="a1272">name</a> <span style="font-style: italic;"><i>groupname</i></span>, <a href="../common_vbageneral/common_general_double.htm" id="a1282" style="font-weight: normal;" name="a1282">double</a> <span style="font-style: italic;"><i>threshold</i></span>, <a href="../common_vbageneral/common_general_integer.htm" id="a1292" style="font-weight: normal;" name="a1292">int</a> <span style="font-style: italic;"><i>numchecks</i></span>, <a href="../common_vbageneral/common_general_bool_data_type.htm" id="a1302" style="font-weight: normal;" name="a1302">bool</a> <span style="font-style: italic;"><i>active</i></span> )</p>
+<p class="VBA-Text-Indent">Defines a stop criterion for the adaptive tetrahedral mesh refinement. The parameter <span style="font-style: italic;"><i>groupname</i></span> specifies the items to be checked within the stop criterion. Each group is declared and fully described in the <a href="../../3D/special_solvopt/special_solvopt_adaptive_mesh_refinement_frequency_domain.htm">Adaptive Tetrahedral Mesh Refinement (Frequency Domain)</a> dialog. A number of predefined group names is given here:</p>
+<p class="VBA-Text-Indent" style="margin-left: 64px;"><span style="font-weight: bold; font-style: italic;"><i>All S-Parameters</i></span> - the stop criterion is based on the convergence of all available S- and F-parameters.</p>
+<p class="VBA-Text-Indent" style="margin-left: 64px;"><span style="font-weight: bold; font-style: italic;"><i>Reflection S-Parameters</i></span> - the stop criterion is based on the convergence of all available reflection S- and F-parameters.</p>
+<p class="VBA-Text-Indent" style="margin-left: 64px;"><span style="font-weight: bold; font-style: italic;"><i>Transmission S-Parameters</i></span> - the stop criterion is based on the convergence of all available transmission S- and F-parameters.</p>
+<p class="VBA-Text-Indent" style="margin-left: 64px;"><span style="font-weight: bold; font-style: italic;"><i>Portmode kz/k0</i></span> - the stop criterion is based on the convergence of the maximum magnitude of the difference of the port modes' complex propagation constants kz divided by the free space propagation constant k0.</p>
+<p class="VBA-Text-Indent" style="margin-left: 64px;"><span style="font-weight: bold; font-style: italic;"><i>All Probes</i></span> - the stop criterion is based on the convergence of all near and far field probe frequency spectra.</p>
+<p class="VBA-Text-Indent">The <span style="font-style: italic;"><i>threshold</i></span> (in linear scale, a value between 0.0 and 1.0) needs to be met for <span style="font-style: italic;"><i>numchecks</i></span> (a value greater than 0) subsequent passes until the convergence criterion is considered to be met. Setting <span style="font-style: italic;"><i>active</i></span> to <span style="font-style: italic;"><i>False</i></span> allows to deactivate the criterion while keeping its definition.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method"><span>RemoveAllUserDefinedStopCriteria</span></p>
+<p class="VBA-Text-Indent">This removes all stop criteria which were defined by the user. User defined stop criteria can be added with <span style="font-style: italic;"><i>AddStopCriterion</i></span>.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">MeshIncrement ( <a href="../common_vbageneral/common_general_integer.htm" id="a18" style="font-weight: normal; font-style: normal;" name="a18">int</a> <span style="font-style: italic;"><i>value</i></span> )</p>
+<p class="VBA-Text-Indent">Only for Expert system based strategy. Specifies the number of mesh lines to add to the <span style="font-style: italic;"><i><a href="special_vbamesho.htm">Mesh</a>. MinimumLineNumber</i></span> setting after a pass has been completed.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">SetFrequencyRange ( <a href="../common_vbageneral/common_general_bool_data_type.htm" id="a19" style="font-weight: normal;" name="a19">bool</a> <span style="font-style: italic;"><i>auto, <a href="../common_vbageneral/common_general_double.htm" id="a20" style="font-weight: normal; font-style: normal;" name="a20">double</a> min, <a href="../common_vbageneral/common_general_double.htm" id="a21" style="font-weight: normal; font-style: normal;" name="a21">double</a> max</i></span> )</p>
+<p class="VBA-Text-Indent">Limits the frequency range used for the adaptive mesh refinement.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">SkipPulses ( <a href="../common_vbageneral/common_general_double.htm" id="a24" style="font-weight: normal;" name="a24">double</a> <span style="font-style: italic;"><i>value</i></span> )</p>
+<p class="VBA-Text-Indent">Specifies the number of pulse widths to be skipped in order to consider very narrow banded structures, where the greatest energy amount is reflected and thus would mislead the refinement procedure. This means that it is advisable to start the energy calculation not until the reflected energy parts have left the structure.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">NumberOfDeltaSChecks ( <a href="../common_vbageneral/common_general_integer.htm" id="a25" style="font-weight: normal;" name="a25">int</a> <span style="font-style: italic;"><i>value</i></span> )</p>
+<p class="VBA-Text-Indent">Defines the number of consecutive adaptive tetrahedral mesh refinement passes during which the S-parameter deviation has to meet the threshold value defined by <span style="font-weight: bold;">MaxDeltaS</span> before the results are accepted to be converged.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">NumberOfPropConstChecks ( <a href="../common_vbageneral/common_general_integer.htm" id="a26" style="font-weight: normal;" name="a26">int</a> <span style="font-style: italic;"><i>value</i></span> )</p>
+<p class="VBA-Text-Indent">Defines the number of consecutive adaptive tetrahedral port mesh refinement passes during which the propagation constants have to meet the threshold value defined by <span style="font-weight: bold;">PropagationConstantAccuracy</span> before the results are accepted to be converged.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">PropagationConstantAccuracy ( <a href="../common_vbageneral/common_general_double.htm" id="a27" style="font-weight: normal;" name="a27">double</a> <span style="font-style: italic;"><i>value</i></span> )</p>
+<p class="VBA-Text-Indent">Defines the desired accuracy of the propagation constants for the adaptive tetrahedral port mesh refinement in terms of kz/k0, where kz is the mode's propagation constant, and k0 is the freespace propagation constant of a plane wave.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">SubsequentChecksOnlyOnce ( <a href="../common_vbageneral/common_general_bool_data_type.htm" id="a29" style="font-weight: normal;" name="a29">bool</a> <span style="font-style: italic;"><i>flag</i></span> )</p>
+<p class="VBA-Text-Indent">This setting only applies to the frequency domain solver with tetrahedral mesh and multiple adaptation frequency samples. Usually, the S-parameter convergence of the adaptive mesh refinement is checked more than once (see <span style="font-weight: bold;">NumberOfDeltaSChecks</span>). The solver will apply this check only to the first mesh adaptation sample if the <span style="font-style: italic;"><i>flag</i></span> is set to True.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">WavelengthBasedRefinement ( <a href="../common_vbageneral/common_general_bool_data_type.htm" id="a30" style="font-weight: normal;" name="a30">bool</a> <span style="font-style: italic;"><i>flag</i></span> )</p>
+<p class="VBA-Text-Indent">This setting only applies to the frequency domain solver with tetrahedral mesh. Each edge of an element will be refined if its length is greater than the desired fraction of a media wavelength at the adaptation frequency, as defined in the mesh properties. In most cases, the initial mesh fulfills this criterion already. If the material properties are not known in advance, as is the case for inhomogeneously biased ferrites, then this option should be enabled.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method"><span>MultiFrequencyRefinement ( <a href="../common_vbageneral/common_general_bool_data_type.htm" id="a301" style="font-weight: normal;" name="a301">bool</a></span> <span style="font-style: italic;"><i>flag</i></span> <span>)</span></p>
+<p class="VBA-Text-Indent">This setting only applies to the anisotropic mesh refinement of the frequency domain solver with tetrahedral mesh, for the cases when only fixed adaptation frequencies (single, equidistant, logarithmic) are defined. During each adaptation pass edges will be marked for refinement based on the estimated errors at all not converged frequency samples. For antennas and filters operating in multiple bands and/or multiple modes enabling this option is highly recommended.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">MinimumAcceptedCellGrowth ( <a href="../common_vbageneral/common_general_double.htm" id="a31" style="font-weight: normal;" name="a31">double</a> <span style="font-style: italic;"><i>value</i></span> )</p>
+<p class="VBA-Text-Indent">This setting only applies to the frequency domain solver with tetrahedral mesh. It enforces an additional convergence criterion, which rejects a "small" delta S (below the desired threshold) if the number of mesh cells did grow less than <span style="font-style: italic;"><i>value</i></span> percent.</p>
+<p class="VBA-Text-Indent" style="font-weight: bold;">&#160;</p>
+<p class="VBA-Heading-Method">RefThetaFactor ( &#160;<a href="../common_vbageneral/common_general_double.htm" id="a33" style="font-weight: normal;" name="a33">double</a> <span style="font-style: italic;"><i>value</i></span> &#160;)</p>
+<p class="VBA-Text-Indent">Defines the refinement percentage. &#160;The error estimator assigns a measure for the error to each edge. Edges with the highest error measures are selected for refinement until their contribution to the overall estimated error is a certain value, called refinement percentage. In addition, this setting is an approximated upper limit for the mesh cell increase.</p>
+<p class="VBA-Text-Indent">Pass an empty string "" as the <span style="font-style: italic;"><i>value</i></span> to let the solvers choose this percentage automatically, depeding on the solver order, for instance.</p>
+<p class="VBA-Text-Indent">Note: If the singular edge refinement is activated, the limit defined with the <span style="font-style: italic;"><i>RefThetaFactor</i></span> might not be preserved.</p>
+<p class="VBA-Text-Indent" style="font-weight: bold;">&#160;</p>
+<p class="VBA-Heading-Method">SetMinimumMeshCellGrowth ( &#160;<a href="../common_vbageneral/common_general_double.htm" id="a125" style="font-weight: normal;" name="a125">double</a> <span style="font-style: italic;"><i>value</i></span> &#160;)</p>
+<p class="VBA-Text-Indent">This setting only applies to the frequency domain solver with tetrahedral mesh. It defines a weak lower limit to the mesh growth in percent of the number of cells of the current mesh adaptation pass or some reference meshes' number of cells, whichever is higher.</p>
+<p class="VBA-Text-Indent" style="font-weight: bold;">&#160;</p>
+<p class="VBA-Heading-Method">SetLinearGrowthLimitation ( &#160;<a href="../common_vbageneral/common_general_double.htm" id="a34" style="font-weight: normal;" name="a34">double</a> <span style="font-style: italic;"><i>value</i></span> &#160;)</p>
+<p class="VBA-Text-Indent">This setting only applies to the frequency domain solver with tetrahedral mesh. It defines a limitation of the mesh growth in percent of the initial or some reference meshes' number of cells.</p>
+<p class="VBA-Text-Indent">Pass an empty string "" as the <span style="font-style: italic;"><i>value</i></span> to let the solvers choose this setting automatically, depeding on the solver order, for instance. See also <span style="font-style: italic;"><i>EnableLinearGrowthLimitation</i></span> below.</p>
+<p class="VBA-Text-Indent">Note: If the singular edge refinement is activated, the limit defined with the <span style="font-style: italic;"><i>SetLinearGrowthLimitation</i></span> might not be preserved.</p>
+<p class="VBA-Text-Indent" style="font-weight: bold;">&#160;</p>
+<p class="VBA-Heading-Method">EnableLinearGrowthLimitation ( &#160;<a href="../common_vbageneral/common_general_bool_data_type.htm" id="a36" style="font-weight: normal;" name="a36">bool</a> <span style="font-style: italic;"><i>flag</i></span> &#160;)</p>
+<p class="VBA-Text-Indent">This setting only applies to the frequency domain solver with tetrahedral mesh. It defines whether the limitation of the mesh growth passed to <span style="font-style: italic;"><i>SetLinearGrowthLimitation</i></span> should apply or not.</p>
+<p class="VBA-Text-Indent">If an empty string "" was passed to <span style="font-style: italic;"><i>SetLinearGrowthLimitation</i></span>, the value of the <span style="font-style: italic;"><i>flag</i></span> is chosen automatically.</p>
+<p class="VBA-Text-Indent">Note: If the singular edge refinement is activated, the limit defined with the <span style="font-style: italic;"><i>SetLinearGrowthLimitation</i></span> might not be preserved.</p>
+<p class="VBA-Text-Indent" style="font-weight: bold;">&#160;</p>
+<p class="VBA-Heading-Method">SingularEdgeRefinement ( <a href="../common_vbageneral/common_general_integer.htm" id="a266" style="font-weight: normal;" name="a266">int</a> level )</p>
+<p class="VBA-Text-Indent">This setting only applies to the frequency domain solver with tetrahedral mesh given that the refinement type is set to automatic (<span style="font-style: italic;"><i>RefinementType ("Automatic")</i></span>). The accuracy and the performance of the adaptive mesh refinement can be further improved by an appropriate refinement of mesh edges on conductors. Due to the potentially highly varying field strength and distribution, a special treatment for these areas during the adaptive mesh refinement passes often leads to faster over all convergence and is recommended especially for planar structures.</p>
+<p class="VBA-Text-Indent">Different levels of the aforementioned strategy are selectable. By default, the singular edge refinement is enabled at level 2. Therewith, an estimated error of the field solution along the model edges is calculated at the adaptation frequency samples and the possible singular edges, which have a certain percentage of the total estimated model edge error, are automatically detected and refined locally. When the mesh in those areas has been refined sufficiently, the singular edge refinement might stop. With the selection reduced to level 1, another threshold for the error will be considered, leading to less number of edges to be refined. Certainly, level 0 switches off the additional singular edge refinement. Level 3 does not involve any threshold for the error and consequently, all possible singular edges will be considered for refinement. The maximum level is recommended for cases when the minimum input reflection of all S-parameters at the present adaptation frequencies seems to be too high and no suitable adaptation frequency can be found.</p>
+<p class="VBA-Text-Indent">Note: As the singular edge refinement is an additional refinement, the limits defined with <span style="font-style: italic;"><i>SetLinearGrowthLimitation</i></span> or <span style="font-style: italic;"><i>RefThetaFactor</i></span> might not be preserved.</p>
+<p class="VBA-Text-Indent" style="font-weight: bold;">&#160;</p>
+<p class="VBA-Heading-Method">SnapToGeometry ( <a href="../common_vbageneral/common_general_bool_data_type.htm" id="a134" style="font-weight: normal;" name="a134">bool</a> flag )</p>
+<p class="VBA-Text-Indent">This setting only applies to the frequency domain solver with tetrahedral mesh. When selected, new nodes that are generated on model interfaces during the mesh adaptation will be projected onto the original geometry, such that the approximation of curved surfaces is improved after each adaptation step.</p>
+<p class="VBA-Text-Indent" style="font-weight: bold;">&#160;</p>
+<p class="VBA-Heading-Method">EnableInnerSParameterAdaptation ( <a href="../common_vbageneral/common_general_bool_data_type.htm" id="a135" style="font-weight: normal;" name="a135">bool</a> flag )</p>
+<p class="VBA-Text-Indent">This setting only applies to the frequency domain solver with tetrahedral mesh. It enables the S-parameter convergence criterion for the adaptive mesh refinement at discrete mesh adaptation samples.</p>
+<p class="VBA-Text-Indent" style="font-weight: bold;">&#160;</p>
+<p class="VBA-Heading-Method">EnablePortPropagationConstantAdaptation ( <a href="../common_vbageneral/common_general_bool_data_type.htm" id="a136" style="font-weight: normal;" name="a136">bool</a> flag )</p>
+<p class="VBA-Text-Indent">This setting only applies to the frequency domain solver with tetrahedral mesh. It enables the propagation constant convergence criterion for the adaptive port mesh refinement for waveguide ports.</p>
+<p class="VBA-Heading-Category"><a name="Defaults" id="Defaults"></a>Default Settings</p>
+<p class="VBA-Text-Example">Errorlimit (0.005)</p>
+<p class="VBA-Text-Example">MinPasses (2)</p>
+<p class="VBA-Text-Example">MaxPasses (6)</p>
+<p class="VBA-Text-Example">CellIncreaseFactor (0.7)</p>
+<p class="VBA-Text-Example">WeightE (1.0)</p>
+<p class="VBA-Text-Example">WeightB (1.0)</p>
+<p class="VBA-Text-Example">RefineX (True)</p>
+<p class="VBA-Text-Example">RefineY (True)</p>
+<p class="VBA-Text-Example">RefineZ (True)</p>
+<p class="VBA-Text-Example">MaxDeltaS (0.02)</p>
+<p class="VBA-Text-Example">MeshIncrement (5)</p>
+<p class="VBA-Text-Example">SetFrequencyRange (True, 0.0, 0.0)</p>
+<p class="VBA-Text-Example">SkipPulses (0.0)</p>
+<p class="VBA-Text-Example">ErrorEstimatorType ("Automatic")</p>
+<p class="VBA-Text-Example">RefinementType ("Automatic")</p>
+<p class="VBA-Heading-Category"><a name="Defaults" id="Defaults"></a>Default Settings (frequency domain solver with hexahedral mesh)</p>
+<p class="VBA-Text-Example">SetType ("HighFrequencyHex")</p>
+<p class="VBA-Text-Example">SetAdaptionStrategy ("ExpertSystem")</p>
+<p class="VBA-Text-Example">MinPasses (2)</p>
+<p class="VBA-Text-Example">MaxPasses (6)</p>
+<p class="VBA-Text-Example">MeshIncrement (5.0)</p>
+<p class="VBA-Heading-Category"><a name="Defaults" id="Defaults"></a>Default Settings (frequency domain solver with tetrahedral mesh)</p>
+<p class="VBA-Text-Example">SetType ("HighFrequencyTet")</p>
+<p class="VBA-Text-Example">SetAdaptionStrategy ("ExpertSystem")</p>
+<p class="VBA-Text-Example">MinPasses (3)</p>
+<p class="VBA-Text-Example">MaxPasses (8)</p>
+<p class="VBA-Text-Example">MaxDeltaS (0.02)</p>
+<p class="VBA-Text-Example">NumberOfDeltaSChecks (1)</p>
+<p class="VBA-Text-Example">EnableInnerSParameterAdaptation (True)</p>
+<p class="VBA-Text-Example">PropagationConstantAccuracy (0.005)</p>
+<p class="VBA-Text-Example">NumberOfPropConstChecks (2)</p>
+<p class="VBA-Text-Example">EnablePortPropagationConstantAdaptation (True)</p>
+<p class="VBA-Text-Example">MinimumAcceptedCellGrowth (0.5)</p>
+<p class="VBA-Text-Example">RefThetaFactor ("")</p>
+<p class="VBA-Text-Example">SetMinimumMeshCellGrowth (5)</p>
+<p class="VBA-Text-Example">ErrorEstimatorType ("Automatic")</p>
+<p class="VBA-Text-Example">RefinementType ("Automatic")</p>
+<p class="VBA-Text-Example">SnapToGeometry (True)</p>
+<p class="VBA-Text-Example">SubsequentChecksOnlyOnce (False)</p>
+<p class="VBA-Text-Example">WavelengthBasedRefinement (True)</p>
+<p class="VBA-Text-Example">EnableLinearGrowthLimitation (True)</p>
+<p class="VBA-Text-Example">SetLinearGrowthLimitation ("")</p>
+<p class="VBA-Text-Example">SingularEdgeRefinement (2)</p>
+<p class="VBA-Heading-Category"><a name="Example" id="Example"></a>Example</p>
+<p class="VBA-Text-Example">With MeshAdaption3D</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;.SetType ("Time")</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;.SetAdaptionStrategy ("ExpertSystem")</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;.MinPasses (2)</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;.MaxPasses (6)</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;.MeshIncrement (5)</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;.MaxDeltaS (0.02)</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;.SetFrequencyRange (True, 0.0, 0.0)</p>
+<p class="VBA-Text-Example">End With</p>
+<?rh-p style="margin-bottom: 0px; text-align: Right; margin-left: 18px; 
+                 margin-right: 18px; margin-top: 18px;" ?>
+<div style="width: 100%; position: relative;" id="footer">
+<p style="border-bottom: Solid 1px #dddddd; text-align: Left; margin-left: 0px; font-family: Arial, sans-serif; line-height: Normal; margin-top: 9px; margin-right: 0px; margin-bottom: 6px; border-left-width: 1px; border-top-width: 1px; border-right-width: 1px;"><span style="text-align: Left; font-family: Arial, sans-serif; line-height: Normal;">&#160;</span></p>
+<table cellspacing="0" width="100%">
+<col style="width: 50%;" />
+<col style="width: 50%;" />
+<tr>
+<td style="vertical-align: Top;"><span style="font-family: Arial, sans-serif; line-height: Normal; font-size: 8pt;"><font size="1" style="font-size:8pt;">CST Studio Suite 2026</font></span></td>
+<td style="vertical-align: Top;">
+<p style="text-align: right;">&#160;</p>
+</td>
+</tr>
+</table>
+<p>&#160;</p>
+</div>
+<script type="text/javascript" language="javascript1.2">
+//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+        writeIntopicBar(0);
+
+
+highlightSearch();
+//-->
+//]]>
+</script>
+</body>
+</html>

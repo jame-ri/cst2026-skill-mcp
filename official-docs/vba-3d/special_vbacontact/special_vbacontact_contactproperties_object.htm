@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="Adobe RoboHelp 11" />
+<title>ContactProperties Object</title>
+<link rel="StyleSheet" href="../online_help_vba.css" type="text/css" />
+<style type="text/css">
+/*<![CDATA[*/
+<!--
+body { border-bottom-style:None; }
+-->
+/*]]>*/
+</style>
+
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+        origWidth = innerWidth;
+        origHeight = innerHeight;
+        onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+/*<![CDATA[*/
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+-->
+/*]]>*/
+</style>
+
+<script type="text/javascript" language="javascript1.2" src="../whmsg.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript" src="../whver.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript1.2" src="../whutils.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript1.2" src="../whproxy.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript1.2" src="../whlang.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript1.2" src="../whtopic.js" charset="utf-8">
+</script>
+</head>
+<body>
+<script type="text/javascript" language="javascript1.2">
+//<![CDATA[
+<!--
+if (window.gbWhTopic)
+{
+        var strUrl = document.location.href;
+        var bc = 0;
+        var n = strUrl.toLowerCase().indexOf("bc-");
+        if(n != -1)
+        {
+                document.location.replace(strUrl.substring(0, n));
+                bc = strUrl.substring(n+3);
+        }
+
+        if (window.addTocInfo)
+        {
+        addTocInfo("3D Simulation VBA\nVBA Objects\nContact Settings\nContactProperties");
+
+        }
+        if (window.writeBtnStyle)
+                writeBtnStyle();
+
+        if (window.writeIntopicBar)
+                writeIntopicBar(0);
+
+        
+        document.write("<p style=\"font-family: Tahoma; font-size: 9pt; font-weight: 400;  font-style:normal; color: rgb(0, 0, 0); text-decoration:none; text-align: left\"> ");
+AddMasterBreadcrumbs("../index.htm", "font-family: Tahoma; font-size: 9pt; font-weight: 400;  font-style:normal; color: rgb(0, 0, 0); text-decoration:none; text-align: left", "|", "Home", "../special_vbaobjects/special_vbaobjects_vbaobjects.htm");
+document.write("<a style=\"font-family: Tahoma; font-size: 9pt; font-weight: 400;  font-style:normal; color: rgb(0, 0, 0); text-decoration:none; text-align: left\" href=\"../special_vbaobjects/special_vbaobjects_vbaobjects.htm\">3D Simulation VBA<\/a> | <a style=\"font-family: Tahoma; font-size: 9pt; font-weight: 400;  font-style:normal; color: rgb(0, 0, 0); text-decoration:none; text-align: left\" href=\"../special_vbaobjects/special_vbaobjects_vbaobjects.htm\">VBA Objects<\/a> | <a style=\"font-family: Tahoma; font-size: 9pt; font-weight: 400;  font-style:normal; color: rgb(0, 0, 0); text-decoration:none; text-align: left\" href=\"special_vbacontact_contactproperties_object.htm\">Contact Settings<\/a> | ContactProperties<\/p>");
+
+}
+else
+        if (window.gbIE4)
+                document.location.reload();
+
+onLoadHandler = function()
+{
+  if (window.setRelStartPage)
+        {
+        setTimeout("setRelStartPage('../index.htm');", 1)
+
+    setTimeout("UpdateBreadCrumbsMarker();", 1);
+        }
+}
+
+if (window.addEventListener){  
+        window.addEventListener('load', onLoadHandler, false);   
+} else if (window.attachEvent){  
+        window.attachEvent('onload', onLoadHandler);  
+}
+
+function onSetStartPage()
+{
+  autoSync(1);
+  sendSyncInfo();
+  sendAveInfoOut();
+}
+//-->
+//]]>
+</script><script type="text/javascript" src="../ehlpdhtm.js" language="JavaScript1.2">
+</script>
+<table cellspacing="0" width="100%">
+<col style="width: 50%;" />
+<col style="width: 50%;" />
+<tr>
+<td style="vertical-align: middle; padding-top: 5px; padding-bottom: 5px;">
+<p style="margin-top: 0px; margin-bottom: 0px;"><img src="../3ds.png" alt="" style="border: none;" border="0" /></p>
+</td>
+<td style="vertical-align: middle;">
+<p style="text-align: right;"><a href="https://www.3ds.com/products-services/3dexperience/" target="_blank"><img src="../3dexp.png" alt="" style="border: none;" width="32" height="32" border="0" /></a></p>
+</td>
+</tr>
+</table>
+<h1>ContactProperties Object</h1>
+<p>This object is used to define new contact properties for <a href="../special_vbathermalsolver/special_vbathermalsolver_thermalsolver.htm">Thermal Solver</a> and <a href="../special_vbastaticsolver/special_vbastaticsolver_stationarycurrentsolver_object.htm">Stationary Current Solver</a>.</p>
+<ul>
+<li class="p-VBA-Index-Category">
+<p class="VBA-Index-Category"><a href="#Methods">Methods</a></p>
+</li>
+<li class="p-VBA-Index-Category">
+<p class="VBA-Index-Category"><a href="#Default Settings">Default Settings</a></p>
+</li>
+<li class="p-VBA-Index-Category">
+<p class="VBA-Index-Category"><a href="#Examples">Examples</a></p>
+</li>
+</ul>
+<p class="VBA-Heading-Category"><a name="Methods" id="Methods"></a>Methods</p>
+<p class="VBA-Heading-Method">Reset</p>
+<p class="VBA-Text-Indent">Resets all the internal settings to their default values.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">Delete ( <a href="../common_vbageneral/common_general_name.htm">name</a> <span style="font-style: italic;"><i>name</i></span> )</p>
+<p class="VBA-Text-Indent">Deletes the contact properties item with the given <span style="font-style: italic;"><i>name</i></span>.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">Create</p>
+<p class="VBA-Text-Indent">Creates a new contact properties item. All necessary settings for this object have to be made previously.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">Name ( <a href="../common_vbageneral/common_general_name.htm">name</a> <span style="font-style: italic;"><i>name</i></span> )</p>
+<p class="VBA-Text-Indent">Sets the name of the temperature source. Each source must have a unique name.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">Folder ( <a href="../common_vbageneral/common_general_name.htm">name</a> <span style="font-style: italic;"><i>foldername</i></span> )</p>
+<p class="VBA-Text-Indent">Sets the name of the folder for the new contact properties. If the name is empty, then the contact properties does not belong to a folder.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">Enable( <a href="../common_vbageneral/common_general_bool_data_type.htm">bool</a> <span style="font-style: italic;"><i>flag</i></span> )</p>
+<p class="VBA-Text-Indent">Sets the contact properties to <span style="font-style: italic;"><i>flag</i></span>. If <span style="font-style: italic;"><i>flag</i></span> <span>is</span> <span style="font-style: italic;"><i>false,</i></span> <span>the contact properties won't be considered for simulation.</span></p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">AddFace ( <a href="../common_vbageneral/common_general_solid_names.htm">solidname</a> solidname, <a href="../common_vbageneral/common_general_integer.htm">int</a> faceid, <a href="../common_vbageneral/common_general_integer.htm">int</a> sideid )</p>
+<p class="VBA-Text-Indent">A contact properties is created on the surfaces separating solids with <span style="font-style: italic;"><i>sideid</i></span> = "1" and solids with <span style="font-style: italic;"><i>sideid</i></span> = 2. This function can be used to identify a solid by its name <span style="font-style: italic;"><i>solidname</i></span> and face <span style="font-style: italic;"><i>faceid</i></span>, and assign a <span style="font-style: italic;"><i>sideid</i></span> to it.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">Thickness ( <a href="../common_vbageneral/common_general_double.htm" id="a6" name="a6">double</a> &#160;<span style="font-style: italic;"><i>thickness</i></span> )</p>
+<p class="vba-text-indent">For material-based contact properties, use this function to set the thickness of the contact layer in user units.</p>
+<p class="vba-text-indent">&#160;</p>
+<p class="VBA-Heading-Method">Material ( <a href="../common_vbageneral/common_general_expression.htm" id="a1" name="a1">name</a> &#160;<span style="font-style: italic;"><i>materialname</i></span> )</p>
+<p class="vba-text-indent">For material-based contact properties, use this function to identify the material used for the contact layer. The properties of this material together with the layer thickness described above define the integral properties of the contact layer.</p>
+<p class="vba-text-indent">&#160;</p>
+<p class="VBA-Heading-Method">ElResistance ( <a href="../common_vbageneral/common_general_double.htm" id="a2" name="a2">double</a> &#160;<span style="font-style: italic;"><i>resistance</i></span> )</p>
+<p class="vba-text-indent">Lumped contact properties are defined by the integral values. Use this function to define the electrical resistance (in Ohm) of the whole contact surface. If this value is zero, the stationary current solver will ignore the contact properties.</p>
+<p class="vba-text-indent">&#160;</p>
+<p class="VBA-Heading-Method">ThermalResistance ( <a href="../common_vbageneral/common_general_double.htm" id="a3" name="a3">double</a> &#160;<span style="font-style: italic;"><i>resistance</i></span> )</p>
+<p class="vba-text-indent">For lumped contact properties, use this function to define the absolute thermal resistance of the contact layer (in K / W). If this value is zero, this Contact Properties item is ignored by the thermal solvers. Alternatively, the thermal resistance per unit area may be defined for the contact layer by using the function <span style="font-weight: bold;">ThermalResistancePerUnitArea</span>.</p>
+<p class="vba-text-indent">&#160;</p>
+<p class="VBA-Heading-Method">ThermalResistancePerUnitArea ( <a href="../common_vbageneral/common_general_double.htm" id="a31" name="a31">double</a> &#160;<span style="font-style: italic;"><i>resistance</i></span> )</p>
+<p class="vba-text-indent">Alternatively to <span style="font-weight: bold;">ThermalResistance</span>, this function may be used to define the thermal resistance per unit area of the contact layer (in K m<span style="font-size: 8pt; vertical-align: Super;"><font size="1" style="font-size:8pt;">2</font></span> / W). If this value is zero, this Contact Properties item is ignored by the thermal solvers. Both of these functions determine the same property of the contact layer (namely the thermal conductivity of the layer material), so if both of them are specified, the setting of the last command in the list is really adopted.</p>
+<p class="vba-text-indent">&#160;</p>
+<p class="VBA-Heading-Method">ThermalCapacitance ( <a href="../common_vbageneral/common_general_double.htm" id="a4" name="a4">double</a> &#160;<span style="font-style: italic;"><i>capacitance</i></span> )</p>
+<p class="vba-text-indent">For lumped contact properties, use this function to define the thermal capacitance of the contact layer (in J / K).</p>
+<p class="vba-text-indent">&#160;</p>
+<p class="VBA-Heading-Method">NewFolder ( <span style="font-style: italic;"><i><a href="../common_vbageneral/common_general_string.htm" id="a61" style="font-style: normal; font-weight: bold;" name="a61">string</a> foldername</i></span> )</p>
+<p class="vba-text-indent">Creates a new folder with the given name.</p>
+<p class="vba-text-indent">&#160;</p>
+<p class="VBA-Heading-Method">RenameFolder ( <span style="font-style: italic;"><i><a href="../common_vbageneral/common_general_string.htm" id="a62" style="font-style: normal; font-weight: bold;" name="a62">string</a> oldFoldername,</i></span> <span style="font-style: italic;"><i><a href="../common_vbageneral/common_general_string.htm" id="a621" style="font-style: normal; font-weight: bold;" name="a621">string</a> newFoldername</i></span>)</p>
+<p class="vba-text-indent">Changes the name of an existing folder.</p>
+<p class="vba-text-indent">&#160;</p>
+<p class="VBA-Heading-Method">DeleteFolder ( <span style="font-style: italic;"><i><a href="../common_vbageneral/common_general_string.htm" id="a611" style="font-style: normal; font-weight: bold;" name="a611">string</a> foldername</i></span> )</p>
+<p class="vba-text-indent">Deletes an existing folder and all the contained elements.</p>
+<p class="VBA-Heading-Category"><a name="Default Settings"></a>Default Settings</p>
+<p class="VBA-Text-Example">.Reset</p>
+<p class="VBA-Text-Example">.Name "contactprops1"</p>
+<p class="VBA-Text-Example">.ElResistance "0.0"</p>
+<p class="VBA-Text-Example">.ThermalResistance "0.0"</p>
+<p class="VBA-Text-Example">.ThermalCapacitance "0.0"</p>
+<p class="VBA-Text-Example">.Enable True</p>
+<p class="VBA-Text-Example">.Folder ""</p>
+<p class="VBA-Heading-Category"><a name="Examples" id="Examples"></a>Examples</p>
+<p class="VBA-Text-Example">With ContactProperties</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.Reset</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.Name "contactprops1"</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.Thickness "1e-5"</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.Material "Air"</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.AddFace "component1:solid1", "1", "1"</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.AddFace "component1:solid2", "6", "2"</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.Create</p>
+<p class="VBA-Text-Example">End With</p>
+<p class="vba-text-indent">&#160;</p>
+<?rh-p style="margin-bottom: 0px; text-align: Right; margin-left: 18px; 
+                 margin-right: 18px; margin-top: 18px;" ?>
+<div style="width: 100%; position: relative;" id="footer">
+<p style="border-bottom: Solid 1px #dddddd; text-align: Left; margin-left: 0px; font-family: Arial, sans-serif; line-height: Normal; margin-top: 9px; margin-right: 0px; margin-bottom: 6px; border-left-width: 1px; border-top-width: 1px; border-right-width: 1px;"><span style="text-align: Left; font-family: Arial, sans-serif; line-height: Normal;">&#160;</span></p>
+<table cellspacing="0" width="100%">
+<col style="width: 50%;" />
+<col style="width: 50%;" />
+<tr>
+<td style="vertical-align: Top;"><span style="font-family: Arial, sans-serif; line-height: Normal; font-size: 8pt;"><font size="1" style="font-size:8pt;">CST Studio Suite 2026</font></span></td>
+<td style="vertical-align: Top;">
+<p style="text-align: right;">&#160;</p>
+</td>
+</tr>
+</table>
+<p>&#160;</p>
+</div>
+<script type="text/javascript" language="javascript1.2">
+//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+        writeIntopicBar(0);
+
+
+highlightSearch();
+//-->
+//]]>
+</script>
+</body>
+</html>

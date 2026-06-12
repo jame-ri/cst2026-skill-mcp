@@ -1,0 +1,365 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="Adobe RoboHelp 11" />
+<title>Force Object</title>
+<link rel="StyleSheet" href="../online_help_vba.css" type="text/css" />
+<style type="text/css">
+/*<![CDATA[*/
+<!--
+body { border-bottom-style:None; }
+-->
+/*]]>*/
+</style>
+
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+        origWidth = innerWidth;
+        origHeight = innerHeight;
+        onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+/*<![CDATA[*/
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+-->
+/*]]>*/
+</style>
+
+<script type="text/javascript" language="javascript1.2" src="../whmsg.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript" src="../whver.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript1.2" src="../whutils.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript1.2" src="../whproxy.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript1.2" src="../whlang.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript1.2" src="../whtopic.js" charset="utf-8">
+</script>
+</head>
+<body>
+<script type="text/javascript" language="javascript1.2">
+//<![CDATA[
+<!--
+if (window.gbWhTopic)
+{
+        var strUrl = document.location.href;
+        var bc = 0;
+        var n = strUrl.toLowerCase().indexOf("bc-");
+        if(n != -1)
+        {
+                document.location.replace(strUrl.substring(0, n));
+                bc = strUrl.substring(n+3);
+        }
+
+        if (window.addTocInfo)
+        {
+        addTocInfo("3D Simulation VBA\nVBA Objects\nPost Processing\nForce");
+
+        }
+        if (window.writeBtnStyle)
+                writeBtnStyle();
+
+        if (window.writeIntopicBar)
+                writeIntopicBar(0);
+
+        
+        document.write("<p style=\"font-family: Tahoma; font-size: 9pt; font-weight: 400;  font-style:normal; color: rgb(0, 0, 0); text-decoration:none; text-align: left\"> ");
+AddMasterBreadcrumbs("../index.htm", "font-family: Tahoma; font-size: 9pt; font-weight: 400;  font-style:normal; color: rgb(0, 0, 0); text-decoration:none; text-align: left", "|", "Home", "../special_vbaobjects/special_vbaobjects_vbaobjects.htm");
+document.write("<a style=\"font-family: Tahoma; font-size: 9pt; font-weight: 400;  font-style:normal; color: rgb(0, 0, 0); text-decoration:none; text-align: left\" href=\"../special_vbaobjects/special_vbaobjects_vbaobjects.htm\">3D Simulation VBA<\/a> | <a style=\"font-family: Tahoma; font-size: 9pt; font-weight: 400;  font-style:normal; color: rgb(0, 0, 0); text-decoration:none; text-align: left\" href=\"../special_vbaobjects/special_vbaobjects_vbaobjects.htm\">VBA Objects<\/a> | <a style=\"font-family: Tahoma; font-size: 9pt; font-weight: 400;  font-style:normal; color: rgb(0, 0, 0); text-decoration:none; text-align: left\" href=\"../special_vbapostproc/special_vbapostproc_type_method.htm\">Post Processing<\/a> | Force<\/p>");
+
+}
+else
+        if (window.gbIE4)
+                document.location.reload();
+
+onLoadHandler = function()
+{
+  if (window.setRelStartPage)
+        {
+        setTimeout("setRelStartPage('../index.htm');", 1)
+
+    setTimeout("UpdateBreadCrumbsMarker();", 1);
+        }
+}
+
+if (window.addEventListener){  
+        window.addEventListener('load', onLoadHandler, false);   
+} else if (window.attachEvent){  
+        window.attachEvent('onload', onLoadHandler);  
+}
+
+function onSetStartPage()
+{
+  autoSync(1);
+  sendSyncInfo();
+  sendAveInfoOut();
+}
+//-->
+//]]>
+</script><script type="text/javascript" src="../ehlpdhtm.js" language="JavaScript1.2">
+</script>
+<table cellspacing="0" width="100%">
+<col style="width: 50%;" />
+<col style="width: 50%;" />
+<tr>
+<td style="vertical-align: middle; padding-top: 5px; padding-bottom: 5px;">
+<p style="margin-top: 0px; margin-bottom: 0px;"><img src="../3ds.png" alt="" style="border: none;" border="0" /></p>
+</td>
+<td style="vertical-align: middle;">
+<p style="text-align: right;"><a href="https://www.3ds.com/products-services/3dexperience/" target="_blank"><img src="../3dexp.png" alt="" style="border: none;" width="32" height="32" border="0" /></a></p>
+</td>
+</tr>
+</table>
+<p class="VBA-Heading-Object">Force Object</p>
+<p class="VBA-Text">The force object calculates forces and torques by the maxwell stress tensor for solids, current wires or coils. Please note that the same VBA functions are used for both, local and global coordinates. If the working coordinate system is activated all settings are made in local &#160;coordinates, with the following assignment:</p>
+<p class="VBA-Text">x = u, &#160;y = v and z = w.</p>
+<ul>
+<li class="p-VBA-Index-Category">
+<p class="VBA-Index-Category"><a href="#Methods">Methods</a></p>
+</li>
+<li class="p-VBA-Index-Category">
+<p class="VBA-Index-Category"><a href="#Functions">Functions</a></p>
+</li>
+<li class="p-VBA-Index-Category">
+<p class="VBA-Index-Category"><a href="#Defaults">Default Settings</a></p>
+</li>
+<li class="p-VBA-Index-Category">
+<p class="VBA-Index-Category"><a href="#Example">Example</a></p>
+</li>
+</ul>
+<p class="VBA-Heading-Category"><a name="Methods" id="Methods">Methods</a></p>
+<p class="VBA-Heading-Method">Reset</p>
+<p class="VBA-Text-Indent">Resets all internal settings to their default values.</p>
+<p class="VBA-Text">&#160;</p>
+<p class="StandardNeu" style="margin-top: 0; margin-bottom: 0;">&#160;</p>
+<p class="VBA-Heading-Method"><a name="CalcType" id="CalcType">CalcType</a> (<a href="../common_vbageneral/common_general_enum.htm" id="a16" style="font-weight: normal;" name="a16">enum</a> &#160;<span style="font-style: italic;"><i>calctype</i></span>)</p>
+<p class="VBA-Text-Indent"><span style="font-style: italic;"><i>S</i></span>elect for which simulation type the force calculation should be performed.</p>
+<table style="vertical-align: top; margin-left: 50px;" cellspacing="0" width="74.761%">
+<col style="width: 29%;" />
+<col style="width: 71%;" />
+<tr style="vertical-align: top;">
+<td style="border: Solid 1px #000000; width: 29%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text"><span style="font-style: italic;"><i>calctype (</i></span><a href="../common_vbageneral/common_general_enum.htm" id="a23" style="font-weight: normal;" name="a23">enum</a> )</p>
+</td>
+<td style="border-top: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 71%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text">meaning</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 29%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text">"E-Statics",</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 71%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text">Force calculation of an electrostatic field</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 29%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text">"M-Statics"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 71%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text">Force calculation of a magnetostatic &#160;field</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 29%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text">"Low Frequency" or "LF"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 71%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text">Force calculation of a magnetic field from a low frequency (magnetoquasistatic) simulation</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 29%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text">"Electroquasistatic"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 71%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text">Force calculation of an electric field from a low frequency (electroquasistatic) simulation</p>
+</td>
+</tr>
+</table>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">Frequency (<a href="../common_vbageneral/common_general_double.htm" id="a1" style="font-weight: normal;" name="a1">double</a> &#160;<span style="font-style: italic;"><i>frequency</i></span>)</p>
+<p class="VBA-Text-Indent">Specify a frequency domain result by its frequency value.</p>
+<p class="vba-text-indent">&#160;</p>
+<p class="VBA-Heading-Method">NormalX (<span><a href="../common_vbageneral/common_general_double.htm" id="a40" style="font-weight: normal; font-style: normal;" name="a40">double</a></span> &#160;<span style="font-style: italic;"><i>xvalue</i></span>)</p>
+<p class="VBA-Heading-Method">NormalY (<span><a href="../common_vbageneral/common_general_double.htm" id="a39" style="font-weight: normal; font-style: normal;" name="a39">double</a></span> &#160;<span style="font-style: italic;"><i>yvalue</i></span>)</p>
+<p class="VBA-Heading-Method">NormalZ (<span><a href="../common_vbageneral/common_general_double.htm" id="a38" style="font-weight: normal; font-style: normal;" name="a38">double</a></span> <span style="font-style: italic;"><i>zvalue</i></span>)</p>
+<p class="VBA-Text-Indent">Sets the x/y/z-component of the axis used for the torque calculation.</p>
+<p style="margin-top: 0; margin-bottom: 0;">&#160;</p>
+<p class="VBA-Heading-Method">OriginX (<span><a href="../common_vbageneral/common_general_double.htm" id="a6" style="font-weight: normal; font-style: normal;" name="a6">double</a></span> <span style="font-style: italic;"><i>xvalue</i></span>)</p>
+<p class="VBA-Heading-Method">OriginY (<span><a href="../common_vbageneral/common_general_double.htm" id="a7" style="font-weight: normal; font-style: normal;" name="a7">double</a></span> <span style="font-style: italic;"><i>yvalue</i></span>)</p>
+<p class="VBA-Heading-Method">OriginZ (<span><a href="../common_vbageneral/common_general_double.htm" id="a9" style="font-weight: normal; font-style: normal;" name="a9">double</a></span> <span style="font-style: italic;"><i>zvalue</i></span>)</p>
+<p class="VBA-Text-Indent">Sets the x/y/zcoordinate of the axis' origin used for the torque calculation.</p>
+<p class="vba-text-indent">&#160;</p>
+<p class="VBA-Heading-Method">CoordinateSystem (<a href="../common_vbageneral/common_general_enum.htm" id="a25" style="font-weight: normal;" name="a25">enum</a> &#160;<span style="font-style: italic;"><i>cosystem</i></span>)</p>
+<p class="VBA-Text-Indent"><span style="font-style: italic;"><i>S</i></span>elect for which simulation type the force calculation should be performed.</p>
+<table style="vertical-align: top; margin-left: 50px;" cellspacing="0" width="74.761%">
+<col style="width: 29%;" />
+<col style="width: 71%;" />
+<tr style="vertical-align: top;">
+<td style="border: Solid 1px #000000; width: 29%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text"><span style="font-style: italic;"><i>cosystem (</i></span><a href="../common_vbageneral/common_general_enum.htm" id="a26" style="font-weight: normal;" name="a26">enum</a> )</p>
+</td>
+<td style="border-top: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 71%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text">meaning</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 29%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text">&#160;"Global"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 71%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text">Global coordinate system</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 29%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text">"WCS"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 71%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text">Local coordinate system (Working coordinate system)</p>
+</td>
+</tr>
+</table>
+<p style="margin-top: 0; margin-bottom: 0;">&#160;</p>
+<p class="VBA-Heading-Method">Extend2TouchingShapes ( <a href="../common_vbageneral/common_general_bool_data_type.htm" id="a17" style="font-weight: normal; font-style: normal;" name="a17">bool</a> <span style="font-style: italic;"><i>bFlag</i></span> )</p>
+<p class="VBA-Text-Indent">This setting concerns only the force computation with tetrahedral solvers and will be ignored otherwise.</p>
+<p class="VBA-Text-Indent">The force computation method requires objects which are surrounded completely by the background or by objects that are equivalent to the background. If <span style="font-style: italic;"><i>bFlag</i></span> is <span style="font-style: italic;"><i>True</i></span>, all shapes connected to a specified solid or coil will be collected into one group and the force on this group will be computed. If no 3d object is specified, all solids and coils will be collected into groups of connected shapes, and the forces will be computed groupwise. If <span style="font-style: italic;"><i>bFlag</i></span> is <span style="font-style: italic;"><i>False</i></span>, the force will be computed on the specified object only (or shape by shape), and a warning will be printed if shapes are detected which are not entirely embedded in background or equivalent material.</p>
+<p class="VBA-Text-Indent">Please note that objects with background (or equivalent) material are ignored by the force computation method <span style="font-weight: bold;">unless</span> a source is assigned or the object is the one which was marked by <span style="font-style: italic;"><i>ForceObject</i></span> for single object force computation.</p>
+<p class="VBA-Text-Indent">Please see <a href="../../3D/special_postpr/special_postpr_static_force.htm">Force and Torque Calculation</a> for further information.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">ForceObject ( <a href="../common_vbageneral/common_general_name.htm" id="a18" style="font-weight: normal; font-style: normal;" name="a18">name</a> &#160;<span style="font-style: italic;"><i>name</i></span> )</p>
+<p class="VBA-Text-Indent">By default, the forces will be computed on all define objects (or object groups). If only one of the objects is of interest then it's <span style="font-style: italic;"><i>name</i></span> can be specified here and the force computation will be performed only on the specified object (or, if specified by <span style="font-style: italic;"><i>Extend2TouchingShapes</i></span>, on the group of shapes connected to the specified object).</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">ComputeForceDensity ( <a href="../common_vbageneral/common_general_bool_data_type.htm" id="a19" style="font-weight: normal; font-style: normal;" name="a19">bool</a> <span style="font-style: italic;"><i>bFlag</i></span> )</p>
+<p class="VBA-Text-Indent">If <span style="font-style: italic;"><i>bFlag</i></span> is set <span style="font-style: italic;"><i>True</i></span>, the distributions of volume and surface force densities as well as nodal forces will be computed and exported. Background material and materials equivalent to it are hereby ignored. These distributions can afterwards be imported by the Structural Mechanics Solver for computation of mechanical deformation.</p>
+<p class="vba-text-indent">&#160;</p>
+<p class="VBA-Heading-Method">Start</p>
+<p class="VBA-Text-Indent">Starts the force calculation.</p>
+<p class="VBA-Heading-Method">&#160;</p>
+<p class="VBA-Heading-Category"><a name="Functions" id="Functions">Functions</a></p>
+<p class="VBA-Heading-Method"><a name="GetForce" id="GetForce">GetForceX</a> (<span style="font-weight: normal;"><a href="../common_vbageneral/common_general_name.htm" id="a2" name="a2">name</a></span> <span style="font-style: italic;"><i>name, <a href="../common_vbageneral/common_general_enum.htm" id="a27" style="font-weight: normal; font-style: normal;" name="a27">enum</a> calctype,</i></span> <a href="../common_vbageneral/common_general_double.htm" id="a28" style="font-weight: normal; font-style: normal;" name="a28">double</a> <span style="font-style: italic;"><i>&#160;frequency, &#160;</i></span><span style="font-weight: normal;"><a href="../common_vbageneral/common_general_double_ref.htm">double_ref</a></span> <span style="font-style: italic;"><i>force_dc,</i></span> <span style="font-weight: normal;"><a href="../common_vbageneral/common_general_double_ref.htm">double_ref</a></span> <span style="font-style: italic;"><i>force_re,</i></span> <span style="font-weight: normal;"><a href="../common_vbageneral/common_general_double_ref.htm">double_ref</a></span> <span style="font-style: italic;"><i>force_im</i></span>) <a href="../common_vbageneral/common_general_double.htm" id="a35" style="font-weight: normal; font-style: normal;" name="a35">double</a></p>
+<p class="VBA-Heading-Method">GetForceY (<span style="font-weight: normal;"><a href="../common_vbageneral/common_general_name.htm" id="a29" name="a29">name</a></span> <span style="font-style: italic;"><i>name, <a href="../common_vbageneral/common_general_enum.htm" id="a30" style="font-weight: normal; font-style: normal;" name="a30">enum</a> calctype,</i></span> <a href="../common_vbageneral/common_general_double.htm" id="a31" style="font-weight: normal; font-style: normal;" name="a31">double</a> <span style="font-style: italic;"><i>&#160;frequency, &#160;</i></span><span style="font-weight: normal;"><a href="../common_vbageneral/common_general_double_ref.htm">double_ref</a></span> <span style="font-style: italic;"><i>force_dc,</i></span> <span style="font-weight: normal;"><a href="../common_vbageneral/common_general_double_ref.htm">double_ref</a></span> <span style="font-style: italic;"><i>force_re,</i></span> <span style="font-weight: normal;"><a href="../common_vbageneral/common_general_double_ref.htm">double_ref</a></span> <span style="font-style: italic;"><i>force_im</i></span>) <a href="../common_vbageneral/common_general_double.htm" id="a36" style="font-weight: normal; font-style: normal;" name="a36">double</a></p>
+<p class="VBA-Heading-Method">GetForceZ (<span style="font-weight: normal;"><a href="../common_vbageneral/common_general_name.htm" id="a32" name="a32">name</a></span> <span style="font-style: italic;"><i>name, <a href="../common_vbageneral/common_general_enum.htm" id="a33" style="font-weight: normal; font-style: normal;" name="a33">enum</a> calctype,</i></span> <a href="../common_vbageneral/common_general_double.htm" id="a34" style="font-weight: normal; font-style: normal;" name="a34">double</a> <span style="font-style: italic;"><i>&#160;frequency, &#160;</i></span><span style="font-weight: normal;"><a href="../common_vbageneral/common_general_double_ref.htm">double_ref</a></span> <span style="font-style: italic;"><i>force_dc,</i></span> <span style="font-weight: normal;"><a href="../common_vbageneral/common_general_double_ref.htm">double_ref</a></span> <span style="font-style: italic;"><i>force_re,</i></span> <span style="font-weight: normal;"><a href="../common_vbageneral/common_general_double_ref.htm">double_ref</a></span> <span style="font-style: italic;"><i>force_im</i></span>) <a href="../common_vbageneral/common_general_double.htm" id="a37" style="font-weight: normal; font-style: normal;" name="a37">double</a></p>
+<p class="VBA-Text-Indent">Get the x/y/z &#160;force-component value of a solid. The paradigm for the <span style="font-style: italic;"><i>name is:</i></span></p>
+<table style="vertical-align: top; margin-left: 50px;" cellspacing="0" width="53.515%">
+<col style="width: 34.767%;" />
+<col style="width: 65.233%;" />
+<tr style="vertical-align: top;">
+<td style="border: Solid 1px #000000; width: 34.767%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text"><span style="font-style: italic;"><i>name</i></span> (<a href="../common_vbageneral/common_general_name.htm" id="a8" name="a8">name</a>) :</p>
+</td>
+<td style="border-top: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 65.233%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text">meaning</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 34.767%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text">For solids</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 65.233%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text">layername:solidname</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 34.767%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text">For coils</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 65.233%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text">&#160;<span style="font-style: italic;"><i>coilname</i></span></p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 34.767%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text">For current paths</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 65.233%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text">&#160;<span style="font-style: italic;"><i>wire:pathname</i></span></p>
+</td>
+</tr>
+</table>
+<p class="VBA-Text-Indent">The enum-type of the field under study is defined in the <span style="font-style: italic; font-weight: bold;"><i><a href="#CalcType">CalcType</a></i></span> command.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">GetNormalX(<a href="../common_vbageneral/common_general_enum.htm" id="a13" style="font-weight: normal;" name="a13">enum</a> &#160;<span style="font-style: italic;"><i>calctype,</i></span> <a href="../common_vbageneral/common_general_double.htm" id="a14" style="font-weight: normal;" name="a14">double</a> <span style="font-style: italic;"><i>frequency</i></span>) <a href="../common_vbageneral/common_general_double.htm" id="a15" style="font-weight: normal; text-decoration: underline;" name="a15">double</a></p>
+<p class="VBA-Heading-Method">GetNormalY(<a href="../common_vbageneral/common_general_enum.htm" id="a47" style="font-weight: normal;" name="a47">enum</a> &#160;<span style="font-style: italic;"><i>calctype,</i></span> <a href="../common_vbageneral/common_general_double.htm" id="a48" style="font-weight: normal;" name="a48">double</a> <span style="font-style: italic;"><i>frequency</i></span>) <a href="../common_vbageneral/common_general_double.htm" id="a49" style="font-weight: normal; text-decoration: underline;" name="a49">double</a></p>
+<p class="VBA-Heading-Method">GetNormalZ (<a href="../common_vbageneral/common_general_enum.htm" id="a50" style="font-weight: normal;" name="a50">enum</a> &#160;<span style="font-style: italic;"><i>calctype,</i></span> <a href="../common_vbageneral/common_general_double.htm" id="a51" style="font-weight: normal;" name="a51">double</a> <span style="font-style: italic;"><i>frequency</i></span>) <a href="../common_vbageneral/common_general_double.htm" id="a52" style="font-weight: normal; text-decoration: underline;" name="a52">double</a></p>
+<p class="VBA-Text-Indent">Get the x/y/z-component of the axis used for the torque calculation.. The enum-type of the field under study is defined in the <span style="font-style: italic; font-weight: bold;"><i><a href="#CalcType">CalcType</a></i></span> command.</p>
+<p class="vba-text-indent">&#160;</p>
+<p class="VBA-Heading-Method">GetOriginX (<a href="../common_vbageneral/common_general_enum.htm" id="a41" style="font-weight: normal;" name="a41">enum</a> &#160;<span style="font-style: italic;"><i>calctype,</i></span> <a href="../common_vbageneral/common_general_double.htm" id="a42" style="font-weight: normal;" name="a42">double</a> &#160;<span style="font-style: italic;"><i>frequency</i></span>) <a href="../common_vbageneral/common_general_double.htm" id="a43" style="font-weight: normal; text-decoration: underline;" name="a43">double</a></p>
+<p class="VBA-Heading-Method">GetOriginY (<a href="../common_vbageneral/common_general_enum.htm" id="a44" style="font-weight: normal;" name="a44">enum</a> &#160;<span style="font-style: italic;"><i>calctype,</i></span> <a href="../common_vbageneral/common_general_double.htm" id="a45" style="font-weight: normal;" name="a45">double</a> &#160;<span style="font-style: italic;"><i>frequency</i></span>) <a href="../common_vbageneral/common_general_double.htm" id="a46" style="font-weight: normal; text-decoration: underline;" name="a46">double</a></p>
+<p class="VBA-Heading-Method">GetOriginZ (<a href="../common_vbageneral/common_general_enum.htm" id="a4" style="font-weight: normal;" name="a4">enum</a> &#160;<span style="font-style: italic;"><i>calctype,</i></span> <a href="../common_vbageneral/common_general_double.htm" id="a3" style="font-weight: normal;" name="a3">double</a> &#160;<span style="font-style: italic;"><i>frequency</i></span>) <a href="../common_vbageneral/common_general_double.htm" id="a5" style="font-weight: normal; text-decoration: underline;" name="a5">double</a></p>
+<p class="VBA-Text-Indent">Get the x/y/z-coordinate of the axis' origin used for the torque calculation. The enum-type of the field under study is defined in the <span style="font-style: italic; font-weight: bold;"><i><a href="#CalcType">CalcType</a></i></span> command.</p>
+<p class="StandardNeu">&#160;</p>
+<p class="VBA-Heading-Method">GetTorque (<span style="font-weight: normal;"><a href="../common_vbageneral/common_general_name.htm" id="a10" name="a10">name</a></span> <span style="font-style: italic;"><i>name, <a href="../common_vbageneral/common_general_enum.htm" id="a11" style="font-weight: normal; font-style: normal;" name="a11">enum</a> calctype,</i></span> <a href="../common_vbageneral/common_general_double.htm" id="a12" style="font-weight: normal; font-style: normal;" name="a12">double</a> <span style="font-style: italic;"><i>frequency, &#160;</i></span><span style="font-weight: normal;"><a href="../common_vbageneral/common_general_double_ref.htm">double_ref</a></span> <span style="font-style: italic;"><i>force_dc,</i></span> <span style="font-weight: normal;"><a href="../common_vbageneral/common_general_double_ref.htm">double_ref</a></span> <span style="font-style: italic;"><i>force_re,</i></span> <span style="font-weight: normal;"><a href="../common_vbageneral/common_general_double_ref.htm">double_ref</a></span> <span style="font-style: italic;"><i>force_im</i></span>) <a href="../common_vbageneral/common_general_double.htm" id="a53" style="font-weight: normal; font-style: normal;" name="a53">double</a></p>
+<p class="VBA-Text-Indent">Get the torque value for a solid. The paradigm for the solid's name is described in the <span style="font-weight: bold; font-style: italic;"><i><a href="#GetForce">GetForce</a></i></span> command. The return value is the absolute torque value. In case of low frequency fields the reference value <span style="font-style: italic;"><i>force_dc r</i></span>eturns the DC part and <span style="font-style: italic;"><i>torque_re / torque_im</i></span> the complex part of the torque.</p>
+<p class="VBA-Heading-Category"><a name="Defaults" id="Defaults">Default Values</a></p>
+<p class="VBA-Text-Example">Frequency "0"</p>
+<p class="VBA-Text-Example">CoordinateSystem "Global"</p>
+<p class="VBA-Text-Example">NormalX "0"</p>
+<p class="VBA-Text-Example">NormalY "0"</p>
+<p class="VBA-Text-Example">NormalZ "1"</p>
+<p class="VBA-Text-Example">OriginX "0"</p>
+<p class="VBA-Text-Example">OriginY "0"</p>
+<p class="VBA-Text-Example">OriginZ "0"</p>
+<p class="VBA-Heading-Category"><a name="Example" id="Example">Examples</a></p>
+<p class="VBA-Text-Example">With Force</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.NormalX "0"</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.NormalY "0"</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.NormalZ "1"</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.OriginX "0"</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.OriginY "0"</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.OriginZ "0"</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.CalcType "low frequency"</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.Frequency "0"</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.CoordinateSystem "Global"</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.Extend2TouchingShapes "True"</p>
+<p class="VBA-Text-Example">End With</p>
+<p class="StandardNeu">&#160;</p>
+<?rh-p style="margin-bottom: 0px; text-align: Right; margin-left: 18px; 
+                 margin-right: 18px; margin-top: 18px;" ?>
+<div style="width: 100%; position: relative;" id="footer">
+<p style="border-bottom: Solid 1px #dddddd; text-align: Left; margin-left: 0px; font-family: Arial, sans-serif; line-height: Normal; margin-top: 9px; margin-right: 0px; margin-bottom: 6px; border-left-width: 1px; border-top-width: 1px; border-right-width: 1px;"><span style="text-align: Left; font-family: Arial, sans-serif; line-height: Normal;">&#160;</span></p>
+<table cellspacing="0" width="100%">
+<col style="width: 50%;" />
+<col style="width: 50%;" />
+<tr>
+<td style="vertical-align: Top;"><span style="font-family: Arial, sans-serif; line-height: Normal; font-size: 8pt;"><font size="1" style="font-size:8pt;">CST Studio Suite 2026</font></span></td>
+<td style="vertical-align: Top;">
+<p style="text-align: right;">&#160;</p>
+</td>
+</tr>
+</table>
+<p>&#160;</p>
+</div>
+<script type="text/javascript" language="javascript1.2">
+//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+        writeIntopicBar(0);
+
+
+highlightSearch();
+//-->
+//]]>
+</script>
+</body>
+</html>

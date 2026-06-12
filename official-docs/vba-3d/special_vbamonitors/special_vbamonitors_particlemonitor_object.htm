@@ -1,0 +1,881 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="Adobe RoboHelp 11" />
+<title>ParticleMonitor Object</title>
+<link rel="StyleSheet" href="../online_help_vba.css" type="text/css" />
+<style type="text/css">
+/*<![CDATA[*/
+<!--
+body { border-bottom-style:None; }
+-->
+/*]]>*/
+</style>
+
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+        origWidth = innerWidth;
+        origHeight = innerHeight;
+        onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+/*<![CDATA[*/
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+-->
+/*]]>*/
+</style>
+
+<script type="text/javascript" language="javascript1.2" src="../whmsg.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript" src="../whver.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript1.2" src="../whutils.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript1.2" src="../whproxy.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript1.2" src="../whlang.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript1.2" src="../whtopic.js" charset="utf-8">
+</script>
+</head>
+<body>
+<script type="text/javascript" language="javascript1.2">
+//<![CDATA[
+<!--
+if (window.gbWhTopic)
+{
+        var strUrl = document.location.href;
+        var bc = 0;
+        var n = strUrl.toLowerCase().indexOf("bc-");
+        if(n != -1)
+        {
+                document.location.replace(strUrl.substring(0, n));
+                bc = strUrl.substring(n+3);
+        }
+
+        if (window.addTocInfo)
+        {
+        addTocInfo("3D Simulation VBA\nVBA Objects\nMonitors\nParticle\nParticleMonitor (TRK, legacy)");
+
+        }
+        if (window.writeBtnStyle)
+                writeBtnStyle();
+
+        if (window.writeIntopicBar)
+                writeIntopicBar(0);
+
+        
+        document.write("<p style=\"font-family: Tahoma; font-size: 9pt; font-weight: 400;  font-style:normal; color: rgb(0, 0, 0); text-decoration:none; text-align: left\"> ");
+AddMasterBreadcrumbs("../index.htm", "font-family: Tahoma; font-size: 9pt; font-weight: 400;  font-style:normal; color: rgb(0, 0, 0); text-decoration:none; text-align: left", "|", "Home", "../special_vbaobjects/special_vbaobjects_vbaobjects.htm");
+document.write("<a style=\"font-family: Tahoma; font-size: 9pt; font-weight: 400;  font-style:normal; color: rgb(0, 0, 0); text-decoration:none; text-align: left\" href=\"../special_vbaobjects/special_vbaobjects_vbaobjects.htm\">3D Simulation VBA<\/a> | <a style=\"font-family: Tahoma; font-size: 9pt; font-weight: 400;  font-style:normal; color: rgb(0, 0, 0); text-decoration:none; text-align: left\" href=\"../special_vbaobjects/special_vbaobjects_vbaobjects.htm\">VBA Objects<\/a> | <a style=\"font-family: Tahoma; font-size: 9pt; font-weight: 400;  font-style:normal; color: rgb(0, 0, 0); text-decoration:none; text-align: left\" href=\"special_vbamonitors_monitor_object.htm\">Monitors<\/a> | <a style=\"font-family: Tahoma; font-size: 9pt; font-weight: 400;  font-style:normal; color: rgb(0, 0, 0); text-decoration:none; text-align: left\" href=\"special_vbamonitors_picpositionmonitor_object.htm\">Particle<\/a> | ParticleMonitor (TRK, legacy)<\/p>");
+
+}
+else
+        if (window.gbIE4)
+                document.location.reload();
+
+onLoadHandler = function()
+{
+  if (window.setRelStartPage)
+        {
+        setTimeout("setRelStartPage('../index.htm');", 1)
+
+    setTimeout("UpdateBreadCrumbsMarker();", 1);
+        }
+}
+
+if (window.addEventListener){  
+        window.addEventListener('load', onLoadHandler, false);   
+} else if (window.attachEvent){  
+        window.attachEvent('onload', onLoadHandler);  
+}
+
+function onSetStartPage()
+{
+  autoSync(1);
+  sendSyncInfo();
+  sendAveInfoOut();
+}
+//-->
+//]]>
+</script><script type="text/javascript" src="../ehlpdhtm.js" language="JavaScript1.2">
+</script>
+<table cellspacing="0" width="100%">
+<col style="width: 50%;" />
+<col style="width: 50%;" />
+<tr>
+<td style="vertical-align: middle; padding-top: 5px; padding-bottom: 5px;">
+<p style="margin-top: 0px; margin-bottom: 0px;"><img src="../3ds.png" alt="" style="border: none;" border="0" /></p>
+</td>
+<td style="vertical-align: middle;">
+<p style="text-align: right;"><a href="https://www.3ds.com/products-services/3dexperience/" target="_blank"><img src="../3dexp.png" alt="" style="border: none;" width="32" height="32" border="0" /></a></p>
+</td>
+</tr>
+</table>
+<p class="VBA-Heading-Object">ParticleMonitor Object (TRK,legacy)</p>
+<p class="VBA-Text">Definition, control and manipulation of particle monitors in the tracking solver.</p>
+<p class="VBA-Text">&#160;</p>
+<p class="VBA-Text" style="color: #ff0000;">Please note, that this command class is deprecated as it has been replaced by the more versatile <a href="particle_reader_objects.htm#Particle2DMonitorReader" style="color: #ff0000;">Particle2DMonitorReader</a> object.</p>
+<p class="VBA-Text" style="color: #ff0000;">The documentation is only kept here to support conversion of existing VBA code when necessary. This object should not be used for new projects.</p>
+<ul>
+<li class="p-VBA-Index-Category">
+<p class="VBA-Index-Category"><a href="#Methods">Methods</a></p>
+</li>
+<li class="p-VBA-Index-Category">
+<p class="VBA-Index-Category"><a href="#Queries">General Queries</a></p>
+</li>
+<li class="p-VBA-Index-Category">
+<p class="VBA-Index-Category"><a href="#Particle Queries">Particle Queries</a></p>
+</li>
+<li class="p-VBA-Index-Category">
+<p class="VBA-Index-Category"><a href="#Default">Default Settings</a></p>
+</li>
+<li class="p-VBA-Index-Category">
+<p class="VBA-Index-Category"><a href="#Example">Example</a></p>
+</li>
+</ul>
+<p class="VBA-Heading-Category"><a name="Methods" id="Methods"></a>Methods</p>
+<p class="VBA-Heading-Method">Reset</p>
+<p class="VBA-Text-Indent">Resets all internal settings to their default values.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">Name ( <span><a href="../common_vbageneral/common_general_name.htm" id="a1" style="font-weight: normal; font-style: normal;" name="a1">name</a></span> <span style="font-style: italic;"><i>name</i></span> )</p>
+<p class="VBA-Text-Indent">Defines a name for the particle monitor.</p>
+<p class="VBA-Heading-Method">&#160;</p>
+<p class="VBA-Heading-Method">AutoLabel ( <span><a href="../common_vbageneral/common_general_bool_data_type.htm" id="a2" style="font-weight: normal; font-style: normal;" name="a2">bool</a></span> <span style="font-style: italic;"><i>autolabel</i></span> <span style="font-weight: normal;">)</span></p>
+<p class="VBA-Text-Indent">If <span style="font-style: italic;"><i>autolabel=True</i></span><span>, a name for the particle monitor is automatically generated</span>.</p>
+<p class="VBA-Heading-Method">&#160;</p>
+<p class="VBA-Heading-Method">SourceName ( <a href="../common_vbageneral/common_general_name.htm" id="a16" style="font-weight: normal; font-style: normal;" name="a16">name</a> <span style="font-style: italic;"><i>name</i></span> )</p>
+<p class="VBA-Text-Indent">Sets the name of the particle source of the emitted particles are monitored. To monitor all particles, <span style="font-style: italic;"><i>name</i></span> can be set to an empty string, i.e. "".</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">SourceType ( <a href="../common_vbageneral/common_general_name.htm" id="a101" style="font-weight: normal; font-style: normal;" name="a101">name</a> <span style="font-style: italic;"><i>name</i></span> )</p>
+<p class="VBA-Text-Indent">Sets the type of the particle sources of which the emitted particles are monitored by the monitor. &#160;The following three types are valid entries: "ParticleSource", "ParticleInterface" and "AllSources". This setting must be in agreement with the <span style="font-weight: bold;">SourceName</span> setting.</p>
+<p class="VBA-Heading-Method">&#160;</p>
+<p class="VBA-Heading-Method">UsePlane ( <span><a href="../common_vbageneral/common_general_bool_data_type.htm" id="a3" style="font-weight: normal; font-style: normal;" name="a3">bool</a></span> <span style="font-style: italic;"><i>useplane</i></span> <span style="font-weight: normal;">)</span></p>
+<p class="VBA-Text-Indent">If set to True, the monitor is defined on a plane, otherwise it is defined on a face.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">PlaneNormal ( <a href="../common_vbageneral/common_general_double.htm" id="a27" style="font-weight: normal;" name="a27">double</a> &#160;<span style="font-style: italic;"><i>uNorm,</i></span> <span style="font-style: italic; font-weight: normal;"><i>&#160;</i></span><span><a href="../common_vbageneral/common_general_double.htm" id="a26" style="font-weight: normal;" name="a26">double</a></span> &#160;<span style="font-style: italic;"><i>vNorm,</i></span> <span style="font-style: italic; font-weight: normal;"><i>&#160;</i></span><span><a href="../common_vbageneral/common_general_double.htm" id="a28" style="font-weight: normal;" name="a28">double</a></span> &#160;<span style="font-style: italic;"><i>wNorm</i></span>)</p>
+<p class="VBA-Text-Indent">Defines the normal of the monitoring plane.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">PlanePoint ( <span style="font-style: italic;"><i>&#160;</i></span><a href="../common_vbageneral/common_general_double.htm" id="a29" style="font-weight: normal;" name="a29">double</a> &#160;<span style="font-style: italic;"><i>uPos, &#160;</i></span><a href="../common_vbageneral/common_general_double.htm" id="a30" style="font-weight: normal;" name="a30">double</a> &#160;<span style="font-style: italic;"><i>vPos, &#160;</i></span><a href="../common_vbageneral/common_general_double.htm" id="a31" style="font-weight: normal;" name="a31">double</a> &#160;<span style="font-style: italic;"><i>wPos</i></span>)</p>
+<p class="VBA-Text-Indent">Defines a point on the monitoring plane.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">PlaneLocalU ( <span style="font-style: italic;"><i>&#160;</i></span><a href="../common_vbageneral/common_general_double.htm" id="a32" style="font-weight: normal;" name="a32">double</a> &#160;<span style="font-style: italic;"><i>uLocU, &#160;&#160;</i></span><a href="../common_vbageneral/common_general_double.htm" id="a33" style="font-weight: normal;" name="a33">double</a> &#160;<span style="font-style: italic;"><i>vLocU, &#160;&#160;</i></span><a href="../common_vbageneral/common_general_double.htm" id="a34" style="font-weight: normal;" name="a34">double</a> &#160;<span style="font-style: italic;"><i>wLocU</i></span>)</p>
+<p class="VBA-Text-Indent">Defines the direction of the local u-axis of the plane. Note that the vector has to be parallel to the plane. The vectors Normal, LocalU und LocalV have to represent three axis of an orthogonal cartesian coordinate system.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">PlaneLocalV ( <span style="font-style: italic;"><i>&#160;</i></span><a href="../common_vbageneral/common_general_double.htm" id="a35" style="font-weight: normal;" name="a35">double</a> &#160;<span style="font-style: italic;"><i>uLocV, &#160;&#160;</i></span><a href="../common_vbageneral/common_general_double.htm" id="a36" style="font-weight: normal;" name="a36">double</a> &#160;<span style="font-style: italic;"><i>vLocV, &#160;&#160;</i></span><a href="../common_vbageneral/common_general_double.htm" id="a37" style="font-weight: normal;" name="a37">double</a> &#160;<span style="font-style: italic;"><i>wLocV</i></span>)</p>
+<p class="VBA-Text-Indent">Defines the direction of the local v-axis of the plane. Note that the vector has to be parallel to the plane. The vectors Normal, LocalU und LocalV have to represent three axis of an orthogonal cartesian coordinate system.</p>
+<p class="VBA-Heading-Method">&#160;</p>
+<p class="VBA-Heading-Method">FaceNameAndID(<span style="font-weight: normal;"><a href="../common_vbageneral/common_general_name.htm" id="a9" name="a9">name</a> &#160;</span><span style="font-style: italic;"><i>facename,</i></span> <span style="font-weight: normal;">&#160;<a href="../common_vbageneral/common_general_integer.htm" id="a8" style="font-weight: normal;" name="a8">int</a></span> <span style="font-style: italic;"><i>&#160;faceid</i></span>)</p>
+<p class="VBA-Text-Indent">Specifies the solid and the faceid if the plane is defined on a face.</p>
+<p class="vba-text-indent">&#160;</p>
+<p class="VBA-Heading-Method">TemporalBehaviour (<a href="../common_vbageneral/common_general_enum.htm" id="a5" style="font-weight: normal;" name="a5">enum</a> <span style="font-style: italic;"><i>&#160;behaviour</i></span>)</p>
+<p class="VBA-Text-Indent">Temporal behavior of the monitoring process.</p>
+<table style="vertical-align: top; margin-left: 50px;" cellspacing="0" width="74.761%">
+<col style="width: 24.989%;" />
+<col style="width: 75.011%;" />
+<tr style="vertical-align: top;">
+<td style="border: Solid 2px #000000; width: 24.989%; padding-right: 10px; padding-left: 10px;">
+<p><span style="font-style: italic;"><i>behaviour (</i></span><a href="../common_vbageneral/common_general_enum.htm" id="a6" style="font-weight: normal;" name="a6">enum</a> )</p>
+</td>
+<td style="border-top: Solid 2px #000000; border-right: Solid 2px #000000; border-bottom: Solid 2px #000000; width: 75.011%; padding-right: 10px; padding-left: 10px;">
+<p>meaning</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 24.989%; padding-right: 10px; padding-left: 10px;">
+<p>"once"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 75.011%; padding-right: 10px; padding-left: 10px;">
+<p>A particle is monitored only the first time it penetrates the monitoring face.</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 24.989%; padding-right: 10px; padding-left: 10px;">
+<p>"continuous"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 75.011%; padding-right: 10px; padding-left: 10px;">
+<p>A particle is monitored continuously.</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 24.989%; padding-right: 10px; padding-left: 10px;">
+<p>"timespan"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 75.011%; padding-right: 10px; padding-left: 10px;">
+<p>The monitor is only active during the given time-span.</p>
+</td>
+</tr>
+</table>
+<p class="VBA-Heading-Method">&#160;</p>
+<p class="VBA-Heading-Method">TimeSpan ( <span style="font-weight: normal;"><a href="../common_vbageneral/common_general_double.htm" id="a13" name="a13">double</a> &#160;</span><span style="font-style: italic;"><i>begintime,</i></span> <span style="font-weight: normal;"><a href="../common_vbageneral/common_general_double.htm" id="a14" name="a14">double</a> &#160;</span><span style="font-style: italic;"><i>endtime</i></span>)</p>
+<p class="Topic-Text-Indent">Specifies the time-span for monitoring the particles.</p>
+<p class="VBA-Heading-Method">&#160;</p>
+<p class="VBA-Heading-Method">Align (<a href="../common_vbageneral/common_general_enum.htm" id="a4" style="font-weight: normal;" name="a4">enum</a> &#160;<span style="font-style: italic;"><i>aligntype</i></span>)</p>
+<p class="VBA-Text-Indent">Defines the type of plane-alignment of the monitor.</p>
+<table style="vertical-align: top; margin-left: 50px;" cellspacing="0" width="74.761%">
+<col style="width: 24.989%;" />
+<col style="width: 75.011%;" />
+<tr style="vertical-align: top;">
+<td style="border: Solid 2px #000000; width: 24.989%; padding-right: 10px; padding-left: 10px;">
+<p><span style="font-style: italic;"><i>typename (</i></span><a href="../common_vbageneral/common_general_enum.htm" id="a7" style="font-weight: normal;" name="a7">enum</a> )</p>
+</td>
+<td style="border-top: Solid 2px #000000; border-right: Solid 2px #000000; border-bottom: Solid 2px #000000; width: 75.011%; padding-right: 10px; padding-left: 10px;">
+<p>meaning</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 24.989%; padding-right: 10px; padding-left: 10px;">
+<p>"GLOBAL"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 75.011%; padding-right: 10px; padding-left: 10px;">
+<p>The monitoring plane is defined with respect to the global coordinate system (GCS).</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 24.989%; padding-right: 10px; padding-left: 10px;">
+<p>"WCS"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 75.011%; padding-right: 10px; padding-left: 10px;">
+<p>The monitoring plane is defined with respect to the working coordinate system (WCS).</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 24.989%; padding-right: 10px; padding-left: 10px;">
+<p>"FREE"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 75.011%; padding-right: 10px; padding-left: 10px;">
+<p>The monitoring plane is freely defined.</p>
+</td>
+</tr>
+</table>
+<p class="VBA-Heading-Method">&#160;</p>
+<p class="VBA-Heading-Method">PlaneSetting (<a href="../common_vbageneral/common_general_enum.htm" id="a10" style="font-weight: normal;" name="a10">enum</a> &#160;<span style="font-style: italic;"><i>axisname,</i></span> <span style="font-weight: normal;"><a href="../common_vbageneral/common_general_double.htm" id="a11" name="a11">double</a> &#160;</span><span style="font-style: italic;"><i>position</i></span>)</p>
+<p class="VBA-Text-Indent">Direction of the plane's normal with respect to the GCS or WCS. The position describes the plane's location along the specified axis.</p>
+<table style="vertical-align: top; margin-left: 50px;" cellspacing="0" width="74.761%">
+<col style="width: 24.989%;" />
+<col style="width: 75.011%;" />
+<tr style="vertical-align: top;">
+<td style="border: Solid 2px #000000; width: 24.989%; padding-right: 10px; padding-left: 10px;">
+<p><span style="font-style: italic;"><i>axisname (</i></span><a href="../common_vbageneral/common_general_enum.htm" id="a12" style="font-weight: normal;" name="a12">enum</a> )</p>
+</td>
+<td style="border-top: Solid 2px #000000; border-right: Solid 2px #000000; border-bottom: Solid 2px #000000; width: 75.011%; padding-right: 10px; padding-left: 10px;">
+<p>meaning</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 24.989%; padding-right: 10px; padding-left: 10px;">
+<p>"x-direction"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 75.011%; padding-right: 10px; padding-left: 10px;">
+<p>Plane's normal is the X/U axis.</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 24.989%; padding-right: 10px; padding-left: 10px;">
+<p>"y-direction"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 75.011%; padding-right: 10px; padding-left: 10px;">
+<p>Plane's normal is the Y/V axis.</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 24.989%; padding-right: 10px; padding-left: 10px;">
+<p>"z-direction"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 75.011%; padding-right: 10px; padding-left: 10px;">
+<p>Plane's normal is the Z/W axis.</p>
+</td>
+</tr>
+</table>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">PlotType (<a href="../common_vbageneral/common_general_enum.htm" id="a15" style="font-weight: normal;" name="a15">enum</a> &#160;<span style="font-style: italic;"><i>plottype</i></span>)</p>
+<p class="VBA-Text-Indent">Specifies the type of the generated plot.</p>
+<p class="VBA-Text-Indent">Note: If a histogram-plot is chosen, the ordinate is automatically set to "probability", i.e. it shows the percentage of particles which correspond to the given abscissa value.</p>
+<table style="vertical-align: top; margin-left: 50px;" cellspacing="0" width="74.761%">
+<col style="width: 24.989%;" />
+<col style="width: 75.011%;" />
+<tr style="vertical-align: top;">
+<td style="border: Solid 2px #000000; width: 24.989%; padding-right: 10px; padding-left: 10px;">
+<p><span style="font-style: italic;"><i>plottype (</i></span><a href="../common_vbageneral/common_general_enum.htm" id="a17" style="font-weight: normal;" name="a17">enum</a> )</p>
+</td>
+<td style="border-top: Solid 2px #000000; border-right: Solid 2px #000000; border-bottom: Solid 2px #000000; width: 75.011%; padding-right: 10px; padding-left: 10px;">
+<p>meaning</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 24.989%; padding-right: 10px; padding-left: 10px;">
+<p>"phase-space"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 75.011%; padding-right: 10px; padding-left: 10px;">
+<p>The plot is a 2D-plot (phase-space diagram).</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 24.989%; padding-right: 10px; padding-left: 10px;">
+<p>"histogram"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 75.011%; padding-right: 10px; padding-left: 10px;">
+<p>The plot is a histogram.</p>
+</td>
+</tr>
+</table>
+<p class="VBA-Heading-Method">&#160;</p>
+<p class="VBA-Heading-Method">DensitySamples ( <span><a href="../common_vbageneral/common_general_integer.htm" id="a24" style="font-weight: normal;" name="a24">int</a></span> <span style="font-style: italic;"><i>&#160;samples</i></span>)</p>
+<p class="Topic-Text-Indent">Number of columns for the histogram plot.</p>
+<p class="Topic-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">AbscissaSetting (<a href="../common_vbageneral/common_general_enum.htm" id="a18" style="font-weight: normal;" name="a18">enum</a> &#160;<span style="font-style: italic;"><i>type,</i></span> <span style="font-weight: normal;"><a href="../common_vbageneral/common_general_enum.htm" id="a19" style="font-weight: normal;" name="a19">enum</a> &#160;</span><span style="font-style: italic;"><i>direction</i></span>)</p>
+<p class="VBA-Heading-Method">OrdinateSetting (<a href="../common_vbageneral/common_general_enum.htm" id="a21" style="font-weight: normal;" name="a21">enum</a> &#160;<span style="font-style: italic;"><i>type,</i></span> <span style="font-weight: normal;"><a href="../common_vbageneral/common_general_enum.htm" id="a22" style="font-weight: normal;" name="a22">enum</a> &#160;</span><span style="font-style: italic;"><i>direction</i></span>)</p>
+<p class="VBA-Text-Indent">Definition of the physical quantity which is displayed in the diagram. Note that for the plot-type "histogram" only the abscissa setting is considered.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<table style="vertical-align: top; margin-left: 50px;" cellspacing="0" width="74.761%">
+<col style="width: 24.989%;" />
+<col style="width: 75.011%;" />
+<tr style="vertical-align: top;">
+<td style="border: Solid 2px #000000; width: 24.989%; padding-right: 10px; padding-left: 10px;">
+<p><span style="font-style: italic;"><i>type (</i></span><a href="../common_vbageneral/common_general_enum.htm" id="a20" style="font-weight: normal;" name="a20">enum</a> )</p>
+</td>
+<td style="border-top: Solid 2px #000000; border-right: Solid 2px #000000; border-bottom: Solid 2px #000000; width: 75.011%; padding-right: 10px; padding-left: 10px;">
+<p>meaning</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 24.989%; padding-right: 10px; padding-left: 10px;">
+<p>"position"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 75.011%; padding-right: 10px; padding-left: 10px;">
+<p>Position of the particles relative to the plane's origin point and local coordinate system.</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 24.989%; padding-right: 10px; padding-left: 10px;">
+<p>"velocity"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 75.011%; padding-right: 10px; padding-left: 10px;">
+<p>Velocity of the particles relative to the plane's local coordinate system.</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 24.989%; padding-right: 10px; padding-left: 10px;">
+<p>"angle"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 75.011%; padding-right: 10px; padding-left: 10px;">
+<p>Penetration Angle in local u- and v-direction.</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 24.989%; padding-right: 10px; padding-left: 10px;">
+<p>"momentum"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 75.011%; padding-right: 10px; padding-left: 10px;">
+<p>Momentum of the particles relative to the plane's local coordinate system.</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 24.989%; padding-right: 10px; padding-left: 10px;">
+<p>"gamma"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 75.011%; padding-right: 10px; padding-left: 10px;">
+<p>Gamma of the particles relative to the plane's local coordinate system.</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 24.989%; padding-right: 10px; padding-left: 10px;">
+<p>"beta"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 75.011%; padding-right: 10px; padding-left: 10px;">
+<p>Beta of the particles relative to the plane's local coordinate system.</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 24.989%; padding-right: 10px; padding-left: 10px;">
+<p>"current "</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 75.011%; padding-right: 10px; padding-left: 10px;">
+<p>Current of the particles relative to the plane's local coordinate system.</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 24.989%; padding-right: 10px; padding-left: 10px;">
+<p>"charge"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 75.011%; padding-right: 10px; padding-left: 10px;">
+<p>Charge of the monitored particles.</p>
+</td>
+</tr>
+</table>
+<p class="VBA-Text-Indent">&#160;</p>
+<table style="vertical-align: top; margin-left: 50px;" cellspacing="0" width="74.761%">
+<col style="width: 24.989%;" />
+<col style="width: 75.011%;" />
+<tr style="vertical-align: top;">
+<td style="border: Solid 2px #000000; width: 24.989%; padding-right: 10px; padding-left: 10px;">
+<p style="font-style: italic;">direction <span style="font-style: italic;"><i>(</i></span><a href="../common_vbageneral/common_general_enum.htm" id="a97" style="font-weight: normal;" name="a97">enum</a> )</p>
+</td>
+<td style="border-top: Solid 2px #000000; border-right: Solid 2px #000000; border-bottom: Solid 2px #000000; width: 75.011%; padding-right: 10px; padding-left: 10px;">
+<p>meaning</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 24.989%; padding-right: 10px; padding-left: 10px;">
+<p>"x-direction"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 75.011%; padding-right: 10px; padding-left: 10px;">
+<p>x-component</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 24.989%; padding-right: 10px; padding-left: 10px;">
+<p>"y-direction"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 75.011%; padding-right: 10px; padding-left: 10px;">
+<p>y-component</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 24.989%; padding-right: 10px; padding-left: 10px;">
+<p>"z-direction"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 75.011%; padding-right: 10px; padding-left: 10px;">
+<p>z-component</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 24.989%; padding-right: 10px; padding-left: 10px;">
+<p>"absolute"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 75.011%; padding-right: 10px; padding-left: 10px;">
+<p>absolute value</p>
+</td>
+</tr>
+</table>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">Create</p>
+<p class="VBA-Text-Indent">Creates the particle monitor</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">Delete ( <a href="../common_vbageneral/common_general_name.htm" id="a38" style="font-weight: normal; font-style: normal;" name="a38">name</a> <span style="font-style: italic;"><i>name</i></span> )</p>
+<p class="VBA-Text-Indent">Deletes the specified particle monitor.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">Rename ( <a href="../common_vbageneral/common_general_name.htm" id="a39" style="font-weight: normal; font-style: normal;" name="a39">name</a> <span style="font-style: italic;"><i>oldName,</i></span> <a href="../common_vbageneral/common_general_name.htm" id="a40" style="font-weight: normal; font-style: normal;" name="a40">name</a> <span style="font-style: italic;"><i>newName</i></span> )</p>
+<p class="VBA-Text-Indent">Renames the particle monitor.</p>
+<p class="VBA-Heading-Category"><a name="Queries" id="Queries"></a>General Queries</p>
+<p class="VBA-Heading-Method">SelectMonitor ( <a href="../common_vbageneral/common_general_name.htm" id="a23" style="font-weight: normal; font-style: normal;" name="a23">name</a> <span style="font-style: italic;"><i>name</i></span> ) <a href="../common_vbageneral/common_general_bool_data_type.htm" id="a49" style="font-weight: normal; font-style: normal;" name="a49">bool</a></p>
+<p class="VBA-Text-Indent">Selects the monitor "name" for the following operations.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">ClearMonitorData</p>
+<p class="VBA-Text-Indent">Delete the data created by SelectMonitor.</p>
+<p class="VBA-Heading-Method">&#160;</p>
+<p class="VBA-Heading-Method">IsPlane &#160;<a href="../common_vbageneral/common_general_bool_data_type.htm" id="a52" style="font-weight: normal; font-style: normal;" name="a52">bool</a></p>
+<p class="VBA-Text-Indent">&#160;Is <span style="font-style: italic;"><i>true</i></span>, if monitor is defined on a plane, <span style="font-style: italic;"><i>false</i></span> if it is defined on a face.</p>
+<p class="vba-text-indent">&#160;</p>
+<p class="VBA-Heading-Method">GetAlign <a href="../common_vbageneral/common_general_integer.htm" id="a50" style="font-weight: normal;" name="a50">int</a></p>
+<p class="VBA-Text-Indent">Returns the align-type of the monitor (if defined on a plane).</p>
+<table style="vertical-align: top; margin-left: 50px;" cellspacing="0" width="74.761%">
+<col style="width: 24.989%;" />
+<col style="width: 75.011%;" />
+<tr style="vertical-align: top;">
+<td style="border: Solid 2px #000000; width: 24.989%; padding-right: 10px; padding-left: 10px;">
+<p><span style="font-style: italic;"><i>typename (</i></span><a href="../common_vbageneral/common_general_enum.htm" id="a95" style="font-weight: normal;" name="a95">enum</a> )</p>
+</td>
+<td style="border-top: Solid 2px #000000; border-right: Solid 2px #000000; border-bottom: Solid 2px #000000; width: 75.011%; padding-right: 10px; padding-left: 10px;">
+<p>meaning</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 24.989%; padding-right: 10px; padding-left: 10px;">
+<p>0</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 75.011%; padding-right: 10px; padding-left: 10px;">
+<p>"GLOBAL"</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 24.989%; padding-right: 10px; padding-left: 10px;">
+<p>1</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 75.011%; padding-right: 10px; padding-left: 10px;">
+<p>"WCS"</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 24.989%; padding-right: 10px; padding-left: 10px;">
+<p>2</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 75.011%; padding-right: 10px; padding-left: 10px;">
+<p>"FREE"</p>
+</td>
+</tr>
+</table>
+<p class="VBA-Heading-Method">&#160;</p>
+<p class="VBA-Heading-Method">GetNormal ( <a href="../common_vbageneral/common_general_double.htm" id="a25" style="font-weight: normal;" name="a25">double</a> <span style="font-style: italic;"><i>&amp; uNorm, &#160;</i></span><a href="../common_vbageneral/common_general_double.htm" id="a41" style="font-weight: normal;" name="a41">double</a> &#160;<span style="font-style: italic;"><i>&amp; vNnorm, &#160;</i></span><a href="../common_vbageneral/common_general_double.htm" id="a42" style="font-weight: normal;" name="a42">double</a> &#160;<span style="font-style: italic;"><i>&amp; wNnorm</i></span>)</p>
+<p class="VBA-Text-Indent">Returns the plane's normal (local W-axis) &#160;(if defined on a plane) in global coordinates.</p>
+<p class="VBA-Heading-Method">&#160;</p>
+<p class="VBA-Heading-Method">GetLocalU (<span style="font-style: italic;"><i><a href="../common_vbageneral/common_general_double.htm" id="a43" style="font-weight: normal;" name="a43">double</a></i></span> &#160;<span style="font-style: italic;"><i>&amp; uLocU,</i></span> <a href="../common_vbageneral/common_general_double.htm" id="a44" style="font-weight: normal;" name="a44">double</a> &#160;<span style="font-style: italic;"><i>&amp; vLocU, &#160;</i></span><a href="../common_vbageneral/common_general_double.htm" id="a45" style="font-weight: normal;" name="a45">double</a> <span style="font-style: italic;"><i>&amp; wLocU</i></span>)</p>
+<p class="VBA-Text-Indent">Returns the plane's local U-axis (if defined on a plane) in global coordinates.</p>
+<p class="vba-text-indent">&#160;</p>
+<p class="VBA-Heading-Method">GetLocalV ( <a href="../common_vbageneral/common_general_double.htm" id="a46" style="font-weight: normal;" name="a46">double</a> <span style="font-style: italic;"><i>&amp; uLocV, &#160;</i></span><a href="../common_vbageneral/common_general_double.htm" id="a47" style="font-weight: normal;" name="a47">double</a> &#160;<span style="font-style: italic;"><i>&amp; vLocV, &#160;</i></span><a href="../common_vbageneral/common_general_double.htm" id="a48" style="font-weight: normal;" name="a48">double</a> <span style="font-style: italic;"><i>&amp; wLocV</i></span>)</p>
+<p class="VBA-Text-Indent">Returns the plane's local V-axis (if defined on a plane) in global coordinates.</p>
+<p class="VBA-Heading-Method">&#160;</p>
+<p class="VBA-Heading-Method">GetPlaneDirection <a href="../common_vbageneral/common_general_integer.htm" id="a51" style="font-weight: normal;" name="a51">int</a> <span style="font-style: italic;"><i>&#160;</i></span></p>
+<p class="VBA-Text-Indent">Returns the alignment of the plane with respect to the active coordinate system (GCS or WCS). &#160;(Only if plane-aligned.)</p>
+<table style="vertical-align: top; margin-left: 50px;" cellspacing="0" width="74.761%">
+<col style="width: 24.989%;" />
+<col style="width: 75.011%;" />
+<tr style="vertical-align: top;">
+<td style="border: Solid 2px #000000; width: 24.989%; padding-right: 10px; padding-left: 10px;">
+<p><span style="font-style: italic;"><i>typename (</i></span><a href="../common_vbageneral/common_general_enum.htm" id="a96" style="font-weight: normal;" name="a96">enum</a> )</p>
+</td>
+<td style="border-top: Solid 2px #000000; border-right: Solid 2px #000000; border-bottom: Solid 2px #000000; width: 75.011%; padding-right: 10px; padding-left: 10px;">
+<p>meaning</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 24.989%; padding-right: 10px; padding-left: 10px;">
+<p>0</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 75.011%; padding-right: 10px; padding-left: 10px;">
+<p>"U/X-component"</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 24.989%; padding-right: 10px; padding-left: 10px;">
+<p>1</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 75.011%; padding-right: 10px; padding-left: 10px;">
+<p>"V/Y-component"</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 24.989%; padding-right: 10px; padding-left: 10px;">
+<p>2</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 75.011%; padding-right: 10px; padding-left: 10px;">
+<p>"W/Z-component"</p>
+</td>
+</tr>
+</table>
+<p class="VBA-Heading-Method">&#160;</p>
+<p class="VBA-Heading-Method">GetPlanePosition <a href="../common_vbageneral/common_general_double.htm" id="a53" style="font-weight: normal;" name="a53">double</a></p>
+<p class="VBA-Text-Indent">Offset of the plane along the normal axis of the GCS or WCS. (Only if plane-aligned.)</p>
+<p class="vba-text-indent">&#160;</p>
+<p class="VBA-Heading-Method">GetNParticles <a href="../common_vbageneral/common_general_integer.htm" id="a55" style="font-weight: normal;" name="a55">int</a> <span style="font-style: italic;"><i>&#160;</i></span></p>
+<p class="VBA-Text-Indent">Returns the number of particles which were recorded by the monitor. If a particle passes the monitor face several times it is counted only once for this query.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">GetNParticlesTotal <a href="../common_vbageneral/common_general_integer.htm" id="a54" style="font-weight: normal;" name="a54">int</a> <span style="font-style: italic;"><i>&#160;</i></span></p>
+<p class="VBA-Text-Indent">Returns the number of all recorded events (or hits). If a particle passes the monitor-face several times, all events are counted.<br />
+An application example where the number of particles and events is usually different would be a cyclotron.</p>
+<p class="VBA-Heading-Method">&#160;</p>
+<p class="VBA-Heading-Method">GetCurrent <a href="../common_vbageneral/common_general_double.htm" id="a56" style="font-weight: normal;" name="a56">double</a></p>
+<p class="VBA-Text-Indent">Returns the amount of current flowing through the monitor's surface.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">GetEmittance ( <a href="../common_vbageneral/common_general_double.htm" id="a69" style="font-weight: normal;" name="a69">double</a> <span style="font-style: italic;"><i>&amp; uEmittance,</i></span> <a href="../common_vbageneral/common_general_double.htm" id="a70" style="font-weight: normal;" name="a70">double</a> <span style="font-style: italic;"><i>&amp; vEmittance</i></span> )</p>
+<p class="VBA-Text-Indent">Returns the averaged transverse emittance, i.e. u- and v-components, of the particles that move through the monitor.</p>
+<p class="vba-text-indent">&#160;</p>
+<p class="VBA-Heading-Method">GetMeanValue ( <a href="../common_vbageneral/common_general_enum.htm" id="a58" style="font-weight: normal;" name="a58">enum</a> <span style="font-style: italic;"><i>type,</i></span> <span><a href="../common_vbageneral/common_general_enum.htm" id="a59" style="font-weight: normal;" name="a59">enum</a></span> <span style="font-style: italic;"><i>direction</i></span> ) <a href="../common_vbageneral/common_general_double.htm" id="a57" style="font-weight: normal;" name="a57">double</a></p>
+<p class="VBA-Text-Indent">Statistical evaluation: arithmetic mean in the <span style="font-style: italic;"><i>direction</i></span> of the quantitiy <span style="font-style: italic;"><i>type</i></span>, e.g. the component of "velocity" in "x-direction". Admissible entries for the <span style="font-style: italic;"><i>type</i></span> are shown in the table of the description of <span style="font-weight: bold;">AbcissaSetting</span>.</p>
+<p class="VBA-Text-Indent">Admissible entries for direction are "x-direction", "y-direction", "z-direction" and "absolute". Here, "x", "y" and "z" represent the local coordinates of the monitor plane: "z" corresponds to the axis that is normal to the monitor plane and "x" and "y" are parallel to it. In the local coordinate system UVW, "x" is "u", "y" is "v" and "z" is "w". The table below translates the directions in the local coordinate system to those in the global coordinate system, depending on which of the principal planes of the global coordinate system the monitor plane is aligned to.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<table style="vertical-align: top; left: 0px; top: 3018px; margin-left: 48px;" cellspacing="0" width="1000">
+<col style="width: 25%;" />
+<col style="width: 25%;" />
+<col style="width: 25%;" />
+<col style="width: 25%;" />
+<tr style="vertical-align: top;">
+<td style="border: Solid 2px #000000; width: 25%; padding-right: 10px; padding-left: 10px;">
+<p style="margin-left: 0px; font-style: italic;">direction (local)</p>
+</td>
+<td style="border-top: Solid 2px #000000; border-right: Solid 2px #000000; border-bottom: Solid 2px #000000; width: 25%; padding-right: 10px; padding-left: 10px;">
+<p>direction when plane normal is x (global)</p>
+</td>
+<td style="border-top: Solid 2px #000000; border-right: Solid 2px #000000; border-bottom: Solid 2px #000000; width: 25%; padding-right: 10px; padding-left: 10px;">
+<p>direction when plane normal is y (global)</p>
+</td>
+<td style="border-top: Solid 2px #000000; border-right: Solid 2px #000000; border-bottom: Solid 2px #000000; width: 25%; padding-right: 10px; padding-left: 10px;">
+<p>direction when plane normal is z (global)</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 25%; padding-right: 10px; padding-left: 10px;">
+<p>"x-direction"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 25%; padding-right: 10px; padding-left: 10px;">
+<p>y</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 25%; padding-right: 10px; padding-left: 10px;">
+<p>z</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 25%; padding-right: 10px; padding-left: 10px;">
+<p>x</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 25%; padding-right: 10px; padding-left: 10px;">
+<p>"y-direction"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 25%; padding-right: 10px; padding-left: 10px;">
+<p>z</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 25%; padding-right: 10px; padding-left: 10px;">
+<p>x</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 25%; padding-right: 10px; padding-left: 10px;">
+<p>y</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 25%; padding-right: 10px; padding-left: 10px;">
+<p>"z-direction"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 25%; padding-right: 10px; padding-left: 10px;">
+<p>x</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 25%; padding-right: 10px; padding-left: 10px;">
+<p>y</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 25%; padding-right: 10px; padding-left: 10px;">
+<p>z</p>
+</td>
+</tr>
+</table>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">GetRMS ( <a href="../common_vbageneral/common_general_enum.htm" id="a98" style="font-weight: normal;" name="a98">enum</a> <span style="font-style: italic;"><i>type,</i></span> <a href="../common_vbageneral/common_general_enum.htm" id="a99" style="font-weight: normal;" name="a99">enum</a> <span style="font-style: italic;"><i>component</i></span> ) <a href="../common_vbageneral/common_general_double.htm" id="a100" style="font-weight: normal;" name="a100">double</a></p>
+<p class="VBA-Text-Indent">Statistical evaluation: Get root mean square. For further information, see description of <span style="font-weight: bold;">GetMeanValue</span>.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">GetSigma ( <a href="../common_vbageneral/common_general_enum.htm" id="a60" style="font-weight: normal;" name="a60">enum</a> <span style="font-style: italic;"><i>type,</i></span> <a href="../common_vbageneral/common_general_enum.htm" id="a61" style="font-weight: normal;" name="a61">enum</a> <span style="font-style: italic;"><i>component</i></span> ) <a href="../common_vbageneral/common_general_double.htm" id="a62" style="font-weight: normal;" name="a62">double</a></p>
+<p class="VBA-Text-Indent">Statistical evaluation: Get standard deviation. For further information, see description of <span style="font-weight: bold;">GetMeanValue</span>.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">GetMin ( <a href="../common_vbageneral/common_general_enum.htm" id="a63" style="font-weight: normal;" name="a63">enum</a> <span style="font-style: italic;"><i>type,</i></span> <a href="../common_vbageneral/common_general_enum.htm" id="a64" style="font-weight: normal;" name="a64">enum</a> <span style="font-style: italic;"><i>component</i></span> ) <a href="../common_vbageneral/common_general_double.htm" id="a65" style="font-weight: normal;" name="a65">double</a></p>
+<p class="VBA-Text-Indent">Statistical evaluation: Get minimum value. For further information, see description of <span style="font-weight: bold;">GetMeanValue</span>.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">GetMax ( <a href="../common_vbageneral/common_general_enum.htm" id="a66" style="font-weight: normal;" name="a66">enum</a> <span style="font-style: italic;"><i>type,</i></span> <a href="../common_vbageneral/common_general_enum.htm" id="a67" style="font-weight: normal;" name="a67">enum</a> <span style="font-style: italic;"><i>component</i></span> ) <a href="../common_vbageneral/common_general_double.htm" id="a68" style="font-weight: normal;" name="a68">double</a></p>
+<p class="VBA-Text-Indent">Statistical evaluation: Get maximum value. For further information, see description of <span style="font-weight: bold;">GetMeanValue</span>.</p>
+<p class="VBA-Heading-Category"><a name="Particle Queries"></a>Particle Queries</p>
+<p class="VBA-Heading-Method">SelectParticle ( <span><a href="../common_vbageneral/common_general_integer.htm" id="a71" style="font-weight: normal;" name="a71">int</a></span> <span style="font-style: italic;"><i>particleindex</i></span> )</p>
+<p class="VBA-Text-Indent">Selects the particle with the index <span style="font-style: italic;"><i>particleindex</i></span> for the following operations.</p>
+<p class="VBA-Heading-Method">&#160;</p>
+<p class="VBA-Heading-Method">GetArea <a href="../common_vbageneral/common_general_double.htm" id="a72" style="font-weight: normal;" name="a72">double</a></p>
+<p class="VBA-Text-Indent">Returns the specific area of the selected particle.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">GetCharge <a href="../common_vbageneral/common_general_double.htm" id="a73" style="font-weight: normal;" name="a73">double</a></p>
+<p class="VBA-Text-Indent" style="vertical-align: Sub;">Returns the specific charge of the selected particle.</p>
+<p class="VBA-Heading-Method">&#160;</p>
+<p class="VBA-Heading-Method">GetMass <a href="../common_vbageneral/common_general_double.htm" id="a74" style="font-weight: normal;" name="a74">double</a></p>
+<p class="VBA-Text-Indent">Returns the specific mass of the selected particle.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">GetTimeStep <a href="../common_vbageneral/common_general_double.htm" id="a75" style="font-weight: normal;" name="a75">double</a></p>
+<p class="VBA-Text-Indent">Returns the specific time step of the selected particle.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">GetNHits <a href="../common_vbageneral/common_general_integer.htm" id="a76" style="font-weight: normal;" name="a76">int</a> <span style="font: '-style:' italic;">&#160;</span></p>
+<p class="VBA-Text-Indent">Returns the number of hits of the particle with the plane. (If particle has penetrated the face more than once).</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">GetHitTime (<span><a href="../common_vbageneral/common_general_integer.htm" id="a78" style="font-weight: normal;" name="a78">int</a></span> <span style="font-style: italic;"><i>hitindex</i></span> ) <a href="../common_vbageneral/common_general_double.htm" id="a77" style="font-weight: normal;" name="a77">double</a></p>
+<p class="VBA-Text-Indent">Returns the time of the hit &#160;with number <span style="font-style: italic;"><i>hitindex</i></span>.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">GetPosition (<span><a href="../common_vbageneral/common_general_integer.htm" id="a82" style="font-weight: normal;" name="a82">int</a></span> <span style="font-style: italic;"><i>hitindex, &#160;</i></span><a href="../common_vbageneral/common_general_double.htm" id="a79" style="font-weight: normal;" name="a79">double</a> <span style="font-style: italic;"><i>&amp;uNorm, &#160;</i></span><a href="../common_vbageneral/common_general_double.htm" id="a80" style="font-weight: normal;" name="a80">double</a> &#160;<span style="font-style: italic;"><i>&amp;vNnorm, &#160;</i></span><a href="../common_vbageneral/common_general_double.htm" id="a81" style="font-weight: normal;" name="a81">double</a> &#160;<span style="font-style: italic;"><i>&amp;wNnorm</i></span>)</p>
+<p class="VBA-Text-Indent">Returns the hit-position of the hit &#160;with number <span style="font-style: italic;"><i>hitindex</i></span>.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">GetMomentum (<span><a href="../common_vbageneral/common_general_integer.htm" id="a83" style="font-weight: normal;" name="a83">int</a></span> <span style="font-style: italic;"><i>hitindex, &#160;</i></span><a href="../common_vbageneral/common_general_double.htm" id="a84" style="font-weight: normal;" name="a84">double</a> <span style="font-style: italic;"><i>&amp;uNorm, &#160;</i></span><a href="../common_vbageneral/common_general_double.htm" id="a85" style="font-weight: normal;" name="a85">double</a> &#160;<span style="font-style: italic;"><i>&amp;vNnorm, &#160;</i></span><a href="../common_vbageneral/common_general_double.htm" id="a86" style="font-weight: normal;" name="a86">double</a> &#160;<span style="font-style: italic;"><i>&amp;wNnorm</i></span>)</p>
+<p class="VBA-Text-Indent">Returns the momentum of the hit &#160;with number <span style="font-style: italic;"><i>hitindex.</i></span></p>
+<p class="VBA-Heading-Method">&#160;</p>
+<p class="VBA-Heading-Method">GetVelocity (<span><a href="../common_vbageneral/common_general_integer.htm" id="a87" style="font-weight: normal;" name="a87">int</a></span> <span style="font-style: italic;"><i>hitindex, &#160;</i></span><a href="../common_vbageneral/common_general_double.htm" id="a88" style="font-weight: normal;" name="a88">double</a> <span style="font-style: italic;"><i>&amp;uNorm, &#160;</i></span><a href="../common_vbageneral/common_general_double.htm" id="a89" style="font-weight: normal;" name="a89">double</a> &#160;<span style="font-style: italic;"><i>&amp;vNnorm, &#160;</i></span><a href="../common_vbageneral/common_general_double.htm" id="a90" style="font-weight: normal;" name="a90">double</a> &#160;<span style="font-style: italic;"><i>&amp;wNnorm</i></span>)</p>
+<p class="VBA-Text-Indent">Returns the velocity of the hit &#160;with number <span style="font-style: italic;"><i>hitindex</i></span>.</p>
+<p class="VBA-Heading-Method">&#160;</p>
+<p class="VBA-Heading-Method">GetValue (<span><a href="../common_vbageneral/common_general_integer.htm" id="a91" style="font-weight: normal;" name="a91">int</a></span> <span style="font-style: italic;"><i>hitindex,</i></span> <a href="../common_vbageneral/common_general_enum.htm" id="a92" style="font-weight: normal;" name="a92">enum</a> &#160;<span style="font-style: italic;"><i>type,</i></span> <span style="font-weight: normal;"><a href="../common_vbageneral/common_general_enum.htm" id="a93" style="font-weight: normal;" name="a93">enum</a> &#160;</span><span style="font-style: italic;"><i>direction</i></span>) <a href="../common_vbageneral/common_general_double.htm" id="a94" style="font-weight: normal;" name="a94">double</a></p>
+<p class="VBA-Text-Indent">Returns the specific value of type <span style="font-style: italic;"><i>type</i></span> in direction <span style="font-style: italic;"><i>direction</i></span> of the hit with the number <span style="font-style: italic;"><i>hitindex</i></span>.</p>
+<p class="VBA-Heading-Category"><a name="Default" id="Default"></a>Default Settings</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;Name ("all sources_Z(0)")</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;AutoLabel (TRUE)</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;SourceName ("all sources")</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;TemporalBehaviour ("once")</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;TimeSpan (0,0)</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;UsePlane (TRUE)</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;Align ("GLOBAL")</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;PlotType ("phase-space")</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;AbscissaSetting ("position", "x-direction")</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;OrdinateSetting ("angle", "x-direction")</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;DensitySamples (100)</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;PlaneSetting ("z-direction", 0)</p>
+<p class="VBA-Heading-Category"><a name="Example" id="Example"></a>Example:</p>
+<p class="VBA-Text-Indent">The following program demonstrates the application of the interrogative commands. The results of these commands are written into a text file.</p>
+<p class="VBA-Text-Example">&#160;</p>
+<p class="VBA-Text-Example">Sub Main</p>
+<p class="vba-text-example">&#160;</p>
+<p class="VBA-Text-Example" style="margin-left: 40px;">With ParticleMonitor</p>
+<p class="VBA-Text-Example" style="margin-left: 40px;">&#160;&#160;&#160;&#160;&#160;.Reset</p>
+<p class="VBA-Text-Example" style="margin-left: 40px;">&#160;&#160;&#160;&#160;&#160;.Name "mymonitor"</p>
+<p class="VBA-Text-Example" style="margin-left: 40px;">&#160;&#160;&#160;&#160;&#160;.AutoLabel "False"</p>
+<p class="VBA-Text-Example" style="margin-left: 40px;">&#160;&#160;&#160;&#160;&#160;.SourceName ""</p>
+<p class="VBA-Text-Example" style="margin-left: 40px;">&#160;&#160;&#160;&#160;&#160;.SourceType "AllSources"</p>
+<p class="VBA-Text-Example" style="margin-left: 40px;">&#160;&#160;&#160;&#160;&#160;.TemporalBehaviour "continuous"</p>
+<p class="VBA-Text-Example" style="margin-left: 40px;">&#160;&#160;&#160;&#160;&#160;.TimeSpan "0", "0"</p>
+<p class="VBA-Text-Example" style="margin-left: 40px;">&#160;&#160;&#160;&#160;&#160;.UsePlane "True"</p>
+<p class="VBA-Text-Example" style="margin-left: 40px;">&#160;&#160;&#160;&#160;&#160;.Align "GLOBAL" &#160;</p>
+<p class="VBA-Text-Example" style="margin-left: 40px;">&#160;&#160;&#160;&#160;&#160;.PlotType "phase-space"</p>
+<p class="VBA-Text-Example" style="margin-left: 40px;">&#160;&#160;&#160;&#160;&#160;.AbscissaSetting "position","z-direction"</p>
+<p class="VBA-Text-Example" style="margin-left: 40px;">&#160;&#160;&#160;&#160;&#160;.OrdinateSetting "position", "y-direction"</p>
+<p class="VBA-Text-Example" style="margin-left: 40px;">&#160;&#160;&#160;&#160;&#160;.DensitySamples "100"</p>
+<p class="VBA-Text-Example" style="margin-left: 40px;">&#160;&#160;&#160;&#160;&#160;.PlaneSetting "x-direction", "0.00" &#160;</p>
+<p class="VBA-Text-Example" style="margin-left: 40px;">&#160;&#160;&#160;&#160;&#160;.Create</p>
+<p class="VBA-Text-Example" style="margin-left: 40px;">End With</p>
+<p class="VBA-Text-Example">&#160;</p>
+<p class="VBA-Text-Example" style="margin-left: 40px;">Dim dtest As Double</p>
+<p class="VBA-Text-Example" style="margin-left: 40px;">Dim ucomp As Double</p>
+<p class="VBA-Text-Example" style="margin-left: 40px;">Dim vcomp As Double</p>
+<p class="VBA-Text-Example" style="margin-left: 40px;">Dim wcomp As Double</p>
+<p class="VBA-Text-Example" style="margin-left: 40px;">Dim btest As Boolean</p>
+<p class="VBA-Text-Example" style="margin-left: 40px;">Dim itest As Long</p>
+<p class="VBA-Text-Example" style="margin-left: 40px;">&#160;</p>
+<p class="VBA-Text-Example" style="margin-left: 40px;">Open "trk monitor.txt" For Output As #1</p>
+<p class="VBA-Text-Example" style="margin-left: 40px;">&#160;</p>
+<p class="VBA-Text-Example" style="margin-left: 40px;">Rem Test of a Particle Monitor</p>
+<p class="VBA-Text-Example" style="margin-left: 40px;">With ParticleMonitor</p>
+<p class="VBA-Text-Example" style="margin-left: 80px;">Rem selection of monitor</p>
+<p class="VBA-Text-Example" style="margin-left: 80px;">.SelectMonitor "mymonitor"</p>
+<p class="VBA-Text-Example" style="margin-left: 80px;">&#160;</p>
+<p class="VBA-Text-Example" style="margin-left: 80px;">Rem normal is 0,0,1</p>
+<p class="VBA-Text-Example" style="margin-left: 80px;">.GetNormal (ucomp,vcomp,wcomp)</p>
+<p class="VBA-Text-Example" style="margin-left: 80px;">Print #1, "Normal &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;: "; ucomp; "; "; vcomp; "; "; wcomp</p>
+<p class="VBA-Text-Example" style="margin-left: 80px;">Rem localU is 1,0,0</p>
+<p class="VBA-Text-Example" style="margin-left: 80px;">.GetLocalU (ucomp,vcomp,wcomp)</p>
+<p class="VBA-Text-Example" style="margin-left: 80px;">Print #1, "NormalU &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;: "; ucomp; "; "; vcomp; "; "; wcomp</p>
+<p class="VBA-Text-Example" style="margin-left: 80px;">Rem localV is 0,1,0</p>
+<p class="VBA-Text-Example" style="margin-left: 80px;">.GetLocalV (ucomp,vcomp,wcomp)</p>
+<p class="VBA-Text-Example" style="margin-left: 80px;">Print #1, "NormalV &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;: "; ucomp; "; "; vcomp; "; "; wcomp</p>
+<p class="VBA-Text-Example" style="margin-left: 80px;">Rem 0 is GCS, 1 is WCS, 2 is Free positioned cutplane</p>
+<p class="VBA-Text-Example" style="margin-left: 80px;">itest = .GetAlign()</p>
+<p class="VBA-Text-Example" style="margin-left: 80px;">Print #1, "Align &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;: "; itest</p>
+<p class="VBA-Text-Example" style="margin-left: 80px;">Rem TRUE is cutplane, FALSE is Face-based monitor - face based monitors only consider the GCS</p>
+<p class="VBA-Text-Example" style="margin-left: 80px;">btest = .IsPlane</p>
+<p class="VBA-Text-Example" style="margin-left: 80px;">Print #1, "IsPlane &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;: &#160;"; btest</p>
+<p class="VBA-Text-Example" style="margin-left: 80px;">REM The plane direction</p>
+<p class="VBA-Text-Example" style="margin-left: 80px;">itest = .GetPlaneDirection()</p>
+<p class="VBA-Text-Example" style="margin-left: 80px;">Print #1, "PlaneDirection &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;: "; itest</p>
+<p class="VBA-Text-Example" style="margin-left: 80px;">Rem The plane position</p>
+<p class="VBA-Text-Example" style="margin-left: 80px;">dtest = .GetPlanePosition()</p>
+<p class="VBA-Text-Example" style="margin-left: 80px;">Print #1, "PlanePosition &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;: "; dtest</p>
+<p class="VBA-Text-Example" style="margin-left: 80px;">Rem number of particles recorded by the monitor</p>
+<p class="VBA-Text-Example" style="margin-left: 80px;">itest = .GetNParticles()</p>
+<p class="VBA-Text-Example" style="margin-left: 80px;">Print #1, "Number of Particles &#160;&#160;&#160;&#160;&#160;&#160;&#160;: &#160;"; itest</p>
+<p class="VBA-Text-Example" style="margin-left: 80px;">Rem number of all particles recorded by the monitor (with multiple penetrated particles)</p>
+<p class="VBA-Text-Example" style="margin-left: 80px;">itest = .GetNParticlesTotal()</p>
+<p class="VBA-Text-Example" style="margin-left: 80px;">Print #1, "Number of all Particles &#160;&#160;&#160;: "; itest</p>
+<p class="VBA-Text-Example" style="margin-left: 80px;">Rem Total current of all single penetrated particles.</p>
+<p class="VBA-Text-Example" style="margin-left: 80px;">dtest = .GetCurrent()</p>
+<p class="VBA-Text-Example" style="margin-left: 80px;">Print #1, "Current &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;: "; dtest</p>
+<p class="VBA-Text-Example" style="margin-left: 80px;">Rem averaged values of all particles (also multiple penetrated particles) in the given direction</p>
+<p class="VBA-Text-Example" style="margin-left: 80px;">Rem As direction, also "absolute" is considered</p>
+<p class="VBA-Text-Example" style="margin-left: 80px;">dtest = .GetMeanValue("position", "x-direction")</p>
+<p class="VBA-Text-Example" style="margin-left: 80px;">Print #1, "Position-X (mean) &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;: "; dtest</p>
+<p class="VBA-Text-Example" style="margin-left: 80px;">dtest = .GetMeanValue("velocity", "z-direction")</p>
+<p class="VBA-Text-Example" style="margin-left: 80px;">Print #1, "Velocity-Z (mean) &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;: "; dtest</p>
+<p class="VBA-Text-Example" style="margin-left: 80px;">dtest = .GetMeanValue("angle", "x-direction")</p>
+<p class="VBA-Text-Example" style="margin-left: 80px;">Print #1, "Angle-X &#160;&#160;&#160;(mean) &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;: "; dtest</p>
+<p class="VBA-Text-Example" style="margin-left: 80px;">dtest = .GetMeanValue("momentum", "z-direction")</p>
+<p class="VBA-Text-Example" style="margin-left: 80px;">Print #1, "Momentum-Z (mean) &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;: "; dtest</p>
+<p class="VBA-Text-Example" style="margin-left: 80px;">dtest = .GetMeanValue("beta", "z-direction")</p>
+<p class="VBA-Text-Example" style="margin-left: 80px;">Print #1, "Beta-Z &#160;&#160;&#160;&#160;(mean) &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;: "; dtest</p>
+<p class="VBA-Text-Example" style="margin-left: 80px;">dtest = .GetMeanValue("gamma", "z-direction")</p>
+<p class="VBA-Text-Example" style="margin-left: 80px;">Print #1, "Gamma-Z &#160;&#160;&#160;(mean) &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;: "; dtest</p>
+<p class="VBA-Text-Example" style="margin-left: 80px;">dtest = .GetMeanValue("current", "z-direction")</p>
+<p class="VBA-Text-Example" style="margin-left: 80px;">Print #1, "Current-Z &#160;(mean) &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;: "; dtest</p>
+<p class="VBA-Text-Example" style="margin-left: 80px;">dtest = .GetMeanValue("charge", "z-direction")</p>
+<p class="VBA-Text-Example" style="margin-left: 80px;">Print #1, "Charge-Z &#160;&#160;(mean) &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;: "; dtest</p>
+<p class="VBA-Text-Example" style="margin-left: 80px;">dtest = .GetMin("position", "x-direction")</p>
+<p class="VBA-Text-Example" style="margin-left: 80px;">Print #1, "Position-Z (min) &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;: "; dtest</p>
+<p class="VBA-Text-Example" style="margin-left: 80px;">dtest = .GetMax("position", "x-direction")</p>
+<p class="VBA-Text-Example" style="margin-left: 80px;">Print #1, "Position-X (max) &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;: "; dtest</p>
+<p class="VBA-Text-Example" style="margin-left: 80px;">Rem returns the emittance in localU and LocalV direction</p>
+<p class="VBA-Text-Example" style="margin-left: 80px;">.GetEmittance(ucomp, vcomp)</p>
+<p class="VBA-Text-Example" style="margin-left: 80px;">Print #1, "Emittance-U &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;: "; ucomp</p>
+<p class="VBA-Text-Example" style="margin-left: 80px;">Print #1, "Emittance-V &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;: "; vcomp</p>
+<p class="VBA-Text-Example" style="margin-left: 80px;">&#160;</p>
+<p class="VBA-Text-Example" style="margin-left: 80px;">Rem A single particle #2 is chosen</p>
+<p class="VBA-Text-Example" style="margin-left: 80px;">.SelectParticle(2)</p>
+<p class="VBA-Text-Example" style="margin-left: 80px;">Print #1, ""</p>
+<p class="VBA-Text-Example" style="margin-left: 80px;">Print #1, "Particle &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;: "; 2</p>
+<p class="VBA-Text-Example" style="margin-left: 80px;">Rem properties of particle #2</p>
+<p class="VBA-Text-Example" style="margin-left: 80px;">dtest = .GetArea()</p>
+<p class="VBA-Text-Example" style="margin-left: 80px;">Print #1, " &#160;&#160;Area &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;: "; dtest</p>
+<p class="VBA-Text-Example" style="margin-left: 80px;">dtest = .GetCharge()</p>
+<p class="VBA-Text-Example" style="margin-left: 80px;">Print #1, " &#160;&#160;Charge &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;: "; dtest</p>
+<p class="VBA-Text-Example" style="margin-left: 80px;">dtest = .GetMass()</p>
+<p class="VBA-Text-Example" style="margin-left: 80px;">Print #1, " &#160;&#160;Mass &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;: "; dtest</p>
+<p class="VBA-Text-Example" style="margin-left: 80px;">Rem Initial timestep (is used for current calculation I=q/dt)</p>
+<p class="VBA-Text-Example" style="margin-left: 80px;">dtest = .GetTimeStep()</p>
+<p class="VBA-Text-Example" style="margin-left: 80px;">Print #1, " &#160;&#160;Timestep &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;: "; dtest</p>
+<p class="VBA-Text-Example" style="margin-left: 80px;">Rem number of particle-hits</p>
+<p class="VBA-Text-Example" style="margin-left: 80px;">itest = .GetNHits()</p>
+<p class="VBA-Text-Example" style="margin-left: 80px;">Print #1, " &#160;&#160;Particle-hits &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;: "; itest</p>
+<p class="VBA-Text-Example" style="margin-left: 80px;">&#160;</p>
+<p class="VBA-Text-Example" style="margin-left: 80px;">Rem point of time of hit</p>
+<p class="VBA-Text-Example" style="margin-left: 80px;">dtest = .GetHitTime(0)</p>
+<p class="VBA-Text-Example" style="margin-left: 80px;"><span style="margin-left: 80px;">Print #1, ""</span></p>
+<p class="VBA-Text-Example" style="margin-left: 80px;">Print #1, "Time of hit #0 &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;: "; dtest</p>
+<p class="VBA-Text-Example" style="margin-left: 80px;">Rem particle data of hit #0</p>
+<p class="VBA-Text-Example" style="margin-left: 80px;">.GetPosition(0,ucomp,vcomp,wcomp)</p>
+<p class="VBA-Text-Example" style="margin-left: 80px;">Print #1, " &#160;&#160;Hit #0: position &#160;&#160;&#160;&#160;&#160;&#160;: "; ucomp; "; "; vcomp; "; "; wcomp</p>
+<p class="VBA-Text-Example" style="margin-left: 80px;">.GetMomentum(0,ucomp,vcomp,wcomp)</p>
+<p class="VBA-Text-Example" style="margin-left: 80px;">Print #1, " &#160;&#160;Hit #0: momentum &#160;&#160;&#160;&#160;&#160;&#160;: "; ucomp; "; "; vcomp; "; "; wcomp</p>
+<p class="VBA-Text-Example" style="margin-left: 80px;">.GetVelocity(0,ucomp,vcomp,wcomp)</p>
+<p class="VBA-Text-Example" style="margin-left: 80px;">Print #1, " &#160;&#160;Hit #0: velocity &#160;&#160;&#160;&#160;&#160;&#160;: "; ucomp; "; "; vcomp; "; "; wcomp</p>
+<p class="VBA-Text-Example" style="margin-left: 80px;">Rem specific data of particle for hit #0</p>
+<p class="VBA-Text-Example" style="margin-left: 80px;">dtest = .GetValue(0,"position", "y-direction")</p>
+<p class="VBA-Text-Example" style="margin-left: 80px;">Print #1, " &#160;&#160;Hit #0: position-y &#160;&#160;&#160;&#160;: "; dtest</p>
+<p class="VBA-Text-Example" style="margin-left: 80px;">dtest = .GetValue(0,"velocity", "z-direction")</p>
+<p class="VBA-Text-Example" style="margin-left: 80px;">Print #1, " &#160;&#160;Hit #0: velocity-z &#160;&#160;&#160;&#160;: "; dtest</p>
+<p class="VBA-Text-Example" style="margin-left: 80px;">dtest = .GetValue(0,"beta", "z-direction")</p>
+<p class="VBA-Text-Example" style="margin-left: 80px;">Print #1, " &#160;&#160;Hit #0: beta-z &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;: "; dtest</p>
+<p class="VBA-Text-Example" style="margin-left: 80px;">&#160;</p>
+<p class="VBA-Text-Example" style="margin-left: 80px;">Rem delete the above created result data</p>
+<p class="VBA-Text-Example" style="margin-left: 80px;">.ClearMonitorData</p>
+<p class="VBA-Text-Example" style="margin-left: 80px;">&#160;</p>
+<p class="VBA-Text-Example" style="margin-left: 40px;">End With</p>
+<p class="VBA-Text-Example" style="margin-left: 40px;">&#160;</p>
+<p class="VBA-Text-Example" style="margin-left: 40px;">Close #1</p>
+<p class="VBA-Text-Example" style="margin-left: 40px;">&#160;</p>
+<p class="VBA-Text-Example">End Sub</p>
+<?rh-p style="margin-bottom: 0px; text-align: Right; margin-left: 18px; 
+                 margin-right: 18px; margin-top: 18px;" ?>
+<div style="width: 100%; position: relative;" id="footer">
+<p style="border-bottom: Solid 1px #dddddd; text-align: Left; margin-left: 0px; font-family: Arial, sans-serif; line-height: Normal; margin-top: 9px; margin-right: 0px; margin-bottom: 6px; border-left-width: 1px; border-top-width: 1px; border-right-width: 1px;"><span style="text-align: Left; font-family: Arial, sans-serif; line-height: Normal;">&#160;</span></p>
+<table cellspacing="0" width="100%">
+<col style="width: 50%;" />
+<col style="width: 50%;" />
+<tr>
+<td style="vertical-align: Top;"><span style="font-family: Arial, sans-serif; line-height: Normal; font-size: 8pt;"><font size="1" style="font-size:8pt;">CST Studio Suite 2026</font></span></td>
+<td style="vertical-align: Top;">
+<p style="text-align: right;">&#160;</p>
+</td>
+</tr>
+</table>
+<p>&#160;</p>
+</div>
+<script type="text/javascript" language="javascript1.2">
+//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+        writeIntopicBar(0);
+
+
+highlightSearch();
+//-->
+//]]>
+</script>
+</body>
+</html>

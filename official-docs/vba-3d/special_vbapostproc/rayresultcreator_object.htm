@@ -1,0 +1,287 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="Adobe RoboHelp 11" />
+<title>RayResultCreator Object</title>
+<link rel="StyleSheet" href="../online_help_vba.css" type="text/css" />
+<style type="text/css">
+/*<![CDATA[*/
+<!--
+body { border-bottom-style:None; }
+-->
+/*]]>*/
+</style>
+
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function ehlp_showtip(current,e,text)
+{
+  if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == 'Netscape'))
+  {
+    document.tooltip.document.write("<layer bgColor='yellow' style='border:1px solid black;font-size:12px;'>"+ text + "<\/layer>");
+    document.tooltip.document.close();
+    document.tooltip.left=e.pageX+5;
+    document.tooltip.top=e.pageY+5;
+    document.tooltip.visibility="show";
+  }
+}
+function ehlp_hidetip()
+{
+  document.tooltip.visibility="hidden";
+}
+//]]>
+</script>
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+        origWidth = innerWidth;
+        origHeight = innerHeight;
+        onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+/*<![CDATA[*/
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+-->
+/*]]>*/
+</style>
+
+<script type="text/javascript" language="javascript1.2" src="../whmsg.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript" src="../whver.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript1.2" src="../whutils.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript1.2" src="../whproxy.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript1.2" src="../whlang.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript1.2" src="../whtopic.js" charset="utf-8">
+</script>
+</head>
+<body>
+<script type="text/javascript" language="javascript1.2">
+//<![CDATA[
+<!--
+if (window.gbWhTopic)
+{
+        var strUrl = document.location.href;
+        var bc = 0;
+        var n = strUrl.toLowerCase().indexOf("bc-");
+        if(n != -1)
+        {
+                document.location.replace(strUrl.substring(0, n));
+                bc = strUrl.substring(n+3);
+        }
+
+        if (window.addTocInfo)
+        {
+        
+        }
+        if (window.writeBtnStyle)
+                writeBtnStyle();
+
+        if (window.writeIntopicBar)
+                writeIntopicBar(0);
+
+        
+        document.write("<p style=\"font-family: Tahoma; font-size: 9pt; font-weight: 400;  font-style:normal; color: rgb(0, 0, 0); text-decoration:none; text-align: left\"> ");
+AddMasterBreadcrumbs("../index.htm", "font-family: Tahoma; font-size: 9pt; font-weight: 400;  font-style:normal; color: rgb(0, 0, 0); text-decoration:none; text-align: left", "|", "Home", "../special_vbaobjects/special_vbaobjects_vbaobjects.htm");
+document.write("RayResultCreator Object<\/p>");
+
+}
+else
+        if (window.gbIE4)
+                document.location.reload();
+
+onLoadHandler = function()
+{
+  if (window.setRelStartPage)
+        {
+        setTimeout("setRelStartPage('../index.htm');", 1)
+
+    setTimeout("UpdateBreadCrumbsMarker();", 1);
+        }
+}
+
+if (window.addEventListener){  
+        window.addEventListener('load', onLoadHandler, false);   
+} else if (window.attachEvent){  
+        window.attachEvent('onload', onLoadHandler);  
+}
+
+function onSetStartPage()
+{
+  autoSync(1);
+  sendSyncInfo();
+  sendAveInfoOut();
+}
+//-->
+//]]>
+</script><script type="text/javascript" src="../ehlpdhtm.js" language="JavaScript1.2">
+</script>
+<table cellspacing="0" width="100%">
+<col style="width: 50%;" />
+<col style="width: 50%;" />
+<tr>
+<td style="vertical-align: middle; padding-top: 5px; padding-bottom: 5px;">
+<p style="margin-top: 0px; margin-bottom: 0px;"><img src="../3ds.png" alt="" style="border: none;" border="0" /></p>
+</td>
+<td style="vertical-align: middle;">
+<p style="text-align: right;"><a href="https://www.3ds.com/products-services/3dexperience/" target="_blank"><img src="../3dexp.png" alt="" style="border: none;" width="32" height="32" border="0" /></a></p>
+</td>
+</tr>
+</table>
+<p class="VBA-Heading-Object">RayResultCreator Object</p>
+<p class="VBA-Text">Offers methods to create the ray results and register them in&#160;the result manager. The binary tree is used for the construction of the rays.</p>
+<ul>
+<li class="p-VBA-Index-Category">
+<p class="VBA-Index-Category"><a href="#Methods">Methods</a></p>
+</li>
+<li class="p-VBA-Index-Category">
+<p class="VBA-Index-Category"><a href="#Example">Example</a></p>
+</li>
+</ul>
+<p class="VBA-Heading-Category"><a name="Methods" id="Methods"></a>Methods</p>
+<p class="VBA-Heading-Method">Reset</p>
+<p class="VBA-Text-Indent">Resets all internal settings to their initial values.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">SetLastPointName( <a href="../common_vbageneral/common_general_name.htm" id="a6" style="font-weight: normal; font-style: normal;" name="a6">name</a> <span style="font-style: italic;"><i>labelName</i></span> )</p>
+<p class="VBA-Text-Indent">Define the node with given name to be able to visit&#160;them again and add &#160;point to the "right" brunch. If it exists, &#160;it will be rewritten.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">GoToPoint( <a href="../common_vbageneral/common_general_name.htm" id="a12" style="font-weight: normal; font-style: normal;" name="a12">name</a> <span style="font-style: italic;"><i>labelName</i></span> )</p>
+<p class="VBA-Text-Indent">Go to the node with given name. The next &#160;point will be added to the "right" brunch in the binary tree. If it exists, &#160;it will be rewritten.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">EndRay</p>
+<p class="VBA-Text-Indent">This commands ends the definition of the ray.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">AddPointAndQuantity( <a href="../common_vbageneral/common_general_double.htm" id="a13" style="font-weight: normal; font-style: normal;" name="a13">double</a> <span style="font-style: italic;"><i>x, <a href="../common_vbageneral/common_general_double.htm" id="a14" style="font-weight: normal; font-style: normal;" name="a14">double</a></i></span> <span style="font-style: italic;"><i>y,</i></span> <a href="../common_vbageneral/common_general_double.htm" id="a141" style="font-weight: normal; font-style: normal;" name="a141">double</a> &#160;z, <a href="../common_vbageneral/common_general_double.htm" id="a1411" style="font-weight: normal; font-style: normal;" name="a1411">double</a> &#160;q)</p>
+<p class="VBA-Text-Indent">Add a node with point coordinates x, y, z and the quantity value q to the tree. If the node is empty, the point is added to the "left"( reflection) &#160;brunch in the binary tree, otherwise in the "right"( transition/refraction)</p>
+<p class="VBA-Heading-Method">&#160;</p>
+<p class="VBA-Heading-Method">SetRayplotType( <a href="../common_vbageneral/common_general_string.htm" id="a3" style="font-weight: normal; font-style: normal;" name="a3">string</a> <span style="font-style: italic;"><i>Filter</i></span> )</p>
+<p class="VBA-Text-Indent">Set the interpolation mode.</p>
+<table style="vertical-align: top; margin-left: 21px;" cellspacing="0">
+<col width="100" />
+<col width="400" />
+<tr style="vertical-align: top;">
+<td style="border: Solid 1px #000000; padding-right: 10px; padding-left: 10px;" width="100">
+<p>Filter</p>
+</td>
+<td style="border-top: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-right: 10px; padding-left: 10px;" width="400">
+<p>Action</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-right: 10px; padding-left: 10px;" width="100">
+<p>"discrete"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-right: 10px; padding-left: 10px;" width="400">
+<p>The quantity values are not interpolated between two points.</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-right: 10px; padding-left: 10px;" width="100">other(default)</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-right: 10px; padding-left: 10px;" width="400">
+<p>The quantity values are t interpolated linear between two points.</p>
+</td>
+</tr>
+</table>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">SetQuantityName( <span style="font-weight: normal;"><a href="../common_vbageneral/common_general_string.htm" id="a31" style="font-weight: normal; font-style: normal;" name="a31">string</a></span> <span style="font-weight: normal; font-style: italic;"><i>q</i></span>)</p>
+<p class="VBA-Text-Indent" style="font-style: normal;">Define quantity name with given name, that should be stored in file.</p>
+<p class="VBA-Heading-Method">&#160;</p>
+<p class="VBA-Heading-Method">SetQuantityUnit( <a href="../common_vbageneral/common_general_string.htm" id="a311" style="font-weight: normal; font-style: normal;" name="a311">string</a> unit )</p>
+<p class="VBA-Text-Indent">Define unit with given name, that should be stored in file. &#160;The unit string uses the syntax described on the <a title="Units" href="../../../userinterface/overview/units.htm" onmouseover="if ((parseInt(navigator.appVersion) == 4) &amp;&amp; (navigator.appName == 'Netscape')) ehlp_showtip(this,event,'Units');" onmouseout="if ((parseInt(navigator.appVersion) == 4) &amp;&amp; (navigator.appName == 'Netscape')) ehlp_hidetip();">Units</a> help page.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">WriteFile( <a href="../common_vbageneral/common_general_string.htm" id="a3111" style="font-weight: normal; font-style: normal;" name="a3111">string</a> filename)</p>
+<p class="VBA-Text-Indent">Write the result file with the given filename.</p>
+<p class="VBA-Heading-Method">&#160;</p>
+<p class="VBA-Heading-Method">AddRayResult( <a href="../common_vbageneral/common_general_string.htm" id="a31111" style="font-weight: normal; font-style: normal;" name="a31111">string</a> treepath)</p>
+<p class="VBA-Text-Indent">Add the result t the tree with given tree path( i.e. "2D\3D Results\Rays\own result").</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">DeleteResult</p>
+<p class="VBA-Text-Indent">Delete defined results.</p>
+<p class="VBA-Heading-Method">&#160;</p>
+<p class="VBA-Heading-Category"><a name="Example" id="Example"></a>Example</p>
+<p class="VBA-Text-Example">RayResultCreator.Reset</p>
+<p class="VBA-Text-Example">RayResultCreator.SetRayplotType "discrete"</p>
+<p class="VBA-Text-Example">RayResultCreator.SetQuantityName "Reflections"</p>
+<p class="VBA-Text-Example">RayResultCreator.SetQuantityUnit "1"</p>
+<p class="VBA-Text-Example">Dim ray As Integer, num_rays As Integer</p>
+<p class="VBA-Text-Example">Dim ystart As Double, zstart As Double</p>
+<p class="VBA-Text-Example">ystart = -480.0</p>
+<p class="VBA-Text-Example">zstart = 1760</p>
+<p class="VBA-Text-Example">num_rays = 5</p>
+<p class="VBA-Text-Example">For ray = 1 To num_rays</p>
+<p class="VBA-Text-Example">Dim i As Integer, num As Integer</p>
+<p class="VBA-Text-Example">num = 5</p>
+<p class="VBA-Text-Example">Dim y As Double, z As Double, deltaY As Double, deltaZ As Double</p>
+<p class="VBA-Text-Example">deltaY = (960-480) / num</p>
+<p class="VBA-Text-Example">deltaZ = (1760-1340) / num</p>
+<p class="VBA-Text-Example">y = ystart - (ray-1) *deltaY</p>
+<p class="VBA-Text-Example">z = zstart</p>
+<p class="VBA-Text-Example">For i = 1 To num</p>
+<p class="VBA-Text-Example">RayResultCreator.AddPointAndQuantity(1310.0, y, z, i)</p>
+<p class="VBA-Text-Example">RayResultCreator.SetLastPointName "1"</p>
+<p class="VBA-Text-Example">RayResultCreator.AddPointAndQuantity(1310.0, y, z - deltaZ, i)</p>
+<p class="VBA-Text-Example">RayResultCreator.GoToPoint("1")</p>
+<p class="VBA-Text-Example">RayResultCreator.AddPointAndQuantity(1310.0, y - deltaY, z, i)</p>
+<p class="VBA-Text-Example">y = y - deltaY</p>
+<p class="VBA-Text-Example">z = z - deltaZ</p>
+<p class="VBA-Text-Example">Next i</p>
+<p class="VBA-Text-Example">RayResultCreator.EndRay</p>
+<p class="VBA-Text-Example">Next ray</p>
+<p class="VBA-Text-Example">RayResultCreator.WriteFile("test.bix")</p>
+<p class="VBA-Text-Example">RayResultCreator.AddRayResult("2D/3D Results\Rays\ray")</p>
+<p class="VBA-Text-Example">SelectTreeItem "2D/3D Results\Rays\ray"</p>
+<p class="VBA-Text-Example">&#160;</p>
+<p class="VBA-Text-Example"><img src="../image2.gif" alt="" style="border: none;" border="0" /></p>
+<p class="VBA-Text-Example">&#160;</p>
+<?rh-p style="margin-bottom: 0px; text-align: Right; margin-left: 18px; 
+                 margin-right: 18px; margin-top: 18px;" ?>
+<div style="width: 100%; position: relative;" id="footer">
+<p style="border-bottom: Solid 1px #dddddd; text-align: Left; margin-left: 0px; font-family: Arial, sans-serif; line-height: Normal; margin-top: 9px; margin-right: 0px; margin-bottom: 6px; border-left-width: 1px; border-top-width: 1px; border-right-width: 1px;"><span style="text-align: Left; font-family: Arial, sans-serif; line-height: Normal;">&#160;</span></p>
+<table cellspacing="0" width="100%">
+<col style="width: 50%;" />
+<col style="width: 50%;" />
+<tr>
+<td style="vertical-align: Top;"><span style="font-family: Arial, sans-serif; line-height: Normal; font-size: 8pt;"><font size="1" style="font-size:8pt;">CST Studio Suite 2026</font></span></td>
+<td style="vertical-align: Top;">
+<p style="text-align: right;">&#160;</p>
+</td>
+</tr>
+</table>
+<p>&#160;</p>
+</div>
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+ if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == 'Netscape'))
+  document.write("<div id='tooltip' class='WebHelpPopupMenu'><\/div>");
+//]]>
+</script><script type="text/javascript" language="javascript1.2">
+//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+        writeIntopicBar(0);
+
+
+highlightSearch();
+//-->
+//]]>
+</script>
+</body>
+</html>

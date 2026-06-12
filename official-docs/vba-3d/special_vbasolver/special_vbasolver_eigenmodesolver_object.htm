@@ -1,0 +1,330 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="Adobe RoboHelp 11" />
+<title>EigenmodeSolver Object</title>
+<link rel="StyleSheet" href="../online_help_vba.css" type="text/css" />
+<style type="text/css">
+/*<![CDATA[*/
+<!--
+body { border-bottom-style:None; }
+-->
+/*]]>*/
+</style>
+
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+        origWidth = innerWidth;
+        origHeight = innerHeight;
+        onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+/*<![CDATA[*/
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+-->
+/*]]>*/
+</style>
+
+<script type="text/javascript" language="javascript1.2" src="../whmsg.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript" src="../whver.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript1.2" src="../whutils.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript1.2" src="../whproxy.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript1.2" src="../whlang.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript1.2" src="../whtopic.js" charset="utf-8">
+</script>
+</head>
+<body>
+<script type="text/javascript" language="javascript1.2">
+//<![CDATA[
+<!--
+if (window.gbWhTopic)
+{
+        var strUrl = document.location.href;
+        var bc = 0;
+        var n = strUrl.toLowerCase().indexOf("bc-");
+        if(n != -1)
+        {
+                document.location.replace(strUrl.substring(0, n));
+                bc = strUrl.substring(n+3);
+        }
+
+        if (window.addTocInfo)
+        {
+        addTocInfo("3D Simulation VBA\nVBA Objects\nSolver\nHigh Frequency\nEigenmodeSolver");
+
+        }
+        if (window.writeBtnStyle)
+                writeBtnStyle();
+
+        if (window.writeIntopicBar)
+                writeIntopicBar(0);
+
+        
+        document.write("<p style=\"font-family: Tahoma; font-size: 9pt; font-weight: 400;  font-style:normal; color: rgb(0, 0, 0); text-decoration:none; text-align: left\"> ");
+AddMasterBreadcrumbs("../index.htm", "font-family: Tahoma; font-size: 9pt; font-weight: 400;  font-style:normal; color: rgb(0, 0, 0); text-decoration:none; text-align: left", "|", "Home", "../special_vbaobjects/special_vbaobjects_vbaobjects.htm");
+document.write("<a style=\"font-family: Tahoma; font-size: 9pt; font-weight: 400;  font-style:normal; color: rgb(0, 0, 0); text-decoration:none; text-align: left\" href=\"../special_vbaobjects/special_vbaobjects_vbaobjects.htm\">3D Simulation VBA<\/a> | <a style=\"font-family: Tahoma; font-size: 9pt; font-weight: 400;  font-style:normal; color: rgb(0, 0, 0); text-decoration:none; text-align: left\" href=\"../special_vbaobjects/special_vbaobjects_vbaobjects.htm\">VBA Objects<\/a> | <a style=\"font-family: Tahoma; font-size: 9pt; font-weight: 400;  font-style:normal; color: rgb(0, 0, 0); text-decoration:none; text-align: left\" href=\"special_vbasolver_background_object.htm\">Solver<\/a> | <a style=\"font-family: Tahoma; font-size: 9pt; font-weight: 400;  font-style:normal; color: rgb(0, 0, 0); text-decoration:none; text-align: left\" href=\"special_vbasolver_solver_object.htm\">High Frequency<\/a> | EigenmodeSolver<\/p>");
+
+}
+else
+        if (window.gbIE4)
+                document.location.reload();
+
+onLoadHandler = function()
+{
+  if (window.setRelStartPage)
+        {
+        setTimeout("setRelStartPage('../index.htm');", 1)
+
+    setTimeout("UpdateBreadCrumbsMarker();", 1);
+        }
+}
+
+if (window.addEventListener){  
+        window.addEventListener('load', onLoadHandler, false);   
+} else if (window.attachEvent){  
+        window.attachEvent('onload', onLoadHandler);  
+}
+
+function onSetStartPage()
+{
+  autoSync(1);
+  sendSyncInfo();
+  sendAveInfoOut();
+}
+//-->
+//]]>
+</script><script type="text/javascript" src="../ehlpdhtm.js" language="JavaScript1.2">
+</script>
+<table cellspacing="0" width="100%">
+<col style="width: 50%;" />
+<col style="width: 50%;" />
+<tr>
+<td style="vertical-align: middle; padding-top: 5px; padding-bottom: 5px;">
+<p style="margin-top: 0px; margin-bottom: 0px;"><img src="../3ds.png" alt="" style="border: none;" border="0" /></p>
+</td>
+<td style="vertical-align: middle;">
+<p style="text-align: right;"><a href="https://www.3ds.com/products-services/3dexperience/" target="_blank"><img src="../3dexp.png" alt="" style="border: none;" width="32" height="32" border="0" /></a></p>
+</td>
+</tr>
+</table>
+<h1>EigenmodeSolver Object</h1>
+<p>This is the object that controls some of the eigenmode solver settings and provides access to basic eigenmode solver results. Currently most VBA settings for the eigenmode solvers are controled by the <a href="special_vbasolver_solver_object.htm#Eigenmode General">Solver</a> Object.</p>
+<p>&#160;</p>
+<p class="VBA-Text" style="margin-left: 21px; font-weight: bold;">Eigenmode Solver Settings and Result Queries</p>
+<ul>
+<li class="p-VBA-Index-Category">
+<p class="VBA-Index-Category"><a href="#General_Methods">General Methods</a></p>
+</li>
+<li class="p-VBA-Index-Category">
+<p class="VBA-Index-Category"><a href="#Result_Queries">Result Queries</a></p>
+</li>
+<li class="p-VBA-Index-Category">
+<p class="VBA-Index-Category"><a href="#Force_Calculation">Force Calculation</a></p>
+</li>
+<li class="p-VBA-Index-Category">
+<p class="VBA-Index-Category"><a href="#Defaults">Defaults</a></p>
+</li>
+</ul>
+<p class="VBA-Heading-Category"><a name="General_Methods" id="General_Methods"></a>General Methods</p>
+<p class="VBA-Heading-Method" style="font-style: normal;"><span style="font-style: normal;">Reset</span></p>
+<p class="VBA-Text-Indent" style="font-style: normal;">Resets the eigenmode solver settings to their default values.</p>
+<p class="vba-text-indent">&#160;</p>
+<p class="VBA-Heading-Method">Start <a href="../common_vbageneral/common_general_integer.htm" id="a159" style="font-weight: normal;" name="a159">int</a></p>
+<p class="VBA-Text-Indent">Starts the eigenmode solver with the current settings and returns 1 if the calculation is successfully finished and 0 if it failed.</p>
+<p class="VBA-Text-Indent" style="font-style: normal;">&#160;</p>
+<p class="VBA-Heading-Method" style="font-style: normal;">SetMeshAdaptationHex ( <a href="../common_vbageneral/common_general_bool_data_type.htm" id="a107" style="font-weight: normal; font-style: normal;" name="a107">bool</a> <span style="font-style: italic;"><i>flag</i></span> )</p>
+<p class="VBA-Text-Indent" style="font-style: normal;">Enable automatic hexahedral mesh adaptation for the eigenmode solver.</p>
+<p>&#160;</p>
+<p class="VBA-Heading-Method" style="font-style: normal;">SetMeshAdaptationTet ( <a href="../common_vbageneral/common_general_bool_data_type.htm" id="a108" style="font-weight: normal; font-style: normal;" name="a108">bool</a> <span style="font-style: italic;"><i>flag</i></span> )</p>
+<p class="VBA-Text-Indent" style="font-style: normal;">Enable automatic tetrahedral mesh adaptation for the eigenmode solver.</p>
+<p>&#160;</p>
+<p class="VBA-Heading-Method" style="font-style: normal;">SetNumberOfModes ( <a href="../common_vbageneral/common_general_integer.htm" id="a102" style="font-weight: normal; font-style: normal;" name="a102">int</a> <span style="font-style: italic;"><i>nModes</i></span> )</p>
+<p class="VBA-Text-Indent" style="font-style: normal;">Sets the number of modes which should be calculated by the eigenmode solver. Modes are sorted by ascending eigenmode frequency.</p>
+<p class="VBA-Text-Indent" style="font-style: normal;">&#160;</p>
+<p class="VBA-Heading-Method" style="font-style: normal;">SetModesInFrequencyRange ( <a href="../common_vbageneral/common_general_bool_data_type.htm" id="a130" style="font-weight: normal; font-style: normal;" name="a130">bool</a> <span style="font-style: italic;"><i>flag</i></span> )</p>
+<p class="VBA-Text-Indent" style="font-style: normal;">Calculates all modes in the global frequency range. This is only available for the JDM eigenmode solver.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method" style="font-style: normal;">SetConsiderStaticModes &#160;( <a href="../common_vbageneral/common_general_bool_data_type.htm" id="a84" style="font-weight: normal; font-style: normal;" name="a84">bool</a> &#160;<span style="font-style: italic;"><i>flag</i></span> )</p>
+<p class="VBA-Text-Indent">If <span style="font-style: italic;"><i>flag = True</i></span> then the static modes are saved and can be accessed via the result tree. Otherwise the static modes are not saved. This setting is not relevant for the General (Lossy) eigenmode solver, as it does not compute static solutions.</p>
+<p class="VBA-Text-Indent" style="font-style: normal;">&#160;</p>
+<p class="VBA-Heading-Method" style="font-style: normal;">SetRemoteCalculation &#160;( <a href="../common_vbageneral/common_general_bool_data_type.htm" id="a161" style="font-weight: normal; font-style: normal;" name="a161">bool</a> &#160;<span style="font-style: italic;"><i>flag</i></span> )</p>
+<p class="VBA-Text-Indent">This method allows to switch between local and remote solver runs. When enabled, an Eigenmode solver run is submitted to the network. The setting does not influence parameter sweeps and optimizer runs with distributed computing.</p>
+<p class="VBA-Text-Indent" style="font-style: normal;">&#160;</p>
+<p class="VBA-Heading-Method" style="font-style: normal;">SetMethodType ( <a href="../common_vbageneral/common_general_enum.htm" id="a112" style="font-weight: normal; font-style: normal;" name="a112">enum</a> {"AKS", "JDM", "JDM (low memory)", "Automatic", "Classical (Lossless)", "General (Lossy)"} <span style="font-style: italic;"><i>key,</i></span> <a href="../common_vbageneral/common_general_enum.htm" id="a121" style="font-weight: normal; font-style: normal;" name="a121">enum</a> {"Hex", "Tet"} <span style="font-style: italic;"><i>mesh</i></span> &#160;)</p>
+<p class="VBA-Text-Indent" style="font-style: normal;">Different eigenmode solver methods are provided for each mesh type, namely AKS (Krylov Subspace method) and JDM (Jacobi-Davidson method) for the hexahedral mesh; Automatic, Classical (Lossless), and General (Lossy) method for the tetrahedral mesh. The JDM and the Classical (Lossless) solver are capable to solve loss free as well as lossy problems with a frequency independent complex permittivity or reluctivity. The "JDM (low memory)" is a variant of "JDM" that is more efficient in terms of memory usage, but may be less robust in terms of the underlying iterative solver's convergence. The General (Lossy) eigenmode solver method with tetrahedral mesh overcomes the aforestated limitations for the material losses being considered and can handle lossy and dispersive materials with no poles in the frequency band of interest. Due to the fact that the General (Lossy) eigenmode solver considers the waveguide ports as open, it also provides an accurate external Q-factor for each calculated mode. This solver can be also used with discrete ports and it supports periodic, open (Standard Impedance Boundary Condition) as well as conducting wall boundaries. In addition to the aforementioned features, lumped elements (parallel/serial, R&gt;=0, L&gt;=0, C&gt;=0) are also supported by the General (Lossy) method. When the Automatic eigenmode method with tetrahedral mesh is used, then the most appropriate tetrahedral eigenmode solver (Classical (Lossless) or General (Lossy)) will be internally selected based on the physical application.</p>
+<p class="VBA-Text-Indent" style="font-style: normal;">&#160;</p>
+<p class="VBA-Heading-Method" style="font-style: normal;">SetMeshType ( <a href="../common_vbageneral/common_general_enum.htm" id="a12" style="font-weight: normal; font-style: normal;" name="a12">enum</a> {"Hexahedral Mesh", "Tetrahedral Mesh"} <span style="font-style: italic;"><i>key</i></span> )</p>
+<p class="VBA-Text-Indent" style="font-style: normal;">The eigenmode solver supports both hexahedral and tetrahedral meshes. Specify which mesh type should be used.</p>
+<p class="VBA-Text-Indent" style="font-style: normal;">&#160;</p>
+<p class="VBA-Heading-Method" style="font-style: normal;">SetMaterialEvaluationFrequency ( <a href="../common_vbageneral/common_general_bool_data_type.htm" id="a111" style="font-weight: normal; font-style: normal;" name="a111">bool</a> <span style="font-style: italic;"><i>flag</i></span>, <a href="../common_vbageneral/common_general_double.htm" id="a110" style="font-weight: normal; font-style: normal;" name="a110">double</a> <span style="font-style: italic;"><i>freq</i></span> )</p>
+<p class="VBA-Text-Indent" style="font-style: normal;">This setting applies to the lossy JDM and Classical (Lossless) eigenmode solver. Electrically conductive materials and dispersive materials are evaluated either at the center frequency, or at another frequency. This yields a complex permittivity which is assumed to be frequency independent.</p>
+<p class="VBA-Text-Indent" style="font-style: normal;">&#160;</p>
+<p class="VBA-Heading-Method" style="font-style: normal;">SetFrequencyTarget ( <a href="../common_vbageneral/common_general_bool_data_type.htm" id="a11" style="font-weight: normal; font-style: normal;" name="a11">bool</a> <span style="font-style: italic;"><i>flag</i></span>, <a href="../common_vbageneral/common_general_double.htm" id="a10" style="font-weight: normal; font-style: normal;" name="a10">double</a> <span style="font-style: italic;"><i>freq</i></span> )</p>
+<p class="VBA-Text-Indent" style="font-style: normal;">This method allows to specify a lower limit to the modes' frequencies. Admissible values are zero to the maximum frequency of the frequency range. The eigenmodes above this frequency are then calculated in ascending order.</p>
+<p class="VBA-Text-Indent" style="font-style: normal;">&#160;</p>
+<p class="VBA-Heading-Method" style="font-style: normal;">SetLowerBoundForQ ( <a href="../common_vbageneral/common_general_bool_data_type.htm" id="a14" style="font-weight: normal; font-style: normal;" name="a14">bool</a> <span style="font-style: italic;"><i>flag</i></span>, <a href="../common_vbageneral/common_general_double.htm" id="a15" style="font-weight: normal; font-style: normal;" name="a15">double</a> <span style="font-style: italic;"><i>value</i></span> )</p>
+<p class="VBA-Text-Indent" style="font-style: normal;">This method allows to specify a lower limit to the modes' Q-factor. It affects those eigenmode calculations with the Classical (Lossless) method and tetrahedral mesh for which losses are considered. Pass an empty string "" as the <span style="font-style: italic;"><i>value</i></span> to disable or enable the lower bound without changing the value. The settings are not considered in case the hexahedral mesh is active.</p>
+<p class="VBA-Text-Indent" style="font-style: normal;">&#160;</p>
+<p class="VBA-Heading-Method" style="font-style: normal;">SetMaxNumberOfThreads ( <a href="../common_vbageneral/common_general_integer.htm" id="a117" style="font-weight: normal; font-style: normal;" name="a117">int</a> <span style="font-style: italic;"><i>nThreads</i></span> )</p>
+<p class="VBA-Text-Indent" style="font-style: normal;">Maximum number of threads to use for the eigenmode calculation. Whether or not the eigenmode solver can use that many threads depends not only on the hardware, but also on the mesh and method chosen.</p>
+<p class="VBA-Text-Indent" style="font-style: normal;">&#160;</p>
+<p class="VBA-Heading-Method" style="font-style: normal;">SetUseParallelization ( <a href="../common_vbageneral/common_general_bool_data_type.htm" id="a17" style="font-weight: normal; font-style: normal;" name="a17">bool</a> <span style="font-style: italic;"><i>flag</i></span> )</p>
+<p class="VBA-Text-Indent" style="font-style: normal;">Specifies whether or not parallelization with different threads may be used for the eigenmode calculation to speed up the simulation.</p>
+<p class="vba-text-indent">&#160;</p>
+<p class="VBA-Heading-Method" style="font-style: normal;">SetConsiderLossesInPostprocessingOnly &#160;( <a href="../common_vbageneral/common_general_bool_data_type.htm" id="a157" style="font-weight: normal; font-style: normal;" name="a157">bool</a> &#160;<span style="font-style: italic;"><i>flag</i></span> )</p>
+<p class="VBA-Text-Indent">It is common practise for eigenmode calculations to ignore the losses in a first step, namely for the calculation of the eigenmode solutions themselves. An approximate consideration of the losses is still possible in the post-processing however, by assuming that the losses generated on the boundary can be calculated from the loss-free case. This approach, also referred to as perturbation method, speeds up the calculation.</p>
+<p class="VBA-Text-Indent">The method <span style="font-weight: bold;">SetConsiderLossesInPostprocessingOnly</span> has an effect on the JDM solver (hexahedral mesh) and the Classical (Lossless) eigenmode solver (tetrahedral mesh). The lossfree AKS solver always ignores losses and only allows to use the perturbation method to calculate the Q-factor. On contrary, the General (Lossy) eigenmode solver always considers defined material losses and directly computes a total Q-factor for each calculated mode (e.g. due to material, external Q, radiated losses). For normal conducting and lossy metal materials, a material loss-Q factor calculation is automatically performed by the General (Lossy) eigenmode solver and the results are inserted into the navigation tree in <span style="font-style: italic;"><i>1D Results &gt; Q Factors&#160;&gt; Loss-Q per Material</i></span>.</p>
+<p class="vba-text-indent">&#160;</p>
+<p class="VBA-Heading-Method" style="font-style: normal;"><span style="font-style: normal;">GetConsiderLossesInPostprocessingOnly</span> <a href="../common_vbageneral/common_general_bool_data_type.htm" id="a18" style="font-weight: normal;" name="a18">bool</a></p>
+<p class="VBA-Text-Indent" style="font-style: normal;">Returns the last value passed to <span style="font-weight: bold;">SetConsiderLossesInPostprocessingOnly</span> or the corresponding default, if the method has not been called before.</p>
+<p class="VBA-Text-Indent" style="font-style: normal;">&#160;</p>
+<p class="VBA-Heading-Method" style="font-style: normal;">SetMinimumQ ( <span style="font-weight: normal;"><a href="../common_vbageneral/common_general_double.htm" id="a151" style="font-weight: normal; font-style: normal;" name="a151">double</a></span> <span style="font-style: italic;"><i>value</i></span> )</p>
+<p class="VBA-Text-Indent">This setting is relevant only for the General (Lossy) eigenmode solver and it allows that only modes having total Q-factor greater or equal to this value will be calculated.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method" style="font-style: normal;">SetCalculateExternalQFactor ( <a href="../common_vbageneral/common_general_bool_data_type.htm" id="a132" style="font-weight: normal; font-style: normal;" name="a132">bool</a> &#160;<span style="font-style: italic;"><i>flag</i></span> )</p>
+<p class="VBA-Text-Indent" style="font-style: normal;">The solver calculates the external Q-factor of all modes if the flag is set to true, to account for the effect of waveguide port coupling with the modes.</p>
+<p class="VBA-Text-Indent" style="font-style: normal;">&#160;</p>
+<p class="VBA-Heading-Method" style="font-style: normal;">SetQExternalAccuracy ( <a href="../common_vbageneral/common_general_double.htm" id="a13" style="font-weight: normal; font-style: normal;" name="a13">double</a> <span style="font-style: italic;"><i>acc</i></span> )</p>
+<p class="VBA-Text-Indent" style="font-style: normal;">Sets the desired linear equation system solver accuracy for calculating the external Q-factor of the modes. Only applies if external Q-factors are calculated, see <span style="font-style: italic;"><i>SetCalculateExternalQFactor</i></span>. This setting is not relevant for the General (Lossy) eigenmode solver.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">SetOrderTet ( <a href="../common_vbageneral/common_general_integer.htm" id="a120" style="font-weight: normal; font-style: normal;" name="a120">int</a> <span style="font-style: italic;"><i>Value</i></span> )</p>
+<p class="VBA-Text-Indent">Specify a value between "1" and "3" for the solver order of both eigenmode solvers with tetrahedral mesh. The choice is between low memory (1), the default second order (2) for good accuracy, or highly accurate results (3) for a given number of mesh cells. Higher order also allows to achieve accurate results with less mesh cells and possibly less memory consumption than lower order, if the structure contains electrically large voids rather than many geometric details.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">SetStoreResultsInCache ( <a href="../common_vbageneral/common_general_bool_data_type.htm" id="a126" style="font-weight: normal;" name="a126">bool</a> <span style="font-style: italic;"><i>flag</i></span> )</p>
+<p class="VBA-Text-Indent">Stores results of the solver in the result cache. For each parameter combination in a parameter sweep, for instance, a full backup of the results is stored in a sub folder like <i>{Projectname}/Result/Cache/run000001</i>.</p>
+<p class="VBA-Text-Indent" style="font-style: normal;">&#160;</p>
+<p class="VBA-Heading-Method" style="font-style: normal;">SetTDCompatibleMaterials ( <a href="../common_vbageneral/common_general_bool_data_type.htm" id="a128" style="font-weight: normal; font-style: normal;" name="a128">bool</a> <span style="font-style: italic;"><i>flag</i></span> )</p>
+<p class="VBA-Text-Indent" style="font-style: normal;">Defines wether constant tangent delta materials should be treated as in the time domain solver, that is by using a dispersive Debye model fit (flag = True), or by a constant imaginary part of the permittivity (flag = False).</p>
+<p class="VBA-Text-Indent" style="font-style: normal;">&#160;</p>
+<p class="VBA-Heading-Method">SetCalculateThermalLosses ( <a href="../common_vbageneral/common_general_bool_data_type.htm" id="a70" style="font-weight: normal; font-style: normal;" name="a70">bool</a> <span style="font-style: italic;"><i>flag )</i></span></p>
+<p class="VBA-Text-Indent" style="font-style: normal;">This setting allows to activate or deactivate the surface loss calculation for the thermal coupling. Please note that the General (Lossy) eigenmode solver does not calculate thermal losses.</p>
+<p class="VBA-Text-Indent" style="font-style: normal;">&#160;</p>
+<p class="VBA-Heading-Method" style="font-style: normal;">SetAccuracy ( <a href="../common_vbageneral/common_general_double.htm" id="a109" style="font-weight: normal; font-style: normal;" name="a109">double</a> <span style="font-style: italic;"><i>acc</i></span> )</p>
+<p class="VBA-Text-Indent" style="font-style: normal;">Sets the desired accuracy of the eigenmode solver in terms of the relative residual norm.</p>
+<p class="VBA-Heading-Category"><a name="Result_Queries" id="Result_Queries"></a>Result Queries</p>
+<p class="VBA-Heading-Method" style="font-style: normal;">GetSolverMethodName <span style="font-weight: normal;"><a href="../common_vbageneral/common_general_string.htm" id="a1681" style="font-weight: normal;" name="a1681">name</a></span></p>
+<p class="VBA-Text-Indent" style="font-style: normal;">Returns the method name for the selected eigenmode solver.</p>
+<p class="VBA-Text-Indent" style="font-style: normal;">&#160;</p>
+<p class="VBA-Heading-Method" style="font-style: normal;"><span style="font-style: normal;"><span style="font-style: normal;">GetNumberOfModesCalculated</span> <a href="../common_vbageneral/common_general_integer.htm" id="a1601" style="font-weight: normal;" name="a1601">int</a></span></p>
+<p class="VBA-Text-Indent" style="font-style: normal;">Returns the number of modes which have been calculated by the eigenmode solver, as stored in the results. This value may differ from the solver setting if for any reason the solver has calculated less modes than requested, or if a frequency range was specified rather than the number of modes. In any case, the number of modes returned by this method should be retrieved for the following queries and before calling any of those queries.</p>
+<p class="vba-text-indent">&#160;</p>
+<p class="VBA-Heading-Method" style="font-style: normal;"><span style="font-style: normal;">GetModeFrequencyInHz</span> ( <a href="../common_vbageneral/common_general_integer.htm" id="a186" style="font-weight: normal; font-style: normal;" name="a186">int</a> <span style="font-style: italic;"><i>ModeNumber</i></span> ) <a href="../common_vbageneral/common_general_double.htm" id="a16" style="font-weight: normal;" name="a16">double</a></p>
+<p class="VBA-Text-Indent" style="font-style: normal;">Returns the eigenmode frequency <span style="font-style: italic;"><i>f</i></span> in Hertz of the mode specified by its one-based number.</p>
+<p class="vba-text-indent">&#160;</p>
+<p class="VBA-Heading-Method" style="font-style: normal;"><span style="font-style: normal;">GetModeRelResidualNorm</span> ( <a href="../common_vbageneral/common_general_integer.htm" id="a187" style="font-weight: normal; font-style: normal;" name="a187">int</a> <span style="font-style: italic;"><i>ModeNumber</i></span> ) <a href="../common_vbageneral/common_general_double.htm" id="a162" style="font-weight: normal;" name="a162">double</a></p>
+<p class="VBA-Text-Indent" style="font-style: normal;">Returns the relative residual norm achieved for a given mode. This value usually is lower than the accuracy threshold in the solver specials.</p>
+<p class="vba-text-indent">&#160;</p>
+<p class="VBA-Heading-Method" style="font-style: normal;"><span style="font-style: normal;">GetModeQFactor</span> ( <a href="../common_vbageneral/common_general_integer.htm" id="a188" style="font-weight: normal; font-style: normal;" name="a188">int</a> <span style="font-style: italic;"><i>ModeNumber</i></span> ) <a href="../common_vbageneral/common_general_double.htm" id="a163" style="font-weight: normal;" name="a163">double</a></p>
+<p class="VBA-Text-Indent" style="font-style: normal;">For structures with lossy materials and solver methods which support considering those losses, the query returns the Q-factor of the mode specified by its one-based number. If none was calculated, the method returns Zero. The Q-factor is derived from the real and imaginary part of the complex eigenfrequency.</p>
+<p class="vba-text-indent">&#160;</p>
+<p class="VBA-Heading-Method" style="font-style: normal;"><span style="font-style: normal;">GetModeExternalQFactor</span> ( <a href="../common_vbageneral/common_general_integer.htm" id="a189" style="font-weight: normal; font-style: normal;" name="a189">int</a> <span style="font-style: italic;"><i>ModeNumber</i></span> ) <a href="../common_vbageneral/common_general_double.htm" id="a164" style="font-weight: normal;" name="a164">double</a></p>
+<p class="VBA-Text-Indent" style="font-style: normal;">While the eigenmode solver usually solves problems with closed boundaries, the external Q-factor calculation allows to take into account the coupling effects of transmission lines being connected to the device, as described by waveguide ports. If the corresponding option was activated at the time the solver started, the method returns the external Q-factor of the mode specified by its one-based number. This result query is intended for the tetrahedral Classical (Lossless) and hexahedral JDM solver.</p>
+<p class="vba-text-indent">&#160;</p>
+<p class="VBA-Heading-Method" style="font-style: normal;"><span style="font-style: normal;">GetLoadedFrequencyInHz</span> ( <a href="../common_vbageneral/common_general_integer.htm" id="a190" style="font-weight: normal; font-style: normal;" name="a190">int</a> <span style="font-style: italic;"><i>ModeNumber</i></span> ) <a href="../common_vbageneral/common_general_double.htm" id="a165" style="font-weight: normal;" name="a165">double</a></p>
+<p class="VBA-Text-Indent" style="font-style: normal;">This result is only available with the external Q-factor calculation in the tetrahedral Classical (Lossless) and hexahedral JDM solver. The eigenfrequency of the device changes as couplers are connected to it. The query returns the loaded frequency of the mode in Hertz.</p>
+<p class="vba-text-indent">&#160;</p>
+<p class="VBA-Heading-Method" style="font-style: normal;"><span style="font-style: normal;">GetNumberOfSensitivityDesignParameters</span> <a href="../common_vbageneral/common_general_integer.htm" id="a166" style="font-weight: normal;" name="a166">int</a></p>
+<p class="VBA-Text-Indent" style="font-style: normal;">Returns the number of eigenmode sensitivity design parameters for which results are available.</p>
+<p class="vba-text-indent">&#160;</p>
+<p class="VBA-Heading-Method" style="font-style: normal;"><span style="font-style: normal;">GetSensitivityDesignParameter</span> ( <a href="../common_vbageneral/common_general_integer.htm" id="a167" style="font-weight: normal; font-style: normal;" name="a167">int</a> <span style="font-style: italic;"><i>Number</i></span> ) <a href="../common_vbageneral/common_general_string.htm" id="a168" style="font-weight: normal;" name="a168">name</a></p>
+<p class="VBA-Text-Indent" style="font-style: normal;">Returns the name of a sensitivity design parameter for which results had been calculated. <span style="font-style: italic;"><i>Number</i></span> is one-based.</p>
+<p class="vba-text-indent">&#160;</p>
+<p class="VBA-Heading-Method" style="font-style: normal;"><span style="font-style: normal;">GetFrequencySensitivity</span> ( <a href="../common_vbageneral/common_general_string.htm" id="a170" style="font-weight: normal; font-style: normal;" name="a170">string</a> <span style="font-style: italic;"><i>DesignParameter</i></span>, <a href="../common_vbageneral/common_general_integer.htm" id="a171" style="font-weight: normal; font-style: normal;" name="a171">int</a> <span style="font-style: italic;"><i>ModeNumber</i></span> ) <a href="../common_vbageneral/common_general_double.htm" id="a172" style="font-weight: normal;" name="a172">double</a></p>
+<p class="VBA-Text-Indent" style="font-style: normal;">Returns the result stored for the derivative of the eigenmode frequency with respect to the given design parameter. All units are SI base units, so that for a geometric sensitivity result, the value is in Hertz per meter, and just Hertz for material sensitivity. The mode number is one-based.</p>
+<p class="vba-text-indent">&#160;</p>
+<p class="VBA-Heading-Method" style="font-style: normal;"><span style="font-style: normal;">GetQFactorSensitivity</span> ( <a href="../common_vbageneral/common_general_string.htm" id="a175" style="font-weight: normal; font-style: normal;" name="a175">string</a> <span style="font-style: italic;"><i>DesignParameter</i></span>, <a href="../common_vbageneral/common_general_integer.htm" id="a176" style="font-weight: normal; font-style: normal;" name="a176">int</a> <span style="font-style: italic;"><i>ModeNumber</i></span> ) <a href="../common_vbageneral/common_general_double.htm" id="a177" style="font-weight: normal;" name="a177">double</a></p>
+<p class="VBA-Text-Indent" style="font-style: normal;">Returns the result stored for the derivative of the eigenmode Q-factor with respect to the given design parameter. The units are SI base units, and depend on the design parameter. The mode number is again one-based.</p>
+<p class="VBA-Heading-Category"><a name="Force_Calculation" id="Force_Calculation"></a>Force Calculation</p>
+<p class="VBA-Heading-Method">ResetForceCalculation</p>
+<p class="VBA-Text-Indent">Clears the list of modes selected for Lorentz force computation.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">CalculateLorentzForceForMode (<a href="../common_vbageneral/common_general_integer.htm" id="a2" style="font-weight: normal;" name="a2">int</a> <span style="font-style: italic;"><i>ModeIndex</i></span>)</p>
+<p class="VBA-Text-Indent">Adds the mode with index <span style="font-style: italic;"><i>ModeIndex</i></span> to the list of modes selected for Lorentz force calculation. Mode indices are 1-based.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">CalculateLorentzForceForAllModes</p>
+<p class="VBA-Text-Indent">Adds all the available modes to the list of modes selected for Lorentz force calculation.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">IsModeSelectedForForceCalculation (<a href="../common_vbageneral/common_general_integer.htm" id="a3" style="font-weight: normal;" name="a3">int</a> <span style="font-style: italic;"><i>ModeIndex</i></span>)&#160;<a href="../common_vbageneral/common_general_bool_data_type.htm" id="a1811" style="font-weight: normal;" name="a1811">bool</a></p>
+<p class="VBA-Text-Indent">Checks whether the mode with index <span style="font-style: italic;"><i>ModeIndex</i></span> is selected for Lorentz force calculation. Mode indices are 1-based.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">IsAnyModeSelectedForForceCalculation&#160;<a href="../common_vbageneral/common_general_bool_data_type.htm" id="a181" style="font-weight: normal;" name="a181">bool</a></p>
+<p class="VBA-Text-Indent">Checks whether any modes are selected for Lorentz force calculation.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">StartForceCalculation&#160;<a href="../common_vbageneral/common_general_bool_data_type.htm" id="a1812" style="font-weight: normal;" name="a1812">bool</a></p>
+<p class="VBA-Text-Indent">Starts the calculation of Lorentz force density distributions for selected modes. This feature is not supported by the General (Lossy) eigenmode solver.</p>
+<p class="VBA-Heading-Category"><a name="Defaults" id="Defaults"></a>Defaults</p>
+<p class="VBA-Text-Example">SetMethodType ("AKS", "Hex")</p>
+<p class="VBA-Text-Example">SetMethodType ("Automatic", "Tet")</p>
+<p class="VBA-Text-Example">SetMeshType ("Tetrahedral Mesh")</p>
+<p class="VBA-Text-Example">SetMeshAdaptationHex (False)</p>
+<p class="VBA-Text-Example">SetMeshAdaptationTet (True)</p>
+<p class="VBA-Text-Example">SetNumberOfModes (1)</p>
+<p class="VBA-Text-Example">SetStoreResultsInCache (False)</p>
+<p class="VBA-Text-Example">SetCalculateExternalQFactor (False)</p>
+<p class="VBA-Text-Example">SetConsiderStaticModes (True)</p>
+<p class="VBA-Text-Example">SetCalculateThermalLosses (True)</p>
+<p class="VBA-Text-Example">SetModesInFrequencyRange (False)</p>
+<p class="VBA-Text-Example">SetFrequencyTarget (True, 0.0)</p>
+<p class="VBA-Text-Example">SetAccuracy (1e-6)</p>
+<p class="VBA-Text-Example">SetQExternalAccuracy (1e-4)</p>
+<p class="VBA-Text-Example">SetMaterialEvaluationFrequency (True, "")</p>
+<p class="VBA-Text-Example">SetTDCompatibleMaterials (False)</p>
+<p class="VBA-Text-Example">SetOrderTet (2)</p>
+<p class="VBA-Text-Example">SetUseSensitivityAnalysis (False)</p>
+<p class="VBA-Text-Example">SetConsiderLossesInPostprocessingOnly (True)</p>
+<p class="VBA-Text-Example">SetMinimumQ (1.0)</p>
+<p class="VBA-Text-Example">SetUseParallelization (True)</p>
+<p class="VBA-Text-Example">SetMaxNumberOfThreads (96)</p>
+<p class="VBA-Text-Example">MaximumNumberOfCPUDevices (2)</p>
+<p class="VBA-Text-Example">SetRemoteCalculation (False)</p>
+<p>&#160;</p>
+<?rh-p style="margin-bottom: 0px; text-align: Right; margin-left: 18px; 
+                 margin-right: 18px; margin-top: 18px;" ?>
+<div style="width: 100%; position: relative;" id="footer">
+<p style="border-bottom: Solid 1px #dddddd; text-align: Left; margin-left: 0px; font-family: Arial, sans-serif; line-height: Normal; margin-top: 9px; margin-right: 0px; margin-bottom: 6px; border-left-width: 1px; border-top-width: 1px; border-right-width: 1px;"><span style="text-align: Left; font-family: Arial, sans-serif; line-height: Normal;">&#160;</span></p>
+<table cellspacing="0" width="100%">
+<col style="width: 50%;" />
+<col style="width: 50%;" />
+<tr>
+<td style="vertical-align: Top;"><span style="font-family: Arial, sans-serif; line-height: Normal; font-size: 8pt;"><font size="1" style="font-size:8pt;">CST Studio Suite 2026</font></span></td>
+<td style="vertical-align: Top;">
+<p style="text-align: right;">&#160;</p>
+</td>
+</tr>
+</table>
+<p>&#160;</p>
+</div>
+<script type="text/javascript" language="javascript1.2">
+//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+        writeIntopicBar(0);
+
+
+highlightSearch();
+//-->
+//]]>
+</script>
+</body>
+</html>

@@ -1,0 +1,460 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="Adobe RoboHelp 11" />
+<title>FarfieldArray Object</title>
+<link rel="StyleSheet" href="../online_help_vba.css" type="text/css" />
+<style type="text/css">
+/*<![CDATA[*/
+<!--
+body { border-bottom-style:None; }
+-->
+/*]]>*/
+</style>
+
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+        origWidth = innerWidth;
+        origHeight = innerHeight;
+        onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+/*<![CDATA[*/
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+-->
+/*]]>*/
+</style>
+
+<script type="text/javascript" language="javascript1.2" src="../whmsg.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript" src="../whver.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript1.2" src="../whutils.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript1.2" src="../whproxy.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript1.2" src="../whlang.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript1.2" src="../whtopic.js" charset="utf-8">
+</script>
+</head>
+<body>
+<a name="bc-1" id="bc-1"></a><script type="text/javascript" language="javascript1.2">
+//<![CDATA[
+<!--
+if (window.gbWhTopic)
+{
+        var strUrl = document.location.href;
+        var bc = 0;
+        var n = strUrl.toLowerCase().indexOf("bc-");
+        if(n != -1)
+        {
+                document.location.replace(strUrl.substring(0, n));
+                bc = strUrl.substring(n+3);
+        }
+
+        if (window.addTocInfo)
+        {
+        addTocInfo("3D Simulation VBA\nVBA Objects\nPost Processing\nFarfieldArray");
+addTocInfo("3D Simulation VBA\nExamples\nSolver and Post processing\nFarfieldArray Object");
+
+        }
+        if (window.writeBtnStyle)
+                writeBtnStyle();
+
+        if (window.writeIntopicBar)
+                writeIntopicBar(0);
+
+        
+        if(bc == 1)
+{
+        document.write("<p style=\"font-family: Tahoma; font-size: 9pt; font-weight: 400;  font-style:normal; color: rgb(0, 0, 0); text-decoration:none; text-align: left\"> ");
+AddMasterBreadcrumbs("../index.htm", "font-family: Tahoma; font-size: 9pt; font-weight: 400;  font-style:normal; color: rgb(0, 0, 0); text-decoration:none; text-align: left", "|", "Home", "../special_vbaobjects/special_vbaobjects_vbaobjects.htm");
+document.write("<a style=\"font-family: Tahoma; font-size: 9pt; font-weight: 400;  font-style:normal; color: rgb(0, 0, 0); text-decoration:none; text-align: left\" href=\"../special_vbaobjects/special_vbaobjects_vbaobjects.htm\">3D Simulation VBA<\/a> | <a style=\"font-family: Tahoma; font-size: 9pt; font-weight: 400;  font-style:normal; color: rgb(0, 0, 0); text-decoration:none; text-align: left\" href=\"../special_vbaobjects/special_vbaobjects_examples_overview.htm\">Examples<\/a> | <a style=\"font-family: Tahoma; font-size: 9pt; font-weight: 400;  font-style:normal; color: rgb(0, 0, 0); text-decoration:none; text-align: left\" href=\"special_vbapostproc_farfieldarray_object.htm#bc-1\">Solver and Post processing<\/a> | FarfieldArray Object<\/p>");
+}
+else{
+        document.write("<p style=\"font-family: Tahoma; font-size: 9pt; font-weight: 400;  font-style:normal; color: rgb(0, 0, 0); text-decoration:none; text-align: left\"> ");
+AddMasterBreadcrumbs("../index.htm", "font-family: Tahoma; font-size: 9pt; font-weight: 400;  font-style:normal; color: rgb(0, 0, 0); text-decoration:none; text-align: left", "|", "Home", "../special_vbaobjects/special_vbaobjects_vbaobjects.htm");
+document.write("<a style=\"font-family: Tahoma; font-size: 9pt; font-weight: 400;  font-style:normal; color: rgb(0, 0, 0); text-decoration:none; text-align: left\" href=\"../special_vbaobjects/special_vbaobjects_vbaobjects.htm\">3D Simulation VBA<\/a> | <a style=\"font-family: Tahoma; font-size: 9pt; font-weight: 400;  font-style:normal; color: rgb(0, 0, 0); text-decoration:none; text-align: left\" href=\"../special_vbaobjects/special_vbaobjects_vbaobjects.htm\">VBA Objects<\/a> | <a style=\"font-family: Tahoma; font-size: 9pt; font-weight: 400;  font-style:normal; color: rgb(0, 0, 0); text-decoration:none; text-align: left\" href=\"special_vbapostproc_type_method.htm\">Post Processing<\/a> | FarfieldArray<\/p>");
+}
+
+
+}
+else
+        if (window.gbIE4)
+                document.location.reload();
+
+onLoadHandler = function()
+{
+  if (window.setRelStartPage)
+        {
+        setTimeout("setRelStartPage('../index.htm');", 1)
+
+    setTimeout("UpdateBreadCrumbsMarker();", 1);
+        }
+}
+
+if (window.addEventListener){  
+        window.addEventListener('load', onLoadHandler, false);   
+} else if (window.attachEvent){  
+        window.attachEvent('onload', onLoadHandler);  
+}
+
+function onSetStartPage()
+{
+  autoSync(1);
+  sendSyncInfo();
+  sendAveInfoOut();
+}
+//-->
+//]]>
+</script><script type="text/javascript" src="../ehlpdhtm.js" language="JavaScript1.2">
+</script>
+<table cellspacing="0" width="100%">
+<col style="width: 50%;" />
+<col style="width: 50%;" />
+<tr>
+<td style="vertical-align: middle; padding-top: 5px; padding-bottom: 5px;">
+<p style="margin-top: 0px; margin-bottom: 0px;"><img src="../3ds.png" alt="" style="border: none;" border="0" /></p>
+</td>
+<td style="vertical-align: middle;">
+<p style="text-align: right;"><a href="https://www.3ds.com/products-services/3dexperience/" target="_blank"><img src="../3dexp.png" alt="" style="border: none;" width="32" height="32" border="0" /></a></p>
+</td>
+</tr>
+</table>
+<p class="VBA-Heading-Object">FarfieldArray Object</p>
+<p class="VBA-Text">Defines the antenna array pattern for a farfieldplot based on a single antenna element.</p>
+<ul>
+<li class="p-VBA-Index-Category">
+<p class="VBA-Index-Category"><a href="#Methods">Methods</a></p>
+</li>
+<li class="p-VBA-Index-Category">
+<p class="VBA-Index-Category"><a href="#Queries">Queries</a></p>
+</li>
+<li class="p-VBA-Index-Category">
+<p class="VBA-Index-Category"><a href="#Defaults">Default Settings</a></p>
+</li>
+<li class="p-VBA-Index-Category">
+<p class="VBA-Index-Category"><a href="#Example">Example</a></p>
+</li>
+</ul>
+<p class="VBA-Heading-Category"><a name="Methods" id="Methods"></a>Methods</p>
+<p class="VBA-Heading-Method">Reset</p>
+<p class="VBA-Text-Indent">Resets all internal settings to their initial values.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">UseArray ( <a href="../common_vbageneral/common_general_bool_data_type.htm" id="a1" style="font-weight: normal; font-style: normal;" name="a1">bool</a> <span style="font-style: italic;"><i>bFlag</i></span> )</p>
+<p class="VBA-Text-Indent">Activates the array pattern for farfield calculation.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">Arraytype ( <a href="../common_vbageneral/common_general_enum.htm" id="a2" style="font-weight: normal; font-style: normal;" name="a2">enum</a> <span style="font-style: italic;"><i>type</i></span> )</p>
+<p class="VBA-Text-Indent">Sets the type of the array pattern.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Text-Indent"><span style="font-weight: bold; font-style: italic;"><i>type</i></span> can have one of the following values:</p>
+<table style="vertical-align: top; margin-left: 15.10pt; left: 0px; top: 642px;" cellspacing="0" width="90%">
+<col style="width: 13.872%;" />
+<col style="width: 86.128%;" />
+<tr style="vertical-align: top;">
+<td style="border: Solid 1px #000000; width: 13.872%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text">”rectangular”</p>
+</td>
+<td style="border-top: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 86.128%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text">A rectangular array pattern (linear: 1D, planar: 2D, cubic: 3D) can be defined by setting the corresponding antenna numbers together with the space and phaseshift information using the methods <span style="font-weight: bold;">XSet</span>, <span style="font-weight: bold;">YSet</span>, and <span style="font-weight: bold;">ZSet</span>. The resulting list is then calculated by <span style="font-weight: bold;">SetList</span>. The array setup uses automatically the unit cell geometry and phasing if unit cell or periodic boundaries are active.</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 13.872%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text">”edit”</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 86.128%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text">This mode offers the possibility to edit the current antennalist by adding single antenna elements to the list using the method <span style="font-weight: bold;">Antenna</span>.</p>
+</td>
+</tr>
+</table>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">XSet ( <a href="../common_vbageneral/common_general_integer.htm" id="a7" style="font-weight: normal; font-style: normal;" name="a7">int</a> <span style="font-style: italic;"><i>&#160;number,</i></span> <a href="../common_vbageneral/common_general_double.htm" id="a8" style="font-weight: normal; font-style: normal;" name="a8">double</a> <span style="font-style: italic;"><i>spaceshift,</i></span> <a href="../common_vbageneral/common_general_double.htm" id="a9" style="font-weight: normal; font-style: normal;" name="a9">double</a> <span style="font-style: italic;"><i>phaseshift</i></span> )</p>
+<p class="VBA-Heading-Method">YSet ( <a href="../common_vbageneral/common_general_integer.htm" id="a10" style="font-weight: normal; font-style: normal;" name="a10">int</a> <span style="font-style: italic;"><i>&#160;number,</i></span> <a href="../common_vbageneral/common_general_double.htm" id="a11" style="font-weight: normal; font-style: normal;" name="a11">double</a> <span style="font-style: italic;"><i>spaceshift,</i></span> <a href="../common_vbageneral/common_general_double.htm" id="a12" style="font-weight: normal; font-style: normal;" name="a12">double</a> <span style="font-style: italic;"><i>phaseshift</i></span> )</p>
+<p class="VBA-Heading-Method">ZSet ( <a href="../common_vbageneral/common_general_integer.htm" id="a13" style="font-weight: normal; font-style: normal;" name="a13">int</a> <span style="font-style: italic;"><i>&#160;number,</i></span> <a href="../common_vbageneral/common_general_double.htm" id="a14" style="font-weight: normal; font-style: normal;" name="a14">double</a> <span style="font-style: italic;"><i>spaceshift,</i></span> <a href="../common_vbageneral/common_general_double.htm" id="a15" style="font-weight: normal; font-style: normal;" name="a15">double</a> <span style="font-style: italic;"><i>phaseshift</i></span> )</p>
+<p class="VBA-Text-Indent">Defines a linear array pattern in the x,y or z-direction respectively. Thus a linear, planar or cubic antenna array structure may be created.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<table style="vertical-align: top; margin-left: 15.10pt; left: 0px; top: 642px;" cellspacing="0" width="90%">
+<col style="width: 13.872%;" />
+<col style="width: 86.128%;" />
+<tr style="vertical-align: top;">
+<td style="border: Solid 1px #000000; width: 13.872%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text">number</p>
+</td>
+<td style="border-top: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 86.128%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text">The number of single antenna elements in x,y or z-direction</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 13.872%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text">spaceshift</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 86.128%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text">The constant spaceshift between two single antenna elements in x,y or z-direction</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 13.872%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text">phaseshift</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 86.128%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text">The constant phaseshift between two single antenna elements in x,y or z-direction</p>
+</td>
+</tr>
+</table>
+<p class="VBA-Heading-Method">&#160;</p>
+<p class="VBA-Heading-Method">AutoPhaseFromBoundary ( <a href="../common_vbageneral/common_general_bool_data_type.htm" id="a110" style="font-weight: normal; font-style: normal;" name="a110">bool</a> <span style="font-style: italic;"><i>bFlag</i></span> )</p>
+<p class="VBA-Text-Indent">Activates the automatic configuration of the phase shift from the boundary condition setup. This only works for projects with periodic or unit cell boundary conditions and is ignored in other cases.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="vba-heading-method">SetList</p>
+<p class="VBA-Text-Indent">Calculates a complete list of single antenna elements based on the specified array configuration and transfers these settings to the farfield plotter.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">DeleteList</p>
+<p class="VBA-Text-Indent">Deletes the current list of single antenna elements defining the array pattern.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">Antenna ( <a href="../common_vbageneral/common_general_double.htm" id="a4" style="font-weight: normal; font-style: normal;" name="a4">double</a> <span style="font-style: italic;"><i>x,</i></span> <a href="../common_vbageneral/common_general_double.htm" id="a5" style="font-weight: normal; font-style: normal;" name="a5">double</a> <span style="font-style: italic;"><i>y,</i></span> <a href="../common_vbageneral/common_general_double.htm" id="a6" style="font-weight: normal; font-style: normal;" name="a6">double</a> <span style="font-style: italic;"><i>z,</i></span> <a href="../common_vbageneral/common_general_double.htm" id="a16" style="font-weight: normal; font-style: normal;" name="a16">double</a> <span style="font-style: italic;"><i>amplitude,</i></span> <a href="../common_vbageneral/common_general_double.htm" id="a17" style="font-weight: normal; font-style: normal;" name="a17">double</a> <span style="font-style: italic;"><i>phase</i></span> )</p>
+<p class="VBA-Text-Indent">Defines the properties of a single antenna element. This method is only applicable in the editing mode set by <span style="font-weight: bold;">Arraytype</span>.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<table style="vertical-align: top; margin-left: 15.10pt; left: 0px; top: 642px;" cellspacing="0" width="90%">
+<col style="width: 13.873%;" />
+<col style="width: 86.127%;" />
+<tr style="vertical-align: top;">
+<td style="border: Solid 1px #000000; width: 13.873%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text">x</p>
+</td>
+<td style="border-top: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 86.127%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text">The x-position of the single antenna element in space</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 13.873%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text">y</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 86.127%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text">The y-position of the single antenna element in space</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 13.873%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text">z</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 86.127%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text">The z-position of the single antenna element in space</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 13.873%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text">amplitude</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 86.127%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text">The amplitude value of the single antenna element</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 13.873%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text">phase</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 86.127%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text">The phase value of the single antenna element</p>
+</td>
+</tr>
+</table>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">AddAntennaItem ( <a href="../common_vbageneral/common_general_filename.htm" style="font-weight: normal; font-style: normal;">filename</a> <span style="font-style: italic;"><i>sfile</i></span>, <a href="../common_vbageneral/common_general_double.htm" id="a18" style="font-weight: normal; font-style: normal;" name="a18">double</a> <span style="font-style: italic;"><i>x</i></span>, <a href="../common_vbageneral/common_general_double.htm" id="a19" style="font-weight: normal; font-style: normal;" name="a19">double</a> <span style="font-style: italic;"><i>y</i></span>, <a href="../common_vbageneral/common_general_double.htm" id="a20" style="font-weight: normal; font-style: normal;" name="a20">double</a> <span style="font-style: italic;"><i>z</i></span>, <a href="../common_vbageneral/common_general_double.htm" id="a21" style="font-weight: normal; font-style: normal;" name="a21">double</a> <span style="font-style: italic;"><i>alpha</i></span>, <a href="../common_vbageneral/common_general_double.htm" id="a22" style="font-weight: normal; font-style: normal;" name="a22">double</a> <span style="font-style: italic;"><i>beta</i></span>, <a href="../common_vbageneral/common_general_double.htm" id="a23" style="font-weight: normal; font-style: normal;" name="a23">double</a> <span style="font-style: italic;"><i>gamma</i></span>, <a href="../common_vbageneral/common_general_double.htm" id="a24" style="font-weight: normal; font-style: normal;" name="a24">double</a> <span style="font-style: italic;"><i>A</i></span>, <a href="../common_vbageneral/common_general_double.htm" id="a25" style="font-weight: normal; font-style: normal;" name="a25">double</a> <span style="font-style: italic;"><i>phase</i></span>)</p>
+<p class="VBA-Text-Indent">Loads an antenna farfield from <span style="font-style: italic;"><i>sfile</i></span> and adds it to the combine list.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">AddAntennaItemA ( <a href="../common_vbageneral/common_general_filename.htm" style="font-weight: normal; font-style: normal;">filename</a> <span style="font-style: italic;"><i>sfile</i></span>, <a href="../common_vbageneral/common_general_double.htm" id="a40" style="font-weight: normal; font-style: normal;" name="a40">double</a> <span style="font-style: italic;"><i>x</i></span>, <a href="../common_vbageneral/common_general_double.htm" id="a41" style="font-weight: normal; font-style: normal;" name="a41">double</a> <span style="font-style: italic;"><i>y</i></span>, <a href="../common_vbageneral/common_general_double.htm" id="a42" style="font-weight: normal; font-style: normal;" name="a42">double</a> <span style="font-style: italic;"><i>z</i></span>, <a href="../common_vbageneral/common_general_double.htm" id="a43" style="font-weight: normal; font-style: normal;" name="a43">double</a> <span style="font-style: italic;"><i>z1</i></span>, <a href="../common_vbageneral/common_general_double.htm" id="a44" style="font-weight: normal; font-style: normal;" name="a44">double</a> <span style="font-style: italic;"><i>z2</i></span>, <a href="../common_vbageneral/common_general_double.htm" id="a45" style="font-weight: normal; font-style: normal;" name="a45">double</a> <span style="font-style: italic;"><i>z3</i></span>, <a href="../common_vbageneral/common_general_double.htm" id="a48" style="font-weight: normal; font-style: normal;" name="a48">double</a> <span style="font-style: italic;"><i>x</i></span><span style="font-style: italic;"><i>1</i></span>, <a href="../common_vbageneral/common_general_double.htm" id="a49" style="font-weight: normal; font-style: normal;" name="a49">double</a> <span style="font-style: italic;"><i>x2</i></span>, <a href="../common_vbageneral/common_general_double.htm" id="a50" style="font-weight: normal; font-style: normal;" name="a50">double</a> <span style="font-style: italic;"><i>x3</i></span>, <a href="../common_vbageneral/common_general_double.htm" id="a46" style="font-weight: normal; font-style: normal;" name="a46">double</a> <span style="font-style: italic;"><i>A</i></span>, <a href="../common_vbageneral/common_general_double.htm" id="a47" style="font-weight: normal; font-style: normal;" name="a47">double</a> <span style="font-style: italic;"><i>phase</i></span>)</p>
+<p class="vba-text-indent">The command is similar to <span style="font-weight: bold;">AddAntennaItem,</span> but the orientation is specified by the antenna frame z-axis and x-axis in global coordinates.</p>
+<p class="VBA-Text-Indent">The following table summarizes the antenna parameters:</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<table style="vertical-align: top; margin-left: 24px; height: 73px; left: 0px; top: 1015px;" cellspacing="0" width="521">
+<col style="width: 27.913%;" />
+<col style="width: 72.087%;" />
+<tr style="vertical-align: top;">
+<td style="border: Solid 1px #000000; width: 27.913%; padding-right: 10px; padding-left: 10px;">
+<p>x, y, z</p>
+</td>
+<td style="border-top: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 72.087%; padding-right: 10px; padding-left: 10px;">
+<p>Position of the antenna in space</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 27.913%; padding-right: 10px; padding-left: 10px;">
+<p>alpha, beta, gamma</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 72.087%; padding-right: 10px; padding-left: 10px;">
+<p>Orientation of the antenna in Euler-x angles</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 27.913%; padding-right: 10px; padding-left: 10px;">
+<p>z1, z2, z3</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 72.087%; padding-right: 10px; padding-left: 10px;">
+<p>Antenna frame z-axis in global coordinate</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 27.913%; padding-right: 10px; padding-left: 10px;">
+<p>x1, x2, x3</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 72.087%; padding-right: 10px; padding-left: 10px;">
+<p>Antenna frame x-axis in global coordinate</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 27.913%; padding-right: 10px; padding-left: 10px;">
+<p>A</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 72.087%; padding-right: 10px; padding-left: 10px;">
+<p>&#160;Amplitude of the antenna emission</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 27.913%; padding-right: 10px; padding-left: 10px;">
+<p>Phase</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 72.087%; padding-right: 10px; padding-left: 10px;">
+<p>&#160;Phase of the antenna emission</p>
+</td>
+</tr>
+</table>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">ClearAntennaItems</p>
+<p class="VBA-Text-Indent">Clears the antenna combine list. &#160;&#160;</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">&#160;SetNormalizeAntennas ( <a href="../common_vbageneral/common_general_bool_data_type.htm" id="a39" style="font-weight: normal; font-style: normal;" name="a39">bool</a> <span style="font-style: italic;"><i>bflag</i></span> )</p>
+<p class="VBA-Text-Indent">Activates the normalization of all antennas &#160;to 1 W(peak) stimulated power before the execution of the combine command. The user specified <span style="font-style: italic;"><i>amplitudes</i></span> are &#160;applied to the scaled farfields.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">SetCombineFrequency ( <a href="../common_vbageneral/common_general_double.htm" id="a26" style="font-weight: normal; font-style: normal;" name="a26">double</a> &#160;<span style="font-style: italic;"><i>frequency</i></span> )</p>
+<p class="VBA-Text-Indent">Sets the frequency of the combined antenna. All antennas in the combine list must have the same frequency, otherwise the consistent combination of the antennas is not possible.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">SetCombineReferenceAxes ( <a href="../common_vbageneral/common_general_double.htm" id="a27" style="font-weight: normal; font-style: normal;" name="a27">double</a> <span style="font-style: italic;"><i>z1</i></span>, <a href="../common_vbageneral/common_general_double.htm" id="a28" style="font-weight: normal; font-style: normal;" name="a28">double</a> <span style="font-style: italic;"><i>z2</i></span>, <a href="../common_vbageneral/common_general_double.htm" id="a29" style="font-weight: normal; font-style: normal;" name="a29">double</a> <span style="font-style: italic;"><i>z3</i></span>, <a href="../common_vbageneral/common_general_double.htm" id="a30" style="font-weight: normal; font-style: normal;" name="a30">double</a> <span style="font-style: italic;"><i>x1</i></span>, <a href="../common_vbageneral/common_general_double.htm" id="a31" style="font-weight: normal; font-style: normal;" name="a31">double</a> <span style="font-style: italic;"><i>x2</i></span>, <a href="../common_vbageneral/common_general_double.htm" id="a32" style="font-weight: normal; font-style: normal;" name="a32">double</a> <span style="font-style: italic;"><i>x3</i></span> )</p>
+<p class="VBA-Text-Indent">Sets the theta reference axis (<span style="font-style: italic;"><i>z1, z2, z3</i></span>) and the phi reference axis (<span style="font-style: italic;"><i>x1, x2, x3</i></span>) of the combined antenna.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">SetCombineReferenceOrigin ( <a href="../common_vbageneral/common_general_double.htm" id="a33" style="font-weight: normal; font-style: normal;" name="a33">double</a> <span style="font-style: italic;"><i>p1</i></span>, <a href="../common_vbageneral/common_general_double.htm" id="a34" style="font-weight: normal; font-style: normal;" name="a34">double</a> <span style="font-style: italic;"><i>p2</i></span>, <a href="../common_vbageneral/common_general_double.htm" id="a35" style="font-weight: normal; font-style: normal;" name="a35">double</a> &#160;<span style="font-style: italic;"><i>p3</i></span> )</p>
+<p class="VBA-Text-Indent">Sets the phase reference origin (<span style="font-style: italic;"><i>p1, p2, p3</i></span>) of the combined antenna.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">ExecuteCombine ( <span><a href="../common_vbageneral/common_general_filename.htm" style="font-weight: normal;">filename</a></span> <span style="font-style: italic;"><i>sfile</i></span>, <a href="../common_vbageneral/common_general_double.htm" id="a38" style="font-weight: normal; font-style: normal;" name="a38">double</a> <span style="font-style: italic;"><i>stepInDegree</i></span> )</p>
+<p class="VBA-Text-Indent">Combines all antennas from the combine list to a single antenna. The new antenna data is sampled with <span style="font-style: italic;"><i>stepInDegree</i></span> and written to <span style="font-style: italic;"><i>sfile</i></span>. No further scaling is applied to the combined field.</p>
+<p class="VBA-Heading-Category"><a name="Queries" id="Queries"></a>Queries</p>
+<p class="VBA-Heading-Method">GetCombinePowerRatio <a href="../common_vbageneral/common_general_double.htm" id="a3" style="font-weight: normal; font-style: normal;" name="a3">double</a></p>
+<p class="VBA-Text-Indent">Returns the ratio of the actual emitted power to the integrated input power of all antennas from the combine list. A strong deviation from unity indicates a non-negligible interaction of the antennas.</p>
+<p class="VBA-Heading-Category"><a name="Defaults" id="Defaults"></a>Default Settings</p>
+<p class="VBA-Text-Example">UseArray (False)</p>
+<p class="VBA-Text-Example">Arraytype ("rectangular")</p>
+<p class="VBA-Text-Example">XSet (1, 0.0, 0.0)</p>
+<p class="VBA-Text-Example">YSet (1, 0.0, 0.0)</p>
+<p class="VBA-Text-Example">ZSet (1, 0.0, 0.0)</p>
+<p class="VBA-Text-Example">AutoPhaseFromBoundary (True)</p>
+<p class="VBA-Text-Example">SetCombineFrequency (-1.0)</p>
+<p class="VBA-Text-Example">SetCombineReferenceAxes (0, 0, 1, 1, 0, 0)</p>
+<p class="VBA-Text-Example">SetCombineReferenceOrigin (0, 0, 0)</p>
+<p class="VBA-Text-Example">SetNormalizeAntennas (True)</p>
+<p class="VBA-Heading-Category"><a name="Example" id="Example"></a>Example</p>
+<p class="VBA-Text">The first example defines a linear antenna array:</p>
+<p class="VBA-Text">&#160;</p>
+<p style="font-family: 'Courier New';">&#160;With FarfieldArray</p>
+<p style="margin-left: 3.75pt;"><span style="font-size: 9pt;"><font size="1" style="font-size:9pt;"><font style="font-family: 'Courier New';" color="#000000" face="Courier New">&#160;&#160;&#160;&#160;.Reset</font></font></span></p>
+<p style="margin-left: 3.75pt;"><span style="font-size: 9pt;"><font size="1" style="font-size:9pt;"><font style="font-family: 'Courier New';" color="#000000" face="Courier New">&#160;&#160;&#160;&#160;.UseArray (True)</font></font></span></p>
+<p style="margin-left: 3.75pt;"><span style="font-size: 9pt;"><font size="1" style="font-size:9pt;"><font style="font-family: 'Courier New';" color="#000000" face="Courier New">&#160;&#160;&#160;&#160;.Arraytype ("rectangular")</font></font></span></p>
+<p style="margin-left: 3.75pt;"><span style="font-size: 9pt;"><font size="1" style="font-size:9pt;"><font style="font-family: 'Courier New';" color="#000000" face="Courier New">&#160;&#160;&#160;&#160;.ZSet (2, 2.5, 90)</font></font></span></p>
+<p style="margin-left: 3.75pt;"><span style="font-size: 9pt;"><font size="1" style="font-size:9pt;"><font style="font-family: 'Courier New';" color="#000000" face="Courier New">&#160;&#160;&#160;&#160;.SetList</font></font></span></p>
+<p style="margin-left: 3.75pt;"><span style="font-size: 9pt;"><font size="1" style="font-size:9pt;"><font style="font-family: 'Courier New';" color="#000000" face="Courier New">&#160;&#160;&#160;&#160;.Arraytype ("edit")</font></font></span></p>
+<p style="margin-left: 3.75pt;"><span style="font-size: 9pt;"><font size="1" style="font-size:9pt;"><font style="font-family: 'Courier New';" color="#008000" face="Courier New">&#160;&#160;&#160;&#160;</font></font></span><span style="font-size: 9pt;"><font size="1" style="font-size:9pt;"><font style="font-family: 'Courier New';" face="Courier New">.Antenna (0, 0, 0, 1.0, 0.0)</font></font></span></p>
+<p style="font-family: 'Courier New';">&#160;End With</p>
+<p style="font-family: 'Courier New';">&#160;</p>
+<p class="VBA-Text">The second example combines two antennas with different orientation and position:</p>
+<p style="font-family: 'Courier New';">&#160;</p>
+<p style="font-family: 'Courier New';">With FarfieldArray</p>
+<p style="font-family: 'Courier New'; margin-left: 40px;">ResultPath = GetProjectPath("Result") &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;' Assume that the farfield files are in the result folder</p>
+<p style="font-family: 'Courier New'; margin-left: 40px;">.ClearAntennaItems()</p>
+<p style="font-family: 'Courier New'; margin-left: 40px;">.SetCombineFrequency(100.0)</p>
+<p style="font-family: 'Courier New'; margin-left: 40px;">.AddAntennaItem(ResultPath + "farfield_1.ffp", 0.0, -1.0, 0.0, 0, &#160;&#160;0, 30.0, 1.0, 90.0)</p>
+<p style="font-family: 'Courier New'; margin-left: 40px;">.AddAntennaItem(ResultPath + "farfield_2.ffp", 0.0, &#160;1.0, 0.0, 0, -30, &#160;0.0, 1.0, &#160;0.0)</p>
+<p style="font-family: 'Courier New'; margin-left: 40px;">.ExecuteCombine(ResultPath + "combined_ff.ffp", 5.0) &#160;' Store the combined antenna in the result folder</p>
+<p style="font-family: 'Courier New'; margin-left: 40px;">MsgBox "Actual Power / Power Sum = " &amp; .GetCombinePowerRatio()</p>
+<p style="font-family: 'Courier New';">End With</p>
+<p>&#160;</p>
+<p class="VBA-Text">The third example combines antennas to a finite-size array of unit cells with seven times seven elements:</p>
+<p style="font-family: 'Courier New';">&#160;</p>
+<p style="font-family: 'Courier New';">With FarfieldArray</p>
+<p style="font-family: 'Courier New'; margin-left: 40px;">.SetCombineFrequency(100.0)</p>
+<p style="font-family: 'Courier New'; margin-left: 40px;">.SetNormalizeAntennas(False)</p>
+<p style="font-family: 'Courier New'; margin-left: 40px;">.SetUnitCellArray("farfield_1.ffp", 7, 7)</p>
+<p style="font-family: 'Courier New'; margin-left: 40px;">.ExecuteCombine("combined_ff.ffp", 5.0)</p>
+<p style="font-family: 'Courier New';">End With</p>
+<p style="font-family: 'Courier New';">&#160;</p>
+<p style="font-family: 'Courier New';">&#160;</p>
+<p class="VBA-Text">The forth example sets the farfield origin:</p>
+<p>&#160;</p>
+<p style="margin-left: 0px; font-family: 'Courier New', monospace;">NewOriginX = -100</p>
+<p style="margin-left: 0px; font-family: 'Courier New', monospace;">NewOriginY = 300</p>
+<p style="margin-left: 0px; font-family: 'Courier New', monospace;">NewOriginZ = 400</p>
+<p style="font-family: 'Courier New', monospace;">&#160;</p>
+<p style="margin-left: 0px; font-family: 'Courier New', monospace;">Frequency = 30.0</p>
+<p style="font-family: 'Courier New', monospace;">&#160;</p>
+<p style="margin-left: 0px; font-family: 'Courier New', monospace;">MonitorName = "farfield (f=30)"</p>
+<p style="font-family: 'Courier New', monospace;">&#160;</p>
+<p style="margin-left: 0px; font-family: 'Courier New', monospace;">With FarfieldArray</p>
+<p style="margin-left: 40px; font-family: 'Courier New', monospace;">ResultPath = GetProjectPath("Result")</p>
+<p style="margin-left: 40px; font-family: 'Courier New', monospace;">.ClearAntennaItems()</p>
+<p style="margin-left: 40px; font-family: 'Courier New', monospace;">.SetCombineFrequency(Frequency)</p>
+<p style="margin-left: 40px; font-family: 'Courier New', monospace;">.AddAntennaItemA(ResultPath + MonitorName + "2D_1.ffp", 0,0,0, 0,0,1,1,0,0, 1, 0)</p>
+<p style="margin-left: 40px; font-family: 'Courier New', monospace;">.SetCombineReferenceOrigin ( NewOriginX, NewOriginY ,NewOriginZ )</p>
+<p style="margin-left: 40px; font-family: 'Courier New', monospace;">.ExecuteCombine(ResultPath + "MovedOrigin.ffp", 1.0)</p>
+<p style="margin-left: 0px; font-family: 'Courier New', monospace;">End With</p>
+<p style="margin-left: 0px; font-family: 'Courier New', monospace;">&#160;</p>
+<p style="margin-left: 0px; font-family: 'Courier New', monospace;">' Add to result tree</p>
+<p style="margin-left: 0px; font-family: 'Courier New', monospace;">With ResultTree</p>
+<p style="margin-left: 40px; font-family: 'Courier New', monospace;">.Name "Farfields\MovedOrigin"</p>
+<p style="margin-left: 40px; font-family: 'Courier New', monospace;">.File ResultPath + "MovedOrigin.ffp"</p>
+<p style="margin-left: 40px; font-family: 'Courier New', monospace;">.Type "Farfield"</p>
+<p style="margin-left: 40px; font-family: 'Courier New', monospace;">.Add</p>
+<p style="margin-left: 0px; font-family: 'Courier New', monospace;">End With</p>
+<?rh-p style="margin-bottom: 0px; text-align: Right; margin-left: 18px; 
+                 margin-right: 18px; margin-top: 18px;" ?>
+<div style="width: 100%; position: relative;" id="footer">
+<p style="border-bottom: Solid 1px #dddddd; text-align: Left; margin-left: 0px; font-family: Arial, sans-serif; line-height: Normal; margin-top: 9px; margin-right: 0px; margin-bottom: 6px; border-left-width: 1px; border-top-width: 1px; border-right-width: 1px;"><span style="text-align: Left; font-family: Arial, sans-serif; line-height: Normal;">&#160;</span></p>
+<table cellspacing="0" width="100%">
+<col style="width: 50%;" />
+<col style="width: 50%;" />
+<tr>
+<td style="vertical-align: Top;"><span style="font-family: Arial, sans-serif; line-height: Normal; font-size: 8pt;"><font size="1" style="font-size:8pt;">CST Studio Suite 2026</font></span></td>
+<td style="vertical-align: Top;">
+<p style="text-align: right;">&#160;</p>
+</td>
+</tr>
+</table>
+<p>&#160;</p>
+</div>
+<script type="text/javascript" language="javascript1.2">
+//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+        writeIntopicBar(0);
+
+
+highlightSearch();
+//-->
+//]]>
+</script>
+</body>
+</html>

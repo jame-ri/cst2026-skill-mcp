@@ -1,0 +1,316 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="Adobe RoboHelp 11" />
+<title>ColorRamp Object</title>
+<link rel="StyleSheet" href="../online_help_vba.css" type="text/css" />
+<style type="text/css">
+/*<![CDATA[*/
+<!--
+body { border-bottom-style:None; }
+-->
+/*]]>*/
+</style>
+
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+        origWidth = innerWidth;
+        origHeight = innerHeight;
+        onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+/*<![CDATA[*/
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+-->
+/*]]>*/
+</style>
+
+<script type="text/javascript" language="javascript1.2" src="../whmsg.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript" src="../whver.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript1.2" src="../whutils.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript1.2" src="../whproxy.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript1.2" src="../whlang.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript1.2" src="../whtopic.js" charset="utf-8">
+</script>
+</head>
+<body>
+<a name="bc-1" id="bc-1"></a><script type="text/javascript" language="javascript1.2">
+//<![CDATA[
+<!--
+if (window.gbWhTopic)
+{
+        var strUrl = document.location.href;
+        var bc = 0;
+        var n = strUrl.toLowerCase().indexOf("bc-");
+        if(n != -1)
+        {
+                document.location.replace(strUrl.substring(0, n));
+                bc = strUrl.substring(n+3);
+        }
+
+        if (window.addTocInfo)
+        {
+        addTocInfo("3D Simulation VBA\nVBA Objects\nPost Processing\nColorRamp");
+addTocInfo("3D Simulation VBA\nVBA Objects\nPlot\nColorRamp");
+
+        }
+        if (window.writeBtnStyle)
+                writeBtnStyle();
+
+        if (window.writeIntopicBar)
+                writeIntopicBar(0);
+
+        
+        if(bc == 1)
+{
+        document.write("<p style=\"font-family: Tahoma; font-size: 9pt; font-weight: 400;  font-style:normal; color: rgb(0, 0, 0); text-decoration:none; text-align: left\"> ");
+AddMasterBreadcrumbs("../index.htm", "font-family: Tahoma; font-size: 9pt; font-weight: 400;  font-style:normal; color: rgb(0, 0, 0); text-decoration:none; text-align: left", "|", "Home", "../special_vbaobjects/special_vbaobjects_vbaobjects.htm");
+document.write("<a style=\"font-family: Tahoma; font-size: 9pt; font-weight: 400;  font-style:normal; color: rgb(0, 0, 0); text-decoration:none; text-align: left\" href=\"../special_vbaobjects/special_vbaobjects_vbaobjects.htm\">3D Simulation VBA<\/a> | <a style=\"font-family: Tahoma; font-size: 9pt; font-weight: 400;  font-style:normal; color: rgb(0, 0, 0); text-decoration:none; text-align: left\" href=\"../special_vbaobjects/special_vbaobjects_vbaobjects.htm\">VBA Objects<\/a> | <a style=\"font-family: Tahoma; font-size: 9pt; font-weight: 400;  font-style:normal; color: rgb(0, 0, 0); text-decoration:none; text-align: left\" href=\"../common_vbaplot/common_vbaplot_plot_object.htm\">Plot<\/a> | ColorRamp<\/p>");
+}
+else{
+        document.write("<p style=\"font-family: Tahoma; font-size: 9pt; font-weight: 400;  font-style:normal; color: rgb(0, 0, 0); text-decoration:none; text-align: left\"> ");
+AddMasterBreadcrumbs("../index.htm", "font-family: Tahoma; font-size: 9pt; font-weight: 400;  font-style:normal; color: rgb(0, 0, 0); text-decoration:none; text-align: left", "|", "Home", "../special_vbaobjects/special_vbaobjects_vbaobjects.htm");
+document.write("<a style=\"font-family: Tahoma; font-size: 9pt; font-weight: 400;  font-style:normal; color: rgb(0, 0, 0); text-decoration:none; text-align: left\" href=\"../special_vbaobjects/special_vbaobjects_vbaobjects.htm\">3D Simulation VBA<\/a> | <a style=\"font-family: Tahoma; font-size: 9pt; font-weight: 400;  font-style:normal; color: rgb(0, 0, 0); text-decoration:none; text-align: left\" href=\"../special_vbaobjects/special_vbaobjects_vbaobjects.htm\">VBA Objects<\/a> | <a style=\"font-family: Tahoma; font-size: 9pt; font-weight: 400;  font-style:normal; color: rgb(0, 0, 0); text-decoration:none; text-align: left\" href=\"../special_vbapostproc/special_vbapostproc_type_method.htm\">Post Processing<\/a> | ColorRamp<\/p>");
+}
+
+
+}
+else
+        if (window.gbIE4)
+                document.location.reload();
+
+onLoadHandler = function()
+{
+  if (window.setRelStartPage)
+        {
+        setTimeout("setRelStartPage('../index.htm');", 1)
+
+    setTimeout("UpdateBreadCrumbsMarker();", 1);
+        }
+}
+
+if (window.addEventListener){  
+        window.addEventListener('load', onLoadHandler, false);   
+} else if (window.attachEvent){  
+        window.attachEvent('onload', onLoadHandler);  
+}
+
+function onSetStartPage()
+{
+  autoSync(1);
+  sendSyncInfo();
+  sendAveInfoOut();
+}
+//-->
+//]]>
+</script><script type="text/javascript" src="../ehlpdhtm.js" language="JavaScript1.2">
+</script>
+<table cellspacing="0" width="100%">
+<col style="width: 50%;" />
+<col style="width: 50%;" />
+<tr>
+<td style="vertical-align: middle; padding-top: 5px; padding-bottom: 5px;">
+<p style="margin-top: 0px; margin-bottom: 0px;"><img src="../3ds.png" alt="" style="border: none;" border="0" /></p>
+</td>
+<td style="vertical-align: middle;">
+<p style="text-align: right;"><a href="https://www.3ds.com/products-services/3dexperience/" target="_blank"><img src="../3dexp.png" alt="" style="border: none;" width="32" height="32" border="0" /></a></p>
+</td>
+</tr>
+</table>
+<h1>ColorRamp Object</h1>
+<p class="VBA-Text">Use this to change the color order for the color-by-value field plots.</p>
+<ul>
+<li class="p-VBA-Index-Category">
+<p class="VBA-Index-Category"><a href="#General_Methods">General Methods</a></p>
+</li>
+<li class="p-VBA-Index-Category">
+<p class="VBA-Index-Category"><a href="#Deprecated_Methods">Deprecated Methods</a></p>
+</li>
+</ul>
+<p class="VBA-Heading-Category"><a name="General_Methods" id="General_Methods"></a>General Methods</p>
+<p class="VBA-Heading-Method"><span style="font-weight: bold;">Type</span> ( <a href="../common_vbageneral/common_general_enum.htm" id="a32" style="font-weight: normal; font-style: normal;" name="a32">enum</a> <span style="font-style: italic;"><i>name</i></span> )</p>
+<p class="VBA-Text-Indent">Sets the color ramp to a pre-defined or user-defined color order.</p>
+<table style="vertical-align: top; margin-left: 40px;" cellspacing="0" width="90%">
+<col style="width: 22.499%;" />
+<col style="width: 77.501%;" />
+<tr style="vertical-align: top;">
+<td style="border: Solid 1px #000000; width: 22.499%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text"><a href="../common_vbageneral/common_general_enum.htm" id="a8" style="font-weight: normal; font-style: normal;" name="a8">enum</a> <span style="font-style: italic; font-weight: bold;"><i>name</i></span></p>
+</td>
+<td style="border-top: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 77.501%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text" style="font-weight: bold;">color order</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 22.499%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text">"Rainbow"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 77.501%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text">blue-cyan-green-yellow-red (default)</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 22.499%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text">"Fire"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 77.501%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text">cyan-blue-magenta-red-yellow</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 22.499%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text">"Inspire"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 77.501%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text">green-blue-magenta-red-yellow</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 22.499%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text">"FarFire"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 77.501%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text">blue-magenta-red-yellow</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 22.499%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text">"Hot"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 77.501%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text">black-red-yellow-white</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 22.499%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text">"Gray"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 77.501%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text">for black-and-white printer</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 22.499%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text">"Phase"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 77.501%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text">red-yellow-green-cyan-blue-magenta-red</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 22.499%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text">"Free"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 77.501%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text">user-defined color order</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 22.499%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text">"Mono"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 77.501%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text">white to user-defined color</p>
+</td>
+</tr>
+</table>
+<p style="margin-top: 0; margin-bottom: 0;">&#160;</p>
+<p class="VBA-Heading-Method">AddFreeRampVertex ( <a href="../common_vbageneral/single_data_type.htm" id="a28" style="font-weight: normal; font-style: normal;" name="a28">single</a> <span style="font-style: italic;"><i>value,</i></span> <a href="../common_vbageneral/single_data_type.htm" id="a28" style="font-weight: normal; font-style: normal;" name="a28">single</a> <span style="font-style: italic;"><i>red,</i></span> <a href="../common_vbageneral/single_data_type.htm" id="a28" style="font-weight: normal; font-style: normal;" name="a28">single</a> <span style="font-style: italic;"><i>green,</i></span> <a href="../common_vbageneral/single_data_type.htm" id="a28" style="font-weight: normal; font-style: normal;" name="a28">single</a> <span style="font-style: italic;"><i>blue</i></span> )</p>
+<p class="VBA-Text-Indent">Adds a vertex to the user-defined "Free" color ramp. All parameters need to be in the range [0.0, 1.0]. The <span style="font-style: italic;"><i>value</i></span> defines the relative position on the color ramp, with <span style="font-style: italic;"><i>value = 0.0</i></span> referring to the lower bound of the color ramp and <span style="font-style: italic;"><i>value = 1.0</i></span> to the upper bound. The color at this position of the color ramp is given in <span style="font-style: italic;"><i>red, green, blue</i></span>.</p>
+<p style="margin-top: 0; margin-bottom: 0;">&#160;</p>
+<p class="VBA-Heading-Method">DeleteFreeRampVertices</p>
+<p class="VBA-Text-Indent">Delete all vertices from the user-defined "Free" color ramp. This results in an empty black color ramp.</p>
+<p style="margin-top: 0; margin-bottom: 0;">&#160;</p>
+<p class="VBA-Heading-Method">SetFreeRampMode ( <a href="../common_vbageneral/common_general_enum.htm" id="a9" style="font-weight: normal; font-style: normal;" name="a9">enum</a> <span style="font-style: italic;"><i>name</i></span> )</p>
+<p class="VBA-Text-Indent">The "Free" color ramp can operate in one of two modes: "continuous" (default) or "stepped"</p>
+<p class="VBA-Text-Indent">In "continuous" mode the colors are interpolated linearly between the given color ramp vertices.</p>
+<p class="VBA-Text-Indent">For example a simple color ramp ranging from blue to red in a continuous transition is defined as follows:</p>
+<p class="VBA-Text-Example" style="margin-left: 40px;">SetFreeRampMode ("continuous")</p>
+<p class="VBA-Text-Example" style="margin-left: 40px;">AddFreeRampVertex (0.0, 0.0, 0.0, 1.0)</p>
+<p class="VBA-Text-Example" style="margin-left: 40px;">AddFreeRampVertex (1.0, 1.0, 0.0, 0.0)</p>
+<p class="VBA-Text-Indent">In "stepped" mode each color covers the range from the given color ramp vertex up to the next color ramp vertex.</p>
+<p class="VBA-Text-Indent">For example a simple color ramp with blue in the lower half and red in the upper half is defined as follows:</p>
+<p class="VBA-Text-Example" style="margin-left: 40px;">SetFreeRampMode ("stepped")</p>
+<p class="VBA-Text-Example" style="margin-left: 40px;">AddFreeRampVertex (0.0, 0.0, 0.0, 1.0)</p>
+<p class="VBA-Text-Example" style="margin-left: 40px;">AddFreeRampVertex (0.5, 1.0, 0.0, 0.0)</p>
+<p style="margin-top: 0; margin-bottom: 0;">&#160;</p>
+<p class="VBA-Heading-Method">SetMonoRampColor ( <a href="../common_vbageneral/single_data_type.htm" id="a28" style="font-weight: normal; font-style: normal;" name="a28">single</a> <span style="font-style: italic;"><i>red,</i></span> <a href="../common_vbageneral/single_data_type.htm" id="a28" style="font-weight: normal; font-style: normal;" name="a28">single</a> <span style="font-style: italic;"><i>green,</i></span> <a href="../common_vbageneral/single_data_type.htm" id="a28" style="font-weight: normal; font-style: normal;" name="a28">single</a> <span style="font-style: italic;"><i>blue</i></span> )</p>
+<p class="VBA-Text-Indent">Set user-defined color of the "Mono" color ramp. Each value needs to be in the range [0.0, 1.0]. This results in a color ramp ranging from white to the given color.</p>
+<p style="margin-top: 0; margin-bottom: 0;">&#160;</p>
+<p class="VBA-Heading-Method">Invert ( <a href="../common_vbageneral/common_general_bool_data_type.htm" id="a28" style="font-weight: normal; font-style: normal;" name="a28">bool</a> <span style="font-style: italic;"><i>flag</i></span> )</p>
+<p class="VBA-Text-Indent">Inverts the color order, e.g. turn the rainbow type to red-yellow-green-cyan-blue<span style="margin-top: 0; margin-bottom: 0; margin-left: 40px;">.</span></p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">Style ( <a href="../common_vbageneral/common_general_enum.htm" id="a9" style="font-weight: normal; font-style: normal;" name="a9">enum</a> <span style="font-style: italic;"><i>name</i></span> )</p>
+<p class="VBA-Text-Indent">This switch either hides ("None") the color ramp or positions it vertically ("Vertical") in the main view.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p style="font-weight: bold;">Reset</p>
+<p class="VBA-Text-Indent">Resets internal settings to default settings.</p>
+<p class="VBA-Heading-Category"><a name="Deprecated_Methods" id="Deprecated_Methods"></a>Deprecated Methods</p>
+<p class="VBA-Text">Methods related to 2D/3D Plots only have been relocated to <a href="../common_vbaplot/plot2d3d.htm">Plot2D3D</a> object. Methods related to Farfield Plots only have been relocated to <a href="../special_vbapostproc/special_vbapostproc_farfieldploto.htm">FarfieldPlot</a> object.</p>
+<p class="VBA-Text">Thus, the following methods are marked deprecated and will vanish from the interface in the future. Please consider updating your scripts accordingly.</p>
+<p class="VBA-Text">&#160;</p>
+<p class="VBA-Heading-Method">SetScalingMode ( <a href="../common_vbageneral/common_general_enum.htm" id="a322" style="font-weight: normal; font-style: normal;" name="a322">enum</a> <span style="font-style: italic;"><i>mode</i></span> )</p>
+<p class="VBA-Heading-Method">SetClampRange ( <a href="../common_vbageneral/common_general_double.htm" style="font-weight: normal;">double</a> <span style="font-style: italic;"><i>min</i></span>, <a href="../common_vbageneral/common_general_double.htm" style="font-weight: normal;">double</a> <span style="font-style: italic;"><i>max</i></span> )</p>
+<p class="VBA-Heading-Method">SetLogStrength ( <a href="../common_vbageneral/common_general_double.htm" style="font-weight: normal;">double</a> <span style="font-style: italic;"><i>strength</i></span> )</p>
+<p class="VBA-Heading-Method">SetdBRange ( <a href="../common_vbageneral/common_general_double.htm" style="font-weight: normal;">double</a> <span style="font-style: italic;"><i>range</i></span> )</p>
+<p class="VBA-Text-Indent">Please refer to&#160;<a href="../common_vbaplot/plot2d3d.htm">Plot2D3D</a> object for descriptions.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">NumberOfContourValues ( <a href="../common_vbageneral/common_general_long.htm" id="a251" style="font-weight: normal; font-style: normal;" name="a251">long</a> <span style="font-style: italic;"><i>number</i></span> )</p>
+<p class="VBA-Heading-Method">GetNumberOfContourValues <a href="../common_vbageneral/common_general_long.htm" id="a2511" style="font-weight: normal; font-style: normal;" name="a2511">long</a></p>
+<p class="VBA-Heading-Method">DrawContourLines ( <a href="../common_vbageneral/common_general_bool_data_type.htm" id="a7" style="font-weight: normal; font-style: normal;" name="a7">bool</a> <span style="font-style: italic;"><i>switch</i></span> )</p>
+<p class="VBA-Text-Indent">Please refer to&#160;<a href="../common_vbaplot/plot2d3d.htm">Plot2D3D</a> object or <a href="../special_vbapostproc/special_vbapostproc_farfieldploto.htm">FarfieldPlot</a> object for descriptions.</p>
+<p class="VBA-Heading-Category">Default Settings</p>
+<p class="VBA-Text-Example" style="font-weight: normal;">Type ("rainbow")</p>
+<p class="VBA-Text-Example" style="font-weight: normal;">Invert (False)</p>
+<p class="VBA-Text">&#160;</p>
+<?rh-p style="margin-bottom: 0px; text-align: Right; margin-left: 18px; 
+                 margin-right: 18px; margin-top: 18px;" ?><?rh-p style="margin-bottom: 0px; text-align: Right; margin-left: 18px; 
+                 margin-right: 18px; margin-top: 18px;" ?>
+<div style="width: 100%; position: relative;" id="footer">
+<p style="border-bottom: Solid 1px #dddddd; text-align: Left; margin-left: 0px; font-family: Arial, sans-serif; line-height: Normal; margin-top: 9px; margin-right: 0px; margin-bottom: 6px; border-left-width: 1px; border-top-width: 1px; border-right-width: 1px;"><span style="text-align: Left; font-family: Arial, sans-serif; line-height: Normal;">&#160;</span></p>
+<table cellspacing="0" width="100%">
+<col style="width: 50%;" />
+<col style="width: 50%;" />
+<tr>
+<td style="vertical-align: Top;"><span style="font-family: Arial, sans-serif; line-height: Normal; font-size: 8pt;"><font size="1" style="font-size:8pt;">CST Studio Suite 2026</font></span></td>
+<td style="vertical-align: Top;">
+<p style="text-align: right;">&#160;</p>
+</td>
+</tr>
+</table>
+<p>&#160;</p>
+</div>
+<script type="text/javascript" language="javascript1.2">
+//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+        writeIntopicBar(0);
+
+
+highlightSearch();
+//-->
+//]]>
+</script>
+</body>
+</html>

@@ -1,0 +1,404 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="Adobe RoboHelp 11" />
+<title>MStaticSolver Object</title>
+<link rel="StyleSheet" href="../online_help_vba.css" type="text/css" />
+<style type="text/css">
+/*<![CDATA[*/
+<!--
+body { border-bottom-style:None; }
+-->
+/*]]>*/
+</style>
+
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+        origWidth = innerWidth;
+        origHeight = innerHeight;
+        onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+/*<![CDATA[*/
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+-->
+/*]]>*/
+</style>
+
+<script type="text/javascript" language="javascript1.2" src="../whmsg.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript" src="../whver.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript1.2" src="../whutils.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript1.2" src="../whproxy.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript1.2" src="../whlang.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript1.2" src="../whtopic.js" charset="utf-8">
+</script>
+</head>
+<body>
+<script type="text/javascript" language="javascript1.2">
+//<![CDATA[
+<!--
+if (window.gbWhTopic)
+{
+        var strUrl = document.location.href;
+        var bc = 0;
+        var n = strUrl.toLowerCase().indexOf("bc-");
+        if(n != -1)
+        {
+                document.location.replace(strUrl.substring(0, n));
+                bc = strUrl.substring(n+3);
+        }
+
+        if (window.addTocInfo)
+        {
+        addTocInfo("3D Simulation VBA\nVBA Objects\nSolver\nLow Frequency\nMStaticSolver");
+
+        }
+        if (window.writeBtnStyle)
+                writeBtnStyle();
+
+        if (window.writeIntopicBar)
+                writeIntopicBar(0);
+
+        
+        document.write("<p style=\"font-family: Tahoma; font-size: 9pt; font-weight: 400;  font-style:normal; color: rgb(0, 0, 0); text-decoration:none; text-align: left\"> ");
+AddMasterBreadcrumbs("../index.htm", "font-family: Tahoma; font-size: 9pt; font-weight: 400;  font-style:normal; color: rgb(0, 0, 0); text-decoration:none; text-align: left", "|", "Home", "../special_vbaobjects/special_vbaobjects_vbaobjects.htm");
+document.write("<a style=\"font-family: Tahoma; font-size: 9pt; font-weight: 400;  font-style:normal; color: rgb(0, 0, 0); text-decoration:none; text-align: left\" href=\"../special_vbaobjects/special_vbaobjects_vbaobjects.htm\">3D Simulation VBA<\/a> | <a style=\"font-family: Tahoma; font-size: 9pt; font-weight: 400;  font-style:normal; color: rgb(0, 0, 0); text-decoration:none; text-align: left\" href=\"../special_vbaobjects/special_vbaobjects_vbaobjects.htm\">VBA Objects<\/a> | <a style=\"font-family: Tahoma; font-size: 9pt; font-weight: 400;  font-style:normal; color: rgb(0, 0, 0); text-decoration:none; text-align: left\" href=\"../special_vbasolver/special_vbasolver_background_object.htm\">Solver<\/a> | <a style=\"font-family: Tahoma; font-size: 9pt; font-weight: 400;  font-style:normal; color: rgb(0, 0, 0); text-decoration:none; text-align: left\" href=\"../special_vbasolver/special_vba_ems_solver_object.htm\">Low Frequency<\/a> | MStaticSolver<\/p>");
+
+}
+else
+        if (window.gbIE4)
+                document.location.reload();
+
+onLoadHandler = function()
+{
+  if (window.setRelStartPage)
+        {
+        setTimeout("setRelStartPage('../index.htm');", 1)
+
+    setTimeout("UpdateBreadCrumbsMarker();", 1);
+        }
+}
+
+if (window.addEventListener){  
+        window.addEventListener('load', onLoadHandler, false);   
+} else if (window.attachEvent){  
+        window.attachEvent('onload', onLoadHandler);  
+}
+
+function onSetStartPage()
+{
+  autoSync(1);
+  sendSyncInfo();
+  sendAveInfoOut();
+}
+//-->
+//]]>
+</script><script type="text/javascript" src="../ehlpdhtm.js" language="JavaScript1.2">
+</script>
+<table cellspacing="0" width="100%">
+<col style="width: 50%;" />
+<col style="width: 50%;" />
+<tr>
+<td style="vertical-align: middle; padding-top: 5px; padding-bottom: 5px;">
+<p style="margin-top: 0px; margin-bottom: 0px;"><img src="../3ds.png" alt="" style="border: none;" border="0" /></p>
+</td>
+<td style="vertical-align: middle;">
+<p style="text-align: right;"><a href="https://www.3ds.com/products-services/3dexperience/" target="_blank"><img src="../3dexp.png" alt="" style="border: none;" width="32" height="32" border="0" /></a></p>
+</td>
+</tr>
+</table>
+<h1>MStaticSolver Object</h1>
+<p class="VBA-Text">This object is used to define the magnetostatic solver settings.</p>
+<ul>
+<li class="p-VBA-Index-Category">
+<p class="VBA-Index-Category"><a href="#Methods">Methods</a></p>
+</li>
+<li class="p-VBA-Index-Category">
+<p class="VBA-Index-Category"><a href="#Functions">Functions</a></p>
+</li>
+<li class="p-VBA-Index-Category">
+<p class="VBA-Index-Category"><a href="#Default" style="font-weight: bold;">Default Settings</a></p>
+</li>
+<li class="p-VBA-Index-Category">
+<p class="VBA-Index-Category"><a href="#Examples">Example</a></p>
+</li>
+</ul>
+<p class="VBA-Heading-Category"><a name="Methods" id="Methods"></a>Methods</p>
+<p class="VBA-Heading-Method">Reset</p>
+<p class="VBA-Text-Indent">&#160;Resets all internal settings to their default values.</p>
+<p class="StandardNeu" style="font-weight: bold;">&#160;</p>
+<p class="VBA-Heading-Method">Accuracy (<a href="../common_vbageneral/common_general_double.htm" id="a9" style="font-weight: normal;" name="a9">double</a> &#160;<span style="font-style: italic;"><i>accuracy</i></span>)</p>
+<p class="VBA-Text-Indent" style="font-style: normal;">During the solver run with a tetrahedral mesh, a relative residual norm is frequently checked against the specified <span style="font-style: italic;"><i>accuracy</i></span>. The solver stops when the desired <span style="font-style: italic;"><i>accuracy</i></span> or a maximum number of iteration steps has been reached.</p>
+<p class="VBA-Text-Indent" style="font-style: normal;">In case of the hexahedral mesh type and nonlinear materials, the material accuracy (outer cycle) is determined automatically depending on this value.</p>
+<p class="StandardNeu" style="font-weight: bold;">&#160;</p>
+<p class="VBA-Heading-Method">ApparentInductanceMatrix (<a href="../common_vbageneral/common_general_bool_data_type.htm" id="a27" style="font-weight: normal;" name="a27">bool</a> &#160;<span style="font-style: italic;"><i>calcInductance</i></span>)</p>
+<p class="VBA-Heading-Method">IncrementalInductanceMatrix (<a href="../common_vbageneral/common_general_bool_data_type.htm" id="a28" style="font-weight: normal;" name="a28">bool</a> &#160;<span style="font-style: italic;"><i>calcInductance</i></span>)</p>
+<p class="vba-heading-method">&#160;</p>
+<p class="VBA-Text-Indent">Switches the calculation of the inductance matrix &#160;between all defined current coils and current paths on or off. <span lang="EN-US" xml:lang="EN-US">Please note that each current sources definition increases the inductance matrix dimension N by one.</span></p>
+<p class="VBA-Text-Indent"><span lang="EN-US" xml:lang="EN-US">For the hexahedral solver, the number of solver runs necessary to compute the inductance matrix can be estimated in advance: If coils are defined the full inductance matrix requires at most &#160;(0.5*N*(N-1)) additional solver runs. For the special case that no coils are defined at most N additional solver runs are sufficient. When only one current source has been defined, only one single run is necessary to compute the self inductance.</span></p>
+<p class="VBA-Text-Indent"><span lang="EN-US" xml:lang="EN-US">T</span>he apparent inductance matrix relates the currents to the flux linkages. The incremental inductance matrix (currently available only for the tetrahedral solver) relates the time derivative of the currents to the induced voltages.</p>
+<p class="VBA-Text-Indent"><span style="font-weight: bold;">Please note</span>: Both, the apparent and the incremental inductance matrices are symmetric. In case of a pure linear computation (no nonlinear materials defined), they coincide with the inductance matrix.</p>
+<p style="margin-top: 0; margin-bottom: 0;">&#160;</p>
+<p class="VBA-Heading-Method">EnableDivergenceCheck (<span style="font-weight: normal;"><a href="../common_vbageneral/common_general_bool_data_type.htm" id="a1" style="font-weight: normal;" name="a1">bool</a> &#160;</span><span style="font-style: italic;"><i>flag</i></span><span style="font-weight: normal;">)</span></p>
+<p class="VBA-Text-Indent">If current sources are defined, the magnetostatic solver requires them to form closed current loops or that they end at perfect electric conductors (PEC) or electric boundary conditions. The same condition has to be fulfilled if conductive domains are defined and a stationary current field is used as source for the magnetostatic solver. (This can be enabled with the <span style="font-style: italic;"><i>PrecomputeStationaryCurrentSource</i></span> command.)</p>
+<p class="VBA-Text-Indent">Otherwise the problem is not solvable by the magnetostatic solver, since Ampere's Law is violated. If such a situation is detected by the solver, an error will be printed saying that the model is not divergence-free or that currents are appearing or disappearing within the calculation domain. The solver will abort in this case.</p>
+<p class="VBA-Text-Indent">This detection method is called divergence check. A divergence check might fail even for valid model setups, if the source field could not be computed with sufficient accuracy. Typical reasons are low mesh quality, high ratios (jumps) in material coefficients or insufficient accuracy settings. In particular, when a stationary current field is used as source for the magnetostatic solver, it is recommended to use a high accuracy for the linear solver. Furthermore, you can consider to refine the mesh or to relax high ratios of the material coefficients by replacing materials with very high electric conductivities by PEC material or materials with very low conductivities by normal material.</p>
+<p class="VBA-Text-Indent">If you do not want the solver to abort in case of a detected divergence error, you should relax the divergence check by setting the <span style="font-style: italic;"><i>flag</i></span> to <span style="font-style: italic;"><i>False</i></span>. Mind that this might lead to convergence problems or inaccurate results. Please check your results carefully in this case.</p>
+<p class="VBA-Text-Indent"><span style="font-weight: bold;">Please note:</span> The divergence check will be performed anyway. But if you relax the check, only a warning will be printed informing you about potential problems.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">GridLocation (<a href="../common_vbageneral/common_general_enum.htm" style="font-weight: normal;">enum</a> <span style="font-style: italic;"><i>gridlocation</i></span>)</p>
+<p class="VBA-Text-Indent">Specifies whether the dual grid based (default) or the normal grid based magnetostatic solver is used for the field calculation.</p>
+<table style="vertical-align: top; margin-left: 50px;" cellspacing="0" width="64.364%">
+<col style="width: 23.258%;" />
+<col style="width: 76.742%;" />
+<tr style="vertical-align: top;">
+<td style="width: 23.258%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text"><span style="font-style: italic;"><i>key</i></span> (<a href="../common_vbageneral/common_general_string.htm" id="a8" name="a8">string</a>)</p>
+</td>
+<td style="width: 76.742%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text">meaning</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="width: 23.258%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text">"normal"</p>
+</td>
+<td style="width: 76.742%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text">The magnetic field H is allocated on the edges of the normal grid.</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="width: 23.258%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text">"dual"</p>
+</td>
+<td style="width: 76.742%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text">The magnetic field H is allocated on the edges of the dual grid.</p>
+</td>
+</tr>
+</table>
+&#160;
+<p class="vba-text-indent">This setting is considered only for the hexahedral mesh type and will be ignored by the tetrahedral solver.</p>
+<p>&#160;</p>
+<p class="VBA-Heading-Method">IgnorePECMaterial (<a href="../common_vbageneral/common_general_bool_data_type.htm" id="a20" style="font-weight: normal;" name="a20">bool</a> &#160;<span style="font-style: italic;"><i>ignorePEC</i></span>)</p>
+<p class="vba-text-indent">Enables or disables the consideration of pec materials. Usually pec materials need not to be ignored (default). If set "<span style="font-style: italic;"><i>True</i></span>", all pec materials will be treated like normal material with a Mu value to be specified.</p>
+<p class="vba-text-indent">This setting is considered only for the hexahedral mesh type and will be ignored by the tetrahedral solver.</p>
+<p class="vba-text-indent">&#160;</p>
+<p class="VBA-Heading-Method">LSESolverType (<span style="font-weight: normal;"><a href="../common_vbageneral/common_general_enum.htm">enum</a></span> <span style="font-style: italic;"><i>solvertype</i></span>)</p>
+<p class="VBA-Text-Indent">Specifies which solver is used to solve linear systems of equations.</p>
+<table style="vertical-align: top; margin-left: 50px;" cellspacing="0" width="74.761%">
+<col style="width: 29%;" />
+<col style="width: 71%;" />
+<tr style="vertical-align: top;">
+<td style="border: Solid 1px #000000; width: 29%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text-Indent"><span style="font-style: italic;"><i>solvertype (</i></span><a href="../common_vbageneral/common_general_enum.htm" id="a21" style="font-weight: normal;" name="a21">enum</a> )</p>
+</td>
+<td style="border-top: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 71%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text-Indent">meaning</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 29%; padding-right: 10px; padding-left: 10px;">
+<p style="text-align: center;">"Auto"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 71%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text-Indent">choose direct or iterative solver automatically depending on the problem size</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 29%; padding-right: 10px; padding-left: 10px;">
+<p style="text-align: center;">"Iterative"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 71%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text-Indent">use the iterative solver</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 29%; padding-right: 10px; padding-left: 10px;">
+<p style="text-align: center;">"Direct"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 71%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text-Indent">use the direct solver</p>
+</td>
+</tr>
+</table>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Text-Indent">The default setting is "Auto". The <span style="font-style: italic;"><i>solvertype</i></span> setting is of interest only for the tetrahedral <a href="#Methods">solver method</a> and will be ignored otherwise.</p>
+<p class="VBA-Heading-Method">&#160;</p>
+<p class="VBA-Heading-Method">MaxNumIter (<a href="../common_vbageneral/common_general_integer.htm" id="a29" style="font-weight: normal;" name="a29">int</a> &#160;<span style="font-style: italic;"><i>value</i></span>)</p>
+<p class="VBA-Text-Indent" style="font-weight: normal;">The number of iterations performed by the (linear or nonlinear) solver is automatically limited by a number depending on the desired solver accuracy. This is equivalent to setting the <span style="font-style: italic;"><i>value</i></span> to "<span style="font-style: italic;"><i>0</i></span>". If you would like to prescribe a fixed upper limit for number of iterations, then specify the corresponding <span style="font-style: italic;"><i>value</i></span> here.</p>
+<p class="VBA-Text-Indent" style="font-weight: normal;">In case that nonlinear materials are defined, i.e. the nonlinear solver is running, the maximum number of iterations allowed for the linear solver steps will be determined automatically depending on the <span style="font-style: italic;"><i>value</i></span> specified here.</p>
+<p class="VBA-Text-Indent" style="font-weight: normal;">&#160;</p>
+<p class="VBA-Heading-Method">MeshAdaption (<a href="../common_vbageneral/common_general_bool_data_type.htm" id="a2" style="font-weight: normal;" name="a2">bool</a> &#160;<span style="font-style: italic;"><i>enableAdaption</i></span>)</p>
+<p class="vba-text-indent">Enables or disables the adaptive mesh refinement for the hexahedral mesh method.</p>
+<p class="vba-text-indent">&#160;</p>
+<p class="StandardNeu" style="font-weight: bold;"><span style="font-weight: bold;">Method (<span style="font-weight: normal;"><a href="../common_vbageneral/common_general_enum.htm">enum</a></span> <span style="font-style: italic;"><i>solvermethod</i></span>)</span></p>
+<p class="VBA-Text-Indent">Specifies the method used by the magnetostatic solver for discretization and solution.</p>
+<table style="vertical-align: top; margin-left: 50px;" cellspacing="0" width="74.761%">
+<col style="width: 29.685%;" />
+<col style="width: 70.315%;" />
+<tr style="vertical-align: top;">
+<td style="border: Solid 1px #000000; width: 29.685%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text"><span style="font-style: italic;"><i>solvermethod(</i></span><a href="../common_vbageneral/common_general_enum.htm" id="a18" style="font-weight: normal;" name="a18">enum</a> )</p>
+</td>
+<td style="border-top: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 70.315%; padding-right: 10px; padding-left: 10px;">
+<p>meaning</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 29.685%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text">"Hexahedral Mesh"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 70.315%; padding-right: 10px; padding-left: 10px;">
+<p>structured grid consisting of hexahedral elements.</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 29.685%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text">"Tetrahedral Mesh"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 70.315%; padding-right: 10px; padding-left: 10px;">
+<p>unstructured grid consisting of tetrahedral elements.</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 29.685%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text">"Planar Mesh"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 70.315%; padding-right: 10px; padding-left: 10px;">
+<p>unstructured planar grid consisting of triangular elements.</p>
+</td>
+</tr>
+</table>
+<p class="StandardNeu" style="font-weight: bold;">&#160;</p>
+<p class="VBA-Heading-Method">MaxNumIter (<a href="../common_vbageneral/common_general_integer.htm" id="a36" style="font-weight: normal;" name="a36">int</a> &#160;<span style="font-style: italic;"><i>value</i></span>)</p>
+<p class="VBA-Text-Indent" style="font-weight: normal;">Specifies the maximum number of nonlinear iteration cycles when nonlinear materials are defined.</p>
+<p class="vba-text-indent">&#160;</p>
+<p class="VBA-Heading-Method"><span style="font-weight: bold;">P</span>recomputeStationaryCurrentSource (<span style="font-weight: normal;"><a href="../common_vbageneral/common_general_bool_data_type.htm" id="a3" style="font-weight: normal;" name="a3">bool</a> &#160;</span><span style="font-style: italic;"><i>precomputeJfield</i></span>)</p>
+<p class="vba-text-indent">Set <span style="font-style: italic;"><i>precomputeJfield</i></span> to <span style="font-style: italic;"><i>True</i></span> if the stationary current solver should run before the magnetostatic calculation. The current distribution inside conductive materials will be used as current source for the magnetostatic problem.</p>
+<p class="vba-text-indent"><span style="margin-left: 36px; font-weight: bold;">Please note</span><span style="margin-left: 36px;">: If the stationary current problem is not well defined the whole computation will fail.</span></p>
+<p class="vba-text-indent">&#160;</p>
+<p class="VBA-Heading-Method">StoreResultsInCache (<a href="../common_vbageneral/common_general_bool_data_type.htm" id="a4" style="font-weight: normal;" name="a4">bool</a> &#160;<span style="font-style: italic;"><i>storeResults</i></span>)</p>
+<p class="vba-text-indent">Activate to store calculation results in the result data cache.</p>
+<p class="vba-text-indent">&#160;</p>
+<p class="VBA-Heading-Method">TetAdaption(<a href="../common_vbageneral/common_general_bool_data_type.htm" id="a22" style="font-weight: normal;" name="a22">bool</a> &#160;<span style="font-style: italic;"><i>enableAdaption</i></span>)</p>
+<p class="VBA-Text-Indent"><span lang="EN-US" xml:lang="EN-US">Enables or disables the adaptive mesh refinement for the tetrahedral mesh method.</span></p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">TetAdaptionAccuracy(<a href="../common_vbageneral/common_general_double.htm" id="a24" name="a24">double</a> &#160;<span style="font-style: italic;"><i>accuracy</i></span>)</p>
+<p class="VBA-Text-Indent"><span lang="EN-US" xml:lang="EN-US">If the relative deviation of the energy between two passes is smaller than this error limit the mesh adaptation will terminate.</span></p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">TetAdaptionMaxCycles(<a href="../common_vbageneral/common_general_integer.htm" style="font-weight: normal;">int</a> <span style="font-style: italic;"><i>maxcycles</i></span>)</p>
+<p class="VBA-Text-Indent"><span lang="EN-US" xml:lang="EN-US">Specifies the maximum number of passes to be performed for the mesh adaption, even if the results have not sufficiently converged so far. This setting is useful to limit the total calculation time to reasonable amounts.</span></p>
+<p class="VBA-Text-Indent"><span lang="EN-US" xml:lang="EN-US">This setting is considered only for the tetrahedral mesh method and ignored otherwise. For specification of hexahedral mesh adaption properties see <a href="../special_vbamesh/special_vbamesh_meshadaption3d_object.htm">MeshAdaption3D</a></span><span lang="EN-US" xml:lang="EN-US">.</span></p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">TetAdaptionMinCycles(<a href="../common_vbageneral/common_general_integer.htm" style="font-weight: normal;">int</a> <span style="font-style: italic;"><i>mincycles</i></span>)</p>
+<p class="VBA-Text-Indent"><span lang="EN-US" xml:lang="EN-US">Sets the minimum number of passes which will be performed during the mesh adaption, even if the results do not change significantly. Sometimes the adaptive mesh refinement needs a couple of passes to figure out the location of the most important regions. Thus it might happen that the results change only marginally during the first few passes but afterwards change in order to converge to the final solution.</span></p>
+<p class="VBA-Text-Indent"><span lang="EN-US" xml:lang="EN-US">This setting is considered only for the tetrahedral mesh method and ignored otherwise. For specification of hexahedral mesh adaption properties see <a href="../special_vbamesh/special_vbamesh_meshadaption3d_object.htm">MeshAdaption3D</a></span><span lang="EN-US" xml:lang="EN-US">.</span></p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">TetAdaptionRefinementPercentage (<a href="../common_vbageneral/common_general_double.htm" id="a26" name="a26">double</a> <span style="font-style: italic;"><i>percent</i></span>)</p>
+<p class="VBA-Text-Indent">Sets the maximum percentage of mesh elements to be refined during a tetrahedral adaptation pass. The higher the specified percentage is, the stronger will the number of elements and therefore the numerical effort increase.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">SnapToGeometry(<a href="../common_vbageneral/common_general_bool_data_type.htm" id="a23" style="font-weight: normal;" name="a23">bool</a> &#160;<span style="font-style: italic;"><i>snapping</i></span>)</p>
+<p class="VBA-Text-Indent"><span lang="EN-US" xml:lang="EN-US">W</span>hen <span style="font-style: italic;"><i>snapping</i></span> is <span style="font-style: italic;"><i>True</i></span>, new nodes that are generated on the surface mesh during the mesh adaption will be projected to the original geometry, so that the approximation of curved surfaces is improved after each adaptation step.</p>
+<p class="VBA-Text-Indent">If this option is disabled, the geometry will be approximated by the initial mesh. The geometric discretization error produced by this approximation will therefore not decrease, but the adaptation process might be faster.</p>
+<p class="VBA-Heading-Method">&#160;</p>
+<p class="VBA-Heading-Method">TetSolverOrder (<a href="../common_vbageneral/common_general_integer.htm" style="font-weight: normal;">int</a> <span style="font-style: italic;"><i>tetorder</i></span>)</p>
+<p class="VBA-Text-Indent"><span lang="EN-US" xml:lang="EN-US">This option allows to specify whether the tetrahedral solver uses first- or second-order accuracy. Second-order (</span><span lang="EN-US" xml:lang="EN-US" style="font-style: italic;"><i>tetorder = "2"</i></span><span lang="EN-US" xml:lang="EN-US">) is the default due to its higher accuracy. However, if the structure is geometrically complex and therefore comes along with huge memory requirements, first-order (</span><span lang="EN-US" xml:lang="EN-US" style="font-style: italic;"><i>tetorder = "1"</i></span><span lang="EN-US" xml:lang="EN-US">) is an adequate alternative.</span></p>
+<p class="VBA-Text-Indent"><span lang="EN-US" xml:lang="EN-US">This setting is considered only for the tetrahedral mesh method and ignored otherwise. For specification of hexahedral mesh adaption properties see <a href="../special_vbamesh/special_vbamesh_meshadaption3d_object.htm">MeshAdaption3D</a></span><span lang="EN-US" xml:lang="EN-US">.</span></p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">UseDistributedComputing(<a href="../common_vbageneral/common_general_bool_data_type.htm" id="a19" style="font-weight: normal;" name="a19">bool</a> &#160;<span style="font-style: italic;"><i>useDC</i></span>)</p>
+<p class="VBA-Text-Indent"><span lang="EN-US" xml:lang="EN-US">Enables or disables distributed computing.</span></p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">UseMaxNumberOfThreads(<a href="../common_vbageneral/common_general_bool_data_type.htm" id="a25" style="font-weight: normal;" name="a25">bool</a> &#160;<span style="font-style: italic;"><i>useMaxThreads</i></span>)</p>
+<p class="vba-text-indent">By default (<span style="font-style: italic;"><i>useMaxThreads = False</i></span>), the solver is forced to employ a particular number of threads that is defined on the basis of the current processor’s architecture and the number of the available parallel licenses. If activated (<span style="font-style: italic;"><i>useMaxThreads = True</i></span>), the solver can be forced <span lang="EN-US" xml:lang="EN-US">to use less than all available threads (see</span> <span lang="EN-US" xml:lang="EN-US" style="font-style: italic;"><i>MaxNumberOfThreads</i></span><span lang="EN-US" xml:lang="EN-US">).</span></p>
+<p class="VBA-Heading-Method">&#160;</p>
+<p class="VBA-Heading-Method">MaxNumberOfThreads (<a href="../common_vbageneral/common_general_integer.htm" style="font-weight: normal;">int</a> <span style="font-style: italic;"><i>nThreads</i></span>)</p>
+<p class="VBA-Text-Indent"><span lang="EN-US" xml:lang="EN-US">If the solver is to use less than all available threads (cf.</span> <span lang="EN-US" xml:lang="EN-US" style="font-style: italic;"><i>UseMaxNumberOfThreads</i></span><span lang="EN-US" xml:lang="EN-US">), the desired number can be specified here. The default value ”r;8” reflects the possibility of the modern processors architecture.</span></p>
+<p class="VBA-Heading-Method">&#160;</p>
+<p class="VBA-Heading-Method">Start <a href="../common_vbageneral/common_general_long.htm" id="a17" style="font-weight: normal; font-style: normal;" name="a17">long</a></p>
+<p class="VBA-Text-Indent">Starts the magnetostatic solver with the prescribed settings and the currently active mesh. If no mesh is available, a new mesh will be generated. Returns 0 if the solver run was successful, an error code &gt;0 otherwise.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method"><span style="color: #000000;"><font color="black">C</font></span>ontinueAdaption <a href="../common_vbageneral/common_general_long.htm" id="a41" style="font-weight: normal; font-style: normal;" name="a41">long</a></p>
+<p class="VBA-Text-Indent">Starts the magnetostatic solver with the prescribed settings and the currently active mesh. In case of the tetrahedral solver with adaptive mesh refinement, this command will continue the previous adaption run if the corresponding results are available. Otherwise this command is similar to the <span style="font-style: italic;"><i>Start</i></span> command. Returns 0 if the solver run was successful, an error code &gt;0 otherwise.</p>
+<p class="VBA-Heading-Category"><a name="Functions" id="Functions"></a>Functions</p>
+<p class="VBA-Heading-Method">GetEnergy <a href="../common_vbageneral/common_general_double.htm" id="a5" style="font-weight: normal;" name="a5">double</a></p>
+<p class="vba-text-indent" style="font-weight: normal;">Returns &#160;the total magnetostatic energy in the computational domain, computed with the differential energy density definition H*dB in Joule.</p>
+<p class="VBA-Heading-Method">&#160;</p>
+<p class="VBA-Heading-Method">GetCoEnergy <a href="../common_vbageneral/common_general_double.htm" id="a12" style="font-weight: normal;" name="a12">double</a></p>
+<p class="vba-text-indent" style="font-weight: normal;"><span style="font-weight: normal;">Returns &#160;the total magnetostatic co-energy in the computational domain, computed with the differential energy density definition B*dH in Joule.</span></p>
+<p>&#160;</p>
+<p class="VBA-Heading-Method">GetInductanceValue &#160;(<span style="font-weight: normal;"><a href="../common_vbageneral/common_general_name.htm" id="a6" name="a6">name</a></span> <span style="font-style: italic;"><i>source1</i></span>, <span style="font-weight: normal;"><a href="../common_vbageneral/common_general_name.htm" id="a7" name="a7">name</a></span> <span style="font-style: italic;"><i>source2</i></span>) <a href="../common_vbageneral/common_general_double.htm" id="a11" style="font-weight: normal;" name="a11">double</a></p>
+<p class="vba-text-indent" style="font-weight: normal;">Retrieves the couple incuctance between given magnetostatic source definitions. The return value represents an element of the inductance matrix in Henry.</p>
+<p class="VBA-Heading-Category"><a name="Default" id="Default"></a>Default Values</p>
+<p class="VBA-Text-Example">GridLocation "dual"</p>
+<p class="VBA-Text-Example">Accuracy "1e-6"</p>
+<p class="VBA-Text-Example">Preconditioner "ILU"</p>
+<p class="VBA-Text-Example">MaxNumIter "0"</p>
+<p class="VBA-Text-Example">CalcInductanceMatrix "False"</p>
+<p class="VBA-Text-Example">MeshAdaption "False"</p>
+<p class="VBA-Text-Example">SavePotentialChargeData &#160;"False"</p>
+<p class="VBA-Text-Example">StoreResultsInCache "False"</p>
+<p class="VBA-Text-Example">UseMaxNumberOfThreads "False"</p>
+<p class="VBA-Text-Example">MaxNumberOfThreads "8"</p>
+<p class="VBA-Text-Example">PrecomputeStationaryCurrentSource "False"</p>
+<p class="VBA-Text-Example">EnableDivergenceCheck "True"</p>
+<p class="VBA-Heading-Category"><a name="Examples" id="Examples"></a>Examples</p>
+<p class="VBA-Text-Example">With MStaticSolver</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.Reset</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.Accuracy "1e-6"</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.Preconditioner "ILU"</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.CalcInductanceMatrix "False"</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.StoreResultsInCache "False"</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.MeshAdaption "False"</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.GridLocation "Dual"</p>
+<p class="VBA-Text-Example">End With</p>
+<p class="StandardNeu">&#160;</p>
+<?rh-p style="margin-bottom: 0px; text-align: Right; margin-left: 18px; 
+                 margin-right: 18px; margin-top: 18px;" ?>
+<div style="width: 100%; position: relative;" id="footer">
+<p style="border-bottom: Solid 1px #dddddd; text-align: Left; margin-left: 0px; font-family: Arial, sans-serif; line-height: Normal; margin-top: 9px; margin-right: 0px; margin-bottom: 6px; border-left-width: 1px; border-top-width: 1px; border-right-width: 1px;"><span style="text-align: Left; font-family: Arial, sans-serif; line-height: Normal;">&#160;</span></p>
+<table cellspacing="0" width="100%">
+<col style="width: 50%;" />
+<col style="width: 50%;" />
+<tr>
+<td style="vertical-align: Top;"><span style="font-family: Arial, sans-serif; line-height: Normal; font-size: 8pt;"><font size="1" style="font-size:8pt;">CST Studio Suite 2026</font></span></td>
+<td style="vertical-align: Top;">
+<p style="text-align: right;">&#160;</p>
+</td>
+</tr>
+</table>
+<p>&#160;</p>
+</div>
+<script type="text/javascript" language="javascript1.2">
+//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+        writeIntopicBar(0);
+
+
+highlightSearch();
+//-->
+//]]>
+</script>
+</body>
+</html>

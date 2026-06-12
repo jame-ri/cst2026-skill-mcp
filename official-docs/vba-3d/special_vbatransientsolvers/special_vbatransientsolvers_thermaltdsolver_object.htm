@@ -1,0 +1,402 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="Adobe RoboHelp 11" />
+<title>ThermalTDSolver Object</title>
+<link rel="StyleSheet" href="../online_help_vba.css" type="text/css" />
+<style type="text/css">
+/*<![CDATA[*/
+<!--
+body { border-bottom-style:None; }
+-->
+/*]]>*/
+</style>
+
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+        origWidth = innerWidth;
+        origHeight = innerHeight;
+        onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+/*<![CDATA[*/
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+-->
+/*]]>*/
+</style>
+
+<script type="text/javascript" language="javascript1.2" src="../whmsg.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript" src="../whver.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript1.2" src="../whutils.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript1.2" src="../whproxy.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript1.2" src="../whlang.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript1.2" src="../whtopic.js" charset="utf-8">
+</script>
+</head>
+<body>
+<script type="text/javascript" language="javascript1.2">
+//<![CDATA[
+<!--
+if (window.gbWhTopic)
+{
+        var strUrl = document.location.href;
+        var bc = 0;
+        var n = strUrl.toLowerCase().indexOf("bc-");
+        if(n != -1)
+        {
+                document.location.replace(strUrl.substring(0, n));
+                bc = strUrl.substring(n+3);
+        }
+
+        if (window.addTocInfo)
+        {
+        addTocInfo("3D Simulation VBA\nVBA Objects\nSolver\nThermal\nThermalTDSolver");
+
+        }
+        if (window.writeBtnStyle)
+                writeBtnStyle();
+
+        if (window.writeIntopicBar)
+                writeIntopicBar(0);
+
+        
+        document.write("<p style=\"font-family: Tahoma; font-size: 9pt; font-weight: 400;  font-style:normal; color: rgb(0, 0, 0); text-decoration:none; text-align: left\"> ");
+AddMasterBreadcrumbs("../index.htm", "font-family: Tahoma; font-size: 9pt; font-weight: 400;  font-style:normal; color: rgb(0, 0, 0); text-decoration:none; text-align: left", "|", "Home", "../special_vbaobjects/special_vbaobjects_vbaobjects.htm");
+document.write("<a style=\"font-family: Tahoma; font-size: 9pt; font-weight: 400;  font-style:normal; color: rgb(0, 0, 0); text-decoration:none; text-align: left\" href=\"../special_vbaobjects/special_vbaobjects_vbaobjects.htm\">3D Simulation VBA<\/a> | <a style=\"font-family: Tahoma; font-size: 9pt; font-weight: 400;  font-style:normal; color: rgb(0, 0, 0); text-decoration:none; text-align: left\" href=\"../special_vbaobjects/special_vbaobjects_vbaobjects.htm\">VBA Objects<\/a> | <a style=\"font-family: Tahoma; font-size: 9pt; font-weight: 400;  font-style:normal; color: rgb(0, 0, 0); text-decoration:none; text-align: left\" href=\"../special_vbasolver/special_vbasolver_background_object.htm\">Solver<\/a> | <a style=\"font-family: Tahoma; font-size: 9pt; font-weight: 400;  font-style:normal; color: rgb(0, 0, 0); text-decoration:none; text-align: left\" href=\"../special_vbathermalsolver/special_vbathermalsolver_chtsolver.htm\">Thermal<\/a> | ThermalTDSolver<\/p>");
+
+}
+else
+        if (window.gbIE4)
+                document.location.reload();
+
+onLoadHandler = function()
+{
+  if (window.setRelStartPage)
+        {
+        setTimeout("setRelStartPage('../index.htm');", 1)
+
+    setTimeout("UpdateBreadCrumbsMarker();", 1);
+        }
+}
+
+if (window.addEventListener){  
+        window.addEventListener('load', onLoadHandler, false);   
+} else if (window.attachEvent){  
+        window.attachEvent('onload', onLoadHandler);  
+}
+
+function onSetStartPage()
+{
+  autoSync(1);
+  sendSyncInfo();
+  sendAveInfoOut();
+}
+//-->
+//]]>
+</script><script type="text/javascript" src="../ehlpdhtm.js" language="JavaScript1.2">
+</script>
+<table cellspacing="0" width="100%">
+<col style="width: 50%;" />
+<col style="width: 50%;" />
+<tr>
+<td style="vertical-align: middle; padding-top: 5px; padding-bottom: 5px;">
+<p style="margin-top: 0px; margin-bottom: 0px;"><img src="../3ds.png" alt="" style="border: none;" border="0" /></p>
+</td>
+<td style="vertical-align: middle;">
+<p style="text-align: right;"><a href="https://www.3ds.com/products-services/3dexperience/" target="_blank"><img src="../3dexp.png" alt="" style="border: none;" width="32" height="32" border="0" /></a></p>
+</td>
+</tr>
+</table>
+<h1>ThermalTDSolver Object</h1>
+<p class="VBA-Text">This object is used to define the Thermal transient solver settings.</p>
+<ul>
+<li class="p-VBA-Index-Category">
+<p class="VBA-Index-Category"><a href="#Methods">Methods</a></p>
+</li>
+<li class="p-VBA-Index-Category">
+<p class="VBA-Index-Category" style="font-weight: bold;"><a href="#Default" style="font-weight: bold;">Default Settings</a></p>
+</li>
+<li class="p-VBA-Index-Category">
+<p class="VBA-Index-Category"><a href="#Examples">Example</a></p>
+</li>
+</ul>
+<p class="VBA-Heading-Category"><a name="Methods" id="Methods"></a>Methods</p>
+<p class="VBA-Heading-Method">Start <a href="../common_vbageneral/common_general_integer.htm">int</a></p>
+<p class="VBA-Text-Indent">Starts the Thermal transient solver. Returns 0 if the solver run was successful, an error code &gt;0 otherwise.</p>
+<p class="VBA-Text">&#160;</p>
+<p class="VBA-Heading-Method">Reset</p>
+<p class="VBA-Text-Indent">Resets all internal settings to their default values.</p>
+<p class="VBA-Text">&#160;</p>
+<p class="VBA-Heading-Method">AmbientTemperature ( <a href="../common_vbageneral/common_general_double.htm">double</a> <span style="font-style: italic;"><i>value</i></span> )</p>
+<p class="VBA-Text-Indent">Specifies the ambient temperature <span style="font-style: italic;"><i>value</i></span>.</p>
+<p class="VBA-Text">&#160;</p>
+<p class="VBA-Heading-Method"><a name="StoreResultsInCache" id="StoreResultsInCache"></a>StoreResultsInCache ( <a href="../common_vbageneral/common_general_bool_data_type.htm">bool</a> <span style="font-style: italic;"><i>flag</i></span> )</p>
+<p class="VBA-Text-Indent">If the <span style="font-style: italic;"><i>flag</i></span> is set to True this method stores results of the thermal solver in the result cache.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">TryLoadResumeInfoFromCache ( <a href="../common_vbageneral/common_general_bool_data_type.htm">bool</a> <span style="font-style: italic;"><i>flag</i></span> )</p>
+<p class="VBA-Text-Indent">If the <span style="font-style: italic;"><i>flag</i></span> is set to True t<span style="font-size: 12px; font-variant-ligatures: normal; font-variant-caps: normal; orphans: 2; text-align: justify; widows: 2; -webkit-text-stroke-width: 0px; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; display: inline ! important ; float: none;">he solver checks whether the last results stored in the <a href="#StoreResultsInCache">cache</a> contain resume information. In this case this information is used to resume the transient solver run. Otherwise a new solver run is started, with the initial temperature distribution generated according to the current settings.</span></p>
+<p class="VBA-Text">&#160;</p>
+<p class="VBA-Heading-Method">UseDistributedComputing( <a href="../common_vbageneral/common_general_bool_data_type.htm" id="a15" name="a15">bool</a> <span style="font-style: italic;"><i>useDC</i></span> )</p>
+<p class="VBA-Text-Indent"><span lang="EN-US" xml:lang="EN-US">Enables or disables distributed computing.</span></p>
+<p class="VBA-Text">&#160;</p>
+<p class="StandardNeu" style="font-weight: bold;">Method ( <a href="../common_vbageneral/common_general_enum.htm">enum</a> <span style="font-style: italic;"><i>solvermethod</i></span> )</p>
+<p class="VBA-Text-Indent">Specifies the method used by the Thermal transient solver for discretization and solution.</p>
+<p class="VBA-Text-Indent">The following values are available: "Hexahedral Mesh", "Tetrahedral Mesh".</p>
+<p class="VBA-Text">&#160;</p>
+<p class="VBA-Heading-Method">StartSolutionAccuracy ( <a href="../common_vbageneral/common_general_double.htm" id="a6" name="a6">double</a> &#160;<span style="font-style: italic;"><i>accuracy</i></span> )</p>
+<p class="VBA-Text-Indent">Specifies the accuracy of the start solution at t=0.</p>
+<p class="StandardNeu" style="font-weight: bold;">&#160;</p>
+<p class="VBA-Heading-Method">TransientSolverAccuracy ( <a href="../common_vbageneral/common_general_double.htm" id="a7" name="a7">double</a> &#160;<span style="font-style: italic;"><i>accuracy</i></span> )</p>
+<p class="VBA-Text-Indent">Specifies the accuracy of the transient solver process.</p>
+<p class="VBA-Text">&#160;</p>
+<p class="VBA-Heading-Method">NonlinearSolverAccuracy ( <a href="../common_vbageneral/common_general_double.htm">double</a> <span style="font-style: italic;"><i>value</i></span> )</p>
+<p class="VBA-Text-Indent">Specifies the desired accuracy <span style="font-style: italic;"><i>value</i></span> for nonlinear iteration cycles, used e.g. for radiation effects.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">SimulationDuration ( <a href="../common_vbageneral/common_general_double.htm" id="a11" name="a11">double</a> &#160;<span style="font-style: italic;"><i>duration</i></span> )</p>
+<p class="VBA-Text-Indent">Specifies the duration of the simulation.</p>
+<p class="VBA-Text">&#160;</p>
+<p class="VBA-Heading-Method">ResetExcitationList</p>
+<p class="VBA-Text-Indent">Deletes all excitation setting for the transient solver.</p>
+<p class="VBA-Heading-Method">&#160;</p>
+<p class="VBA-Heading-Method">UseMaxNumberOfThreads(<a href="../common_vbageneral/common_general_bool_data_type.htm" id="a61" name="a61">bool</a> &#160;<span style="font-style: italic;"><i>useMaxThreads</i></span>)</p>
+<p class="VBA-Text-Indent">By default (<span style="font-style: italic;"><i>useMaxThreads = True</i></span>), the solver is run in the parallel mode, with the number of threads equal to the minimum of the following numbers:</p>
+<ul style="list-style: disc;">
+<li>
+<p class="VBA-Text-Indent">Number of available parallelization licenses,</p>
+</li>
+<li>
+<p class="VBA-Text-Indent">Parallelization capability of the processor's architecture,</p>
+</li>
+<li>
+<p class="VBA-Text-Indent"><span style="font-style: italic;"><i>MaxNumberOfThreads</i></span> setting.</p>
+</li>
+</ul>
+<p class="VBA-Text-Indent">If <span style="font-style: italic;"><i>useMaxThreads=False</i></span>, the solver parallelization is off.</p>
+<p class="VBA-Heading-Method">&#160;</p>
+<p class="VBA-Heading-Method">MaxNumberOfThreads (<a href="../common_vbageneral/common_general_integer.htm">int</a> <span style="font-style: italic;"><i>nThreads</i></span>)</p>
+<p class="VBA-Text-Indent"><span lang="EN-US" xml:lang="EN-US">If the solver is to use less than all available threads (cf.</span> <span lang="EN-US" xml:lang="EN-US" style="font-style: italic;"><i>UseMaxNumberOfThreads</i></span><span lang="EN-US" xml:lang="EN-US">), the desired number can be specified here. The default value ”96” is chosen in the way that it exceeds the possibility of the modern processors architecture.</span></p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method"><span lang="EN-US" xml:lang="EN-US">M</span>aximumNumberOfCPUDevices&#160;(<a href="../common_vbageneral/common_general_integer.htm">int</a> <span style="font-style: italic;"><i>nCpus</i></span>)</p>
+<p class="VBA-Text-Indent">If (<span style="font-style: italic;"><i>useMaxThreads = True</i></span>), use this command to specify the maximal number of processors on your system to be utilized by the calculation. If this number is larger that the number of available processors, the actual number of processors is used instead.</p>
+<p class="vba-heading-method">&#160;</p>
+<p class="VBA-Heading-Method">PTCDefault ( <a href="../common_vbageneral/common_general_enum.htm">enum</a> <span style="font-style: italic;"><i>ptctype</i></span> )</p>
+<p class="VBA-Text-Indent">Specifies how ptc domains without source definition and thermal boundary behave:</p>
+<table style="vertical-align: top; margin-left: 50px;" cellspacing="0" width="74.761%">
+<col style="width: 29%;" />
+<col style="width: 71%;" />
+<tr style="vertical-align: top;">
+<td style="border: Solid 1px #000000; width: 29%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text-Indent"><span style="font-style: italic;"><i>ptctype (</i></span><a href="../common_vbageneral/common_general_enum.htm" id="a3" name="a3">enum</a> )</p>
+</td>
+<td style="border-top: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 71%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text-Indent">meaning</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 29%; padding-right: 10px; padding-left: 10px;">
+<p style="text-align: center;">"Floating"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 71%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text-Indent">treat all PTC domains as floating temperatures</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 29%; padding-right: 10px; padding-left: 10px;">
+<p style="text-align: center;">"Ambient"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 71%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text-Indent">treat all PTC domains with the fixed ambient temperature</p>
+</td>
+</tr>
+</table>
+<p class="vba-heading-method">&#160;</p>
+<p class="VBA-Heading-Method">Excitation ( <a href="../common_vbageneral/common_general_name.htm">name</a> <span style="font-style: italic;"><i>sourcename</i></span>, <a href="../common_vbageneral/common_general_enum.htm">enum</a> <span style="font-style: italic;"><i>sourcetype</i></span>, <a href="../common_vbageneral/common_general_double.htm" id="a1" name="a1">double</a> <span style="font-style: italic;"><i>timeshift,</i></span> <a href="../common_vbageneral/common_general_name.htm">name</a> <span style="font-style: italic;"><i>signalname,</i></span> <a href="../common_vbageneral/common_general_bool_data_type.htm" id="a2" name="a2">bool</a> <span style="font-style: italic;"><i>active</i></span> )</p>
+<p class="VBA-Text-Indent">Adds a new transient source to the simulation process. This command allows to assign a time signal to a previously defined thermal source.</p>
+<p class="vba-heading-method">&#160;</p>
+<p class="VBA-Text-Indent" style="margin-left: 0px;"><span style="font-weight: bold;">TimeIntegrationOrder( <a href="../common_vbageneral/common_general_enum.htm">enum</a></span> <span style="font-style: italic;"><i>scheme</i></span> <span style="font-weight: bold;">)</span></p>
+<p class="VBA-Text-Indent">Defines the order of the time integrator. Possible values are "High", or "Low". "<span style="font-size: 12px; font-variant-ligatures: normal; font-variant-caps: normal; orphans: 2; text-align: justify; widows: 2; -webkit-text-stroke-width: 0px; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial;"><i style="font-style: normal;">Low" order</i></span>&#160;<span style="font-size: 12px; font-variant-ligatures: normal; font-variant-caps: normal; orphans: 2; text-align: justify; widows: 2; -webkit-text-stroke-width: 0px; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; display: inline ! important ; float: none;">may deliver lower transient accuracy but higher calculation velocity.</span> <span style="font-size: 12px; font-variant-ligatures: normal; font-variant-caps: normal; orphans: 2; text-align: justify; widows: 2; -webkit-text-stroke-width: 0px; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; display: inline ! important ; float: none;"><a href="#UseAdaptiveTimeStep">Adaptive time stepping</a> is not available in combination w</span><span style="font-size: 12px; font-variant-ligatures: normal; font-variant-caps: normal; orphans: 2; text-align: justify; widows: 2; -webkit-text-stroke-width: 0px; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; display: inline ! important ; float: none;">ith</span> <span style="display: inline ! important ; float: none; font-size: 12px; font-variant-ligatures: normal; font-variant-caps: normal; orphans: 2; text-align: justify; widows: 2; -webkit-text-stroke-width: 0px; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial;">"Low".</span></p>
+<p class="vba-heading-method">&#160;</p>
+<p class="VBA-Heading-Method"><a name="UseAdaptiveTimeStep" id="UseAdaptiveTimeStep"></a>UseAdaptiveTimeStep ( <a href="../common_vbageneral/common_general_bool_data_type.htm" id="a2" name="a2">bool</a> <span style="font-style: italic;"><i>adaptive</i></span> )</p>
+<p class="VBA-Text-Indent">Defines whether the time step width should be selected adaptively based on the solution change or a constant time step should be used.</p>
+<p class="VBA-Text">&#160;</p>
+<p class="StandardNeu" style="font-weight: bold;">AdaptiveTimeStepScheme ( <a href="../common_vbageneral/common_general_enum.htm">enum</a> <span style="font-style: italic;"><i>scheme</i></span> )</p>
+<p class="VBA-Text-Indent">Two schemes of adaptive selection of time step width are currently available:</p>
+<table style="vertical-align: top; margin-left: 40px;" cellspacing="0" width="63.025%">
+<col style="width: 21.674%;" />
+<col style="width: 73.867%;" />
+<tr style="vertical-align: top;">
+<td style="border: Solid 1px #000000; width: 21.674%; padding-right: 10px; padding-left: 10px;">
+<p>Automatic</p>
+</td>
+<td style="border-top: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 73.867%; padding-right: 10px; padding-left: 10px;">
+<p>Determines all necessary parameters for the time integration process automatically.</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 21.674%; padding-right: 10px; padding-left: 10px;">
+<p>User</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 73.867%; padding-right: 10px; padding-left: 10px;">
+<p>Allows to define the most important parameters of the adaptive time integration scheme by the user.</p>
+</td>
+</tr>
+</table>
+<p class="VBA-Text">&#160;</p>
+<p class="VBA-Heading-Method">TimeStepInit ( <a href="../common_vbageneral/common_general_double.htm" id="a4" name="a4">double</a> <span style="font-style: italic;"><i>value</i></span> )</p>
+<p class="VBA-Text-Indent">If the "User" scheme of adaptive time step selection is chosen, this command specifies the width of initial time step of transient simulation.</p>
+<p class="VBA-Heading-Method">&#160;</p>
+<p class="VBA-Heading-Method">TimeStepMin ( <a href="../common_vbageneral/common_general_double.htm" id="a10" name="a10">double</a> &#160;<span style="font-style: italic;"><i>tmin</i></span> )</p>
+<p class="VBA-Text-Indent"><span lang="EN-US" xml:lang="EN-US">Specifies lower bounds for the adaptive time step width. This setting is useful to prevent the time step width from becoming arbitrarily small.</span> It will only be considered when time adaption scheme "User" is enabled.</p>
+<p class="VBA-Heading-Method">&#160;</p>
+<p class="VBA-Heading-Method">TimeStepMax ( <a href="../common_vbageneral/common_general_double.htm" id="a13" name="a13">double</a> &#160;<span style="font-style: italic;"><i>tmax</i></span> )</p>
+<p class="VBA-Text-Indent"><span lang="EN-US" xml:lang="EN-US">Specifies upper bounds for the adaptive time step width. This setting is useful to prevent the time step width from becoming inappropriately large.</span> It will only be considered when time adaption scheme "User" is enabled.</p>
+<p class="VBA-Heading-Method">&#160;</p>
+<p class="VBA-Heading-Method">TimeStepSamples ( <a href="../common_vbageneral/common_general_integer.htm" id="a8" name="a8">int</a> <span style="font-style: italic;"><i>nsamples</i></span> )</p>
+<p class="VBA-Text-Indent"><span lang="EN-US" xml:lang="EN-US">Defines the maximal number of time steps to be performed</span>.It will only be considered when time adaption scheme "User" is enabled.</p>
+<p class="VBA-Text">&#160;</p>
+<p class="StandardNeu" style="font-weight: bold;">ConstTimeStepParam ( <a href="../common_vbageneral/common_general_enum.htm">enum</a> <span style="font-style: italic;"><i>param</i></span> )</p>
+<p class="VBA-Text-Indent">If the constant time step width has been selected, this command specifies which parameter to use for time step width selection:</p>
+<table style="vertical-align: top; margin-left: 40px;" cellspacing="0" width="63.025%">
+<col style="width: 21.674%;" />
+<col style="width: 73.867%;" />
+<tr style="vertical-align: top;">
+<td style="border: Solid 1px #000000; width: 21.674%; padding-right: 10px; padding-left: 10px;">
+<p>NumSteps</p>
+</td>
+<td style="border-top: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 73.867%; padding-right: 10px; padding-left: 10px;">
+<p>Time step width is defined by the whole simulation duration divided by the number of constant steps specified in the command <span style="font-weight: bold;">NumConstTimeSteps</span>.</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 21.674%; padding-right: 10px; padding-left: 10px;">
+<p>StepWidth</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 73.867%; padding-right: 10px; padding-left: 10px;">
+<p>Time step width is specified explicitly in the command <span style="font-weight: bold;">ConstTimeStepWidth</span>.</p>
+</td>
+</tr>
+</table>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">NumConstTimeSteps ( <a href="../common_vbageneral/common_general_integer.htm" id="a5" name="a5">int</a> <span style="font-style: italic;"><i>nsteps</i></span> )</p>
+<p class="VBA-Text-Indent">Defines number of constant time steps to be done during transient co-simulation. This command can only be used with <span style="font-weight: bold;">ConstTimeStepParam "NumSteps"</span>.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">ConstTimeStepWidth ( <a href="../common_vbageneral/common_general_double.htm" id="a5" name="a5">double</a> <span style="font-style: italic;"><i>stepwidth</i></span> )</p>
+<p class="VBA-Text-Indent">Defines the constant width of time steps to be done during transient co-simulation. This command can only be used with <span style="font-weight: bold;">ConstTimeStepParam "StepWidth"</span>.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Text-Indent" style="margin-left: 0px;"><span style="font-weight: bold;">LSESolverType( <a href="../common_vbageneral/common_general_enum.htm">enum</a> type</span> <span style="font-weight: bold;">)</span></p>
+<p class="VBA-Text-Indent">Specifies which solver is used to solve linear systems of equations. Possible values are "Auto", "Iterative", "Direct". If "Auto" is selected, t<span style="font-size: 12px; font-variant-ligatures: normal; font-variant-caps: normal; orphans: 2; text-align: justify; widows: 2; -webkit-text-stroke-width: 0px; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; display: inline ! important ; float: none;">he solver type is automatically set depending on the problem size. Available only if tetrahedral mesh is selected.</span></p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">TetSolverOrder ( <a href="../common_vbageneral/common_general_integer.htm" id="a5" name="a5">int</a> <span style="font-style: italic;"><i>order</i></span> )</p>
+<p class="VBA-Text-Indent">Defines the finite element solution order for the tetrahedral solver.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">InitialSolutionImported ( <a href="../common_vbageneral/common_general_name.htm">name</a> <span style="font-style: italic;"><i>fieldname</i></span> )</p>
+<p class="VBA-Text-Indent">Use the imported temperature field <span style="font-style: italic;"><i>fieldname</i></span> as the initial temperature distribution. For PTC solids, no temperature distributions are imported, the initial temperature values are used instead.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">InitialSolutionStationary</p>
+<p class="VBA-Text-Indent">The stationary thermal solver is started in order to generate the initial temperature distributions. All the transient sources are taken with values for the time instant t=0.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">InitialSolutionCustom</p>
+<p class="VBA-Text-Indent">The ambient temperature is assigned to the whole solution domain except for PTC solids with temperature sources assigned.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">ConsiderBioheat (&#160;<a href="../common_vbageneral/common_general_bool_data_type.htm" id="a21" name="a21">bool</a> <span style="font-style: italic;"><i>consider</i></span> )</p>
+<p class="VBA-Text-Indent">Specify whether bioheat properties of materials (bloodflow coefficient and basal metabolic rate) should be taken into account by the solver.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">BloodTemperature ( <a href="../common_vbageneral/common_general_double.htm" id="a131" name="a131">double</a> &#160;<span style="font-style: italic;"><i>tmax</i></span> )</p>
+<p class="VBA-Text-Indent">Specify the blood temperature in °C. This setting is ignored if bioheat materials are absent or ignored.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Text-Indent" style="margin-left: 0px;"><span style="font-weight: bold;">TimeIntegratorType ( <a href="../common_vbageneral/common_general_enum.htm">enum</a> type</span> <span style="font-weight: bold;">)</span></p>
+<p class="VBA-Text-Indent">Defines the type of time integrator. Possible values are "Automatic", "Explicit", "Implicit". If "Automatic" is selected, t<span style="font-size: 12px; font-variant-ligatures: normal; font-variant-caps: normal; orphans: 2; text-align: justify; widows: 2; -webkit-text-stroke-width: 0px; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; display: inline ! important ; float: none;">he type is automatically set depending on the step size.</span></p>
+<p class="VBA-Heading-Category"><a name="Default" id="Default"></a>Default Values</p>
+<p class="VBA-Text-Example">Method "Tetrahedral Mesh"</p>
+<p class="VBA-Text-Example">StartSolutionAccuracy "1e-6"</p>
+<p class="VBA-Text-Example">TransientSolverAccuracy "1e-6"</p>
+<p class="VBA-Text-Example">NonlinearSolverAccuracy "1e-6"</p>
+<p class="VBA-Text-Example">TetSolverOrder "2"</p>
+<p class="VBA-Text-Example">LSESolverType "Auto"</p>
+<p class="VBA-Text-Example">StoreResultsInCache "False"</p>
+<p class="VBA-Text-Example">SimulationDuration "1"</p>
+<p class="VBA-Text-Example">AmbientTemperature "293.15", "Kelvin"</p>
+<p class="VBA-Text-Example">ConsiderBioheat "True"</p>
+<p class="VBA-Text-Example">BloodTemperature "37.0"</p>
+<p class="VBA-Text-Example">PTCDefault "Ambient"</p>
+<p class="VBA-Text-Example">TimeStepScheme "Automatic"</p>
+<p class="VBA-Text-Example">TimeStepInit "1e-3"</p>
+<p class="VBA-Text-Example">TimeStepMin "1e-6"</p>
+<p class="VBA-Text-Example">TimeStepMax "1e-1"</p>
+<p class="VBA-Text-Example">TimeStepSamples "100000"</p>
+<p class="VBA-Text-Example">TimeIntegratorType "Automatic"</p>
+<p class="VBA-Text-Example">InitialSolutionCustom</p>
+<p class="VBA-Text-Example">TryLoadResumeInfoFromCache "False"</p>
+<p class="VBA-Text-Example">TimeIntegrationOrder "High"</p>
+<p class="VBA-Text-Example">UseMaxNumberOfThreads "True"</p>
+<p class="VBA-Text-Example">MaxNumberOfThreads "96"</p>
+<p class="VBA-Text-Example">MaximumNumberOfCPUDevices "2"</p>
+<p class="VBA-Text-Example">UseDistributedComputing "False"</p>
+<p class="VBA-Heading-Category"><a name="Examples" id="Examples"></a>Examples</p>
+<p class="VBA-Text-Example">With ThermalTDSolver</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.Reset</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.Method "Hexahedral Mesh"</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.StartSolutionAccuracy "1e-6"</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.TransientSolverAccuracy "1e-6"</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.StoreResultsInCache "False"</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.SimulationDuration "10"</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.AmbientTemperature "20"</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.TimeStepScheme "AdaptiveUser"</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.TimeStepInit "1e-3"</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.TimeStepMin "1e-6"</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.TimeStepMax "1e-1"</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.TimeStepSamples "100000"</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.ResetExcitationList</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.Excitation "thermal loss distribution", "thermallossdistr", "0.0", "constant", "True"</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.UseDistributedComputing "False"</p>
+<p class="VBA-Text-Example">End With</p>
+<?rh-p style="margin-bottom: 0px; text-align: Right; margin-left: 18px; 
+                 margin-right: 18px; margin-top: 18px;" ?>
+<div style="width: 100%; position: relative;" id="footer">
+<p style="border-bottom: Solid 1px #dddddd; text-align: Left; margin-left: 0px; font-family: Arial, sans-serif; line-height: Normal; margin-top: 9px; margin-right: 0px; margin-bottom: 6px; border-left-width: 1px; border-top-width: 1px; border-right-width: 1px;"><span style="text-align: Left; font-family: Arial, sans-serif; line-height: Normal;">&#160;</span></p>
+<table cellspacing="0" width="100%">
+<col style="width: 50%;" />
+<col style="width: 50%;" />
+<tr>
+<td style="vertical-align: Top;"><span style="font-family: Arial, sans-serif; line-height: Normal; font-size: 8pt;"><font size="1" style="font-size:8pt;">CST Studio Suite 2026</font></span></td>
+<td style="vertical-align: Top;">
+<p style="text-align: right;">&#160;</p>
+</td>
+</tr>
+</table>
+<p>&#160;</p>
+</div>
+<script type="text/javascript" language="javascript1.2">
+//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+        writeIntopicBar(0);
+
+
+highlightSearch();
+//-->
+//]]>
+</script>
+</body>
+</html>

@@ -1,0 +1,834 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="Adobe RoboHelp 11" />
+<title>VBA Objects Overview</title>
+<link rel="StyleSheet" href="../online_help_vba.css" type="text/css" />
+<style type="text/css">
+/*<![CDATA[*/
+<!--
+body { border-bottom-style:None; }
+-->
+/*]]>*/
+</style>
+
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+        origWidth = innerWidth;
+        origHeight = innerHeight;
+        onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+/*<![CDATA[*/
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+-->
+/*]]>*/
+</style>
+
+<script type="text/javascript" language="javascript1.2" src="../whmsg.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript" src="../whver.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript1.2" src="../whutils.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript1.2" src="../whproxy.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript1.2" src="../whlang.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript1.2" src="../whtopic.js" charset="utf-8">
+</script>
+</head>
+<body>
+<script type="text/javascript" language="javascript1.2">
+//<![CDATA[
+<!--
+if (window.gbWhTopic)
+{
+        var strUrl = document.location.href;
+        var bc = 0;
+        var n = strUrl.toLowerCase().indexOf("bc-");
+        if(n != -1)
+        {
+                document.location.replace(strUrl.substring(0, n));
+                bc = strUrl.substring(n+3);
+        }
+
+        if (window.addTocInfo)
+        {
+        addTocInfo("3D Simulation VBA\nVBA Objects\nVBA Objects Overview");
+
+        }
+        if (window.writeBtnStyle)
+                writeBtnStyle();
+
+        if (window.writeIntopicBar)
+                writeIntopicBar(0);
+
+        
+        document.write("<p style=\"font-family: Tahoma; font-size: 9pt; font-weight: 400;  font-style:normal; color: rgb(0, 0, 0); text-decoration:none; text-align: left\"> ");
+AddMasterBreadcrumbs("../index.htm", "font-family: Tahoma; font-size: 9pt; font-weight: 400;  font-style:normal; color: rgb(0, 0, 0); text-decoration:none; text-align: left", "|", "Home", "special_vbaobjects_vbaobjects.htm");
+document.write("<a style=\"font-family: Tahoma; font-size: 9pt; font-weight: 400;  font-style:normal; color: rgb(0, 0, 0); text-decoration:none; text-align: left\" href=\"special_vbaobjects_vbaobjects.htm\">3D Simulation VBA<\/a> | <a style=\"font-family: Tahoma; font-size: 9pt; font-weight: 400;  font-style:normal; color: rgb(0, 0, 0); text-decoration:none; text-align: left\" href=\"special_vbaobjects_vbaobjects.htm\">VBA Objects<\/a> | VBA Objects Overview<\/p>");
+
+}
+else
+        if (window.gbIE4)
+                document.location.reload();
+
+onLoadHandler = function()
+{
+  if (window.setRelStartPage)
+        {
+        setTimeout("setRelStartPage('../index.htm');", 1)
+
+    setTimeout("UpdateBreadCrumbsMarker();", 1);
+        }
+}
+
+if (window.addEventListener){  
+        window.addEventListener('load', onLoadHandler, false);   
+} else if (window.attachEvent){  
+        window.attachEvent('onload', onLoadHandler);  
+}
+
+function onSetStartPage()
+{
+  autoSync(1);
+  sendSyncInfo();
+  sendAveInfoOut();
+}
+//-->
+//]]>
+</script><script type="text/javascript" src="../ehlpdhtm.js" language="JavaScript1.2">
+</script>
+<table cellspacing="0" width="100%">
+<col style="width: 50%;" />
+<col style="width: 50%;" />
+<tr>
+<td style="vertical-align: middle; padding-top: 5px; padding-bottom: 5px;">
+<p style="margin-top: 0px; margin-bottom: 0px;"><img src="../3ds.png" alt="" style="border: none;" border="0" /></p>
+</td>
+<td style="vertical-align: middle;">
+<p style="text-align: right;"><a href="https://www.3ds.com/products-services/3dexperience/" target="_blank"><img src="../3dexp.png" alt="" style="border: none;" width="32" height="32" border="0" /></a></p>
+</td>
+</tr>
+</table>
+<h1><span>VBA Obje</span>cts Overview</h1>
+<p class="Tip-Note-Text-Bulleted" style="margin-top: 6pt; text-indent: 0px; margin-left: 0px; text-align: left;">CST Studio Suite is implemented as OLE automation server. The application is registered under "CSTStudio.Application". An instance can be created through the <span style="font-style: italic;"><i>CreateObject</i></span> &#160;VBA command:</p>
+<p style="font-family: 'Courier New', monospace;">Dim app As Object</p>
+<p style="font-family: 'Courier New', monospace;">Set app = CreateObject ("CSTStudio.Application")</p>
+<p class="Tip-Note-Text-Bulleted" style="text-indent: 0px; text-align: left; margin-left: 0px; font-family: Arial, sans-serif;">This application object provides methods to open and create projects. Refer to the <a href="../../../advanced/vbaapplicationobject.htm">Application Object</a> &#160;for details.</p>
+<p class="Tip-Note-Text-Bulleted" style="text-indent: 0px; text-align: left; margin-left: 0px;">If you open the built-in CST Studio Suite VBA-Interpreter all of these objects are already available. To call the method <span style="font-style: italic;"><i>AMethod</i></span> of the object <span style="font-style: italic;"><i>AnObject</i></span> simply type <span style="font-style: italic;"><i>AnObject.AMethod ( Parameters )</i></span>. All functions and methods of the <a href="../common_vbaapp/common_vbaappapplication_object.htm">Project Object</a> and the <a href="../common_vbaunitso/common_vbaunitso_units_object.htm">Units Object</a> can be called directly, because you are in the scope of this object.</p>
+<p class="Tip-Note-Text-Bulleted" style="text-indent: 0px; text-align: left; margin-left: 0px;"><span>The VBA commands for the associated canvas can be accessed as well. Refer to the <a href="special_vbaobjects_dsvbaobjects.htm">CST Design Studio objects</a> page that gives a short overview over their usage.</span></p>
+<p class="Tip-Note-Text-Bulleted" style="text-indent: 0px; text-align: left; margin-left: 0px;">&#160;</p>
+<p class="StandardNeu" style="font-weight: bold;">Reference by group:</p>
+<table style="vertical-align: top;" cellspacing="0">
+<col width="123" />
+<col width="61" />
+<col width="76" />
+<tr style="vertical-align: top; height: 5px;">
+<td style="padding-right: 10px; padding-left: 10px;" width="123">
+<h6>Global:</h6>
+</td>
+<td style="padding-right: 10px; padding-left: 10px;" width="61">
+<p class="VBA-Text"><a href="../common_vbaapp/common_vbaappapplication_object.htm">Project</a></p>
+</td>
+<td style="padding-right: 10px; padding-left: 10px;" width="76">
+<p class="VBA-Text"><a href="../common_vbaunitso/common_vbaunitso_units_object.htm">Units</a></p>
+</td>
+</tr>
+</table>
+<p class="VBA-Text" style="margin-left: 0px;">&#160;</p>
+<table style="vertical-align: top;" cellspacing="0">
+<col width="124" />
+<col width="44" />
+<col width="92" />
+<tr style="vertical-align: top; height: 5px;">
+<td style="padding-right: 10px; padding-left: 10px;" width="124">
+<h6>Material:</h6>
+</td>
+<td style="padding-right: 10px; padding-left: 10px;" width="44">
+<p class="VBA-Text"><a href="../special_vbalayer/special_vbalayerolayer_object.htm">Material</a></p>
+</td>
+<td style="padding-right: 10px; padding-left: 10px;" width="92">
+<p class="VBA-Text"><a href="../special_vbalayer/materiallibrary_object.htm">MaterialLibrary</a></p>
+</td>
+</tr>
+</table>
+<p class="VBA-Text" style="margin-left: 0px;">&#160;</p>
+<table style="vertical-align: top;" cellspacing="0">
+<col width="124" />
+<col width="66" />
+<col width="70" />
+<tr style="vertical-align: top; height: 5px;">
+<td style="padding-right: 10px; padding-left: 10px;" width="124">
+<h6>Component:</h6>
+</td>
+<td style="padding-right: 10px; padding-left: 10px;" width="66">
+<p class="VBA-Text"><a href="../special_vbalayer/special_vbalayerocomponent_object.htm">Component</a></p>
+</td>
+<td style="padding-right: 10px; padding-left: 10px;" width="70">
+<p class="VBA-Text">&#160;</p>
+</td>
+</tr>
+</table>
+<p class="VBA-Heading-Method">&#160;</p>
+<table style="vertical-align: top;" cellspacing="0">
+<col width="124" />
+<col width="66" />
+<col width="70" />
+<tr style="vertical-align: top; height: 5px;">
+<td style="padding-right: 10px; padding-left: 10px;" width="124">
+<h6>Group:</h6>
+</td>
+<td style="padding-right: 10px; padding-left: 10px;" width="66">
+<p class="VBA-Text"><a href="../special_vbalayer/spwcial_vbalayerogroup_object.htm">Group</a></p>
+</td>
+<td style="padding-right: 10px; padding-left: 10px;" width="70">
+<p class="VBA-Text">&#160;</p>
+</td>
+</tr>
+</table>
+<p class="VBA-Text" style="margin-left: 0px;">&#160;</p>
+<table style="vertical-align: top;" cellspacing="0">
+<col width="125" />
+<col width="46" />
+<col width="54" />
+<col width="119" />
+<tr style="vertical-align: top; height: 6px;">
+<td style="padding-right: 10px; padding-left: 10px;" width="125">
+<h6><nobr>Shapes</nobr>:</h6>
+</td>
+<td style="padding-right: 10px; padding-left: 10px;" width="46">
+<p class="VBA-Text"><a href="../common_vbabasicsolids/common_vbaanalyticalface_object.htm">AnalyticalFace</a></p>
+<p class="VBA-Text"><a href="../common_vbabasicsolids/common_vbabrick_object.htm">Brick</a></p>
+<p class="VBA-Text"><a href="../common_vbabasicsolids/common_vbacone_object.htm">Cone</a></p>
+<p class="VBA-Text"><a href="../common_vbabasicsolids/common_vbacylinder_object.htm">Cylinder</a></p>
+</td>
+<td style="padding-right: 10px; padding-left: 10px;" width="54">
+<p class="VBA-Text"><a href="../common_vbabasicsolids/common_vbaecylinder_object.htm">ECylinder</a></p>
+<p class="VBA-Text"><a href="../common_vbabasicsolids/common_vbasphere_object.htm">Sphere</a></p>
+<p class="VBA-Text"><a href="../common_vbabasicsolids/common_vbatorus_object.htm">Torus</a></p>
+</td>
+<td style="padding-right: 10px; padding-left: 10px;" width="119">
+<p class="VBA-Text"><a href="../common_vbabasicsolids/common_vbawire_object.htm">Wire</a></p>
+<p class="VBA-Text">&#160;</p>
+</td>
+</tr>
+</table>
+<p class="Tip-Note-Text-Bulleted" style="text-indent: 0px; text-align: left; margin-left: 0px;">&#160;</p>
+<table style="vertical-align: top;" cellspacing="0">
+<col width="125" />
+<col width="42" />
+<col width="93" />
+<col width="93" />
+<tr style="vertical-align: top; height: 17px;">
+<td style="padding-right: 10px; padding-left: 10px;" width="125">
+<h6><nobr>2D-Profiles to</nobr></h6>
+<h6><nobr>Shapes:</nobr></h6>
+</td>
+<td style="padding-right: 10px; padding-left: 10px;" width="42">
+<p class="VBA-Text"><a href="../common_vbaextrude/common_vbaextrudeextrude_object.htm">Extrude</a></p>
+<p class="VBA-Text"><a href="../common_vbaloft/common_vbaloftloft_object.htm">Loft</a></p>
+</td>
+<td style="padding-right: 10px; padding-left: 10px;" width="93">
+<p class="VBA-Text"><a href="../common_vbarotateo/common_vbarotateo_rotate_object.htm">Rotate</a></p>
+<p class="VBA-Text"><a href="../common_vbacurves/common_vbacurves_tracefromcurve_object.htm">TraceFromCurve</a></p>
+</td>
+<td style="padding-right: 10px; padding-left: 10px;" width="93">
+<p>&#160;</p>
+</td>
+</tr>
+</table>
+<p class="Tip-Note-Text-Bulleted" style="text-indent: 0px; text-align: left; margin-left: 0px;">&#160;</p>
+<table style="vertical-align: top;" cellspacing="0">
+<col width="125" />
+<col width="29" />
+<tr style="vertical-align: top; height: 17px;">
+<td style="padding-right: 10px; padding-left: 10px;" width="125">
+<h6><nobr>Shape Operations:</nobr></h6>
+</td>
+<td style="padding-right: 10px; padding-left: 10px;" width="29">
+<p class="VBA-Text"><a href="../common_vbasolido/common_vbasolido_solid_object.htm">Solid</a></p>
+<p class="VBA-Text"><a href="../common_vbabending/common_vbabending_object.htm">Bending</a> <a href="../common_vbasolido/common_vbaobjectso_local_modifications_object.htm">LocalModification</a></p>
+</td>
+</tr>
+</table>
+<p class="Tip-Note-Text-Bulleted" style="text-indent: 0px; text-align: left; margin-left: 0px;">&#160;</p>
+<table style="vertical-align: top;" cellspacing="0">
+<col width="125" />
+<col width="95" />
+<tr style="vertical-align: top; height: 17px;">
+<td style="padding-right: 10px; padding-left: 10px;" width="125">
+<h6><nobr>Transformations</nobr></h6>
+<h6><nobr>and Picks:</nobr></h6>
+</td>
+<td style="padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text"><a href="../common_vbawcso/common_vbawcso_anchorpoint_object.htm">Anchor Points</a></p>
+<p class="VBA-Text"><a href="../special_vbatransformo/special_vbatransformo_align_object.htm">Align</a></p>
+<p class="VBA-Text"><a href="../common_vbapicko/common_vbapicko_pick_object.htm">Pick</a></p>
+<p class="VBA-Text"><a href="../special_vbatransformo/special_vbatransformo_transform_object.htm">Transform</a></p>
+<p class="VBA-Text"><a href="../common_vbawcso/common_vbawcso_wcs_object.htm">WCS</a></p>
+</td>
+</tr>
+</table>
+<p class="Tip-Note-Text-Bulleted" style="text-indent: 0px; text-align: left; margin-left: 0px;">&#160;</p>
+<table style="vertical-align: top;" cellspacing="0">
+<col width="125" />
+<col width="39" />
+<col width="39" />
+<col width="57" />
+<col width="123" />
+<tr style="vertical-align: top; height: 5px;">
+<td style="padding-right: 10px; padding-left: 10px;" width="125">
+<h6 style="text-align: left;">Construction Curves and Faces:</h6>
+</td>
+<td style="padding-right: 10px; padding-left: 10px;" width="39">
+<p class="VBA-Text"><a href="../common_vbacurves/common_vbacurves_curve_object.htm">Curve</a></p>
+<p class="VBA-Text">&#160;</p>
+</td>
+<td style="padding-right: 10px; padding-left: 10px;" width="39">
+<p class="VBA-Text"><a href="../common_vbacurves/common_vbacurves_analyticalcurve_object.htm">AnalyticalCurve</a></p>
+<p class="VBA-Text"><a href="../common_vbacurves/common_vbacurves_arc_object.htm">Arc</a></p>
+<p class="VBA-Text"><a href="../common_vbacurves/common_vbacurves_circle_object.htm">Circle</a></p>
+<p class="VBA-Text"><a href="../common_vbacurves/common_vbacurves_ellipse_object.htm">Ellipse</a></p>
+<p class="VBA-Text"><a href="../common_vbacurves/common_vbacurves_rectangle_object.htm">Rectangle</a></p>
+</td>
+<td style="padding-right: 10px; padding-left: 10px;" width="57">
+<p class="VBA-Text"><a href="../common_vbacurves/common_vbacurves_line_object.htm">Line</a></p>
+<p class="VBA-Text"><a href="../common_vbacurves/common_vbacurves_polygon_object.htm">Polygon</a></p>
+<p class="VBA-Text"><a href="../common_vbacurves/common_vbacurves_spline_object.htm">Spline</a></p>
+<p class="VBA-Text"><a href="../common_vbacurves/common_vbacurves_polygon3d.htm">Polygon3D</a></p>
+</td>
+<td style="padding-right: 10px; padding-left: 10px;" width="123">
+<p class="vba-text"><a href="../common_vbafaces/common_vbafaces_face_object.htm">Face</a></p>
+</td>
+</tr>
+</table>
+<p class="Tip-Note-Text-Bulleted" style="text-indent: 0px; text-align: left; margin-left: 0px;">&#160;</p>
+<table style="vertical-align: top;" cellspacing="0">
+<col width="126" />
+<col width="81" />
+<col width="74" />
+<col width="63" />
+<tr style="vertical-align: top; height: 17px;">
+<td style="padding-right: 10px; padding-left: 10px;" width="126">
+<h6><nobr>Curve Operations</nobr><nobr style="white-space: nowrap;">:</nobr></h6>
+</td>
+<td style="padding-right: 10px; padding-left: 10px;" width="81">
+<p class="VBA-Text"><a href="../common_vbacurves/common_vbacurves_blendcurve_object.htm">BlendCurve</a></p>
+<p class="VBA-Text"><a href="../common_vbacurves/common_vbacurves_chamfercurve_object.htm">ChamferCurve</a></p>
+<p class="VBA-Text"><a href="../common_vbacurves/common_vbacurves_covercurve_object.htm">CoverCurve</a></p>
+<p class="VBA-Text"><a href="../common_vbacurves/common_vbacurves_edgecurve_object.htm">EdgeCurve</a></p>
+</td>
+<td style="padding-right: 10px; padding-left: 10px;" width="74">
+<p class="VBA-Text"><a href="../common_vbacurves/common_vbacurves_extrudecurve_object.htm">ExtrudeCurve</a></p>
+<p class="VBA-Text"><a href="../common_vbacurves/common_vbacurves_loftcurves_object.htm">LoftCurves</a></p>
+<p class="VBA-Text"><a href="../common_vbacurves/common_vbacurves_sweepcurve_object.htm">SweepCurve</a></p>
+<p class="VBA-Text"><a href="../common_vbacurves/common_vbacurves_trimcurves_object.htm">TrimCurves</a></p>
+</td>
+<td style="padding-right: 10px; padding-left: 10px;" width="63">
+<p>&#160;</p>
+</td>
+</tr>
+</table>
+<p class="Tip-Note-Text-Bulleted" style="text-indent: 0px; text-align: left; margin-left: 0px;">&#160;</p>
+<table style="vertical-align: top;" cellspacing="0">
+<col width="125" />
+<col width="272" />
+<tr style="vertical-align: top; height: 17px;">
+<td style="padding-right: 10px; padding-left: 10px;" width="125">
+<h6><nobr><span style="white-space: nowrap;">Cable Studio</span>:</nobr></h6>
+</td>
+<td style="padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text"><a href="../common_vbacablestudio/cst_cablestudio_objects_overview.htm">Cable Studio Overview</a></p>
+</td>
+</tr>
+</table>
+<p class="Tip-Note-Text-Bulleted" style="text-indent: 0px; text-align: left; margin-left: 0px;">&#160;</p>
+<table style="vertical-align: top;" cellspacing="0">
+<col width="126" />
+<col width="103" />
+<col width="171" />
+<col width="186" />
+<tr style="vertical-align: top; height: 17px;">
+<td style="padding-right: 10px; padding-left: 10px;" width="126">
+<h6><nobr style="white-space: nowrap;">Import / Export:</nobr></h6>
+</td>
+<td style="padding-right: 10px; padding-left: 10px;" width="103">
+<p class="VBA-Text"><a href="../common_vbaimpexp/asciiexport_object.htm">ASCIIExport</a></p>
+<p class="VBA-Text"><a href="../common_vbaimpexp/common_vbaimp_exp_catia_object.htm">CATIA</a></p>
+<p class="VBA-Text"><a href="../common_vbaimpexp/solidworks_object.htm">SOLIDWORKS</a></p>
+<p class="VBA-Text"><a href="../common_vbaimpexp/siemensnx_object.htm">SiemensNX</a></p>
+<p class="VBA-Text"><a href="../common_vbaimpexp/solidedge_object.htm">SolidEdge</a></p>
+<p class="VBA-Text"><a href="../common_vbaimpexp/common_vbaimp_exp_conventorware_object.htm">CoventorWare</a></p>
+<p class="VBA-Text"><a href="../common_vbaimpexp/common_vbaimp_exp_mecadtron_object.htm">Mecadtron</a></p>
+</td>
+<td style="padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text" style="text-align: left;"><a href="../common_vbaimpexp/common_vbaie_dxf.htm">DXF</a></p>
+<p class="VBA-Text" style="text-align: left;"><a href="../common_vbaimpexp/common_vbaimp_exp_gerber.htm">GERBER</a></p>
+<p class="VBA-Text" style="text-align: left;"><a href="../common_vbaimpexp/common_vbaie_gdsii.htm">GDSII</a></p>
+<p class="VBA-Text" style="text-align: left;"><a href="../common_vbaimpexp/common_vbaimp_exp_hfss_object.htm">HFSS</a></p>
+<p class="VBA-Text" style="text-align: left;"><a href="../common_vbaimpexp/common_vbaimp_exp_humanmodel.htm">HumanModel</a></p>
+<p class="VBA-Text" style="text-align: left;"><a href="../common_vbaimpexp/common_vbaie_iges.htm">IGES</a></p>
+<p class="VBA-Text" style="text-align: left;"><a href="../common_vbaimpexp/common_vbaimp_exp_proe_object.htm">PRO/E (PTC Creo and Pro/E</a>)</p>
+<p class="VBA-Text" style="text-align: left;"><a href="../common_vbaimpexp/common_vbaimpexp_nastran_object.htm">NASTRAN</a></p>
+</td>
+<td style="padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text"><a href="../common_vbaimpexp/common_vbaie_sat.htm">SAT</a></p>
+<p class="VBA-Text"><a href="../common_vbaimpexp/common_vbaimp_exp_step.htm">STEP</a></p>
+<p class="VBA-Text"><a href="../common_vbaimpexp/common_vbaie_stl.htm">STL</a></p>
+<p class="VBA-Text"><a href="../common_vbaimpexp/common_vbaie_obj.htm">OBJ</a></p>
+<p class="VBA-Text"><a href="../special_vbaimpexp/special_vbaimp_exp_touchstone.htm">TOUCHSTONE</a></p>
+<p class="VBA-Text"><a href="../special_vbaimpexp/adscomponentexport.htm">ADSComponentExport</a></p>
+<p class="VBA-Text"><a href="../common_vbalayoutdb/common_vbalayoutdb.htm">LayoutDB</a></p>
+</td>
+</tr>
+</table>
+<p class="Tip-Note-Text-Bulleted" style="text-indent: 0px; text-align: left; margin-left: 0px;">&#160;</p>
+<table style="vertical-align: top;" cellspacing="0">
+<col width="126" />
+<col width="82" />
+<col width="145" />
+<tr style="vertical-align: top; height: 17px;">
+<td style="padding-right: 10px; padding-left: 10px;" width="126">
+<h6>Parametric Import:</h6>
+</td>
+<td style="padding-right: 10px; padding-left: 10px;" width="82">
+<p><a href="../special_vbaimpexp/parametricimport.htm">LiveLink</a></p>
+</td>
+<td style="padding-right: 10px; padding-left: 10px;" width="145">
+<p class="VBA-Text">&#160;</p>
+</td>
+</tr>
+</table>
+<p class="Tip-Note-Text-Bulleted" style="text-indent: 0px; text-align: left; margin-left: 0px;">&#160;</p>
+<table style="vertical-align: top;" cellspacing="0">
+<col width="126" />
+<col width="131" />
+<col width="82" />
+<col width="145" />
+<tr style="vertical-align: top; height: 17px;">
+<td style="padding-right: 10px; padding-left: 10px;" width="126">
+<h6>Signals:</h6>
+</td>
+<td style="padding-right: 10px; padding-left: 10px;" width="131">
+<p class="VBA-Text"><a href="../special_vbasignals/special_vbasignals_timesignal_object.htm">TimeSignal</a></p>
+</td>
+<td style="padding-right: 10px; padding-left: 10px;" width="82">
+<p>&#160;</p>
+</td>
+<td style="padding-right: 10px; padding-left: 10px;" width="145">
+<p class="VBA-Text">&#160;</p>
+</td>
+</tr>
+</table>
+<p class="tip-note-text-bulleted">&#160;</p>
+<table style="vertical-align: top;" cellspacing="0">
+<col width="126" />
+<col width="31" />
+<col width="95" />
+<col width="103" />
+<tr style="vertical-align: top; height: 17px;">
+<td style="padding-right: 10px; padding-left: 10px;" width="126">
+<h6>Mesh:</h6>
+</td>
+<td style="padding-right: 10px; padding-left: 10px;" width="31">
+<p class="VBA-Text"><a href="../special_vbamesh/special_vbamesho.htm">Mesh</a></p>
+</td>
+<td style="padding-right: 10px; padding-left: 10px;" width="95">
+<p class="VBA-Text"><a href="../special_vbamesh/special_vbamesh_meshadaption3d_object.htm">MeshAdaption3D</a></p>
+</td>
+<td style="padding-right: 10px; padding-left: 10px;" width="103">
+<p class="VBA-Text">&#160;</p>
+</td>
+</tr>
+</table>
+<p class="Tip-Note-Text-Bulleted" style="text-indent: 0px; text-align: left; margin-left: 0px; color: #008000;">&#160;</p>
+<table style="vertical-align: top;" cellspacing="0">
+<col width="126" />
+<col width="131" />
+<col width="82" />
+<col width="145" />
+<tr style="vertical-align: top; height: 17px;">
+<td style="padding-right: 10px; padding-left: 10px;" width="126">
+<h6>Field Sources:</h6>
+</td>
+<td style="padding-right: 10px; padding-left: 10px;" width="131">
+<p><a href="../special_vbaports/special_vbaports_fieldsource_object.htm">FieldSource</a></p>
+<p><a href="../special_vbapredefinedfield/special_vbapredefinedfield.htm">Predefined Field</a></p>
+</td>
+<td style="padding-right: 10px; padding-left: 10px;" width="82">
+<p><a href="../special_vbaports/farfieldsource_object.htm">FarfieldSource</a></p>
+<p><a href="../special_vbasourcefield/special_vbasourcefield_sourcefield_object.htm">SourceField</a></p>
+</td>
+<td style="padding-right: 10px; padding-left: 10px;" width="145">
+<p class="VBA-Text">&#160;</p>
+</td>
+</tr>
+</table>
+<p class="Tip-Note-Text-Bulleted" style="text-indent: 0px; text-align: left; margin-left: 0px; color: #008000;">&#160;</p>
+<table style="vertical-align: top;" cellspacing="0">
+<col width="126" />
+<col width="69" />
+<col width="63" />
+<col width="63" />
+<col width="86" />
+<tr style="vertical-align: top; height: 17px;">
+<td rowspan="2" style="padding-right: 10px; padding-left: 10px;" width="126">
+<h6>Ports:</h6>
+</td>
+<td style="padding-right: 10px; padding-left: 10px;" width="69">
+<p class="VBA-Text"><a href="../special_vbaports/special_vbaports_discrete_port_object.htm">DiscretePort</a></p>
+</td>
+<td style="padding-right: 10px; padding-left: 10px;" width="63">
+<p class="VBA-Text"><a href="../special_vbaports/special_vbaports_port_object.htm">Port</a></p>
+</td>
+<td style="padding-right: 10px; padding-left: 10px;" width="63">
+<p class="VBA-Text"><a href="../special_vbaports/special_vbaports_discrete_face_port_object.htm">DiscreteFacePort</a></p>
+</td>
+<td style="padding-right: 10px; padding-left: 10px;" width="86">
+<p class="VBA-Text"><a href="../special_vbaports/floquetport_object.htm">FloquetPort</a></p>
+</td>
+</tr>
+<tr style="vertical-align: top; height: 17px;">
+<td style="padding-right: 10px; padding-left: 10px;" width="69">
+<p class="VBA-Text"><a href="../special_vbaports/special_vbaports_planewave_object.htm">PlaneWave</a></p>
+</td>
+<td style="padding-right: 10px; padding-left: 10px;" width="69">
+<p class="VBA-Text"><a href="../special_vbaports/special_vbaports_cable_port_object.htm">CablePort</a></p>
+</td>
+<td style="padding-right: 10px; padding-left: 10px;" width="63">
+<p class="VBA-Text">&#160;</p>
+</td>
+<td style="padding-right: 10px; padding-left: 10px;" width="86">
+<p><a href="../special_vbaports/farfieldsource_object.htm">FarfieldSource</a></p>
+</td>
+</tr>
+</table>
+<p class="Tip-Note-Text-Bulleted" style="text-indent: 0px; text-align: left; margin-left: 0px;">&#160;</p>
+<table style="vertical-align: top;" cellspacing="0">
+<col width="126" />
+<col width="93" />
+<col width="87" />
+<col width="43" />
+<tr style="vertical-align: top; height: 17px;">
+<td style="padding-right: 10px; padding-left: 10px;" width="126">
+<h6><nobr style="white-space: nowrap;">Discrete Elements:</nobr></h6>
+</td>
+<td style="padding-right: 10px; padding-left: 10px;" width="93">
+<p class="VBA-Text"><a href="../special_vbadiscreteelements/special_vbalumpedelement_object.htm">LumpedElement</a></p>
+</td>
+<td style="padding-right: 10px; padding-left: 10px;" width="87">
+<p class="VBA-Text"><a href="../special_vbadiscreteelements/special_vbalumpedfaceelement_object.htm">LumpedFaceElement</a></p>
+</td>
+<td style="padding-right: 10px; padding-left: 10px;" width="43">
+<p class="VBA-Text">&#160;</p>
+</td>
+</tr>
+</table>
+<p class="Tip-Note-Text-Bulleted" style="text-indent: 0px; text-align: left; margin-left: 0px;">&#160;</p>
+<table style="vertical-align: top; left: 0px; top: 1256px;" cellspacing="0" width="764">
+<col width="120" />
+<col width="83" />
+<col width="87" />
+<col width="85" />
+<col width="149" />
+<col width="105" />
+<tr style="vertical-align: top; height: 17px;">
+<td style="padding-right: 10px; padding-left: 10px;">
+<h6><nobr style="white-space: nowrap;">Source Definitions:</nobr></h6>
+</td>
+<td style="padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text" style="margin-right: -29px;"><a href="../special_vbacharge/special_vbacharge_charge_object.htm">Charge</a></p>
+<p class="VBA-Text" style="margin-right: -29px;"><a href="../special_vbacoil/special_vbacoil_coil_object.htm">Coil</a></p>
+<p class="VBA-Text" style="margin-right: -29px;"><a href="../special_vbacurrentpath/special_vbacurrentpath_currentpath_object.htm">CurrentPath</a></p>
+<p class="VBA-Text" style="margin-right: -29px;"><a href="../special_vbacurrentport/special_vbacurrentport_current_port_object.htm">CurrentPort</a></p>
+</td>
+<td style="padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text" style="margin-right: 0px;"><a href="../special_vbamechanics/displacement_object.htm">Displacement</a></p>
+<p class="VBA-Text" style="margin-right: 0px;"><a href="../special_vbamechanics/traction_object.htm">Traction</a></p>
+<p class="VBA-Text" style="margin-right: 0px;"><a href="../special_vbamagnet/special_vbamagnet_magnet_object.htm">Magnet</a></p>
+<p class="VBA-Text" style="margin-right: 0px;"><a href="../special_vbapotential/special_vbapotential_potential_object.htm">Potential</a></p>
+</td>
+<td style="padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text" style="margin-right: 0px;"><a href="../special_vbavoltagewire/special_vbavoltagewire_voltage_wire_object.htm">VoltageWire</a></p>
+<p class="VBA-Text" style="margin-right: 0px;"><a href="../special_vbaparticlesource/special_vbaparticlesource_particlesource_object.htm">ParticleSource</a></p>
+</td>
+<td style="padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text" style="margin-left: 0px;"><a href="../special_vbathermalsolver/special_vbathermalsolver_heatsource.htm">HeatSource</a></p>
+<p class="VBA-Text" style="margin-left: 0px;"><a href="../special_vbathermalsolver/special_vbathermalsolver_temperaturesource.htm">TemperatureSource</a></p>
+<p class="VBA-Text" style="margin-left: 0px;"><a href="../special_vbathermalsolver/special_vbathermalsolver_thermalsourceparameter.htm">ThermalSourceParameter</a></p>
+<p class="VBA-Text" style="margin-left: 0px;"><a href="../special_vbathermalsolver/special_vbathermalsolver_thermalsurfaceproperty.htm">ThermalSurfaceProperty</a></p>
+</td>
+<td style="padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text" style="margin-left: 0px;"><a href="../special_vbadriftdiffusionsolver/special_vbadriftdiffusionsolver_dopingdensity_object.htm">Doping Density</a></p>
+</td>
+</tr>
+</table>
+<p class="VBA-Text-Example" style="margin-left: 0px;">&#160;</p>
+<table style="vertical-align: top;" cellspacing="0">
+<col width="126" />
+<col width="41" />
+<col width="34" />
+<col width="143" />
+<tr style="vertical-align: top; height: 17px;">
+<td style="padding-right: 10px; padding-left: 10px;" width="126">
+<h6>Monitors:</h6>
+</td>
+<td style="padding-right: 10px; padding-left: 10px;" width="41">
+<p class="VBA-Text"><a href="../special_vbamonitors/special_vbamonitors_monitor_object.htm">Monitor</a></p>
+</td>
+<td style="padding-right: 10px; padding-left: 10px;" width="34">
+<p class="VBA-Text"><a href="../special_vbamonitors/special_vbamonitors_probe_object.htm">Probe</a></p>
+</td>
+<td style="padding-right: 10px; padding-left: 10px;" width="143">
+<p class="VBA-Text"><a href="../special_vbamonitors/special_vbamonitors_voltagemonitor_object.htm">VoltageMonitor</a></p>
+<p class="VBA-Text"><a href="../special_vbamonitors/special_vbamonitors_currentmonitor_object.htm">CurrentMonitor</a></p>
+</td>
+</tr>
+</table>
+<p class="Tip-Note-Text-Bulleted" style="text-indent: 0px; text-align: left; margin-left: 0px;">&#160;</p>
+<table style="vertical-align: top;" cellspacing="0">
+<col width="126" />
+<col width="41" />
+<col width="143" />
+<tr style="vertical-align: top; height: 17px;">
+<td style="padding-right: 10px; padding-left: 10px;" width="126">
+<h6>Particle Monitors:</h6>
+</td>
+<td style="padding-right: 10px; padding-left: 10px;" width="41">
+<p class="VBA-Text"><a href="../special_vbamonitors/special_vbamonitors_picpositionmonitor_object.htm">PICPositionMonitor</a></p>
+<p class="VBA-Text"><a href="../special_vbamonitors/special_vbamonitors_pic2dmonitor_object.htm">PIC2DMonitor</a></p>
+<p class="VBA-Text"><a href="../special_vbamonitors/special_vbamonitors_picphasespacemonitor_object.htm">PICPhaseSpaceMonitor</a></p>
+</td>
+<td style="padding-right: 10px; padding-left: 10px;" width="143">
+<p class="VBA-Text"><a href="../special_vbamonitors/special_vbamonitors_particlemonitor_object.htm">ParticleMonitor (TRK)</a></p>
+</td>
+</tr>
+</table>
+<p class="Tip-Note-Text-Bulleted" style="text-indent: 0px; text-align: left; margin-left: 0px;">&#160;</p>
+<table style="vertical-align: top;" cellspacing="0">
+<col width="126" />
+<col width="110" />
+<col width="105" />
+<col width="107" />
+<tr style="vertical-align: top; height: 17px;">
+<td style="padding-right: 10px; padding-left: 10px;" width="126">
+<h6>Time Monitors:</h6>
+</td>
+<td style="padding-right: 10px; padding-left: 10px;" width="110">
+<p><a href="../special_vbamonitors/special_vbamonitors_timemonitor_object.htm">TimeMonitor</a></p>
+<p>&#160;</p>
+</td>
+<td style="padding-right: 10px; padding-left: 10px;" width="105">
+<p><a href="../special_vbamonitors/special_vbamonitors_timemonitor0d_object.htm">TimeMonitor0D</a></p>
+<p><a href="../special_vbamonitors/special_vbamonitors_timemonitor1d_object.htm">TimeMonitor1D</a></p>
+</td>
+<td style="padding-right: 10px; padding-left: 10px;" width="107">
+<p><a href="../special_vbamonitors/special_vbamonitors_timemonitor2d_object.htm">TimeMonitor2D</a></p>
+<p><a href="../special_vbamonitors/special_vbamonitors_timemonitor3d_object.htm">TimeMonitor3D</a></p>
+</td>
+</tr>
+</table>
+<p class="VBA-Text-Example" style="margin-left: 0px;">&#160;</p>
+<table style="vertical-align: top;" cellspacing="0">
+<col width="126" />
+<col width="73" />
+<col width="97" />
+<col width="148" />
+<tr style="vertical-align: top; height: 17px;">
+<td style="padding-right: 10px; padding-left: 10px;" width="126">
+<h6>Solver:</h6>
+</td>
+<td style="padding-right: 10px; padding-left: 10px;" width="73">
+<p class="VBA-Text"><a href="../special_vbasolver/special_vbasolver_background_object.htm">Background</a></p>
+<p class="VBA-Text"><a href="../special_vbasolver/special_vbasolver_layerstacking_object.htm">LayerStacking</a></p>
+<p class="VBA-Text"><a href="../special_vbasolver/special_vbasolver_boundary_object.htm">Boundary</a></p>
+<p class="VBA-Text">&#160;</p>
+<p class="VBA-Text"><a href="../special_vbasolver/special_vbasolver_solver_object.htm">Solver (HF)</a></p>
+<p class="VBA-Text"><a href="../special_vbasolver/special_vbasolver_fdsolver_object.htm">FDSolver</a></p>
+<p class="VBA-Text"><a href="../common_vbadomaindecomposition/common_domaindecomposition_object.htm">DomainDecomposition</a></p>
+<p class="VBA-Text"><a href="../special_vbasolver/special_vbasolver_eigenmodesolver_object.htm">EigenmodeSolver</a></p>
+<p class="VBA-Text"><a href="../special_vbasolver/special_vbasolver_iesolver_object.htm">IESolver</a></p>
+<p class="VBA-Text"><a href="../special_vbasolver/special_vbasolver_asymptoticsolver_object.htm">AsymptoticSolver</a></p>
+</td>
+<td style="padding-right: 10px; padding-left: 10px;" width="97">
+<p class="VBA-Text" style="text-align: left;"><a href="../special_vbasolver/special_vba_ems_solver_object.htm">Solver (LF)</a></p>
+<p class="VBA-Text" style="text-align: left;"><a href="../special_vbastaticsolver/special_vbastaticsolver_estaticsolver_object.htm">EStaticSolver</a></p>
+<p class="VBA-Text" style="text-align: left;"><a href="../special_vbastaticsolver/special_vbastaticsolver_mstaticsolver_object.htm">MStaticSolver</a></p>
+<p class="VBA-Text" style="text-align: left;"><a href="../special_vbastaticsolver/special_vbastaticsolver_stationarycurrentsolver_object.htm">StationaryCurrentSolver</a></p>
+<p class="VBA-Text" style="text-align: left;"><a href="../special_vbastaticsolver/special_vbastaticsolver_lfsolver_object.htm">LFSolver - LF Frequency Domain Solver (MQS/Fullwave)</a></p>
+<p class="VBA-Text" style="text-align: left;"><a href="../special_vbastaticsolver/special_vbastaticsolver_eqssolver_object.htm">EQSSolver - LF Frequency Domain Solver (EQS)</a></p>
+<p class="VBA-Text" style="text-align: left;"><a href="../special_vbatransientsolvers/special_vbatransientsolvers_mqstdsolver_object.htm">MQSTDSolver- LF Time Domain Solver</a></p>
+<p class="VBA-Text" style="text-align: left;">&#160;</p>
+<p class="VBA-Text" style="text-align: left;"><a href="../special_vbadriftdiffusionsolver/special_vbadriftdiffusionsolver_driftdiffusionsolver_object.htm">Drift-Diffusion Solver</a></p>
+<p class="VBA-Text">&#160;</p>
+<p class="VBA-Text"><a href="../special_vbasolver/special_vbasolver_solver_object.htm">Wakefield Solver</a></p>
+<p class="VBA-Text"><a href="../special_vbapicsolver/special_vbasolver_picsolver_object.htm">PICSolver</a></p>
+<p class="VBA-Text"><a href="../special_vbastaticsolver/special_vbasolver_trackingsolver_object.htm">TrackingSolver</a></p>
+</td>
+<td style="padding-right: 10px; padding-left: 10px;" width="148">
+<p class="VBA-Text"><a href="../special_vbathermalsolver/special_vbathermalsolver_thermalsolver.htm">ThermalSolver</a></p>
+<p class="VBA-Text"><a href="../special_vbatransientsolvers/special_vbatransientsolvers_thermaltdsolver_object.htm">ThermalTDSolver</a></p>
+<p class="VBA-Text"><a href="../special_vbathermalsolver/special_vbathermalsolver_chtsolver.htm">CHTSolver</a></p>
+<p class="VBA-Text">&#160;</p>
+<p class="VBA-Text"><a href="../special_vbamechanics/structuralmechanicssolver_object.htm">StructuralMechanicsSolver</a></p>
+<p class="VBA-Text">&#160;</p>
+<p class="VBA-Text"><a href="../special_vbasolver/special_vbasolver_optimizer_object.htm">Optimizer</a></p>
+<p class="VBA-Text"><a href="../special_vbaparametersweep/special_vbaparametersweepo_parametersweep_object.htm">ParameterSweep</a></p>
+<p class="VBA-Text"><a href="../special_vbasolver/special_vbasolver_solver_parameter_object.htm">SolverParameter</a></p>
+<p class="VBA-Text"><a href="../special_vbasolver/special_vbasolver_adscosimulation.htm">ADSCosimulation</a></p>
+<p class="VBA-Text"><a href="../special_vbasolver/special_vbasolver_simuliacse_object.htm">Simulia Co-Simulation</a></p>
+</td>
+</tr>
+</table>
+<p class="Tip-Note-Text-Bulleted" style="text-indent: 0px; text-align: left; margin-left: 0px;">&#160;</p>
+<table style="vertical-align: top;" cellspacing="0">
+<col width="127" />
+<col width="138" />
+<col width="157" />
+<col width="109" />
+<col width="101" />
+<tr style="vertical-align: top; height: 17px;">
+<td style="padding-right: 10px; padding-left: 10px;">
+<h6><span><nobr style="white-space: nowrap;">Post Processing:</nobr></span></h6>
+</td>
+<td style="padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text"><a href="../special_vbapostproc/special_vbapostprocarfiltero.htm">Arfilter</a></p>
+<p class="VBA-Text"><a href="../common_vbapostproc/common_vbapostproc_colorramp_object.htm">ColorRamp</a></p>
+<p class="VBA-Text"><a href="../special_vbapostproc/special_vbapostproc_combineresults_object.htm">CombineResults</a></p>
+<p class="VBA-Text"><a href="../common_vbapostproc/common_vbapostproc_evaluatefieldalongcurve.htm">EvaluateFieldAlongCurve</a></p>
+<p class="VBA-Text"><a href="../common_vbapostproc/common_vbapostproc_evaluatefieldonface_object.htm">EvaluateFieldOnFace</a></p>
+<p class="VBA-Text"><a href="../special_vbapostproc/special_vbapostproc_farfieldarray_object.htm">FarfieldArray</a></p>
+<p class="VBA-Text">&#160;</p>
+</td>
+<td style="padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text"><a href="../special_vbapostproc/special_vbapostproc_farfieldcalculator_object.htm">FarfieldCalculator</a></p>
+<p class="VBA-Text"><a href="../special_vbapostproc/special_vbapostproc_farfieldploto.htm">FarfieldPlot</a></p>
+<p class="VBA-Text"><a href="../special_vbaforce/special_vba_force_object.htm">Force</a></p>
+<p class="VBA-Text"><a href="../special_vbapostproc/special_vbapostproc_networkparameterextractiono.htm">NetworkParameterExtraction</a></p>
+<p class="VBA-Text"><a href="../special_vbapostproc/special_vbapostproc_postprocess1d_object.htm">PostProcess1D</a></p>
+<p class="VBA-Text"><a href="../special_vbapostproc/special_vbapostproc_qfactor_object.htm">QFactor</a></p>
+</td>
+<td style="padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text"><a href="../special_vbapostproc/result_0d_object.htm">Result0D</a></p>
+<p class="VBA-Text"><a href="../special_vbapostproc/special_vbapostprocres1do.htm">Result1D</a></p>
+<p class="VBA-Text"><a href="../special_vbapostproc/result_1d_complex_object.htm">Result1DComplex</a></p>
+<p class="VBA-Text"><a href="../special_vbapostproc/result_2d.htm">Result2D</a></p>
+<p class="VBA-Text"><a href="../special_vbapostproc/special_vbapostproc_result_3d_object.htm">Result3D</a></p>
+<p class="VBA-Text"><a href="../special_vbapostproc/scatterresult_object.htm">ScatterResult</a></p>
+</td>
+<td style="padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text"><a href="../common_vbapostproc/common_vbapostproc_resultdatabase_object.htm"><span>ResultDatabase</span></a></p>
+<p class="VBA-Text"><a href="../special_vbapostproc/special_vbapostprocresultmap_object.htm">ResultMap</a></p>
+<p class="VBA-Text"><a href="../special_vbapostproc/special_vbapostproc_resulttreeo.htm">ResultTree</a></p>
+<p class="VBA-Text"><a href="../special_vbapostproc/special_vbapostproc_sar_object.htm">SAR</a></p>
+<p class="VBA-Text"><a href="../special_vbastaticsolver/special_vbasolver_trackingsolver_object.htm">TrackingPlot</a></p>
+</td>
+</tr>
+</table>
+<p class="Tip-Note-Text-Bulleted" style="text-indent: 0px; text-align: left; margin-left: 0px;">&#160;</p>
+<table style="vertical-align: top;" cellspacing="0">
+<col width="127" />
+<col width="38" />
+<col width="73" />
+<col width="102" />
+<tr style="vertical-align: top; height: 5px;">
+<td style="padding-right: 10px; padding-left: 10px;" width="127">
+<h6>Plot:</h6>
+</td>
+<td style="padding-right: 10px; padding-left: 10px;" width="38">
+<p class="VBA-Text"><a href="../common_vbaplot/common_vbaplot_plot_object.htm">Plot</a></p>
+<p class="VBA-Text"><a href="../common_vbaplot/common_vbaplot_plot1d_object.htm">Plot1D</a></p>
+<p class="VBA-Text"><a href="../common_vbaplot/plot2d3d.htm">Plot2D3D</a></p>
+</td>
+<td style="padding-right: 10px; padding-left: 10px;" width="73">
+<p class="VBA-Text"><a href="../common_vbaplot/common_vbaplot_scalarplot2d_object.htm">ScalarPlot2D</a></p>
+<p class="VBA-Text"><a href="../common_vbaplot/common_vbaplot_scalarplot3d_object.htm">ScalarPlot3D</a></p>
+<p class="VBA-Text"><a href="../common_vbaplot/common_vbaplot_vectorplot2d_object.htm">VectorPlot2D</a></p>
+<p class="VBA-Text"><a href="../common_vbaplot/common_vbaplot_vectorplot3d_object.htm">VectorPlot3D</a></p>
+</td>
+<td style="padding-right: 10px; padding-left: 10px;" width="102">
+<p class="VBA-Text"><a href="../special_vbapostproc/special_vbapostproc_farfieldploto.htm"><span>FarfieldPlot</span></a></p>
+<p class="VBA-Text"><a href="../common_vbaplot/colourmapplot_object.htm">ColourMapPlot</a></p>
+<p class="VBA-Text"><a href="../common_vbapostproc/common_vbapostproc_colorramp_object.htm">ColorRamp</a></p>
+</td>
+</tr>
+</table>
+<p class="Tip-Note-Text-Bulleted" style="text-indent: 0px; text-align: left; margin-left: 0px;">&#160;</p>
+<table style="vertical-align: top;" cellspacing="0">
+<col width="126" />
+<col width="82" />
+<col width="145" />
+<tr style="vertical-align: top; height: 17px;">
+<td style="padding-right: 10px; padding-left: 10px;" width="126">
+<h6>Dimensions:</h6>
+</td>
+<td style="padding-right: 10px; padding-left: 10px;" width="82">
+<p><a href="../special_vbadimension/dimension.htm">Dimension</a></p>
+</td>
+<td style="padding-right: 10px; padding-left: 10px;" width="145">
+<p class="VBA-Text">&#160;</p>
+</td>
+</tr>
+</table>
+<p class="Tip-Note-Text-Bulleted" style="text-indent: 0px; text-align: left; margin-left: 0px;">&#160;</p>
+<table style="vertical-align: top;" cellspacing="0">
+<col width="125" />
+<col width="272" />
+<tr style="vertical-align: top; height: 17px;">
+<td style="padding-right: 10px; padding-left: 10px;" width="125">
+<h6 style="white-space: nowrap;"><nobr><span style="white-space: nowrap;">3DEXPERIENCE</span></nobr></h6>
+<h6><nobr><span style="white-space: nowrap;">Interface</span>:</nobr></h6>
+</td>
+<td style="padding-right: 10px; padding-left: 10px;">
+<p><a href="../special_vba3dxcoupling/special_vba3dxcoupling_smamphysinterface.htm">SMAMPhysInterface</a></p>
+</td>
+</tr>
+</table>
+<p class="Tip-Note-Text-Bulleted" style="text-indent: 0px; text-align: left; margin-left: 0px;">&#160;</p>
+<?rh-p style="margin-bottom: 0px; text-align: Right; margin-left: 18px; 
+                 margin-right: 18px; margin-top: 18px;" ?>
+<div style="width: 100%; position: relative;" id="footer">
+<p style="border-bottom: Solid 1px #dddddd; text-align: Left; margin-left: 0px; font-family: Arial, sans-serif; line-height: Normal; margin-top: 9px; margin-right: 0px; margin-bottom: 6px; border-left-width: 1px; border-top-width: 1px; border-right-width: 1px;"><span style="text-align: Left; font-family: Arial, sans-serif; line-height: Normal;">&#160;</span></p>
+<table cellspacing="0" width="100%">
+<col style="width: 50%;" />
+<col style="width: 50%;" />
+<tr>
+<td style="vertical-align: Top;"><span style="font-family: Arial, sans-serif; line-height: Normal; font-size: 8pt;"><font size="1" style="font-size:8pt;">CST Studio Suite 2026</font></span></td>
+<td style="vertical-align: Top;">
+<p style="text-align: right;">&#160;</p>
+</td>
+</tr>
+</table>
+<p>&#160;</p>
+</div>
+<script type="text/javascript" language="javascript1.2">
+//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+        writeIntopicBar(0);
+
+
+highlightSearch();
+//-->
+//]]>
+</script>
+</body>
+</html>

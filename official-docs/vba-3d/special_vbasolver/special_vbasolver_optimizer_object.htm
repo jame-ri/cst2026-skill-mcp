@@ -1,0 +1,621 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="Adobe RoboHelp 11" />
+<title>Optimizer Object</title>
+<link rel="StyleSheet" href="../online_help_vba.css" type="text/css" />
+<style type="text/css">
+/*<![CDATA[*/
+<!--
+body { border-bottom-style:None; }
+-->
+/*]]>*/
+</style>
+
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+        origWidth = innerWidth;
+        origHeight = innerHeight;
+        onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+/*<![CDATA[*/
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+-->
+/*]]>*/
+</style>
+
+<script type="text/javascript" language="javascript1.2" src="../whmsg.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript" src="../whver.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript1.2" src="../whutils.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript1.2" src="../whproxy.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript1.2" src="../whlang.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript1.2" src="../whtopic.js" charset="utf-8">
+</script>
+</head>
+<body>
+<script type="text/javascript" language="javascript1.2">
+//<![CDATA[
+<!--
+if (window.gbWhTopic)
+{
+        var strUrl = document.location.href;
+        var bc = 0;
+        var n = strUrl.toLowerCase().indexOf("bc-");
+        if(n != -1)
+        {
+                document.location.replace(strUrl.substring(0, n));
+                bc = strUrl.substring(n+3);
+        }
+
+        if (window.addTocInfo)
+        {
+        addTocInfo("3D Simulation VBA\nVBA Objects\nSolver\nOptimizer");
+
+        }
+        if (window.writeBtnStyle)
+                writeBtnStyle();
+
+        if (window.writeIntopicBar)
+                writeIntopicBar(0);
+
+        
+        document.write("<p style=\"font-family: Tahoma; font-size: 9pt; font-weight: 400;  font-style:normal; color: rgb(0, 0, 0); text-decoration:none; text-align: left\"> ");
+AddMasterBreadcrumbs("../index.htm", "font-family: Tahoma; font-size: 9pt; font-weight: 400;  font-style:normal; color: rgb(0, 0, 0); text-decoration:none; text-align: left", "|", "Home", "../special_vbaobjects/special_vbaobjects_vbaobjects.htm");
+document.write("<a style=\"font-family: Tahoma; font-size: 9pt; font-weight: 400;  font-style:normal; color: rgb(0, 0, 0); text-decoration:none; text-align: left\" href=\"../special_vbaobjects/special_vbaobjects_vbaobjects.htm\">3D Simulation VBA<\/a> | <a style=\"font-family: Tahoma; font-size: 9pt; font-weight: 400;  font-style:normal; color: rgb(0, 0, 0); text-decoration:none; text-align: left\" href=\"../special_vbaobjects/special_vbaobjects_vbaobjects.htm\">VBA Objects<\/a> | <a style=\"font-family: Tahoma; font-size: 9pt; font-weight: 400;  font-style:normal; color: rgb(0, 0, 0); text-decoration:none; text-align: left\" href=\"special_vbasolver_background_object.htm\">Solver<\/a> | Optimizer<\/p>");
+
+}
+else
+        if (window.gbIE4)
+                document.location.reload();
+
+onLoadHandler = function()
+{
+  if (window.setRelStartPage)
+        {
+        setTimeout("setRelStartPage('../index.htm');", 1)
+
+    setTimeout("UpdateBreadCrumbsMarker();", 1);
+        }
+}
+
+if (window.addEventListener){  
+        window.addEventListener('load', onLoadHandler, false);   
+} else if (window.attachEvent){  
+        window.attachEvent('onload', onLoadHandler);  
+}
+
+function onSetStartPage()
+{
+  autoSync(1);
+  sendSyncInfo();
+  sendAveInfoOut();
+}
+//-->
+//]]>
+</script><script type="text/javascript" src="../ehlpdhtm.js" language="JavaScript1.2">
+</script>
+<table cellspacing="0" width="100%">
+<col style="width: 50%;" />
+<col style="width: 50%;" />
+<tr>
+<td style="vertical-align: middle; padding-top: 5px; padding-bottom: 5px;">
+<p style="margin-top: 0px; margin-bottom: 0px;"><img src="../3ds.png" alt="" style="border: none;" border="0" /></p>
+</td>
+<td style="vertical-align: middle;">
+<p style="text-align: right;"><a href="https://www.3ds.com/products-services/3dexperience/" target="_blank"><img src="../3dexp.png" alt="" style="border: none;" width="32" height="32" border="0" /></a></p>
+</td>
+</tr>
+</table>
+<p class="VBA-Heading-Object">Optimizer Object</p>
+<p class="VBA-Text">With the optimizer object you may start an optimization run. For the optimization you have to define a set of parameters that will be changed by the optimizer and at least one goal function that is tried to be optimized. &#160;The kind of goal function depends on the chosen solver type.</p>
+<ul>
+<li class="p-VBA-Index-Category">
+<p class="VBA-Index-Category"><a href="#General">General Methods</a></p>
+</li>
+<li class="p-VBA-Index-Category">
+<p class="VBA-Index-Category"><a href="#Parameters">Methods Concerning Parameters</a></p>
+</li>
+<li class="p-VBA-Index-Category">
+<p class="VBA-Index-Category"><a href="#Goals">Methods Concerning Goals in General</a></p>
+</li>
+<li class="p-VBA-Index-Category">
+<p class="VBA-Index-Category"><a href="#Special_Goals">Methods Concerning Special Goal Settings</a></p>
+</li>
+<li class="p-VBA-Index-Category">
+<p class="VBA-Index-Category"><a href="#Specials">Methods Concerning Special Optimizer Settings</a></p>
+</li>
+<li class="p-VBA-Index-Category">
+<p class="VBA-Index-Category"><a href="#Defaults">Default Settings</a></p>
+</li>
+<li class="p-VBA-Index-Category">
+<p class="VBA-Index-Category"><a href="#Example">Example</a></p>
+</li>
+</ul>
+<p class="VBA-Heading-Category"><a name="General" id="General"></a>General Methods</p>
+<p class="VBA-Heading-Method">Start</p>
+<p class="VBA-Text-Indent">Starts the optimizer with the previously made settings.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">StartActiveSolver(<span style="font-weight: normal;">&#160;<a href="../common_vbageneral/common_general_bool_data_type.htm" id="a410" style="font-weight: normal; font-style: normal;" name="a410">bool</a></span> <span style="font-style: italic;"><i>bFlag</i></span> )</p>
+<p class="VBA-Text-Indent">Switches the simulation type to be used for the optimization.&#160;If <span style="font-style: italic;"><i>bFlag</i></span> is True the solver module of the project at hand is used. Otherwise the optimizer will evaluate only the template based post-processing. In the latter case the parameters, that are chosen for optimization, should only have dependencies in the template based post-processing.</p>
+<p class="VBA-Heading-Category"><a name="Parameters" id="Parameters"></a>Methods Concerning Parameters</p>
+<p class="VBA-Heading-Method">InitParameterList</p>
+<p class="VBA-Text-Indent">Initialize the optimizer's parameter list from the projects parameter list.</p>
+<p class="vba-text-indent">&#160;</p>
+<p class="VBA-Heading-Method">ResetParameterList</p>
+<p class="VBA-Text-Indent">Deselect all parameters in the optimizer's parameter list. After calling this function no parameter is chosen to be optimized.</p>
+<p class="VBA-Heading-Method">&#160;</p>
+<p class="VBA-Heading-Method">SelectParameter ( <a href="../common_vbageneral/common_general_name.htm" id="a1" style="font-weight: normal; font-style: normal;" name="a1">name</a> <span style="font-style: italic;"><i>paraName</i></span>, <a href="../common_vbageneral/common_general_bool_data_type.htm" id="a4" style="font-weight: normal; font-style: normal;" name="a4">bool</a> <span style="font-style: italic;"><i>bFlag</i></span> )</p>
+<p class="VBA-Text-Indent">Select the parameter specified by its name <span style="font-style: italic;"><i>paraName</i></span>. If <span style="font-style: italic;"><i>bFlag</i></span> is True the parameter named <span style="font-style: italic;"><i>paraName</i></span> is chosen to be optimized.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">SetParameterInit ( <a href="../common_vbageneral/common_general_double.htm" id="a9" style="font-weight: normal; font-style: normal;" name="a9">double</a> <span style="font-style: italic;"><i>value</i></span> )</p>
+<p class="VBA-Text-Indent">This method initializes a previously selected parameter with the given value. The parameter is selected using the <span style="font-weight: bold;">SelectParameter</span> method.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">SetParameterMin ( <a href="../common_vbageneral/common_general_double.htm" id="a5" style="font-weight: normal; font-style: normal;" name="a5">double</a> <span style="font-style: italic;"><i>value</i></span> )</p>
+<p class="VBA-Text-Indent">Set the minimum value the currently selected parameter can reach. You must select a parameter using the <span style="font-weight: bold;">SelectParameter</span> &#160;method before you can apply this method.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">SetParameterMax ( <a href="../common_vbageneral/common_general_double.htm" id="a6" style="font-weight: normal; font-style: normal;" name="a6">double</a> <span style="font-style: italic;"><i>value</i></span> )</p>
+<p class="VBA-Text-Indent">Set the maximum value the currently selected parameter can reach. You must select a parameter using the <span style="font-weight: bold;">SelectParameter</span> &#160;method before you can apply this method.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">SetParameterAnchors ( <a href="../common_vbageneral/common_general_integer.htm" id="a8" style="font-weight: normal; font-style: normal;" name="a8">int</a> <span style="font-style: italic;"><i>number</i></span> )</p>
+<p class="VBA-Text-Indent">If you use the interpolated Quasi-Newton optimizer (see also <span style="font-weight: bold;">SetOptimizerType</span>), it is necessary to specify the number of samples per parameter used while the optimization is running. Set the number of samples for a selected parameter using this method. You must select a parameter using the <span style="font-weight: bold;">SelectParameter</span> &#160;method before you can apply this method.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">SetMinMaxAuto ( <a href="../common_vbageneral/common_general_double.htm" id="a7" style="font-weight: normal; font-style: normal;" name="a7">double</a> <span style="font-style: italic;"><i>percentage</i></span> )</p>
+<p class="VBA-Text-Indent">Sets the specified percentage for the calculation of the minimum and maximum values for all parameters.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">SetAndUpdateMinMaxAuto ( <a href="../common_vbageneral/common_general_double.htm" id="a47" style="font-weight: normal; font-style: normal;" name="a47">double</a> <span style="font-style: italic;"><i>percentage</i></span> )</p>
+<p class="VBA-Text-Indent">Resets the minimum and maximum values for all parameters. The new minimum and maximum values are calculated by subtracting respectively adding the specified percentage of the current parameter values to the current parameter values. If a parameter is 0 (or very close to 0), the minimum and maximum values are set to the negative respectively positive percentage value.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">SetAlwaysStartFromCurrent ( <a href="../common_vbageneral/common_general_bool_data_type.htm" id="a10" style="font-weight: normal; font-style: normal;" name="a10">bool</a> <span style="font-style: italic;"><i>bFlag</i></span> )</p>
+<p class="VBA-Text-Indent">Activate this method to initialize the optimizer with the current settings (<span style="font-style: italic;"><i>bFlag</i></span> = True), i.e. you can proceed optimizing your model starting each time from the previously optimized parameter results. However, if you want to restart the optimizer several times with the same initial parameter settings this method should be deactivated (<span style="font-style: italic;"><i>bFlag</i></span> = False).</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">SetUseDataOfPreviousCalculations ( <a href="../common_vbageneral/common_general_bool_data_type.htm" id="a65" style="font-weight: normal; font-style: normal;" name="a65">bool</a> <span style="font-style: italic;"><i>bFlag</i></span> )</p>
+<p class="VBA-Text-Indent"><span lang="EN-US" xml:lang="EN-US">Activate this method to trigger the import of previously calculated results for new optimizations to speed up the optimization process. If the result templates on which the optimizer goals are based were already evaluated before and the corresponding parameter combinations lie in the defined parameter space the&#160;results might be imported without the need for recalculation. For the local algorithms it's possible that the initial point is replaced if a more suitable point is found in advance. For the algorithms that use a set of initial points, multiple initial points will be replaced by points that lie close or have a better goal value than the points in the close neighborhood. This may disturb the selected</span> <span lang="EN-US" xml:lang="EN-US" style="font-weight: bold;">distribution type</span> <span lang="EN-US" xml:lang="EN-US">but the algorithm will find a good compromise between finding points with good goal value and a well distributed set of starting points in the parameter space. Keep in mind that this feature will make the reproducibility of optimizations more difficult because after an optimization there will be more potential imports available than before.</span></p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">GetNumberOfVaryingParameters <a href="../common_vbageneral/common_general_long.htm" id="a11" style="font-weight: normal; font-style: normal;" name="a11">long</a></p>
+<p class="VBA-Text-Indent">Returns the number of varying parameters.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">GetNameOfVaryingParameter ( <a href="../common_vbageneral/common_general_integer.htm" id="a12" style="font-weight: normal; font-style: normal;" name="a12">int</a> <span style="font-style: italic;"><i>index</i></span> ) <a href="../common_vbageneral/common_general_name.htm" id="a14" style="font-weight: normal; font-style: normal;" name="a14">name</a></p>
+<p class="VBA-Text-Indent">Returns the name of the parameter referenced by index between 0 and N-1, where N can be determined by <span style="font-weight: bold;">GetNumberOfVaryingParameters</span>.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">GetValueOfVaryingParameter ( <a href="../common_vbageneral/common_general_integer.htm" id="a13" style="font-weight: normal; font-style: normal;" name="a13">int</a> <span style="font-style: italic;"><i>index</i></span> ) <a href="../common_vbageneral/common_general_double.htm" id="a15" style="font-weight: normal; font-style: normal;" name="a15">double</a></p>
+<p class="VBA-Text-Indent">Returns the value of the parameter referenced by index between 0 and N-1, where N can be determined by <span style="font-weight: bold;">GetNumberOfVaryingParameters</span>.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">GetParameterMinOfVaryingParameter( <a href="../common_vbageneral/common_general_integer.htm" id="a131" style="font-weight: normal; font-style: normal;" name="a131">int</a> <span style="font-style: italic;"><i>index</i></span> ) <a href="../common_vbageneral/common_general_double.htm" id="a151" style="font-weight: normal; font-style: normal;" name="a151">double</a></p>
+<p class="VBA-Text-Indent">Returns the minimum value of the parameter referenced by index between 0 and N-1, where N can be determined by <span style="font-weight: bold;">GetNumberOfVaryingParameters</span>.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">GetParameterMaxOfVaryingParameter( <a href="../common_vbageneral/common_general_integer.htm" id="a1311" style="font-weight: normal; font-style: normal;" name="a1311">int</a> <span style="font-style: italic;"><i>index</i></span> ) <a href="../common_vbageneral/common_general_double.htm" id="a1511" style="font-weight: normal; font-style: normal;" name="a1511">double</a></p>
+<p class="VBA-Text-Indent">Returns the maximum value of the parameter referenced by index between 0 and N-1, where N can be determined by <span style="font-weight: bold;">GetNumberOfVaryingParameters</span>.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">GetParameterInitOfVaryingParameter( <a href="../common_vbageneral/common_general_integer.htm" id="a13111" style="font-weight: normal; font-style: normal;" name="a13111">int</a> <span style="font-style: italic;"><i>index</i></span> ) <a href="../common_vbageneral/common_general_double.htm" id="a15111" style="font-weight: normal; font-style: normal;" name="a15111">double</a></p>
+<p class="VBA-Text-Indent">Returns the intial value of the parameter referenced by index between 0 and N-1, where N can be determined by <span style="font-weight: bold;">GetNumberOfVaryingParameters</span>.</p>
+<p class="VBA-Heading-Category"><a name="Goals" id="Goals"></a>Methods Concerning Goals in General</p>
+<p class="VBA-Heading-Method">AddGoal ( <a href="../common_vbageneral/common_general_enum.htm" id="a17" style="font-weight: normal; font-style: normal;" name="a17">enum</a> <span style="font-style: italic;"><i>goalType</i></span> ) <a href="../common_vbageneral/common_general_long.htm" id="a16" style="font-weight: normal; font-style: normal;" name="a16">long</a></p>
+<p class="VBA-Text-Indent">Creates a new goal and adds it to the internal list of goals. Upon creation an ID is created for each goal which is returned by this function. The newly defined goal is selected automatically for use with the currently selected optimizer. The newly defined goal is selected automatically for use with the currently selected optimizer.</p>
+<p class="VBA-Text-Indent"><span style="font-style: italic;"><i>goalType</i></span> can have one of the following values:</p>
+<table style="vertical-align: top; left: 0px; top: 223px; height: 74px; margin-left: 24px;" cellspacing="0" width="714">
+<col style="width: 21.62%;" />
+<col style="width: 30.297%;" />
+<col style="width: 48.083%;" />
+<tr style="vertical-align: top;">
+<td style="border: Solid 1px #000000; width: 21.62%; padding-right: 10px; padding-left: 10px;">
+<p>"1D Primary Result"</p>
+</td>
+<td style="border-top: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 30.297%; padding-right: 10px; padding-left: 10px;">
+<p>Adds a goal for 1D result data</p>
+</td>
+<td style="border-top: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 48.083%; padding-right: 10px; padding-left: 10px;">
+<p>A goal specification can be done on some 1D result in the result tree, e.g. Time signal equal zero at t equal 3 Milliseconds.</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 21.62%; padding-right: 10px; padding-left: 10px;">
+<p>"1DC Primary Result"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 30.297%; padding-right: 10px; padding-left: 10px;">
+<p>Adds a goal for complex valued 1D result data</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 48.083%; padding-right: 10px; padding-left: 10px;">
+<p>A goal specification can be done on some complex valued 1D result in the result tree, e.g. S-Parameter "S11" &#160;smaller -20 dB from 2-3 GHz.</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 21.62%; padding-right: 10px; padding-left: 10px;">
+<p>"0D Result"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 30.297%; padding-right: 10px; padding-left: 10px;">
+<p>Adds a template based post-processing goal for 0D result data</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 48.083%; padding-right: 10px; padding-left: 10px;">
+<p>A goal specification can be done on some template based post-processing result that creates a single value, e.g. the maximum gain of a farfield monitored at a certain frequency.</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 21.62%; padding-right: 10px; padding-left: 10px;">
+<p>"1D Result"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 30.297%; padding-right: 10px; padding-left: 10px;">
+<p>Adds a template based post-processing goal for 1D result data</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 48.083%; padding-right: 10px; padding-left: 10px;">
+<p>A goal specification can be done on some template based &#160;post processing that creates1D result data.</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 21.62%; padding-right: 10px; padding-left: 10px;">
+<p>"1DC Result"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 30.297%; padding-right: 10px; padding-left: 10px;">
+<p>Adds a template based post-processing goal for complex valued 1D result data</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 48.083%; padding-right: 10px; padding-left: 10px;">
+<p>A goal specification can be done on some template based &#160;post processing that creates1DC result data.</p>
+</td>
+</tr>
+</table>
+<p class="VBA-Heading-Method">&#160;</p>
+<p class="VBA-Heading-Method">SelectGoal ( <a href="../common_vbageneral/common_general_long.htm" id="a18" style="font-weight: normal; font-style: normal;" name="a18">long</a> <span style="font-style: italic;"><i>id</i></span>, <a href="../common_vbageneral/common_general_bool_data_type.htm" id="a20" style="font-weight: normal; font-style: normal;" name="a20">bool</a> <span style="font-style: italic;"><i>bFlag</i></span> )</p>
+<p class="VBA-Text-Indent">Selects the goal specified by its ID <span style="font-style: italic;"><i>id.</i></span> The ID is returned when the goal is created using the <span style="font-weight: bold;">AddGoal</span> function. It is necessary to call this method before many other methods may be called because these other methods apply to a previously selected goal.</p>
+<p class="VBA-Text-Indent">&#160;If <span style="font-style: italic;"><i>bFlag</i></span> is True the selected goal is used for the optimization else it is ignored.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">DeleteGoal ( <a href="../common_vbageneral/common_general_long.htm" id="a19" style="font-weight: normal; font-style: normal;" name="a19">long</a> <span style="font-style: italic;"><i>id</i></span> )</p>
+<p class="VBA-Text-Indent">Deletes the specified goal. To specify the goal use the ID that is returned by the <span style="font-weight: bold;">AddGoal</span> function when the goal is created.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">DeleteAllGoals</p>
+<p class="VBA-Text-Indent">Deletes all goals that were previously created.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">SetGoalSummaryType( <a href="../common_vbageneral/common_general_enum.htm" id="a66" style="font-weight: normal; font-style: normal;" name="a66">enum</a> <span style="font-style: italic;"><i>{</i></span><span lang="EN-US" xml:lang="EN-US" style="font-style: italic;"><i>"Sum_All_Goals", "Max_All_Goals"</i></span><span style="font-style: italic;"><i>} summaryType</i></span> &#160;)</p>
+<p class="VBA-Text-Indent"><span lang="EN-US" xml:lang="EN-US">Selects a summary type of all goals</span><span lang="EN-US" xml:lang="EN-US">. The optimizer will minimize the sum or the maximum of all goals corresponding to what is selected.</span></p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">SetGoalUseFlag ( <a href="../common_vbageneral/common_general_bool_data_type.htm" id="a22" style="font-weight: normal; font-style: normal;" name="a22">bool</a> <span style="font-style: italic;"><i>bFlag</i></span> )</p>
+<p class="VBA-Text-Indent">Marks a previously defined goal to be used or not to be used for the optimization. You must select a previously defined goal using the <span style="font-weight: bold;">SelectGoal</span> method before you can apply this method.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">SetGoalOperator ( <a href="../common_vbageneral/common_general_enum.htm" id="a23" style="font-weight: normal; font-style: normal;" name="a23">enum</a> <span style="font-style: italic;"><i>operatorType</i></span> )</p>
+<p class="VBA-Text-Indent">Almost every goal needs a goal operator that indicates how to evaluate the goal function value. The selectable operator types depend on the goal type of the currently selected goal. E.g. the operators "min", "max", "&lt;", "&gt;" or "=" &#160;indicate that a goal function should be minimized, maximized, lowered under or raised upon a certain value or that the goal function should reach a certain value respectively. You must select a previously defined goal using the <span style="font-weight: bold;">SelectGoal</span> method before you can apply this method.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Text-Indent"><span style="font-style: italic;"><i>operatorType</i></span> can have one of the following values:</p>
+<table style="vertical-align: top; height: 59px; margin-left: 24px; left: 0px; top: 2407px;" cellspacing="0" width="723">
+<col style="width: 13.214%;" />
+<col style="width: 35.906%;" />
+<col style="width: 50.88%;" />
+<tr style="vertical-align: top;">
+<td style="border: Solid 1px #000000; width: 13.214%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text">&lt;</p>
+</td>
+<td style="border-top: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 35.906%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text">lower goal function value under a given target value</p>
+</td>
+<td style="border-top: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 50.88%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text">0D and 1D template based post-processing goals</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 13.214%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text">&gt;</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 35.906%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text">raise goal function value upon a given target value</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 50.88%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text">0D and 1D template based post-processing goals</p>
+<p class="vba-text">&#160;</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 13.214%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text">=</p>
+<p class="vba-text">&#160;</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 35.906%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text">0D and 1D template based post-processing goals</p>
+<p class="vba-text">&#160;</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 50.88%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text">0D and 1D template based post-processing goals</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 13.214%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text">min</p>
+<p class="vba-text">&#160;</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 35.906%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text">minimize goal function</p>
+<p class="vba-text">&#160;</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 50.88%; padding-right: 10px; padding-left: 10px;">
+<p>1D results based on the amplitude or dB entity of an S-Parameter template</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 13.214%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text">max</p>
+<p class="vba-text">&#160;</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 35.906%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text">maximize goal function</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 50.88%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text">1D results based on the amplitude or dB entity of an S-Parameter template</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 13.214%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text">move min</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 35.906%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text">minimize the abscissa distance of the minimum of the 1D result to the selected target. Keep in mind that sensitivities can't be exploited if this goal is used because the min operator is not differentiable</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 50.88%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text">1D template based post-processing goals</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 13.214%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text">move max</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 35.906%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text">minimize the distance of the maximum of the 1D result to the selected target. Keep in mind that sensitivities can't be exploited if this goal is used because the max operator is not differentiable</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 50.88%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text">1D template based post-processing goals</p>
+</td>
+</tr>
+</table>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">SetGoalTarget ( <a href="../common_vbageneral/common_general_double.htm" id="a21" style="font-weight: normal; font-style: normal;" name="a21">double</a> <span style="font-style: italic;"><i>value</i></span> )</p>
+<p class="VBA-Text-Indent">Sets a target value for a previously defined goal. You must select a previously defined goal using the <span style="font-weight: bold;">SelectGoal</span> method before you can apply this method.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">SetGoalNormNew ( <a href="../common_vbageneral/common_general_enum.htm" id="a101" style="font-weight: normal; font-style: normal;" name="a101">enum</a> <span style="font-style: italic;"><i>{</i></span><span lang="EN-US" xml:lang="EN-US" style="font-style: italic;"><i>"MaxDiff", "MaxDiffSq", "SumDiff", "SumDiffSq", "Diff", "DiffSq"</i></span><span style="font-style: italic;"><i>} summaryType</i></span> &#160;&#160;)</p>
+<p class="VBA-Text-Indent">Sets the norm for a previously defined goal. For <span lang="EN-US" xml:lang="EN-US" style="font-style: italic;"><i>"MaxDiff"</i></span> <span lang="EN-US" xml:lang="EN-US">the goal value will be the maximal violation in the goal range.</span> <span lang="EN-US" xml:lang="EN-US" style="font-style: italic;"><i>"MaxDiffSq"</i></span> <span lang="EN-US" xml:lang="EN-US">is the square of the maximal violation.</span> <span lang="EN-US" xml:lang="EN-US" style="font-style: italic;"><i>"SumDiff"</i></span> <span lang="EN-US" xml:lang="EN-US">will take the sum of all goal violations to calculate the goal.</span> <span lang="EN-US" xml:lang="EN-US" style="font-style: italic;"><i>"SumDiffSq"</i></span> <span lang="EN-US" xml:lang="EN-US">will take a sum of squares.</span> <span lang="EN-US" xml:lang="EN-US" style="font-style: italic;"><i>"Diff"</i></span> <span lang="EN-US" xml:lang="EN-US">and</span> <span lang="EN-US" xml:lang="EN-US" style="font-style: italic;"><i>"DiffSq"</i></span> <span lang="EN-US" xml:lang="EN-US">are only</span> applicable to 0D goals and are calculated as the absolute value of the difference and the square of the violation respectively.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">SetGoalWeight ( <a href="../common_vbageneral/common_general_double.htm" id="a24" style="font-weight: normal; font-style: normal;" name="a24">double</a> <span style="font-style: italic;"><i>value</i></span> )</p>
+<p class="VBA-Text-Indent">Each goal can be weighted. Thus it is possible to distinguish between goals of greater or less importance. You must select a previously defined goal using the <span style="font-weight: bold;">SelectGoal</span> method before you can apply this method.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">SetGoalScalarType( <a href="../common_vbageneral/common_general_enum.htm" id="a56" style="font-weight: normal; font-style: normal;" name="a56">enum</a> <span style="font-style: italic;"><i>{"maglin", "magdb10", "magdb20", "real", "imag", "phase"} scalarType</i></span> )</p>
+<p class="VBA-Text-Indent">Defines the real scalar type of the complex valued result on which the goal operator is evaluated.</p>
+<p class="VBA-Heading-Category"><a name="Special_Goals" id="Special_Goals"></a>Methods Concerning Special Goal Settings</p>
+<p class="VBA-Heading-Method">SetGoal1DResultName &#160;( <a href="../common_vbageneral/common_general_name.htm" id="a51" style="font-weight: normal;" name="a51">name</a> <span style="font-style: italic;"><i>resultName</i></span> )</p>
+<p class="VBA-Text-Indent">Set the tree name of a 1D result to the previously selected 1D goal.</p>
+<p class="VBA-Heading-Method">&#160;</p>
+<p class="VBA-Heading-Method">SetGoal1DCResultName &#160;( <a href="../common_vbageneral/common_general_name.htm" id="a52" style="font-weight: normal;" name="a52">name</a> <span style="font-style: italic;"><i>resultName</i></span> )</p>
+<p class="VBA-Text-Indent">Set the tree name of a complex valued 1D result to the previously selected 1DC goal.</p>
+<p class="vba-text-indent">&#160;</p>
+<p class="VBA-Heading-Method">SetGoalTemplateBased0DResultName &#160;( <a href="../common_vbageneral/common_general_name.htm" id="a3" style="font-weight: normal;" name="a3">name</a> <span style="font-style: italic;"><i>resultName</i></span> )</p>
+<p class="VBA-Text-Indent">Set the name of a template based post-processing 0D result. The name needs to be an absolute path containing the template based post-processing path and the template name to the previously selected template based post-processing 0D goal.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">SetGoalTemplateBased1DResultName &#160;( <a href="../common_vbageneral/common_general_name.htm" id="a38" style="font-weight: normal;" name="a38">name</a> <span style="font-style: italic;"><i>resultName</i></span> )</p>
+<p class="VBA-Text-Indent">Set the name of a template based post-processing 1D result. The name needs to be an absolute path containing the template based post-processing path and the template name to the previously selected template based post-processing 1D goal.</p>
+<p class="VBA-Heading-Method">&#160;</p>
+<p class="VBA-Heading-Method">SetGoalTemplateBased1DCResultName &#160;( <a href="../common_vbageneral/common_general_name.htm" id="a48" style="font-weight: normal;" name="a48">name</a> <span style="font-style: italic;"><i>resultName</i></span> )</p>
+<p class="VBA-Text-Indent">Set the name of a complex valued template based post-processing 1D result. The name needs to be an absolute path containing the template based post-processing path and the template name to the previously selected template based post-processing 1DC goal.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">SetGoalRange ( <a href="../common_vbageneral/common_general_double.htm" id="a67" name="a67">double</a> <span style="font-style: italic;"><i>Min</i></span>, <a href="../common_vbageneral/common_general_double.htm" id="a68" name="a68">double</a> Max )</p>
+<p class="VBA-Text-Indent">&#160;Set a range for a previously selected 1D or 1DC result goal. You must select a previously defined 1D result goal using the <span style="font-weight: bold;">SelectGoal</span> method before you can apply this method.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">SetGoalRangeType &#160;( <a href="../common_vbageneral/common_general_enum.htm" id="a62" style="font-weight: normal; font-style: normal;" name="a62">enum</a> <span style="font-style: italic;"><i>{"total", "range", "single"} rangeType</i></span> &#160;)</p>
+<p class="VBA-Text-Indent">For a defined template based post-processing 1D result goal, you can define the range that is being evaluated with this goal while the optimization is running. If the 1D result goal is based on an S-Parameter template then the range may cover the entire frequency range (total) of the simulation, only a part of the simulation's frequency range (range) or only one single frequency point (single). You must select a previously defined 1D result goal using the <span style="font-weight: bold;">SelectGoal</span> method before you can apply this method.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">UseSlope ( <a href="../common_vbageneral/common_general_bool_data_type.htm" id="a58" style="font-weight: normal; font-style: normal;" name="a58">bool</a> <span style="font-style: italic;"><i>bFlag</i></span> )</p>
+<p class="VBA-Text-Indent">Sets a previously defined goal to use a slope for the goal operator. The selected goal needs to be defined on a range and the operators have to be "&lt;", "&gt;" or "=". The slope will be from the <span style="font-weight: bold;">target</span> at the minimum range to the <span style="font-weight: bold;">maximum target</span> at the maximum range.</p>
+<p class="vba-text-indent">&#160;</p>
+<p class="VBA-Heading-Method">SetGoalTargetMax &#160;( <a href="../common_vbageneral/common_general_double.htm" id="a57" name="a57">double</a> <span style="font-style: italic;"><i>target2</i></span> &#160;)</p>
+<p class="VBA-Text-Indent">Sets a previously defined goal to use <span style="font-weight: bold; font-style: italic;"><i>target2</i></span> as <span style="font-weight: bold;">maximum target</span>. This setting has only an effect if the goal is set to use a slope operator, set by the method <span style="font-weight: bold;">UseSlope</span>.</p>
+<p class="VBA-Heading-Category"><a name="Specials" id="Specials"></a>Methods Concerning Special Optimizer Settings</p>
+<p class="VBA-Heading-Method">SetOptimizerType ( <a href="../common_vbageneral/common_general_enum.htm" id="a53" style="font-weight: normal; font-style: normal;" name="a53">enum</a> <span style="font-style: italic;"><i>optimizerType</i></span> )</p>
+<p class="VBA-Text-Indent">You can choose between seven kinds of optimizer types here. If the runtime of the solver is long the <span style="font-weight: bold;">Trust Region Framework</span> is recommended, especially when the starting point of the optimization is already in the neighborhood of the expected optimum. If the solver evaluation is quick the <span style="font-weight: bold;">Covariance Matrix Adaptation Evolutionary Strategy</span> may be superior because of it's global optimization algorithm properties. The Nelder Mead Simplex algorithm is also know to work well on multiple problems.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Text-Indent"><span style="font-style: italic;"><i>optimizerType</i></span> can have one of the following values:</p>
+<table style="margin-left: 24px; left: 0px; top: 3126px;" cellspacing="0" width="1232">
+<col style="width: 17.073%;" />
+<col style="width: 82.927%;" />
+<tr style="vertical-align: top;">
+<td style="border: Solid 1px #000000; width: 17.073%; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;">
+<p>"Trust_Region"</p>
+<p>&#160;</p>
+</td>
+<td style="border-top: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 82.927%; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;">
+<p class="VBA-Text">Selects a local optimizing technique embedded in a trust region framework. The algorithm starts with building a linear model on <a href="../../3D/special_process/common_overview_optimizer_interpolation_of_primary_data.htm" style="color: Transparent; text-decoration: none;">primary data</a> in a "trust" region around the starting point. For building this model <a href="../../3D/special_overview/special_overview_sensitivity_analysis_overview.htm" style="color: Transparent; text-decoration: none;">sensitivity information</a> of the primary data will be exploited if provided. Fast optimizations are done based on this local model to achieve a candidate for a new solver evaluation. The new point is accepted, if it is superior to the anchors of the model. If the model is not accurate enough the radius of the trust region will be decreased and a model on the new trust region will be created. The algorithm will be converged once the trust region radius or distance to the next predicted optimum becomes smaller than the specified <span lang="EN-US" xml:lang="EN-US" style="font-weight: bold;">domain accuracy</span><span lang="EN-US" xml:lang="EN-US">.</span></p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 17.073%; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;">
+<p>"Nelder_Mead_Simplex"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 82.927%; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;">
+<p><span lang="EN-US" xml:lang="EN-US">Selects the local Simplex optimization algorithm by Nelder and Mead. This method is a local optimization technique. If N is the number of parameters, it starts with N+1 points distributed in the parameter space.</span></p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 17.073%; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;">
+<p class="VBA-Text">"CMAES"</p>
+<p>&#160;</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 82.927%; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;">
+<p>Selects the global <span style="font-weight: bold;">Covariance Matrix Adaptation Evolutionary Strategy.</span> The method follows a global optimization approach in general. An internal step size parameter introduces a convergence property to the method.</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 17.073%; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;">
+<p class="VBA-Text">"Genetic_Algorithm"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 82.927%; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;">
+<p class="VBA-Text">Selects the global genetic optimizer.</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 17.073%; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;">
+<p class="VBA-Text">"Particle_Swarm"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 82.927%; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;">
+<p class="VBA-Text">Selects the global particle swarm optimizer.</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 17.073%; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;">
+<p class="VBA-Text">"Interpolated_NR_VariableMetric"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 82.927%; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;">
+<p>Selects the local optimizer supporting interpolation of primary data. This optimizer is fast in comparison to the <b>Classic Powell</b> optimizer but may be less accurate. In addition, you can set the number N of optimizer passes (1 to 10) for this optimizer type. A number N greater than 1 forces the optimizer to start over (N-1) times. Within each optimizer pass the minimum and maximum settings of the parameters are changed approaching the optimal parameter setting. Increase the number of passes to values greater than 1 (e.g., 2 or 3) &#160;to obtain more accurate results. It is recommended for the most common EM optimizations not to increase the number higher than 3 but to increase the number of samples in the <span lang="EN-US" xml:lang="EN-US" style="font-weight: bold;">parameter list</span><span lang="EN-US" xml:lang="EN-US">, if the results are not suitable.</span></p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 17.073%; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;">
+<p class="VBA-Text">"Classic Powell"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 82.927%; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;">
+<p class="VBA-Text">Selects the local optimizer without interpolation of primary data. In addition, it is necessary to set the accuracy, which effects the accuracy of the optimal parameter settings and the time of termination of the optimization process. For optimizations with more than one parameter the <b>Trust Region Framework<span lang="EN-US" xml:lang="EN-US" style="font-weight: normal;">, the</span> <span lang="EN-US" xml:lang="EN-US">Interpolated Quasi Newton</span></b> or the <b>Nelder Mead Simplex Algorithm</b> should be preferred to this technique.</p>
+</td>
+</tr>
+</table>
+<p class="VBA-Heading-Method">&#160;</p>
+<p class="VBA-Heading-Method">SetUseInterpolation ( <a href="../common_vbageneral/common_general_enum.htm" id="a32" style="font-weight: normal; font-style: normal;" name="a32">enum</a> <span style="font-style: italic;"><i>{"Second_Order"} interpolationType,</i></span> <a href="../common_vbageneral/common_general_enum.htm" id="a33" style="font-weight: normal; font-style: normal;" name="a33">enum</a> <span style="font-style: italic;"><i>{"Genetic_Algorithm", "Particle_Swarm" } optimizerType</i></span> )</p>
+<p class="Topic-Text-Indent"><span lang="EN-US" xml:lang="EN-US">This option is only available for the</span> <span style="font-weight: bold;">Genetic Algorithm</span> <span lang="EN-US" xml:lang="EN-US">or the</span> <span lang="EN-US" xml:lang="EN-US" style="font-weight: bold;">Particle Swarm Optimization</span><span lang="EN-US" xml:lang="EN-US">. Check this box to activate the interpolation, and disables the sample values in the parameter list.</span></p>
+<p class="Topic-Text-Indent"><span lang="EN-US" xml:lang="EN-US">F</span>or both global optimizers it is possible to switch on the Interpolation of Primary Data. If the interpolation is applied the only true solver runs that will be done are the ones for the evaluation of the specified anchors and a final solver run for the estimated &#160;best parameters. All other goal function evaluations will be interpolated.</p>
+<p class="Topic-Text-Indent"><span lang="EN-US" xml:lang="EN-US"><span><span lang="EN-US" xml:lang="EN-US">Please note that global optimization algorithms have the probability of exploring most of the parameter space. Thus it is most likely that all or nearly all anchor points will actually be evaluated. Keep in mind that the number of solver runs needed for interpolation is dependant of the number of parameters whereas the number of solver runs needed for the two global optimization algorithms are independent of the number of parameters. Because of this, the usage of the interpolation feature will only pay off if the parameter space is not too high dimensional or a large number of iterations is planned.</span></span></span></p>
+<p class="Topic-Text-Indent"><span lang="EN-US" xml:lang="EN-US">Since the possible goal functions that can be defined have always non negative values the optimization will automatically be stopped if one of the anchor evaluations yields a goal value equal zero.</span></p>
+<p class="Topic-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">SetGenerationSize ( <a href="../common_vbageneral/common_general_double.htm" id="a27" style="font-weight: normal; font-style: normal;" name="a27">double</a> <span style="font-style: italic;"><i>size,</i></span> <a href="../common_vbageneral/common_general_enum.htm" id="a42" style="font-weight: normal; font-style: normal;" name="a42">enum</a> <span style="font-style: italic;"><i>{"Genetic_Algorithm", "Particle_Swarm" } optimizerType</i></span> )</p>
+<p class="VBA-Text-Indent">It's possible to specify the population size for the <span style="font-weight: bold;">Genetic Algorithm</span> <span lang="EN-US" xml:lang="EN-US">or the</span> <span lang="EN-US" xml:lang="EN-US" style="font-weight: bold;">Particle Swarm Optimization</span>. Keep in mind that choosing a small population size increases the risk that the genes can be depleted. If a large population size is chosen there will be more solver evaluations necessary for the calculation of each generation.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">SetMaxIt ( <a href="../common_vbageneral/common_general_double.htm" id="a28" style="font-weight: normal; font-style: normal;" name="a28">double</a> <span style="font-style: italic;"><i>max_it,</i></span> <a href="../common_vbageneral/common_general_enum.htm" id="a29" style="font-weight: normal; font-style: normal;" name="a29">enum</a> <span style="font-style: italic;"><i>{"Genetic_Algorithm", "Particle_Swarm", "CMAES" } optimizerType</i></span> )</p>
+<p class="VBA-Text-Indent"><span lang="EN-US" xml:lang="EN-US">Set the maximal number of iterations. The <b>Genetic Algorithm</b></span> <span lang="EN-US" xml:lang="EN-US">or the</span> <span lang="EN-US" xml:lang="EN-US" style="font-weight: bold;">Particle Swarm Optimization</span> <span lang="EN-US" xml:lang="EN-US">will stop after the maximal number of iterations have been done. Like this, it is possible to estimate the maximal optimization time a priori. If "n" is the population size and "m" is the maximal number of iterations "(m+1)*n/2 + 1" solver runs will be done. However this estimation is not valid if the Interpolation feature</span> <span lang="EN-US" xml:lang="EN-US" style="font-style: italic;"><i>SetUseInterpolation</i></span> <span lang="EN-US" xml:lang="EN-US">is switched on, the optimization is aborted or the desired accuracy is reached</span></p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">SetInitialDistribution ( <span><a href="../common_vbageneral/common_general_enum.htm" id="a34" style="font-weight: normal; font-style: normal;" name="a34">enum</a></span> <span style="font-style: italic;"><i>{"Uniform_Random_Numbers", "Latin_Hyper_Cube", "Noisy_Latin_Hyper_Cube", "Cube_Distribution"} distributionType, <a href="../common_vbageneral/common_general_enum.htm" id="a41" style="font-weight: normal; font-style: normal;" name="a41">enum</a> {"Genetic_Algorithm", "Particle_Swarm", "Nelder_Mead_Simplex"} optimizerType</i></span> )</p>
+<p class="Topic-Text-Indent"><span lang="EN-US" xml:lang="EN-US">For the featured global optimization techniques and the &#160;<b>Nelder Mead Simplex Algorithm</b> a set of initial points in the parameter space are necessary. These points will automatically be generated by a uniform random distribution generator or by the <b>Latin Hypercube</b> approach.</span></p>
+<p class="Topic-Text-Indent"><span><span lang="EN-US" xml:lang="EN-US"><span lang="EN-US" xml:lang="EN-US"><span><b style="font-weight: bold;"><span lang="EN-US" xml:lang="EN-US"><b style="font-weight: bold;">Uniform Random Numbers</b></span><span lang="EN-US" xml:lang="EN-US">:</span></b> &#160;For each starting point a</span> <span lang="EN-US" xml:lang="EN-US" style="font-style: italic;"><i>pseudo</i></span> <span lang="EN-US" xml:lang="EN-US">random number generator will choose uniformly distributed points in the parameter space.</span></span></span></span></p>
+<p class="Topic-Text-Indent"><span lang="EN-US" xml:lang="EN-US"><b style="font-weight: bold;">Latin Hypercube<span lang="EN-US" xml:lang="EN-US">:</span></b> <span lang="EN-US" xml:lang="EN-US">&#160;Randomly chosen points sometimes have the disadvantage that they do not have optimal space filling properties in the parameter space. The <b><span lang="EN-US" xml:lang="EN-US" style="font-weight: bold;">Latin Hypercube sampling has the special property that a projection onto each parameter interval yields an equidistant sampling.</span></b></span></span></p>
+<p class="Topic-Text-Indent"><span lang="EN-US" xml:lang="EN-US"><span lang="EN-US" xml:lang="EN-US"><span lang="EN-US" xml:lang="EN-US"><b style="font-weight: bold;">N</b></span><span style="font-weight: bold;"><b>oisy Latin Hypercube Distribution:</b></span> <span lang="EN-US" xml:lang="EN-US">&#160;The initial points are distributed similar to the</span> <span style="font-weight: bold;"><b>Latin Hypercube Distribution</b></span> <span lang="EN-US" xml:lang="EN-US">but a perturbation is added on each point. This distribution type has similar space filling properties as the</span> <span style="font-weight: bold;"><b>Latin Hypercube Distribution</b></span> <span lang="EN-US" xml:lang="EN-US">but the generated point set will be less regular. This distribution type is only available for the</span> <span style="font-weight: bold;"><b>Nelder Mead Simplex Algorithm</b></span><span lang="EN-US" xml:lang="EN-US">.</span></span></span></p>
+<p class="Topic-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method"><span lang="EN-US" xml:lang="EN-US"><span lang="EN-US" xml:lang="EN-US">SetGoalFunctionLevel ( <a href="../common_vbageneral/common_general_double.htm" id="a36" style="font-weight: normal; font-style: normal;" name="a36">double</a> <span style="font-style: italic;"><i>level,</i></span> &#160;<a href="../common_vbageneral/common_general_enum.htm" id="a43" style="font-weight: normal; font-style: normal;" name="a43">enum</a> <span style="font-style: italic;"><i>{"Genetic_Algorithm", "Particle_Swarm", "Nelder_Mead_Simplex" } optimizerType</i></span> )</span></span></p>
+<p class="VBA-Text-Indent">A desired goal function level can be specified for the <b>Genetic Algorithm</b> <span lang="EN-US" xml:lang="EN-US">or the Particle Swarm Optimization. The algorithm will be stopped if the goal function value is less than the specified level. However, if the optimization is done distributed this criterion will only be checked after the complete population was calculated. If the desired level is set to zero then the <b>Maximal Number of Iterations</b> is the only breaking condition. This setting is very convenient if the defined goals can't be satisfied per definition or are very unlikely to be reached exactly.</span></p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method"><span lang="EN-US" xml:lang="EN-US"><span lang="EN-US" xml:lang="EN-US">SetMutationRate ( <a href="../common_vbageneral/common_general_double.htm" id="a37" style="font-weight: normal; font-style: normal;" name="a37">double</a> <span style="font-style: italic;"><i>rate,</i></span> <span><a href="../common_vbageneral/common_general_enum.htm" id="a39" style="font-weight: normal; font-style: normal;" name="a39">enum</a></span> <span style="font-style: italic;"><i>{"Genetic_Algorithm", "Particle_Swarm" } optimizerType</i></span> <span style="font-weight: normal;">)</span></span></span></p>
+<p class="VBA-Text-Indent"><span lang="EN-US" xml:lang="EN-US"><span lang="EN-US" xml:lang="EN-US"><span lang="EN-US" xml:lang="EN-US">If the genes of &#160;two parents are similar enough the mutation rate specifies the probability that a mutation occurs. This option is only available for the <b>Genetic Algorithm</b></span> <b><span lang="EN-US" xml:lang="EN-US" style="font-weight: normal;">and</span></b> <span lang="EN-US" xml:lang="EN-US">the</span> <span lang="EN-US" xml:lang="EN-US" style="font-weight: bold;">Particle Swarm Optimization</span><span lang="EN-US" xml:lang="EN-US">.</span></span></span></p>
+<p class="Topic-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method"><span lang="EN-US" xml:lang="EN-US"><span lang="EN-US" xml:lang="EN-US">SetMinSimplexSize ( <span><a href="../common_vbageneral/common_general_double.htm" id="a40" style="font-weight: normal; font-style: normal;" name="a40">double</a></span> <span style="font-style: italic;"><i>size</i></span> )</span></span></p>
+<p class="VBA-Text-Indent"><span lang="EN-US" xml:lang="EN-US"><span lang="EN-US" xml:lang="EN-US">Sets the minimal simplex size for the <span style="font-weight: bold;"><b>Nelder Mead Simplex Algorithm</b></span>. For optimization the parameter space is mapped onto the unit cube. The simplex is a geometrical figure that moves in this multidimensional space. The algorithm will stop as soon as the largest edge of the Simplex will be smaller than the specified size. If the optimization is defined over &#160;just one parameter in the interval [0;1] then this setting corresponds with the desired accuracy in the parameter space.</span></span></p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method"><span lang="EN-US" xml:lang="EN-US">SetUseMaxEval ( <a href="../common_vbageneral/common_general_bool_data_type.htm" id="a31" style="font-weight: normal; font-style: normal;" name="a31">bool</a></span> <span style="font-style: italic;"><i>bFlag, <a href="../common_vbageneral/common_general_enum.htm" id="a46" style="font-weight: normal; font-style: normal;" name="a46">enum</a> {"Nelder_Mead_Simplex"</i></span><span lang="EN-US" xml:lang="EN-US">, "CMAES", "Trust_Region"</span> <span lang="EN-US" xml:lang="EN-US" style="font-style: italic;"><i>} optimizerType &#160;</i></span><span lang="EN-US" xml:lang="EN-US">)</span></p>
+<p class="VBA-Text-Indent"><span lang="EN-US" xml:lang="EN-US">Set this option to enable the use of the maximal number of evaluations. This option is only available for the</span> <b><span style="font-weight: bold;">Nelder Mead Simplex Algorithm,</span> <span lang="EN-US" xml:lang="EN-US">CMAES</span></b> <span lang="EN-US" xml:lang="EN-US">and</span> <b><span lang="EN-US" xml:lang="EN-US" style="font-weight: bold;">Trust Region Framework</span></b><span lang="EN-US" xml:lang="EN-US">.</span></p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method"><span lang="EN-US" xml:lang="EN-US">SetMaxEval (</span> <span style="font-weight: normal;"><a href="../common_vbageneral/common_general_integer.htm" id="a81" style="font-weight: normal; font-style: normal;" name="a81">int</a></span> <span style="font-style: italic;"><i>number</i></span><span lang="EN-US" xml:lang="EN-US">, <a href="../common_vbageneral/common_general_enum.htm" id="a44" style="font-weight: normal; font-style: normal;" name="a44">enum</a> {"Nelder_Mead_Simplex", "CMAES", "Trust_Region" } optimizerType &#160;)</span></p>
+<p class="VBA-Text-Indent"><span lang="EN-US" xml:lang="EN-US">Sets the maximal number of evaluations for the <b>Nelder Mead Simplex Algorithm, CMAES</b>&#160;or</span> <b><span lang="EN-US" xml:lang="EN-US" style="font-weight: bold;">Trust Region Framework</span></b><span lang="EN-US" xml:lang="EN-US">.</span> <b><span lang="EN-US" xml:lang="EN-US" style="font-weight: normal;">Depending on the optimization problem definition it is possible that the specified goal function level can't be reached. In this case it is convenient to define a maximal number of function evaluations to restrict optimization time a priory. This number has to be greater than one.</span></b></p>
+<p class="VBA-Text-Indent" style="font-weight: bold;">&#160;</p>
+<p class="VBA-Heading-Method"><span lang="EN-US" xml:lang="EN-US">SetUsePreDefPointInInitDistribution ( <a href="../common_vbageneral/common_general_bool_data_type.htm" id="a35" style="font-weight: normal; font-style: normal;" name="a35">bool</a></span> <span style="font-style: italic;"><i>bFlag, <a href="../common_vbageneral/common_general_enum.htm" id="a45" style="font-weight: normal; font-style: normal;" name="a45">enum</a> {"Nelder_Mead_Simplex"</i></span><span lang="EN-US" xml:lang="EN-US">, "CMAES"</span> <span lang="EN-US" xml:lang="EN-US" style="font-style: italic;"><i>} optimizerType</i></span> <span lang="EN-US" xml:lang="EN-US">)</span></p>
+<p class="VBA-Text-Indent"><span lang="EN-US" xml:lang="EN-US">This option is only available for the</span> <b><span lang="EN-US" xml:lang="EN-US" style="font-weight: bold;">Nelder Mead Simplex Algorithm</span></b> <b><span lang="EN-US" xml:lang="EN-US" style="font-weight: normal;">and</span> <span lang="EN-US" xml:lang="EN-US">CMAES</span></b><span lang="EN-US" xml:lang="EN-US">. If this feature is switched on then the point that is defined as anchor point in the parameter list will be included in the initial data set of the algorithm. If the current parameter settings are already quite good then it makes sense to include this point in the starting set. After the set of initial points is generated the closest point from the automatically generated set will be substituted with the predefined point. However if the current point was created by a previous optimization run of a local optimizer and a second optimization is planned on a reduced parameter space this setting should be turned off because it increases the risk that the second optimization will converge to the same local optimum as before. In this case the second optimization won't yield any improvement.</span></p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method"><span lang="EN-US" xml:lang="EN-US"><span lang="EN-US" xml:lang="EN-US">SetNumRefinements ( <a href="../common_vbageneral/common_general_long.htm" id="a55" style="font-weight: normal; font-style: normal;" name="a55">long</a> <span style="font-style: italic;"><i>number</i></span> )</span></span></p>
+<p class="VBA-Text-Indent"><span lang="EN-US" xml:lang="EN-US"><span lang="EN-US" xml:lang="EN-US">Sets the number of <span style="font-weight: bold;">Quasi-Newton</span> optimizer passes. With each Quasi-Newton optimizer pass past the first pass, the minimum and maximum parameter values are refined around the optimal parameter values found in the previous pass.</span></span></p>
+<p class="Topic-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method"><span lang="EN-US" xml:lang="EN-US"><span lang="EN-US" xml:lang="EN-US">SetDomainAccuracy ( <a href="../common_vbageneral/common_general_double.htm" id="a25" style="font-weight: normal; font-style: normal;" name="a25">double</a> <span style="font-style: italic;"><i>accuracy,</i></span> <a href="../common_vbageneral/common_general_enum.htm" id="a26" style="font-weight: normal; font-style: normal;" name="a26">enum</a> <span style="font-style: italic;"><i>{"Trust_Region" } optimizerType</i></span> )</span></span></p>
+<p class="VBA-Text-Indent"><span lang="EN-US" xml:lang="EN-US"><span lang="EN-US" xml:lang="EN-US"><span lang="EN-US" xml:lang="EN-US">Set the accuracy of the optimizer in the parameter space if all parameter ranges are mapped to the interval [0,1]. This option is only available for the</span> <b><span lang="EN-US" xml:lang="EN-US" style="font-weight: bold;">Trust Region Framework</span></b><span lang="EN-US" xml:lang="EN-US">.</span></span></span></p>
+<p class="VBA-Heading-Method">&#160;</p>
+<p class="VBA-Heading-Method"><span lang="EN-US" xml:lang="EN-US">SetSigma ( <a href="../common_vbageneral/common_general_double.htm" id="a49" style="font-weight: normal; font-style: normal;" name="a49">double</a> value, <a href="../common_vbageneral/common_general_enum.htm" id="a50" style="font-weight: normal; font-style: normal;" name="a50">enum</a> {"CMAES" } optimizerType &#160;</span><span lang="EN-US" xml:lang="EN-US">&#160;)</span></p>
+<p class="VBA-Text-Indent"><span lang="EN-US" xml:lang="EN-US">This option is only available for</span> <b><span lang="EN-US" xml:lang="EN-US">CMAES.</span> <span lang="EN-US" xml:lang="EN-US" style="font-weight: normal;">It sets the sigma of the normal distribution used in the algorithm to the defined</span> <span lang="EN-US" xml:lang="EN-US">value</span><span lang="EN-US" xml:lang="EN-US" style="font-weight: normal;">, which must be greater zero and less or equal one.</span></b></p>
+<p class="vba-text-indent">&#160;</p>
+<p class="VBA-Heading-Method"><span lang="EN-US" xml:lang="EN-US"><span lang="EN-US" xml:lang="EN-US">SetAccuracy ( <a href="../common_vbageneral/common_general_double.htm" id="a54" style="font-weight: normal; font-style: normal;" name="a54">double</a> <span style="font-style: italic;"><i>accuracy</i></span> )</span></span></p>
+<p class="VBA-Text-Indent"><span lang="EN-US" xml:lang="EN-US"><span lang="EN-US" xml:lang="EN-US">This value defines when the <span style="font-weight: bold;">Classic Powell</span> optimizer stops. It is a norm of the difference between the actual and the previous set of parameters.</span></span></p>
+<p class="VBA-Text-Indent"><span lang="EN-US" xml:lang="EN-US">So general speaking the Powell optimizer stops, if &#160;the change of all the parameters used is smaller than the value given here.</span></p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method"><span lang="EN-US" xml:lang="EN-US">SetDataStorageStrategy ( &#160;<a href="../common_vbageneral/common_general_enum.htm" id="a59" style="font-weight: normal; font-style: normal;" name="a59">enum</a> {"All", "Automatic", "None"} storageType )</span></p>
+<p class="VBA-Text-Indent"><span lang="EN-US" xml:lang="EN-US">Sets the storage strategy for the 1D results produced during the optimization. For optimizations which generate much results on each evaluation or are expected to run for many evaluations it's possible to save time and disc space by avoiding the storage of the signals via the option "None". This setting doesn't apply to the template based post-processing results.</span></p>
+<p class="VBA-Heading-Method">&#160;</p>
+<p class="VBA-Heading-Method"><span lang="EN-US" xml:lang="EN-US">SetOptionMoveMesh ( <a href="../common_vbageneral/common_general_bool_data_type.htm" id="a351" style="font-weight: normal; font-style: normal;" name="a351">bool</a></span> <span style="font-style: italic;"><i>bFlag</i></span> <span lang="EN-US" xml:lang="EN-US">)</span></p>
+<p class="VBA-Text-Indent"><span lang="EN-US" xml:lang="EN-US">Set this option to make the optimizer attempt to move (or morph) the mesh on parameter changes instead of re-meshing the project for each parameter combination. If set, this option will overrule the tetrahedral mesh-setting for the course of the optimization.</span></p>
+<p class="VBA-Heading-Category"><span lang="EN-US" xml:lang="EN-US"><a name="Defaults" id="Defaults"></a>Default Settings</span></p>
+<p class="VBA-Text-Example"><span lang="EN-US" xml:lang="EN-US"><span lang="EN-US" xml:lang="EN-US">SetMinMaxAuto (10.0)</span></span></p>
+<p class="VBA-Text-Example"><span lang="EN-US" xml:lang="EN-US"><span lang="EN-US" xml:lang="EN-US">SetParameterAnchors (5)</span></span></p>
+<p class="VBA-Text-Example"><span lang="EN-US" xml:lang="EN-US"><span lang="EN-US" xml:lang="EN-US">SetAlwaysStartFromCurrent (True)</span></span></p>
+<p class="VBA-Text-Example"><span lang="EN-US" xml:lang="EN-US"><span lang="EN-US" xml:lang="EN-US">SetGoalUseFlag (True)</span></span></p>
+<p class="VBA-Text-Example"><span lang="EN-US" xml:lang="EN-US"><span lang="EN-US" xml:lang="EN-US">SetGoalOperator ("&lt;")</span></span></p>
+<p class="VBA-Text-Example"><span lang="EN-US" xml:lang="EN-US"><span lang="EN-US" xml:lang="EN-US">SetGoalTarget (0.0)</span></span></p>
+<p class="VBA-Text-Example"><span lang="EN-US" xml:lang="EN-US"><span lang="EN-US" xml:lang="EN-US">SetGoalWeight (1.0)</span></span></p>
+<p class="VBA-Text-Example"><span lang="EN-US" xml:lang="EN-US"><span lang="EN-US" xml:lang="EN-US">SetOptimizerType ("Nelder_Mead_Simplex")</span></span></p>
+<p class="VBA-Text-Example"><span lang="EN-US" xml:lang="EN-US"><span lang="EN-US" xml:lang="EN-US">SetAccuracy (0.01 )</span></span></p>
+<p class="VBA-Text-Example"><span lang="EN-US" xml:lang="EN-US"><span lang="EN-US" xml:lang="EN-US">SetNumRefinements (1)</span></span></p>
+<p class="VBA-Heading-Category"><span lang="EN-US" xml:lang="EN-US"><span lang="EN-US" xml:lang="EN-US"><a name="Example" id="Example"></a>Example</span></span></p>
+<p class="VBA-Text-Example"><span lang="EN-US" xml:lang="EN-US"><span lang="EN-US" xml:lang="EN-US">Dim goalID As Long</span></span></p>
+<p class="VBA-Text-Example">&#160;</p>
+<p class="VBA-Text-Example"><span lang="EN-US" xml:lang="EN-US"><span lang="EN-US" xml:lang="EN-US">With Optimizer</span></span></p>
+<p class="VBA-Text-Example"><span lang="EN-US" xml:lang="EN-US"><span lang="EN-US" xml:lang="EN-US">&#160;&#160;.SetOptimizerType ("Interpolated_NR_VariableMetric")</span></span></p>
+<p class="VBA-Text-Example"><span lang="EN-US" xml:lang="EN-US">&#160;&#160;.</span>StartActiveSolver ( True )</p>
+<p class="VBA-Text-Example"><span lang="EN-US" xml:lang="EN-US"><span lang="EN-US" xml:lang="EN-US">&#160;&#160;.SetNumRefinements (1)</span></span></p>
+<p class="VBA-Text-Example"><span lang="EN-US" xml:lang="EN-US"><span lang="EN-US" xml:lang="EN-US">&#160;&#160;.SetMinMaxAuto (10)</span></span></p>
+<p class="VBA-Text-Example"><span lang="EN-US" xml:lang="EN-US"><span lang="EN-US" xml:lang="EN-US">&#160;&#160;.SetAlwaysStartFromCurrent (False)</span></span></p>
+<p class="VBA-Text-Example"><span lang="EN-US" xml:lang="EN-US"><span lang="EN-US" xml:lang="EN-US">&#160;&#160;.SelectParameter ("r", True)</span></span></p>
+<p class="VBA-Text-Example"><span lang="EN-US" xml:lang="EN-US"><span lang="EN-US" xml:lang="EN-US">&#160;&#160;.SetParameterInit (17)</span></span></p>
+<p class="VBA-Text-Example"><span lang="EN-US" xml:lang="EN-US"><span lang="EN-US" xml:lang="EN-US">&#160;&#160;.SetParameterMin (15.3)</span></span></p>
+<p class="VBA-Text-Example"><span lang="EN-US" xml:lang="EN-US"><span lang="EN-US" xml:lang="EN-US">&#160;&#160;.SetParameterMax (18.7)</span></span></p>
+<p class="VBA-Text-Example"><span lang="EN-US" xml:lang="EN-US"><span lang="EN-US" xml:lang="EN-US">&#160;&#160;.SetParameterAnchors (5)</span></span></p>
+<p class="VBA-Text-Example"><span lang="EN-US" xml:lang="EN-US"><span lang="EN-US" xml:lang="EN-US">&#160;&#160;.SelectParameter ("ts", False)</span></span></p>
+<p class="VBA-Text-Example"><span lang="EN-US" xml:lang="EN-US"><span lang="EN-US" xml:lang="EN-US">&#160;&#160;.SetParameterInit (0.05)</span></span></p>
+<p class="VBA-Text-Example"><span lang="EN-US" xml:lang="EN-US"><span lang="EN-US" xml:lang="EN-US">&#160;&#160;.SetParameterMin (0.045)</span></span></p>
+<p class="VBA-Text-Example"><span lang="EN-US" xml:lang="EN-US"><span lang="EN-US" xml:lang="EN-US">&#160;&#160;.SetParameterMax (0.055)</span></span></p>
+<p class="VBA-Text-Example"><span lang="EN-US" xml:lang="EN-US"><span lang="EN-US" xml:lang="EN-US">&#160;&#160;.SetParameterAnchors (5)</span></span></p>
+<p class="VBA-Text-Example"><span lang="EN-US" xml:lang="EN-US"><span lang="EN-US" xml:lang="EN-US">&#160;&#160;.SelectParameter ("ws", False)</span></span></p>
+<p class="VBA-Text-Example"><span lang="EN-US" xml:lang="EN-US"><span lang="EN-US" xml:lang="EN-US">&#160;&#160;.SetParameterInit (4)</span></span></p>
+<p class="VBA-Text-Example"><span lang="EN-US" xml:lang="EN-US"><span lang="EN-US" xml:lang="EN-US">&#160;&#160;.SetParameterMin (3.6)</span></span></p>
+<p class="VBA-Text-Example"><span lang="EN-US" xml:lang="EN-US"><span lang="EN-US" xml:lang="EN-US">&#160;&#160;.SetParameterMax (4.4)</span></span></p>
+<p class="VBA-Text-Example"><span lang="EN-US" xml:lang="EN-US"><span lang="EN-US" xml:lang="EN-US">&#160;&#160;.SetParameterAnchors (5)</span></span></p>
+<p class="VBA-Text-Example"><span lang="EN-US" xml:lang="EN-US"><span lang="EN-US" xml:lang="EN-US">&#160;&#160;.SetGoalSummaryType ("Sum_All_Goals")</span></span></p>
+<p class="VBA-Text-Example"><span lang="EN-US" xml:lang="EN-US"><span lang="EN-US" xml:lang="EN-US">&#160;&#160;.SetUseDataOfPreviousCalculations (False)</span></span></p>
+<p class="VBA-Text-Example"><span lang="EN-US" xml:lang="EN-US"><span lang="EN-US" xml:lang="EN-US">&#160;&#160;goalID = .AddGoal ("0D Result")</span></span></p>
+<p class="VBA-Text-Example"><span lang="EN-US" xml:lang="EN-US"><span lang="EN-US" xml:lang="EN-US">&#160;&#160;.SelectGoal (goalID, True)</span></span></p>
+<p class="VBA-Text-Example"><span lang="EN-US" xml:lang="EN-US"><span lang="EN-US" xml:lang="EN-US">&#160;&#160;.SetGoalOperator ("&lt;")</span></span></p>
+<p class="VBA-Text-Example"><span lang="EN-US" xml:lang="EN-US"><span lang="EN-US" xml:lang="EN-US">&#160;&#160;.SetGoalTarget (0.0)</span></span></p>
+<p class="VBA-Text-Example"><span lang="EN-US" xml:lang="EN-US"><span lang="EN-US" xml:lang="EN-US">&#160;&#160;.SetGoalWeight (1.0)</span></span></p>
+<p class="VBA-Text-Example"><span lang="EN-US" xml:lang="EN-US"><span lang="EN-US" xml:lang="EN-US">&#160;&#160;.SetGoalTemplateBased0DResultName ("S11_fctr")</span></span></p>
+<p class="VBA-Text-Example"><span lang="EN-US" xml:lang="EN-US"><span lang="EN-US" xml:lang="EN-US">&#160;&#160;.Start</span></span></p>
+<p class="VBA-Text-Example"><span lang="EN-US" xml:lang="EN-US">End With</span></p>
+<p class="VBA-Text-Example">&#160;</p>
+<?rh-p style="margin-bottom: 0px; text-align: Right; margin-left: 18px; 
+                 margin-right: 18px; margin-top: 18px;" ?>
+<div style="width: 100%; position: relative;" id="footer">
+<p style="border-bottom: Solid 1px #dddddd; text-align: Left; margin-left: 0px; font-family: Arial, sans-serif; line-height: Normal; margin-top: 9px; margin-right: 0px; margin-bottom: 6px; border-left-width: 1px; border-top-width: 1px; border-right-width: 1px;"><span style="text-align: Left; font-family: Arial, sans-serif; line-height: Normal;">&#160;</span></p>
+<table cellspacing="0" width="100%">
+<col style="width: 50%;" />
+<col style="width: 50%;" />
+<tr>
+<td style="vertical-align: Top;"><span style="font-family: Arial, sans-serif; line-height: Normal; font-size: 8pt;"><font size="1" style="font-size:8pt;">CST Studio Suite 2026</font></span></td>
+<td style="vertical-align: Top;">
+<p style="text-align: right;">&#160;</p>
+</td>
+</tr>
+</table>
+<p>&#160;</p>
+</div>
+<script type="text/javascript" language="javascript1.2">
+//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+        writeIntopicBar(0);
+
+
+highlightSearch();
+//-->
+//]]>
+</script>
+</body>
+</html>

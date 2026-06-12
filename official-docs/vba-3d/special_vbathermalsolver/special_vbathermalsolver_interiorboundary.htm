@@ -1,0 +1,388 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="Adobe RoboHelp 11" />
+<title>InteriorBoundary Object</title>
+<link rel="StyleSheet" href="../online_help_vba.css" type="text/css" />
+<style type="text/css">
+/*<![CDATA[*/
+<!--
+body { border-bottom-style:None; }
+-->
+/*]]>*/
+</style>
+
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+        origWidth = innerWidth;
+        origHeight = innerHeight;
+        onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+/*<![CDATA[*/
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+-->
+/*]]>*/
+</style>
+
+<script type="text/javascript" language="javascript1.2" src="../whmsg.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript" src="../whver.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript1.2" src="../whutils.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript1.2" src="../whproxy.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript1.2" src="../whlang.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript1.2" src="../whtopic.js" charset="utf-8">
+</script>
+</head>
+<body>
+<script type="text/javascript" language="javascript1.2">
+//<![CDATA[
+<!--
+if (window.gbWhTopic)
+{
+        var strUrl = document.location.href;
+        var bc = 0;
+        var n = strUrl.toLowerCase().indexOf("bc-");
+        if(n != -1)
+        {
+                document.location.replace(strUrl.substring(0, n));
+                bc = strUrl.substring(n+3);
+        }
+
+        if (window.addTocInfo)
+        {
+        addTocInfo("3D Simulation VBA\nVBA Objects\nSources and Ports\nThermal\nInteriorBoundary Object");
+
+        }
+        if (window.writeBtnStyle)
+                writeBtnStyle();
+
+        if (window.writeIntopicBar)
+                writeIntopicBar(0);
+
+        
+        document.write("<p style=\"font-family: Tahoma; font-size: 9pt; font-weight: 400;  font-style:normal; color: rgb(0, 0, 0); text-decoration:none; text-align: left\"> ");
+AddMasterBreadcrumbs("../index.htm", "font-family: Tahoma; font-size: 9pt; font-weight: 400;  font-style:normal; color: rgb(0, 0, 0); text-decoration:none; text-align: left", "|", "Home", "../special_vbaobjects/special_vbaobjects_vbaobjects.htm");
+document.write("<a style=\"font-family: Tahoma; font-size: 9pt; font-weight: 400;  font-style:normal; color: rgb(0, 0, 0); text-decoration:none; text-align: left\" href=\"../special_vbaobjects/special_vbaobjects_vbaobjects.htm\">3D Simulation VBA<\/a> | <a style=\"font-family: Tahoma; font-size: 9pt; font-weight: 400;  font-style:normal; color: rgb(0, 0, 0); text-decoration:none; text-align: left\" href=\"../special_vbaobjects/special_vbaobjects_vbaobjects.htm\">VBA Objects<\/a> | <a style=\"font-family: Tahoma; font-size: 9pt; font-weight: 400;  font-style:normal; color: rgb(0, 0, 0); text-decoration:none; text-align: left\" href=\"../special_vbasignals/special_vbasignals_timesignal_object.htm\">Sources and Ports<\/a> | <a style=\"font-family: Tahoma; font-size: 9pt; font-weight: 400;  font-style:normal; color: rgb(0, 0, 0); text-decoration:none; text-align: left\" href=\"special_vbathermalsolver_compactthermalmodel_object.htm\">Thermal<\/a> | InteriorBoundary Object<\/p>");
+
+}
+else
+        if (window.gbIE4)
+                document.location.reload();
+
+onLoadHandler = function()
+{
+  if (window.setRelStartPage)
+        {
+        setTimeout("setRelStartPage('../index.htm');", 1)
+
+    setTimeout("UpdateBreadCrumbsMarker();", 1);
+        }
+}
+
+if (window.addEventListener){  
+        window.addEventListener('load', onLoadHandler, false);   
+} else if (window.attachEvent){  
+        window.attachEvent('onload', onLoadHandler);  
+}
+
+function onSetStartPage()
+{
+  autoSync(1);
+  sendSyncInfo();
+  sendAveInfoOut();
+}
+//-->
+//]]>
+</script><script type="text/javascript" src="../ehlpdhtm.js" language="JavaScript1.2">
+</script>
+<table cellspacing="0" width="100%">
+<col style="width: 50%;" />
+<col style="width: 50%;" />
+<tr>
+<td style="vertical-align: middle; padding-top: 5px; padding-bottom: 5px;">
+<p style="margin-top: 0px; margin-bottom: 0px;"><img src="../3ds.png" alt="" style="border: none;" border="0" /></p>
+</td>
+<td style="vertical-align: middle;">
+<p style="text-align: right;"><a href="https://www.3ds.com/products-services/3dexperience/" target="_blank"><img src="../3dexp.png" alt="" style="border: none;" width="32" height="32" border="0" /></a></p>
+</td>
+</tr>
+</table>
+<h1>InteriorBoundary Object</h1>
+<p class="VBA-Text">This object is used to create a new lid object or a new opening for the multifluid support of the <a href="special_vbathermalsolver_chtsolver.htm">Conjugate Heat Transfer Solver</a>.</p>
+<p class="VBA-Text">Lids should close a <a href="special_vbathermalsolver_fluiddomain.htm">fluid domain</a>. A lid which is not related to a fluid domain will be ignored in the simulation.</p>
+<p class="VBA-Text">Openings should be surrounded by background material and not be associated to fluid domains. &#160;</p>
+<ul>
+<li class="p-VBA-Index-Category">
+<p class="VBA-Index-Category"><a href="#Methods">Methods</a></p>
+</li>
+<li class="p-VBA-Index-Category">
+<p class="VBA-Index-Category"><a href="#Example">Example</a></p>
+</li>
+</ul>
+<p class="VBA-Heading-Category"><a name="Methods" id="Methods"></a>Methods</p>
+<p class="VBA-Heading-Method">Reset</p>
+<p class="VBA-Text-Indent">Resets all internal settings of the interior boundary (lid or opening) to their default values.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">Name ( <span style="font-style: italic;"><i><a href="../common_vbageneral/common_general_string.htm" id="a6" style="font-weight: normal; font-style: normal;" name="a6">string</a> name</i></span> )</p>
+<p class="VBA-Text-Indent">Specifies the <span style="font-style: italic;"><i>name</i></span> of the interior boundary. Each lid and each opening must have a unique name.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">Folder ( <a href="../common_vbageneral/common_general_name.htm" style="font-weight: normal;">name</a> <span style="font-style: italic;"><i>foldername</i></span> )</p>
+<p class="VBA-Text-Indent">Sets the name of the folder for the new interior boundary. If the name is empty, then the interior boundary does not belong to a folder.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">Enable( <a href="../common_vbageneral/common_general_bool_data_type.htm" style="font-weight: normal;">bool</a> <span style="font-style: italic;"><i>flag</i></span> )</p>
+<p class="VBA-Text-Indent">Sets the interior boundary &#160;to <span style="font-style: italic;"><i>flag</i></span>. If <span style="font-style: italic;"><i>flag</i></span> is <span style="font-style: italic;"><i>false,</i></span> the interior boundary won't be considered for simulation.</p>
+<p class="VBA-Text-Indent">default: <span style="font-style: italic;"><i>value = True</i></span></p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">EnableItem( <span style="font-weight: normal;"><a href="../common_vbageneral/common_general_name.htm" id="a22" name="a22">name</a> &#160;</span><span style="font-style: italic;"><i>name</i></span>, &#160;<a href="../common_vbageneral/common_general_bool_data_type.htm" style="font-weight: normal;">bool</a> <span style="font-style: italic;"><i>flag</i></span> )</p>
+<p class="VBA-Text-Indent">Enables or disables the (existing) interior boundary with the given <span style="font-style: italic;"><i>name</i></span> depending on <span style="font-style: italic;"><i>flag</i></span>. If <span style="font-style: italic;"><i>flag</i></span> is <span style="font-style: italic;"><i>false,</i></span> the interior boundary will not be considered for simulation.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method"><span style="font-weight: bold;">A</span>ddFace ( <span style="font-weight: normal;"><a href="../common_vbageneral/common_general_solid_names.htm">solidname</a></span> <span style="font-style: italic;"><i>solidname,</i></span> <span style="font-weight: normal;"><a href="../common_vbageneral/common_general_integer.htm">int</a></span> <span style="font-style: italic;"><i>faceid</i></span> &#160;)</p>
+<p class="VBA-Text-Indent">Defines a face inside the calculation domain. For openings, the face should be surrounded by background. A lid face should close a <a href="special_vbathermalsolver_fluiddomain.htm">fluid domain</a> cavity.</p>
+<p class="VBA-Text-Indent">It might be necessary to define multiple lids in order to completely close a fluid domain. Mind that fluid domains which are not completely closed by lids are not supported.</p>
+<p class="VBA-Text-Indent">Each face belonging to the interior boundary must be specified by its <span style="font-style: italic;"><i>faceid</i></span> of the solid with name <span style="font-style: italic;"><i>solidname</i></span>.</p>
+<p class="vba-text-indent" style="margin-left: 0px;">&#160;</p>
+<p class="VBA-Heading-Method">UsePickedFaces (<a href="../common_vbageneral/common_general_bool_data_type.htm" id="a14" style="font-weight: normal;" name="a14">bool</a> &#160;<span style="font-style: italic;"><i>usePickedFaces</i></span>)</p>
+<p class="vba-text-indent">Defines if faces which were picked before the tool activation are used for the definition instead of faces selected by the <span style="font-weight: bold;">AddFace</span> command.</p>
+<p class="vba-text-indent" style="margin-left: 0px;">&#160;</p>
+<p class="vba-text-indent" style="margin-left: 0px;"><span style="font-weight: bold;">Set (</span> <span style="font-style: italic;"><i><a href="../common_vbageneral/common_general_string.htm" id="a61" style="font-weight: normal; font-style: normal;" name="a61">string</a></i></span> <span style="font-style: italic; font-weight: bold;"><i>what</i></span><span style="font-style: italic;"><i>,</i></span> <a href="../common_vbageneral/common_general_variant.htm">variant</a> <span style="font-style: italic; font-weight: bold;"><i>parameters</i></span><span style="font-style: italic;"><i>...</i></span> <span style="font-weight: bold;">)</span></p>
+<p class="VBA-Text-Indent">Defines the parameters of the interior opening. The following settings are available:</p>
+<p class="VBA-Heading-Method">&#160;</p>
+<table style="vertical-align: top; margin-left: 24px; left: 0px; top: 749px;" cellspacing="0" width="871">
+<col style="width: 17.318%;" />
+<col style="width: 84.96%;" />
+<tr style="vertical-align: top;">
+<td style="border: Solid 1px #000000; width: 17.318%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text">"<span style="font-weight: bold; font-style: italic;"><i>BoundaryType</i></span>" or<br />
+"<span style="font-weight: bold; font-style: italic;"><i>Boundary Type</i></span>"</p>
+</td>
+<td style="border-top: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text">The boundary type considered only for lids and ignored for openings. Openings are always "<span style="font-style: italic;"><i>open</i></span>". Available boundary types are:</p>
+<table cellspacing="0" width="100%">
+<col style="width: 24.875%;" />
+<col style="width: 75.125%;" />
+<tr>
+<td style="vertical-align: top;"><span style="font-size: 9pt; font-family: Arial, sans-serif;"><font size="1" style="font-size:9pt;">"</font></span><span style="font-weight: bold; font-style: italic; font-size: 9pt; font-family: Arial, sans-serif;"><font size="1" style="font-size:9pt;"><i>open</i></font></span><span style="font-size: 9pt; font-family: Arial, sans-serif;"><font size="1" style="font-size:9pt;">"</font></span></td>
+<td style="vertical-align: top;">
+<p style="color: #000000; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial; margin-top: 0pt; font-family: Arial, sans-serif; font-size: 9pt;">The flow temperature or temperature gradient and the flow velocity, gauge pressure or volume flow rate can be set.</p>
+<p style="color: #000000; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial; margin-top: 0pt; font-family: Arial, sans-serif; font-size: 9pt;">The opening emissivity is set to one.</p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align: top;"><span style="font-size: 9pt; font-family: Arial, sans-serif;"><font size="1" style="font-size:9pt;">"</font></span><span style="font-weight: bold; font-style: italic; font-size: 9pt; font-family: Arial, sans-serif;"><font size="1" style="font-size:9pt;"><i>wall: isothermal"</i></font></span></td>
+<td style="vertical-align: top;"><span style="font-variant-ligatures: normal; font-variant-caps: normal; orphans: 2; text-align: justify; widows: 2; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial; display: inline ! important ; float: none; font-size: 9pt; font-family: Arial, sans-serif;"><font size="1" style="font-size:9pt;">Heat can pass this type of boundary, but the temperature is constant.</font></span></td>
+</tr>
+<tr>
+<td style="vertical-align: top;"><span style="font-size: 9pt; font-family: Arial, sans-serif;"><font size="1" style="font-size:9pt;">"</font></span><span style="font-weight: bold; font-style: italic; font-size: 9pt; font-family: Arial, sans-serif;"><font size="1" style="font-size:9pt;"><i>wall: adiabatic</i></font></span><span style="font-size: 9pt; font-family: Arial, sans-serif;"><font size="1" style="font-size:9pt;">"</font></span></td>
+<td style="vertical-align: top;"><span style="font-variant-ligatures: normal; font-variant-caps: normal; orphans: 2; text-align: justify; widows: 2; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial; display: inline ! important ; float: none; font-size: 9pt; font-family: Arial, sans-serif;"><font size="1" style="font-size:9pt;">No heat flow passes this boundary condition. The temperature distribution is not constant.</font></span></td>
+</tr>
+</table>
+<p class="VBA-Text">&#160;</p>
+<p class="VBA-Text">The boundary type is passed as second parameter, e.g. <span style="font-style: italic;"><i>.Set "BoundaryType", "wall: isothermal</i></span>".</p>
+<p class="VBA-Text">&#160;</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 17.318%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text">"<span style="font-style: italic; font-weight: bold;"><i>Temperature</i></span>"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text">This setting is ignored by lids of type "<span style="font-style: italic;"><i>wall: adiabatic</i></span>". The second parameter specifies the way in which the temperature is prescribed. Available types are:</p>
+<table cellspacing="0" width="100%">
+<col style="width: 25.162%;" />
+<col style="width: 74.838%;" />
+<tr>
+<td style="vertical-align: top;"><span style="font-family: Arial, sans-serif; font-size: 9pt;"><font size="1" style="font-size:9pt;">"</font></span><span style="font-weight: bold; font-style: italic; font-family: Arial, sans-serif; font-size: 9pt;"><font size="1" style="font-size:9pt;"><i>unset</i></font></span><span style="font-family: Arial, sans-serif; font-size: 9pt;"><font size="1" style="font-size:9pt;">"</font></span></td>
+<td style="vertical-align: top;">
+<p style="color: #000000; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial; margin-top: 0pt; font-family: Arial, sans-serif; font-size: 9pt;">Supported only for open boundary types. In this case the flow temperature gradient is zero.</p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align: top;"><span style="font-family: Arial, sans-serif; font-size: 9pt;"><font size="1" style="font-size:9pt;">"</font></span><span style="font-weight: bold; font-style: italic; font-family: Arial, sans-serif; font-size: 9pt;"><font size="1" style="font-size:9pt;"><i>ambient"</i></font></span></td>
+<td style="vertical-align: top;"><span style="font-variant-ligatures: normal; font-variant-caps: normal; orphans: 2; text-align: justify; widows: 2; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial; display: inline ! important ; float: none; font-family: Arial, sans-serif; font-size: 9pt;"><font size="1" style="font-size:9pt;">The ambient temperature, which is set in the solver parameter settings, will be used for the fluid.</font></span></td>
+</tr>
+<tr>
+<td style="vertical-align: top;"><span style="font-family: Arial, sans-serif; font-size: 9pt;"><font size="1" style="font-size:9pt;">"</font></span><span style="font-weight: bold; font-style: italic; font-family: Arial, sans-serif; font-size: 9pt;"><font size="1" style="font-size:9pt;"><i>fixed</i></font></span><span style="font-family: Arial, sans-serif; font-size: 9pt;"><font size="1" style="font-size:9pt;">"</font></span></td>
+<td style="vertical-align: top;"><span style="font-variant-ligatures: normal; font-variant-caps: normal; orphans: 2; text-align: justify; widows: 2; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial; display: inline ! important ; float: none; font-family: Arial, sans-serif; font-size: 9pt;"><font size="1" style="font-size:9pt;">A user-defined fixed value can be assigned to the fluid. In this case two further parameters are required:</font></span> <span style="font-style: italic; font-family: Arial, sans-serif; font-size: 9pt;"><font size="1" style="font-size:9pt;"><i><a href="../common_vbageneral/common_general_string.htm" id="a611" style="font-weight: normal; font-style: normal; font-family: Arial, sans-serif; font-size: 9pt;" name="a611">string</a></i></font></span> <span style="font-style: italic; font-family: Arial, sans-serif; font-size: 9pt;"><font size="1" style="font-size:9pt;"><i>value</i></font></span><span style="font-family: Arial, sans-serif; font-size: 9pt;"><font size="1" style="font-size:9pt;">, <a href="../common_vbageneral/common_general_enum.htm" style="font-family: Arial, sans-serif; font-size: 9pt;">enum</a></font></span> <span style="font-style: italic; font-family: Arial, sans-serif; font-size: 9pt;"><font size="1" style="font-size:9pt;"><i>unit</i></font></span><span style="font-family: Arial, sans-serif; font-size: 9pt;"><font size="1" style="font-size:9pt;">, where</font></span> <span style="font-style: italic; font-family: Arial, sans-serif; font-size: 9pt;"><font size="1" style="font-size:9pt;"><i>unit</i></font></span> <span style="font-family: Arial, sans-serif; font-size: 9pt;"><font size="1" style="font-size:9pt;">is either "</font></span><span style="font-style: italic; font-family: Arial, sans-serif; font-size: 9pt;"><font size="1" style="font-size:9pt;"><i>Kelvin</i></font></span><span style="font-family: Arial, sans-serif; font-size: 9pt;"><font size="1" style="font-size:9pt;">" or "</font></span><span style="font-style: italic; font-family: Arial, sans-serif; font-size: 9pt;"><font size="1" style="font-size:9pt;"><i>Celsius</i></font></span><span style="font-family: Arial, sans-serif; font-size: 9pt;"><font size="1" style="font-size:9pt;">" or "</font></span><span style="font-style: italic; font-family: Arial, sans-serif; font-size: 9pt;"><font size="1" style="font-size:9pt;"><i>Fahrenheit</i></font></span><span style="font-family: Arial, sans-serif; font-size: 9pt;"><font size="1" style="font-size:9pt;">".</font></span></td>
+</tr>
+</table>
+<p class="VBA-Text">&#160;</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 17.318%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text">"<span style="font-style: italic; font-weight: bold;"><i>WallfFlow</i></span>" or<br />
+"<span style="font-weight: bold; font-style: italic;"><i>Wall Flow</i></span>"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text"><span style="font-family: Arial, sans-serif;">This setting is relevant only for lids with boundary type "</span><span style="font-style: italic; font-family: Arial, sans-serif;"><i>wall: adiabatic</i></span><span style="font-family: Arial, sans-serif;">" or "</span><span style="font-style: italic; font-family: Arial, sans-serif;"><i>wall: isothermal</i></span><span style="font-family: Arial, sans-serif;">".</span> <span style="font-variant-ligatures: normal; font-variant-caps: normal; orphans: 2; text-align: start; widows: 2; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial; display: inline ! important ; float: none; font-family: Arial, sans-serif;">A slip or no-slip boundary condition can be applied to a lid to describe the flow behavior at the wall. The slip boundary condition sets the tangential velocity gradient to zero at the wall which implies that the flow encounters no friction at the wall and thus doesn't slow down. Conversely, the no-slip boundary condition sets the tangential velocity to zero at the wall which implies that the wall friction slows down the flow. The no-slip boundary condition is typically used to model a physical wall.</span></p>
+<p class="VBA-Text">This wall flow boundary condition is passed as a second parameter, e.g. <span style="font-style: italic;"><i>.Set "WallFlow", "no-slip"</i></span>.</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 17.318%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text">"<span style="font-style: italic; font-weight: bold;"><i>Emissivity</i></span>"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text">This setting is considered only for lids with boundary type "<span style="font-style: italic;"><i>wall: isothermal</i></span>". For other boundary types default values will be used according to the table below. Please note that radiation properties are used only when radiation is turned on in the <a href="special_vbathermalsolver_chtsolver.htm#Radiation">CHT Solver Parameters</a>.</p>
+<table cellspacing="0" width="100%">
+<col style="width: 25.162%;" />
+<col style="width: 74.838%;" />
+<tr>
+<td style="vertical-align: top;"><span style="font-family: Arial, sans-serif; font-size: 9pt;"><font size="1" style="font-size:9pt;">wall: isothermal</font></span></td>
+<td style="vertical-align: top;">
+<p style="color: #000000; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial; margin-top: 0pt; font-family: Arial, sans-serif; font-size: 9pt;">The emissivity is set to the value specified by the user. &#160;The wall temperature value is used as the reference temperature.</p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align: top;"><span style="font-family: Arial, sans-serif; font-size: 9pt;"><font size="1" style="font-size:9pt;">wall: adiabatic</font></span></td>
+<td style="vertical-align: top;"><span style="font-variant-ligatures: normal; font-variant-caps: normal; orphans: 2; text-align: justify; widows: 2; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial; display: inline ! important ; float: none; font-family: Arial, sans-serif; font-size: 9pt;"><font size="1" style="font-size:9pt;">The emissivity is set to 0.</font></span></td>
+</tr>
+<tr>
+<td style="vertical-align: top;"><span style="font-family: Arial, sans-serif; font-size: 9pt;"><font size="1" style="font-size:9pt;">open</font></span></td>
+<td style="vertical-align: top;"><span style="font-variant-ligatures: normal; font-variant-caps: normal; orphans: 2; text-align: justify; widows: 2; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial; display: inline ! important ; float: none; font-family: Arial, sans-serif; font-size: 9pt;"><font size="1" style="font-size:9pt;">The radiation temperature define in the <a href="special_vbathermalsolver_chtsolver.htm">CHT Solver Parameters</a> is used as the reference temperature.</font></span></td>
+</tr>
+</table>
+<p>&#160;</p>
+<p>The emissivity value is passed as a second parameter, e.g. <span style="font-style: italic;"><i>.Set "Radiation", "0.8"</i></span>.</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 17.318%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text">"<span style="font-style: italic; font-weight: bold;"><i>Velocity</i></span>"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text">This setting is considered only for openings or lids with boundary type "<span style="font-style: italic;"><i>open</i></span>". The settings for "<span style="font-style: italic;"><i>Velocity</i></span>", "<span style="font-style: italic;"><i>Pressure</i></span>" and "<span style="font-style: italic;"><i>VolumeFlowRate</i></span>" are exclusive. The last settings wins over the others.</p>
+<p class="VBA-Text">With further parameters, the veloctiy vector and a unit (<span style="font-style: italic;"><i>"m/s"</i></span> or <span style="font-style: italic;"><i>"km/h"</i></span>) can be specified, e.g. <span style="font-style: italic;"><i>.Set "Velocity", "0", "0", "10", "km/h"</i></span>.</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 17.318%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text">"<span style="font-style: italic; font-weight: bold;"><i>Pressure</i></span>"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text">This setting is considered only for openings or lids with boundary type "<span style="font-style: italic;"><i>open</i></span>". The settings for "<span style="font-style: italic;"><i>Velocity</i></span>", "<span style="font-style: italic;"><i>Pressure</i></span>" and "<span style="font-style: italic;"><i>VolumeFlowRate</i></span>" are exclusive. The last settings wins over the others.</p>
+<p class="VBA-Text">With further parameters, the fluid gauge pressure at the interior boundary can be set to a fixed value and the corresponding unit (<span style="font-style: italic;"><i>"atm", "bar", "Pa", "psi"</i></span>), e.g. <span style="font-style: italic;"><i>.Set "Pressure", "5", "bar"</i></span>.</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 17.318%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text">"<span style="font-style: italic; font-weight: bold;"><i>VolumeFlowRate</i></span>" or "<span style="font-weight: bold; font-style: italic;"><i>Volume Flow Rate</i></span>"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text">This setting is considered only for openings or lids with boundary type "<span style="font-style: italic;"><i>open</i></span>". The settings for "<span style="font-style: italic;"><i>Velocity</i></span>", "<span style="font-style: italic;"><i>Pressure</i></span>" and "<span style="font-style: italic;"><i>VolumeFlowRate</i></span>" are exclusive. The last settings wins over the others.</p>
+<p class="VBA-Text">With further parameters, the volume flow rate (and optionally its unit "<span style="font-style: italic;"><i>m^3/h</i></span>" or "<span style="font-style: italic;"><i>m3/h</i></span>") can be specified, e.g. <span style="font-style: italic;"><i>.Set "VolumeFlowRate", "1", "m3/h"</i></span>.</p>
+</td>
+</tr>
+</table>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">Create ( <span style="font-style: italic;"><i><a href="../common_vbageneral/common_general_enum.htm" id="a21" style="font-weight: normal; font-style: normal;" name="a21">enum</a> type</i></span> )</p>
+<p class="VBA-Text-Indent">Creates the interior boundary with its previously made settings. It has to be specified which <span style="font-style: italic;"><i>type</i></span> of interior boundary is created:</p>
+<p class="vba-text-indent">&#160;</p>
+<table style="vertical-align: top; margin-left: 24px; left: 0px; top: 749px;" cellspacing="0" width="560">
+<col style="width: 17.318%;" />
+<col style="width: 82.682%;" />
+<tr style="vertical-align: top;">
+<td style="border: Solid 1px #000000; width: 17.318%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text">"Opening"</p>
+</td>
+<td style="border-top: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 82.682%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text">Define an interior opening. An opening should be surrounded by background.</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 17.318%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text">"Lid"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 82.682%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text">Define a lid. A lid should close a fluid domain.</p>
+</td>
+</tr>
+</table>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">Delete ( <span style="font-style: italic;"><i><a href="../common_vbageneral/common_general_enum.htm" id="a211" style="font-weight: normal; font-style: normal;" name="a211">enum</a> type,</i></span> <span style="font-style: italic;"><i><a href="../common_vbageneral/common_general_string.htm" id="a2" style="font-weight: normal; font-style: normal;" name="a2">string</a> name</i></span> )</p>
+<p class="VBA-Text-Indent">Deletes the interior boundary of the specified type ("Opening" or "Lid") with the given <span style="font-style: italic;"><i>name</i></span>.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">Rename &#160;( <span style="font-style: italic;"><i><a href="../common_vbageneral/common_general_enum.htm" id="a2111" style="font-weight: normal; font-style: normal;" name="a2111">enum</a> type,</i></span> <span style="font-style: italic;"><i><a href="../common_vbageneral/common_general_string.htm" id="a3" style="font-weight: normal; font-style: normal;" name="a3">string</a> oldname,</i></span> &#160;<span style="font-style: italic;"><i><a href="../common_vbageneral/common_general_string.htm" id="a4" style="font-weight: normal; font-style: normal;" name="a4">string</a> newname</i></span> &#160;)</p>
+<p class="VBA-Text-Indent">Renames the interior boundary of the specified type ("Opening" or "Lid") with the given <span style="font-style: italic;"><i>oldname</i></span> to the defined <span style="font-style: italic;"><i>newname</i></span>.</p>
+<p class="vba-text-indent">&#160;</p>
+<p class="VBA-Heading-Method">NewFolder ( <span style="font-style: italic;"><i><a href="../common_vbageneral/common_general_string.htm" id="a612" style="font-style: normal; font-weight: normal;" name="a612">string</a> foldername</i></span> )</p>
+<p class="vba-text-indent">Creates a new folder with the given name.</p>
+<p class="vba-text-indent">&#160;</p>
+<p class="VBA-Heading-Method">RenameFolder ( <span style="font-style: italic;"><i><a href="../common_vbageneral/common_general_string.htm" id="a62" style="font-style: normal; font-weight: normal;" name="a62">string</a> oldFoldername,</i></span> <span style="font-style: italic;"><i><a href="../common_vbageneral/common_general_string.htm" id="a621" style="font-style: normal; font-weight: normal;" name="a621">string</a> newFoldername</i></span>)</p>
+<p class="vba-text-indent">Changes the name of an existing folder.</p>
+<p class="vba-text-indent">&#160;</p>
+<p class="VBA-Heading-Method">DeleteFolder ( <span style="font-style: italic;"><i><a href="../common_vbageneral/common_general_string.htm" id="a6111" style="font-style: normal; font-weight: normal;" name="a6111">string</a> foldername</i></span> )</p>
+<p class="vba-text-indent">Deletes an existing folder and all the contained elements.</p>
+<p class="VBA-Text-Example">&#160;</p>
+<p class="VBA-Heading-Category"><a name="Example" id="Example"></a>Example</p>
+<p class="VBA-Text-Example">With InteriorBoundary</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.Reset</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.Name "lid_outlet"</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.AddFace "Background:lid_outlet", "3"</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.Set "BoundaryType", "open"</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.Set "Temperature", "unset"</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.Set "Pressure", "0.0", "Pa"</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.Create "Lid"</p>
+<p class="VBA-Text-Example">End With</p>
+<p class="VBA-Text-Example">&#160;</p>
+<p class="VBA-Text-Example">With InteriorBoundary</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.Reset</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.Name "flow_condition"</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.AddFace "Background:opening_inlet", "3"</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.Set "Temperature", "Fixed", "16", "Celsius"</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.Set "VolumeFlowRate"", "0.19", "m3/h"</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.Create "Opening"</p>
+<p class="VBA-Text-Example">End With</p>
+<p class="VBA-Text-Example">&#160;</p>
+<?rh-p style="margin-bottom: 0px; text-align: Right; margin-left: 18px; 
+                 margin-right: 18px; margin-top: 18px;" ?>
+<div style="width: 100%; position: relative;" id="footer">
+<p style="border-bottom: Solid 1px #dddddd; text-align: Left; margin-left: 0px; font-family: Arial, sans-serif; line-height: Normal; margin-top: 9px; margin-right: 0px; margin-bottom: 6px; border-left-width: 1px; border-top-width: 1px; border-right-width: 1px;"><span style="text-align: Left; font-family: Arial, sans-serif; line-height: Normal;">&#160;</span></p>
+<table cellspacing="0" width="100%">
+<col style="width: 50%;" />
+<col style="width: 50%;" />
+<tr>
+<td style="vertical-align: Top;"><span style="font-family: Arial, sans-serif; line-height: Normal; font-size: 8pt;"><font size="1" style="font-size:8pt;">CST Studio Suite 2026</font></span></td>
+<td style="vertical-align: Top;">
+<p style="text-align: right;">&#160;</p>
+</td>
+</tr>
+</table>
+<p>&#160;</p>
+</div>
+<script type="text/javascript" language="javascript1.2">
+//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+        writeIntopicBar(0);
+
+
+highlightSearch();
+//-->
+//]]>
+</script>
+</body>
+</html>

@@ -1,0 +1,353 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="Adobe RoboHelp 11" />
+<title>Plot Object</title>
+<link rel="StyleSheet" href="../online_help_vba.css" type="text/css" />
+<style type="text/css">
+/*<![CDATA[*/
+<!--
+body { border-bottom-style:None; }
+-->
+/*]]>*/
+</style>
+
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+        origWidth = innerWidth;
+        origHeight = innerHeight;
+        onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+/*<![CDATA[*/
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+-->
+/*]]>*/
+</style>
+
+<script type="text/javascript" language="javascript1.2" src="../whmsg.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript" src="../whver.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript1.2" src="../whutils.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript1.2" src="../whproxy.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript1.2" src="../whlang.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript1.2" src="../whtopic.js" charset="utf-8">
+</script>
+</head>
+<body>
+<script type="text/javascript" language="javascript1.2">
+//<![CDATA[
+<!--
+if (window.gbWhTopic)
+{
+        var strUrl = document.location.href;
+        var bc = 0;
+        var n = strUrl.toLowerCase().indexOf("bc-");
+        if(n != -1)
+        {
+                document.location.replace(strUrl.substring(0, n));
+                bc = strUrl.substring(n+3);
+        }
+
+        if (window.addTocInfo)
+        {
+        addTocInfo("3D Simulation VBA\nVBA Objects\nPlot\nPlot");
+addAvenueInfo("common_VBAPLOT","","common_VBAPlot/common_VBAPlot_VectorPlot3D_Object.htm");
+
+        }
+        if (window.writeBtnStyle)
+                writeBtnStyle();
+
+        if (window.writeIntopicBar)
+                writeIntopicBar(0);
+
+        
+        document.write("<p style=\"font-family: Tahoma; font-size: 9pt; font-weight: 400;  font-style:normal; color: rgb(0, 0, 0); text-decoration:none; text-align: left\"> ");
+AddMasterBreadcrumbs("../index.htm", "font-family: Tahoma; font-size: 9pt; font-weight: 400;  font-style:normal; color: rgb(0, 0, 0); text-decoration:none; text-align: left", "|", "Home", "../special_vbaobjects/special_vbaobjects_vbaobjects.htm");
+document.write("<a style=\"font-family: Tahoma; font-size: 9pt; font-weight: 400;  font-style:normal; color: rgb(0, 0, 0); text-decoration:none; text-align: left\" href=\"../special_vbaobjects/special_vbaobjects_vbaobjects.htm\">3D Simulation VBA<\/a> | <a style=\"font-family: Tahoma; font-size: 9pt; font-weight: 400;  font-style:normal; color: rgb(0, 0, 0); text-decoration:none; text-align: left\" href=\"../special_vbaobjects/special_vbaobjects_vbaobjects.htm\">VBA Objects<\/a> | <a style=\"font-family: Tahoma; font-size: 9pt; font-weight: 400;  font-style:normal; color: rgb(0, 0, 0); text-decoration:none; text-align: left\" href=\"common_vbaplot_plot_object.htm\">Plot<\/a> | Plot<\/p>");
+
+}
+else
+        if (window.gbIE4)
+                document.location.reload();
+
+onLoadHandler = function()
+{
+  if (window.setRelStartPage)
+        {
+        setTimeout("setRelStartPage('../index.htm');", 1)
+
+    setTimeout("UpdateBreadCrumbsMarker();", 1);
+        }
+}
+
+if (window.addEventListener){  
+        window.addEventListener('load', onLoadHandler, false);   
+} else if (window.attachEvent){  
+        window.attachEvent('onload', onLoadHandler);  
+}
+
+function onSetStartPage()
+{
+  autoSync(1);
+  sendSyncInfo();
+  sendAveInfoOut();
+}
+//-->
+//]]>
+</script><script type="text/javascript" src="../ehlpdhtm.js" language="JavaScript1.2">
+</script>
+<table cellspacing="0" width="100%">
+<col style="width: 50%;" />
+<col style="width: 50%;" />
+<tr>
+<td style="vertical-align: middle; padding-top: 5px; padding-bottom: 5px;">
+<p style="margin-top: 0px; margin-bottom: 0px;"><img src="../3ds.png" alt="" style="border: none;" border="0" /></p>
+</td>
+<td style="vertical-align: middle;">
+<p style="text-align: right;"><a href="https://www.3ds.com/products-services/3dexperience/" target="_blank"><img src="../3dexp.png" alt="" style="border: none;" width="32" height="32" border="0" /></a></p>
+</td>
+</tr>
+</table>
+<h1>Plot Object</h1>
+<p class="StandardNeu">Controls the output of the main plot window.</p>
+<ul>
+<li class="p-VBA-Index-Category">
+<p class="VBA-Index-Category"><a href="#Cutplane">Cutplane</a></p>
+</li>
+<li class="p-VBA-Index-Category">
+<p class="VBA-Index-Category"><a href="#GeneralMethods">General Methods</a></p>
+</li>
+<li class="p-VBA-Index-Category">
+<p class="VBA-Index-Category"><a href="#Views_And_Zoom">Views and Zoom</a></p>
+</li>
+<li class="p-VBA-Index-Category">
+<p class="VBA-Index-Category"><a href="#Export_image">Export image</a></p>
+</li>
+<li class="p-VBA-Index-Category">
+<p class="VBA-Index-Category"><a href="#ViewOptions" style="font-weight: bold;">View Options</a></p>
+</li>
+</ul>
+<p class="VBA-Heading-Category"><a name="Cutplane" id="Cutplane"></a>Cutplane</p>
+<p class="VBA-Heading-Method">AbovePlaneMode ( <a href="../common_vbageneral/common_general_enum.htm" id="a19" style="font-weight: normal;" name="a19">enum</a> {"hide", "wireframe", "transparent","solid"} <span style="font-style: italic;"><i>type )</i></span></p>
+<p class="VBA-Text-Indent">Sets the view above the cutplane.</p>
+<p class="vba-text-indent">&#160;</p>
+<p class="VBA-Heading-Method">DefinePlane( <span style="font-weight: normal;"><a href="../common_vbageneral/common_general_string.htm" id="a27" name="a27">string</a></span> <span style="font-style: italic;"><i>nx,</i></span> <span style="font-weight: normal;"><a href="../common_vbageneral/common_general_string.htm" id="a28" name="a28">string</a></span> <span style="font-style: italic;"><i>ny,</i></span> <span style="font-weight: normal;"><a href="../common_vbageneral/common_general_string.htm" id="a29" name="a29">string</a></span> <span style="font-style: italic;"><i>nz, <span style="font-weight: normal;"><a href="../common_vbageneral/common_general_string.htm" id="a32" name="a32">string</a></span> <span style="font-style: italic;"><i>px,</i></span> <span style="font-weight: normal;"><a href="../common_vbageneral/common_general_string.htm" id="a34" name="a34">string</a></span> <span style="font-style: italic;"><i>py,</i></span> <span style="font-weight: normal;"><a href="../common_vbageneral/common_general_string.htm" id="a35" name="a35">string</a></span> <span style="font-style: italic;"><i>pz )</i></span></i></span></p>
+<p class="VBA-Text-Indent">Defines the cutplane by the normal direction and point on the plane.</p>
+<p class="vba-text-indent" style="font-style: normal;">&#160;</p>
+<p class="VBA-Heading-Method" style="font-style: normal;">CutPlaneNormal ( <span><a href="../common_vbageneral/common_general_enum.htm" id="a191" style="font-weight: normal;" name="a191">enum</a></span> {"x", "y", "z"} key )</p>
+<p class="VBA-Text-Indent" style="font-style: normal;">Defines the normal direction of the cutplane.</p>
+<p class="VBA-Heading-Method" style="font-style: normal;">&#160;</p>
+<p class="VBA-Heading-Method" style="font-style: normal;">CutPlaneRatio ( <a href="../common_vbageneral/common_general_double.htm" id="a9" style="font-weight: normal; font-style: normal;" name="a9">double</a> ratio )</p>
+<p class="VBA-Text-Indent" style="font-style: normal;">Defines where the cutplane will be located. A value of 0.0 for Ratio will position the cut plane at the lowest dimension of the structure in direction of <span style="font-weight: bold;">CutPlaneNormal</span>. A value of 1.0 will move the plane to the highest dimension.</p>
+<p class="VBA-Heading-Method" style="font-style: normal;">&#160;</p>
+<p class="VBA-Heading-Method" style="font-style: normal;">ShowCutPlane ( <a href="../common_vbageneral/common_general_bool_data_type.htm" id="a7" style="font-weight: normal; font-style: normal;" name="a7">bool</a> switch )</p>
+<p class="VBA-Text-Indent" style="font-style: normal;">A cutplane can be defined to look inside a structure. This cutplane divides the structure into two parts, while only one of them will be plotted. The cutplane can be defined by the methods <span style="font-weight: bold;">CutPlaneNormal</span> and <span style="font-weight: bold;">CutPlaneRatio</span>.</p>
+<p class="VBA-Text-Indent" style="font-style: normal;">&#160;</p>
+<p class="VBA-Heading-Method" style="font-style: normal;">DrawSolidCutPlane( <a href="../common_vbageneral/common_general_bool_data_type.htm" id="a71" style="font-weight: normal; font-style: normal;" name="a71">bool</a> switch )</p>
+<p class="VBA-Text-Indent" style="font-style: normal;">If this flag is set to true, the cutplane will be displayed as solid, otherwise it will not be drawn.</p>
+<p class="VBA-Text-Indent" style="font-style: normal;">&#160;</p>
+<p class="VBA-Heading-Method" style="font-style: normal;">DrawSolidCutPlaneMark( <a href="../common_vbageneral/common_general_bool_data_type.htm" id="a711" style="font-weight: normal; font-style: normal;" name="a711">bool</a> switch )</p>
+<p class="VBA-Text-Indent" style="font-style: normal;">If this flag is set to true, the cutplane will be displayed as solid with a stipple pattern.</p>
+<p class="VBA-Text-Indent" style="font-style: normal;">&#160;</p>
+<p class="VBA-Heading-Method" style="font-style: normal;">Draw2DWithCutPlane( <a href="../common_vbageneral/common_general_bool_data_type.htm" id="a7111" style="font-weight: normal; font-style: normal;" name="a7111">bool</a> switch )</p>
+<p class="VBA-Text-Indent" style="font-style: normal;">Display the structure in a flat and true 2D style if the cutplane is active (Unavailable for field plot mode).</p>
+<p class="VBA-Heading-Category"><a name="GeneralMethods" id="GeneralMethods"></a>General Methods</p>
+<p class="VBA-Heading-Method" style="font-style: normal;">RotationAngle ( <a href="../common_vbageneral/common_general_double.htm" id="a26" style="font-weight: normal; font-style: normal;" name="a26">double</a> angle )</p>
+<p class="VBA-Text-Indent" style="font-style: normal;">Sets the angle of rotation.</p>
+<p class="VBA-Text-Indent" style="font-style: normal;">&#160;</p>
+<p class="VBA-Heading-Method" style="font-style: normal;">Rotate ( <span style="font-weight: normal;"><a href="../common_vbageneral/common_general_string.htm" id="a1" style="font-style: normal;" name="a1">string</a></span> direction )</p>
+<p class="VBA-Text-Indent" style="font-style: normal;">Rotates the plot in the main view. This method has no effect if 2D-Values are plotted.</p>
+<p class="VBA-Text-Indent" style="font-style: normal;">&#160;</p>
+<p class="VBA-Text-Indent" style="font-style: normal;">direction can have one of the following values:</p>
+<table style="left: 0px; top: 194px; margin-left: 24px;" cellspacing="0" width="320">
+<col width="109" />
+<col width="203" />
+<tr style="vertical-align: top;">
+<td style="padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;" width="109">
+<p class="VBA-Text">”left”</p>
+</td>
+<td style="padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;" width="203">
+<p class="VBA-Text">Rotates the figure to the left</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;" width="109">
+<p class="VBA-Text">”right”</p>
+</td>
+<td style="padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;" width="203">
+<p class="VBA-Text">Rotates the figure to the right</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;" width="109">
+<p class="VBA-Text">”up”</p>
+</td>
+<td style="padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;" width="203">
+<p class="VBA-Text">Rotates the figure upward</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;" width="109">
+<p class="VBA-Text">”down”</p>
+</td>
+<td style="padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;" width="203">
+<p class="VBA-Text">Rotates the figure downward</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;" width="109">
+<p class="VBA-Text">”clockwise”</p>
+</td>
+<td style="padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;" width="203">
+<p class="VBA-Text">Rotates the figure clockwise</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;" width="109">
+<p class="VBA-Text">”counterclockwise”</p>
+</td>
+<td style="padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;" width="203">
+<p class="VBA-Text">Rotates the figure counterclockwise</p>
+</td>
+</tr>
+</table>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">Update</p>
+<p class="VBA-Text-Indent">Updates the plot.</p>
+<p class="VBA-Heading-Category"><a name="Views_And_Zoom" id="Views_and_Zoom"></a>Views and Zoom</p>
+<p class="VBA-Heading-Method" style="font-style: normal;">StoreCurrentView ( <span style="font-weight: normal;"><a href="../common_vbageneral/common_general_string.htm" id="a22" style="font-style: normal;" name="a22">string</a> &#160;</span>name )</p>
+<p class="VBA-Text-Indent" style="font-style: normal;">Stores the current view as a user defined view with the given name.</p>
+<p class="VBA-Text-Indent" style="font-style: normal;">&#160;</p>
+<p class="VBA-Heading-Method" style="font-style: normal;">RestoreView ( <span style="font-weight: normal;"><a href="../common_vbageneral/common_general_string.htm" id="a6" style="font-style: normal;" name="a6">string</a></span> name )</p>
+<p class="VBA-Text-Indent" style="font-style: normal;">Restores a previously stored view. If one of the reserved view names "Left", "Right", "Front", "Back", "Top", "Bottom" or &#160;"Perspective" or "Nearest Axis" is used, that particular predefined view is set.</p>
+<p class="VBA-Text-Indent" style="font-style: normal;">&#160;</p>
+<p class="VBA-Heading-Method" style="font-style: normal;">RenameView ( <span style="font-weight: normal;"><a href="../common_vbageneral/common_general_string.htm" id="a22" style="font-style: normal;" name="a22">string</a> &#160;</span>old_name, <span style="font-weight: normal;"><a href="../common_vbageneral/common_general_string.htm" id="a22" style="font-style: normal;" name="a22">string</a></span> &#160;new_name )</p>
+<p class="VBA-Text-Indent" style="font-style: normal;">Renames a user defined view from old_name to new_name.</p>
+<p class="VBA-Text-Indent" style="font-style: normal;">&#160;</p>
+<p class="VBA-Heading-Method" style="font-style: normal;">RemoveView ( <span style="font-weight: normal;"><a href="../common_vbageneral/common_general_string.htm" id="a22" style="font-style: normal;" name="a22">string</a> &#160;</span>name )</p>
+<p class="VBA-Text-Indent" style="font-style: normal;">Deletes the user defined view with the given name.</p>
+<p class="VBA-Text-Indent" style="font-style: normal;">&#160;</p>
+<p class="VBA-Heading-Method" style="font-style: normal;">RemoveAllViews</p>
+<p class="VBA-Text-Indent" style="font-style: normal;">For deletion of all stored views.</p>
+<p class="VBA-Text-Indent" style="font-style: normal;">&#160;</p>
+<p class="VBA-Heading-Method" style="font-style: normal;">ExportView ( <span style="font-weight: normal;"><a href="../common_vbageneral/common_general_string.htm" id="a22" style="font-style: normal;" name="a22">string</a> &#160;</span>name ) <span style="font-weight: normal;"><a href="../common_vbageneral/common_general_string.htm" id="a22" style="font-style: normal;" name="a22">string</a></span></p>
+<p class="VBA-Text-Indent" style="font-style: normal;">Export the user defined view with the given name to a view definition string. The view definition string can be used with <span style="font-weight: bold;">ImportView</span> or <span style="font-weight: bold;">ImportAllViews</span>.</p>
+<p class="VBA-Text-Indent" style="font-style: normal;">&#160;</p>
+<p class="VBA-Heading-Method" style="font-style: normal;">ImportView ( <span style="font-weight: normal;"><a href="../common_vbageneral/common_general_string.htm" id="a22" style="font-style: normal;" name="a22">string</a> &#160;</span>name, <span style="font-weight: normal;"><a href="../common_vbageneral/common_general_string.htm" id="a22" style="font-style: normal;" name="a22">string</a></span> &#160;definition )</p>
+<p class="VBA-Text-Indent" style="font-style: normal;">Import the user defined view with the given name from a view definition string. The view definition string can stem from <span style="font-weight: bold;">ExportView</span> or <span style="font-weight: bold;">ExportAllViews</span>.</p>
+<p class="VBA-Text-Indent" style="font-style: normal;">&#160;</p>
+<p class="VBA-Heading-Method" style="font-style: normal;">ExportAllViews <span style="font-weight: normal;"><a href="../common_vbageneral/common_general_string.htm" id="a22" style="font-style: normal;" name="a22">string</a></span></p>
+<p class="VBA-Text-Indent" style="font-style: normal;">Export all user defined views to a view definition string. The view definition string can be used with <span style="font-weight: bold;">ImportView</span> or <span style="font-weight: bold;">ImportAllViews</span>.</p>
+<p class="VBA-Text-Indent" style="font-style: normal;">&#160;</p>
+<p class="VBA-Heading-Method" style="font-style: normal;">ImportAllViews ( <span style="font-weight: normal;"><a href="../common_vbageneral/common_general_string.htm" id="a22" style="font-style: normal;" name="a22">string</a></span> &#160;definition )</p>
+<p class="VBA-Text-Indent" style="font-style: normal;">Import all user defined views from a view definition string. The view definition string can stem from <span style="font-weight: bold;">ExportView</span> or <span style="font-weight: bold;">ExportAllViews</span>.</p>
+<p class="VBA-Text-Indent" style="font-style: normal;">&#160;</p>
+<p class="VBA-Heading-Method" style="font-style: normal;">ZoomToStructure</p>
+<p class="VBA-Text-Indent" style="font-style: normal;">The camera zoom is adjusted to have the complete structure nicely fill the screen, as if the user would have pressed the Space or selected <span style="font-style: italic; text-decoration: underline;"><u><i>View-&gt;Change View-&gt;Reset View</i></u></span>.</p>
+<p class="VBA-Text-Indent" style="font-style: normal;">&#160;</p>
+<p class="VBA-Heading-Method" style="font-style: normal;"><span style="font-style: normal;">ZoomToSelectedStructure</span></p>
+<p class="VBA-Text-Indent" style="font-style: normal;">The camera zoom is adjusted to show the selected shapes. Similar to the shortcut key Shift + Space or by selecting <span style="font-style: italic; text-decoration: underline;"><u><i>View-&gt;Change View-&gt;Reset View to Selection</i></u></span>.</p>
+<p class="VBA-Text-Indent" style="font-style: normal;">&#160;</p>
+<p class="VBA-Heading-Method" style="font-style: normal;">ZoomToRegion ( <a href="../common_vbageneral/common_general_double.htm" id="a9" style="font-weight: normal; font-style: normal;" name="a9">double</a> xmin, <a href="../common_vbageneral/common_general_double.htm" id="a9" style="font-weight: normal; font-style: normal;" name="a9">double</a> ymin, <a href="../common_vbageneral/common_general_double.htm" id="a9" style="font-weight: normal; font-style: normal;" name="a9">double</a> zmin, <a href="../common_vbageneral/common_general_double.htm" id="a9" style="font-weight: normal; font-style: normal;" name="a9">double</a> xmax, <a href="../common_vbageneral/common_general_double.htm" id="a9" style="font-weight: normal; font-style: normal;" name="a9">double</a> ymax, <a href="../common_vbageneral/common_general_double.htm" id="a9" style="font-weight: normal; font-style: normal;" name="a9">double</a> zmax )</p>
+<p class="VBA-Text-Indent" style="font-style: normal;">The camera zoom is adjusted to show the given cubic region.</p>
+<p class="VBA-Text-Indent" style="font-style: normal;">&#160;</p>
+<p class="VBA-Heading-Method" style="font-style: normal;"><span>ResetZoom</span></p>
+<p class="VBA-Text-Indent" style="font-style: normal;">The camera zoom is reset. The structure, bounding box and the complete working plane (if enabled) is visible.</p>
+<p class="VBA-Heading-Category"><a name="Export_image" id="Export_image"></a>Export image</p>
+<p class="VBA-Heading-Method" style="font-style: normal;">ExportImage( <span style="font-weight: normal;"><a href="../common_vbageneral/common_general_string.htm" id="a41" style="font-style: normal;" name="a41">string</a></span> name, <span style="font-weight: normal;">&#160;<a href="../common_vbageneral/common_general_integer.htm" style="font-weight: normal;">int</a></span> width, <span style="font-weight: normal;">&#160;<a href="../common_vbageneral/common_general_integer.htm" style="font-weight: normal;">int</a></span> height)</p>
+<p class="VBA-Text-Indent">Creates a bitmap file of the current plot (3D sheet) with the specified size. The string filename is expected to be an absolute file path. Supported file formats are bmp, jpeg and png.</p>
+<p class="VBA-Text-Indent">Examples:</p>
+<p class="VBA-Text-Indent" style="font-style: italic;">Plot.ExportImage ("D:\image.bmp", 1024, 768)</p>
+<p class="VBA-Text-Indent" style="font-style: italic;">Plot.ExportImage ("D:\image.png", 1024, 768)</p>
+<p class="VBA-Text-Indent" style="font-style: italic;">Plot.ExportImage ("D:\image.jpeg", 800, 600)</p>
+<p class="VBA-Heading-Category"><span style="font-style: italic;"><i><a name="ViewOptions" id="ViewOptions"></a>View Options</i></span></p>
+<p class="VBA-Heading-Method" style="font-style: normal;">DrawBox ( <a href="../common_vbageneral/common_general_bool_data_type.htm" id="a20" style="font-weight: normal; font-style: normal;" name="a20">bool</a> switch )</p>
+<p class="VBA-Text-Indent" style="font-style: normal;">Shows or hides the bounding box of the whole structure.</p>
+<p class="VBA-Text-Indent" style="font-style: normal;">&#160;</p>
+<p class="VBA-Heading-Method" style="font-style: normal;">DrawWorkplane ( <span style="font-weight: normal;">&#160;enum {"TRUE", "FALSE"}</span> switch )</p>
+<p class="VBA-Text-Indent" style="font-style: normal;">Shows or hides the working plane.</p>
+<p class="VBA-Text-Indent" style="font-style: normal;">&#160;</p>
+<p class="VBA-Heading-Method" style="font-style: normal;">InnerSurfaces ( <a href="../common_vbageneral/common_general_bool_data_type.htm" id="a74" style="font-weight: normal; font-style: normal;" name="a74">bool</a> switch )</p>
+<p class="VBA-Text-Indent" style="font-style: normal;">This setting affects the scene only if a cutplane is defined such that the inside of the structure can be seen. If switch is True then the inner surfaces will be plotted in the same color as the solid. Otherwise they will be plotted in black.</p>
+<p class="VBA-Text-Indent" style="font-style: normal;">&#160;</p>
+<p class="VBA-Heading-Method" style="font-style: normal;">SurfaceMesh ( <a href="../common_vbageneral/common_general_bool_data_type.htm" id="a3" style="font-weight: normal; font-style: normal;" name="a3">bool</a> switch )</p>
+<p class="VBA-Text-Indent" style="font-style: normal;">Displays the surface facets' outline of the plotted structure. This method only takes effect if the main view shows the structure. If a tetrahedral mesh is used the surface triangles of this mesh are displayed.</p>
+<p class="VBA-Text-Indent" style="font-style: normal;">&#160;</p>
+<p class="VBA-Heading-Method" style="font-style: normal;">WireFrame ( <a href="../common_vbageneral/common_general_bool_data_type.htm" id="a2" style="font-weight: normal; font-style: normal;" name="a2">bool</a> switch )</p>
+<p class="VBA-Text-Indent" style="font-style: normal;">Toggles between two kinds of structure presentations. If switch is True the structure is plotted only by characteristic lines. Otherwise it is plotted as solid.</p>
+<p class="VBA-Text-Indent" style="font-style: normal;">&#160;</p>
+<p class="VBA-Heading-Method" style="font-style: normal;">ShowTextbox ( <a href="../common_vbageneral/common_general_bool_data_type.htm" id="a2" style="font-weight: normal; font-style: normal;" name="a2">bool</a> switch )</p>
+<p class="VBA-Text-Indent" style="font-style: normal;">Shows or hides the info text in the modeler view and the post-processing views.</p>
+<p class="VBA-Text-Indent" style="font-style: normal;">&#160;</p>
+<p class="VBA-Heading-Method" style="font-style: normal;">SetGradientBackground ( <a href="../common_vbageneral/common_general_bool_data_type.htm" id="a23" style="font-weight: normal; font-style: normal;" name="a23">bool</a> switch )</p>
+<p class="VBA-Text-Indent" style="font-style: normal;">Activates the gradient background in the main view.</p>
+<p class="vba-text-indent" style="font-style: normal;">&#160;</p>
+<p class="VBA-Heading-Method" style="font-style: normal;">GetGradientBackground <a href="../common_vbageneral/common_general_bool_data_type.htm" id="a24" style="font-weight: normal; font-style: normal;" name="a24">bool</a></p>
+<p class="VBA-Text-Indent" style="font-style: normal;">Queries whether the gradient background in the main view is active.</p>
+<p class="VBA-Text-Indent" style="font-style: normal;">&#160;</p>
+<p class="VBA-Heading-Method" style="font-style: normal;">SetBackgroundColor( <span style="font-weight: normal;"><a href="../common_vbageneral/common_general_string.htm" id="a36" style="font-style: normal;" name="a36">string</a></span> r, <span style="font-weight: normal;"><a href="../common_vbageneral/common_general_string.htm" id="a37" style="font-style: normal;" name="a37">string</a></span> g, <span style="font-weight: normal;"><a href="../common_vbageneral/common_general_string.htm" id="a38" style="font-style: normal;" name="a38">string</a></span> b )</p>
+<p class="VBA-Text-Indent" style="font-style: normal;">Set the background color in the main view.</p>
+<p class="VBA-Text-Indent" style="font-style: normal;">&#160;</p>
+<p class="VBA-Heading-Method" style="font-style: normal;">GetBackgroundColorR <a href="../common_vbageneral/common_general_string.htm" id="a33" style="font-weight: normal; font-style: normal;" name="a33">string</a></p>
+<p class="VBA-Heading-Method" style="font-style: normal;">GetBackgroundColorG <a href="../common_vbageneral/common_general_string.htm" id="a30" style="font-weight: normal; font-style: normal;" name="a30">string</a></p>
+<p class="VBA-Heading-Method" style="font-style: normal;">GetBackgroundColorB <a href="../common_vbageneral/common_general_string.htm" id="a30" style="font-weight: normal; font-style: normal;" name="a30">string</a></p>
+<p class="VBA-Text-Indent" style="font-style: normal;">Returns the red / green / blue component of the background color in the main view.</p>
+<p class="VBA-Heading-Category"><span style="font-style: italic;"><i>Default Settings</i></span></p>
+<p class="VBA-Text-Example" style="font-style: normal;">CutPlaneRatio (0.5)</p>
+<p class="VBA-Text-Example" style="font-style: normal;">DrawBox (False)</p>
+<p class="VBA-Text-Example" style="font-style: normal;">InnerSurfaces (True)</p>
+<p class="VBA-Text-Example" style="font-style: normal;">RotationAngle (10.0)</p>
+<p class="VBA-Text-Example" style="font-style: normal;">ShowCutPlane (False)</p>
+<p class="VBA-Text-Example" style="font-style: normal;">SurfaceMesh (False)</p>
+<p class="VBA-Text-Example" style="font-style: normal;">WireFrame (False)</p>
+<p class="VBA-Text-Example" style="font-style: normal;">&#160;</p>
+<?rh-p style="margin-bottom: 0px; text-align: Right; margin-left: 18px; 
+                 margin-right: 18px; margin-top: 18px;" ?>
+<div style="width: 100%; position: relative;" id="footer">
+<p style="border-bottom: Solid 1px #dddddd; text-align: Left; margin-left: 0px; font-family: Arial, sans-serif; line-height: Normal; margin-top: 9px; margin-right: 0px; margin-bottom: 6px; border-left-width: 1px; border-top-width: 1px; border-right-width: 1px;"><span style="text-align: Left; font-family: Arial, sans-serif; line-height: Normal;">&#160;</span></p>
+<table cellspacing="0" width="100%">
+<col style="width: 50%;" />
+<col style="width: 50%;" />
+<tr>
+<td style="vertical-align: Top;"><span style="font-family: Arial, sans-serif; line-height: Normal; font-size: 8pt;"><font size="1" style="font-size:8pt;">CST Studio Suite 2026</font></span></td>
+<td style="vertical-align: Top;">
+<p style="text-align: right;">&#160;</p>
+</td>
+</tr>
+</table>
+<p>&#160;</p>
+</div>
+<script type="text/javascript" language="javascript1.2">
+//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+        writeIntopicBar(0);
+
+
+highlightSearch();
+//-->
+//]]>
+</script>
+</body>
+</html>

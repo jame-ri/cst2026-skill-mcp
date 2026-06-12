@@ -1,0 +1,624 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="Adobe RoboHelp 11" />
+<title>Probe Object</title>
+<link rel="StyleSheet" href="../online_help_vba.css" type="text/css" />
+<script type="text/javascript" language="JavaScript1.2">
+//<![CDATA[
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+//]]>
+</script>
+<script type="text/javascript" id="MathJax-script" async="" src="../mathjax/es5/tex-svg.js" language="JavaScript1.2">
+</script>
+<style type="text/css">
+/*<![CDATA[*/
+<!--
+body { border-bottom-style:None; }
+-->
+/*]]>*/
+</style>
+
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+        origWidth = innerWidth;
+        origHeight = innerHeight;
+        onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+/*<![CDATA[*/
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+-->
+/*]]>*/
+</style>
+
+<script type="text/javascript" language="javascript1.2" src="../whmsg.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript" src="../whver.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript1.2" src="../whutils.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript1.2" src="../whproxy.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript1.2" src="../whlang.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript1.2" src="../whtopic.js" charset="utf-8">
+</script>
+</head>
+<body>
+<script type="text/javascript" language="javascript1.2">
+//<![CDATA[
+<!--
+if (window.gbWhTopic)
+{
+        var strUrl = document.location.href;
+        var bc = 0;
+        var n = strUrl.toLowerCase().indexOf("bc-");
+        if(n != -1)
+        {
+                document.location.replace(strUrl.substring(0, n));
+                bc = strUrl.substring(n+3);
+        }
+
+        if (window.addTocInfo)
+        {
+        addTocInfo("3D Simulation VBA\nVBA Objects\nMonitors\nProbe");
+addAvenueInfo("common_VBAMONITORS","special_VBAMonitors/special_VBAMonitors_Monitor_Object.htm","");
+
+        }
+        if (window.writeBtnStyle)
+                writeBtnStyle();
+
+        if (window.writeIntopicBar)
+                writeIntopicBar(0);
+
+        
+        document.write("<p style=\"font-family: Tahoma; font-size: 9pt; font-weight: 400;  font-style:normal; color: rgb(0, 0, 0); text-decoration:none; text-align: left\"> ");
+AddMasterBreadcrumbs("../index.htm", "font-family: Tahoma; font-size: 9pt; font-weight: 400;  font-style:normal; color: rgb(0, 0, 0); text-decoration:none; text-align: left", "|", "Home", "../special_vbaobjects/special_vbaobjects_vbaobjects.htm");
+document.write("<a style=\"font-family: Tahoma; font-size: 9pt; font-weight: 400;  font-style:normal; color: rgb(0, 0, 0); text-decoration:none; text-align: left\" href=\"../special_vbaobjects/special_vbaobjects_vbaobjects.htm\">3D Simulation VBA<\/a> | <a style=\"font-family: Tahoma; font-size: 9pt; font-weight: 400;  font-style:normal; color: rgb(0, 0, 0); text-decoration:none; text-align: left\" href=\"../special_vbaobjects/special_vbaobjects_vbaobjects.htm\">VBA Objects<\/a> | <a style=\"font-family: Tahoma; font-size: 9pt; font-weight: 400;  font-style:normal; color: rgb(0, 0, 0); text-decoration:none; text-align: left\" href=\"special_vbamonitors_monitor_object.htm\">Monitors<\/a> | Probe<\/p>");
+
+}
+else
+        if (window.gbIE4)
+                document.location.reload();
+
+onLoadHandler = function()
+{
+  if (window.setRelStartPage)
+        {
+        setTimeout("setRelStartPage('../index.htm');", 1)
+
+    setTimeout("UpdateBreadCrumbsMarker();", 1);
+        }
+}
+
+if (window.addEventListener){  
+        window.addEventListener('load', onLoadHandler, false);   
+} else if (window.attachEvent){  
+        window.attachEvent('onload', onLoadHandler);  
+}
+
+function onSetStartPage()
+{
+  autoSync(1);
+  sendSyncInfo();
+  sendAveInfoOut();
+}
+//-->
+//]]>
+</script><script type="text/javascript" src="../ehlpdhtm.js" language="JavaScript1.2">
+</script>
+<table cellspacing="0" width="100%">
+<col style="width: 50%;" />
+<col style="width: 50%;" />
+<tr>
+<td style="vertical-align: middle; padding-top: 5px; padding-bottom: 5px;">
+<p style="margin-top: 0px; margin-bottom: 0px;"><img src="../3ds.png" alt="" style="border: none;" border="0" /></p>
+</td>
+<td style="vertical-align: middle;">
+<p style="text-align: right;"><a href="https://www.3ds.com/products-services/3dexperience/" target="_blank"><img src="../3dexp.png" alt="" style="border: none;" width="32" height="32" border="0" /></a></p>
+</td>
+</tr>
+</table>
+<p class="VBA-Heading-Object">Probe Object</p>
+<p class="VBA-Text">Defines probes within your structure that store one field component at that location. The field values during time as well as the corresponding S-Parameter are stored. You may have either electric or magnetic field probes in nearfield as well as in farfield region.</p>
+<ul>
+<li class="p-VBA-Index-Category">
+<p class="VBA-Index-Category"><a href="#General">General Methods</a></p>
+</li>
+<li class="p-VBA-Index-Category">
+<p class="VBA-Index-Category"><a href="#Methods_Position">Methods Concerning Probe Position and Orientation</a></p>
+</li>
+<li class="p-VBA-Index-Category">
+<p class="VBA-Index-Category"><a href="#Queries_Position">Queries Concerning Probe Position and Orientation</a></p>
+</li>
+<li class="p-VBA-Index-Category" style="color: #000000;">
+<p class="VBA-Index-Category"><a href="#Farfield_Specials">Methods Concerning Farfield Specials</a></p>
+</li>
+<li class="p-VBA-Index-Category">
+<p class="VBA-Index-Category"><a href="#Probe_Iteration">Probe Iteration</a></p>
+</li>
+<li class="p-VBA-Index-Category">
+<p class="VBA-Index-Category"><a href="#Defaults">Default Settings</a></p>
+</li>
+<li class="p-VBA-Index-Category">
+<p class="VBA-Index-Category"><a href="#Example">Examples</a></p>
+</li>
+</ul>
+<p class="VBA-Heading-Category"><a name="General" id="General"></a>General Methods</p>
+<p class="VBA-Heading-Method">Reset</p>
+<p class="VBA-Text-Indent">Resets all internal values to their default settings.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">ID</p>
+<p class="VBA-Text-Indent">Sets the ID to be used for the next probe to be created. If it is not set or set to a value smaller than zero, an ID will automatically be generated. See also "GetNextValidId" and "GetLastAddedId". To ensure backward compatibility, the caption of a probe still needs to be unique for each probe. However, probes should be handled using the integer value used as ID.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">AutoLabel ( <span><a href="../common_vbageneral/common_general_bool_data_type.htm" id="a461" style="font-weight: normal; font-style: normal;" name="a461">bool</a></span> flag &#160;)</p>
+<p class="VBA-Text-Indent">If true the caption of the probe will be generated out of its type and its position. It will be updated accordingly once the position will change (due to transformations or parameter changes) and makes sure the caption is always unique</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">Field ( <a href="../common_vbageneral/common_general_enum.htm" id="a7" style="font-weight: normal; font-style: normal;" name="a7">enum</a><span style="font-weight: normal;">{"efield","hfield","efarfield","hfarfield","rcs"}</span> <span style="font-style: italic;"><i>fieldType</i></span> )</p>
+<p class="VBA-Text-Indent">Selects whether the probe should monitor an electric ("efield") or magnetic ("hfield") field inside the calculation domain or an electric ("efarfield") or magnetic ("hfarfield") farfield or RCS values.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">GetField &#160;<a href="../common_vbageneral/common_general_enum.htm" id="a6" style="font-weight: normal; font-style: normal;" name="a6">enum</a><span style="font-weight: normal;">{"efield","hfield","efarfield","hfarfield","rcs"}</span></p>
+<p class="VBA-Text-Indent">Returns the field type of the currently selected probe. The selection is done either with the <span style="font-weight: bold;">GetFirst</span> or the <span style="font-weight: bold;">GetNext</span> function.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">Create</p>
+<p class="VBA-Text-Indent">Creates the probe.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">GetNextValidId <a href="../common_vbageneral/common_general_long.htm" id="a4622" style="font-weight: normal; font-style: normal;" name="a4622">long</a></p>
+<p class="VBA-Text-Indent">Returns the ID for the next probe to be generated. In most cases you will not need this function, since the ID can be generated automatically by the Create method.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">GetLastAddedId <a href="../common_vbageneral/common_general_long.htm" id="a4623" style="font-weight: normal; font-style: normal;" name="a4623">long</a></p>
+<p class="VBA-Text-Indent">Returns the last ID automatically generated by the Create method.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">GetCaption <a href="../common_vbageneral/common_general_string.htm" id="a4621111" style="font-weight: normal; font-style: normal;" name="a4621111">string</a></p>
+<p class="VBA-Text-Indent">Returns the current caption of a selected probe. Use the iterators GetFirst() and GetNext() to select a probe.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">DeleteById ( <a href="../common_vbageneral/common_general_long.htm" id="a4621" style="font-weight: normal; font-style: normal;" name="a4621">long</a> id )</p>
+<p class="VBA-Text-Indent">Deletes the probe with the given ID.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">NewCaption ( <a href="../common_vbageneral/common_general_long.htm" id="a46211" style="font-weight: normal; font-style: normal;" name="a46211">long</a> id, <span><a href="../common_vbageneral/common_general_string.htm" id="a462111" style="font-weight: normal; font-style: normal;" name="a462111">string</a></span> caption &#160;)</p>
+<p class="VBA-Text-Indent">Assigns a new caption to the probe with the given ID. To ensure backward compatibility the caption of a probe still needs to be unique for each probe. However, probes should be handled using the integer value used as ID.</p>
+<p class="VBA-Heading-Category"><a name="Methods_Position" id="Methods_Position"></a>Methods Concerning Probe Position and Orientation</p>
+<p class="VBA-Heading-Method">Xpos ( <a href="../common_vbageneral/common_general_double.htm" id="a9" style="font-weight: normal; font-style: normal;" name="a9">double</a> <span style="font-style: italic;"><i>pos</i></span> )</p>
+<p class="VBA-Heading-Method">Ypos ( <a href="../common_vbageneral/common_general_double.htm" id="a10" style="font-weight: normal; font-style: normal;" name="a10">double</a> <span style="font-style: italic;"><i>pos</i></span> )</p>
+<p class="VBA-Heading-Method">Zpos ( <a href="../common_vbageneral/common_general_double.htm" id="a11" style="font-weight: normal; font-style: normal;" name="a11">double</a> <span style="font-style: italic;"><i>pos</i></span> )</p>
+<p class="VBA-Text-Indent">Defines the position of the probe for the respective coordinate direction.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">SetPosition1 ( <a href="../common_vbageneral/common_general_double.htm" id="a12" style="font-weight: normal; font-style: normal;" name="a12">double</a> <span style="font-style: italic;"><i>pos</i></span> )</p>
+<p class="VBA-Heading-Method">SetPosition2 ( <a href="../common_vbageneral/common_general_double.htm" id="a13" style="font-weight: normal; font-style: normal;" name="a13">double</a> <span style="font-style: italic;"><i>pos</i></span> )</p>
+<p class="VBA-Heading-Method">SetPosition3 ( <a href="../common_vbageneral/common_general_double.htm" id="a14" style="font-weight: normal; font-style: normal;" name="a14">double</a> <span style="font-style: italic;"><i>pos</i></span> )</p>
+<p class="VBA-Text-Indent">Defines the first, second or third &#160;farfield coordinate parameter of the probe due to the selected coordinate system (using <span style="font-weight: bold;">SetCoordinateSystemType</span> method).</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Text-Indent">The actual coordinate component with <span style="font-weight: bold;">SetPostion1/2/3</span> is listed below depending on the coordinate system type:</p>
+<table style="vertical-align: top; margin-left: 24px; left: 0px; top: 1246px;" cellspacing="0">
+<col />
+<col />
+<col />
+<col />
+<tr style="vertical-align: top;">
+<td style="border: Solid 1px #000000; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text-Indent">Coordinate System Type</p>
+</td>
+<td style="border-top: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text-Indent">Parameter 1</p>
+</td>
+<td style="border-top: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text-Indent">Parameter 2</p>
+</td>
+<td style="border-top: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text-Indent">Parameter 3</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text-Indent">Cartesian</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text-Indent">X</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text-Indent">Y</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text-Indent">Z</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text-Indent">Spherical</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text-Indent">Theta</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text-Indent">Phi</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text-Indent">Radius</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text-Indent">Ludwig 2 Azim. over Elev.</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text-Indent">Elevation</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text-Indent">Azimuth</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text-Indent">Radius</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text-Indent">Ludwig 2 Elev. over Azim.</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text-Indent">Alpha</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text-Indent">Epsilon</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text-Indent">Radius</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text-Indent">Ludwig 3</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text-Indent">Theta</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text-Indent">Phi</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text-Indent">Radius</p>
+</td>
+</tr>
+</table>
+<p class="VBA-Text-Indent">Please note that <span style="font-style: italic;"><i>Cartesian</i></span> uses global coordinates while all <span style="font-style: italic;"><i>Spherical</i></span> / <span style="font-style: italic;"><i>Ludwig</i></span> coordinates are relative to the probe origin.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">Orientation ( <a href="../common_vbageneral/common_general_enum.htm" id="a15" style="font-weight: normal; font-style: normal;" name="a15">enum</a> <span style="font-style: italic;"><i>orientType</i></span> )</p>
+<p class="VBA-Text-Indent">Defines the orientation of the probe regarding the coordinate system type set with <span style="font-weight: bold;">SetCoordinateSystemType</span> and therefore the field component that is monitored.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Text-Indent"><span style="font-style: italic;"><i>orientType</i></span> can have one of the following values:</p>
+<table style="vertical-align: top; margin-left: 24px; left: 0px; top: 1217px;" cellspacing="0" width="595">
+<col />
+<col />
+<tr style="vertical-align: top;">
+<td style="border: Solid 1px #000000; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text-Indent">"x"</p>
+</td>
+<td style="border-top: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text-Indent">component in x-direction of the cartesian coordinate system</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text-Indent">"y"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text-Indent">component in y-direction of the cartesian coordinate system</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text-Indent">"z"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text-Indent">component in z-direction of cartesian coordinate system</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text-Indent">"all"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text-Indent">create a set of probes with all the available orientations depending on the coordinate system. &#160;For instance for the <span style="font-style: italic;"><i>cartesian</i></span>&#160;coordinate system the probes are generated in the x-, y- and z- direction whereas for the <span style="font-style: italic;"><i>spherical</i></span> coordinate system the probes are in the theta- and phi- direction. The option allows to inspect all the field components at the same time together with the global field magnitude computation.</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text-Indent">"theta"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text-Indent">component in theta-direction of spherical coordinate system</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text-Indent">"phi"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text-Indent">component in phi-direction of spherical coordinate system</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text-Indent">"radial"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text-Indent">component in radial-direction of spherical and Ludwig2/3 coordinate systems</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text-Indent">"azimuth"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text-Indent">component in azimuth-direction of Ludwig 2 Azim. over Elev. coordinate system</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text-Indent">"elevation"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text-Indent">component in elevation-direction of Ludwig 2 Azim. over Elev. coordinate system</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text-Indent">"epsilon"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text-Indent">component in epsilon-direction of Ludwig 2 Elev. over Azim. coordinate system</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text-Indent">"alpha"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text-Indent">component in alpha-direction of Ludwig 2 Elev. over Azim. coordinate system</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text-Indent">"horizontal"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text-Indent">component in horizontal-direction of Ludwig 3 coordinate system</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text-Indent">"vertical"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text-Indent">component in vertical-direction of Ludwig 3 coordinate system</p>
+</td>
+</tr>
+</table>
+<p class="Topic-Text-Indent">&#160;</p>
+<p class="Topic-Text-Indent"><span style="font-weight: bold;">Note</span>: Using the <span style="font-style: italic;"><i>orientType</i></span> &#160;"all" the global field magnitude of a probe signal in the time domain is computed with the standard norm of a vector according to the formula \begin{equation} ||F|| = \sqrt{\sum_i |F_i|^2} \end{equation}</p>
+<p class="Topic-Text-Indent">Here <span style="font-weight: bold;">F</span> represents any real valued field vector and the sum is performed over the field components.</p>
+<p class="Topic-Text-Indent">In case of a probe spectra in the frequency domain the global field magnitude is computed according to the maximum field amplitude defined by the formula (here <span style="font-weight: bold;">F</span> represents any complex valued field vector) \begin{equation} |F|_{\mathrm{max}} = \max\limits_{\varphi \in[0, 2\pi]}{||\operatorname{Re} \left(F e^{j\varphi} \right) ||} \end{equation}</p>
+<p class="Topic-Text-Indent">This definition is consistent with the 2D and 3D field monitor processing, see also the <a href="../../3D/common_preloadedmacro/common_preloadedmacro_0d_evaluate_field_in_arbitrary_coordinates_(0d_1d_2d_3d).htm">2D and 3D Field Results / Evaluate Field in arbitrary Coordinates</a> and <a href="../../3D/special_solvopt/special_solvopt_probe_general.htm">Probe General</a> pages.</p>
+<p class="VBA-Heading-Category"><a name="Queries_Position" id="Queries_Position"></a>Queries Concerning Probe Position and Orientation</p>
+<p class="VBA-Heading-Method">GetPosition1 <a href="../common_vbageneral/common_general_double.htm" id="a16" style="font-weight: normal; font-style: normal;" name="a16">double</a></p>
+<p class="VBA-Heading-Method">GetPosition2 <a href="../common_vbageneral/common_general_double.htm" id="a17" style="font-weight: normal; font-style: normal;" name="a17">double</a></p>
+<p class="VBA-Heading-Method">GetPosition3 <a href="../common_vbageneral/common_general_double.htm" id="a18" style="font-weight: normal; font-style: normal;" name="a18">double</a></p>
+<p class="VBA-Text-Indent">Returns the first, second or third component of the position of the currently selected probe, depending on the corresponding coordinate system type, respectively. The selection of the probe is done either with the <span style="font-weight: bold;">GetFirst</span> or the <span style="font-weight: bold;">GetNext</span> function.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">GetXPos <a href="../common_vbageneral/common_general_double.htm" id="a19" style="font-weight: normal; font-style: normal;" name="a19">double</a></p>
+<p class="VBA-Heading-Method">GetYPos <a href="../common_vbageneral/common_general_double.htm" id="a20" style="font-weight: normal; font-style: normal;" name="a20">double</a></p>
+<p class="VBA-Heading-Method" style="margin-top: 0; margin-bottom: 0;">GetZPos <a href="../common_vbageneral/common_general_double.htm" id="a21" style="font-weight: normal; font-style: normal;" name="a21">double</a></p>
+<p class="VBA-Text-Indent"><span style="margin-top: 0; margin-bottom: 0;">Returns</span> the position of the probe for the respective coordinate direction.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">GetOrientation <a href="../common_vbageneral/common_general_enum.htm" id="a22" style="font-weight: normal; font-style: normal;" name="a22">enum</a> <span style="font-style: italic;"><i>orientType</i></span></p>
+<p class="VBA-Text-Indent">Returns the orientation of the probe as a string value <span style="font-weight: bold; font-style: italic;"><i>orientType</i></span>. Please find the meaning of the different string values in the description of the <span style="font-weight: bold;">Orientation</span> method above.</p>
+<p class="VBA-Text-Indent">The selection of the probe is done either with the <span style="font-weight: bold;">GetFirst</span> or the <span style="font-weight: bold;">GetNext</span> function.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">GetTheta <a href="../common_vbageneral/common_general_double.htm" id="a23" style="font-weight: normal; font-style: normal;" name="a23">double</a></p>
+<p class="VBA-Heading-Method">GetPhi <a href="../common_vbageneral/common_general_double.htm" id="a24" style="font-weight: normal; font-style: normal;" name="a24">double</a></p>
+<p class="VBA-Heading-Method">GetRadius <a href="../common_vbageneral/common_general_double.htm" id="a38" style="font-weight: normal; font-style: normal;" name="a38">double</a></p>
+<p class="VBA-Text-Indent">Returns the location of the probe in spherical coordinates. The selection of the probe is done either with the <span style="font-weight: bold;">GetFirst</span> or the <span style="font-weight: bold;">GetNext</span> function.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">GetXComp <a href="../common_vbageneral/common_general_double.htm" id="a39" style="font-weight: normal; font-style: normal;" name="a39">double</a></p>
+<p class="VBA-Heading-Method">GetYComp <a href="../common_vbageneral/common_general_double.htm" id="a40" style="font-weight: normal; font-style: normal;" name="a40">double</a></p>
+<p class="VBA-Heading-Method">GetZComp <a href="../common_vbageneral/common_general_double.htm" id="a41" style="font-weight: normal; font-style: normal;" name="a41">double</a></p>
+<p class="VBA-Text-Indent">Returns the orientation of the probe in cartesian coordinates. The selection of the probe is done either with the <span style="font-weight: bold;">GetFirst</span> or the <span style="font-weight: bold;">GetNext</span> function.</p>
+<p class="VBA-Heading-Category"><a name="Farfield_Specials" id="Farfield_Specials"></a>Methods Concerning Farfield Specials</p>
+<p class="VBA-Heading-Method">SetCoordinateSystemType ( <a href="../common_vbageneral/common_general_enum.htm" id="a43" style="font-weight: normal; font-style: normal;" name="a43">enum</a> <span style="font-style: italic;"><i>coordType</i></span> )</p>
+<p class="VBA-Heading-Method">GetCoordinateSystemType <a href="../common_vbageneral/common_general_enum.htm" id="a42" style="font-weight: normal; font-style: normal;" name="a42">enum</a> <span style="font-style: italic;"><i>coordType</i></span></p>
+<p class="VBA-Text-Indent">Sets or returns the coordinate system type for a farfield probe, respectively. For the <span style="font-weight: bold;">GetCoordinateSystemType</span> method the selection of the probe is done either with the <span style="font-weight: bold;">GetFirst</span> or the <span style="font-weight: bold;">GetNext</span> function.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Text-Indent"><span style="font-style: italic;"><i>coordType</i></span> can have one of the following values:</p>
+<table style="margin-left: 24px;" cellspacing="0" width="519">
+<tr style="vertical-align: top;">
+<td style="border: Solid 1px #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;" width="151">
+<p>�Cartesian�</p>
+</td>
+<td style="border-top: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;" width="368">
+<p>Cartesian coordinate system</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;" width="151">
+<p>�Spherical�</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;" width="368">
+<p>Spherical coordinate system</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;" width="151">
+<p>�Ludwig2ae�</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;" width="368">
+<p>Ludwig 2 Azimuth over Elevation coordinate system</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;" width="151">
+<p>�Ludwig2ea�</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;" width="368">
+<p>Ludwig 2 Elevation over Azimuth coordinate system</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;" width="151">
+<p>�Ludwig3�</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;" width="368">
+<p>Ludwig 3 coordinate system</p>
+</td>
+</tr>
+</table>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">Origin ( <a href="../common_vbageneral/common_general_enum.htm" id="a51" style="font-weight: normal; font-style: normal;" name="a51">enum</a> <span style="font-style: italic;"><i>originType</i></span> )</p>
+<p class="VBA-Text-Indent">The origin type of all farfield probes.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Text-Indent"><span style="font-style: italic;"><i>originType</i></span> can have one of the following values:</p>
+<table style="margin-left: 24px;" cellspacing="0" width="453">
+<tr style="vertical-align: top;">
+<td style="border: Solid 1px #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;" width="94">
+<p class="VBA-Text-Indent">�bbox�</p>
+</td>
+<td style="border-top: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;" width="359">
+<p class="VBA-Text-Indent">The center of the bounding box of the structure.</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;" width="94">
+<p class="VBA-Text-Indent">�zero�</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;" width="359">
+<p class="VBA-Text-Indent">Origin of coordinate system.</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;" width="94">
+<p class="VBA-Text-Indent">�free�</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;" width="359">
+<p class="VBA-Text-Indent">Any desired point defined by <span style="font-weight: bold;">Userorigin</span></p>
+</td>
+</tr>
+</table>
+<p class="VBA-Heading-Method">&#160;</p>
+<p class="VBA-Heading-Method">Userorigin (<a href="../common_vbageneral/common_general_double.htm" id="a49" style="font-weight: normal; font-style: normal;" name="a49">double</a> <span style="font-style: italic;"><i>x,</i></span> <a href="../common_vbageneral/common_general_double.htm" id="a50" style="font-weight: normal; font-style: normal;" name="a50">double</a> <span style="font-style: italic;"><i>y,</i></span> <a href="../common_vbageneral/common_general_double.htm" id="a52" style="font-weight: normal; font-style: normal;" name="a52">double</a> <span style="font-style: italic;"><i>z</i></span> )</p>
+<p class="VBA-Text-Indent">Sets origin of the farfield probe calculation if the origin type is set to �free�.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method"><span style="font-weight: bold;">U</span>seDecouplingPlane ( <a href="../common_vbageneral/common_general_bool_data_type.htm" id="a63" style="font-weight: normal; font-style: normal;" name="a63">bool</a> <span style="font-style: italic;"><i>bFlag</i></span> &#160;)</p>
+<p class="VBA-Text-Indent">Enables or disables a decoupling plane for a farfield probe calculation.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">DecouplingPlaneAxis ( <a href="../common_vbageneral/common_general_enum.htm" id="a65" style="font-weight: normal; font-style: normal;" name="a65">enum</a><span style="font-weight: normal;">{"x", "y", "z"}</span> <span style="font-style: italic;"><i>axis</i></span> )</p>
+<p class="VBA-Text-Indent">This command sets the normal of user defined decoupling plane. The normal is always aligned with one of the three cartesian coordinate axes x, y, or z.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">DecouplingPlanePosition ( <a href="../common_vbageneral/common_general_double.htm" id="a64" style="font-weight: normal; font-style: normal;" name="a64">double</a> <span style="font-style: italic;"><i>position</i></span> )</p>
+<p class="VBA-Text-Indent">Enter here the coordinate of the user defined decoupling plane in normal direction.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">SetUserDecouplingPlane ( <a href="../common_vbageneral/common_general_bool_data_type.htm" id="a66" style="font-weight: normal; font-style: normal;" name="a66">bool</a> <span style="font-style: italic;"><i>bFlag</i></span> &#160;)</p>
+<p class="VBA-Text-Indent">If activated a user defined decoupling plane for a &#160;farfield probe calculation is used instead of an automatically detected decoupling plane.</p>
+<p class="VBA-Heading-Category"><a name="Probe_Iteration" id="Probe_Iteration"></a>Probe Iteration</p>
+<p class="VBA-Heading-Method">GetFirst <span><a href="../common_vbageneral/common_general_long.htm" id="a46" style="font-weight: normal; font-style: normal;" name="a46">long</a></span></p>
+<p class="VBA-Text-Indent">Selects the first probe in the internal probe list and returns 1 on success and 0 if no probes are defined. The following probes of the list are then selectable using the <span style="font-weight: bold;">GetNext</span> function.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">GetNext <a href="../common_vbageneral/common_general_long.htm" id="a47" style="font-weight: normal; font-style: normal;" name="a47">long</a></p>
+<p class="VBA-Text-Indent">Selects the next probe in the internal probe list and returns 1 on success and 0 if no probes are defined. The first probe of the list is selectable using the <span style="font-weight: bold;">GetFirst</span> function.</p>
+<p class="VBA-Heading-Category"><a name="Defaults" id="Defaults"></a>Default Settings</p>
+<p class="VBA-Text-Example">ID -1</p>
+<p class="VBA-Text-Example">AutoLabel 0</p>
+<p class="VBA-Text-Example">Field ("efield")</p>
+<p class="VBA-Text-Example">Xpos (0.0)</p>
+<p class="VBA-Text-Example">Ypos (0.0)</p>
+<p class="VBA-Text-Example">Zpos (0.0)</p>
+<p class="VBA-Text-Example">Orientation ("x")</p>
+<p class="VBA-Text-Example">SetCoordinateSystemType ("Cartesian")</p>
+<p class="VBA-Text-Example">Origin ("bbox")</p>
+<p class="VBA-Text-Example">Userorigin (0.0, 0.0, 0.0)</p>
+<p class="VBA-Text-Example">UseMirrorPlane (False)</p>
+<p class="VBA-Text-Example">MirrorPlaneAxis ("x")</p>
+<p class="VBA-Text-Example">MirrorPlanePosition (0.0)</p>
+<p class="VBA-Text-Example">SetUserMirrorPlane (False)</p>
+<p class="VBA-Heading-Category"><a name="Example" id="Example"></a>Examples</p>
+<p class="VBA-Text-Example">'Probe creation</p>
+<p class="VBA-Text-Example">With Probe</p>
+<p class="VBA-Text-Example" style="margin-left: 40px;">.Reset</p>
+<p class="VBA-Text-Example" style="margin-left: 40px;">.ID 0</p>
+<p class="VBA-Text-Example" style="margin-left: 40px;">.AutoLabel 1</p>
+<p class="VBA-Text-Example" style="margin-left: 40px;">.Field ("efarfield")</p>
+<p class="VBA-Text-Example" style="margin-left: 40px;">.SetCoordinateSystemType ("Spherical")</p>
+<p class="VBA-Text-Example" style="margin-left: 40px;">.SetPosition1 (90.0)</p>
+<p class="VBA-Text-Example" style="margin-left: 40px;">.SetPosition2 (0.0)</p>
+<p class="VBA-Text-Example" style="margin-left: 40px;">.SetPosition3 (1.0)</p>
+<p class="VBA-Text-Example" style="margin-left: 40px;">.Orientation ("Theta")</p>
+<p class="VBA-Text-Example" style="margin-left: 40px;">.Origin ("zero")</p>
+<p class="VBA-Text-Example" style="margin-left: 40px;">.Create</p>
+<p class="VBA-Text-Example">End With</p>
+<p class="VBA-Text-Example">&#160;</p>
+<p class="VBA-Text-Example">'Probe query</p>
+<p class="VBA-Text-Example">Dim lRunningIndex As Long</p>
+<p class="VBA-Text-Example">Dim lProbeCount &#160;&#160;As Long</p>
+<p class="VBA-Text-Example">&#160;</p>
+<p class="VBA-Text-Example">If Probe.GetFirst = 1 Then</p>
+<p class="VBA-Text-Example" style="margin-left: 40px;">ReportInformation(Probe.GetCaption())</p>
+<p class="VBA-Text-Example" style="margin-left: 40px;">lProbeCount = 1</p>
+<p class="VBA-Text-Example">Else</p>
+<p class="VBA-Text-Example" style="margin-left: 40px;">lProbeCount = 0</p>
+<p class="VBA-Text-Example">End If</p>
+<p class="VBA-Text-Example">While Probe.GetNext = 1</p>
+<p class="VBA-Text-Example" style="margin-left: 40px;">lProbeCount = lProbeCount + 1</p>
+<p class="VBA-Text-Example" style="margin-left: 40px;">ReportInformation(Probe.GetCaption())</p>
+<p class="VBA-Text-Example">Wend</p>
+<p class="VBA-Text-Example">ReportInformation("number of probes: " &amp; lProbeCount)</p>
+<p class="VBA-Text-Example">&#160;</p>
+<?rh-p style="margin-bottom: 0px; text-align: Right; margin-left: 18px; 
+                 margin-right: 18px; margin-top: 18px;" ?>
+<div style="width: 100%; position: relative;" id="footer">
+<p style="border-bottom: Solid 1px #dddddd; text-align: Left; margin-left: 0px; font-family: Arial, sans-serif; line-height: Normal; margin-top: 9px; margin-right: 0px; margin-bottom: 6px; border-left-width: 1px; border-top-width: 1px; border-right-width: 1px;"><span style="text-align: Left; font-family: Arial, sans-serif; line-height: Normal;">&#160;</span></p>
+<table cellspacing="0" width="100%">
+<col style="width: 50%;" />
+<col style="width: 50%;" />
+<tr>
+<td style="vertical-align: Top;"><span style="font-family: Arial, sans-serif; line-height: Normal; font-size: 8pt;"><font size="1" style="font-size:8pt;">CST Studio Suite 2026</font></span></td>
+<td style="vertical-align: Top;">
+<p style="text-align: right;">&#160;</p>
+</td>
+</tr>
+</table>
+<p>&#160;</p>
+</div>
+<script type="text/javascript" language="javascript1.2">
+//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+        writeIntopicBar(0);
+
+
+highlightSearch();
+//-->
+//]]>
+</script>
+</body>
+</html>

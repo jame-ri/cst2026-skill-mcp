@@ -1,0 +1,503 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="Adobe RoboHelp 11" />
+<title>TrackingSolver Object</title>
+<link rel="StyleSheet" href="../online_help_vba.css" type="text/css" />
+<style type="text/css">
+/*<![CDATA[*/
+<!--
+body { border-bottom-style:None; }
+-->
+/*]]>*/
+</style>
+
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+        origWidth = innerWidth;
+        origHeight = innerHeight;
+        onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+/*<![CDATA[*/
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+-->
+/*]]>*/
+</style>
+
+<script type="text/javascript" language="javascript1.2" src="../whmsg.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript" src="../whver.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript1.2" src="../whutils.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript1.2" src="../whproxy.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript1.2" src="../whlang.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript1.2" src="../whtopic.js" charset="utf-8">
+</script>
+</head>
+<body>
+<script type="text/javascript" language="javascript1.2">
+//<![CDATA[
+<!--
+if (window.gbWhTopic)
+{
+        var strUrl = document.location.href;
+        var bc = 0;
+        var n = strUrl.toLowerCase().indexOf("bc-");
+        if(n != -1)
+        {
+                document.location.replace(strUrl.substring(0, n));
+                bc = strUrl.substring(n+3);
+        }
+
+        if (window.addTocInfo)
+        {
+        addTocInfo("3D Simulation VBA\nVBA Objects\nSolver\nParticles\nTrackingSolver");
+
+        }
+        if (window.writeBtnStyle)
+                writeBtnStyle();
+
+        if (window.writeIntopicBar)
+                writeIntopicBar(0);
+
+        
+        document.write("<p style=\"font-family: Tahoma; font-size: 9pt; font-weight: 400;  font-style:normal; color: rgb(0, 0, 0); text-decoration:none; text-align: left\"> ");
+AddMasterBreadcrumbs("../index.htm", "font-family: Tahoma; font-size: 9pt; font-weight: 400;  font-style:normal; color: rgb(0, 0, 0); text-decoration:none; text-align: left", "|", "Home", "../special_vbaobjects/special_vbaobjects_vbaobjects.htm");
+document.write("<a style=\"font-family: Tahoma; font-size: 9pt; font-weight: 400;  font-style:normal; color: rgb(0, 0, 0); text-decoration:none; text-align: left\" href=\"../special_vbaobjects/special_vbaobjects_vbaobjects.htm\">3D Simulation VBA<\/a> | <a style=\"font-family: Tahoma; font-size: 9pt; font-weight: 400;  font-style:normal; color: rgb(0, 0, 0); text-decoration:none; text-align: left\" href=\"../special_vbaobjects/special_vbaobjects_vbaobjects.htm\">VBA Objects<\/a> | <a style=\"font-family: Tahoma; font-size: 9pt; font-weight: 400;  font-style:normal; color: rgb(0, 0, 0); text-decoration:none; text-align: left\" href=\"../special_vbasolver/special_vbasolver_background_object.htm\">Solver<\/a> | <a style=\"font-family: Tahoma; font-size: 9pt; font-weight: 400;  font-style:normal; color: rgb(0, 0, 0); text-decoration:none; text-align: left\" href=\"../special_vbasolver/special_vbasolver_solver_object.htm#bc-1\">Particles<\/a> | TrackingSolver<\/p>");
+
+}
+else
+        if (window.gbIE4)
+                document.location.reload();
+
+onLoadHandler = function()
+{
+  if (window.setRelStartPage)
+        {
+        setTimeout("setRelStartPage('../index.htm');", 1)
+
+    setTimeout("UpdateBreadCrumbsMarker();", 1);
+        }
+}
+
+if (window.addEventListener){  
+        window.addEventListener('load', onLoadHandler, false);   
+} else if (window.attachEvent){  
+        window.attachEvent('onload', onLoadHandler);  
+}
+
+function onSetStartPage()
+{
+  autoSync(1);
+  sendSyncInfo();
+  sendAveInfoOut();
+}
+//-->
+//]]>
+</script><script type="text/javascript" src="../ehlpdhtm.js" language="JavaScript1.2">
+</script>
+<table cellspacing="0" width="100%">
+<col style="width: 50%;" />
+<col style="width: 50%;" />
+<tr>
+<td style="vertical-align: middle; padding-top: 5px; padding-bottom: 5px;">
+<p style="margin-top: 0px; margin-bottom: 0px;"><img src="../3ds.png" alt="" style="border: none;" border="0" /></p>
+</td>
+<td style="vertical-align: middle;">
+<p style="text-align: right;"><a href="https://www.3ds.com/products-services/3dexperience/" target="_blank"><img src="../3dexp.png" alt="" style="border: none;" width="32" height="32" border="0" /></a></p>
+</td>
+</tr>
+</table>
+<p class="VBA-Heading-Object">TrackingSolver Object</p>
+<p class="VBA-Text">The Object is used to define the Tracking Solver parameters.</p>
+<ul>
+<li class="p-VBA-Index-Category">
+<p class="VBA-Index-Category"><a href="#Methods">Methods</a></p>
+</li>
+<li class="p-VBA-Index-Category">
+<p class="VBA-Index-Category" style="font-weight: bold;"><a href="#Default" style="font-weight: bold;">Default Settings</a></p>
+</li>
+<li class="p-VBA-Index-Category">
+<p class="VBA-Index-Category"><a href="#Example">Example</a></p>
+</li>
+</ul>
+<p class="VBA-Heading-Category" style="font-size: 12pt; color: #000000;"><a name="Methods" id="Methods" style="font-size: 12pt;"><span style="color: #000000;"><font color="black">Methods</font></span></a></p>
+<p class="VBA-Heading-Method">Reset</p>
+<p class="VBA-Text-Indent">Resets all internal settings to their default values.</p>
+<p class="StandardNeu" style="font-weight: bold;">&#160;</p>
+<p class="VBA-Heading-Method">MaxTimeSteps &#160;(<a href="../common_vbageneral/common_general_long.htm" id="a7" style="font-weight: normal;" name="a7">long</a> &#160;<span style="font-style: italic;"><i>timesteps</i></span>)</p>
+<p class="VBA-Text-Indent">Sets the maximal number of time steps for the tracking solver. The solver stops calculating the electrons' &#160;trajectories when the last particle leaves the calculation domain or the maximal number of time steps is reached.</p>
+<p class="StandardNeu" style="margin-left: 40px;">&#160;</p>
+<p class="VBA-Heading-Method">SetSpatialSamplingRate &#160;(<a href="../common_vbageneral/common_general_integer.htm" id="a8" style="font-weight: normal;" name="a8">int</a> &#160;<span style="font-style: italic;"><i>spatialsampling</i></span>)</p>
+<p class="VBA-Text-Indent">Defines the number of steps the fastest particle has to stay at least within the smallest mesh cell.</p>
+<p class="StandardNeu" style="margin-left: 40px;">&#160;</p>
+<p class="VBA-Heading-Method">SetTemporalSamplingRate &#160;(<a href="../common_vbageneral/common_general_integer.htm" id="a9" style="font-weight: normal;" name="a9">int</a> &#160;<span style="font-style: italic;"><i>temporalsampling</i></span>)</p>
+<p class="VBA-Text-Indent">Defines the rate at which the data are sampled over time. If &#160;it is set to "1", the data for every time step is recorded. If it is set to "2", only every second time step is recorded, etc..</p>
+<p class="StandardNeu" style="font-weight: bold;">&#160;</p>
+<p class="VBA-Heading-Method">SetTemporalDynamic (<a href="../common_vbageneral/common_general_double.htm" id="a38" style="font-weight: normal;" name="a38">double</a> <span style="font-style: italic;"><i>dynamic</i></span>)</p>
+<p class="VBA-Text-Indent">Sets the dynamic of the adaptive temporal discretization, i.e. the maximal increase or decrease of the time step size. Consider two successive time steps: a value of "2" means that the second time step size can at most twice the first time step. A value of "1" ensures an equidistant time step size.</p>
+<p class="StandardNeu" style="font-weight: bold; font-style: normal;">&#160;</p>
+<p class="VBA-Heading-Method">ConsiderSpaceCharge (<a href="../common_vbageneral/common_general_bool_data_type.htm" id="a40" style="font-weight: normal;" name="a40">bool</a> <span style="font-style: italic;"><i>spacecharge</i></span>)</p>
+<p class="VBA-Text-Indent">When activated, the particle current and space charge are stored. If the gun-iteration is activated this setting is enabled by default and cannot be disabled.</p>
+<p class="standardneu">&#160;</p>
+<p class="VBA-Heading-Method">SetNeglectPECCharging (<a href="../common_vbageneral/common_general_bool_data_type.htm" id="a401" style="font-weight: normal;" name="a401">bool</a> <span style="font-style: italic;"><i>neglectpeccharging</i></span>)</p>
+<p class="VBA-Text-Indent">When activated, the charge of particles colliding with PEC bodies, that either have a 1) floating potential or a 2) charge, is neglected. When this is deactivated, the charge of particles colliding with floating or charged PEC bodies is added to the respective floating potential or charge.</p>
+<p class="VBA-Text-Indent">This setting does not affect particles that are hitting other materials (like PEC bodies with a fixed potential or dielectrics). These particles are always neglected in terms of charging.</p>
+<p class="StandardNeu" style="font-weight: bold;">&#160;</p>
+<p class="VBA-Heading-Method">SetGunIteration (<a href="../common_vbageneral/common_general_bool_data_type.htm" id="a39" style="font-weight: normal;" name="a39">bool</a> <span style="font-style: italic;"><i>guniteration</i></span>)</p>
+<p class="VBA-Text-Indent">Activates the gun-iteration solver. When this setting is deactivated, the particles have no effect on the electrostatic field. When this setting is activated, the gun-solver takes into account the effect of the particle space charge on the electrostatic field and calculates iteratively both the particle trajectories and the electrostatic field.</p>
+<p class="StandardNeu" style="font-weight: bold;">&#160;</p>
+<p class="VBA-Heading-Method">SetGunIterationMaxN (<a href="../common_vbageneral/common_general_integer.htm" id="a41" style="font-weight: normal;" name="a41">int</a> &#160;<span style="font-style: italic;"><i>iteration</i></span>)</p>
+<p class="VBA-Text-Indent">Sets the maximal number of iterations of the gun-solver.</p>
+<p class="StandardNeu" style="font-weight: bold;">&#160;</p>
+<p class="VBA-Heading-Method">SetGunIterationAccuracy (<span style="font-weight: normal;"><a href="../common_vbageneral/common_general_string.htm" id="a23" name="a23">string</a></span> <span style="font-style: italic;"><i>accuracy</i></span>)</p>
+<p class="VBA-Text-Indent">Sets the termination condition of the GUN-Solver. The solver finishes its calculation when the relative difference of the computed space charge between two consecutive iteration steps is less than <span style="font-style: italic;"><i>accuracy</i></span>. Possible values are "-10 dB", "-20 dB", "-30 dB",... , "-120 dB". When <span style="font-style: italic;"><i>accuracy</i></span> is set to &#160;"No Check", the solver will stop when the maximum number of GUN iterations is reached.</p>
+<p class="VBA-Text-Indent">For example, when "-20 dB" is entered, the solver stops when the relative difference is less than 0.1. It is also possible to enter a double value for the relative difference, such as "0.1".</p>
+<p class="StandardNeu" style="font-weight: bold;">&#160;</p>
+<p class="VBA-Heading-Method">SetGunIterationRelaxation (<a href="../common_vbageneral/common_general_double.htm" id="a43" style="font-weight: normal;" name="a43">double</a> &#160;<span style="font-style: italic;"><i>relaxation</i></span>)</p>
+<p class="VBA-Text-Indent">Defines the weighting factor for the update of the global space charge vector with the resulting space charge of the last tracking process. A factor of "1" results in a space charge which is directly influenced by the last tracking result, a value of "0.1" results in an only 10% modification of the global space charge vector by the last computed space charge.</p>
+<p class="VBA-Heading-Method">&#160;</p>
+<p class="VBA-Heading-Method">AddStaticsField &#160;(<a href="../common_vbageneral/common_general_enum.htm" id="a44" style="font-weight: normal;" name="a44">enum</a> <span style="font-style: italic;"><i>fieldtype</i></span><span style="font-weight: normal;">,</span> <a href="../common_vbageneral/common_general_double.htm" id="a48" style="font-weight: normal;" name="a48">double</a> &#160;<span style="font-style: italic;"><i>factor,</i></span> <a href="../common_vbageneral/common_general_bool_data_type.htm" id="a6" style="font-weight: normal;" name="a6">bool</a> &#160;<span style="font-style: italic;"><i>recalculate</i></span>)</p>
+<p class="VBA-Text-Indent">Adds a static field of type <span style="font-style: italic;"><i>fieldtype</i></span>, scaled by <span style="font-style: italic;"><i>factor</i></span> that will influence the particles' trajectories. If recalculate is set to true, the fields will be recalculated before the tracking solver starts.</p>
+<p class="VBA-Text-Indent">Note that a factor of "0" leaves the field unconsidered for the tracking process.</p>
+<table style="vertical-align: top; margin-left: 50px;" cellspacing="0" width="74.761%">
+<col style="width: 22.02%;" />
+<col style="width: 77.98%;" />
+<tr style="vertical-align: top;">
+<td style="border: Solid 1px #000000; width: 22.02%; padding-right: 10px; padding-left: 10px;">
+<p><span style="font-style: italic;"><i>fieldtype(</i></span><a href="../common_vbageneral/common_general_enum.htm" id="a46" style="font-weight: normal;" name="a46">enum</a> )</p>
+</td>
+<td style="border-top: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 77.98%; padding-right: 10px; padding-left: 10px;">
+<p>meaning</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 22.02%; padding-right: 10px; padding-left: 10px;">
+<p>"E-Static"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 77.98%; padding-right: 10px; padding-left: 10px;">
+<p>Electrostatic field.</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 22.02%; padding-right: 10px; padding-left: 10px;">
+<p>"M-Static"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 77.98%; padding-right: 10px; padding-left: 10px;">
+<p>Magnetostatic field.</p>
+</td>
+</tr>
+</table>
+<p class="VBA-Heading-Method">&#160;</p>
+<p class="VBA-Heading-Method">AddModeField (<a href="../common_vbageneral/common_general_enum.htm" id="a1" style="font-weight: normal;" name="a1">enum</a> <span style="font-style: italic;"><i>fieldtype</i></span><span style="font-weight: normal;">, <a href="../common_vbageneral/common_general_integer.htm" id="a21" style="font-weight: normal;" name="a21">int</a></span> <span style="font-style: italic;"><i>modenumber</i></span><span style="font-weight: normal;">,</span> <a href="../common_vbageneral/common_general_double.htm" id="a3" style="font-weight: normal;" name="a3">double</a> <span style="font-style: italic;"><i>factor</i></span>, <a href="../common_vbageneral/common_general_double.htm" id="a4" style="font-weight: normal;" name="a4">double</a> <span style="font-style: italic;"><i>frequency,</i></span> <span style="font-weight: normal;">&#160;</span><a href="../common_vbageneral/common_general_double.htm" id="a10" style="font-weight: normal;" name="a10">double</a> <span style="font-style: italic;"><i>phase,</i></span> <a href="../common_vbageneral/common_general_bool_data_type.htm" id="a11" style="font-weight: normal;" name="a11">bool</a> <span style="font-style: italic;"><i>recalculate</i></span>)</p>
+<p class="VBA-Text-Indent">Defines an eigenmode fieldtype, which is determined by its modenumber (the fieldtype should be "Eigenmode").</p>
+<p class="VBA-Text-Indent">In addition this methods specifies the weighting <span style="font-style: italic;"><i>factor</i></span> with which the particles' trajectory is influenced by the field, the <span style="font-style: italic;"><i>frequency</i></span>, the <span style="font-style: italic;"><i>phase</i></span> of the electric field at the beginning of the simulation and the option to recalculate the field.</p>
+<p class="VBA-Text-Indent">Note that a factor of "0" leaves the field unconsidered for the tracking process.</p>
+<table style="vertical-align: top; margin-left: 50px;" cellspacing="0" width="74.761%">
+<col style="width: 23.184%;" />
+<col style="width: 76.816%;" />
+<tr style="vertical-align: top;">
+<td style="border: Solid 1px #000000; width: 23.184%; padding-right: 10px; padding-left: 10px;">
+<p><span style="font-style: italic;"><i>fieldtype(</i></span><a href="../common_vbageneral/common_general_enum.htm" id="a5" style="font-weight: normal;" name="a5">enum</a>)</p>
+</td>
+<td style="border-top: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 76.816%; padding-right: 10px; padding-left: 10px;">
+<p>meaning</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 23.184%; padding-right: 10px; padding-left: 10px;">
+<p>"Eigenmode"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 76.816%; padding-right: 10px; padding-left: 10px;">
+<p>Eigenmode field.</p>
+</td>
+</tr>
+</table>
+<p class="VBA-Heading-Method">&#160;</p>
+<p class="VBA-Heading-Method">AddTrackingSource (<a href="../common_vbageneral/common_general_name.htm" id="a45" style="font-weight: normal; font-style: normal;" name="a45">name</a> &#160;<span style="font-style: italic;"><i>type</i></span>, <a href="../common_vbageneral/common_general_name.htm" id="a19" style="font-weight: normal; font-style: normal;" name="a19">name</a> &#160;<span style="font-style: italic;"><i>name</i></span>)</p>
+<p class="VBA-Text-Indent">Defines the particle sources that are included in the solver calculations. The argument <span style="font-style: italic;"><i>type</i></span> defines the source type and can be "all sources", "particle" or "interface". When <span style="font-style: italic;"><i>type</i></span> = "all sources", the argument name defines the particular particle source or interface that is included in the solver calculations (e.g., "particle1").</p>
+<p>&#160;</p>
+<p><span style="font-weight: bold;">StoreResultsInDataCache</span> (<a href="../common_vbageneral/common_general_bool_data_type.htm" id="a2" style="font-weight: normal;" name="a2">bool</a> &#160;<span style="font-style: italic; font-weight: bold;"><i>flag</i></span>)</p>
+<p class="VBA-Text-Indent">Activate or deactivate the storage of the results in the data cache.</p>
+<p>&#160;</p>
+<p><span style="font-weight: bold;">DefaultBoundaryEstatic</span> (<a href="../common_vbageneral/common_general_enum.htm" id="a12" style="font-weight: normal;" name="a12">enum</a> <span style="font-style: italic; font-weight: bold;"><i>boundarytype</i></span>)</p>
+<p class="VBA-Text-Indent">When periodic boundaries are selected for the eigenmode solver setup, the electrostatic solver must use different boundary settings: here, this method sets these different settings for the electrostatic solver.</p>
+<table style="vertical-align: top; margin-left: 50px;" cellspacing="0" width="74.761%">
+<col style="width: 27.374%;" />
+<col style="width: 72.626%;" />
+<tr style="vertical-align: top;">
+<td style="border: Solid 1px #000000; width: 27.374%; padding-right: 10px; padding-left: 10px;">
+<p><span style="font-style: italic;"><i>boundarytype(</i></span><a href="../common_vbageneral/common_general_enum.htm" id="a18" style="font-weight: normal;" name="a18">enum</a>)</p>
+</td>
+<td style="border-top: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 72.626%; padding-right: 10px; padding-left: 10px;">
+<p>meaning</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 27.374%; padding-right: 10px; padding-left: 10px;">
+<p>"electric"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 72.626%; padding-right: 10px; padding-left: 10px;">
+<p>Electric tangential and magnetic normal field is set to zero.</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 27.374%; padding-right: 10px; padding-left: 10px;">
+<p>"magnetic"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 72.626%; padding-right: 10px; padding-left: 10px;">
+<p>Electric normal and magnetic tangential field is set to zero.</p>
+<p>&#160;</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 27.374%; padding-right: 10px; padding-left: 10px;">
+<p>"normal"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 72.626%; padding-right: 10px; padding-left: 10px;">
+<p>Electric and magnetic normal field is set to zero.</p>
+<p>&#160;</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 27.374%; padding-right: 10px; padding-left: 10px;">
+<p>"tangential"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 72.626%; padding-right: 10px; padding-left: 10px;">
+<p>Electric and magnetic tangential field is set to zero.</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 27.374%; padding-right: 10px; padding-left: 10px;">
+<p>"open"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 72.626%; padding-right: 10px; padding-left: 10px;">
+<p>Open boundary condition</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 27.374%; padding-right: 10px; padding-left: 10px;">
+<p>"expanded open"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 72.626%; padding-right: 10px; padding-left: 10px;">
+<p>Open boundary condition (and extra space is added to the computational domain)</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 27.374%; padding-right: 10px; padding-left: 10px;">
+<p>"periodic"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 72.626%; padding-right: 10px; padding-left: 10px;">
+<p>invalid</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 27.374%; padding-right: 10px; padding-left: 10px;">
+<p>"none"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 72.626%; padding-right: 10px; padding-left: 10px;">
+<p>invalid</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 27.374%; padding-right: 10px; padding-left: 10px;">
+<p>"conducting wall"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 72.626%; padding-right: 10px; padding-left: 10px;">
+<p>invalid</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 27.374%; padding-right: 10px; padding-left: 10px;">
+<p>"unit cell"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 72.626%; padding-right: 10px; padding-left: 10px;">
+<p>invalid</p>
+</td>
+</tr>
+</table>
+<p>&#160;</p>
+<p><span style="font-weight: bold;">DefaultBoundaryMstatic</span> (<a href="../common_vbageneral/common_general_enum.htm" id="a13" style="font-weight: normal;" name="a13">enum</a> <span style="font-style: italic; font-weight: bold;"><i>boundarytype</i></span>)</p>
+<p class="VBA-Text-Indent">When periodic boundaries are selected for the eigenmode solver setup, the magnetostatic solver must use different boundary settings: here, this method sets these different settings for the magnetostatic solver.</p>
+<table style="vertical-align: top; margin-left: 50px;" cellspacing="0" width="74.761%">
+<col style="width: 27.374%;" />
+<col style="width: 72.626%;" />
+<tr style="vertical-align: top;">
+<td style="border: Solid 1px #000000; width: 27.374%; padding-right: 10px; padding-left: 10px;">
+<p><span style="font-style: italic;"><i>boundarytype(</i></span><a href="../common_vbageneral/common_general_enum.htm" id="a16" style="font-weight: normal;" name="a16">enum</a>)</p>
+</td>
+<td style="border-top: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 72.626%; padding-right: 10px; padding-left: 10px;">
+<p>meaning</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 27.374%; padding-right: 10px; padding-left: 10px;">
+<p>"electric"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 72.626%; padding-right: 10px; padding-left: 10px;">
+<p>Electric tangential and magnetic normal field is set to zero.</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 27.374%; padding-right: 10px; padding-left: 10px;">
+<p>"magnetic"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 72.626%; padding-right: 10px; padding-left: 10px;">
+<p>Electric normal and magnetic tangential field is set to zero.</p>
+<p>&#160;</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 27.374%; padding-right: 10px; padding-left: 10px;">
+<p>"normal"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 72.626%; padding-right: 10px; padding-left: 10px;">
+<p>Electric and magnetic normal field is set to zero.</p>
+<p>&#160;</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 27.374%; padding-right: 10px; padding-left: 10px;">
+<p>"tangential"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 72.626%; padding-right: 10px; padding-left: 10px;">
+<p>Electric and magnetic tangential field is set to zero.</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 27.374%; padding-right: 10px; padding-left: 10px;">
+<p>"open"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 72.626%; padding-right: 10px; padding-left: 10px;">
+<p>Open boundary condition</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 27.374%; padding-right: 10px; padding-left: 10px;">
+<p>"expanded open"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 72.626%; padding-right: 10px; padding-left: 10px;">
+<p>Open boundary condition (and extra space is added to the computational domain)</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 27.374%; padding-right: 10px; padding-left: 10px;">
+<p>"periodic"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 72.626%; padding-right: 10px; padding-left: 10px;">
+<p>invalid</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 27.374%; padding-right: 10px; padding-left: 10px;">
+<p>"none"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 72.626%; padding-right: 10px; padding-left: 10px;">
+<p>invalid</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 27.374%; padding-right: 10px; padding-left: 10px;">
+<p>"conducting wall"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 72.626%; padding-right: 10px; padding-left: 10px;">
+<p>invalid</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 27.374%; padding-right: 10px; padding-left: 10px;">
+<p>"unit cell"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 72.626%; padding-right: 10px; padding-left: 10px;">
+<p>invalid</p>
+</td>
+</tr>
+</table>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method"><span>SEEDeterministicRandom</span> (<a href="../common_vbageneral/common_general_bool_data_type.htm" id="a24" style="font-weight: normal;" name="a24">bool</a> <span style="font-style: italic;"><i>flag</i></span>)</p>
+<p class="VBA-Text-Indent">Enables or disables a nondeterministic random number generation process for the secondary electron generation. The default is set to deterministic, that means true.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">Start <a href="../common_vbageneral/common_general_long.htm" id="a17" style="font-weight: normal; font-style: normal;" name="a17">long</a></p>
+<p class="VBA-Text-Indent">Starts the tracking solver. Returns 0 if the solver run was successful, an error code &gt;0 otherwise.</p>
+<p class="VBA-Heading-Category" style="font-weight: bold; font-size: 12pt; font-style: italic;"><a name="Default" id="Default"></a>Default Settings</p>
+<p class="VBA-Text-Example">MaxTimeSteps "10000"</p>
+<p class="VBA-Text-Example">SetSpatialSamplingRate "5"</p>
+<p class="VBA-Text-Example">SetTemporalSamplingRate "1"</p>
+<p class="VBA-Text-Example">SetTemporalDynamic "1.2"</p>
+<p class="VBA-Text-Example">ConsiderSpacecharge "True"</p>
+<p class="VBA-Text-Example">SetNeglectPECCharging "False"</p>
+<p class="VBA-Text-Example">SetGunIteration "False"</p>
+<p class="VBA-Text-Example">SetGunIterationMaxN "50"</p>
+<p class="VBA-Text-Example">SetGunIterationAccuracy "1e-3"</p>
+<p class="VBA-Text-Example">SetGunIterationRelaxation "0.35"</p>
+<p class="VBA-Text-Example">AddTrackingSource "All sources", ""</p>
+<p class="VBA-Text-Example">AddStaticsField "E-Static", 1.0, TRUE</p>
+<p class="VBA-Text-Example">AddModeField "Eigenmode", 1, 1.0, 0.0, 0, TRUE</p>
+<p class="VBA-Text-Example" style="font-weight: normal;">DefaultBoundaryEstatic "normal"</p>
+<p class="VBA-Text-Example" style="font-weight: normal;">DefaultBoundaryMstatic "tangential"</p>
+<p class="VBA-Heading-Category" style="font-size: 12pt;"><a name="Example" id="Example"></a>Example</p>
+<p class="VBA-Text-Example">With TrackingSolver</p>
+<p class="VBA-Text-Example" style="margin-left: 40px;">.Reset</p>
+<p class="VBA-Text-Example" style="margin-left: 40px;">.MaxTimeSteps "10000"</p>
+<p class="VBA-Text-Example" style="margin-left: 40px;">.SetSpatialSamplingRate "5"</p>
+<p class="VBA-Text-Example" style="margin-left: 40px;">.SetTemporalSamplingRate "1"</p>
+<p class="VBA-Text-Example" style="margin-left: 40px;">.SetTemporalDynamic "1.2"</p>
+<p class="VBA-Text-Example" style="margin-left: 40px;">.ConsiderSpacecharge "True"</p>
+<p class="VBA-Text-Example" style="margin-left: 40px;">.SetNeglectPECCharging "False"</p>
+<p class="VBA-Text-Example" style="margin-left: 40px;">.SetGunIteration "False"</p>
+<p class="VBA-Text-Example" style="margin-left: 40px;">.SetGunIterationMaxN "50"</p>
+<p class="VBA-Text-Example" style="margin-left: 40px;">.SetGunIterationAccuracy "1e-3"</p>
+<p class="VBA-Text-Example" style="margin-left: 40px;">.SetGunIterationRelaxation "0.35"</p>
+<p class="VBA-Text-Example" style="margin-left: 40px;">.AddParticleSource "All sources"</p>
+<p class="VBA-Text-Example">End With</p>
+<p class="VBA-Text-Example">&#160;</p>
+<p class="VBA-Text-Example">&#160;</p>
+<?rh-p style="margin-bottom: 0px; text-align: Right; margin-left: 18px; 
+                 margin-right: 18px; margin-top: 18px;" ?>
+<div style="width: 100%; position: relative;" id="footer">
+<p style="border-bottom: Solid 1px #dddddd; text-align: Left; margin-left: 0px; font-family: Arial, sans-serif; line-height: Normal; margin-top: 9px; margin-right: 0px; margin-bottom: 6px; border-left-width: 1px; border-top-width: 1px; border-right-width: 1px;"><span style="text-align: Left; font-family: Arial, sans-serif; line-height: Normal;">&#160;</span></p>
+<table cellspacing="0" width="100%">
+<col style="width: 50%;" />
+<col style="width: 50%;" />
+<tr>
+<td style="vertical-align: Top;"><span style="font-family: Arial, sans-serif; line-height: Normal; font-size: 8pt;"><font size="1" style="font-size:8pt;">CST Studio Suite 2026</font></span></td>
+<td style="vertical-align: Top;">
+<p style="text-align: right;">&#160;</p>
+</td>
+</tr>
+</table>
+<p>&#160;</p>
+</div>
+<script type="text/javascript" language="javascript1.2">
+//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+        writeIntopicBar(0);
+
+
+highlightSearch();
+//-->
+//]]>
+</script>
+</body>
+</html>

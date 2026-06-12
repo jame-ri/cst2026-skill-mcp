@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="Adobe RoboHelp 11" />
+<title>MeshShapes Object</title>
+<link rel="StyleSheet" href="../online_help_vba.css" type="text/css" />
+<style type="text/css">
+/*<![CDATA[*/
+<!--
+body { border-bottom-style:None; }
+-->
+/*]]>*/
+</style>
+
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+        origWidth = innerWidth;
+        origHeight = innerHeight;
+        onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+/*<![CDATA[*/
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+-->
+/*]]>*/
+</style>
+
+<script type="text/javascript" language="javascript1.2" src="../whmsg.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript" src="../whver.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript1.2" src="../whutils.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript1.2" src="../whproxy.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript1.2" src="../whlang.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript1.2" src="../whtopic.js" charset="utf-8">
+</script>
+</head>
+<body>
+<script type="text/javascript" language="javascript1.2">
+//<![CDATA[
+<!--
+if (window.gbWhTopic)
+{
+        var strUrl = document.location.href;
+        var bc = 0;
+        var n = strUrl.toLowerCase().indexOf("bc-");
+        if(n != -1)
+        {
+                document.location.replace(strUrl.substring(0, n));
+                bc = strUrl.substring(n+3);
+        }
+
+        if (window.addTocInfo)
+        {
+        addTocInfo("3D Simulation VBA\nVBA Objects\nMesh\nMeshShapes Object");
+
+        }
+        if (window.writeBtnStyle)
+                writeBtnStyle();
+
+        if (window.writeIntopicBar)
+                writeIntopicBar(0);
+
+        
+        document.write("<p style=\"font-family: Tahoma; font-size: 9pt; font-weight: 400;  font-style:normal; color: rgb(0, 0, 0); text-decoration:none; text-align: left\"> ");
+AddMasterBreadcrumbs("../index.htm", "font-family: Tahoma; font-size: 9pt; font-weight: 400;  font-style:normal; color: rgb(0, 0, 0); text-decoration:none; text-align: left", "|", "Home", "../special_vbaobjects/special_vbaobjects_vbaobjects.htm");
+document.write("<a style=\"font-family: Tahoma; font-size: 9pt; font-weight: 400;  font-style:normal; color: rgb(0, 0, 0); text-decoration:none; text-align: left\" href=\"../special_vbaobjects/special_vbaobjects_vbaobjects.htm\">3D Simulation VBA<\/a> | <a style=\"font-family: Tahoma; font-size: 9pt; font-weight: 400;  font-style:normal; color: rgb(0, 0, 0); text-decoration:none; text-align: left\" href=\"../special_vbaobjects/special_vbaobjects_vbaobjects.htm\">VBA Objects<\/a> | <a style=\"font-family: Tahoma; font-size: 9pt; font-weight: 400;  font-style:normal; color: rgb(0, 0, 0); text-decoration:none; text-align: left\" href=\"special_vbamesho.htm\">Mesh<\/a> | MeshShapes Object<\/p>");
+
+}
+else
+        if (window.gbIE4)
+                document.location.reload();
+
+onLoadHandler = function()
+{
+  if (window.setRelStartPage)
+        {
+        setTimeout("setRelStartPage('../index.htm');", 1)
+
+    setTimeout("UpdateBreadCrumbsMarker();", 1);
+        }
+}
+
+if (window.addEventListener){  
+        window.addEventListener('load', onLoadHandler, false);   
+} else if (window.attachEvent){  
+        window.attachEvent('onload', onLoadHandler);  
+}
+
+function onSetStartPage()
+{
+  autoSync(1);
+  sendSyncInfo();
+  sendAveInfoOut();
+}
+//-->
+//]]>
+</script><script type="text/javascript" src="../ehlpdhtm.js" language="JavaScript1.2">
+</script>
+<table cellspacing="0" width="100%">
+<col style="width: 50%;" />
+<col style="width: 50%;" />
+<tr>
+<td style="vertical-align: middle; padding-top: 5px; padding-bottom: 5px;">
+<p style="margin-top: 0px; margin-bottom: 0px;"><img src="../3ds.png" alt="" style="border: none;" border="0" /></p>
+</td>
+<td style="vertical-align: middle;">
+<p style="text-align: right;"><a href="https://www.3ds.com/products-services/3dexperience/" target="_blank"><img src="../3dexp.png" alt="" style="border: none;" width="32" height="32" border="0" /></a></p>
+</td>
+</tr>
+</table>
+<p class="VBA-Heading-Object">MeshShapes Object</p>
+<p class="VBA-Text">This object controls the mesh generation. Several methods/functions to control the automatic mesh generation as well as to define a manual mesh can be found here.</p>
+<p class="VBA-Text">In both cases the major element to control the mesh generator are fixpoints. These fixpoints force the mesh generator to try to position mesh lines through this point. However, it might not always be able to do so, because of concurring settings.</p>
+<p class="VBA-Text">Fixpoints can be accessed via a unique identity number.</p>
+<ul>
+<li class="p-VBA-Index-Category">
+<p class="VBA-Index-Category"><a href="#General">Methods</a></p>
+</li>
+<li class="p-VBA-Index-Category">
+<p class="VBA-Index-Category"><a href="#Defaults">Default Settings</a></p>
+</li>
+<li class="p-VBA-Index-Category">
+<p class="VBA-Index-Category"><a href="#Example">Example</a></p>
+</li>
+</ul>
+<p class="VBA-Heading-Category"><a name="General" id="General"></a>Methods</p>
+<p class="VBA-Heading-Method">Reset</p>
+<p class="VBA-Text-Indent">Resets all internal settings to their default values.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">Delete ( <a href="../common_vbageneral/common_general_string.htm" id="a149" style="font-weight: normal; font-style: normal;" name="a149">string</a> <span style="font-style: italic;"><i>MeshShapeName</i></span> )</p>
+<p class="VBA-Text-Indent">Deletes the specified mesh shape.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">Rename ( <span><a href="../common_vbageneral/common_general_string.htm" id="a1510" style="font-weight: normal; font-style: normal;" name="a1510">string</a></span> <span style="font-style: italic;"><i>OldMeshShapeName</i></span>, <span><a href="../common_vbageneral/common_general_string.htm" id="a161" style="font-weight: normal; font-style: normal;" name="a161">string</a></span> <span style="font-style: italic;"><i>NewMeshShapeName</i></span> )</p>
+<p class="VBA-Text-Indent">Renames the existing mesh shape to the new name.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">NewFolder ( <span><a href="../common_vbageneral/common_general_name.htm" style="font-weight: normal; font-style: normal;">name</a></span> <span style="font-style: italic;"><i>FolderName</i></span> )</p>
+<p class="VBA-Text-Indent">Creates a folder for mesh shapes with the specified name.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">DeleteFolder ( <span><a href="../common_vbageneral/common_general_name.htm" style="font-weight: normal; font-style: normal;">name</a></span> <span style="font-style: italic;"><i>F</i></span><span style="font-style: italic;"><i>olderName</i></span> )</p>
+<p class="VBA-Text-Indent">Deletes the folder and all containing mesh shapes.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">RenameFolder ( <a href="../common_vbageneral/common_general_string.htm" id="a15101" style="font-weight: normal; font-style: normal;" name="a15101">string</a> <span style="font-style: italic;"><i>OldFolderName</i></span>, <a href="../common_vbageneral/common_general_string.htm" id="a1611" style="font-weight: normal; font-style: normal;" name="a1611">string</a> <span style="font-style: italic;"><i>NewFolderName</i></span> )</p>
+<p class="VBA-Text-Indent">Renames the existing mesh shape folder to the new name.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">ChangeMaterial (&#160;<a href="../common_vbageneral/common_general_string.htm" id="a1491" style="font-weight: normal; font-style: normal;" name="a1491">string</a> <span style="font-style: italic;"><i>MeshShapeName, <a href="../common_vbageneral/common_general_name.htm" id="a410" style="font-weight: normal; font-style: normal;" name="a410">name</a> MaterialName</i></span> )</p>
+<p class="vba-text-indent">Changes the material of a mesh shape. The material to change to must already exist.</p>
+<p class="vba-text-indent">&#160;</p>
+<p class="VBA-Heading-Method">AddName ( <a href="../common_vbageneral/common_general_string.htm" id="a1492" style="font-weight: normal; font-style: normal;" name="a1492">string</a> <span style="font-style: italic;"><i>ElementName</i></span> )</p>
+<p class="VBA-Text-Indent">Adds an element name to an internal list, which will be used by functions which are working with multiple elements.<br />
+Mesh shape names can be added if afterwards the functions <span style="font-weight: bold;">DeleteMultiple</span> or <span style="font-weight: bold;">ResolveIntersections</span> are invoked.<br />
+Solid names can be added if afterwards the functions <span style="font-weight: bold;">CreateMeshShapesByFacetting</span> or <span style="font-weight: bold;">CreateMeshShapesByRemeshing</span> are invoked, the latter allows both solid and mesh shape names.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">DeleteMultiple</p>
+<p class="VBA-Text-Indent">Deletes multiple mesh shapes at once. The mesh shapes must be added &#160;with the command <span style="font-weight: bold;">AddName</span>. If several mesh shapes should be deleted, the performance will be much better if this function is used, instead of using function <span style="font-weight: bold;">Delete</span> multiple times.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">Tolerance ( <span><a href="../common_vbageneral/common_general_double.htm" id="a10" style="font-weight: normal; font-style: normal;" name="a10">double</a></span> <span style="font-style: italic;"><i>value</i></span> )</p>
+<p class="VBA-Text-Indent">Specifies the tolerance which will be used in function <span style="font-weight: bold;">ResolveIntersections</span>.</p>
+<p class="vba-text-indent">&#160;</p>
+<p class="VBA-Heading-Method">ResolveIntersections</p>
+<p class="VBA-Text-Indent">Repaires self-intersections between mesh shapes. The mesh shapes must be added &#160;with the command <span style="font-weight: bold;">AddName</span>.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">MeshElementSize ( <a href="../common_vbageneral/common_general_double.htm" id="a101" style="font-weight: normal; font-style: normal;" name="a101">double</a> <span style="font-style: italic;"><i>value</i></span> )</p>
+<p class="VBA-Text-Indent">Specifies the targeted size of mesh elements, used by functions <span style="font-weight: bold;">CreateMeshShapesByFacetting</span> and <span style="font-weight: bold;">CreateMeshShapesByRemeshing</span>.</p>
+<p class="vba-text-indent">&#160;</p>
+<p class="VBA-Heading-Method">CreateMeshShapesByFacetting</p>
+<p class="VBA-Text-Indent">Convert each solid to a mesh shape, while retaining all geometric detail of the solid. The solids must be added &#160;with the command <span style="font-weight: bold;">AddName</span>. The specified <span style="font-weight: bold;">mesh element size</span> controls the desired resolution of the mesh. However, to faithfully represent small geometric details and strongly curved surfaces, the mesh elements may become smaller. If multiple intersecting solids were selected, then the generated meshes will also intersect. Shape names and material assignments are preserved.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">CreateMeshShapesByRemeshing</p>
+<p class="VBA-Text-Indent">Creates a mesh that approximates the given solids and mesh shapes. The solids and mesh shapes must be added &#160;with the command <span style="font-weight: bold;">AddName</span>. The selected mesh element size specifies the resolution for the approximation. The remeshing operation resolves intersections, can remove small geometric details and close small gaps. Names and material assignments of the selected shapes are lost during this step.</p>
+<p class="VBA-Heading-Category"><a name="Defaults" id="Defaults"></a>Default Settings</p>
+<p class="VBA-Text-Example" style="font-family: Arial, sans-serif;">The given values refer to High Frequency simulations and might differ for Low Frequency setup.</p>
+<p class="VBA-Text-Example">Tolerance (1e-6)</p>
+<p class="VBA-Text-Example">MeshElementSize (0.1)</p>
+<p class="VBA-Heading-Category"><a name="Example" id="Example"></a>Example</p>
+<p class="VBA-Text-Example">With MeshShapes</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.Reset</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.Tolerance "1e-6"</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.AddName "folder1:shape1"</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.AddName "folder1:shape2"</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.ResolveIntersections</p>
+<p class="VBA-Text-Example">End With</p>
+<?rh-p style="margin-bottom: 0px; text-align: Right; margin-left: 18px; 
+                 margin-right: 18px; margin-top: 18px;" ?>
+<div style="width: 100%; position: relative;" id="footer">
+<p style="border-bottom: Solid 1px #dddddd; text-align: Left; margin-left: 0px; font-family: Arial, sans-serif; line-height: Normal; margin-top: 9px; margin-right: 0px; margin-bottom: 6px; border-left-width: 1px; border-top-width: 1px; border-right-width: 1px;"><span style="text-align: Left; font-family: Arial, sans-serif; line-height: Normal;">&#160;</span></p>
+<table cellspacing="0" width="100%">
+<col style="width: 50%;" />
+<col style="width: 50%;" />
+<tr>
+<td style="vertical-align: Top;"><span style="font-family: Arial, sans-serif; line-height: Normal; font-size: 8pt;"><font size="1" style="font-size:8pt;">CST Studio Suite 2026</font></span></td>
+<td style="vertical-align: Top;">
+<p style="text-align: right;">&#160;</p>
+</td>
+</tr>
+</table>
+<p>&#160;</p>
+</div>
+<script type="text/javascript" language="javascript1.2">
+//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+        writeIntopicBar(0);
+
+
+highlightSearch();
+//-->
+//]]>
+</script>
+</body>
+</html>

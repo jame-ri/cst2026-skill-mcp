@@ -1,0 +1,329 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="Adobe RoboHelp 11" />
+<title>ThermalLossImport Object</title>
+<link rel="StyleSheet" href="../online_help_vba.css" type="text/css" />
+<style type="text/css">
+/*<![CDATA[*/
+<!--
+body { border-bottom-style:None; }
+-->
+/*]]>*/
+</style>
+
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function ehlp_showtip(current,e,text)
+{
+  if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == 'Netscape'))
+  {
+    document.tooltip.document.write("<layer bgColor='yellow' style='border:1px solid black;font-size:12px;'>"+ text + "<\/layer>");
+    document.tooltip.document.close();
+    document.tooltip.left=e.pageX+5;
+    document.tooltip.top=e.pageY+5;
+    document.tooltip.visibility="show";
+  }
+}
+function ehlp_hidetip()
+{
+  document.tooltip.visibility="hidden";
+}
+//]]>
+</script>
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+        origWidth = innerWidth;
+        origHeight = innerHeight;
+        onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+/*<![CDATA[*/
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+-->
+/*]]>*/
+</style>
+
+<script type="text/javascript" language="javascript1.2" src="../whmsg.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript" src="../whver.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript1.2" src="../whutils.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript1.2" src="../whproxy.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript1.2" src="../whlang.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript1.2" src="../whtopic.js" charset="utf-8">
+</script>
+</head>
+<body>
+<script type="text/javascript" language="javascript1.2">
+//<![CDATA[
+<!--
+if (window.gbWhTopic)
+{
+        var strUrl = document.location.href;
+        var bc = 0;
+        var n = strUrl.toLowerCase().indexOf("bc-");
+        if(n != -1)
+        {
+                document.location.replace(strUrl.substring(0, n));
+                bc = strUrl.substring(n+3);
+        }
+
+        if (window.addTocInfo)
+        {
+        
+        }
+        if (window.writeBtnStyle)
+                writeBtnStyle();
+
+        if (window.writeIntopicBar)
+                writeIntopicBar(0);
+
+        
+        document.write("<p style=\"font-family: Tahoma; font-size: 9pt; font-weight: 400;  font-style:normal; color: rgb(0, 0, 0); text-decoration:none; text-align: left\"> ");
+AddMasterBreadcrumbs("../index.htm", "font-family: Tahoma; font-size: 9pt; font-weight: 400;  font-style:normal; color: rgb(0, 0, 0); text-decoration:none; text-align: left", "|", "Home", "../special_vbaobjects/special_vbaobjects_vbaobjects.htm");
+document.write("ThermalLossImport Object<\/p>");
+
+}
+else
+        if (window.gbIE4)
+                document.location.reload();
+
+onLoadHandler = function()
+{
+  if (window.setRelStartPage)
+        {
+        setTimeout("setRelStartPage('../index.htm');", 1)
+
+    setTimeout("UpdateBreadCrumbsMarker();", 1);
+        }
+}
+
+if (window.addEventListener){  
+        window.addEventListener('load', onLoadHandler, false);   
+} else if (window.attachEvent){  
+        window.attachEvent('onload', onLoadHandler);  
+}
+
+function onSetStartPage()
+{
+  autoSync(1);
+  sendSyncInfo();
+  sendAveInfoOut();
+}
+//-->
+//]]>
+</script><script type="text/javascript" src="../ehlpdhtm.js" language="JavaScript1.2">
+</script>
+<table cellspacing="0" width="100%">
+<col style="width: 50%;" />
+<col style="width: 50%;" />
+<tr>
+<td style="vertical-align: middle; padding-top: 5px; padding-bottom: 5px;">
+<p style="margin-top: 0px; margin-bottom: 0px;"><img src="../3ds.png" alt="" style="border: none;" border="0" /></p>
+</td>
+<td style="vertical-align: middle;">
+<p style="text-align: right;"><a href="https://www.3ds.com/products-services/3dexperience/" target="_blank"><img src="../3dexp.png" alt="" style="border: none;" width="32" height="32" border="0" /></a></p>
+</td>
+</tr>
+</table>
+<h1>ThermalLossImport Object</h1>
+<p class="VBA-Text">This object offers the possibility to import thermal loss distributions into a thermal projects. For each thermal loss import performed using the <a title="FieldSource object documentation" href="../special_vbaports/special_vbaports_fieldsource_object.htm#Field_Imports" onmouseover="if ((parseInt(navigator.appVersion) == 4) &amp;&amp; (navigator.appName == 'Netscape')) ehlp_showtip(this,event,'FieldSource object documentation');" onmouseout="if ((parseInt(navigator.appVersion) == 4) &amp;&amp; (navigator.appName == 'Netscape')) ehlp_hidetip();">FieldSource object</a>, an entry with the same name has to be created, containing the additional settings for this loss import.</p>
+<p class="VBA-Text">&#160;</p>
+<p class="VBA-Heading-Method">Reset</p>
+<p class="VBA-Text-Indent">This command resets all the member variables of the ThermalLossImport object.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">ResetAll</p>
+<p class="VBA-Text-Indent">Resets the member variables of the ThermalLossImport object and deletes all the items in it.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">FieldName ( <a href="../common_vbageneral/common_general_name.htm" id="a17" name="a17"><span style="font-weight: normal;">name</span></a> <span style="font-style: italic;"><i>name</i></span> )</p>
+<p class="VBA-Text-Indent">Specifies the <span style="font-style: italic;"><i>name</i></span> of the loss field imported using the <a title="FieldSource object documentation" href="../special_vbaports/special_vbaports_fieldsource_object.htm#Field_Imports" onmouseover="if ((parseInt(navigator.appVersion) == 4) &amp;&amp; (navigator.appName == 'Netscape')) ehlp_showtip(this,event,'FieldSource object documentation');" onmouseout="if ((parseInt(navigator.appVersion) == 4) &amp;&amp; (navigator.appName == 'Netscape')) ehlp_hidetip();">FieldSource object</a>, for which the current ThermalLossImport entry is defined.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">Active ( <a href="../common_vbageneral/common_general_bool_data_type.htm" id="a16" style="font-weight: normal;" name="a16">bool</a> &#160;<span style="font-style: italic;"><i>flag</i></span> )</p>
+<p class="VBA-Text-Indent">Activate or deactivate the thermal loss import.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">PowerFactor ( <span style="font-weight: normal;"><a href="../common_vbageneral/common_general_double.htm">double</a></span> <span style="font-style: italic;"><i>value</i></span> )</p>
+<p class="VBA-Text-Indent">Specifies a factor <span style="font-style: italic;"><i>value</i></span>, by which the thermal loss field has to be multiplied.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">LossName ( <a href="../common_vbageneral/common_general_name.htm" id="a1" name="a1"><span style="font-weight: normal;">name</span></a> <span style="font-style: italic;"><i>name</i></span> )</p>
+<p class="VBA-Text-Indent">Specifies the <span style="font-style: italic;"><i>name</i></span> of the source setup where the losses should be imported from.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">AutoLossSelection ( <a href="../common_vbageneral/common_general_bool_data_type.htm" id="a2" style="font-weight: normal;" name="a2">bool</a> &#160;<span style="font-style: italic;"><i>flag</i></span> )</p>
+<p class="VBA-Text-Indent">If the <span style="font-style: italic;"><i>flag</i></span> is true, the source setup is selected automatically. In this case, the <span style="font-weight: bold;">LossName</span> setting is ignored.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">Rename ( <a href="../common_vbageneral/common_general_name.htm" id="a3" name="a3"><span style="font-weight: normal;">name</span></a> <span style="font-style: italic;"><i>oldname,</i></span> &#160;<a href="../common_vbageneral/common_general_name.htm" id="a4" name="a4"><span style="font-weight: normal;">name</span></a> <span style="font-style: italic;"><i>newname</i></span> )</p>
+<p class="VBA-Text-Indent">Assign a new <span style="font-weight: bold;">FieldName</span> to the existing ThermalLossImport entry. The corresponding <a title="FieldSource object documentation" href="../special_vbaports/special_vbaports_fieldsource_object.htm#Field_Imports" onmouseover="if ((parseInt(navigator.appVersion) == 4) &amp;&amp; (navigator.appName == 'Netscape')) ehlp_showtip(this,event,'FieldSource object documentation');" onmouseout="if ((parseInt(navigator.appVersion) == 4) &amp;&amp; (navigator.appName == 'Netscape')) ehlp_hidetip();">FieldSource object</a> must also be renamed.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">SelectionParameter ( <span style="font-weight: normal;"><a href="../common_vbageneral/common_general_enum.htm">enum</a></span> <span style="font-style: italic;"><i>parameter</i></span>, <a href="../common_vbageneral/common_general_name.htm" id="a5" name="a5"><span style="font-weight: normal;">name</span></a> <span style="font-style: italic;"><i>value</i></span> )</p>
+<p class="VBA-Text-Indent">Specifies which thermal loss should be selected in the current loss import. The following <span style="font-style: italic;"><i>parameters</i></span> can be set:</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<table style="vertical-align: top; margin-left: 24px; left: 0px; top: 614px;" cellspacing="0" width="907">
+<col style="width: 22.273%;" />
+<col style="width: 77.727%;" />
+<tr style="vertical-align: top;">
+<td style="border: Solid 1px #000000; width: 22.273%; padding-right: 10px; padding-left: 10px;">
+<p style="text-align: center;">Frequency</p>
+</td>
+<td style="border-top: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 77.727%; padding-right: 10px; padding-left: 10px;">
+<p>If the current loss import contains losses for several field frequencies, the loss with frequency <span style="font-style: italic;"><i>value</i></span> will be selected.</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 22.273%; padding-right: 10px; padding-left: 10px;">
+<p style="text-align: center;">Description</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 77.727%; padding-right: 10px; padding-left: 10px;">
+<p>In this case, <span style="font-style: italic;"><i>value</i></span> is interpreted as the name of the specific loss monitor.</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 22.273%; padding-right: 10px; padding-left: 10px;">
+<p style="text-align: center;">Eigenmode</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 77.727%; padding-right: 10px; padding-left: 10px;">
+<p>If the current loss import contains losses for several eigenmodes, the eigenmode with index equal to <span style="font-style: italic;"><i>value</i></span> will be selected.</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 22.273%; padding-right: 10px; padding-left: 10px;">
+<p style="text-align: center;">Any</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 77.727%; padding-right: 10px; padding-left: 10px;">
+<p><span style="font-style: italic;"><i>Value</i></span> is interpreted automatically according to the contents of the loss import.</p>
+</td>
+</tr>
+</table>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Text-Indent">For the first two parameter types, the <span style="font-style: italic;"><i>value</i></span> can be omitted and specified later using the corresponding command:</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">Frequency ( <span style="font-weight: normal;"><a href="../common_vbageneral/common_general_double.htm">double</a></span> <span style="font-style: italic;"><i>value</i></span> )</p>
+<p class="VBA-Text-Indent">If the current loss import contains losses for several field frequencies, the loss with frequency <span style="font-style: italic;"><i>value</i></span> will be selected.</p>
+<p>&#160;</p>
+<p class="VBA-Heading-Method">Description ( <a href="../common_vbageneral/common_general_name.htm" id="a6" name="a6"><span style="font-weight: normal;">name</span></a> <span style="font-style: italic;"><i>value</i></span> )</p>
+<p class="VBA-Text-Indent">In this case, <span style="font-style: italic;"><i>value</i></span> is interpreted as the name of the specific loss monitor.</p>
+<p>&#160;</p>
+<p class="VBA-Heading-Method">AutoSelectSubvolume (<a href="../common_vbageneral/common_general_bool_data_type.htm" id="a15" style="font-weight: normal;" name="a15">bool</a> <span style="font-style: italic;"><i>flag</i></span>)</p>
+<p class="VBA-Text-Indent">If the loss import contains losses with given parameter type and value defined in several different subvolumes, the <span style="font-style: italic;"><i>flag</i></span> marks, whether the subvolume should be selected automatically, or it will be defined by the following call <span style="font-weight: bold;">SelectSubvolume</span>.</p>
+<p>&#160;</p>
+<p class="VBA-Heading-Method">SelectSubvolume ( <a href="../common_vbageneral/common_general_double.htm" style="font-weight: normal; font-style: normal;">double</a> <span style="font-style: italic;"><i>xmin,</i></span> &#160;&#160;<a href="../common_vbageneral/common_general_double.htm" style="font-weight: normal; font-style: normal;">double</a> <span style="font-style: italic;"><i>xmax,</i></span> &#160;&#160;<a href="../common_vbageneral/common_general_double.htm" style="font-weight: normal; font-style: normal;">double</a> <span style="font-style: italic;"><i>ymin,</i></span> &#160;&#160;<a href="../common_vbageneral/common_general_double.htm" style="font-weight: normal; font-style: normal;">double</a> <span style="font-style: italic;"><i>ymax,</i></span> &#160;&#160;<a href="../common_vbageneral/common_general_double.htm" style="font-weight: normal; font-style: normal;">double</a> <span style="font-style: italic;"><i>zmin,</i></span> &#160;&#160;<a href="../common_vbageneral/common_general_double.htm" style="font-weight: normal; font-style: normal;">double</a> <span style="font-style: italic;"><i>zmax</i></span> )</p>
+<p class="VBA-Text-Indent">If <span style="font-weight: bold;">.AutoSelectSubvolume "True"</span> has been specified, this call defines the subvolume, in which the loss distribution has been calculated. If the set of losses does not contain losses with given parameter type and value in this subvolume, no losses are imported.</p>
+<p>&#160;</p>
+<p class="VBA-Heading-Method">SelectEntireVolume</p>
+<p class="VBA-Text-Indent">This call is alternative to the previous one and allows to import the loss distribution defined in the whole solution domain.</p>
+<p class="VBA-Heading-Method">&#160;</p>
+<p class="VBA-Heading-Method">SurfaceCond ( <span style="font-weight: normal;"><a href="../common_vbageneral/common_general_double.htm">double</a></span> <span style="font-style: italic;"><i>value</i></span> )</p>
+<p class="VBA-Text-Indent">Specifies the surface conductivity which is used to compute thermal losses on PEC solids.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">UseElVolLoss ( <a href="../common_vbageneral/common_general_bool_data_type.htm" id="a7" style="font-weight: normal;" name="a7">bool</a> &#160;<span style="font-style: italic;"><i>flag</i></span> )</p>
+<p class="VBA-Text-Indent">Specify if ohmic volume losses are taken into account for the thermal simulation.</p>
+<p class="vba-text-indent">&#160;</p>
+<p class="VBA-Heading-Method">UseMagVolLoss (<a href="../common_vbageneral/common_general_bool_data_type.htm" id="a11" style="font-weight: normal;" name="a11">bool</a> <span style="font-style: italic;"><i>flag</i></span>)</p>
+<p class="VBA-Text-Indent">Specify if magnetic dispersive volume losses are taken into account for the thermal simulation.</p>
+<p class="vba-text-indent">&#160;</p>
+<p class="VBA-Heading-Method">UseSurfaceLoss (<a href="../common_vbageneral/common_general_bool_data_type.htm" id="a15" style="font-weight: normal;" name="a15">bool</a> <span style="font-style: italic;"><i>flag</i></span>)</p>
+<p class="VBA-Text-Indent">Specify if surface based losses are taken into account for the thermal simulation.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">UseParticleLoss(<a href="../common_vbageneral/common_general_bool_data_type.htm" id="a151" style="font-weight: normal;" name="a151">bool</a> <span style="font-style: italic;"><i>flag</i></span>)</p>
+<p class="VBA-Text-Indent">Specify if <span style="font-size: 12px; font-variant-ligatures: normal; font-variant-caps: normal; orphans: 2; text-align: justify; widows: 2; -webkit-text-stroke-width: 0px; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; display: inline ! important ; float: none;">losses resulting from collisions between particles and metallic/PEC surfaces are taken into account</span> for the thermal simulation.</p>
+<p class="vba-text-indent">&#160;</p>
+<p class="VBA-Heading-Method">AllowLossMappingToBackground(<a href="../common_vbageneral/common_general_bool_data_type.htm" id="a1511" style="font-weight: normal;" name="a1511">bool</a> <span style="font-style: italic;"><i>flag</i></span>)</p>
+<p class="VBA-Text-Indent">Specify if <span style="font-size: 12px; font-variant-ligatures: normal; font-variant-caps: normal; orphans: 2; text-align: justify; widows: 2; -webkit-text-stroke-width: 0px; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; display: inline ! important ; float: none;">volume losses are mapped to the background</span> for the thermal simulation. If False, <span style="font-size: 12px; font-variant-ligatures: normal; font-variant-caps: normal; orphans: 2; text-align: justify; widows: 2; -webkit-text-stroke-width: 0px; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; display: inline ! important ; float: none;">volume losses are mapped to the closest solid. Surface losses are always mapped to the closest solid.</span></p>
+<p class="vba-text-indent">&#160;</p>
+<p class="VBA-Heading-Method">Create</p>
+<p class="VBA-Text-Indent">Adds the previously determined loss field settings set as a new entry to ThermalLossImport object. Please note that each thermal loss import performed by <a title="FieldSource object documentation" href="../special_vbaports/special_vbaports_fieldsource_object.htm#Field_Imports" onmouseover="if ((parseInt(navigator.appVersion) == 4) &amp;&amp; (navigator.appName == 'Netscape')) ehlp_showtip(this,event,'FieldSource object documentation');" onmouseout="if ((parseInt(navigator.appVersion) == 4) &amp;&amp; (navigator.appName == 'Netscape')) ehlp_hidetip();">FieldSource object</a> should have a counterpart in ThermalLossImport in order to be handled properly.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">Delete ( <span style="font-weight: normal;"><a href="../common_vbageneral/common_general_expression.htm" id="a12" name="a12">name</a> &#160;</span><span style="font-style: italic;"><i>name</i></span> )</p>
+<p class="VBA-Text-Indent">Deletes the imported loss field with the given <span style="font-style: italic;"><i>name</i></span>.</p>
+<p class="vba-text-indent">&#160;</p>
+<p class="VBA-Heading-Method">MinRelThermalCondSrf (<span style="font-weight: normal;"><a href="../common_vbageneral/common_general_double.htm">double</a></span> <span style="font-style: italic;"><i>value</i></span>)</p>
+<p class="VBA-Text-Indent">This settings defines the relative minimum thermal conductivity of a region where surface loss distributions are taken into account. The minimum conductance value is calculated by multiplying the entered relative value (between 0 and 1) with the maximum conductance value used for a certain example. This setting is applied to all the imported thermal surface losses.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">MinRelThermalCondVol (<span style="font-weight: normal;"><a href="../common_vbageneral/common_general_double.htm">double</a></span> <span style="font-style: italic;"><i>value</i></span>)</p>
+<p class="VBA-Text-Indent">This settings defines the relative minimum thermal conductivity of a region where volume based loss distributions are taken into account. The minimum conductance value is calculated by multiplying the entered relative value (between 0 and 1) with the maximum conductance value used for a certain example. This setting is applied to all the imported thermal volume losses.</p>
+<p class="VBA-Heading-Category"><a name="Defaults" id="Defaults"></a>Default Settings</p>
+<p class="VBA-Text-Example">PowerFactor (0.0)</p>
+<p class="VBA-Text-Example">SelectionParameter ("Frequency", "0.0")</p>
+<p class="VBA-Text-Example">MinRelThermalCondSrf (1e-2)</p>
+<p class="vba-text-example">&#160;</p>
+<p class="VBA-Text">Applying the field of a LF frequency domain solver run as thermal source:</p>
+<p class="vba-text">&#160;</p>
+<p class="VBA-Text-Example">With FieldSource</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.Reset</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.Name "thermalloss0"</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.Id "0"</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.ProjectPath "LF.cst"</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.UseRelativePath "True"</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.SourceName "Thermal Losses"</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.UseCopyOnly "False"</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.CreateFieldImport</p>
+<p class="VBA-Text-Example">End With</p>
+<p class="VBA-Text-Example">With ThermalLossImport</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.Reset</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.FieldName "thermalloss0"</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.Active "True"</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.PowerFactor "1"</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.AutoLossSelection "False"</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.LossName "LF Frequency Domain Solver"</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.SelectionParameter "Frequency", "5"</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.SurfaceCond "0"</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.UseElVolLoss "True"</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.UseMagVolLoss "True"</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.UseSurfaceLoss "True"</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.Create</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.MinRelThermalCondSrf "0.01"</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.MinRelThermalCondVol "0"</p>
+<p class="VBA-Text-Example">End With</p>
+<p class="vba-text">&#160;</p>
+<?rh-p style="margin-bottom: 0px; text-align: Right; margin-left: 18px; 
+                 margin-right: 18px; margin-top: 18px;" ?>
+<div style="width: 100%; position: relative;" id="footer">
+<p style="border-bottom: Solid 1px #dddddd; text-align: Left; margin-left: 0px; font-family: Arial, sans-serif; line-height: Normal; margin-top: 9px; margin-right: 0px; margin-bottom: 6px; border-left-width: 1px; border-top-width: 1px; border-right-width: 1px;"><span style="text-align: Left; font-family: Arial, sans-serif; line-height: Normal;">&#160;</span></p>
+<table cellspacing="0" width="100%">
+<col style="width: 50%;" />
+<col style="width: 50%;" />
+<tr>
+<td style="vertical-align: Top;"><span style="font-family: Arial, sans-serif; line-height: Normal; font-size: 8pt;"><font size="1" style="font-size:8pt;">CST Studio Suite 2026</font></span></td>
+<td style="vertical-align: Top;">
+<p style="text-align: right;">&#160;</p>
+</td>
+</tr>
+</table>
+<p>&#160;</p>
+</div>
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+ if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == 'Netscape'))
+  document.write("<div id='tooltip' class='WebHelpPopupMenu'><\/div>");
+//]]>
+</script><script type="text/javascript" language="javascript1.2">
+//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+        writeIntopicBar(0);
+
+
+highlightSearch();
+//-->
+//]]>
+</script>
+</body>
+</html>

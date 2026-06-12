@@ -1,0 +1,335 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="Adobe RoboHelp 11" />
+<title>ThermalSourceParameter Object</title>
+<link rel="StyleSheet" href="../online_help_vba.css" type="text/css" />
+<style type="text/css">
+/*<![CDATA[*/
+<!--
+body { border-bottom-style:None; }
+-->
+/*]]>*/
+</style>
+
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+        origWidth = innerWidth;
+        origHeight = innerHeight;
+        onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+/*<![CDATA[*/
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+-->
+/*]]>*/
+</style>
+
+<script type="text/javascript" language="javascript1.2" src="../whmsg.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript" src="../whver.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript1.2" src="../whutils.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript1.2" src="../whproxy.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript1.2" src="../whlang.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript1.2" src="../whtopic.js" charset="utf-8">
+</script>
+</head>
+<body>
+<script type="text/javascript" language="javascript1.2">
+//<![CDATA[
+<!--
+if (window.gbWhTopic)
+{
+        var strUrl = document.location.href;
+        var bc = 0;
+        var n = strUrl.toLowerCase().indexOf("bc-");
+        if(n != -1)
+        {
+                document.location.replace(strUrl.substring(0, n));
+                bc = strUrl.substring(n+3);
+        }
+
+        if (window.addTocInfo)
+        {
+        
+        }
+        if (window.writeBtnStyle)
+                writeBtnStyle();
+
+        if (window.writeIntopicBar)
+                writeIntopicBar(0);
+
+        
+        document.write("<p style=\"font-family: Tahoma; font-size: 9pt; font-weight: 400;  font-style:normal; color: rgb(0, 0, 0); text-decoration:none; text-align: left\"> ");
+AddMasterBreadcrumbs("../index.htm", "font-family: Tahoma; font-size: 9pt; font-weight: 400;  font-style:normal; color: rgb(0, 0, 0); text-decoration:none; text-align: left", "|", "Home", "../special_vbaobjects/special_vbaobjects_vbaobjects.htm");
+document.write("ThermalSourceParameter Object<\/p>");
+
+}
+else
+        if (window.gbIE4)
+                document.location.reload();
+
+onLoadHandler = function()
+{
+  if (window.setRelStartPage)
+        {
+        setTimeout("setRelStartPage('../index.htm');", 1)
+
+    setTimeout("UpdateBreadCrumbsMarker();", 1);
+        }
+}
+
+if (window.addEventListener){  
+        window.addEventListener('load', onLoadHandler, false);   
+} else if (window.attachEvent){  
+        window.attachEvent('onload', onLoadHandler);  
+}
+
+function onSetStartPage()
+{
+  autoSync(1);
+  sendSyncInfo();
+  sendAveInfoOut();
+}
+//-->
+//]]>
+</script><script type="text/javascript" src="../ehlpdhtm.js" language="JavaScript1.2">
+</script>
+<table cellspacing="0" width="100%">
+<col style="width: 50%;" />
+<col style="width: 50%;" />
+<tr>
+<td style="vertical-align: middle; padding-top: 5px; padding-bottom: 5px;">
+<p style="margin-top: 0px; margin-bottom: 0px;"><img src="../3ds.png" alt="" style="border: none;" border="0" /></p>
+</td>
+<td style="vertical-align: middle;">
+<p style="text-align: right;"><a href="https://www.3ds.com/products-services/3dexperience/" target="_blank"><img src="../3dexp.png" alt="" style="border: none;" width="32" height="32" border="0" /></a></p>
+</td>
+</tr>
+</table>
+<h1>ThermalSourceParameter Object</h1>
+<p class="VBA-Text">This object offers the possibility to define a thermal source based on a given field monitor of a previously performed calculation. These fields are used as a thermal source by the <a href="special_vbathermalsolver_thermalsolver.htm">Thermal Solver</a> and can be calculated by stationary current solvers as well as low or high frequency solvers. Moreover this VBA object allows to compute all or selected loss distributions of the current project in order to import them in another project.</p>
+<ul>
+<li class="p-VBA-Index-Category">
+<p class="VBA-Index-Category"><a href="#Methods">Methods</a></p>
+</li>
+<li class="p-VBA-Index-Category">
+<p class="VBA-Index-Category"><a href="#Defaults">Default Settings</a></p>
+</li>
+<li class="p-VBA-Index-Category">
+<p class="VBA-Index-Category"><a href="#Example">Example</a></p>
+</li>
+</ul>
+<p class="VBA-Heading-Category"><a name="Methods" id="Methods"></a>Methods</p>
+<p class="VBA-Heading-Method">CreateThermalDistributions</p>
+<p class="VBA-Text-Indent">This command creates all or the previously selected loss distributions for the current project. These loss distribution files can be imported into another project.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">ExportSelectedLosses (<a href="../common_vbageneral/common_general_bool_data_type.htm" style="font-weight: normal;" id="a14" name="a14">bool</a> &#160;<span style="font-style: italic;"><i>flag</i></span>)</p>
+<p class="VBA-Text-Indent">Activates or deactivates the selective calculation of thermal loss distributions. This setting is helpful if a project contains many result files and only a a few loss distributions are of interest.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">AddLossForExport ( <a href="../common_vbageneral/common_general_name.htm" id="a17" name="a17"><span style="font-weight: normal;">name</span></a> <span style="font-style: italic;"><i>name,</i></span> &#160;<a href="../common_vbageneral/common_general_enum.htm" style="font-weight: normal; font-style: normal;" id="a150" name="a150">enum</a> <span style="font-style: italic;"><i>parameter,</i></span> <span style="font-weight: normal;"><a href="../common_vbageneral/common_general_variant.htm" id="a18" name="a18">variant</a></span> <span style="font-style: italic;"><i>value</i></span> )</p>
+<p class="VBA-Text-Indent">Adds a loss distribution or field to the thermal loss computation. The <span style="font-weight: bold; font-style: italic;"><i>name</i></span> represents the source name.</p>
+<p class="VBA-Text-Indent">Available <a href="../common_vbageneral/common_general_enum.htm" style="font-weight: normal; font-style: normal;" id="a153" name="a153">enum</a> values for the <span style="font-weight: bold; font-style: italic;"><i>parameter</i></span> are { "Frequency" or "Description" }. If "Frequency" is chosen, than <span style="font-weight: bold; font-style: italic;"><i>value</i></span> corresponds to the frequency of the source to be exported. If &#160;"Description" is chosen, than <span style="font-weight: bold; font-style: italic;"><i>value</i></span> corresponds to the name of the loss source. This latter option is specifically designed for the losses computed with a time averaging method, for which the frequency value is otherwise meaningless.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">AddLossForExportInSubVolumeCoords ( <a href="../common_vbageneral/common_general_name.htm" style="font-weight: normal; font-style: normal;" id="a17" name="a17">name</a> <span style="font-style: italic;"><i>name,</i></span> &#160; <a href="../common_vbageneral/common_general_enum.htm" style="font-weight: normal; font-style: normal;" id="a150" name="a150">enum</a> <span style="font-style: italic;"><i>parameter,</i></span> &#160; <a href="../common_vbageneral/common_general_variant.htm" style="font-weight: normal; font-style: normal;" id="a18" name="a18">variant</a> <span style="font-style: italic;"><i>value,</i></span> &#160; <a href="../common_vbageneral/common_general_double.htm" style="font-weight: normal; font-style: normal;">double</a> <span style="font-style: italic;"><i>xmin,</i></span> &#160; <a href="../common_vbageneral/common_general_double.htm" style="font-weight: normal; font-style: normal;">double</a> <span style="font-style: italic;"><i>xmax,</i></span> &#160; <a href="../common_vbageneral/common_general_double.htm" style="font-weight: normal; font-style: normal;">double</a> <span style="font-style: italic;"><i>ymin,</i></span> &#160; <a href="../common_vbageneral/common_general_double.htm" style="font-weight: normal; font-style: normal;">double</a> <span style="font-style: italic;"><i>ymax,</i></span> &#160; <a href="../common_vbageneral/common_general_double.htm" style="font-weight: normal; font-style: normal;">double</a> <span style="font-style: italic;"><i>zmin,</i></span> &#160; <a href="../common_vbageneral/common_general_double.htm" style="font-weight: normal; font-style: normal;">double</a> <span style="font-style: italic;"><i>zmax</i></span> )</p>
+<p class="VBA-Text-Indent">This command has the same functionality as the previous one, but the losses will be computed from the e- and h-fields saved by monitors in the corresponding subvolume.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">UseTriangularSurfaceLossCalc (<a href="../common_vbageneral/common_general_bool_data_type.htm" style="font-weight: normal;" id="a16" name="a16">bool</a> &#160;<span style="font-style: italic;"><i>flag</i></span>)</p>
+<p class="VBA-Text-Indent">For simulation results based on hexahedral grids, this setting can be used to switch between two different computation methods for surface losses. Especially if the EM- and the thermal simulation mesh are different this setting should be activated.</p>
+<p class="vba-text-indent">&#160;</p>
+<p class="VBA-Heading-Method">GetNumberOfCreatedThermalDistributions &#160;<a href="../common_vbageneral/common_general_integer.htm" style="font-weight: normal;" id="a98" name="a98">int</a></p>
+<p class="vba-text-indent">If a loss computation was don this function returns the number of computed loss distributions.</p>
+<p class="vba-text-indent">&#160;</p>
+<p class="VBA-Heading-Method">ResetExportLossSettings</p>
+<p class="vba-text-indent">Resets all settings for the thermal loss computation.</p>
+<p class="vba-text-indent">&#160;</p>
+<p class="VBA-Heading-Method">ResetLossFieldSettings</p>
+<p class="VBA-Text-Indent">Resets all parameter of the thermal loss field definition.</p>
+<p class="vba-text-indent">&#160;</p>
+<p class="VBA-Heading-Method">ResetTemperatureSettings</p>
+<p class="VBA-Text-Indent">Resets the thermal background temperature definition and the blood temperature.</p>
+<p class="vba-text-indent">&#160;</p>
+<p class="VBA-Heading-Method">ResetGlobalSurfaceLossSettings</p>
+<p class="VBA-Text-Indent">Resets all settings for the surface loss calculation.</p>
+<p class="vba-text-indent">&#160;</p>
+<p class="VBA-Heading-Method">LossDistDefActive (<span><a href="../common_vbageneral/common_general_bool_data_type.htm" style="font-weight: normal;" id="a3" name="a3">bool</a></span> <span style="font-style: italic;"><i>flag</i></span>)</p>
+<p class="VBA-Text-Indent">Activate or deactivate the thermal source field.</p>
+<p class="vba-text-indent">&#160;</p>
+<p class="VBA-Heading-Method">ExternalProjectPath( <a href="../common_vbageneral/common_general_name.htm" id="a12" name="a12"><span style="font-weight: normal;">name</span></a> <span style="font-style: italic;"><i>name</i></span>)</p>
+<p class="vba-text-indent">Define the project path if thermal losses should be imported from an external project.</p>
+<p class="vba-text-indent">&#160;</p>
+<p class="VBA-Heading-Method">ExternalProjectUseCopy(<a href="../common_vbageneral/common_general_bool_data_type.htm" style="font-weight: normal;" id="a13" name="a13">bool</a> &#160;<span style="font-style: italic;"><i>flag</i></span>)</p>
+<p class="vba-text-indent">Define if the local copy should always be used form imported losses, or if losses are updated before the solver is started.</p>
+<p class="vba-text-indent">&#160;</p>
+<p class="VBA-Heading-Method">ExternalProjectUseRelativePath(<a href="../common_vbageneral/common_general_bool_data_type.htm" style="font-weight: normal;" id="a2" name="a2">bool</a> &#160;<span style="font-style: italic;"><i>flag</i></span>)</p>
+<p class="vba-text-indent">Define if the path-name to an external project is relative or absolute.</p>
+<p class="vba-text-indent">&#160;</p>
+<p class="VBA-Heading-Method">SourceSetup ( <a href="../common_vbageneral/common_general_name.htm" id="a1" name="a1"><span style="font-weight: normal; font-style: normal;">name</span></a> <span style="font-style: italic;"><i>name</i></span> )</p>
+<p class="VBA-Text-Indent">Specifies the <span style="font-style: italic;"><i>name</i></span> of the source setup where the losses should be imported from.</p>
+<p class="vba-text-indent">&#160;</p>
+<p class="VBA-Heading-Method">FrequencyParameter ( <span style="font-weight: normal;"><a href="../common_vbageneral/common_general_double.htm">double</a></span> <span style="font-style: italic;"><i>value</i></span> )</p>
+<p class="VBA-Text-Indent">Specifies the frequency to determine the correspondent loss fields.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">Factor ( <span style="font-weight: normal;"><a href="../common_vbageneral/common_general_double.htm">double</a></span> <span style="font-style: italic;"><i>value</i></span> )</p>
+<p class="VBA-Text-Indent">Specifies a factor <span style="font-style: italic;"><i>value</i></span> which is multiplied on the selected current field.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">SurfaceLossDefaultConductivity (<span style="font-weight: normal;"><a href="../common_vbageneral/common_general_double.htm">double</a></span> <span style="font-style: italic;"><i>conductivity</i></span>)</p>
+<p class="VBA-Text-Indent">Specifies the surface conductivity which is used to compute thermal losses on PEC solids.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">UseXminForSurfaceLossCalc (<a href="../common_vbageneral/common_general_bool_data_type.htm" style="font-weight: normal;" id="a4" name="a4">bool</a> &#160;<span style="font-style: italic;"><i>flag</i></span>)</p>
+<p class="VBA-Text-Indent">Specify if the boundary at Xmin should be taken into account for the surface loss calculation.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">UseXmaxForSurfaceLossCalc (<span><a href="../common_vbageneral/common_general_bool_data_type.htm" style="font-weight: normal;" id="a5" name="a5">bool</a></span> &#160;<span style="font-style: italic;"><i>flag</i></span>)</p>
+<p class="VBA-Text-Indent">Specify if the boundary at Xmax should be taken into account for the surface loss calculation.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">UseYminForSurfaceLossCalc (<span><a href="../common_vbageneral/common_general_bool_data_type.htm" style="font-weight: normal;" id="a6" name="a6">bool</a></span> &#160;<span style="font-style: italic;"><i>flag</i></span>)</p>
+<p class="VBA-Text-Indent">Specify if the boundary at Ymin should be taken into account for the surface loss calculation.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">UseYmaxForSurfaceLossCalc (<span><a href="../common_vbageneral/common_general_bool_data_type.htm" style="font-weight: normal;" id="a7" name="a7">bool</a></span> &#160;<span style="font-style: italic;"><i>flag</i></span>)</p>
+<p class="VBA-Text-Indent">Specify if the boundary at Ymax should be taken into account for the surface loss calculation.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">UseZminForSurfaceLossCalc (<span><a href="../common_vbageneral/common_general_bool_data_type.htm" style="font-weight: normal;" id="a8" name="a8">bool</a></span> &#160;<span style="font-style: italic;"><i>flag</i></span>)</p>
+<p class="VBA-Text-Indent">Specify if the boundary at Zmin should be taken into account for the surface loss calculation.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">UseZmaxForSurfaceLossCalc (<span><a href="../common_vbageneral/common_general_bool_data_type.htm" style="font-weight: normal;" id="a9" name="a9">bool</a></span> &#160;<span style="font-style: italic;"><i>flag</i></span>)</p>
+<p class="VBA-Text-Indent">Specify if the boundary at Zmax should be taken into account for the surface loss calculation.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">UseElVolumeLosses (<a href="../common_vbageneral/common_general_bool_data_type.htm" style="font-weight: normal;" id="a10" name="a10">bool</a> <span style="font-style: italic;"><i>flag</i></span>)</p>
+<p class="VBA-Text-Indent">Specify if ohmic volume losses are taken into account for the thermal simulation.</p>
+<p class="vba-text-indent">&#160;</p>
+<p class="VBA-Heading-Method">UseMagVolumeLosses (<a href="../common_vbageneral/common_general_bool_data_type.htm" style="font-weight: normal;" id="a11" name="a11">bool</a> <span style="font-style: italic;"><i>flag</i></span>)</p>
+<p class="VBA-Text-Indent">Specify if magnetic dispersive volume losses are taken into account for the thermal simulation.</p>
+<p class="vba-text-indent">&#160;</p>
+<p class="VBA-Heading-Method">UseSurfaceLosses (<a href="../common_vbageneral/common_general_bool_data_type.htm" style="font-weight: normal;" id="a15" name="a15">bool</a> <span style="font-style: italic;"><i>flag</i></span>)</p>
+<p class="VBA-Text-Indent">Specify if surface based losses are taken into account for the thermal simulation.</p>
+<p class="vba-text-indent">&#160;</p>
+<p class="VBA-Heading-Method">AddSource</p>
+<p class="VBA-Text-Indent">Adds the previously determined current field as a source to the thermal source definition.</p>
+<p class="VBA-Text-Indent">Please note, that momentarily only one current field can be used as thermal source.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">MinRelThermConductanceForSurfaceLosses (<span style="font-weight: normal;"><a href="../common_vbageneral/common_general_double.htm">double</a></span> <span style="font-style: italic;"><i>value</i></span>)</p>
+<p class="VBA-Text-Indent">This setting defines the relative minimum thermal conductivity of a region where surface loss distributions are taken into account. The minimum conductance value is calculated by multiplying the entered relative value (between 0 and 1) with the maximum conductance value used for a certain example.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">MinRelThermConductanceForVolumeLosses (<span style="font-weight: normal;"><a href="../common_vbageneral/common_general_double.htm">double</a></span> <span style="font-style: italic;"><i>value</i></span>)</p>
+<p class="VBA-Text-Indent">This setting defines the relative minimum thermal conductivity of a region where volume based loss distributions are taken into account. The minimum conductance value is calculated by multiplying the entered relative value (between 0 and 1) with the maximum conductance value used for a certain example.</p>
+<p class="VBA-Heading-Category"><a name="Defaults" id="Defaults"></a>Default Settings</p>
+<p class="VBA-Text-Example">Factor (0.0)</p>
+<p class="VBA-Text-Example">FrequencyParameter (0.0)</p>
+<p class="VBA-Text-Example">MinimumRelativeThermalConductance (1e-2)</p>
+<p class="VBA-Heading-Category"><a name="Example" id="Example"></a>Example</p>
+<p class="VBA-Text">Create all loss distributions for an export to another .cst project.</p>
+<p class="VBA-Text">&#160;</p>
+<p class="VBA-Text-Example">ThermalSourceParameter.CreateThermalDistributions</p>
+<p class="VBA-Text-Example">&#160;</p>
+<p class="VBA-Text">Applying the field of a stationary current solver run as thermal source:</p>
+<p class="VBA-Text">&#160;</p>
+<p class="VBA-Text-Example">With ThermalSourceParameter</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.ResetLossFieldSettings</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.LossDistDefActive "True"</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.ExternalProjectPath "J-Statics.cst"</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.ExternalProjectUseCopy "False"</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.ExternalProjectUseRelativePath "True"</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.SourceSetup "Stationary Current Solver"</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.FrequencyParameter "0"</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.UseElVolumeLosses "True"</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.UseMagVolumeLosses "False"</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.UseSurfaceLosses "False"</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.Factor "1e6"</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.MinRelThermConductanceForSurfaceLosses "0.01"</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.MinRelThermConductanceForVolumeLosses "0.0"</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.AddSource</p>
+<p class="VBA-Text-Example">End With</p>
+<p class="VBA-Text-Example">&#160;</p>
+<p class="VBA-Text">Applying the losses of a transient solver run as thermal source:</p>
+<p class="VBA-Text">&#160;</p>
+<p class="VBA-Text-Example">With ThermalSourceParameter</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.ResetLossFieldSettings</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.LossDistDefActive "True"</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.ExternalProjectPath "HFTD Seq.cst"</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.ExternalProjectUseCopy "False"</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.ExternalProjectUseRelativePath "True"</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.SourceSetup "Time Domain: S-Parameter [1,1]"</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.FrequencyParameter "82"</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.UseElVolumeLosses "True"</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.UseMagVolumeLosses "True"</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.UseSurfaceLosses "True"</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.Factor "100"</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.MinRelThermConductanceForSurfaceLosses "0.01"</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.MinRelThermConductanceForVolumeLosses "0.0"</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.AddSource</p>
+<p class="VBA-Text-Example">End With</p>
+<p class="vba-text-example">&#160;</p>
+<script type="text/javascript" language="JavaScript1.2">
+//<![CDATA[
+        if( typeof( FilePopupInit ) != 'function' ) FilePopupInit = new Function();
+        FilePopupInit('a14');
+        FilePopupInit('a17');
+        FilePopupInit('a150');
+        FilePopupInit('a18');
+        FilePopupInit('a153');
+        FilePopupInit('a16');
+        FilePopupInit('a98');
+        FilePopupInit('a3');
+        FilePopupInit('a12');
+        FilePopupInit('a13');
+        FilePopupInit('a2');
+        FilePopupInit('a1');
+        FilePopupInit('a4');
+        FilePopupInit('a5');
+        FilePopupInit('a6');
+        FilePopupInit('a7');
+        FilePopupInit('a8');
+        FilePopupInit('a9');
+        FilePopupInit('a10');
+        FilePopupInit('a11');
+        FilePopupInit('a15');
+//]]>
+</script><?rh-p style="margin-bottom: 0px; text-align: Right; margin-left: 18px; 
+                 margin-right: 18px; margin-top: 18px;" ?>
+<div style="width: 100%; position: relative;" id="footer">
+<p style="border-bottom: Solid 1px #dddddd; text-align: Left; margin-left: 0px; font-family: Arial, sans-serif; line-height: Normal; margin-top: 9px; margin-right: 0px; margin-bottom: 6px; border-left-width: 1px; border-top-width: 1px; border-right-width: 1px;"><span style="text-align: Left; font-family: Arial, sans-serif; line-height: Normal;">&#160;</span></p>
+<table cellspacing="0" width="100%">
+<col style="width: 50%;" />
+<col style="width: 50%;" />
+<tr>
+<td style="vertical-align: Top;"><span style="font-family: Arial, sans-serif; line-height: Normal; font-size: 8pt;"><font size="1" style="font-size:8pt;">CST Studio Suite 2026</font></span></td>
+<td style="vertical-align: Top;">
+<p style="text-align: right;">&#160;</p>
+</td>
+</tr>
+</table>
+<p>&#160;</p>
+</div>
+<script type="text/javascript" language="javascript1.2">
+//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+        writeIntopicBar(0);
+
+
+highlightSearch();
+//-->
+//]]>
+</script>
+</body>
+</html>

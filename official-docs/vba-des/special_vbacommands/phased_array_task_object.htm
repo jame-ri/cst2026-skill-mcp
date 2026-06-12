@@ -1,0 +1,316 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="Adobe RoboHelp 11" />
+<title>ArrayTask Object</title>
+<link rel="StyleSheet" href="../online_help_vba.css" type="text/css" />
+<style type="text/css">
+/*<![CDATA[*/
+<!--
+body { border-bottom-style:None; }
+-->
+/*]]>*/
+</style>
+
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+        origWidth = innerWidth;
+        origHeight = innerHeight;
+        onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+/*<![CDATA[*/
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+-->
+/*]]>*/
+</style>
+
+<script type="text/javascript" language="javascript1.2" src="../whmsg.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript" src="../whver.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript1.2" src="../whutils.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript1.2" src="../whproxy.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript1.2" src="../whlang.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript1.2" src="../whtopic.js" charset="utf-8">
+</script>
+</head>
+<body>
+<script type="text/javascript" language="javascript1.2">
+//<![CDATA[
+<!--
+if (window.gbWhTopic)
+{
+        var strUrl = document.location.href;
+        var bc = 0;
+        var n = strUrl.toLowerCase().indexOf("bc-");
+        if(n != -1)
+        {
+                document.location.replace(strUrl.substring(0, n));
+                bc = strUrl.substring(n+3);
+        }
+
+        if (window.addTocInfo)
+        {
+        addTocInfo("Circuits & Systems VBA\nSimulation\nArrayTask");
+
+        }
+        if (window.writeBtnStyle)
+                writeBtnStyle();
+
+        if (window.writeIntopicBar)
+                writeIntopicBar(0);
+
+        
+        document.write("<p style=\"font-family: Tahoma; font-size: 9pt; font-weight: 400;  font-style:normal; color: rgb(0, 0, 0); text-decoration:none; text-align: left\"> ");
+AddMasterBreadcrumbs("../index.htm", "font-family: Tahoma; font-size: 9pt; font-weight: 400;  font-style:normal; color: rgb(0, 0, 0); text-decoration:none; text-align: left", "|", "Home", "../special_vbaobjects/cstdesignstudiovbaobjects.htm");
+document.write("<a style=\"font-family: Tahoma; font-size: 9pt; font-weight: 400;  font-style:normal; color: rgb(0, 0, 0); text-decoration:none; text-align: left\" href=\"../special_vbaobjects/cstdesignstudiovbaobjects.htm\">Circuits & Systems VBA<\/a> | <a style=\"font-family: Tahoma; font-size: 9pt; font-weight: 400;  font-style:normal; color: rgb(0, 0, 0); text-decoration:none; text-align: left\" href=\"simulationtaskobject.htm\">Simulation<\/a> | ArrayTask<\/p>");
+
+}
+else
+        if (window.gbIE4)
+                document.location.reload();
+
+onLoadHandler = function()
+{
+  if (window.setRelStartPage)
+        {
+        setTimeout("setRelStartPage('../index.htm');", 1)
+
+    setTimeout("UpdateBreadCrumbsMarker();", 1);
+        }
+}
+
+if (window.addEventListener){  
+        window.addEventListener('load', onLoadHandler, false);   
+} else if (window.attachEvent){  
+        window.attachEvent('onload', onLoadHandler);  
+}
+
+function onSetStartPage()
+{
+  autoSync(1);
+  sendSyncInfo();
+  sendAveInfoOut();
+}
+//-->
+//]]>
+</script><script type="text/javascript" src="../ehlpdhtm.js" language="JavaScript1.2">
+</script>
+<table cellspacing="0" width="100%">
+<col style="width: 50%;" />
+<col style="width: 50%;" />
+<tr>
+<td style="vertical-align: middle; padding-top: 5px; padding-bottom: 5px;">
+<p style="margin-top: 0px; margin-bottom: 0px;"><img src="../3ds.png" alt="" style="border: none;" border="0" /></p>
+</td>
+<td style="vertical-align: middle;">
+<p style="text-align: right;"><a href="https://www.3ds.com/products-services/3dexperience/" target="_blank"><img src="../3dexp.png" alt="" style="border: none;" width="32" height="32" border="0" /></a></p>
+</td>
+</tr>
+</table>
+<h1>ArrayTask Object</h1>
+<p>Object referring to an array task. Use this object to create or to manipulate an array task.</p>
+<ul>
+<li class="p-VBA-Index-Category">
+<p class="VBA-Index-Category"><a href="#Methods">Methods Concerning Creation of Array Tasks</a></p>
+</li>
+<li class="p-VBA-Index-Category">
+<p class="VBA-Index-Category"><a href="#MethodsOnExisting">Methods Concerning Existing Array Tasks</a></p>
+</li>
+<li class="p-VBA-Index-Category">
+<p class="VBA-Index-Category"><a href="#Queries">Queries</a></p>
+</li>
+<li class="p-VBA-Index-Category">
+<p class="VBA-Index-Category"><a href="#Example">Example</a></p>
+</li>
+</ul>
+<p class="VBA-Heading-Category"><a name="Methods" id="Methods"></a>Methods Concerning Creation of Array Task</p>
+<p class="VBA-Heading-Method">Reset</p>
+<p class="VBA-Text-Indent">Resets all internal settings to their default values.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">Name ( <a href="../common_vbageneral/common_general_name.htm" id="a9" style="font-weight: normal; font-style: normal;" name="a9">name</a> <span style="font-style: italic;"><i>taskname</i></span> )</p>
+<p class="VBA-Text-Indent" style="text-align: justify;">Sets the name of a phased array antenna task before calling <span style="font-style: italic;"><i>Create</i></span>.</p>
+<p class="VBA-Text-Indent" style="text-align: justify;">&#160;</p>
+<p class="VBA-Heading-Method">SetExcitationPattern (<a href="../common_vbageneral/common_general_string.htm" id="a2" style="font-weight: normal; font-style: normal;" name="a2">string</a> <span style="font-style: italic;"><i>pattern</i></span>)</p>
+<p class="VBA-Text-Indent">Sets the excitation pattern for the phased array antenna. Valid choices are: <span style="font-style: italic;"><i>Uniform</i></span>, <span style="font-style: italic;"><i>Cosine</i></span>, <span style="font-style: italic;"><i>Cosine-Sq.</i></span>, <span style="font-style: italic;"><i>Taylor</i></span>, <span style="font-style: italic;"><i>Binomial,</i></span> <span style="font-style: italic;"><i>Chebyshev and Multiple Excitations.</i></span></p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">SetElementModel (<span style="font-weight: normal;"><a href="../common_vbageneral/common_general_name.htm" id="a142" style="font-weight: normal; font-style: normal;" name="a142">name</a></span> <span style="font-style: italic;"><i>elementmodel</i></span>)</p>
+<p class="VBA-Text-Indent">Sets the element model for the phased array antenna.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">SetTSVFilename(<a href="../common_vbageneral/common_general_string.htm" id="a26" style="font-weight: normal; font-style: normal;" name="a26">string</a> <span style="font-style: italic;"><i>filename</i></span>)</p>
+<p class="VBA-Text-Indent">Sets the TSV filename and uses the data in the file to define the phased array antenna task.</p>
+<p class="VBA-Heading-Method">&#160;</p>
+<p class="VBA-Heading-Method"><span style="font-style: italic;"><i>SetShapeCustom</i></span> (<span><a href="../common_vbageneral/common_general_string.htm" id="a21" style="font-weight: normal; font-style: normal;" name="a21">string</a></span> <span style="font-style: italic;"><i>elements_in_x,</i></span> <span><a href="../common_vbageneral/common_general_string.htm" id="a22" style="font-weight: normal; font-style: normal;" name="a22">string</a></span> <span style="font-style: italic;"><i>elements_in_y,</i></span> <span><a href="../common_vbageneral/common_general_string.htm" id="a23" style="font-weight: normal; font-style: normal;" name="a23">string</a></span> <span style="font-style: italic;"><i>spacing_in_x,</i></span> <span><a href="../common_vbageneral/common_general_string.htm" id="a24" style="font-weight: normal; font-style: normal;" name="a24">string</a></span> <span style="font-style: italic;"><i>spacing_in_y,</i></span> <span><a href="../common_vbageneral/common_general_string.htm" id="a25" style="font-weight: normal; font-style: normal;" name="a25">string</a></span> <span style="font-style: italic;"><i>grid_angle</i></span>)</p>
+<p class="VBA-Text-Indent">Sets the settings for creating a custom shape phased array antenna</p>
+<p class="VBA-Text-Indent"><span style="font-style: italic; font-weight: bold;"><i>elements_in_x</i></span>: Specify the number of elements in the X direction.</p>
+<p class="VBA-Text-Indent"><span style="font-style: italic; font-weight: bold;"><i>elements_in_y</i></span>: Specify the number of elements in the Y direction.</p>
+<p class="VBA-Text-Indent"><span style="font-style: italic; font-weight: bold;"><i>spacing_in_x</i></span>: Specify the spacing in the X direction. This is the distance from an element's center to the center of an adjacent element in the X direction.</p>
+<p class="VBA-Text-Indent"><span style="font-style: italic; font-weight: bold;"><i>spacing_in_y</i></span>: Specify the spacing in the Y direction. This is the distance from an element's center to the center of an adjacent element in the Y direction.</p>
+<p class="VBA-Text-Indent"><span style="font-style: italic; font-weight: bold;"><i>grid_angle</i></span>: Specify the grid angle of the array.</p>
+<p class="VBA-Heading-Method">&#160;</p>
+<p class="VBA-Heading-Method"><span style="font-style: italic;"><i>SetShapeDiamond</i></span> (<a href="../common_vbageneral/common_general_string.htm" id="a211" style="font-weight: normal; font-style: normal;" name="a211">string</a> <span style="font-style: italic;"><i>elements_in_a_side,</i></span> <a href="../common_vbageneral/common_general_string.htm" id="a212" style="font-weight: normal; font-style: normal;" name="a212">string</a> <span style="font-style: italic;"><i>spacing_in_x,</i></span> <a href="../common_vbageneral/common_general_string.htm" id="a213" style="font-weight: normal; font-style: normal;" name="a213">string</a> <span style="font-style: italic;"><i>spacing_in_y</i></span>)</p>
+<p class="VBA-Text-Indent">Sets the settings for creating a diamond shape phased array antenna</p>
+<p class="VBA-Text-Indent"><span style="font-style: italic; font-weight: bold;"><i>elements_in_a_side</i></span>: Specify the number of elements in one side of the diamond.</p>
+<p class="VBA-Text-Indent"><span style="font-style: italic; font-weight: bold;"><i>spacing_in_x</i></span>: Specify the spacing in the X direction. This is the distance from an element's center to the center of an adjacent element in the X direction.</p>
+<p class="VBA-Text-Indent"><span style="font-style: italic; font-weight: bold;"><i>spacing_in_y</i></span>: Specify the spacing in the Y direction. This is the distance from an element's center to the center of an adjacent element in the Y direction.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method"><span style="font-style: italic;"><i>SetShapeHexagonal</i></span> (<a href="../common_vbageneral/common_general_string.htm" id="a214" style="font-weight: normal; font-style: normal;" name="a214">string</a> <span style="font-style: italic;"><i>elements_in_a_side,</i></span> <a href="../common_vbageneral/common_general_string.htm" id="a215" style="font-weight: normal; font-style: normal;" name="a215">string</a> <span style="font-style: italic;"><i>spacing_in_x,</i></span> <a href="../common_vbageneral/common_general_string.htm" id="a216" style="font-weight: normal; font-style: normal;" name="a216">string</a> <span style="font-style: italic;"><i>spacing_in_y</i></span>)</p>
+<p class="VBA-Text-Indent">Sets the settings for creating a hexagonal shape phased array antenna</p>
+<p class="VBA-Text-Indent"><span style="font-style: italic; font-weight: bold;"><i>elements_in_a_side</i></span>: Specify the number of elements in one side of the hexagon.</p>
+<p class="VBA-Text-Indent"><span style="font-style: italic; font-weight: bold;"><i>spacing_in_x</i></span>: Specify the spacing in the X direction. This is the distance from an element's center to the center of an adjacent element in the X direction.</p>
+<p class="VBA-Text-Indent"><span style="font-style: italic; font-weight: bold;"><i>spacing_in_y</i></span>: Specify the spacing in the Y direction. This is the distance from an element's center to the center of an adjacent element in the Y direction.</p>
+<p class="vba-text-indent">&#160;</p>
+<p class="VBA-Heading-Method"><span style="font-style: italic;"><i>SetShapeOctagonal</i></span> (<a href="../common_vbageneral/common_general_string.htm" id="a217" style="font-weight: normal; font-style: normal;" name="a217">string</a> <span style="font-style: italic;"><i>elements_in_a_side,</i></span> <a href="../common_vbageneral/common_general_string.htm" id="a218" style="font-weight: normal; font-style: normal;" name="a218">string</a> <span style="font-style: italic;"><i>spacing_in_x,</i></span> <a href="../common_vbageneral/common_general_string.htm" id="a219" style="font-weight: normal; font-style: normal;" name="a219">string</a> <span style="font-style: italic;"><i>spacing_in_y</i></span>)</p>
+<p class="VBA-Text-Indent">Sets the settings for creating a octagonal shape phased array antenna</p>
+<p class="VBA-Text-Indent"><span style="font-style: italic; font-weight: bold;"><i>elements_in_a_side</i></span>: Specify the number of elements in one side of the octagon.</p>
+<p class="VBA-Text-Indent"><span style="font-style: italic; font-weight: bold;"><i>spacing_in_x</i></span>: Specify the spacing in the X direction. This is the distance from an element's center to the center of an adjacent element in the X direction.</p>
+<p class="VBA-Text-Indent"><span style="font-style: italic; font-weight: bold;"><i>spacing_in_y</i></span>: Specify the spacing in the Y direction. This is the distance from an element's center to the center of an adjacent element in the Y direction.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">Create</p>
+<p class="VBA-Text-Indent">Creates a new phased array antenna task.</p>
+<p class="VBA-Heading-Category"><a name="MethodsOnExisting" id="MethodsOnExisting"></a>Methods Concerning Existing Array Tasks</p>
+<p class="VBA-Heading-Method">AddTSVFilenameToMultipleExcitationList(<span style="font-weight: normal;"><a href="../common_vbageneral/common_general_name.htm" id="a683" style="font-weight: normal; font-style: normal;" name="a683">name</a></span> <span style="font-style: italic;"><i>taskname,</i></span> <a href="../common_vbageneral/common_general_string.htm" id="a2611" style="font-weight: normal; font-style: normal;" name="a2611">string</a> <span style="font-style: italic;"><i>filename</i></span>)</p>
+<p class="VBA-Text-Indent">Adds a TSV file to the multiple excitation lists of an existing array task. The array excitation pattern will be set to <span style="font-style: italic;"><i>Multiple Excitations.</i></span></p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">ImportAmplitudeAndPhaseValuesFromTSVFilename(<span><a href="../common_vbageneral/common_general_name.htm" id="a682" style="font-weight: normal; font-style: normal;" name="a682">name</a></span> <span style="font-style: italic;"><i>taskname,</i></span> <a href="../common_vbageneral/common_general_string.htm" id="a2612" style="font-weight: normal; font-style: normal;" name="a2612">string</a> <span style="font-style: italic;"><i>filename</i></span>)</p>
+<p class="VBA-Text-Indent">Imports the amplitude and phase value of a TSV file in an existing array task.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">SetElementExcitationType(<span><a href="../common_vbageneral/common_general_name.htm" id="a68" style="font-weight: normal; font-style: normal;" name="a68">name</a></span> <span style="font-style: italic;"><i>taskname,</i></span> <a href="../common_vbageneral/common_general_string.htm" id="a27" style="font-weight: normal; font-style: normal;" name="a27">string</a> <span style="font-style: italic;"><i>type</i></span>)</p>
+<p class="VBA-Text-Indent">Sets the element excitation type of an existing array task. Valid choices are: <span style="font-style: italic;"><i>Simultaneous</i></span> and <span style="font-style: italic;"><i>Individual</i></span>.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">SetPort(<span><a href="../common_vbageneral/common_general_name.htm" id="a681" style="font-weight: normal; font-style: normal;" name="a681">name</a></span> <span style="font-style: italic;"><i>taskname,</i></span> <a href="../common_vbageneral/common_general_string.htm" id="a26124" style="font-weight: normal; font-style: normal;" name="a26124">string</a> portNumber, <a href="../common_vbageneral/common_general_string.htm" id="a26123" style="font-weight: normal; font-style: normal;" name="a26123">string</a> modeNumber, <span style="font-weight: normal;"><a href="../common_vbageneral/common_general_bool_data_type.htm">bool</a></span> activeflag, <a href="../common_vbageneral/common_general_string.htm" id="a26121" style="font-weight: normal; font-style: normal;" name="a26121">string</a> amplitude, <a href="../common_vbageneral/common_general_string.htm" id="a26122" style="font-weight: normal; font-style: normal;" name="a26122">string</a> phaseshift)</p>
+<p class="VBA-Text-Indent">Sets the parameters of a port in the element excitations of an existing array task. The port is specified via the <span style="font-style: italic;"><i>portnumber</i></span> and <span style="font-style: italic;"><i>modenumber</i></span>. The following parameters are set in the port: <span style="font-style: italic;"><i>activeflag</i></span>, <span style="font-style: italic;"><i>amplitude</i></span> and <span style="font-style: italic;"><i>phaseshift</i></span>.</p>
+<p class="VBA-Heading-Category"><a name="Queries" id="Queries"></a>Queries</p>
+<p class="VBA-Heading-Method">GetElementModel(<span><a href="../common_vbageneral/common_general_name.htm" id="a684" style="font-weight: normal; font-style: normal;" name="a684">name</a></span> <span style="font-style: italic;"><i>taskname)</i></span> <a href="../common_vbageneral/common_general_name.htm" id="a14" style="font-weight: normal; font-style: normal;" name="a14">name</a></p>
+<p class="VBA-Text-Indent">Returns the name of the element model of the array task.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">GetTSVFilename(<span><a href="../common_vbageneral/common_general_name.htm" id="a685" style="font-weight: normal; font-style: normal;" name="a685">name</a></span> <span style="font-style: italic;"><i>taskname)</i></span> <a href="../common_vbageneral/common_general_name.htm" id="a141" style="font-weight: normal; font-style: normal;" name="a141">name</a></p>
+<p class="VBA-Text-Indent">Returns the TSV filename of the array task.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">GetElementExcitationType(<span><a href="../common_vbageneral/common_general_name.htm" id="a686" style="font-weight: normal; font-style: normal;" name="a686">name</a></span> <span style="font-style: italic;"><i>taskname)</i></span> <a href="../common_vbageneral/common_general_name.htm" id="a1411" style="font-weight: normal; font-style: normal;" name="a1411">name</a></p>
+<p class="VBA-Text-Indent">Returns the element excitation type of the array task.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">GetAmplitudeStringValues(<span><a href="../common_vbageneral/common_general_name.htm" id="a687" style="font-weight: normal; font-style: normal;" name="a687">name</a></span> <span style="font-style: italic;"><i>taskname)</i></span> <span style="font-weight: normal;"><a href="../common_vbageneral/common_general_variant.htm">variant</a></span></p>
+<p class="VBA-Text-Indent">Returns an array of the amplitude values as strings of the array task.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">GetPhaseStringValues(<span><a href="../common_vbageneral/common_general_name.htm" id="a688" style="font-weight: normal; font-style: normal;" name="a688">name</a></span> <span style="font-style: italic;"><i>taskname)</i></span> <span style="font-weight: normal;"><a href="../common_vbageneral/common_general_variant.htm">variant</a></span></p>
+<p class="VBA-Text-Indent">Returns an array of the phase values as strings of the array task.</p>
+<p class="VBA-Heading-Category"><a name="Example" id="Example"></a>Example</p>
+<p class="VBA-Text-Indent" style="margin-left: 0px;">' Example 1</p>
+<p class="VBA-Text-Indent" style="margin-left: 0px;">'Delete the task if it exists</p>
+<p class="VBA-Text-Indent" style="margin-left: 0px;">&#160;</p>
+<p class="VBA-Text-Indent" style="margin-left: 0px;">With SimulationTask</p>
+<p class="VBA-Text-Indent" style="margin-left: 40px;">.Reset</p>
+<p class="VBA-Text-Indent" style="margin-left: 40px;">.Name ("Task1")</p>
+<p class="VBA-Text-Indent" style="margin-left: 40px;"><span style="margin-left: 0px;">If .doesexist Then .delete</span></p>
+<p class="VBA-Text-Indent" style="margin-left: 0px;">End With</p>
+<p class="VBA-Text-Indent" style="margin-left: 0px;">&#160;</p>
+<p class="VBA-Text-Indent" style="margin-left: 0px;">'Create a new phased array antenna task</p>
+<p class="VBA-Text-Indent" style="margin-left: 0px;">&#160;</p>
+<p class="VBA-Text-Indent" style="margin-left: 0px;">With PhasedArrayTask</p>
+<p class="VBA-Text-Indent" style="margin-left: 40px;">.Reset</p>
+<p class="VBA-Text-Indent" style="margin-left: 40px;">.Name ("Task1") &#160;&#160;&#160;</p>
+<p class="VBA-Text-Indent" style="margin-left: 40px;">.SetShapeCustom ("5", "5", "10.0", "10.0", "63.43")</p>
+<p class="VBA-Text-Indent" style="margin-left: 40px;"><span style="margin-left: 0px;">.SetExcitationPattern ("Cosine")</span></p>
+<p class="VBA-Text-Indent" style="margin-left: 40px;">.Create</p>
+<p class="VBA-Text-Indent" style="margin-left: 0px;">End With</p>
+<p class="VBA-Text-Indent" style="margin-left: 0px;">&#160;</p>
+<p class="VBA-Text-Indent" style="margin-left: 0px;">'Import amplitude and phase values of a TSV-file to the created array task</p>
+<p class="VBA-Text-Indent" style="margin-left: 0px;">&#160;</p>
+<p class="VBA-Text-Indent" style="margin-left: 0px;">PhasedArrayTask.ImportAmplitudeAndPhaseValuesFromTSVFilename("Task1", "import_ampl_phase\Model\3D\5by5.tsv")</p>
+<p class="VBA-Text-Indent" style="margin-left: 0px;">&#160;</p>
+<p class="VBA-Text-Indent" style="margin-left: 0px;">'Get the amplitude values from the array task</p>
+<p class="VBA-Text-Indent" style="margin-left: 0px;">&#160;</p>
+<p class="VBA-Text-Indent" style="margin-left: 0px;">Dim amplitudeValues As Variant</p>
+<p class="VBA-Text-Indent" style="margin-left: 0px;">PhasedArrayTask.GetAmplitudeStringValues("Task1", amplitudeValues)</p>
+<p class="VBA-Text-Indent" style="margin-left: 0px;">&#160;</p>
+<p class="VBA-Text-Indent" style="margin-left: 0px;">Dim amplVal0 As String</p>
+<p class="VBA-Text-Indent" style="margin-left: 0px;">amplVal0 = amplitudeValues(0)</p>
+<p class="VBA-Text-Indent" style="margin-left: 0px;">&#160;</p>
+<p class="VBA-Text-Indent" style="margin-left: 0px;">' Example 2</p>
+<p class="VBA-Text-Indent" style="margin-left: 0px;">'Delete the task if it exists</p>
+<p class="VBA-Text-Indent" style="margin-left: 0px;">&#160;</p>
+<p class="VBA-Text-Indent" style="margin-left: 0px;">Dim sArrayTaskName As String</p>
+<p class="VBA-Text-Indent" style="margin-left: 0px;">sArrayTaskName = "Task2"</p>
+<p class="VBA-Text-Indent" style="margin-left: 0px;">&#160;</p>
+<p class="VBA-Text-Indent" style="margin-left: 0px;">With SimulationTask</p>
+<p class="VBA-Text-Indent" style="margin-left: 40px;">.Reset</p>
+<p class="VBA-Text-Indent" style="margin-left: 40px;">.Name sArrayTaskName</p>
+<p class="VBA-Text-Indent" style="margin-left: 40px;"><span style="margin-left: 0px;">If .doesexist Then .delete</span></p>
+<p class="VBA-Text-Indent" style="margin-left: 0px;">End With</p>
+<p class="VBA-Text-Indent" style="margin-left: 0px;">&#160;</p>
+<p class="VBA-Text-Indent" style="margin-left: 0px;">'Create a new phased array antenna task using a TSV-file which is located next to the CST-file</p>
+<p class="VBA-Text-Indent" style="margin-left: 0px;">&#160;</p>
+<p class="VBA-Text-Indent" style="margin-left: 0px;">With PhasedArrayTask</p>
+<p class="VBA-Text-Indent" style="margin-left: 40px;">.Reset</p>
+<p class="VBA-Text-Indent" style="margin-left: 40px;">.Name sArrayTaskName &#160;&#160;&#160;&#160;</p>
+<p class="VBA-Text-Indent" style="margin-left: 40px;">.SetElementModel ("Block: MWSSCHEM1")</p>
+<p class="VBA-Text-Indent" style="margin-left: 40px;">&#160;.SetExcitationPattern ("Multiple Excitations")</p>
+<p class="VBA-Text-Indent" style="margin-left: 40px;">&#160;.SetTSVFilename ("MultipleLists\Array_Layout.tsv" )</p>
+<p class="VBA-Text-Indent" style="margin-left: 40px;">.Create</p>
+<p class="VBA-Text-Indent" style="margin-left: 0px;">End With</p>
+<p class="VBA-Text-Indent" style="margin-left: 0px;">&#160;</p>
+<p class="VBA-Text-Indent" style="margin-left: 0px;">'Specify the element excitation type and the port parameters of the created array task</p>
+<p class="VBA-Text-Indent" style="margin-left: 0px;">&#160;</p>
+<p class="VBA-Text-Indent" style="margin-left: 0px;">PhasedArrayTask.SetElementExcitationType(sArrayTaskName, "Individual")</p>
+<p class="VBA-Text-Indent" style="margin-left: 0px;">PhasedArrayTask.SetPort(sArrayTaskName, "1", "", True, "1.0", "0.0")</p>
+<p class="VBA-Text-Indent" style="margin-left: 0px;">PhasedArrayTask.SetPort(sArrayTaskName, "2", "", True, "1.0", "0.0")</p>
+<p class="VBA-Text-Indent" style="margin-left: 0px;">&#160;</p>
+<p class="VBA-Text-Indent" style="margin-left: 0px;">'Add TSV-files to the multiple excitation lists of the array task</p>
+<p class="VBA-Text-Indent" style="margin-left: 0px;">&#160;</p>
+<p class="VBA-Text-Indent" style="margin-left: 0px;">PhasedArrayTask.AddTSVFilenameToMultipleExcitationList(sArrayTaskName, "MultipleLists\lists\1_Uniform.tsv")</p>
+<p class="VBA-Text-Indent" style="margin-left: 0px;">PhasedArrayTask.AddTSVFilenameToMultipleExcitationList(sArrayTaskName, "MultipleLists\lists\2_TaylorTaper.tsv")</p>
+<p class="VBA-Text-Indent" style="margin-left: 0px;">PhasedArrayTask.AddTSVFilenameToMultipleExcitationList(sArrayTaskName, "MultipleLists\lists\3_BroadsideNull.tsv")</p>
+<p class="VBA-Text-Indent" style="margin-left: 0px;">PhasedArrayTask.AddTSVFilenameToMultipleExcitationList(sArrayTaskName, "MultipleLists\lists\4_FanBeam.tsv")</p>
+<p class="VBA-Text-Indent" style="margin-left: 0px;">&#160;</p>
+<p class="VBA-Text-Indent" style="margin-left: 0px;">&#160;</p>
+<p class="VBA-Text-Indent" style="margin-left: 0px;">&#160;</p>
+<?rh-p style="margin-bottom: 0px; text-align: Right; margin-left: 18px; 
+                 margin-right: 18px; margin-top: 18px;" ?>
+<div style="width: 100%; position: relative;" id="footer">
+<p style="border-bottom: Solid 1px #dddddd; text-align: Left; margin-left: 0px; font-family: Arial, sans-serif; line-height: Normal; margin-top: 9px; margin-right: 0px; margin-bottom: 6px; border-left-width: 1px; border-top-width: 1px; border-right-width: 1px;"><span style="text-align: Left; font-family: Arial, sans-serif; line-height: Normal;">&#160;</span></p>
+<table cellspacing="0" width="100%">
+<col style="width: 50%;" />
+<col style="width: 50%;" />
+<tr>
+<td style="vertical-align: Top;"><span style="font-family: Arial, sans-serif; line-height: Normal; font-size: 8pt;"><font size="1" style="font-size:8pt;">CST Studio Suite 2026</font></span></td>
+<td style="vertical-align: Top;">
+<p style="text-align: right;">&#160;</p>
+</td>
+</tr>
+</table>
+<p>&#160;</p>
+</div>
+<script type="text/javascript" language="javascript1.2">
+//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+        writeIntopicBar(0);
+
+
+highlightSearch();
+//-->
+//]]>
+</script>
+</body>
+</html>

@@ -1,0 +1,326 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="Adobe RoboHelp 11" />
+<title>ADSComponentExport</title>
+<link rel="StyleSheet" href="../online_help_vba.css" type="text/css" />
+<style type="text/css">
+/*<![CDATA[*/
+<!--
+body { border-bottom-style:None; }
+-->
+/*]]>*/
+</style>
+
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+        origWidth = innerWidth;
+        origHeight = innerHeight;
+        onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+/*<![CDATA[*/
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+-->
+/*]]>*/
+</style>
+
+<script type="text/javascript" language="javascript1.2" src="../whmsg.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript" src="../whver.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript1.2" src="../whutils.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript1.2" src="../whproxy.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript1.2" src="../whlang.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript1.2" src="../whtopic.js" charset="utf-8">
+</script>
+</head>
+<body>
+<script type="text/javascript" language="javascript1.2">
+//<![CDATA[
+<!--
+if (window.gbWhTopic)
+{
+        var strUrl = document.location.href;
+        var bc = 0;
+        var n = strUrl.toLowerCase().indexOf("bc-");
+        if(n != -1)
+        {
+                document.location.replace(strUrl.substring(0, n));
+                bc = strUrl.substring(n+3);
+        }
+
+        if (window.addTocInfo)
+        {
+        addTocInfo("3D Simulation VBA\nVBA Objects\nImport/Export\nADSComponentExport");
+
+        }
+        if (window.writeBtnStyle)
+                writeBtnStyle();
+
+        if (window.writeIntopicBar)
+                writeIntopicBar(0);
+
+        
+        document.write("<p style=\"font-family: Tahoma; font-size: 9pt; font-weight: 400;  font-style:normal; color: rgb(0, 0, 0); text-decoration:none; text-align: left\"> ");
+AddMasterBreadcrumbs("../index.htm", "font-family: Tahoma; font-size: 9pt; font-weight: 400;  font-style:normal; color: rgb(0, 0, 0); text-decoration:none; text-align: left", "|", "Home", "../special_vbaobjects/special_vbaobjects_vbaobjects.htm");
+document.write("<a style=\"font-family: Tahoma; font-size: 9pt; font-weight: 400;  font-style:normal; color: rgb(0, 0, 0); text-decoration:none; text-align: left\" href=\"../special_vbaobjects/special_vbaobjects_vbaobjects.htm\">3D Simulation VBA<\/a> | <a style=\"font-family: Tahoma; font-size: 9pt; font-weight: 400;  font-style:normal; color: rgb(0, 0, 0); text-decoration:none; text-align: left\" href=\"../special_vbaobjects/special_vbaobjects_vbaobjects.htm\">VBA Objects<\/a> | <a style=\"font-family: Tahoma; font-size: 9pt; font-weight: 400;  font-style:normal; color: rgb(0, 0, 0); text-decoration:none; text-align: left\" href=\"adscomponentexport.htm\">Import/Export<\/a> | ADSComponentExport<\/p>");
+
+}
+else
+        if (window.gbIE4)
+                document.location.reload();
+
+onLoadHandler = function()
+{
+  if (window.setRelStartPage)
+        {
+        setTimeout("setRelStartPage('../index.htm');", 1)
+
+    setTimeout("UpdateBreadCrumbsMarker();", 1);
+        }
+}
+
+if (window.addEventListener){  
+        window.addEventListener('load', onLoadHandler, false);   
+} else if (window.attachEvent){  
+        window.attachEvent('onload', onLoadHandler);  
+}
+
+function onSetStartPage()
+{
+  autoSync(1);
+  sendSyncInfo();
+  sendAveInfoOut();
+}
+//-->
+//]]>
+</script><script type="text/javascript" src="../ehlpdhtm.js" language="JavaScript1.2">
+</script>
+<table cellspacing="0" width="100%">
+<col style="width: 50%;" />
+<col style="width: 50%;" />
+<tr>
+<td style="vertical-align: middle; padding-top: 5px; padding-bottom: 5px;">
+<p style="margin-top: 0px; margin-bottom: 0px;"><img src="../3ds.png" alt="" style="border: none;" border="0" /></p>
+</td>
+<td style="vertical-align: middle;">
+<p style="text-align: right;"><a href="https://www.3ds.com/products-services/3dexperience/" target="_blank"><img src="../3dexp.png" alt="" style="border: none;" width="32" height="32" border="0" /></a></p>
+</td>
+</tr>
+</table>
+<p class="VBA-Heading-Object">ADSComponentExport Object</p>
+<p class="VBA-Text">This command offers the option to create an ADS® parametric component based &#160;on the current project.</p>
+<p class="VBA-Heading-Method">&#160;</p>
+<p class="VBA-Heading-Method">AddCurrentSparameterToMdifFile</p>
+<p class="VBA-Text-Indent">This command stored the currently calculated S-parameters together with the current structure parameters in the "&lt;projectname&gt;^sparameters.mdf" data file. This file may contain a collection of various S-parameter results for several structure parameter combinations. All data stored in this file can later be accessed from within the ADS schematic by using the corresponding component. Other parameter settings within this range will then be interpolated between the given data points, parameter settings outside this range will be extrapolated accordingly.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">SetDescription ( <span style="font-weight: normal; color: #0000ff; text-decoration: underline;"><font color="blue"><u><a href="../common_vbageneral/common_general_string.htm" id="a1" name="a1">string</a></u></font></span> <span style="font-style: italic;"><i>description</i></span> )</p>
+<p class="VBA-Text-Indent">Sets the description text of the ADS schematic component. This text will be used when the component is created the next time.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">SetParameterType ( <a href="../common_vbageneral/common_general_name.htm" id="a2" style="font-weight: normal;" name="a2">name</a> <span style="font-style: italic;"><i>parametername,</i></span> &#160;<span style="font-weight: normal; color: #0000ff; text-decoration: underline;"><font color="blue"><u><a href="../common_vbageneral/common_general_string.htm" id="a3" name="a3">string</a></u></font></span> <span style="font-style: italic;"><i>type</i></span> )</p>
+<p class="VBA-Text-Indent">This command sets the type of a parameter. This information is required to correctly consider different unit settings in CST Microwave Studio and ADS. Once the type of the parameter is known, the actual values are scaled accordingly.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Text-Indent"><span style="font-style: italic;"><i>type</i></span> can have one of &#160;the following values:</p>
+<table style="vertical-align: top; margin-left: 24px;" cellspacing="0" width="61.936%">
+<col style="width: 21.2%;" />
+<col style="width: 78.8%;" />
+<tr style="vertical-align: top;">
+<td style="border: Solid 1px #000000; width: 21.2%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text-Indent" style="margin-left: 12px;">"String"</p>
+</td>
+<td style="border-top: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 78.8%; padding-right: 10px; padding-left: 10px;">
+<p style="margin-left: 0px;">The parameter is an arbitrary string (no scaling)</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 21.2%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text-Indent" style="margin-left: 12px;">"Unitless"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 78.8%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text-Indent" style="margin-left: 0px;">The parameter does not have a unit (no scaling)</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 21.2%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text-Indent" style="margin-left: 12px;">"Frequency"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 78.8%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text-Indent" style="margin-left: 0px;">The parameter is related to a frequency (scaling by frequency units)</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 21.2%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text-Indent" style="margin-left: 12px;">"Resistance"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 78.8%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text-Indent" style="margin-left: 0px;">The parameter is related to a resistance (scaling by resistance units)</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 21.2%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text-Indent" style="margin-left: 12px;">"Conductance"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 78.8%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text-Indent" style="margin-left: 0px;">The parameter is related to a conductance (scaling by conductance units)</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 21.2%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text-Indent" style="margin-left: 12px;">"Inductance"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 78.8%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text-Indent" style="margin-left: 0px;">The parameter is related to a inductance (scaling by inductance units)</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 21.2%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text-Indent" style="margin-left: 12px;">"Capacitance"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 78.8%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text-Indent" style="margin-left: 0px;">The parameter is related to a capacitance (scaling by capacitance units)</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 21.2%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text-Indent" style="margin-left: 12px;">"Length"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 78.8%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text-Indent" style="margin-left: 0px;">The parameter is related to a length (scaling by length units)</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 21.2%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text-Indent" style="margin-left: 12px;">"Time"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 78.8%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text-Indent" style="margin-left: 0px;">The parameter is related to a time (scaling by time units)</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 21.2%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text-Indent" style="margin-left: 12px;">"Angle"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 78.8%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text-Indent" style="margin-left: 0px;">The parameter is related to an angle (scaling by angular units)</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 21.2%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text-Indent" style="margin-left: 12px;">"Power"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 78.8%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text-Indent" style="margin-left: 0px;">The parameter is related to a power (scaling by power units)</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 21.2%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text-Indent" style="margin-left: 12px;">"Voltage"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 78.8%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text-Indent" style="margin-left: 0px;">The parameter is related to a voltage (scaling by voltage units)</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 21.2%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text-Indent" style="margin-left: 12px;">"Current"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 78.8%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text-Indent" style="margin-left: 0px;">The parameter is related to a current (scaling by current units)</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 21.2%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text-Indent" style="margin-left: 12px;">"Distance"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 78.8%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text-Indent" style="margin-left: 0px;">The parameter is related to a distance (scaling by distance units)</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 21.2%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text-Indent" style="margin-left: 12px;">"Temperature"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 78.8%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text-Indent" style="margin-left: 0px;">The parameter is related to a temperature (scaling by temperature units)</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 21.2%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text-Indent" style="margin-left: 12px;">"dB"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 78.8%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text-Indent" style="margin-left: 0px;">The parameter is related to a dB value (no scaling)</p>
+</td>
+</tr>
+</table>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">ExportADSComponent</p>
+<p class="VBA-Text-Indent">This command creates the ADS component in the design kit by using the previously made settings concerning description and parameter types.</p>
+<p class="VBA-Heading-Category"><a name="Default" id="Default"></a>Default Settings</p>
+<p class="VBA-Text-Example">SetDescription("&lt;ADS component name&gt; Component")</p>
+<p class="VBA-Text-Example">SetParameterType("*", "Unitless")</p>
+<p class="VBA-Heading-Category"><a name="Example" id="Example"></a>Example</p>
+<p class="VBA-Text">Storing currently calculated S-parameters in the data file for later use within the component. The data is stored together with the current parameter settings which allows for a parametric data access from within the ADS schematic.</p>
+<p class="VBA-Text">&#160;</p>
+<p class="VBA-Text-Example">With ADSComponentExport</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;.AddCurrentSparameterToMdifFile</p>
+<p class="VBA-Text-Example">End With</p>
+<p class="VBA-Text-Example">&#160;</p>
+<p class="VBA-Text">Automatically creating an ADS component from within a VBA script:</p>
+<p class="VBA-Text-Example">&#160;</p>
+<p class="VBA-Text-Example">&#160;With ADSComponentExport</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;.SetDescription("Magic Tee 4 Port Rectangular Waveguide")</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;.SetParameterType("waveguide_width", "Length")</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;.SetParameterType("waveguide_height", "Length")</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;.ExportADSComponent</p>
+<p class="VBA-Text-Example">End With</p>
+<p class="VBA-Text-Example">&#160;</p>
+<?rh-p style="margin-bottom: 0px; text-align: Right; margin-left: 18px; 
+                 margin-right: 18px; margin-top: 18px;" ?>
+<div style="width: 100%; position: relative;" id="footer">
+<p style="border-bottom: Solid 1px #dddddd; text-align: Left; margin-left: 0px; font-family: Arial, sans-serif; line-height: Normal; margin-top: 9px; margin-right: 0px; margin-bottom: 6px; border-left-width: 1px; border-top-width: 1px; border-right-width: 1px;"><span style="text-align: Left; font-family: Arial, sans-serif; line-height: Normal;">&#160;</span></p>
+<table cellspacing="0" width="100%">
+<col style="width: 50%;" />
+<col style="width: 50%;" />
+<tr>
+<td style="vertical-align: Top;"><span style="font-family: Arial, sans-serif; line-height: Normal; font-size: 8pt;"><font size="1" style="font-size:8pt;">CST Studio Suite 2026</font></span></td>
+<td style="vertical-align: Top;">
+<p style="text-align: right;">&#160;</p>
+</td>
+</tr>
+</table>
+<p>&#160;</p>
+</div>
+<script type="text/javascript" language="javascript1.2">
+//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+        writeIntopicBar(0);
+
+
+highlightSearch();
+//-->
+//]]>
+</script>
+</body>
+</html>

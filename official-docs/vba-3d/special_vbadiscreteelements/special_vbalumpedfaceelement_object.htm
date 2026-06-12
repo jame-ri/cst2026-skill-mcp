@@ -1,0 +1,348 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="Adobe RoboHelp 11" />
+<title>LumpedFaceElement Object</title>
+<link rel="StyleSheet" href="../online_help_vba.css" type="text/css" />
+<style type="text/css">
+/*<![CDATA[*/
+<!--
+body { border-bottom-style:None; }
+-->
+/*]]>*/
+</style>
+
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+        origWidth = innerWidth;
+        origHeight = innerHeight;
+        onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+/*<![CDATA[*/
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+-->
+/*]]>*/
+</style>
+
+<script type="text/javascript" language="javascript1.2" src="../whmsg.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript" src="../whver.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript1.2" src="../whutils.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript1.2" src="../whproxy.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript1.2" src="../whlang.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript1.2" src="../whtopic.js" charset="utf-8">
+</script>
+</head>
+<body>
+<script type="text/javascript" language="javascript1.2">
+//<![CDATA[
+<!--
+if (window.gbWhTopic)
+{
+        var strUrl = document.location.href;
+        var bc = 0;
+        var n = strUrl.toLowerCase().indexOf("bc-");
+        if(n != -1)
+        {
+                document.location.replace(strUrl.substring(0, n));
+                bc = strUrl.substring(n+3);
+        }
+
+        if (window.addTocInfo)
+        {
+        addTocInfo("3D Simulation VBA\nVBA Objects\nDiscrete Elements\nLumpedFaceElement");
+
+        }
+        if (window.writeBtnStyle)
+                writeBtnStyle();
+
+        if (window.writeIntopicBar)
+                writeIntopicBar(0);
+
+        
+        document.write("<p style=\"font-family: Tahoma; font-size: 9pt; font-weight: 400;  font-style:normal; color: rgb(0, 0, 0); text-decoration:none; text-align: left\"> ");
+AddMasterBreadcrumbs("../index.htm", "font-family: Tahoma; font-size: 9pt; font-weight: 400;  font-style:normal; color: rgb(0, 0, 0); text-decoration:none; text-align: left", "|", "Home", "../special_vbaobjects/special_vbaobjects_vbaobjects.htm");
+document.write("<a style=\"font-family: Tahoma; font-size: 9pt; font-weight: 400;  font-style:normal; color: rgb(0, 0, 0); text-decoration:none; text-align: left\" href=\"../special_vbaobjects/special_vbaobjects_vbaobjects.htm\">3D Simulation VBA<\/a> | <a style=\"font-family: Tahoma; font-size: 9pt; font-weight: 400;  font-style:normal; color: rgb(0, 0, 0); text-decoration:none; text-align: left\" href=\"../special_vbaobjects/special_vbaobjects_vbaobjects.htm\">VBA Objects<\/a> | <a style=\"font-family: Tahoma; font-size: 9pt; font-weight: 400;  font-style:normal; color: rgb(0, 0, 0); text-decoration:none; text-align: left\" href=\"special_vbalumpedelement_object.htm\">Discrete Elements<\/a> | LumpedFaceElement<\/p>");
+
+}
+else
+        if (window.gbIE4)
+                document.location.reload();
+
+onLoadHandler = function()
+{
+  if (window.setRelStartPage)
+        {
+        setTimeout("setRelStartPage('../index.htm');", 1)
+
+    setTimeout("UpdateBreadCrumbsMarker();", 1);
+        }
+}
+
+if (window.addEventListener){  
+        window.addEventListener('load', onLoadHandler, false);   
+} else if (window.attachEvent){  
+        window.attachEvent('onload', onLoadHandler);  
+}
+
+function onSetStartPage()
+{
+  autoSync(1);
+  sendSyncInfo();
+  sendAveInfoOut();
+}
+//-->
+//]]>
+</script><script type="text/javascript" src="../ehlpdhtm.js" language="JavaScript1.2">
+</script>
+<table cellspacing="0" width="100%">
+<col style="width: 50%;" />
+<col style="width: 50%;" />
+<tr>
+<td style="vertical-align: middle; padding-top: 5px; padding-bottom: 5px;">
+<p style="margin-top: 0px; margin-bottom: 0px;"><img src="../3ds.png" alt="" style="border: none;" border="0" /></p>
+</td>
+<td style="vertical-align: middle;">
+<p style="text-align: right;"><a href="https://www.3ds.com/products-services/3dexperience/" target="_blank"><img src="../3dexp.png" alt="" style="border: none;" width="32" height="32" border="0" /></a></p>
+</td>
+</tr>
+</table>
+<h1>LumpedFaceElement Object</h1>
+<p class="VBA-Text">The discrete lumped face element is a special kind of discrete lumped element and as such can be used to include electronic components such as resistors, inductances, capacitances and diodes into the simulation. Spice or Touchstone files can be also imported (up to 2 pins with the lumped element type and with more than 2 pins with the multipin element type).</p>
+<ul>
+<li class="p-VBA-Index-Category">
+<p class="VBA-Index-Category"><a href="#Methods">Methods</a></p>
+</li>
+<li class="p-VBA-Index-Category">
+<p class="VBA-Index-Category"><a href="#Defaults" style="font-weight: bold;">Defaults</a></p>
+</li>
+</ul>
+<p class="VBA-Heading-Category"><a name="Methods" id="Methods"></a>Methods</p>
+<p class="VBA-Heading-Method">Reset</p>
+<p class="VBA-Text-Indent">Resets all internal values to their default settings.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">Create</p>
+<p class="VBA-Text-Indent">Creates a new lumped face element. All necessary settings for this element have to be made previously. For the definition of a multipin lumped element (type&#160;<span style="font-style: italic;"><i>multipingroupspice</i></span> or <span style="font-style: italic;"><i>multipingrouptouchstone</i></span>) use the <span style="font-style: italic;"><i>CreateMultipin</i></span> method of the <a href="special_vbalumpedelement_object.htm">LumpedElement</a> object.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">Modify</p>
+<p class="VBA-Text-Indent">Modifies an existing element. Only geometrical settings which were made previously are changed.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">SetType ( <a href="../common_vbageneral/common_general_enum.htm" id="a1" style="font-weight: normal; font-style: normal;" name="a1">enum</a> <span style="font-style: italic;"><i>key</i></span> )</p>
+<p class="VBA-Text-Indent">Sets the type of the element.</p>
+<table style="vertical-align: top;" cellspacing="0" width="100%">
+<col style="width: 13.046%;" />
+<col style="width: 86.954%;" />
+<tr style="vertical-align: top;">
+<td style="border: Solid 1px #000000; width: 13.046%; padding-right: 10px; padding-left: 10px;">
+<p><a href="../common_vbageneral/common_general_enum.htm" id="a2" style="font-weight: normal; font-style: normal;" name="a2">enum</a> <span style="font-weight: bold; font-style: italic;"><i>key</i></span></p>
+</td>
+<td style="border-top: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 86.954%; padding-right: 10px; padding-left: 10px;">
+<p style="font-weight: bold;">meaning</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 13.046%; padding-right: 10px; padding-left: 10px;">
+<p>"rlcserial"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 86.954%; padding-right: 10px; padding-left: 10px;">
+<p>The discrete element is made out of a serial circuit of a resistance, an inductance and a capacitance. (default)</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 13.046%; padding-right: 10px; padding-left: 10px;">
+<p>"rlcparallel"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 86.954%; padding-right: 10px; padding-left: 10px;">
+<p>The discrete element is made out of a parallel circuit of a resistance, an inductance and a capacitance.</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 13.046%; padding-right: 10px; padding-left: 10px;">
+<p>"short"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 86.954%; padding-right: 10px; padding-left: 10px;">
+<p>The discrete element is made out of a short circuit, this is equivalent to a "rlcserial" element with zero (i.e. missing) resistance, inductance and capacitance.</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 13.046%; padding-right: 10px; padding-left: 10px;">
+<p>"open"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 86.954%; padding-right: 10px; padding-left: 10px;">
+<p>The discrete element is made out of an open circuit, this is equivalent to a "rlcparallel" element with zero (i.e. missing) resistance, inductance and capacitance.</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 13.046%; padding-right: 10px; padding-left: 10px;">
+<p>"diode"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 86.954%; padding-right: 10px; padding-left: 10px;">
+<p>The discrete element is a diode.</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 13.046%; padding-right: 10px; padding-left: 10px;">
+<p>"spicecircuit"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 86.954%; padding-right: 10px; padding-left: 10px;">
+<p>The discrete element is defined by circuit file with Spice format (typical extensions are *.cir, *.net).</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 13.046%; padding-right: 10px; padding-left: 10px;">
+<p>"touchstone"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 86.954%; padding-right: 10px; padding-left: 10px;">
+<p>The discrete element is defined by circuit file with Touchstone format (typical extensions are *.ts, *.s*p).</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 13.046%; padding-right: 10px; padding-left: 10px;">
+<p>"multipingroupitem"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 86.954%; padding-right: 10px; padding-left: 10px;">
+<p>The discrete element is a multipin sub-element to be connected to a multipin lumped element (with type "multipingroupspice" or multipingrouptouchstone").</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 13.046%; padding-right: 10px; padding-left: 10px;">
+<p>"multipingroupspice"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 86.954%; padding-right: 10px; padding-left: 10px;">
+<p>The discrete element is a multipin lumped element defined by circuit file with Spice format (typical extensions are *.cir, *.net).</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 13.046%; padding-right: 10px; padding-left: 10px;">
+<p>"multipingrouptouchstone"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 86.954%; padding-right: 10px; padding-left: 10px;">
+<p>The discrete element is a multipin lumped element defined by circuit file with Touchstone format (typical extensions are *.ts, *.s*p).</p>
+</td>
+</tr>
+</table>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">SetName ( <span><a href="../common_vbageneral/common_general_name.htm" id="a44" style="font-weight: normal; font-style: normal;" name="a44">name</a></span> <span style="font-style: italic;"><i>name</i></span> )</p>
+<p class="VBA-Text-Indent">Sets the name of the element.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">Folder ( <span><a href="../common_vbageneral/common_general_name.htm" id="a23" style="font-weight: normal; font-style: normal;" name="a23">name</a></span> <span style="font-style: italic;"><i>foldername</i></span> )</p>
+<p class="VBA-Text-Indent">Sets the name of the folder for the new element. If the name is empty, then the element does not belong to a folder.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">SetR / SetL / SetC ( <a href="../common_vbageneral/common_general_double.htm" id="a5" style="font-weight: normal; font-style: normal;" name="a5">double</a> <span style="font-style: italic;"><i>dValue</i></span> )</p>
+<p class="VBA-Text-Indent">Defines the value of resistance / inductance / capacitance of the element.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">SetGs / SetI0 / SetT ( <a href="../common_vbageneral/common_general_double.htm" id="a10" style="font-weight: normal; font-style: normal;" name="a10">double</a> <span style="font-style: italic;"><i>dValue</i></span> )</p>
+<p class="VBA-Text-Indent">Sets the blocking conductivity / reverse current / the temperature in Kelvin for the diode. These methods have only an effect if the .SetType method is set to ”diode”.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">SetP1 / SetP2 ( <a href="../common_vbageneral/common_general_bool_data_type.htm" id="a9" style="font-weight: normal; font-style: normal;" name="a9">bool</a> <span style="font-style: italic;"><i>picked,</i></span> <a href="../common_vbageneral/common_general_double.htm" id="a6" style="font-weight: normal; font-style: normal;" name="a6">double</a> <span style="font-style: italic;"><i>x,</i></span> <a href="../common_vbageneral/common_general_double.htm" id="a7" style="font-weight: normal; font-style: normal;" name="a7">double</a> <span style="font-style: italic;"><i>y,</i></span> <a href="../common_vbageneral/common_general_double.htm" id="a8" style="font-weight: normal; font-style: normal;" name="a8">double</a> <span style="font-style: italic;"><i>z</i></span> )</p>
+<p class="VBA-Text-Indent">Define the starting / end point of the lumped face element. <span style="font-style: italic;"><i>picked</i></span> has to be True however, hence the coordinates are only used as a reference.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">CircuitFileName ( <a href="../common_vbageneral/common_general_name.htm" id="a231" style="font-weight: normal; font-style: normal;" name="a231">name</a> <span style="font-style: italic;"><i>filename</i></span> )</p>
+<p class="VBA-Text-Indent">Sets the name of the external Spice or Touchstone file to be imported for the <span style="font-style: italic;"><i>spicecircuit</i></span>, <span style="font-style: italic;"><i>touchstone</i></span>, <span style="font-style: italic;"><i>multipingroupspice</i></span> and <span style="font-style: italic;"><i>multipingrouptouchstone</i></span> element type.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">UseRelativePath ( <a href="../common_vbageneral/common_general_bool_data_type.htm" id="a911" style="font-weight: normal; font-style: normal;" name="a911">bool</a> <span style="font-style: italic;"><i>flag</i></span> )</p>
+<p class="VBA-Text-Indent"><span style="font-size: 12px; line-height: normal; orphans: auto; widows: 1; -webkit-text-stroke-width: 0px; display: inline ! important ; float: none;">Defines if the</span><span class="Apple-converted-space">&#160;</span><span style="font-size: 12px; line-height: normal; orphans: auto; widows: 1; -webkit-text-stroke-width: 0px; font-weight: bold;">CircuitFileName</span> <span style="font-size: 12px; line-height: normal; orphans: auto; widows: 1; -webkit-text-stroke-width: 0px; display: inline ! important ; float: none;">is given with a relative or absolute path. In the former case</span><span class="Apple-converted-space">&#160;</span><span style="font-size: 12px; line-height: normal; orphans: auto; widows: 1; -webkit-text-stroke-width: 0px; font-weight: bold;">CircuitFileName</span> <span style="font-size: 12px; line-height: normal; orphans: auto; widows: 1; -webkit-text-stroke-width: 0px; display: inline ! important ; float: none;">must specify a location relative to the current project file.</span></p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">CircuitId ( <span style="font-weight: normal;"><a href="../common_vbageneral/common_general_integer.htm">int</a></span> <span style="font-style: italic;"><i>Id</i></span>)</p>
+<p class="VBA-Text-Indent">Set a unique id to identify the local copy of the circuit file.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">UseCopyOnly ( <a href="../common_vbageneral/common_general_bool_data_type.htm" id="a91" style="font-weight: normal; font-style: normal;" name="a91">bool</a> <span style="font-style: italic;"><i>flag</i></span> )</p>
+<p class="VBA-Text-Indent"><span style="widows: 1; -webkit-text-stroke-width: 0px;">Only the initially copied circuit file in the project folder is used. Any later changes in the external file are ignored.</span></p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">SetInvert ( <a href="../common_vbageneral/common_general_bool_data_type.htm" id="a11" style="font-weight: normal; font-style: normal;" name="a11">bool</a> <span style="font-style: italic;"><i>switch</i></span> )</p>
+<p class="VBA-Text-Indent">Set <span style="font-style: italic;"><i>switch</i></span> to True to reverse the orientation of the element. This might be important, if the lumped element is a diode.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">SetMonitor ( <a href="../common_vbageneral/common_general_bool_data_type.htm" id="a12" style="font-weight: normal; font-style: normal;" name="a12">bool</a> <span style="font-style: italic;"><i>switch</i></span> )</p>
+<p class="VBA-Text-Indent">If <span style="font-style: italic;"><i>switch</i></span> is True, current and voltage between start and end point of the element will be monitored.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">UseProjection ( <a href="../common_vbageneral/common_general_bool_data_type.htm" id="a21" style="font-weight: normal; font-style: normal;" name="a21">bool</a> <span style="font-style: italic;"><i>flag</i></span> )</p>
+<p class="VBA-Text-Indent">When this flag is activated then one edge is projected onto the other edge and the element face is created in between the edge and its projection.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">ReverseProjection ( <a href="../common_vbageneral/common_general_bool_data_type.htm" id="a22" style="font-weight: normal; font-style: normal;" name="a22">bool</a> <span style="font-style: italic;"><i>flag</i></span> )</p>
+<p class="VBA-Text-Indent">When this flag is activated then the second picked edge will be projected onto the first picked edge. This flag is only considered when <span style="font-style: italic;"><i>UseProjection</i></span> is active.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">PortName ( <a href="../common_vbageneral/common_general_name.htm" id="a441" style="font-weight: normal; font-style: normal;" name="a441">name</a> <span style="font-style: italic;"><i>name</i></span> )</p>
+<p class="VBA-Text-Indent">If a port name is set, the new element will retrieve its geometry definition from an existing discrete face port. Geometrical properties defined by commands like <span style="font-style: italic;"><i>SetP1</i></span>, <span style="font-style: italic;"><i>SetInvert</i></span>, etc. are ignored. By default, the port is then deleted, so this is used for converting discrete face ports into lumped face elements.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">DeletePort&#160;( <a href="../common_vbageneral/common_general_bool_data_type.htm" id="a221" style="font-weight: normal; font-style: normal;" name="a221">bool</a> <span style="font-style: italic;"><i>flag</i></span> )</p>
+<p class="VBA-Text-Indent">If a <span style="font-style: italic;"><i>PortName</i></span> is set, this flag decides, whether the port is deleted after conversion to a lumped face element or whether it is kept. The default is "True", so the port will be deleted.</p>
+<p class="VBA-Heading-Method">&#160;</p>
+<p class="VBA-Heading-Method">Rename ( <a href="../common_vbageneral/common_general_name.htm" id="a3" style="font-weight: normal; font-style: normal;" name="a3">name</a> <span style="font-style: italic;"><i>sOldName,</i></span> <a href="../common_vbageneral/common_general_name.htm" id="a4" style="font-weight: normal; font-style: normal;" name="a4">name</a> <span style="font-style: italic;"><i>sNewName</i></span> )</p>
+<p class="VBA-Text-Indent">Changes the name of an existing object.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">Delete ( <span><a href="../common_vbageneral/common_general_name.htm" id="a13" style="font-weight: normal; font-style: normal;" name="a13">name</a></span> <span style="font-style: italic;"><i>name</i></span> )</p>
+<p class="VBA-Text-Indent">Deletes an existing object.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">NewFolder ( <span><a href="../common_vbageneral/common_general_name.htm" id="a24" style="font-weight: normal; font-style: normal;" name="a24">name</a></span> <span style="font-style: italic;"><i>foldername</i></span> )</p>
+<p class="VBA-Text-Indent">Creates a new folder with the given name.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">DeleteFolder ( <span><a href="../common_vbageneral/common_general_name.htm" id="a25" style="font-weight: normal; font-style: normal;" name="a25">name</a></span> <span style="font-style: italic;"><i>foldername</i></span> )</p>
+<p class="VBA-Text-Indent">Deletes an existing folder and all the containing elements.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">RenameFolder ( <span><a href="../common_vbageneral/common_general_name.htm" id="a26" style="font-weight: normal; font-style: normal;" name="a26">name</a></span> <span style="font-style: italic;"><i>oldFoldername,</i></span> <span><a href="../common_vbageneral/common_general_name.htm" id="a27" style="font-weight: normal; font-style: normal;" name="a27">name</a></span> <span style="font-style: italic;"><i>newFoldername</i></span> )</p>
+<p class="VBA-Text-Indent">Changes the name of an existing folder.</p>
+<p class="VBA-Heading-Category"><a name="Defaults" id="Defaults"></a>Defaults</p>
+<p class="VBA-Text-Example">SetType ("rlcparallel")</p>
+<p class="VBA-Text-Example">SetR (0)</p>
+<p class="VBA-Text-Example">SetL (0)</p>
+<p class="VBA-Text-Example">SetC (0)</p>
+<p class="VBA-Text-Example">SetGs (0)</p>
+<p class="VBA-Text-Example">SetT (0)</p>
+<p class="VBA-Text-Example">SetP1 (False, 0, 0, 0)</p>
+<p class="VBA-Text-Example">SetP2 (False, 0, 0, 0)</p>
+<p class="VBA-Text-Example">SetInvert (False)</p>
+<p class="VBA-Text-Example">SetMonitor (False)</p>
+<p class="VBA-Text-Example">PortName ("")</p>
+<p class="VBA-Text-Example">DeletePort (True)</p>
+<p class="vba-text">&#160;</p>
+<p class="VBA-Text-Example">&#160;</p>
+<?rh-p style="margin-bottom: 0px; text-align: Right; margin-left: 18px; 
+                 margin-right: 18px; margin-top: 18px;" ?>
+<div style="width: 100%; position: relative;" id="footer">
+<p style="border-bottom: Solid 1px #dddddd; text-align: Left; margin-left: 0px; font-family: Arial, sans-serif; line-height: Normal; margin-top: 9px; margin-right: 0px; margin-bottom: 6px; border-left-width: 1px; border-top-width: 1px; border-right-width: 1px;"><span style="text-align: Left; font-family: Arial, sans-serif; line-height: Normal;">&#160;</span></p>
+<table cellspacing="0" width="100%">
+<col style="width: 50%;" />
+<col style="width: 50%;" />
+<tr>
+<td style="vertical-align: Top;"><span style="font-family: Arial, sans-serif; line-height: Normal; font-size: 8pt;"><font size="1" style="font-size:8pt;">CST Studio Suite 2026</font></span></td>
+<td style="vertical-align: Top;">
+<p style="text-align: right;">&#160;</p>
+</td>
+</tr>
+</table>
+<p>&#160;</p>
+</div>
+<script type="text/javascript" language="javascript1.2">
+//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+        writeIntopicBar(0);
+
+
+highlightSearch();
+//-->
+//]]>
+</script>
+</body>
+</html>

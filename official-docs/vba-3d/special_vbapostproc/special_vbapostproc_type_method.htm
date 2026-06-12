@@ -1,0 +1,505 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="Adobe RoboHelp 11" />
+<title>Result Type Overview</title>
+<link rel="StyleSheet" href="../online_help_vba.css" type="text/css" />
+<style type="text/css">
+/*<![CDATA[*/
+<!--
+body { border-bottom-style:None; }
+-->
+/*]]>*/
+</style>
+
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+        origWidth = innerWidth;
+        origHeight = innerHeight;
+        onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+/*<![CDATA[*/
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+-->
+/*]]>*/
+</style>
+
+<script type="text/javascript" language="javascript1.2" src="../whmsg.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript" src="../whver.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript1.2" src="../whutils.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript1.2" src="../whproxy.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript1.2" src="../whlang.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript1.2" src="../whtopic.js" charset="utf-8">
+</script>
+</head>
+<body>
+<script type="text/javascript" language="javascript1.2">
+//<![CDATA[
+<!--
+if (window.gbWhTopic)
+{
+        var strUrl = document.location.href;
+        var bc = 0;
+        var n = strUrl.toLowerCase().indexOf("bc-");
+        if(n != -1)
+        {
+                document.location.replace(strUrl.substring(0, n));
+                bc = strUrl.substring(n+3);
+        }
+
+        if (window.addTocInfo)
+        {
+        addTocInfo("3D Simulation VBA\nVBA Objects\nPost Processing\nResult Type Overview");
+
+        }
+        if (window.writeBtnStyle)
+                writeBtnStyle();
+
+        if (window.writeIntopicBar)
+                writeIntopicBar(0);
+
+        
+        document.write("<p style=\"font-family: Tahoma; font-size: 9pt; font-weight: 400;  font-style:normal; color: rgb(0, 0, 0); text-decoration:none; text-align: left\"> ");
+AddMasterBreadcrumbs("../index.htm", "font-family: Tahoma; font-size: 9pt; font-weight: 400;  font-style:normal; color: rgb(0, 0, 0); text-decoration:none; text-align: left", "|", "Home", "../special_vbaobjects/special_vbaobjects_vbaobjects.htm");
+document.write("<a style=\"font-family: Tahoma; font-size: 9pt; font-weight: 400;  font-style:normal; color: rgb(0, 0, 0); text-decoration:none; text-align: left\" href=\"../special_vbaobjects/special_vbaobjects_vbaobjects.htm\">3D Simulation VBA<\/a> | <a style=\"font-family: Tahoma; font-size: 9pt; font-weight: 400;  font-style:normal; color: rgb(0, 0, 0); text-decoration:none; text-align: left\" href=\"../special_vbaobjects/special_vbaobjects_vbaobjects.htm\">VBA Objects<\/a> | <a style=\"font-family: Tahoma; font-size: 9pt; font-weight: 400;  font-style:normal; color: rgb(0, 0, 0); text-decoration:none; text-align: left\" href=\"special_vbapostproc_type_method.htm\">Post Processing<\/a> | Result Type Overview<\/p>");
+
+}
+else
+        if (window.gbIE4)
+                document.location.reload();
+
+onLoadHandler = function()
+{
+  if (window.setRelStartPage)
+        {
+        setTimeout("setRelStartPage('../index.htm');", 1)
+
+    setTimeout("UpdateBreadCrumbsMarker();", 1);
+        }
+}
+
+if (window.addEventListener){  
+        window.addEventListener('load', onLoadHandler, false);   
+} else if (window.attachEvent){  
+        window.attachEvent('onload', onLoadHandler);  
+}
+
+function onSetStartPage()
+{
+  autoSync(1);
+  sendSyncInfo();
+  sendAveInfoOut();
+}
+//-->
+//]]>
+</script><script type="text/javascript" src="../ehlpdhtm.js" language="JavaScript1.2">
+</script>
+<table cellspacing="0" width="100%">
+<col style="width: 50%;" />
+<col style="width: 50%;" />
+<tr>
+<td style="vertical-align: middle; padding-top: 5px; padding-bottom: 5px;">
+<p style="margin-top: 0px; margin-bottom: 0px;"><img src="../3ds.png" alt="" style="border: none;" border="0" /></p>
+</td>
+<td style="vertical-align: middle;">
+<p style="text-align: right;"><a href="https://www.3ds.com/products-services/3dexperience/" target="_blank"><img src="../3dexp.png" alt="" style="border: none;" width="32" height="32" border="0" /></a></p>
+</td>
+</tr>
+</table>
+<h1>Result Type Overview</h1>
+<h3>The following list shows result types handled by the ResultTree object:</h3>
+<h6>&#160;</h6>
+<h6>CST Microwave Studio</h6>
+<table style="vertical-align: top;" cellspacing="0" width="100%">
+<col style="width: 36.053%;" />
+<col style="width: 63.947%;" />
+<tr style="vertical-align: top;">
+<td style="border: Solid 1px #000000; width: 36.053%; padding-right: 10px; padding-left: 10px;">
+<p><a href="../common_vbageneral/common_general_enum.htm" id="a1" style="font-weight: normal; font-style: normal;" name="a1">enum</a> <span style="font-weight: bold; font-style: italic;"><i>key</i></span></p>
+</td>
+<td style="border-top: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 63.947%; padding-right: 10px; padding-left: 10px;">
+<p style="font-weight: bold;">meaning</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 36.053%; padding-right: 10px; padding-left: 10px;">
+<p>"Efield3D", "Efield3DTD", "Efield3D_tet", "Efield3D_srf"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 63.947%; padding-right: 10px; padding-left: 10px;">
+<p>3D electric field plot 1)</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 36.053%; padding-right: 10px; padding-left: 10px;">
+<p>"Dfield3D", "Dfield3D_tet", "Dfield3D_srf"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 63.947%; padding-right: 10px; padding-left: 10px;">
+<p>3D electric flux plot</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 36.053%; padding-right: 10px; padding-left: 10px;">
+<p>"Hfield3D", "Hfield3DTD", "Hfield3D_tet", "Hfield3D_srf"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 63.947%; padding-right: 10px; padding-left: 10px;">
+<p>3D magnetic field plot 1)</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 36.053%; padding-right: 10px; padding-left: 10px;">
+<p>"Bfield3D", "Bfield3D_tet", "Bfield3D_srf"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 63.947%; padding-right: 10px; padding-left: 10px;">
+<p>3D magnetic flux plot</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 36.053%; padding-right: 10px; padding-left: 10px;">
+<p>"SurfaceCurrent", "SurfaceCurrentTD", "SurfaceCurrent_tet", "SurfaceCurrent_srf"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 63.947%; padding-right: 10px; padding-left: 10px;">
+<p>3D surface current plot 1)</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 36.053%; padding-right: 10px; padding-left: 10px;">
+<p>"Pfield3D", "Pfield3DTD", "Pfield3D_tet"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 63.947%; padding-right: 10px; padding-left: 10px;">
+<p>3D power flow plot 1)</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 36.053%; padding-right: 10px; padding-left: 10px;">
+<p>"Efield2D", "Efield2DTD"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 63.947%; padding-right: 10px; padding-left: 10px;">
+<p>2D electric field plot 1)</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 36.053%; padding-right: 10px; padding-left: 10px;">
+<p>"Hfield2D", "Hfield2DTD"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 63.947%; padding-right: 10px; padding-left: 10px;">
+<p>2D magnetic field plot 1)</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 36.053%; padding-right: 10px; padding-left: 10px;">
+<p>"Pfield2D", &#160;"Pfield2DTD"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 63.947%; padding-right: 10px; padding-left: 10px;">
+<p>2D power flow plot 1)</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 36.053%; padding-right: 10px; padding-left: 10px;">
+<p>"Current3D", "Current3DTD", "Current3D_tet"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 63.947%; padding-right: 10px; padding-left: 10px;">
+<p>Current density 1)</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 36.053%; padding-right: 10px; padding-left: 10px;">
+<p>"PowerLoss3D", "PowerLoss3DTD", "PowerLoss3D_tet"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 63.947%; padding-right: 10px; padding-left: 10px;">
+<p>Power loss density 1)</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 36.053%; padding-right: 10px; padding-left: 10px;">
+<p>"EEnergy3D", "EEnergy3DTD", "EEnergy3D_tet"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 63.947%; padding-right: 10px; padding-left: 10px;">
+<p>Electric energy 1)</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 36.053%; padding-right: 10px; padding-left: 10px;">
+<p>"HEnergy3D", "HEnergy3DTD", "HEnergy3D_tet"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 63.947%; padding-right: 10px; padding-left: 10px;">
+<p>Magnetic energy 1)</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 36.053%; padding-right: 10px; padding-left: 10px;">
+<p>"SAR3D"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 63.947%; padding-right: 10px; padding-left: 10px;">
+<p>SAR field</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 36.053%; padding-right: 10px; padding-left: 10px;">
+<p>"Farfield"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 63.947%; padding-right: 10px; padding-left: 10px;">
+<p>Far field plot</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 36.053%; padding-right: 10px; padding-left: 10px;">
+<p>"Colourmap"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 63.947%; padding-right: 10px; padding-left: 10px;">
+<p>Colourmap plot</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 36.053%; padding-right: 10px; padding-left: 10px;">
+<p>"XYSignal"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 63.947%; padding-right: 10px; padding-left: 10px;">
+<p>General 1D result, needs additional definition by the Subtype method.</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 36.053%; padding-right: 10px; padding-left: 10px;">
+<p>"Notefile"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 63.947%; padding-right: 10px; padding-left: 10px;">
+<p>A generic ASCII text file</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 36.053%; padding-right: 10px; padding-left: 10px;">
+<p>"Macro"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 63.947%; padding-right: 10px; padding-left: 10px;">
+<p>Visual Basic Macro</p>
+</td>
+</tr>
+</table>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Text-Indent">The extension _tet indicates tetrahedral, _srf indicates triangular surface mesh results.</p>
+<p class="VBA-Text-Indent">1) The extension TD indicates time monitors.</p>
+<p>&#160;</p>
+<h6>CST EM Studio and CST Particle Studio</h6>
+<table style="vertical-align: top;" cellspacing="0" width="100%">
+<col style="width: 17.35%;" />
+<col style="width: 82.65%;" />
+<tr style="vertical-align: top;">
+<td style="border: Solid 1px #000000; width: 17.35%; padding-right: 10px; padding-left: 10px;">
+<p><a href="../common_vbageneral/common_general_enum.htm" id="a2" style="font-weight: normal; font-style: normal;" name="a2">enum</a> <span style="font-weight: bold; font-style: italic;"><i>key</i></span></p>
+</td>
+<td style="border-top: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 82.65%; padding-right: 10px; padding-left: 10px;">
+<p style="font-weight: bold;">meaning</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 17.35%; padding-right: 10px; padding-left: 10px;">
+<p>”Efield3D”</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 82.65%; padding-right: 10px; padding-left: 10px;">
+<p>3D electric field plot</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 17.35%; padding-right: 10px; padding-left: 10px;">
+<p>"Dfield3D"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 82.65%; padding-right: 10px; padding-left: 10px;">
+<p>3D electric flux plot</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 17.35%; padding-right: 10px; padding-left: 10px;">
+<p>”Hfield3D”</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 82.65%; padding-right: 10px; padding-left: 10px;">
+<p>3D magnetic field plot</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 17.35%; padding-right: 10px; padding-left: 10px;">
+<p>"Bfield3D"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 82.65%; padding-right: 10px; padding-left: 10px;">
+<p>3D magnetic flux plot</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 17.35%; padding-right: 10px; padding-left: 10px;">
+<p>"SurfaceCurrent"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 82.65%; padding-right: 10px; padding-left: 10px;">
+<p>3D surface current plot</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 17.35%; padding-right: 10px; padding-left: 10px;">
+<p>”Pfield3D”</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 82.65%; padding-right: 10px; padding-left: 10px;">
+<p>3D power flow plot</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 17.35%; padding-right: 10px; padding-left: 10px;">
+<p>"Current3D"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 82.65%; padding-right: 10px; padding-left: 10px;">
+<p>Current density</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 17.35%; padding-right: 10px; padding-left: 10px;">
+<p>"ElPotential"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 82.65%; padding-right: 10px; padding-left: 10px;">
+<p>Scalar field of electric potentials.</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 17.35%; padding-right: 10px; padding-left: 10px;">
+<p>"Hstatic3D"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 82.65%; padding-right: 10px; padding-left: 10px;">
+<p>Magnetic &#160;vector field from a static simulation.</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 17.35%; padding-right: 10px; padding-left: 10px;">
+<p>"Bstatic3D"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 82.65%; padding-right: 10px; padding-left: 10px;">
+<p>Magnetic flux density vector field form a static simulation.</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 17.35%; padding-right: 10px; padding-left: 10px;">
+<p>"StaticCurrent3D"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 82.65%; padding-right: 10px; padding-left: 10px;">
+<p>Vector field of the current density from a static simulation.</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 17.35%; padding-right: 10px; padding-left: 10px;">
+<p>"Charge3D"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 82.65%; padding-right: 10px; padding-left: 10px;">
+<p>Scalar field of charges.</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 17.35%; padding-right: 10px; padding-left: 10px;">
+<p>"Estatic3D"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 82.65%; padding-right: 10px; padding-left: 10px;">
+<p>Electric vector field from a static simulation.</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 17.35%; padding-right: 10px; padding-left: 10px;">
+<p>"Dstatic3D"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 82.65%; padding-right: 10px; padding-left: 10px;">
+<p>Electric flux density vector field form a static simulation.</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 17.35%; padding-right: 10px; padding-left: 10px;">
+<p>"MatMuStatic3D"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 82.65%; padding-right: 10px; padding-left: 10px;">
+<p>Scalar field of the permeability.</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 17.35%; padding-right: 10px; padding-left: 10px;">
+<p>"ExciCurrent3D"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 82.65%; padding-right: 10px; padding-left: 10px;">
+<p>Vector field of the current density from a eddy current simulation.</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 17.35%; padding-right: 10px; padding-left: 10px;">
+<p>”ELossDens3D”</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 82.65%; padding-right: 10px; padding-left: 10px;">
+<p>Electric loss density.</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 17.35%; padding-right: 10px; padding-left: 10px;">
+<p>”MatDMustatic3D”</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 82.65%; padding-right: 10px; padding-left: 10px;">
+<p>Mu material distribution on dual grid.</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 17.35%; padding-right: 10px; padding-left: 10px;">
+<p>"Notefile"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 82.65%; padding-right: 10px; padding-left: 10px;">
+<p>A generic ASCII text file</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 17.35%; padding-right: 10px; padding-left: 10px;">
+<p>”Macro”</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 82.65%; padding-right: 10px; padding-left: 10px;">
+<p>Visual Basic Macro</p>
+</td>
+</tr>
+</table>
+<p class="vba-text-indent">&#160;</p>
+<?rh-p style="margin-bottom: 0px; text-align: Right; margin-left: 18px; 
+                 margin-right: 18px; margin-top: 18px;" ?>
+<div style="width: 100%; position: relative;" id="footer">
+<p style="border-bottom: Solid 1px #dddddd; text-align: Left; margin-left: 0px; font-family: Arial, sans-serif; line-height: Normal; margin-top: 9px; margin-right: 0px; margin-bottom: 6px; border-left-width: 1px; border-top-width: 1px; border-right-width: 1px;"><span style="text-align: Left; font-family: Arial, sans-serif; line-height: Normal;">&#160;</span></p>
+<table cellspacing="0" width="100%">
+<col style="width: 50%;" />
+<col style="width: 50%;" />
+<tr>
+<td style="vertical-align: Top;"><span style="font-family: Arial, sans-serif; line-height: Normal; font-size: 8pt;"><font size="1" style="font-size:8pt;">CST Studio Suite 2026</font></span></td>
+<td style="vertical-align: Top;">
+<p style="text-align: right;">&#160;</p>
+</td>
+</tr>
+</table>
+<p>&#160;</p>
+</div>
+<script type="text/javascript" language="javascript1.2">
+//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+        writeIntopicBar(0);
+
+
+highlightSearch();
+//-->
+//]]>
+</script>
+</body>
+</html>

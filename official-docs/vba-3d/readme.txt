@@ -1,0 +1,2 @@
+﻿This text file is a placeholder for the empty folder and should not be removed.
+This folder was created for a merged WebHelp\FlashHelp\Adobe AIR project. To merge the sub-project, publish it into this folder.

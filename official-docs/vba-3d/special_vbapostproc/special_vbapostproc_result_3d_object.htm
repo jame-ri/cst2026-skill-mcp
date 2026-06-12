@@ -1,0 +1,602 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="Adobe RoboHelp 11" />
+<title>Result3D Object</title>
+<link rel="StyleSheet" href="../online_help_vba.css" type="text/css" />
+<style type="text/css">
+/*<![CDATA[*/
+<!--
+body { border-bottom-style:None; }
+-->
+/*]]>*/
+</style>
+
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function ehlp_showtip(current,e,text)
+{
+  if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == 'Netscape'))
+  {
+    document.tooltip.document.write("<layer bgColor='yellow' style='border:1px solid black;font-size:12px;'>"+ text + "<\/layer>");
+    document.tooltip.document.close();
+    document.tooltip.left=e.pageX+5;
+    document.tooltip.top=e.pageY+5;
+    document.tooltip.visibility="show";
+  }
+}
+function ehlp_hidetip()
+{
+  document.tooltip.visibility="hidden";
+}
+//]]>
+</script>
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+        origWidth = innerWidth;
+        origHeight = innerHeight;
+        onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+/*<![CDATA[*/
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+-->
+/*]]>*/
+</style>
+
+<script type="text/javascript" language="javascript1.2" src="../whmsg.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript" src="../whver.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript1.2" src="../whutils.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript1.2" src="../whproxy.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript1.2" src="../whlang.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript1.2" src="../whtopic.js" charset="utf-8">
+</script>
+</head>
+<body>
+<script type="text/javascript" language="javascript1.2">
+//<![CDATA[
+<!--
+if (window.gbWhTopic)
+{
+        var strUrl = document.location.href;
+        var bc = 0;
+        var n = strUrl.toLowerCase().indexOf("bc-");
+        if(n != -1)
+        {
+                document.location.replace(strUrl.substring(0, n));
+                bc = strUrl.substring(n+3);
+        }
+
+        if (window.addTocInfo)
+        {
+        addTocInfo("3D Simulation VBA\nVBA Objects\nPost Processing\nResult3D");
+
+        }
+        if (window.writeBtnStyle)
+                writeBtnStyle();
+
+        if (window.writeIntopicBar)
+                writeIntopicBar(0);
+
+        
+        document.write("<p style=\"font-family: Tahoma; font-size: 9pt; font-weight: 400;  font-style:normal; color: rgb(0, 0, 0); text-decoration:none; text-align: left\"> ");
+AddMasterBreadcrumbs("../index.htm", "font-family: Tahoma; font-size: 9pt; font-weight: 400;  font-style:normal; color: rgb(0, 0, 0); text-decoration:none; text-align: left", "|", "Home", "../special_vbaobjects/special_vbaobjects_vbaobjects.htm");
+document.write("<a style=\"font-family: Tahoma; font-size: 9pt; font-weight: 400;  font-style:normal; color: rgb(0, 0, 0); text-decoration:none; text-align: left\" href=\"../special_vbaobjects/special_vbaobjects_vbaobjects.htm\">3D Simulation VBA<\/a> | <a style=\"font-family: Tahoma; font-size: 9pt; font-weight: 400;  font-style:normal; color: rgb(0, 0, 0); text-decoration:none; text-align: left\" href=\"../special_vbaobjects/special_vbaobjects_vbaobjects.htm\">VBA Objects<\/a> | <a style=\"font-family: Tahoma; font-size: 9pt; font-weight: 400;  font-style:normal; color: rgb(0, 0, 0); text-decoration:none; text-align: left\" href=\"special_vbapostproc_type_method.htm\">Post Processing<\/a> | Result3D<\/p>");
+
+}
+else
+        if (window.gbIE4)
+                document.location.reload();
+
+onLoadHandler = function()
+{
+  if (window.setRelStartPage)
+        {
+        setTimeout("setRelStartPage('../index.htm');", 1)
+
+    setTimeout("UpdateBreadCrumbsMarker();", 1);
+        }
+}
+
+if (window.addEventListener){  
+        window.addEventListener('load', onLoadHandler, false);   
+} else if (window.attachEvent){  
+        window.attachEvent('onload', onLoadHandler);  
+}
+
+function onSetStartPage()
+{
+  autoSync(1);
+  sendSyncInfo();
+  sendAveInfoOut();
+}
+//-->
+//]]>
+</script><script type="text/javascript" src="../ehlpdhtm.js" language="JavaScript1.2">
+</script>
+<table cellspacing="0" width="100%">
+<col style="width: 50%;" />
+<col style="width: 50%;" />
+<tr>
+<td style="vertical-align: middle; padding-top: 5px; padding-bottom: 5px;">
+<p style="margin-top: 0px; margin-bottom: 0px;"><img src="../3ds.png" alt="" style="border: none;" border="0" /></p>
+</td>
+<td style="vertical-align: middle;">
+<p style="text-align: right;"><a href="https://www.3ds.com/products-services/3dexperience/" target="_blank"><img src="../3dexp.png" alt="" style="border: none;" width="32" height="32" border="0" /></a></p>
+</td>
+</tr>
+</table>
+<h1>Result3D Object</h1>
+<p class="VBA-Text">This object offers access and manipulation functions to 3D results. Therefore it may contain either vector fields or scalar fields. If a scalar field is represented by this object, its values are treated to be x-components of a vector field, while all other components are not available. Therefore all functions that manipulate the x-components manipulate the components of the scalar field.</p>
+<p class="VBA-Text">&#160;</p>
+<p class="VBA-Heading-Category">Usage in CST Design Studio / Schematic</p>
+<p class="VBA-Text">A Result3D object instantiated in CST Design Studio has only limited functionality. As a workaround, a Result3D object is automatically instantiated in the Modeler with the name "ResultOperator3D". It can be used from CST Design Studio as any other Modeler object (i.e. Brick, Mesh).</p>
+<p class="VBA-Text">&#160;</p>
+<ul>
+<li class="p-VBA-Index-Category">
+<p class="VBA-Index-Category"><a href="#FileInit">Initialization, File Operation</a></p>
+</li>
+<li class="p-VBA-Index-Category">
+<p class="VBA-Index-Category"><a href="#3DTo3D">3D to 3D Operations</a></p>
+</li>
+<li class="p-VBA-Index-Category">
+<p class="VBA-Index-Category"><a href="#Global">Local Operations</a></p>
+</li>
+<li class="p-VBA-Index-Category">
+<p class="VBA-Index-Category"><a href="#Local">Data Access</a></p>
+</li>
+<li class="p-VBA-Index-Category">
+<p class="VBA-Index-Category"><a href="#General">General Settings</a></p>
+</li>
+<li class="p-VBA-Index-Category">
+<p class="VBA-Index-Category"><a href="#Example">Example</a></p>
+</li>
+</ul>
+<p class="VBA-Heading-Category"><a name="FileInit" id="FileInit"></a>Initialization, File Operation</p>
+<p class="VBA-Heading-Method">Construction</p>
+<p class="VBA-Text-Indent">A Result3D object must be constructed with a string as argument. The string may either be empty or the name of a result file. If the string is empty, an empty object will be created.</p>
+<p class="VBA-Text-Indent">If the string contains a valid result file name, the object will read the values into its memory and represent this data. The behavior will be the same as if an empty object is created and afterwards filled by the Load command.</p>
+<p class="VBA-Text-Indent">Example:</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Text-Example" style="margin-left: 40px;">Dim result As Object</p>
+<p class="VBA-Text-Example" style="margin-left: 40px;">Set result = Result3D("")</p>
+<p class="VBA-Text-Example" style="margin-left: 40px;">&#160;</p>
+<p class="VBA-Heading-Method">Load ( <span><a href="../common_vbageneral/common_general_name.htm" id="a1" style="font-weight: normal; font-style: normal;" name="a1">name</a></span> <span style="font-style: italic;"><i>sObjectName</i></span> )</p>
+<p class="VBA-Text-Indent">Loads a 3D result from a file with a file path contructed from <span style="font-style: italic;"><i>sObjectName</i></span>. If you do not specify an absolute path, the result folder of the current project will be used. If you do not specify a file ending, the default file ending ".m3d" will be used.</p>
+<p class="VBA-Text">&#160;</p>
+<p class="VBA-Heading-Method">Save ( <span><a href="../common_vbageneral/common_general_name.htm" id="a2" style="font-weight: normal; font-style: normal;" name="a2">name</a></span> <span style="font-style: italic;"><i>sObjectName</i></span> )</p>
+<p class="VBA-Text-Indent">Saves the object with the given filename. Note, that like in the Load method, the project name is added if the first character is a '^'. If the filename is blank the data is saved with name of the previous loaded file.</p>
+<p class="VBA-Text">&#160;</p>
+<p class="VBA-Heading-Method">Initialize ( <a href="../common_vbageneral/common_general_long.htm" id="a4" style="font-weight: normal; font-style: normal;" name="a4">long</a> <span style="font-style: italic;"><i>nx,</i></span> <a href="../common_vbageneral/common_general_long.htm" id="a5" style="font-weight: normal; font-style: normal;" name="a5">long</a> <span style="font-style: italic;"><i>ny,</i></span> <a href="../common_vbageneral/common_general_long.htm" id="a6" style="font-weight: normal; font-style: normal;" name="a6">long</a> <span style="font-style: italic;"><i>nz,</i></span> <a href="../common_vbageneral/common_general_enum.htm" id="a7" style="font-weight: normal; font-style: normal;" name="a7">enum</a><span style="font-weight: normal;">{"vector", "scalar"}</span> <span style="font-style: italic;"><i>type</i></span> )</p>
+<p class="VBA-Text-Indent">Initializes an empty Result3D object of the given type with the specified dimensions.</p>
+<p class="VBA-Text">&#160;</p>
+<p class="VBA-Heading-Method">InitSCT ( <a href="../common_vbageneral/common_general_long.htm" id="a35" style="font-weight: normal; font-style: normal;" name="a35">long</a> <span style="font-style: italic;"><i>nFirstSideTriangles,</i></span> <a href="../common_vbageneral/common_general_long.htm" id="a36" style="font-weight: normal; font-style: normal;" name="a36">long</a> <span style="font-style: italic;"><i>nSamplesPerTriangle,</i></span> <a href="../common_vbageneral/common_general_long.htm" id="a37" style="font-weight: normal; font-style: normal;" name="a37">long</a> <span style="font-style: italic;"><i>nComponents,</i></span> <a href="../common_vbageneral/common_general_long.htm" id="a38" style="font-weight: normal; font-style: normal;" name="a38">long</a> <span style="font-style: italic;"><i>nSecondSideTriangles</i></span> )</p>
+<p class="VBA-Text-Indent">Initializes the object as zero valued triangle-based surface result data. Set nComponents=6 for complex vector, nComponents=3 for vector and nComponents=1 for scalar data. Valid values for nSamplesPerTriangle are 1, 3 or 6.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">InitM3T ( <a href="../common_vbageneral/common_general_long.htm" id="a351" style="font-weight: normal; font-style: normal;" name="a351">long</a> <span style="font-style: italic;"><i>nTetrahedra,</i></span> <a href="../common_vbageneral/common_general_long.htm" id="a361" style="font-weight: normal; font-style: normal;" name="a361">long</a> <span style="font-style: italic;"><i>nSamplesPerTetrahedron,</i></span> <a href="../common_vbageneral/common_general_long.htm" id="a371" style="font-weight: normal; font-style: normal;" name="a371">long</a> <span style="font-style: italic;"><i>nComponents</i></span> )</p>
+<p class="VBA-Text-Indent">Initializes the object as zero valued tetrahedral volume result data. Set nComponents=6 for complex vector, nComponents=3 for vector and nComponents=1 for scalar data. Valid values for nSamplesPerTetrahedron are 1, 4 or 10.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">AddToTree ( <span><a href="../common_vbageneral/common_general_name.htm" id="a3" style="font-weight: normal; font-style: normal;" name="a3">name</a></span> <span style="font-style: italic;"><i>sTreePath,</i></span> <span><a href="../common_vbageneral/common_general_name.htm" id="a8" style="font-weight: normal; font-style: normal;" name="a8">name</a></span> <span style="font-style: italic;"><i>sLabel</i></span> )</p>
+<p class="VBA-Text-Indent">Inserts the Result3D object into the tree at the folder specified by sTreePath with a item name given by sLabel.</p>
+<p class="VBA-Text">&#160;</p>
+<p class="VBA-Heading-Method">LoadFieldLine ( <span><a href="../common_vbageneral/common_general_filename.htm" id="a3" style="font-weight: normal; font-style: normal;" name="a3">name</a></span> <span style="font-style: italic;"><i>sFilePath,</i></span> <span><a href="../common_vbageneral/common_general_long.htm" id="a35" style="font-weight: normal; font-style: normal;" name="a35">long</a></span> <span style="font-style: italic;"><i>iLine,</i></span> <span><a href="../common_vbageneral/common_general_name.htm" id="a8" style="font-weight: normal; font-style: normal;" name="a8">name</a></span> <span style="font-style: italic;"><i>sQuantity</i></span> ) <a href="../common_vbageneral/common_general_long.htm" id="a47" style="font-weight: normal; font-style: normal;" name="a47">long</a></p>
+<p class="VBA-Text-Indent">Loads one quantity of field line number iLine from a field line file (*.bix). Returns total number of field lines in file.</p>
+<p class="VBA-Heading-Category"><a name="3DTo3D" id="3DTo3D"></a>3D to 3D Operations</p>
+<p class="VBA-Text">3D to 3D operations return a new Result3D object, while the calling Result3D object is unchanged.</p>
+<p class="VBA-Text">&#160;</p>
+<p class="VBA-Heading-Method">Copy <span style="color: #0000ff; font-weight: normal;"><font color="blue">Result3D Object</font></span></p>
+<p class="VBA-Text-Indent">Returns a new Result3D object as copy. Usage: <span style="font-family: 'Courier New', monospace;">set res2 = res1.Copy()</span>. Be aware to use <span style="font-family: 'Courier New', monospace;">set</span> when assigning vba objects.</p>
+<p class="VBA-Heading-Category"><a name="Global" id="Global"></a>Local Operations</p>
+<p class="VBA-Text">Local operations modify the calling Result3D object.</p>
+<p class="VBA-Text">&#160;</p>
+<p class="VBA-Heading-Method">ScalarMult ( <a href="../common_vbageneral/common_general_double.htm" id="a10" style="font-weight: normal; font-style: normal;" name="a10">double</a> <span style="font-style: italic;"><i>dFactor</i></span> )</p>
+<p class="VBA-Text-Indent">Scales the Result3D Object with the given factor.</p>
+<p class="VBA-Text">&#160;</p>
+<p class="VBA-Heading-Method">ScalarMult3 ( <a href="../common_vbageneral/common_general_double.htm" id="a11" style="font-weight: normal; font-style: normal;" name="a11">double</a> <span style="font-style: italic;"><i>dFactorX,</i></span> <a href="../common_vbageneral/common_general_double.htm" id="a12" style="font-weight: normal; font-style: normal;" name="a12">double</a> <span style="font-style: italic;"><i>dFactorY,</i></span> <a href="../common_vbageneral/common_general_double.htm" id="a13" style="font-weight: normal; font-style: normal;" name="a13">double</a> <span style="font-style: italic;"><i>dFactorZ</i></span> )</p>
+<p class="VBA-Text-Indent">Scales the x/y/z components of the Result3D Object individually. This function is only valid for vector field Result Objects.</p>
+<p class="VBA-Text">&#160;</p>
+<p class="VBA-Heading-Method">Add / Subtract ( <span style="color: #0000ff; font-weight: normal;"><font color="blue">Result3D Object</font></span> <span style="font-style: italic;"><i>oObject</i></span> )</p>
+<p class="VBA-Text-Indent">Adds / subtracts the components in <span style="font-style: italic;"><i>oObject</i></span> &#160;to / from the calling object's components. The result will be stored in the calling object.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">Combine ( <span style="color: #0000ff; font-weight: normal;"><font color="blue">Result3D Object</font></span> <span style="font-style: italic;"><i>oObject2,</i></span> <a href="../common_vbageneral/common_general_double.htm" id="a14" style="font-weight: normal; font-style: normal;" name="a14">double</a> <span style="font-style: italic;"><i>dFactor2,</i></span> <a href="../common_vbageneral/common_general_long.htm" id="a15" style="font-weight: normal; font-style: normal;" name="a15">long</a> <span style="font-style: italic;"><i>iComponent1,</i></span> <a href="../common_vbageneral/common_general_long.htm" id="a32" style="font-weight: normal; font-style: normal;" name="a32">long</a> <span style="font-style: italic;"><i>iComponent2</i></span>)</p>
+<p class="VBA-Text-Indent">Performs a component wise operation between two Result3D objects: oCallingObject[iComponent1] += dFactor2 * oObject2[iComponent2]. The component indices iComponent1 and iComponent2 can have values from 0 to 5 for Xre=0, Yre=1, Zre=2, ..., Zim=5. The result will be stored in the calling object.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">DotProduct ( <span style="color: #0000ff; font-weight: normal;"><font color="blue">Result3D Object</font></span> <span style="font-style: italic;"><i>oObject,</i></span> <a href="../common_vbageneral/common_general_double.htm" id="a33" style="font-weight: normal; font-style: normal;" name="a33">double</a> <span style="font-style: italic;"><i>dRe,</i></span> <a href="../common_vbageneral/common_general_double.htm" id="a34" style="font-weight: normal; font-style: normal;" name="a34">double</a> <span style="font-style: italic;"><i>dIm</i></span> )</p>
+<p class="VBA-Text-Indent">Performs a inner product between field vectors of two Result3D objects for each point. The result will be stored in the x component of the calling object, y and z will be set to zero. The spatial sum over all points of the result can be obtained in <span style="font-style: italic;"><i>dRe</i></span> and <span style="font-style: italic;"><i>dIm</i></span>.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">VectorProd ( <span style="color: #0000ff; font-weight: normal;"><font color="blue">Result3D Object</font></span> <span style="font-style: italic;"><i>oObject</i></span> )</p>
+<p class="VBA-Text-Indent">Performs a vector product of two Result3D objects. The result will be stored in the calling object.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">Conjugate</p>
+<p class="VBA-Text-Indent">Calculates the complex conjugates of calling object.</p>
+<p class="VBA-Heading-Category"><a name="Local" id="Local"></a>Data Access</p>
+<p class="VBA-Text">Data access methods use a zero-based index to reference data in the Result3D object.</p>
+<p class="VBA-Text">For regular hexahedral mesh the index is given by</p>
+<p class="VBA-Text">index = ix + iy*nx + iz*nx*ny &lt; .GetLength = nx*ny*nz,</p>
+<p class="VBA-Text">where ix, iy, iz are the zero based indices for the mesh nodes in each coordinate direction and nx, ny, nz are the numbers of meshnodes in the corresponding coordinate directions.</p>
+<p class="VBA-Text">For tetrahedral/surface mesh the index is based on the tetrahedron/surface index combined with the number of samples per tetrahedron/surface. A relation to coordinates is not given.</p>
+<p class="VBA-Text">&#160;</p>
+<p class="VBA-Heading-Method">SetXRe / SetYRe / SetZRe / SetXIm / SetYIm / SetZIm ( <a href="../common_vbageneral/common_general_long.htm" id="a16" style="font-weight: normal; font-style: normal;" name="a16">long</a> <span style="font-style: italic;"><i>index,</i></span> <a href="../common_vbageneral/common_general_double.htm" id="a17" style="font-weight: normal; font-style: normal;" name="a17">double</a> <span style="font-style: italic;"><i>dValue</i></span> )</p>
+<p class="VBA-Heading-Method">GetXRe / GetYRe / GetZRe / GetXIm / GetYIm / GetZIm ( <a href="../common_vbageneral/common_general_long.htm" id="a18" style="font-weight: normal; font-style: normal;" name="a18">long</a> <span style="font-style: italic;"><i>index</i></span> ) <a href="../common_vbageneral/common_general_double.htm" id="a19" style="font-weight: normal; font-style: normal;" name="a19">double</a></p>
+<p class="VBA-Text-Indent">Changes / Returns the real/imaginary part of the x/y/z-component in the Result3D Object that corresponds to the given <span style="font-style: italic;"><i>index</i></span>. For scalar Result3D objects, only the GetXRe method may be used.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">GetDataFromIndex ( <a href="../common_vbageneral/common_general_long.htm" id="a20" style="font-weight: normal; font-style: normal;" name="a20">long</a> <span style="font-style: italic;"><i>index,</i></span> <span><a href="../common_vbageneral/common_general_double_ref.htm" id="a9" style="font-weight: normal;" name="a9">double_ref</a></span> <span style="font-style: italic;"><i>xre,</i></span> <span><a href="../common_vbageneral/common_general_double_ref.htm" id="a21" style="font-weight: normal;" name="a21">double_ref</a></span> <span style="font-style: italic;"><i>yre,</i></span> <span><a href="../common_vbageneral/common_general_double_ref.htm" id="a22" style="font-weight: normal;" name="a22">double_ref</a></span> <span style="font-style: italic;"><i>zre,</i></span> <span><a href="../common_vbageneral/common_general_double_ref.htm" id="a23" style="font-weight: normal;" name="a23">double_ref</a></span> <span style="font-style: italic;"><i>xim,</i></span> <span><a href="../common_vbageneral/common_general_double_ref.htm" id="a24" style="font-weight: normal;" name="a24">double_ref</a></span> <span style="font-style: italic;"><i>yim,</i></span> <span><a href="../common_vbageneral/common_general_double_ref.htm" id="a25" style="font-weight: normal;" name="a25">double_ref</a></span> <span style="font-style: italic;"><i>zim</i></span> )</p>
+<p class="VBA-Text-Indent">Yields real and imaginary parts of all vector components for the given <span style="font-style: italic;"><i>index</i></span>.</p>
+<p class="VBA-Heading-Method">&#160;</p>
+<p class="VBA-Heading-Method">GetArray ( <a href="../common_vbageneral/common_general_enum.htm" id="a401" style="font-weight: normal; font-style: normal;" name="a401">enum</a> <span style="font-style: italic;"><i>component</i></span> ) <a href="../common_vbageneral/common_general_variant.htm" id="a441" style="font-weight: normal; font-style: normal;" name="a441">variant</a></p>
+<p class="VBA-Text-Indent">Returns the array of the component results for all meshnodes ordered by the indexing scheme described above. The return value is an array of doubles. Valid components are "xre", "yre", "zre", &#160;"xim", "yim", "zim".</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">GetSubArray ( <span style="font-weight: normal;">&#160;<a href="../common_vbageneral/common_general_enum.htm" id="a4012" style="font-weight: normal; font-style: normal;" name="a4012">enum</a></span> <span style="font-style: italic;"><i>component</i></span> , &#160;<a href="../common_vbageneral/common_general_long.htm" id="a2011" style="font-weight: normal; font-style: normal;" name="a2011">long</a> <span style="font-style: italic;"><i>offset,</i></span> <a href="../common_vbageneral/common_general_long.htm" id="a20111" style="font-weight: normal; font-style: normal;" name="a20111">long</a> <span style="font-style: italic;"><i>length</i></span> ) &#160;<a href="../common_vbageneral/common_general_variant.htm" id="a4412" style="font-weight: normal; font-style: normal;" name="a4412">variant</a></p>
+<p class="VBA-Text-Indent">Returns a sub range of an array of component results ordered by the indexing scheme described above. The return value is an array of doubles. Valid components are "xre", "yre", "zre", &#160;"xim", "yim", "zim". <span style="font-style: italic;"><i>Offset</i></span> is the start index of the range and <span style="font-style: italic;"><i>length</i></span> the number of elements in the range</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">SetArray ( <a href="../common_vbageneral/common_general_variant.htm" id="a4411" style="font-weight: normal; font-style: normal;" name="a4411">variant</a> <span style="font-style: italic;"><i>values</i></span>, <a href="../common_vbageneral/common_general_enum.htm" id="a4011" style="font-weight: normal; font-style: normal;" name="a4011">enum</a> <span style="font-style: italic;"><i>component</i></span> )</p>
+<p class="VBA-Text-Indent">Sets an array of component results for all meshnodes ordered by the indexing scheme described above. Valid components are "xre", "yre", "zre", &#160;"xim", "yim", "zim".</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">SetSubArray ( <a href="../common_vbageneral/common_general_variant.htm" id="a44111" style="font-weight: normal; font-style: normal;" name="a44111">variant</a> <span style="font-style: italic;"><i>values</i></span>, <a href="../common_vbageneral/common_general_enum.htm" id="a40111" style="font-weight: normal; font-style: normal;" name="a40111">enum</a> <span style="font-style: italic;"><i>component,</i></span> &#160;<a href="../common_vbageneral/common_general_long.htm" id="a201" style="font-weight: normal; font-style: normal;" name="a201">long</a> <span style="font-style: italic;"><i>offset</i></span> )</p>
+<p class="VBA-Text-Indent">Sets a sub range on an array of component results ordered by the indexing scheme described above. Valid components are "xre", "yre", "zre", &#160;"xim", "yim", "zim". <span style="font-style: italic;"><i>Offset</i></span> is the start index of the range.</p>
+<p class="VBA-Heading-Category"><a name="General" id="General"></a>General Settings</p>
+<p class="VBA-Heading-Method">SetType ( <a href="../common_vbageneral/common_general_enum.htm" id="a40" style="font-weight: normal; font-style: normal;" name="a40">enum</a> <span style="font-style: italic;"><i>type</i></span> )</p>
+<p class="VBA-Heading-Method">GetType <a href="../common_vbageneral/common_general_enum.htm" id="a41" style="font-weight: normal; font-style: normal;" name="a41">enum</a></p>
+<p class="VBA-Text-Indent">Sets / returns the field type contained in the Result3D Object.</p>
+<table style="vertical-align: top; margin-left: 24px;" cellspacing="0" width="97.483%">
+<col style="width: 30.42%;" />
+<col style="width: 69.58%;" />
+<tr style="vertical-align: top;">
+<td style="border: Solid 1px #000000; width: 30.42%; padding-right: 10px; padding-left: 10px;">
+<p><a href="../common_vbageneral/common_general_enum.htm" id="a42" style="font-weight: normal; font-style: normal;" name="a42">enum</a> &#160;<span style="font-style: italic; font-weight: bold;"><i>type</i></span></p>
+</td>
+<td style="border-top: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 69.58%; padding-right: 10px; padding-left: 10px;">
+<p style="font-weight: bold;">Object contains...</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 30.42%; padding-right: 10px; padding-left: 10px;">
+<p>"dynamic e-field"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 69.58%; padding-right: 10px; padding-left: 10px;">
+<p>electric vector field from a dynamic simulation.</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 30.42%; padding-right: 10px; padding-left: 10px;">
+<p>"dynamic d-field"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 69.58%; padding-right: 10px; padding-left: 10px;">
+<p>electric flux density vector field from a dynamic simulation.</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 30.42%; padding-right: 10px; padding-left: 10px;">
+<p>"dynamic h-field"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 69.58%; padding-right: 10px; padding-left: 10px;">
+<p>magnetic vector field from a dynamic simulation.</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 30.42%; padding-right: 10px; padding-left: 10px;">
+<p>"dynamic b-field"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 69.58%; padding-right: 10px; padding-left: 10px;">
+<p>magnetic flux density vector field from a dynamic simulation.</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 30.42%; padding-right: 10px; padding-left: 10px;">
+<p>"dynamic powerflow"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 69.58%; padding-right: 10px; padding-left: 10px;">
+<p>vector field of the calculated poynting vectors.</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 30.42%; padding-right: 10px; padding-left: 10px;">
+<p>"dynamic Current"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 69.58%; padding-right: 10px; padding-left: 10px;">
+<p>vector field of the current density from a dynamic simulation.</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 30.42%; padding-right: 10px; padding-left: 10px;">
+<p>"dynamic e-energy"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 69.58%; padding-right: 10px; padding-left: 10px;">
+<p>scalar field of the electric energy density.</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 30.42%; padding-right: 10px; padding-left: 10px;">
+<p>"dynamic h-energy"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 69.58%; padding-right: 10px; padding-left: 10px;">
+<p>scalar field of the magnetic energy density.</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 30.42%; padding-right: 10px; padding-left: 10px;">
+<p>"dynamic loss density"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 69.58%; padding-right: 10px; padding-left: 10px;">
+<p>scalar field of the loss density, caused by a conductivity.</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 30.42%; padding-right: 10px; padding-left: 10px;">
+<p>"dynamic sar"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 69.58%; padding-right: 10px; padding-left: 10px;">
+<p>scalar field of a sar simulation.</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 30.42%; padding-right: 10px; padding-left: 10px;">
+<p>"static e-field"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 69.58%; padding-right: 10px; padding-left: 10px;">
+<p>electric vector field from a static simulation.</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 30.42%; padding-right: 10px; padding-left: 10px;">
+<p>"static d-field"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 69.58%; padding-right: 10px; padding-left: 10px;">
+<p>electric flux density vector field from a static simulation.</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 30.42%; padding-right: 10px; padding-left: 10px;">
+<p>"static h-field"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 69.58%; padding-right: 10px; padding-left: 10px;">
+<p>magnetic vector field from a static simulation.</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 30.42%; padding-right: 10px; padding-left: 10px;">
+<p>"static b-field"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 69.58%; padding-right: 10px; padding-left: 10px;">
+<p>magnetic flux density vector field from a static simulation.</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 30.42%; padding-right: 10px; padding-left: 10px;">
+<p>"static current"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 69.58%; padding-right: 10px; padding-left: 10px;">
+<p>vector field of the current density from a static simulation.</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 30.42%; padding-right: 10px; padding-left: 10px;">
+<p>"static el-potential"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 69.58%; padding-right: 10px; padding-left: 10px;">
+<p>scalar field of electric potentials.</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 30.42%; padding-right: 10px; padding-left: 10px;">
+<p>"static charge"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 69.58%; padding-right: 10px; padding-left: 10px;">
+<p>scalar field of charges.</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 30.42%; padding-right: 10px; padding-left: 10px;">
+<p>"static material mu"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 69.58%; padding-right: 10px; padding-left: 10px;">
+<p>scalar field of the permeability.</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 30.42%; padding-right: 10px; padding-left: 10px;">
+<p>"space charge"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 69.58%; padding-right: 10px; padding-left: 10px;">
+<p>scalar field of the space charge density from a &#160;PIC simulation</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 30.42%; padding-right: 10px; padding-left: 10px;">
+<p>"temperature"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 69.58%; padding-right: 10px; padding-left: 10px;">
+<p>scalar field of the temperature distribution from a thermal simulation</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 30.42%; padding-right: 10px; padding-left: 10px;">
+<p>"heat flow density"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 69.58%; padding-right: 10px; padding-left: 10px;">
+<p>vector field of the heat flow density from a thermal simulation</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 30.42%; padding-right: 10px; padding-left: 10px;">
+<p>"mechanical displacement"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 69.58%; padding-right: 10px; padding-left: 10px;">
+<p>vector field of the displacement from a mechanical simulation</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 30.42%; padding-right: 10px; padding-left: 10px;">
+<p>"mechanical stress"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 69.58%; padding-right: 10px; padding-left: 10px;">
+<p>scalar field of a component from the stress tensor from a mechanical simulation</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 30.42%; padding-right: 10px; padding-left: 10px;">
+<p>"von mises stress"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 69.58%; padding-right: 10px; padding-left: 10px;">
+<p>scalar field of the von mises stress from a mechanical simulation</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 30.42%; padding-right: 10px; padding-left: 10px;">
+<p>"hydrostatic stress"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 69.58%; padding-right: 10px; padding-left: 10px;">
+<p>scalar field of the hydrostatic stress from a mechanical simulation</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 30.42%; padding-right: 10px; padding-left: 10px;">
+<p>"mechanical strain"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 69.58%; padding-right: 10px; padding-left: 10px;">
+<p>scalar field of a component from the strain tensor from a mechanical simulation</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 30.42%; padding-right: 10px; padding-left: 10px;">
+<p>"volumetric strain"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 69.58%; padding-right: 10px; padding-left: 10px;">
+<p>scalar field of the volumetric strain from a mechanical simulation</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 30.42%; padding-right: 10px; padding-left: 10px;">
+<p>"temperature change"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 69.58%; padding-right: 10px; padding-left: 10px;">
+<p>scalar field of the interpolated temperature change from a mechanical simulation</p>
+</td>
+</tr>
+</table>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">SetActive ( <a href="../common_vbageneral/common_general_bool_data_type.htm" id="a43" style="font-weight: normal; font-style: normal;" name="a43">bool</a> <span style="font-style: italic;"><i>flag</i></span> )</p>
+<p class="VBA-Heading-Method">GetActive <a href="../common_vbageneral/common_general_bool_data_type.htm" id="a44" style="font-weight: normal; font-style: normal;" name="a44">bool</a></p>
+<p class="VBA-Text-Indent">Sets / determines, if the object contains valid data. GetActive may return "false" if, for instance, the monitor was outside the frequency range, when performing a dynamic simulation.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">SetFrequency ( <a href="../common_vbageneral/common_general_double.htm" id="a45" style="font-weight: normal; font-style: normal;" name="a45">double</a> <span style="font-style: italic;"><i>dValue</i></span> )</p>
+<p class="VBA-Heading-Method">GetFrequency <a href="../common_vbageneral/common_general_double.htm" id="a46" style="font-weight: normal; font-style: normal;" name="a46">double</a></p>
+<p class="VBA-Text-Indent">Sets / returns the frequency for which the values in the Result3D object are valid.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">SetQFactor ( <a href="../common_vbageneral/common_general_double.htm" id="a50" style="font-weight: normal;" name="a50">double</a> <span style="font-style: italic;"><i>dValue</i></span> )</p>
+<p class="VBA-Heading-Method">GetQFactor <a href="../common_vbageneral/common_general_double.htm" id="a52" style="font-weight: normal;" name="a52">double</a></p>
+<p class="VBA-Text-Indent">Sets / returns the Q factor for the Result3D Object. Usually set in fields calculated by the complex eigenmode solver.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">SetExternalQFactor ( <a href="../common_vbageneral/common_general_double.htm" id="a28" style="font-weight: normal;" name="a28">double</a> <span style="font-style: italic;"><i>dValue</i></span> )</p>
+<p class="VBA-Heading-Method">GetExternalQFactor <a href="../common_vbageneral/common_general_double.htm" id="a29" style="font-weight: normal;" name="a29">double</a></p>
+<p class="VBA-Text-Indent">Sets / returns the external Q factor for the Result3D Object. Usually set in fields calculated by the eigenmode solver.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">SetLoadedFrequency ( <a href="../common_vbageneral/common_general_double.htm" id="a30" style="font-weight: normal;" name="a30">double</a> <span style="font-style: italic;"><i>dValue</i></span> )</p>
+<p class="VBA-Heading-Method">GetLoadedFrequency <a href="../common_vbageneral/common_general_double.htm" id="a31" style="font-weight: normal;" name="a31">double</a></p>
+<p class="VBA-Text-Indent">Sets / returns the loaded frequency for the Result3D Object. Usually set in fields calculated by the eigenmode solver.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">SetAccuracy ( <a href="../common_vbageneral/common_general_double.htm" id="a51" style="font-weight: normal; font-style: normal;" name="a51">double</a> <span style="font-style: italic;"><i>dValue</i></span> )</p>
+<p class="VBA-Heading-Method">GetAccuracy <a href="../common_vbageneral/common_general_double.htm" id="a53" style="font-weight: normal; font-style: normal;" name="a53">double</a></p>
+<p class="VBA-Text-Indent">Sets / returns the accuracy of the values in the Result3D object.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">SetUnit ( <a href="../common_vbageneral/common_general_string.htm" id="a51" style="font-weight: normal; font-style: normal;" name="a51">string</a> <span style="font-style: italic;"><i>sUnit</i></span> )</p>
+<p class="VBA-Heading-Method">GetUnit <a href="../common_vbageneral/common_general_string.htm" id="a53" style="font-weight: normal; font-style: normal;" name="a53">string</a></p>
+<p class="VBA-Text-Indent">Sets / returns the unit as string of the stored field. The unit string uses the syntax described on the <a title="Units" href="../../../userinterface/overview/units.htm" onmouseover="if ((parseInt(navigator.appVersion) == 4) &amp;&amp; (navigator.appName == 'Netscape')) ehlp_showtip(this,event,'Units');" onmouseout="if ((parseInt(navigator.appVersion) == 4) &amp;&amp; (navigator.appName == 'Netscape')) ehlp_hidetip();">Units</a> help page.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">SetLogarithmicFactor ( <a href="../common_vbageneral/common_general_double.htm" id="a51" style="font-weight: normal; font-style: normal;" name="a51">double</a> <span style="font-style: italic;"><i>dValue</i></span> )</p>
+<p class="VBA-Heading-Method">GetLogarithmicFactor <a href="../common_vbageneral/common_general_double.htm" id="a53" style="font-weight: normal; font-style: normal;" name="a53">double</a></p>
+<p class="VBA-Text-Indent">Sets / returns logarithmic factor used for dB Scaling. The logarithmic factor can be 10 for power quantities, 20 for field quantities and zero if dB scaling is not available.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">GetNx / GetNy / GetNz <a href="../common_vbageneral/common_general_long.htm" id="a47" style="font-weight: normal; font-style: normal;" name="a47">long</a></p>
+<p class="VBA-Text-Indent">Returns the number of mesh nodes in x/y/z-direction. Returns zero for tetrahedral meshes.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">GetNxNyNz ( <span><a href="../common_vbageneral/common_general_long_ref.htm" id="a49" style="font-weight: normal; font-style: normal;" name="a49">long_ref</a></span> <span style="font-style: italic;"><i>nx,</i></span> <span><a href="../common_vbageneral/common_general_long_ref.htm" id="a26" style="font-weight: normal; font-style: normal;" name="a26">long_ref</a></span> <span style="font-style: italic;"><i>ny,</i></span> <span><a href="../common_vbageneral/common_general_long_ref.htm" id="a27" style="font-weight: normal; font-style: normal;" name="a27">long_ref</a></span> <span style="font-style: italic;"><i>nz</i></span> )</p>
+<p class="VBA-Text-Indent">Yields the number of mesh nodes in all three coordinate directions. Yields zero for tetrahedral meshes.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">GetLength <a href="../common_vbageneral/common_general_long.htm" id="a48" style="font-weight: normal; font-style: normal;" name="a48">long</a></p>
+<p class="VBA-Text-Indent">Returns the dimension of the Result3D Object. This value is equal to nx*ny*nz for regular hexahedral meshes and equal to nTets*nSamplesPerTet for tetrahedral meshes.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">IsScalar <a href="../common_vbageneral/common_general_bool_data_type.htm" id="a56" style="font-weight: normal; font-style: normal;" name="a56">bool</a></p>
+<p class="VBA-Text-Indent">Determines, if the object contains only scalar values.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">IsComplex <a href="../common_vbageneral/common_general_bool_data_type.htm" id="a94" style="font-weight: normal; font-style: normal;" name="a94">bool</a></p>
+<p class="VBA-Text-Indent">Determines, if the object contains complex values.</p>
+<p class="VBA-Heading-Category"><a name="Example" id="Example"></a>Example</p>
+<p class="VBA-Text">The following VBA-Script adds a result vector with its complex conjugate, stores it to file with a separate filename and adds the result to the Navigation Tree.</p>
+<p class="VBA-Text">&#160;</p>
+<p class="VBA-Text-Example">Dim filename As String</p>
+<p class="VBA-Text-Example">filename = ResultTree.GetFileFromTreeItem("2D/3D Results\E-Field\e-field (f=0.1) [1]") <span style="color: #007f00;"><font color="#007F00">'Retrieve filename from navigation tree</font></span></p>
+<p class="VBA-Text-Example">&#160;</p>
+<p class="VBA-Text-Example">Dim res1 As Object &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;<span style="color: #007f00;"><font color="#007F00">'Create an object with the project</font></span></p>
+<p class="VBA-Text-Example">Set res1 = Result3D(filename) &#160;<span style="color: #007f00;"><font color="#007F00">'Load file from project result folder</font></span></p>
+<p class="VBA-Text-Example">&#160;</p>
+<p class="VBA-Text-Example">Dim res2 As Object &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;<span style="color: #007f00;"><font color="#007F00">'Create an empty object</font></span></p>
+<p class="VBA-Text-Example">Set res2 = Result3D("")</p>
+<p class="VBA-Text-Example">Set res2 = res1.Copy() &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;<span style="color: #007f00;"><font color="#007F00">'Copy the data of res1 into res2</font></span></p>
+<p class="VBA-Text-Example">&#160;</p>
+<p class="VBA-Text-Example">res1.Conjugate &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;<span style="color: #007f00;"><font color="#007F00">'Calculate the complex conjugate</font></span></p>
+<p class="VBA-Text-Example">res1.Add(res2) &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;<span style="color: #007f00;"><font color="#007F00">'Add both results</font></span></p>
+<p class="VBA-Text-Example">&#160;</p>
+<p class="VBA-Text-Example">Dim resultpath As String</p>
+<p class="VBA-Text-Example">resultpath = GetProjectPath("Result")</p>
+<p class="VBA-Text-Example">&#160;</p>
+<p class="VBA-Text-Example">res1.Save(resultpath + "\MyResult.rex") <span style="color: #007f00;"><font color="#007F00">'Save the result into project result folder</font></span></p>
+<p class="VBA-Text-Example">&#160;</p>
+<p class="VBA-Text-Example" style="color: #007f00;">'Store the result into the tree</p>
+<p class="VBA-Text-Example">res1.AddToTree("2D/3D Results\MyResult", "MyResult.rex")</p>
+<p class="vba-text-example">&#160;</p>
+<?rh-p style="margin-bottom: 0px; text-align: Right; margin-left: 18px; 
+                 margin-right: 18px; margin-top: 18px;" ?>
+<div style="width: 100%; position: relative;" id="footer">
+<p style="border-bottom: Solid 1px #dddddd; text-align: Left; margin-left: 0px; font-family: Arial, sans-serif; line-height: Normal; margin-top: 9px; margin-right: 0px; margin-bottom: 6px; border-left-width: 1px; border-top-width: 1px; border-right-width: 1px;"><span style="text-align: Left; font-family: Arial, sans-serif; line-height: Normal;">&#160;</span></p>
+<table cellspacing="0" width="100%">
+<col style="width: 50%;" />
+<col style="width: 50%;" />
+<tr>
+<td style="vertical-align: Top;"><span style="font-family: Arial, sans-serif; line-height: Normal; font-size: 8pt;"><font size="1" style="font-size:8pt;">CST Studio Suite 2026</font></span></td>
+<td style="vertical-align: Top;">
+<p style="text-align: right;">&#160;</p>
+</td>
+</tr>
+</table>
+<p>&#160;</p>
+</div>
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+ if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == 'Netscape'))
+  document.write("<div id='tooltip' class='WebHelpPopupMenu'><\/div>");
+//]]>
+</script><script type="text/javascript" language="javascript1.2">
+//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+        writeIntopicBar(0);
+
+
+highlightSearch();
+//-->
+//]]>
+</script>
+</body>
+</html>

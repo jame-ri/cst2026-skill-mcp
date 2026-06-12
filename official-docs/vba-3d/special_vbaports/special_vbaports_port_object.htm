@@ -1,0 +1,719 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="Adobe RoboHelp 11" />
+<title>Port Object</title>
+<link rel="StyleSheet" href="../online_help_vba.css" type="text/css" />
+<style type="text/css">
+/*<![CDATA[*/
+<!--
+body { border-bottom-style:None; }
+-->
+/*]]>*/
+</style>
+
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+        origWidth = innerWidth;
+        origHeight = innerHeight;
+        onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+/*<![CDATA[*/
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+-->
+/*]]>*/
+</style>
+
+<script type="text/javascript" language="javascript1.2" src="../whmsg.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript" src="../whver.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript1.2" src="../whutils.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript1.2" src="../whproxy.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript1.2" src="../whlang.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript1.2" src="../whtopic.js" charset="utf-8">
+</script>
+</head>
+<body>
+<script type="text/javascript" language="javascript1.2">
+//<![CDATA[
+<!--
+if (window.gbWhTopic)
+{
+        var strUrl = document.location.href;
+        var bc = 0;
+        var n = strUrl.toLowerCase().indexOf("bc-");
+        if(n != -1)
+        {
+                document.location.replace(strUrl.substring(0, n));
+                bc = strUrl.substring(n+3);
+        }
+
+        if (window.addTocInfo)
+        {
+        addTocInfo("3D Simulation VBA\nVBA Objects\nSources and Ports\nHigh Frequency\nPort");
+
+        }
+        if (window.writeBtnStyle)
+                writeBtnStyle();
+
+        if (window.writeIntopicBar)
+                writeIntopicBar(0);
+
+        
+        document.write("<p style=\"font-family: Tahoma; font-size: 9pt; font-weight: 400;  font-style:normal; color: rgb(0, 0, 0); text-decoration:none; text-align: left\"> ");
+AddMasterBreadcrumbs("../index.htm", "font-family: Tahoma; font-size: 9pt; font-weight: 400;  font-style:normal; color: rgb(0, 0, 0); text-decoration:none; text-align: left", "|", "Home", "../special_vbaobjects/special_vbaobjects_vbaobjects.htm");
+document.write("<a style=\"font-family: Tahoma; font-size: 9pt; font-weight: 400;  font-style:normal; color: rgb(0, 0, 0); text-decoration:none; text-align: left\" href=\"../special_vbaobjects/special_vbaobjects_vbaobjects.htm\">3D Simulation VBA<\/a> | <a style=\"font-family: Tahoma; font-size: 9pt; font-weight: 400;  font-style:normal; color: rgb(0, 0, 0); text-decoration:none; text-align: left\" href=\"../special_vbaobjects/special_vbaobjects_vbaobjects.htm\">VBA Objects<\/a> | <a style=\"font-family: Tahoma; font-size: 9pt; font-weight: 400;  font-style:normal; color: rgb(0, 0, 0); text-decoration:none; text-align: left\" href=\"../special_vbasignals/special_vbasignals_timesignal_object.htm\">Sources and Ports<\/a> | <a style=\"font-family: Tahoma; font-size: 9pt; font-weight: 400;  font-style:normal; color: rgb(0, 0, 0); text-decoration:none; text-align: left\" href=\"../special_vbasignals/special_vbasignals_timesignal_object.htm\">High Frequency<\/a> | Port<\/p>");
+
+}
+else
+        if (window.gbIE4)
+                document.location.reload();
+
+onLoadHandler = function()
+{
+  if (window.setRelStartPage)
+        {
+        setTimeout("setRelStartPage('../index.htm');", 1)
+
+    setTimeout("UpdateBreadCrumbsMarker();", 1);
+        }
+}
+
+if (window.addEventListener){  
+        window.addEventListener('load', onLoadHandler, false);   
+} else if (window.attachEvent){  
+        window.attachEvent('onload', onLoadHandler);  
+}
+
+function onSetStartPage()
+{
+  autoSync(1);
+  sendSyncInfo();
+  sendAveInfoOut();
+}
+//-->
+//]]>
+</script><script type="text/javascript" src="../ehlpdhtm.js" language="JavaScript1.2">
+</script>
+<table cellspacing="0" width="100%">
+<col style="width: 50%;" />
+<col style="width: 50%;" />
+<tr>
+<td style="vertical-align: middle; padding-top: 5px; padding-bottom: 5px;">
+<p style="margin-top: 0px; margin-bottom: 0px;"><img src="../3ds.png" alt="" style="border: none;" border="0" /></p>
+</td>
+<td style="vertical-align: middle;">
+<p style="text-align: right;"><a href="https://www.3ds.com/products-services/3dexperience/" target="_blank"><img src="../3dexp.png" alt="" style="border: none;" width="32" height="32" border="0" /></a></p>
+</td>
+</tr>
+</table>
+<p class="VBA-Heading-Object">Port Object</p>
+<p class="VBA-Text">Defines a waveguide port object. Waveguide ports are used to feed the calculation domain with power and to absorb the returning power. For each waveguide port, time signals and S-Parameters will be recorded during a solver run. In practice the port can be substituted by a longitudinal homogeneous waveguide connected to the structure. You will need at least one port (either waveguide port or <a href="special_vbaports_discrete_port_object.htm">discrete port</a>) or a <a href="special_vbaports_planewave_object.htm">plane wave</a> excitation source to feed the structure, before starting a solver run.</p>
+<ul>
+<li class="p-VBA-Index-Category">
+<p class="VBA-Index-Category"><a href="#General_Methods" target="_self">General Methods</a></p>
+</li>
+<li class="p-VBA-Index-Category">
+<p class="VBA-Index-Category"><a href="#Port_Creation">Port Creation / Modification</a></p>
+</li>
+<li style="list-style: none; display: inline">
+<ul>
+<li class="p-VBA-Index-Category">
+<p class="VBA-Index-Category"><a href="#Port_Settings">Port Settings</a></p>
+</li>
+<li class="p-VBA-Index-Category">
+<p class="VBA-Index-Category"><a href="#Modes">Mode Settings</a></p>
+</li>
+</ul>
+</li>
+<li class="p-VBA-Index-Category">
+<p class="VBA-Index-Category"><a href="#Queries">Queries</a></p>
+</li>
+<li class="p-VBA-Index-Category">
+<p class="VBA-Index-Category"><a href="#Defaults">Default Settings</a></p>
+</li>
+<li class="p-VBA-Index-Category">
+<p class="VBA-Index-Category"><a href="#Examples">Examples</a></p>
+</li>
+</ul>
+<p class="VBA-Heading-Category"><a name="General_Methods" id="General_Methods"></a>General Methods</p>
+<p class="VBA-Heading-Method">Delete ( <span><a href="../common_vbageneral/common_general_integer.htm" id="a31" style="font-weight: normal; font-style: normal;" name="a31">int</a></span> <span style="font-style: italic;"><i>portnumber</i></span> )</p>
+<p class="VBA-Text-Indent">Deletes an existing port.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Text-Indent" style="margin-left: 0px;"><span style="font-weight: bold;">Rename(</span> <a href="../common_vbageneral/common_general_integer.htm" id="a210" style="font-weight: normal; font-style: normal;" name="a210">int</a> <span style="font-weight: bold;">old</span><span style="font-weight: bold; font-style: italic;"><i>portnumber</i></span><span style="font-style: italic;"><i>,</i></span> <a href="../common_vbageneral/common_general_integer.htm" id="a211" style="font-weight: normal; font-style: normal;" name="a211">int</a> <span style="font-weight: bold;">new</span><span style="font-weight: bold; font-style: italic;"><i>portnumber</i></span> <span style="font-style: italic;"><i>)</i></span></p>
+<p class="VBA-Text-Indent">Changes the number of a port</p>
+<p class="VBA-Text-Indent" style="margin-left: 0px;">&#160;</p>
+<p class="VBA-Text-Indent" style="margin-left: 0px;"><span style="font-weight: bold;">RenameLabel(</span> <a href="../common_vbageneral/common_general_integer.htm" id="a2101" style="font-weight: normal; font-style: normal;" name="a2101">int</a> <span style="font-weight: bold; font-style: italic;"><i>portnumber</i></span><span style="font-style: italic;"><i>, <a href="../common_vbageneral/common_general_string.htm" id="a1211" style="font-weight: normal; font-style: normal;" name="a1211">string</a> &#160;</i></span><span style="font-style: italic; font-weight: bold;"><i>label</i></span> <span style="font-style: italic;"><i>)</i></span></p>
+<p class="VBA-Text-Indent">Changes the label of the port with the given number</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">StartPortNumberIteration <a href="../common_vbageneral/common_general_integer.htm" id="a80" style="font-weight: normal; font-style: normal;" name="a80">int</a></p>
+<p class="VBA-Text-Indent">This function resets the counter for an iteration loop over all defined ports and returns the total number of the ports. The port numbers are successively available by using the <span style="font-weight: bold;">GetNextportNumber</span> method.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">StartSParaPortNumberIteration <a href="../common_vbageneral/common_general_integer.htm" id="a802" style="font-weight: normal; font-style: normal;" name="a802">int</a></p>
+<p class="VBA-Text-Indent">Similar to the method above, this function resets the counter for an iteration loop but restricts the loop to S-parameter ports only. Consequently, it &#160;returns the total number of S-parameter ports. The port numbers are successively available by using the <span style="font-weight: bold;">GetNextportNumber</span> method.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">GetNextPortNumber <a href="../common_vbageneral/common_general_integer.htm" id="a81" style="font-weight: normal; font-style: normal;" name="a81">int</a></p>
+<p class="VBA-Text-Indent">This function successively returns the portnumber of the next port, looping over all defined ports. The counter for the iteration loop can be reset using the <span style="font-weight: bold;">StartPortNumberIteration</span> method.</p>
+<p class="VBA-Heading-Category"><a name="Port_Creation" id="Port_Creation"></a>Port Creation / Modification</p>
+<p class="VBA-Heading-Method">LoadContentForModify&#160;<a href="../common_vbageneral/common_general_integer.htm" id="a801" style="font-weight: normal; font-style: normal;" name="a801">int</a></p>
+<p class="VBA-Text-Indent">If you want to modify an existing port with the <span style="font-weight: bold;">Modify</span> command, the first step is, to load the properties of that port. Then you may use methods to change particular settings and call <span style="font-weight: bold;">Modify</span> in the end. Loading the content first is mandatory for flawless operation of port modification even if all properties will be overwritten by the <span style="font-style: italic;"><i>Port Settings</i></span> and <span style="font-style: italic;"><i>Mode Settings</i></span> commands.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">Create / Modify</p>
+<p class="VBA-Text-Indent">Creates a new or modifies an existing waveguide port.</p>
+<p class="VBA-Text-Indent">Please note, that all necessary settings have to be made previously before calling one of these commands.</p>
+<p class="VBA-Text-Indent">This also implies that the following <span style="font-style: italic;"><i>Port</i></span> and <span style="font-style: italic;"><i>Mode Settings</i></span> in the <span style="font-style: italic;"><i>Port Creation / Modification</i></span> section cannot be used separately, but only for port creation or modification.</p>
+<p class="VBA-Heading-Category"><a name="Port_Settings" id="Port_Settings"></a>Port Settings</p>
+<p class="VBA-Heading-Method">PortNumber ( <a href="../common_vbageneral/common_general_integer.htm" id="a2" style="font-weight: normal; font-style: normal;" name="a2">int</a> <span style="font-style: italic;"><i>portnumber</i></span> )</p>
+<p class="VBA-Text-Indent">Chooses the waveguide port by its number.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">Label ( <a href="../common_vbageneral/common_general_string.htm" id="a121" style="font-weight: normal; font-style: normal;" name="a121">string</a> <span style="font-style: italic;"><i>&#160;label</i></span> )</p>
+<p class="VBA-Text-Indent">Sets the label of the port.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">NumberOfModes ( <a href="../common_vbageneral/common_general_integer.htm" id="a1" style="font-weight: normal; font-style: normal;" name="a1">int</a> <span style="font-style: italic;"><i>modenumber</i></span> )</p>
+<p class="VBA-Text-Indent">Sets the number of modes for the waveguide port.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">Orientation ( <span style="font-style: italic;"><i><a href="../common_vbageneral/common_general_enum.htm" id="a18" style="font-weight: normal; font-style: normal;" name="a18">enum</a> key</i></span> )</p>
+<p class="VBA-Text-Indent">This method defines the orientation, i.e. the direction of excitation, of the waveguide port. "xmin" means that the port is located at the lower x-boundary of the calculation domain and feeds the structure in positive x-direction. This excitation direction is also valid for internal ports, determined by the <span style="font-weight: bold;">PortOnBound</span> method.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Text-Indent">key = {"xmin", "xmax", "ymin", "ymax", "zmin", "zmax"}</p>
+<p class="VBA-Heading-Method">&#160;</p>
+<p class="VBA-Heading-Method">Coordinates ( <a href="../common_vbageneral/common_general_enum.htm" id="a4" style="font-weight: normal; font-style: normal;" name="a4">enum</a> <span style="font-weight: normal;">{"Free", "Full", "Picks"}</span> <span style="font-style: italic;"><i>key</i></span> )</p>
+<p class="VBA-Text-Indent">This method determines how the transversal expansion of a waveguide port is defined.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Text-Indent"><span style="font-style: italic;"><i>key</i></span> can have one of &#160;the following values:</p>
+<table style="margin-left: 24px;" cellspacing="0" width="693">
+<col style="width: 7.648%;" />
+<col width="640" />
+<tr style="vertical-align: top;">
+<td style="border: Solid 1px #000000; width: 7.648%; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;">
+<p class="VBA-Text">Free</p>
+</td>
+<td style="border-top: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;" width="640">
+<p class="VBA-Text">The transversal plane of the port is defined by the free input of the dimensions (<span style="font-weight: bold;">Xrange</span>, <span style="font-weight: bold;">Yrange</span>, <span style="font-weight: bold;">Zrange</span>).</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 7.648%; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;">
+<p class="VBA-Text">Full</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;" width="640">
+<p class="VBA-Text">The full plane of the calculation domain will work as the waveguide port.</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 7.648%; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;">
+<p class="VBA-Text">Picks</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;" width="640">
+<p class="VBA-Text">The transversal plane of the port is defined by selected pickpoints.</p>
+</td>
+</tr>
+</table>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">Xrange ( <a href="../common_vbageneral/common_general_double.htm" id="a8" style="font-weight: normal; font-style: normal;" name="a8">double</a> <span style="font-style: italic;"><i>xmin, <a href="../common_vbageneral/common_general_double.htm" id="a9" style="font-weight: normal; font-style: normal;" name="a9">double</a> xmax</i></span> )</p>
+<p class="VBA-Heading-Method">Yrange ( <a href="../common_vbageneral/common_general_double.htm" id="a10" style="font-weight: normal; font-style: normal;" name="a10">double</a> <span style="font-style: italic;"><i>ymin, <a href="../common_vbageneral/common_general_double.htm" id="a11" style="font-weight: normal; font-style: normal;" name="a11">double</a> ymax</i></span> )</p>
+<p class="VBA-Heading-Method">Zrange ( <a href="../common_vbageneral/common_general_double.htm" id="a12" style="font-weight: normal; font-style: normal;" name="a12">double</a> <span style="font-style: italic;"><i>zmin, <a href="../common_vbageneral/common_general_double.htm" id="a13" style="font-weight: normal; font-style: normal;" name="a13">double</a> zmax</i></span> )</p>
+<p class="VBA-Text-Indent">In case that the transversal &#160;<span style="font-weight: bold;">Coordinates</span> of the waveguide port are defined as "Free", these methods determine the range in each direction in global (x, y, z) coordinates.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">XrangeAdd ( <a href="../common_vbageneral/common_general_double.htm" id="a36" style="font-weight: normal; font-style: normal;" name="a36">double</a> <span style="font-style: italic;"><i>xminadd, <a href="../common_vbageneral/common_general_double.htm" id="a37" style="font-weight: normal; font-style: normal;" name="a37">double</a> xmaxadd</i></span> )</p>
+<p class="VBA-Heading-Method">YrangeAdd ( <a href="../common_vbageneral/common_general_double.htm" id="a83" style="font-weight: normal; font-style: normal;" name="a83">double</a> <span style="font-style: italic;"><i>yminadd, <a href="../common_vbageneral/common_general_double.htm" id="a84" style="font-weight: normal; font-style: normal;" name="a84">double</a> ymaxadd</i></span> )</p>
+<p class="VBA-Heading-Method">ZrangeAdd ( <a href="../common_vbageneral/common_general_double.htm" id="a85" style="font-weight: normal; font-style: normal;" name="a85">double</a> <span style="font-style: italic;"><i>zminadd, <a href="../common_vbageneral/common_general_double.htm" id="a93" style="font-weight: normal; font-style: normal;" name="a93">double</a> zmaxadd</i></span> )</p>
+<p class="VBA-Text-Indent">In case that the transversal &#160;<span style="font-weight: bold;">Coordinates</span> of the waveguide port are defined by selected pickpoints, these methods allow to extend the resulting range in each direction in global (x, y, z) coordinates if the port is axis aligned. If the port is tilted in any way, ZrangeAdd shall only contain "0" values, while XrangeAdd and YrangeAdd are thought to be in port local coordinates. (A coordinate system with u and v is shown, XrangeAdd defines the additionell range in u-direction, whereas YrangeAdd specifies the v-direction additions.)</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">PortOnBound ( <a href="../common_vbageneral/common_general_bool_data_type.htm" id="a79" style="font-weight: normal; font-style: normal;" name="a79">bool</a> <span style="font-style: italic;"><i>flag</i></span> )</p>
+<p class="VBA-Text-Indent">This method decides if the port is located on the boundaries of the calculation domain (<span style="font-style: italic;"><i>flag</i></span> = True) or could be located inside the calculation domain due to its normal position definition (<span style="font-weight: bold;">Xrange</span><font color="#008000">,</font> <span style="font-weight: bold;">Yrange</span> or <span style="font-weight: bold;">Zrange</span> method) (<span style="font-style: italic;"><i>flag</i></span> = False). This method is not relevant for picked ports, since here the location is determined by the picked face.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">ClipPickedPortToBound ( <a href="../common_vbageneral/common_general_bool_data_type.htm" id="a5" style="font-weight: normal; font-style: normal;" name="a5">bool</a> <span style="font-style: italic;"><i>flag</i></span> )</p>
+<p class="VBA-Text-Indent">In case of a picked port this method decides if the port &#160;plane should be located &#160;on the boundaries of the calculation domain (<span style="font-style: italic;"><i>flag</i></span> = True) or should be defined correspondent to the pick information (<span style="font-style: italic;"><i>flag</i></span> = False). In general this method should not be used, since the intention is to locate the port due to its pick information.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">TextSize ( <a href="../common_vbageneral/common_general_integer.htm" id="a14" style="font-weight: normal; font-style: normal;" name="a14">int</a> <span style="font-style: italic;"><i>value</i></span> )</p>
+<p class="VBA-Heading-Method">ChangeTextSize ( <a href="../common_vbageneral/common_general_integer.htm" id="a21" style="font-weight: normal; font-style: normal;" name="a21">int</a> <span style="font-style: italic;"><i>portnumber,</i></span> <a href="../common_vbageneral/common_general_integer.htm" id="a20" style="font-weight: normal; font-style: normal;" name="a20">int</a> <span style="font-style: italic;"><i>value</i></span> )</p>
+<p class="VBA-Text-Indent">Determines the textsize of the labeling of a new created or an existing waveguide port, specified by its <span style="font-style: italic;"><i>portnumber</i></span>. The relative textsize can be defined as an integer <span style="font-style: italic;"><i>value</i></span> between 1 and 100.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">TextMaxLimit( <span><a href="../common_vbageneral/common_general_bool_data_type.htm" id="a171" style="font-weight: normal; font-style: normal;" name="a171">bool</a></span> <span style="font-style: italic;"><i>flag</i></span>)</p>
+<p class="VBA-Text-Indent">If set to zero the port label may exceed the size of the port depending on TextSize. Otherwise the label textsize will be fitted until the label is completely within the boundary of the port.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">ReferencePlaneDistance ( <a href="../common_vbageneral/common_general_double.htm" id="a17" style="font-weight: normal; font-style: normal;" name="a17">double</a> <span style="font-style: italic;"><i>dist</i></span> )</p>
+<p class="VBA-Text-Indent">Sets the distance to the reference plane. The S-Parameters will then be calculated (phase deembedded) related to this reference plane. A negative distance corresponds to a reference plane inside the structure, a &#160;positive distance to an outside located plane.</p>
+<p class="VBA-Heading-Category"><a name="Modes" id="Modes"></a>Mode Settings</p>
+<p class="VBA-Heading-Method">AddPotentialNumerically ( <a href="../common_vbageneral/common_general_integer.htm" id="a38" style="font-weight: normal; font-style: normal;" name="a38">int</a> <span style="font-style: italic;"><i>modeset, <a href="../common_vbageneral/common_general_enum.htm" id="a39" style="font-weight: normal; font-style: normal;" name="a39">enum</a></i></span> <span style="font-weight: normal;">{"Positive", "Negative"}</span> <span style="font-style: italic;"><i>potential, <a href="../common_vbageneral/common_general_double.htm" id="a40" style="font-weight: normal; font-style: normal;" name="a40">double</a></i></span> <span style="font-style: italic;"><i>upos</i></span><span style="font-weight: normal; font-style: italic;"><i>, <a href="../common_vbageneral/common_general_double.htm" id="a41" style="font-weight: normal; font-style: normal;" name="a41">double</a></i></span> <span style="font-style: italic;"><i>vpos</i></span> )</p>
+<p class="VBA-Text-Indent">This method adds and defines a new potential setting to a specific <span style="font-style: italic;"><i>modeset</i></span> of a multipin waveguide port. The location of the potential can be defined either numerically (<span style="font-style: italic;"><i>upos, vpos</i></span>) or by selecting a PEC solid face or edge in the port plane, determined by its corresponding <span style="font-style: italic;"><i>name</i></span> and <span style="font-style: italic;"><i>face_id or edge_id.</i></span></p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Text-Indent" style="font-style: normal;">The <span style="font-style: italic;"><i>potential</i></span> can have one of &#160;the following values:</p>
+<table style="margin-left: 24px;" cellspacing="0" width="361">
+<col style="width: 20.222%;" />
+<col width="288" />
+<tr style="vertical-align: top; height: 16px;">
+<td style="border: Solid 1px #000000; width: 20.222%; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;">
+<p class="VBA-Text">Positive</p>
+</td>
+<td style="border-top: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;" width="288">
+<p class="VBA-Text">Defines a positive electrical potential setting.</p>
+</td>
+</tr>
+<tr style="vertical-align: top; height: 19px;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 20.222%; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;">
+<p class="VBA-Text">Negative</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;" width="288">
+<p class="VBA-Text">Defines a negative electrical potential setting.</p>
+</td>
+</tr>
+</table>
+<p class="VBA-Heading-Method">&#160;</p>
+<p class="VBA-Heading-Method">AddPotentialPicked ( <a href="../common_vbageneral/common_general_integer.htm" id="a102" style="font-weight: normal; font-style: normal;" name="a102">int</a> <span style="font-style: italic;"><i>modeset, <a href="../common_vbageneral/common_general_enum.htm" id="a108" style="font-weight: normal; font-style: normal;" name="a108">enum</a></i></span> <span style="font-weight: normal;">{"Positive", "Negative"}</span> <span style="font-style: italic;"><i>potential, <a href="../common_vbageneral/common_general_solid_names.htm" id="a109" style="font-weight: normal; font-style: normal;" name="a109">solidname</a> name,</i></span> <a href="../common_vbageneral/common_general_integer.htm" id="a110" style="font-weight: normal; font-style: normal;" name="a110">int</a> <span style="font-style: italic;"><i>face_id</i></span> )</p>
+<p class="VBA-Text-Indent">This method adds and defines a new potential setting to a specific <span style="font-style: italic;"><i>modeset</i></span> of a multipin waveguide port. The location of the potential can be defined either numerically (<span style="font-style: italic;"><i>upos, vpos</i></span>) or by selecting a PEC solid face or edge in the port plane, determined by its corresponding <span style="font-style: italic;"><i>name</i></span> and <span style="font-style: italic;"><i>face_id or edge_id.</i></span></p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Text-Indent" style="font-style: normal;">The <span style="font-style: italic;"><i>potential</i></span> can have one of &#160;the following values:</p>
+<table style="margin-left: 24px;" cellspacing="0" width="361">
+<col style="width: 20.222%;" />
+<col width="288" />
+<tr style="vertical-align: top; height: 16px;">
+<td style="border: Solid 1px #000000; width: 20.222%; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;">
+<p class="VBA-Text">Positive</p>
+</td>
+<td style="border-top: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;" width="288">
+<p class="VBA-Text">Defines a positive electrical potential setting.</p>
+</td>
+</tr>
+<tr style="vertical-align: top; height: 19px;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 20.222%; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;">
+<p class="VBA-Text">Negative</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;" width="288">
+<p class="VBA-Text">Defines a negative electrical potential setting.</p>
+</td>
+</tr>
+</table>
+<p class="VBA-Heading-Method">&#160;</p>
+<p class="VBA-Heading-Method">AddPotentialEdgePicked ( <a href="../common_vbageneral/common_general_integer.htm" id="a94" style="font-weight: normal; font-style: normal;" name="a94">int</a> <span style="font-style: italic;"><i>modeset, <a href="../common_vbageneral/common_general_enum.htm" id="a95" style="font-weight: normal; font-style: normal;" name="a95">enum</a></i></span> <span style="font-weight: normal;">{"Positive", "Negative"}</span> <span style="font-style: italic;"><i>potential, <a href="../common_vbageneral/common_general_solid_names.htm" id="a111" style="font-weight: normal; font-style: normal;" name="a111">solidname</a> name,</i></span> <a href="../common_vbageneral/common_general_integer.htm" id="a112" style="font-weight: normal; font-style: normal;" name="a112">int</a> <span style="font-style: italic;"><i>fedge_id</i></span> )</p>
+<p class="VBA-Text-Indent">This method adds and defines a new potential setting to a specific <span style="font-style: italic;"><i>modeset</i></span> of a multipin waveguide port. The location of the potential can be defined either numerically (<span style="font-style: italic;"><i>upos, vpos</i></span>) or by selecting a PEC solid face or edge in the port plane, determined by its corresponding <span style="font-style: italic;"><i>name</i></span> and <span style="font-style: italic;"><i>face_id or edge_id.</i></span></p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Text-Indent" style="font-style: normal;">The <span style="font-style: italic;"><i>potential</i></span> can have one of &#160;the following values:</p>
+<table style="margin-left: 24px;" cellspacing="0" width="361">
+<col style="width: 20.222%;" />
+<col width="288" />
+<tr style="vertical-align: top; height: 16px;">
+<td style="border: Solid 1px #000000; width: 20.222%; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;">
+<p class="VBA-Text">Positive</p>
+</td>
+<td style="border-top: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;" width="288">
+<p class="VBA-Text">Defines a positive electrical potential setting.</p>
+</td>
+</tr>
+<tr style="vertical-align: top; height: 19px;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 20.222%; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;">
+<p class="VBA-Text">Negative</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;" width="288">
+<p class="VBA-Text">Defines a negative electrical potential setting.</p>
+</td>
+</tr>
+</table>
+<p class="VBA-Heading-Method">&#160;</p>
+<p class="VBA-Heading-Method">AdjustPolarization ( <a href="../common_vbageneral/common_general_bool_data_type.htm" id="a15" style="font-weight: normal; font-style: normal;" name="a15">bool</a> <span style="font-style: italic;"><i>flag</i></span> )</p>
+<p class="VBA-Text-Indent">Switch that decides if the polarization of the electric field should be adjusted or not. This method works together with the <span style="font-weight: bold;">PolarizationAngle</span> method.</p>
+<p class="VBA-Text-Indent"><span style="font-weight: bold;">Note</span>: Only works if two or more degenerated modes exists.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">PolarizationAngle ( <a href="../common_vbageneral/common_general_double.htm" id="a16" style="font-weight: normal; font-style: normal;" name="a16">double</a> <span style="font-style: italic;"><i>angle</i></span> )</p>
+<p class="VBA-Text-Indent">&#160;If you have activated the <span style="font-weight: bold;">AdjustPolarization</span> switch, here the polarization angle can be defined.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">PortImpedanceAndCalibration ( <span style="font-weight: normal;">&#160;<a href="../common_vbageneral/common_general_bool_data_type.htm" id="a24" style="font-weight: normal; font-style: normal;" name="a24">bool</a></span> <span style="font-style: italic;"><i>flag</i></span> )</p>
+<p class="VBA-Text-Indent">This switch activates the enhanced impedance and calibration evaluation for the port, based on the definition of corresponding reference lines. The lines are defined with help of the <span style="font-weight: bold;">AddLineByPoint</span>, <span style="font-weight: bold;">AddLineByFace</span> or <span style="font-weight: bold;">AddLineByBoundary</span> method and assigned to the mode with the <span style="font-weight: bold;">AddModeLine</span> method.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">AddModeLineByPoint ( <a href="../common_vbageneral/common_general_integer.htm" id="a3" style="font-weight: normal; font-style: normal;" name="a3">int</a> <span style="font-style: italic;"><i>linenumber,</i></span> <a href="../common_vbageneral/common_general_double.htm" id="a25" style="font-weight: normal; font-style: normal;" name="a25">double</a> <span style="font-style: italic;"><i>xstart,</i></span> <a href="../common_vbageneral/common_general_double.htm" id="a26" style="font-weight: normal; font-style: normal;" name="a26">double</a> <span style="font-style: italic;"><i>ystart,</i></span> <a href="../common_vbageneral/common_general_double.htm" id="a27" style="font-weight: normal; font-style: normal;" name="a27">double</a> <span style="font-style: italic;"><i>zstart,</i></span> <a href="../common_vbageneral/common_general_double.htm" id="a28" style="font-weight: normal; font-style: normal;" name="a28">double</a> <span style="font-style: italic;"><i>xend,</i></span> <a href="../common_vbageneral/common_general_double.htm" id="a29" style="font-weight: normal; font-style: normal;" name="a29">double</a> <span style="font-style: italic;"><i>yend,</i></span> <a href="../common_vbageneral/common_general_double.htm" id="a30" style="font-weight: normal; font-style: normal;" name="a30">double</a> <span style="font-style: italic;"><i>zend,</i></span> <a href="../common_vbageneral/common_general_bool_data_type.htm" id="a32" style="font-weight: normal; font-style: normal;" name="a32">bool</a> <span style="font-style: italic;"><i>reverse</i></span> )</p>
+<p class="VBA-Text-Indent">Adds a new line with a given <span style="font-style: italic;"><i>linenumber</i></span> to the port mode description. <span style="font-style: italic;"><i>xstart / ystart / zstart</i></span> defines the start point &#160;and <span style="font-style: italic;"><i>xend / yend / zend</i></span> the end point. Afterwards the defined line can be used as an impedance, calibration or polarization reference with help of the <span style="font-weight: bold;">AddModeLine</span> method. The <span style="font-style: italic;"><i>reverse</i></span> flag toggles the start and end point.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">AddModeLineByFace ( <a href="../common_vbageneral/common_general_integer.htm" id="a96" style="font-weight: normal; font-style: normal;" name="a96">int</a> <span style="font-style: italic;"><i>linenumber,</i></span> <a href="../common_vbageneral/common_general_double.htm" id="a97" style="font-weight: normal; font-style: normal;" name="a97">double</a> <span style="font-style: italic;"><i>xstart,</i></span> <a href="../common_vbageneral/common_general_double.htm" id="a98" style="font-weight: normal; font-style: normal;" name="a98">double</a> <span style="font-style: italic;"><i>ystart,</i></span> <a href="../common_vbageneral/common_general_double.htm" id="a99" style="font-weight: normal; font-style: normal;" name="a99">double</a> <span style="font-style: italic;"><i>zstart, <a href="../common_vbageneral/common_general_solid_names.htm" id="a100" style="font-weight: normal; font-style: normal;" name="a100">solidname</a> name,</i></span> <a href="../common_vbageneral/common_general_integer.htm" id="a101" style="font-weight: normal; font-style: normal;" name="a101">int</a> <span style="font-style: italic;"><i>face_id</i></span> <span style="font-style: italic;"><i>,</i></span> <a href="../common_vbageneral/common_general_bool_data_type.htm" id="a33" style="font-weight: normal; font-style: normal;" name="a33">bool</a> <span style="font-style: italic;"><i>reverse</i></span> )</p>
+<p class="VBA-Text-Indent">Adds a new line with a given <span style="font-style: italic;"><i>linenumber</i></span> to the port mode description. <span style="font-style: italic;"><i>xstart / ystart / zstart</i></span> defines the start point. The end point is determined by the nearest point on the face <span style="font-style: italic;"><i>face_id</i></span> of the solid <span style="font-style: italic;"><i>name</i></span>. The face needs to be a planar face on the port plane . Afterwards the defined line can be used as an impedance, calibration or polarization reference with help of the <span style="font-weight: bold;">AddModeLine</span> method. The reverse flag toggles the start and end point.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">AddModeLineByBoundary ( <a href="../common_vbageneral/common_general_integer.htm" id="a103" style="font-weight: normal; font-style: normal;" name="a103">int</a> <span style="font-style: italic;"><i>linenumber,</i></span> <a href="../common_vbageneral/common_general_double.htm" id="a104" style="font-weight: normal; font-style: normal;" name="a104">double</a> <span style="font-style: italic;"><i>xstart,</i></span> <a href="../common_vbageneral/common_general_double.htm" id="a105" style="font-weight: normal; font-style: normal;" name="a105">double</a> <span style="font-style: italic;"><i>ystart,</i></span> <a href="../common_vbageneral/common_general_double.htm" id="a106" style="font-weight: normal; font-style: normal;" name="a106">double</a> <span style="font-style: italic;"><i>zstart, <a href="../common_vbageneral/common_general_enum.htm" id="a107" style="font-weight: normal; font-style: normal;" name="a107">enum</a></i></span> <span style="font-weight: normal;">{"Umin", "Umax", "Vmin", "Vmax"}</span> <span style="font-style: italic;"><i>position,</i></span> <a href="../common_vbageneral/common_general_bool_data_type.htm" id="a34" style="font-weight: normal; font-style: normal;" name="a34">bool</a> <span style="font-style: italic;"><i>reverse</i></span> )</p>
+<p class="VBA-Text-Indent">Adds a new line with a given <span style="font-style: italic;"><i>linenumber</i></span> to the port mode description. <span style="font-style: italic;"><i>xstart / ystart / zstart</i></span> defines the start point. The end point is determined by the port boundary at <span style="font-style: italic;"><i>position</i></span>. The line will be perpendicular on the port boundary. Afterwards the defined line can be used as an impedance, calibration or polarization reference with help of the <span style="font-weight: bold;">AddModeLine</span> method. The reverse flag toggles the start and end point.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">AddModeLine ( <a href="../common_vbageneral/common_general_integer.htm" id="a82" style="font-weight: normal; font-style: normal;" name="a82">int</a> <span style="font-style: italic;"><i>modenumber,</i></span> &#160;<a href="../common_vbageneral/common_general_integer.htm" id="a6" style="font-weight: normal; font-style: normal;" name="a6">int</a> <span style="font-style: italic;"><i>impedance_linenumber,</i></span> &#160;<a href="../common_vbageneral/common_general_integer.htm" id="a22" style="font-weight: normal; font-style: normal;" name="a22">int</a> <span style="font-style: italic;"><i>calibration_linenumber,</i></span> &#160;<a href="../common_vbageneral/common_general_integer.htm" id="a23" style="font-weight: normal; font-style: normal;" name="a23">int</a> <span style="font-style: italic;"><i>polarization_linenumber</i></span> )</p>
+<p class="VBA-Text-Indent">This method assigns previously defined lines to a port mode, specified by its <span style="font-style: italic;"><i>modenumber</i></span>, and are used as references for the evaluation of the impedance, calibration and polarization of the mode. The lines are indicated by their <span style="font-style: italic;"><i>linenumber</i></span> and can be represented by only one or even three different lines. All of them have to be defined previously by using the <span style="font-weight: bold;">AddLineByPoint</span>, <span style="font-weight: bold;">AddLineByFace</span> or <span style="font-weight: bold;">AddLineByBoundary</span> method.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">SetEstimation ( <a href="../common_vbageneral/common_general_integer.htm" id="a19" style="font-weight: normal; font-style: normal;" name="a19">int</a> <span style="font-style: italic;"><i>portnumber, <a href="../common_vbageneral/common_general_double.htm" id="a7" style="font-weight: normal; font-style: normal;" name="a7">double</a> value</i></span> )</p>
+<p class="VBA-Text-Indent">Defines an estimation of the propagation constant for the mode calculation of a waveguide port, specified by its <span style="font-style: italic;"><i>portname</i></span>. A positive <span style="font-style: italic;"><i>value</i></span> refers to the propagation constant <span style="font-style: italic;"><i>beta</i></span>, a negative value to the damping constant <span style="font-style: italic;"><i>alpha</i></span>. This method is necessary only for some special application cases, normally it need not to be used.</p>
+<p class="VBA-Text-Indent"><span style="font-weight: bold;">Note:</span> The made setting is only valid for one solver run and will not be stored in the project files.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">SingleEnded ( <span style="font-weight: normal;">&#160;<a href="../common_vbageneral/common_general_bool_data_type.htm" id="a35" style="font-weight: normal; font-style: normal;" name="a35">bool</a></span> <span style="font-style: italic;"><i>flag</i></span> )</p>
+<p class="VBA-Text-Indent">This method offers the possibility to automatically recalculate the scattering parameters as a post-processing step due to previously defined single-ended multipin ports. Consequently during setup of the multipin definition a separate mode set has to be created for each of the inner conductors, i.e. one (usually the outermost) conductor remains undefined representing the ground conductor.</p>
+<p class="VBA-Text-Indent"><span style="font-weight: bold;">Note:</span> All ports has to be defined as single-ended type in this way, otherwise the simulation can not be started. By applying single-ended port mode calculation the solvers automatically activate renormalization to fixed impedance, however, the impedance value itself can be modified in the corresponding solver dialog box before starting the simulation.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">Shield ( <a href="../common_vbageneral/common_general_enum.htm" id="a122" style="font-weight: normal; font-style: normal;" name="a122">enum</a> <span style="font-weight: normal;">{"none", "PEC", "PMC"}</span> <span style="font-style: italic;"><i>key</i></span> )</p>
+<p class="VBA-Text-Indent">The boundary of the waveguide port is treated as a perfect electric (PEC) or magnetic (PMC) conductor frame when calling this method with <span style="font-style: italic;"><i>key =</i></span> "PEC" or "PMC", respectively.</p>
+<p class="VBA-Heading-Category"><a name="Queries" id="Queries"></a>Queries</p>
+<p class="VBA-Heading-Method">GetFrequency ( <a href="../common_vbageneral/common_general_integer.htm" id="a44" style="font-weight: normal; font-style: normal;" name="a44">int</a> <span style="font-style: italic;"><i>portnumber,</i></span> &#160;<a href="../common_vbageneral/common_general_integer.htm" id="a42" style="font-weight: normal; font-style: normal;" name="a42">int</a> <span style="font-style: italic;"><i>modenumber</i></span> ) <a href="../common_vbageneral/common_general_double.htm" id="a45" style="font-weight: normal; font-style: normal;" name="a45">double</a></p>
+<p class="VBA-Text-Indent">Returns the calculation frequency of a port mode, specified by its <span style="font-style: italic;"><i>portnumber</i></span> and <span style="font-style: italic;"><i>modenumber</i></span>.</p>
+<p class="VBA-Text-Indent">For homogeneous waveguide port modes this function returns the frequency for which the modes have been calculated. If there are multiple mode evaluation frequencies at an inhomogeneous port the center frequency of the chosen frequency range is returned.</p>
+<p class="VBA-Text-Indent"><span style="font-weight: bold;">Note:</span> The given frequency also corresponds to the calculated port parameters as the propagation constant beta, the damping constant alpha and the different impedance values.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">GetFcutoff ( <a href="../common_vbageneral/common_general_integer.htm" id="a43" style="font-weight: normal; font-style: normal;" name="a43">int</a> <span style="font-style: italic;"><i>portnumber,</i></span> &#160;<a href="../common_vbageneral/common_general_integer.htm" id="a46" style="font-weight: normal; font-style: normal;" name="a46">int</a> <span style="font-style: italic;"><i>modenumber</i></span> ) <a href="../common_vbageneral/common_general_double.htm" id="a47" style="font-weight: normal; font-style: normal;" name="a47">double</a></p>
+<p class="VBA-Text-Indent">In case of a TE or TM mode, this function returns the Cutoff Frequency for the port mode, specified by its <span style="font-style: italic;"><i>portnumber</i></span> and <span style="font-style: italic;"><i>modenumber</i></span>.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">GetModeType ( <a href="../common_vbageneral/common_general_integer.htm" id="a54" style="font-weight: normal; font-style: normal;" name="a54">int</a> <span style="font-style: italic;"><i>portnumber,</i></span> &#160;<a href="../common_vbageneral/common_general_integer.htm" id="a55" style="font-weight: normal; font-style: normal;" name="a55">int</a> <span style="font-style: italic;"><i>modenumber</i></span> ) <a href="../common_vbageneral/common_general_enum.htm" id="a56" style="font-weight: normal; font-style: normal;" name="a56">enum</a> &#160;<span style="font-style: italic;"><i>type</i></span></p>
+<p class="VBA-Text-Indent">This function returns the mode type of &#160;the port mode, specified by its <span style="font-style: italic;"><i>portnumber</i></span> and <span style="font-style: italic;"><i>modenumber</i></span>.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Text-Indent">The return <span style="font-style: italic;"><i>type</i></span> can have one of the following values:</p>
+<table style="margin-left: 24px;" cellspacing="0" width="633">
+<col width="105" />
+<col width="520" />
+<tr style="vertical-align: top;">
+<td style="border: Solid 1px #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;" width="105">
+<p class="VBA-Text">TE</p>
+</td>
+<td style="border-top: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;" width="520">
+<p class="VBA-Text">Mode with a transverse electric field</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;" width="105">
+<p class="VBA-Text">TM</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;" width="520">
+<p class="VBA-Text">Mode with a transverse magnetic field</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;" width="105">
+<p class="VBA-Text">TEM</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;" width="520">
+<p class="VBA-Text">Mode with a transverse electromagnetic field</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;" width="105">
+<p class="VBA-Text">QTEM</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;" width="520">
+<p class="VBA-Text">Mode with a quasi-transverse electromagnetic field</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;" width="105">
+<p class="VBA-Text">UNDEF</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;" width="520">
+<p class="VBA-Text">Unknown mode type.</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;" width="105">
+<p class="VBA-Text">DAMPED</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;" width="520">
+<p class="VBA-Text">Currently not used.</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;" width="105">
+<p class="VBA-Text">"PLANE WAVE"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;" width="520">
+<p class="VBA-Text">Plane wave mode type</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;" width="105">
+<p class="VBA-Text">"FLOQUET"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;" width="520">
+<p class="VBA-Text">Floquet mode type</p>
+</td>
+</tr>
+</table>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">GetBeta ( <a href="../common_vbageneral/common_general_integer.htm" id="a48" style="font-weight: normal; font-style: normal;" name="a48">int</a> <span style="font-style: italic;"><i>portnumber,</i></span> &#160;<a href="../common_vbageneral/common_general_integer.htm" id="a49" style="font-weight: normal; font-style: normal;" name="a49">int</a> <span style="font-style: italic;"><i>modenumber</i></span> ) <a href="../common_vbageneral/common_general_double.htm" id="a50" style="font-weight: normal; font-style: normal;" name="a50">double</a></p>
+<p class="VBA-Text-Indent">This function returns the beta value (equivalent to the propagation constant) of &#160;the port mode, specified by its <span style="font-style: italic;"><i>portnumber</i></span> and <span style="font-style: italic;"><i>modenumber</i></span>. It is calculated at the frequency returned by <span style="font-weight: bold;">GetFrequency</span> method.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">GetAlpha ( <a href="../common_vbageneral/common_general_integer.htm" id="a51" style="font-weight: normal; font-style: normal;" name="a51">int</a> <span style="font-style: italic;"><i>portnumber,</i></span> &#160;<a href="../common_vbageneral/common_general_integer.htm" id="a52" style="font-weight: normal; font-style: normal;" name="a52">int</a> <span style="font-style: italic;"><i>modenumber</i></span> ) <a href="../common_vbageneral/common_general_double.htm" id="a53" style="font-weight: normal; font-style: normal;" name="a53">double</a></p>
+<p class="VBA-Text-Indent">This function returns the alpha value (equivalent to the damping constant) of &#160;the port mode, specified by its <span style="font-style: italic;"><i>portnumber</i></span> and <span style="font-style: italic;"><i>modenumber</i></span>. It is calculated at the frequency returned by <span style="font-weight: bold;">GetFrequency</span> method.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">GetAccuracy ( <a href="../common_vbageneral/common_general_integer.htm" id="a57" style="font-weight: normal; font-style: normal;" name="a57">int</a> <span style="font-style: italic;"><i>portnumber,</i></span> &#160;<a href="../common_vbageneral/common_general_integer.htm" id="a58" style="font-weight: normal; font-style: normal;" name="a58">int</a> <span style="font-style: italic;"><i>modenumber</i></span> ) <a href="../common_vbageneral/common_general_double.htm" id="a61" style="font-weight: normal; font-style: normal;" name="a61">double</a></p>
+<p class="VBA-Text-Indent">This function returns the accuracy of the eigenmode calculation of &#160;the port mode, specified by its <span style="font-style: italic;"><i>portnumber</i></span> and <span style="font-style: italic;"><i>modenumber</i></span>.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">GetWaveImpedance ( <a href="../common_vbageneral/common_general_integer.htm" id="a62" style="font-weight: normal; font-style: normal;" name="a62">int</a> <span style="font-style: italic;"><i>portnumber,</i></span> &#160;<a href="../common_vbageneral/common_general_integer.htm" id="a63" style="font-weight: normal; font-style: normal;" name="a63">int</a> <span style="font-style: italic;"><i>modenumber</i></span> ) <a href="../common_vbageneral/common_general_double.htm" id="a64" style="font-weight: normal; font-style: normal;" name="a64">double</a></p>
+<p class="VBA-Text-Indent">This function returns the wave impedance of &#160;the port mode, specified by its <span style="font-style: italic;"><i>portnumber</i></span> and <span style="font-style: italic;"><i>modenumber</i></span>.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">GetLineImpedance ( <a href="../common_vbageneral/common_general_integer.htm" id="a65" style="font-weight: normal; font-style: normal;" name="a65">int</a> <span style="font-style: italic;"><i>portnumber,</i></span> &#160;<a href="../common_vbageneral/common_general_integer.htm" id="a66" style="font-weight: normal; font-style: normal;" name="a66">int</a> <span style="font-style: italic;"><i>modenumber</i></span> ) <a href="../common_vbageneral/common_general_double.htm" id="a67" style="font-weight: normal; font-style: normal;" name="a67">double</a></p>
+<p class="VBA-Text-Indent">This function returns the line impedance of &#160;the port mode, specified by its <span style="font-style: italic;"><i>portnumber</i></span> and <span style="font-style: italic;"><i>modenumber</i></span>. Please note, that this method is only reasonable for "TEM" or "Quasi TEM" mode types, otherwise the return value is zero.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">GetLineImpedanceBroadByIndex ( <a href="../common_vbageneral/common_general_integer.htm" id="a68" style="font-weight: normal; font-style: normal;" name="a68">int</a> <span style="font-style: italic;"><i>portnumber,</i></span> &#160;<a href="../common_vbageneral/common_general_integer.htm" id="a69" style="font-weight: normal; font-style: normal;" name="a69">int</a> <span style="font-style: italic;"><i>modenumber,</i></span> &#160;<a href="../common_vbageneral/common_general_integer.htm" id="a74" style="font-weight: normal; font-style: normal;" name="a74">int</a> <span style="font-style: italic;"><i>index</i></span> ) <a href="../common_vbageneral/common_general_double.htm" id="a70" style="font-weight: normal; font-style: normal;" name="a70">double</a></p>
+<p class="VBA-Heading-Method">GetLineImpedanceBroadByFreq ( <a href="../common_vbageneral/common_general_integer.htm" id="a75" style="font-weight: normal; font-style: normal;" name="a75">int</a> <span style="font-style: italic;"><i>portnumber,</i></span> &#160;<a href="../common_vbageneral/common_general_integer.htm" id="a76" style="font-weight: normal; font-style: normal;" name="a76">int</a> <span style="font-style: italic;"><i>modenumber,</i></span> <a href="../common_vbageneral/common_general_double.htm" id="a77" style="font-weight: normal; font-style: normal;" name="a77">double</a> <span style="font-style: italic;"><i>frequency</i></span> ) <a href="../common_vbageneral/common_general_double.htm" id="a78" style="font-weight: normal; font-style: normal;" name="a78">double</a></p>
+<p class="VBA-Text-Indent">This function returns the line impedance of &#160;the port mode, specified by its <span style="font-style: italic;"><i>portnumber</i></span> and <span style="font-style: italic;"><i>modenumber</i></span>. The impedance value is given at a specific frequency, either determined by the <span style="font-style: italic;"><i>frequency</i></span> value itself or a corresponding <span style="font-style: italic;"><i>index</i></span>. Please note, that this method is only reasonable for "TEM" or "Quasi TEM" mode types, otherwise the return value is zero.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">GetType ( <a href="../common_vbageneral/common_general_integer.htm" id="a59" style="font-weight: normal; font-style: normal;" name="a59">int</a> <span style="font-style: italic;"><i>portnumber</i></span> ) <a href="../common_vbageneral/common_general_enum.htm" id="a60" style="font-weight: normal; font-style: normal;" name="a60">enum</a> <span style="font-weight: normal;">{"Waveguide", "Discrete"}</span> <span style="font-style: italic;"><i>type</i></span></p>
+<p class="VBA-Text-Indent">This function returns the type of an existing port, specified by its <span style="font-style: italic;"><i>portnumber</i></span>.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">GetNumberOfModes ( <a href="../common_vbageneral/common_general_integer.htm" id="a72" style="font-weight: normal; font-style: normal;" name="a72">int</a> <span style="font-style: italic;"><i>portnumber</i></span> ) <a href="../common_vbageneral/common_general_integer.htm" id="a73" style="font-weight: normal; font-style: normal;" name="a73">int</a></p>
+<p class="VBA-Text-Indent">This function returns the number of modes of an existing port, specified by its <span style="font-style: italic;"><i>portnumber</i></span>.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">GetPortMeshLocation ( <a href="../common_vbageneral/common_general_integer.htm" id="a71" style="font-weight: normal; font-style: normal;" name="a71">int</a> <span style="font-style: italic;"><i>portnumber, <a href="../common_vbageneral/common_general_long_ref.htm" id="a86" style="font-weight: normal; font-style: normal;" name="a86">long_ref</a> orientation, <a href="../common_vbageneral/common_general_long_ref.htm" id="a87" style="font-weight: normal; font-style: normal;" name="a87">long_ref</a> ixmin, <a href="../common_vbageneral/common_general_long_ref.htm" id="a88" style="font-weight: normal; font-style: normal;" name="a88">long_ref</a> ixmax, <a href="../common_vbageneral/common_general_long_ref.htm" id="a89" style="font-weight: normal; font-style: normal;" name="a89">long_ref</a> iymin, <a href="../common_vbageneral/common_general_long_ref.htm" id="a90" style="font-weight: normal; font-style: normal;" name="a90">long_ref</a> iymax, <a href="../common_vbageneral/common_general_long_ref.htm" id="a91" style="font-weight: normal; font-style: normal;" name="a91">long_ref</a> izmin, <a href="../common_vbageneral/common_general_long_ref.htm" id="a92" style="font-weight: normal; font-style: normal;" name="a92">long_ref</a> izmax</i></span> )</p>
+<p class="VBA-Text-Indent">This function returns the mesh line location of an existing port, specified by its <span style="font-style: italic;"><i>portnumber</i></span>.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Text-Indent">The reference values have the following meaning:</p>
+<table style="margin-left: 24px;" cellspacing="0" width="673">
+<col style="width: 16.196%;" />
+<col width="564" />
+<tr style="vertical-align: top;">
+<td style="border: Solid 1px #000000; width: 16.196%; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;">
+<p class="VBA-Text" style="font-style: italic;">orientation</p>
+</td>
+<td style="border-top: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;" width="564">
+<p class="VBA-Text">0 (xmin), 1 (xmax), 2 (ymin), 3 (ymax), 4 (zmin), 5(zmax), correspondent to the <span style="font-weight: bold;">Orientation</span> method.</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 16.196%; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;">
+<p class="VBA-Text" style="font-style: italic;">ixmin / ixmax</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;" width="564">
+<p class="VBA-Text">The min / max &#160;meshline number in x-direction.</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 16.196%; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;">
+<p class="VBA-Text" style="font-style: italic;">iymin / iymax</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;" width="564">
+<p class="VBA-Text">The min / max &#160;meshline number in y-direction.</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 16.196%; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;">
+<p class="VBA-Text" style="font-style: italic;">izmin / izmax</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;" width="564">
+<p class="VBA-Text">The min / max &#160;meshline number in z-direction.</p>
+</td>
+</tr>
+</table>
+<p class="VBA-Heading-Method" style="margin-left: 40px;">&#160;</p>
+<p class="VBA-Heading-Method">GetPortMeshCoordinates ( <a href="../common_vbageneral/common_general_integer.htm" id="a113" style="font-weight: normal; font-style: normal;" name="a113">int</a> <span style="font-style: italic;"><i>portnumber, <a href="../common_vbageneral/common_general_long_ref.htm" id="a114" style="font-weight: normal; font-style: normal;" name="a114">long_ref</a> orientation,</i></span> <span style="font-weight: normal;"><a href="../common_vbageneral/common_general_double_ref.htm" id="a115" name="a115">double_ref</a></span> <span style="font-style: italic;"><i>dxmin,</i></span> <span style="font-weight: normal;"><a href="../common_vbageneral/common_general_double_ref.htm" id="a116" name="a116">double_ref</a></span> <span style="font-style: italic;"><i>dxmax,</i></span> <span style="font-weight: normal;"><a href="../common_vbageneral/common_general_double_ref.htm" id="a117" name="a117">double_ref</a></span> <span style="font-style: italic;"><i>dymin,</i></span> <span style="font-weight: normal;"><a href="../common_vbageneral/common_general_double_ref.htm" id="a118" name="a118">double_ref</a></span> <span style="font-style: italic;"><i>dymax,</i></span> <span style="font-weight: normal;"><a href="../common_vbageneral/common_general_double_ref.htm" id="a119" name="a119">double_ref</a></span> <span style="font-style: italic;"><i>dzmin,</i></span> <span style="font-weight: normal;"><a href="../common_vbageneral/common_general_double_ref.htm" id="a120" name="a120">double_ref</a></span> <span style="font-style: italic;"><i>dzmax</i></span> )</p>
+<p class="VBA-Text-Indent">This function returns the mesh line coordinates in local units of an existing port, specified by its <span style="font-style: italic;"><i>portnumber</i></span>.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Text-Indent">The reference values have the following meaning:</p>
+<table style="margin-left: 24px;" cellspacing="0" width="673">
+<col style="width: 16.196%;" />
+<col width="564" />
+<tr style="vertical-align: top;">
+<td style="border: Solid 1px #000000; width: 16.196%; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;">
+<p class="VBA-Text" style="font-style: italic;">orientation</p>
+</td>
+<td style="border-top: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;" width="564">
+<p class="VBA-Text">0 (xmin), 1 (xmax), 2 (ymin), 3 (ymax), 4 (zmin), 5(zmax), correspondent to the <span style="font-weight: bold;">Orientation</span> method.</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 16.196%; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;">
+<p class="VBA-Text" style="font-style: italic;">dxmin / dxmax</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;" width="564">
+<p class="VBA-Text">The min / max mesh location in x-direction.</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 16.196%; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;">
+<p class="VBA-Text" style="font-style: italic;">dymin / dymax</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;" width="564">
+<p class="VBA-Text">The min / max mesh location in y-direction.</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 16.196%; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;">
+<p class="VBA-Text" style="font-style: italic;">dzmin / dzmax</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;" width="564">
+<p class="VBA-Text">The min / max mesh location in z-direction.</p>
+</td>
+</tr>
+</table>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">GetPortCenterCoordinates ( <a href="../common_vbageneral/common_general_integer.htm" id="a126" style="font-weight: normal; font-style: normal;" name="a126">int</a> <span style="font-style: italic;"><i>portnumber,</i></span> <span style="font-weight: normal;"><a href="../common_vbageneral/common_general_double_ref.htm" id="a131" name="a131">double_ref</a></span> <span style="font-style: italic;"><i>dxcenter,</i></span> <span style="font-weight: normal;"><a href="../common_vbageneral/common_general_double_ref.htm" id="a132" name="a132">double_ref</a></span> <span style="font-style: italic;"><i>dycenter,</i></span> <span style="font-weight: normal;"><a href="../common_vbageneral/common_general_double_ref.htm" id="a133" name="a133">double_ref</a></span> <span style="font-style: italic;"><i>dzcenter</i></span>)</p>
+<p class="VBA-Text-Indent">This function returns the center point of a waveguide or discrete port, specified by its <span style="font-style: italic;"><i>portnumber</i></span>.</p>
+<p class="VBA-Heading-Method">&#160;</p>
+<p class="VBA-Heading-Method">GetFacePortTypeAndSize( <a href="../common_vbageneral/common_general_integer.htm" id="a125" style="font-weight: normal; font-style: normal;" name="a125">int</a> <span style="font-style: italic;"><i>portnumber, <a href="../common_vbageneral/common_general_long_ref.htm" id="a127" style="font-weight: normal; font-style: normal;" name="a127">long_ref</a> faceporttype,</i></span> <span style="font-weight: normal;"><a href="../common_vbageneral/common_general_double_ref.htm" id="a128" name="a128">double_ref</a></span> <span style="font-style: italic;"><i>dsizevalue1,</i></span> <span style="font-weight: normal;"><a href="../common_vbageneral/common_general_double_ref.htm" id="a130" name="a130">double_ref</a></span> <span style="font-style: italic;"><i>dsizevalue2</i></span> )</p>
+<p class="VBA-Text-Indent">This function returns characteristic values of the discrete face port of a special geometry type (enumerated by <span style="font-style: italic;"><i>faceporttype).</i></span></p>
+<p class="VBA-Text-Indent">The size value parameters &#160;have the following meaning:</p>
+<table style="margin-left: 24px;" cellspacing="0" width="673">
+<col style="width: 16.196%;" />
+<col width="564" />
+<col width="564" />
+<col width="564" />
+<tr style="vertical-align: top;">
+<td style="border: Solid 1px #000000; width: 16.196%; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;">
+<p class="VBA-Text" style="font-style: italic;">faceporttype</p>
+</td>
+<td style="border-top: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;" width="564">
+<p class="VBA-Text">type</p>
+</td>
+<td style="border-top: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;" width="564">
+<p class="VBA-Text">dsizevalue1</p>
+</td>
+<td style="border-top: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;" width="564">
+<p class="VBA-Text">dsizevalue2</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 16.196%; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;">
+<p>0</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;" width="564">
+<p class="VBA-Text">unknown</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;" width="564">
+<p class="VBA-Text">---</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;" width="564">
+<p class="VBA-Text">---</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 16.196%; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;">
+<p class="VBA-Text" style="font-style: italic;">1</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;" width="564">
+<p class="VBA-Text">rectangular</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;" width="564">
+<p class="VBA-Text">width</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;" width="564">
+<p class="VBA-Text">length</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 16.196%; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;">
+<p class="VBA-Text" style="font-style: italic;">2</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;" width="564">
+<p class="VBA-Text">barrel shaped / cylindrical</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;" width="564">
+<p class="VBA-Text">radius</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;" width="564">
+<p class="VBA-Text">length</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 16.196%; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;">
+<p class="VBA-Text" style="font-style: italic;">3</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;" width="564">
+<p class="VBA-Text">coaxial</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;" width="564">
+<p class="VBA-Text">radius of excited edge</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;" width="564">
+<p class="VBA-Text">radius of ground edge</p>
+</td>
+</tr>
+</table>
+<p class="VBA-Heading-Category">GetLabel ( <a href="../common_vbageneral/common_general_integer.htm" id="a123" style="font-weight: normal; font-style: normal;" name="a123">int</a> portnumber ) <a href="../common_vbageneral/common_general_string.htm" id="a124" style="font-weight: normal; font-style: normal;" name="a124">string</a></p>
+<p class="VBA-Text-Indent">This function returns the label of the port.</p>
+<p class="VBA-Heading-Category"><a name="Defaults" id="Defaults"></a>Default Settings</p>
+<p class="VBA-Text-Example">Label("")</p>
+<p class="VBA-Text-Example">NumberOfModes (1)</p>
+<p class="VBA-Text-Example">AdjustPolarization (False)</p>
+<p class="VBA-Text-Example">PolarizationAngle (0.0)</p>
+<p class="VBA-Text-Example">ReferencePlaneDistance (0.0)</p>
+<p class="VBA-Text-Example">TextSize (50)</p>
+<p class="VBA-Text-Example">Coordinates ("Free")</p>
+<p class="VBA-Text-Example">Orientation ("zmin")</p>
+<p class="VBA-Text-Example">PortOnBound (True)</p>
+<p class="VBA-Text-Example">ClipPickedPortToBound (False)</p>
+<p class="VBA-Text-Example">Xrange (0.0, 0.0)</p>
+<p class="VBA-Text-Example">Yrange (0.0, 0.0)</p>
+<p class="VBA-Text-Example">Zrange (0.0, 0.0)</p>
+<p class="VBA-Heading-Category"><a name="Examples" id="Examples"></a>Examples:</p>
+<p class="VBA-Text-Example">With Port &#160;&#160;&#160;&#160;<span style="color: #008000;"><font color="green">' Definition of a normal waveguide port</font></span></p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.Reset</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.PortNumber (1)</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.NumberOfModes (2)</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.AdjustPolarization (False)</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.PolarizationAngle (0.0)</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.ReferencePlaneDistance (-5)</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.TextSize (50)</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.Coordinates ("Free")</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.Orientation ("zmax")</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.PortOnBound (False)</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.ClipPickedPortToBound (False)</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.Xrange (-1, 1)</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.Yrange (-0.3, 0.2)</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.Zrange (1.1, 1.1)</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.Create</p>
+<p class="VBA-Text-Example">End With</p>
+<p class="footnote-text" style="margin-top: 0; margin-bottom: 0;">&#160;</p>
+<p class="VBA-Text-Example">With Port &#160;&#160;&#160;&#160;&#160;<span style="color: #008000;"><font color="green">' Definition of a multipin port</font></span></p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.Reset</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.PortNumber (2)</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.ReferencePlaneDistance (0)</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.TextSize (50)</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.Coordinates ("Full")</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.Orientation ("zmin")</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.PortOnBound (True)</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.ClipPickedPortToBound (False)</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.Xrange (-9.2, 9.2)</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.Yrange (-9.2, 9.2)</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.Zrange (0.0, 0.0)</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.AddPotentialNumerically (1, "Positive", -2.0, 0.0)</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.AddPotentialNumerically (1, "Positive", 2.0, 0.0)</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.AddPotentialNumerically (2, "Positive", -2.0, 0.0)</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.AddPotentialNumerically (2, "Negative", 2.0, 0.0)</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.Create</p>
+<p class="VBA-Text-Example">End With</p>
+<?rh-p style="margin-bottom: 0px; text-align: Right; margin-left: 18px; 
+                 margin-right: 18px; margin-top: 18px;" ?>
+<div style="width: 100%; position: relative;" id="footer">
+<p style="border-bottom: Solid 1px #dddddd; text-align: Left; margin-left: 0px; font-family: Arial, sans-serif; line-height: Normal; margin-top: 9px; margin-right: 0px; margin-bottom: 6px; border-left-width: 1px; border-top-width: 1px; border-right-width: 1px;"><span style="text-align: Left; font-family: Arial, sans-serif; line-height: Normal;">&#160;</span></p>
+<table cellspacing="0" width="100%">
+<col style="width: 50%;" />
+<col style="width: 50%;" />
+<tr>
+<td style="vertical-align: Top;"><span style="font-family: Arial, sans-serif; line-height: Normal; font-size: 8pt;"><font size="1" style="font-size:8pt;">CST Studio Suite 2026</font></span></td>
+<td style="vertical-align: Top;">
+<p style="text-align: right;">&#160;</p>
+</td>
+</tr>
+</table>
+<p>&#160;</p>
+</div>
+<script type="text/javascript" language="javascript1.2">
+//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+        writeIntopicBar(0);
+
+
+highlightSearch();
+//-->
+//]]>
+</script>
+</body>
+</html>

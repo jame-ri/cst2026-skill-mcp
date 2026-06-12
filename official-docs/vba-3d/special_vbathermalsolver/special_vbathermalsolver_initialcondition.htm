@@ -1,0 +1,256 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="Adobe RoboHelp 11" />
+<title>InitialCondition Object</title>
+<link rel="StyleSheet" href="../online_help_vba.css" type="text/css" />
+<style type="text/css">
+/*<![CDATA[*/
+<!--
+body { border-bottom-style:None; }
+-->
+/*]]>*/
+</style>
+
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+        origWidth = innerWidth;
+        origHeight = innerHeight;
+        onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+/*<![CDATA[*/
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+-->
+/*]]>*/
+</style>
+
+<script type="text/javascript" language="javascript1.2" src="../whmsg.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript" src="../whver.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript1.2" src="../whutils.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript1.2" src="../whproxy.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript1.2" src="../whlang.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript1.2" src="../whtopic.js" charset="utf-8">
+</script>
+</head>
+<body>
+<script type="text/javascript" language="javascript1.2">
+//<![CDATA[
+<!--
+if (window.gbWhTopic)
+{
+        var strUrl = document.location.href;
+        var bc = 0;
+        var n = strUrl.toLowerCase().indexOf("bc-");
+        if(n != -1)
+        {
+                document.location.replace(strUrl.substring(0, n));
+                bc = strUrl.substring(n+3);
+        }
+
+        if (window.addTocInfo)
+        {
+        addTocInfo("3D Simulation VBA\nVBA Objects\nSources and Ports\nThermal\nInitialCondition Object");
+
+        }
+        if (window.writeBtnStyle)
+                writeBtnStyle();
+
+        if (window.writeIntopicBar)
+                writeIntopicBar(0);
+
+        
+        document.write("<p style=\"font-family: Tahoma; font-size: 9pt; font-weight: 400;  font-style:normal; color: rgb(0, 0, 0); text-decoration:none; text-align: left\"> ");
+AddMasterBreadcrumbs("../index.htm", "font-family: Tahoma; font-size: 9pt; font-weight: 400;  font-style:normal; color: rgb(0, 0, 0); text-decoration:none; text-align: left", "|", "Home", "../special_vbaobjects/special_vbaobjects_vbaobjects.htm");
+document.write("<a style=\"font-family: Tahoma; font-size: 9pt; font-weight: 400;  font-style:normal; color: rgb(0, 0, 0); text-decoration:none; text-align: left\" href=\"../special_vbaobjects/special_vbaobjects_vbaobjects.htm\">3D Simulation VBA<\/a> | <a style=\"font-family: Tahoma; font-size: 9pt; font-weight: 400;  font-style:normal; color: rgb(0, 0, 0); text-decoration:none; text-align: left\" href=\"../special_vbaobjects/special_vbaobjects_vbaobjects.htm\">VBA Objects<\/a> | <a style=\"font-family: Tahoma; font-size: 9pt; font-weight: 400;  font-style:normal; color: rgb(0, 0, 0); text-decoration:none; text-align: left\" href=\"../special_vbasignals/special_vbasignals_timesignal_object.htm\">Sources and Ports<\/a> | <a style=\"font-family: Tahoma; font-size: 9pt; font-weight: 400;  font-style:normal; color: rgb(0, 0, 0); text-decoration:none; text-align: left\" href=\"special_vbathermalsolver_compactthermalmodel_object.htm\">Thermal<\/a> | InitialCondition Object<\/p>");
+
+}
+else
+        if (window.gbIE4)
+                document.location.reload();
+
+onLoadHandler = function()
+{
+  if (window.setRelStartPage)
+        {
+        setTimeout("setRelStartPage('../index.htm');", 1)
+
+    setTimeout("UpdateBreadCrumbsMarker();", 1);
+        }
+}
+
+if (window.addEventListener){  
+        window.addEventListener('load', onLoadHandler, false);   
+} else if (window.attachEvent){  
+        window.attachEvent('onload', onLoadHandler);  
+}
+
+function onSetStartPage()
+{
+  autoSync(1);
+  sendSyncInfo();
+  sendAveInfoOut();
+}
+//-->
+//]]>
+</script><script type="text/javascript" src="../ehlpdhtm.js" language="JavaScript1.2">
+</script>
+<table cellspacing="0" width="100%">
+<col style="width: 50%;" />
+<col style="width: 50%;" />
+<tr>
+<td style="vertical-align: middle; padding-top: 5px; padding-bottom: 5px;">
+<p style="margin-top: 0px; margin-bottom: 0px;"><img src="../3ds.png" alt="" style="border: none;" border="0" /></p>
+</td>
+<td style="vertical-align: middle;">
+<p style="text-align: right;"><a href="https://www.3ds.com/products-services/3dexperience/" target="_blank"><img src="../3dexp.png" alt="" style="border: none;" width="32" height="32" border="0" /></a></p>
+</td>
+</tr>
+</table>
+<h1>InitialCondition Object</h1>
+<p class="VBA-Text">This object is used to specify initial conditions for solids and fluid domains for the <a href="special_vbathermalsolver_chtsolver.htm">Conjugate Heat Transfer Solver</a>.</p>
+<p class="VBA-Text">For solids, the initial temperature can be specified. For fluid domains the initial fluid velocity and/or temperature can be specified.</p>
+<ul>
+<li class="p-VBA-Index-Category">
+<p class="VBA-Index-Category"><a href="#Methods">Methods</a></p>
+</li>
+<li class="p-VBA-Index-Category">
+<p class="VBA-Index-Category"><a href="#Example">Example</a></p>
+</li>
+</ul>
+<p class="VBA-Heading-Category"><a name="Methods" id="Methods"></a>Methods</p>
+<p class="VBA-Heading-Method">Reset</p>
+<p class="VBA-Text-Indent">Resets all internal settings of the initial condition object to their default values.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">Name ( <span style="font-style: italic;"><i><a href="../common_vbageneral/common_general_string.htm" id="a6" style="font-weight: normal; font-style: normal;" name="a6">string</a> name</i></span> )</p>
+<p class="VBA-Text-Indent">Specifies the <span style="font-style: italic;"><i>name</i></span> of the initial condition. Each initial condition must have a unique name.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">Set ( <a href="../common_vbageneral/common_general_string.htm" id="a6111" style="font-style: normal; font-weight: normal;" name="a6111">string</a> <span style="font-style: italic;"><i>parameterName,</i></span> <a href="../common_vbageneral/common_general_variant.htm" style="color: rgb(0, 0, 255); font-family: Arial; font-size: 12px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: left; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px;">variant</a> <span style="font-style: italic;"><i>parameterValues, ...</i></span> )</p>
+<p class="VBA-Text-Indent">To define special parameters for a thermoelectric cooler, the command <span style="font-style: italic;"><i>Set</i></span> can be used. Available <span style="font-style: italic;"><i>parameterName</i></span>s are listed below. All values must be set before the <span style="font-style: italic;"><i>Create</i></span> command is called.</p>
+<table style="margin-left: 40px; left: 0px; top: 1623px; border-collapse: separate; border-collapse: separate;" cellspacing="0" width="1057" border="1">
+<col style="width: 18.189%;" />
+<col style="width: 26.223%;" />
+<col style="width: 53.357%;" />
+<tr>
+<td>
+<p style="font-weight: bold;">parameterName</p>
+</td>
+<td>
+<p style="font-weight: bold;">parameterValues</p>
+</td>
+<td>
+<p style="font-weight: bold;">Meaning</p>
+</td>
+</tr>
+<tr>
+<td>
+<p>"Temperature"</p>
+</td>
+<td>
+<p class="VBA-Heading-Method" style="font-weight: normal;"><span style="font-style: italic;"><i>&#160;</i></span><a href="../common_vbageneral/common_general_enum.htm" style="font-weight: normal;">enum</a> <span style="font-style: italic;"><i>type { "Ambient", "Fixed" }</i></span></p>
+</td>
+<td>
+<p class="VBA-Text">Initial temperature for the fluid domain or solid. The second parameter specifies the way in which the temperature is prescribed. Available types are:</p>
+<table cellspacing="0" width="100%">
+<col style="width: 25.162%;" />
+<col style="width: 74.838%;" />
+<tr>
+<td style="vertical-align: top;"><span style="font-family: Arial, sans-serif; font-size: 9pt;"><font size="1" style="font-size:9pt;">"</font></span><span style="font-weight: bold; font-style: italic; font-family: Arial, sans-serif; font-size: 9pt;"><font size="1" style="font-size:9pt;"><i>Ambient"</i></font></span></td>
+<td style="vertical-align: top;"><span style="font-variant-ligatures: normal; font-variant-caps: normal; orphans: 2; text-align: justify; widows: 2; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial; display: inline ! important ; float: none; font-family: Arial, sans-serif; font-size: 9pt;"><font size="1" style="font-size:9pt;">The ambient temperature, which is set in the solver parameter settings, will be used for the initial condition.</font></span></td>
+</tr>
+<tr>
+<td style="vertical-align: top;"><span style="font-family: Arial, sans-serif; font-size: 9pt;"><font size="1" style="font-size:9pt;">"</font></span><span style="font-weight: bold; font-style: italic; font-family: Arial, sans-serif; font-size: 9pt;"><font size="1" style="font-size:9pt;"><i>Fixed</i></font></span><span style="font-family: Arial, sans-serif; font-size: 9pt;"><font size="1" style="font-size:9pt;">"</font></span></td>
+<td style="vertical-align: top;"><span style="font-variant-ligatures: normal; font-variant-caps: normal; orphans: 2; text-align: justify; widows: 2; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial; display: inline ! important ; float: none; font-family: Arial, sans-serif; font-size: 9pt;"><font size="1" style="font-size:9pt;">A user-defined fixed value can be assigned to the initial condition. In this case two further parameters are required:</font></span> <span style="font-style: italic; font-family: Arial, sans-serif; font-size: 9pt;"><font size="1" style="font-size:9pt;"><i><a href="../common_vbageneral/common_general_string.htm" id="a611" style="font-weight: normal; font-style: normal; font-family: Arial, sans-serif; font-size: 9pt;" name="a611">string</a></i></font></span> <span style="font-style: italic; font-family: Arial, sans-serif; font-size: 9pt;"><font size="1" style="font-size:9pt;"><i>value</i></font></span><span style="font-family: Arial, sans-serif; font-size: 9pt;"><font size="1" style="font-size:9pt;">, <a href="../common_vbageneral/common_general_enum.htm" style="font-family: Arial, sans-serif; font-size: 9pt;">enum</a></font></span> <span style="font-style: italic; font-family: Arial, sans-serif; font-size: 9pt;"><font size="1" style="font-size:9pt;"><i>unit</i></font></span><span style="font-family: Arial, sans-serif; font-size: 9pt;"><font size="1" style="font-size:9pt;">, where</font></span> <span style="font-style: italic; font-family: Arial, sans-serif; font-size: 9pt;"><font size="1" style="font-size:9pt;"><i>unit</i></font></span> <span style="font-family: Arial, sans-serif; font-size: 9pt;"><font size="1" style="font-size:9pt;">is either "</font></span><span style="font-style: italic; font-family: Arial, sans-serif; font-size: 9pt;"><font size="1" style="font-size:9pt;"><i>Kelvin</i></font></span><span style="font-family: Arial, sans-serif; font-size: 9pt;"><font size="1" style="font-size:9pt;">" or "</font></span><span style="font-style: italic; font-family: Arial, sans-serif; font-size: 9pt;"><font size="1" style="font-size:9pt;"><i>Celsius</i></font></span><span style="font-family: Arial, sans-serif; font-size: 9pt;"><font size="1" style="font-size:9pt;">" or "</font></span><span style="font-style: italic; font-family: Arial, sans-serif; font-size: 9pt;"><font size="1" style="font-size:9pt;"><i>Fahrenheit</i></font></span><span style="font-family: Arial, sans-serif; font-size: 9pt;"><font size="1" style="font-size:9pt;">".</font></span></td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>
+<p>"Velocity"</p>
+</td>
+<td>
+<p class="VBA-Heading-Method" style="font-weight: normal;"><a href="../common_vbageneral/common_general_expression.htm">double expression</a> <span style="font-style: italic;"><i>vx,&#160;</i></span><a href="../common_vbageneral/common_general_expression.htm">double expression</a> <span style="font-style: italic;"><i>vy,&#160;</i></span><a href="../common_vbageneral/common_general_expression.htm">double expression</a> <span style="font-style: italic;"><i>vz,&#160;</i></span><span style="font-family: Arial, sans-serif;"><a href="../common_vbageneral/common_general_enum.htm" style="font-family: Arial, sans-serif; font-size: 9pt;">enum</a></span> <span style="font-style: italic; font-family: Arial, sans-serif;"><i>unit</i></span></p>
+</td>
+<td>
+<p>Initial velocity prescribed in the fluid domain. The unit can be either "<span style="font-style: italic;"><i>m/s</i></span>" or "<span style="font-style: italic;"><i>km/h</i></span>".</p>
+</td>
+</tr>
+</table>
+<p class="VBA-Heading-Method">&#160;</p>
+<p class="VBA-Heading-Method">&#160;</p>
+<p class="VBA-Heading-Method">AddItem ( <span style="font-style: italic;"><i><a href="../common_vbageneral/common_general_string.htm" id="a21" style="font-weight: normal; font-style: normal;" name="a21">string</a> objectname,</i></span> <span style="font-style: italic;"><i><a href="../common_vbageneral/common_general_string.htm" id="a211" style="font-weight: normal; font-style: normal;" name="a211">string</a> initialconditionname</i></span> )</p>
+<p class="VBA-Text-Indent">Adds the initial condition named <span style="font-style: italic;"><i>initialconditionname</i></span> to the object (fluid domain or solid) with the given <span style="font-style: italic;"><i>objectname</i></span>. The <span style="font-style: italic;"><i>objectname</i></span> <span>must be prefixed by either "</span><span style="font-style: italic;"><i>fluiddomain$"</i></span> <span>or "</span><span style="font-style: italic;"><i>solid$",</i></span> <span>depending on the type of the object.</span></p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">RemoveItem ( <span style="font-style: italic;"><i><a href="../common_vbageneral/common_general_string.htm" id="a212" style="font-weight: normal; font-style: normal;" name="a212">string</a> objectname,</i></span> <span style="font-style: italic;"><i><a href="../common_vbageneral/common_general_string.htm" id="a2111" style="font-weight: normal; font-style: normal;" name="a2111">string</a> initialconditionname</i></span> )</p>
+<p class="VBA-Text-Indent">Removes the initial condition named <span style="font-style: italic;"><i>initialconditionname</i></span> from &#160;the object (fluid domain or solid) with the given <span style="font-style: italic;"><i>objectname</i></span>. The <span style="font-style: italic;"><i>objectname</i></span> must be prefixed by either "<span style="font-style: italic;"><i>fluiddomain$"</i></span> or "<span style="font-style: italic;"><i>solid$",</i></span> depending on the type of the object.</p>
+<p class="VBA-Heading-Method">&#160;</p>
+<p class="VBA-Heading-Method">Create</p>
+<p class="VBA-Text-Indent">Creates the initial condition with the previously set parameters.</p>
+<p class="vba-text-indent">&#160;</p>
+<p class="VBA-Heading-Method">Delete ( <span style="font-style: italic;"><i><a href="../common_vbageneral/common_general_string.htm" id="a2" style="font-weight: normal; font-style: normal;" name="a2">string</a> name</i></span> )</p>
+<p class="VBA-Text-Indent">Deletes the initial condition with the given <span style="font-style: italic;"><i>name</i></span>.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">Rename &#160;( <span style="font-style: italic;"><i><a href="../common_vbageneral/common_general_string.htm" id="a3" style="font-weight: normal; font-style: normal;" name="a3">string</a> oldname,</i></span> &#160;<span style="font-style: italic;"><i><a href="../common_vbageneral/common_general_string.htm" id="a4" style="font-weight: normal; font-style: normal;" name="a4">string</a> newname</i></span> &#160;)</p>
+<p class="VBA-Text-Indent">Renames the initial condition with the given <span style="font-style: italic;"><i>oldname</i></span> to the defined <span style="font-style: italic;"><i>newname</i></span>.</p>
+<p class="vba-text-indent">&#160;</p>
+<p class="VBA-Heading-Category"><a name="Example" id="Example"></a>Example</p>
+<p class="VBA-Text-Example">With InitialCondition</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.Reset</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.Name "initialcondition1"</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.Set "Temperature", "Ambient"</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.Set "Velocity",0.0,0.0,0.0, "m/s"</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.Create</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.AddItem "solid$component1:solid1", "initialcondition1"</p>
+<p class="VBA-Text-Example">End With</p>
+<p class="VBA-Text-Example">&#160;</p>
+<?rh-p style="margin-bottom: 0px; text-align: Right; margin-left: 18px; 
+                 margin-right: 18px; margin-top: 18px;" ?>
+<div style="width: 100%; position: relative;" id="footer">
+<p style="border-bottom: Solid 1px #dddddd; text-align: Left; margin-left: 0px; font-family: Arial, sans-serif; line-height: Normal; margin-top: 9px; margin-right: 0px; margin-bottom: 6px; border-left-width: 1px; border-top-width: 1px; border-right-width: 1px;"><span style="text-align: Left; font-family: Arial, sans-serif; line-height: Normal;">&#160;</span></p>
+<table cellspacing="0" width="100%">
+<col style="width: 50%;" />
+<col style="width: 50%;" />
+<tr>
+<td style="vertical-align: Top;"><span style="font-family: Arial, sans-serif; line-height: Normal; font-size: 8pt;"><font size="1" style="font-size:8pt;">CST Studio Suite 2026</font></span></td>
+<td style="vertical-align: Top;">
+<p style="text-align: right;">&#160;</p>
+</td>
+</tr>
+</table>
+<p>&#160;</p>
+</div>
+<script type="text/javascript" language="javascript1.2">
+//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+        writeIntopicBar(0);
+
+
+highlightSearch();
+//-->
+//]]>
+</script>
+</body>
+</html>

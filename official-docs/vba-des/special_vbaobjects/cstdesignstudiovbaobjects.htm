@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="Adobe RoboHelp 11" />
+<title>CST Design Studio VBA Objects</title>
+<link rel="StyleSheet" href="../online_help_vba.css" type="text/css" />
+<style type="text/css">
+/*<![CDATA[*/
+<!--
+body { border-bottom-style:None; }
+-->
+/*]]>*/
+</style>
+
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function ehlp_showtip(current,e,text)
+{
+  if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == 'Netscape'))
+  {
+    document.tooltip.document.write("<layer bgColor='yellow' style='border:1px solid black;font-size:12px;'>"+ text + "<\/layer>");
+    document.tooltip.document.close();
+    document.tooltip.left=e.pageX+5;
+    document.tooltip.top=e.pageY+5;
+    document.tooltip.visibility="show";
+  }
+}
+function ehlp_hidetip()
+{
+  document.tooltip.visibility="hidden";
+}
+//]]>
+</script>
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+        origWidth = innerWidth;
+        origHeight = innerHeight;
+        onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+/*<![CDATA[*/
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+-->
+/*]]>*/
+</style>
+
+<script type="text/javascript" language="javascript1.2" src="../whmsg.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript" src="../whver.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript1.2" src="../whutils.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript1.2" src="../whproxy.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript1.2" src="../whlang.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript1.2" src="../whtopic.js" charset="utf-8">
+</script>
+</head>
+<body>
+<script type="text/javascript" language="javascript1.2">
+//<![CDATA[
+<!--
+if (window.gbWhTopic)
+{
+        var strUrl = document.location.href;
+        var bc = 0;
+        var n = strUrl.toLowerCase().indexOf("bc-");
+        if(n != -1)
+        {
+                document.location.replace(strUrl.substring(0, n));
+                bc = strUrl.substring(n+3);
+        }
+
+        if (window.addTocInfo)
+        {
+        addTocInfo("Circuits & Systems VBA\nCST Design Studio VBA Objects");
+
+        }
+        if (window.writeBtnStyle)
+                writeBtnStyle();
+
+        if (window.writeIntopicBar)
+                writeIntopicBar(0);
+
+        
+        document.write("<p style=\"font-family: Tahoma; font-size: 9pt; font-weight: 400;  font-style:normal; color: rgb(0, 0, 0); text-decoration:none; text-align: left\"> ");
+AddMasterBreadcrumbs("../index.htm", "font-family: Tahoma; font-size: 9pt; font-weight: 400;  font-style:normal; color: rgb(0, 0, 0); text-decoration:none; text-align: left", "|", "Home", "cstdesignstudiovbaobjects.htm");
+document.write("<a style=\"font-family: Tahoma; font-size: 9pt; font-weight: 400;  font-style:normal; color: rgb(0, 0, 0); text-decoration:none; text-align: left\" href=\"cstdesignstudiovbaobjects.htm\">Circuits & Systems VBA<\/a> | CST Design Studio VBA Objects<\/p>");
+
+}
+else
+        if (window.gbIE4)
+                document.location.reload();
+
+onLoadHandler = function()
+{
+  if (window.setRelStartPage)
+        {
+        setTimeout("setRelStartPage('../index.htm');", 1)
+
+    setTimeout("UpdateBreadCrumbsMarker();", 1);
+        }
+}
+
+if (window.addEventListener){  
+        window.addEventListener('load', onLoadHandler, false);   
+} else if (window.attachEvent){  
+        window.attachEvent('onload', onLoadHandler);  
+}
+
+function onSetStartPage()
+{
+  autoSync(1);
+  sendSyncInfo();
+  sendAveInfoOut();
+}
+//-->
+//]]>
+</script><script type="text/javascript" src="../ehlpdhtm.js" language="JavaScript1.2">
+</script>
+<table cellspacing="0" width="100%">
+<col style="width: 50%;" />
+<col style="width: 50%;" />
+<tr>
+<td style="vertical-align: middle; padding-top: 5px; padding-bottom: 5px;">
+<p style="margin-top: 0px; margin-bottom: 0px;"><img src="../3ds.png" alt="" style="border: none;" border="0" /></p>
+</td>
+<td style="vertical-align: middle;">
+<p style="text-align: right;"><a href="https://www.3ds.com/products-services/3dexperience/" target="_blank"><img src="../3dexp.png" alt="" style="border: none;" width="32" height="32" border="0" /></a></p>
+</td>
+</tr>
+</table>
+<h1>CST Design Studio VBA Objects</h1>
+<p class="Tip-Note-Text-Bulleted" style="margin-top: 6pt; text-indent: 0px; margin-left: 0px;">CST Studio Suite is implemented as an OLE automation server. The application is registered under "CSTStudio.Application". An instance can be created through the <span style="font-style: italic;"><i>CreateObject</i></span> VBA command:</p>
+<p style="font-family: 'Courier New', monospace;">Dim app As Object</p>
+<p style="font-family: 'Courier New', monospace;">Set app = CreateObject ("CSTStudio.Application")</p>
+<p class="Tip-Note-Text-Bulleted" style="text-indent: 0px; text-align: left; margin-left: 0px; font-family: Arial, sans-serif;">This application object provides methods to open and create projects. Refer to the <a href="../../../advanced/vbaapplicationobject.htm">Application Object</a> for details.</p>
+<p class="Tip-Note-Text-Bulleted" style="text-indent: 0px; text-align: left; margin-left: 0px;">If you open the built-in VBA-Interpreter for a CST Design Studio project all of these objects are already available. To call the method <span style="font-style: italic;"><i>AMethod</i></span> of the object <span style="font-style: italic;"><i>AnObject</i></span> simply type <span style="font-style: italic;"><i>AnObject.AMethod ( Parameters )</i></span>. All functions and methods of the <a href="../special_vbacommands/projectobject.htm">Project Object</a> and the <a href="../special_vbacommands/unitsobject.htm">Units Object</a> can be called directly, because you are in the scope of this object.</p>
+<p class="VBA-Heading-Category">Project</p>
+<p class="VBA-Text"><a href="../special_vbacommands/projectobject.htm">Project</a></p>
+<p class="VBA-Text"><a href="../special_vbacommands/unitsobject.htm">Units</a></p>
+<p class="VBA-Text"><a href="../special_vbacommands/result_tree_object.htm">ResultTree</a></p>
+<p class="VBA-Heading-Category">Component/Modeling</p>
+<p class="VBA-Text"><a href="../special_vbacommands/blockobject.htm">Block</a></p>
+<p class="VBA-Text"><a href="../special_vbacommands/circuitprobeobject.htm">CircuitProbe</a></p>
+<p class="VBA-Text"><a href="../special_vbacommands/externalportobject.htm">ExternalPort</a></p>
+<p class="VBA-Text"><a href="../special_vbacommands/net_object.htm">Net</a></p>
+<p class="VBA-Text"><a title="SchematicLayout" href="../special_vbacommands/schematiclayout_object.htm" onmouseover="if ((parseInt(navigator.appVersion) == 4) &amp;&amp; (navigator.appName == 'Netscape')) ehlp_showtip(this,event,'SchematicLayout');" onmouseout="if ((parseInt(navigator.appVersion) == 4) &amp;&amp; (navigator.appName == 'Netscape')) ehlp_hidetip();">SchematicLayout</a></p>
+<p class="VBA-Heading-Category">Simulation</p>
+<p class="VBA-Text"><a href="../special_vbacommands/simulationtaskobject.htm">SimulationTask</a></p>
+<p class="VBA-Text"><a href="../special_vbacommands/ibisami_task_object.htm">IBISAMITask</a></p>
+<p class="VBA-Text"><a href="../special_vbacommands/eyeanalysis_task_object.htm">EyeAnalysisTask</a></p>
+<p class="VBA-Text"><a href="../special_vbacommands/phased_array_task_object.htm">ArrayTask</a></p>
+<p class="VBA-Text"><a href="../special_vbacommands/parametersweepobject.htm">ParameterSweep</a></p>
+<p class="VBA-Text"><a href="../simulationproject_object.htm">SimulationProject</a></p>
+<p class="VBA-Text"><a href="../special_vbacommands/optimizerobject.htm">Optimizer</a></p>
+<p class="VBA-Heading-Category">Result</p>
+<p class="VBA-Text"><a href="../special_vbacommands/result0d_object.htm">Result0D</a></p>
+<p class="VBA-Text"><a href="../special_vbacommands/result1dobject.htm">Result1D</a></p>
+<p class="VBA-Text"><a href="../special_vbacommands/result1dcomplex_object.htm">Result1DComplex</a></p>
+<p class="VBA-Text"><a href="../../VBA_3D/special_vbapostproc/scatterresult_object.htm">ScatterResult</a></p>
+<p class="VBA-Text"><a href="../../VBA_3D/special_vbapostproc/result_2d.htm">Result2D</a></p>
+<p class="VBA-Text"><a href="../special_vbacommands/special_vbapostproc_networkparameterextractiono.htm">Network Parameter Extraction</a></p>
+<p class="VBA-Heading-Category">Plot</p>
+<p class="VBA-Text"><a href="../../VBA_3D/common_vbaplot/plot2d3d.htm">Plot2D3D</a></p>
+<p class="VBA-Text"><a href="../../VBA_3D/common_vbaplot/common_vbaplot_scalarplot2d_object.htm">ScalarPlot2D</a></p>
+<p class="VBA-Text"><a href="../../VBA_3D/common_vbaplot/common_vbaplot_scalarplot3d_object.htm">ScalarPlot3D</a></p>
+<p class="VBA-Text"><a href="../../VBA_3D/common_vbaplot/common_vbaplot_vectorplot2d_object.htm">VectorPlot2D</a></p>
+<p class="VBA-Text"><a href="../../VBA_3D/common_vbaplot/common_vbaplot_vectorplot3d_object.htm">VectorPlot3D</a></p>
+<p class="VBA-Text"><a href="../../VBA_3D/common_vbaplot/colourmapplot_object.htm">ColourMapPlot</a></p>
+<p class="VBA-Text"><a href="../../VBA_3D/common_vbapostproc/common_vbapostproc_colorramp_object.htm">ColorRamp</a></p>
+<p class="Tip-Note-Text-Bulleted" style="text-indent: 0px; text-align: left; margin-left: 0px;">&#160;</p>
+<?rh-p style="margin-bottom: 0px; text-align: Right; margin-left: 18px; 
+                 margin-right: 18px; margin-top: 18px;" ?>
+<div style="width: 100%; position: relative;" id="footer">
+<p style="border-bottom: Solid 1px #dddddd; text-align: Left; margin-left: 0px; font-family: Arial, sans-serif; line-height: Normal; margin-top: 9px; margin-right: 0px; margin-bottom: 6px; border-left-width: 1px; border-top-width: 1px; border-right-width: 1px;"><span style="text-align: Left; font-family: Arial, sans-serif; line-height: Normal;">&#160;</span></p>
+<table cellspacing="0" width="100%">
+<col style="width: 50%;" />
+<col style="width: 50%;" />
+<tr>
+<td style="vertical-align: Top;"><span style="font-family: Arial, sans-serif; line-height: Normal; font-size: 8pt;"><font size="1" style="font-size:8pt;">CST Studio Suite 2026</font></span></td>
+<td style="vertical-align: Top;">
+<p style="text-align: right;">&#160;</p>
+</td>
+</tr>
+</table>
+<p>&#160;</p>
+</div>
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+ if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == 'Netscape'))
+  document.write("<div id='tooltip' class='WebHelpPopupMenu'><\/div>");
+//]]>
+</script><script type="text/javascript" language="javascript1.2">
+//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+        writeIntopicBar(0);
+
+
+highlightSearch();
+//-->
+//]]>
+</script>
+</body>
+</html>

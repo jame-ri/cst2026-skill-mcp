@@ -1,0 +1,328 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="Adobe RoboHelp 11" />
+<title>FloquetPort Object</title>
+<link rel="StyleSheet" href="../online_help_vba.css" type="text/css" />
+<style type="text/css">
+/*<![CDATA[*/
+<!--
+body { border-bottom-style:None; }
+-->
+/*]]>*/
+</style>
+
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+        origWidth = innerWidth;
+        origHeight = innerHeight;
+        onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+/*<![CDATA[*/
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+-->
+/*]]>*/
+</style>
+
+<script type="text/javascript" language="javascript1.2" src="../whmsg.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript" src="../whver.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript1.2" src="../whutils.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript1.2" src="../whproxy.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript1.2" src="../whlang.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript1.2" src="../whtopic.js" charset="utf-8">
+</script>
+</head>
+<body>
+<script type="text/javascript" language="javascript1.2">
+//<![CDATA[
+<!--
+if (window.gbWhTopic)
+{
+        var strUrl = document.location.href;
+        var bc = 0;
+        var n = strUrl.toLowerCase().indexOf("bc-");
+        if(n != -1)
+        {
+                document.location.replace(strUrl.substring(0, n));
+                bc = strUrl.substring(n+3);
+        }
+
+        if (window.addTocInfo)
+        {
+        addTocInfo("3D Simulation VBA\nVBA Objects\nSources and Ports\nHigh Frequency\nFloquetPort");
+
+        }
+        if (window.writeBtnStyle)
+                writeBtnStyle();
+
+        if (window.writeIntopicBar)
+                writeIntopicBar(0);
+
+        
+        document.write("<p style=\"font-family: Tahoma; font-size: 9pt; font-weight: 400;  font-style:normal; color: rgb(0, 0, 0); text-decoration:none; text-align: left\"> ");
+AddMasterBreadcrumbs("../index.htm", "font-family: Tahoma; font-size: 9pt; font-weight: 400;  font-style:normal; color: rgb(0, 0, 0); text-decoration:none; text-align: left", "|", "Home", "../special_vbaobjects/special_vbaobjects_vbaobjects.htm");
+document.write("<a style=\"font-family: Tahoma; font-size: 9pt; font-weight: 400;  font-style:normal; color: rgb(0, 0, 0); text-decoration:none; text-align: left\" href=\"../special_vbaobjects/special_vbaobjects_vbaobjects.htm\">3D Simulation VBA<\/a> | <a style=\"font-family: Tahoma; font-size: 9pt; font-weight: 400;  font-style:normal; color: rgb(0, 0, 0); text-decoration:none; text-align: left\" href=\"../special_vbaobjects/special_vbaobjects_vbaobjects.htm\">VBA Objects<\/a> | <a style=\"font-family: Tahoma; font-size: 9pt; font-weight: 400;  font-style:normal; color: rgb(0, 0, 0); text-decoration:none; text-align: left\" href=\"../special_vbasignals/special_vbasignals_timesignal_object.htm\">Sources and Ports<\/a> | <a style=\"font-family: Tahoma; font-size: 9pt; font-weight: 400;  font-style:normal; color: rgb(0, 0, 0); text-decoration:none; text-align: left\" href=\"../special_vbasignals/special_vbasignals_timesignal_object.htm\">High Frequency<\/a> | FloquetPort<\/p>");
+
+}
+else
+        if (window.gbIE4)
+                document.location.reload();
+
+onLoadHandler = function()
+{
+  if (window.setRelStartPage)
+        {
+        setTimeout("setRelStartPage('../index.htm');", 1)
+
+    setTimeout("UpdateBreadCrumbsMarker();", 1);
+        }
+}
+
+if (window.addEventListener){  
+        window.addEventListener('load', onLoadHandler, false);   
+} else if (window.attachEvent){  
+        window.attachEvent('onload', onLoadHandler);  
+}
+
+function onSetStartPage()
+{
+  autoSync(1);
+  sendSyncInfo();
+  sendAveInfoOut();
+}
+//-->
+//]]>
+</script><script type="text/javascript" src="../ehlpdhtm.js" language="JavaScript1.2">
+</script>
+<table cellspacing="0" width="100%">
+<col style="width: 50%;" />
+<col style="width: 50%;" />
+<tr>
+<td style="vertical-align: middle; padding-top: 5px; padding-bottom: 5px;">
+<p style="margin-top: 0px; margin-bottom: 0px;"><img src="../3ds.png" alt="" style="border: none;" border="0" /></p>
+</td>
+<td style="vertical-align: middle;">
+<p style="text-align: right;"><a href="https://www.3ds.com/products-services/3dexperience/" target="_blank"><img src="../3dexp.png" alt="" style="border: none;" width="32" height="32" border="0" /></a></p>
+</td>
+</tr>
+</table>
+<h1>FloquetPort Object</h1>
+<p class="VBA-Text">Use this object to configure the Floquet ports of an infinite array's unit cell. Whenever unit cell boundaries are combined with open boundaries at Zmin or Zmax, the open boundary is realized by a Floquet mode waveguide port (this allows for instance to excite plane waves, which are the fundamental Floquet modes TE(0,0) and TM(0,0)). The FloquetPort object collects methods to manipulate the modes of all Floquet ports. The following information applies to the general purpose Frequency Domain solvers.</p>
+<ul>
+<li class="p-VBA-Index-Category">
+<p class="VBA-Index-Category"><a href="#Methods" target="_self">Methods</a></p>
+</li>
+<li class="p-VBA-Index-Category">
+<p class="VBA-Index-Category"><a href="#Defaults">Default Settings</a></p>
+</li>
+<li class="p-VBA-Index-Category">
+<p class="VBA-Index-Category"><a href="#Examples">Example</a></p>
+</li>
+</ul>
+<p class="VBA-Heading-Category"><a name="Methods" id="Methods"></a>Methods</p>
+<p class="VBA-Heading-Method"><span style="font-weight: bold;">Reset</span></p>
+<p class="VBA-Text-Indent">Resets all internal values to their default settings.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">Port ( <a href="../common_vbageneral/common_general_enum.htm" style="font-weight: normal; font-style: normal;" id="a20" name="a20">enum</a> <span style="font-weight: normal;">{"zmin", "zmax"}</span> <span style="font-style: italic;"><i>position</i></span> )</p>
+<p class="VBA-Text-Indent">This methods is called before any other method in order to specify the Floquet port to which subsequent calls refer. The argument is either "Zmin" or "Zmax".</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">AddMode ( <a href="../common_vbageneral/common_general_enum.htm" style="font-weight: normal; font-style: normal;" id="a2" name="a2">enum</a> type <span style="font-weight: normal;">{"TE", "TM", "LCP", "RCP"}</span>, <a href="../common_vbageneral/common_general_integer.htm" style="font-weight: normal; font-style: normal;" id="a21" name="a21">int</a> order_x, <a href="../common_vbageneral/common_general_integer.htm" style="font-weight: normal; font-style: normal;" id="a24" name="a24">int</a> &#160;order_yprime )</p>
+<p class="VBA-Text-Indent">Adds a single Floquet mode to this port. The mode is specified by its type (TE for transversal electric field with respect to the port's plane, and TM for transversal magnetic field), and its signed integer order numbers along the unit cell lattice vectors. The order numbers need to be zero for LCP and RCP modes (also see <span style="font-weight: bold;">SetUseCircularPolarization</span>). Note that it is not necessary to specify all Floquet modes explicitly by calling this method unless a fully customized list of modes is required.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">SetUseCircularPolarization ( <a href="../common_vbageneral/common_general_bool_data_type.htm" style="font-weight: normal; font-style: normal;" id="a1" name="a1">bool</a> <span style="font-style: italic;"><i>flag</i></span> )</p>
+<p class="VBA-Text-Indent">If this flag is set to True, left and right circularly polarized waves (LCP, RCP) will be excited instead of the linearly polarized TE(0,0) and TM(0,0) modes.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">SetPolarizationIndependentOfScanAnglePhi ( <a href="../common_vbageneral/common_general_double.htm" style="font-weight: normal; font-style: normal;" id="a81" name="a81">double</a> <span style="font-style: italic;"><i>value</i></span>, <a href="../common_vbageneral/common_general_bool_data_type.htm" style="font-weight: normal; font-style: normal;" id="a11" name="a11">bool</a> <span style="font-style: italic;"><i>flag</i></span> )</p>
+<p class="VBA-Text-Indent">The polarization of the Floquet modes is usually given implicitly as a function of the scan angle phi. If the <span style="font-style: italic;"><i>flag</i></span> is set to <span style="font-style: italic;"><i>True</i></span>, the fundamental modes TE(0,0) and TM(0,0) will be linearily combined such that the resulting first mode's polarization is aligned to the given <span style="font-style: italic;"><i>value</i></span> (in degrees, with respect to the u-axis of the port, as for waveguide ports.)</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">SetDialogFrequency ( <a href="../common_vbageneral/common_general_double.htm" style="font-weight: normal; font-style: normal;" id="a8" name="a8">double</a> <span style="font-style: italic;"><i>value</i></span> )</p>
+<p class="VBA-Text-Indent">The sorting of the Floquet modes (e.g. by decreasing beta) depends on frequency as well as the scan angles theta and phi. As the modes should not change their order while a frequency sweep is performed, the frequency at which the modes are sorted needs to be fixed by calling this method. Pass an empty string to sort the modes at the uppermost frequency. Calling this method affects all Floquet ports.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">SetDialogMediaFactor ( <a href="../common_vbageneral/common_general_double.htm" style="font-weight: normal; font-style: normal;" id="a10" name="a10">double</a> <span style="font-style: italic;"><i>value</i></span> )</p>
+<p class="VBA-Text-Indent">The preview calculation of alpha and beta can be adapted to a specific material by calling this method. Pass an empty string to perform the calculations in the current background material. For different materials, pass the square root of the relative permittivity times the square root of the relative permeability as the value. Calling this method affects the preview for all Floquet ports.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">SetDialogTheta ( <a href="../common_vbageneral/common_general_double.htm" style="font-weight: normal; font-style: normal;" id="a42" name="a42">double</a> <span style="font-style: italic;"><i>value</i></span> )</p>
+<p class="VBA-Text-Indent">The sorting of the Floquet modes (e.g. by decreasing beta) depends on frequency as well as the scan angles theta and phi. As the modes should not change their order while a frequency sweep is performed, the theta at which the modes are sorted needs to be fixed by calling this method. Calling this method affects all Floquet ports.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">SetDialogPhi ( <a href="../common_vbageneral/common_general_double.htm" style="font-weight: normal; font-style: normal;" id="a26" name="a26">double</a> <span style="font-style: italic;"><i>value</i></span> )</p>
+<p class="VBA-Text-Indent">The sorting of the Floquet modes (e.g. by decreasing beta) depends on frequency as well as the scan angles theta and phi. As the modes should not change their order while a frequency sweep is performed, the phi at which the modes are sorted needs to be fixed by calling this method. Calling this method affects all Floquet ports.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">SetDialogMaxOrderX ( <a href="../common_vbageneral/common_general_integer.htm" style="font-weight: normal; font-style: normal;" id="a27" name="a27">int</a> <span style="font-style: italic;"><i>value</i></span> )</p>
+<p class="VBA-Text-Indent">The number of Floquet modes which need to be considered depends on the size of the Floquet port in terms of wavelength. When the modes are not explicitly defined by calling <span style="font-weight: bold;">AddMode</span>, their maximum order needs to be specified. <span style="font-weight: bold;">SetDialogMaxOrderX</span> defines the range of the Floquet modes' first order number by means of its magnitude. For example, if "2" is passed as an argument, the Floquet modes (-2,*), (-1,*), (0,*), (1,*), and (2,*) will be considered. When an empty string is passed to this method, the maximum order is determined automatically from the size of the Floquet port in terms of the wavelength at the sorting frequency. Calling this method affects all Floquet ports.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">SetDialogMaxOrderYPrime ( <a href="../common_vbageneral/common_general_integer.htm" style="font-weight: normal; font-style: normal;" id="a28" name="a28">int</a> <span style="font-style: italic;"><i>value</i></span> )</p>
+<p class="VBA-Text-Indent">The number of Floquet modes which need to be considered depends on the size of the Floquet port in terms of wavelength. When the modes are not explicitly defined by calling <span style="font-weight: bold;">AddMode</span>, their maximum order needs to be specified. <span style="font-weight: bold;">SetDialogMaxOrderYPrime</span> defines the range of the Floquet modes' second order number by means of its magnitude. For example, if "2" is passed as an argument, the Floquet modes (*,-2), (*,-1), (*,0), (*,1), and (*,2) will be considered. When an empty string is passed to this method, the maximum order is determined automatically from the size of the Floquet port in terms of the wavelength at the sorting frequency. Calling this method affects all Floquet ports.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">SetCustomizedListFlag &#160;( <a href="../common_vbageneral/common_general_bool_data_type.htm" style="font-weight: normal; font-style: normal;" id="a30" name="a30">bool</a> <span style="font-style: italic;"><i>flag</i></span> )</p>
+<p class="VBA-Text-Indent">The <span style="font-style: italic;"><i>flag</i></span> should be set to True whenever modes are explicitly defined by calling <span style="font-weight: bold;">AddMode</span>. Otherwise, the Floquet modes are assigned automatically based on the arguments passed to <span style="font-weight: bold;">SetDialogMaxOrderX</span> and <span style="font-weight: bold;">SetDialogMaxOrderYPrime</span>.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">SetNumberOfModesConsidered &#160;( <a href="../common_vbageneral/common_general_integer.htm" style="font-weight: normal; font-style: normal;" id="a29" name="a29">int</a> <span style="font-style: italic;"><i>value</i></span> )</p>
+<p class="VBA-Text-Indent">As the number of Floquet modes specified for the given Floquet port might be much larger than the number of modes which are actually required for the given structure, this method defines how many modes to consider during the simulation. Note that the number of modes to consider is larger than or equal to the number of modes to excite.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">SetSortCode ( <a href="../common_vbageneral/common_general_enum.htm" style="font-weight: normal; font-style: normal;" id="a31" name="a31">enum</a> <span style="font-weight: normal;">{"+beta/pw", "+beta", "-beta", "+alpha", "-alpha", "+te", "-te", "+tm", "-tm", "+orderx", "-orderx", "+ordery", "-ordery"}</span> code )</p>
+<p class="VBA-Text-Indent">Specifies how to sort the list of Floquet modes (unless it has been customized). The modes can be sorted by their type, their propagation constants alpha and beta, or by their order numbers. A plus in front of the sort code refers to the default order (for instance sort by decreasing beta), while a minus indicates a reversal of the sorting (for instance sort by increasing beta). Calling this method affects all Floquet ports. The default sort code is "+beta/pw", which means sorting by decreasing beta, but with the fundamental Floquet modes, which are the regular plane waves (pw), at the first place, regardless of their beta.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">SetDistanceToReferencePlane &#160;( <a href="../common_vbageneral/common_general_double.htm" style="font-weight: normal; font-style: normal;" id="a9" name="a9">double</a> <span style="font-style: italic;"><i>value</i></span> )</p>
+<p class="VBA-Text-Indent">Defines the phase deembedding distance for the Floquet port. The Frequency Domain solver with tetrahedral mesh will then calculate the S-parameters as if the Floquet port were placed at the given distance to the reference plane. The value is negative if the new reference plane is inside the structure.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">GetNumberOfModes <a href="../common_vbageneral/common_general_integer.htm" style="font-weight: normal; font-style: normal;" id="a32" name="a32">int</a></p>
+<p class="VBA-Text-Indent">Returns the number of modes specified for the currently selected port. This number is less than or equal to the number of modes to consider during the calculation, which is returned by <span style="font-weight: bold;">GetNumberOfModesConsidered</span>.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">FirstMode <a href="../common_vbageneral/common_general_bool_data_type.htm" style="font-weight: normal; font-style: normal;" id="a39" name="a39">bool</a></p>
+<p class="VBA-Text-Indent">Initializes an iteration over all modes of the currently selected Floquet port. The method returns False if there are no modes associated with the port.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">GetMode ( <a href="../common_vbageneral/common_general_enum.htm" style="font-weight: normal; font-style: normal;" id="a34" name="a34">enum</a> type, <a href="../common_vbageneral/common_general_integer.htm" style="font-weight: normal; font-style: normal;" id="a35" name="a35">int</a> order_x, <a href="../common_vbageneral/common_general_integer.htm" style="font-weight: normal; font-style: normal;" id="a36" name="a36">int</a> &#160;order_yprime ) <a href="../common_vbageneral/common_general_bool_data_type.htm" style="font-weight: normal; font-style: normal;" id="a37" name="a37">bool</a></p>
+<p class="VBA-Text-Indent">Use this method in combination with <span style="font-weight: bold;">FirstMode</span> and <span style="font-weight: bold;">NextMode</span> to get the parameters of the currently selected port's modes: their types (TE or TM, as well as RCP or LCP for circular polarized fundamental modes), and their order numbers.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">NextMode <a href="../common_vbageneral/common_general_bool_data_type.htm" style="font-weight: normal; font-style: normal;" id="a6" name="a6">bool</a></p>
+<p class="VBA-Text-Indent">The method moves the port mode iteration to the next mode of the currently selected Floquet port, or returns False if there are no more modes.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">GetNumberOfModesConsidered <a href="../common_vbageneral/common_general_integer.htm" style="font-weight: normal; font-style: normal;" id="a33" name="a33">int</a></p>
+<p class="VBA-Text-Indent">Returns the number of modes considered for the currently selected port.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">IsPortAtZmin <a href="../common_vbageneral/common_general_bool_data_type.htm" style="font-weight: normal; font-style: normal;" id="a38" name="a38">bool</a></p>
+<p class="VBA-Heading-Method">IsPortAtZmax <a href="../common_vbageneral/common_general_bool_data_type.htm" style="font-weight: normal; font-style: normal;" id="a7" name="a7">bool</a></p>
+<p class="VBA-Text-Indent">Returns if the selected port is located at zmin or zmax, respectively.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">GetModeNameByNumber ( <span style="font-weight: normal;"><a href="../common_vbageneral/common_general_string_ref.htm" style="font-weight: normal; font-style: normal;" id="a151" name="a151">string_ref</a></span> &#160;name, &#160;<a href="../common_vbageneral/common_general_integer.htm" style="font-weight: normal; font-style: normal;" id="a3" name="a3">int</a> number ) &#160;<a href="../common_vbageneral/common_general_bool_data_type.htm" style="font-weight: normal; font-style: normal;" id="a40" name="a40">bool</a></p>
+<p class="VBA-Text-Indent">Use this method to get a mode's name by specifying its number, which refers to the currently active mode order, as defined by the current sorting mode. While the order of the modes may change with frequency and scan angle, their names naturally remain constant.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">GetModeNumberByName ( &#160;<a href="../common_vbageneral/common_general_long_ref.htm" style="font-weight: normal; font-style: normal;" id="a4" name="a4">long_ref</a> number, <span style="font-style: italic;"><i><a href="../common_vbageneral/common_general_string.htm" style="font-weight: normal; font-style: normal;" id="a5" name="a5">string</a></i></span> name ) <a href="../common_vbageneral/common_general_bool_data_type.htm" style="font-weight: normal; font-style: normal;" id="a41" name="a41">bool</a></p>
+<p class="VBA-Text-Indent">Use this method to get a mode's number, which corresponds to the currently active mode order, by specifying the mode's name.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">ForceLegacyPhaseReference ( <a href="../common_vbageneral/common_general_bool_data_type.htm" style="font-weight: normal; font-style: normal;" id="a1" name="a1">bool</a> <span style="font-style: italic;"><i>flag</i></span> )</p>
+<p class="VBA-Text-Indent">If this flag is set to True, the phase reference for the Floquet port modes is the smallest x- and y-coordinate of the Floquet ports and thus of the unit cell. This is the legacy behavior for versions older than 2017. The new default is the xy-center of the bounding box, with gives more symmetric modes at phase Zero.</p>
+<p class="VBA-Heading-Category"><a name="Defaults" id="Defaults"></a>Default Settings</p>
+<p class="VBA-Text-Example">Port ("Zmin")</p>
+<p class="VBA-Text-Example">SetUseCircularPolarization (False)</p>
+<p class="VBA-Text-Example">SetPolarizationIndependentOfScanAnglePhi (0.0, False)</p>
+<p class="VBA-Text-Example">SetDialogFrequency ("")</p>
+<p class="VBA-Text-Example">SetDialogMediaFactor ("")</p>
+<p class="VBA-Text-Example">SetDialogTheta (0)</p>
+<p class="VBA-Text-Example">SetDialogPhi (0)</p>
+<p class="VBA-Text-Example">SetDialogMaxOrderX ("")</p>
+<p class="VBA-Text-Example">SetDialogMaxOrderYPrime ("")</p>
+<p class="VBA-Text-Example">SetCustomizedListFlag (False)</p>
+<p class="VBA-Text-Example">SetNumberOfModesConsidered (18)</p>
+<p class="VBA-Text-Example">SetSortCode ("+beta/pw")</p>
+<p class="VBA-Text-Example">SetDistanceToReferencePlane (0)</p>
+<p class="VBA-Text-Example">ForceLegacyPhaseReference (False)</p>
+<p class="VBA-Heading-Category"><a name="Examples" id="Examples"></a>Example</p>
+<p class="VBA-Text-Example" style="color: #008000;">' Specify the modes for the Floquet port at Zmax</p>
+<p class="VBA-Text-Example">With FloquetPort</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;.SetDialogFrequency (5)</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;.SetDialogTheta (60)</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;.SetDialogPhi (0)</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;.SetDialogMaxOrderX (1)</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;.SetDialogMaxOrderYPrime (1)</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;.SetSortCode ("+beta")</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;.SetCustomizedListFlag (False)</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;.Port ("Zmax")</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;.SetNumberOfModesConsidered (2)</p>
+<p class="VBA-Text-Example">End With</p>
+<p class="VBA-Text-Example">&#160;</p>
+<p class="VBA-Text-Example" style="color: #008000;">' Get the mode number of the plane waves TE(0,0) and TM(0,0)</p>
+<p class="VBA-Text-Example">Dim iTE As Long</p>
+<p class="VBA-Text-Example">Dim iTM As Long</p>
+<p class="VBA-Text-Example">With FloquetPort</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;.Port ("Zmax")</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;.GetModeNumberByName (iTE, "TE(0,0)")</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;.GetModeNumberByName (iTM, "TM(0,0)")</p>
+<p class="VBA-Text-Example">End With</p>
+<p class="VBA-Text-Example">&#160;</p>
+<p class="VBA-Text-Example" style="color: #008000;">' Specify the phase deembedding distance for the Floquet ports at Zmin and Zmax</p>
+<p class="VBA-Text-Example">With FloquetPort</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;.Port ("Zmin")</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;.SetDistanceToReferencePlane (-10)</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;.Port ("Zmax")</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;.SetDistanceToReferencePlane (-10)</p>
+<p class="VBA-Text-Example">End With</p>
+<p class="VBA-Text-Example">&#160;</p>
+<script type="text/javascript" language="JavaScript1.2">
+//<![CDATA[
+        if( typeof( FilePopupInit ) != 'function' ) FilePopupInit = new Function();
+        FilePopupInit('a20');
+        FilePopupInit('a2');
+        FilePopupInit('a21');
+        FilePopupInit('a24');
+        FilePopupInit('a1');
+        FilePopupInit('a81');
+        FilePopupInit('a11');
+        FilePopupInit('a8');
+        FilePopupInit('a10');
+        FilePopupInit('a42');
+        FilePopupInit('a26');
+        FilePopupInit('a27');
+        FilePopupInit('a28');
+        FilePopupInit('a30');
+        FilePopupInit('a29');
+        FilePopupInit('a31');
+        FilePopupInit('a9');
+        FilePopupInit('a32');
+        FilePopupInit('a39');
+        FilePopupInit('a34');
+        FilePopupInit('a35');
+        FilePopupInit('a36');
+        FilePopupInit('a37');
+        FilePopupInit('a6');
+        FilePopupInit('a33');
+        FilePopupInit('a38');
+        FilePopupInit('a7');
+        FilePopupInit('a151');
+        FilePopupInit('a3');
+        FilePopupInit('a40');
+        FilePopupInit('a4');
+        FilePopupInit('a5');
+        FilePopupInit('a41');
+//]]>
+</script><?rh-p style="margin-bottom: 0px; text-align: Right; margin-left: 18px; 
+                 margin-right: 18px; margin-top: 18px;" ?>
+<div style="width: 100%; position: relative;" id="footer">
+<p style="border-bottom: Solid 1px #dddddd; text-align: Left; margin-left: 0px; font-family: Arial, sans-serif; line-height: Normal; margin-top: 9px; margin-right: 0px; margin-bottom: 6px; border-left-width: 1px; border-top-width: 1px; border-right-width: 1px;"><span style="text-align: Left; font-family: Arial, sans-serif; line-height: Normal;">&#160;</span></p>
+<table cellspacing="0" width="100%">
+<col style="width: 50%;" />
+<col style="width: 50%;" />
+<tr>
+<td style="vertical-align: Top;"><span style="font-family: Arial, sans-serif; line-height: Normal; font-size: 8pt;"><font size="1" style="font-size:8pt;">CST Studio Suite 2026</font></span></td>
+<td style="vertical-align: Top;">
+<p style="text-align: right;">&#160;</p>
+</td>
+</tr>
+</table>
+<p>&#160;</p>
+</div>
+<script type="text/javascript" language="javascript1.2">
+//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+        writeIntopicBar(0);
+
+
+highlightSearch();
+//-->
+//]]>
+</script>
+</body>
+</html>

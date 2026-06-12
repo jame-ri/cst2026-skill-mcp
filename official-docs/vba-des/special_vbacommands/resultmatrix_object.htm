@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="Adobe RoboHelp 11" />
+<title>ResultMatrix Object</title>
+<link rel="StyleSheet" href="../online_help_vba.css" type="text/css" />
+<style type="text/css">
+/*<![CDATA[*/
+<!--
+body { border-bottom-style:None; }
+-->
+/*]]>*/
+</style>
+
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+        origWidth = innerWidth;
+        origHeight = innerHeight;
+        onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+/*<![CDATA[*/
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+-->
+/*]]>*/
+</style>
+
+<script type="text/javascript" language="javascript1.2" src="../whmsg.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript" src="../whver.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript1.2" src="../whutils.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript1.2" src="../whproxy.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript1.2" src="../whlang.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript1.2" src="../whtopic.js" charset="utf-8">
+</script>
+</head>
+<body>
+<script type="text/javascript" language="javascript1.2">
+//<![CDATA[
+<!--
+if (window.gbWhTopic)
+{
+        var strUrl = document.location.href;
+        var bc = 0;
+        var n = strUrl.toLowerCase().indexOf("bc-");
+        if(n != -1)
+        {
+                document.location.replace(strUrl.substring(0, n));
+                bc = strUrl.substring(n+3);
+        }
+
+        if (window.addTocInfo)
+        {
+        addTocInfo("Circuits & Systems VBA\nResult\nResultMatrix");
+
+        }
+        if (window.writeBtnStyle)
+                writeBtnStyle();
+
+        if (window.writeIntopicBar)
+                writeIntopicBar(0);
+
+        
+        document.write("<p style=\"font-family: Tahoma; font-size: 9pt; font-weight: 400;  font-style:normal; color: rgb(0, 0, 0); text-decoration:none; text-align: left\"> ");
+AddMasterBreadcrumbs("../index.htm", "font-family: Tahoma; font-size: 9pt; font-weight: 400;  font-style:normal; color: rgb(0, 0, 0); text-decoration:none; text-align: left", "|", "Home", "../special_vbaobjects/cstdesignstudiovbaobjects.htm");
+document.write("<a style=\"font-family: Tahoma; font-size: 9pt; font-weight: 400;  font-style:normal; color: rgb(0, 0, 0); text-decoration:none; text-align: left\" href=\"../special_vbaobjects/cstdesignstudiovbaobjects.htm\">Circuits & Systems VBA<\/a> | <a style=\"font-family: Tahoma; font-size: 9pt; font-weight: 400;  font-style:normal; color: rgb(0, 0, 0); text-decoration:none; text-align: left\" href=\"result0d_object.htm\">Result<\/a> | ResultMatrix<\/p>");
+
+}
+else
+        if (window.gbIE4)
+                document.location.reload();
+
+onLoadHandler = function()
+{
+  if (window.setRelStartPage)
+        {
+        setTimeout("setRelStartPage('../index.htm');", 1)
+
+    setTimeout("UpdateBreadCrumbsMarker();", 1);
+        }
+}
+
+if (window.addEventListener){  
+        window.addEventListener('load', onLoadHandler, false);   
+} else if (window.attachEvent){  
+        window.attachEvent('onload', onLoadHandler);  
+}
+
+function onSetStartPage()
+{
+  autoSync(1);
+  sendSyncInfo();
+  sendAveInfoOut();
+}
+//-->
+//]]>
+</script><script type="text/javascript" src="../ehlpdhtm.js" language="JavaScript1.2">
+</script>
+<table cellspacing="0" width="100%">
+<col style="width: 50%;" />
+<col style="width: 50%;" />
+<tr>
+<td style="vertical-align: middle; padding-top: 5px; padding-bottom: 5px;">
+<p style="margin-top: 0px; margin-bottom: 0px;"><img src="../3ds.png" alt="" style="border: none;" border="0" /></p>
+</td>
+<td style="vertical-align: middle;">
+<p style="text-align: right;"><a href="https://www.3ds.com/products-services/3dexperience/" target="_blank"><img src="../3dexp.png" alt="" style="border: none;" width="32" height="32" border="0" /></a></p>
+</td>
+</tr>
+</table>
+<h1>ResultMatrix Object</h1>
+<h3 class="VBA-Text-Example">This object offers access functions to matrix results. A ResultMatrix object can hold a two dimensional array of numbers.</h3>
+<p>A typical use case for a ResultMatrix is the Capacitance Matrix of electric potentials created by the Electrostatic Solver in a 3D simulation.</p>
+<ul>
+<li class="p-VBA-Index-Category">
+<p class="VBA-Index-Category"><a href="#FileInit">Initialization</a></p>
+</li>
+<li class="p-VBA-Index-Category">
+<p class="VBA-Index-Category"><a href="#Local">Queries</a></p>
+</li>
+<li class="p-VBA-Index-Category">
+<p class="VBA-Index-Category"><a href="#Examples">Example</a></p>
+</li>
+</ul>
+<p class="VBA-Heading-Category"><a name="FileInit" id="FileInit"></a>Initialization</p>
+<p class="VBA-Text-Indent">A ResultMatrix object can be created via the <a href="result_tree_object.htm">ResultTree</a> object:</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Text-Example" style="margin-left: 40px;">Dim matrix As Object</p>
+<p class="VBA-Text-Example" style="margin-left: 40px;">Set matrix = DSResultTree.GetResultFromTreeItem("Tasks\SP1\3D Model Results\1D Results\Es Solver\Capacitance Matrix",DS.GetLastResultID())</p>
+<p class="VBA-Text-Example" style="margin-left: 40px;">&#160;</p>
+<p class="VBA-Text-Indent">The first argument needs to be a tree path to an existing matrix result in the navigation tree.</p>
+<p class="VBA-Heading-Category"><a name="Local" id="Local"></a>Queries</p>
+<p class="VBA-Heading-Method">GetSize( <a href="../../VBA_3D/common_vbageneral/common_general_string.htm" id="a111" style="font-weight: normal; font-style: normal;" name="a111">string</a> <span style="font-style: italic;"><i>row_or_column</i></span> ) <a href="../../VBA_3D/common_vbageneral/common_general_long.htm" id="a431" style="font-weight: normal; font-style: normal;" name="a431">long</a></p>
+<p class="VBA-Text-Indent">The method returns the number of rows or columns. The argument is expected to be the string <span style="font-style: italic;"><i>"row"</i></span> or <span style="font-style: italic;"><i>"column"</i></span> to indicate which size is queried.</p>
+<p class="VBA-Heading-Method">&#160;</p>
+<p class="VBA-Heading-Method">GetName( <a href="../../VBA_3D/common_vbageneral/common_general_string.htm" id="a1111" style="font-weight: normal; font-style: normal;" name="a1111">string</a> <span style="font-style: italic;"><i>row_or_column, <a href="../../VBA_3D/common_vbageneral/common_general_long.htm" id="a4311" style="font-weight: normal; font-style: normal;" name="a4311">long</a> index</i></span> ) <a href="../../VBA_3D/common_vbageneral/common_general_string.htm" id="a1211" style="font-weight: normal; font-style: normal;" name="a1211">string</a></p>
+<p class="VBA-Text-Indent">This method returns the name of a row or column. The first argument is expected to be the string <span style="font-style: italic;"><i>"row"</i></span> or <span style="font-style: italic;"><i>"column"</i></span> . The second argument is the zero-based index of the queried row or column.</p>
+<p class="vba-text-indent">&#160;</p>
+<p class="VBA-Heading-Method">GetElementType() <a href="../../VBA_3D/common_vbageneral/common_general_string.htm" id="a121" style="font-weight: normal; font-style: normal;" name="a121">string</a></p>
+<p class="VBA-Text-Indent">This method returns the <span style="font-style: italic;"><i>ResultObjectType</i></span> of a single matrix element, e.g. the string <span style="font-style: italic;"><i>"0D"</i></span>.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">GetElement( <span style="font-style: italic;"><i><a href="../../VBA_3D/common_vbageneral/common_general_long.htm" id="a43111" style="font-weight: normal; font-style: normal;" name="a43111">long</a> row,</i></span> <span style="font-style: italic;"><i><a href="../../VBA_3D/common_vbageneral/common_general_long.htm" id="a431111" style="font-weight: normal; font-style: normal;" name="a431111">long</a> column</i></span> ) <span style="font-weight: normal;"><a href="result0d_object.htm" style="font-weight: normal;">Result0D</a></span></p>
+<p class="VBA-Text-Indent">This method returns a <a href="result0d_object.htm" style="font-weight: normal;">Result0D</a> object which contains the data of the matrix at the given row and column.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">GetResultObjectType() <a href="../../VBA_3D/common_vbageneral/common_general_string.htm" id="a12" style="font-weight: normal; font-style: normal;" name="a12">string</a></p>
+<p class="VBA-Text-Indent">Returns the string <span style="font-style: italic;"><i>"matrix"</i></span>. This method can be used to distinguish this result object from other objects (e.g. Result1D, &#160;Result1DComplex) &#160;in a context where the type of a result object is unknown.</p>
+<p class="VBA-Heading-Category"><a name="Examples" id="Examples"></a>Example</p>
+<p class="VBA-Text-Indent">This example loads a matrix result, iterates over all its elements and reports the value of each matrix entry to the message window.</p>
+<p class="vba-text-indent">&#160;</p>
+<p class="VBA-Text-Example" style="margin-left: 40px;">Dim m As Object</p>
+<p class="VBA-Text-Example" style="margin-left: 40px;">Set m = DSResultTree.GetResultFromTreeItem("Tasks\SP1\3D Model Results\1D Results\Es Solver\Capacitance Matrix",DS.GetLastResultID())</p>
+<p class="VBA-Text-Example" style="margin-left: 40px;">If (m Is Nothing) Then</p>
+<p class="VBA-Text-Example" style="margin-left: 40px;">&#160;&#160;&#160;&#160;ReportError("empty object.")</p>
+<p class="VBA-Text-Example" style="margin-left: 40px;">End If</p>
+<p class="VBA-Text-Example" style="margin-left: 40px;">Dim row As Long, col As Long</p>
+<p class="VBA-Text-Example" style="margin-left: 40px;">For row = 0 To m.GetSize("row")-1</p>
+<p class="VBA-Text-Example" style="margin-left: 40px;">&#160;&#160;&#160;&#160;For col = 0 To m.GetSize("column")-1</p>
+<p class="VBA-Text-Example" style="margin-left: 40px;">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Dim o As Object</p>
+<p class="VBA-Text-Example" style="margin-left: 40px;">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Set o = m.GetElement(row,col)</p>
+<p class="VBA-Text-Example" style="margin-left: 40px;">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;If o.GetResultObjectType() = "0D" Then</p>
+<p class="VBA-Text-Example" style="margin-left: 40px;">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Dim data As Double</p>
+<p class="VBA-Text-Example" style="margin-left: 40px;">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;o.GetData( data )</p>
+<p class="VBA-Text-Example" style="margin-left: 40px;">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;DS.ReportInformationToWindow( Cstr(row) + "," + Cstr(col) + ": " + Cstr(data) )</p>
+<p class="VBA-Text-Example" style="margin-left: 40px;">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Else</p>
+<p class="VBA-Text-Example" style="margin-left: 40px;">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;DS.ReportWarningToWindow("not a 0D object")</p>
+<p class="VBA-Text-Example" style="margin-left: 40px;">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;End If</p>
+<p class="VBA-Text-Example" style="margin-left: 40px;">&#160;&#160;&#160;&#160;Next</p>
+<p class="VBA-Text-Example" style="margin-left: 40px;">&#160;Next</p>
+<p class="VBA-Text-Example">&#160;</p>
+<?rh-p style="margin-bottom: 0px; text-align: Right; margin-left: 18px; 
+                 margin-right: 18px; margin-top: 18px;" ?>
+<div style="width: 100%; position: relative;" id="footer">
+<p style="border-bottom: Solid 1px #dddddd; text-align: Left; margin-left: 0px; font-family: Arial, sans-serif; line-height: Normal; margin-top: 9px; margin-right: 0px; margin-bottom: 6px; border-left-width: 1px; border-top-width: 1px; border-right-width: 1px;"><span style="text-align: Left; font-family: Arial, sans-serif; line-height: Normal;">&#160;</span></p>
+<table cellspacing="0" width="100%">
+<col style="width: 50%;" />
+<col style="width: 50%;" />
+<tr>
+<td style="vertical-align: Top;"><span style="font-family: Arial, sans-serif; line-height: Normal; font-size: 8pt;"><font size="1" style="font-size:8pt;">CST Studio Suite 2026</font></span></td>
+<td style="vertical-align: Top;">
+<p style="text-align: right;">&#160;</p>
+</td>
+</tr>
+</table>
+<p>&#160;</p>
+</div>
+<script type="text/javascript" language="javascript1.2">
+//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+        writeIntopicBar(0);
+
+
+highlightSearch();
+//-->
+//]]>
+</script>
+</body>
+</html>

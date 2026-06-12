@@ -1,0 +1,535 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="Adobe RoboHelp 11" />
+<title>Result1D Object</title>
+<link rel="StyleSheet" href="../online_help_vba.css" type="text/css" />
+<style type="text/css">
+/*<![CDATA[*/
+<!--
+body { border-bottom-style:None; }
+-->
+/*]]>*/
+</style>
+
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function ehlp_showtip(current,e,text)
+{
+  if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == 'Netscape'))
+  {
+    document.tooltip.document.write("<layer bgColor='yellow' style='border:1px solid black;font-size:12px;'>"+ text + "<\/layer>");
+    document.tooltip.document.close();
+    document.tooltip.left=e.pageX+5;
+    document.tooltip.top=e.pageY+5;
+    document.tooltip.visibility="show";
+  }
+}
+function ehlp_hidetip()
+{
+  document.tooltip.visibility="hidden";
+}
+//]]>
+</script>
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+        origWidth = innerWidth;
+        origHeight = innerHeight;
+        onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+/*<![CDATA[*/
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+-->
+/*]]>*/
+</style>
+
+<script type="text/javascript" language="javascript1.2" src="../whmsg.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript" src="../whver.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript1.2" src="../whutils.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript1.2" src="../whproxy.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript1.2" src="../whlang.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript1.2" src="../whtopic.js" charset="utf-8">
+</script>
+</head>
+<body>
+<script type="text/javascript" language="javascript1.2">
+//<![CDATA[
+<!--
+if (window.gbWhTopic)
+{
+        var strUrl = document.location.href;
+        var bc = 0;
+        var n = strUrl.toLowerCase().indexOf("bc-");
+        if(n != -1)
+        {
+                document.location.replace(strUrl.substring(0, n));
+                bc = strUrl.substring(n+3);
+        }
+
+        if (window.addTocInfo)
+        {
+        addTocInfo("3D Simulation VBA\nVBA Objects\nPost Processing\nResult1D");
+
+        }
+        if (window.writeBtnStyle)
+                writeBtnStyle();
+
+        if (window.writeIntopicBar)
+                writeIntopicBar(0);
+
+        
+        document.write("<p style=\"font-family: Tahoma; font-size: 9pt; font-weight: 400;  font-style:normal; color: rgb(0, 0, 0); text-decoration:none; text-align: left\"> ");
+AddMasterBreadcrumbs("../index.htm", "font-family: Tahoma; font-size: 9pt; font-weight: 400;  font-style:normal; color: rgb(0, 0, 0); text-decoration:none; text-align: left", "|", "Home", "../special_vbaobjects/special_vbaobjects_vbaobjects.htm");
+document.write("<a style=\"font-family: Tahoma; font-size: 9pt; font-weight: 400;  font-style:normal; color: rgb(0, 0, 0); text-decoration:none; text-align: left\" href=\"../special_vbaobjects/special_vbaobjects_vbaobjects.htm\">3D Simulation VBA<\/a> | <a style=\"font-family: Tahoma; font-size: 9pt; font-weight: 400;  font-style:normal; color: rgb(0, 0, 0); text-decoration:none; text-align: left\" href=\"../special_vbaobjects/special_vbaobjects_vbaobjects.htm\">VBA Objects<\/a> | <a style=\"font-family: Tahoma; font-size: 9pt; font-weight: 400;  font-style:normal; color: rgb(0, 0, 0); text-decoration:none; text-align: left\" href=\"special_vbapostproc_type_method.htm\">Post Processing<\/a> | Result1D<\/p>");
+
+}
+else
+        if (window.gbIE4)
+                document.location.reload();
+
+onLoadHandler = function()
+{
+  if (window.setRelStartPage)
+        {
+        setTimeout("setRelStartPage('../index.htm');", 1)
+
+    setTimeout("UpdateBreadCrumbsMarker();", 1);
+        }
+}
+
+if (window.addEventListener){  
+        window.addEventListener('load', onLoadHandler, false);   
+} else if (window.attachEvent){  
+        window.attachEvent('onload', onLoadHandler);  
+}
+
+function onSetStartPage()
+{
+  autoSync(1);
+  sendSyncInfo();
+  sendAveInfoOut();
+}
+//-->
+//]]>
+</script><script type="text/javascript" src="../ehlpdhtm.js" language="JavaScript1.2">
+</script>
+<table cellspacing="0" width="100%">
+<col style="width: 50%;" />
+<col style="width: 50%;" />
+<tr>
+<td style="vertical-align: middle; padding-top: 5px; padding-bottom: 5px;">
+<p style="margin-top: 0px; margin-bottom: 0px;"><img src="../3ds.png" alt="" style="border: none;" border="0" /></p>
+</td>
+<td style="vertical-align: middle;">
+<p style="text-align: right;"><a href="https://www.3ds.com/products-services/3dexperience/" target="_blank"><img src="../3dexp.png" alt="" style="border: none;" width="32" height="32" border="0" /></a></p>
+</td>
+</tr>
+</table>
+<h1>Result1D Object</h1>
+<h3>This object offers access and manipulation functions to 1D results.</h3>
+<h3>When this object is constructed an argument specifies what result will be represented by this object. The corresponding data is read from file and stored within the memory of this object.</h3>
+<h3>As an Result1D object represents a signal it stores x-values and the corresponding y-values. If, for instance, the object represents a magnitude over frequency, the x-values are the frequency values and the y-values are the corresponding magnitude values.</h3>
+<h3>All data is stored in arrays so that access to the values is possible by specifying an zero-based index.</h3>
+<ul>
+<li class="p-VBA-Index-Category">
+<p class="VBA-Index-Category"><a href="#FileInit">Initialization, File Operation</a></p>
+</li>
+<li class="p-VBA-Index-Category">
+<p class="VBA-Index-Category"><a href="#Global">1D to 1D Operations</a></p>
+</li>
+<li class="p-VBA-Index-Category">
+<p class="VBA-Index-Category"><a href="#Global2Local">1D to 0D Operations</a></p>
+</li>
+<li class="p-VBA-Index-Category">
+<p class="VBA-Index-Category"><a href="#Local">Local Operations</a></p>
+</li>
+<li class="p-VBA-Index-Category">
+<p class="VBA-Index-Category"><a href="#General">General Settings</a></p>
+</li>
+<li class="p-VBA-Index-Category">
+<p class="VBA-Index-Category"><a href="#Examples">Examples</a></p>
+</li>
+</ul>
+<p class="VBA-Heading-Category"><a name="FileInit" id="FileInit"></a>Initialization, File Operation</p>
+<p class="VBA-Text"><span style="font-weight: bold;">Construction</span></p>
+<p class="VBA-Text-Indent">An Result1D object can be created as follows:</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Text-Example" style="margin-left: 40px;">dim objName as object</p>
+<p class="VBA-Text-Example" style="margin-left: 40px;">set objName = Result1D("adapt_error")</p>
+<p class="VBA-Text-Example" style="margin-left: 40px;">&#160;</p>
+<p class="VBA-Text-Indent">While ”adapt_error” is the name of the result data the Result1D object should contain.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">Initialize ( <a href="../common_vbageneral/common_general_long.htm" id="a1" style="font-weight: normal; font-style: normal;" name="a1">long</a> <span style="font-style: italic;"><i>n</i></span> )</p>
+<p class="VBA-Text-Indent">Initializes an empty Result1D object with the specified dimension <span style="font-style: italic;"><i>n</i></span>.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">Load ( <span><a href="../common_vbageneral/common_general_name.htm" id="a26" style="font-weight: normal; font-style: normal;" name="a26">name</a></span> <span style="font-style: italic;"><i>sObjectName</i></span> )</p>
+<p class="VBA-Text-Indent">Loads a 1D result. sObjectName is the signal file name extension for the signal to be loaded.</p>
+<p class="VBA-Text-Example" style="margin-left: 40px;">&#160;dim app As Object</p>
+<p class="VBA-Text-Example" style="margin-left: 40px;"><span style="margin-left: 80px;">&#160;set app = CreateObject("CSTStudio.Application")</span></p>
+<p class="VBA-Text-Example" style="margin-left: 40px;"><span style="margin-left: 80px;">&#160;dim mws as Object</span></p>
+<p class="VBA-Text-Example" style="margin-left: 40px;"><span style="margin-left: 80px;">&#160;set</span> mws = app.NewMWS</p>
+<p class="VBA-Text-Example" style="margin-left: 40px;">&#160;<span style="margin-left: 80px;">dim res as object</span></p>
+<p class="VBA-Text-Example" style="margin-left: 40px;"><span style="margin-left: 80px;">&#160;</span>set res = mws.Result1D("")</p>
+<p class="VBA-Text-Example" style="margin-left: 40px;">&#160;res.Load("adapt_error")</p>
+<p class="VBA-Text-Indent"><span style="font-weight: bold;">Note:</span> The names used in the ResultTree do not necessarily correspond to the file names.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">LoadPlainFile ( <span style="font-weight: normal;"><a href="../common_vbageneral/common_general_filename.htm">filename</a></span> <span style="font-style: italic;"><i>sObjectName</i></span> )</p>
+<p class="VBA-Text-Indent">Loads an external 1D result stored in the file <span style="font-style: italic;"><i>sObjectName</i></span>. If the file name <span style="font-style: italic;"><i>sObjectName</i></span> starts with a '^' the project name will automatically be added such that the corresponding signal of the current project will be loaded. <span style="font-style: italic;"><i>sObjectName</i></span> may be a signal file of any source. It may have an arbitrary header, followed by the signal data organized in two columns. See also the <a href="#Example4">example</a>.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">Save ( <span><a href="../common_vbageneral/common_general_name.htm" id="a2" style="font-weight: normal; font-style: normal;" name="a2">name</a></span> <span style="font-style: italic;"><i>sObjectName</i></span> )</p>
+<p class="VBA-Text-Indent">Saves the object with the given filename. Note, that like in the LoadPlainFile method, the project name is added if the first character is a '^'. If the filename is blank the data is saved with name of the previous loaded file.</p>
+<p class="VBA-Heading-Method">&#160;</p>
+<p class="VBA-Heading-Method">Clear</p>
+<p class="VBA-Text-Indent">Deletes all data stored in the Result1D object.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">AddToTree ( <span><a href="../common_vbageneral/common_general_name.htm" id="a8" style="font-weight: normal; font-style: normal;" name="a8">name</a></span> <span style="font-style: italic;"><i>sTreePath</i></span> )</p>
+<p class="VBA-Text-Indent">Inserts the Result1D object into the tree at the folder specified by sTreePath. NOTE: Save the Result1D object before adding it to the tree to set correct path.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">DeleteAt ( <a href="../common_vbageneral/common_general_enum.htm" id="a3" style="font-weight: normal; font-style: normal;" name="a3">enum</a> <span style="font-style: italic;"><i>type</i></span> )</p>
+<p class="VBA-Text-Indent">Defines the lifetime of the result object.</p>
+<table style="vertical-align: top; margin-left: 24px;" cellspacing="0" width="420">
+<col style="width: 33.333%;" />
+<col style="width: 66.667%;" />
+<tr style="vertical-align: top;">
+<td style="border: Solid 1px #000000; width: 33.333%; padding-right: 10px; padding-left: 10px;">
+<p><a href="../common_vbageneral/common_general_enum.htm" id="a4" style="font-weight: normal; font-style: normal;" name="a4">enum</a> <span style="font-weight: bold; font-style: italic;"><i>type</i></span></p>
+</td>
+<td style="border-top: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 66.667%; padding-right: 10px; padding-left: 10px;">
+<p style="font-weight: bold;">meaning</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 33.333%; padding-right: 10px; padding-left: 10px;">
+<p>"never"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 66.667%; padding-right: 10px; padding-left: 10px;">
+<p>The result will be never deleted.</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 33.333%; padding-right: 10px; padding-left: 10px;">
+<p>"rebuild"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 66.667%; padding-right: 10px; padding-left: 10px;">
+<p>Deletion during model update. (default)</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 33.333%; padding-right: 10px; padding-left: 10px;">
+<p>"solverstart"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 66.667%; padding-right: 10px; padding-left: 10px;">
+<p>A solver start will delete the result.</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 33.333%; padding-right: 10px; padding-left: 10px;">
+<p>"truemodelchange"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 66.667%; padding-right: 10px; padding-left: 10px;">
+<p>A parameter change will not delete the results.</p>
+</td>
+</tr>
+</table>
+<p class="VBA-Text-Indent">&#160;&#160;</p>
+<p class="VBA-Heading-Category"><a name="Global" id="Global"></a>1D to 1D Operations</p>
+<p class="VBA-Heading-Method">Copy <span style="color: #0000ff; font-weight: normal;"><font color="blue">Result1D Object</font></span></p>
+<p class="VBA-Text-Indent"><span style="color: #000000; text-decoration: none;"><font color="black">Returns a copy of the object.</font></span></p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">Add / Subtract ( <span style="color: #0000ff; font-weight: normal;"><font color="blue">Result1D Object</font></span> <span style="font-style: italic;"><i>oObject</i></span> )</p>
+<p class="VBA-Text-Indent">Adds / subtracts the components in <span style="font-style: italic;"><i>oObject</i></span> &#160;to/from the calling object's components. The result will be stored in the calling object. Before calling this method please make sure that the calling object and <span style="font-style: italic;"><i>oObject</i></span> contain compatible data (same number of samples, same values of the independent variable).</p>
+<p class="vba-text-indent">&#160;</p>
+<p class="VBA-Heading-Method">ScalarMult ( <a href="../common_vbageneral/common_general_double.htm" id="a10" style="font-weight: normal; font-style: normal;" name="a10">double</a> <span style="font-style: italic;"><i>dFactor</i></span> )</p>
+<p class="VBA-Text-Indent">Scales the Result1D Object with the given factor.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">ComponentMult / ComponentDiv ( <span style="color: #0000ff; font-weight: normal;"><font color="blue">Result1D Object</font></span> <span style="font-style: italic;"><i>oObject</i></span> )</p>
+<p class="VBA-Text-Indent">Multiplies / divides the components in <span style="font-style: italic;"><i>oObject</i></span> &#160;with/by the calling object's components. The result will be stored in the calling object. Before calling this method please make sure that the calling object and <span style="font-style: italic;"><i>oObject</i></span> contain compatible data (same number of samples, same values of the independent variable).</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">ApplyTimeWindow ( <a href="../common_vbageneral/common_general_double.htm" id="a6" style="font-weight: normal;" name="a6"><span>double</span></a> <span style="font-style: italic;"><i>smoothness</i></span> )</p>
+<p class="VBA-Text-Indent">Applies a squared cosine windowing function to the result. Set <span style="font-style: italic;"><i>smoothness</i></span> to a value from 0 to 100 to specify when the cosine shape starts. At a value of 100, t0 equals to zero and at a value of zero, t0 equals to tmax, which means that it is identical to a rectangular window.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">ApplyLowPass ( <a href="../common_vbageneral/common_general_double.htm" id="a7" style="font-weight: normal;" name="a7"><span>double</span></a> <span style="font-style: italic;"><i>fmax</i></span> )</p>
+<p class="VBA-Text-Indent">Filters the result using a low pass filter with the cut-off-frequency <span style="font-style: italic;"><i>fmax</i></span>.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">ResampleTo ( <a href="../common_vbageneral/common_general_double.htm" id="a9" style="font-weight: normal; font-style: normal;" name="a9">double</a> <span style="font-style: italic;"><i>min,</i></span> <a href="../common_vbageneral/common_general_double.htm" id="a11" style="font-weight: normal; font-style: normal;" name="a11">double</a> <span style="font-style: italic;"><i>max,</i></span> <a href="../common_vbageneral/common_general_long.htm" id="a12" style="font-weight: normal; font-style: normal;" name="a12">long</a> <span style="font-style: italic;"><i>nSamples</i></span> )</p>
+<p class="VBA-Text-Indent">Resample the result to a given number of samples between a minimum and maximum value. The new data samples are calculated by a linear interpolation of the original data samples.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">MakeCompatibleTo ( <span style="color: #0000ff; font-weight: normal;"><font color="blue">Result1D Object</font></span> <span style="font-style: italic;"><i>oObject</i></span> )</p>
+<p class="VBA-Text-Indent">Re-samples the result in the calling object to make it compatible to the sampling of <span style="font-style: italic;"><i>oObject</i></span>. The new data samples are calculated by a linear interpolation of the original data samples.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">SortByX</p>
+<p class="VBA-Text-Indent">Sorts the data contained in the result object to have monotonically increasing x-values.</p>
+<p class="VBA-Heading-Category"><a name="Global2Local" id="Global2Local"></a>1D to 0D Operations</p>
+<p class="VBA-Heading-Method">ScalarProd ( <span style="color: #0000ff; font-weight: normal;"><font color="blue">Result1D Object</font></span> <span style="font-style: italic;"><i>oObject</i></span> ) <a href="../common_vbageneral/common_general_double.htm" id="a13" style="font-weight: normal; font-style: normal;" name="a13">double</a></p>
+<p class="VBA-Text-Indent">Performs a scalar product between two Result1D objects. The result will be returned as a double value.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">GetGlobalMaximum / GetGlobalMinimum <a href="../common_vbageneral/common_general_long.htm" id="a14" style="font-weight: normal; font-style: normal;" name="a14">long</a></p>
+<p class="VBA-Text-Indent">Returns the index of the overall maximum / minimum of the y-values.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">GetMaximumInRange / GetMinimumInRange ( <a href="../common_vbageneral/common_general_double.htm" id="a15" style="font-weight: normal; font-style: normal;" name="a15">double</a> <span style="font-style: italic;"><i>x1,</i></span> <a href="../common_vbageneral/common_general_double.htm" id="a16" style="font-weight: normal; font-style: normal;" name="a16">double</a> <span style="font-style: italic;"><i>x2</i></span> ) <a href="../common_vbageneral/common_general_long.htm" id="a17" style="font-weight: normal; font-style: normal;" name="a17">long</a></p>
+<p class="VBA-Text-Indent">Returns the x index of the maximum / minimum y-value found in the intervall from x1 to x2. This function assumes monotonously increasing x values.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">GetMaximumInIndexRange / GetMinimumInIndexRange ( <a href="../common_vbageneral/common_general_long.htm" id="a18" style="font-weight: normal; font-style: normal;" name="a18">long</a> <span style="font-style: italic;"><i>i1,</i></span> <a href="../common_vbageneral/common_general_long.htm" id="a19" style="font-weight: normal; font-style: normal;" name="a19">long</a> <span style="font-style: italic;"><i>i2</i></span> ) <a href="../common_vbageneral/common_general_long.htm" id="a20" style="font-weight: normal; font-style: normal;" name="a20">long</a></p>
+<p class="VBA-Text-Indent">Returns the index to the maximum / minimum y-value that can be found between two x-values referenced by the indices i1 and i2.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">GetFirstMaximum / GetFirstMinimum ( <a href="../common_vbageneral/common_general_double.htm" id="a21" style="font-weight: normal; font-style: normal;" name="a21">double</a> <span style="font-style: italic;"><i>yLimit</i></span> ) <a href="../common_vbageneral/common_general_long.htm" id="a23" style="font-weight: normal; font-style: normal;" name="a23">long</a></p>
+<p class="VBA-Heading-Method">GetNextMaximum / GetNextMinimum ( <a href="../common_vbageneral/common_general_double.htm" id="a22" style="font-weight: normal; font-style: normal;" name="a22">double</a> <span style="font-style: italic;"><i>yLimit</i></span> ) <a href="../common_vbageneral/common_general_long.htm" id="a24" style="font-weight: normal; font-style: normal;" name="a24">long</a></p>
+<p class="VBA-Text-Indent">Returns the index to the first / next maximum / minimum y-value. The parameter <span style="font-style: italic;"><i>yLimit</i></span> defines a minimum difference between the found local maximum/minimum y-value and the previous and next local minimum/maximum y-value. If no further maximum/minimum could be found the returned index will be -1.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">GetMeanValue <a href="../common_vbageneral/common_general_double.htm" id="a38" style="font-weight: normal; font-style: normal;" name="a38">double</a></p>
+<p class="VBA-Text-Indent">Returns the mean value of the Result1D object's y-values.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">GetSigma <a href="../common_vbageneral/common_general_double.htm" id="a39" style="font-weight: normal; font-style: normal;" name="a39">double</a></p>
+<p class="VBA-Text-Indent">Returns the deviation of the Result1D object's y-values.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">GetIntegral <a href="../common_vbageneral/common_general_double.htm" id="a40" style="font-weight: normal; font-style: normal;" name="a40">double</a></p>
+<p class="VBA-Text-Indent">Returns the integral of the Result1D object, which is calculated via the Trapezoidal Rule.</p>
+<p class="vba-text-indent">&#160;</p>
+<p class="VBA-Heading-Method">GetNorm <a href="../common_vbageneral/common_general_double.htm" id="a41" style="font-weight: normal; font-style: normal;" name="a41">double</a></p>
+<p class="VBA-Text-Indent">Returns the Euclidean norm of the Result1D object.</p>
+<p class="VBA-Heading-Category"><a name="Local" id="Local"></a>Local Operations:</p>
+<p class="VBA-Heading-Method">GetX / GetY ( <a href="../common_vbageneral/common_general_long.htm" id="a44" style="font-weight: normal; font-style: normal;" name="a44">long</a> <span style="font-style: italic;"><i>index</i></span> ) <a href="../common_vbageneral/common_general_double.htm" id="a43" style="font-weight: normal; font-style: normal;" name="a43">double</a></p>
+<p class="VBA-Heading-Method">SetX / SetY ( <a href="../common_vbageneral/common_general_long.htm" id="a45" style="font-weight: normal; font-style: normal;" name="a45">long</a> <span style="font-style: italic;"><i>index,</i></span> <a href="../common_vbageneral/common_general_double.htm" id="a42" style="font-weight: normal; font-style: normal;" name="a42">double</a> <span style="font-style: italic;"><i>dValue</i></span> )</p>
+<p class="VBA-Text-Indent">Sets / returns the x/y-value at the specified index in the Result1D object.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">SetXY ( <a href="../common_vbageneral/common_general_long.htm" id="a50" style="font-weight: normal; font-style: normal;" name="a50">long</a> <span style="font-style: italic;"><i>index,</i></span> <a href="../common_vbageneral/common_general_double.htm" id="a46" style="font-weight: normal; font-style: normal;" name="a46">double</a> <span style="font-style: italic;"><i>xValue,</i></span> <a href="../common_vbageneral/common_general_double.htm" id="a47" style="font-weight: normal; font-style: normal;" name="a47">double</a> <span style="font-style: italic;"><i>yValue</i></span> )</p>
+<p class="VBA-Text-Indent">Sets the x- and &#160;y-value at the specified index in the Result1D object.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">SetXYDouble ( <a href="../common_vbageneral/common_general_long.htm" id="a27" style="font-weight: normal; font-style: normal;" name="a27">long</a> <span style="font-style: italic;"><i>index,</i></span> <a href="../common_vbageneral/common_general_double.htm" id="a35" style="font-weight: normal; font-style: normal;" name="a35">double</a> <span style="font-style: italic;"><i>xValue,</i></span> <a href="../common_vbageneral/common_general_double.htm" id="a36" style="font-weight: normal; font-style: normal;" name="a36">double</a> <span style="font-style: italic;"><i>yValue</i></span> )</p>
+<p class="VBA-Heading-Method">GetXYDouble ( <a href="../common_vbageneral/common_general_long.htm" id="a28" style="font-weight: normal; font-style: normal;" name="a28">long</a> <span style="font-style: italic;"><i>index,</i></span> <span><a href="../common_vbageneral/common_general_double_ref.htm" id="a29" style="font-weight: normal;" name="a29">double_ref</a></span> <span style="font-style: italic;"><i>xValue,</i></span> <span><a href="../common_vbageneral/common_general_double_ref.htm" id="a30" style="font-weight: normal;" name="a30">double_ref</a></span> <span style="font-style: italic;"><i>yValue</i></span> )</p>
+<p class="VBA-Text-Indent">Sets / returns the x- and &#160;y-value at the specified index in the Result1D object.</p>
+<p class="VBA-Text-Indent">Note, that these methods in contrast to .SetXY do only accept double parameters and no expressions.</p>
+<p>&#160;</p>
+<p class="VBA-Heading-Method">AppendXY ( <a href="../common_vbageneral/common_general_double.htm" id="a49" style="font-weight: normal; font-style: normal;" name="a49">double</a> <span style="font-style: italic;"><i>xValue,</i></span> <a href="../common_vbageneral/common_general_double.htm" id="a48" style="font-weight: normal; font-style: normal;" name="a48">double</a> <span style="font-style: italic;"><i>yValue</i></span> )</p>
+<p class="VBA-Text-Indent">Appends a new pair of values to the end of the result object.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">GetClosestIndexFromX ( <a href="../common_vbageneral/common_general_double.htm" id="a51" style="font-weight: normal; font-style: normal;" name="a51">double</a> <span style="font-style: italic;"><i>dValue</i></span> ) <a href="../common_vbageneral/common_general_long.htm" id="a52" style="font-weight: normal; font-style: normal;" name="a52">long</a></p>
+<p class="VBA-Text-Indent">Returns the index of the x-value stored in the Result1D object that is closest to the specified value.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">GetArray ( <a href="../common_vbageneral/common_general_string.htm" id="a5511" style="font-weight: normal; font-style: normal;" name="a5511">string</a> <span style="font-style: italic;"><i>component</i></span> ) <a href="../common_vbageneral/common_general_variant.htm" id="a5111" style="font-weight: normal; font-style: normal;" name="a5111">variant</a></p>
+<p class="VBA-Text-Indent">Returns data of &#160;the Result 1D object as double array . The string <span style="font-style: italic;"><i>component</i></span> can be <span style="font-style: italic;"><i>'x'</i></span> or <span style="font-style: italic;"><i>'y'</i></span> and specifies which component of the Result 1D object will be returned, analogous to 'GetX' and 'GetY'.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">SetArray ( <a href="../common_vbageneral/common_general_variant.htm" id="a511" style="font-weight: normal; font-style: normal;" name="a511">variant</a> <span style="font-style: italic;"><i>doubleArray,</i></span> <a href="../common_vbageneral/common_general_string.htm" id="a551" style="font-weight: normal; font-style: normal;" name="a551">string</a> <span style="font-style: italic;"><i>component</i></span> )</p>
+<p class="VBA-Text-Indent">Overwrites the data in the Result1D object with the data provided as double array . The string <span style="font-style: italic;"><i>component</i></span> can be <span style="font-style: italic;"><i>'x'</i></span> or <span style="font-style: italic;"><i>'y'</i></span> and specifies which component of the Result1D object will be overwritten, analogous to 'SetX' and 'SetY'. The variant <span style="font-style: italic;"><i>doubleArray</i></span> can be an array of double values. It has to start with index zero and it is expected to have at least as many elements as the Result1D object contains. In case more elements are provided, they will be ignored. Consider using the methods 'GetN' to query and 'Initialize' to modify the size of the Result1D object.</p>
+<p class="VBA-Heading-Category"><a name="General" id="General"></a>General Settings</p>
+<p class="VBA-Heading-Method">Title ( <a href="../common_vbageneral/common_general_string.htm" id="a54" style="font-weight: normal; font-style: normal;" name="a54">string</a> <span style="font-style: italic;"><i>name</i></span> )</p>
+<p class="VBA-Text-Indent">Defines the title of the result.</p>
+<p class="vba-text-indent">&#160;</p>
+<p class="VBA-Heading-Method">GetTitle <a href="../common_vbageneral/common_general_string.htm" id="a55" style="font-weight: normal; font-style: normal;" name="a55">string</a></p>
+<p class="VBA-Text-Indent">Returns the title of the result. This function works only for user added tree result objects.</p>
+<p class="VBA-Heading-Method">&#160;</p>
+<p class="VBA-Heading-Method">GetXLabelAndUnit ( <a href="../common_vbageneral/common_general_string.htm" id="a511112" style="font-weight: normal; font-style: normal;" name="a511112">string</a> <span style="font-style: italic;"><i>sLabel</i></span>, <a href="../common_vbageneral/common_general_string.htm" id="a51122" style="font-weight: normal; font-style: normal;" name="a51122">string</a> <span style="font-style: italic;"><i>sUnit</i></span> )</p>
+<p class="VBA-Heading-Method">GetYLabelAndUnit ( <a href="../common_vbageneral/common_general_string.htm" id="a5111111" style="font-weight: normal; font-style: normal;" name="a5111111">string</a> <span style="font-style: italic;"><i>sLabel</i></span>, <a href="../common_vbageneral/common_general_string.htm" id="a511211" style="font-weight: normal; font-style: normal;" name="a511211">string</a> <span style="font-style: italic;"><i>sUnit</i></span> )</p>
+<p class="VBA-Text-Indent">Returns label and unit of &#160;the corresponding axis. The unit string uses the syntax described on the <a title="Units" href="../../../userinterface/overview/units.htm" onmouseover="if ((parseInt(navigator.appVersion) == 4) &amp;&amp; (navigator.appName == 'Netscape')) ehlp_showtip(this,event,'Units');" onmouseout="if ((parseInt(navigator.appVersion) == 4) &amp;&amp; (navigator.appName == 'Netscape')) ehlp_hidetip();">Units</a> help page.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">SetXLabelAndUnit ( <a href="../common_vbageneral/common_general_string.htm" id="a51111" style="font-weight: normal; font-style: normal;" name="a51111">string</a> <span style="font-style: italic;"><i>sLabel</i></span>, <a href="../common_vbageneral/common_general_string.htm" id="a5112" style="font-weight: normal; font-style: normal;" name="a5112">string</a> <span style="font-style: italic;"><i>sUnit</i></span> )</p>
+<p class="VBA-Heading-Method">SetYLabelAndUnit ( <a href="../common_vbageneral/common_general_string.htm" id="a511111" style="font-weight: normal; font-style: normal;" name="a511111">string</a> <span style="font-style: italic;"><i>sLabel</i></span>, <a href="../common_vbageneral/common_general_string.htm" id="a51121" style="font-weight: normal; font-style: normal;" name="a51121">string</a> <span style="font-style: italic;"><i>sUnit</i></span> )</p>
+<p class="VBA-Text-Indent">Sets a label and unit to annotate the corresponding axis. The unit string uses the syntax described on the <a title="Units" href="../../../userinterface/overview/units.htm" onmouseover="if ((parseInt(navigator.appVersion) == 4) &amp;&amp; (navigator.appName == 'Netscape')) ehlp_showtip(this,event,'Units');" onmouseout="if ((parseInt(navigator.appVersion) == 4) &amp;&amp; (navigator.appName == 'Netscape')) ehlp_hidetip();">Units</a> help page.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">GetXUnit / GetYUnit <a href="../common_vbageneral/common_general_string.htm" id="a532" style="font-weight: normal; font-style: normal;" name="a532">string</a></p>
+<p class="VBA-Text-Indent">Returns the unit of the &#160;x-axis / y-axis as string. The unit string uses the syntax described on the <a title="Units" href="../../../userinterface/overview/units.htm" onmouseover="if ((parseInt(navigator.appVersion) == 4) &amp;&amp; (navigator.appName == 'Netscape')) ehlp_showtip(this,event,'Units');" onmouseout="if ((parseInt(navigator.appVersion) == 4) &amp;&amp; (navigator.appName == 'Netscape')) ehlp_hidetip();">Units</a> help page.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">SetLogarithmicFactor( <a href="../common_vbageneral/common_general_string.htm" id="a121" style="font-weight: normal; font-style: normal;" name="a121">string</a> <span style="font-style: italic;"><i>LogFactor</i></span> )</p>
+<p class="VBA-Text-Indent">When the curve contained in the Result1D object is visualized in dB, the logarithmic factor provides the scaling of the data. The string <span style="font-style: italic;"><i>LogFactor</i></span> can be 10 for a power quantity, 20 for a field quantity, or -1 which will disable the dB option. The default is -1.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">GetLogarithmicFactor <a href="../common_vbageneral/common_general_double.htm" id="a201" style="font-weight: normal; font-style: normal;" name="a201">double</a></p>
+<p class="VBA-Text-Indent">Returns the logarithmic factor.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">Type ( <a href="../common_vbageneral/common_general_enum.htm" id="a57" name="a57">enum</a> <span style="font-style: italic;"><i>key</i></span> )</p>
+<p class="VBA-Text-Indent">Define the type of the Result1D object.</p>
+<table style="vertical-align: top; margin-left: 24px;" cellspacing="0" width="360">
+<col style="width: 22.572%;" />
+<col style="width: 77.428%;" />
+<tr style="vertical-align: top;">
+<td style="border: Solid 1px #000000; width: 22.572%; padding-right: 10px; padding-left: 10px;">
+<p><a href="../common_vbageneral/common_general_enum.htm" id="a56" name="a56">enum</a> <span style="font-style: italic; font-weight: bold;"><i>key</i></span></p>
+</td>
+<td style="border-top: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 77.428%; padding-right: 10px; padding-left: 10px;">
+<p style="font-weight: bold;">meaning</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 22.572%; padding-right: 10px; padding-left: 10px;">
+<p>"magnitude"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 77.428%; padding-right: 10px; padding-left: 10px;">
+<p>Magnitude (default)</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 22.572%; padding-right: 10px; padding-left: 10px;">
+<p>"dB"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 77.428%; padding-right: 10px; padding-left: 10px;">
+<p>Magnitude in dB</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 22.572%; padding-right: 10px; padding-left: 10px;">
+<p>"phase"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 77.428%; padding-right: 10px; padding-left: 10px;">
+<p>Phase in degrees</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 22.572%; padding-right: 10px; padding-left: 10px;">
+<p>"real"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 77.428%; padding-right: 10px; padding-left: 10px;">
+<p>Real part</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 22.572%; padding-right: 10px; padding-left: 10px;">
+<p>"imaginary"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 77.428%; padding-right: 10px; padding-left: 10px;">
+<p>Imaginary part</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 22.572%; padding-right: 10px; padding-left: 10px;">
+<p>"linear_points"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 77.428%; padding-right: 10px; padding-left: 10px;">
+<p>A linear result plotted as unconnected points</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 22.572%; padding-right: 10px; padding-left: 10px;">
+<p style="font-family: Arial, sans-serif;">"farfield:polar"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 77.428%; padding-right: 10px; padding-left: 10px;">
+<p>A polar farfield result</p>
+</td>
+</tr>
+</table>
+<p class="VBA-Text-Indent">The type "farfield:polar" is considered only if the Result1D object is created and processed within a template evaluation in the Template Based Post-Processing framework.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">GetN <a href="../common_vbageneral/common_general_long.htm" id="a53" style="font-weight: normal; font-style: normal;" name="a53">long</a></p>
+<p class="VBA-Text-Indent">Returns the total number of value pairs stored in the Result1D object.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">GetResultObjectType <a href="../common_vbageneral/common_general_string.htm" id="a25" style="font-weight: normal; font-style: normal;" name="a25">string</a></p>
+<p class="VBA-Text-Indent">Returns the string <span style="font-style: italic;"><i>"1D"</i></span>. This method can be used to distinguish the result object from Result0D and Result1DComplex objects in a context where the type of a result object is unknown.</p>
+<p class="VBA-Heading-Category"><a name="Examples" id="Examples"></a>Examples</p>
+<p class="VBA-Text"><a name="Example1" id="Example1"></a>The following example shows how a Result1D object can be filled with data and added to the Navigation Tree.</p>
+<p class="VBA-Text">&#160;</p>
+<p class="VBA-Text-Example" style="margin-left: 40px;">Dim o As Object</p>
+<p class="VBA-Text-Example" style="margin-left: 40px;">Set o = Result1D("")</p>
+<p class="VBA-Text-Example" style="margin-left: 40px; color: #008000;">'fill empty object with data</p>
+<p class="VBA-Text-Example" style="margin-left: 40px;">Dim n As Long</p>
+<p class="VBA-Text-Example" style="margin-left: 40px;">For n = 0 To 1000</p>
+<p class="VBA-Text-Example" style="margin-left: 80px;">Dim x As Double</p>
+<p class="VBA-Text-Example" style="margin-left: 80px;">x = 2.0*PI*n/1000</p>
+<p class="VBA-Text-Example" style="margin-left: 80px;">o.Appendxy(x,Cos(x))</p>
+<p class="VBA-Text-Example" style="margin-left: 40px;">Next</p>
+<p class="VBA-Text-Example" style="margin-left: 40px; color: #008000;">'set label, save data, add it to the Navigation Tree</p>
+<p class="VBA-Text-Example" style="margin-left: 40px;">o.ylabel("cosine")</p>
+<p class="VBA-Text-Example" style="margin-left: 40px;">o.Save("cosine_curve.sig")</p>
+<p class="VBA-Text-Example" style="margin-left: 40px;">o.AddToTree("1D Results\Data\curve_1D")</p>
+<p class="VBA-Text-Example" style="margin-left: 40px;">&#160;</p>
+<p class="VBA-Text"><a name="Example4" id="Example4"></a>This example shows how &#160;ASCII data from an external file can be loaded into a Result1D object and added to the Navigation Tree.</p>
+<p class="VBA-Text">&#160;</p>
+<p class="VBA-Text-Example" style="margin-left: 40px;">Dim o As Object</p>
+<p class="VBA-Text-Example" style="margin-left: 40px;">Set o = Result1D("")</p>
+<p class="VBA-Text-Example" style="margin-left: 40px; color: #008000;"><span style="color: #008000;"><font color="green">'load external ASCII file containing two data columns separated by white space or tabulator</font></span></p>
+<p class="VBA-Text-Example" style="margin-left: 40px;">o.LoadPlainFile("C:\two_column_data.txt")</p>
+<p class="VBA-Text-Example" style="margin-left: 40px;"><span style="color: #008000;"><font color="green">'set labels</font></span></p>
+<p class="VBA-Text-Example" style="margin-left: 40px;">o.SetXLabelAndUnit("xvalues","GHz")</p>
+<p class="VBA-Text-Example" style="margin-left: 40px;">o.SetYLabelAndUnit("yvalues","V/m")</p>
+<p class="VBA-Text-Example" style="margin-left: 40px;"><span style="color: #008000;"><font color="green">'save it within the project</font></span></p>
+<p class="VBA-Text-Example" style="margin-left: 40px;">o.Save("imported_curve.sig")</p>
+<p class="VBA-Text-Example" style="margin-left: 40px;"><span style="color: #008000;"><font color="green">'add it to the Navigation Tree</font></span></p>
+<p class="VBA-Text-Example" style="margin-left: 40px;">o.AddToTree("1D Results\Data\curve_import")</p>
+<p class="VBA-Text-Example" style="margin-left: 40px;">&#160;</p>
+<p class="VBA-Text"><a name="Example2" id="Example2"></a>The example shows how to access all values of a time signal stored in file "o1(1)1(1).sig".</p>
+<p class="VBA-Text-Example">&#160;</p>
+<p class="VBA-Text-Example" style="margin-left: 40px;">Dim nPoints As Long</p>
+<p class="VBA-Text-Example" style="margin-left: 40px;">Dim n As Long</p>
+<p class="VBA-Text-Example" style="margin-left: 40px;">Dim x As Double</p>
+<p class="VBA-Text-Example" style="margin-left: 40px;">Dim y As Double</p>
+<p class="VBA-Text-Example" style="margin-left: 40px;">With Result1D("o1(1)1(1).sig") <span style="color: #008000;"><font color="green">'load data</font></span></p>
+<p class="VBA-Text-Example" style="margin-left: 80px;">nPoints = .GetN <span style="color: #008000;"><font color="green">'get number of points</font></span></p>
+<p class="VBA-Text-Example" style="margin-left: 80px;">For n = 0 To nPoints-1</p>
+<p class="VBA-Text-Example" style="margin-left: 80px; color: #008000;">'read all points, index of first point is zero.</p>
+<p class="VBA-Text-Example" style="margin-left: 80px;">x = .GetX(n)</p>
+<p class="VBA-Text-Example" style="margin-left: 80px;">y = .GetY(n)</p>
+<p class="VBA-Text-Example" style="margin-left: 80px; color: #008000;">'print to message window</p>
+<p class="VBA-Text-Example" style="margin-left: 80px;">ReportInformationToWindow("x: " + Cstr(x) + " y: " + CStr(y))</p>
+<p class="VBA-Text-Example" style="margin-left: 80px;">Next n</p>
+<p class="VBA-Text-Example" style="margin-left: 40px;">End With</p>
+<p class="VBA-Text-Example" style="margin-left: 40px;">&#160;</p>
+<p class="VBA-Text"><a name="Example3" id="Example3"></a>This example loads&#160;S1,1 and extracts the real part of the complex-valued S-Parameter. It then determines the closest existing data point to a certain frequency (here 0.65 GHz) and prints the result to the message window. It shows how the <a href="special_vbapostproc_resulttreeo.htm">ResultTree object</a>, the <a href="result_1d_complex_object.htm">Result1DComplex object</a> and the Result1D object can be used together to access 1D data.</p>
+<p class="VBA-Text-Example">&#160;</p>
+<p class="VBA-Text-Example" style="margin-left: 40px;">Dim filename As String</p>
+<p class="VBA-Text-Example" style="margin-left: 40px;">filename = Resulttree.GetFileFromTreeItem("1D Results\S-Parameters\S1,1")</p>
+<p class="VBA-Text-Example" style="margin-left: 40px;">If filename = "" Then</p>
+<p class="VBA-Text-Example" style="margin-left: 80px;">ReportInformationToWindow("Result does not exist.")</p>
+<p class="VBA-Text-Example" style="margin-left: 40px;">Else</p>
+<p class="VBA-Text-Example" style="margin-left: 80px;">Dim o As Object</p>
+<p class="VBA-Text-Example" style="margin-left: 80px;">Set o = Result1DComplex(filename) <span style="color: #008000;"><font color="green">'load complex-valued S1,1</font></span></p>
+<p class="VBA-Text-Example" style="margin-left: 80px;">Dim realPart As Object</p>
+<p class="VBA-Text-Example" style="margin-left: 80px;">Set realPart = o.Real() <span style="color: #008000;"><font color="green">'extract a Result1D-object containing the real part of S1,1</font></span></p>
+<p class="VBA-Text-Example" style="margin-left: 80px;">Dim n As Integer</p>
+<p class="VBA-Text-Example" style="margin-left: 80px;">n = realPart.GetClosestIndexFromX(0.65)</p>
+<p class="VBA-Text-Example" style="margin-left: 80px;">ReportInformationToWindow("Closest data point to frequency 0.65 Ghz: " + Cstr(realPart.GetX(n)) + ", " + Cstr(realPart.GetY(n)))</p>
+<p class="VBA-Text-Example" style="margin-left: 40px;">End If</p>
+<p class="VBA-Text-Example" style="margin-left: 40px;">&#160;</p>
+<p class="VBA-Text-Example">&#160;</p>
+<?rh-p style="margin-bottom: 0px; text-align: Right; margin-left: 18px; 
+                 margin-right: 18px; margin-top: 18px;" ?>
+<div style="width: 100%; position: relative;" id="footer">
+<p style="border-bottom: Solid 1px #dddddd; text-align: Left; margin-left: 0px; font-family: Arial, sans-serif; line-height: Normal; margin-top: 9px; margin-right: 0px; margin-bottom: 6px; border-left-width: 1px; border-top-width: 1px; border-right-width: 1px;"><span style="text-align: Left; font-family: Arial, sans-serif; line-height: Normal;">&#160;</span></p>
+<table cellspacing="0" width="100%">
+<col style="width: 50%;" />
+<col style="width: 50%;" />
+<tr>
+<td style="vertical-align: Top;"><span style="font-family: Arial, sans-serif; line-height: Normal; font-size: 8pt;"><font size="1" style="font-size:8pt;">CST Studio Suite 2026</font></span></td>
+<td style="vertical-align: Top;">
+<p style="text-align: right;">&#160;</p>
+</td>
+</tr>
+</table>
+<p>&#160;</p>
+</div>
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+ if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == 'Netscape'))
+  document.write("<div id='tooltip' class='WebHelpPopupMenu'><\/div>");
+//]]>
+</script><script type="text/javascript" language="javascript1.2">
+//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+        writeIntopicBar(0);
+
+
+highlightSearch();
+//-->
+//]]>
+</script>
+</body>
+</html>

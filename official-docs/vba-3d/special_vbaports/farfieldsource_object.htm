@@ -1,0 +1,300 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="Adobe RoboHelp 11" />
+<title>FarfieldSource Object</title>
+<link rel="StyleSheet" href="../online_help_vba.css" type="text/css" />
+<style type="text/css">
+/*<![CDATA[*/
+<!--
+body { border-bottom-style:None; }
+-->
+/*]]>*/
+</style>
+
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+        origWidth = innerWidth;
+        origHeight = innerHeight;
+        onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+/*<![CDATA[*/
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+-->
+/*]]>*/
+</style>
+
+<script type="text/javascript" language="javascript1.2" src="../whmsg.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript" src="../whver.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript1.2" src="../whutils.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript1.2" src="../whproxy.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript1.2" src="../whlang.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript1.2" src="../whtopic.js" charset="utf-8">
+</script>
+</head>
+<body>
+<script type="text/javascript" language="javascript1.2">
+//<![CDATA[
+<!--
+if (window.gbWhTopic)
+{
+        var strUrl = document.location.href;
+        var bc = 0;
+        var n = strUrl.toLowerCase().indexOf("bc-");
+        if(n != -1)
+        {
+                document.location.replace(strUrl.substring(0, n));
+                bc = strUrl.substring(n+3);
+        }
+
+        if (window.addTocInfo)
+        {
+        addTocInfo("3D Simulation VBA\nVBA Objects\nSources and Ports\nHigh Frequency\nFarfieldSource");
+
+        }
+        if (window.writeBtnStyle)
+                writeBtnStyle();
+
+        if (window.writeIntopicBar)
+                writeIntopicBar(0);
+
+        
+        document.write("<p style=\"font-family: Tahoma; font-size: 9pt; font-weight: 400;  font-style:normal; color: rgb(0, 0, 0); text-decoration:none; text-align: left\"> ");
+AddMasterBreadcrumbs("../index.htm", "font-family: Tahoma; font-size: 9pt; font-weight: 400;  font-style:normal; color: rgb(0, 0, 0); text-decoration:none; text-align: left", "|", "Home", "../special_vbaobjects/special_vbaobjects_vbaobjects.htm");
+document.write("<a style=\"font-family: Tahoma; font-size: 9pt; font-weight: 400;  font-style:normal; color: rgb(0, 0, 0); text-decoration:none; text-align: left\" href=\"../special_vbaobjects/special_vbaobjects_vbaobjects.htm\">3D Simulation VBA<\/a> | <a style=\"font-family: Tahoma; font-size: 9pt; font-weight: 400;  font-style:normal; color: rgb(0, 0, 0); text-decoration:none; text-align: left\" href=\"../special_vbaobjects/special_vbaobjects_vbaobjects.htm\">VBA Objects<\/a> | <a style=\"font-family: Tahoma; font-size: 9pt; font-weight: 400;  font-style:normal; color: rgb(0, 0, 0); text-decoration:none; text-align: left\" href=\"../special_vbasignals/special_vbasignals_timesignal_object.htm\">Sources and Ports<\/a> | <a style=\"font-family: Tahoma; font-size: 9pt; font-weight: 400;  font-style:normal; color: rgb(0, 0, 0); text-decoration:none; text-align: left\" href=\"../special_vbasignals/special_vbasignals_timesignal_object.htm\">High Frequency<\/a> | FarfieldSource<\/p>");
+
+}
+else
+        if (window.gbIE4)
+                document.location.reload();
+
+onLoadHandler = function()
+{
+  if (window.setRelStartPage)
+        {
+        setTimeout("setRelStartPage('../index.htm');", 1)
+
+    setTimeout("UpdateBreadCrumbsMarker();", 1);
+        }
+}
+
+if (window.addEventListener){  
+        window.addEventListener('load', onLoadHandler, false);   
+} else if (window.attachEvent){  
+        window.attachEvent('onload', onLoadHandler);  
+}
+
+function onSetStartPage()
+{
+  autoSync(1);
+  sendSyncInfo();
+  sendAveInfoOut();
+}
+//-->
+//]]>
+</script><script type="text/javascript" src="../ehlpdhtm.js" language="JavaScript1.2">
+</script>
+<table cellspacing="0" width="100%">
+<col style="width: 50%;" />
+<col style="width: 50%;" />
+<tr>
+<td style="vertical-align: middle; padding-top: 5px; padding-bottom: 5px;">
+<p style="margin-top: 0px; margin-bottom: 0px;"><img src="../3ds.png" alt="" style="border: none;" border="0" /></p>
+</td>
+<td style="vertical-align: middle;">
+<p style="text-align: right;"><a href="https://www.3ds.com/products-services/3dexperience/" target="_blank"><img src="../3dexp.png" alt="" style="border: none;" width="32" height="32" border="0" /></a></p>
+</td>
+</tr>
+</table>
+<h1 style="font-size: 12pt;">FarfieldSource Object</h1>
+<p class="VBA-Text">Use this object to define a farfield as a source for the simulation. The field source can be used to excite a single simulation.</p>
+<ul>
+<li class="p-VBA-Index-Category">
+<p class="VBA-Index-Category"><a href="#Methods" target="_self">Methods</a></p>
+</li>
+<li class="p-VBA-Index-Category">
+<p class="VBA-Index-Category"><a href="#Examples">Example</a></p>
+</li>
+</ul>
+<p class="VBA-Heading-Category"><a name="Methods" id="Methods"></a>Methods</p>
+<p class="VBA-Heading-Method">Reset</p>
+<p class="VBA-Text-Indent">Resets the object.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">Name ( <a href="../common_vbageneral/common_general_string.htm" id="a121" style="font-weight: normal; font-style: normal;" name="a121">string</a> <span style="font-style: italic;"><i>name</i></span> )</p>
+<p class="VBA-Text-Indent" style="font-style: normal;">Sets the name of the farfield source.</p>
+<p class="VBA-Text-Indent" style="font-style: normal;">&#160;</p>
+<p class="VBA-Heading-Method">Id( <a href="../common_vbageneral/common_general_integer.htm" id="a31" style="font-weight: normal; font-style: normal;" name="a31">int</a> <span style="font-style: italic;"><i>id</i></span> )</p>
+<p class="VBA-Text-Indent">Sets a unique identifier for the imported farfield source data. Therefore farfield sources pointing to the same imported data (e.g. created via transform and copy) share the same id. Please use <span style="font-style: italic;"><i>GetNextId</i></span> to retrieve a free id.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">SetPosition ( <span><a href="../common_vbageneral/common_general_double.htm" id="a1" style="font-weight: normal; font-style: normal;" name="a1">double</a></span> <span style="font-style: italic;"><i>x,</i></span> <a href="../common_vbageneral/common_general_double.htm" id="a2" style="font-weight: normal; font-style: normal;" name="a2">double</a> <span style="font-style: italic;"><i>y,</i></span> <a href="../common_vbageneral/common_general_double.htm" id="a3" style="font-weight: normal; font-style: normal;" name="a3">double</a> <span style="font-style: italic;"><i>z</i></span> )</p>
+<p class="VBA-Text-Indent">Specifies the position for the point source.</p>
+<p class="VBA-Heading-Method">&#160;</p>
+<p class="VBA-Heading-Method">SetPhi0XYZ (<a href="../common_vbageneral/common_general_double.htm" id="a53" style="font-weight: normal; font-style: normal;" name="a53">double</a> <span style="font-style: italic;"><i>x,</i></span> <a href="../common_vbageneral/common_general_double.htm" id="a54" style="font-weight: normal; font-style: normal;" name="a54">double</a> <span style="font-style: italic;"><i>y,</i></span> <a href="../common_vbageneral/common_general_double.htm" id="a55" style="font-weight: normal; font-style: normal;" name="a55">double</a> <span style="font-style: italic;"><i>z</i></span> )</p>
+<p class="VBA-Heading-Method">SetTheta0XYZ (<a href="../common_vbageneral/common_general_double.htm" id="a56" style="font-weight: normal; font-style: normal;" name="a56">double</a> <span style="font-style: italic;"><i>x,</i></span> <a href="../common_vbageneral/common_general_double.htm" id="a57" style="font-weight: normal; font-style: normal;" name="a57">double</a> <span style="font-style: italic;"><i>y,</i></span> <a href="../common_vbageneral/common_general_double.htm" id="a58" style="font-weight: normal; font-style: normal;" name="a58">double</a> <span style="font-style: italic;"><i>z</i></span> )</p>
+<p class="VBA-Text-Indent">Set new origin vectors in global cartesian coordinates for the x'-axis and z'axis. The x'axis defines the new start of the angle phi, the z'-axis defines the new start of the angle theta. Therefore <span style="font-weight: bold;">SetPhi0</span> is used to set the new x'-axis, <span style="font-weight: bold;">SetTheta0</span> to set the new z'-axis. The resulting vectors will be normalized to 1. The x'-axis will be orthogonalized to the z'-axis. Please make sure that the axes are not parallel and that the vectors do not have zero length. The y'-axis will be determined automatically.</p>
+<p class="VBA-Text-Indent"><span style="font-weight: bold;">Please note:</span> <span style="font-style: italic;"><i>x, y, and z</i></span> must be double values here. Any expression is <span style="font-weight: bold;">not</span> allowed.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">Import ( <span style="font-style: italic;"><i><a href="../common_vbageneral/common_general_string.htm" id="a7" style="font-weight: normal; font-style: normal;" name="a7">string</a> name</i></span> )</p>
+<p class="VBA-Text-Indent"><span style="font-style: italic;"><i>name</i></span> specifies the source file and path.</p>
+<p class="VBA-Text-Indent">Note: The import is currently only available for files containing version and frequency information. Please see below for an example import file. Files can be created by the <a href="../special_vbapostproc/special_vbapostproc_farfieldploto.htm#General">FarfieldPlot Object</a>-method ASCIIExportAsSource(...) from any MWS farfield calculation.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">UseCopyOnly ( <a href="../common_vbageneral/common_general_bool_data_type.htm" id="a79" style="font-weight: normal; font-style: normal;" name="a79">bool</a> <span style="font-style: italic;"><i>flag</i></span> )</p>
+<p class="VBA-Text-Indent">The farfield source file is copied once into the project folder. Hence changes of the originally imported file do not affect the defined farfield source.</p>
+<p class="VBA-Heading-Method">&#160;</p>
+<p class="VBA-Heading-Method">UseMultipoleFFS ( <span><a href="../common_vbageneral/common_general_bool_data_type.htm" style="font-weight: normal;">bool</a></span> <span style="font-style: italic;"><i>flag</i></span> )</p>
+<p class="VBA-Text-Indent">This option enables the calculation of the multiple coefficients for the farfield source. For the simulation the farfield representation by the multipole coefficients will be used. It is recommended to use this option if the farfield source is positioned relatively close to the defined structure.</p>
+<p class="VBA-Heading-Method">&#160;</p>
+<p class="VBA-Heading-Method">UseForSimulation ( <a href="../common_vbageneral/common_general_bool_data_type.htm" style="font-weight: normal;">bool</a> <span style="font-style: italic;"><i>flag</i></span> )</p>
+<p class="VBA-Text-Indent">Activates the farfield source for simulation.</p>
+<p class="VBA-Heading-Method">&#160;</p>
+<p class="VBA-Heading-Method">SetAlignmentType( <a href="../common_vbageneral/common_general_enum.htm" style="font-weight: normal;">enum</a> <span style="font-style: italic;"><i>type</i></span> )</p>
+<p class="VBA-Text-Indent">Specifies the alignment and positioning of the farfield source. The following types are available:</p>
+<table style="vertical-align: top; margin-left: 23px;" cellspacing="0">
+<col width="100" />
+<col width="250" />
+<tr style="vertical-align: top;">
+<td style="border: Solid 1px #000000; padding-right: 10px; padding-left: 10px;" width="100">
+<p>"user"</p>
+</td>
+<td style="border-top: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-right: 10px; padding-left: 10px;" width="250">
+<p>The farfield source position and orientation are defined via <span style="font-weight: bold;">SetPosition</span>, <span style="font-weight: bold;">SetPhi0</span> and <span style="font-weight: bold;">SetTheta0</span>.</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-right: 10px; padding-left: 10px;" width="100">
+<p>"currentwcs"</p>
+<p>&#160;</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-right: 10px; padding-left: 10px;" width="250">
+<p>The farfield source is aligned with the current wcs at the time of the source definition.</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-right: 10px; padding-left: 10px;" width="100">
+<p>"sourcefile"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-right: 10px; padding-left: 10px;" width="250">
+<p>The farfield source position and orientation are read from the specified source file.</p>
+</td>
+</tr>
+</table>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">SetMultipoleDegree ( <span><a href="../common_vbageneral/common_general_integer.htm" style="font-weight: normal;">integer</a></span> <span style="font-style: italic;"><i>degree</i></span> )</p>
+<p class="VBA-Text-Indent">Sets a user defined degree of the multipole expansion to guide the calculation. Its effect depends on the specified <span style="font-style: italic;"><i>calculation mode</i></span>.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">SetMultipoleCalcMode( <a href="../common_vbageneral/common_general_enum.htm" style="font-weight: normal;">enum</a> <span style="font-style: italic;"><i>mode</i></span> )</p>
+<p class="VBA-Text-Indent">Defines the strategy used to determine the maximal degree of the multipole expansion. Three modes are available:</p>
+<table style="vertical-align: top; margin-left: 23px;" cellspacing="0">
+<col width="100" />
+<col width="350" />
+<tr style="vertical-align: top;">
+<td style="border: Solid 1px #000000; padding-right: 10px; padding-left: 10px;" width="100">
+<p>"automatic"</p>
+</td>
+<td style="border-top: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-right: 10px; padding-left: 10px;" width="350">
+<p>The maximal degree is automatically derived from the estimated discretization error of the farfield.</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-right: 10px; padding-left: 10px;" width="100">
+<p>"user defined"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-right: 10px; padding-left: 10px;" width="350">
+<p>The value set by <span style="font-weight: bold;">SetMultipoleDegree</span> is used.</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-right: 10px; padding-left: 10px;" width="100">
+<p>"autotruncation"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-right: 10px; padding-left: 10px;" width="350">
+<p>The value set by <span style="font-weight: bold;">SetMultipoleDegree</span> is used as a starting value to guide the automatic calculation.</p>
+</td>
+</tr>
+</table>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">Store</p>
+<p class="VBA-Text-Indent">Activates the import, which has to be previously specified using the described methods.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">Delete</p>
+<p class="VBA-Text-Indent">Deletes the farfield source specified by <span style="font-style: italic;"><i>Name</i></span></p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">DeleteAll</p>
+<p class="VBA-Text-Indent">Removes all farfield sources</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">Rename( <span style="font-style: italic;"><i><a href="../common_vbageneral/common_general_string.htm" id="a71" style="font-weight: normal; font-style: normal;" name="a71">string</a> old_name</i></span>, <span style="font-style: italic;"><i><a href="../common_vbageneral/common_general_string.htm" id="a711" style="font-weight: normal; font-style: normal;" name="a711">string</a> new_name</i></span> )</p>
+<p class="VBA-Text-Indent">Renames the farfield source <span style="font-style: italic;"><i>old_name</i></span> to <span style="font-style: italic;"><i>new_name</i></span>.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method" style="font-style: normal;">GetNextId <a href="../common_vbageneral/common_general_integer.htm" style="font-weight: normal;">integer</a></p>
+<p class="VBA-Text-Indent">Returns the next free unique ID to for a new farfield source.</p>
+<p class="VBA-Heading-Category"><a name="Examples" id="Examples"></a>Example</p>
+<p class="VBA-Text-Example" style="color: #000000; text-decoration: underline;">Example for using the VBA object:</p>
+<p class="VBA-Text-Example" style="color: #008000;">' Define a FarfieldSource</p>
+<p class="VBA-Text-Example">With FARFIELDSOURCE</p>
+<p class="VBA-Text-Example" style="margin-left: 40px;">.Reset</p>
+<p class="VBA-Text-Example" style="margin-left: 40px;">.Name "ffs1"</p>
+<p class="VBA-Text-Example" style="margin-left: 40px;">.Id "1"</p>
+<p class="VBA-Text-Example" style="margin-left: 40px;">.UseCopyOnly "true"</p>
+<p class="VBA-Text-Example" style="margin-left: 40px;">.Setposition "1.", &#160;"1.", &#160;"1."</p>
+<p class="VBA-Text-Example" style="margin-left: 40px;">.SetTheta0 "0.", &#160;"0.", &#160;"1."</p>
+<p class="VBA-Text-Example" style="margin-left: 40px;">.SetPhi0 "1.", &#160;"0.", &#160;"0."</p>
+<p class="VBA-Text-Example" style="margin-left: 40px;">.Import "example.txt"</p>
+<p class="VBA-Text-Example" style="margin-left: 40px;">.UseMultipoleFFS "false"</p>
+<p class="VBA-Text-Example" style="margin-left: 40px;">.SetAlignmentType "user"</p>
+<p class="VBA-Text-Example" style="margin-left: 40px;">.SetMultipoleDegree "10"</p>
+<p class="VBA-Text-Example" style="margin-left: 40px;">.SetMultipoleCalcMode "automatic"</p>
+<p class="VBA-Text-Example" style="margin-left: 40px;">.UseForSimulation "true"</p>
+<p class="VBA-Text-Example" style="margin-left: 40px;">.Store</p>
+<p class="VBA-Text-Example">End With</p>
+<p class="VBA-Text-Example" style="color: #000000;">&#160;</p>
+<?rh-p style="margin-bottom: 0px; text-align: Right; margin-left: 18px; 
+                 margin-right: 18px; margin-top: 18px;" ?>
+<div style="width: 100%; position: relative;" id="footer">
+<p style="border-bottom: Solid 1px #dddddd; text-align: Left; margin-left: 0px; font-family: Arial, sans-serif; line-height: Normal; margin-top: 9px; margin-right: 0px; margin-bottom: 6px; border-left-width: 1px; border-top-width: 1px; border-right-width: 1px;"><span style="text-align: Left; font-family: Arial, sans-serif; line-height: Normal;">&#160;</span></p>
+<table cellspacing="0" width="100%">
+<col style="width: 50%;" />
+<col style="width: 50%;" />
+<tr>
+<td style="vertical-align: Top;"><span style="font-family: Arial, sans-serif; line-height: Normal; font-size: 8pt;"><font size="1" style="font-size:8pt;">CST Studio Suite 2026</font></span></td>
+<td style="vertical-align: Top;">
+<p style="text-align: right;">&#160;</p>
+</td>
+</tr>
+</table>
+<p>&#160;</p>
+</div>
+<script type="text/javascript" language="javascript1.2">
+//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+        writeIntopicBar(0);
+
+
+highlightSearch();
+//-->
+//]]>
+</script>
+</body>
+</html>

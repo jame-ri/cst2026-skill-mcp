@@ -1,0 +1,656 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="Adobe RoboHelp 11" />
+<title>ResultDatabase Object</title>
+<link rel="StyleSheet" href="../online_help_vba.css" type="text/css" />
+<style type="text/css">
+/*<![CDATA[*/
+<!--
+body { border-bottom-style:None; }
+-->
+/*]]>*/
+</style>
+
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+        origWidth = innerWidth;
+        origHeight = innerHeight;
+        onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+/*<![CDATA[*/
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+-->
+/*]]>*/
+</style>
+
+<script type="text/javascript" language="javascript1.2" src="../whmsg.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript" src="../whver.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript1.2" src="../whutils.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript1.2" src="../whproxy.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript1.2" src="../whlang.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript1.2" src="../whtopic.js" charset="utf-8">
+</script>
+</head>
+<body>
+<script type="text/javascript" language="javascript1.2">
+//<![CDATA[
+<!--
+if (window.gbWhTopic)
+{
+        var strUrl = document.location.href;
+        var bc = 0;
+        var n = strUrl.toLowerCase().indexOf("bc-");
+        if(n != -1)
+        {
+                document.location.replace(strUrl.substring(0, n));
+                bc = strUrl.substring(n+3);
+        }
+
+        if (window.addTocInfo)
+        {
+        addTocInfo("3D Simulation VBA\nVBA Objects\nPost Processing\nResultDatabase");
+
+        }
+        if (window.writeBtnStyle)
+                writeBtnStyle();
+
+        if (window.writeIntopicBar)
+                writeIntopicBar(0);
+
+        
+        document.write("<p style=\"font-family: Tahoma; font-size: 9pt; font-weight: 400;  font-style:normal; color: rgb(0, 0, 0); text-decoration:none; text-align: left\"> ");
+AddMasterBreadcrumbs("../index.htm", "font-family: Tahoma; font-size: 9pt; font-weight: 400;  font-style:normal; color: rgb(0, 0, 0); text-decoration:none; text-align: left", "|", "Home", "../special_vbaobjects/special_vbaobjects_vbaobjects.htm");
+document.write("<a style=\"font-family: Tahoma; font-size: 9pt; font-weight: 400;  font-style:normal; color: rgb(0, 0, 0); text-decoration:none; text-align: left\" href=\"../special_vbaobjects/special_vbaobjects_vbaobjects.htm\">3D Simulation VBA<\/a> | <a style=\"font-family: Tahoma; font-size: 9pt; font-weight: 400;  font-style:normal; color: rgb(0, 0, 0); text-decoration:none; text-align: left\" href=\"../special_vbaobjects/special_vbaobjects_vbaobjects.htm\">VBA Objects<\/a> | <a style=\"font-family: Tahoma; font-size: 9pt; font-weight: 400;  font-style:normal; color: rgb(0, 0, 0); text-decoration:none; text-align: left\" href=\"../special_vbapostproc/special_vbapostproc_type_method.htm\">Post Processing<\/a> | ResultDatabase<\/p>");
+
+}
+else
+        if (window.gbIE4)
+                document.location.reload();
+
+onLoadHandler = function()
+{
+  if (window.setRelStartPage)
+        {
+        setTimeout("setRelStartPage('../index.htm');", 1)
+
+    setTimeout("UpdateBreadCrumbsMarker();", 1);
+        }
+}
+
+if (window.addEventListener){  
+        window.addEventListener('load', onLoadHandler, false);   
+} else if (window.attachEvent){  
+        window.attachEvent('onload', onLoadHandler);  
+}
+
+function onSetStartPage()
+{
+  autoSync(1);
+  sendSyncInfo();
+  sendAveInfoOut();
+}
+//-->
+//]]>
+</script><script type="text/javascript" src="../ehlpdhtm.js" language="JavaScript1.2">
+</script>
+<table cellspacing="0" width="100%">
+<col style="width: 50%;" />
+<col style="width: 50%;" />
+<tr>
+<td style="vertical-align: middle; padding-top: 5px; padding-bottom: 5px;">
+<p style="margin-top: 0px; margin-bottom: 0px;"><img src="../3ds.png" alt="" style="border: none;" border="0" /></p>
+</td>
+<td style="vertical-align: middle;">
+<p style="text-align: right;"><a href="https://www.3ds.com/products-services/3dexperience/" target="_blank"><img src="../3dexp.png" alt="" style="border: none;" width="32" height="32" border="0" /></a></p>
+</td>
+</tr>
+</table>
+<p class="VBA-Heading-Object">ResultDatabase Object</p>
+<p class="VBA-Text">This object offers access to 0D results, which have been previously created by a simulation run or post-processing step.</p>
+<p class="VBA-Text">The ResultDatabase Object is used by certain solvers to store important results as accuracy, solver time, energies, forces etc.</p>
+<p class="VBA-Text">With the help of the following inquiry methods these results can be extracted from the database.</p>
+<p class="VBA-Heading-Category">Methods</p>
+<p class="VBA-Heading-Method">GetDoubleEntry ( <span><a href="../common_vbageneral/common_general_string.htm" id="a27" style="font-weight: normal; font-style: normal;" name="a27">string</a></span> <span style="font-style: italic;"><i>key</i></span> ) <a href="../common_vbageneral/common_general_double.htm" id="a26" style="font-weight: normal; font-style: normal;" name="a26">double</a></p>
+<p class="VBA-Text-Indent">Returns the double value of a result database entry specified by it's key value.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">GetIntegerEntry ( <span><a href="../common_vbageneral/common_general_string.htm" id="a1" style="font-weight: normal; font-style: normal;" name="a1">string</a></span> <span style="font-style: italic;"><i>key</i></span> ) <a href="../common_vbageneral/common_general_integer.htm" id="a4" style="font-weight: normal; font-style: normal;" name="a4">int</a></p>
+<p class="VBA-Text-Indent">Returns the integer value of a result database entry specified by it's key value.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">GetStringEntry ( <span><a href="../common_vbageneral/common_general_string.htm" id="a2" style="font-weight: normal; font-style: normal;" name="a2">string</a></span> <span style="font-style: italic;"><i>key</i></span> ) <a href="../common_vbageneral/common_general_string.htm" id="a5" style="font-weight: normal; font-style: normal;" name="a5">string</a></p>
+<p class="VBA-Text-Indent">Returns the string value of a result database entry specified by it's key value.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">GetNumberOfDoubleEntries <a href="../common_vbageneral/common_general_integer.htm" id="a6" style="font-weight: normal; font-style: normal;" name="a6">int</a></p>
+<p class="VBA-Text-Indent">Returns the total number of double entries in the result database.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">GetDoubleKeyFromIndex ( <a href="../common_vbageneral/common_general_integer.htm" id="a7" style="font-weight: normal; font-style: normal;" name="a7">int</a> <span style="font-style: italic;"><i>index</i></span> ) <a href="../common_vbageneral/common_general_string.htm" id="a8" style="font-weight: normal; font-style: normal;" name="a8">string</a></p>
+<p class="VBA-Text-Indent">Returns the key-string &#160;of a double result entry specified by it's integer index. The index value must be greater or equal zero and smaller than the total number of double result entries (can &#160;be obtained by <span style="font-style: italic;"><i>GetNumberOfDoubleEntries</i></span>).</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">GetNumberOfDoubleEntriesForDir ( <span><a href="../common_vbageneral/common_general_string.htm" id="a3" style="font-weight: normal; font-style: normal;" name="a3">string</a></span> <span style="font-style: italic;"><i>dirname</i></span> ) <a href="../common_vbageneral/common_general_integer.htm" id="a9" style="font-weight: normal; font-style: normal;" name="a9">int</a></p>
+<p class="VBA-Text-Indent">Returns the total number of double entries within a subfolder in the result database.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">GetDoubleEntryForDir ( <span><a href="../common_vbageneral/common_general_string.htm" id="a10" style="font-weight: normal; font-style: normal;" name="a10">string</a></span> <span style="font-style: italic;"><i>subkey, <a href="../common_vbageneral/common_general_string.htm" id="a11" style="font-weight: normal; font-style: normal;" name="a11">string</a> dirname</i></span> ) <a href="../common_vbageneral/common_general_double.htm" id="a12" style="font-weight: normal; font-style: normal;" name="a12">double</a></p>
+<p class="VBA-Text-Indent">Returns the double value of a result database entry specified by it's directory name and the remaining subkey value. When combined, directory name and subkey form the reference key together.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">GetDoubleKeyFromIndexForDir ( <a href="../common_vbageneral/common_general_integer.htm" id="a14" style="font-weight: normal; font-style: normal;" name="a14">int</a> <span style="font-style: italic;"><i>index, <a href="../common_vbageneral/common_general_string.htm" id="a15" style="font-weight: normal; font-style: normal;" name="a15">string</a> dirname</i></span> ) <a href="../common_vbageneral/common_general_string.htm" id="a13" style="font-weight: normal; font-style: normal;" name="a13">string</a></p>
+<p class="VBA-Text-Indent">Returns the subkey-string &#160;of a double result entry specified by it's integer index. The index value must be greater or equal zero and smaller than the total number of double result entries (can &#160;be obtained by <span style="font-style: italic;"><i>GetNumberOfDoubleEntriesForDir</i></span>).</p>
+<p class="VBA-Text">&#160;</p>
+<p class="VBA-Text">The keys values are constructed using the following <span style="font-style: italic;"><i>solvernames as</i></span> <a href="../common_vbageneral/common_general_enum.htm" id="a23" name="a23">enums</a>:</p>
+<p class="VBA-Text">&#160;</p>
+<table style="vertical-align: top; margin-left: 40px;" cellspacing="0" width="84.37%">
+<col style="width: 17.021%;" />
+<col style="width: 82.979%;" />
+<tr style="vertical-align: top;">
+<td style="border: Solid 1px #000000; width: 17.021%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text" style="font-style: italic;">solvername (<a href="../common_vbageneral/common_general_enum.htm" id="a92" name="a92">enums</a>)</p>
+</td>
+<td style="border-top: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 82.979%; padding-right: 10px; padding-left: 10px;">
+<p>Description</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 17.021%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text">"EStatic"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 82.979%; padding-right: 10px; padding-left: 10px;">
+<p>Electrostatic solver</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 17.021%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text">"JStatic"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 82.979%; padding-right: 10px; padding-left: 10px;">
+<p>Stationary current solver</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 17.021%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text">"MStatic"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 82.979%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text">Magnetostatic solver</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 17.021%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text">"LFSolver"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 82.979%; padding-right: 10px; padding-left: 10px;">
+<p>Low frequency solver</p>
+</td>
+</tr>
+</table>
+<p class="VBA-Text">&#160;</p>
+<p class="VBA-Text">Some examples for the keys that are stored in the database are listed below:</p>
+<p class="VBA-Text">&#160;</p>
+<table style="vertical-align: top; margin-left: 40px;" cellspacing="0" width="89.014%">
+<col style="width: 7.529%;" />
+<col style="width: 33.737%;" />
+<col style="width: 21.396%;" />
+<tr style="vertical-align: top;">
+<td style="border: Solid 1px #000000; width: 7.529%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text" style="font-style: italic;">key (<a href="../common_vbageneral/common_general_string.htm" id="a91" name="a91">string</a>)</p>
+</td>
+<td style="border-top: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 33.737%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text" style="margin-left: 0px;">Description of return value</p>
+</td>
+<td style="border-top: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 21.396%; padding-right: 10px; padding-left: 10px;">
+<p>Supported by</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 7.529%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text">"AllSolvers\\Volume\\"+<a href="../common_vbageneral/common_general_solid_names.htm" id="a16" name="a16">solidname</a></p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 33.737%; padding-right: 10px; padding-left: 10px;">
+<p style="margin-left: 0px;">Volume of the specified solid.</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 21.396%; padding-right: 10px; padding-left: 10px;">
+<p>All available solvers</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 7.529%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text"><a href="../common_vbageneral/common_general_enum.htm" id="a17" name="a17">solvername</a>+"\\Solvertime"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 33.737%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text" style="margin-left: 0px;">Total calculation time.</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 21.396%; padding-right: 10px; padding-left: 10px;">
+<p>EStatic</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 7.529%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text"><a href="../common_vbageneral/common_general_enum.htm" id="a18" name="a18">solvername</a>+"\\Maxiter"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 33.737%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text" style="margin-left: 0px;">Maximal number of iterations of the iterative solver</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 21.396%; padding-right: 10px; padding-left: 10px;">
+<p>EStatic</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 7.529%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text"><a href="../common_vbageneral/common_general_enum.htm" id="a19" name="a19">solvername</a>+"\\NRuns"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 33.737%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text" style="margin-left: 0px;">Number of required solver runs</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 21.396%; padding-right: 10px; padding-left: 10px;">
+<p>EStatic &#160;/ LFSolver</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 7.529%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text"><a href="../common_vbageneral/common_general_enum.htm" id="a20" name="a20">solvername</a>+"\\Energy"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 33.737%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text" style="margin-left: 0px;">Energy of the computed fields.</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 21.396%; padding-right: 10px; padding-left: 10px;">
+<p>EStatic &#160;/ MStatic / LFSolver</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 7.529%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text"><a href="../common_vbageneral/common_general_enum.htm" id="a99" name="a99">solvername</a>+"\\"+<a href="../common_vbageneral/common_general_solid_names.htm" id="a100" name="a100">solidname</a>+"\\Energy"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 33.737%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text" style="margin-left: 0px;">Energy of the computed fields in the specified solid.</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 21.396%; padding-right: 10px; padding-left: 10px;">
+<p>EStatic &#160;/ MStatic / LFSolver</p>
+<p>&#160;(only for tetrahedral meshes)</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 7.529%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text"><a href="../common_vbageneral/common_general_enum.htm" id="a25" name="a25">solvername</a>+"\\Co-Energy"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 33.737%; padding-right: 10px; padding-left: 10px;">
+<p style="margin-left: 0px;">Co-energy of the field</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 21.396%; padding-right: 10px; padding-left: 10px;">
+<p>MStatic</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 7.529%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text"><a href="../common_vbageneral/common_general_enum.htm" id="a101" name="a101">solvername</a>+"\\"+<a href="../common_vbageneral/common_general_solid_names.htm" id="a102" name="a102">solidname</a>+"\\Co-Energy"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 33.737%; padding-right: 10px; padding-left: 10px;">
+<p style="margin-left: 0px;">Co-energy of the field in the specified solid</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 21.396%; padding-right: 10px; padding-left: 10px;">
+<p>MStatic</p>
+<p>(only for tetrahedral meshes)</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 7.529%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text"><a href="../common_vbageneral/common_general_enum.htm" id="a87" name="a87">solvername</a>+"\\"+<a href="../common_vbageneral/common_general_integer.htm" id="a88" name="a88">iFreqIndex</a>+"\\Mag. Energy"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 33.737%; padding-right: 10px; padding-left: 10px;">
+<p style="margin-left: 0px;">Magnetic field energy of the requested frequency</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 21.396%; padding-right: 10px; padding-left: 10px;">
+<p>LFSolver</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 7.529%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text"><a href="../common_vbageneral/common_general_enum.htm" id="a103" name="a103">solvername</a>+"\\"+<a href="../common_vbageneral/common_general_integer.htm" id="a104" name="a104">iFreqIndex</a>+"\\"+<a href="../common_vbageneral/common_general_solid_names.htm" id="a105" name="a105">solidname</a>+"\\Mag. Energy"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 33.737%; padding-right: 10px; padding-left: 10px;">
+<p style="margin-left: 0px;">Magnetic field energy of the requested frequency in the specified solid</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 21.396%; padding-right: 10px; padding-left: 10px;">
+<p>LFSolver</p>
+<p>(only for tetrahedral meshes)</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 7.529%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text"><a href="../common_vbageneral/common_general_enum.htm" id="a89" name="a89">solvername</a>+"\\"<a href="../common_vbageneral/common_general_integer.htm" id="a90" name="a90">iFreqIndex</a>+"\\El. Energy"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 33.737%; padding-right: 10px; padding-left: 10px;">
+<p style="margin-left: 0px;">Electric field energy of the requested frequency</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 21.396%; padding-right: 10px; padding-left: 10px;">
+<p>LFSolver</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 7.529%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text"><a href="../common_vbageneral/common_general_enum.htm" id="a106" name="a106">solvername</a>+"\\"<a href="../common_vbageneral/common_general_integer.htm" id="a107" name="a107">iFreqIndex</a>+"\\"+<a href="../common_vbageneral/common_general_solid_names.htm" id="a108" name="a108">solidname</a>+"\\El. Energy"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 33.737%; padding-right: 10px; padding-left: 10px;">
+<p style="margin-left: 0px;">Electric field energy of the requested frequency in the specified solid</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 21.396%; padding-right: 10px; padding-left: 10px;">
+<p>LFSolver</p>
+<p>(only for tetrahedral meshes)</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 7.529%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text"><a href="../common_vbageneral/common_general_enum.htm" id="a112" name="a112">solvername</a>+"\\Loss Power"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 33.737%; padding-right: 10px; padding-left: 10px;">
+<p style="margin-left: 0px;">Ohmic losses of the field (only for stationary current solver)</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 21.396%; padding-right: 10px; padding-left: 10px;">
+<p>JStatic</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 7.529%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text"><a href="../common_vbageneral/common_general_enum.htm" id="a28" name="a28">solvername</a>+"\\"+<a href="../common_vbageneral/common_general_solid_names.htm" id="a113" name="a113">solidname</a>+"\\Loss Power"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 33.737%; padding-right: 10px; padding-left: 10px;">
+<p style="margin-left: 0px;">Ohmic losses of the field (only for stationary current solver) in the specified solid</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 21.396%; padding-right: 10px; padding-left: 10px;">
+<p>JStatic</p>
+<p>(only for tetrahedral meshes)</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 7.529%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text"><a href="../common_vbageneral/common_general_enum.htm" id="a21" name="a21">solvername</a>+"\\"+<a href="../common_vbageneral/common_general_integer.htm">inumber</a>+"\\Accuracy"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 33.737%; padding-right: 10px; padding-left: 10px;">
+<p style="margin-left: 0px;">Reached accuracy of the inumber'th run of the equation solver.</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 21.396%; padding-right: 10px; padding-left: 10px;">
+<p>EStatic</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 7.529%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text"><a href="../common_vbageneral/common_general_enum.htm" id="a22" name="a22">solvername</a>+"\\"+<a href="../common_vbageneral/common_general_integer.htm">inumber</a>+"\\NIterations"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 33.737%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text" style="margin-left: 0px;">Used number of iterations of the inumber'th run of the equation solver.</p>
+<p class="vba-text" style="margin-left: 0px;">&#160;</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 21.396%; padding-right: 10px; padding-left: 10px;">
+<p>EStatic</p>
+</td>
+</tr>
+<tr style="vertical-align: top; height: 0px;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 7.529%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text"><a href="../common_vbageneral/common_general_enum.htm" id="a24" name="a24">solvername</a>+"\\Force\\NormalX"</p>
+<p class="VBA-Text"><a href="../common_vbageneral/common_general_enum.htm" id="a29" name="a29">solvername</a>+"\\Force\\NormalY"</p>
+<p class="VBA-Text"><a href="../common_vbageneral/common_general_enum.htm" id="a30" name="a30">solvername</a>+"\\Force\\NormalZ"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 33.737%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text" style="margin-left: 0px;">Returns the X/Y/Z component of the torque axes normal.</p>
+<p class="vba-text" style="margin-left: 0px;">&#160;</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 21.396%; padding-right: 10px; padding-left: 10px;">
+<p>LFSolver / EStatic &#160;/ MStatic</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 7.529%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text"><a href="../common_vbageneral/common_general_enum.htm" id="a31" name="a31">solvername</a>+"\\Force\\OriginX"</p>
+<p class="VBA-Text"><a href="../common_vbageneral/common_general_enum.htm" id="a32" name="a32">solvername</a>+"\\Force\\OriginY"</p>
+<p class="VBA-Text"><a href="../common_vbageneral/common_general_enum.htm" id="a33" name="a33">solvername</a>+"\\Force\\OriginZ"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 33.737%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text" style="margin-left: 0px;">Returns the X/Y/Z coordinate of the torque axes origin.</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 21.396%; padding-right: 10px; padding-left: 10px;">
+<p>LFSolver / EStatic &#160;/ MStatic</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 7.529%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text"><a href="../common_vbageneral/common_general_enum.htm" id="a34" name="a34">solvername</a>+"\\Force\\"+<a href="../common_vbageneral/common_general_solid_names.htm" id="a37" name="a37">solidname</a>+"\\ForceX"</p>
+<p class="VBA-Text"><a href="../common_vbageneral/common_general_enum.htm" id="a35" name="a35">solvername</a>+"\\Force\\"+<a href="../common_vbageneral/common_general_solid_names.htm" id="a38" name="a38">solidname</a>+"\\ForceY"</p>
+<p class="VBA-Text"><a href="../common_vbageneral/common_general_enum.htm" id="a36" name="a36">solvername</a>+"\\Force\\"+<a href="../common_vbageneral/common_general_solid_names.htm" id="a39" name="a39">solidname</a>+"\\ForceZ"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 33.737%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text" style="margin-left: 0px;">Returns the X/Y/Z component of the total force acting on the specified solid (for static calculations only)</p>
+<p class="vba-text" style="margin-left: 0px;">&#160;</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 21.396%; padding-right: 10px; padding-left: 10px;">
+<p class="vba-text">EStatic &#160;/ MStatic</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 7.529%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text"><a href="../common_vbageneral/common_general_enum.htm" id="a95" name="a95">solvername</a>+"\\Force\\"+<a href="../common_vbageneral/common_general_solid_names.htm" id="a96" name="a96">solidname</a>+"\\Torque"</p>
+<p class="vba-text">&#160;</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 33.737%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text" style="margin-left: 0px;">Returns the torque value related to the given axes on the specified solid. (for static calculations only)</p>
+<p class="vba-text" style="margin-left: 0px;">&#160;</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 21.396%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text">EStatic &#160;/ MStatic</p>
+<p class="vba-text">&#160;</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 7.529%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text"><a href="../common_vbageneral/common_general_enum.htm" id="a114" name="a114">solvername</a>+"\\"+<span>coilname+</span>"\\FluxLinkage"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 33.737%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text" style="margin-left: 0px;">Returns the flux value of the named coil.</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 21.396%; padding-right: 10px; padding-left: 10px;">
+<p>MStatic</p>
+<p>(only for tetrahedral meshes)</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 7.529%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text"><a href="../common_vbageneral/common_general_enum.htm" id="a42" name="a42">solvername</a>+"\\Force\\"+<a href="../common_vbageneral/common_general_solid_names.htm" id="a43" name="a43">solidname</a>+"\\ForceXDC"</p>
+<p class="VBA-Text"><a href="../common_vbageneral/common_general_enum.htm" id="a44" name="a44">solvername</a>+"\\Force\\"+<a href="../common_vbageneral/common_general_solid_names.htm" id="a45" name="a45">solidname</a>+"\\ForceYDC"</p>
+<p class="VBA-Text"><a href="../common_vbageneral/common_general_enum.htm" id="a46" name="a46">solvername</a>+"\\Force\\"+<a href="../common_vbageneral/common_general_solid_names.htm" id="a47" name="a47">solidname</a>+"\\ForceZDC"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 33.737%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text" style="margin-left: 0px;">Returns the static part of the total force acting on the specified solid (for time-harmonic calculations).</p>
+<p class="vba-text" style="margin-left: 0px;">&#160;</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 21.396%; padding-right: 10px; padding-left: 10px;">
+<p>LFSolver</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 7.529%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text"><a href="../common_vbageneral/common_general_enum.htm" id="a48" name="a48">solvername</a>+"\\Force\\"+<a href="../common_vbageneral/common_general_solid_names.htm" id="a49" name="a49">solidname</a>+"\\ForceXAC_re"</p>
+<p class="VBA-Text"><a href="../common_vbageneral/common_general_enum.htm" id="a54" name="a54">solvername</a>+"\\Force\\"+<a href="../common_vbageneral/common_general_solid_names.htm" id="a55" name="a55">solidname</a>+"\\ForceXAC_im"</p>
+<p class="VBA-Text"><a href="../common_vbageneral/common_general_enum.htm" id="a56" name="a56">solvername</a>+"\\Force\\"+<a href="../common_vbageneral/common_general_solid_names.htm" id="a57" name="a57">solidname</a>+"\\ForceYAC_re"</p>
+<p class="VBA-Text"><a href="../common_vbageneral/common_general_enum.htm" id="a58" name="a58">solvername</a>+"\\Force\\"+<a href="../common_vbageneral/common_general_solid_names.htm" id="a59" name="a59">solidname</a>+"\\ForceYAC_im"</p>
+<p class="VBA-Text"><a href="../common_vbageneral/common_general_enum.htm" id="a60" name="a60">solvername</a>+"\\Force\\"+<a href="../common_vbageneral/common_general_solid_names.htm" id="a61" name="a61">solidname</a>+"\\ForceZAC_re"</p>
+<p class="VBA-Text"><a href="../common_vbageneral/common_general_enum.htm" id="a62" name="a62">solvername</a>+"\\Force\\"+<a href="../common_vbageneral/common_general_solid_names.htm" id="a63" name="a63">solidname</a>+"\\ForceZAC_im"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 33.737%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text" style="margin-left: 0px;">Returns the X/Y/Z component of the real/complex total force acting on the solid.</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 21.396%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text">LFSolver</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 7.529%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text"><a href="../common_vbageneral/common_general_enum.htm" id="a50" name="a50">solvername</a>+"\\Force\\"+<a href="../common_vbageneral/common_general_solid_names.htm" id="a51" name="a51">solidname</a>+"\\TorqueDC"</p>
+<p class="vba-text">&#160;</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 33.737%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text" style="margin-left: 0px;">Returns the static part of the torque value related to the given axes on the specified solid.</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 21.396%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text">LFSolver</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 7.529%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text"><a href="../common_vbageneral/common_general_enum.htm" id="a52" name="a52">solvername</a>+"\\Force\\"+<a href="../common_vbageneral/common_general_solid_names.htm" id="a53" name="a53">solidname</a>+"\\TorqueAC_re"</p>
+<p class="VBA-Text"><a href="../common_vbageneral/common_general_enum.htm" id="a64" name="a64">solvername</a>+"\\Force\\"+<a href="../common_vbageneral/common_general_solid_names.htm" id="a65" name="a65">solidname</a>+"\\TorqueAC_im"</p>
+<p class="vba-text">&#160;</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 33.737%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text" style="margin-left: 0px;">Returns the real/complex part of the torque value related to the given axes on the specified solid.</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 21.396%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text">LFSolver</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 7.529%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text"><a href="../common_vbageneral/common_general_enum.htm" id="a66" name="a66">solvername</a>+"\\"+<a href="../common_vbageneral/common_general_integer.htm" id="a69" name="a69">iFreqIndex</a>+"\\"+<a href="../common_vbageneral/common_general_name.htm" id="a83" name="a83">SourceName</a>+"\\Current\\Re"</p>
+<p class="VBA-Text"><a href="../common_vbageneral/common_general_enum.htm" id="a72" name="a72">solvername</a>+"\\"+<a href="../common_vbageneral/common_general_integer.htm" id="a73" name="a73">iFreqIndex</a>+"\\"+<a href="../common_vbageneral/common_general_name.htm" id="a84" name="a84">SourceName</a>+"\\Current\\Im"</p>
+<p class="vba-text">&#160;</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 33.737%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text" style="margin-left: 0px;">Complex Part of the current for the specified voltage path.</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 21.396%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text">LFSolver (Voltage Path)</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 7.529%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text"><a href="../common_vbageneral/common_general_enum.htm" id="a67" name="a67">solvername</a>+"\\"+<a href="../common_vbageneral/common_general_integer.htm" id="a74" name="a74">iFreqIndex</a>+"\\"+<a href="../common_vbageneral/common_general_name.htm" id="a85" name="a85">SourceName</a>+"\\Impedance\\Re"</p>
+<p class="VBA-Text"><a href="../common_vbageneral/common_general_enum.htm" id="a75" name="a75">solvername</a>+"\\"+<a href="../common_vbageneral/common_general_integer.htm" id="a76" name="a76">iFreqIndex</a>+"\\"+<a href="../common_vbageneral/common_general_name.htm" id="a86" name="a86">SourceName</a>"\\Impedance\\Im"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 33.737%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text" style="margin-left: 0px;">Real and imaginary parts of the impedance for the specified voltage path.</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 21.396%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text">LFSolver (Voltage Path)</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 7.529%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text"><a href="../common_vbageneral/common_general_enum.htm" id="a77" name="a77">solvername</a>+"\\"+<a href="../common_vbageneral/common_general_integer.htm" id="a78" name="a78">iFreqIndex</a>+<a href="../common_vbageneral/common_general_name.htm" id="a93" name="a93">SourceName</a>+"\\CoilVRe"</p>
+<p class="VBA-Text"><a href="../common_vbageneral/common_general_enum.htm" id="a79" name="a79">solvername</a>+"\\"+<a href="../common_vbageneral/common_general_integer.htm" id="a80" name="a80">iFreqIndex</a>+<a href="../common_vbageneral/common_general_name.htm" id="a94" name="a94">SourceName</a>+"\\CoilVIm"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 33.737%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text" style="margin-left: 0px;">Real and imaginary parts of the coil's voltage.</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 21.396%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text">LFSolver (Coil, Current Path)</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 7.529%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text"><a href="../common_vbageneral/common_general_enum.htm" id="a81" name="a81">solvername</a>+"\\"+<a href="../common_vbageneral/common_general_integer.htm" id="a82" name="a82">iFreqIndex</a>+"\\Total Losses"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 33.737%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text" style="margin-left: 0px;">Returns the total losses for the requested frequency</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 21.396%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text">LFSolver</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 7.529%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text"><a href="../common_vbageneral/common_general_enum.htm" id="a109" name="a109">solvername</a>+"\\"+<a href="../common_vbageneral/common_general_integer.htm" id="a110" name="a110">iFreqIndex</a>+"\\"+<a href="../common_vbageneral/common_general_solid_names.htm" id="a111" name="a111">solidname</a>+"\\Losses"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 33.737%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text" style="margin-left: 0px;">Returns the losses in the specified solid for the requested frequency</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 21.396%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text">LFSolver</p>
+<p>(only for tetrahedral meshes)</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 7.529%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text"><a href="../common_vbageneral/common_general_enum.htm" id="a68" name="a68">solvername</a>+"\\"+<a href="../common_vbageneral/common_general_integer.htm" id="a70" name="a70">iFreqIndex</a>+"\\Frequency"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 33.737%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text" style="margin-left: 0px;">Returns the calculation frequency assigned to <a href="../common_vbageneral/common_general_integer.htm" id="a71" name="a71">iFreqIndex</a></p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 21.396%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text">LFSolver</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 7.529%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text"><a href="../common_vbageneral/common_general_enum.htm">solvername</a>+"\\"+<a href="../common_vbageneral/common_general_integer.htm">iFreqIndex</a>+<a href="../common_vbageneral/common_general_name.htm">SourceName</a>+"\\CurrentPathVRe"</p>
+<p class="VBA-Text"><a href="../common_vbageneral/common_general_enum.htm">solvername</a>+"\\"+<a href="../common_vbageneral/common_general_integer.htm">iFreqIndex</a>+<a href="../common_vbageneral/common_general_name.htm">SourceName</a>+"\\CurrentPathVIm"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 33.737%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text" style="margin-left: 0px;">Real and imaginary parts of the voltage along the current path.</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 21.396%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text">LFSolver (Current Path)</p>
+</td>
+</tr>
+</table>
+<p class="VBA-Heading-Category">Example</p>
+<p class="VBA-Text-Example">With ResultDataBase</p>
+<p class="VBA-Text-Example">&#160;.GetDoubleEntry ("EStatic\Energy")</p>
+<p class="VBA-Text-Example">&#160;.GetIntegerEntry ("MStatic\Maxiter"</p>
+<p class="VBA-Text-Example"><span style="margin-left: 40px;">&#160;.GetDoubleEntry("LFSolver\1\Frequency")</span> <span style="margin-left: 40px; color: #008000;"><font color="green">'returns the frequency of the second defined frequency point</font></span></p>
+<p class="VBA-Text-Example"><span style="margin-left: 40px;">&#160;.GetDoubleEntry ("LFSolver\1\Total Losses") &#160;</span><span style="margin-left: 40px; color: #008000;"><font color="green">'returns the electromagnetic field losses of the second defined frequency point</font></span></p>
+<p class="VBA-Text-Example">End With</p>
+<p class="VBA-Text-Example">&#160;</p>
+<p class="VBA-Text-Example">Sub Main</p>
+<p class="VBA-Text-Example"><span style="margin-left: 40px;">&#160;&#160;Dim freq As Double</span></p>
+<p class="VBA-Text-Example">&#160;&#160;freq = ResultDatabase.GetDoubleEntry("LFSolver\0\Frequency")</p>
+<p class="VBA-Text-Example">&#160;</p>
+<p class="VBA-Text-Example">&#160;&#160;Dim vcoil As Double</p>
+<p class="VBA-Text-Example">&#160;&#160;vcoil = ResultDatabase.GetDoubleEntry("LFSolver\0\coil1\CoilVRe")</p>
+<p class="VBA-Text-Example">End Sub</p>
+<p class="VBA-Text">&#160;</p>
+<?rh-p style="margin-bottom: 0px; text-align: Right; margin-left: 18px; 
+                 margin-right: 18px; margin-top: 18px;" ?>
+<div style="width: 100%; position: relative;" id="footer">
+<p style="border-bottom: Solid 1px #dddddd; text-align: Left; margin-left: 0px; font-family: Arial, sans-serif; line-height: Normal; margin-top: 9px; margin-right: 0px; margin-bottom: 6px; border-left-width: 1px; border-top-width: 1px; border-right-width: 1px;"><span style="text-align: Left; font-family: Arial, sans-serif; line-height: Normal;">&#160;</span></p>
+<table cellspacing="0" width="100%">
+<col style="width: 50%;" />
+<col style="width: 50%;" />
+<tr>
+<td style="vertical-align: Top;"><span style="font-family: Arial, sans-serif; line-height: Normal; font-size: 8pt;"><font size="1" style="font-size:8pt;">CST Studio Suite 2026</font></span></td>
+<td style="vertical-align: Top;">
+<p style="text-align: right;">&#160;</p>
+</td>
+</tr>
+</table>
+<p>&#160;</p>
+</div>
+<script type="text/javascript" language="javascript1.2">
+//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+        writeIntopicBar(0);
+
+
+highlightSearch();
+//-->
+//]]>
+</script>
+</body>
+</html>

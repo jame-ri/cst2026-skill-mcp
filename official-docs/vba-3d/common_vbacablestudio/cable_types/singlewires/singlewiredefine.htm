@@ -1,0 +1,664 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="Adobe RoboHelp 11" />
+<title>SingleWireDefine</title>
+<link rel="StyleSheet" href="../../../online_help_vba.css" type="text/css" />
+<style type="text/css">
+/*<![CDATA[*/
+<!--
+body { border-bottom-style:None; }
+-->
+/*]]>*/
+</style>
+
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+        origWidth = innerWidth;
+        origHeight = innerHeight;
+        onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+/*<![CDATA[*/
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+-->
+/*]]>*/
+</style>
+
+<script type="text/javascript" language="javascript1.2" src="../../../whmsg.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript" src="../../../whver.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript1.2" src="../../../whutils.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript1.2" src="../../../whproxy.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript1.2" src="../../../whlang.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript1.2" src="../../../whtopic.js" charset="utf-8">
+</script>
+</head>
+<body>
+<script type="text/javascript" language="javascript1.2">
+//<![CDATA[
+<!--
+if (window.gbWhTopic)
+{
+        var strUrl = document.location.href;
+        var bc = 0;
+        var n = strUrl.toLowerCase().indexOf("bc-");
+        if(n != -1)
+        {
+                document.location.replace(strUrl.substring(0, n));
+                bc = strUrl.substring(n+3);
+        }
+
+        if (window.addTocInfo)
+        {
+        addTocInfo("3D Simulation VBA\nVBA Objects\nCable Studio\nCable Types\nSingle Wires\nSingleWireDefine");
+
+        }
+        if (window.writeBtnStyle)
+                writeBtnStyle();
+
+        if (window.writeIntopicBar)
+                writeIntopicBar(0);
+
+        
+        document.write("<p style=\"font-family: Tahoma; font-size: 9pt; font-weight: 400;  font-style:normal; color: rgb(0, 0, 0); text-decoration:none; text-align: left\"> ");
+AddMasterBreadcrumbs("../../../index.htm", "font-family: Tahoma; font-size: 9pt; font-weight: 400;  font-style:normal; color: rgb(0, 0, 0); text-decoration:none; text-align: left", "|", "Home", "../../../special_vbaobjects/special_vbaobjects_vbaobjects.htm");
+document.write("<a style=\"font-family: Tahoma; font-size: 9pt; font-weight: 400;  font-style:normal; color: rgb(0, 0, 0); text-decoration:none; text-align: left\" href=\"../../../special_vbaobjects/special_vbaobjects_vbaobjects.htm\">3D Simulation VBA<\/a> | <a style=\"font-family: Tahoma; font-size: 9pt; font-weight: 400;  font-style:normal; color: rgb(0, 0, 0); text-decoration:none; text-align: left\" href=\"../../../special_vbaobjects/special_vbaobjects_vbaobjects.htm\">VBA Objects<\/a> | <a style=\"font-family: Tahoma; font-size: 9pt; font-weight: 400;  font-style:normal; color: rgb(0, 0, 0); text-decoration:none; text-align: left\" href=\"../../cst_cablestudio_objects_overview.htm\">Cable Studio<\/a> | <a style=\"font-family: Tahoma; font-size: 9pt; font-weight: 400;  font-style:normal; color: rgb(0, 0, 0); text-decoration:none; text-align: left\" href=\"../hierarchical_structure_definition.htm\">Cable Types<\/a> | <a style=\"font-family: Tahoma; font-size: 9pt; font-weight: 400;  font-style:normal; color: rgb(0, 0, 0); text-decoration:none; text-align: left\" href=\"singlewiredefine.htm\">Single Wires<\/a> | SingleWireDefine<\/p>");
+
+}
+else
+        if (window.gbIE4)
+                document.location.reload();
+
+onLoadHandler = function()
+{
+  if (window.setRelStartPage)
+        {
+        setTimeout("setRelStartPage('../../../index.htm');", 1)
+
+    setTimeout("UpdateBreadCrumbsMarker();", 1);
+        }
+}
+
+if (window.addEventListener){  
+        window.addEventListener('load', onLoadHandler, false);   
+} else if (window.attachEvent){  
+        window.attachEvent('onload', onLoadHandler);  
+}
+
+function onSetStartPage()
+{
+  autoSync(1);
+  sendSyncInfo();
+  sendAveInfoOut();
+}
+//-->
+//]]>
+</script><script type="text/javascript" src="../../../ehlpdhtm.js" language="JavaScript1.2">
+</script>
+<table cellspacing="0" width="100%">
+<col style="width: 50%;" />
+<col style="width: 50%;" />
+<tr>
+<td style="vertical-align: middle; padding-top: 5px; padding-bottom: 5px;">
+<p style="margin-top: 0px; margin-bottom: 0px;"><img src="../../../3ds.png" alt="" style="border: none;" border="0" /></p>
+</td>
+<td style="vertical-align: middle;">
+<p style="text-align: right;"><a href="https://www.3ds.com/products-services/3dexperience/" target="_blank"><img src="../../../3dexp.png" alt="" style="border: none;" width="32" height="32" border="0" /></a></p>
+</td>
+</tr>
+</table>
+<h1>SingleWireDefine</h1>
+<p>Creates a single wire cable complete with geometries</p>
+<ul>
+<li class="p-VBA-Index-Category">
+<p class="VBA-Index-Category"><a href="#Methods">Methods</a></p>
+</li>
+<li class="p-VBA-Index-Category">
+<p class="VBA-Index-Category"><a href="#SpecificShapes">Specific shapes</a></p>
+</li>
+<li class="p-VBA-Index-Category">
+<p class="VBA-Index-Category"><a href="#Default settings">Default settings</a></p>
+</li>
+<li class="p-VBA-Index-Category">
+<p class="VBA-Index-Category"><a href="#Examples">Example</a></p>
+</li>
+</ul>
+<p class="VBA-Heading-Category"><a name="Methods" id="Methods">Methods</a></p>
+<p class="VBA-Heading-Method">Reset</p>
+<p class="VBA-Text-Indent">Resets all internal settings for this command to their default values.</p>
+<p class="VBA-Heading-Method">OutputName(<a href="../../../common_vbageneral/common_general_string.htm" id="a4" name="a4">string</a> objType, <a href="../../../common_vbageneral/common_general_string.htm" id="a1" name="a1">string</a> cmdId, <a href="../../../common_vbageneral/common_general_string.htm" id="a2" name="a2">string</a> value)</p>
+<p class="VBA-Text-Indent">Parameter 'objType' is "CSSingleWire".</p>
+<p class="VBA-Text-Indent">Parameter 'cmdId' is "Name".</p>
+<p class="VBA-Text-Indent">Parameter ’value’ defines the name of the wire that will be edited or created.</p>
+<p class="VBA-Heading-Method">AddArgument (<a href="../../../common_vbageneral/common_general_string.htm" id="a41" name="a41">string</a> name, <a href="../../../common_vbageneral/common_general_double.htm" id="a6" name="a6">double</a> value)</p>
+<p class="VBA-Text-Indent">Sets the value for the parameters of type 'name'. Default value ”0.0”.</p>
+<p class="VBA-Text-Indent">For possible values please refer to the details below.</p>
+<p class="VBA-Heading-Method">AddStringArgument (&#160;<a href="../../../common_vbageneral/common_general_string.htm" id="a11" name="a11">string</a> name, &#160;<a href="../../../common_vbageneral/common_general_string.htm" id="a12" name="a12">string</a> value)</p>
+<p class="VBA-Text-Indent">Sets the value for the parameters of type 'name'.</p>
+<p class="VBA-Text-Indent">For possible values please refer to the details below.</p>
+<p class="VBA-Heading-Method">Execute (<a href="../../../common_vbageneral/common_general_string.htm" id="a5" name="a5">string</a> command)</p>
+<p class="VBA-Text-Indent">Create a new single wire element with the given parameters or defaults.</p>
+<p class="VBA-Heading-Category"><a name="SpecificShapes" id="SpecificShapes">Specific shapes</a></p>
+<p>Overall syntax</p>
+<p>&#160;</p>
+<p class="VBA-Text-Indent">.AddStringArgument "LocalUnits", "&lt;enum{m, cm, mm, um, nm, ft, in, mil}&gt;"</p>
+<p class="VBA-Text-Indent">.AddStringArgument "conductor_included", "&lt;boolean&gt;"</p>
+<p class="VBA-Text-Indent">.AddStringArgument "conductor$shape", "&lt;enum{Circle, Ellipse, Rectangle, Polygon, Polyline}&gt;"</p>
+<p class="VBA-Text-Indent">.AddStringArgument "conductor$material", "&lt;string&gt;"</p>
+<p>&#160;</p>
+<p>Circle</p>
+<p class="VBA-Text-Indent">.AddStringArgument "conductor$circle_definedby", "&lt;enum{Diameter, Radius, Area}&gt;"</p>
+<p>&#160;</p>
+<p>Diameter</p>
+<p class="VBA-Text-Indent">.AddArgument "conductor$circle_diameter", "&lt;double|parameter&gt;" Radius</p>
+<p class="VBA-Text-Indent">.AddArgument "conductor$circle_radius", "&lt;double|parameter&gt;"</p>
+<p>&#160;</p>
+<p>Area</p>
+<p class="VBA-Text-Indent">.AddArgument "conductor$circle_area", "&lt;double|parameter&gt;"</p>
+<p>&#160;</p>
+<p>Ellipse</p>
+<p class="VBA-Text-Indent">.AddArgument "conductor$ellipse_width", "&lt;double|parameter&gt;"</p>
+<p class="VBA-Text-Indent">.AddArgument "conductor$ellipse_height", "&lt;double|parameter&gt;"</p>
+<p>&#160;</p>
+<p>Rectangle</p>
+<p>&#160;</p>
+<p class="VBA-Text-Indent">.AddArgument "conductor$rect_width", "&lt;double|parameter&gt;"</p>
+<p class="VBA-Text-Indent">.AddArgument "conductor$rect_height", "&lt;double|parameter&gt;"</p>
+<p>&#160;</p>
+<p>Polygon</p>
+<p class="VBA-Text-Indent">.AddArgument "conductor$data_path_l", "&lt;int&gt;"</p>
+<p class="VBA-Text-Indent">.AddArgument "conductor$data_path_0", "&lt;double|parameter&gt;"</p>
+<p class="VBA-Text-Indent">…</p>
+<p class="VBA-Text-Indent">.AddArgument "conductor$data_path_n", "&lt;double|parameter&gt;"</p>
+<p class="VBA-Text-Indent">.AddArgument "conductor$data_path_n+1", "&lt;double|parameter&gt;"</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p>Polyline</p>
+<p class="VBA-Text-Indent">.AddArgument "conductor$pline_width", "&lt;double|parameter&gt;"</p>
+<p class="VBA-Text-Indent">.AddArgument "conductor$data_path_l", "&lt;int&gt;"</p>
+<p class="VBA-Text-Indent">.AddArgument "conductor$data_path_0", "&lt;double|parameter&gt;"</p>
+<p class="VBA-Text-Indent">…</p>
+<p class="VBA-Text-Indent">.AddArgument "conductor$data_path_n", "&lt;double|parameter&gt;"</p>
+<p class="VBA-Text-Indent">.AddArgument "conductor$data_path_n+1", "&lt;double|parameter&gt;"</p>
+<p>&#160;</p>
+<p>Circle composed of strands</p>
+<p class="VBA-Text-Indent">.AddStringArgument "conductor$strand_definedby", "&lt;enum{Diameter, Radius, Area}&gt;"</p>
+<p>Diameter</p>
+<p class="VBA-Text-Indent">.AddArgument"conductor$strand_diameter", "&lt;double|parameter&gt;"</p>
+<p>Radius</p>
+<p class="VBA-Text-Indent">.AddArgument"conductor$strand_radius", "&lt;double|parameter&gt;"</p>
+<p>Area</p>
+<p class="VBA-Text-Indent">.AddArgument"conductor$strand_area", "&lt;double|parameter&gt;"</p>
+<p class="VBA-Text-Indent">.AddArgument"conductor$strand_numberofstrands","&lt;double|parameter&gt;"</p>
+<p class="VBA-Text-Indent">.AddStringArgument "insulator_included", "&lt;boolean&gt;"</p>
+<p class="VBA-Text-Indent">.AddStringArgument "insulator$shape", "&lt;enum&gt;"</p>
+<p>&#160;</p>
+<p>The same geometries + wrap</p>
+<p class="VBA-Text-Indent">.AddArgument "insulator$wrap_thickness", "&lt;double|parameter&gt;"</p>
+<p class="VBA-Text-Indent">.AddStringArgument "insulator$material", "&lt;string&gt;"</p>
+<p class="VBA-Heading-Category"><a name="Keywords" id="Keywords">Keywords</a></p>
+<p class="VBA-Heading-Category">General</p>
+<table style="vertical-align: top;" cellspacing="0" width="100%">
+<col style="width: 50%;" />
+<col style="width: 50%;" />
+<tr style="vertical-align: top;">
+<td style="border: Solid 1px #000000; width: 50%; padding-right: 10px; padding-left: 10px;">
+<p style="font-weight: bold;">Keyword</p>
+</td>
+<td style="border-top: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 50%; padding-right: 10px; padding-left: 10px;">
+<p style="font-weight: bold;">Description</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 50%; padding-right: 10px; padding-left: 10px;">
+<p>CSSingleWire</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 50%; padding-right: 10px; padding-left: 10px;">
+<p>String for object type (single wire)</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 50%; padding-right: 10px; padding-left: 10px;">
+<p>Name</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 50%; padding-right: 10px; padding-left: 10px;">
+<p>String for parameter setting to use</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 50%; padding-right: 10px; padding-left: 10px;">
+<p>conductor_included</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 50%; padding-right: 10px; padding-left: 10px;">
+<p>Bool parameter for inclusion of conductor</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 50%; padding-right: 10px; padding-left: 10px;">
+<p>insulator_included</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 50%; padding-right: 10px; padding-left: 10px;">
+<p>Bool parameter for inclusion of insulator</p>
+</td>
+</tr>
+</table>
+<p class="VBA-Heading-Category">Conductor</p>
+<table style="vertical-align: top;" cellspacing="0" width="100%">
+<col style="width: 50%;" />
+<col style="width: 50%;" />
+<tr style="vertical-align: top;">
+<td style="border: Solid 1px #000000; width: 50%; padding-right: 10px; padding-left: 10px;">
+<p style="font-weight: bold;">Keyword</p>
+</td>
+<td style="border-top: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 50%; padding-right: 10px; padding-left: 10px;">
+<p style="font-weight: bold;">Description</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 50%; padding-right: 10px; padding-left: 10px;">
+<p>material</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 50%; padding-right: 10px; padding-left: 10px;">
+<p>Material ID string &#160;for conductor</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 50%; padding-right: 10px; padding-left: 10px;">
+<p>shape</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 50%; padding-right: 10px; padding-left: 10px;">
+<p>shape type string for conductor</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 50%; padding-right: 10px; padding-left: 10px;">
+<p>circle_definedby</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 50%; padding-right: 10px; padding-left: 10px;">
+<p>stringwith possible values Diameter, Radius, Area</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 50%; padding-right: 10px; padding-left: 10px;">
+<p>circle_diameter</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 50%; padding-right: 10px; padding-left: 10px;">
+<p>Double value for circle diameter</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 50%; padding-right: 10px; padding-left: 10px;">
+<p>circle_radius</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 50%; padding-right: 10px; padding-left: 10px;">
+<p>Double value for circle radius</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 50%; padding-right: 10px; padding-left: 10px;">
+<p>circle_area</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 50%; padding-right: 10px; padding-left: 10px;">
+<p>Double value of circle area</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 50%; padding-right: 10px; padding-left: 10px;">
+<p>ellipse_width</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 50%; padding-right: 10px; padding-left: 10px;">
+<p>double value for ellipse width</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 50%; padding-right: 10px; padding-left: 10px;">
+<p>ellipse_height</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 50%; padding-right: 10px; padding-left: 10px;">
+<p>Double value for ellipse height</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 50%; padding-right: 10px; padding-left: 10px;">
+<p>data_path_l</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 50%; padding-right: 10px; padding-left: 10px;">
+<p>Integer polygon(polyline) data path length</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 50%; padding-right: 10px; padding-left: 10px;">
+<p>data_path_n</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 50%; padding-right: 10px; padding-left: 10px;">
+<p>Polygon(polyline) data points set</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 50%; padding-right: 10px; padding-left: 10px;">
+<p>pline_width</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 50%; padding-right: 10px; padding-left: 10px;">
+<p>Polyline width</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 50%; padding-right: 10px; padding-left: 10px;">
+<p>strand_definedby</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 50%; padding-right: 10px; padding-left: 10px;">
+<p>Wire strand defined by (Diameter, Radius, Area)</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 50%; padding-right: 10px; padding-left: 10px;">
+<p>strand_diameter</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 50%; padding-right: 10px; padding-left: 10px;">
+<p>Single strand diameter double value</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 50%; padding-right: 10px; padding-left: 10px;">
+<p>strand_radius</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 50%; padding-right: 10px; padding-left: 10px;">
+<p>Single strand radius double value</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 50%; padding-right: 10px; padding-left: 10px;">
+<p>strand_area</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 50%; padding-right: 10px; padding-left: 10px;">
+<p>Single strand area value</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 50%; padding-right: 10px; padding-left: 10px;">
+<p>strand_numberofstrands</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 50%; padding-right: 10px; padding-left: 10px;">
+<p>Number of strands</p>
+</td>
+</tr>
+</table>
+<p>&#160;</p>
+<p class="VBA-Heading-Category">Insulator</p>
+<table style="vertical-align: top;" cellspacing="0" width="100%">
+<col style="width: 50%;" />
+<col style="width: 50%;" />
+<tr style="vertical-align: top;">
+<td style="border: Solid 1px #000000; width: 50%; padding-right: 10px; padding-left: 10px;">
+<p style="font-weight: bold;">Keyword</p>
+</td>
+<td style="border-top: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 50%; padding-right: 10px; padding-left: 10px;">
+<p style="font-weight: bold;">Description</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 50%; padding-right: 10px; padding-left: 10px;">
+<p>material</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 50%; padding-right: 10px; padding-left: 10px;">
+<p>Material ID string &#160;for insulator</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 50%; padding-right: 10px; padding-left: 10px;">
+<p>shape</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 50%; padding-right: 10px; padding-left: 10px;">
+<p>Shape type string for insulator</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 50%; padding-right: 10px; padding-left: 10px;">
+<p>circle_definedby</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 50%; padding-right: 10px; padding-left: 10px;">
+<p>Circle defined by (Diameter, Radius, Area)</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 50%; padding-right: 10px; padding-left: 10px;">
+<p>circle_diameter</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 50%; padding-right: 10px; padding-left: 10px;">
+<p>Double value of circle diameter</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 50%; padding-right: 10px; padding-left: 10px;">
+<p>circle_radius</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 50%; padding-right: 10px; padding-left: 10px;">
+<p>Double value of circle radius</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 50%; padding-right: 10px; padding-left: 10px;">
+<p>circle_area</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 50%; padding-right: 10px; padding-left: 10px;">
+<p>Double value of circle area</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 50%; padding-right: 10px; padding-left: 10px;">
+<p>ellipse_width</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 50%; padding-right: 10px; padding-left: 10px;">
+<p>Double value for ellipse width</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 50%; padding-right: 10px; padding-left: 10px;">
+<p>ellipse_height</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 50%; padding-right: 10px; padding-left: 10px;">
+<p>Double value for ellipse height</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 50%; padding-right: 10px; padding-left: 10px;">
+<p>data_path_l</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 50%; padding-right: 10px; padding-left: 10px;">
+<p>Polygon(polyline) data path length</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 50%; padding-right: 10px; padding-left: 10px;">
+<p>data_path_n</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 50%; padding-right: 10px; padding-left: 10px;">
+<p>Polygon(polyline) data points</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 50%; padding-right: 10px; padding-left: 10px;">
+<p>pline_width</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 50%; padding-right: 10px; padding-left: 10px;">
+<p>Double value for polyline width</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 50%; padding-right: 10px; padding-left: 10px;">
+<p>wrap_thickness</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 50%; padding-right: 10px; padding-left: 10px;">
+<p>Double value for thickness of insulator</p>
+</td>
+</tr>
+</table>
+<p>&#160;</p>
+<p class="VBA-Heading-Category"><a name="Default settings">Default settings</a></p>
+<p class="VBA-Text">General</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Text-Indent">.AddStringArgument "conductor_included", "true"</p>
+<p class="VBA-Text-Indent">.AddStringArgument "conductor$shape", "Circle"</p>
+<p class="VBA-Text-Indent">.AddStringArgument "conductor$material", "Cu"</p>
+<p>&#160;</p>
+<p>Circle</p>
+<p class="VBA-Text-Indent">.AddStringArgument "conductor$circle_definedby", "Diameter"</p>
+<p>&#160;</p>
+<p>Diameter</p>
+<p class="VBA-Text-Indent">.AddArgument "conductor$circle_diameter", "1.0”</p>
+<p>&#160;</p>
+<p>Radius</p>
+<p class="VBA-Text-Indent">.AddArgument "conductor$circle_diameter", "0.5”</p>
+<p>&#160;</p>
+<p>Area</p>
+<p class="VBA-Text-Indent">.AddArgument "conductor$circle_diameter", " 0.7853982”</p>
+<p>&#160;</p>
+<p>Ellipse</p>
+<p class="VBA-Text-Indent">.AddArgument "conductor$ellipse_width", "1.0"</p>
+<p class="VBA-Text-Indent">.AddArgument "conductor$ellipse_height", "1.0"</p>
+<p>&#160;</p>
+<p>Rectangle</p>
+<p class="VBA-Text-Indent">.AddArgument "conductor$rect_width", "1.0"</p>
+<p class="VBA-Text-Indent">.AddArgument "conductor$rect_height", "1.0"</p>
+<p>&#160;</p>
+<p>Polyline</p>
+<p class="VBA-Text-Indent">.AddArgument "conductor$pline_width", "1.0"</p>
+<p>&#160;</p>
+<p>Circle composed of strands</p>
+<p class="VBA-Text-Indent">.AddStringArgument "conductor$strand_definedby", "Diameter"</p>
+<p class="VBA-Text-Indent">.AddArgument"conductor$strand_diameter", "0.2"</p>
+<p class="VBA-Text-Indent">.AddArgument"conductor$strand_numberofstrands","7"</p>
+<p class="VBA-Text-Indent">.AddStringArgument "insulator_included", "true"</p>
+<p class="VBA-Text-Indent">.AddStringArgument "insulator$shape", "Wrap"</p>
+<p class="VBA-Text-Indent">.AddArgument "insulator$wrap_thickness", "1.0"</p>
+<p class="VBA-Text-Indent">.AddStringArgument "insulator$material", "PE"</p>
+<p class="VBA-Heading-Category"><a name="Examples" id="Examples">Examples</a></p>
+<p class="VBA-Text-Example">Default circle</p>
+<p class="VBA-Text-Example">&#160;</p>
+<p class="VBA-Text-Example">With CableStudio</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;.Reset</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;.AddStringArgument "LocalUnits", "mm"</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;.OutputName "CSSingleWire", "Name", "Single_Wire_10"</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;.Execute "SingleWireDefine"</p>
+<p class="VBA-Text-Example">End With</p>
+<p class="VBA-Text-Example">&#160;</p>
+<p class="VBA-Text-Example">Default ellipse</p>
+<p class="VBA-Text-Example">&#160;</p>
+<p class="VBA-Text-Example">With CableStudio</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;.Reset</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;.OutputName "CSSingleWire", "Name", "Single_Wire_11"</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;.AddStringArgument "conductor$shape", "Ellipse"</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;.AddArgument "conductor$ellipse_width", "1.0"</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;.AddArgument "conductor$ellipse_height", "1.0"</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;.Execute "SingleWireDefine"</p>
+<p class="VBA-Text-Example">End With</p>
+<p class="VBA-Text-Example">&#160;</p>
+<p class="VBA-Text-Example">Default rectangle</p>
+<p class="VBA-Text-Example">&#160;</p>
+<p class="VBA-Text-Example">With CableStudio</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;.Reset</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;.OutputName "CSSingleWire", "Name", "Single_Wire_12"</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;.AddStringArgument "conductor$shape", "Rectangle"</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;.AddArgument "conductor$rect_width", "1.0"</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;.AddArgument "conductor$rect_height", "1.0"</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;.Execute "SingleWireDefine"</p>
+<p class="VBA-Text-Example">End With</p>
+<p class="VBA-Text-Example">&#160;</p>
+<p class="VBA-Text-Example">Polygon</p>
+<p class="VBA-Text-Example">&#160;</p>
+<p class="VBA-Text-Example">With CableStudio</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;.Reset</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;.OutputName "CSSingleWire", "Name", "Single_Wire_13"</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;.AddStringArgument "conductor$shape", "Polygon"</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;.AddArgument "conductor$data_path_l", "6"</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;.AddArgument "conductor$data_path_0", "0.5"</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;.AddArgument "conductor$data_path_1", "-0.5"</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;.AddArgument "conductor$data_path_2", "-0.5"</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;.AddArgument "conductor$data_path_3", "-0.5"</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;.AddArgument "conductor$data_path_4", "0.5"</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;.AddArgument "conductor$data_path_5", "0.5"</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;.Execute "SingleWireDefine"</p>
+<p class="VBA-Text-Example">End With</p>
+<p class="VBA-Text-Example">&#160;</p>
+<p class="VBA-Text-Example">Polyline</p>
+<p class="VBA-Text-Example">&#160;</p>
+<p class="VBA-Text-Example">With CableStudio</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;.Reset</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;.OutputName "CSSingleWire", "Name", "Single_Wire_14"</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;.AddStringArgument "conductor$shape", "Polyline"</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;.AddArgument "conductor$pline_width", "1.0"</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;.AddArgument "conductor$data_path_l", "6"</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;.AddArgument "conductor$data_path_0", "0.5"</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;.AddArgument "conductor$data_path_1", "-0.5"</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;.AddArgument "conductor$data_path_2", "-0.5"</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;.AddArgument "conductor$data_path_3", "-0.5"</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;.AddArgument "conductor$data_path_4", "0.5"</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;.AddArgument "conductor$data_path_5", "0.5"</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;.Execute "SingleWireDefine"</p>
+<p class="VBA-Text-Example">End With</p>
+<p class="VBA-Text-Example">&#160;</p>
+<p class="VBA-Text-Example">Default circle composed of strands</p>
+<p class="VBA-Text-Example">&#160;</p>
+<p class="VBA-Text-Example">With CableStudio</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;.Reset</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;.OutputName "CSSingleWire", "Name", "Single_Wire_15"</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;.AddStringArgument "conductor$shape", "Circle composed of strands"</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;.AddStringArgument "conductor$strand_definedby", "Diameter"</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;.AddArgument "conductor$strand_diameter", "0.2"</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;.AddArgument "conductor$strand_numberofstrands", "7.0"</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;.Execute "SingleWireDefine"</p>
+<p class="VBA-Text-Example">End With</p>
+<p>&#160;</p>
+<p>&#160;</p>
+<p>&#160;</p>
+<p>&#160;</p>
+<p>&#160;</p>
+<?rh-p style="margin-bottom: 0px; text-align: Right; margin-left: 18px; 
+                 margin-right: 18px; margin-top: 18px;" ?>
+<div style="width: 100%; position: relative;" id="footer">
+<p style="border-bottom: Solid 1px #dddddd; text-align: Left; margin-left: 0px; font-family: Arial, sans-serif; line-height: Normal; margin-top: 9px; margin-right: 0px; margin-bottom: 6px; border-left-width: 1px; border-top-width: 1px; border-right-width: 1px;"><span style="text-align: Left; font-family: Arial, sans-serif; line-height: Normal;">&#160;</span></p>
+<table cellspacing="0" width="100%">
+<col style="width: 50%;" />
+<col style="width: 50%;" />
+<tr>
+<td style="vertical-align: Top;"><span style="font-family: Arial, sans-serif; line-height: Normal; font-size: 8pt;"><font size="1" style="font-size:8pt;">CST Studio Suite 2026</font></span></td>
+<td style="vertical-align: Top;">
+<p style="text-align: right;">&#160;</p>
+</td>
+</tr>
+</table>
+<p>&#160;</p>
+</div>
+<script type="text/javascript" language="javascript1.2">
+//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+        writeIntopicBar(0);
+
+
+highlightSearch();
+//-->
+//]]>
+</script>
+</body>
+</html>

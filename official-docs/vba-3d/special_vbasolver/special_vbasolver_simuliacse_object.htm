@@ -1,0 +1,451 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="Content-Language" content="en-US" />
+<meta name="generator" content="Adobe RoboHelp 11" />
+<title>SimuliaCSE Object</title>
+<link rel="StyleSheet" href="../online_help_vba.css" type="text/css" />
+<style type="text/css">
+/*<![CDATA[*/
+<!--
+body { border-bottom-style:None; }
+-->
+/*]]>*/
+</style>
+
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+        origWidth = innerWidth;
+        origHeight = innerHeight;
+        onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+/*<![CDATA[*/
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+-->
+/*]]>*/
+</style>
+
+<script type="text/javascript" language="javascript1.2" src="../whmsg.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript" src="../whver.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript1.2" src="../whutils.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript1.2" src="../whproxy.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript1.2" src="../whlang.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript1.2" src="../whtopic.js" charset="utf-8">
+</script>
+</head>
+<body>
+<script type="text/javascript" language="javascript1.2">
+//<![CDATA[
+<!--
+if (window.gbWhTopic)
+{
+        var strUrl = document.location.href;
+        var bc = 0;
+        var n = strUrl.toLowerCase().indexOf("bc-");
+        if(n != -1)
+        {
+                document.location.replace(strUrl.substring(0, n));
+                bc = strUrl.substring(n+3);
+        }
+
+        if (window.addTocInfo)
+        {
+        addTocInfo("3D Simulation VBA\nVBA Objects\nSolver\nSimulia Co-Simulation");
+
+        }
+        if (window.writeBtnStyle)
+                writeBtnStyle();
+
+        if (window.writeIntopicBar)
+                writeIntopicBar(0);
+
+        
+        document.write("<p style=\"font-family: Tahoma; font-size: 9pt; font-weight: 400;  font-style:normal; color: rgb(0, 0, 0); text-decoration:none; text-align: left\"> ");
+AddMasterBreadcrumbs("../index.htm", "font-family: Tahoma; font-size: 9pt; font-weight: 400;  font-style:normal; color: rgb(0, 0, 0); text-decoration:none; text-align: left", "|", "Home", "../special_vbaobjects/special_vbaobjects_vbaobjects.htm");
+document.write("<a style=\"font-family: Tahoma; font-size: 9pt; font-weight: 400;  font-style:normal; color: rgb(0, 0, 0); text-decoration:none; text-align: left\" href=\"../special_vbaobjects/special_vbaobjects_vbaobjects.htm\">3D Simulation VBA<\/a> | <a style=\"font-family: Tahoma; font-size: 9pt; font-weight: 400;  font-style:normal; color: rgb(0, 0, 0); text-decoration:none; text-align: left\" href=\"../special_vbaobjects/special_vbaobjects_vbaobjects.htm\">VBA Objects<\/a> | <a style=\"font-family: Tahoma; font-size: 9pt; font-weight: 400;  font-style:normal; color: rgb(0, 0, 0); text-decoration:none; text-align: left\" href=\"special_vbasolver_background_object.htm\">Solver<\/a> | Simulia Co-Simulation<\/p>");
+
+}
+else
+        if (window.gbIE4)
+                document.location.reload();
+
+onLoadHandler = function()
+{
+  if (window.setRelStartPage)
+        {
+        setTimeout("setRelStartPage('../index.htm');", 1)
+
+    setTimeout("UpdateBreadCrumbsMarker();", 1);
+        }
+}
+
+if (window.addEventListener){  
+        window.addEventListener('load', onLoadHandler, false);   
+} else if (window.attachEvent){  
+        window.attachEvent('onload', onLoadHandler);  
+}
+
+function onSetStartPage()
+{
+  autoSync(1);
+  sendSyncInfo();
+  sendAveInfoOut();
+}
+//-->
+//]]>
+</script><script type="text/javascript" src="../ehlpdhtm.js" language="JavaScript1.2">
+</script>
+<table cellspacing="0" width="100%">
+<col style="width: 50%;" />
+<col style="width: 50%;" />
+<tr>
+<td style="vertical-align: middle; padding-top: 5px; padding-bottom: 5px;">
+<p style="margin-top: 0px; margin-bottom: 0px;"><img src="../3ds.png" alt="" style="border: none;" border="0" /></p>
+</td>
+<td style="vertical-align: middle;">
+<p style="text-align: right;"><a href="https://www.3ds.com/products-services/3dexperience/" target="_blank"><img src="../3dexp.png" alt="" style="border: none;" width="32" height="32" border="0" /></a></p>
+</td>
+</tr>
+</table>
+<h1>SimuliaCSE Object</h1>
+<p class="VBA-Text">This object offers the possibility to run a co-simulation using Simulia Co-Simulation Engine (CSE).</p>
+<ul>
+<li class="p-VBA-Index-Category">
+<p class="VBA-Index-Category"><a href="#ConnectionSettings">Connection Settings</a></p>
+</li>
+<li class="p-VBA-Index-Category">
+<p class="VBA-Index-Category"><a href="#TimeSettings">Time Settings</a></p>
+</li>
+<li class="p-VBA-Index-Category">
+<p class="VBA-Index-Category"><a href="#Excitation_Settings">Excitation Settings</a></p>
+</li>
+<li class="p-VBA-Index-Category">
+<p class="VBA-Index-Category"><a href="#ExternalToolsSettings">External Tools Settings</a></p>
+</li>
+<li class="p-VBA-Index-Category">
+<p class="VBA-Index-Category"><a href="#RegionsSettings">Regions Settings</a></p>
+</li>
+<li class="p-VBA-Index-Category">
+<p class="VBA-Index-Category"><a href="#FieldsSettings">Fields Settings</a></p>
+</li>
+<li class="p-VBA-Index-Category">
+<p class="VBA-Index-Category"><a href="#Export3DFMUSettings">3dfmu Export Settings</a></p>
+</li>
+<li class="p-VBA-Index-Category">
+<p class="VBA-Index-Category"><a href="#DeprecatedCommands">Deprecated</a></p>
+</li>
+<li class="p-VBA-Index-Category">
+<p class="VBA-Index-Category"><a href="#Defaults">Default Settings</a></p>
+</li>
+<li class="p-VBA-Index-Category">
+<p class="VBA-Index-Category"><a href="#Example">Example</a></p>
+</li>
+</ul>
+<p class="VBA-Heading-Category"><a name="ConnectionSettings" id="ConnectionSettings"></a>Connection Settings</p>
+<p class="VBA-Heading-Method">SetCodeName ( <a href="../common_vbageneral/common_general_string.htm" id="a811" style="font-weight: normal; font-style: normal;" name="a811">string</a> <span style="font-style: italic;"><i>codename</i></span> )</p>
+<p class="VBA-Text-Indent">Defines a code name for the co-simulation client. This name corresponds to the &lt;codeName&gt; attribute in the CSE configuration file.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">SetJobName ( <a href="../common_vbageneral/common_general_string.htm" id="a8111" style="font-weight: normal; font-style: normal;" name="a8111">string</a> <span style="font-style: italic;"><i>jobname</i></span> )</p>
+<p class="VBA-Text-Indent">Defines a job name for the co-simulation client. This name corresponds to the &lt;componentInstanceName&gt; attribute in the CSE configuration file.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">SetDirectorName ( <a href="../common_vbageneral/common_general_string.htm" id="a81111" style="font-weight: normal; font-style: normal;" name="a81111">string</a> <span style="font-style: italic;"><i>hostname</i></span> )</p>
+<p class="VBA-Text-Indent">This method defines a name of the host where the CSE director runs.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">SetDirectorPort (<span style="font-weight: normal;">&#160;<a href="../common_vbageneral/common_general_integer.htm" id="a102" style="font-weight: normal; font-style: normal;" name="a102">int</a></span> <span style="font-style: italic;"><i>portno</i></span> )</p>
+<p class="VBA-Text-Indent">Sets the port number which should be used for connection to the CSE director.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">SetConnectionTimeout (<span style="font-weight: normal;">&#160;<a href="../common_vbageneral/common_general_integer.htm" id="a1021" style="font-weight: normal; font-style: normal;" name="a1021">int</a></span> <span style="font-style: italic;"><i>TimeInS</i></span> )</p>
+<p class="VBA-Text-Indent">If during this number of seconds no connection to the CSE director could be established, the client stops and shows the time-out error message.</p>
+<p class="VBA-Heading-Category"><a name="TimeSettings" id="TimeSettings"></a>Time Settings</p>
+<p class="VBA-Heading-Method">SetSimulationDuration (<span style="font-weight: normal;">&#160;<a href="../common_vbageneral/common_general_double.htm" id="a36" style="font-weight: normal;" name="a36">double</a></span> <span style="font-style: italic;"><i>time</i></span> )</p>
+<p class="VBA-Text-Indent">Defines the co-simulation duration in currently selected user units.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">SetMasterClient ( <span style="font-weight: normal;"><a href="../common_vbageneral/common_general_string.htm" id="a8111112" style="font-weight: normal; font-style: normal;" name="a8111112">string</a></span> <span style="font-style: italic;"><i>name</i></span> )</p>
+<p class="VBA-Text-Indent">Specifies, which co-simulation client should be the main responsible for the choice of transient time steps. Possible values of <span style="font-style: italic; font-weight: bold;"><i>name</i></span>:</p>
+<ul style="list-style: disc;">
+<li>
+<p class="VBA-Text-Indent">"CST": the CST client selects the time step length based on excitation signals assigned to the solver sources.</p>
+</li>
+<li>
+<p class="VBA-Text-Indent">"Counterpart": the external client is responsible for selection of the time step length. The time step settings for CST are ignored.</p>
+</li>
+<li>
+<p class="VBA-Text-Indent">"Both": both CST and external clients submit their proposals for the next time step length, the shortest one is selected.</p>
+</li>
+</ul>
+<p class="VBA-Heading-Method">SetTimeStepAutoSelection (<span style="font-weight: normal;">&#160;<a href="../common_vbageneral/common_general_bool_data_type.htm" id="a1111" style="font-weight: normal; font-style: normal;" name="a1111">bool</a></span> <span style="font-style: italic;"><i>&#160;autoselect</i></span> )</p>
+<p class="VBA-Text-Indent">This command specifies, whether user settings for the time step length should be utilized ("False"), or automatic settings should be generated ("True").</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">SetMinTimeStep&#160;(&#160;<a href="../common_vbageneral/common_general_double.htm" id="a3623" style="font-weight: normal;" name="a3623">double</a> <span style="font-style: italic;"><i>timestep</i></span> )</p>
+<p class="VBA-Text-Indent">Select the minimum time step length in user units. This signal is ignored if the Master Client is set to "Counterpart" or Autoselection is on.</p>
+<p class="VBA-Heading-Method">&#160;</p>
+<p class="VBA-Heading-Method">SetStartTime(&#160;<a href="../common_vbageneral/common_general_double.htm" id="a362" style="font-weight: normal;" name="a362">double</a> <span style="font-style: italic;"><i>timestep</i></span> )</p>
+<p class="VBA-Text-Indent">Select the start time in user units. This signal is ignored if the Master Client is set to "Counterpart" or Autoselection is on.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">SetMaxTimeStep&#160;(&#160;<a href="../common_vbageneral/common_general_double.htm" id="a3621" style="font-weight: normal;" name="a3621">double</a> <span style="font-style: italic;"><i>timestep</i></span> )</p>
+<p class="VBA-Text-Indent">Select the maximum time step length in user units. This signal is ignored if the Master Client is set to "Counterpart" or Autoselection is on.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">SetMaxSignalChange&#160;(&#160;<a href="../common_vbageneral/common_general_double.htm" id="a3622" style="font-weight: normal;" name="a3622">double</a> <span style="font-style: italic;"><i>percent</i></span> )</p>
+<p class="VBA-Text-Indent">Use this command to select the relative signal change in percent, according to which the next time step length should be selected. This signal is ignored if the Master Client is set to "Counterpart" or Autoselection is on.</p>
+<p class="VBA-Heading-Category"><a name="Excitation_Settings" id="Excitation_Settings"></a>Excitation Settings</p>
+<p class="VBA-Text-Indent">In this section, the VBA commands controlling the change of electromagnetic source values in the course of transient co-simulation are described. Their usage is quite similar to <a href="../special_vbatransientsolvers/special_vbatransientsolvers_thermaltdsolver_object.htm">Transient Thermal</a> and <a href="../special_vbatransientsolvers/special_vbatransientsolvers_mqstdsolver_object.htm">MQS</a> solvers.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">ResetExcitationList</p>
+<p class="VBA-Text-Indent">Use this command to reset all the excitation signals assigned to EM sources. The option to define different excitation signals to sources at different frequencies is turned off.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">SetExcitationsFrequencyDependent (<span style="font-weight: normal;">&#160;<a href="../common_vbageneral/common_general_bool_data_type.htm" id="a1111" style="font-weight: normal; font-style: normal;" name="a1111">bool</a></span> <span style="font-style: italic;"><i>&#160;freq_dependent</i></span> )</p>
+<p class="VBA-Text-Indent">For the LF frequency-domain electromagnetic solver on the CST side of co-simulation, this command defines whether the solver is started at each step of co-simulation separately for each calculation frequency (<span style="font-weight: bold;">freq_dependent = true</span>) or only once for all the frequencies (<span style="font-weight: bold;">freq_dependent = false</span>). In the former case the excitation signals can be assigned to electromagnetic sources independently for each frequency.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">ExcitationName ( <a href="../common_vbageneral/common_general_string.htm" id="a8111113" style="font-weight: normal; font-style: normal;" name="a8111113">string</a> <span style="font-style: italic;"><i>sourcename</i></span> )</p>
+<p class="VBA-Text-Indent">For a new excitation being created, specify the source name the excitation signal should be assigned to (e.g.: "currentport1")</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">ExcitationType&#160;( <a href="../common_vbageneral/common_general_string.htm" id="a81111131" style="font-weight: normal; font-style: normal;" name="a81111131">string</a> <span style="font-style: italic;"><i>exctype</i></span> )</p>
+<p class="VBA-Text-Indent">This command specifies the type of the source, to which the excitation signal should be assigned. In the following table, the possible values of exctype are listed:</p>
+<table style="margin-left: 24px; left: 0px; top: 1266px; border-collapse: separate; border-collapse: separate;" cellspacing="0" width="728" border="1">
+<col style="width: 19.911%;" />
+<col style="width: 80.089%;" />
+<tr>
+<td>
+<p class="VBA-Text-Indent">"Current"</p>
+</td>
+<td>
+<p class="VBA-Text-Indent">The source is a current wire</p>
+</td>
+</tr>
+<tr>
+<td>
+<p class="VBA-Text-Indent">"Voltage"</p>
+</td>
+<td>
+<p class="VBA-Text-Indent">The source is a voltage wire</p>
+</td>
+</tr>
+<tr>
+<td>
+<p class="VBA-Text-Indent">"Coil"</p>
+</td>
+<td>
+<p class="VBA-Text-Indent">The source is a single coil</p>
+</td>
+</tr>
+<tr>
+<td>
+<p class="VBA-Text-Indent">"CoilGroup"</p>
+</td>
+<td>
+<p class="VBA-Text-Indent">The source is a coil group</p>
+</td>
+</tr>
+<tr>
+<td>
+<p class="VBA-Text-Indent">"CurrentPort"</p>
+</td>
+<td>
+<p class="VBA-Text-Indent">The source is a current port.</p>
+</td>
+</tr>
+</table>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">ExcitationShift ( <a href="../common_vbageneral/common_general_double.htm" id="a36221" style="font-weight: normal;" name="a36221">double</a> <span style="font-style: italic;"><i>timeshift</i></span> )</p>
+<p class="VBA-Text-Indent">Use this command to specify a time shift in user units, after which the excitation signal is applied to the signal. If the <span style="font-style: italic; font-weight: bold;"><i>timeshift</i></span> has a positive value, the start value of the excitation signal is used for time instants less than <span style="font-style: italic; font-weight: bold;"><i>timeshift</i></span>.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">ExcitationSignal&#160;( <a href="../common_vbageneral/common_general_string.htm" id="a811111311" style="font-weight: normal; font-style: normal;" name="a811111311">string</a> <span style="font-style: italic;"><i>signalname</i></span> )</p>
+<p class="VBA-Text-Indent">Specify the name of the excitation signal which should be applied to the solver source.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">ExcitationActive ( <a href="../common_vbageneral/common_general_bool_data_type.htm" id="a1112" style="font-weight: normal; font-style: normal;" name="a1112">bool</a> <span style="font-style: italic;"><i>&#160;active</i></span> )</p>
+<p class="VBA-Text-Indent">If active is false, the source is ignored.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">CreateExcitationForAllFrequencies</p>
+<p class="VBA-Text-Indent">Assign the selected excitation signal to the solver source for all the frequencies at which the calculation is performed. This command can only be used if the command <span style="font-weight: bold;">SetExcitationsFrequencyDependent</span> with parameter <span style="font-weight: bold;">False</span> has been called.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">CreateExcitationForFrequency ( <a href="../common_vbageneral/common_general_double.htm" id="a36221" style="font-weight: normal;" name="a36221">double</a> <span style="font-style: italic;"><i>frequency</i></span> )</p>
+<p class="VBA-Text-Indent">Assign the selected excitation signal to the solver source. This signal will be used for a single calculation frequency. This command can only be used if the command <span style="font-weight: bold;">SetExcitationsFrequencyDependent</span> with parameter <span style="font-weight: bold;">True</span> has been called.</p>
+<p class="VBA-Heading-Category"><a name="ExternalToolsSettings" id="ExternalToolsSettings"></a>External Tools Settings</p>
+<p class="VBA-Heading-Method">ResetExternalToolsSettings</p>
+<p class="VBA-Text-Indent">Resets the settings which have been made for starting the CSE director and external CSE clients.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">RunExternalTools ( <a href="../common_vbageneral/common_general_bool_data_type.htm" id="a111" style="font-weight: normal; font-style: normal;" name="a111">bool</a> <span style="font-style: italic;"><i>&#160;run</i></span> )</p>
+<p class="VBA-Text-Indent">This method defines if the CSE director and/or external CSE clients should be started automatically before the CST client is started.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">WorkingDir ( <a href="../common_vbageneral/common_general_string.htm" id="a811111" style="font-weight: normal; font-style: normal;" name="a811111">string</a> <span style="font-style: italic;"><i>dirname</i></span> )</p>
+<p class="VBA-Text-Indent">Defines which directory should be used by the CSE director and other clients for loading and saving of information.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">CoSimJobName ( <a href="../common_vbageneral/common_general_string.htm" id="a8111111" style="font-weight: normal; font-style: normal;" name="a8111111">string</a> <span style="font-style: italic;"><i>jobname</i></span> )</p>
+<p class="VBA-Text-Indent">Specifies the job name for the CSE director.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">CreateNewConfigFile (<a href="../common_vbageneral/common_general_bool_data_type.htm" id="a111" style="font-weight: normal; font-style: normal;" name="a111">bool</a> <span style="font-style: italic;"><i>&#160;bCreateNew</i></span> )</p>
+<p class="VBA-Text-Indent">If the CSE director should be started, it needs an XML configuration file. This function specifies if this file should be created automatically.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">XMLConfigFile ( <a href="../common_vbageneral/common_general_string.htm" id="a81111111" style="font-weight: normal; font-style: normal;" name="a81111111">string</a> <span style="font-style: italic;"><i>filename</i></span> )</p>
+<p class="VBA-Text-Indent">Provides the name of the configuration file which should be used by the CSE director. This value is ignored if <span style="font-weight: bold;">.CreateNewConfigFile "True"</span> has been specified.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">SetExternalClient ( <span style="font-weight: normal;">&#160;</span><a href="../common_vbageneral/common_general_enum.htm" id="a18" style="font-weight: normal;" name="a18">enum</a> <span style="font-weight: normal;">{"Abaqus", "CommandLine", "None"}</span> <span style="font-style: italic;"><i>ext_client</i></span> )</p>
+<p class="VBA-Text-Indent">Specifies which external client should be started automatically from the CST environment.</p>
+<ul style="list-style: disc;">
+<li>
+<p class="VBA-Text-Indent"><span style="font-style: italic;"><i>Abaqus</i></span> means that the client settings are defined by <span style="font-weight: bold;">.SetAbaqusJobName</span>, <span style="font-weight: bold;">.SetAbaqusInputFile</span> and <span style="font-weight: bold;">.SetAbaqusCommandLineParams</span>.</p>
+</li>
+<li>
+<p class="VBA-Text-Indent">If <span style="font-style: italic;"><i>CommandLine</i></span> is selected, the external client is defined by the <span style="font-weight: bold;">.AddClientCommandLine</span> setting.</p>
+</li>
+<li>
+<p class="VBA-Text-Indent"><span style="font-style: italic;"><i>None</i></span> means that no external client should be started automatically. In this case after the CST client and CSE director are started the co-simulation is blocked until the external client is started manually.</p>
+</li>
+</ul>
+<p class="VBA-Heading-Method">SetAbaqusJobName ( <a href="../common_vbageneral/common_general_string.htm" id="a811111122" style="font-weight: normal; font-style: normal;" name="a811111122">string</a> <span style="font-style: italic;"><i>jobname</i></span> )</p>
+<p class="VBA-Text-Indent">Specifies the job name for the Abaqus client (only considered for <span style="font-weight: bold;">.SetExternalClient "Abaqus"</span>). If this value is not set, an error message will be shown and no co-simulation will be started.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">SetAbaqusInputFile&#160;( <a href="../common_vbageneral/common_general_string.htm" id="a811111123" style="font-weight: normal; font-style: normal;" name="a811111123">string</a> <span style="font-style: italic;"><i>filename</i></span> )</p>
+<p class="VBA-Text-Indent">Here the Abaqus input file can be specified (only considered for <span style="font-weight: bold;">.SetExternalClient "Abaqus"</span>). If the input file is located in the working directory and its name (without ".inp") is equal to the Abaqus job name, such file will be found automatically and there's no need to call this function.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">SetAbaqusCommandLineParams&#160;( <a href="../common_vbageneral/common_general_string.htm" id="a811111124" style="font-weight: normal; font-style: normal;" name="a811111124">string</a> <span style="font-style: italic;"><i>cl_params</i></span> )</p>
+<p class="VBA-Text-Indent">With this function additional command line parameters can be specified for Abaqus (only considered for <span style="font-weight: bold;">.SetExternalClient "Abaqus"</span>), such as the number of cpus etc (please refer to Simula Abaqus documentation).</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">AddClientCommandLine ( <a href="../common_vbageneral/common_general_string.htm" id="a81111112" style="font-weight: normal; font-style: normal;" name="a81111112">string</a> <span style="font-style: italic;"><i>commandline</i></span> )</p>
+<p class="VBA-Text-Indent">Add a complete command line for each external co-simulation client to be started (only considered for <span style="font-weight: bold;">.SetExternalClient "CommandLine"</span>).</p>
+<p class="VBA-Heading-Category"><a name="RegionsSettings" id="RegionsSettings"></a>Regions Settings</p>
+<p class="VBA-Heading-Method">ResetRegions</p>
+<p class="VBA-Text-Indent">Removes all the regions.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">ResetRegionData</p>
+<p class="VBA-Text-Indent">Resets the settings made for creation of a new region.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">RegionFace ( <a href="../common_vbageneral/common_general_string.htm" id="a811111121" style="font-weight: normal; font-style: normal;" name="a811111121">string</a> <span style="font-style: italic;"><i>SolidName,</i></span><span style="font-weight: normal;">&#160;<a href="../common_vbageneral/common_general_integer.htm" id="a10211" style="font-weight: normal; font-style: normal;" name="a10211">int</a></span> <span style="font-style: italic;"><i>FaceID</i></span> )</p>
+<p class="VBA-Text-Indent">Adds a solid face to the existing list of faces, for which a new region should be created. If the region dimension is 2D, the face will be used for co-simulation, otherwise the whole solid will be used.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">RegionName ( <a href="../common_vbageneral/common_general_string.htm" id="a8111111211" style="font-weight: normal; font-style: normal;" name="a8111111211">string</a> <span style="font-style: italic;"><i>n</i></span><span style="font-style: italic;"><i>ame</i></span> )</p>
+<p class="VBA-Text-Indent">Defines the name for the new region.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">RegionType ( <span style="font-weight: normal;"><a href="../common_vbageneral/common_general_enum.htm" id="a181" style="font-weight: normal;" name="a181">enum</a> {"Surface", "Volume"}</span> <span style="font-style: italic;"><i>type</i></span> )</p>
+<p class="VBA-Text-Indent">This method specifies if the newly created region should be defined on a surface or in a volume.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">CounterpartRegionName ( <a href="../common_vbageneral/common_general_string.htm" id="a81111112112" style="font-weight: normal; font-style: normal;" name="a81111112112">string</a> <span style="font-style: italic;"><i>name</i></span> )</p>
+<p class="VBA-Text-Indent">Defines the name for the new region in the external client. This command is useful if many different regions exist for field exchange, in this way the CSE director knows where to map the field data to in the external project.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">CreateRegion</p>
+<p class="VBA-Text-Indent">Creates a new regions with previously defined settings.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">SetCoordsUnit (<span style="font-weight: normal;">&#160;</span><a href="../common_vbageneral/common_general_enum.htm" id="a182" style="font-weight: normal;" name="a182">enum</a> <span style="font-weight: normal;">{"m", "cm", "mm", "in"...}</span> <span style="font-style: italic;"><i>gUnit</i></span> )</p>
+<p class="VBA-Text-Indent">This methods allows to specify the length unit, into which the mesh node coordinates should be converted for the co-simulation. For the full list of supported values please refer to the <a href="../common_vbaunitso/common_vbaunitso_units_object.htm#Methods Geometry">Units Object</a> documentation.</p>
+<p class="VBA-Heading-Category"><a name="FieldsSettings" id="FieldsSettings"></a>Fields Settings</p>
+<p class="VBA-Heading-Method">SetCoSimulationType ( <span style="font-weight: normal;">&#160;</span><a href="../common_vbageneral/common_general_enum.htm" id="a18" style="font-weight: normal;" name="a18">enum</a> <span style="font-weight: normal;">{"EM-Thermal", "EM-Mechanics", "Custom"}</span> <span style="font-style: italic;"><i>cs_type</i></span> )</p>
+<p class="VBA-Text-Indent">Specifies, which co-simulation type (and the default set of exchanged fields) has been selected by the user last time.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">ResetFields</p>
+<p class="VBA-Text-Indent">Removes all the fields in the list.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">AddField ( <span style="font-weight: normal;"><a href="../common_vbageneral/common_general_enum.htm" id="a1811" style="font-weight: normal;" name="a1811">enum</a> {"In", "Out"}</span> <span style="font-style: italic;"><i>direction,</i></span> <span style="font-weight: normal;"><a href="../common_vbageneral/common_general_enum.htm" id="a1812" style="font-weight: normal;" name="a1812">enum</a> {"Loss", "Displacement", "Force"}</span> <span style="font-style: italic;"><i>FieldType,</i></span> <span style="font-weight: normal;"><a href="../common_vbageneral/common_general_double.htm" id="a361" style="font-weight: normal;" name="a361">double</a></span> <span style="font-style: italic;"><i>factor,</i></span> <a href="../common_vbageneral/common_general_string.htm" id="a81111112111" style="font-weight: normal; font-style: normal;" name="a81111112111">string</a> <span style="font-style: italic;"><i>RegionName</i></span> )</p>
+<p class="VBA-Text-Indent">Defines a new field to exchange. Use <span style="font-weight: bold; font-style: italic;"><i>direction</i></span> to specify, whether the field should be sent to or received from the CSE director. <span style="font-weight: bold; font-style: italic;"><i>FieldType</i></span> defines the type of the field data. <span style="font-weight: bold; font-style: italic;"><i>factor</i></span> specifies the value, by which the field values should be multiplied after receiving or before submitting to the CSE client counterpart. <span style="font-weight: bold; font-style: italic;"><i>RegionName</i></span> defines, in which region the field should be exchanged (empty string means the whole simulation domain).</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">AddTemperatureField ( <span style="font-weight: normal;"><a href="../common_vbageneral/common_general_enum.htm" id="a18111" style="font-weight: normal;" name="a18111">enum</a> {"In", "Out"}</span> <span style="font-style: italic;"><i>direction,</i></span> <span style="font-weight: normal;"><a href="../common_vbageneral/common_general_enum.htm" id="a18121" style="font-weight: normal;" name="a18121">enum</a> {"Celsius", "Kelvin", "Fahrenheit"}</span> <span style="font-style: italic;"><i>unit,</i></span> <a href="../common_vbageneral/common_general_string.htm" id="a811111121111" style="font-weight: normal; font-style: normal;" name="a811111121111">string</a> <span style="font-style: italic;"><i>RegionName</i></span> )</p>
+<p class="VBA-Text-Indent">Defines a new temperature field. Use <span style="font-weight: bold; font-style: italic;"><i>direction</i></span> to specify, whether the field should be sent to or received from the CSE director. <span style="font-weight: bold; font-style: italic;"><i>Unit</i></span> specifies, which temperature unit is used in the CSE client counterpart. <span style="font-weight: bold; font-style: italic;"><i>RegionName</i></span> defines, in which region the temperature field should be exchanged (empty string means the whole simulation domain).</p>
+<p class="VBA-Heading-Method">&#160;</p>
+<p class="VBA-Heading-Method">AddLossToSubmitWithFrequency ( <span style="font-weight: normal;"><a href="../common_vbageneral/common_general_double.htm" id="a3611" style="font-weight: normal;" name="a3611">double</a></span> <span style="font-style: italic;"><i>factor,</i></span> <a href="../common_vbageneral/common_general_string.htm" id="a811111121112" style="font-weight: normal; font-style: normal;" name="a811111121112">string</a> <span style="font-style: italic;"><i>RegionName,</i></span> <span style="font-weight: normal;"><a href="../common_vbageneral/common_general_double.htm" id="a36111" style="font-weight: normal;" name="a36111">double</a></span> <span style="font-style: italic;"><i>frequency</i></span> )</p>
+<p class="VBA-Text-Indent">Defines a new loss field to be submitted to the CSE director. <span style="font-weight: bold; font-style: italic;"><i>factor</i></span> specifies the value, by which the loss field values should be multiplied before submitting to the CSE client counterpart. <span style="font-weight: bold; font-style: italic;"><i>RegionName</i></span> defines, in which region the field should be exchanged (empty string means the whole simulation domain). <span style="font-weight: bold;">frequency</span> is the frequency value in user units, determining which loss field from EM solver output should be selected. The <span style="font-style: italic; font-weight: bold;"><i>frequency</i></span> must be defined in the solver settings as well, so the solver could deliver this loss field.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">AddLossToSubmitWithMonitorName ( <span style="font-weight: normal;"><a href="../common_vbageneral/common_general_double.htm" id="a36112" style="font-weight: normal;" name="a36112">double</a></span> <span style="font-style: italic;"><i>factor,</i></span> <a href="../common_vbageneral/common_general_string.htm" id="a8111111211121" style="font-weight: normal; font-style: normal;" name="a8111111211121">string</a> <span style="font-style: italic;"><i>RegionName,</i></span> <span style="font-weight: normal;"><a href="../common_vbageneral/common_general_string.htm" id="a81111112111211" style="font-weight: normal; font-style: normal;" name="a81111112111211">string</a></span> <span style="font-style: italic;"><i>MonitorName</i></span> )</p>
+<p class="VBA-Text-Indent">Same as previous, but the loss distribution is selected by <span style="font-style: italic; font-weight: bold;"><i>MonitorName</i></span> instead of frequency value. This is relevant e.g. for the LF Time Domain Solver (MQS), where the specific time-averaged loss field is identified by its monitor name. A average loss field monitor with this name must exist, otherwise the co-simulation cannot be started.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">StartCoSimulation <a href="../common_vbageneral/common_general_long.htm" id="a12" style="font-weight: normal; font-style: normal;" name="a12">long</a></p>
+<p class="VBA-Text-Indent">Starts the co-simulation with the prescribed settings and the currently active mesh. If no mesh is available, a new mesh will be generated. Returns 0 if the co-simulation client run was successful or an error code &gt;0 otherwise.</p>
+<p class="VBA-Heading-Category"><a name="Export3DFMUSettings" id="Export3DFMUSettings"></a>3dfmu Package Export Settings</p>
+<p class="VBA-Heading-Method">Set3DFMUExportDestination ( <span style="font-weight: normal;"><a href="../common_vbageneral/common_general_enum.htm" id="a18112" style="font-weight: normal;" name="a18112">enum</a> {"File", "3DEXPERIENCE"}</span> <span style="font-style: italic;"><i>destination</i></span>)</p>
+<p class="VBA-Text-Indent">Defines the destination to save the new 3dfmu package. Use "File" to specify that the package must be saved into a file on the disk or "3DEXPERIENCE" if the package must be uploaded directly to 3DEXPERIENCE as a Logical Component.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">Set3DFMULogicalComponentName ( <span style="font-weight: normal;"><a href="../common_vbageneral/common_general_string.htm" id="a8111111211121" style="font-weight: normal; font-style: normal;" name="a8111111211121">string</a> <span style="font-style: italic; font-weight: bold;"><i>ComponentName</i></span></span> )</p>
+<p class="VBA-Text-Indent">If the package is going to be uploaded to 3DEXPERIENCE, specifies the name of resulting Logical Component object.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">Set3DFMULogicalBehaviorName ( <span style="font-weight: normal;"><a href="../common_vbageneral/common_general_string.htm" id="a8111111211121" style="font-weight: normal; font-style: normal;" name="a8111111211121">string</a> <span style="font-style: italic; font-weight: bold;"><i>BehaviorName</i></span></span> )</p>
+<p class="VBA-Text-Indent">If the package is going to be uploaded to 3DEXPERIENCE, specifies the name of resulting Logical Behavior object.</p>
+<p class="VBA-Heading-Category"><a name="DeprecatedCommands" id="DeprecatedCommands"></a>Deprecated</p>
+<p class="VBA-Heading-Method">CreateExcitation</p>
+<p class="VBA-Text-Indent">Same as <span style="font-weight: bold;">CreateExcitationForAllFrequencies</span>.</p>
+<p class="VBA-Heading-Category"><a name="Defaults" id="Defaults"></a>Default Settings</p>
+<p class="VBA-Text-Example">With SimuliaCSE</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.SetCodeName "cst_job"</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.SetJobName "cst_job"</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.SetDirectorName "localhost"</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.SetDirectorPort "22000"</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.SetConnectionTimeout "300"</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.SetSimulationDuration "0"</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.SetMasterClient "Both"</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.SetTimeStepAutoSelection "True"</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.RunExternalTools "False"</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.ResetRegions</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.ResetFields</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.ResetExcitationList</p>
+<p class="VBA-Text-Example">End With</p>
+<p class="VBA-Heading-Category"><a name="Example" id="Example"></a>Example</p>
+<p class="VBA-Text-Example">With SimuliaCSE</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.SetCodeName "lf_solution"</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.SetJobName "lf_solution"</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.SetDirectorName "localhost"</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.SetDirectorPort "22000"</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.SetConnectionTimeout "120"</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.SetSimulationDuration "1000"</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.ResetRegions</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.ResetRegionData</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.RegionName "region3D"</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.RegionFace "default:import_1_5", "9"</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.RegionFace "default:import_1_4", "19"</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.RegionFace "default:import_1_2", "19"</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.RegionFace "default:import_1_3", "19"</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.RegionFace "default:import_1", "19"</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.RegionFace "default:import_1_1", "19"</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.CreateRegion</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.ResetFields</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.AddLossToSubmitWithFrequency "1e-3", "region3D", "10000"</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.AddTemperatureField "In", "Celsius", "region3D"</p>
+<p class="VBA-Text-Example">End With</p>
+<?rh-p style="margin-bottom: 0px; text-align: Right; margin-left: 18px; 
+                 margin-right: 18px; margin-top: 18px;" ?>
+<div style="width: 100%; position: relative;" id="footer">
+<p style="border-bottom: Solid 1px #dddddd; text-align: Left; margin-left: 0px; font-family: Arial, sans-serif; line-height: Normal; margin-top: 9px; margin-right: 0px; margin-bottom: 6px; border-left-width: 1px; border-top-width: 1px; border-right-width: 1px;"><span style="text-align: Left; font-family: Arial, sans-serif; line-height: Normal;">&#160;</span></p>
+<table cellspacing="0" width="100%">
+<col style="width: 50%;" />
+<col style="width: 50%;" />
+<tr>
+<td style="vertical-align: Top;"><span style="font-family: Arial, sans-serif; line-height: Normal; font-size: 8pt;"><font size="1" style="font-size:8pt;">CST Studio Suite 2026</font></span></td>
+<td style="vertical-align: Top;">
+<p style="text-align: right;">&#160;</p>
+</td>
+</tr>
+</table>
+<p>&#160;</p>
+</div>
+<script type="text/javascript" language="javascript1.2">
+//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+        writeIntopicBar(0);
+
+
+highlightSearch();
+//-->
+//]]>
+</script>
+</body>
+</html>

@@ -1,0 +1,308 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="Adobe RoboHelp 11" />
+<title>ASCIIExport Object</title>
+<link rel="StyleSheet" href="../online_help_vba.css" type="text/css" />
+<style type="text/css">
+/*<![CDATA[*/
+<!--
+body { border-bottom-style:None; }
+-->
+/*]]>*/
+</style>
+
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+        origWidth = innerWidth;
+        origHeight = innerHeight;
+        onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+/*<![CDATA[*/
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+-->
+/*]]>*/
+</style>
+
+<script type="text/javascript" language="javascript1.2" src="../whmsg.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript" src="../whver.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript1.2" src="../whutils.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript1.2" src="../whproxy.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript1.2" src="../whlang.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript1.2" src="../whtopic.js" charset="utf-8">
+</script>
+</head>
+<body>
+<script type="text/javascript" language="javascript1.2">
+//<![CDATA[
+<!--
+if (window.gbWhTopic)
+{
+        var strUrl = document.location.href;
+        var bc = 0;
+        var n = strUrl.toLowerCase().indexOf("bc-");
+        if(n != -1)
+        {
+                document.location.replace(strUrl.substring(0, n));
+                bc = strUrl.substring(n+3);
+        }
+
+        if (window.addTocInfo)
+        {
+        addTocInfo("3D Simulation VBA\nVBA Objects\nImport/Export\nASCIIExport");
+
+        }
+        if (window.writeBtnStyle)
+                writeBtnStyle();
+
+        if (window.writeIntopicBar)
+                writeIntopicBar(0);
+
+        
+        document.write("<p style=\"font-family: Tahoma; font-size: 9pt; font-weight: 400;  font-style:normal; color: rgb(0, 0, 0); text-decoration:none; text-align: left\"> ");
+AddMasterBreadcrumbs("../index.htm", "font-family: Tahoma; font-size: 9pt; font-weight: 400;  font-style:normal; color: rgb(0, 0, 0); text-decoration:none; text-align: left", "|", "Home", "../special_vbaobjects/special_vbaobjects_vbaobjects.htm");
+document.write("<a style=\"font-family: Tahoma; font-size: 9pt; font-weight: 400;  font-style:normal; color: rgb(0, 0, 0); text-decoration:none; text-align: left\" href=\"../special_vbaobjects/special_vbaobjects_vbaobjects.htm\">3D Simulation VBA<\/a> | <a style=\"font-family: Tahoma; font-size: 9pt; font-weight: 400;  font-style:normal; color: rgb(0, 0, 0); text-decoration:none; text-align: left\" href=\"../special_vbaobjects/special_vbaobjects_vbaobjects.htm\">VBA Objects<\/a> | <a style=\"font-family: Tahoma; font-size: 9pt; font-weight: 400;  font-style:normal; color: rgb(0, 0, 0); text-decoration:none; text-align: left\" href=\"../special_vbaimpexp/adscomponentexport.htm\">Import/Export<\/a> | ASCIIExport<\/p>");
+
+}
+else
+        if (window.gbIE4)
+                document.location.reload();
+
+onLoadHandler = function()
+{
+  if (window.setRelStartPage)
+        {
+        setTimeout("setRelStartPage('../index.htm');", 1)
+
+    setTimeout("UpdateBreadCrumbsMarker();", 1);
+        }
+}
+
+if (window.addEventListener){  
+        window.addEventListener('load', onLoadHandler, false);   
+} else if (window.attachEvent){  
+        window.attachEvent('onload', onLoadHandler);  
+}
+
+function onSetStartPage()
+{
+  autoSync(1);
+  sendSyncInfo();
+  sendAveInfoOut();
+}
+//-->
+//]]>
+</script><script type="text/javascript" src="../ehlpdhtm.js" language="JavaScript1.2">
+</script>
+<table cellspacing="0" width="100%">
+<col style="width: 50%;" />
+<col style="width: 50%;" />
+<tr>
+<td style="vertical-align: middle; padding-top: 5px; padding-bottom: 5px;">
+<p style="margin-top: 0px; margin-bottom: 0px;"><img src="../3ds.png" alt="" style="border: none;" border="0" /></p>
+</td>
+<td style="vertical-align: middle;">
+<p style="text-align: right;"><a href="https://www.3ds.com/products-services/3dexperience/" target="_blank"><img src="../3dexp.png" alt="" style="border: none;" width="32" height="32" border="0" /></a></p>
+</td>
+</tr>
+</table>
+<p class="VBA-Heading-Object">ASCIIExport Object</p>
+<p class="VBA-Text">Export result data as an ASCII file.</p>
+<ul>
+<li class="p-VBA-Index-Category">
+<p class="VBA-Index-Category"><a href="#Supported result items">Supported result items</a></p>
+</li>
+<li class="p-VBA-Index-Category">
+<p class="VBA-Index-Category"><a href="#Methods">Methods</a></p>
+</li>
+<li class="p-VBA-Index-Category">
+<p class="VBA-Index-Category"><a href="#Default">Default Settings</a></p>
+</li>
+<li class="p-VBA-Index-Category">
+<p class="VBA-Index-Category"><a href="#Example">Example</a></p>
+</li>
+</ul>
+<p class="VBA-Heading-Category"><a name="Supported result items"></a>Supported result items</p>
+<p class="VBA-Text-Indent">The ASCII data export functionality is available for the following result items:</p>
+<ul style="list-style: disc;">
+<li class="p-VBA-Text-Indent">
+<p class="VBA-Text-Indent" style="margin-left: 0px;">1D signals</p>
+</li>
+<li class="p-VBA-Text-Indent">
+<p class="VBA-Text-Indent" style="margin-left: 0px;">1D and 2D/3D farfields</p>
+</li>
+<li class="p-VBA-Text-Indent">
+<p class="VBA-Text-Indent" style="margin-left: 0px;">2D/3D field results</p>
+</li>
+</ul>
+<p class="VBA-Heading-Category"><a name="Methods" id="Methods"></a>Methods</p>
+<p class="VBA-Heading-Method">Reset</p>
+<p class="VBA-Text-Indent">Resets the export options to the default.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">FileName ( <span><a href="../common_vbageneral/common_general_filename.htm" id="a31" style="font-weight: normal; font-style: normal;" name="a31">filename</a></span> <span style="font-style: italic;"><i>filename</i></span> )</p>
+<p class="VBA-Text-Indent">Sets the absolute name of the exported file.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">Mode ( <span><a href="../common_vbageneral/common_general_enum.htm" id="a32" style="font-weight: normal; font-style: normal;" name="a32">enum</a></span> <span style="font-style: italic;"><i>type</i></span> )</p>
+<p class="VBA-Text-Indent">Use a fixed step width or a fixed number of samples for your data export. This settings are only available for 2D/3D field results.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Text-Indent"><span style="font-style: italic;"><i>type</i></span> can have one of the following values:</p>
+<table style="vertical-align: top; margin-left: 24px;" cellspacing="0" width="300">
+<col style="width: 21.2%;" />
+<col style="width: 78.8%;" />
+<tr style="vertical-align: top;">
+<td style="border: Solid 1px #000000; width: 21.2%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text">"FixedNumber"</p>
+</td>
+<td style="border-top: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 78.8%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text">Fixed number of samples</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 21.2%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text">"FixedWidth"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 78.8%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text">Fixed step width</p>
+</td>
+</tr>
+</table>
+<p class="VBA-Heading-Method">&#160;</p>
+<p class="VBA-Heading-Method">SetFileType( <a href="../common_vbageneral/common_general_enum.htm" id="a321" style="font-weight: normal; font-style: normal;" name="a321">enum</a> type )</p>
+<p class="VBA-Text-Indent">Set the file format for exports. This setting is only available for 2D/3D field results.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Text-Indent"><span style="font-style: italic;"><i>type</i></span> can have one of the following values:</p>
+<table style="vertical-align: top; margin-left: 24px;" cellspacing="0" width="300">
+<col style="width: 21.2%;" />
+<col style="width: 78.8%;" />
+<tr style="vertical-align: top;">
+<td style="border: Solid 1px #000000; width: 21.2%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text">"ascii"</p>
+</td>
+<td style="border-top: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 78.8%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text">ASCII format (default)</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 21.2%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text">"csv"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 78.8%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text">csv format</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 21.2%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text">"hdf5"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 78.8%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text">HDF5 format</p>
+</td>
+</tr>
+</table>
+<p class="VBA-Heading-Method">&#160;</p>
+<p class="VBA-Heading-Method">SetCsvSeparator( <a href="../common_vbageneral/common_general_string.htm" id="a46" style="font-weight: normal;" name="a46">string</a> val )</p>
+<p class="VBA-Text-Indent">Set the separator for "csv"-formats. This settings is only available for 2D/3D field results.</p>
+<p class="VBA-Heading-Method">&#160;</p>
+<p class="VBA-Heading-Method">ExportCoordinatesInMeter( <a href="../common_vbageneral/common_general_bool_data_type.htm" id="a27" style="font-weight: normal; font-style: normal;" name="a27">bool</a> val )</p>
+<p class="VBA-Text-Indent">Activate or deactivate conversion of coordinates from project unit to meter. This setting is only available for 2D/3D field results.</p>
+<p class="VBA-Heading-Method">&#160;</p>
+<p class="VBA-Heading-Method">Step ( <a href="../common_vbageneral/common_general_double.htm" id="a26" style="font-weight: normal; font-style: normal;" name="a26">double</a> step )</p>
+<p class="VBA-Text-Indent">Number of steps or step width in all directions. Use the .Mode method to select the step definition. This setting is only available for 2D/3D field results.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">StepX ( <a href="../common_vbageneral/common_general_double.htm" id="a2" style="font-weight: normal; font-style: normal;" name="a2">double</a> step )</p>
+<p class="VBA-Heading-Method">StepY ( <a href="../common_vbageneral/common_general_double.htm" id="a5" style="font-weight: normal; font-style: normal;" name="a5">double</a> step )</p>
+<p class="VBA-Heading-Method">StepZ ( <a href="../common_vbageneral/common_general_double.htm" id="a7" style="font-weight: normal; font-style: normal;" name="a7">double</a> step )</p>
+<p class="VBA-Text-Indent">Number of steps or step width in x / y / z-direction. Use the .Mode method to select the step definition. This settings are only available for 2D/3D field results.</p>
+<p class="VBA-Heading-Method">&#160;</p>
+<p class="VBA-Heading-Method">SetPointFile( <a href="../common_vbageneral/common_general_filename.htm" id="a311" style="font-weight: normal; font-style: normal;" name="a311">filename</a> name )</p>
+<p class="VBA-Text-Indent" style="color: #1F497D;">Set the file name of a file containing points that are used for the field evaluation and export.</p>
+<p class="VBA-Heading-Method">&#160;</p>
+<p class="VBA-Heading-Method">SetSubvolume( <a href="../common_vbageneral/common_general_double.htm" id="a23" style="font-weight: normal; font-style: normal;" name="a23">double</a> xmin, <a href="../common_vbageneral/common_general_double.htm" id="a24" style="font-weight: normal; font-style: normal;" name="a24">double</a> xmax, <a href="../common_vbageneral/common_general_double.htm" id="a25" style="font-weight: normal; font-style: normal;" name="a25">double</a> ymin, <a href="../common_vbageneral/common_general_double.htm" id="a28" style="font-weight: normal; font-style: normal;" name="a28">double</a> ymax, <a href="../common_vbageneral/common_general_double.htm" id="a29" style="font-weight: normal; font-style: normal;" name="a29">double</a> zmin, <a href="../common_vbageneral/common_general_double.htm" id="a210" style="font-weight: normal; font-style: normal;" name="a210">double</a> zmax )</p>
+<p class="VBA-Text-Indent">Define axis aligned sub volume for the volume exports. This setting is only available for 2D/3D field results.</p>
+<p class="VBA-Heading-Method">&#160;</p>
+<p class="VBA-Heading-Method">UseSubvolume( <a href="../common_vbageneral/common_general_bool_data_type.htm" id="a271" style="font-weight: normal; font-style: normal;" name="a271">bool</a> val )</p>
+<p class="VBA-Text-Indent">Activate or deactivate defined sub volume defined with the .SetSubvolume method.</p>
+<p class="VBA-Heading-Method">&#160;</p>
+<p class="VBA-Heading-Method">SetTimeRange( <a href="../common_vbageneral/common_general_double.htm" id="a21" style="font-weight: normal; font-style: normal;" name="a21">double</a> val_min, <a href="../common_vbageneral/common_general_double.htm" id="a22" style="font-weight: normal; font-style: normal;" name="a22">double</a> val_max)</p>
+<p class="VBA-Text-Indent">Set the time range for time dependent results. Times are expected in project units. This setting is only available for 2D/3D field results.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">SetSampleRange( <a href="../common_vbageneral/common_general_integer.htm" id="a33" style="font-weight: normal; font-style: normal;" name="a33">int</a> val_min, <a href="../common_vbageneral/common_general_integer.htm" id="a34" style="font-weight: normal; font-style: normal;" name="a34">int</a> val_max )</p>
+<p class="VBA-Text-Indent">Set the time sample range for time dependent results. This setting is only available for 2D/3D field results.</p>
+<p class="VBA-Heading-Method">&#160;</p>
+<p class="VBA-Heading-Method">Execute</p>
+<p class="VBA-Text-Indent">Performs the ASCIIExport.</p>
+<p class="VBA-Heading-Category"><a name="Default" id="Default"></a>Default Settings</p>
+<p class="VBA-Text-Example">FileName ("")</p>
+<p class="VBA-Text-Example">Mode ("FixedWidth")</p>
+<p class="VBA-Text-Example">Step (-1)</p>
+<p class="VBA-Text-Example">File type "ascii"</p>
+<p class="VBA-Heading-Category"><a name="Example" id="Example"></a>Example</p>
+<p class="VBA-Text-Example" style="color: #008000;">' The following script exports a file containing the electric field "e1" (if available)</p>
+<p class="VBA-Text-Example" style="color: #008000;">' The file will show 9 columns:</p>
+<p class="VBA-Text-Example" style="color: #008000;">' &#160;&#160;&#160;&#160;3 for the positions (x, y, z) and</p>
+<p class="VBA-Text-Example" style="color: #008000;">' &#160;&#160;&#160;&#160;6 for the electric field vector (3 x Re/Im)</p>
+<p class="VBA-Text-Example" style="color: #008000;">&#160;</p>
+<p class="VBA-Text-Example" style="font-family: 'Courier New';"><span style="color: #008000;"><font color="green">' Select the desired monitor in the tree.</font></span></p>
+<p class="VBA-Text-Example" style="font-family: 'Courier New';">SelectTreeItem ("2D/3D Results\E-Field\e1")</p>
+<p class="VBA-Text-Example">&#160;</p>
+<p class="VBA-Text-Example">With ASCIIExport</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;.Reset</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;.FileName (GetProjectPath("Project") + "\Export\example.txt")</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;.Mode ("FixedNumber")</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;.StepX (12)</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;.StepY (12)</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;.StepZ (8)</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;.Execute</p>
+<p class="VBA-Text-Example">End With</p>
+<p>&#160;</p>
+<?rh-p style="margin-bottom: 0px; text-align: Right; margin-left: 18px; 
+                 margin-right: 18px; margin-top: 18px;" ?>
+<div style="width: 100%; position: relative;" id="footer">
+<p style="border-bottom: Solid 1px #dddddd; text-align: Left; margin-left: 0px; font-family: Arial, sans-serif; line-height: Normal; margin-top: 9px; margin-right: 0px; margin-bottom: 6px; border-left-width: 1px; border-top-width: 1px; border-right-width: 1px;"><span style="text-align: Left; font-family: Arial, sans-serif; line-height: Normal;">&#160;</span></p>
+<table cellspacing="0" width="100%">
+<col style="width: 50%;" />
+<col style="width: 50%;" />
+<tr>
+<td style="vertical-align: Top;"><span style="font-family: Arial, sans-serif; line-height: Normal; font-size: 8pt;"><font size="1" style="font-size:8pt;">CST Studio Suite 2026</font></span></td>
+<td style="vertical-align: Top;">
+<p style="text-align: right;">&#160;</p>
+</td>
+</tr>
+</table>
+<p>&#160;</p>
+</div>
+<script type="text/javascript" language="javascript1.2">
+//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+        writeIntopicBar(0);
+
+
+highlightSearch();
+//-->
+//]]>
+</script>
+</body>
+</html>

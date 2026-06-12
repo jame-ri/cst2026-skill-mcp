@@ -1,0 +1,757 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="Adobe RoboHelp 11" />
+<title>Solid Object</title>
+<link rel="StyleSheet" href="../online_help_vba.css" type="text/css" />
+<style type="text/css">
+/*<![CDATA[*/
+<!--
+body { border-bottom-style:None; }
+-->
+/*]]>*/
+</style>
+
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+        origWidth = innerWidth;
+        origHeight = innerHeight;
+        onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+/*<![CDATA[*/
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+-->
+/*]]>*/
+</style>
+
+<script type="text/javascript" language="javascript1.2" src="../whmsg.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript" src="../whver.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript1.2" src="../whutils.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript1.2" src="../whproxy.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript1.2" src="../whlang.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript1.2" src="../whtopic.js" charset="utf-8">
+</script>
+</head>
+<body>
+<script type="text/javascript" language="javascript1.2">
+//<![CDATA[
+<!--
+if (window.gbWhTopic)
+{
+        var strUrl = document.location.href;
+        var bc = 0;
+        var n = strUrl.toLowerCase().indexOf("bc-");
+        if(n != -1)
+        {
+                document.location.replace(strUrl.substring(0, n));
+                bc = strUrl.substring(n+3);
+        }
+
+        if (window.addTocInfo)
+        {
+        addTocInfo("3D Simulation VBA\nVBA Objects\nShape Operations\nSolid");
+addAvenueInfo("common_VBASOLIDO","","");
+
+        }
+        if (window.writeBtnStyle)
+                writeBtnStyle();
+
+        if (window.writeIntopicBar)
+                writeIntopicBar(0);
+
+        
+        document.write("<p style=\"font-family: Tahoma; font-size: 9pt; font-weight: 400;  font-style:normal; color: rgb(0, 0, 0); text-decoration:none; text-align: left\"> ");
+AddMasterBreadcrumbs("../index.htm", "font-family: Tahoma; font-size: 9pt; font-weight: 400;  font-style:normal; color: rgb(0, 0, 0); text-decoration:none; text-align: left", "|", "Home", "../special_vbaobjects/special_vbaobjects_vbaobjects.htm");
+document.write("<a style=\"font-family: Tahoma; font-size: 9pt; font-weight: 400;  font-style:normal; color: rgb(0, 0, 0); text-decoration:none; text-align: left\" href=\"../special_vbaobjects/special_vbaobjects_vbaobjects.htm\">3D Simulation VBA<\/a> | <a style=\"font-family: Tahoma; font-size: 9pt; font-weight: 400;  font-style:normal; color: rgb(0, 0, 0); text-decoration:none; text-align: left\" href=\"../special_vbaobjects/special_vbaobjects_vbaobjects.htm\">VBA Objects<\/a> | <a style=\"font-family: Tahoma; font-size: 9pt; font-weight: 400;  font-style:normal; color: rgb(0, 0, 0); text-decoration:none; text-align: left\" href=\"common_vbasolido_solid_object.htm\">Shape Operations<\/a> | Solid<\/p>");
+
+}
+else
+        if (window.gbIE4)
+                document.location.reload();
+
+onLoadHandler = function()
+{
+  if (window.setRelStartPage)
+        {
+        setTimeout("setRelStartPage('../index.htm');", 1)
+
+    setTimeout("UpdateBreadCrumbsMarker();", 1);
+        }
+}
+
+if (window.addEventListener){  
+        window.addEventListener('load', onLoadHandler, false);   
+} else if (window.attachEvent){  
+        window.attachEvent('onload', onLoadHandler);  
+}
+
+function onSetStartPage()
+{
+  autoSync(1);
+  sendSyncInfo();
+  sendAveInfoOut();
+}
+//-->
+//]]>
+</script><script type="text/javascript" src="../ehlpdhtm.js" language="JavaScript1.2">
+</script>
+<table cellspacing="0" width="100%">
+<col style="width: 50%;" />
+<col style="width: 50%;" />
+<tr>
+<td style="vertical-align: middle; padding-top: 5px; padding-bottom: 5px;">
+<p style="margin-top: 0px; margin-bottom: 0px;"><img src="../3ds.png" alt="" style="border: none;" border="0" /></p>
+</td>
+<td style="vertical-align: middle;">
+<p style="text-align: right;"><a href="https://www.3ds.com/products-services/3dexperience/" target="_blank"><img src="../3dexp.png" alt="" style="border: none;" width="32" height="32" border="0" /></a></p>
+</td>
+</tr>
+</table>
+<p class="VBA-Heading-Object">Solid Object</p>
+<p class="VBA-Text">Changes Solids in several ways and offers tools for the reparation of imported solids.</p>
+<ul>
+<li class="p-VBA-Index-Category">
+<p class="VBA-Index-Category"><a href="#General Methods">General Methods</a></p>
+</li>
+<li class="p-VBA-Index-Category">
+<p class="VBA-Index-Category"><a href="#Boolean">Boolean</a></p>
+</li>
+<li class="p-VBA-Index-Category">
+<p class="VBA-Index-Category"><a href="#Appearance">Appearance</a></p>
+</li>
+<li class="p-VBA-Index-Category">
+<p class="VBA-Index-Category"><a href="#Advanced Modelling">Advanced Modelling</a></p>
+</li>
+<li class="p-VBA-Index-Category">
+<p class="VBA-Index-Category"><a href="#Local Modifications">Local Modifications</a></p>
+</li>
+<li class="p-VBA-Index-Category">
+<p class="VBA-Index-Category"><a href="#Mesh Settings">Mesh Settings</a></p>
+</li>
+<li class="p-VBA-Index-Category">
+<p class="VBA-Index-Category"><a href="#Healing">Healing</a></p>
+</li>
+<li class="p-VBA-Index-Category">
+<p class="VBA-Index-Category"><a href="#Show Problems">Show Problems</a></p>
+</li>
+<li class="p-VBA-Index-Category">
+<p class="VBA-Index-Category"><a href="#Face Healing">Face Healing</a></p>
+</li>
+<li class="p-VBA-Index-Category">
+<p class="VBA-Index-Category"><a href="#Advanced_Repair_Operations">Advanced Repair Operations</a></p>
+</li>
+<li class="p-VBA-Index-Category">
+<p class="VBA-Index-Category"><a href="#Queries">Queries</a></p>
+</li>
+<li class="p-VBA-Index-Category">
+<p class="VBA-Index-Category"><a href="#Default Settings" style="font-weight: bold;">Default Settings</a></p>
+</li>
+<li class="p-VBA-Index-Category">
+<p class="VBA-Index-Category" style="font-weight: bold;"><a href="#Examples">Examples</a></p>
+</li>
+</ul>
+<p class="VBA-Heading-Category"><a name="General Methods"></a>General Methods</p>
+<p class="VBA-Heading-Method">Delete ( <a href="../common_vbageneral/common_general_solid_names.htm" id="a9" style="font-weight: normal; font-style: normal;" name="a9">solidname</a> <span style="font-style: italic;"><i>SolidName</i></span> )</p>
+<p class="VBA-Text-Indent">Deletes the Solid with the given name.</p>
+<p class="vba-text-indent">&#160;</p>
+<p class="VBA-Heading-Method">Rename ( <a href="../common_vbageneral/common_general_solid_names.htm" id="a5" style="font-weight: normal; font-style: normal;" name="a5">solidname</a> <span style="font-style: italic;"><i>oldName,</i></span> <a href="../common_vbageneral/common_general_name.htm" id="a6" style="font-weight: normal; font-style: normal;" name="a6">name</a> <span style="font-style: italic;"><i>newName</i></span> )</p>
+<p class="vba-text-indent">Changes the name of an already named Solid.</p>
+<p class="VBA-Heading-Method">&#160;</p>
+<p class="VBA-Heading-Method">ChangeComponent ( <a href="../common_vbageneral/common_general_solid_names.htm" id="a1" style="font-weight: normal; font-style: normal;" name="a1">solidname</a> <span style="font-style: italic;"><i>SolidName, <a href="../common_vbageneral/common_general_name.htm" id="a2" style="font-weight: normal; font-style: normal;" name="a2">name</a> ComponentName</i></span> )</p>
+<p class="vba-text-indent">Changes the component of a solid. The component to be changed to must already exist.</p>
+<p class="vba-text-indent">&#160;</p>
+<p class="VBA-Heading-Method">ChangeMaterial ( <a href="../common_vbageneral/common_general_solid_names.htm" id="a3" style="font-weight: normal; font-style: normal;" name="a3">solidname</a> <span style="font-style: italic;"><i>SolidName, <a href="../common_vbageneral/common_general_name.htm" id="a4" style="font-weight: normal; font-style: normal;" name="a4">name</a> MaterialName</i></span> )</p>
+<p class="vba-text-indent">Changes the material of a solid. The material to change to must already exist.</p>
+<p class="vba-text-indent">&#160;</p>
+<p class="VBA-Heading-Method">SetUseIndividualColor ( <a href="../common_vbageneral/common_general_solid_names.htm" id="a311" style="font-weight: normal; font-style: normal;" name="a311">solidname</a> <span style="font-style: italic;"><i>SolidName,</i></span> <span><a href="../common_vbageneral/common_general_bool_data_type.htm" id="a1710" style="font-weight: normal; font-style: normal;" name="a1710">bool</a></span> <span style="font-style: italic;"><i>flag</i></span> &#160;)</p>
+<p class="vba-text-indent">Enables the use of the individual color for a solid. The RGB values of the material will be ignored if enabled and replaced by the one from the solid. &#160;&#160;</p>
+<p class="vba-text-indent">&#160;</p>
+<p class="VBA-Heading-Method">ChangeIndividualColor ( <a href="../common_vbageneral/common_general_solid_names.htm" id="a3111" style="font-weight: normal; font-style: normal;" name="a3111">solidname</a> <span style="font-style: italic;"><i>SolidName,</i></span> <a href="../common_vbageneral/common_general_integer.htm" id="a17101" style="font-weight: normal; font-style: normal;" name="a17101">int</a> r<span style="font-style: italic;"><i>,</i></span> <a href="../common_vbageneral/common_general_integer.htm" id="a17111" style="font-weight: normal; font-style: normal;" name="a17111">int</a> g<span style="font-style: italic;"><i>,</i></span> <a href="../common_vbageneral/common_general_integer.htm" id="a17121" style="font-weight: normal; font-style: normal;" name="a17121">int</a> b )</p>
+<p class="vba-text-indent">Changes the RGB values of the individual color of the given solid. "SetUseIndividualColor" need to be set to "1" before to make sure the change will be visible.</p>
+<p class="vba-text-indent">&#160;</p>
+<p class="VBA-Heading-Method">FastModelUpdate ( <a href="../common_vbageneral/common_general_bool_data_type.htm" id="a139" style="font-weight: normal; font-style: normal;" name="a139">bool</a> <span style="font-style: italic;"><i>flag</i></span> )</p>
+<p class="VBA-Text-Indent">For setting the edit behavior of project elements and parameters. If the fast model update is deactivated, editing most of the project elements will lead to a complete rebuild of the projects history. If activated, only the relevant history entries are executed to save time.</p>
+<p class="VBA-Heading-Category"><a name="Boolean" id="Boolean"></a>Boolean</p>
+<p class="VBA-Heading-Method">Add ( <a href="../common_vbageneral/common_general_solid_names.htm" id="a7" style="font-weight: normal; font-style: normal;" name="a7">solidname</a> <span style="font-style: italic;"><i>solid1,</i></span> <a href="../common_vbageneral/common_general_solid_names.htm" id="a8" style="font-weight: normal; font-style: normal;" name="a8">solidname</a> <span style="font-style: italic;"><i>solid2</i></span> )</p>
+<p class="vba-text-indent">This method adds two solids. The added solid will be stored under <span style="font-style: italic;"><i>solid1</i></span> and the second solid will be deleted.</p>
+<p class="vba-text-indent">&#160;</p>
+<p class="VBA-Heading-Method">Insert ( <a href="../common_vbageneral/common_general_solid_names.htm" id="a10" style="font-weight: normal; font-style: normal;" name="a10">solidname</a> <span style="font-style: italic;"><i>solid1,</i></span> <a href="../common_vbageneral/common_general_solid_names.htm" id="a11" style="font-weight: normal; font-style: normal;" name="a11">solidname</a> <span style="font-style: italic;"><i>solid2</i></span> )</p>
+<p class="vba-text-indent">Performs an subtraction between the solids <span style="font-style: italic;"><i>solid1</i></span> and <span style="font-style: italic;"><i>solid2</i></span> (<span style="font-style: italic;"><i>solid1</i></span> <span style="font-style: italic;"><i>solid2</i></span>) but does not delete <span style="font-style: italic;"><i>solid2</i></span>.</p>
+<p class="vba-text-indent">&#160;</p>
+<p class="VBA-Heading-Method">Intersect ( <a href="../common_vbageneral/common_general_solid_names.htm" id="a12" style="font-weight: normal; font-style: normal;" name="a12">solidname</a> <span style="font-style: italic;"><i>solid1,</i></span> <a href="../common_vbageneral/common_general_solid_names.htm" id="a13" style="font-weight: normal; font-style: normal;" name="a13">solidname</a> <span style="font-style: italic;"><i>solid2</i></span> )</p>
+<p class="vba-text-indent">Performs an intersection on the two solids. The overlapping parts between the two solids remains while the rest will be deleted. The result will be stored in <span style="font-style: italic;"><i>solid1</i></span> while <span style="font-style: italic;"><i>solid2</i></span> will be deleted.</p>
+<p class="vba-text-indent">&#160;</p>
+<p class="VBA-Heading-Method">Subtract ( <a href="../common_vbageneral/common_general_solid_names.htm" id="a14" style="font-weight: normal; font-style: normal;" name="a14">solidname</a> <span style="font-style: italic;"><i>solid1,</i></span> <a href="../common_vbageneral/common_general_solid_names.htm" id="a15" style="font-weight: normal; font-style: normal;" name="a15">solidname</a> <span style="font-style: italic;"><i>solid2</i></span> )</p>
+<p class="vba-text-indent">Performs the operation <span style="font-style: italic;"><i>solid1</i></span> <span style="font-style: italic;"><i>solid2</i></span>. The result will be stored in <span style="font-style: italic;"><i>solid1</i></span> while <span style="font-style: italic;"><i>solid2</i></span> will be deleted.</p>
+<p class="vba-text-indent">&#160;</p>
+<p class="VBA-Heading-Method">MergeMaterialsOfComponent ( <span><a href="../common_vbageneral/common_general_name.htm" id="a16" style="font-weight: normal; font-style: normal;" name="a16">name</a></span> <span style="font-style: italic;"><i>name</i></span> )</p>
+<p class="vba-text-indent">The parameter <span style="font-style: italic;"><i>name</i></span> can be a componentname or a solidname.</p>
+<p class="vba-text-indent">If it is a componentname the function will merge all shapes from one component with the same material like the boolean operation add.</p>
+<p class="vba-text-indent">If <span style="font-style: italic;"><i>name</i></span> is a solidname all shapes of a component with the same material like the solid <span style="font-style: italic;"><i>name</i></span> will be merged together. The resulting shape is called like <span style="font-style: italic;"><i>name</i></span>.</p>
+<p class="vba-text-indent">&#160;</p>
+<p class="VBA-Heading-Method">MergeSolidsWithSameMaterialName ( <a href="../common_vbageneral/common_general_name.htm" id="a1610" style="font-weight: normal; font-style: normal;" name="a1610">name</a> componentn<span style="font-style: italic;"><i>ame</i></span> )</p>
+<p class="vba-text-indent">Merges all shapes with the same material name. The resulting shapes are moved into the component specified by <span style="font-style: italic;"><i>componentname</i></span>.</p>
+<p class="vba-text-indent">&#160;</p>
+<p class="VBA-Heading-Method">MergeSolidsWithSameMaterialProperties( <a href="../common_vbageneral/common_general_name.htm" id="a16101" style="font-weight: normal; font-style: normal;" name="a16101">name</a> componentn<span style="font-style: italic;"><i>ame</i></span> )</p>
+<p class="vba-text-indent">Merges all shapes which materials have the same properties. The resulting shapes are moved into the component specified by <span style="font-style: italic;"><i>componentname</i></span>.</p>
+<p class="VBA-Heading-Category"><a name="Appearance" id="Appearance"></a>Appearance</p>
+<p class="VBA-Heading-Method">ShapeVisualizationAccuracy2 ( <a href="../common_vbageneral/common_general_integer.htm" id="a17" style="font-weight: normal; font-style: normal;" name="a17">int</a> <span style="font-style: italic;"><i>acc</i></span>)</p>
+<p class="VBA-Text-Indent">Specifies the accuracy of the triangulation of the shapes used for visualization. This setting only changes the display information, it does not change any internal description of a solid (Modeler, mesh module, solver, etc.). The parameter <span style="font-style: italic;"><i>acc</i></span> may ordinarily have values between 0 - 100, can be set interactively up to 120 and may also have arbitrary high values. However, due to performance reasons it is not recommended using values above 100. .</p>
+<p class="vba-text-indent">&#160;</p>
+<p class="VBA-Heading-Method">ShapeVisualizationOffset ( <a href="../common_vbageneral/common_general_integer.htm" id="a18" style="font-weight: normal; font-style: normal;" name="a18">int</a> <span style="font-style: italic;"><i>offset</i></span>)</p>
+<p class="VBA-Text-Indent">Specifies the distance between the triangulation of adjacent shapes. This setting only changes the display information, it does not change any internal description of a solid (Modeler, mesh module, solver, etc.); The parameter <span style="font-style: italic;"><i>offset</i></span> may have values between 0 - 100. This method is deprecated and should not be used anymore.</p>
+<p class="VBA-Heading-Category"><a name="Advanced Modelling"></a>Advanced Modelling</p>
+<p class="VBA-Heading-Method">AttachActiveWCS ( <a href="../common_vbageneral/common_general_name.htm" id="a169" style="font-weight: normal; font-style: normal;" name="a169">name</a> <span style="font-style: italic;"><i>sName</i></span> )</p>
+<p class="VBA-Text-Indent">Attaches the currently active coordinate system (global or local WCS) to the solid specified by <span style="font-style: italic;"><i>sName.</i></span> This solid will then own a <span style="font-style: italic;"><i>Local Solid Coordinate System</i></span> (SCS) which transforms with solid transformation and which will be copied when the solid is copied within a transformation. The SCS feature is useful for all applications which depend on an orientation (like anisotropic materials or radial magnets). A solid coordinate system can be changed by attaching a new WCS to the solid.</p>
+<p class="VBA-Heading-Method">&#160;</p>
+<p class="VBA-Heading-Method">BlendEdge ( <a href="../common_vbageneral/common_general_double.htm" id="a38" style="font-weight: normal; font-style: normal;" name="a38">double</a> <span style="font-style: italic;"><i>rad</i></span> )</p>
+<p class="VBA-Text-Indent">This method changes the transition between two faces. If two faces join each other at a straight edge this edge can be picked and replaced by a cylindrical shape of radius <span style="font-style: italic;"><i>rad</i></span>. This shape is inserted into the structure such that a smooth transition between the two original faces arises.</p>
+<p class="VBA-Text-Indent">If radius is chosen in a way that the structure would change significantly, the operation might not be possible.</p>
+<p class="VBA-Text-Indent">If no edge is picked this method performs no action.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">ChamferEdge ( <a href="../common_vbageneral/common_general_double.htm" id="a19" style="font-weight: normal; font-style: normal;" name="a19">double</a> <span style="font-style: italic;"><i>depth, <a href="../common_vbageneral/common_general_double.htm" id="a128" style="font-weight: normal; font-style: normal;" name="a128">double</a> angle,</i></span> <a href="../common_vbageneral/common_general_bool_data_type.htm" id="a129" style="font-weight: normal; font-style: normal;" name="a129">bool</a> <span style="font-style: italic;"><i>switch, <a href="../common_vbageneral/common_general_integer.htm" id="a165" style="font-weight: normal; font-style: normal;" name="a165">int</a> faceID</i></span> )</p>
+<p class="VBA-Text-Indent">This option cuts all previously picked edges to the specified <span style="font-style: italic;"><i>depth</i></span>. The parameter <span style="font-style: italic;"><i>angle</i></span> defines the angle of the chamfer in degrees (default is 45.0°). There are two possibilities the chamfer width and the angle can be applied to the selected edge. Once is to the right and once is to the left of the selected edges. The parameter switch is to apply the specified settings to the other direction. The faceID will determine from which face we measure the angle (if switch is true, it is the opposite)</p>
+<p class="VBA-Text-Indent">If depth is chosen in a way that the structure would change significantly, the operation might not be possible.</p>
+<p class="VBA-Text-Indent">If no edge is picked this method performs no action.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">SliceShape ( <span><a href="../common_vbageneral/common_general_name.htm" id="a20" style="font-weight: normal; font-style: normal;" name="a20">name</a></span> <span style="font-style: italic;"><i>sName,</i></span> <a href="../common_vbageneral/common_general_name.htm" id="a21" style="font-weight: normal; font-style: normal;" name="a21">name</a> <span style="font-style: italic;"><i>componentName</i></span> )</p>
+<p class="vba-text-indent">Cuts the solid <span style="font-style: italic;"><i>sName</i></span> of component <span style="font-style: italic;"><i>componentName</i></span> into two half while the currently active working plane defines the cutting plane.</p>
+<p class="vba-text-indent">&#160;</p>
+<p class="VBA-Heading-Method">SplitShape ( <span><a href="../common_vbageneral/common_general_name.htm" id="a22" style="font-weight: normal; font-style: normal;" name="a22">name</a></span> <span style="font-style: italic;"><i>sName,</i></span> <a href="../common_vbageneral/common_general_name.htm" id="a23" style="font-weight: normal; font-style: normal;" name="a23">name</a> <span style="font-style: italic;"><i>componentName</i></span> )</p>
+<p class="vba-text-indent">A solid may consist out of several parts that are not connected to each other. An example for such a solid can be created by subtracting one solid from a second one, in a way that the first one cuts the second one into two parts.</p>
+<p class="vba-text-indent">This method converts the different parts of the solid <span style="font-style: italic;"><i>sName</i></span> &#160;of component <span style="font-style: italic;"><i>componentName</i></span> into independent, new solids. The new solids will be named automatically.</p>
+<p class="vba-text-indent">If the solid has only one part this method has no effect.</p>
+<p class="vba-text-indent">&#160;</p>
+<p class="VBA-Heading-Method">ThickenSheetAdvanced ( <a href="../common_vbageneral/common_general_solid_names.htm" id="a24" style="font-weight: normal; font-style: normal;" name="a24">solidname</a> <span style="font-style: italic;"><i>solid1,</i></span> <span><a href="../common_vbageneral/common_general_enum.htm" id="a40" style="font-weight: normal;" name="a40">enum</a></span> <span style="font-style: italic;"><i>key,</i></span> &#160;&#160;<a href="../common_vbageneral/common_general_double.htm" id="a41" style="font-weight: normal; font-style: normal;" name="a41">double</a> <span style="font-style: italic;"><i>thickness,</i></span> <a href="../common_vbageneral/common_general_bool_data_type.htm" id="a130" style="font-weight: normal; font-style: normal;" name="a130">bool</a> <span style="font-style: italic;"><i>clearpicks</i></span> )</p>
+<p class="vba-text-indent">This method thickens an existing sheet body with the given thickness <span style="font-style: italic;"><i>thickness</i></span>. Thus, the original sheet body is transformed to a solid body.</p>
+<p class="vba-text-indent">The parameter <span style="font-style: italic;"><i>clearpicks</i></span> indicates if the actual picks are deleted after the operation. This is needed for multiple solid operation, because several entries are written into the history and only the last one should delete the picks. So all <span style="font-style: italic;"><i>clearpicks</i></span> values in the history entries of the multiple solid operation should be false and the last one should be true.</p>
+<p class="vba-text-indent">&#160;</p>
+<p class="vba-text-indent">The parameter <span style="font-style: italic;"><i>key</i></span> may have one of the following values:</p>
+<table style="vertical-align: top; margin-left: 24px; left: 0px; top: 1786px;" cellspacing="0" width="477">
+<col style="width: 50%;" />
+<col style="width: 50%;" />
+<tr style="vertical-align: top;">
+<td style="border: Solid 1px #000000; width: 50%; padding-right: 10px; padding-left: 10px;">
+<p>"Inside"</p>
+</td>
+<td style="border-top: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 50%; padding-right: 10px; padding-left: 10px;">
+<p>The sheet is thickened in antiparallel direction of the normal of the sheet's face.</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 50%; padding-right: 10px; padding-left: 10px;">
+<p>"Outside"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 50%; padding-right: 10px; padding-left: 10px;">
+<p>The sheet is thickened in direction of the normal of the sheet's face.</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 50%; padding-right: 10px; padding-left: 10px;">
+<p>"Centered"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 50%; padding-right: 10px; padding-left: 10px;">
+<p>The sheet is thickened around both sides of the original sheet.</p>
+</td>
+</tr>
+</table>
+<p class="vba-text-indent">&#160;</p>
+<p class="VBA-Heading-Method">ShellAdvanced ( <a href="../common_vbageneral/common_general_solid_names.htm" id="a25" style="font-weight: normal; font-style: normal;" name="a25">solidname</a> <span style="font-style: italic;"><i>solid1,</i></span> <span><a href="../common_vbageneral/common_general_enum.htm" id="a26" style="font-weight: normal;" name="a26">enum</a></span> <span style="font-style: italic;"><i>key,</i></span> &#160;&#160;<a href="../common_vbageneral/common_general_double.htm" id="a27" style="font-weight: normal; font-style: normal;" name="a27">double</a> <span style="font-style: italic;"><i>thickness,</i></span> <a href="../common_vbageneral/common_general_bool_data_type.htm" id="a131" style="font-weight: normal; font-style: normal;" name="a131">bool</a> <span style="font-style: italic;"><i>clearpicks</i></span> )</p>
+<p class="vba-text-indent">This method hollows out the existing solid <span style="font-style: italic;"><i>solid1</i></span>. The original solid is transformed to a new solid that is made out of the surface of the old one with a defined <span style="font-style: italic;"><i>thickness</i></span>.</p>
+<p class="vba-text-indent">The parameter <span style="font-style: italic;"><i>clearpicks</i></span> indicates if the actual picks are deleted after the operation. This is needed for multiple solid operation, because several entries are written into the history and only the last one should delete the picks. So all <span style="font-style: italic;"><i>clearpicks</i></span> values in the history entries of the multiple solid operation should be false and the last one should be true.</p>
+<p class="vba-text-indent">&#160;</p>
+<p class="vba-text-indent">The parameter <span style="font-style: italic;"><i>key</i></span> may have one of the following values:</p>
+<table style="vertical-align: top; margin-left: 24px; left: 0px; top: 1786px;" cellspacing="0" width="477">
+<col style="width: 50%;" />
+<col style="width: 50%;" />
+<tr style="vertical-align: top;">
+<td style="border: Solid 1px #000000; width: 50%; padding-right: 10px; padding-left: 10px;">
+<p>"Inside"</p>
+</td>
+<td style="border-top: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 50%; padding-right: 10px; padding-left: 10px;">
+<p>The wall will be created from the original solids surface to its inside.</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 50%; padding-right: 10px; padding-left: 10px;">
+<p>"Outside"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 50%; padding-right: 10px; padding-left: 10px;">
+<p>The wall will be created from the original solids surface to its outside</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 50%; padding-right: 10px; padding-left: 10px;">
+<p>"Centered"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 50%; padding-right: 10px; padding-left: 10px;">
+<p>The wall will be created around the original solids surface.</p>
+</td>
+</tr>
+</table>
+<p class="vba-text-indent">&#160;</p>
+<p class="VBA-Heading-Method">FillUpSpaceAdvanced ( <a href="../common_vbageneral/common_general_name.htm" id="a28" style="font-weight: normal; font-style: normal;" name="a28">name</a> <span style="font-style: italic;"><i>sName,</i></span> <a href="../common_vbageneral/common_general_name.htm" id="a29" style="font-weight: normal; font-style: normal;" name="a29">name</a> <span style="font-style: italic;"><i>componentName,</i></span> <a href="../common_vbageneral/common_general_name.htm" id="a30" style="font-weight: normal; font-style: normal;" name="a30">name</a> <span style="font-style: italic;"><i>materialName</i></span> )</p>
+<p class="vba-text-indent">Creates a brick with the size of the entire calculation domain and inserts all solids that have been defined so far into it. The new solid will have the name <span style="font-style: italic;"><i>sName</i></span> of component <span style="font-style: italic;"><i>componentName</i></span> and will have the material <span style="font-style: italic;"><i>materialName.</i></span> Both the given material and the given component must already exist.</p>
+<p class="vba-text-indent">&#160;</p>
+<p class="VBA-Heading-Method">AssignMaterialByMappingScheme( <a href="../../../../../OH-MAIN-MBI8-eu-dar-ohvm3/Online Help/VBA/VBA_3D/common_VBAGeneral/common_general_filename.htm" id="a312" style="font-weight: normal; font-style: normal;" name="a312">filename</a> <span style="font-style: italic;"><i>filename</i></span> )</p>
+<p class="VBA-Text-Indent">This method uses the mapping scheme defined in the input json file and assigns the materials to the shapes. The component and shape names in the mapping scheme may contain wild cards. The assignment to the material name is done if both component and shape name is matching. The json file with the mapping scheme has to be stored in the Library folder under "&lt;Studio_Install_Path&gt;\Library\Materials\ShapeToMaterialMappings"<span style="color: rgb(23, 43, 77); font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif; font-size: 14px; font-variant-ligatures: normal; font-variant-caps: normal; orphans: 2; widows: 2; -webkit-text-stroke-width: 0px; background-color: rgb(255, 255, 255); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; display: inline ! important ; float: none;">.</span></p>
+<p class="VBA-Text-Indent">Consider the following example for the json file:</p>
+<p class="VBA-Text-Indent"><span style="font-family: 'Courier New', monospace;">{</span></p>
+<p class="vba-text-indent" style="font-family: 'Courier New', monospace;">&#160;&#160;&#160;&#160;&#160;"version": 1,</p>
+<p class="vba-text-indent" style="font-family: 'Courier New', monospace;">&#160;&#160;&#160;&#160;&#160;"mappings" : [</p>
+<p class="vba-text-indent" style="font-family: 'Courier New', monospace;">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;{ "component": "component1", <span style="font-family: 'Courier New', monospace;">"shape": "solid1", "material": "Vacuum" },</span></p>
+<p class="vba-text-indent" style="font-family: 'Courier New', monospace;">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;{ <span style="font-family: 'Courier New', monospace;">"component": "component2", "shape": "solid*", "material": "Lead glass" },&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;</span></p>
+<p class="vba-text-indent" style="font-family: 'Courier New', monospace;">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;{ <span style="font-family: 'Courier New', monospace;">"component": "component1/comp*",&#160;"shape": "so*d3", "material": "PEC" }</span></p>
+<p class="vba-text-indent" style="font-family: 'Courier New', monospace;">&#160;&#160;&#160;&#160;&#160;]</p>
+<p class="vba-text-indent" style="font-family: 'Courier New', monospace;"><span style="font-family: 'Courier New', monospace;">&#160;&#160;&#160;}</span></p>
+<p class="VBA-Heading-Category"><a name="Local Modifications"></a>Local Modifications <span style="font-weight: normal;">(deprecated, use the <a href="common_vbaobjectso_local_modifications_object.htm" style="font-weight: normal;">LocalModification Object</a> instead)</span></p>
+<p class="VBA-Heading-Method">MoveSelectedFace ( <span style="font-style: italic;"><i>&#160;<a href="../common_vbageneral/common_general_double.htm" id="a32" style="font-weight: normal; font-style: normal;" name="a32">double</a> dx</i></span> <span style="font-style: italic;"><i>, <a href="../common_vbageneral/common_general_double.htm" id="a33" style="font-weight: normal; font-style: normal;" name="a33">double</a> dy, <a href="../common_vbageneral/common_general_double.htm" id="a34" style="font-weight: normal; font-style: normal;" name="a34">double</a> dz</i></span> )</p>
+<p class="VBA-Text-Indent">Moves the selected face to the specified direction. Depending on the face a movement might not be possible in every directions. For planar faces <span style="font-weight: bold;">MoveSelectedPlanarFace</span> should be used.</p>
+<p class="VBA-Text">&#160;</p>
+<p class="VBA-Heading-Method">MoveSelectedPlanarFace ( <span style="font-style: italic;"><i>&#160;<a href="../common_vbageneral/common_general_double.htm" id="a31" style="font-weight: normal; font-style: normal;" name="a31">double</a> offset</i></span> )</p>
+<p class="VBA-Text-Indent">Moves a previously picked face toward its normal direction. When a face shall be moved, the modeler tries to enlarge the adjoining faces according to their shapes such that the surface of the solid remains closed. If the solid can not be varied in this way, the operation will not be executed.</p>
+<p class="VBA-Text-Indent">In simple cases, this method can be used as a fast method to parameterize a structure. Normally a structure is parameterized by defining parameters for the basic solids the structure consists of. Then, changing parameters means rebuilding the entire structure. With this method small changes can be made only by local operations.</p>
+<p class="VBA-Text">&#160;</p>
+<p class="VBA-Heading-Method">OffsetSelectedFaces ( <span style="font-style: italic;"><i>&#160;<a href="../common_vbageneral/common_general_double.htm" id="a35" style="font-weight: normal; font-style: normal;" name="a35">double</a> offset</i></span> )</p>
+<p class="VBA-Text-Indent">This method moves the selected face in direction of its face normal. For instance if the offset method is applied to a cylindrical face of a cylinder, it simply changes its radius.</p>
+<p class="VBA-Text-Indent">All adjoining faces to the changed face will be changed as well such that the solid retains a closed surface.</p>
+<p class="VBA-Text-Indent">OffsetSelectedFaces can be very useful when parameterizing an imported structure. No information about the history of the solid creation is needed.</p>
+<p class="VBA-Text">&#160;</p>
+<p class="VBA-Heading-Method">RemoveSelectedFaces</p>
+<p class="VBA-Text-Indent">Tries to remove all previously picked faces. When a face has to be removed the modeler tries to enlarge the adjoining faces according to their shapes to close the structure again. If the solid can not be closed in this way, the operation will not be executed.</p>
+<p class="VBA-Text">&#160;</p>
+<p class="VBA-Heading-Method">SelectedFaceRadius ( <a href="../common_vbageneral/common_general_double.htm" id="a96" style="font-weight: normal; font-style: normal;" name="a96">double</a> &#160;<span style="font-style: italic;"><i>radius</i></span> )</p>
+<p class="VBA-Text-Indent">For changing the radius of a selected cylindrical face within the model. When changing the radius, all connected faces will be extended to fill up the appearing gaps in the corresponding solid.</p>
+<p class="VBA-Text-Indent">This operation is especially useful when an imported part with no further construction history information shall be parameterized for later optimization runs.</p>
+<p class="VBA-Text-Indent">The operation may fail when the topology of the model changes too much.</p>
+<p class="VBA-Heading-Category"><a name="Mesh Settings"></a>Mesh Settings</p>
+<p class="VBA-Heading-Method">SetMeshStepWidth ( <a href="../common_vbageneral/common_general_solid_names.htm" id="a46" style="font-weight: normal; font-style: normal;" name="a46">solidname</a> <span style="font-style: italic;"><i>solid1, <a href="../common_vbageneral/common_general_double.htm" id="a47" style="font-weight: normal; font-style: normal;" name="a47">double</a> dx</i></span> <span style="font-style: italic;"><i>, <a href="../common_vbageneral/common_general_double.htm" id="a48" style="font-weight: normal; font-style: normal;" name="a48">double</a> dy, <a href="../common_vbageneral/common_general_double.htm" id="a49" style="font-weight: normal; font-style: normal;" name="a49">double</a> dz</i></span> )</p>
+<p class="VBA-Text-Indent">For some structures it might be necessary to increase the mesh density for individual solids. To do this a maximum step width for all three directions can be given. The automatic mesh generator tries to realize these values for the volume of the solid specified. However, this is not an exclusive setting, it competes with other automesh settings. It might not be fulfilled exactly.</p>
+<p class="VBA-Text-Indent">If zero is specified for one coordinate direction, no further influence to the mesh generation in this direction is made.</p>
+<p class="vba-text-indent">&#160;</p>
+<p class="VBA-Heading-Method">SetMeshExtendwidth ( <a href="../common_vbageneral/common_general_solid_names.htm" id="a42" style="font-weight: normal; font-style: normal;" name="a42">solidname</a> <span style="font-style: italic;"><i>solid1, <a href="../common_vbageneral/common_general_double.htm" id="a36" style="font-weight: normal; font-style: normal;" name="a36">double</a> dx</i></span> <span style="font-style: italic;"><i>, <a href="../common_vbageneral/common_general_double.htm" id="a37" style="font-weight: normal; font-style: normal;" name="a37">double</a> dy, <a href="../common_vbageneral/common_general_double.htm" id="a39" style="font-weight: normal; font-style: normal;" name="a39">double</a> dz</i></span> )</p>
+<p class="VBA-Text-Indent">Extends the volume for mesh refinements defined by &#160;<span style="font-weight: bold;">SetAutomeshStepWidth</span> for <span style="font-style: italic;"><i>solid1</i></span>.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">SetAutomeshFixpoints ( <a href="../common_vbageneral/common_general_solid_names.htm" id="a134" style="font-weight: normal; font-style: normal;" name="a134">solidname</a> <span style="font-style: italic;"><i>solid1,</i></span> <span><a href="../common_vbageneral/common_general_bool_data_type.htm" id="a136" style="font-weight: normal; font-style: normal;" name="a136">bool</a></span> <span style="font-style: italic;"><i>flag</i></span> )</p>
+<p class="VBA-Text-Indent">This method specifies if the specified solid should be considered by the automatic mesh generation or not. If the solid is unimportant for the mesh generation the setting <span style="font-style: italic;"><i>flag</i></span> =False makes sure that the solid does not have any influence on the mesh. No fix- or density points will be created for this solid.</p>
+<p class="vba-text-indent">&#160;</p>
+<p class="VBA-Heading-Method">SetMaterialBasedRefinement ( <a href="../common_vbageneral/common_general_solid_names.htm" id="a135" style="font-weight: normal; font-style: normal;" name="a135">solidname</a> <span style="font-style: italic;"><i>solid1, &#160;</i></span><a href="../common_vbageneral/common_general_bool_data_type.htm" id="a137" style="font-weight: normal; font-style: normal;" name="a137">bool</a> <span style="font-style: italic;"><i>flag</i></span> <span style="font-weight: normal;">)</span></p>
+<p class="VBA-Text-Indent">Use this method to activate the material based refinement to be considered by the mesh generation of the selected solid.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">SetMeshProperties ( <a href="../common_vbageneral/common_general_solid_names.htm" id="a50" style="font-weight: normal; font-style: normal;" name="a50">solidname</a> <span style="font-style: italic;"><i>solid1,</i></span> <a href="../common_vbageneral/common_general_enum.htm" id="a51" style="font-weight: normal;" name="a51">enum</a> <span style="font-style: italic;"><i>type,</i></span> <a href="../common_vbageneral/common_general_bool_data_type.htm" id="a52" style="font-weight: normal; font-style: normal;" name="a52">bool</a> <span style="font-style: italic;"><i>defaultType</i></span> )</p>
+<p class="VBA-Text-Indent">Set the approximation type during the matrix calculation process of a given shape.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Text-Indent">The parameter <span style="font-style: italic;"><i>type</i></span> may have one of the following values:</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<table style="vertical-align: top; margin-left: 24px; left: 0px; top: 3230px;" cellspacing="0" width="426">
+<col style="width: 22.77%;" />
+<col style="width: 77.23%;" />
+<tr style="vertical-align: top;">
+<td style="border: Solid 1px #000000; width: 22.77%; padding-right: 10px; padding-left: 10px;">
+<p style="margin-left: 0px;">"PBA "</p>
+</td>
+<td style="border-top: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 77.23%; padding-right: 10px; padding-left: 10px;">
+<p>Use this setting to obtain the best approximation of the structure during simulation.</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 22.77%; padding-right: 10px; padding-left: 10px;">
+<p style="margin-left: 0px;">&#160;"Staircase"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 77.23%; padding-right: 10px; padding-left: 10px;">
+<p>With this setting the structure will be approximated by a staircase mesh.</p>
+</td>
+</tr>
+</table>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">SetUseForSimulation ( <a href="../common_vbageneral/common_general_solid_names.htm" id="a98" style="font-weight: normal; font-style: normal;" name="a98">solidname</a> &#160;<span style="font-style: italic;"><i>solid1, <a href="../common_vbageneral/common_general_bool_data_type.htm" id="a99" style="font-weight: normal; font-style: normal;" name="a99">bool</a> &#160;flag</i></span> &#160;)</p>
+<p class="VBA-Text-Indent">Indicates if a specific solid should be included in the calculation. If the solid is unimportant for the simulation the setting <span style="font-style: italic;"><i>flag</i></span> =False makes sure that it does not have any influence.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">SetUseThinSheetMeshForShape ( <a href="../common_vbageneral/common_general_solid_names.htm" id="a54" style="font-weight: normal; font-style: normal;" name="a54">solidname</a> <span style="font-style: italic;"><i>solid1,</i></span> <a href="../common_vbageneral/common_general_bool_data_type.htm" id="a56" style="font-weight: normal; font-style: normal;" name="a56">bool</a> <span style="font-style: italic;"><i>flag</i></span> )</p>
+<p class="VBA-Text-Indent">Activates thin sheets (TST) for the shape <span style="font-style: italic;"><i>solid1</i></span>.</p>
+<p class="vba-text-indent">&#160;</p>
+<p class="VBA-Heading-Method">SetMeshRefinement ( <a href="../common_vbageneral/common_general_solid_names.htm" id="a57" style="font-weight: normal; font-style: normal;" name="a57">solidname</a> <span style="font-style: italic;"><i>solid1,</i></span> <a href="../common_vbageneral/common_general_bool_data_type.htm" id="a59" style="font-weight: normal; font-style: normal;" name="a59">bool</a> <span style="font-style: italic;"><i>edgeRefine, <a href="../common_vbageneral/common_general_double.htm" id="a58" style="font-weight: normal; font-style: normal;" name="a58">double</a> edgeRefineFact</i></span><span style="font-style: italic;"><i>,</i></span></p>
+<p class="VBA-Heading-Method" style="margin-left: 120px;">&#160;<a href="../common_vbageneral/common_general_bool_data_type.htm" id="a60" style="font-weight: normal; font-style: normal;" name="a60">bool</a> <span style="font-style: italic;"><i>volumeRefine, <a href="../common_vbageneral/common_general_double.htm" id="a61" style="font-weight: normal; font-style: normal;" name="a61">double</a> volumeRefineFact</i></span> )</p>
+<p class="VBA-Text-Indent">Use this method to increase the mesh density for <span style="font-style: italic;"><i>solid1</i></span>.</p>
+<p class="VBA-Text-Indent">If <span style="font-style: italic;"><i>edgeRefine</i></span> is set to True, a higher mesh density &#160;for all edges of <span style="font-style: italic;"><i>solid1</i></span> that run parallel to a mesh line is used (the mesh density will be increased by a factor of <span style="font-style: italic;"><i>edgeRefineFact</i></span> ). The mesh will be increased only in the perpendicular directions of the edges.</p>
+<p class="VBA-Text-Indent">If <span style="font-style: italic;"><i>volumeRefine</i></span> is set to True, the mesh within the bounding box of <span style="font-style: italic;"><i>solid1</i></span> will be <span style="font-style: italic;"><i>volumeRefineFact</i></span> more dense as it would be if <span style="font-style: italic;"><i>edgeRefineFact</i></span> is set to False.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">SetSolidLocalMeshProperties ( &#160;<a href="../common_vbageneral/common_general_solid_names.htm" id="a43" style="font-weight: normal; font-style: normal;" name="a43">solidname</a> <span style="font-style: italic;"><i>solid1,</i></span> <a href="../common_vbageneral/common_general_enum.htm" id="a44" style="font-weight: normal;" name="a44">enum</a> <span style="font-style: italic;"><i>type,</i></span> <a href="../common_vbageneral/common_general_bool_data_type.htm" id="a45" style="font-weight: normal; font-style: normal;" name="a45">bool</a> <span style="font-style: italic;"><i>defaultType,</i></span></p>
+<p class="VBA-Heading-Method" style="margin-left: 184px;"><span style="font-style: italic;"><i><a href="../common_vbageneral/common_general_double.htm" id="a138" style="font-weight: normal; font-style: normal;" name="a138">double</a> priority,</i></span></p>
+<p class="VBA-Heading-Method" style="margin-left: 184px;"><a href="../common_vbageneral/common_general_bool_data_type.htm" id="a142" style="font-weight: normal; font-style: normal;" name="a142">bool</a> <span style="font-style: italic;"><i>flagAutomeshFixpoints,</i></span></p>
+<p class="VBA-Heading-Method" style="margin-left: 184px;"><a href="../common_vbageneral/common_general_bool_data_type.htm" id="a143" style="font-weight: normal; font-style: normal;" name="a143">bool</a> <span style="font-style: italic;"><i>flagMaterialBaseRefinement,</i></span></p>
+<p class="VBA-Heading-Method" style="margin-left: 184px;"><span style="font-style: italic;"><i><a href="../common_vbageneral/common_general_double.htm" id="a144" style="font-weight: normal; font-style: normal;" name="a144">double</a> dxStepwidth</i></span> <span style="font-style: italic;"><i>, <a href="../common_vbageneral/common_general_double.htm" id="a145" style="font-weight: normal; font-style: normal;" name="a145">double</a> dyStepwidth, <a href="../common_vbageneral/common_general_double.htm" id="a146" style="font-weight: normal; font-style: normal;" name="a146">double</a> dz</i></span><span style="font-style: italic;"><i>Stepwidth,</i></span></p>
+<p class="VBA-Heading-Method" style="margin-left: 184px;"><span style="font-style: italic;"><i><a href="../common_vbageneral/common_general_double.htm" id="a147" style="font-weight: normal; font-style: normal;" name="a147">double</a> dxExtendwidth</i></span> <span style="font-style: italic;"><i>, <a href="../common_vbageneral/common_general_double.htm" id="a148" style="font-weight: normal; font-style: normal;" name="a148">double</a> dyExtendwidth, <a href="../common_vbageneral/common_general_double.htm" id="a149" style="font-weight: normal; font-style: normal;" name="a149">double</a> dz</i></span><span style="font-style: italic;"><i>Extendwidth,</i></span></p>
+<p class="VBA-Heading-Method" style="margin-left: 184px;"><a href="../common_vbageneral/common_general_bool_data_type.htm" id="a150" style="font-weight: normal; font-style: normal;" name="a150"><span>b</span>ool</a> <span style="font-style: italic;"><i>edgeRefine, <a href="../common_vbageneral/common_general_double.htm" id="a151" style="font-weight: normal; font-style: normal;" name="a151">double</a> edgeRefineFact</i></span><span style="font-style: italic;"><i>,</i></span> <a href="../common_vbageneral/common_general_bool_data_type.htm" id="a152" style="font-weight: normal; font-style: normal;" name="a152"><span>b</span>ool</a> <span style="font-style: italic;"><i>volumeRefine, <a href="../common_vbageneral/common_general_double.htm" id="a153" style="font-weight: normal; font-style: normal;" name="a153">double</a> volumeRefineFact,</i></span></p>
+<p class="VBA-Heading-Method" style="margin-left: 184px;"><a href="../common_vbageneral/common_general_bool_data_type.htm" id="a154" style="font-weight: normal; font-style: normal;" name="a154">bool</a> <span style="font-style: italic;"><i>flagThinSheetMeshForShape,</i></span></p>
+<p class="VBA-Heading-Method" style="margin-left: 184px;"><span style="font-style: italic;"><i><a href="../common_vbageneral/common_general_bool_data_type.htm" id="a155" style="font-weight: normal; font-style: normal;" name="a155">bool</a> flagUseForSimulation,</i></span></p>
+<p class="VBA-Heading-Method" style="margin-left: 184px;"><span style="font-style: italic;"><i><a href="../common_vbageneral/common_general_bool_data_type.htm" id="a156" style="font-weight: normal; font-style: normal;" name="a156">bool</a> flagUseForBoundingBox,</i></span></p>
+<p class="VBA-Heading-Method" style="margin-left: 184px;"><span style="font-style: italic;"><i><a href="../common_vbageneral/common_general_bool_data_type.htm" id="a168" style="font-weight: normal; font-style: normal;" name="a168">bool</a> flagLimitStepWidth</i></span> &#160;)</p>
+<p class="VBA-Text-Indent">This function combines the functions <span style="font-weight: bold;">SetMeshProperties</span>, <span style="font-weight: bold;">SetPriority</span>, <span style="font-weight: bold;">SetAutomeshFixpoints</span>, <span style="font-weight: bold;">SetMaterialBasedRefinement</span>, <span style="font-weight: bold;">SetMeshStepwidth</span>, <span style="font-weight: bold;">SetMeshExtendwidth</span>, <span style="font-weight: bold;">SetMeshRefinement</span>, <span style="font-weight: bold;">SetUseThinSheetMeshForShape</span>, <span style="font-weight: bold;">SetUseForSimulation</span>, <span style="font-weight: bold;">SetUseForBoundingBox</span> for a faster internal evaluation.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">AdjustSolidMeshPropertiesStart</p>
+<p class="VBA-Heading-Method">AdjustSolidMeshPropertiesEnd</p>
+<p class="VBA-Text-Indent">Are used for the features sub project import and copy &amp; paste. They are wrapped around the function <span style="font-style: italic;"><i>SetSolidLocalMeshProperties</i></span> because some settings have to be adjusted to the global unit settings.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">SetMeshStepwidthTet ( <a href="../common_vbageneral/common_general_solid_names.htm" id="a100" style="font-weight: normal; font-style: normal;" name="a100">solidname</a> <span style="font-style: italic;"><i>solid1, <a href="../common_vbageneral/common_general_double.htm" id="a101" style="font-weight: normal; font-style: normal;" name="a101">double</a> dmax</i></span> )</p>
+<p class="VBA-Text-Indent">Sets the maximum edge length of any tetrahedral created for <span style="font-style: italic;"><i>solid1</i></span>.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">SetMeshStepwidthSrf ( <a href="../common_vbageneral/common_general_solid_names.htm" id="a53" style="font-weight: normal;" name="a53">solidname</a> <span style="font-style: italic;"><i>solid1, <a href="../common_vbageneral/common_general_double.htm" id="a55" style="font-weight: normal; font-style: normal;" name="a55">double</a> dmax</i></span> )</p>
+<p class="VBA-Text-Indent">Sets the maximum edge length of any surface created for <span style="font-style: italic;"><i>solid1</i></span>.</p>
+<p class="VBA-Heading-Category"><a name="Healing" id="Healing"></a>Healing</p>
+<p class="VBA-Heading-Method">HealAllShapesAdvanced</p>
+<p class="VBA-Text-Indent">This method should only be used for repair purposes of imported structures.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">HealShapeAdvanced ( <a href="../common_vbageneral/common_general_solid_names.htm" id="a62" style="font-weight: normal; font-style: normal;" name="a62">solidname</a> <span style="font-style: italic;"><i>solid1</i></span> )</p>
+<p class="VBA-Text-Indent">This method should only be used for repair purposes of imported structures.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">HealSelfIntersectingShape ( <a href="../common_vbageneral/common_general_solid_names.htm" id="a63" style="font-weight: normal; font-style: normal;" name="a63">solidname</a> <span style="font-style: italic;"><i>solid1</i></span> )</p>
+<p class="VBA-Text-Indent">This method should only be used for repair purposes of imported structures.</p>
+<p class="vba-text-indent">&#160;</p>
+<p class="VBA-Heading-Method">HealFacesOfShape ( <a href="../common_vbageneral/common_general_solid_names.htm" id="a64" style="font-weight: normal; font-style: normal;" name="a64">solidname</a> <span style="font-style: italic;"><i>solid1</i></span> )</p>
+<p class="VBA-Text-Indent">This method should only be used for repair purposes of imported structures.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">UndoLastShapeHealing</p>
+<p class="VBA-Text-Indent">This method undoes a previously performed healing operation. However, it should only be used for repair purposes of imported structures.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">ManualShapeHealing ( <a href="../common_vbageneral/common_general_solid_names.htm" id="a65" style="font-weight: normal; font-style: normal;" name="a65">solidname</a> <span style="font-style: italic;"><i>solid1,</i></span></p>
+<p class="VBA-Heading-Method" style="margin-left: 129px;"><a href="../common_vbageneral/common_general_bool_data_type.htm" id="a66" style="font-weight: normal; font-style: normal;" name="a66">bool</a> <span style="font-style: italic;"><i>simplify, <a href="../common_vbageneral/common_general_bool_data_type.htm" id="a70" style="font-weight: normal; font-style: normal;" name="a70">bool</a> stitch,</i></span><span style="font-style: italic;"><i><a href="../common_vbageneral/common_general_bool_data_type.htm" id="a71" style="font-weight: normal; font-style: normal;" name="a71">bool</a> geombuild,</i></span></p>
+<p class="VBA-Heading-Method" style="margin-left: 129px; font-style: italic;"><span style="font-weight: normal; font-style: normal;"><a href="../common_vbageneral/common_general_double.htm">double</a></span> simplify_tol, <span style="font-weight: normal; font-style: normal;"><a href="../common_vbageneral/common_general_double.htm">double</a></span> stitch_tol, <span style="font-style: normal; font-weight: normal;"><a href="../common_vbageneral/common_general_double.htm">double</a></span> geombuild_tol )</p>
+<p class="VBA-Text-Indent">This method should only be used for repair purposes of imported structures.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">MakeBadElementsTolerant ( <a href="../common_vbageneral/common_general_solid_names.htm" id="a72" style="font-weight: normal; font-style: normal;" name="a72">solidname</a> <span style="font-style: italic;"><i>solid1</i></span> )</p>
+<p class="VBA-Text-Indent">If possible this method fits a tolerance range to the specified shape so that the bad elements will be associated to it properly.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">CleanShape ( <a href="../common_vbageneral/common_general_solid_names.htm" id="a73" style="font-weight: normal; font-style: normal;" name="a73">solidname</a> <span style="font-style: italic;"><i>solid1</i></span> )</p>
+<p class="VBA-Text-Indent">This method should only be used for repair purposes of imported structures.</p>
+<p class="VBA-Heading-Category"><a name="Show Problems"></a>Show Problems</p>
+<p class="VBA-Heading-Method">CheckSolid ( <a href="../common_vbageneral/common_general_solid_names.htm" id="a74" style="font-weight: normal; font-style: normal;" name="a74">solidname</a> <span style="font-style: italic;"><i>solid1,</i></span> &#160;<span style="font-style: italic;"><i><a href="../common_vbageneral/common_general_integer.htm" id="a170" style="font-weight: normal; font-style: normal;" name="a170">int</a> CheckLevel</i></span>)</p>
+<p class="VBA-Text-Indent">Opens a window displaying all interesting information about the specified shape concerning existing bad edges, vertices or faces. A smaller value &#160;for <span style="font-style: italic;"><i>CheckLevel</i></span> causes a faster, but less detailed check of the solid. Valid values are 20, 30, 40, 50.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">PickDanglingEdges ( <a href="../common_vbageneral/common_general_solid_names.htm" id="a77" style="font-weight: normal; font-style: normal;" name="a77">solidname</a> <span style="font-style: italic;"><i>solid1</i></span> )</p>
+<p class="VBA-Text-Indent">Highlights all dangling edges belonging to the specified solid shape. A dangling edge is associated to a shape but has only one adjacent face.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">PickJunctionEdges ( <a href="../common_vbageneral/common_general_solid_names.htm" id="a140" style="font-weight: normal; font-style: normal;" name="a140">solidname</a> <span style="font-style: italic;"><i>solid1</i></span> )</p>
+<p class="VBA-Text-Indent">Highlights all junction edges belonging to the specified solid shape. A junction edge is associated to a shape but has more than two adjacent faces.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">ShowBadEdges ( <a href="../common_vbageneral/common_general_solid_names.htm" id="a75" style="font-weight: normal; font-style: normal;" name="a75">solidname</a> <span style="font-style: italic;"><i>solid1</i></span> )</p>
+<p class="VBA-Text-Indent">Highlights all bad edges belonging to the specified solid shape. A bad edge has no correct association to the shape.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">ShowBadVertices ( <a href="../common_vbageneral/common_general_solid_names.htm" id="a76" style="font-weight: normal; font-style: normal;" name="a76">solidname</a> <span style="font-style: italic;"><i>solid1</i></span> )</p>
+<p class="VBA-Text-Indent">Highlights all bad vertices belonging to the specified solid shape. A bad vertex has no correct association to the shape.</p>
+<p class="vba-text-indent">&#160;</p>
+<p class="VBA-Heading-Method">ShowBoundingBoxProblems ( <a href="../common_vbageneral/common_general_solid_names.htm" id="a141" style="font-weight: normal; font-style: normal;" name="a141">solidname</a> <span style="font-style: italic;"><i>solid1</i></span> )</p>
+<p class="VBA-Text-Indent">A popup window informs if there are any bounding box problems concerning the specified shape.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">ShowDanglingEdges ( <a href="../common_vbageneral/common_general_solid_names.htm" id="a78" style="font-weight: normal; font-style: normal;" name="a78">solidname</a> <span style="font-style: italic;"><i>solid1</i></span> )</p>
+<p class="VBA-Text-Indent"><span style="font-style: italic;"><i>deprecated</i></span> use <span style="font-weight: bold;">PickDanglingEdges</span> instead.</p>
+<p class="VBA-Text-Indent">Highlights all dangling edges belonging to the specified solid shape. A dangling edge is associated to a shape but has only one adjacent face.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">ShowMaximumTolerance ( <a href="../common_vbageneral/common_general_solid_names.htm" id="a79" style="font-weight: normal; font-style: normal;" name="a79">solidname</a> <span style="font-style: italic;"><i>solid1</i></span> )</p>
+<p class="VBA-Text-Indent">A popup window displays the maximum tolerance if the specified shape is tolerant.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">ShowSplineEdges ( <a href="../common_vbageneral/common_general_solid_names.htm" id="a80" style="font-weight: normal; font-style: normal;" name="a80">solidname</a> <span style="font-style: italic;"><i>solid1</i></span> )</p>
+<p class="VBA-Text-Indent">Highlights all spline edges belonging to the specified solid shape.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">ShowSplineFaces ( <a href="../common_vbageneral/common_general_solid_names.htm" id="a81" style="font-weight: normal; font-style: normal;" name="a81">solidname</a> <span style="font-style: italic;"><i>solid1</i></span> )</p>
+<p class="VBA-Text-Indent">Highlights all spline faces belonging to the specified solid shape.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">ShowTolerantEdges ( <a href="../common_vbageneral/common_general_solid_names.htm" id="a82" style="font-weight: normal; font-style: normal;" name="a82">solidname</a> <span style="font-style: italic;"><i>solid1</i></span> )</p>
+<p class="VBA-Text-Indent">Highlights all tolerant edges belonging to the specified solid shape. A tolerant edge indicates a tolerant region concerning the shapes dimensions.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">ShowTolerantVertices ( <a href="../common_vbageneral/common_general_solid_names.htm" id="a83" style="font-weight: normal; font-style: normal;" name="a83">solidname</a> <span style="font-style: italic;"><i>solid1</i></span> )</p>
+<p class="VBA-Text-Indent">Highlights all tolerant vertices belonging to the specified solid shape. A tolerant vertex indicates a tolerant region concerning the shapes dimensions.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">ShowShortestEdge</p>
+<p class="VBA-Text-Indent">Shows the shortest edge of all solids in the project and also the center point of the shortest edge.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">ShowEdgeRange ( <span style="font-weight: normal;"><a href="../common_vbageneral/common_general_double.htm">double</a></span> <span style="font-style: italic;"><i>min,</i></span> <span style="font-weight: normal;"><a href="../common_vbageneral/common_general_double.htm">double</a></span> <span style="font-style: italic;"><i>max</i></span> )</p>
+<p class="VBA-Text-Indent">Picks edges and their mid points within the specified length range. <span style="font-weight: bold;">Please note:</span> For performance reasons this is limited to the first 501 edges.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">ShowEdgeLengthDistribution</p>
+<p class="VBA-Text-Indent">Creates histogram describing edge length distribution. The histogram is created in <span style="font-style: italic; font-weight: bold;"><i>1D Results</i></span><span style="font-weight: bold;">\</span><span style="font-style: italic; font-weight: bold;"><i>Model Info</i></span> folder of the Navigation Tree.</p>
+<p class="VBA-Heading-Category"><a name="Face Healing"></a>Face Healing</p>
+<p class="VBA-Heading-Method">CoverSelectedEdges</p>
+<p class="VBA-Text-Indent">Tries to create a face according to previously selected edges. If two edges are selected the face connects these two. If a closed loop of edges is selected, a minimal area face is tried to create. If the edges already belong to an existing face, the operation has no effect.</p>
+<p class="VBA-Text-Indent">Generally, this method should only be used for repair purposes of imported structures.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">DeleteFacesForSelectedEdge ( <a href="../common_vbageneral/common_general_solid_names.htm" id="a84" style="font-weight: normal; font-style: normal;" name="a84">solidname</a> <span style="font-style: italic;"><i>solid1</i></span> )</p>
+<p class="VBA-Text-Indent">This method deletes all faces adjacent to the picked edges of the specified solid shape.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">DeleteZeroFaces ( <a href="../common_vbageneral/common_general_solid_names.htm" id="a85" style="font-weight: normal; font-style: normal;" name="a85">solidname</a> <span style="font-style: italic;"><i>solid1</i></span> )</p>
+<p class="VBA-Text-Indent">This method deletes all zero faces belonging to the specified solid shape. A zero face is not associated properly to the shape.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">ReverseSelectedFaces</p>
+<p class="VBA-Text-Indent">Reverses the orientation of a selected face. This method should only be used for repair purposes of imported structures.</p>
+<p class="vba-heading-method">&#160;</p>
+<p class="VBA-Heading-Method">ReverseShape ( <a href="../common_vbageneral/common_general_solid_names.htm" id="a86" style="font-weight: normal; font-style: normal;" name="a86">solidname</a> <span style="font-style: italic;"><i>solid1</i></span> )</p>
+<p class="VBA-Text-Indent">Reverses the orientation of all faces of a selected solid.</p>
+<p class="VBA-Text-Indent">This method should only be used for repair purposes of imported structures.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">UnhookSelectedFaces</p>
+<p class="VBA-Text-Indent">Physically deletes a face. If a face of an existing solid will be deleted, the remaining solid will be converted into a surface. The information of inside and outside will be lost.</p>
+<p class="VBA-Text-Indent">This method should only be used for repair purposes of imported structures.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">AddLinearCurveFromPoints ( <a href="../common_vbageneral/common_general_solid_names.htm" id="a87" style="font-weight: normal; font-style: normal;" name="a87">solidname</a> <span style="font-style: italic;"><i>solid1</i></span> )</p>
+<p class="VBA-Text-Indent">Adds a straight line (a linear curve) to the solid between two previously picked points. However, this method should only be used for repair purposes of imported structures.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">AddTangentCurveFromPoints ( <a href="../common_vbageneral/common_general_solid_names.htm" id="a88" style="font-weight: normal; font-style: normal;" name="a88">solidname</a> <span style="font-style: italic;"><i>solid1,</i></span> <a href="../common_vbageneral/common_general_enum.htm" id="a89" style="font-weight: normal;" name="a89">enum</a> <span style="font-style: italic;"><i>key1,</i></span> <a href="../common_vbageneral/common_general_enum.htm" id="a90" style="font-weight: normal;" name="a90">enum</a> <span style="font-style: italic;"><i>key2,</i></span> <a href="../common_vbageneral/common_general_bool_data_type.htm" id="a91" style="font-weight: normal; font-style: normal;" name="a91">bool</a> <span style="font-style: italic;"><i>flag1,</i></span> <a href="../common_vbageneral/common_general_bool_data_type.htm" id="a92" style="font-weight: normal; font-style: normal;" name="a92">bool</a> <span style="font-style: italic;"><i>flag2</i></span> )</p>
+<p class="VBA-Text-Indent">This method should only be used for repair purposes of imported structures.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Text-Indent"><span style="font-style: italic;"><i>key1, key2</i></span> &#160;= &#160;{ none, tangent, normalface, normalboth }</p>
+<p class="VBA-Text-Indent"><span style="font-style: italic;"><i>flag1, flag2</i></span> = Inverted or not.</p>
+<p class="vba-text-indent">&#160;</p>
+<p class="VBA-Heading-Method">LoftSelectedEdges ( <a href="../common_vbageneral/common_general_string.htm" id="a69" style="font-weight: normal; font-style: normal;" name="a69">string</a> &#160;<span style="font-style: italic;"><i>constraint1</i></span>, <a href="../common_vbageneral/common_general_double.htm" id="a67" style="font-weight: normal; font-style: normal;" name="a67">double</a> &#160;<span style="font-style: italic;"><i>strength1</i></span>, <a href="../common_vbageneral/common_general_bool_data_type.htm" id="a93" style="font-weight: normal; font-style: normal;" name="a93">bool</a> &#160;<span style="font-style: italic;"><i>invert1</i></span>, <a href="../common_vbageneral/common_general_string.htm" id="a94" style="font-weight: normal; font-style: normal;" name="a94">string</a> &#160;<span style="font-style: italic;"><i>constraint2</i></span>, <a href="../common_vbageneral/common_general_double.htm" id="a68" style="font-weight: normal; font-style: normal;" name="a68">double</a> &#160;<span style="font-style: italic;"><i>strength2</i></span>, <a href="../common_vbageneral/common_general_bool_data_type.htm" id="a95" style="font-weight: normal; font-style: normal;" name="a95">bool</a> &#160;<span style="font-style: italic;"><i>invert2</i></span> )</p>
+<p class="VBA-Text-Indent">This method should be used only for repair purposes of imported structures. You may create a face by lofting two edges. Note: The face is only non-ambiguous in case of a dangling edge (an edge belonging to only one face). <span style="font-style: italic;"><i>'1'</i></span> marked the settings for the first selected edge and <span style="font-style: italic;"><i>'2'</i></span> for the second one.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Text-Indent"><span style="font-style: italic;"><i>'constraint1 / constraint2'</i></span> can have one of &#160;the following values:</p>
+<table style="vertical-align: top; margin-left: 24px;" cellspacing="0" width="80.836%">
+<col style="width: 16.243%;" />
+<col style="width: 83.757%;" />
+<tr style="vertical-align: top;">
+<td style="border: Solid 1px #000000; width: 16.243%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text">"none"</p>
+</td>
+<td style="border-top: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 83.757%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text">Creates a connecting face without any restriction.</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 16.243%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text">"tangent"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 83.757%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text">Creates a face which is tangential to the face belonging to the selected edge.</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 16.243%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text">"perpendicular"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 83.757%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text">Creates a face which is normal to the face belonging to the selected edge.</p>
+</td>
+</tr>
+</table>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Text-Indent"><span style="font-style: italic;"><i>'strength1 / strength2'</i></span> defines the strength of constraint considering the selected face orientation described above.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Text-Indent"><span style="font-style: italic;"><i>'invert1 / invert2'</i></span> can have one of &#160;the following values:</p>
+<table style="vertical-align: top; margin-left: 24px;" cellspacing="0" width="80.836%">
+<col style="width: 23.682%;" />
+<col style="width: 76.318%;" />
+<tr style="vertical-align: top;">
+<td style="border: Solid 1px #000000; width: 23.682%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text">False</p>
+</td>
+<td style="border-top: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 76.318%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text">Creates a face with a normal starting direction.</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 23.682%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text">True</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 76.318%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text">Creates a face with an inverse starting direction.</p>
+</td>
+</tr>
+</table>
+<p class="vba-text-indent">&#160;</p>
+<p class="VBA-Heading-Method">SkinSelectedEdges</p>
+<p class="VBA-Text-Indent">This method should only be used for repair purposes of imported structures. A solid face will be created between two selected edges in order to fill a gap.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">SweepSelectedConnectedEdges</p>
+<p class="VBA-Text-Indent">This method should only be used for repair purposes of imported structures. The first selected edge will be swept along the second selected edge. <span style="font-style: italic;"><i>Constraint</i></span>: The two edges must be connected.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">SplitSelectedEdgeAtPickedPoint ( <a href="../common_vbageneral/common_general_solid_names.htm" id="a97" style="font-weight: normal; font-style: normal;" name="a97">solidname</a> <span style="font-style: italic;"><i>solid1</i></span> )</p>
+<p class="VBA-Text-Indent">This method should only be used for repair purposes of imported structures. The selected edge will be split at the selected point. The selected point have to be positioned on the selected edge.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">RenameCurve ( <a href="../common_vbageneral/common_general_curve_names.htm"><span style="font-weight: normal;">curve</span><span style="font-weight: normal;">name</span></a> <span style="font-style: italic;"><i>curve1,</i></span> <a href="../common_vbageneral/common_general_curve_names.htm"><span style="font-weight: normal;">curve</span><span style="font-weight: normal;">name</span></a> <span style="font-style: italic;"><i>curve2</i></span> )</p>
+<p class="VBA-Text-Indent">Renames a single curve belonging to a solid shape. The curve is specified by the name of the component, the solid and the curve itself.</p>
+<p class="vba-text-indent">&#160;</p>
+<p class="VBA-Heading-Method">DeleteCurve ( <a href="../common_vbageneral/common_general_curve_names.htm"><span style="font-weight: normal;">curve</span><span style="font-weight: normal;">name</span></a> <span style="font-style: italic;"><i>curve1</i></span> )</p>
+<p class="VBA-Text-Indent">Deletes <span style="font-style: italic;"><i>curve1</i></span>. However, this method should only be used for repair purposes of imported structures.</p>
+<p class="vba-heading-method">&#160;</p>
+<p class="VBA-Heading-Method">CreateShapeFromFaces ( <a href="../common_vbageneral/common_general_name.htm" id="a103" style="font-weight: normal; font-style: normal;" name="a103">name</a> <span style="font-style: italic;"><i>sName,</i></span> <a href="../common_vbageneral/common_general_name.htm" id="a104" style="font-weight: normal; font-style: normal;" name="a104">name</a> <span style="font-style: italic;"><i>componentName,</i></span> <a href="../common_vbageneral/common_general_name.htm" id="a105" style="font-weight: normal; font-style: normal;" name="a105">name</a> <span style="font-style: italic;"><i>materialName</i></span> )</p>
+<p class="vba-text-indent">Creates a new shape form one or more picked faces.</p>
+<p class="VBA-Heading-Category"><a name="Advanced_Repair_Operations" id="Advanced_Repair_Operations"></a>Advanced Repair Operations</p>
+<p class="VBA-Heading-Method">FacettedRepresentationOfShape ( <a href="../common_vbageneral/common_general_solid_names.htm" id="a106" style="font-weight: normal; font-style: normal;" name="a106">solidname</a> <span style="font-style: italic;"><i>solid1</i></span>,</p>
+<p class="VBA-Heading-Method" style="margin-left: 191px;"><span style="font-style: italic;"><i>&#160;<a href="../common_vbageneral/common_general_double.htm" id="a108" style="font-weight: normal; font-style: normal;" name="a108">double</a> surftol,</i></span> <span style="font-style: italic;"><i><a href="../common_vbageneral/common_general_double.htm" id="a107" style="font-weight: normal; font-style: normal;" name="a107">double</a> normaltol</i></span>,</p>
+<p class="VBA-Heading-Method" style="margin-left: 191px;"><span style="font-style: italic;"><i>&#160;<a href="../common_vbageneral/common_general_double.htm" id="a109" style="font-weight: normal; font-style: normal;" name="a109">double</a> maxEdlen</i></span>, <a href="../common_vbageneral/common_general_double.htm" id="a110" style="font-weight: normal; font-style: normal;" name="a110">double</a> <span style="font-style: italic;"><i>minPtDist</i></span> )</p>
+<p class="VBA-Text-Indent">Converts the analytical description of a shape into an approximated one. After this operation the shape consists out of several planar faces. However, this method should only be used for repair purposes of imported structures.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">SimplifyFigureOfRotation ( <a href="../common_vbageneral/common_general_solid_names.htm" id="a111" style="font-weight: normal; font-style: normal;" name="a111">solidname</a> <span style="font-style: italic;"><i>solid1</i></span>, <a href="../common_vbageneral/common_general_double.htm" id="a113" style="font-weight: normal; font-style: normal;" name="a113">double</a> <span style="font-style: italic;"><i>value</i></span>, <a href="../common_vbageneral/common_general_enum.htm" id="a114" style="font-weight: normal;" name="a114">enum</a> <span style="font-style: italic;"><i>key</i></span> )</p>
+<p class="VBA-Text-Indent">A method for performing some special kind of rotation to create a desired figure.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Text-Indent"><span style="font-style: italic;"><i>key</i></span> &#160;= &#160;{ None, Inside, Outside }</p>
+<p class="VBA-Heading-Category"><a name="Queries" id="Queries"></a>Queries</p>
+<p class="VBA-Heading-Method">DoesExist ( <a href="../common_vbageneral/common_general_name.htm" id="a181" style="font-weight: normal; font-style: normal;" name="a181">name</a> <span style="font-style: italic;"><i>solid1</i></span> ) <a href="../common_vbageneral/common_general_bool_data_type.htm" id="a1621" style="font-weight: normal; font-style: normal;" name="a1621">bool</a></p>
+<p class="VBA-Text-Indent">Returns whether a solid with the given name does exist. This can be useful if your script tries to find a new telling name that does not exist yet - try your name first with this method.</p>
+<p class="VBA-Heading-Method">&#160;</p>
+<p class="VBA-Heading-Method">GetNextFreeName <a href="../common_vbageneral/common_general_name.htm" id="a112" style="font-weight: normal; font-style: normal;" name="a112">name</a></p>
+<p class="VBA-Text-Indent">Returns an unused solid name.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">GetNumberOfShapes <a href="../common_vbageneral/common_general_integer.htm" id="a115" style="font-weight: normal; font-style: normal;" name="a115">int</a></p>
+<p class="VBA-Text-Indent">Returns the total number of currently defined shapes.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">GetNameOfShapeFromIndex ( <span><a href="../common_vbageneral/common_general_integer.htm" id="a117" style="font-weight: normal; font-style: normal;" name="a117">int</a></span> <span style="font-style: italic;"><i>index )</i></span> <a href="../common_vbageneral/common_general_name.htm" id="a116" style="font-weight: normal; font-style: normal;" name="a116">name</a></p>
+<p class="VBA-Text-Indent">Returns the name of the shape that is identified by index. If there is no shape of index, an empty string is returned.</p>
+<p class="vba-text-indent">&#160;</p>
+<p class="VBA-Heading-Method">GetMaterialNameForShape ( <a href="../common_vbageneral/common_general_solid_names.htm" id="a102" style="font-weight: normal; font-style: normal;" name="a102">solidname</a> <span style="font-style: italic;"><i>solid1</i></span> ) <span><a href="../common_vbageneral/common_general_name.htm" id="a127" style="font-weight: normal; font-style: normal;" name="a127">name</a></span></p>
+<p class="VBA-Text-Indent">Returns the name of the material for <span style="font-style: italic;"><i>solid1.</i></span></p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">IsPointInsideShape ( <span style="font-style: italic;"><i><a href="../common_vbageneral/common_general_double.htm" id="a119" style="font-weight: normal; font-style: normal;" name="a119">double</a> x</i></span> <span style="font-style: italic;"><i>, <a href="../common_vbageneral/common_general_double.htm" id="a120" style="font-weight: normal; font-style: normal;" name="a120">double</a> y, <a href="../common_vbageneral/common_general_double.htm" id="a121" style="font-weight: normal; font-style: normal;" name="a121">double</a> z,</i></span> <a href="../common_vbageneral/common_general_solid_names.htm" id="a122" style="font-weight: normal; font-style: normal;" name="a122">solidname</a> <span style="font-style: italic;"><i>solid1</i></span> ) <a href="../common_vbageneral/common_general_bool_data_type.htm" id="a118" style="font-weight: normal; font-style: normal;" name="a118">bool</a></p>
+<p class="VBA-Text-Indent">Returns True, if the point of given coordinates is inside shape <span style="font-style: italic;"><i>solid1</i></span>, otherwise False.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">IsPointOnAnyEdgeOfShape( <span style="font-style: italic;"><i><a href="../common_vbageneral/common_general_double.htm" id="a1191" style="font-weight: normal; font-style: normal;" name="a1191">double</a> x</i></span> <span style="font-style: italic;"><i>, <a href="../common_vbageneral/common_general_double.htm" id="a1201" style="font-weight: normal; font-style: normal;" name="a1201">double</a> y, <a href="../common_vbageneral/common_general_double.htm" id="a1211" style="font-weight: normal; font-style: normal;" name="a1211">double</a> z,</i></span> <a href="../common_vbageneral/common_general_solid_names.htm" id="a1221" style="font-weight: normal; font-style: normal;" name="a1221">solidname</a> <span style="font-style: italic;"><i>solid1</i></span> ) <a href="../common_vbageneral/common_general_bool_data_type.htm" id="a1181" style="font-weight: normal; font-style: normal;" name="a1181">bool</a></p>
+<p class="VBA-Text-Indent">Returns True, if the point of given coordinates is on any edge of shape <span style="font-style: italic;"><i>solid1</i></span>, otherwise False.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">GetVolume ( <a href="../common_vbageneral/common_general_solid_names.htm" id="a126" style="font-weight: normal; font-style: normal;" name="a126">solidname</a> <span style="font-style: italic;"><i>solid1</i></span> ) <a href="../common_vbageneral/common_general_double.htm" id="a123" style="font-weight: normal; font-style: normal;" name="a123">double</a></p>
+<p class="VBA-Text-Indent">Returns the volume of the given shape.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">GetMass ( <a href="../common_vbageneral/common_general_solid_names.htm" id="a124" style="font-weight: normal; font-style: normal;" name="a124">solidname</a> <span style="font-style: italic;"><i>solid1</i></span> ) <a href="../common_vbageneral/common_general_double.htm" id="a125" style="font-weight: normal; font-style: normal;" name="a125">double</a></p>
+<p class="VBA-Text-Indent">Returns the mass of the given shape.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">GetArea ( <a href="../common_vbageneral/common_general_solid_names.htm" id="a179" style="font-weight: normal; font-style: normal;" name="a179">solidname</a> <span style="font-style: italic;"><i>solid1</i></span> ) <a href="../common_vbageneral/common_general_double.htm" id="a180" style="font-weight: normal; font-style: normal;" name="a180">double</a></p>
+<p class="VBA-Text-Indent">Returns the surface area of the given shape.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">GetPointCoordinates (<span><a href="../common_vbageneral/common_general_solid_names.htm" id="a157" style="font-weight: normal; font-style: normal;" name="a157">solidname</a></span> <span style="font-style: italic;"><i>solid1,</i></span> &#160;<a href="../common_vbageneral/common_general_string.htm" id="a158" style="font-weight: normal; font-style: normal;" name="a158">string</a> pid, <a href="../common_vbageneral/common_general_double.htm" id="a159" style="font-weight: normal; font-style: normal;" name="a159">double</a> <span style="font-style: italic;"><i>&amp;x</i></span>,<a href="../common_vbageneral/common_general_double.htm" id="a160" style="font-weight: normal; font-style: normal;" name="a160">double</a> <span style="font-style: italic;"><i>&amp;y</i></span>,<a href="../common_vbageneral/common_general_double.htm" id="a161" style="font-weight: normal; font-style: normal;" name="a161">double</a> <span style="font-style: italic;"><i>&amp;z</i></span> ) <a href="../common_vbageneral/common_general_bool_data_type.htm" id="a162" style="font-weight: normal; font-style: normal;" name="a162">bool</a></p>
+<p class="VBA-Text-Indent">Returns the coordinates of the point with the given pid.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">GetNumberOfPoints (<a href="../common_vbageneral/common_general_solid_names.htm" id="a163" style="font-weight: normal; font-style: normal;" name="a163">solidname</a> <span style="font-style: italic;"><i>solid1 )</i></span> <a href="../common_vbageneral/common_general_integer.htm" id="a164" style="font-weight: normal; font-style: normal;" name="a164">int</a></p>
+<p class="VBA-Text-Indent">Returns the maximum number of points.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">GetAnyFaceIdFromSolid (<a href="../common_vbageneral/common_general_solid_names.htm" id="a166" style="font-weight: normal; font-style: normal;" name="a166">solidname</a> <span style="font-style: italic;"><i>solid1 )</i></span> <a href="../common_vbageneral/common_general_integer.htm" id="a167" style="font-weight: normal; font-style: normal;" name="a167">int</a></p>
+<p class="VBA-Text-Indent">Returns the id of the first face found for the specified solid. Returns -1 if the solid identification failed (e.g. does not exist) or if no faces were found.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">GetLooseBoundingBoxOfShape (<a href="../common_vbageneral/common_general_solid_names.htm" id="a171" style="font-weight: normal; font-style: normal;" name="a171">solidname</a> <span style="font-style: italic;"><i>solid1, <a href="../common_vbageneral/common_general_double.htm" id="a173" style="font-weight: normal; font-style: normal;" name="a173">double</a> &amp;xmin, <a href="../common_vbageneral/common_general_double.htm" id="a174" style="font-weight: normal; font-style: normal;" name="a174">double</a> &amp;xmax, <a href="../common_vbageneral/common_general_double.htm" id="a175" style="font-weight: normal; font-style: normal;" name="a175">double</a> &amp;ymin, <a href="../common_vbageneral/common_general_double.htm" id="a176" style="font-weight: normal; font-style: normal;" name="a176">double</a> &amp;ymax, <a href="../common_vbageneral/common_general_double.htm" id="a177" style="font-weight: normal; font-style: normal;" name="a177">double</a> &amp;zmin, <a href="../common_vbageneral/common_general_double.htm" id="a178" style="font-weight: normal; font-style: normal;" name="a178">double</a> &amp;zmax)</i></span> &#160;<a href="../common_vbageneral/common_general_bool_data_type.htm" id="a172" style="font-weight: normal; font-style: normal;" name="a172">bool</a></p>
+<p class="VBA-Text-Indent">Returns false, if the solid does not exist, throws error, if a solid without geometry was given. This returns a <span style="font-weight: bold;">non-tight bounding</span> box of solid1 in global coordinates. It is only guaranteed, that the complete volume of the solid is inside of the bounding box defined by the two extreme vertices. This query cannot be executed during history rebuilds or structural macro execution. Designed for post-processing.</p>
+<p class="VBA-Text-Indent">The solidname can also be given in <a href="../common_vbageneral/common_general_global_names.htm">global name</a> format, but so far, only real solids are allowed anyway.</p>
+<p class="vba-text-indent">&#160;</p>
+<p class="VBA-Heading-Method">UpdateAllBodyTypes(<span style="font-style: italic;"><i>)</i></span></p>
+<p class="VBA-Text-Indent">To be used before <span style="font-style: italic;"><i>IsSolidShape</i></span> and/or <span style="font-style: italic;"><i>IsHybridShape</i></span> if those Commands are used in the history. This assures correct body type detection. Within the history, the body type will stay valid until further geometrical modeling steps occur.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">IsSolidShape (<a href="../common_vbageneral/common_general_solid_names.htm" id="a16611" style="font-weight: normal; font-style: normal;" name="a16611">solidname</a> <span style="font-style: italic;"><i>solid1 )</i></span> <a href="../common_vbageneral/common_general_bool_data_type.htm" id="a16212" style="font-weight: normal; font-style: normal;" name="a16212">bool</a></p>
+<p class="VBA-Text-Indent">Returns false if the shape is a pure sheet and has no volume. In all other cases it returns true. Consider to assure the correct body type with <span style="font-style: italic;"><i>UpdateAllBodyTypes</i></span>, if used within the modeler history.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">IsHybridShape (<a href="../common_vbageneral/common_general_solid_names.htm" id="a16612" style="font-weight: normal; font-style: normal;" name="a16612">solidname</a> <span style="font-style: italic;"><i>solid1 )</i></span> <a href="../common_vbageneral/common_general_bool_data_type.htm" id="a16211" style="font-weight: normal; font-style: normal;" name="a16211">bool</a></p>
+<p class="VBA-Text-Indent">Returns true if the shape consists of solid and sheet parts. In all other cases it returns false. Consider to assure the correct body type with <span style="font-style: italic;"><i>UpdateAllBodyTypes</i></span>, if used within the modeler history.</p>
+<p class="VBA-Heading-Method">&#160;</p>
+<p class="VBA-Heading-Method">IsConsideredForSimulation (<a href="../common_vbageneral/common_general_solid_names.htm" id="a166122" style="font-weight: normal; font-style: normal;" name="a166122">solidname</a> <span style="font-style: italic;"><i>solid1 )</i></span> <a href="../common_vbageneral/common_general_bool_data_type.htm" id="a162112" style="font-weight: normal; font-style: normal;" name="a162112">bool</a></p>
+<p class="VBA-Text-Indent">Returns true if the shape is considered for simulation.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">IsConsideredForBoundingBox (<a href="../common_vbageneral/common_general_solid_names.htm" id="a1661221" style="font-weight: normal; font-style: normal;" name="a1661221">solidname</a> <span style="font-style: italic;"><i>solid1 )</i></span> <a href="../common_vbageneral/common_general_bool_data_type.htm" id="a1621121" style="font-weight: normal; font-style: normal;" name="a1621121">bool</a></p>
+<p class="VBA-Text-Indent">Returns true if the shape is considered for the size of the calculation domain..</p>
+<p class="VBA-Heading-Category"><a name="Intersection_Checks" id="Intersection_Checks"></a>Intersection Checks</p>
+<p class="VBA-Heading-Method">DoTheseGeometricallyIntersect(<a href="../common_vbageneral/common_general_solid_names.htm" id="a166121" style="font-weight: normal; font-style: normal;" name="a166121">solidname</a> <span style="font-style: italic;"><i>solid1, <a href="../common_vbageneral/common_general_solid_names.htm" id="a1661211" style="font-weight: normal; font-style: normal;" name="a1661211">solidname</a> solid2 )</i></span> <a href="../common_vbageneral/common_general_bool_data_type.htm" id="a162111" style="font-weight: normal; font-style: normal;" name="a162111">bool</a></p>
+<p class="VBA-Text-Indent">Returns true if the shapes do geometrically intersect. This is different to the regular intersection checks in the regard that material and EMAG-behavior is ignored: PEC-PEC intersections are reported, "Consider for simulation" flags are ignored.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">CheckIntersectionFor(<a href="../common_vbageneral/common_general_solid_names.htm" id="a1661212" style="font-weight: normal; font-style: normal;" name="a1661212">solidname</a> <span style="font-style: italic;"><i>solid1 )</i></span> <a href="../common_vbageneral/common_general_bool_data_type.htm" id="a1621111" style="font-weight: normal; font-style: normal;" name="a1621111">bool</a></p>
+<p class="VBA-Text-Indent">Equivalent to the interactive intersection check in <span style="font-style: italic;"><i>Modeling -&gt; Tools -&gt; Boolean -&gt; Perform Intersection Check...</i></span>, when one solid is selected.</p>
+<p class="VBA-Text-Indent">This returns true, if any intersection has been encountered that is relevant for the simulation. Using <span style="font-weight: bold;">GetNextEncounteredIntersection</span>, all encountered shape names can be extracted (see below and check the example further below).</p>
+<p class="VBA-Heading-Method">GetNextEncounteredIntersection(<span style="font-style: italic;"><i>)</i></span> <span><a href="../common_vbageneral/common_general_name.htm" id="a1121" style="font-weight: normal; font-style: normal;" name="a1121">name</a></span></p>
+<p class="VBA-Text-Indent">After having called <span style="font-weight: bold;">CheckIntersectionFor</span>(...) (see above), this function is used to sequentially retrieve all shape names that relate to shapes that intersected with the shape given in <span style="font-weight: bold;">CheckIntersectionFor</span> that were relevant.</p>
+<p class="VBA-Text-Indent">This function shall be repeatedly called to extract all names. It will return an empty string, as soon as all shapes have been named by previous calls.</p>
+<p class="VBA-Text-Indent">(see below, for an example how to use).</p>
+<p class="VBA-Heading-Category"><a name="Default Settings"></a>Default Settings</p>
+<p class="VBA-Text-Example">SetAutomeshExtendwidth (0.0, 0.0, 0.0)</p>
+<p class="VBA-Text-Example">SetAutomeshStepwidth (0.0, 0.0, 0.0)</p>
+<p class="VBA-Text-Example">ShapeVisualiziationAccuracy(30)</p>
+<p class="VBA-Text-Example">ShapeVisualiziationOffset (25)</p>
+<p class="VBA-Heading-Category"><a name="Examples" id="Examples"></a>Examples</p>
+<p class="VBA-Text-Example"><span style="color: #008000;"><font color="green">' performs the boolean operation solid1 = solid1 - solid2</font></span></p>
+<p class="VBA-Text-Example">Solid.Subtract "component1:solid1", "component1:solid2"</p>
+<p class="VBA-Text-Example">&#160;</p>
+<p class="VBA-Text-Example" style="color: #008000;">' Renames solid1 to struct1</p>
+<p class="VBA-Text-Example">Solid.Rename "component1:solid1", "struct1"</p>
+<p class="VBA-Text-Example">&#160;</p>
+<p class="VBA-Text-Example" style="color: #008000;">' Creates the new component "part1"</p>
+<p class="VBA-Text-Example">Component.New "part1"</p>
+<p class="VBA-Text-Example">&#160;</p>
+<p class="VBA-Text-Example" style="color: #008000;">' Moves struct1 into part1</p>
+<p class="VBA-Text-Example">Solid.ChangeComponent "component1:struct1", "part1"</p>
+<p class="VBA-Text-Example">&#160;</p>
+<p class="VBA-Text-Example" style="color: #008000;">' Creates a new material of name "diel"</p>
+<p class="VBA-Text-Example">With Material</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.Reset</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.Name "diel"</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.FrqType "hf"</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.Type "Normal"</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.Epsilon "2.7"</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.Mu "1.0"</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.Colour "0", "0.501961", "0.501961"</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.Create</p>
+<p class="VBA-Text-Example">End With</p>
+<p class="VBA-Text-Example">&#160;</p>
+<p class="VBA-Text-Example" style="color: #008000;">' Changes the material for struct1</p>
+<p class="VBA-Text-Example">Solid.ChangeMaterial "part1:struct1", "diel"</p>
+<p class="VBA-Text-Example">&#160;</p>
+<p class="VBA-Text-Example" style="color: #008000;"><span style="color: #008000;"><font color="green">' Intersection Check workflow to check one shape (e.g. component1:wire1) against all other geometry.</font></span></p>
+<p class="VBA-Text-Example">Dim intersection_result As Boolean</p>
+<p class="VBA-Text-Example">Dim check_body_name As String</p>
+<p class="VBA-Text-Example">check_body_name = "component1:wire1"</p>
+<p class="VBA-Text-Example">&#160;</p>
+<p class="VBA-Text-Example">intersection_result = Solid.CheckIntersectionFor (check_body_name)</p>
+<p class="VBA-Text-Example">MsgBox(check_body_name + "does have intersections:" + Str (intersection_result))</p>
+<p class="VBA-Text-Example">&#160;</p>
+<p class="VBA-Text-Example">If (intersection_result) Then</p>
+<p class="VBA-Text-Example" style="margin-left: 40px;">Dim intersection_partner As String</p>
+<p class="VBA-Text-Example" style="margin-left: 40px;">intersection_partner = Solid.GetNextEncounteredIntersection</p>
+<p class="VBA-Text-Example" style="margin-left: 40px;">&#160;</p>
+<p class="VBA-Text-Example" style="margin-left: 40px;">While (Len(intersection_partner) &gt; 0)</p>
+<p class="VBA-Text-Example" style="margin-left: 80px;">MsgBox("check_body_name intersects with: " + intersection_partner)</p>
+<p class="VBA-Text-Example" style="margin-left: 80px;">intersection_partner = Solid.GetNextEncounteredIntersection</p>
+<p class="VBA-Text-Example" style="margin-left: 40px;">Wend</p>
+<p class="VBA-Text-Example">End If</p>
+<?rh-p style="margin-bottom: 0px; text-align: Right; margin-left: 18px; 
+                 margin-right: 18px; margin-top: 18px;" ?>
+<div style="width: 100%; position: relative;" id="footer">
+<p style="border-bottom: Solid 1px #dddddd; text-align: Left; margin-left: 0px; font-family: Arial, sans-serif; line-height: Normal; margin-top: 9px; margin-right: 0px; margin-bottom: 6px; border-left-width: 1px; border-top-width: 1px; border-right-width: 1px;"><span style="text-align: Left; font-family: Arial, sans-serif; line-height: Normal;">&#160;</span></p>
+<table cellspacing="0" width="100%">
+<col style="width: 50%;" />
+<col style="width: 50%;" />
+<tr>
+<td style="vertical-align: Top;"><span style="font-family: Arial, sans-serif; line-height: Normal; font-size: 8pt;"><font size="1" style="font-size:8pt;">CST Studio Suite 2026</font></span></td>
+<td style="vertical-align: Top;">
+<p style="text-align: right;">&#160;</p>
+</td>
+</tr>
+</table>
+<p>&#160;</p>
+</div>
+<script type="text/javascript" language="javascript1.2">
+//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+        writeIntopicBar(0);
+
+
+highlightSearch();
+//-->
+//]]>
+</script>
+</body>
+</html>

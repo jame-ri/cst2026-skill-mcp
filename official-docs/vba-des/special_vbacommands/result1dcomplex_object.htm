@@ -1,0 +1,398 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="Adobe RoboHelp 11" />
+<title>Result1DComplex Object</title>
+<link rel="StyleSheet" href="../online_help_vba.css" type="text/css" />
+<style type="text/css">
+/*<![CDATA[*/
+<!--
+body { border-bottom-style:None; }
+-->
+/*]]>*/
+</style>
+
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function ehlp_showtip(current,e,text)
+{
+  if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == 'Netscape'))
+  {
+    document.tooltip.document.write("<layer bgColor='yellow' style='border:1px solid black;font-size:12px;'>"+ text + "<\/layer>");
+    document.tooltip.document.close();
+    document.tooltip.left=e.pageX+5;
+    document.tooltip.top=e.pageY+5;
+    document.tooltip.visibility="show";
+  }
+}
+function ehlp_hidetip()
+{
+  document.tooltip.visibility="hidden";
+}
+//]]>
+</script>
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+        origWidth = innerWidth;
+        origHeight = innerHeight;
+        onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+/*<![CDATA[*/
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+-->
+/*]]>*/
+</style>
+
+<script type="text/javascript" language="javascript1.2" src="../whmsg.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript" src="../whver.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript1.2" src="../whutils.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript1.2" src="../whproxy.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript1.2" src="../whlang.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript1.2" src="../whtopic.js" charset="utf-8">
+</script>
+</head>
+<body>
+<script type="text/javascript" language="javascript1.2">
+//<![CDATA[
+<!--
+if (window.gbWhTopic)
+{
+        var strUrl = document.location.href;
+        var bc = 0;
+        var n = strUrl.toLowerCase().indexOf("bc-");
+        if(n != -1)
+        {
+                document.location.replace(strUrl.substring(0, n));
+                bc = strUrl.substring(n+3);
+        }
+
+        if (window.addTocInfo)
+        {
+        addTocInfo("Circuits & Systems VBA\nResult\nResult1DComplex");
+
+        }
+        if (window.writeBtnStyle)
+                writeBtnStyle();
+
+        if (window.writeIntopicBar)
+                writeIntopicBar(0);
+
+        
+        document.write("<p style=\"font-family: Tahoma; font-size: 9pt; font-weight: 400;  font-style:normal; color: rgb(0, 0, 0); text-decoration:none; text-align: left\"> ");
+AddMasterBreadcrumbs("../index.htm", "font-family: Tahoma; font-size: 9pt; font-weight: 400;  font-style:normal; color: rgb(0, 0, 0); text-decoration:none; text-align: left", "|", "Home", "../special_vbaobjects/cstdesignstudiovbaobjects.htm");
+document.write("<a style=\"font-family: Tahoma; font-size: 9pt; font-weight: 400;  font-style:normal; color: rgb(0, 0, 0); text-decoration:none; text-align: left\" href=\"../special_vbaobjects/cstdesignstudiovbaobjects.htm\">Circuits & Systems VBA<\/a> | <a style=\"font-family: Tahoma; font-size: 9pt; font-weight: 400;  font-style:normal; color: rgb(0, 0, 0); text-decoration:none; text-align: left\" href=\"result0d_object.htm\">Result<\/a> | Result1DComplex<\/p>");
+
+}
+else
+        if (window.gbIE4)
+                document.location.reload();
+
+onLoadHandler = function()
+{
+  if (window.setRelStartPage)
+        {
+        setTimeout("setRelStartPage('../index.htm');", 1)
+
+    setTimeout("UpdateBreadCrumbsMarker();", 1);
+        }
+}
+
+if (window.addEventListener){  
+        window.addEventListener('load', onLoadHandler, false);   
+} else if (window.attachEvent){  
+        window.attachEvent('onload', onLoadHandler);  
+}
+
+function onSetStartPage()
+{
+  autoSync(1);
+  sendSyncInfo();
+  sendAveInfoOut();
+}
+//-->
+//]]>
+</script><script type="text/javascript" src="../ehlpdhtm.js" language="JavaScript1.2">
+</script>
+<table cellspacing="0" width="100%">
+<col style="width: 50%;" />
+<col style="width: 50%;" />
+<tr>
+<td style="vertical-align: middle; padding-top: 5px; padding-bottom: 5px;">
+<p style="margin-top: 0px; margin-bottom: 0px;"><img src="../3ds.png" alt="" style="border: none;" border="0" /></p>
+</td>
+<td style="vertical-align: middle;">
+<p style="text-align: right;"><a href="https://www.3ds.com/products-services/3dexperience/" target="_blank"><img src="../3dexp.png" alt="" style="border: none;" width="32" height="32" border="0" /></a></p>
+</td>
+</tr>
+</table>
+<h1>Result1DComplex Object</h1>
+<h3 class="VBA-Text-Example">This object offers access and manipulation functions to complex 1D results. A Result1DComplex object can hold a number of points ( <span style="font-style: italic;"><i>x,</i></span> <span style="font-style: italic;"><i>y</i></span> ) where <span style="font-style: italic;"><i>x</i></span> is a real number and <span style="font-style: italic;"><i>y</i></span> is a complex number. Access to the points is possible by specifying an zero-based index.</h3>
+<p>A typical use case for a Result1DComplex object would be to load a previously calculated S-Parameter and do some post-processing on the data.</p>
+<ul>
+<li class="p-VBA-Index-Category">
+<p class="VBA-Index-Category"><a href="#FileInit">Initialization, File Operation</a></p>
+</li>
+<li class="p-VBA-Index-Category">
+<p class="VBA-Index-Category"><a href="#GlobalTo1DC">1D Complex to 1D Complex Operations</a></p>
+</li>
+<li class="p-VBA-Index-Category">
+<p class="VBA-Index-Category"><a href="#GlobalTo1D">1D Complex to 1D Operations</a></p>
+</li>
+<li class="p-VBA-Index-Category">
+<p class="VBA-Index-Category"><a href="#Local">Local Operations</a></p>
+</li>
+<li class="p-VBA-Index-Category">
+<p class="VBA-Index-Category"><a href="#General">General Settings</a></p>
+</li>
+<li class="p-VBA-Index-Category">
+<p class="VBA-Index-Category"><a href="#Examples">Examples</a></p>
+</li>
+</ul>
+<p class="VBA-Heading-Category"><a name="FileInit" id="FileInit"></a>Initialization, File Operation</p>
+<p class="VBA-Text"><span style="font-weight: bold;">Construction</span></p>
+<p class="VBA-Text-Indent">An Result1DComplex object can be created as follows:</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Text-Example" style="margin-left: 40px;">Dim result As Object</p>
+<p class="VBA-Text-Example" style="margin-left: 40px;">Set result = Result1DComplex("")</p>
+<p class="VBA-Text-Example" style="margin-left: 40px;">&#160;</p>
+<p class="VBA-Text-Indent">This will create an empty object. Alternatively, a filename of a complex .sig-file can be given as a parameter, then the object loads the data from the .sig-file (see <a href="result1dcomplex_object.htm#Examples">Examples</a>).</p>
+<p class="VBA-Heading-Method">Initialize ( <a href="../common_vbageneral/common_general_string.htm" id="a1" style="font-weight: normal; font-style: normal;" name="a1">string</a> <span style="font-style: italic;"><i>Size</i></span> )</p>
+<p class="VBA-Text-Indent">Initializes an empty Result1DComplex object with the given number of samples.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">Load ( <a href="../common_vbageneral/common_general_string.htm" id="a13" style="font-weight: normal; font-style: normal;" name="a13">string</a> <span style="font-style: italic;"><i>FileName</i></span> )</p>
+<p class="VBA-Text-Indent">Loads a 1D Complex result from a file. The string <span style="font-style: italic;"><i>FileName</i></span> is the signal file name for the complex signal to be loaded. If you do not specify an absolute path, the path of the current project will be used. If you do not specify a file ending, the default file ending ".sig" will be used.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Text-Indent"><span style="font-weight: bold;">Note:</span> The names used in the ResultTree do not necessarily correspond to the file names. The file names of tree items can be queried using the <a href="result_tree_object.htm">ResultTree Object</a>.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">Save ( <a href="../common_vbageneral/common_general_string.htm" id="a8" style="font-weight: normal; font-style: normal;" name="a8">string</a> <span style="font-style: italic;"><i>FileName</i></span> )</p>
+<p class="VBA-Text-Indent">Saves the object to a file with the given filename. If you do not specify an absolute path, the path of the current project will be used. If you do not specify a file ending, the default file ending ".sig" will be used.</p>
+<p class="vba-text-indent">&#160;</p>
+<p class="VBA-Heading-Method">LoadFromMagnitudeAndPhase ( <a href="../common_vbageneral/common_general_string.htm" id="a16" style="font-weight: normal; font-style: normal;" name="a16">string</a> <span style="font-style: italic;"><i>MagnitudeFilename</i></span> , <a href="../common_vbageneral/common_general_string.htm" id="a18" style="font-weight: normal; font-style: normal;" name="a18">string</a> <span style="font-style: italic;"><i>PhaseFilename</i></span> )</p>
+<p class="VBA-Text-Indent">Loads a 1D Complex result out of two files. The string <span style="font-style: italic;"><i>MagnitudeFilename</i></span> specifies the file where the magnitude of the data is stored. The string <span style="font-style: italic;"><i>PhaseFilename</i></span> specifies the file where the phase in degree of the data is stored. If the two files have a different sampling, an error will be returned. If you do not specify an absolute path, the path of the current project will be used. If you do not specify a file ending, the default file ending ".sig" will be used.</p>
+<p class="vba-text-indent">&#160;</p>
+<p class="VBA-Heading-Method">LoadFromRealAndImaginary ( <a href="../common_vbageneral/common_general_string.htm" id="a17" style="font-weight: normal; font-style: normal;" name="a17">string</a> <span style="font-style: italic;"><i>RealFilename</i></span> , <a href="../common_vbageneral/common_general_string.htm" id="a19" style="font-weight: normal; font-style: normal;" name="a19">string</a> <span style="font-style: italic;"><i>ImaginaryFilename</i></span> )</p>
+<p class="VBA-Text-Indent">Loads a 1D Complex result out of two files. The string <span style="font-style: italic;"><i>RealFilename</i></span> specifies the file where the real part of the data is stored. The string <span style="font-style: italic;"><i>ImaginaryFilename</i></span> specifies the file where the imaginary part of the data is stored. If the two files have a different sampling, an error will be returned. If you do not specify an absolute path, the path of the current project will be used. If you do not specify a file ending, the default file ending ".sig" will be used.</p>
+<p class="vba-text-indent">&#160;</p>
+<p class="VBA-Heading-Method">AddToTree ( <span><a href="../common_vbageneral/common_general_string.htm" id="a7" style="font-weight: normal; font-style: normal;" name="a7">string</a></span> <span style="font-style: italic;"><i>TreePath</i></span> )</p>
+<p class="VBA-Text-Indent">Inserts the Result1DComplex object into the tree at the folder specified by <span style="font-style: italic;"><i>TreePath</i></span>. Please note that the Result1DComplex object needs to be saved before it can be added to the tree. It will be automatically added below the "Results" tree folder. See also <span style="font-style: italic;"><i>SetReferenceImpedanceLink</i></span>.</p>
+<p class="vba-text-indent">&#160;</p>
+<p class="VBA-Heading-Method">Clear</p>
+<p class="VBA-Text-Indent">Deletes all data stored in the Result1DComplex object.</p>
+<p class="vba-text-indent">&#160;</p>
+<p class="VBA-Heading-Method">DeleteDataAt ( <a href="../common_vbageneral/common_general_string.htm" id="a6" style="font-weight: normal; font-style: normal;" name="a6">string</a> <span style="font-style: italic;"><i>Index</i></span> )</p>
+<p class="VBA-Text-Indent">Deletes the data point at the given index.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Category"><a name="GlobalTo1DC" id="GlobalTo1DC"></a>1D Complex to 1D Complex Operations</p>
+<p class="VBA-Heading-Method">Copy <span style="font-weight: normal;"><a href="result1dcomplex_object.htm">Result1DComplex Object</a></span></p>
+<p class="VBA-Text-Indent">Returns a copy of the Result1D Complex object.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Category"><a name="GlobalTo1D" id="GlobalTo1D"></a>1D Complex to 1D Operations</p>
+<p class="VBA-Heading-Method">Real <a href="result1dobject.htm" style="font-weight: normal;">Result1D Object</a></p>
+<p class="VBA-Text-Indent">Returns a Result1D object filled with the real part of the data stored in the Result1DComplex object.</p>
+<p class="vba-text-indent">&#160;</p>
+<p class="VBA-Heading-Method">Imaginary <a href="result1dobject.htm" style="font-weight: normal;">Result1D Object</a></p>
+<p class="VBA-Text-Indent">Returns a Result1D object filled with the imaginary part of the data stored in the Result1DComplex object.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">Magnitude <span><a href="result1dobject.htm" style="font-weight: normal;">Result1D Object</a></span></p>
+<p class="VBA-Text-Indent">Returns a Result1D object filled with the magnitude of the data stored in the Result1DComplex object.</p>
+<p class="vba-text-indent">&#160;</p>
+<p class="VBA-Heading-Method">Phase <a href="result1dobject.htm" style="font-weight: normal;">Result1D Object</a></p>
+<p class="VBA-Text-Indent">Returns a Result1D object filled with the phase in degrees of the data stored in the Result1DComplex object.</p>
+<p class="vba-text-indent">&#160;</p>
+<p class="VBA-Heading-Category"><a name="Local" id="Local"></a>Local Operations:</p>
+<p class="VBA-Heading-Method">GetN <a href="../common_vbageneral/common_general_long.htm" id="a9" style="font-weight: normal; font-style: normal;" name="a9">long</a></p>
+<p class="VBA-Text-Indent">Returns the number of elements in the Result1DComplex object.</p>
+<p class="vba-text-indent">&#160;</p>
+<p class="VBA-Heading-Method">GetX / GetYRe / GetYIm ( <a href="../common_vbageneral/common_general_long.htm" id="a44" style="font-weight: normal; font-style: normal;" name="a44">long</a> <span style="font-style: italic;"><i>Index</i></span> ) <a href="../common_vbageneral/common_general_double.htm" id="a43" style="font-weight: normal; font-style: normal;" name="a43">double</a></p>
+<p class="VBA-Text-Indent">Returns the x-value / the Real part of y / the Imaginary part of y at the specified index in the Result1DComplex object.</p>
+<p class="vba-text-indent">&#160;</p>
+<p class="VBA-Heading-Method">SetX / SetYRe / SetYIm ( <span><a href="../common_vbageneral/common_general_string.htm" id="a71411" style="font-weight: normal; font-style: normal;" name="a71411">string</a></span> <span style="font-style: italic;"><i>Index,</i></span> <span><a href="../common_vbageneral/common_general_string.htm" id="a71412" style="font-weight: normal; font-style: normal;" name="a71412">string</a></span> <span style="font-style: italic;"><i>Value</i></span> )</p>
+<p class="VBA-Text-Indent">Sets the x-value / the Real part of y / the Imaginary part of y at the specified index in the Result1DComplex object.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">AppendXY( <a href="../common_vbageneral/common_general_double.htm" id="a49" style="font-weight: normal; font-style: normal;" name="a49">double</a> <span style="font-style: italic;"><i>XValue,</i></span> <a href="../common_vbageneral/common_general_double.htm" id="a48" style="font-weight: normal; font-style: normal;" name="a48">double</a> <span style="font-style: italic;"><i>YReal</i></span> <span style="font-style: italic;"><i>,</i></span> <a href="../common_vbageneral/common_general_double.htm" id="a10" style="font-weight: normal; font-style: normal;" name="a10">double</a> <span style="font-style: italic;"><i>YImaginary</i></span> )</p>
+<p class="VBA-Text-Indent">Appends a data point &#160;to the end of the complex result object.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">AppendXYDouble( <span style="font-weight: normal;">&#160;<a href="../common_vbageneral/common_general_double.htm" id="a491" style="font-weight: normal; font-style: normal;" name="a491">double</a></span> <span style="font-style: italic;"><i>XValue,</i></span> <span style="font-weight: normal;"><a href="../common_vbageneral/common_general_double.htm" id="a481" style="font-weight: normal; font-style: normal;" name="a481">double</a></span> <span style="font-style: italic;"><i>YReal</i></span> <span style="font-style: italic;"><i>,</i></span> <span style="font-weight: normal;"><a href="../common_vbageneral/common_general_double.htm" id="a101" style="font-weight: normal; font-style: normal;" name="a101">double</a></span> <span style="font-style: italic;"><i>YImaginary</i></span> )</p>
+<p class="VBA-Text-Indent">This command has the same behavior as <span style="font-style: italic;"><i>AppendXY</i></span>, but it accepts double values, which may be evaluated more efficiently depending on the context.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">ScalarMultReIm( <a href="../common_vbageneral/common_general_string.htm" id="a7141" style="font-weight: normal; font-style: normal;" name="a7141">string</a> <span style="font-style: italic;"><i>YReal,</i></span> <a href="../common_vbageneral/common_general_string.htm" id="a7142" style="font-weight: normal; font-style: normal;" name="a7142">string</a> <span style="font-style: italic;"><i>YImaginary )</i></span></p>
+<p class="VBA-Text-Indent">Multiplies all y-values of the current object with the given complex number.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">ScalarMultAmPh( <span><a href="../common_vbageneral/common_general_string.htm" id="a714" style="font-weight: normal; font-style: normal;" name="a714">string</a></span> <span style="font-style: italic;"><i>YAmplitude,</i></span> <span><a href="../common_vbageneral/common_general_string.htm" id="a715" style="font-weight: normal; font-style: normal;" name="a715">string</a></span> <span style="font-style: italic;"><i>YPhase)</i></span></p>
+<p class="VBA-Text-Indent">Multiplies all y-values of the current object with the given complex number. The phase needs to be scaled in degrees.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">Conjugate</p>
+<p class="VBA-Text-Indent">Conjugates all complex y-values of the current object.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">NthPower( <a href="../common_vbageneral/common_general_string.htm" id="a71" style="font-weight: normal; font-style: normal;" name="a71">string</a> <span style="font-style: italic;"><i>Exponent</i></span> )</p>
+<p class="VBA-Text-Indent">Raises each complex y-value of the current object to the real power of <span style="font-style: italic;"><i>Exponent</i></span> .</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">ResampleTo( <span><a href="../common_vbageneral/common_general_string.htm" id="a711" style="font-weight: normal; font-style: normal;" name="a711">string</a></span> <span style="font-style: italic;"><i>Min,</i></span> <span><a href="../common_vbageneral/common_general_string.htm" id="a712" style="font-weight: normal; font-style: normal;" name="a712">string</a></span> <span style="font-style: italic;"><i>Max,</i></span> <span><a href="../common_vbageneral/common_general_string.htm" id="a713" style="font-weight: normal; font-style: normal;" name="a713">string</a></span> <span style="font-style: italic;"><i>Samples</i></span> )</p>
+<p class="VBA-Text-Indent">Re-samples the data points of the object to a given number of samples between a minimum specified in <span style="font-style: italic;"><i>Min</i></span> and maximum value specified in <span style="font-style: italic;"><i>Max</i></span>. The new data samples are calculated using an interpolation of the original data samples. The method returns an error if less than three data points are contained in the object.</p>
+<p class="vba-text-indent">&#160;</p>
+<p class="VBA-Heading-Method">Add( <a href="result1dcomplex_object.htm" style="font-weight: normal;">Result1DComplex Object</a> <span style="font-style: italic;"><i>Other</i></span> )</p>
+<p class="VBA-Text-Indent">Adds the complex y-values of the other object to the y-values of the current object. The number of points need to be the same in both objects. The x-values are taken from the current object.</p>
+<p class="vba-text-indent">&#160;</p>
+<p class="VBA-Heading-Method">Subtract( <a href="result1dcomplex_object.htm" style="font-weight: normal;">Result1DComplex Object</a> <span style="font-style: italic;"><i>Other</i></span> )</p>
+<p class="VBA-Text-Indent">Subtracts the complex y-values of the other object from the y-values of the current object. The number of points need to be the same in both objects. The x-values are taken from the current object.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">ComponentMult( <a href="result1dcomplex_object.htm" style="font-weight: normal;">Result1DComplex Object</a> <span style="font-style: italic;"><i>Other</i></span> )</p>
+<p class="VBA-Text-Indent">Multiplies the complex y-values of the other object with the y-values of the current object. The number of points need to be the same in both objects. The x-values are taken from the current object.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">ComponentDiv( <a href="result1dcomplex_object.htm" style="font-weight: normal;">Result1DComplex Object</a> <span style="font-style: italic;"><i>Other</i></span> )</p>
+<p class="VBA-Text-Indent">Divides the complex y-values of the current object by the y-values of the other object. The method returns an error if a division by zero was encountered. The number of points need to be the same in both objects. The x-values are taken from the current object.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">MakeCompatibleTo( <span style="font-weight: normal;"><a href="result1dobject.htm">Result1D Object</a>/<a href="result1dcomplex_object.htm">Result1DComplex Object</a></span> <span style="font-style: italic;"><i>Other</i></span> )</p>
+<p class="VBA-Text-Indent">Re-samples the result data of the current object to make it compatible to the sampling of the other object<span style="font-style: italic;"><i>.</i></span> The new data samples are calculated by an interpolation of the original data samples. The method returns an error if less than three data points are contained in the current object or less than two data points are contained in the other object.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">SortByX</p>
+<p class="VBA-Text-Indent">Sorts the data contained in the result object to have monotonically increasing x-values.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">ZthPower( <span style="font-weight: normal;"><a href="result1dcomplex_object.htm">Result1DComplex Object</a></span> <span style="font-style: italic;"><i>Other</i></span> )</p>
+<p class="VBA-Text-Indent">Raises each complex y-value of the current object to the complex power of the y-value of the other object at the same index. The number of points need to be the same in both objects. The x-values remain unchanged. The method returns an error if an invalid operation was encountered (e.g. zero to the power of zero).</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">GetArray ( <a href="../../VBA_3D/common_vbageneral/common_general_string.htm" id="a5511" style="font-weight: normal; font-style: normal;" name="a5511">string</a> <span style="font-style: italic;"><i>component</i></span> ) <a href="../../VBA_3D/common_vbageneral/common_general_variant.htm" id="a5111" style="font-weight: normal; font-style: normal;" name="a5111">variant</a></p>
+<p class="VBA-Text-Indent">Returns data of &#160;the Result1DComplex object as double array . The string <span style="font-style: italic;"><i>component</i></span> can be <span style="font-style: italic;"><i>'x', 'yre'</i></span> or <span style="font-style: italic;"><i>'yim'</i></span> and specifies which component of the Result1DComplex object will be returned, analogous to 'GetX' and 'GetYRe' and 'GetYIm' .</p>
+<p class="VBA-Heading-Method">&#160;</p>
+<p class="VBA-Heading-Method">SetArray ( <a href="../../VBA_3D/common_vbageneral/common_general_variant.htm" id="a511" style="font-weight: normal; font-style: normal;" name="a511">variant</a> <span style="font-style: italic;"><i>doubleArray,</i></span> <a href="../../VBA_3D/common_vbageneral/common_general_string.htm" id="a551" style="font-weight: normal; font-style: normal;" name="a551">string</a> <span style="font-style: italic;"><i>component</i></span> )</p>
+<p class="VBA-Text-Indent">Overwrites the data in the Result1DComplex object with the data provided as double array . The string <span style="font-style: italic;"><i>component</i></span> can be <span style="font-style: italic;"><i>'x', 'yre' &#160;or 'yim'</i></span> and specifies which component of the Result1DComplex object will be overwritten, analogous to 'SetX' and 'SetYRe' and 'SetYIm'. The variant <span style="font-style: italic;"><i>doubleArray</i></span> can be an array of double values. It has to start with index zero and it is expected to have at least as many elements as the Result1DComplex object contains. In case more elements are provided, they will be ignored. Consider using the methods 'GetN' to query and 'Initialize' to modify the size of the Result1DComplex object.</p>
+<p class="VBA-Heading-Category"><a name="General" id="General"></a>General Settings</p>
+<p class="VBA-Heading-Method">Title ( <a href="../common_vbageneral/common_general_string.htm" id="a54" style="font-weight: normal; font-style: normal;" name="a54">string</a> <span style="font-style: italic;"><i>Name</i></span> )</p>
+<p class="VBA-Text-Indent">Defines the title of the result. &#160;</p>
+<p class="vba-text-indent">&#160;</p>
+<p class="VBA-Heading-Method">GetTitle <a href="../common_vbageneral/common_general_string.htm" id="a55" style="font-weight: normal; font-style: normal;" name="a55">string</a></p>
+<p class="VBA-Text-Indent">Returns the title of the result.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">GetXLabelAndUnit ( <span style="font-weight: normal;"><a href="../common_vbageneral/common_general_string_ref.htm">string_ref</a></span> <span style="font-style: italic;"><i>sLabel</i></span>, <span style="font-weight: normal;"><a href="../common_vbageneral/common_general_string_ref.htm">string_ref</a></span> <span style="font-style: italic;"><i>sUnit</i></span> )</p>
+<p class="VBA-Heading-Method">GetYLabelAndUnit ( <span style="font-weight: normal;"><a href="../common_vbageneral/common_general_string_ref.htm">string_ref</a></span> <span style="font-style: italic;"><i>sLabel</i></span>, <span style="font-weight: normal;"><a href="../common_vbageneral/common_general_string_ref.htm">string_ref</a></span> <span style="font-style: italic;"><i>sUnit</i></span> )</p>
+<p class="VBA-Text-Indent">Returns label and unit of the corresponding axis. The unit string uses the syntax described on the <a title="Units" href="../../../userinterface/overview/units.htm" onmouseover="if ((parseInt(navigator.appVersion) == 4) &amp;&amp; (navigator.appName == 'Netscape')) ehlp_showtip(this,event,'Units');" onmouseout="if ((parseInt(navigator.appVersion) == 4) &amp;&amp; (navigator.appName == 'Netscape')) ehlp_hidetip();">Units</a> help page.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">SetXLabelAndUnit ( <a href="../../VBA_3D/common_vbageneral/common_general_string.htm" id="a51111" style="font-weight: normal; font-style: normal;" name="a51111">string</a> <span style="font-style: italic;"><i>sLabel</i></span>, <a href="../../VBA_3D/common_vbageneral/common_general_string.htm" id="a5112" style="font-weight: normal; font-style: normal;" name="a5112">string</a> <span style="font-style: italic;"><i>sUnit</i></span> )</p>
+<p class="VBA-Heading-Method">SetYLabelAndUnit ( <a href="../../VBA_3D/common_vbageneral/common_general_string.htm" id="a511111" style="font-weight: normal; font-style: normal;" name="a511111">string</a> <span style="font-style: italic;"><i>sLabel</i></span>, <a href="../../VBA_3D/common_vbageneral/common_general_string.htm" id="a51121" style="font-weight: normal; font-style: normal;" name="a51121">string</a> <span style="font-style: italic;"><i>sUnit</i></span> )</p>
+<p class="VBA-Text-Indent">Sets a label and unit to annotate the corresponding axis. The unit string uses the syntax described on the <a title="Units" href="../../../userinterface/overview/units.htm" onmouseover="if ((parseInt(navigator.appVersion) == 4) &amp;&amp; (navigator.appName == 'Netscape')) ehlp_showtip(this,event,'Units');" onmouseout="if ((parseInt(navigator.appVersion) == 4) &amp;&amp; (navigator.appName == 'Netscape')) ehlp_hidetip();">Units</a> help page.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">GetXUnit / GetYUnit <a href="../../VBA_3D/common_vbageneral/common_general_string.htm" id="a532" style="font-weight: normal; font-style: normal;" name="a532">string</a></p>
+<p class="VBA-Text-Indent">Returns the unit of the &#160;x-axis / y-axis as string. The unit string uses the syntax described on the <a title="Units" href="../../../userinterface/overview/units.htm" onmouseover="if ((parseInt(navigator.appVersion) == 4) &amp;&amp; (navigator.appName == 'Netscape')) ehlp_showtip(this,event,'Units');" onmouseout="if ((parseInt(navigator.appVersion) == 4) &amp;&amp; (navigator.appName == 'Netscape')) ehlp_hidetip();">Units</a> help page.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">SetLogarithmicFactor( <a href="../common_vbageneral/common_general_string.htm" id="a12" style="font-weight: normal; font-style: normal;" name="a12">string</a> <span style="font-style: italic;"><i>LogFactor</i></span> )</p>
+<p class="VBA-Text-Indent">When the complex curve contained in the Result1DComplex object is visualized in dB, the logarithmic factor provides the scaling of the data. The string <span style="font-style: italic;"><i>LogFactor</i></span> can be 10 for a power quantity, 20 for a field quantity, or -1 which will disable the dB option. The default is 20.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">GetLogarithmicFactor <a href="../common_vbageneral/common_general_double.htm" id="a20" style="font-weight: normal; font-style: normal;" name="a20">double</a></p>
+<p class="VBA-Text-Indent">Returns the logarithmic factor.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">SetReferenceImpedanceLink( <span><a href="../common_vbageneral/common_general_string.htm" id="a11" style="font-weight: normal; font-style: normal;" name="a11">string</a></span> <span style="font-style: italic;"><i>TreePath</i></span> )</p>
+<p class="VBA-Text-Indent">This command allows adding a 1D result to the Navigation Tree which can be visualized as a Smith Chart. One can specify a link to another existing 1D result in the Navigation Tree which will be interpreted as reference impedance data. The link is created when the Result1DComplex object is added to the Navigation Tree via a subsequent call of <span style="font-style: italic;"><i>AddToTree</i></span>. The reference impedance item needs to be an existing complex-valued item of the same sampling as the processed data. It also needs to be located within the same Navigation Tree folder as the reference impedance tree item, otherwise <span style="font-style: italic;"><i>AddToTree</i></span> will report an error. See also <a href="result1dcomplex_object.htm#Examples">Examples</a>.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">GetReferenceImpedanceLink <span><a href="../common_vbageneral/common_general_string.htm" id="a30" style="font-weight: normal; font-style: normal;" name="a30">string</a></span></p>
+<p class="VBA-Text-Indent">Returns the tree item specified by <span style="font-style: italic;"><i>SetReferenceImpedanceLink</i></span>.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">SetDefaultPlotView( <a href="../common_vbageneral/common_general_string.htm" id="a33" style="font-weight: normal; font-style: normal;" name="a33">string</a> <span style="font-style: italic;"><i>Type &#160;</i></span>)</p>
+<p class="VBA-Text-Indent">This setting specifies the default plot view type that should be used when a 1D plot of &#160;this result is opened. The variable <span style="font-style: italic;"><i>Type</i></span> specifies the type of view that should be plotted and can be one of the following strings: <i><span style="font-style: italic;"><i>"real", "imaginary", "magnitude", "magnitudedb", "phase", "polar",</i></span> <span style="font-style: normal;">or an empty string.</span></i> This setting is considered if the Result1DComplex object is created and processed within a template evaluation in the Template Based Post-Processing framework or if the object is added to the Navigation Tree via <span style="font-style: italic;"><i>AddToTree</i></span>.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">GetDefaultPlotView <a href="../common_vbageneral/common_general_string.htm" id="a34" style="font-weight: normal; font-style: normal;" name="a34">string</a></p>
+<p class="VBA-Text-Indent">Returns the default plot view type specified by <span style="font-style: italic;"><i>SetDefaultPlotView.</i></span></p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">GetResultObjectType <a href="../common_vbageneral/common_general_string.htm" id="a35" style="font-weight: normal; font-style: normal;" name="a35">string</a></p>
+<p class="VBA-Text-Indent">Returns the string <span style="font-style: italic;"><i>"1DC"</i></span>. This method can be used to distinguish the result object from Result0D and Result1D objects in a context where the type of a result object is unknown.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Category"><a name="Examples" id="Examples"></a>Examples</p>
+<p class="VBA-Text-Indent">This example creates an empty object, fills it with data and adds it to the ResultTree.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Text-Indent">NOTE: The behavior of the "Result1DComplex" object depends on the context it is used. If you use it in CST Design Environment, the .AddToTree command will place the curves into the result tree of CST Design Studio. However, if for example used from within CST Microwave Studio, the curves will be placed into the result tree of CST Microwave Studio. To have the curves placed into CST Design Studio you need to construct the result object as "DS.Result1DComplex("")".</p>
+<p class="vba-text-indent">&#160;</p>
+<p class="VBA-Text-Example" style="margin-left: 40px;">Dim result As Object</p>
+<p class="VBA-Text-Example" style="margin-left: 40px;">Set result = Result1DComplex("")</p>
+<p class="VBA-Text-Example" style="margin-left: 40px;">With result</p>
+<p class="VBA-Text-Example" style="margin-left: 40px;">&#160;&#160;&#160;&#160;.AppendXY(1,1,1)</p>
+<p class="VBA-Text-Example" style="margin-left: 40px;">&#160;&#160;&#160;&#160;.AppendXY(2,2,1)</p>
+<p class="VBA-Text-Example" style="margin-left: 40px;">&#160;&#160;&#160;&#160;.AppendXY(3,2,2)</p>
+<p class="VBA-Text-Example" style="margin-left: 40px;">&#160;&#160;&#160;&#160;.Title("A complex curve")</p>
+<p class="VBA-Text-Example" style="margin-left: 40px;">&#160;&#160;&#160;&#160;.SetXLabelAndUnit("xvalues","GHz")</p>
+<p class="VBA-Text-Example" style="margin-left: 40px;">&#160;&#160;&#160;&#160;.SetYLabelAndUnit("yvalues","V/m")</p>
+<p class="VBA-Text-Example" style="margin-left: 40px;">&#160;&#160;&#160;&#160;.Save("a_file_name")</p>
+<p class="VBA-Text-Example" style="margin-left: 40px;">&#160;&#160;&#160;&#160;.AddToTree("Results\Test\complex_curve")</p>
+<p class="VBA-Text-Example" style="margin-left: 40px;">End With</p>
+<p class="VBA-Text-Example" style="margin-left: 40px;">&#160;</p>
+<p class="VBA-Text-Indent">This example loads a S-Parameter and adds it to the ResultTree.</p>
+<p class="vba-text-indent">&#160;</p>
+<p class="VBA-Text-Example" style="margin-left: 40px;">Dim TreeItem As String, FileName As String</p>
+<p class="VBA-Text-Example" style="margin-left: 40px;">TreeItem = "Tasks\SPara1\S-Parameters\S1,1"</p>
+<p class="VBA-Text-Example" style="margin-left: 40px;">FileName = DSResultTree.GetFileFromTreeItem(TreeItem)</p>
+<p class="VBA-Text-Example" style="margin-left: 40px;">Dim result As Object</p>
+<p class="VBA-Text-Example" style="margin-left: 40px;">Set result = DS.Result1DComplex("")</p>
+<p class="VBA-Text-Example" style="margin-left: 40px;">With result</p>
+<p class="VBA-Text-Example" style="margin-left: 40px;">&#160;&#160;&#160;&#160;.Load(FileName)</p>
+<p class="VBA-Text-Example" style="margin-left: 40px;">&#160;&#160;&#160;&#160;.Save("my_file_name")</p>
+<p class="VBA-Text-Example" style="margin-left: 40px;">&#160;&#160;&#160;&#160;.AddToTree("Results\S-Parameter\S1,1")</p>
+<p class="VBA-Text-Example" style="margin-left: 40px;">End With</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Text-Indent">This example links two objects via the command <span style="font-style: italic;"><i>SetReferenceImpedanceLink</i></span>.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Text-Example" style="margin-left: 40px;">Dim refImp As Object</p>
+<p class="VBA-Text-Example" style="margin-left: 40px;">Set refImp = Result1DComplex("")</p>
+<p class="VBA-Text-Example" style="margin-left: 40px;">refImp.Appendxy(1,50,0)</p>
+<p class="VBA-Text-Example" style="margin-left: 40px;">refImp.Save("refimp_name.sig")</p>
+<p class="VBA-Text-Example" style="margin-left: 40px;">refImp.AddToTree("Results\Data\result-ref-imp")</p>
+<p class="VBA-Text-Example" style="margin-left: 40px;">&#160;</p>
+<p class="VBA-Text-Example" style="margin-left: 40px;">Dim result As Object</p>
+<p class="VBA-Text-Example" style="margin-left: 40px;">Set result = Result1DComplex("")</p>
+<p class="VBA-Text-Example" style="margin-left: 40px;">result.Appendxy(1,0.4,0.6)</p>
+<p class="VBA-Text-Example" style="margin-left: 40px;">result.Save("result_name.sig")</p>
+<p class="VBA-Text-Example" style="margin-left: 40px;">result.SetReferenceImpedanceLink("Results\Data\result-ref-imp")</p>
+<p class="VBA-Text-Example" style="margin-left: 40px;">result.AddToTree("Results\Data\result")</p>
+<?rh-p style="margin-bottom: 0px; text-align: Right; margin-left: 18px; 
+                 margin-right: 18px; margin-top: 18px;" ?>
+<div style="width: 100%; position: relative;" id="footer">
+<p style="border-bottom: Solid 1px #dddddd; text-align: Left; margin-left: 0px; font-family: Arial, sans-serif; line-height: Normal; margin-top: 9px; margin-right: 0px; margin-bottom: 6px; border-left-width: 1px; border-top-width: 1px; border-right-width: 1px;"><span style="text-align: Left; font-family: Arial, sans-serif; line-height: Normal;">&#160;</span></p>
+<table cellspacing="0" width="100%">
+<col style="width: 50%;" />
+<col style="width: 50%;" />
+<tr>
+<td style="vertical-align: Top;"><span style="font-family: Arial, sans-serif; line-height: Normal; font-size: 8pt;"><font size="1" style="font-size:8pt;">CST Studio Suite 2026</font></span></td>
+<td style="vertical-align: Top;">
+<p style="text-align: right;">&#160;</p>
+</td>
+</tr>
+</table>
+<p>&#160;</p>
+</div>
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+ if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == 'Netscape'))
+  document.write("<div id='tooltip' class='WebHelpPopupMenu'><\/div>");
+//]]>
+</script><script type="text/javascript" language="javascript1.2">
+//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+        writeIntopicBar(0);
+
+
+highlightSearch();
+//-->
+//]]>
+</script>
+</body>
+</html>

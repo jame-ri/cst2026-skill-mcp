@@ -1,0 +1,551 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>cst.results module &#8212; CST Python Libraries  documentation</title>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinxdoc.css?v=0a676766" />
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js?v=16ad857a"></script>
+    <script src="../_static/doctools.js?v=888ff710"></script>
+    <script src="../_static/sphinx_highlight.js?v=4825356b"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../main.html">CST Python Libraries  documentation</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">cst.results module</a></li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <section id="cst-results-module">
+<h1>cst.results module<a class="headerlink" href="#cst-results-module" title="Permalink to this heading">¶</a></h1>
+<section id="topics">
+<h2>Topics<a class="headerlink" href="#topics" title="Permalink to this heading">¶</a></h2>
+<ul class="simple">
+<li><p><a class="reference internal" href="#module-contents">Module Contents</a></p></li>
+<li><p><a class="reference internal" href="#general-notes">General Notes</a></p></li>
+<li><p><a class="reference internal" href="#examples">Examples</a></p></li>
+</ul>
+</section>
+<section id="module-cst.results">
+<span id="module-contents"></span><h2>Module Contents<a class="headerlink" href="#module-cst.results" title="Permalink to this heading">¶</a></h2>
+<p>This module allows reading one-dimensional result curves, data points and two-dimensional colormap results of CST project files.</p>
+<p>No running instance of CST Studio Suite is required for data access.</p>
+<p>Supported are unpacked and unprotected project files generated with CST Studio Suite 2025 or CST Studio Suite 2026.</p>
+<p>To understand how this module can be used, see the <a class="reference internal" href="#examples">Examples</a> section of the documentation.</p>
+<dl class="py function">
+<dt class="sig sig-object py" id="cst.results.print_version_info">
+<span class="sig-name descname"><span class="pre">print_version_info</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#cst.results.print_version_info" title="Permalink to this definition">¶</a></dt>
+<dd><p>Print version information of this module</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="cst.results.get_version_info">
+<span class="sig-name descname"><span class="pre">get_version_info</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#cst.results.get_version_info" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get a dictionary containing version information of the files used by this module</p>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="cst.results.ProjectFile">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">ProjectFile</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cst.results.ProjectFile" title="Permalink to this definition">¶</a></dt>
+<dd><p>This class allows loading a CST file to access its results.</p>
+<p>Overloaded function.</p>
+<p><strong>__init__</strong>(<code class="docutils literal notranslate"><span class="pre">self:</span> <span class="pre">ProjectFile</span></code>) → <code class="docutils literal notranslate"><span class="pre">None</span></code></p>
+<p>Initialize an empty ProjectFile.</p>
+<p><strong>__init__</strong>(<code class="docutils literal notranslate"><span class="pre">self:</span> <span class="pre">ProjectFile,</span> <span class="pre">filepath:</span> <span class="pre">os.PathLike,</span> <span class="pre">allow_interactive:</span> <span class="pre">bool</span> <span class="pre">=</span> <span class="pre">False</span></code>) → <code class="docutils literal notranslate"><span class="pre">None</span></code></p>
+<p>Initialize a ProjectFile with a filepath to a CST file. See method ‘init’ for more details about the setting ‘allow_interactive’.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="cst.results.ProjectFile.__init__">
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cst.results.ProjectFile.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Overloaded function.</p>
+<p><strong>__init__</strong>(<code class="docutils literal notranslate"><span class="pre">self:</span> <span class="pre">ProjectFile</span></code>) → <code class="docutils literal notranslate"><span class="pre">None</span></code></p>
+<p>Initialize an empty ProjectFile.</p>
+<p><strong>__init__</strong>(<code class="docutils literal notranslate"><span class="pre">self:</span> <span class="pre">ProjectFile,</span> <span class="pre">filepath:</span> <span class="pre">os.PathLike,</span> <span class="pre">allow_interactive:</span> <span class="pre">bool</span> <span class="pre">=</span> <span class="pre">False</span></code>) → <code class="docutils literal notranslate"><span class="pre">None</span></code></p>
+<p>Initialize a ProjectFile with a filepath to a CST file. See method ‘init’ for more details about the setting ‘allow_interactive’.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="cst.results.ProjectFile.filename">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">filename</span></span><a class="headerlink" href="#cst.results.ProjectFile.filename" title="Permalink to this definition">¶</a></dt>
+<dd><p>The filename of the CST project.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cst.results.ProjectFile.get_3d">
+<span class="sig-name descname"><span class="pre">get_3d</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#cst.results.ResultModule" title="cst.results.ResultModule"><span class="pre">ResultModule</span></a></span></span><a class="headerlink" href="#cst.results.ProjectFile.get_3d" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the 3D submodule of a CST project.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cst.results.ProjectFile.get_schematic">
+<span class="sig-name descname"><span class="pre">get_schematic</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#cst.results.ResultModule" title="cst.results.ResultModule"><span class="pre">ResultModule</span></a></span></span><a class="headerlink" href="#cst.results.ProjectFile.get_schematic" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the Schematic submodule of a CST project.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cst.results.ProjectFile.init">
+<span class="sig-name descname"><span class="pre">init</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">filepath</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">os.PathLike</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">allow_interactive</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#cst.results.ProjectFile.init" title="Permalink to this definition">¶</a></dt>
+<dd><p>Initialize a ProjectFile with a filepath to a CST file. The setting ‘allow_interactive=True’ allows accessing a project which can be simultaneously opened in CST Studio Suite. In this interactive mode, data access can be done after ‘Save’ was triggered in CST Studio Suite. If any changes are made in CST Studio Suite to the project without saving (e.g. a solver is started), the retrieved data will be outdated or ill-formed. It is up to the user to ensure that the project is not in an intermediate state. Also note that, when accessing many result items, performance can be considerably lower than for ‘allow_interactive=False’.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cst.results.ProjectFile.list_subprojects">
+<span class="sig-name descname"><span class="pre">list_subprojects</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#cst.results.ProjectFile.list_subprojects" title="Permalink to this definition">¶</a></dt>
+<dd><p>List tree paths which represent subprojects (i.e. Simulation Projects Tasks or Block Simulation Tasks).</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cst.results.ProjectFile.load_subproject">
+<span class="sig-name descname"><span class="pre">load_subproject</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">treepath</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#cst.results.ProjectFile" title="cst.results.ProjectFile"><span class="pre">ProjectFile</span></a></span></span><a class="headerlink" href="#cst.results.ProjectFile.load_subproject" title="Permalink to this definition">¶</a></dt>
+<dd><p>Load a subproject from a tree path.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="cst.results.ResultModule">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">ResultModule</span></span><a class="headerlink" href="#cst.results.ResultModule" title="Permalink to this definition">¶</a></dt>
+<dd><p>This class provides an interface to access the 3D or Schematic results submodule of a of a CST project.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="cst.results.ResultModule.get_all_run_ids">
+<span class="sig-name descname"><span class="pre">get_all_run_ids</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">max_mesh_passes_only</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#cst.results.ResultModule.get_all_run_ids" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="simple">
+<dt>Get all existing run ids (independent of a tree path).</dt><dd><p>In case of a mesh adaptation, max_mesh_passes_only=True yields only results with the highest mesh pass.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cst.results.ResultModule.get_parameter_combination">
+<span class="sig-name descname"><span class="pre">get_parameter_combination</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">run_id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">dict</span></span></span><a class="headerlink" href="#cst.results.ResultModule.get_parameter_combination" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the parameter combination which corresponds to the provided run id.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cst.results.ResultModule.get_result2d_item">
+<span class="sig-name descname"><span class="pre">get_result2d_item</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">treepath</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#cst.results.Result2DItem" title="cst.results.Result2DItem"><span class="pre">Result2DItem</span></a></span></span><a class="headerlink" href="#cst.results.ResultModule.get_result2d_item" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get 2D (colormap) result of a navigation tree item.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cst.results.ResultModule.get_result_item">
+<span class="sig-name descname"><span class="pre">get_result_item</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">treepath</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">run_id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">load_impedances</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#cst.results.ResultItem" title="cst.results.ResultItem"><span class="pre">ResultItem</span></a></span></span><a class="headerlink" href="#cst.results.ResultModule.get_result_item" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get result of a navigation tree item. The setting ‘load_impedances=False’ omits automatic loading of reference impedances.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cst.results.ResultModule.get_run_ids">
+<span class="sig-name descname"><span class="pre">get_run_ids</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">treepath</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">skip_nonparametric</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#cst.results.ResultModule.get_run_ids" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get all existing run ids for a tree item. The setting ‘skip_nonparametric=True’ enforces run id = 0 to be excluded from the list.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cst.results.ResultModule.get_tree_items">
+<span class="sig-name descname"><span class="pre">get_tree_items</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">filter</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'0D/1D'</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#cst.results.ResultModule.get_tree_items" title="Permalink to this definition">¶</a></dt>
+<dd><p>List navigation tree items. Supported filter options are ‘0D/1D’ and ‘colormap’.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="cst.results.ResultItem">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">ResultItem</span></span><a class="headerlink" href="#cst.results.ResultItem" title="Permalink to this definition">¶</a></dt>
+<dd><p>This class represents the result data of a navigation tree item of a CST project for a single parameter combination.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="cst.results.ResultItem.get_data">
+<span class="sig-name descname"><span class="pre">get_data</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">list</span></span></span><a class="headerlink" href="#cst.results.ResultItem.get_data" title="Permalink to this definition">¶</a></dt>
+<dd><p>The data as list of tuples, or a double value.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cst.results.ResultItem.get_parameter_combination">
+<span class="sig-name descname"><span class="pre">get_parameter_combination</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">dict</span></span></span><a class="headerlink" href="#cst.results.ResultItem.get_parameter_combination" title="Permalink to this definition">¶</a></dt>
+<dd><p>The parameter combination which was used to generate the result.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cst.results.ResultItem.get_ref_imp_data">
+<span class="sig-name descname"><span class="pre">get_ref_imp_data</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">object</span></span></span><a class="headerlink" href="#cst.results.ResultItem.get_ref_imp_data" title="Permalink to this definition">¶</a></dt>
+<dd><p>The reference impedance of the result.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cst.results.ResultItem.get_xdata">
+<span class="sig-name descname"><span class="pre">get_xdata</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">object</span></span></span><a class="headerlink" href="#cst.results.ResultItem.get_xdata" title="Permalink to this definition">¶</a></dt>
+<dd><p>The x-axis of the result.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cst.results.ResultItem.get_ydata">
+<span class="sig-name descname"><span class="pre">get_ydata</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">object</span></span></span><a class="headerlink" href="#cst.results.ResultItem.get_ydata" title="Permalink to this definition">¶</a></dt>
+<dd><p>The y-axis of the result.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="cst.results.ResultItem.length">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">length</span></span><a class="headerlink" href="#cst.results.ResultItem.length" title="Permalink to this definition">¶</a></dt>
+<dd><p>The number of points returned by ‘get_ydata’.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="cst.results.ResultItem.run_id">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">run_id</span></span><a class="headerlink" href="#cst.results.ResultItem.run_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>The run id of the result.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="cst.results.ResultItem.title">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">title</span></span><a class="headerlink" href="#cst.results.ResultItem.title" title="Permalink to this definition">¶</a></dt>
+<dd><p>The title of the result.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="cst.results.ResultItem.treepath">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">treepath</span></span><a class="headerlink" href="#cst.results.ResultItem.treepath" title="Permalink to this definition">¶</a></dt>
+<dd><p>The navigation tree path of the result.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="cst.results.ResultItem.xlabel">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">xlabel</span></span><a class="headerlink" href="#cst.results.ResultItem.xlabel" title="Permalink to this definition">¶</a></dt>
+<dd><p>The x-label of the result.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="cst.results.ResultItem.ylabel">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">ylabel</span></span><a class="headerlink" href="#cst.results.ResultItem.ylabel" title="Permalink to this definition">¶</a></dt>
+<dd><p>The y-label of the result.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="cst.results.Result2DItem">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">Result2DItem</span></span><a class="headerlink" href="#cst.results.Result2DItem" title="Permalink to this definition">¶</a></dt>
+<dd><p>This class represents the result data of a 2D (colormap) result navigation tree item of a CST project.</p>
+<dl class="py property">
+<dt class="sig sig-object py" id="cst.results.Result2DItem.dataunit">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">dataunit</span></span><a class="headerlink" href="#cst.results.Result2DItem.dataunit" title="Permalink to this definition">¶</a></dt>
+<dd><p>The unit of the result data.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cst.results.Result2DItem.get_data">
+<span class="sig-name descname"><span class="pre">get_data</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">list</span></span></span><a class="headerlink" href="#cst.results.Result2DItem.get_data" title="Permalink to this definition">¶</a></dt>
+<dd><p>The data as a list of lists. The data layout is in row-major order.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cst.results.Result2DItem.get_xpositions">
+<span class="sig-name descname"><span class="pre">get_xpositions</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">list</span></span></span><a class="headerlink" href="#cst.results.Result2DItem.get_xpositions" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sampling points on the x-axis.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cst.results.Result2DItem.get_ypositions">
+<span class="sig-name descname"><span class="pre">get_ypositions</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">list</span></span></span><a class="headerlink" href="#cst.results.Result2DItem.get_ypositions" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sampling points on the y-axis.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="cst.results.Result2DItem.nx">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">nx</span></span><a class="headerlink" href="#cst.results.Result2DItem.nx" title="Permalink to this definition">¶</a></dt>
+<dd><p>Number of sampling points on the x-axis.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="cst.results.Result2DItem.ny">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">ny</span></span><a class="headerlink" href="#cst.results.Result2DItem.ny" title="Permalink to this definition">¶</a></dt>
+<dd><p>Number of sampling points on the y-axis.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="cst.results.Result2DItem.title">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">title</span></span><a class="headerlink" href="#cst.results.Result2DItem.title" title="Permalink to this definition">¶</a></dt>
+<dd><p>The title of the result.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="cst.results.Result2DItem.xlabel">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">xlabel</span></span><a class="headerlink" href="#cst.results.Result2DItem.xlabel" title="Permalink to this definition">¶</a></dt>
+<dd><p>The x-label of the result.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="cst.results.Result2DItem.xmax">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">xmax</span></span><a class="headerlink" href="#cst.results.Result2DItem.xmax" title="Permalink to this definition">¶</a></dt>
+<dd><p>The maximum of the x-axis.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="cst.results.Result2DItem.xmin">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">xmin</span></span><a class="headerlink" href="#cst.results.Result2DItem.xmin" title="Permalink to this definition">¶</a></dt>
+<dd><p>The minimum of the x-axis.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="cst.results.Result2DItem.xunit">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">xunit</span></span><a class="headerlink" href="#cst.results.Result2DItem.xunit" title="Permalink to this definition">¶</a></dt>
+<dd><p>The unit of the x-axis.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="cst.results.Result2DItem.ylabel">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">ylabel</span></span><a class="headerlink" href="#cst.results.Result2DItem.ylabel" title="Permalink to this definition">¶</a></dt>
+<dd><p>The y-label of the result.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="cst.results.Result2DItem.ymax">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">ymax</span></span><a class="headerlink" href="#cst.results.Result2DItem.ymax" title="Permalink to this definition">¶</a></dt>
+<dd><p>The maximum of the y-axis.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="cst.results.Result2DItem.ymin">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">ymin</span></span><a class="headerlink" href="#cst.results.Result2DItem.ymin" title="Permalink to this definition">¶</a></dt>
+<dd><p>The minimum of the y-axis.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="cst.results.Result2DItem.yunit">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">yunit</span></span><a class="headerlink" href="#cst.results.Result2DItem.yunit" title="Permalink to this definition">¶</a></dt>
+<dd><p>The unit of the y-axis.</p>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="general-notes">
+<h2>General Notes<a class="headerlink" href="#general-notes" title="Permalink to this heading">¶</a></h2>
+<p>This module supports only access to unpacked CST files. A packed CST project file (generated via “Archive As”) can be extracted by opening it with CST Studio Suite. If the project has subprojects (see Examples), they need to be unpacked recursively as well (i.e. by double-clicking on the corresponding subproject tree entry in Schematic, then saving the parent project).</p>
+<p>Protected project files are not supported.</p>
+<p>Please also note that access to projects which are being simulated in an open CST Studio Suite is not supported.</p>
+</section>
+<section id="examples">
+<h2>Examples<a class="headerlink" href="#examples" title="Permalink to this heading">¶</a></h2>
+<dl>
+<dt><strong>Introduction</strong></dt><dd><p>The CST Studio Suite installation comes with a Python interpreter, so there is no need to additionally install Python to follow the examples.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>For simplicity, the following examples assume a Windows OS. However, Linux is supported as well.</p>
+</div>
+<p>To open a Python console, browse for the <code class="file docutils literal notranslate"><span class="pre">\AMD64\python</span></code> subfolder of the CST Studio Suite installation (e.g.
+<code class="file docutils literal notranslate"><span class="pre">C:\Program</span> <span class="pre">Files</span> <span class="pre">(x86)\CST</span> <span class="pre">STUDIO</span> <span class="pre">SUITE</span> <span class="pre">2026\AMD64\python</span></code>) and run <code class="file docutils literal notranslate"><span class="pre">python(.bat)</span></code>.</p>
+</dd>
+<dt><strong>Example 1 - Access S-Parameter data</strong></dt><dd><p>The following code loads S-Parameter data of a 3D project.</p>
+<p>For this example, take any 3D project which contains an S-Parameter <em>S1,1</em>, or create one from <a class="reference internal" href="#scratch">scratch</a>. Open the project in CST Studio Suite, save it to an appropriate path (e.g. “C:\demo\project.cst”) and close CST Studio Suite.</p>
+<p>Then load the project and address <em>S1,1</em> via its navigation tree path:</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span><span class="w"> </span><span class="nn">cst.results</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">project</span> <span class="o">=</span> <span class="n">cst</span><span class="o">.</span><span class="n">results</span><span class="o">.</span><span class="n">ProjectFile</span><span class="p">(</span><span class="sa">r</span><span class="s2">&quot;C:\demo\project.cst&quot;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">s11</span> <span class="o">=</span> <span class="n">project</span><span class="o">.</span><span class="n">get_3d</span><span class="p">()</span><span class="o">.</span><span class="n">get_result_item</span><span class="p">(</span><span class="sa">r</span><span class="s2">&quot;1D Results\S-Parameters\S1,1&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>The returned object is of the class <a class="reference internal" href="#cst.results.ResultItem" title="cst.results.ResultItem"><code class="xref py py-class docutils literal notranslate"><span class="pre">ResultItem</span></code></a>, which offers a variety of functions and properties to have a fine-grained data access to a 0D/1D Result.
+To get the x-axis data, use <a class="reference internal" href="#cst.results.ResultItem.get_xdata" title="cst.results.ResultItem.get_xdata"><code class="xref py py-func docutils literal notranslate"><span class="pre">get_xdata()</span></code></a> and <a class="reference internal" href="#cst.results.ResultItem.xlabel" title="cst.results.ResultItem.xlabel"><code class="xref py py-attr docutils literal notranslate"><span class="pre">xlabel</span></code></a>. The function <a class="reference internal" href="#cst.results.ResultItem.get_data" title="cst.results.ResultItem.get_data"><code class="xref py py-func docutils literal notranslate"><span class="pre">get_data()</span></code></a> returns the data as list of tuples with varying number of entries, or a double value.</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">s11</span><span class="o">.</span><span class="n">get_xdata</span><span class="p">()</span>
+<span class="go">[8.0, 9.0, 10.0]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">s11</span><span class="o">.</span><span class="n">xlabel</span>
+<span class="go">&#39;Frequency / GHz&#39;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">s11</span><span class="o">.</span><span class="n">get_data</span><span class="p">()</span>
+<span class="go">[(8.0, (0.011821912601590157+0.26499754190444946j), (1066.824324690301+0j)),</span>
+<span class="go">(9.0, (0.10851031541824341-0.052459076046943665j), (678.7112974398144+0j)),</span>
+<span class="go">(10.0, (-0.007742199115455151-0.06290644407272339j), (568.406116209625+0j))]</span>
+</pre></div>
+</div>
+<p>In this case, the first tuple entry in the list represents the frequency of the S-Parameter, the second tuple entry represents the complex-valued S-Parameter and the third entry represents the complex-valued Reference Impedance of the S-Parameter.</p>
+<p>The returned object type of <a class="reference internal" href="#cst.results.ResultItem.get_data" title="cst.results.ResultItem.get_data"><code class="xref py py-func docutils literal notranslate"><span class="pre">get_data()</span></code></a> depends on the type of the loaded result. For 1D Results without Reference Impedance, this will be a list of tuples with two entries, where the second tuple entry may be complex-valued or not. For 0D Results, the method’s return value will not be a list, but a single double value.</p>
+<div class="admonition-set-up-a-demo-example-project admonition" id="scratch">
+<p class="admonition-title">Set up a demo example project</p>
+<p>In case you want to set up a demo example project from scratch, open an empty CST Studio Suite and select the <a class="reference external" href="../../userinterface/elements/backstage.htm#The_New_and_Recent_tab">New and Recent</a> tab. From the <em>Modules/Tools</em> section, pick <em>3D Simulation-&gt; High Frequency</em>. This will open an empty 3D project. From the <em>Home Ribbon</em>, select <em>VBA Macros-&gt;Construct-&gt;Demo Examples-&gt;Waveguide T Splitter</em>. This will run a construction VBA macro.
+Start the simulation run to obtain 0D/1D Results. Save it and close CST Studio Suite.</p>
+</div>
+</dd>
+<dt><strong>Example 2 - Access subproject data</strong></dt><dd><p>The following example shows how subproject data of a Schematic Task can be accessed.</p>
+<p>To set up the example project, please open CST Studio Suite, go to the <a class="reference external" href="../../userinterface/componentlibrary/component_library.htm">Component Library</a>
+and use the search bar in the top right corner to find the <a class="reference external" href="../../mergedProjects/EXP_DES/workflow/assemblies/assembly.htm">“Antenna Reflector Assembly”</a> example.
+Open it, save it to an appropriate path (e.g. “C:\demo\Antenna Reflector Assembly.cst”) and close CST Studio Suite.</p>
+<p>To get the treepaths of all existing 0D/1D Results, the method <a class="reference internal" href="#cst.results.ResultModule.get_tree_items" title="cst.results.ResultModule.get_tree_items"><code class="xref py py-func docutils literal notranslate"><span class="pre">get_tree_items()</span></code></a> of the project’s Schematic <a class="reference internal" href="#cst.results.ResultModule" title="cst.results.ResultModule"><code class="xref py py-class docutils literal notranslate"><span class="pre">ResultModule</span></code></a> can be used.</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span><span class="w"> </span><span class="nn">cst.results</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">project</span> <span class="o">=</span> <span class="n">cst</span><span class="o">.</span><span class="n">results</span><span class="o">.</span><span class="n">ProjectFile</span><span class="p">(</span><span class="sa">r</span><span class="s2">&quot;C:\demo\Antenna Reflector Assembly.cst&quot;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">project</span><span class="o">.</span><span class="n">get_schematic</span><span class="p">()</span><span class="o">.</span><span class="n">get_tree_items</span><span class="p">()</span>
+<span class="go">[&#39;Tasks\\HS1\\1D Results\\Convergence\\Excitation [[Source2]1]\\Frequency = 5 GHz&#39;,</span>
+<span class="go"> &#39;Tasks\\HS1\\1D Results\\Efficiencies\\Rad. Efficiency [[Source2]1]&#39;,</span>
+<span class="go"> &#39;Tasks\\HS1\\1D Results\\Efficiencies\\Tot. Efficiency [[Source2]1]&#39;,</span>
+<span class="go"> &#39;Tasks\\HS1\\1D Results\\Power\\Excitation [[Source2]1]\\Power Accepted&#39;,</span>
+<span class="go"> &#39;Tasks\\HS1\\1D Results\\Power\\Excitation [[Source2]1]\\Power Radiated&#39;,</span>
+<span class="go"> &#39;Tasks\\HS1\\1D Results\\Power\\Excitation [[Source2]1]\\Power Stimulated&#39;,</span>
+<span class="go"> &#39;Tasks\\HS1\\1D Results\\Reference Impedance\\ZRef [Source2]1&#39;,</span>
+<span class="go"> &#39;Tasks\\HS1\\1D Results\\S-Parameters\\S[Source2]1,[Source2]1&#39;]</span>
+</pre></div>
+</div>
+<p>However, you may notice that the project has more tree items which are not listed here, e.g. below <code class="docutils literal notranslate"><span class="pre">Tasks\\SP1</span></code>.
+These results are part of subprojects and need to be opened explicitly. Subprojects are represented by some Generalized Simulation Tasks in the Schematic,
+e.g. <a class="reference external" href="../../mergedProjects/DES/analysis/simulation/simulation_task_overview.htm#Simulation_Project">Simulation Project Tasks</a>, <a class="reference external" href="../../mergedProjects/DES/analysis/simulation/simulation_task_overview.htm#Electrical_Machine_Task">Electrical Machine Tasks</a>, <a class="reference external" href="../../mergedProjects/DES/analysis/simulation/simulation_task_overview.htm#Block_Simulation_Task">Block Simulation Tasks</a> or <a class="reference external" href="../../mergedProjects/DES/analysis/simulation/simulation_task_overview.htm#Hybrid_Solver_Task">Hybrid Solver Tasks</a>.</p>
+<p>To get the treepaths of all existing subprojects, use the command <a class="reference internal" href="#cst.results.ProjectFile.list_subprojects" title="cst.results.ProjectFile.list_subprojects"><code class="xref py py-func docutils literal notranslate"><span class="pre">list_subprojects()</span></code></a>.</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">project</span><span class="o">.</span><span class="n">list_subprojects</span><span class="p">()</span>
+<span class="go">[&#39;Tasks\\HS-UniDir1\\Platform1&#39;,</span>
+<span class="go"> &#39;Tasks\\HS-UniDir1\\Source1&#39;,</span>
+<span class="go"> &#39;Tasks\\HS1\\Platform2&#39;,</span>
+<span class="go"> &#39;Tasks\\HS1\\Source2&#39;,</span>
+<span class="go"> &#39;Tasks\\SP1&#39;]</span>
+</pre></div>
+</div>
+<p>Using one of the obtained tree paths, the data of the corresponding subproject can be loaded by via <a class="reference internal" href="#cst.results.ProjectFile.load_subproject" title="cst.results.ProjectFile.load_subproject"><code class="xref py py-func docutils literal notranslate"><span class="pre">load_subproject()</span></code></a>. The returned object is again a <a class="reference internal" href="#cst.results.ProjectFile" title="cst.results.ProjectFile"><code class="xref py py-class docutils literal notranslate"><span class="pre">ProjectFile</span></code></a> which can be accessed like any other CST project.
+To show the tree items of the subproject, call <a class="reference internal" href="#cst.results.ResultModule.get_tree_items" title="cst.results.ResultModule.get_tree_items"><code class="xref py py-func docutils literal notranslate"><span class="pre">get_tree_items()</span></code></a> of the project’s 3D <a class="reference internal" href="#cst.results.ResultModule" title="cst.results.ResultModule"><code class="xref py py-class docutils literal notranslate"><span class="pre">ResultModule</span></code></a>.</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">sub_project</span> <span class="o">=</span> <span class="n">project</span><span class="o">.</span><span class="n">load_subproject</span><span class="p">(</span><span class="s2">&quot;Tasks</span><span class="se">\\</span><span class="s2">SP1&quot;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">sub_project</span><span class="o">.</span><span class="n">get_3d</span><span class="p">()</span><span class="o">.</span><span class="n">get_tree_items</span><span class="p">()</span>
+<span class="go">[&#39;1D Results\\Balance\\Balance [1]&#39;,</span>
+<span class="go"> &#39;1D Results\\Efficiencies\\Rad. Efficiency [1]&#39;,</span>
+<span class="go"> &#39;1D Results\\Efficiencies\\Tot. Efficiency [1]&#39;,</span>
+<span class="go"> &#39;1D Results\\Energy\\Energy [1]&#39;,</span>
+<span class="go">...]</span>
+</pre></div>
+</div>
+</dd>
+<dt><strong>Example 3 - Access parametric data</strong></dt><dd><p>The following example shows how existing parametric 0D/1D Results can be accessed.</p>
+<p>To set up the example project, please open CST Studio Suite, go to the <a class="reference external" href="../../userinterface/componentlibrary/component_library.htm">Component Library</a> and use the search bar in the top right corner to find the <a class="reference external" href="../../mergedProjects/EXP_DES/transient_circuit_simulations/examples/vco_parameter_sweep.htm">“VCO Parameter Sweep”</a> example.
+Open it, save it to an appropriate path (e.g. “C:\demo\VCO Parameter Sweep.cst”) and close CST Studio Suite.</p>
+<p>Typically, CST Studio Suite stores all 0D/1D Results which are calculated during a parameter sweep of simulation runs. This allows studying the relationship of parameters and results.
+In CST Studio Suite, a parameter combination is represented by an identifier called <em>run id</em>. A detailed description about parametric data handling can be found in the <a class="reference external" href="../../userinterface/views/parametricresultsoverview.htm">Parametric Results Overview</a>.</p>
+<p>In Python, the <em>run id</em> is depicted by an integer.</p>
+<p>Note that this is a Circuits &amp; Systems project, therefore the Schematic <a class="reference internal" href="#cst.results.ResultModule" title="cst.results.ResultModule"><code class="xref py py-class docutils literal notranslate"><span class="pre">ResultModule</span></code></a> needs to be queried. To list all existing <em>run ids</em>, use <a class="reference internal" href="#cst.results.ResultModule.get_all_run_ids" title="cst.results.ResultModule.get_all_run_ids"><code class="xref py py-func docutils literal notranslate"><span class="pre">get_all_run_ids()</span></code></a>.</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span><span class="w"> </span><span class="nn">cst.results</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">project</span> <span class="o">=</span> <span class="n">cst</span><span class="o">.</span><span class="n">results</span><span class="o">.</span><span class="n">ProjectFile</span><span class="p">(</span><span class="sa">r</span><span class="s2">&quot;C:\demo\VCO Parameter Sweep.cst&quot;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">schematic</span> <span class="o">=</span> <span class="n">project</span><span class="o">.</span><span class="n">get_schematic</span><span class="p">()</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">schematic</span><span class="o">.</span><span class="n">get_all_run_ids</span><span class="p">()</span>
+<span class="go">[0, 1, 2, 3, 4, 5, 6]</span>
+</pre></div>
+</div>
+<p>This show all <em>run ids</em> which were created in the Schematic submodule of the project. However, not all tree entries necessarily have results for all existing <em>run ids</em>, since the project setup allows a fine-grained control about which results are stored during a parameter sweep.</p>
+<p>Let’s first query the existing <em>run ids</em> of a Postprocessing Task result item via <a class="reference internal" href="#cst.results.ResultModule.get_run_ids" title="cst.results.ResultModule.get_run_ids"><code class="xref py py-func docutils literal notranslate"><span class="pre">get_run_ids()</span></code></a>.</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">schematic</span><span class="o">.</span><span class="n">get_run_ids</span><span class="p">(</span><span class="s1">&#39;Tasks</span><span class="se">\\</span><span class="s1">Sweep Tuning Voltage</span><span class="se">\\</span><span class="s1">Tran1</span><span class="se">\\</span><span class="s1">PP1</span><span class="se">\\</span><span class="s1">0D</span><span class="se">\\</span><span class="s1">Oscillation Frequency&#39;</span><span class="p">)</span>
+<span class="go">[0, 1, 2, 3, 4, 5, 6]</span>
+</pre></div>
+</div>
+<p>In this case, for all runs there is also a result. Now let’s query the existing runs of the <em>Port1</em> item in the Transient Task.</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">schematic</span><span class="o">.</span><span class="n">get_run_ids</span><span class="p">(</span><span class="s1">&#39;Tasks</span><span class="se">\\</span><span class="s1">Sweep Tuning Voltage</span><span class="se">\\</span><span class="s1">Tran1</span><span class="se">\\</span><span class="s1">TD Currents</span><span class="se">\\</span><span class="s1">Port1&#39;</span><span class="p">)</span>
+<span class="go">[0]</span>
+</pre></div>
+</div>
+<p>For this tree item, only results are stored which correspond to <em>run id=0</em>.
+If we try to get the <a class="reference internal" href="#cst.results.ResultItem" title="cst.results.ResultItem"><code class="xref py py-class docutils literal notranslate"><span class="pre">ResultItem</span></code></a> for a non-existing <em>run id</em>, we get an error. Note that the method <a class="reference internal" href="#cst.results.ResultModule.get_result_item" title="cst.results.ResultModule.get_result_item"><code class="xref py py-func docutils literal notranslate"><span class="pre">get_result_item()</span></code></a> has an argument for the queried <em>run id</em> which defaults to 0.</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">port1</span> <span class="o">=</span> <span class="n">schematic</span><span class="o">.</span><span class="n">get_result_item</span><span class="p">(</span><span class="s1">&#39;Tasks</span><span class="se">\\</span><span class="s1">Sweep Tuning Voltage</span><span class="se">\\</span><span class="s1">Tran1</span><span class="se">\\</span><span class="s1">TD Currents</span><span class="se">\\</span><span class="s1">Port1&#39;</span><span class="p">,</span><span class="mi">5</span><span class="p">)</span>
+<span class="go">ValueError: ResultItem does not exist for run id=5.</span>
+</pre></div>
+</div>
+<p>Querying the existing result with <em>run id=0</em> works.</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">port1</span> <span class="o">=</span> <span class="n">schematic</span><span class="o">.</span><span class="n">get_result_item</span><span class="p">(</span><span class="s1">&#39;Tasks</span><span class="se">\\</span><span class="s1">Sweep Tuning Voltage</span><span class="se">\\</span><span class="s1">Tran1</span><span class="se">\\</span><span class="s1">TD Currents</span><span class="se">\\</span><span class="s1">Port1&#39;</span><span class="p">,</span><span class="mi">0</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">port1</span><span class="o">.</span><span class="n">length</span>
+<span class="go">23779</span>
+</pre></div>
+</div>
+<p>To resolve a <em>run id</em> to its parameter combination, use <a class="reference internal" href="#cst.results.ResultModule.get_parameter_combination" title="cst.results.ResultModule.get_parameter_combination"><code class="xref py py-func docutils literal notranslate"><span class="pre">get_parameter_combination()</span></code></a>.
+This method returns a dictionary which contains the parameter names and values.</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">schematic</span><span class="o">.</span><span class="n">get_parameter_combination</span><span class="p">(</span><span class="mi">4</span><span class="p">)</span>
+<span class="go">{&#39;VTUNE&#39;: 1.5,</span>
+<span class="go"> &#39;VBIAS&#39;: 2.7,</span>
+<span class="go"> &#39;LE&#39;: 0.25, ...}</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">schematic</span><span class="o">.</span><span class="n">get_parameter_combination</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
+<span class="go">{&#39;VTUNE&#39;: 2.0,</span>
+<span class="go"> &#39;VBIAS&#39;: 2.7,</span>
+<span class="go"> &#39;LE&#39;: 0.25, ...}</span>
+</pre></div>
+</div>
+<p>For convenience, a loaded <a class="reference internal" href="#cst.results.ResultItem" title="cst.results.ResultItem"><code class="xref py py-class docutils literal notranslate"><span class="pre">ResultItem</span></code></a> also has a notion about its parameter combination. It offers <a class="reference internal" href="#cst.results.ResultItem.run_id" title="cst.results.ResultItem.run_id"><code class="xref py py-attr docutils literal notranslate"><span class="pre">run_id</span></code></a> and <a class="reference internal" href="#cst.results.ResultItem.get_parameter_combination" title="cst.results.ResultItem.get_parameter_combination"><code class="xref py py-func docutils literal notranslate"><span class="pre">get_parameter_combination()</span></code></a>.</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">f</span> <span class="o">=</span> <span class="n">schematic</span><span class="o">.</span><span class="n">get_result_item</span><span class="p">(</span><span class="s1">&#39;Tasks</span><span class="se">\\</span><span class="s1">Sweep Tuning Voltage</span><span class="se">\\</span><span class="s1">Tran1</span><span class="se">\\</span><span class="s1">PP1</span><span class="se">\\</span><span class="s1">0D</span><span class="se">\\</span><span class="s1">Oscillation Frequency&#39;</span><span class="p">,</span><span class="mi">5</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">f</span><span class="o">.</span><span class="n">run_id</span>
+<span class="go">5</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">f</span><span class="o">.</span><span class="n">get_parameter_combination</span><span class="p">()</span>
+<span class="go">{&#39;VTUNE&#39;: 2.0,</span>
+<span class="go"> &#39;VBIAS&#39;: 2.7,</span>
+<span class="go"> &#39;LE&#39;: 0.25, ...}</span>
+</pre></div>
+</div>
+<p>In case one is interested in the relationship of parameter “VTUNE” to the result value “Oscillation Frequency”, one can read the data as follows:</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">tree_item</span> <span class="o">=</span> <span class="s1">&#39;Tasks</span><span class="se">\\</span><span class="s1">Sweep Tuning Voltage</span><span class="se">\\</span><span class="s1">Tran1</span><span class="se">\\</span><span class="s1">PP1</span><span class="se">\\</span><span class="s1">0D</span><span class="se">\\</span><span class="s1">Oscillation Frequency&#39;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">x</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">y</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">run_ids</span> <span class="o">=</span> <span class="n">schematic</span><span class="o">.</span><span class="n">get_run_ids</span><span class="p">(</span><span class="n">tree_item</span><span class="p">,</span><span class="n">skip_nonparametric</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="k">for</span> <span class="n">run</span> <span class="ow">in</span> <span class="n">run_ids</span><span class="p">:</span>
+<span class="gp">&gt;&gt;&gt; </span>    <span class="n">result</span> <span class="o">=</span> <span class="n">schematic</span><span class="o">.</span><span class="n">get_result_item</span><span class="p">(</span><span class="n">tree_item</span><span class="p">,</span><span class="n">run</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span>    <span class="n">x</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">result</span><span class="o">.</span><span class="n">get_parameter_combination</span><span class="p">()[</span><span class="s1">&#39;VTUNE&#39;</span><span class="p">])</span>
+<span class="gp">&gt;&gt;&gt; </span>    <span class="n">y</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">result</span><span class="o">.</span><span class="n">get_ydata</span><span class="p">())</span>
+<span class="gp">&gt;&gt;&gt;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">x</span><span class="p">)):</span>
+<span class="gp">&gt;&gt;&gt; </span>    <span class="nb">print</span> <span class="p">(</span><span class="n">x</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="n">y</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>
+<span class="go">0.0 0.957083333333333</span>
+<span class="go">0.5 0.974583333333333</span>
+<span class="go">1.0 0.987916666666667</span>
+<span class="go">1.5 1.00166666666667</span>
+<span class="go">2.0 1.01125</span>
+<span class="go">2.5 1.01916666666667</span>
+</pre></div>
+</div>
+<p>Note that the loaded result “Oscillation Frequency” is a 0D Result, therefore the function <a class="reference internal" href="#cst.results.ResultItem.get_ydata" title="cst.results.ResultItem.get_ydata"><code class="xref py py-func docutils literal notranslate"><span class="pre">get_ydata()</span></code></a> returns a single double value. Since <em>run id=0</em> plays a special role (in particular, a copy of its results may exist with a different <em>run id</em>), we use
+the function <a class="reference internal" href="#cst.results.ResultModule.get_run_ids" title="cst.results.ResultModule.get_run_ids"><code class="xref py py-func docutils literal notranslate"><span class="pre">get_run_ids()</span></code></a> with the argument <em>skip_nonparametric=True</em> to exclude it from the list to avoid a potential result duplicate.
+The obtained x-y data now can be used for further processing or plotting.</p>
+</dd>
+</dl>
+</section>
+</section>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <div>
+    <h3><a href="../main.html">Table of Contents</a></h3>
+    <ul>
+<li><a class="reference internal" href="#">cst.results module</a><ul>
+<li><a class="reference internal" href="#topics">Topics</a></li>
+<li><a class="reference internal" href="#module-cst.results">Module Contents</a></li>
+<li><a class="reference internal" href="#general-notes">General Notes</a></li>
+<li><a class="reference internal" href="#examples">Examples</a></li>
+</ul>
+</li>
+</ul>
+
+  </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../main.html">CST Python Libraries  documentation</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">cst.results module</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+    &#169; Copyright 2009-2025 Dassault Systemes Deutschland GmbH. All rights reserved.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 7.1.2.
+    </div>
+  </body>
+</html>

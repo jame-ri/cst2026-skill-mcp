@@ -1,0 +1,1372 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="Adobe RoboHelp 11" />
+<title>Simulation Task Object</title>
+<link rel="StyleSheet" href="../online_help_vba.css" type="text/css" />
+<style type="text/css">
+/*<![CDATA[*/
+<!--
+body { border-bottom-style:None; }
+-->
+/*]]>*/
+</style>
+
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+        origWidth = innerWidth;
+        origHeight = innerHeight;
+        onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+/*<![CDATA[*/
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+-->
+/*]]>*/
+</style>
+
+<script type="text/javascript" language="javascript1.2" src="../whmsg.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript" src="../whver.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript1.2" src="../whutils.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript1.2" src="../whproxy.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript1.2" src="../whlang.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript1.2" src="../whtopic.js" charset="utf-8">
+</script>
+</head>
+<body>
+<script type="text/javascript" language="javascript1.2">
+//<![CDATA[
+<!--
+if (window.gbWhTopic)
+{
+        var strUrl = document.location.href;
+        var bc = 0;
+        var n = strUrl.toLowerCase().indexOf("bc-");
+        if(n != -1)
+        {
+                document.location.replace(strUrl.substring(0, n));
+                bc = strUrl.substring(n+3);
+        }
+
+        if (window.addTocInfo)
+        {
+        addTocInfo("Circuits & Systems VBA\nSimulation\nSimulationTask");
+
+        }
+        if (window.writeBtnStyle)
+                writeBtnStyle();
+
+        if (window.writeIntopicBar)
+                writeIntopicBar(0);
+
+        
+        document.write("<p style=\"font-family: Tahoma; font-size: 9pt; font-weight: 400;  font-style:normal; color: rgb(0, 0, 0); text-decoration:none; text-align: left\"> ");
+AddMasterBreadcrumbs("../index.htm", "font-family: Tahoma; font-size: 9pt; font-weight: 400;  font-style:normal; color: rgb(0, 0, 0); text-decoration:none; text-align: left", "|", "Home", "../special_vbaobjects/cstdesignstudiovbaobjects.htm");
+document.write("<a style=\"font-family: Tahoma; font-size: 9pt; font-weight: 400;  font-style:normal; color: rgb(0, 0, 0); text-decoration:none; text-align: left\" href=\"../special_vbaobjects/cstdesignstudiovbaobjects.htm\">Circuits & Systems VBA<\/a> | <a style=\"font-family: Tahoma; font-size: 9pt; font-weight: 400;  font-style:normal; color: rgb(0, 0, 0); text-decoration:none; text-align: left\" href=\"simulationtaskobject.htm\">Simulation<\/a> | SimulationTask<\/p>");
+
+}
+else
+        if (window.gbIE4)
+                document.location.reload();
+
+onLoadHandler = function()
+{
+  if (window.setRelStartPage)
+        {
+        setTimeout("setRelStartPage('../index.htm');", 1)
+
+    setTimeout("UpdateBreadCrumbsMarker();", 1);
+        }
+}
+
+if (window.addEventListener){  
+        window.addEventListener('load', onLoadHandler, false);   
+} else if (window.attachEvent){  
+        window.attachEvent('onload', onLoadHandler);  
+}
+
+function onSetStartPage()
+{
+  autoSync(1);
+  sendSyncInfo();
+  sendAveInfoOut();
+}
+//-->
+//]]>
+</script><script type="text/javascript" src="../ehlpdhtm.js" language="JavaScript1.2">
+</script>
+<table cellspacing="0" width="100%">
+<col style="width: 50%;" />
+<col style="width: 50%;" />
+<tr>
+<td style="vertical-align: middle; padding-top: 5px; padding-bottom: 5px;">
+<p style="margin-top: 0px; margin-bottom: 0px;"><img src="../3ds.png" alt="" style="border: none;" border="0" /></p>
+</td>
+<td style="vertical-align: middle;">
+<p style="text-align: right;"><a href="https://www.3ds.com/products-services/3dexperience/" target="_blank"><img src="../3dexp.png" alt="" style="border: none;" width="32" height="32" border="0" /></a></p>
+</td>
+</tr>
+</table>
+<h1>SimulationTask Object</h1>
+<p>Object referring to a simulation task. Use this object to create or to manipulate a simulation task.</p>
+<ul>
+<li class="p-VBA-Index-Category">
+<p class="VBA-Index-Category"><a href="#General_Methods">General Methods</a></p>
+</li>
+<li class="p-VBA-Index-Category">
+<p class="VBA-Index-Category"><a href="#Methods_Concerning_Properties">Methods Concerning Properties</a></p>
+</li>
+<li class="p-VBA-Index-Category">
+<p class="VBA-Index-Category"><a href="#Methods_Concerning_Result_Options">Methods Concerning Result Options</a></p>
+</li>
+<li class="p-VBA-Index-Category">
+<p class="VBA-Index-Category"><a href="#Monitor">Methods Concerning Monitor</a></p>
+</li>
+<li class="p-VBA-Index-Category">
+<p class="VBA-Index-Category"><a href="#Special_Methods">Special Methods</a></p>
+</li>
+<li class="p-VBA-Index-Category">
+<p class="VBA-Index-Category"><a href="#Queries">Queries</a></p>
+</li>
+<li class="p-VBA-Index-Category">
+<p class="VBA-Index-Category"><a href="#Default_Settings">Default Settings</a></p>
+</li>
+<li class="p-VBA-Index-Category">
+<p class="VBA-Index-Category"><a href="#Examples">Examples</a></p>
+</li>
+</ul>
+<p class="VBA-Heading-Category"><a name="General_Methods" id="General_Methods"></a>General Methods</p>
+<p class="VBA-Heading-Method">Reset</p>
+<p class="VBA-Text-Indent">Resets all internal settings to their default values.</p>
+<p class="VBA-Heading-Method">&#160;</p>
+<p class="VBA-Heading-Method">Type ( <span style="font-weight: normal;"><a href="../common_vbageneral/common_general_string.htm">string</a></span> <span style="font-style: italic;"><i>type</i></span> )</p>
+<p class="VBA-Text-Indent">Sets the type for a simulation task. This setting must be made before calling <span style="font-style: italic;"><i>Create</i></span>. The type can not be modified after the creation. Most task settings can be accessed by a simulation task object. In addition, specialized objects are available for some types of tasks. Valid task types and specialized objects are:</p>
+<table style="vertical-align: top; margin-left: 24px; left: 0px; top: 393px; height: 199px;" cellspacing="0" width="380">
+<col style="width: 35%;" />
+<col style="width: 65%;" />
+<tr style="vertical-align: top;">
+<th style="border: Solid 1px #000000; padding-right: 10px; padding-left: 10px;">
+<p>Type</p>
+</th>
+<th style="border-top: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-right: 10px; padding-left: 10px;">
+<p>Object</p>
+</th>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-right: 10px; padding-left: 10px;">
+<p>"s-parameters"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-right: 10px; padding-left: 10px;">
+<p>&#160;</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-right: 10px; padding-left: 10px;">
+<p>"dc"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-right: 10px; padding-left: 10px;">
+<p>&#160;</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-right: 10px; padding-left: 10px;">
+<p>"ac"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-right: 10px; padding-left: 10px;">
+<p>&#160;</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-right: 10px; padding-left: 10px;">
+<p>"spectral lines"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-right: 10px; padding-left: 10px;">
+<p>&#160;</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-right: 10px; padding-left: 10px;">
+<p>"mixer"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-right: 10px; padding-left: 10px;">
+<p>&#160;</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-right: 10px; padding-left: 10px;">
+<p>"amplifier"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-right: 10px; padding-left: 10px;">
+<p>&#160;</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-right: 10px; padding-left: 10px;">
+<p>"transient"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-right: 10px; padding-left: 10px;">
+<p>&#160;</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-right: 10px; padding-left: 10px;">
+<p>"ibisami"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-right: 10px; padding-left: 10px;">
+<p><a href="ibisami_task_object.htm">IbisAmiTask Object</a></p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-right: 10px; padding-left: 10px;">
+<p>"eye analysis"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-right: 10px; padding-left: 10px;">
+<p><a href="eyeanalysis_task_object.htm">EyeAnalysisTask Object</a></p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-right: 10px; padding-left: 10px;">
+<p>"template"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-right: 10px; padding-left: 10px;">
+<p>&#160;</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-right: 10px; padding-left: 10px;">
+<p>"sequence"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-right: 10px; padding-left: 10px;">
+<p>&#160;</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-right: 10px; padding-left: 10px;">
+<p>"array"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-right: 10px; padding-left: 10px;">
+<p><a href="phased_array_task_object.htm">Phased Array Antenna Task Object</a></p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-right: 10px; padding-left: 10px;">
+<p>"parameter sweep"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-right: 10px; padding-left: 10px;">
+<p><a href="parametersweepobject.htm">ParameterSweep Object</a></p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-right: 10px; padding-left: 10px;">
+<p>"optimization"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-right: 10px; padding-left: 10px;">
+<p><a href="optimizerobject.htm">Optimizer Object</a></p>
+</td>
+</tr>
+</table>
+<p class="VBA-Heading-Method">&#160;</p>
+<p class="VBA-Heading-Method">Name ( <a href="../common_vbageneral/common_general_name.htm" id="a9" style="font-weight: normal; font-style: normal;" name="a9">name</a> <span style="font-style: italic;"><i>taskname</i></span> )</p>
+<p class="VBA-Text-Indent" style="text-align: justify;">Sets the name of a simulation task before calling <span style="font-style: italic;"><i>Create</i></span>. Furthermore, this method can be used to select an existing task of your project. The task name needs to include all parent tasks for nested tasks, separated by backslashes, e.g. "Seq1\SPara1".</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">Create</p>
+<p class="VBA-Text-Indent">Creates a new simulation task.</p>
+<p class="VBA-Heading-Method">&#160;</p>
+<p class="VBA-Heading-Method">Delete</p>
+<p class="VBA-Text-Indent">Deletes the task with the given name. <span style="font-style: italic;"><i>Name</i></span> needs to be called before this function can be evaluated.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">Duplicate( <span style="font-weight: normal;"><a href="../common_vbageneral/common_general_bool_data_type.htm">bool</a></span> <span style="font-style: italic;"><i>copyResults</i></span> ) <a href="../common_vbageneral/common_general_string.htm" id="a1811" style="font-weight: normal; font-style: normal;" name="a1811">string</a></p>
+<p class="VBA-Text-Indent">Duplicates the task with the given name. <span style="font-weight: bold;">copyResults</span> specifies if available results are copied in the duplicated task. The name of the duplicated task is returned.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">Update</p>
+<p class="VBA-Text-Indent">Executes the task with the given name, including all sub tasks. <span style="font-style: italic;"><i>Name</i></span> needs to be called before this function can be evaluated.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Text-Indent"><span style="font-weight: bold;">Note:</span> To update all Tasks in the tree, the command &#160;"<span style="font-weight: bold;">UpdateResults</span>" can be used. This command is not part of the object SimulationTask.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">SetName ( <a href="../common_vbageneral/common_general_name.htm" id="a10" style="font-weight: normal; font-style: normal;" name="a10">name</a> <span style="font-style: italic;"><i>taskname</i></span> )</p>
+<p class="VBA-Text-Indent">Modifies the name of an existing simulation task. The name needs to include parent tasks, like for <span style="font-style: italic;"><i>Name</i></span>. By specifying a different parent part it is also possible to move a task from one parent to another.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">MoveInTree ( <a href="../common_vbageneral/common_general_name.htm" id="a20" style="font-weight: normal; font-style: normal;" name="a20">name</a> <span style="font-style: italic;"><i>newparent</i></span>, <a href="../common_vbageneral/common_general_name.htm" id="a22" style="font-weight: normal; font-style: normal;" name="a22">name</a> <span style="font-style: italic;"><i>nexttask</i></span> )</p>
+<p class="VBA-Text-Indent">Moves an existing simulation task to a different position in the tree. <span style="font-weight: bold;">newparent</span> specifies the new parent task (including parents of the parent like for <span style="font-style: italic;"><i>Name</i></span>). If <span style="font-weight: bold;">newparent</span> is empty the task will be moved to the top level. If <span style="font-weight: bold;">nexttask</span> is empty the task will be moved behind all tasks at the new level. If <span style="font-weight: bold;">nexttask</span> is not empty the task will be moved in front of <span style="font-weight: bold;">nexttask</span>. <span style="font-weight: bold;">nexttask</span> specifies the task name only (without parent tasks).</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">ValidateSetup</p>
+<p class="VBA-Text-Indent">Verifies that all task settings respect their restrictions. The function either writes a confirmation to the message window, or raises an error with a message explaining the problems found.</p>
+<p class="VBA-Heading-Category"><a name="Methods_Concerning_Properties" id="Methods_Concerning_Properties"></a>Methods Concerning Properties</p>
+<p class="VBA-Heading-Method">SetProperty ( <a href="../common_vbageneral/common_general_name.htm" id="a6" style="font-weight: normal; font-style: normal;" name="a6">name</a> <span style="font-style: italic;"><i>propertyname,</i></span> <span style="font-weight: normal;"><a href="../common_vbageneral/common_general_string.htm">string</a></span> <span style="font-style: italic;"><i>value</i></span> )</p>
+<p class="vba-heading-method">&#160;</p>
+<p class="VBA-Text-Indent">Sets the given value for the specified property. The following properties are available for the different simulation task types:</p>
+<table style="margin-right: 2px; margin-top: 3px; margin-bottom: 3px; margin-left: 24px; left: 0px; top: 1214px; height: 1554px;" width="1300" cellspacing="0">
+<col style="width: 8.02%;" />
+<col width="1275" />
+<tr style="vertical-align: center;">
+<td style="border: Solid 1px #000000; vertical-align: middle;">
+<p style="margin-left: 12px;">All tasks</p>
+</td>
+<td style="border-top: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; vertical-align: middle;">
+<p>"<span style="font-weight: bold;">enabled</span>" (possible values: "True" or "False"): enables/disables a simulation task.</p>
+</td>
+</tr>
+<tr style="vertical-align: center;">
+<td style="border-left: solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; vertical-align: middle;">
+<p style="margin-left: 12px;">All circuit simulation tasks</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; vertical-align: middle;">
+<p>"<span style="font-weight: bold;">parallelization</span> " (possible values: "Maximum", "None" or any positive integer): specifies how much parallelization is applied, the maximum possible number of threads, no parallelization, or a custom number of threads, respectively.</p>
+<p>"<span style="font-weight: bold;">auto solver</span>" (possible values: "True" or "False"): specifies whether the Nonlinear solver settings in the Solver Specials dialog of the task are calculated automatically and manual settings are ignored.</p>
+<p>"<span style="font-weight: bold;">error current</span>": specifies tolerance on error current (=sum of all currents to/from a node) in simulation</p>
+<p>"<span style="font-weight: bold;">tolerance type</span>" (possible values: "relative" or "absolute"): Type of tolerance on error current. Reference value is the impressed current.</p>
+<p>"<span style="font-weight: bold;">iterations</span>": specifies the maximum number of iterations in the calculation of the initial operation point.</p>
+<p>"<span style="font-weight: bold;">auto condition</span>" (possible values: "True" or "False"): specifies whether the Circuit condition settings in the Solver Specials dialog of the task are calculated automatically and manual settings are ignored.</p>
+<p>"<span style="font-weight: bold;">gmin</span>": conductance to ground, attached to possibly floating nodes to achieve convergence in circuit simulation. The conductance is calculated automatically if the expression evaluates to a negative number.</p>
+<p>"<span style="font-weight: bold;">rmin</span>": resistance value, below which resistors are treated as ideal shorts in circuit simulation.</p>
+<p><span style="font-weight: bold;">"s-parameter interpolation scheme"</span> &#160;(possible values: "real/imaginary" "magnitude/phase"): specifies the way how S-parameter data can be interpolated.</p>
+</td>
+</tr>
+<tr style="vertical-align: center;">
+<td style="border-left: solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; vertical-align: middle;">
+<p style="margin-left: 12px;">S-Parameters</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; vertical-align: middle;">
+<p>"<span style="font-weight: bold;">fmin</span>", "<span style="font-weight: bold;">fmax</span>": simulation frequency range. These settings are only used if "maximum frequency range" is off.</p>
+<p>"<span style="font-weight: bold;">maximum frequency range</span>" (possible values: "True" or "False"): enables or disables the maximum frequency sweep range. If the maximum frequency range is disabled, the frequencies set by the properties "fmin" and "fmax" will be used. If the maximum frequency range is enabled, those properties are ignored. The maximum frequency range must be disabled if the model is not frequency limited.</p>
+<p>"<span style="font-weight: bold;">td block representation</span>" (possible values: "True" or "False"): indicates whether a time domain representation, i.e., vector fitting, is used for frequency-dependent blocks.</p>
+<p>"<span style="font-weight: bold;">circuit simulator</span>": the type of simulator to be used (possible values: "cst" or "hspice"). For the latter an HSPICE netlist is exported. If the path to a Synopsis HSPICE executable has been specified via Macros-&gt;Solver-&gt;HSPICE Settings, an Synospsis HSPICE simulation on the exported netlist is carried out in addition.</p>
+<p>"<span style="font-weight: bold;">broadband sweep</span>" (possible values: "True" or "False"): Specifies whether an accuracy-controlled, adaptive broadband frequency sweep is applied on task results of the S-Parameter task.</p>
+<p>"<span style="font-weight: bold;">broadband sweep accuracy</span>": Specifies the desired accuracy of S-Parameters for the broadband frequency sweep applied on task results of the S-Parameter task. I.e., it defines the termination condition of the adaptive fitting process.</p>
+<p>"<span style="font-weight: bold;">block broadband sweep</span>" (possible values: "True" or "False"): Specifies whether an accuracy-controlled, adaptive broadband frequency sweep is applied on block S-Parameters for blocks that are expensive to evaluate. The setting is ignored for blocks that are inexpensive to evaluate.</p>
+<p>"<span style="font-weight: bold;">block broadband sweep accuracy</span>": Specifies the desired accuracy of block S-Parameters if a broadband frequency sweep is applied on the results of a block. I.e., it defines the termination condition of the adaptive fitting process.</p>
+</td>
+</tr>
+<tr style="vertical-align: center;">
+<td style="border-left: solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; vertical-align: middle;">
+<p style="margin-left: 12px;">Operating point (DC)</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; vertical-align: middle;">
+<p>"<span style="font-weight: bold;">circuit simulator</span>": the type of simulator to be used (possible values: "cst", "hspice", "pspice" or "ltspice"). For the latter three a SPICE netlist is exported. If the path to a Synopsis HSPICE or LTSPICE executable, respectively, has been specified, a SPICE simulation on the exported netlist is carried out in addition.</p>
+<p>"<span style="font-weight: bold;">vector fitting</span>" (possible values: "True" or "False"): indicates whether a time domain representation, i.e., vector fitting, is used for frequency-dependent blocks. Use this option if you want the operation point task results to be consistent with the initial conditions of a transient task or the task results of a Frequency Domain task that uses vector fitting. Note that all circuit tasks calculate an operation point at the beginning of the actual simulation and that in the operation point calculation vector fitting results of frequency-dependent blocks are applied if they are available.</p>
+<p>"<span style="font-weight: bold;">vector fitting fromtask</span>" (possible values: "True" or "False"): If true and if vector fitting is enabled, the frequency range of another circuit task is inherited for the vector fitting of the operation point task. If false and if vector fitting is enabled, the frequency range in vector fitting is expected to be specified manually.</p>
+<p>"<span style="font-weight: bold;">vector fitting task</span>": If the property "vector fitting fromtask" is enabled, this property specifies the name of a circuit task, from which the frequency range, applied on vector fitting, is inherited. The operation point task results are thus made consistent with the operation point calculation of that circuit task.</p>
+<p>"<span style="font-weight: bold;">vector fitting fmax</span>": If vector fitting is enabled and if the property "vector fitting fromtask" is disabled, this specifies the upper value of the frequency range, applied in vector fitting. DC is applied as lower frequency limit as long as the respective block supports DC.</p>
+<p>"<span style="font-weight: bold;">block broadband sweep</span>" (possible values: "True" or "False"): Specifies whether an accuracy-controlled, adaptive broadband frequency sweep is applied on block S-Parameters for blocks that are expensive to evaluate. The setting is ignored for blocks that are inexpensive to evaluate and if vector fitting is disabled for the operation point task.</p>
+<p>"<span style="font-weight: bold;">block broadband sweep accuracy</span>": Specifies the desired accuracy of block S-Parameters if a broadband frequency sweep is applied on the results of a block. I.e., it defines the termination condition of the adaptive fitting process.</p>
+</td>
+</tr>
+<tr style="vertical-align: center;">
+<td style="border-left: solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; vertical-align: middle;">
+<p style="margin-left: 12px;">Transient</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; vertical-align: middle;">
+<p>"<span style="font-weight: bold;">integration method</span>" (possible values: "adams" or "gear")</p>
+<p>"<span style="font-weight: bold;">integration order</span>" (possible values: 1, 2, 3, or 4)</p>
+<p>"<span style="font-weight: bold;">time stepping</span>" (possible values: "automatic" ,"adaptive", and "fixed")</p>
+<p>"<span style="font-weight: bold;">time step</span>": maximum/fixed time step for adaptive/fixed time stepping.</p>
+<p>"<span style="font-weight: bold;">tmax</span>": to be simulated time span.</p>
+<p>"<span style="font-weight: bold;">minimum time step</span>": minimum time step for adaptive time stepping</p>
+<p>"<span style="font-weight: bold;">fmin</span>", "<span style="font-weight: bold;">fmax</span>": Reference frequency range. They are set per default to 0 and 1.</p>
+<p>"<span style="font-weight: bold;">calculatefullsparameter</span>": (possible values: "True" or "False"). Enables/disables the full S-Matrix calculation.</p>
+<p>"<span style="font-weight: bold;">transient accuracy</span>": the desired relative accuracy of the transient solution.</p>
+<p>"<span style="font-weight: bold;">circuit simulator</span>": the type of simulator to be used (possible values: "cst", "cst - steady state", "cosimulation", "hspice", "pspice" or "ltspice"). For the latter three a SPICE netlist is exported. If the path to a Synopsis HSPICE or LTSPICE executable, respectively, has been specified, a SPICE simulation on the exported netlist is carried out in addition..</p>
+<p>"<span style="font-weight: bold;">sampling method</span>" (possible values: "Automatic", "Nyquist", "Manual", and "Simulated"). Note that the method SetSweepData() resets the sampling method to "Manual".</p>
+<p>"<span style="font-weight: bold;">fmax estimator</span>": the type of estimation on the maximum excitation frequency (possible values: "automatic", "energy", "transitiontime", or "manual fmax").</p>
+<p>"<span style="font-weight: bold;">energy threshold</span>": relative energy threshold for the estimation of the maximum excitation frequency. It only applies if the energy-based fmax estimator has been selected.</p>
+<p>"<span style="font-weight: bold;">manual fmax</span>": maximum excitation frequency. It only applies if the manual fmax estimator has been selected.</p>
+<p>"<span style="font-weight: bold;">nfdsamples</span>": The number of frequency sample points used for calculating spectral densities or FD voltages/currents.</p>
+<p>"<span style="font-weight: bold;">docombineresults</span>": Starts the field combination in the 3D solver with respect to the calculated excitations in DS. Be sure to set the property "<span style="font-weight: bold;">blocknameforcombineresults</span>" to activate combine results correctly.</p>
+<p>"<span style="font-weight: bold;">blocknameforcombineresults</span>": Selects the MWS - block for which the fields are to be combined.</p>
+<p>"<span style="font-weight: bold;">block broadband sweep</span>" (possible values: "True" or "False"): Specifies whether an accuracy-controlled, adaptive broadband frequency sweep is applied on block S-Parameters for blocks that are expensive to evaluate. The setting is ignored for blocks that are inexpensive to evaluate.</p>
+<p>"<span style="font-weight: bold;">block broadband sweep accuracy</span>": Specifies the desired accuracy of block S-Parameters if a broadband frequency sweep is applied on the results of a block. I.e., it defines the termination condition of the adaptive fitting process.</p>
+<p>"<span style="font-weight: bold;">steady state period detection</span>" (possible values: "true" or "false"): Applicable if "cst - steady state" is enabled as " <span style="font-weight: bold;">circuit simulator</span>". In this case, it defines whether a suitable steady state period is extracted from periodic excitations at external ports or whether a manually specified steady state period is applied is steady state simulation.</p>
+<p>"<span style="font-weight: bold;">steady state period</span>". (possible values: any time period to which all periodic excitations are commensurable. If they are not commensurable this will result in a simulation error.): Applicable if "cst - steady state" is enabled as " <span style="font-weight: bold;">circuit simulator</span> " and steady state period detection has been disabled. In this case, it specifies the steady state period in time units that is applied is steady state simulation.</p>
+<p>"<span style="font-weight: bold;">steady state tolerance</span>" (possible values: between 0 and 1): Applicable if "cst - steady state" is enabled as "<span style="font-weight: bold;">circuit simulator</span>". In this case, it specifies a threshold on the relative resuidual of steady state iteration, below which steady state iterations are terminated and steady state simulation is considered successful.</p>
+</td>
+</tr>
+<tr style="vertical-align: center;">
+<td style="border-left: solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; vertical-align: middle;">
+<p style="margin-left: 12px;">AC</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; vertical-align: middle;">
+<p>"<span style="font-weight: bold;">fmin</span>", "<span style="font-weight: bold;">fmax</span>": simulation frequency range. These settings are only used if "maximum frequency range" is off.</p>
+<p>"<span style="font-weight: bold;">maximum frequency range</span>" (possible values: "True" or "False"): enables or disables the maximum frequency sweep range. If the maximum frequency range is disabled, the frequencies set by the properties "fmin" and "fmax" will be used. If the maximum frequency range is enabled, those properties are ignored. The maximum frequency range must be disabled if the model is not frequency limited.</p>
+<p>"<span style="font-weight: bold;">docombineresults</span>": Starts the field combination in the 3D solver with respect to the calculated excitations in DS. Be sure to set the property "<span style="font-weight: bold;">blocknameforcombineresults</span>" to activate combine results correctly.</p>
+<p>"<span style="font-weight: bold;">blocknameforcombineresults</span>": Selects the MWS - block for which the fields are to be combined.</p>
+<p>"<span style="font-weight: bold;">td block representation</span>" (possible values: "True" or "False"): indicates whether a time domain representation, i.e., vector fitting, is used for frequency-dependent blocks.</p>
+<p>"<span style="font-weight: bold;">circuit simulator</span>": the type of simulator to be used (possible values: "cst", "hspice", "pspice" or "ltspice"). For the latter three a SPICE netlist is exported. If the path to a Synopsis HSPICE or LTSPICE executable, respectively, has been specified, a SPICE simulation on the exported netlist is carried out in addition.</p>
+<p>"<span style="font-weight: bold;">block broadband sweep</span>" (possible values: "True" or "False"): Specifies whether an accuracy-controlled, adaptive broadband frequency sweep is applied on block S-Parameters for blocks that are expensive to evaluate. The setting is ignored for blocks that are inexpensive to evaluate.</p>
+<p>"<span style="font-weight: bold;">block broadband sweep accuracy</span>": Specifies the desired accuracy of block S-Parameters if a broadband frequency sweep is applied on the results of a block. I.e., it defines the termination condition of the adaptive fitting process.</p>
+</td>
+</tr>
+<tr style="vertical-align: center;">
+<td style="border-left: solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; vertical-align: middle;">
+<p style="margin-left: 12px;">Spectral lines</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; vertical-align: middle;">
+<p>no task type specific property</p>
+</td>
+</tr>
+<tr style="vertical-align: center;">
+<td style="border-left: solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; vertical-align: middle;">
+<p style="margin-left: 12px;">Mixer</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; vertical-align: middle;">
+<p>"<span style="font-weight: bold;">input frequency</span>",</p>
+<p>"<span style="font-weight: bold;">lo frequency</span>",</p>
+<p>"<span style="font-weight: bold;">input resistance</span>",</p>
+<p>"<span style="font-weight: bold;">lo resistance</span>",</p>
+<p>"<span style="font-weight: bold;">output resistance</span>",</p>
+<p>"<span style="font-weight: bold;">input power</span>",</p>
+<p>"<span style="font-weight: bold;">lo power</span>"</p>
+</td>
+</tr>
+<tr style="vertical-align: center;">
+<td style="border-left: solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; vertical-align: middle;">
+<p style="margin-left: 12px;">Amplifier</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; vertical-align: middle;">
+<p>"<span style="font-weight: bold;">input frequency</span>",</p>
+<p>"<span style="font-weight: bold;">input res</span>",</p>
+<p>"<span style="font-weight: bold;">input pow</span>",</p>
+<p>"<span style="font-weight: bold;">load res</span>"</p>
+<p>"<span style="font-weight: bold;">logarithmic sweep</span>" (possible values: "True" or "False"): switches between logarithmic and linear frequency or power sampling.</p>
+</td>
+</tr>
+</table>
+<p class="VBA-Heading-Category"><a name="Methods_Concerning_Result_Options" id="Methods_Concerning_Result_Options"></a>Methods Concerning Result Options</p>
+<p class="VBA-Heading-Method">EnableResult ( <span style="font-weight: normal;"><a href="../common_vbageneral/common_general_string.htm">string</a></span> <span style="font-style: italic;"><i>resultname,</i></span> <span style="font-weight: normal;"><a href="../common_vbageneral/common_general_bool_data_type.htm">bool</a></span> <span style="font-style: italic;"><i>enable</i></span> <span style="font-weight: normal;">)</span></p>
+<p class="VBA-Text-Indent">Switches on/off the consideration of the result specified by name. The following results are available:</p>
+<table style="margin-left: 24px; vertical-align: Center; left: 0px; top: 1755px;" cellspacing="0" width="614">
+<col style="width: 23.223%;" />
+<col style="width: 76.777%;" />
+<tr style="vertical-align: center;">
+<td style="border: Solid 1px #000000;">
+<p style="margin-left: 12px; margin-right: -18px;">S-Parameters</p>
+</td>
+<td style="border-top: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000;">
+<p>"<span style="font-weight: bold;">block</span>"</p>
+</td>
+</tr>
+<tr style="vertical-align: center;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000;">
+<p style="margin-left: 12px; margin-right: -18px;">Operating point (DC)</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000;">
+<p>"<span style="font-weight: bold;">block</span>"</p>
+</td>
+</tr>
+<tr style="vertical-align: center;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000;">
+<p style="margin-left: 12px; margin-right: -18px;">Transient</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000;">
+<p>"<span style="font-weight: bold;">block</span>"</p>
+</td>
+</tr>
+<tr style="vertical-align: center;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000;">
+<p style="margin-left: 12px; margin-right: -18px;">AC</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000;">
+<p>"<span style="font-weight: bold;">block</span>"</p>
+</td>
+</tr>
+<tr style="vertical-align: center;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000;">
+<p style="margin-left: 12px; margin-right: -18px;">Spectral lines</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000;">
+<p>none</p>
+</td>
+</tr>
+<tr style="vertical-align: center;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000;">
+<p style="margin-left: 12px; margin-right: -18px;">Mixer</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000;">
+<p>"<span style="font-weight: bold;">vswr</span>", "<span style="font-weight: bold;">spectrum</span>", "<span style="font-weight: bold;">isolation</span>", "<span style="font-weight: bold;">gain</span>"</p>
+</td>
+</tr>
+<tr style="vertical-align: center;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000;">
+<p style="margin-left: 12px; margin-right: -18px;">Amplifier</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000;">
+<p>"<span style="font-weight: bold;">s-param</span>", "<span style="font-weight: bold;">group delay</span>", "<span style="font-weight: bold;">linear gain</span>", "<span style="font-weight: bold;">stability</span>", "<span style="font-weight: bold;">spectrum</span>", "<span style="font-weight: bold;">distortion</span>", "<span style="font-weight: bold;">power</span>", "<span style="font-weight: bold;">gain</span>"</p>
+</td>
+</tr>
+</table>
+<br />
+<p class="VBA-Text-Indent">The result name "block" is quite generic and requires further explanation. Many blocks are S-Parameter based. Their block S-Parameters may be of interest and therefore they have an option "Create S-parameter" in their <span style="font-weight: normal;"><a href="../../DES/components/block/parameterlist/properties_solver_common.htm">Solver Properties</a></span>. Furthermore, for some circuit tasks S-Parameter based blocks are characterized by vector fitting. The results of this vector fitting process might also be of interest. Enabling the "block" result option, block S-Parameters and/or vector fitting results are displayed in the tree for all S-Parameter based blocks, that have the "Create S-parameter" block solver option enabled, when running the task.</p>
+<p class="VBA-Heading-Method">&#160;</p>
+<p class="VBA-Heading-Method">ResultEnabled ( <span style="font-weight: normal;"><a href="../common_vbageneral/common_general_string.htm">string</a></span> <span style="font-style: italic;"><i>resultname</i></span> <span style="font-weight: normal;">)</span> <span style="font-weight: normal;"><a href="../common_vbageneral/common_general_bool_data_type.htm">bool</a></span></p>
+<p class="VBA-Text-Indent">Tells whether the result specified by name is considered. The available result names are identical to those used by <span style="font-weight: bold;">EnableResult</span>.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">GetResultOption ( <span style="font-weight: normal;"><a href="../common_vbageneral/common_general_string.htm">string</a></span> <span style="font-style: italic;"><i>resultoption_name</i></span> ) <a href="../common_vbageneral/common_general_string.htm" id="a181" style="font-weight: normal; font-style: normal;" name="a181">string</a></p>
+<p class="VBA-Text-Indent">Returns the value of the named result option of &#160;the selected task.</p>
+<p class="VBA-Text-Indent"><span style="font-style: italic;"><i>resultoption_name:</i></span><br />
+These values are case sensitive and are the same as displayed in the <span style="font-style: italic;"><i>Name</i></span> column in the <span style="font-style: italic;"><i>Results Settings</i></span> tab in the <span style="font-style: italic;"><i>Simulation Task</i></span> dialog. &#160;</p>
+<p class="VBA-Text-Indent">An error is thrown if no or a non existing task is specified or if the given name couldn't be recognized as a result option of the task .</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">SetResultOption ( <span style="font-weight: normal;"><a href="../common_vbageneral/common_general_string.htm">string</a></span> <span style="font-style: italic;"><i>resultoption_name ,</i></span> <span style="font-weight: normal;"><a href="../common_vbageneral/common_general_string.htm">string</a></span> <span style="font-style: italic;"><i>resultoption_value</i></span> &#160;)</p>
+<p class="VBA-Text-Indent">Sets the value of the named result option of &#160;the selected task to the named value.</p>
+<p class="VBA-Text-Indent"><span style="font-style: italic;"><i>resultoption_name:</i></span><br />
+Specifies the result option to be modified.</p>
+<p class="VBA-Text-Indent">These values are case sensitive and need to be the same as displayed in the <span style="font-style: italic;"><i>Name</i></span> column in the <span style="font-style: italic;"><i>Results Settings</i></span> tab in the <span style="font-style: italic;"><i>Simulation Task</i></span> dialog. &#160;<br />
+An error is thrown if the name couldn't be recognized as a result option name of the task. An error is thrown if no task or a non existing task is specified.</p>
+<p class="VBA-Text-Indent"><span style="font-style: italic;"><i>resultoption_value:</i></span><br />
+Is the value to which the specified &#160;result option will be set. For enum type <span style="font-style: italic;"><i>resultoption_values</i></span>, the string is case sensitive and needs to agree to the available values in the corresponding task parameter window.<br />
+An error is thrown if the task doesn't accept the value (for instance, if a non existing value of a enum variable is given). &#160;<br />
+Boolean resultoptions (displayed as checkbox in the block parameter window) are set by "true" or "false" strings. Both don't need to be case sensitive. Variants as "True" or "tRuE" are also accepted. Any other string will throw an error.<br /></p>
+<p>The following two VBA methods do only apply to result options that have an <span style="font-style: italic;"><i>Auto</i></span> checkbox in the <span style="font-style: italic;"><i>Control</i></span> column. Currently, only result options of transient tasks have a <span style="font-style: italic;"><i>Control</i></span> column. The mechanism of such auto checkboxes is as follows: If the checkbox is checked, an automatically calculated value is displayed in the non-editable edit field of the <span style="font-style: italic;"><i>Expression</i></span> column. If the checkbox is unchecked, a manual value can be edited in edit field of the <span style="font-style: italic;"><i>Expression</i></span> column.</p>
+<br />
+<p class="VBA-Heading-Method">GetResultOptionAutoControl ( <span style="font-weight: normal;"><a href="../common_vbageneral/common_general_string.htm">string</a></span> <span style="font-style: italic;"><i>resultoptiondescription )</i></span> <span style="font-weight: normal;"><a href="../common_vbageneral/common_general_bool_data_type.htm">bool</a></span></p>
+<p class="VBA-Text-Indent">Returns whether the "Auto" checkbox in the 'Control' column of the named result option of &#160;the selected task is checked.</p>
+<p class="VBA-Text-Indent">Parameter <span style="font-style: italic;"><i>resultoptiondescription:</i></span> (case sensitive as displayed in the 'Results Settings'-tab in the 'Simulation Task'-dialog). An error is thrown if the name couldn't be recognized as a result option name of the task or if the named result option does not have an "Auto" checkbox control.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">SetResultOptionAutoControl ( <span style="font-weight: normal;"><a href="../common_vbageneral/common_general_string.htm">string</a></span> <span style="font-style: italic;"><i>resultoptiondescription ,</i></span> <span style="font-weight: normal;"><a href="../common_vbageneral/common_general_bool_data_type.htm">bool</a></span> <span style="font-style: italic;"><i>resultoptionstate</i></span> &#160;)</p>
+<p class="VBA-Text-Indent">Sets the state of the "Auto" checkbox in the 'Control' column of the named result option of &#160;the selected task.</p>
+<p class="VBA-Text-Indent">Parameter <span style="font-style: italic;"><i>resultoptiondescription:</i></span> (case sensitive as displayed in the 'Description'-column in the 'Results Settings'-tab in the 'Simulation Task'-dialog). An error is thrown if the name couldn't be recognized as a result option name of the task. An error is thrown if no task is selected or if the given name couldn't be recognized as a result option of the task or if the named result option does not have an "Auto" checkbox control.</p>
+<p class="VBA-Text-Indent">Parameter <span style="font-style: italic;"><i>resultoptionstate:</i></span> . If true, the "Auto" checkbox in the 'Control' column is checked, otherwise it is unchecked. An error is thrown if the task couldn't set the value. Note that a Boolean result option (displayed as checkbox) can be set using the value "true" or case-insensitive variants such as "True" or "tRuE" but setting it to "1" would throw an error.</p>
+<p class="VBA-Heading-Category"><a name="Monitor" id="Monitor"></a>Monitor</p>
+<p class="VBA-Heading-Method">ResetCombineMonitorFilters</p>
+<p class="VBA-Text-Indent">Clears all monitor selection filters.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">GetNCombineMonitorFilters <a href="../common_vbageneral/common_general_integer.htm" id="a68" style="font-weight: normal; font-style: normal;" name="a68">int</a></p>
+<p class="VBA-Text-Indent">Gets the number of defined monitor selections.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">GetCombineMonitorFilter( <a href="../common_vbageneral/common_general_integer.htm" id="a70" style="font-weight: normal; font-style: normal;" name="a70">int</a> <span style="font-style: italic;"><i>index</i></span> ) <a href="../common_vbageneral/common_general_name.htm" id="a69" style="font-weight: normal; font-style: normal;" name="a69">name</a></p>
+<p class="VBA-Text-Indent">Gets the filter string of index "<span style="font-style: italic;"><i>index</i></span>".</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">AddCombineMonitorFilter( <span><a href="../common_vbageneral/common_general_name.htm" id="a71" style="font-weight: normal; font-style: normal;" name="a71">name</a></span> <span style="font-style: italic;"><i>filterName</i></span> )</p>
+<p class="VBA-Text-Indent">Adds a monitor selection filter to the internal filter set. The following expressions are allowed:</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<table style="vertical-align: top; left: 0px; top: 3037px; margin-left: 24px;" cellspacing="0" width="485">
+<col style="width: 26.755%;" />
+<col style="width: 73.244%;" />
+<tr style="vertical-align: top; height: 20px;">
+<td style="border: Solid 1px #000000; width: 26.755%; padding-right: 10px; padding-left: 10px;">
+<p>Filter</p>
+</td>
+<td style="border-top: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 73.244%; padding-right: 10px; padding-left: 10px;">
+<p>Action</p>
+</td>
+</tr>
+<tr style="vertical-align: top; height: 20px;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 26.755%; padding-right: 10px; padding-left: 10px;">
+<p>*</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 73.244%; padding-right: 10px; padding-left: 10px;">
+<p>All monitors are added to the selection</p>
+</td>
+</tr>
+<tr style="vertical-align: top; height: 20px;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 26.755%; padding-right: 10px; padding-left: 10px;">
+<p>&lt;MonitorName&gt;</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 73.244%; padding-right: 10px; padding-left: 10px;">
+<p>This monitor is added to the selection</p>
+</td>
+</tr>
+<tr style="vertical-align: top; height: 20px;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 26.755%; padding-right: 10px; padding-left: 10px;">
+<p>:farfield:</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 73.244%; padding-right: 10px; padding-left: 10px;">
+<p>All farfield monitors are added to the selection</p>
+</td>
+</tr>
+<tr style="vertical-align: top; height: 20px;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 26.755%; padding-right: 10px; padding-left: 10px;">
+<p>:fieldsource:</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 73.244%; padding-right: 10px; padding-left: 10px;">
+<p>All Field source monitors are added to the selection</p>
+</td>
+</tr>
+<tr style="vertical-align: top; height: 20px;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 26.755%; padding-right: 10px; padding-left: 10px;">
+<p>:efield:</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 73.244%; padding-right: 10px; padding-left: 10px;">
+<p>All E-field monitors are added to the selection</p>
+</td>
+</tr>
+<tr style="vertical-align: top; height: 20px;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 26.755%; padding-right: 10px; padding-left: 10px;">
+<p>:hfield:</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 73.244%; padding-right: 10px; padding-left: 10px;">
+<p>All H-field monitors are added to the selection</p>
+</td>
+</tr>
+<tr style="vertical-align: top; height: 20px;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 26.755%; padding-right: 10px; padding-left: 10px;">
+<p>:current:</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 73.244%; padding-right: 10px; padding-left: 10px;">
+<p>All current monitors are added to the selection</p>
+</td>
+</tr>
+<tr style="vertical-align: top; height: 20px;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 26.755%; padding-right: 10px; padding-left: 10px;">
+<p>:powerflow:</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 73.244%; padding-right: 10px; padding-left: 10px;">
+<p>All power flow monitors are added to the selection</p>
+</td>
+</tr>
+<tr style="vertical-align: top; height: 20px;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 26.755%; padding-right: 10px; padding-left: 10px;">
+<p>:eenergy:</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 73.244%; padding-right: 10px; padding-left: 10px;">
+<p>All E-energy monitors are added to the selection</p>
+</td>
+</tr>
+<tr style="vertical-align: top; height: 20px;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 26.755%; padding-right: 10px; padding-left: 10px;">
+<p>:henergy:</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 73.244%; padding-right: 10px; padding-left: 10px;">
+<p>All H-energy monitors are added to the selection</p>
+</td>
+</tr>
+</table>
+<p class="VBA-Heading-Category"><a name="Special_Methods" id="Special_Methods"></a>Special Methods</p>
+<p class="VBA-Heading-Method">SetLogarithmicSweep( <span style="font-weight: normal;"><a href="../common_vbageneral/common_general_bool_data_type.htm">bool</a></span> <span style="font-style: italic;"><i>bLog</i></span> <span style="font-weight: normal;">)</span></p>
+<p class="VBA-Text-Indent">Switches on/off the logarithmic sweep. An error is thrown if logarithmic sweep is not supported by the simulation task.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">SetSweepType ( <span style="font-weight: normal;"><a href="../common_vbageneral/common_general_string.htm">string</a></span> <span style="font-style: italic;"><i>sweeptype</i></span> )</p>
+<p class="VBA-Text-Indent">Specifies the property to sweep. Valid arguments are "no", "frequency" and "power" for amplifier tasks and "no", "frequency", "lo power" and "input power" for mixer tasks.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">SetSweepData ( <span style="font-weight: normal;"><a href="../common_vbageneral/common_general_string.htm">string</a></span> <span style="font-style: italic;"><i>min,</i></span> <span style="font-weight: normal;"><a href="../common_vbageneral/common_general_string.htm">string</a></span> <span style="font-style: italic;"><i>max,</i></span> <span style="font-weight: normal;"><a href="../common_vbageneral/common_general_string.htm">string</a></span> <span style="font-style: italic;"><i>samples</i></span> <span style="font-weight: normal;">)</span></p>
+<p class="VBA-Text-Indent">Specifies the sweep range and the number of samples. The sweep range is Tmin and Tmax for transient tasks. For frequency domain tasks it is Fmin and Fmax, and for mixer and amplifier tasks it is either Fmin and Fmax or Pmin and Pmax (depending on the task settings). Note that for transient tasks the sampling method is reset to "Manual".</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">SetLocalUnit ( <span style="font-weight: normal;"><a href="../common_vbageneral/common_general_string.htm">string</a></span> <span style="font-style: italic;"><i>unittype,</i></span> <span style="font-weight: normal;"><a href="../common_vbageneral/common_general_string.htm">string</a></span> <span style="font-style: italic;"><i>unit</i></span> )</p>
+<p class="VBA-Text-Indent">Sets the task to local units, i.e. values of all properties associated with the selected simulation task will not refer to the project's global units any more but to the tasks local units. Additionally, the unit of the specified type of unit is set to the given value.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">SetGlobalUnit ( <span style="font-weight: normal;"><a href="../common_vbageneral/common_general_string.htm">string</a></span> <span style="font-style: italic;"><i>unittype</i></span> )</p>
+<p class="VBA-Text-Indent">Sets the task to global units. The local unit of the specified type is deleted. All other local units are preserved, but not active. They can be activated again by calling <span style="font-weight: bold;">SetLocalUnit</span>.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">SetDiamondScheme ( <span style="font-weight: normal;"><a href="../common_vbageneral/common_general_bool_data_type.htm">bool</a></span> <span style="font-style: italic;"><i>diamond</i></span> <span style="font-weight: normal;">)</span></p>
+<p class="VBA-Text-Indent">Switches on/off the consideration of the frequencies according to the diamond scheme for a spectral lines simulation task.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">SetDiamondHarmonics ( <span style="font-weight: normal;"><a href="../common_vbageneral/common_general_string.htm">string</a></span> <span style="font-style: italic;"><i>harmonics )</i></span></p>
+<p class="VBA-Text-Indent">Sets the number of harmonics for the diamond scheme for a spectral lines simulation task.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">AddFundamentalFrequency ( <span style="font-weight: normal;"><a href="../common_vbageneral/common_general_string.htm">string</a></span> <span style="font-style: italic;"><i>frequency,</i></span> <span style="font-weight: normal;"><a href="../common_vbageneral/common_general_string.htm">string</a></span> <span style="font-style: italic;"><i>harmonics )</i></span></p>
+<p class="VBA-Text-Indent">Adds a fundamental frequency to a spectral lines simulation task with a given number of harmonics that will be considered if the diamond scheme is switched off.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">ClearFundamentalFrequencies</p>
+<p class="VBA-Text-Indent">Removes all entries from the list of fundamental frequencies for a spectral lines simulation task.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">SetPortSignal ( <span style="font-weight: normal;"><a href="../common_vbageneral/common_general_string.htm">string</a></span> <span style="font-style: italic;"><i>portname</i></span>, <span style="font-weight: normal;"><a href="../common_vbageneral/common_general_string.htm">string</a></span> <span style="font-style: italic;"><i>type</i></span>, <span style="font-weight: normal;"><a href="../common_vbageneral/common_general_variant.htm">string array</a></span> <span style="font-style: italic;"><i>values</i></span> )</p>
+<p class="VBA-Text-Indent">Sets the signal type associated with the given port for the selected simulation task, as presented as key in the following table. For parameter definitions of the corresponding signal types in the following tables, please see <a href="../../DES/analysis/simulation/tasks/transienttask/excitationsignal.htm">transient excitations</a> for the non-digital excitation types and <a href="../../DES/analysis/simulation/tasks/transienttask/digitalexcitationsignals.htm">digital excitations</a> for the digital excitation types, in particular.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Text-Indent" style="margin-top: 0pt; margin-bottom: 3pt; font-family: Arial; font-size: 9pt; text-align: left; margin-left: 24px; color: rgb(0, 0, 0); font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial;"><span style="font-family: Arial; font-size: 9pt; color: rgb(0, 0, 0); font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial;"><font size="1" style="font-size:9pt;">Type/Values pairs for Transient tasks:</font></span></p>
+<table style="color: rgb(0, 0, 0); font-family: 'Times New Roman'; font-size: medium; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; vertical-align: top; margin-left: 24px; border-style: solid; border-width: 1px; left: 0px; top: 5072px;" cellspacing="0" width="640">
+<colgroup>
+<col style="width: 28.914%;" />
+<col width="455" /></colgroup>
+<tr style="vertical-align: top;">
+<td style="border: 1px solid rgb(0, 0, 0); padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text" style="margin-top: 0pt; margin-bottom: 0pt; font-family: Arial; font-size: 9pt; text-align: left; font-weight: bold;">Signal type</p>
+</td>
+<td style="border-top: 1px solid rgb(0, 0, 0); border-right: 1px solid rgb(0, 0, 0); border-bottom: 1px solid rgb(0, 0, 0); padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text" style="margin-top: 0pt; margin-bottom: 0pt; font-family: Arial; font-size: 9pt; text-align: left; font-weight: bold;">Parameters to be given in the<span>&#160;</span><span style="font-style: italic;"><i>values</i></span><span>&#160;</span>array</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: 1px solid rgb(0, 0, 0); border-right: 1px solid rgb(0, 0, 0); border-bottom: 1px solid rgb(0, 0, 0); padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text" style="margin-top: 0pt; margin-bottom: 0pt; font-family: Arial; font-size: 9pt; text-align: left;">Gaussian</p>
+</td>
+<td style="border-right: 1px solid rgb(0, 0, 0); border-bottom: 1px solid rgb(0, 0, 0); padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text" style="margin-top: 0pt; margin-bottom: 0pt; font-family: Arial; font-size: 9pt; text-align: left;">Fmin, Fmax, Ampl, UseFminFmaxFromTask&#160;(optional: <span style="font-weight: bold;">"false"</span> or "true")</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: 1px solid rgb(0, 0, 0); border-right: 1px solid rgb(0, 0, 0); border-bottom: 1px solid rgb(0, 0, 0); padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text" style="margin-top: 0pt; margin-bottom: 0pt; font-family: Arial; font-size: 9pt; text-align: left;">Sine</p>
+</td>
+<td style="border-right: 1px solid rgb(0, 0, 0); border-bottom: 1px solid rgb(0, 0, 0); padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text" style="margin-top: 0pt; margin-bottom: 0pt; font-family: Arial; font-size: 9pt; text-align: left;">Aoffset, Ampl, Freq, Signal delay</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: 1px solid rgb(0, 0, 0); border-right: 1px solid rgb(0, 0, 0); border-bottom: 1px solid rgb(0, 0, 0); padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text" style="margin-top: 0pt; margin-bottom: 0pt; font-family: Arial; font-size: 9pt; text-align: left;">Damped sine</p>
+</td>
+<td style="border-right: 1px solid rgb(0, 0, 0); border-bottom: 1px solid rgb(0, 0, 0); padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text" style="margin-top: 0pt; margin-bottom: 0pt; font-family: Arial; font-size: 9pt; text-align: left;">Aoffset, Ampl, Freq, Signal delay, Damp</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: 1px solid rgb(0, 0, 0); border-right: 1px solid rgb(0, 0, 0); border-bottom: 1px solid rgb(0, 0, 0); padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text" style="margin-top: 0pt; margin-bottom: 0pt; font-family: Arial; font-size: 9pt; text-align: left;">Exponential rising</p>
+</td>
+<td style="border-right: 1px solid rgb(0, 0, 0); border-bottom: 1px solid rgb(0, 0, 0); padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text" style="margin-top: 0pt; margin-bottom: 0pt; font-family: Arial; font-size: 9pt; text-align: left;">Ainit, Aend, Signal delay, Crise</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: 1px solid rgb(0, 0, 0); border-right: 1px solid rgb(0, 0, 0); border-bottom: 1px solid rgb(0, 0, 0); padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text" style="margin-top: 0pt; margin-bottom: 0pt; font-family: Arial; font-size: 9pt; text-align: left;">Exponential rising and falling</p>
+</td>
+<td style="border-right: 1px solid rgb(0, 0, 0); border-bottom: 1px solid rgb(0, 0, 0); padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text" style="margin-top: 0pt; margin-bottom: 0pt; font-family: Arial; font-size: 9pt; text-align: left;">Ainit, Apulse, Signal delay, Crise, Signal delay + Tdelayfall, Cfall</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: 1px solid rgb(0, 0, 0); border-right: 1px solid rgb(0, 0, 0); border-bottom: 1px solid rgb(0, 0, 0); padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text" style="margin-top: 0pt; margin-bottom: 0pt; font-family: Arial; font-size: 9pt; text-align: left;">Double exponential</p>
+</td>
+<td style="border-right: 1px solid rgb(0, 0, 0); border-bottom: 1px solid rgb(0, 0, 0); padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text" style="margin-top: 0pt; margin-bottom: 0pt; font-family: Arial; font-size: 9pt; text-align: left;">Ainit, Apulse, Signal delay, Crise, Cfall</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: 1px solid rgb(0, 0, 0); border-right: 1px solid rgb(0, 0, 0); border-bottom: 1px solid rgb(0, 0, 0); padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text" style="margin-top: 0pt; margin-bottom: 0pt; font-family: Arial; font-size: 9pt; text-align: left;">Import</p>
+</td>
+<td style="border-right: 1px solid rgb(0, 0, 0); border-bottom: 1px solid rgb(0, 0, 0); padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text" style="margin-top: 0pt; margin-bottom: 0pt; font-family: Arial; font-size: 9pt; text-align: left;">Filename, Periodic&#160;(optional: <span style="font-weight: bold;">"false"</span> or "true")</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: 1px solid rgb(0, 0, 0); border-right: 1px solid rgb(0, 0, 0); border-bottom: 1px solid rgb(0, 0, 0); padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text" style="margin-top: 0pt; margin-bottom: 0pt; font-family: Arial; font-size: 9pt; text-align: left;">Impulse</p>
+</td>
+<td style="border-right: 1px solid rgb(0, 0, 0); border-bottom: 1px solid rgb(0, 0, 0); padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text" style="margin-top: 0pt; margin-bottom: 0pt; font-family: Arial; font-size: 9pt; text-align: left;">Fmax, Ampl</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: 1px solid rgb(0, 0, 0); border-right: 1px solid rgb(0, 0, 0); border-bottom: 1px solid rgb(0, 0, 0); padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text" style="margin-top: 0pt; margin-bottom: 0pt; font-family: Arial; font-size: 9pt; text-align: left;">Digital</p>
+</td>
+<td style="border-right: 1px solid rgb(0, 0, 0); border-bottom: 1px solid rgb(0, 0, 0); padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text" style="margin-top: 0pt; margin-bottom: 0pt; font-family: Arial; font-size: 9pt; text-align: left;">Shapetype, Patterntype, Shapevalues... (see table), Patternvalues... (see table)</p>
+</td>
+</tr>
+</table>
+<p class="VBA-Text-Indent" style="margin-top: 0pt; margin-bottom: 3pt; font-family: Arial; font-size: 9pt; text-align: left; margin-left: 24px; color: rgb(0, 0, 0); font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial;">&#160;</p>
+<p class="VBA-Text-Indent" style="margin-top: 0pt; margin-bottom: 3pt; font-family: Arial; font-size: 9pt; text-align: left; margin-left: 64px; color: rgb(0, 0, 0); font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial;">Bit shapes</p>
+<table style="color: rgb(0, 0, 0); font-family: 'Times New Roman'; font-size: medium; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; vertical-align: top; border-style: solid; border-width: 1px; margin-left: 64px;" cellspacing="0" width="543">
+<colgroup>
+<col width="188" />
+<col width="353" /></colgroup>
+<tr style="vertical-align: top;">
+<td style="border: 1px solid rgb(0, 0, 0); padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text" style="margin-top: 0pt; margin-bottom: 0pt; font-family: Arial; font-size: 9pt; text-align: left; font-weight: bold;">Bit shape</p>
+</td>
+<td style="border-top: 1px solid rgb(0, 0, 0); border-right: 1px solid rgb(0, 0, 0); border-bottom: 1px solid rgb(0, 0, 0); padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text" style="margin-top: 0pt; margin-bottom: 0pt; font-family: Arial; font-size: 9pt; text-align: left; font-weight: bold;">Parameters to be given in the<span>&#160;</span><span style="font-style: italic;"><i>values</i></span><span>&#160;</span>array</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: 1px solid rgb(0, 0, 0); border-right: 1px solid rgb(0, 0, 0); border-bottom: 1px solid rgb(0, 0, 0); padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text" style="margin-top: 0pt; margin-bottom: 0pt; font-family: Arial; font-size: 9pt; text-align: left;">Generic</p>
+</td>
+<td style="border-right: 1px solid rgb(0, 0, 0); border-bottom: 1px solid rgb(0, 0, 0); padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text" style="margin-top: 0pt; margin-bottom: 0pt; font-family: Arial; font-size: 9pt; text-align: left;">Alow, Ahigh, Trise, Tfall, Tdelayrise, Tdelayfall, Ttotal</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: 1px solid rgb(0, 0, 0); border-right: 1px solid rgb(0, 0, 0); border-bottom: 1px solid rgb(0, 0, 0); padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text" style="margin-top: 0pt; margin-bottom: 0pt; font-family: Arial; font-size: 9pt; text-align: left;">Pulse</p>
+</td>
+<td style="border-right: 1px solid rgb(0, 0, 0); border-bottom: 1px solid rgb(0, 0, 0); padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text" style="margin-top: 0pt; margin-bottom: 0pt; font-family: Arial; font-size: 9pt; text-align: left;">Alow, Ahigh, Trise, Tfall, Tdelay, Thold, Ttotal</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: 1px solid rgb(0, 0, 0); border-right: 1px solid rgb(0, 0, 0); border-bottom: 1px solid rgb(0, 0, 0); padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text" style="margin-top: 0pt; margin-bottom: 0pt; font-family: Arial; font-size: 9pt; text-align: left;">Duty cycle and period time</p>
+</td>
+<td style="border-right: 1px solid rgb(0, 0, 0); border-bottom: 1px solid rgb(0, 0, 0); padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text" style="margin-top: 0pt; margin-bottom: 0pt; font-family: Arial; font-size: 9pt; text-align: left;">Alow, Ahigh, Trise, Tfall, Duty cycle, Ttotal</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: 1px solid rgb(0, 0, 0); border-right: 1px solid rgb(0, 0, 0); border-bottom: 1px solid rgb(0, 0, 0); padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text" style="margin-top: 0pt; margin-bottom: 0pt; font-family: Arial; font-size: 9pt; text-align: left;">Duty cycle and frequency</p>
+</td>
+<td style="border-right: 1px solid rgb(0, 0, 0); border-bottom: 1px solid rgb(0, 0, 0); padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text" style="margin-top: 0pt; margin-bottom: 0pt; font-family: Arial; font-size: 9pt; text-align: left;">Alow, Ahigh, Trise, Tfall, Duty cycle, Frequency</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: 1px solid rgb(0, 0, 0); border-right: 1px solid rgb(0, 0, 0); border-bottom: 1px solid rgb(0, 0, 0); padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text" style="margin-top: 0pt; margin-bottom: 0pt; font-family: Arial; font-size: 9pt; text-align: left;">Duty cycle and bit rate</p>
+</td>
+<td style="border-right: 1px solid rgb(0, 0, 0); border-bottom: 1px solid rgb(0, 0, 0); padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text" style="margin-top: 0pt; margin-bottom: 0pt; font-family: Arial; font-size: 9pt; text-align: left;">Alow, Ahigh, Trise, Tfall, Duty cycle, Bit rate</p>
+</td>
+</tr>
+</table>
+<p class="VBA-Text-Indent" style="margin-top: 0pt; margin-bottom: 3pt; font-family: Arial; font-size: 9pt; text-align: left; margin-left: 64px; color: rgb(0, 0, 0); font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial;">&#160;</p>
+<p class="VBA-Text-Indent" style="margin-top: 0pt; margin-bottom: 3pt; font-family: Arial; font-size: 9pt; text-align: left; margin-left: 64px; color: rgb(0, 0, 0); font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial;">Bit patterns</p>
+<table style="color: rgb(0, 0, 0); font-family: 'Times New Roman'; font-size: medium; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; vertical-align: top; border-style: solid; border-width: 1px; margin-left: 64px;" cellspacing="0" width="543">
+<colgroup>
+<col width="185" />
+<col width="356" /></colgroup>
+<tr style="vertical-align: top;">
+<td style="border: 1px solid rgb(0, 0, 0); padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text" style="margin-top: 0pt; margin-bottom: 0pt; font-family: Arial; font-size: 9pt; text-align: left; font-weight: bold;">Bit pattern</p>
+</td>
+<td style="border-top: 1px solid rgb(0, 0, 0); border-right: 1px solid rgb(0, 0, 0); border-bottom: 1px solid rgb(0, 0, 0); padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text" style="margin-top: 0pt; margin-bottom: 0pt; font-family: Arial; font-size: 9pt; text-align: left; font-weight: bold;">Parameters to be given in the<span>&#160;</span><span style="font-style: italic;"><i>values</i></span><span>&#160;</span>array</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: 1px solid rgb(0, 0, 0); border-right: 1px solid rgb(0, 0, 0); border-bottom: 1px solid rgb(0, 0, 0); padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text" style="margin-top: 0pt; margin-bottom: 0pt; font-family: Arial; font-size: 9pt; text-align: left;">PRBS</p>
+</td>
+<td style="border-right: 1px solid rgb(0, 0, 0); border-bottom: 1px solid rgb(0, 0, 0); padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text" style="margin-top: 0pt; margin-bottom: 0pt; font-family: Arial; font-size: 9pt; text-align: left;">N</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: 1px solid rgb(0, 0, 0); border-right: 1px solid rgb(0, 0, 0); border-bottom: 1px solid rgb(0, 0, 0); padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text" style="margin-top: 0pt; margin-bottom: 0pt; font-family: Arial; font-size: 9pt; text-align: left;">PRBS random</p>
+</td>
+<td style="border-right: 1px solid rgb(0, 0, 0); border-bottom: 1px solid rgb(0, 0, 0); padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text" style="margin-top: 0pt; margin-bottom: 0pt; font-family: Arial; font-size: 9pt; text-align: left;">N</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: 1px solid rgb(0, 0, 0); border-right: 1px solid rgb(0, 0, 0); border-bottom: 1px solid rgb(0, 0, 0); padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text" style="margin-top: 0pt; margin-bottom: 0pt; font-family: Arial; font-size: 9pt; text-align: left;">K285</p>
+</td>
+<td style="border-right: 1px solid rgb(0, 0, 0); border-bottom: 1px solid rgb(0, 0, 0); padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text" style="margin-top: 0pt; margin-bottom: 0pt; font-family: Arial; font-size: 9pt; text-align: left;">-</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: 1px solid rgb(0, 0, 0); border-right: 1px solid rgb(0, 0, 0); border-bottom: 1px solid rgb(0, 0, 0); padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text" style="margin-top: 0pt; margin-bottom: 0pt; font-family: Arial; font-size: 9pt; text-align: left;">K285 inverted</p>
+</td>
+<td style="border-right: 1px solid rgb(0, 0, 0); border-bottom: 1px solid rgb(0, 0, 0); padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text" style="margin-top: 0pt; margin-bottom: 0pt; font-family: Arial; font-size: 9pt; text-align: left;">-</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: 1px solid rgb(0, 0, 0); border-right: 1px solid rgb(0, 0, 0); border-bottom: 1px solid rgb(0, 0, 0); padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text" style="margin-top: 0pt; margin-bottom: 0pt; font-family: Arial; font-size: 9pt; text-align: left;">Clock</p>
+</td>
+<td style="border-right: 1px solid rgb(0, 0, 0); border-bottom: 1px solid rgb(0, 0, 0); padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text" style="margin-top: 0pt; margin-bottom: 0pt; font-family: Arial; font-size: 9pt; text-align: left;">-</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: 1px solid rgb(0, 0, 0); border-right: 1px solid rgb(0, 0, 0); border-bottom: 1px solid rgb(0, 0, 0); padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text" style="margin-top: 0pt; margin-bottom: 0pt; font-family: Arial; font-size: 9pt; text-align: left;">Random</p>
+</td>
+<td style="border-right: 1px solid rgb(0, 0, 0); border-bottom: 1px solid rgb(0, 0, 0); padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text" style="margin-top: 0pt; margin-bottom: 0pt; font-family: Arial; font-size: 9pt; text-align: left;">Nbits</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: 1px solid rgb(0, 0, 0); border-right: 1px solid rgb(0, 0, 0); border-bottom: 1px solid rgb(0, 0, 0); padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text" style="margin-top: 0pt; margin-bottom: 0pt; font-family: Arial; font-size: 9pt; text-align: left;">Manual</p>
+</td>
+<td style="border-right: 1px solid rgb(0, 0, 0); border-bottom: 1px solid rgb(0, 0, 0); padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text" style="margin-top: 0pt; margin-bottom: 0pt; font-family: Arial; font-size: 9pt; text-align: left;">Initbit, Bitsequence (e.g. "100110"), Periodic ("true" or "false")</p>
+</td>
+</tr>
+</table>
+<br class="Apple-interchange-newline" />
+<p class="VBA-Text-Indent">Type/Values pairs for AC-tasks:</p>
+<table style="vertical-align: top; margin-left: 24px;" cellspacing="0" width="540">
+<col style="width: 35%;" />
+<col style="width: 65%;" />
+<tr style="vertical-align: top;">
+<td style="border: Solid 1px #000000; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text" style="font-weight: bold;">Signal name</p>
+</td>
+<td style="border-top: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text" style="font-weight: bold;">Parameters to be given in the <span style="font-style: italic;"><i>values</i></span> array</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text">Constant</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text">Amplitude, Phase (in degree)</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text">Import_File</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-right: 10px; padding-left: 10px;">
+<p>Filename of an external file with frequency - amplitude pairs</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text">Import_DS_Result</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-right: 10px; padding-left: 10px;">
+<p>Result tree name of an existing DS-Result. These values will be used as excitation.</p>
+</td>
+</tr>
+</table>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">SetComplexPortExcitation (<span style="font-weight: normal;"><a href="../common_vbageneral/common_general_string.htm">string</a></span> <span style="font-style: italic;"><i>portname</i></span>, <span style="font-weight: normal;"><a href="../common_vbageneral/common_general_string.htm">string</a></span> <span style="font-style: italic;"><i>amplitude,</i></span> &#160;<span style="font-weight: normal;"><a href="../common_vbageneral/common_general_string.htm">string</a></span> <span style="font-style: italic;"><i>phase</i></span>)</p>
+<p class="VBA-Text-Indent">Sets the complex excitation amplitude of an AC-Task. The task needs to exist before this function can be called.</p>
+<p class="VBA-Heading-Method">&#160;</p>
+<p class="VBA-Heading-Method">SetRealPortExcitation (<span style="font-weight: normal;"><a href="../common_vbageneral/common_general_string.htm">string</a></span> <span style="font-style: italic;"><i>portname</i></span>, <span style="font-weight: normal;"><a href="../common_vbageneral/common_general_string.htm">string</a></span> <span style="font-style: italic;"><i>amplitude</i></span>)</p>
+<p class="VBA-Text-Indent">Sets the excitation amplitude of a DC-Task. The task needs to exist before this function can be called.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">SetPortSourceType ( <span style="font-weight: normal;"><a href="../common_vbageneral/common_general_string.htm">string</a></span> <span style="font-style: italic;"><i>portname</i></span>, <span style="font-weight: normal;"><a href="../common_vbageneral/common_general_string.htm">string</a></span> <span style="font-style: italic;"><i>type</i></span> )</p>
+<p class="VBA-Text-Indent">Sets the source type associated with the given port for the selected simulation task. Possible values are:</p>
+<table style="vertical-align: top; margin-left: 24px; left: 0px; top: 2859px;" cellspacing="0" width="97">
+<col style="width: 100%;" />
+<tr style="vertical-align: top;">
+<td style="border: Solid 1px #000000; width: 100%; padding-right: 10px; padding-left: 10px;">
+<p>"None"</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 100%; padding-right: 10px; padding-left: 10px;">
+<p>"Voltage"</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 100%; padding-right: 10px; padding-left: 10px;">
+<p>"Current"</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 100%; padding-right: 10px; padding-left: 10px;">
+<p>&#160;"Signal"</p>
+</td>
+</tr>
+</table>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Text-Indent">The value "None" deletes the excitation signal of this port. The port will therefore be considered as impedance.</p>
+<p class="VBA-Text-Indent">The task needs to exist and "SetComplexPortExcitation" ("SetRealPortExcitation") has to be called before this function can be executed.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">SetPortSignalDelay ( <span style="font-weight: normal;"><a href="../common_vbageneral/common_general_string.htm">string</a></span> <span style="font-style: italic;"><i>portname</i></span>, <span style="font-weight: normal;"><a href="../common_vbageneral/common_general_string.htm">string</a></span> <span style="font-style: italic;"><i>delay</i></span>)</p>
+<p class="VBA-Text-Indent">Sets the signal delay for an already existing transient excitation signal of port "<span style="font-style: italic;"><i>portname"</i></span>.</p>
+<p class="VBA-Text-Indent">An error will be thrown if the port could not be found or if no signal is assigned to it.</p>
+<p class="VBA-Text-Indent">An error will also be thrown if the given task does not exist or if it is not a transient task.</p>
+<p class="VBA-Heading-Method">&#160;</p>
+<p class="VBA-Heading-Method">SetPortSignalName ( <span style="font-weight: normal;"><a href="../common_vbageneral/common_general_string.htm">string</a></span> <span style="font-style: italic;"><i>portname</i></span>, <span style="font-weight: normal;"><a href="../common_vbageneral/common_general_string.htm">string</a></span> <span style="font-style: italic;"><i>signalname</i></span>)</p>
+<p class="VBA-Text-Indent">Sets a user defined name for an already existing excitation signal of port no. <span style="font-style: italic;"><i>portname</i></span>.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method"><a name="SetPortImpedanceBlockDependent" id="SetPortImpedanceBlockDependent"></a>SetPortImpedanceBlockDependent ( <span style="font-weight: normal;"><a href="../common_vbageneral/common_general_name.htm">name</a></span> <i>portname</i> )</p>
+<p class="VBA-Text-Indent">Sets the impedance of the associated port for the selected simulation task to be taken from the connected block (if possible).</p>
+<p>&#160;</p>
+<p class="VBA-Heading-Method"><a name="SetPortImpedanceFileName" id="SetPortImpedanceFileName"></a>SetPortImpedanceFileName ( <span style="font-weight: normal;"><a href="../common_vbageneral/common_general_name.htm">name</a></span> <i>portname</i>, <span style="font-weight: normal;"><a href="../common_vbageneral/common_general_string.htm">string</a></span> <i>filename</i> )</p>
+<p class="VBA-Text-Indent">Sets the filename associated with the given port for the selected simulation task. The impedance data will be imported from the given file. The setting will not be set if no data could be imported from the file.</p>
+<p>&#160;</p>
+<p class="VBA-Heading-Method"><a name="SetConstPortImpedance" id="SetConstPortImpedance"></a>SetConstPortImpedance ( <span style="font-weight: normal;"><a href="../common_vbageneral/common_general_name.htm">name</a></span> <i>portname</i>, <span style="font-weight: normal;"><a href="../common_vbageneral/common_general_string.htm">string</a></span> <i>real</i>, <span style="font-weight: normal;"><a href="../common_vbageneral/common_general_string.htm">string</a></span> <i>imaginary</i> )</p>
+<p class="VBA-Text-Indent">Sets the impedance associated with the given port for the selected simulation task. Impedances are only available for ports which are not excited with current or voltage. This function is also used to set the reference impedance if the port excitation source type is "Signal". This function sets the constant property also if it is not used by the simulation.</p>
+<p>&#160;</p>
+<p class="VBA-Heading-Method">SetPortInnerConductance ( <span style="font-weight: normal;"><a href="../common_vbageneral/common_general_name.htm">name</a></span> <i>portname</i>, <span style="font-weight: normal;"><a href="../common_vbageneral/common_general_string.htm">string</a></span> <i>conductance</i> )</p>
+<p class="VBA-Text-Indent">Sets the inner conductance associated with the given port for the selected simulation task.</p>
+<p class="VBA-Text-Indent">This setting is only used if the port is excited with "Current".</p>
+<p>&#160;</p>
+<p class="VBA-Heading-Method">SetPortInnerResistance ( <span style="font-weight: normal;"><a href="../common_vbageneral/common_general_name.htm">name</a></span> <i>portname</i>, <span style="font-weight: normal;"><a href="../common_vbageneral/common_general_string.htm">string</a></span> <i>resistance</i> )</p>
+<p class="VBA-Text-Indent">Sets the inner resistance associated with the given port for the selected simulation task.</p>
+<p class="VBA-Text-Indent">This setting is only used if the port is excited with "Voltage".</p>
+<p class="VBA-Heading-Method">&#160;</p>
+<p class="VBA-Heading-Method">SetUseExcitationReferenceFminFmax( <span style="font-weight: normal;"><a href="../common_vbageneral/common_general_string.htm">string</a></span> <span style="font-style: italic;"><i>portname</i></span>, <span style="font-weight: normal;"><a href="../common_vbageneral/common_general_string.htm">string</a></span> <span style="font-style: italic;"><i>boolean</i></span>)</p>
+<p class="VBA-Text-Indent">Sets the corresponding port to use reference Fmin/Fmax of the corresponding task.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">LoadLisFile</p>
+<p class="VBA-Text-Indent">This method is only applicable for circuit simulation tasks that have "Run Synopsys HSPICE" specified as "Circuit Simulator" in their task parameter list. Furthermore, it requires that the Synopsys HSPICE simulator has been executed on the HSPICE netlist, generated by the circuit simulation task. A prerequite for this is that a valid path to a Synopsys HSPICE executable has been specified by the user. The method reads the results from the lis-file, generated by Synopsys HSPICE, and puts them into the Design Studio result tree.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">LoadRawFile</p>
+<p class="VBA-Text-Indent">This method is only applicable for circuit simulation tasks that have "Run LTSPICE" specified as "Circuit Simulator" in their task parameter list. Furthermore, it requires that the LTSPICE simulator has been executed on the LTSPICE netlist, generated by the circuit simulation task. A prerequite for this is that a valid path to an LTSPICE executable has been specified by the user. The method reads the results from the raw-file, generated by LTSPICE, and puts them into the Design Studio result tree. .</p>
+<p class="VBA-Heading-Category"><a name="Queries" id="Queries"></a>Queries</p>
+<p class="VBA-Heading-Method">ArePortsDependent ( <span style="font-weight: normal;"><a href="../common_vbageneral/common_general_string.htm">string</a></span> <span style="font-style: italic;"><i>portname1</i></span>, <span style="font-weight: normal;"><a href="../common_vbageneral/common_general_string.htm">string</a></span> <span style="font-style: italic;"><i>portname2</i></span> ) <span style="font-weight: normal;"><a href="../common_vbageneral/common_general_bool_data_type.htm">bool</a></span></p>
+<p class="VBA-Text-Indent" style="font-weight: normal;">Checks if two external ports specified by their names are dependent. The method returns <a href="../common_vbageneral/common_general_true_keyword.htm">True</a> if the two ports are connected through some components of the model.</p>
+<p class="VBA-Heading-Method">&#160;</p>
+<p class="VBA-Heading-Method">GetUnit ( <span style="font-weight: normal;"><a href="../common_vbageneral/common_general_string.htm">string</a></span> <span style="font-style: italic;"><i>unittype</i></span> ) <span style="font-weight: normal;"><a href="../common_vbageneral/common_general_string.htm">string</a></span></p>
+<p class="VBA-Text-Indent">Returns the unit for the given type specified for the selected task. This is either the task's local unit or the project's global unit.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">GetUnitScale ( <span style="font-weight: normal;"><a href="../common_vbageneral/common_general_string.htm">string</a></span> <span style="font-style: italic;"><i>unittype</i></span> ) <span style="font-weight: normal;"><a href="../common_vbageneral/common_general_double.htm">double</a></span></p>
+<p class="VBA-Text-Indent">Returns the unit scale for the given type specified for the selected task. This is either the task's local scale or the project's global scale.</p>
+<p class="VBA-Heading-Method">&#160;</p>
+<p class="VBA-Heading-Method">GetNameOfCurrentTask <a href="../common_vbageneral/common_general_name.htm" id="a3" style="font-weight: normal; font-style: normal;" name="a3">name</a></p>
+<p class="VBA-Text-Indent">Returns the name of the currently running task while the simulation is performed.</p>
+<p class="VBA-Heading-Method">&#160;</p>
+<p class="VBA-Heading-Method">GetModelFolder ( <span style="font-weight: normal;"><a href="../common_vbageneral/common_general_bool_data_type.htm">bool</a></span> <span style="font-style: italic;"><i>absolute</i></span> ) <a href="../common_vbageneral/common_general_string.htm" id="a23" style="font-weight: normal; font-style: normal;" name="a23">string</a></p>
+<p class="VBA-Text-Indent">Returns the generic model folder of the selected task, or an empty string if no task is selected. If <span style="font-weight: bold; font-style: italic;"><i>absolute</i></span> is false, the path is returned relative to the project model folder that can be obtained with <a href="projectobject.htm">GetProjectPath("ModelDS")</a>. Note that not all tasks store individual model files, so the returned folder might not contain any files or not exist.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">GetResultFolder ( <span style="font-weight: normal;"><a href="../common_vbageneral/common_general_bool_data_type.htm">bool</a></span> <span style="font-style: italic;"><i>absolute</i></span> ) <a href="../common_vbageneral/common_general_string.htm" id="a18" style="font-weight: normal; font-style: normal;" name="a18">string</a></p>
+<p class="VBA-Text-Indent">Returns the generic result folder of the selected task, or an empty string if no task is selected. If <span style="font-weight: bold; font-style: italic;"><i>absolute</i></span> is false, the path is returned relative to the project result folder that can be obtained with <a href="projectobject.htm">GetProjectPath("ResultDS")</a>. Note that the returned folder is only used for result files without tree item. 1D results and tables are stored in different locations. You can get those paths via the <a href="result_tree_object.htm">ResultTree Object</a> from the corresponding tree names.</p>
+<p>&#160;</p>
+<p class="VBA-Heading-Method">GetPortImpedanceType ( <span style="font-weight: normal;"><a href="../common_vbageneral/common_general_name.htm">name</a></span> <i>portname</i> ) <span style="font-weight: normal;"><a href="../common_vbageneral/common_general_string.htm">string</a></span></p>
+<p class="VBA-Text-Indent">Returns the impedance type associated with the given port for the selected simulation task.</p>
+<p class="VBA-Text-Indent">The possible return types are:</p>
+<table style="vertical-align: top; margin-left: 24px;" cellspacing="0" width="655">
+<col style="width: 25%;" />
+<col style="width: 75%;" />
+<tr style="vertical-align: top;">
+<td style="border: Solid 1px #000000; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text" style="font-weight: bold;">Impedance type</p>
+</td>
+<td style="border-top: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text" style="font-weight: bold;">Description</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-right: 10px; padding-left: 10px;">
+<p>"Block_Dependent"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-right: 10px; padding-left: 10px;">
+<p>The impedance is taken from the block connected to the specified port (if possible).</p>
+<p>Use <a href="#SetPortImpedanceBlockDependent">SetPortImpedanceBlockDependent</a> to enable this setting.</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-right: 10px; padding-left: 10px;">
+<p>"Constant"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-right: 10px; padding-left: 10px;">
+<p>Constant impedance is used.</p>
+<p>Use <a href="#SetConstPortImpedance">SetConstPortImpedance</a> to set the impedance value and enable this setting.</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-right: 10px; padding-left: 10px;">
+<p>"Import_File"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-right: 10px; padding-left: 10px;">
+<p>A frequency dependent impedance that is imported from a file is used.</p>
+<p>Use <a href="#SetPortImpedanceFileName">SetPortImpedanceFileName</a> to enable this setting and import data from file.</p>
+</td>
+</tr>
+</table>
+<p>&#160;</p>
+<p class="VBA-Heading-Method">GetConstPortImpedance ( <span style="font-weight: normal;"><a href="../common_vbageneral/common_general_name.htm">name</a></span> <i>portname</i>, <span style="font-weight: normal;"><a href="../common_vbageneral/common_general_string.htm">string&amp;</a></span> <i>real</i>, <span style="font-weight: normal;"><a href="../common_vbageneral/common_general_string.htm">string&amp;</a></span> <i>imaginary</i> )</p>
+<p class="VBA-Text-Indent">Returns the impedance (real, imaginary) associated with the given port for the selected simulation task.</p>
+<p class="VBA-Text-Indent">For DC-Task: only the real part is relevant (imaginary in this case is 0). This function returns always the saved constant property without any information whether it is used by the simulation.</p>
+<p>&#160;</p>
+<p class="VBA-Heading-Method">GetPortInnerConductance ( <span style="font-weight: normal;"><a href="../common_vbageneral/common_general_name.htm">name</a></span> <i>portname</i> ) <span style="font-weight: normal;"><a href="../common_vbageneral/common_general_string.htm">string</a></span></p>
+<p class="VBA-Text-Indent">Returns the conductance associated with the given port for the selected simulation task.</p>
+<p>&#160;</p>
+<p class="VBA-Heading-Method">GetPortInnerResistance ( <span style="font-weight: normal;"><a href="../common_vbageneral/common_general_name.htm">name</a></span> <i>portname</i> ) <span style="font-weight: normal;"><a href="../common_vbageneral/common_general_string.htm">string</a></span></p>
+<p class="VBA-Text-Indent">Returns the resistance associated with the given port for the selected simulation task.</p>
+<p class="VBA-Heading-Method">&#160;</p>
+<p class="VBA-Heading-Method">GetProperty ( <a href="../common_vbageneral/common_general_name.htm" id="a16" style="font-weight: normal; font-style: normal;" name="a16">name</a> <span style="font-style: italic;"><i>propertyname</i></span> ) &#160;&#160;<span style="font-weight: normal;"><a href="../common_vbageneral/common_general_string.htm">string</a></span></p>
+<p class="VBA-Text-Indent">Inverse method to SetProperty(). Returns the value of the specified property. &#160;For details on valid properties, see SetProperty().</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">GetPortSignalType ( <span style="font-weight: normal;"><a href="../common_vbageneral/common_general_string.htm">string</a></span> <span style="font-style: italic;"><i>portname</i></span> ) <span style="font-weight: normal;"><a href="../common_vbageneral/common_general_string.htm">string</a></span></p>
+<p class="VBA-Text-Indent">Returns the signal type associated with the given port for the selected simulation task. Possible return values are "None" (if no signal is assigned to the specified port, i.e. the port will be considered as impedance), "Gaussian", "Pulse", "Sine", "Damped sine", "Exponential rising", "Exponential rising and falling", "PRBS", "PRBS random initialization", "K285", "K285 inverted", "Random", "Pulse Sequence" and "Import". The following table shows the mapping between the legacy signal types, returned by the method <i>GetPortSignalType</i> and the bit pattern and bit shape of the <a href="../../DES/analysis/simulation/tasks/transienttask/digitalexcitationsignals.htm">digital</a> excitation signals.</p>
+<table style="vertical-align: top; margin-left: 24px; left: 0px; top: 613px; height: 29px;" cellspacing="0" width="600">
+<col style="width: 30%;" />
+<col style="width: 30%;" />
+<col style="width: 40%;" />
+<tr style="vertical-align: top;">
+<th style="border: Solid 1px #000000; padding-right: 10px; padding-left: 10px;">
+<p>Legacy signal type</p>
+</th>
+<th style="border: Solid 1px #000000; padding-right: 10px; padding-left: 10px;">
+<p>Bit pattern</p>
+</th>
+<th style="border: Solid 1px #000000; padding-right: 10px; padding-left: 10px;">
+<p>Bit shape</p>
+</th>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-right: 10px; padding-left: 10px;">
+<p>"Pulse"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-right: 10px; padding-left: 10px;">
+<p>"Clock"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-right: 10px; padding-left: 10px;">
+<p>"Pulse"</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-right: 10px; padding-left: 10px;">
+<p>"PRBS"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-right: 10px; padding-left: 10px;">
+<p>"PRBS"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-right: 10px; padding-left: 10px;">
+<p>"Duty cycle and period time"</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-right: 10px; padding-left: 10px;">
+<p>"PRBS random initialization"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-right: 10px; padding-left: 10px;">
+<p>"PRBS random"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-right: 10px; padding-left: 10px;">
+<p>"Duty cycle and period time"</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-right: 10px; padding-left: 10px;">
+<p>"K285"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-right: 10px; padding-left: 10px;">
+<p>"K285"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-right: 10px; padding-left: 10px;">
+<p>"Duty cycle and period time"</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-right: 10px; padding-left: 10px;">
+<p>"K285 inverted"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-right: 10px; padding-left: 10px;">
+<p>"K285 inverted"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-right: 10px; padding-left: 10px;">
+<p>"Duty cycle and period time"</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-right: 10px; padding-left: 10px;">
+<p>"Random"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-right: 10px; padding-left: 10px;">
+<p>"Random"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-right: 10px; padding-left: 10px;">
+<p>"Duty cycle and period time"</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-right: 10px; padding-left: 10px;">
+<p>"Pulse Sequence"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-right: 10px; padding-left: 10px;">
+<p>"Manual"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-right: 10px; padding-left: 10px;">
+<p>"Generic"</p>
+</td>
+</tr>
+</table>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">GetRealPortExcitation ( <span style="font-weight: normal;"><a href="../common_vbageneral/common_general_string.htm">string</a></span> <span style="font-style: italic;"><i>portname</i></span> ) <span style="font-weight: normal;"><a href="../common_vbageneral/common_general_string.htm">string</a></span></p>
+<p class="VBA-Text-Indent">Returns the excitation amplitude of a DC-Task. The task needs to exist before this function can be called.</p>
+<p class="VBA-Heading-Method">&#160;</p>
+<p class="VBA-Heading-Method">GetAbsPortExcitation ( <span style="font-weight: normal;"><a href="../common_vbageneral/common_general_string.htm">string</a></span> <span style="font-style: italic;"><i>portname</i></span> ) <span style="font-weight: normal;"><a href="../common_vbageneral/common_general_string.htm">string</a></span></p>
+<p class="VBA-Text-Indent">Returns the amplitude of the complex excitation of an AC-Task. The task needs to exist before this function can be called.</p>
+<p class="VBA-Heading-Method">&#160;</p>
+<p class="VBA-Heading-Method">GetArgPortExcitation ( <span style="font-weight: normal;"><a href="../common_vbageneral/common_general_string.htm">string</a></span> <span style="font-style: italic;"><i>portname</i></span> ) <span style="font-weight: normal;"><a href="../common_vbageneral/common_general_string.htm">string</a></span></p>
+<p class="VBA-Text-Indent">Returns the&#160;argument (phase) of the complex excitation of an AC-Task. The task needs to exist before this function can be called.</p>
+<p class="VBA-Heading-Method">&#160;</p>
+<p class="VBA-Heading-Method">GetPortSignalDelay ( <span style="font-weight: normal;"><a href="../common_vbageneral/common_general_string.htm">string</a></span> <span style="font-style: italic;"><i>portname</i></span> ) <span style="font-weight: normal;"><a href="../common_vbageneral/common_general_string.htm">string</a></span></p>
+<p class="VBA-Text-Indent">Returns the signal delay for an already existing transient excitation signal of port "<span style="font-style: italic;"><i>portname"</i></span>.</p>
+<p class="VBA-Text-Indent">An error will be thrown if the port could not be found or if no signal is assigned to it.</p>
+<p class="VBA-Text-Indent">An error will also be thrown if the given task does not exist or if it is not a transient task.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">GetPortSourceType ( <span style="font-weight: normal;"><a href="../common_vbageneral/common_general_string.htm">string</a></span> <span style="font-style: italic;"><i>portname</i></span> ) <span style="font-weight: normal;"><a href="../common_vbageneral/common_general_string.htm">string</a></span></p>
+<p class="VBA-Text-Indent">Returns the source type associated with the given port for the selected simulation task. Possible return values are "None" (if no signal is assigned to the specified port, i.e. the port will be considered as impedance), "Voltage", "Current" and "Signal".</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">GetGaussProperties ( <span style="font-weight: normal;"><a href="../common_vbageneral/common_general_string.htm">string</a></span> <span style="font-style: italic;"><i>portname</i></span>, <span style="font-weight: normal;"><a href="../common_vbageneral/common_general_double.htm">double</a></span>&amp; <span style="font-style: italic;"><i>amplitude</i></span>, <span style="font-weight: normal;"><a href="../common_vbageneral/common_general_double.htm">double</a></span>&amp; <span style="font-style: italic;"><i>fmin</i></span>, <span style="font-weight: normal;"><a href="../common_vbageneral/common_general_double.htm">double</a></span>&amp; <span style="font-style: italic;"><i>fmax</i></span> )</p>
+<p class="VBA-Text-Indent">Retrieves the settings for a gaussian excitation signal at the given port.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">StartTaskNameIteration <a href="../common_vbageneral/common_general_integer.htm" id="a2" style="font-weight: normal; font-style: normal;" name="a2">int</a></p>
+<p class="VBA-Text-Indent">Resets the iterator for the simulation tasks and returns the number of simulation tasks.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">GetNextTaskName <a href="../common_vbageneral/common_general_name.htm" id="a5" style="font-weight: normal; font-style: normal;" name="a5">name</a></p>
+<p class="VBA-Text-Indent">Returns the next simulation task's name. Call <span style="font-style: italic;"><i>StartTaskNameIteration</i></span> before the first call of this method.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">DoesExist <a href="../common_vbageneral/common_general_integer.htm" id="a1911" style="font-weight: normal; font-style: normal;" name="a1911">bool</a></p>
+<p class="VBA-Text-Indent">Checks if a task with the given name does already exist.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">GetTypeForTask ( <a href="../common_vbageneral/common_general_name.htm" id="a4" style="font-weight: normal; font-style: normal;" name="a4">name</a> <span style="font-style: italic;"><i>taskname</i></span> ) <a href="../common_vbageneral/common_general_name.htm" id="a1" style="font-weight: normal; font-style: normal;" name="a1">name</a></p>
+<p class="VBA-Text-Indent">Returns the type of the simulation task given by name.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">GetSequenceTaskLoopCurrentIteration <a href="../common_vbageneral/common_general_integer.htm" id="a15" style="font-weight: normal; font-style: normal;" name="a15">int</a></p>
+<p class="VBA-Text-Indent">If a sequence task is currently performing a loop, this function returns the current iteration number. If no loop is currently running, -1 is returned.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">GetSequenceTaskLoopMaxIteration <a href="../common_vbageneral/common_general_integer.htm" id="a17" style="font-weight: normal; font-style: normal;" name="a17">int</a></p>
+<p class="VBA-Text-Indent">If a sequence task is currently performing a loop, this function returns the maximum number of iterations. If no loop is currently running, -1 is returned.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">GetUseExcitationReferenceFminFmax( <span style="font-weight: normal;"><a href="../common_vbageneral/common_general_string.htm">string</a></span> <span style="font-style: italic;"><i>portname</i></span>) <span><a href="../common_vbageneral/common_general_integer.htm" id="a191" style="font-weight: normal; font-style: normal;" name="a191">bool</a></span></p>
+<p class="VBA-Text-Indent">Returns true if the port is set to use reference Fmin/Fmax, otherwise false.</p>
+<p class="VBA-Heading-Category"><a name="Default_Settings" id="Default_Settings"></a>Default Settings</p>
+<p class="VBA-Text-Example">SetProperty ("enabled", "True")</p>
+<p class="VBA-Text-Example">SetProperty ("logarithmic sweep", "False")</p>
+<p class="VBA-Text-Example">SetProperty ("maximum frequency range", "True")</p>
+<p class="VBA-Text-Example">SetLocalUnit (&lt;any&gt;, False)</p>
+<p class="VBA-Text-Example">SetDiamondScheme (True)</p>
+<p class="VBA-Text-Example">SetUpconverting (True)</p>
+<p class="VBA-Text-Example">SetProperty ("gmin", "-1")</p>
+<p class="VBA-Text-Example">SetProperty ("rmin", "1e-6")</p>
+<p class="VBA-Heading-Category"><a name="Examples" id="Examples"></a>Examples</p>
+<p class="VBA-Text-Example"><a name="Creation" id="Creation"></a>'Creates a simulation task</p>
+<p class="VBA-Text-Example">&#160;</p>
+<p class="VBA-Text-Example">With SimulationTask</p>
+<p class="VBA-Text-Example" style="margin-left: 40px;">.Reset</p>
+<p class="VBA-Text-Example" style="margin-left: 40px;">.Type ("S-Parameters")</p>
+<p class="VBA-Text-Example" style="margin-left: 40px;">.Name ("MyTask")</p>
+<p class="VBA-Text-Example" style="margin-left: 40px;">.Create</p>
+<p class="VBA-Text-Example">End With</p>
+<p class="VBA-Text-Example">&#160;</p>
+<p class="VBA-Text-Example">With SimulationTask</p>
+<p class="VBA-Text-Example" style="margin-left: 40px;">.Reset</p>
+<p class="VBA-Text-Example" style="margin-left: 40px;">.Name("AC1")</p>
+<p class="VBA-Text-Example" style="margin-left: 40px;">.Type("AC")</p>
+<p class="VBA-Text-Example" style="margin-left: 40px;">.SetProperty("fmin",0)</p>
+<p class="VBA-Text-Example" style="margin-left: 40px;">.SetProperty("fmax",1000)</p>
+<p class="VBA-Text-Example" style="margin-left: 40px;">.SetProperty("maximum frequency range", "False")</p>
+<p class="VBA-Text-Example" style="margin-left: 40px;">.Create</p>
+<p class="VBA-Text-Example" style="margin-left: 40px;">.SetComplexPortExcitation("1", "1", "45")</p>
+<p class="VBA-Text-Example" style="margin-left: 40px;">.SetPortSourceType("1", "CURRENT")</p>
+<p class="VBA-Text-Example" style="margin-left: 40px;">.SetResultOption("FD Powers", "On (Parametric)")</p>
+<p class="VBA-Text-Example">End With</p>
+<p class="VBA-Text-Example">&#160;</p>
+<p class="VBA-Text-Example"><a name="Modification" id="Modification"></a>'Modifies an existing simulation task</p>
+<p class="VBA-Text-Example">&#160;</p>
+<p class="VBA-Text-Example">With SimulationTask</p>
+<p class="VBA-Text-Example" style="margin-left: 40px;">.Reset</p>
+<p class="VBA-Text-Example" style="margin-left: 40px;">.Name ("MyTask")</p>
+<p class="VBA-Text-Example" style="margin-left: 40px;">.SetProperty("maximum frequency range", "False")</p>
+<p class="VBA-Text-Example" style="margin-left: 40px;">.SetLocalUnit ("Frequency", "GHz")</p>
+<p class="VBA-Text-Example" style="margin-left: 40px;">.SetSweepData (1.0e-5, 10.0, 101)</p>
+<p class="VBA-Text-Example" style="margin-left: 40px;">.SetProperty ("logarithmic sweep", "True")</p>
+<p class="VBA-Text-Example">End With</p>
+<p>&#160;</p>
+<p class="VBA-Text-Example"><a name="Creation1" id="Creation1"></a>'Tests if a simulation task with a given name exists</p>
+<p class="VBA-Text-Example">&#160;</p>
+<p class="VBA-Text-Example">SimulationTask.Name("Sweep1\SPara1")</p>
+<p class="VBA-Text-Example">If SimulationTask.DoesExist Then</p>
+<p class="VBA-Text-Example" style="margin-left: 40px;">ReportInformationToWindow("Task exists.")</p>
+<p class="VBA-Text-Example">Else</p>
+<p class="VBA-Text-Example" style="margin-left: 40px;">ReportInformationToWindow("Task doesn't exist.")</p>
+<p class="VBA-Text-Example">End If</p>
+<p class="VBA-Text-Example">&#160;</p>
+<p class="VBA-Text-Example"><a name="Creation11" id="Creation11"></a>' Update all tasks &#160;(UpdateAllTasks)</p>
+<p class="VBA-Text-Example">&#160;</p>
+<p class="VBA-Text-Example">UpdateResults</p>
+<p class="VBA-Text-Example">&#160;</p>
+<p class="VBA-Text-Example"><a name="Creation12" id="Creation12"></a>'Values string array as argument of SetPortSignal</p>
+<p class="VBA-Text-Example">&#160;</p>
+<p class="VBA-Text-Example" style="margin-top: 0pt; margin-bottom: 3pt; font-family: 'Courier New', monospace; font-size: 9pt; text-align: left; color: rgb(0, 0, 0); font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial;">Dim arr() As String</p>
+<p class="VBA-Text-Example" style="margin-top: 0pt; margin-bottom: 3pt; font-family: 'Courier New', monospace; font-size: 9pt; text-align: left; color: rgb(0, 0, 0); font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial;">With SimulationTask</p>
+<p class="VBA-Text-Example" style="margin-top: 0pt; margin-bottom: 3pt; font-family: 'Courier New', monospace; font-size: 9pt; text-align: left; color: rgb(0, 0, 0); font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial;">&#160;&#160;&#160;&#160;'1. Defining a sine signal</p>
+<p class="VBA-Text-Example" style="margin-top: 0pt; margin-bottom: 3pt; font-family: 'Courier New', monospace; font-size: 9pt; text-align: left; color: rgb(0, 0, 0); font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial;"><span style="font-family: 'Courier New', monospace; font-size: 9pt; color: rgb(0, 0, 0); font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial;"><font size="1" style="font-size:9pt;">&#160;&#160;&#160;&#160;.Reset</font></span></p>
+<p class="VBA-Text-Example" style="margin-top: 0pt; margin-bottom: 3pt; font-family: 'Courier New', monospace; font-size: 9pt; text-align: left; color: rgb(0, 0, 0); font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial;">&#160;&#160;&#160;&#160;.Name "Tran1"</p>
+<p class="VBA-Text-Example" style="margin-top: 0pt; margin-bottom: 3pt; font-family: 'Courier New', monospace; font-size: 9pt; text-align: left; color: rgb(0, 0, 0); font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial;">&#160;&#160;&#160;&#160;ReDim arr(3) As String &#160;' (3) means (0 To 3)</p>
+<p class="VBA-Text-Example" style="margin-top: 0pt; margin-bottom: 3pt; font-family: 'Courier New', monospace; font-size: 9pt; text-align: left; color: rgb(0, 0, 0); font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial;">&#160;&#160;&#160;&#160;arr(0)="0" &#160;' offset</p>
+<p class="VBA-Text-Example" style="margin-top: 0pt; margin-bottom: 3pt; font-family: 'Courier New', monospace; font-size: 9pt; text-align: left; color: rgb(0, 0, 0); font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial;">&#160;&#160;&#160;&#160;arr(1)="1"&#160;&#160;' ampl</p>
+<p class="VBA-Text-Example" style="margin-top: 0pt; margin-bottom: 3pt; font-family: 'Courier New', monospace; font-size: 9pt; text-align: left; color: rgb(0, 0, 0); font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial;">&#160;&#160;&#160;&#160;arr(2)="2"&#160;&#160;' freq</p>
+<p class="VBA-Text-Example" style="margin-top: 0pt; margin-bottom: 3pt; font-family: 'Courier New', monospace; font-size: 9pt; text-align: left; color: rgb(0, 0, 0); font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial;">&#160;&#160;&#160;&#160;arr(3)="3"&#160;&#160;' tdelay</p>
+<p class="VBA-Text-Example" style="margin-top: 0pt; margin-bottom: 3pt; font-family: 'Courier New', monospace; font-size: 9pt; text-align: left; color: rgb(0, 0, 0); font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial;">&#160;&#160;&#160;&#160;.SetPortSignal("1", "Sine", arr) &#160;' Pre-defined string array as argument</p>
+<p class="VBA-Text-Example" style="margin-top: 0pt; margin-bottom: 3pt; font-family: 'Courier New', monospace; font-size: 9pt; text-align: left; color: rgb(0, 0, 0); font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial;">&#160;</p>
+<p class="VBA-Text-Example" style="margin-top: 0pt; margin-bottom: 3pt; font-family: 'Courier New', monospace; font-size: 9pt; text-align: left; color: rgb(0, 0, 0); font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial;">&#160;&#160;&#160;&#160;ReDim arr(1 To 4) As String</p>
+<p class="VBA-Text-Example" style="margin-top: 0pt; margin-bottom: 3pt; font-family: 'Courier New', monospace; font-size: 9pt; text-align: left; color: rgb(0, 0, 0); font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial;">&#160;&#160;&#160;&#160;arr(1)="1"</p>
+<p class="VBA-Text-Example" style="margin-top: 0pt; margin-bottom: 3pt; font-family: 'Courier New', monospace; font-size: 9pt; text-align: left; color: rgb(0, 0, 0); font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial;">&#160;&#160;&#160;&#160;arr(2)="2"</p>
+<p class="VBA-Text-Example" style="margin-top: 0pt; margin-bottom: 3pt; font-family: 'Courier New', monospace; font-size: 9pt; text-align: left; color: rgb(0, 0, 0); font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial;">&#160;&#160;&#160;&#160;arr(3)="3"</p>
+<p class="VBA-Text-Example" style="margin-top: 0pt; margin-bottom: 3pt; font-family: 'Courier New', monospace; font-size: 9pt; text-align: left; color: rgb(0, 0, 0); font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial;">&#160;&#160;&#160;&#160;arr(4)="4"</p>
+<p class="VBA-Text-Example" style="margin-top: 0pt; margin-bottom: 3pt; font-family: 'Courier New', monospace; font-size: 9pt; text-align: left; color: rgb(0, 0, 0); font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial;">&#160;&#160;&#160;&#160;.SetPortSignal("1", "Sine", arr) &#160;' Pre-defined string array as argument (only size matters)</p>
+<p class="VBA-Text-Example" style="margin-top: 0pt; margin-bottom: 3pt; font-family: 'Courier New', monospace; font-size: 9pt; text-align: left; color: rgb(0, 0, 0); font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial;">&#160;</p>
+<p class="VBA-Text-Example" style="margin-top: 0pt; margin-bottom: 3pt; font-family: 'Courier New', monospace; font-size: 9pt; text-align: left; color: rgb(0, 0, 0); font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial;">&#160;&#160;&#160;&#160;' 2. example for other signal type with different string array size</p>
+<p class="VBA-Text-Example" style="margin-top: 0pt; margin-bottom: 3pt; font-family: 'Courier New', monospace; font-size: 9pt; text-align: left; color: rgb(0, 0, 0); font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial;">&#160;&#160;&#160;&#160;.Reset</p>
+<p class="VBA-Text-Example" style="margin-top: 0pt; margin-bottom: 3pt; font-family: 'Courier New', monospace; font-size: 9pt; text-align: left; color: rgb(0, 0, 0); font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial;">&#160;&#160;&#160;&#160;.Name "Tran2"</p>
+<p class="VBA-Text-Example" style="margin-top: 0pt; margin-bottom: 3pt; font-family: 'Courier New', monospace; font-size: 9pt; text-align: left; color: rgb(0, 0, 0); font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial;"><span style="font-family: 'Courier New', monospace; font-size: 9pt; color: rgb(0, 0, 0); font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial;"><font size="1" style="font-size:9pt;">&#160;&#160;&#160;&#160;ReDim arr(3) As String &#160;' (3) means (0 To 3)</font></span></p>
+<p class="VBA-Text-Example" style="margin-top: 0pt; margin-bottom: 3pt; font-family: 'Courier New', monospace; font-size: 9pt; text-align: left; color: rgb(0, 0, 0); font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial;">&#160;&#160;&#160;&#160;arr(0)="0" &#160;' Fmin</p>
+<p class="VBA-Text-Example" style="margin-top: 0pt; margin-bottom: 3pt; font-family: 'Courier New', monospace; font-size: 9pt; text-align: left; color: rgb(0, 0, 0); font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial;">&#160;&#160;&#160;&#160;arr(1)="1"&#160;&#160;' Fmax</p>
+<p class="VBA-Text-Example" style="margin-top: 0pt; margin-bottom: 3pt; font-family: 'Courier New', monospace; font-size: 9pt; text-align: left; color: rgb(0, 0, 0); font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial;">&#160;&#160;&#160;&#160;arr(2)="2"&#160;&#160;' Ampl</p>
+<p class="VBA-Text-Example" style="margin-top: 0pt; margin-bottom: 3pt; font-family: 'Courier New', monospace; font-size: 9pt; text-align: left; color: rgb(0, 0, 0); font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial;">&#160;&#160;&#160;&#160;arr(3)="false"&#160;&#160;' Use FMin/Fmax from Task (optional)</p>
+<p class="VBA-Text-Example" style="margin-top: 0pt; margin-bottom: 3pt; font-family: 'Courier New', monospace; font-size: 9pt; text-align: left; color: rgb(0, 0, 0); font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial;">&#160;&#160;&#160;&#160;.SetPortSignal("1", "Gaussian", arr) &#160;' Need 3 definitions (optional 4) To define a gaussian signal</p>
+<p class="VBA-Text-Example" style="margin-top: 0pt; margin-bottom: 3pt; font-family: 'Courier New', monospace; font-size: 9pt; text-align: left; color: rgb(0, 0, 0); font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial;">&#160;</p>
+<p class="VBA-Text-Example" style="margin-top: 0pt; margin-bottom: 3pt; font-family: 'Courier New', monospace; font-size: 9pt; text-align: left; color: rgb(0, 0, 0); font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial;">&#160;&#160;&#160;&#160;' 3. example to define a "Digital-Generic-PRBS random" signal</p>
+<p class="VBA-Text-Example" style="margin-top: 0pt; margin-bottom: 3pt; font-family: 'Courier New', monospace; font-size: 9pt; text-align: left; color: rgb(0, 0, 0); font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial;">&#160;&#160;&#160;&#160;.Reset</p>
+<p class="VBA-Text-Example" style="margin-top: 0pt; margin-bottom: 3pt; font-family: 'Courier New', monospace; font-size: 9pt; text-align: left; color: rgb(0, 0, 0); font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial;">&#160;&#160;&#160;&#160;.Name "Tran3"</p>
+<p class="VBA-Text-Example" style="margin-top: 0pt; margin-bottom: 3pt; font-family: 'Courier New', monospace; font-size: 9pt; text-align: left; color: rgb(0, 0, 0); font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial;">&#160;&#160;&#160;&#160;Dim values() As String</p>
+<p class="VBA-Text-Example" style="margin-top: 0pt; margin-bottom: 3pt; font-family: 'Courier New', monospace; font-size: 9pt; text-align: left; color: rgb(0, 0, 0); font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial;">&#160;&#160;&#160;&#160;ReDim values(9) As String&#160;&#160;' (9) means (0 To 9)</p>
+<p class="VBA-Text-Example" style="margin-top: 0pt; margin-bottom: 3pt; font-family: 'Courier New', monospace; font-size: 9pt; text-align: left; color: rgb(0, 0, 0); font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial;">&#160;&#160;&#160;&#160;values(0) = "Generic" &#160;&#160;&#160;&#160;&#160;' Shape Type</p>
+<p class="VBA-Text-Example" style="margin-top: 0pt; margin-bottom: 3pt; font-family: 'Courier New', monospace; font-size: 9pt; text-align: left; color: rgb(0, 0, 0); font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial;">&#160;&#160;&#160;&#160;values(1) = "PRBS random" &#160;' Pattern Type</p>
+<p class="VBA-Text-Example" style="margin-top: 0pt; margin-bottom: 3pt; font-family: 'Courier New', monospace; font-size: 9pt; text-align: left; color: rgb(0, 0, 0); font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial;">&#160;&#160;&#160;&#160;values(2) = "0" &#160;' Alow</p>
+<p class="VBA-Text-Example" style="margin-top: 0pt; margin-bottom: 3pt; font-family: 'Courier New', monospace; font-size: 9pt; text-align: left; color: rgb(0, 0, 0); font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial;">&#160;&#160;&#160;&#160;values(3) = "1" &#160;' Ahigh</p>
+<p class="VBA-Text-Example" style="margin-top: 0pt; margin-bottom: 3pt; font-family: 'Courier New', monospace; font-size: 9pt; text-align: left; color: rgb(0, 0, 0); font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial;">&#160;&#160;&#160;&#160;values(4) = "1" &#160;' Trise</p>
+<p class="VBA-Text-Example" style="margin-top: 0pt; margin-bottom: 3pt; font-family: 'Courier New', monospace; font-size: 9pt; text-align: left; color: rgb(0, 0, 0); font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial;">&#160;&#160;&#160;&#160;values(5) = "2" &#160;' Tfall</p>
+<p class="VBA-Text-Example" style="margin-top: 0pt; margin-bottom: 3pt; font-family: 'Courier New', monospace; font-size: 9pt; text-align: left; color: rgb(0, 0, 0); font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial;">&#160;&#160;&#160;&#160;values(6) = "3" &#160;' Tdelayrise</p>
+<p class="VBA-Text-Example" style="margin-top: 0pt; margin-bottom: 3pt; font-family: 'Courier New', monospace; font-size: 9pt; text-align: left; color: rgb(0, 0, 0); font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial;">&#160;&#160;&#160;&#160;values(7) = "4" &#160;' Tdelayfall</p>
+<p class="VBA-Text-Example" style="margin-top: 0pt; margin-bottom: 3pt; font-family: 'Courier New', monospace; font-size: 9pt; text-align: left; color: rgb(0, 0, 0); font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial;">&#160;&#160;&#160;&#160;values(8) = "13" ' Ttotal</p>
+<p class="VBA-Text-Example" style="margin-top: 0pt; margin-bottom: 3pt; font-family: 'Courier New', monospace; font-size: 9pt; text-align: left; color: rgb(0, 0, 0); font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial;">&#160;&#160;&#160;&#160;values(9) = "7" &#160;' N</p>
+<p class="VBA-Text-Example" style="margin-top: 0pt; margin-bottom: 3pt; font-family: 'Courier New', monospace; font-size: 9pt; text-align: left; color: rgb(0, 0, 0); font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial;">&#160;&#160;&#160;&#160;.SetPortSignal("1", "Digital", values)</p>
+<p class="VBA-Text-Example" style="margin-top: 0pt; margin-bottom: 3pt; font-family: 'Courier New', monospace; font-size: 9pt; text-align: left; color: rgb(0, 0, 0); font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial;">&#160;&#160;&#160;&#160;.SetPortSignalDelay("1", "1.0")</p>
+<p class="VBA-Text-Example" style="margin-top: 0pt; margin-bottom: 3pt; font-family: 'Courier New', monospace; font-size: 9pt; text-align: left; color: rgb(0, 0, 0); font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial;">&#160;&#160;&#160;&#160;.SetPortSourceType("1", "Signal")</p>
+<p class="VBA-Text-Example" style="margin-top: 0pt; margin-bottom: 3pt; font-family: 'Courier New', monospace; font-size: 9pt; text-align: left; color: rgb(0, 0, 0); font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial;">&#160;&#160;&#160;&#160;.SetPortSignalName("1", "Digital_1")</p>
+<p class="VBA-Text-Example" style="margin-top: 0pt; margin-bottom: 3pt; font-family: 'Courier New', monospace; font-size: 9pt; text-align: left; color: rgb(0, 0, 0); font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial;">&#160;</p>
+<p class="VBA-Text-Example" style="margin-top: 0pt; margin-bottom: 3pt; font-family: 'Courier New', monospace; font-size: 9pt; text-align: left; color: rgb(0, 0, 0); font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial;"><span style="font-family: 'Courier New', monospace; font-size: 9pt; color: rgb(0, 0, 0); font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial;"><font size="1" style="font-size:9pt;">&#160;&#160;&#160;&#160;' 3. example to define a "Digital-Duty cycle and frequency-Manual" signal</font></span></p>
+<p class="VBA-Text-Example" style="margin-top: 0pt; margin-bottom: 3pt; font-family: 'Courier New', monospace; font-size: 9pt; text-align: left; color: rgb(0, 0, 0); font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial;">&#160;&#160;&#160;&#160;.Reset</p>
+<p class="VBA-Text-Example" style="margin-top: 0pt; margin-bottom: 3pt; font-family: 'Courier New', monospace; font-size: 9pt; text-align: left; color: rgb(0, 0, 0); font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial;"><span style="font-family: 'Courier New', monospace; font-size: 9pt; color: rgb(0, 0, 0); font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial;"><font size="1" style="font-size:9pt;">&#160;&#160;&#160;&#160;.Name "Tran4"</font></span></p>
+<p class="VBA-Text-Example" style="margin-top: 0pt; margin-bottom: 3pt; font-variant-ligatures: normal; font-variant-caps: normal; orphans: 2; widows: 2; -webkit-text-stroke-width: 0px; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial;">&#160;&#160;&#160;&#160;Dim values() As String</p>
+<p class="VBA-Text-Example" style="margin-top: 0pt; margin-bottom: 3pt; font-variant-ligatures: normal; font-variant-caps: normal; orphans: 2; widows: 2; -webkit-text-stroke-width: 0px; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial;">&#160;&#160;&#160;&#160;ReDim values(10) As String</p>
+<p class="VBA-Text-Example" style="margin-top: 0pt; margin-bottom: 3pt; font-variant-ligatures: normal; font-variant-caps: normal; orphans: 2; widows: 2; -webkit-text-stroke-width: 0px; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial;">&#160;&#160;&#160;&#160;values(0) = "Duty cycle and frequency" ' Shape Type</p>
+<p class="VBA-Text-Example" style="margin-top: 0pt; margin-bottom: 3pt; font-variant-ligatures: normal; font-variant-caps: normal; orphans: 2; widows: 2; -webkit-text-stroke-width: 0px; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial;">&#160;&#160;&#160;&#160;values(1) = "Manual" &#160;' Pattern Type</p>
+<p class="VBA-Text-Example" style="margin-top: 0pt; margin-bottom: 3pt; font-variant-ligatures: normal; font-variant-caps: normal; orphans: 2; widows: 2; -webkit-text-stroke-width: 0px; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial;">&#160;&#160;&#160;&#160;values(2) = "0.0" ' Alow</p>
+<p class="VBA-Text-Example" style="margin-top: 0pt; margin-bottom: 3pt; font-variant-ligatures: normal; font-variant-caps: normal; orphans: 2; widows: 2; -webkit-text-stroke-width: 0px; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial;">&#160;&#160;&#160;&#160;values(3) = "1.0" ' Ahigh</p>
+<p class="VBA-Text-Example" style="margin-top: 0pt; margin-bottom: 3pt; font-variant-ligatures: normal; font-variant-caps: normal; orphans: 2; widows: 2; -webkit-text-stroke-width: 0px; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial;">&#160;&#160;&#160;&#160;values(4) = "0.1" ' Trise</p>
+<p class="VBA-Text-Example" style="margin-top: 0pt; margin-bottom: 3pt; font-variant-ligatures: normal; font-variant-caps: normal; orphans: 2; widows: 2; -webkit-text-stroke-width: 0px; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial;">&#160;&#160;&#160;&#160;values(5) = "0.1 ' Tfall</p>
+<p class="VBA-Text-Example" style="margin-top: 0pt; margin-bottom: 3pt; font-variant-ligatures: normal; font-variant-caps: normal; orphans: 2; widows: 2; -webkit-text-stroke-width: 0px; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial;">&#160;&#160;&#160;&#160;values(6) = "1" ' Duty cycle</p>
+<p class="VBA-Text-Example" style="margin-top: 0pt; margin-bottom: 3pt; font-variant-ligatures: normal; font-variant-caps: normal; orphans: 2; widows: 2; -webkit-text-stroke-width: 0px; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial;">&#160;&#160;&#160;&#160;values(7) = "1" ' Freq</p>
+<p class="VBA-Text-Example" style="margin-top: 0pt; margin-bottom: 3pt; font-variant-ligatures: normal; font-variant-caps: normal; orphans: 2; widows: 2; -webkit-text-stroke-width: 0px; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial;">&#160;&#160;&#160;&#160;values(8) = "0" ' Initbit</p>
+<p class="VBA-Text-Example" style="margin-top: 0pt; margin-bottom: 3pt; font-variant-ligatures: normal; font-variant-caps: normal; orphans: 2; widows: 2; -webkit-text-stroke-width: 0px; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial;">&#160;&#160;&#160;&#160;values(9) = "101010" ' Bitsequence</p>
+<p class="VBA-Text-Example" style="margin-top: 0pt; margin-bottom: 3pt; font-variant-ligatures: normal; font-variant-caps: normal; orphans: 2; widows: 2; -webkit-text-stroke-width: 0px; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial;">&#160;&#160;&#160;&#160;values(10) = "true" ' Periodic</p>
+<p class="VBA-Text-Example" style="margin-top: 0pt; margin-bottom: 3pt; font-family: 'Courier New', monospace; font-size: 9pt; text-align: left; color: rgb(0, 0, 0); font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial;"><span style="font-family: 'Courier New', monospace; font-size: 9pt; color: rgb(0, 0, 0); font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial;"><font size="1" style="font-size:9pt;">&#160;&#160;&#160;&#160;.SetPortSignal("1", "Digital", values)</font></span></p>
+<p class="VBA-Text-Example" style="margin-top: 0pt; margin-bottom: 3pt; font-family: 'Courier New', monospace; font-size: 9pt; text-align: left; color: rgb(0, 0, 0); font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial;"><span style="font-family: 'Courier New', monospace; font-size: 9pt; color: rgb(0, 0, 0); font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial;"><font size="1" style="font-size:9pt;">&#160;&#160;&#160;&#160;.SetPortSignalDelay("1", "1.0")</font></span></p>
+<p class="VBA-Text-Example" style="margin-top: 0pt; margin-bottom: 3pt; font-family: 'Courier New', monospace; font-size: 9pt; text-align: left; color: rgb(0, 0, 0); font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial;">&#160;&#160;&#160;&#160;.SetPortSourceType("1", "Signal")</p>
+<p class="VBA-Text-Example" style="margin-top: 0pt; margin-bottom: 3pt; font-family: 'Courier New', monospace; font-size: 9pt; text-align: left; color: rgb(0, 0, 0); font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial;">&#160;&#160;&#160;&#160;.SetPortSignalName("1", "Digital_1")</p>
+<p class="VBA-Text-Example">&#160;</p>
+<p class="VBA-Text-Example">End With</p>
+<?rh-p style="margin-bottom: 0px; text-align: Right; margin-left: 18px; 
+                 margin-right: 18px; margin-top: 18px;" ?>
+<div style="width: 100%; position: relative;" id="footer">
+<p style="border-bottom: Solid 1px #dddddd; text-align: Left; margin-left: 0px; font-family: Arial, sans-serif; line-height: Normal; margin-top: 9px; margin-right: 0px; margin-bottom: 6px; border-left-width: 1px; border-top-width: 1px; border-right-width: 1px;"><span style="text-align: Left; font-family: Arial, sans-serif; line-height: Normal;">&#160;</span></p>
+<table cellspacing="0" width="100%">
+<col style="width: 50%;" />
+<col style="width: 50%;" />
+<tr>
+<td style="vertical-align: Top;"><span style="font-family: Arial, sans-serif; line-height: Normal; font-size: 8pt;"><font size="1" style="font-size:8pt;">CST Studio Suite 2026</font></span></td>
+<td style="vertical-align: Top;">
+<p style="text-align: right;">&#160;</p>
+</td>
+</tr>
+</table>
+<p>&#160;</p>
+</div>
+<script type="text/javascript" language="javascript1.2">
+//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+        writeIntopicBar(0);
+
+
+highlightSearch();
+//-->
+//]]>
+</script>
+</body>
+</html>

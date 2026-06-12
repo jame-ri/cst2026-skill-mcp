@@ -1,0 +1,528 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="Adobe RoboHelp 11" />
+<title>GeneralCompactThermalModel Object</title>
+<link rel="StyleSheet" href="../online_help_vba.css" type="text/css" />
+<style type="text/css">
+/*<![CDATA[*/
+<!--
+body { border-bottom-style:None; }
+-->
+/*]]>*/
+</style>
+
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+        origWidth = innerWidth;
+        origHeight = innerHeight;
+        onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+/*<![CDATA[*/
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+-->
+/*]]>*/
+</style>
+
+<script type="text/javascript" language="javascript1.2" src="../whmsg.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript" src="../whver.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript1.2" src="../whutils.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript1.2" src="../whproxy.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript1.2" src="../whlang.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript1.2" src="../whtopic.js" charset="utf-8">
+</script>
+</head>
+<body>
+<script type="text/javascript" language="javascript1.2">
+//<![CDATA[
+<!--
+if (window.gbWhTopic)
+{
+        var strUrl = document.location.href;
+        var bc = 0;
+        var n = strUrl.toLowerCase().indexOf("bc-");
+        if(n != -1)
+        {
+                document.location.replace(strUrl.substring(0, n));
+                bc = strUrl.substring(n+3);
+        }
+
+        if (window.addTocInfo)
+        {
+        addTocInfo("3D Simulation VBA\nVBA Objects\nSources and Ports\nThermal\nGeneralCompactThermalModel Object");
+
+        }
+        if (window.writeBtnStyle)
+                writeBtnStyle();
+
+        if (window.writeIntopicBar)
+                writeIntopicBar(0);
+
+        
+        document.write("<p style=\"font-family: Tahoma; font-size: 9pt; font-weight: 400;  font-style:normal; color: rgb(0, 0, 0); text-decoration:none; text-align: left\"> ");
+AddMasterBreadcrumbs("../index.htm", "font-family: Tahoma; font-size: 9pt; font-weight: 400;  font-style:normal; color: rgb(0, 0, 0); text-decoration:none; text-align: left", "|", "Home", "../special_vbaobjects/special_vbaobjects_vbaobjects.htm");
+document.write("<a style=\"font-family: Tahoma; font-size: 9pt; font-weight: 400;  font-style:normal; color: rgb(0, 0, 0); text-decoration:none; text-align: left\" href=\"../special_vbaobjects/special_vbaobjects_vbaobjects.htm\">3D Simulation VBA<\/a> | <a style=\"font-family: Tahoma; font-size: 9pt; font-weight: 400;  font-style:normal; color: rgb(0, 0, 0); text-decoration:none; text-align: left\" href=\"../special_vbaobjects/special_vbaobjects_vbaobjects.htm\">VBA Objects<\/a> | <a style=\"font-family: Tahoma; font-size: 9pt; font-weight: 400;  font-style:normal; color: rgb(0, 0, 0); text-decoration:none; text-align: left\" href=\"../special_vbasignals/special_vbasignals_timesignal_object.htm\">Sources and Ports<\/a> | <a style=\"font-family: Tahoma; font-size: 9pt; font-weight: 400;  font-style:normal; color: rgb(0, 0, 0); text-decoration:none; text-align: left\" href=\"special_vbathermalsolver_compactthermalmodel_object.htm\">Thermal<\/a> | GeneralCompactThermalModel Object<\/p>");
+
+}
+else
+        if (window.gbIE4)
+                document.location.reload();
+
+onLoadHandler = function()
+{
+  if (window.setRelStartPage)
+        {
+        setTimeout("setRelStartPage('../index.htm');", 1)
+
+    setTimeout("UpdateBreadCrumbsMarker();", 1);
+        }
+}
+
+if (window.addEventListener){  
+        window.addEventListener('load', onLoadHandler, false);   
+} else if (window.attachEvent){  
+        window.attachEvent('onload', onLoadHandler);  
+}
+
+function onSetStartPage()
+{
+  autoSync(1);
+  sendSyncInfo();
+  sendAveInfoOut();
+}
+//-->
+//]]>
+</script><script type="text/javascript" src="../ehlpdhtm.js" language="JavaScript1.2">
+</script>
+<table cellspacing="0" width="100%">
+<col style="width: 50%;" />
+<col style="width: 50%;" />
+<tr>
+<td style="vertical-align: middle; padding-top: 5px; padding-bottom: 5px;">
+<p style="margin-top: 0px; margin-bottom: 0px;"><img src="../3ds.png" alt="" style="border: none;" border="0" /></p>
+</td>
+<td style="vertical-align: middle;">
+<p style="text-align: right;"><a href="https://www.3ds.com/products-services/3dexperience/" target="_blank"><img src="../3dexp.png" alt="" style="border: none;" width="32" height="32" border="0" /></a></p>
+</td>
+</tr>
+</table>
+<h1>GeneralCompactThermalModel Object</h1>
+<p class="VBA-Text">This object is used to create new &#160;general compact thermal model sources for the <a href="special_vbathermalsolver_chtsolver.htm">Conjugate Heat Transfer Solver</a>.</p>
+<p class="VBA-Text" style="font-size: 12px; font-variant-ligatures: normal; font-variant-caps: normal; orphans: 2; widows: 2;"><span style="-webkit-text-stroke-width: 0px; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial;">The general compact thermal model can be used to approximate the thermal behavior of single-die packages that can be effectively represented by a thermal resistance network. It is a generalization of the <a href="special_vbathermalsolver_delphimodel.htm">Delphi compact thermal model</a> to arbitrary geometry and thermal network configuration.</span></p>
+<ul>
+<li class="p-VBA-Index-Category">
+<p class="VBA-Index-Category"><a href="#Methods">Methods</a></p>
+</li>
+<li class="p-VBA-Index-Category">
+<p class="VBA-Index-Category"><a href="#Defaults">Default Settings</a></p>
+</li>
+<li class="p-VBA-Index-Category">
+<p class="VBA-Index-Category"><a href="#Example">Example</a></p>
+</li>
+</ul>
+<p class="VBA-Heading-Category"><a name="Methods" id="Methods"></a>Methods</p>
+<p class="VBA-Heading-Method">Reset</p>
+<p class="VBA-Text-Indent">Resets all internal settings to their default values.</p>
+<p class="VBA-Heading-Method">&#160;</p>
+<p class="VBA-Heading-Method">Name ( <span style="font-weight: normal;"><a href="../common_vbageneral/common_general_name.htm" id="a9" name="a9">name</a> &#160;</span><span style="font-style: italic;"><i>name</i></span> )</p>
+<p class="VBA-Text-Indent">Sets the <span style="font-style: italic;"><i>name</i></span> of the general compact thermal model source. <span lang="EN-US" xml:lang="EN-US">Each source must have a unique name.</span></p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">Rename ( <span style="font-weight: normal;"><a href="../common_vbageneral/common_general_name.htm" id="a2" name="a2">name</a> &#160;</span><span style="font-style: italic;"><i>oldname</i></span>, &#160;<span style="font-weight: normal;"><a href="../common_vbageneral/common_general_name.htm" id="a3" name="a3">name</a></span> <span style="font-style: italic;"><i>newname</i></span> )</p>
+<p class="VBA-Text-Indent">Renames the general compact thermal model with the given <span style="font-style: italic;"><i>oldname</i></span> to the defined <span style="font-style: italic;"><i>newname</i></span>. A model with the new name must not already exist.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">Folder ( <a href="../common_vbageneral/common_general_name.htm" style="font-weight: normal;">name</a> <span style="font-style: italic;"><i>foldername</i></span> )</p>
+<p class="VBA-Text-Indent">Sets the name of the folder for the general compact thermal model under creation. The folder will be created if it does not exist. &#160;If the name is empty, then the general compact thermal model does not belong to a folder.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">NewFolder ( <a href="../common_vbageneral/common_general_name.htm" style="font-weight: normal;">name</a> <span style="font-style: italic;"><i>foldername</i></span> )</p>
+<p class="VBA-Text-Indent">Creates a new folder for general compact thermal models with the given name. The name of the new folder (<span style="font-style: italic;"><i>foldername</i></span>) must be unique. Otherwise no new folder will be created.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">RenameFolder ( <span style="font-weight: normal;"><a href="../common_vbageneral/common_general_name.htm" id="a21" name="a21">name</a> &#160;</span><span style="font-style: italic;"><i>oldname</i></span>, &#160;<span style="font-weight: normal;"><a href="../common_vbageneral/common_general_name.htm" id="a31" name="a31">name</a></span> <span style="font-style: italic;"><i>newname</i></span> )</p>
+<p class="VBA-Text-Indent">Renames an existing general compact thermal model folder from <span style="font-style: italic;"><i>oldname</i></span> to <span style="font-style: italic;"><i>newname</i></span>, if a folder with <span style="font-style: italic;"><i>newname</i></span> does not already exist. All items below the renamed folder will remain below the folder with the new name.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">DeleteFolder ( <span style="font-style: italic;"><i><a href="../common_vbageneral/common_general_string.htm" id="a611" style="font-style: normal; font-weight: normal;" name="a611">string</a> foldername</i></span> )</p>
+<p class="VBA-Text-Indent">Deletes an existing folder and all the contained elements.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">Enable( <a href="../common_vbageneral/common_general_bool_data_type.htm" style="font-weight: normal;">bool</a> <span style="font-style: italic;"><i>flag</i></span> )</p>
+<p class="VBA-Text-Indent">Enables or disables the compact thermal model under creation depending on <span style="font-style: italic;"><i>flag</i></span>. If <span style="font-style: italic;"><i>flag</i></span> is <span style="font-style: italic;"><i>false,</i></span> the compact thermal model won't be considered for simulation.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">EnableItem( <span style="font-weight: normal;"><a href="../common_vbageneral/common_general_name.htm" id="a22" name="a22">name</a> &#160;</span><span style="font-style: italic;"><i>name</i></span>, &#160;<a href="../common_vbageneral/common_general_bool_data_type.htm" style="font-weight: normal;">bool</a> <span style="font-style: italic;"><i>flag</i></span> )</p>
+<p class="VBA-Text-Indent">Enables or disables the (existing) compact thermal model with the given <span style="font-style: italic;"><i>name</i></span> depending on <span style="font-style: italic;"><i>flag</i></span>. If <span style="font-style: italic;"><i>flag</i></span> is <span style="font-style: italic;"><i>false,</i></span> the compact thermal model won't be considered for simulation.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">Delete ( <span style="font-weight: normal;"><a href="../common_vbageneral/common_general_expression.htm" id="a1" name="a1">name</a> &#160;</span><span style="font-style: italic;"><i>name</i></span> )</p>
+<p class="VBA-Text-Indent">Deletes the compact thermal model with the given <span style="font-style: italic;"><i>name</i></span>.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">Set ( <a href="../common_vbageneral/common_general_string.htm" id="a6111" style="font-style: normal; font-weight: normal;" name="a6111">string</a> <span style="font-style: italic;"><i>parameterName,</i></span> <a href="../common_vbageneral/common_general_variant.htm" style="color: rgb(0, 0, 255); font-family: Arial; font-size: 12px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: left; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px;">variant</a> <span style="font-style: italic;"><i>parameterValues, ...</i></span> )</p>
+<p class="VBA-Text-Indent">To define special parameters for a compact thermal model, the command <span style="font-style: italic;"><i>Set</i></span> can be used. Available <span style="font-style: italic;"><i>parameterName</i></span>s are listed below. All settings must be made before the <span style="font-style: italic;"><i>Create</i></span> command is called.</p>
+<table style="margin-left: 40px; left: 0px; top: 1623px; border-collapse: separate; border-collapse: separate;" cellspacing="0" width="1057" border="1">
+<col style="width: 14.664%;" />
+<col style="width: 21.141%;" />
+<col style="width: 18.948%;" />
+<col style="width: 43.016%;" />
+<tr>
+<td>
+<p style="font-weight: bold;">parameterName</p>
+</td>
+<td>
+<p style="font-weight: bold;">parameterValues</p>
+</td>
+<td>
+<p style="font-weight: bold;">Default</p>
+</td>
+<td>
+<p style="font-weight: bold;">Meaning</p>
+</td>
+</tr>
+<tr>
+<td>
+<p>"Name"</p>
+</td>
+<td>
+<p class="VBA-Heading-Method" style="font-weight: normal;"><a href="../common_vbageneral/common_general_name.htm" style="font-style: normal;">name</a> <span style="font-style: italic;"><i>itemName</i></span></p>
+</td>
+<td>
+<p>&lt;empty / invalid&gt;</p>
+</td>
+<td>
+<p>Specifies the name of the general compact thermal model under creation (same as ".Name" command)</p>
+</td>
+</tr>
+<tr>
+<td>
+<p>"Face"</p>
+</td>
+<td>
+<p class="VBA-Heading-Method"><span style="font-weight: normal;"><a href="../common_vbageneral/common_general_solid_names.htm">solidname</a></span> <span style="font-style: italic; font-weight: normal;"><i>solidName,</i></span> <span style="font-weight: normal;"><a href="../common_vbageneral/common_general_integer.htm">int</a></span> <span style="font-style: italic; font-weight: normal;"><i>faceId,</i></span> <span style="font-style: italic;"><i><a href="../common_vbageneral/common_general_integer.htm" id="a29112" style="font-weight: normal; font-style: normal;" name="a29112">int</a></i></span> <span style="font-weight: normal; font-style: italic;"><i>nodeIndex</i></span></p>
+</td>
+<td>
+<p class="VBA-Heading-Method" style="font-weight: normal;">&lt;empty / invalid&gt;</p>
+</td>
+<td>
+<p>Assigns a face of a given solid &#160;to the node with the given <span style="font-style: italic;"><i>nodeIndex</i></span><span>.</span> &#160;The solid is specified by <span style="font-style: italic;"><i>solidName</i></span> and the face is indicated by <span style="font-style: italic;"><i>faceId</i></span> which is the id of the face index in the list of faces belonging to the specified solid.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p style="font-style: normal;"><span style="font-style: normal;">"NetworkNodeName"</span></p>
+</td>
+<td>
+<p style="font-style: italic;"><a href="../common_vbageneral/common_general_integer.htm" id="a2911" style="font-weight: normal; font-style: normal;" name="a2911">int</a> nodeIndex, <a href="../common_vbageneral/common_general_string.htm" id="a6112" style="font-style: normal; font-weight: normal;" name="a6112">string</a> nodeName</p>
+</td>
+<td>
+<p style="font-style: italic;">&lt;empty / invalid&gt;</p>
+</td>
+<td>
+<p style="margin-top: 0pt; margin-bottom: 3px; font-variant-ligatures: normal; font-variant-caps: normal; orphans: 2; widows: 2; -webkit-text-stroke-width: 0px; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial;">Defines the name of the node with the given <span style="font-style: italic;"><i>nodeIndex</i></span>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p>"NetworkNodeType"</p>
+</td>
+<td>
+<p class="VBA-Heading-Method"><a href="../common_vbageneral/common_general_integer.htm" id="a2911122" style="font-weight: normal; font-style: normal;" name="a2911122"><span style="font-style: normal;">i</span><span style="font-weight: normal; font-style: normal;">nt</span></a> <span style="font-style: italic; font-weight: normal;"><i>nodeIndex</i></span><span style="font-style: italic;"><i>,</i></span> <a href="../common_vbageneral/common_general_enum.htm" style="font-weight: normal;">enum</a> <span style="font-style: italic; font-weight: normal;"><i>type</i></span></p>
+<p style="font-style: italic;">{ "Internal", "External", "Leads" }</p>
+</td>
+<td>
+<p class="VBA-Heading-Method" style="font-weight: normal; font-style: italic;">&lt;1&gt;, "Internal"</p>
+<p class="VBA-Heading-Method" style="font-weight: normal; font-style: italic;">&lt;<span style="font-style: normal;">all other nodes</span>&gt;, "External"</p>
+</td>
+<td>
+<p>Specifies the type of the node with the given <span style="font-style: italic;"><i>nodeIndex.</i></span></p>
+<p>If the type <span style="font-style: italic;"><i>Internal</i></span> is specified, the node is an internal node, which participates in heat transfer only via the thermal resistance network.</p>
+<p>If the type <span style="font-style: italic;"><i>External</i></span> is specified, the is an external node, which participates in heat transfer in the compact thermal model via the thermal resistance network and to the environment.</p>
+<p>If the type <span style="font-style: italic;"><i>Leads</i></span> is specified, the is an external node, which participates in heat transfer in the compact thermal model via the thermal resistance network and to the environment, but does not participate in convective heat transfer.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p style="font-style: normal;">"NetworkNodeCapacitance"</p>
+</td>
+<td>
+<p style="font-style: normal;"><span style="font-style: italic;"><i><a href="../common_vbageneral/common_general_integer.htm" id="a29111" style="font-weight: normal; font-style: normal;" name="a29111">int</a> nodeIndex,</i></span> <a href="../common_vbageneral/common_general_double.htm" style="font-style: normal;">double</a> <span style="font-style: italic;"><i>nodeCapacitance</i></span></p>
+</td>
+<td>
+<p style="font-style: italic;">0</p>
+</td>
+<td>
+<p style="margin-top: 0pt; margin-bottom: 3px; font-variant-ligatures: normal; font-variant-caps: normal; orphans: 2; widows: 2; -webkit-text-stroke-width: 0px; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial;">Defines the capacitance of the node with the given <span style="font-style: italic;"><i>nodeIndex</i></span>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p style="font-style: normal;">"NetworkNodePower"</p>
+</td>
+<td>
+<p style="font-style: italic;"><a href="../common_vbageneral/common_general_integer.htm" id="a291111" style="font-weight: normal; font-style: normal;" name="a291111">int</a> nodeIndex, <a href="../common_vbageneral/common_general_double.htm" style="font-style: normal;">double</a> nodePower</p>
+</td>
+<td>
+<p style="font-style: italic;">0</p>
+</td>
+<td>
+<p style="margin-top: 0pt; margin-bottom: 3px; font-variant-ligatures: normal; font-variant-caps: normal; orphans: 2; widows: 2; -webkit-text-stroke-width: 0px; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial;">Defines the power of the node with the given <span style="font-style: italic;"><i>nodeIndex</i></span>. The <span style="font-style: italic;"><i>nodePower</i></span> is ignored for non-internal nodes.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p>"NetworkNodeOverwriteEmissivity"</p>
+<p>&#160;</p>
+<p>"NetworkNodeEmissivity"</p>
+</td>
+<td>
+<p><span style="font-style: italic;"><i><a href="../common_vbageneral/common_general_integer.htm" id="a291112" style="font-weight: normal; font-style: normal;" name="a291112">int</a> nodeIndex,</i></span> <a href="../common_vbageneral/common_general_bool_data_type.htm" style="font-weight: normal;">bool</a> <span style="font-style: italic;"><i>flag</i></span></p>
+<p>&#160;</p>
+<p style="font-style: italic;"><a href="../common_vbageneral/common_general_integer.htm" id="a291113" style="font-weight: normal; font-style: normal;" name="a291113">int</a> nodeIndex, <a href="../common_vbageneral/common_general_double.htm" style="font-style: normal;">double</a> emissivity</p>
+</td>
+<td>
+<p style="font-style: italic;">&lt;<span style="font-style: normal;">all nodes</span>&gt;, False</p>
+<p style="font-style: italic;">&#160;</p>
+<p style="font-style: italic;">&lt;<span style="font-style: normal;">all nodes</span>&gt;, 0.0</p>
+</td>
+<td><span style="font-family: Arial; font-size: 12px; font-variant-ligatures: normal; font-variant-caps: normal; orphans: 2; text-align: justify; widows: 2; -webkit-text-stroke-width: 0px; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; display: inline ! important ; float: none;">When enabled (</span><span style="font-family: Arial; font-size: 12px; font-variant-ligatures: normal; font-variant-caps: normal; orphans: 2; text-align: justify; widows: 2; -webkit-text-stroke-width: 0px; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; display: inline ! important ; float: none; font-style: italic;"><i>flag = True</i></span><span style="font-family: Arial; font-size: 12px; font-variant-ligatures: normal; font-variant-caps: normal; orphans: 2; text-align: justify; widows: 2; -webkit-text-stroke-width: 0px; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; display: inline ! important ; float: none;">), the user-defined</span> <span style="font-family: Arial; font-size: 12px; font-variant-ligatures: normal; font-variant-caps: normal; orphans: 2; text-align: justify; widows: 2; -webkit-text-stroke-width: 0px; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; display: inline ! important ; float: none; font-style: italic;"><i>emissivity</i></span> <span style="font-family: Arial; font-size: 12px; font-variant-ligatures: normal; font-variant-caps: normal; orphans: 2; text-align: justify; widows: 2; -webkit-text-stroke-width: 0px; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; display: inline ! important ; float: none;">is used to specify the surface emissivity of the node with the given</span> <span style="font-family: Arial; font-size: 12px; font-variant-ligatures: normal; font-variant-caps: normal; orphans: 2; text-align: justify; widows: 2; -webkit-text-stroke-width: 0px; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; display: inline ! important ; float: none; font-style: italic;"><i>nodeIndex</i></span><span style="font-family: Arial; font-size: 12px; font-variant-ligatures: normal; font-variant-caps: normal; orphans: 2; text-align: justify; widows: 2; -webkit-text-stroke-width: 0px; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; display: inline ! important ; float: none;">. Otherwise (</span><span style="font-family: Arial; font-size: 12px; font-variant-ligatures: normal; font-variant-caps: normal; orphans: 2; text-align: justify; widows: 2; -webkit-text-stroke-width: 0px; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; display: inline ! important ; float: none; font-style: italic;"><i>flag = False</i></span><span style="font-family: Arial; font-size: 12px; font-variant-ligatures: normal; font-variant-caps: normal; orphans: 2; text-align: justify; widows: 2; -webkit-text-stroke-width: 0px; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; display: inline ! important ; float: none;">), the emissivity of the material assigned to the package (</span><a href="../special_vbalayer/special_vbalayerolayer_object.htm#Thermal_Material_Properties" style="font-size: 12px; font-family: Arial, sans-serif; font-weight: 400; font-style: normal; color: rgb(0, 0, 160); font-variant-ligatures: normal; font-variant-caps: normal; letter-spacing: normal; orphans: 2; text-align: justify; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px;">Thermal</a><span style="font-family: Arial; font-size: 12px; font-variant-ligatures: normal; font-variant-caps: normal; orphans: 2; text-align: justify; widows: 2; -webkit-text-stroke-width: 0px; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; display: inline ! important ; float: none;">) is used and the value of "</span><span style="font-family: Arial; font-size: 12px; font-variant-ligatures: normal; font-variant-caps: normal; orphans: 2; text-align: justify; widows: 2; -webkit-text-stroke-width: 0px; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; display: inline ! important ; float: none; font-style: italic;"><i>NetworkNodeEmissivity</i></span><span style="font-family: Arial; font-size: 12px; font-variant-ligatures: normal; font-variant-caps: normal; orphans: 2; text-align: justify; widows: 2; -webkit-text-stroke-width: 0px; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; display: inline ! important ; float: none;">" is ignored. These settings are ignored for internal nodes.</span></td>
+</tr>
+<tr>
+<td>
+<p>"NetworkNodeOverwriteAbsorptance"</p>
+<p>&#160;</p>
+<p>"NetworkNodeAbsorptance"</p>
+</td>
+<td>
+<p><span style="font-style: italic;"><i><a href="../common_vbageneral/common_general_integer.htm" id="a2911121" style="font-weight: normal; font-style: normal;" name="a2911121">int</a> nodeIndex,</i></span> <a href="../common_vbageneral/common_general_bool_data_type.htm" style="font-weight: normal;">bool</a> <span style="font-style: italic;"><i>flag</i></span></p>
+<p>&#160;</p>
+<p style="font-style: italic;"><a href="../common_vbageneral/common_general_integer.htm" id="a2911131" style="font-weight: normal; font-style: normal;" name="a2911131">int</a> nodeIndex, <a href="../common_vbageneral/common_general_double.htm" style="font-style: normal;">double</a> absorptance</p>
+</td>
+<td>
+<p style="font-style: italic;"><span style="font-style: italic;"><i>&lt;<span style="font-style: normal;">all nodes</span>&gt;, False</i></span></p>
+<p style="font-style: italic;">&#160;</p>
+<p style="font-style: italic;">&lt;<span style="font-style: normal;">all nodes</span>&gt;, 0.0</p>
+</td>
+<td><span style="font-family: Arial; font-size: 12px; font-variant-ligatures: normal; font-variant-caps: normal; orphans: 2; text-align: justify; widows: 2; -webkit-text-stroke-width: 0px; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; display: inline ! important ; float: none;">When enabled (</span><span style="font-family: Arial; font-size: 12px; font-variant-ligatures: normal; font-variant-caps: normal; orphans: 2; text-align: justify; widows: 2; -webkit-text-stroke-width: 0px; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; display: inline ! important ; float: none; font-style: italic;"><i>flag = True</i></span><span style="font-family: Arial; font-size: 12px; font-variant-ligatures: normal; font-variant-caps: normal; orphans: 2; text-align: justify; widows: 2; -webkit-text-stroke-width: 0px; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; display: inline ! important ; float: none;">), the user-defined</span> <span style="font-family: Arial; font-size: 12px; font-variant-ligatures: normal; font-variant-caps: normal; orphans: 2; text-align: justify; widows: 2; -webkit-text-stroke-width: 0px; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; display: inline ! important ; float: none; font-style: italic;"><i>absorptance</i></span> <span style="font-family: Arial; font-size: 12px; font-variant-ligatures: normal; font-variant-caps: normal; orphans: 2; text-align: justify; widows: 2; -webkit-text-stroke-width: 0px; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; display: inline ! important ; float: none;">is used to specify the surface solar absorptance of the node with the given</span> <span style="font-family: Arial; font-size: 12px; font-variant-ligatures: normal; font-variant-caps: normal; orphans: 2; text-align: justify; widows: 2; -webkit-text-stroke-width: 0px; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; display: inline ! important ; float: none; font-style: italic;"><i>nodeIndex</i></span><span style="font-family: Arial; font-size: 12px; font-variant-ligatures: normal; font-variant-caps: normal; orphans: 2; text-align: justify; widows: 2; -webkit-text-stroke-width: 0px; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; display: inline ! important ; float: none;">. Otherwise (</span><span style="font-family: Arial; font-size: 12px; font-variant-ligatures: normal; font-variant-caps: normal; orphans: 2; text-align: justify; widows: 2; -webkit-text-stroke-width: 0px; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; display: inline ! important ; float: none; font-style: italic;"><i>flag = False</i></span><span style="font-family: Arial; font-size: 12px; font-variant-ligatures: normal; font-variant-caps: normal; orphans: 2; text-align: justify; widows: 2; -webkit-text-stroke-width: 0px; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; display: inline ! important ; float: none;">), the emissivity of the material assigned to the package (</span><a href="../special_vbalayer/special_vbalayerolayer_object.htm#Thermal_Material_Properties" style="font-size: 12px; font-family: Arial, sans-serif; font-weight: 400; font-style: normal; color: rgb(0, 0, 160); font-variant-ligatures: normal; font-variant-caps: normal; letter-spacing: normal; orphans: 2; text-align: justify; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px;">Thermal</a><span style="font-family: Arial; font-size: 12px; font-variant-ligatures: normal; font-variant-caps: normal; orphans: 2; text-align: justify; widows: 2; -webkit-text-stroke-width: 0px; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; display: inline ! important ; float: none;">) is used and the value of "</span><span style="font-family: Arial; font-size: 12px; font-variant-ligatures: normal; font-variant-caps: normal; orphans: 2; text-align: justify; widows: 2; -webkit-text-stroke-width: 0px; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; display: inline ! important ; float: none; font-style: italic;"><i>NetworkNodeAbsorptance</i></span><span style="font-family: Arial; font-size: 12px; font-variant-ligatures: normal; font-variant-caps: normal; orphans: 2; text-align: justify; widows: 2; -webkit-text-stroke-width: 0px; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; display: inline ! important ; float: none;">" is ignored.&#160;These settings are ignored for internal nodes.</span></td>
+</tr>
+<tr>
+<td>
+<p style="font-style: normal;">"NetworkResistance"</p>
+</td>
+<td>
+<p style="font-style: italic;"><a href="../common_vbageneral/common_general_integer.htm" id="a2911111" style="font-weight: normal; font-style: normal;" name="a2911111">int</a> nodeIndex1, <a href="../common_vbageneral/common_general_integer.htm" id="a2911112" style="font-weight: normal; font-style: normal;" name="a2911112">int</a> nodeIndex2, <a href="../common_vbageneral/common_general_double.htm" style="font-style: normal;">double</a> resistance</p>
+</td>
+<td>
+<p style="font-style: italic;">&lt;unset / no connection&gt;</p>
+</td>
+<td>
+<p style="margin-top: 0pt; margin-bottom: 3px; font-variant-ligatures: normal; font-variant-caps: normal; orphans: 2; widows: 2; -webkit-text-stroke-width: 0px; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial;">Defines the <span style="font-style: italic;"><i>resistance</i></span> between the node pair (<span style="font-style: italic;"><i>nodeIindex1, nodeIndex2</i></span>). The node / resistance table is assumed to be symmetric, so it is not necessary to repeat the same settings for node pair (<span style="font-style: italic;"><i>nodeIindex2, nodeIndex1</i></span>). If redundant settings are made, the last one wins over the previous ones.</p>
+</td>
+</tr>
+</table>
+<p class="VBA-Text-Indent" style="font-weight: normal;">&#160;</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">Create</p>
+<p class="VBA-Text-Indent">Creates a general compact thermal model source. All required settings for this object have to be made before the Create command is called and will be checked for correctness and consistency during creation.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">DeleteItemNode ( <span style="font-weight: normal;"><a href="../common_vbageneral/common_general_name.htm" id="a21111" name="a21111">name</a> &#160;</span><span style="font-style: italic;"><i>itemname</i></span><span style="font-weight: normal;">, &#160;<a href="../common_vbageneral/common_general_name.htm" id="a31111" name="a31111">name</a></span> <span style="font-style: italic;"><i>nodename</i></span> )</p>
+<p class="VBA-Text-Indent">Deletes the node <span style="font-style: italic;"><i>nodename</i></span> of item <span style="font-style: italic;"><i>itemname</i></span> and clears all corresponding geometry assignments.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">RenameItemNode ( <span style="font-weight: normal;"><a href="../common_vbageneral/common_general_name.htm" id="a211111" name="a211111">name</a> &#160;</span><span style="font-style: italic;"><i>itemname</i></span><span style="font-weight: normal;">, &#160;<a href="../common_vbageneral/common_general_name.htm" id="a311111" name="a311111">name</a></span> <span style="font-style: italic;"><i>oldnodename</i></span><span style="font-weight: normal;">, &#160;<a href="../common_vbageneral/common_general_name.htm" id="a3111111" name="a3111111">name</a></span> <span style="font-style: italic;"><i>newnodename</i></span> )</p>
+<p class="VBA-Text-Indent">Renames the node <span style="font-style: italic;"><i>oldnodename</i></span> of item <span style="font-style: italic;"><i>itemname</i></span> to <span style="font-style: italic;"><i>newnodename</i></span>.</p>
+<p class="VBA-Heading-Method">&#160;</p>
+<p class="VBA-Heading-Method">ClearFaceList</p>
+<p class="VBA-Text-Indent">Clears the current face list used for node geometry assignment changes.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">ClearNodeFaces ( <span style="font-weight: normal;"><a href="../common_vbageneral/common_general_name.htm" id="a2111" name="a2111">name</a> &#160;</span><span style="font-style: italic;"><i>itemname</i></span><span style="font-weight: normal;">, &#160;<a href="../common_vbageneral/common_general_name.htm" id="a3111" name="a3111">name</a></span> <span style="font-style: italic;"><i>nodename</i></span> )</p>
+<p class="VBA-Text-Indent">Clears all geometry assignment for the node <span style="font-style: italic;"><i>nodename</i></span> of item <span style="font-style: italic;"><i>itemname</i></span>.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">AddNodeToFace ( <span style="font-weight: normal;"><a href="../common_vbageneral/common_general_name.htm" id="a211" name="a211">name</a> &#160;</span><span style="font-style: italic;"><i>itemname</i></span>, &#160;<span style="font-weight: normal;"><a href="../common_vbageneral/common_general_name.htm" id="a311" name="a311">name</a></span> <span style="font-style: italic;"><i>nodename,</i></span> &#160;<span style="font-weight: normal;"><a href="../common_vbageneral/common_general_solid_names.htm">solidname</a></span> <span style="font-style: italic;"><i>solidName</i></span><span style="font-style: italic; font-weight: normal;"><i>,</i></span> <span style="font-weight: normal;"><a href="../common_vbageneral/common_general_integer.htm">int</a></span> <span style="font-style: italic;"><i>faceId</i></span> )</p>
+<p class="VBA-Text-Indent">&#160;&#160;&#160;&#160;Adds an entry to the face list to add the face number <span style="font-style: italic;"><i>faceId</i></span> from shape <span style="font-style: italic;"><i>solidName</i></span> to the node <span style="font-style: italic;"><i>nodename</i></span> of item <span style="font-style: italic;"><i>itemname</i></span>. Use <span style="font-weight: bold;">StoreFaces</span> to apply the changes.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">StoreFaces</p>
+<p class="VBA-Text-Indent">Applies all face assignments in the face list to their respective items and nodes.</p>
+<p class="VBA-Heading-Category"><a name="Defaults" id="Defaults"></a>Default Settings</p>
+<p class="VBA-Text-Example">Name ("")</p>
+<p class="VBA-Text-Example">Set "Face" ("", 0)</p>
+<p class="VBA-Text-Example">Enable (True)</p>
+<p class="VBA-Text-Example">Folder ("")</p>
+<p class="VBA-Heading-Category"><a name="Example" id="Example"></a>Example</p>
+<p class="VBA-Text-Example">With GeneralCompactThermalModel</p>
+<p>&#160;</p>
+<p class="VBA-Text-Example">.Reset</p>
+<p class="VBA-Text-Example" style="margin-left: 40px;">.Set "Name", "general compact thermal model 1"</p>
+<p class="VBA-Text-Example" style="margin-left: 40px;">.Folder ""</p>
+<p class="VBA-Text-Example" style="margin-left: 40px;">.Enable "True"</p>
+<p class="VBA-Text-Example" style="margin-left: 40px;">.Set "NetworkNodeName", "1", "Junction"</p>
+<p class="VBA-Text-Example" style="margin-left: 40px;">.Set "NetworkNodeType", "1", "Internal"</p>
+<p class="VBA-Text-Example" style="margin-left: 40px;">.Set "NetworkNodePower", "1", "0.17"</p>
+<p class="VBA-Text-Example" style="margin-left: 40px;">.Set "NetworkNodeCapacitance", "1", "8e-4"</p>
+<p class="VBA-Text-Example" style="margin-left: 40px;">.Set "NetworkNodeName", "2", "Internal2"</p>
+<p class="VBA-Text-Example" style="margin-left: 40px;">.Set "NetworkNodeType", "2", "Internal"</p>
+<p class="VBA-Text-Example" style="margin-left: 40px;">.Set "NetworkNodePower", "2", "0"</p>
+<p class="VBA-Text-Example" style="margin-left: 40px;">.Set "NetworkNodeCapacitance", "2", "8e-4"</p>
+<p class="VBA-Text-Example" style="margin-left: 40px;">.Set "NetworkResistance", "2", "1", "33"</p>
+<p class="VBA-Text-Example" style="margin-left: 40px;">.Set "NetworkNodeName", "3", "Internal_bottom"</p>
+<p class="VBA-Text-Example" style="margin-left: 40px;">.Set "NetworkNodeType", "3", "Internal"</p>
+<p class="VBA-Text-Example" style="margin-left: 40px;">.Set "NetworkNodePower", "3", "0"</p>
+<p class="VBA-Text-Example" style="margin-left: 40px;">.Set "NetworkNodeCapacitance", "3", "8e-4"</p>
+<p class="VBA-Text-Example" style="margin-left: 40px;">.Set "NetworkResistance", "3", "1", "1200"</p>
+<p class="VBA-Text-Example" style="margin-left: 40px;">.Set "NetworkResistance", "3", "2", "900"</p>
+<p class="VBA-Text-Example" style="margin-left: 40px;">.Set "NetworkNodeName", "4", "Internal_leads"</p>
+<p class="VBA-Text-Example" style="margin-left: 40px;">.Set "NetworkNodeType", "4", "Internal"</p>
+<p class="VBA-Text-Example" style="margin-left: 40px;">.Set "NetworkNodePower", "4", "0"</p>
+<p class="VBA-Text-Example" style="margin-left: 40px;">.Set "NetworkNodeCapacitance", "4", "8e-4"</p>
+<p class="VBA-Text-Example" style="margin-left: 40px;">.Set "NetworkResistance", "4", "2", "100"</p>
+<p class="VBA-Text-Example" style="margin-left: 40px;">.Set "NetworkNodeName", "5", "Internal_leads_1"</p>
+<p class="VBA-Text-Example" style="margin-left: 40px;">.Set "NetworkNodeType", "5", "Internal"</p>
+<p class="VBA-Text-Example" style="margin-left: 40px;">.Set "NetworkNodePower", "5", "0"</p>
+<p class="VBA-Text-Example" style="margin-left: 40px;">.Set "NetworkNodeCapacitance", "5", "8e-4"</p>
+<p class="VBA-Text-Example" style="margin-left: 40px;">.Set "NetworkResistance", "5", "2", "30"</p>
+<p class="VBA-Text-Example" style="margin-left: 40px;">.Set "NetworkNodeName", "6", "Internal_inner_bottom"</p>
+<p class="VBA-Text-Example" style="margin-left: 40px;">.Set "NetworkNodeType", "6", "Internal"</p>
+<p class="VBA-Text-Example" style="margin-left: 40px;">.Set "NetworkNodePower", "6", "0"</p>
+<p class="VBA-Text-Example" style="margin-left: 40px;">.Set "NetworkNodeCapacitance", "6", "8e-4"</p>
+<p class="VBA-Text-Example" style="margin-left: 40px;">.Set "NetworkResistance", "6", "1", "1000"</p>
+<p class="VBA-Text-Example" style="margin-left: 40px;">.Set "NetworkResistance", "6", "2", "400"</p>
+<p class="VBA-Text-Example" style="margin-left: 40px;">.Set "NetworkResistance", "6", "3", "600"</p>
+<p class="VBA-Text-Example" style="margin-left: 40px;">.Set "NetworkNodeName", "7", "Back"</p>
+<p class="VBA-Text-Example" style="margin-left: 40px;">.Set "NetworkNodeType", "7", "External"</p>
+<p class="VBA-Text-Example" style="margin-left: 40px;">.Set "NetworkNodeOverwriteEmissivity", "7", "False"</p>
+<p class="VBA-Text-Example" style="margin-left: 40px;">.Set "NetworkNodeOverwriteAbsorptance", "7", "False"</p>
+<p class="VBA-Text-Example" style="margin-left: 40px;">.Set "NetworkNodeCapacitance", "7", "0"</p>
+<p class="VBA-Text-Example" style="margin-left: 40px;">.Set "NetworkResistance", "7", "1", "1500"</p>
+<p class="VBA-Text-Example" style="margin-left: 40px;">.Set "NetworkResistance", "7", "2", "1000"</p>
+<p class="VBA-Text-Example" style="margin-left: 40px;">.Set "NetworkResistance", "7", "3", "17500"</p>
+<p class="VBA-Text-Example" style="margin-left: 40px;">.Set "Face", "component1:Internal_nodes", "15", "7"</p>
+<p class="VBA-Text-Example" style="margin-left: 40px;">.Set "NetworkNodeName", "8", "Top"</p>
+<p class="VBA-Text-Example" style="margin-left: 40px;">.Set "NetworkNodeType", "8", "External"</p>
+<p class="VBA-Text-Example" style="margin-left: 40px;">.Set "NetworkNodeOverwriteEmissivity", "8", "False"</p>
+<p class="VBA-Text-Example" style="margin-left: 40px;">.Set "NetworkNodeOverwriteAbsorptance", "8", "False"</p>
+<p class="VBA-Text-Example" style="margin-left: 40px;">.Set "NetworkNodeCapacitance", "8", "0"</p>
+<p class="VBA-Text-Example" style="margin-left: 40px;">.Set "NetworkResistance", "8", "1", "1250"</p>
+<p class="VBA-Text-Example" style="margin-left: 40px;">.Set "NetworkResistance", "8", "2", "9000"</p>
+<p class="VBA-Text-Example" style="margin-left: 40px;">.Set "NetworkResistance", "8", "3", "9500"</p>
+<p class="VBA-Text-Example" style="margin-left: 40px;">.Set "NetworkResistance", "8", "7", "1200"</p>
+<p class="VBA-Text-Example" style="margin-left: 40px;">.Set "Face", "component1:Internal_nodes", "9", "8"</p>
+<p class="VBA-Text-Example" style="margin-left: 40px;">.Set "NetworkNodeName", "9", "Bottom"</p>
+<p class="VBA-Text-Example" style="margin-left: 40px;">.Set "NetworkNodeType", "9", "External"</p>
+<p class="VBA-Text-Example" style="margin-left: 40px;">.Set "NetworkNodeOverwriteEmissivity", "9", "False"</p>
+<p class="VBA-Text-Example" style="margin-left: 40px;">.Set "NetworkNodeOverwriteAbsorptance", "9", "False"</p>
+<p class="VBA-Text-Example" style="margin-left: 40px;">.Set "NetworkNodeCapacitance", "9", "0"</p>
+<p class="VBA-Text-Example" style="margin-left: 40px;">.Set "NetworkResistance", "9", "3", "1800"</p>
+<p class="VBA-Text-Example" style="margin-left: 40px;">.Set "Face", "component1:Internal_nodes", "10", "9"</p>
+<p class="VBA-Text-Example" style="margin-left: 40px;">.Set "NetworkNodeName", "10", "Inner_top"</p>
+<p class="VBA-Text-Example" style="margin-left: 40px;">.Set "NetworkNodeType", "10", "External"</p>
+<p class="VBA-Text-Example" style="margin-left: 40px;">.Set "NetworkNodeOverwriteEmissivity", "10", "False"</p>
+<p class="VBA-Text-Example" style="margin-left: 40px;">.Set "NetworkNodeOverwriteAbsorptance", "10", "False"</p>
+<p class="VBA-Text-Example" style="margin-left: 40px;">.Set "NetworkNodeCapacitance", "10", "0"</p>
+<p class="VBA-Text-Example" style="margin-left: 40px;">.Set "NetworkResistance", "10", "1", "750"</p>
+<p class="VBA-Text-Example" style="margin-left: 40px;">.Set "NetworkResistance", "10", "2", "5000"</p>
+<p class="VBA-Text-Example" style="margin-left: 40px;">.Set "Face", "component1:Internal_nodes", "20", "10"</p>
+<p class="VBA-Text-Example" style="margin-left: 40px;">.Set "NetworkNodeName", "11", "Inner_bottom"</p>
+<p class="VBA-Text-Example" style="margin-left: 40px;">.Set "NetworkNodeType", "11", "External"</p>
+<p class="VBA-Text-Example" style="margin-left: 40px;">.Set "NetworkNodeOverwriteEmissivity", "11", "False"</p>
+<p class="VBA-Text-Example" style="margin-left: 40px;">.Set "NetworkNodeOverwriteAbsorptance", "11", "False"</p>
+<p class="VBA-Text-Example" style="margin-left: 40px;">.Set "NetworkNodeCapacitance", "11", "0"</p>
+<p class="VBA-Text-Example" style="margin-left: 40px;">.Set "NetworkResistance", "11", "6", "5000"</p>
+<p class="VBA-Text-Example" style="margin-left: 40px;">.Set "Face", "component1:Internal_nodes", "19", "11"</p>
+<p class="VBA-Text-Example" style="margin-left: 40px;">.Set "NetworkNodeName", "12", "Leads"</p>
+<p class="VBA-Text-Example" style="margin-left: 40px;">.Set "NetworkNodeType", "12", "Leads"</p>
+<p class="VBA-Text-Example" style="margin-left: 40px;">.Set "NetworkNodeOverwriteEmissivity", "12", "False"</p>
+<p class="VBA-Text-Example" style="margin-left: 40px;">.Set "NetworkNodeOverwriteAbsorptance", "12", "False"</p>
+<p class="VBA-Text-Example" style="margin-left: 40px;">.Set "NetworkNodeCapacitance", "12", "0"</p>
+<p class="VBA-Text-Example" style="margin-left: 40px;">.Set "NetworkResistance", "12", "4", "300"</p>
+<p class="VBA-Text-Example" style="margin-left: 40px;">.Set "Face", "component1:Leads", "1", "12"</p>
+<p class="VBA-Text-Example" style="margin-left: 40px;">.Set "NetworkNodeName", "13", "Leads_1"</p>
+<p class="VBA-Text-Example" style="margin-left: 40px;">.Set "NetworkNodeType", "13", "Leads"</p>
+<p class="VBA-Text-Example" style="margin-left: 40px;">.Set "NetworkNodeOverwriteEmissivity", "13", "False"</p>
+<p class="VBA-Text-Example" style="margin-left: 40px;">.Set "NetworkNodeOverwriteAbsorptance", "13", "False"</p>
+<p class="VBA-Text-Example" style="margin-left: 40px;">.Set "NetworkNodeCapacitance", "13", "0"</p>
+<p class="VBA-Text-Example" style="margin-left: 40px;">.Set "NetworkResistance", "13", "5", "300"</p>
+<p class="VBA-Text-Example" style="margin-left: 40px;">.Set "Face", "component1:Leads_1", "1", "13"</p>
+<p class="VBA-Text-Example" style="margin-left: 40px;">.Set "NetworkNodeName", "14", "Back_1"</p>
+<p class="VBA-Text-Example" style="margin-left: 40px;">.Set "NetworkNodeType", "14", "External"</p>
+<p class="VBA-Text-Example" style="margin-left: 40px;">.Set "NetworkNodeOverwriteEmissivity", "14", "False"</p>
+<p class="VBA-Text-Example" style="margin-left: 40px;">.Set "NetworkNodeOverwriteAbsorptance", "14", "False"</p>
+<p class="VBA-Text-Example" style="margin-left: 40px;">.Set "NetworkNodeCapacitance", "14", "0"</p>
+<p class="VBA-Text-Example" style="margin-left: 40px;">.Set "NetworkResistance", "14", "1", "1500"</p>
+<p class="VBA-Text-Example" style="margin-left: 40px;">.Set "NetworkResistance", "14", "2", "1000"</p>
+<p class="VBA-Text-Example" style="margin-left: 40px;">.Set "NetworkResistance", "14", "3", "17500"</p>
+<p class="VBA-Text-Example" style="margin-left: 40px;">.Set "NetworkResistance", "14", "8", "1200"</p>
+<p class="VBA-Text-Example" style="margin-left: 40px;">.Set "Face", "component1:Internal_nodes", "16", "14"</p>
+<p class="VBA-Text-Example" style="margin-left: 40px;">.Set "NetworkNodeName", "15", "Back_2"</p>
+<p class="VBA-Text-Example" style="margin-left: 40px;">.Set "NetworkNodeType", "15", "External"</p>
+<p class="VBA-Text-Example" style="margin-left: 40px;">.Set "NetworkNodeOverwriteEmissivity", "15", "False"</p>
+<p class="VBA-Text-Example" style="margin-left: 40px;">.Set "NetworkNodeOverwriteAbsorptance", "15", "False"</p>
+<p class="VBA-Text-Example" style="margin-left: 40px;">.Set "NetworkNodeCapacitance", "15", "0"</p>
+<p class="VBA-Text-Example" style="margin-left: 40px;">.Set "NetworkResistance", "15", "1", "2500"</p>
+<p class="VBA-Text-Example" style="margin-left: 40px;">.Set "NetworkResistance", "15", "2", "1750"</p>
+<p class="VBA-Text-Example" style="margin-left: 40px;">.Set "NetworkResistance", "15", "3", "27500"</p>
+<p class="VBA-Text-Example" style="margin-left: 40px;">.Set "NetworkResistance", "15", "8", "2000"</p>
+<p class="VBA-Text-Example" style="margin-left: 40px;">.Set "Face", "component1:Internal_nodes", "11", "15"</p>
+<p class="VBA-Text-Example" style="margin-left: 40px;">.Set "NetworkNodeName", "16", "Back_3"</p>
+<p class="VBA-Text-Example" style="margin-left: 40px;">.Set "NetworkNodeType", "16", "External"</p>
+<p class="VBA-Text-Example" style="margin-left: 40px;">.Set "NetworkNodeOverwriteEmissivity", "16", "False"</p>
+<p class="VBA-Text-Example" style="margin-left: 40px;">.Set "NetworkNodeOverwriteAbsorptance", "16", "False"</p>
+<p class="VBA-Text-Example" style="margin-left: 40px;">.Set "NetworkNodeCapacitance", "16", "0"</p>
+<p class="VBA-Text-Example" style="margin-left: 40px;">.Set "NetworkResistance", "16", "1", "2500"</p>
+<p class="VBA-Text-Example" style="margin-left: 40px;">.Set "NetworkResistance", "16", "2", "1750"</p>
+<p class="VBA-Text-Example" style="margin-left: 40px;">.Set "NetworkResistance", "16", "3", "27500"</p>
+<p class="VBA-Text-Example" style="margin-left: 40px;">.Set "NetworkResistance", "16", "8", "2000"</p>
+<p class="VBA-Text-Example" style="margin-left: 40px;">.Set "Face", "component1:Internal_nodes", "18", "16"</p>
+<p class="VBA-Text-Example" style="margin-left: 40px;">.Create</p>
+<p class="VBA-Text-Example">End With</p>
+<p style="-qt-paragraph-type: empty; margin-top: 0px; margin-bottom: 0px; margin-left: 0px; margin-right: 0px; -qt-block-indent: 0; text-indent: 0px;">&#160;</p>
+<p class="VBA-Text-Example">With GeneralCompactThermalModel</p>
+<p class="VBA-Text-Example" style="margin-left: 40px;">.ResetFaceList</p>
+<p class="VBA-Text-Example" style="margin-left: 40px;">.ClearNodeFaces "general compact thermal model 1", "15"</p>
+<p class="VBA-Text-Example" style="margin-left: 40px;">.AddFaceToNode "general compact thermal model 1", "15", "component1:Back_2", "1"</p>
+<p class="VBA-Text-Example" style="margin-left: 40px;">.StoreFaces</p>
+<p class="VBA-Text-Example">End With</p>
+<p style="-qt-paragraph-type: empty; margin-top: 0px; margin-bottom: 0px; margin-left: 0px; margin-right: 0px; -qt-block-indent: 0; text-indent: 0px;"><br />
+<br /></p>
+<p class="VBA-Text-Example">&#160;</p>
+<?rh-p style="margin-bottom: 0px; text-align: Right; margin-left: 18px; 
+                 margin-right: 18px; margin-top: 18px;" ?>
+<div style="width: 100%; position: relative;" id="footer">
+<p style="border-bottom: Solid 1px #dddddd; text-align: Left; margin-left: 0px; font-family: Arial, sans-serif; line-height: Normal; margin-top: 9px; margin-right: 0px; margin-bottom: 6px; border-left-width: 1px; border-top-width: 1px; border-right-width: 1px;"><span style="text-align: Left; font-family: Arial, sans-serif; line-height: Normal;">&#160;</span></p>
+<table cellspacing="0" width="100%">
+<col style="width: 50%;" />
+<col style="width: 50%;" />
+<tr>
+<td style="vertical-align: Top;"><span style="font-family: Arial, sans-serif; line-height: Normal; font-size: 8pt;"><font size="1" style="font-size:8pt;">CST Studio Suite 2026</font></span></td>
+<td style="vertical-align: Top;">
+<p style="text-align: right;">&#160;</p>
+</td>
+</tr>
+</table>
+<p>&#160;</p>
+</div>
+<script type="text/javascript" language="javascript1.2">
+//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+        writeIntopicBar(0);
+
+
+highlightSearch();
+//-->
+//]]>
+</script>
+</body>
+</html>

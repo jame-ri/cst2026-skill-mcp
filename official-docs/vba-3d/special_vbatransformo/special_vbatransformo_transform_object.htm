@@ -1,0 +1,461 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="Adobe RoboHelp 11" />
+<title>Transform Object</title>
+<link rel="StyleSheet" href="../online_help_vba.css" type="text/css" />
+<style type="text/css">
+/*<![CDATA[*/
+<!--
+body { border-bottom-style:None; }
+-->
+/*]]>*/
+</style>
+
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+        origWidth = innerWidth;
+        origHeight = innerHeight;
+        onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+/*<![CDATA[*/
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+-->
+/*]]>*/
+</style>
+
+<script type="text/javascript" language="javascript1.2" src="../whmsg.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript" src="../whver.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript1.2" src="../whutils.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript1.2" src="../whproxy.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript1.2" src="../whlang.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript1.2" src="../whtopic.js" charset="utf-8">
+</script>
+</head>
+<body>
+<script type="text/javascript" language="javascript1.2">
+//<![CDATA[
+<!--
+if (window.gbWhTopic)
+{
+        var strUrl = document.location.href;
+        var bc = 0;
+        var n = strUrl.toLowerCase().indexOf("bc-");
+        if(n != -1)
+        {
+                document.location.replace(strUrl.substring(0, n));
+                bc = strUrl.substring(n+3);
+        }
+
+        if (window.addTocInfo)
+        {
+        addTocInfo("3D Simulation VBA\nVBA Objects\nTransformations and Picks\nTransform");
+
+        }
+        if (window.writeBtnStyle)
+                writeBtnStyle();
+
+        if (window.writeIntopicBar)
+                writeIntopicBar(0);
+
+        
+        document.write("<p style=\"font-family: Tahoma; font-size: 9pt; font-weight: 400;  font-style:normal; color: rgb(0, 0, 0); text-decoration:none; text-align: left\"> ");
+AddMasterBreadcrumbs("../index.htm", "font-family: Tahoma; font-size: 9pt; font-weight: 400;  font-style:normal; color: rgb(0, 0, 0); text-decoration:none; text-align: left", "|", "Home", "../special_vbaobjects/special_vbaobjects_vbaobjects.htm");
+document.write("<a style=\"font-family: Tahoma; font-size: 9pt; font-weight: 400;  font-style:normal; color: rgb(0, 0, 0); text-decoration:none; text-align: left\" href=\"../special_vbaobjects/special_vbaobjects_vbaobjects.htm\">3D Simulation VBA<\/a> | <a style=\"font-family: Tahoma; font-size: 9pt; font-weight: 400;  font-style:normal; color: rgb(0, 0, 0); text-decoration:none; text-align: left\" href=\"../special_vbaobjects/special_vbaobjects_vbaobjects.htm\">VBA Objects<\/a> | <a style=\"font-family: Tahoma; font-size: 9pt; font-weight: 400;  font-style:normal; color: rgb(0, 0, 0); text-decoration:none; text-align: left\" href=\"special_vbatransformo_align_object.htm\">Transformations and Picks<\/a> | Transform<\/p>");
+
+}
+else
+        if (window.gbIE4)
+                document.location.reload();
+
+onLoadHandler = function()
+{
+  if (window.setRelStartPage)
+        {
+        setTimeout("setRelStartPage('../index.htm');", 1)
+
+    setTimeout("UpdateBreadCrumbsMarker();", 1);
+        }
+}
+
+if (window.addEventListener){  
+        window.addEventListener('load', onLoadHandler, false);   
+} else if (window.attachEvent){  
+        window.attachEvent('onload', onLoadHandler);  
+}
+
+function onSetStartPage()
+{
+  autoSync(1);
+  sendSyncInfo();
+  sendAveInfoOut();
+}
+//-->
+//]]>
+</script><script type="text/javascript" src="../ehlpdhtm.js" language="JavaScript1.2">
+</script>
+<table cellspacing="0" width="100%">
+<col style="width: 50%;" />
+<col style="width: 50%;" />
+<tr>
+<td style="vertical-align: middle; padding-top: 5px; padding-bottom: 5px;">
+<p style="margin-top: 0px; margin-bottom: 0px;"><img src="../3ds.png" alt="" style="border: none;" border="0" /></p>
+</td>
+<td style="vertical-align: middle;">
+<p style="text-align: right;"><a href="https://www.3ds.com/products-services/3dexperience/" target="_blank"><img src="../3dexp.png" alt="" style="border: none;" width="32" height="32" border="0" /></a></p>
+</td>
+</tr>
+</table>
+<h1>Transform Object</h1>
+<p class="VBA-Text">Offers a set of tools that change a solid by transformations.</p>
+<ul>
+<li class="p-VBA-Index-Category">
+<p class="VBA-Index-Category"><a href="#Methods">Methods</a></p>
+</li>
+<li class="p-VBA-Index-Category">
+<p class="VBA-Index-Category" style="font-weight: bold;"><a href="#Defaults" style="font-weight: bold;">Default Settings</a></p>
+</li>
+</ul>
+<p class="VBA-Heading-Category"><a name="Methods" id="Methods"></a>Methods</p>
+<p class="VBA-Heading-Method">Reset</p>
+<p class="VBA-Text-Indent">Resets all internal values to their defaults.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">Name ( <span><a href="../common_vbageneral/common_general_name.htm" id="a44" style="font-weight: normal; font-style: normal;" name="a44">name</a></span> <span style="font-style: italic;"><i>sObjectName</i></span> )</p>
+<p class="VBA-Text-Indent">Defines the name of the object, the transformation should be applied to.</p>
+<p class="VBA-Text-Indent">Note: for some transforms ("mixed" in particular), a <a href="../common_vbageneral/common_general_global_names.htm">global name</a> may be required.</p>
+<p class="VBA-Heading-Method">&#160;</p>
+<p class="VBA-Heading-Method">AddName ( <a href="../common_vbageneral/common_general_name.htm" id="a23" style="font-weight: normal; font-style: normal;" name="a23">name</a> <span style="font-style: italic;"><i>sObjectName</i></span> )</p>
+<p class="VBA-Text-Indent">Defines one more name of an additional object, in addition to the <span style="font-style: italic;"><i>previously</i></span> defined object. This is only used for transformations of <span style="font-style: italic;"><i>solids</i></span> with <span style="font-style: italic;"><i>Origin</i></span> set to <span style="font-style: italic;"><i>CommonCenter,</i></span> for <span style="font-style: italic;"><i>TransformAlign</i></span> and <span style="font-style: italic;"><i>RotateAlign</i></span>.</p>
+<p class="VBA-Text-Indent">Note: for some transforms ("mixed" in particular), a <a href="../common_vbageneral/common_general_global_names.htm">global name</a> may be required.</p>
+<p class="vba-text-indent">&#160;</p>
+<p class="VBA-Heading-Method">TranslateCurve / ScaleCurve / RotateCurve / MirrorCurve</p>
+<p class="VBA-Heading-Method">TranslateWire / ScaleWire / RotateWire / MirrorWire</p>
+<p class="VBA-Heading-Method">TranslateCoil / ScaleCoil / RotateCoil / MirrorCoil</p>
+<p class="VBA-Text-Indent">Translate / scale / rotate / mirror the selected object with all previously made settings.</p>
+<p class="VBA-Heading-Method">&#160;</p>
+<p class="VBA-Heading-Method">Transform ( <a href="../common_vbageneral/common_general_enum.htm" id="a27" style="font-style: normal;" name="a27"><span style="font-weight: normal;">enum</span></a> <span style="font-weight: normal;">{"Anchorpoint", "Coil", "Currentdistribution", "CurrentMonitor", CurrentWire", "Face", "FFS", "HF3DMonitor", "Mixed", "Port", "Probe", "Shape", "VoltageMonitor", "VoltageWire", "Voxeldata"}</span> <span style="font-style: italic;"><i>what,</i></span> &#160;<a href="../common_vbageneral/common_general_enum.htm" id="a29" style="font-weight: normal; font-style: normal;" name="a29">enum</a> <span style="font-weight: normal;">{"Translate", "Rotate", "Scale", "Mirror", "Matrix", "GlobalToLocal", "LocalToGlobal"}</span> <span style="font-style: italic;"><i>how</i></span> )</p>
+<p class="VBA-Text-Indent">This execute a specified transform onto the given type of objects (named via <span style="font-style: italic;"><i>Name</i></span> and <span style="font-style: italic;"><i>AddName</i></span>). Note that not all transformations are applicable to all types of objects.</p>
+<p class="VBA-Text-Indent" style="margin-left: 64px;">&#160;</p>
+<table style="vertical-align: top; margin-left: 40px;" cellspacing="0" width="100%">
+<col style="width: 13.222%;" />
+<col style="width: 86.778%;" />
+<tr style="vertical-align: top;">
+<td style="border: Solid 1px #000000; width: 13.222%; padding-right: 10px; padding-left: 10px;">
+<p style="text-align: center;"><a href="../common_vbageneral/common_general_enum.htm" id="a28" style="font-style: normal;" name="a28">enum</a> <span style="font-weight: bold;">what</span></p>
+</td>
+<td style="border-top: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 86.778%; padding-right: 10px; padding-left: 10px;">
+<p style="text-align: center; font-weight: bold;">description</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 13.222%; padding-right: 10px; padding-left: 10px;">
+<p>Shape</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 86.778%; padding-right: 10px; padding-left: 10px;">
+<p>this transforms solids</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 13.222%; padding-right: 10px; padding-left: 10px;">
+<p>Anchorpoint, Face, Meshshape, Probe, Voxeldata</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 86.778%; padding-right: 10px; padding-left: 10px;">
+<p>this transforms the named object</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 13.222%; padding-right: 10px; padding-left: 10px;">
+<p>mixed</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 86.778%; padding-right: 10px; padding-left: 10px;">
+<p>this transforms a mixed selection of objects. Those need to be added via <span style="font-style: italic;"><i>Name</i></span> and <span style="font-style: italic;"><i>AddName</i></span> &#160;<a href="../common_vbageneral/common_general_global_names.htm">global name</a> syntax.</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 13.222%; padding-right: 10px; padding-left: 10px;">
+<p>FFS</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 86.778%; padding-right: 10px; padding-left: 10px;">
+<p>this transforms farfield sources</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 13.222%; padding-right: 10px; padding-left: 10px;">
+<p>HF3DMonitor</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 86.778%; padding-right: 10px; padding-left: 10px;">
+<p>this transforms high frequency field monitors. Currently only Field-Source-Monitors are transformable.</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 13.222%; padding-right: 10px; padding-left: 10px;">
+<p>Port</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 86.778%; padding-right: 10px; padding-left: 10px;">
+<p>this transforms all kinds of ports</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 13.222%; padding-right: 10px; padding-left: 10px;">
+<p>Lumpedelement</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 86.778%; padding-right: 10px; padding-left: 10px;">
+<p>this transforms lumped element</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 13.222%; padding-right: 10px; padding-left: 10px;">
+<p>Currentdistribution</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 86.778%; padding-right: 10px; padding-left: 10px;">
+<p>this transforms nearfield sources</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 13.222%; padding-right: 10px; padding-left: 10px;">
+<p>Coil, currentmonitor, currentwire, voltagemonitor, voltagewire</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 86.778%; padding-right: 10px; padding-left: 10px;">
+<p>this transforms the named object</p>
+</td>
+</tr>
+</table>
+<p class="VBA-Text-Indent" style="margin-left: 64px;">&#160;</p>
+<table style="vertical-align: top; margin-left: 40px;" cellspacing="0" width="100%">
+<col style="width: 13.272%;" />
+<col style="width: 59.17%;" />
+<col style="width: 27.558%;" />
+<tr style="vertical-align: top;">
+<td style="border: Solid 1px #000000; width: 13.272%; padding-right: 10px; padding-left: 10px;">
+<p style="text-align: center;"><a href="../common_vbageneral/common_general_enum.htm" id="a30" style="font-weight: normal; font-style: normal;" name="a30">enum</a> <span style="font-weight: bold;">how</span></p>
+</td>
+<td style="border-top: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 59.17%; padding-right: 10px; padding-left: 10px;">
+<p style="text-align: center; font-weight: bold;">description</p>
+</td>
+<td style="border-top: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 27.558%; padding-right: 10px; padding-left: 10px;">
+<p style="text-align: center; font-weight: bold;">special methods</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 13.272%; padding-right: 10px; padding-left: 10px;">
+<p>Translate</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 59.17%; padding-right: 10px; padding-left: 10px;">
+<p>Moves the object along a given vector</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 27.558%; padding-right: 10px; padding-left: 10px;">
+<p>Vector, UsePickedPoints, InvertPickedPoints</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 13.272%; padding-right: 10px; padding-left: 10px;">
+<p>Rotate</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 59.17%; padding-right: 10px; padding-left: 10px;">
+<p>Rotates the object around one main axis, given the angle and an offset for the rotation axis (origin).</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 27.558%; padding-right: 10px; padding-left: 10px;">
+<p>Angle, Center, Origin</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 13.272%; padding-right: 10px; padding-left: 10px;">
+<p>Scale</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 59.17%; padding-right: 10px; padding-left: 10px;">
+<p>scales the object. The scaling center can be specified as well. For some types, only uniform scaling is allowed.</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 27.558%; padding-right: 10px; padding-left: 10px;">
+<p>ScaleFactor, Center, Origin</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 13.272%; padding-right: 10px; padding-left: 10px;">
+<p>Mirror</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 59.17%; padding-right: 10px; padding-left: 10px;">
+<p>mirrors the object on a mirror plane whose normal and offset is given</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 27.558%; padding-right: 10px; padding-left: 10px;">
+<p>PlaneNormal, Center, Origin</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 13.272%; padding-right: 10px; padding-left: 10px;">
+<p>Matrix</p>
+<p>&#160;</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 59.17%; padding-right: 10px; padding-left: 10px;">
+<p>this applies a general matrix transformation onto a given object. Input is a 3 by 3 Matrix and an additional translation vector.</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 27.558%; padding-right: 10px; padding-left: 10px;">
+<p>Matrix, Vector</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 13.272%; padding-right: 10px; padding-left: 10px;">
+<p>LocalToGlobal</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 59.17%; padding-right: 10px; padding-left: 10px;">
+<p>After this transform that consists of translates and rotates internally, the position and orientation of the object &#160;in regard to the <span style="font-style: italic;"><i>global coordinate system</i></span> will match its position and rotation that it had to the <span style="font-style: italic;"><i>local coordinate system</i></span> before.</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 27.558%; padding-right: 10px; padding-left: 10px;">
+<p>&#160;</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 13.272%; padding-right: 10px; padding-left: 10px;">
+<p>GlobalToLocal</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 59.17%; padding-right: 10px; padding-left: 10px;">
+<p>This is the inverse operation to the one above. An object aligned to the x-y plane in the origin of the global coordinate system will afterwards be aligned to the u-v plane and translated to be in the origin of the local coordinate system.</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 27.558%; padding-right: 10px; padding-left: 10px;">
+<p>&#160;</p>
+</td>
+</tr>
+</table>
+<p class="VBA-Heading-Method">&#160;</p>
+<p class="Tip-Note-Heading" style="margin-left: 40px;"><span style="font-weight: bold;">Note:</span> To align some object in a completely user specified manner onto something else, you can follow this workflow:</p>
+<ol style="list-style: decimal;">
+<li class="p-Tip-Note-Text">
+<p class="Tip-Note-Text" style="margin-left: 40px;">Transform the local coordinate system to specify an anchor system for your object to be aligned.</p>
+</li>
+<li class="p-Tip-Note-Text">
+<p class="Tip-Note-Text" style="margin-left: 40px;">Transform "LocalToGlobal" this object.</p>
+</li>
+<li class="p-Tip-Note-Text">
+<p class="Tip-Note-Text" style="margin-left: 40px;">Align the local coordinate system to specify the target of your previously defined anchor coordinate system</p>
+</li>
+<li class="p-Tip-Note-Text">
+<p class="Tip-Note-Text" style="margin-left: 40px;">Transform "GlobalToLocal" your object of interest.</p>
+</li>
+</ol>
+<p class="Tip-Note-Text" style="margin-left: 40px;">(There is a Macro for that. Contstruct/Miscellaneous/Transform selected objects to local WCS or to global coordinates")</p>
+<p class="VBA-Heading-Method">&#160;</p>
+<p class="VBA-Heading-Method">UsePickedPoints ( <a href="../common_vbageneral/common_general_bool_data_type.htm" id="a2" style="font-weight: normal; font-style: normal;" name="a2">bool</a> <span style="font-style: italic;"><i>switch</i></span> )</p>
+<p class="VBA-Text-Indent">This method is valid for the translation of a selected shape and decides if a translation vector is defined by the two recently picked points (<span style="font-style: italic;"><i>switch</i></span> = True) or if the vector is given numerically (<span style="font-style: italic;"><i>switch</i></span> = False).</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">InvertPickedPoints</p>
+<p class="VBA-Text-Indent">This method is valid for the translation of a selected shape by use of picked points. The resulting translation vector will be inverted (<span style="font-style: italic;"><i>switch</i></span> = True) or remains unchanged (<span style="font-style: italic;"><i>switch</i></span> = False).</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">MultipleObjects ( <a href="../common_vbageneral/common_general_bool_data_type.htm" id="a4" style="font-weight: normal; font-style: normal;" name="a4">bool</a> <span style="font-style: italic;"><i>copy</i></span> )</p>
+<p class="VBA-Text-Indent">If switch is True, the new solid will be copied and the original will remain untouched. Else (<span style="font-style: italic;"><i>copy</i></span> = False), the original object will be deleted. In case of repeated execution by usage of the .Repetitions method, <span style="font-style: italic;"><i>copy</i></span> = True will result in number new objects plus the original object.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">GroupObjects ( <a href="../common_vbageneral/common_general_bool_data_type.htm" id="a5" style="font-weight: normal; font-style: normal;" name="a5">bool</a> <span style="font-style: italic;"><i>unite</i></span> )</p>
+<p class="VBA-Text-Indent">If new objects are created during the transformation (.MultipleObjects enabled), <span style="font-style: italic;"><i>unite</i></span> = True defines that every new object will be a united with the original object after the transformation. If <span style="font-style: italic;"><i>unite</i></span> = False all new objects will stay separately.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">Origin ( <a href="../common_vbageneral/common_general_enum.htm" id="a1" style="font-weight: normal; font-style: normal;" name="a1">enum</a> {"ShapeCenter", "CommonCenter","Free"} <span style="font-style: italic;"><i>key</i></span> )</p>
+<p class="VBA-Text-Indent">For scale, rotate and mirror transformations, this method defines, whether the origin for the transformation should be the shape center, the center of all named shapes (see .AddName), or a free point defined by the .Center method.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">Center ( <a href="../common_vbageneral/common_general_double.htm" id="a6" style="font-weight: normal; font-style: normal;" name="a6">double</a> <span style="font-style: italic;"><i>u,</i></span> <a href="../common_vbageneral/common_general_double.htm" id="a7" style="font-weight: normal; font-style: normal;" name="a7">double</a> <span style="font-style: italic;"><i>v,</i></span> <a href="../common_vbageneral/common_general_double.htm" id="a8" style="font-weight: normal; font-style: normal;" name="a8">double</a> <span style="font-style: italic;"><i>w</i></span> )</p>
+<p class="VBA-Text-Indent">Sets the center for scale, rotate and mirror transformations. The working coordinate system will be used, if activated. Only applicable, if .Origin is set to "free".</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">Vector ( <a href="../common_vbageneral/common_general_double.htm" id="a12" style="font-weight: normal; font-style: normal;" name="a12">double</a> <span style="font-style: italic;"><i>u,</i></span> <a href="../common_vbageneral/common_general_double.htm" id="a13" style="font-weight: normal; font-style: normal;" name="a13">double</a> <span style="font-style: italic;"><i>v,</i></span> <a href="../common_vbageneral/common_general_double.htm" id="a14" style="font-weight: normal; font-style: normal;" name="a14">double</a> <span style="font-style: italic;"><i>w</i></span> )</p>
+<p class="VBA-Text-Indent">Sets the translation vector. The working coordinate system will be used, if activated. Use in case of translate transformation only.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">ScaleFactor ( <a href="../common_vbageneral/common_general_double.htm" id="a9" style="font-weight: normal; font-style: normal;" name="a9">double</a> <span style="font-style: italic;"><i>u,</i></span> <a href="../common_vbageneral/common_general_double.htm" id="a10" style="font-weight: normal; font-style: normal;" name="a10">double</a> <span style="font-style: italic;"><i>v,</i></span> <a href="../common_vbageneral/common_general_double.htm" id="a11" style="font-weight: normal; font-style: normal;" name="a11">double</a> <span style="font-style: italic;"><i>w</i></span> )</p>
+<p class="VBA-Text-Indent">Sets the scale factor for each coordinate direction. The working coordinate system will be used, if activated. Use in case of scale transformation only.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">Angle ( <a href="../common_vbageneral/common_general_double.htm" id="a18" style="font-weight: normal; font-style: normal;" name="a18">double</a> <span style="font-style: italic;"><i>u,</i></span> <a href="../common_vbageneral/common_general_double.htm" id="a19" style="font-weight: normal; font-style: normal;" name="a19">double</a> <span style="font-style: italic;"><i>v,</i></span> <a href="../common_vbageneral/common_general_double.htm" id="a20" style="font-weight: normal; font-style: normal;" name="a20">double</a> <span style="font-style: italic;"><i>w</i></span> )</p>
+<p class="VBA-Text-Indent">Sets the rotation angle in degrees around the respective axis. The working coordinate system will be used, if activated. Use in case of rotate transformation only.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">PlaneNormal ( <a href="../common_vbageneral/common_general_double.htm" id="a15" style="font-weight: normal; font-style: normal;" name="a15">double</a> <span style="font-style: italic;"><i>u,</i></span> <a href="../common_vbageneral/common_general_double.htm" id="a16" style="font-weight: normal; font-style: normal;" name="a16">double</a> <span style="font-style: italic;"><i>v,</i></span> <a href="../common_vbageneral/common_general_double.htm" id="a17" style="font-weight: normal; font-style: normal;" name="a17">double</a> <span style="font-style: italic;"><i>w</i></span> )</p>
+<p class="VBA-Text-Indent">Sets the mirror plane normal. The working coordinate system will be used, if activated. Use in case of mirror transformation only.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">Matrix ( <a href="../common_vbageneral/common_general_double.htm" id="a31" style="font-weight: normal; font-style: normal;" name="a31">double</a> <span style="font-style: italic;"><i>c11,</i></span> <a href="../common_vbageneral/common_general_double.htm" id="a32" style="font-weight: normal; font-style: normal;" name="a32">double</a> <span style="font-style: italic;"><i>c12,</i></span> <a href="../common_vbageneral/common_general_double.htm" id="a33" style="font-weight: normal; font-style: normal;" name="a33">double</a> <span style="font-style: italic;"><i>c13,</i></span> <a href="../common_vbageneral/common_general_double.htm" id="a34" style="font-weight: normal; font-style: normal;" name="a34">double</a> <span style="font-style: italic;"><i>c21,</i></span> <a href="../common_vbageneral/common_general_double.htm" id="a35" style="font-weight: normal; font-style: normal;" name="a35">double</a> <span style="font-style: italic;"><i>c22,</i></span> <a href="../common_vbageneral/common_general_double.htm" id="a36" style="font-weight: normal; font-style: normal;" name="a36">double</a> <span style="font-style: italic;"><i>c23,</i></span> <a href="../common_vbageneral/common_general_double.htm" id="a37" style="font-weight: normal; font-style: normal;" name="a37">double</a> <span style="font-style: italic;"><i>c31,</i></span> <a href="../common_vbageneral/common_general_double.htm" id="a39" style="font-weight: normal; font-style: normal;" name="a39">double</a> <span style="font-style: italic;"><i>c32,</i></span> <a href="../common_vbageneral/common_general_double.htm" id="a40" style="font-weight: normal; font-style: normal;" name="a40">double</a> <span style="font-style: italic;"><i>c33</i></span> )</p>
+<p class="VBA-Text-Indent">Sets a 3 by 3 matrix for the matrix transformation column by column. c11 through c13 will define the transformation of the x vector.</p>
+<p class="vba-text-indent">&#160;</p>
+<p class="VBA-Heading-Method">Repetitions ( <a href="../common_vbageneral/common_general_integer.htm" id="a22" style="font-weight: normal; font-style: normal;" name="a22">int</a> <span style="font-style: italic;"><i>number</i></span> )</p>
+<p class="VBA-Text-Indent">Defines the number of repetitions, the transformation will be applied to the selected object.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">Component ( <span><a href="../common_vbageneral/common_general_name.htm" id="a3" style="font-weight: normal; font-style: normal;" name="a3">name</a></span> <span style="font-style: italic;"><i>name</i></span> )</p>
+<p class="VBA-Text-Indent">Sets the component for the new solid. The component must already exist.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">Material ( <span><a href="../common_vbageneral/common_general_name.htm" id="a21" style="font-weight: normal; font-style: normal;" name="a21">name</a></span> <span style="font-style: italic;"><i>name</i></span> )</p>
+<p class="VBA-Text-Indent">Sets the material for the new solid. The material must already exist.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">MultipleSelection ( <a href="../common_vbageneral/common_general_bool_data_type.htm" id="a38" style="font-weight: normal; font-style: normal;" name="a38">bool</a> <span style="font-style: italic;"><i>switch</i></span> )</p>
+<p class="VBA-Text-Indent">This setting specifies whether the transformation should be performed only to one solid or to multiple selected objects. If you transform multiple objects history entries are created for every shape and if you transform by selected points the pick-points will be deleted after an operation. This flag prevents the pickpoints from being deleted. If there are still solids to transform the flag is <span style="font-style: italic;"><i>'true'</i></span> and in the last transform block it is <span style="font-style: italic;"><i>'false'</i></span> so the pick-points will be deleted.</p>
+<p class="VBA-Heading-Method">&#160;</p>
+<p class="VBA-Heading-Method">&#160;</p>
+<p class="VBA-Heading-Method">Touch ( <a href="../common_vbageneral/common_general_bool_data_type.htm" id="a41" style="font-weight: normal; font-style: normal;" name="a41">bool</a> enable )</p>
+<p class="VBA-Text-Indent">This enables parametric transform-touch. Whenever this transform is executed, the translation or rotation is continued until it hits another shape.</p>
+<p class="VBA-Heading-Method">AddNameToActiveTouchSet ( <a href="../common_vbageneral/common_general_name.htm" id="a310" style="font-weight: normal; font-style: normal;" name="a310">name</a> <span style="font-style: italic;"><i>name</i></span> &#160;)</p>
+<p class="VBA-Text-Indent">Adds a shape to the set of shapes that are used for touch calculation and actively moved against the set of passive shapes. If not specified, all shapes listed via <span style="font-style: italic;"><i>Name</i></span> and <span style="font-style: italic;"><i>AddName</i></span> are used for the touch calculations.</p>
+<p class="VBA-Heading-Method">AddNameToPassiveTouchSet ( <a href="../common_vbageneral/common_general_name.htm" id="a3101" style="font-weight: normal; font-style: normal;" name="a3101">name</a> <span style="font-style: italic;"><i>name</i></span> &#160;)</p>
+<p class="VBA-Text-Indent">Adds a shape to the set of shapes that are used as opponents for the touch calculations. Against each of the shapes, all shapes of the "active set" (see above) are moved. If not specified, all shapes of the project that are not part of the "active set" are taken as "passive set".</p>
+<p class="VBA-Heading-Method">TouchTolerance ( <a href="../common_vbageneral/common_general_double.htm" id="a181" style="font-weight: normal; font-style: normal;" name="a181">double</a> tolerance )</p>
+<p class="VBA-Text-Indent">Specifies the maximum distance that the touch algorithm interprets as "touching". The smaller this value, the longer touch calculations will take but also the more accurate they will be.</p>
+<p class="VBA-Heading-Method">TouchMaxIterations( <span style="font-weight: normal;"><a href="../common_vbageneral/common_general_integer.htm" id="a221" style="font-weight: normal; font-style: normal;" name="a221">int</a></span> <span style="font-style: italic;"><i>number</i></span> )</p>
+<p class="VBA-Text-Indent">Specifies the maximum number of iterations that the touch algorithm performs. If nothing is found until max iterations is reached, the shapes will not move at all.</p>
+<p class="VBA-Heading-Method">TouchHeuristic( &#160;<a href="../common_vbageneral/common_general_bool_data_type.htm" id="a411" style="font-weight: normal; font-style: normal;" name="a411">bool</a> heuristic)</p>
+<p class="VBA-Text-Indent">Usually, the heurstic mode is a lot faster, esp. for rotation cases. The default is "true". In very special corner cases, a collision may be missed. If switched off, a conservative approach in collision detection is used. This will take way more iterations but no collision will be missed.</p>
+<p class="VBA-Heading-Method">TouchOffset ( <a href="../common_vbageneral/common_general_double.htm" id="a1811" style="font-weight: normal; font-style: normal;" name="a1811">double</a> offset )</p>
+<p class="VBA-Text-Indent">If above zero, the transformation is taken beyond the point of touching, <span style="font-weight: bold;">approximately</span> to penetrate the touching shape by a depth of <span style="font-style: italic;"><i>offset</i></span>.</p>
+<p class="VBA-Text-Indent">If below zero, a collision is prevented and the final state should be <span style="font-weight: bold;">approximately</span> such that the minimum distance between the moving shapes and a close "passive" shape has the value of <span style="font-style: italic;"><i>offset</i></span>.</p>
+<p class="VBA-Heading-Category"><a name="Defaults" id="Defaults"></a>Defaults</p>
+<p class="VBA-Text-Example">UsePickedPoints (False)</p>
+<p class="VBA-Text-Example">InvertPickedPoints (False)</p>
+<p class="VBA-Text-Example">MultipleObjects (False)</p>
+<p class="VBA-Text-Example">GroupObjects (False)</p>
+<p class="VBA-Text-Example">Origin ("ShapeCenter")</p>
+<p class="VBA-Text-Example">MulitpleSelection (False)</p>
+<p class="VBA-Text-Example">Repetitions (1)</p>
+<p class="VBA-Text-Example">Touch (False)</p>
+<p class="VBA-Text-Example">TouchTolerance (1e-6)</p>
+<p class="VBA-Text-Example">TouchMaxIterations (500)</p>
+<p class="VBA-Text-Example">TouchHeuristic (True)</p>
+<p class="VBA-Text-Example">TouchOffset (0.0)</p>
+<p class="VBA-Text-Example">&#160;</p>
+<?rh-p style="margin-bottom: 0px; text-align: Right; margin-left: 18px; 
+                 margin-right: 18px; margin-top: 18px;" ?>
+<div style="width: 100%; position: relative;" id="footer">
+<p style="border-bottom: Solid 1px #dddddd; text-align: Left; margin-left: 0px; font-family: Arial, sans-serif; line-height: Normal; margin-top: 9px; margin-right: 0px; margin-bottom: 6px; border-left-width: 1px; border-top-width: 1px; border-right-width: 1px;"><span style="text-align: Left; font-family: Arial, sans-serif; line-height: Normal;">&#160;</span></p>
+<table cellspacing="0" width="100%">
+<col style="width: 50%;" />
+<col style="width: 50%;" />
+<tr>
+<td style="vertical-align: Top;"><span style="font-family: Arial, sans-serif; line-height: Normal; font-size: 8pt;"><font size="1" style="font-size:8pt;">CST Studio Suite 2026</font></span></td>
+<td style="vertical-align: Top;">
+<p style="text-align: right;">&#160;</p>
+</td>
+</tr>
+</table>
+<p>&#160;</p>
+</div>
+<script type="text/javascript" language="javascript1.2">
+//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+        writeIntopicBar(0);
+
+
+highlightSearch();
+//-->
+//]]>
+</script>
+</body>
+</html>

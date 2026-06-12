@@ -1,0 +1,422 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="Adobe RoboHelp 11" />
+<title>Pick Object</title>
+<link rel="StyleSheet" href="../online_help_vba.css" type="text/css" />
+<style type="text/css">
+/*<![CDATA[*/
+<!--
+body { border-bottom-style:None; }
+-->
+/*]]>*/
+</style>
+
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+        origWidth = innerWidth;
+        origHeight = innerHeight;
+        onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+/*<![CDATA[*/
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+-->
+/*]]>*/
+</style>
+
+<script type="text/javascript" language="javascript1.2" src="../whmsg.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript" src="../whver.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript1.2" src="../whutils.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript1.2" src="../whproxy.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript1.2" src="../whlang.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript1.2" src="../whtopic.js" charset="utf-8">
+</script>
+</head>
+<body>
+<script type="text/javascript" language="javascript1.2">
+//<![CDATA[
+<!--
+if (window.gbWhTopic)
+{
+        var strUrl = document.location.href;
+        var bc = 0;
+        var n = strUrl.toLowerCase().indexOf("bc-");
+        if(n != -1)
+        {
+                document.location.replace(strUrl.substring(0, n));
+                bc = strUrl.substring(n+3);
+        }
+
+        if (window.addTocInfo)
+        {
+        addTocInfo("3D Simulation VBA\nVBA Objects\nTransformations and Picks\nPick");
+addAvenueInfo("common_VBAPICKO","","");
+
+        }
+        if (window.writeBtnStyle)
+                writeBtnStyle();
+
+        if (window.writeIntopicBar)
+                writeIntopicBar(0);
+
+        
+        document.write("<p style=\"font-family: Tahoma; font-size: 9pt; font-weight: 400;  font-style:normal; color: rgb(0, 0, 0); text-decoration:none; text-align: left\"> ");
+AddMasterBreadcrumbs("../index.htm", "font-family: Tahoma; font-size: 9pt; font-weight: 400;  font-style:normal; color: rgb(0, 0, 0); text-decoration:none; text-align: left", "|", "Home", "../special_vbaobjects/special_vbaobjects_vbaobjects.htm");
+document.write("<a style=\"font-family: Tahoma; font-size: 9pt; font-weight: 400;  font-style:normal; color: rgb(0, 0, 0); text-decoration:none; text-align: left\" href=\"../special_vbaobjects/special_vbaobjects_vbaobjects.htm\">3D Simulation VBA<\/a> | <a style=\"font-family: Tahoma; font-size: 9pt; font-weight: 400;  font-style:normal; color: rgb(0, 0, 0); text-decoration:none; text-align: left\" href=\"../special_vbaobjects/special_vbaobjects_vbaobjects.htm\">VBA Objects<\/a> | <a style=\"font-family: Tahoma; font-size: 9pt; font-weight: 400;  font-style:normal; color: rgb(0, 0, 0); text-decoration:none; text-align: left\" href=\"../special_vbatransformo/special_vbatransformo_align_object.htm\">Transformations and Picks<\/a> | Pick<\/p>");
+
+}
+else
+        if (window.gbIE4)
+                document.location.reload();
+
+onLoadHandler = function()
+{
+  if (window.setRelStartPage)
+        {
+        setTimeout("setRelStartPage('../index.htm');", 1)
+
+    setTimeout("UpdateBreadCrumbsMarker();", 1);
+        }
+}
+
+if (window.addEventListener){  
+        window.addEventListener('load', onLoadHandler, false);   
+} else if (window.attachEvent){  
+        window.attachEvent('onload', onLoadHandler);  
+}
+
+function onSetStartPage()
+{
+  autoSync(1);
+  sendSyncInfo();
+  sendAveInfoOut();
+}
+//-->
+//]]>
+</script><script type="text/javascript" src="../ehlpdhtm.js" language="JavaScript1.2">
+</script>
+<table cellspacing="0" width="100%">
+<col style="width: 50%;" />
+<col style="width: 50%;" />
+<tr>
+<td style="vertical-align: middle; padding-top: 5px; padding-bottom: 5px;">
+<p style="margin-top: 0px; margin-bottom: 0px;"><img src="../3ds.png" alt="" style="border: none;" border="0" /></p>
+</td>
+<td style="vertical-align: middle;">
+<p style="text-align: right;"><a href="https://www.3ds.com/products-services/3dexperience/" target="_blank"><img src="../3dexp.png" alt="" style="border: none;" width="32" height="32" border="0" /></a></p>
+</td>
+</tr>
+</table>
+<p class="VBA-Heading-Object">Pick Object</p>
+<p class="VBA-Text">Offers a set of tools to find or set specific points, edges or areas.</p>
+<p class="VBA-Text">&#160;</p>
+<p class="VBA-Text">Some methods/functions specify the objects that have to be picked by an <span style="font-weight: bold;">id</span> number. This id number is unique for every object. If not specified otherwise, the numbering starts with 0. Please note: If a solid changes such that new faces/edges/points are created, the id number might change!</p>
+<p class="VBA-Text">&#160;</p>
+<p class="VBA-Text">Some other methods/functions work on existing picks that can be listed by the pick lists (<a href="../ribbons/3d/common_ribbons_modeling.htm" id="a1711" name="a1711">Modeling:</a> <i><span style="font-weight: bold;">Picks &gt;</span></i> <i style="font-weight: bold;">Pick Lists &#160;</i><span><i><sub style="font-style: normal; vertical-align: Baseline; font-weight: bold;"><img src="../icon_images/3d_modeling/pick_list_16.png" alt="" style="border: none;" border="0" /></sub></i></span> ). In this case, an <span style="font-weight: bold;">index</span> is passed to the function. This index is <span style="font-style: italic;"><i>0-based</i></span>. The first element in the list (the pick that was performed the earliest) will be addressed by "0". It is also possible to use negative numbers, in that case the list is addressed in reverse order: "-1" is the latest picked object (the one with the greatest index in the list), "-2" the second to last pick and so on.</p>
+<ul>
+<li class="p-VBA-Index-Category">
+<p class="VBA-Index-Category" style="font-weight: bold;"><a href="#EdgeModification">Edge Modifications</a></p>
+</li>
+<li class="p-VBA-Index-Category">
+<p class="VBA-Index-Category"><a href="#General Methods">General Methods</a></p>
+</li>
+<li class="p-VBA-Index-Category">
+<p class="VBA-Index-Category"><a href="#Generic_Picking">Generic Picking</a></p>
+</li>
+<li class="p-VBA-Index-Category">
+<p class="VBA-Index-Category" style="font-weight: bold;"><a href="#PickEdgesFromSolids(IdBased)" style="font-weight: bold;">Pick Edges from Solids</a></p>
+</li>
+<li class="p-VBA-Index-Category">
+<p class="VBA-Index-Category" style="font-weight: bold;"><a href="#PickFaces">Pick Faces</a></p>
+</li>
+<li class="p-VBA-Index-Category">
+<p class="VBA-Index-Category" style="font-weight: bold;"><a href="#PickModifications">Pick Modifications</a></p>
+</li>
+<li class="p-VBA-Index-Category">
+<p class="VBA-Index-Category"><a href="#PickPointsFromCurves_CoordBased_" style="font-weight: bold;">Pick Points from Curves (Coordinate based)</a></p>
+</li>
+<li class="p-VBA-Index-Category">
+<p class="VBA-Index-Category" style="font-weight: bold;"><span><a href="#PickPointsFromCurves_IdBased_" style="font-weight: bold;">Pick Points from Curves (Id based)</a></span></p>
+</li>
+<li class="p-VBA-Index-Category">
+<p class="VBA-Index-Category" style="font-weight: bold;"><a href="#PickPointsFromSolids_CoordBased_" style="font-weight: bold;">Pick Points from Solids (Coordinate based)</a></p>
+</li>
+<li class="p-VBA-Index-Category">
+<p class="VBA-Index-Category" style="font-weight: normal;"><a href="#PickPointsFromSolids(IdBased)" style="font-weight: bold;">Pick Points from Solids (Id based)</a></p>
+</li>
+<li class="p-VBA-Index-Category">
+<p class="VBA-Index-Category"><a href="#PickPointsFromWires">Pick Points from Wires</a></p>
+</li>
+<li class="p-VBA-Index-Category">
+<p class="VBA-Index-Category" style="font-weight: bold;"><a href="#Queries">Queries</a></p>
+</li>
+<li class="p-VBA-Index-Category">
+<p class="VBA-Index-Category" style="font-weight: bold;"><a href="#Example">Example</a></p>
+</li>
+</ul>
+<p class="VBA-Heading-Category"><a name="EdgeModification" id="EdgeModification"></a>Edge Modifications <span style="font-weight: normal;">(index based)</span></p>
+<p class="VBA-Heading-Method">AddEdge ( <a href="../common_vbageneral/common_general_integer.htm" id="a91" style="font-weight: normal; font-style: normal;" name="a91">int</a> <span style="font-style: italic;"><i>u1,</i></span> <a href="../common_vbageneral/common_general_integer.htm" id="a90" style="font-weight: normal; font-style: normal;" name="a90">int</a> <span style="font-style: italic;"><i>v1,</i></span> <a href="../common_vbageneral/common_general_integer.htm" id="a92" style="font-weight: normal; font-style: normal;" name="a92">int</a> <span style="font-style: italic;"><i>w1,</i></span> <a href="../common_vbageneral/common_general_integer.htm" id="a93" style="font-weight: normal; font-style: normal;" name="a93">int</a> <span style="font-style: italic;"><i>u2,</i></span> <a href="../common_vbageneral/common_general_integer.htm" id="a94" style="font-weight: normal; font-style: normal;" name="a94">int</a> <span style="font-style: italic;"><i>v2,</i></span> <a href="../common_vbageneral/common_general_integer.htm" id="a95" style="font-weight: normal; font-style: normal;" name="a95">int</a> <span style="font-style: italic;"><i>w2</i></span> )</p>
+<p class="VBA-Text-Indent">Defines an edge with the starting point (<span style="font-style: italic;"><i>u1,v1,w1</i></span>) and the end point (<span style="font-style: italic;"><i>u2,v2,w2</i></span>). The points are taken as coordinates in the actual working coordinate system (WCS).</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">DeleteEdge ( <a href="../common_vbageneral/common_general_integer.htm" id="a96" style="font-weight: normal; font-style: normal;" name="a96">int</a> <span style="font-style: italic;"><i>index</i></span> )</p>
+<p class="VBA-Text-Indent">Deletes a picked edge, specified by an index into the currently picked edge list (See: <a href="../ribbons/3d/common_ribbons_modeling.htm" id="a1712" name="a1712">Modeling:</a> <i><span style="font-weight: bold;">Picks &gt;</span></i> <i style="font-weight: bold;">Pick Lists &#160;</i><i><sub style="font-style: normal; vertical-align: Baseline; font-weight: bold;"><img src="../icon_images/3d_modeling/pick_list_16.png" alt="" style="border: none;" border="0" /></sub></i> &#160;<span style="font-weight: bold;">&gt;</span> <i style="font-weight: bold;">Selected Edges...</i> <i><sub style="font-style: normal; vertical-align: Baseline; font-weight: bold;"><span style="font-style: normal; font-weight: bold;"><img src="../icon_images/3d_modeling/pick_listedges_16.png" alt="" style="border: none;" border="0" /></span></sub></i> ).</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">MeanEdge ( <a href="../common_vbageneral/common_general_string.htm" id="a97" style="font-weight: normal; font-style: normal;" name="a97">string</a> <span style="font-style: italic;"><i>indices</i></span> )</p>
+<p class="VBA-Text-Indent">Creates a mean edge out of the given ones (specified by the indices). <span style="font-style: italic;"><i>Indices</i></span> is a comma-separated list of numbers (either all positive and 0-indexed or all negative).</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">MoveEdge ( <a href="../common_vbageneral/common_general_integer.htm" id="a98" style="font-weight: normal; font-style: normal;" name="a98">int</a> <span style="font-style: italic;"><i>index,</i></span> <a href="../common_vbageneral/common_general_double.htm" id="a99" style="font-weight: normal; font-style: normal;" name="a99">double</a> <span style="font-style: italic;"><i>deltax</i></span>, <a href="../common_vbageneral/common_general_double.htm" id="a100" style="font-weight: normal; font-style: normal;" name="a100">double</a> <span style="font-style: italic;"><i>deltay</i></span>, <a href="../common_vbageneral/common_general_double.htm" id="a101" style="font-weight: normal; font-style: normal;" name="a101">double</a> <span style="font-style: italic;"><i>deltaz, <a href="../common_vbageneral/common_general_bool_data_type.htm" id="a102" style="font-weight: normal; font-style: normal;" name="a102">bool</a></i></span> <span style="font-style: italic;"><i>keep</i></span> )</p>
+<p class="VBA-Text-Indent">Moves the mid point of an edge (specified by <span style="font-style: italic;"><i>index</i></span>) in <span style="font-style: italic;"><i>deltax</i></span>, <span style="font-style: italic;"><i>deltay</i></span> and <span style="font-style: italic;"><i>deltaz</i></span> direction. The direction of the edge is kept, so it is only a collinear displacement.</p>
+<p class="VBA-Text-Indent"><span style="font-style: italic;"><i>Keep</i></span> indicates weather the picked original edge will be kept (true) or deleted (false).</p>
+<p class="VBA-Text-Indent">This method represents the macro implementation of the "modify action" from <a href="../ribbons/3d/common_ribbons_modeling.htm" id="a171" name="a171">Modeling:</a> <i><span style="font-weight: bold;">Picks &gt;</span></i> <i style="font-weight: bold;">Pick Lists &#160;</i><i><sub style="font-style: normal; vertical-align: Baseline; font-weight: bold;"><img src="../icon_images/3d_modeling/pick_list_16.png" alt="" style="border: none;" border="0" /></sub></i> <span style="font-weight: bold;">&gt;</span> <i style="font-weight: bold;">Selected Edges...</i> <i><sub style="vertical-align: Baseline;"><span style="font-style: normal; font-weight: bold;"><img src="../icon_images/3d_modeling/pick_listedges_16.png" alt="" style="border: none;" border="0" /></span></sub></i>.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">MoveEdgeInPlane ( <a href="../common_vbageneral/common_general_integer.htm" id="a103" style="font-weight: normal; font-style: normal;" name="a103">int</a> <span style="font-style: italic;"><i>index,</i></span> <a href="../common_vbageneral/common_general_double.htm" id="a104" style="font-weight: normal; font-style: normal;" name="a104">double</a> <span style="font-style: italic;"><i>offset</i></span>, <span><a href="../common_vbageneral/common_general_bool_data_type.htm" id="a107" style="font-weight: normal; font-style: normal;" name="a107">bool</a></span> <span style="font-style: italic;"><i>keep</i></span> )</p>
+<p class="VBA-Text-Indent">Moves the edge - defined from the latest picked face - tangential to the plane. <span style="font-style: italic;"><i>Offset</i></span> specifies how much the edge is moved from edge’s origin. <span style="font-style: italic;"><i>Keep</i></span> indicates weather the picked original edge will be kept (true) or deleted (false).</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">PickEdgeFromPickedPoints ( <a href="../common_vbageneral/common_general_integer.htm" id="a105" style="font-weight: normal; font-style: normal;" name="a105">int</a> <span style="font-style: italic;"><i>index1,</i></span> <span><a href="../common_vbageneral/common_general_integer.htm" id="a106" style="font-weight: normal; font-style: normal;" name="a106">int</a></span> <span style="font-style: italic;"><i>index2</i></span> )</p>
+<p class="VBA-Text-Indent">Picks a single edge which is specified by the indices of two previously picked points as listed in the Selected Point List: <a href="../ribbons/3d/common_ribbons_modeling.htm" id="a1713" name="a1713">Modeling:</a> <i><span style="font-weight: bold;">Picks &gt;</span></i> <i style="font-weight: bold;">Pick Lists &#160;</i><i><sub style="font-style: normal; vertical-align: Baseline; font-weight: bold;"><img src="../icon_images/3d_modeling/pick_list_16.png" alt="" style="border: none;" border="0" /></sub></i>&#160;<span style="font-weight: bold;">&gt;</span> <i style="font-weight: bold;">Selected Points...</i> <i><sub style="font-style: normal; vertical-align: Baseline; font-weight: bold;"><img src="../icon_images/3d_modeling/pick_list_16.png" alt="" style="border: none;" border="0" /></sub></i>.</p>
+<p class="VBA-Heading-Category"><a name="General Methods"></a>General Methods</p>
+<p class="VBA-Heading-Method">ClearAllPicks</p>
+<p class="VBA-Text-Indent">Clears all previously chosen picks (edge, face, point).</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">NextPickToDatabase ( <a href="../common_vbageneral/common_general_integer.htm" id="a3" style="font-weight: normal; font-style: normal;" name="a3">int</a> <span style="font-style: italic;"><i>id</i></span> )</p>
+<p class="VBA-Text-Indent">The next pick point will be written to an internal database. The <span style="font-style: italic;"><i>id</i></span> is the slot in the database. These points are referenced by the VBA functions <span style="font-style: italic;"><i>xp, yp, zp, dist2d, dist3d, ldist2d</i></span>.</p>
+<p class="VBA-Text-Indent">(See also: <a href="../common_vbaapp/common_vbaappapplication_object.htm">Project</a> VBA commands)</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">SnapLastPointToDrawplane</p>
+<p class="VBA-Text-Indent">The last selected point will be projected to the drawing plane. In contrast to the <a href="../ribbons/3d/common_ribbons_modeling.htm" id="a172" name="a172">Modeling:</a> <i><span style="font-weight: bold;">Picks</span></i> <span style="font-weight: bold;">&gt;</span> <i style="font-weight: bold;">Picks</i> <span><i><sub style="font-style: normal; vertical-align: Baseline; font-weight: bold;"><img src="../icon_images/3d_modeling/pick_elements_16.png" alt="" style="border: none;" border="0" /></sub></i></span> <span style="font-weight: bold;">&gt;</span> <i style="font-weight: bold;">Snap points to drawing plane</i> &#160;- which depends on the current view - the macro command is view independent.</p>
+<p class="VBA-Heading-Category"><a name="Generic_Picking" id="Generic_Picking"></a>Generic Picking on Lumped Elements, Ports and Coils</p>
+<p class="VBA-Text-Indent">For some picking (e.g. on Lumped Elements, Port and Coils), generic Pick commands can be used. Those require a <a href="../common_vbageneral/common_general_global_names.htm">global name</a>. If in doubt whether these methods can be used, please perform an interactive pick and then check the history entry... Face picking is only available for coils, via these generic commands.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">PickPointFromIdOn ( &#160;<span style="font-weight: normal; text-decoration: underline;"><u><a href="../common_vbageneral/common_general_global_name_data_type.htm">global name</a></u></span> <span style="font-style: italic;"><i>name</i></span>, <a href="../common_vbageneral/common_general_string.htm" id="a182" style="font-weight: normal; font-style: normal;" name="a182">string</a> <span style="font-style: italic;"><i>picktype</i></span>, <a href="../common_vbageneral/common_general_integer.htm" id="a177" style="font-weight: normal; font-style: normal;" name="a177">int</a> <span style="font-style: italic;"><i>id</i></span> )</p>
+<p class="VBA-Text-Indent">Picks the point with the given <span style="font-style: italic;"><i>id</i></span> from the element given by a <a href="../common_vbageneral/common_general_global_names.htm">global name</a>. Currently the only supported value for <span style="font-style: italic;"><i>picktype</i></span> is "EndPoint".</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">PickPointFromPointOn ( <span style="font-weight: normal; text-decoration: underline;"><u><a href="../common_vbageneral/common_general_global_name_data_type.htm">global name</a></u></span> <span style="font-style: italic;"><i>name</i></span>, <a href="../common_vbageneral/common_general_string.htm" id="a179" style="font-weight: normal; font-style: normal;" name="a179">string</a> <span style="font-style: italic;"><i>picktype</i></span>, <a href="../common_vbageneral/common_general_double.htm" id="a180" style="font-weight: normal; font-style: normal;" name="a180">double</a> <span style="font-style: italic;"><i>x</i></span><span style="font-weight: normal;">, <a href="../common_vbageneral/common_general_double.htm" id="a181" style="font-weight: normal; font-style: normal;" name="a181">double</a></span> <span style="font-style: italic;"><i>y</i></span><span style="font-weight: normal;">, <a href="../common_vbageneral/common_general_double.htm" id="a186" style="font-weight: normal; font-style: normal;" name="a186">double</a></span> <span style="font-style: italic;"><i>z</i></span> )</p>
+<p class="VBA-Text-Indent">Picks the point next to (<span style="font-style: italic;"><i>x</i></span>, <span style="font-style: italic;"><i>y</i></span>, <span style="font-style: italic;"><i>z</i></span>) in the global coordinate system from the element given by a <a href="../common_vbageneral/common_general_global_names.htm">global name</a>. Currently the only supported value for <span style="font-style: italic;"><i>picktype</i></span> is "AnyVertex".</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">PickEdgeFromIdOn ( &#160;<span style="font-weight: normal; text-decoration: underline;"><u><a href="../common_vbageneral/common_general_global_name_data_type.htm">global name</a></u></span> <span style="font-style: italic;"><i>name</i></span>, <a href="../common_vbageneral/common_general_integer.htm" id="a184" style="font-weight: normal; font-style: normal;" name="a184">int</a> <span style="font-style: italic;"><i>edgeId</i></span>, <a href="../common_vbageneral/common_general_integer.htm" id="a185" style="font-weight: normal; font-style: normal;" name="a185">int</a> <span style="font-style: italic;"><i>vertexId</i></span> )</p>
+<p class="VBA-Text-Indent">Picks the edge with the given <span style="font-style: italic;"><i>edgeId</i></span> from the element given by a <a href="../common_vbageneral/common_general_global_names.htm">global name</a>. <span style="font-style: italic;"><i>vertexId</i></span> need to be the index of the starting vertex of the edge.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">PickEdgeFromPointOn ( &#160;<span style="font-weight: normal; text-decoration: underline;"><u><a href="../common_vbageneral/common_general_global_name_data_type.htm">global name</a></u></span> <span style="font-style: italic;"><i>name</i></span>, <a href="../common_vbageneral/common_general_double.htm" id="a189" style="font-weight: normal; font-style: normal;" name="a189">double</a> <span style="font-style: italic;"><i>x</i></span><span style="font-weight: normal;">, <a href="../common_vbageneral/common_general_double.htm" id="a190" style="font-weight: normal; font-style: normal;" name="a190">double</a></span> <span style="font-style: italic;"><i>y</i></span><span style="font-weight: normal;">, <a href="../common_vbageneral/common_general_double.htm" id="a191" style="font-weight: normal; font-style: normal;" name="a191">double</a></span> <span style="font-style: italic;"><i>z</i></span> )</p>
+<p class="VBA-Text-Indent">Picks the edge next to (<span style="font-style: italic;"><i>x</i></span>, <span style="font-style: italic;"><i>y</i></span>, <span style="font-style: italic;"><i>z</i></span>) in the global coordinate system from the element given by a <a href="../common_vbageneral/common_general_global_names.htm" style="font-style: normal;">global name</a>.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">PickFaceFromIdOn ( &#160;<span style="font-weight: normal; text-decoration: underline;"><u><a href="../common_vbageneral/common_general_global_name_data_type.htm">global name</a></u></span> <span style="font-style: italic;"><i>name</i></span>, <a href="../common_vbageneral/common_general_integer.htm" id="a1841" style="font-weight: normal; font-style: normal;" name="a1841">int</a> <span style="font-style: italic;"><i>faceId</i></span> )</p>
+<p class="VBA-Text-Indent">Picks the face with the given <span style="font-style: italic;"><i>faceId</i></span> from the element given by a <a href="../common_vbageneral/common_general_global_names.htm">global name</a>. <span style="font-style: italic;"><i>vertexId</i></span> need to be the index of the starting vertex of the edge.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">PickFaceFromPointOn ( &#160;<span style="font-weight: normal; text-decoration: underline;"><u><a href="../common_vbageneral/common_general_global_name_data_type.htm">global name</a></u></span> <span style="font-style: italic;"><i>name</i></span>, <a href="../common_vbageneral/common_general_double.htm" id="a1891" style="font-weight: normal; font-style: normal;" name="a1891">double</a> <span style="font-style: italic;"><i>x</i></span><span style="font-weight: normal;">, <a href="../common_vbageneral/common_general_double.htm" id="a1901" style="font-weight: normal; font-style: normal;" name="a1901">double</a></span> <span style="font-style: italic;"><i>y</i></span><span style="font-weight: normal;">, <a href="../common_vbageneral/common_general_double.htm" id="a1911" style="font-weight: normal; font-style: normal;" name="a1911">double</a></span> <span style="font-style: italic;"><i>z</i></span> )</p>
+<p class="VBA-Text-Indent">Picks the face next to (<span style="font-style: italic;"><i>x</i></span>, <span style="font-style: italic;"><i>y</i></span>, <span style="font-style: italic;"><i>z</i></span>) in the global coordinate system from the element given by a <a href="../common_vbageneral/common_general_global_names.htm" style="font-style: normal;">global name</a>.</p>
+<p class="VBA-Heading-Category"><a name="PickEdgesFromSolids(IdBased)"></a>Pick Edges from Solids</p>
+<p class="VBA-Heading-Method">PickDanglingEdgeChainFromId ( <a href="../common_vbageneral/common_general_string.htm" id="a79" style="font-weight: normal; font-style: normal;" name="a79">string</a> <span style="font-style: italic;"><i>shapeName</i></span>, <a href="../common_vbageneral/common_general_integer.htm" id="a80" style="font-weight: normal; font-style: normal;" name="a80">int</a> <span style="font-style: italic;"><i>id</i></span> )</p>
+<p class="VBA-Text-Indent">Picks a dangling edge chain (a set of connected edges) of a solid. The edge chain is specified by the solid that it belongs to and an identity number. A dangling edge has only one adjacent face.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">PickEdgeFromId ( <a href="../common_vbageneral/common_general_string.htm" id="a81" style="font-weight: normal; font-style: normal;" name="a81">string</a> <span style="font-style: italic;"><i>shapeName</i></span>, <a href="../common_vbageneral/common_general_integer.htm" id="a82" style="font-weight: normal; font-style: normal;" name="a82">int</a> <span style="font-style: italic;"><i>edge_id</i></span> , <a href="../common_vbageneral/common_general_integer.htm" id="a137" style="font-weight: normal; font-style: normal;" name="a137">int</a> &#160;<span style="font-style: italic;"><i>vertex_id</i></span> )</p>
+<p class="VBA-Text-Indent">Picks an edge of a solid. The edge is specified by the solid that it belongs to and an identity number. <span style="font-style: italic;"><i>'vertex_id'</i></span> is the index of the start point of this edge.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">PickEdgeFromPoint ( <a href="../common_vbageneral/common_general_string.htm" id="a83" style="font-weight: normal; font-style: normal;" name="a83">string</a> <span style="font-style: italic;"><i>shapeName</i></span>, <a href="../common_vbageneral/common_general_double.htm" id="a84" style="font-weight: normal; font-style: normal;" name="a84">double</a> <span style="font-style: italic;"><i>xpoint</i></span><span style="font-weight: normal;">, <a href="../common_vbageneral/common_general_double.htm" id="a85" style="font-weight: normal; font-style: normal;" name="a85">double</a></span> <span style="font-style: italic;"><i>ypoint</i></span><span style="font-weight: normal;">, <a href="../common_vbageneral/common_general_double.htm" id="a86" style="font-weight: normal; font-style: normal;" name="a86">double</a></span> <span style="font-style: italic;"><i>zpoint</i></span> )</p>
+<p class="VBA-Text-Indent">Pick’s an edge of a solid - using a point on the edge - whereby the point is always defined</p>
+<p class="VBA-Text-Indent">in global coordinates. The method so represents the <a href="../ribbons/3d/common_ribbons_modeling.htm" id="a170" name="a170">Modeling:</a> <i><span style="font-weight: bold;">Picks</span></i> <span style="font-weight: bold;">&gt;</span> <i style="font-weight: bold;">Picks</i> <i><sub style="font-style: normal; vertical-align: Baseline; font-weight: bold;"><img src="../icon_images/3d_modeling/pick_elements_16.png" alt="" style="border: none;" border="0" /></sub></i> &gt; <i style="font-weight: bold;">Absolute Pick Positioning</i> <span><i><sub style="font-style: normal; vertical-align: Baseline; font-weight: bold;"><img src="../icon_images/de/misc_anchor_16.png" alt="" style="border: none;" border="0" /></sub></i></span> mode</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">PickSolidEdgeChainFromId ( <a href="../common_vbageneral/common_general_string.htm" id="a87" style="font-weight: normal; font-style: normal;" name="a87">string</a> <span style="font-style: italic;"><i>shapeName</i></span>, <a href="../common_vbageneral/common_general_integer.htm" id="a88" style="font-weight: normal; font-style: normal;" name="a88">int</a> <span style="font-style: italic;"><i>edgeid</i></span>, <a href="../common_vbageneral/common_general_integer.htm" id="a89" style="font-weight: normal; font-style: normal;" name="a89">int</a> <span style="font-style: italic;"><i>faceid</i></span> )</p>
+<p class="VBA-Text-Indent">Picks an edge chain (a set of connected edges) of a solid. The edge chain is specified by the solid that it belongs to and two identity numbers.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">PickAllEdges ( <span style="font-weight: normal;"><a href="../common_vbageneral/common_general_string.htm" id="a871" style="font-weight: normal; font-style: normal;" name="a871">string</a></span> <span style="font-style: italic;"><i>shapeName</i></span> )</p>
+<p class="VBA-Text-Indent">Picks all edges of a shape.</p>
+<p class="VBA-Heading-Category"><a name="PickFaces" id="PickFaces"></a>Pick Faces</p>
+<p class="VBA-Heading-Method">PickFaceChainFromId ( <a href="../common_vbageneral/common_general_string.htm" id="a110" style="font-weight: normal; font-style: normal;" name="a110">string</a> <span style="font-style: italic;"><i>shapeName</i></span>, &#160;<a href="../common_vbageneral/common_general_integer.htm" id="a108" style="font-weight: normal; font-style: normal;" name="a108">int</a> <span style="font-style: italic;"><i>faceId</i></span> )</p>
+<p class="VBA-Text-Indent">Picks a face chain (a set of connected faces) of a solid. The face chain is specified by the solid that it belongs to and an identity number.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">PickFaceFromId ( <a href="../common_vbageneral/common_general_string.htm" id="a109" style="font-weight: normal; font-style: normal;" name="a109">string</a> <span style="font-style: italic;"><i>shapeName</i></span>, &#160;<a href="../common_vbageneral/common_general_integer.htm" id="a111" style="font-weight: normal; font-style: normal;" name="a111">int</a> <span style="font-style: italic;"><i>id</i></span> )</p>
+<p class="VBA-Text-Indent">Picks a face of a solid. &#160;The face is specified by the solid that it belongs to and an identity number.</p>
+<p class="VBA-Text">&#160;</p>
+<p class="VBA-Heading-Method">PickFaceFromPoint ( <a href="../common_vbageneral/common_general_string.htm" id="a112" style="font-weight: normal; font-style: normal;" name="a112">string</a> <span style="font-style: italic;"><i>shapeName</i></span>, <a href="../common_vbageneral/common_general_double.htm" id="a113" style="font-weight: normal; font-style: normal;" name="a113">double</a> <span style="font-style: italic;"><i>xpoint</i></span><span style="font-weight: normal;">, <a href="../common_vbageneral/common_general_double.htm" id="a114" style="font-weight: normal; font-style: normal;" name="a114">double</a></span> <span style="font-style: italic;"><i>ypoint</i></span><span style="font-weight: normal;">, <a href="../common_vbageneral/common_general_double.htm" id="a115" style="font-weight: normal; font-style: normal;" name="a115">double</a></span> <span style="font-style: italic;"><i>zpoint</i></span> )</p>
+<p class="VBA-Text-Indent">Pick’s a face - using a point on the face - whereby the point is always defined in global coordinates. The method so represents the <a href="../ribbons/3d/common_ribbons_modeling.htm" id="a173" name="a173">Modeling:</a> <i><span style="font-weight: bold;">Picks</span></i> <span style="font-weight: bold;">&gt;</span> <i style="font-weight: bold;">Picks</i> <span><i><sub style="font-style: normal; vertical-align: Baseline; font-weight: bold;"><img src="../icon_images/3d_modeling/pick_elements_16.png" alt="" style="border: none;" border="0" /></sub></i></span> <span style="font-weight: bold;">&gt;</span> <i style="font-weight: bold;">Absolute Pick Positioning</i> <i><sub style="font-style: normal; vertical-align: Baseline; font-weight: bold;"><img src="../icon_images/de/misc_anchor_16.png" alt="" style="border: none;" border="0" /></sub></i> mode.</p>
+<p class="VBA-Heading-Category"><a name="PickModifications" id="PickModifications"></a>Pick Modifications <span style="font-weight: normal;">(partially index based)</span></p>
+<p class="VBA-Heading-Method">ChangeFaceId &#160;( <a href="../common_vbageneral/common_general_string.htm" id="a138" style="font-weight: normal; font-style: normal;" name="a138">string</a> &#160;<span style="font-style: italic;"><i>shapeName</i></span>, <a href="../common_vbageneral/common_general_string.htm" id="a139" style="font-weight: normal; font-style: normal;" name="a139">string</a> &#160;<span style="font-style: italic;"><i>changestatement</i></span>, <a href="../common_vbageneral/common_general_string.htm" id="a140" style="font-weight: normal; font-style: normal;" name="a140">string</a> &#160;<span style="font-style: italic;"><i>versionnumber</i></span> )</p>
+<p class="VBA-Text-Indent">Used for backward compatibility of old projects that contain invalid pick id's. The pick id's of picked faces can be changed. <span style="font-style: italic;"><i>ShapeName</i></span> is the name of the picked solid. <span style="font-style: italic;"><i>Changestatement</i></span> indicates what id has to be replaced with which new id. <span style="font-style: italic;"><i>Versionnumber</i></span> indicates the design environment in which the replacement is valid.</p>
+<p class="VBA-Text">&#160;</p>
+<p class="VBA-Heading-Method">ChangeEdgeId &#160;( <a href="../common_vbageneral/common_general_string.htm" id="a141" style="font-weight: normal; font-style: normal;" name="a141">string</a> &#160;<span style="font-style: italic;"><i>shapeName</i></span>, <a href="../common_vbageneral/common_general_string.htm" id="a142" style="font-weight: normal; font-style: normal;" name="a142">string</a> &#160;<span style="font-style: italic;"><i>changestatement</i></span>, <a href="../common_vbageneral/common_general_string.htm" id="a143" style="font-weight: normal; font-style: normal;" name="a143">string</a> &#160;<span style="font-style: italic;"><i>versionnumber</i></span> )</p>
+<p class="VBA-Text-Indent">Used for backward compatibility of old projects that contain invalid pick id's. The pick id's of picked edges can be changed. <span style="font-style: italic;"><i>ShapeName</i></span> is the name of the picked solid. <span style="font-style: italic;"><i>Changestatement</i></span> indicates what id has to be replaced with which new id. <span style="font-style: italic;"><i>Versionnumber</i></span> indicates the design environment in which the replacement is valid.</p>
+<p class="VBA-Text">&#160;</p>
+<p class="VBA-Heading-Method">ChangeVertexId &#160;( <a href="../common_vbageneral/common_general_string.htm" id="a144" style="font-weight: normal; font-style: normal;" name="a144">string</a> &#160;<span style="font-style: italic;"><i>shapeName</i></span>, <a href="../common_vbageneral/common_general_string.htm" id="a145" style="font-weight: normal; font-style: normal;" name="a145">string</a> &#160;<span style="font-style: italic;"><i>changestatement</i></span>, <a href="../common_vbageneral/common_general_string.htm" id="a146" style="font-weight: normal; font-style: normal;" name="a146">string</a> &#160;<span style="font-style: italic;"><i>versionnumber</i></span> )</p>
+<p class="VBA-Text-Indent">Used for backward compatibility of old projects that contain invalid pick id's. The pick id's of picked vertices can be changed. <span style="font-style: italic;"><i>ShapeName</i></span> is the name of the picked solid. <span style="font-style: italic;"><i>Changestatement</i></span> indicates what id has to be replaced with which new id. <span style="font-style: italic;"><i>Versionnumber</i></span> indicates the design environment in which the replacement is valid.</p>
+<p class="VBA-Text">&#160;</p>
+<p class="VBA-Heading-Method">DeleteFace ( <a href="../common_vbageneral/common_general_integer.htm" id="a158" style="font-weight: normal; font-style: normal;" name="a158">int</a> <span style="font-style: italic;"><i>index</i></span> )</p>
+<p class="VBA-Text-Indent">Deletes a picked face, specified by an index into the corresponding pick list (see <a href="../ribbons/3d/common_ribbons_modeling.htm" id="a17131" name="a17131">Modeling:</a> <i><span style="font-weight: bold;">Picks &gt;</span></i> <i style="font-weight: bold;">Pick Lists &#160;</i><span><i><sub style="font-style: normal; vertical-align: Baseline; font-weight: bold;"><img src="../icon_images/3d_modeling/pick_list_16.png" alt="" style="border: none;" border="0" /></sub></i></span><sub style="vertical-align: Baseline; font-weight: bold;"><i>&#160;<span style="font-weight: bold;">&gt;</span></i> <i style="font-weight: bold;">Selected Faces...</i> <i><sub style="font-style: normal; vertical-align: Baseline; font-weight: bold;"><img alt="" src="../icon_images/3d_modeling/pick_listfaces_16.png" style="border: none;" border="0" />&#160;</sub>)</i></sub>.</p>
+<p class="VBA-Text">&#160;</p>
+<p class="VBA-Heading-Method">DeletePoint ( <a href="../common_vbageneral/common_general_integer.htm" id="a69" style="font-weight: normal; font-style: normal;" name="a69">int</a> <span style="font-style: italic;"><i>index</i></span> )</p>
+<p class="VBA-Text-Indent">Deletes a picked point, specified by an index into the corresponding pick list (see <a href="../ribbons/3d/common_ribbons_modeling.htm" id="a171311" name="a171311">Modeling:</a> <i><span style="font-weight: bold;">Picks &gt;</span></i> <i style="font-weight: bold;">Pick Lists &#160;</i><span><i><sub style="font-style: normal; vertical-align: Baseline; font-weight: bold;"><img src="../icon_images/3d_modeling/pick_list_16.png" alt="" style="border: none;" border="0" /></sub></i></span><i><sub style="font-style: normal; vertical-align: Baseline; font-weight: bold;">)</sub></i>.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">MeanPoint ( <a href="../common_vbageneral/common_general_string.htm" id="a68" style="font-weight: normal; font-style: normal;" name="a68">string</a> <span style="font-style: italic;"><i>indices</i></span> )</p>
+<p class="VBA-Text-Indent">Creates a mean point out of the given ones (specified by the indices). <span style="font-style: italic;"><i>Indices</i></span> is a comma-separated list of numbers (either all positive and 0-indexed or all negative).</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">MeanLastTwoPoints</p>
+<p class="VBA-Text-Indent">Creates the mean of &#160;the <span style="font-style: italic;"><i>latest &#160;two picked points</i></span> and replaces them with the newly created one. It represents the macro implementation of the command <a href="../ribbons/3d/common_ribbons_modeling.htm" id="a174" name="a174">Modeling:</a> <i><span style="font-weight: bold;">Picks</span></i> <span style="font-weight: bold;">&gt;</span> <i style="font-weight: bold;">Pick Point &#160;</i><span><i><sub style="font-style: normal; vertical-align: Baseline; font-weight: bold;"><img src="../icon_images/3d_modeling/pick_midpoint_16.png" alt="" style="border: none;" border="0" /></sub></i></span> <span style="font-weight: bold;">&gt;</span> <span style="font-weight: bold;">Mean Last two points</span></p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">MovePoint ( <a href="../common_vbageneral/common_general_integer.htm" id="a70" style="font-weight: normal; font-style: normal;" name="a70">int</a> <span style="font-style: italic;"><i>index,</i></span> <a href="../common_vbageneral/common_general_double.htm" id="a71" style="font-weight: normal; font-style: normal;" name="a71">double</a> <span style="font-style: italic;"><i>deltax</i></span>, <a href="../common_vbageneral/common_general_double.htm" id="a72" style="font-weight: normal; font-style: normal;" name="a72">double</a> <span style="font-style: italic;"><i>deltay</i></span>, <a href="../common_vbageneral/common_general_double.htm" id="a73" style="font-weight: normal; font-style: normal;" name="a73">double</a> <span style="font-style: italic;"><i>deltaz, <a href="../common_vbageneral/common_general_bool_data_type.htm" id="a74" style="font-weight: normal; font-style: normal;" name="a74">bool</a></i></span> <span style="font-style: italic;"><i>keep</i></span> )</p>
+<p class="VBA-Text-Indent">Moves a point (specified by <span style="font-style: italic;"><i>index</i></span>) in <span style="font-style: italic;"><i>deltax</i></span>, <span style="font-style: italic;"><i>deltay</i></span> and <span style="font-style: italic;"><i>deltaz</i></span> direction.</p>
+<p class="VBA-Text-Indent"><span style="font-style: italic;"><i>Keep</i></span> indicates weather the picked original edge will be kept (true) or deleted (false).</p>
+<p class="VBA-Text-Indent">This method represents the macro implementation of the "modify" action in <a href="../ribbons/3d/common_ribbons_modeling.htm" id="a175" name="a175">Modeling:</a> <i><span style="font-weight: bold;">Picks</span></i> <span style="font-weight: bold;">&gt;</span> <i style="font-weight: bold;">Pick Lists &#160;</i><span><i><sub style="font-style: normal; vertical-align: Baseline; font-weight: bold;"><img src="../icon_images/3d_modeling/pick_list_16.png" alt="" style="border: none;" border="0" /></sub></i></span>.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">PickPointFromCoordinates ( <span><a href="../common_vbageneral/common_general_double.htm" id="a76" style="font-weight: normal; font-style: normal;" name="a76">double</a></span> <span style="font-style: italic;"><i>x</i></span><span style="font-weight: normal;">, <a href="../common_vbageneral/common_general_double.htm" id="a77" style="font-weight: normal; font-style: normal;" name="a77">double</a></span> <span style="font-style: italic;"><i>y</i></span><span style="font-weight: normal;">, <a href="../common_vbageneral/common_general_double.htm" id="a78" style="font-weight: normal; font-style: normal;" name="a78">double</a></span> <span style="font-style: italic;"><i>z</i></span> <span style="font-weight: normal;">)</span></p>
+<p class="VBA-Text-Indent">Picks a point. The point is specified by the desired position in space. If a local WCS is active the coordinates are relative to it, but stay absolute in the global system (so position will be the same after switching off the local WCS).</p>
+<p class="VBA-Heading-Category"><a name="PickPointsFromCurves_CoordBased_" id="PickPointsFromCurves_CoordBased_"></a>Pick Points from Curves (Coordinate based)</p>
+<p class="VBA-Heading-Method">PickCurveCirclecenterFromPoint ( <a href="../common_vbageneral/common_general_string.htm" id="a45" style="font-weight: normal; font-style: normal;" name="a45">string</a> <span style="font-style: italic;"><i>curveName</i></span>, <a href="../common_vbageneral/common_general_double.htm" id="a46" style="font-weight: normal; font-style: normal;" name="a46">double</a> <span style="font-style: italic;"><i>x</i></span>, <a href="../common_vbageneral/common_general_double.htm" id="a47" style="font-weight: normal; font-style: normal;" name="a47">double</a> <span style="font-style: italic;"><i>y</i></span>, <a href="../common_vbageneral/common_general_double.htm" id="a48" style="font-weight: normal; font-style: normal;" name="a48">double</a> <span style="font-style: italic;"><i>z</i></span> )</p>
+<p class="VBA-Text-Indent">Picks the center point of a circular curve. The point is specified by the curve that it belongs to and the desired position in space.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">PickCurveCirclepointFromPoint ( <span><a href="../common_vbageneral/common_general_string.htm" id="a49" style="font-weight: normal; font-style: normal;" name="a49">string</a></span> <span style="font-style: italic;"><i>curveName</i></span><span style="font-weight: normal;">, <a href="../common_vbageneral/common_general_double.htm" id="a50" style="font-weight: normal; font-style: normal;" name="a50">double</a></span> <span style="font-style: italic;"><i>x</i></span><span style="font-weight: normal;">, <a href="../common_vbageneral/common_general_double.htm" id="a51" style="font-weight: normal; font-style: normal;" name="a51">double</a></span> <span style="font-style: italic;"><i>y</i></span><span style="font-weight: normal;">, <a href="../common_vbageneral/common_general_double.htm" id="a52" style="font-weight: normal; font-style: normal;" name="a52">double</a></span> <span style="font-style: italic;"><i>z</i></span>, <a href="../common_vbageneral/common_general_integer.htm" id="a53" style="font-weight: normal; font-style: normal;" name="a53">int</a> <span style="font-style: italic;"><i>index</i></span> )</p>
+<p class="VBA-Text-Indent">Picks a point on a circular curve. The point is specified by the curve that it belongs to and the desired position in space. Furthermore there are four possible positions on the curve, defined by an index (0-3), each with a phase shift of 90 degree.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">PickCurveEndpointFromPoint ( <span><a href="../common_vbageneral/common_general_string.htm" id="a54" style="font-weight: normal; font-style: normal;" name="a54">string</a></span> <span style="font-style: italic;"><i>curveName</i></span><span style="font-weight: normal;">, <a href="../common_vbageneral/common_general_double.htm" id="a55" style="font-weight: normal; font-style: normal;" name="a55">double</a></span> <span style="font-style: italic;"><i>x</i></span><span style="font-weight: normal;">, <a href="../common_vbageneral/common_general_double.htm" id="a56" style="font-weight: normal; font-style: normal;" name="a56">double</a></span> <span style="font-style: italic;"><i>y</i></span><span style="font-weight: normal;">, <a href="../common_vbageneral/common_general_double.htm" id="a57" style="font-weight: normal; font-style: normal;" name="a57">double</a></span> <span style="font-style: italic;"><i>z</i></span> )</p>
+<p class="VBA-Text-Indent">Picks the end point of a curve. The point is specified by the curve that it belongs to and the desired position in space.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">PickCurveMidpointFromPoint ( <span><a href="../common_vbageneral/common_general_string.htm" id="a58" style="font-weight: normal; font-style: normal;" name="a58">string</a></span> <span style="font-style: italic;"><i>curveName</i></span><span style="font-weight: normal;">, <a href="../common_vbageneral/common_general_double.htm" id="a59" style="font-weight: normal; font-style: normal;" name="a59">double</a></span> <span style="font-style: italic;"><i>x</i></span><span style="font-weight: normal;">, <a href="../common_vbageneral/common_general_double.htm" id="a60" style="font-weight: normal; font-style: normal;" name="a60">double</a></span> <span style="font-style: italic;"><i>y</i></span><span style="font-weight: normal;">, <a href="../common_vbageneral/common_general_double.htm" id="a61" style="font-weight: normal; font-style: normal;" name="a61">double</a></span> <span style="font-style: italic;"><i>z</i></span> )</p>
+<p class="VBA-Text-Indent">Picks the middle point of a curve segment. The point is specified by the curve that it belongs to and the desired position in space.</p>
+<p class="VBA-Heading-Category"><a name="PickPointsFromCurves_IdBased_" id="PickPointsFromCurves_IdBased_"></a>Pick Points from Curves (Id based)</p>
+<p class="VBA-Heading-Method">PickCurveCirclecenterFromId ( <a href="../common_vbageneral/common_general_string.htm" id="a36" style="font-weight: normal; font-style: normal;" name="a36">string</a> <span style="font-style: italic;"><i>curveName</i></span>, <a href="../common_vbageneral/common_general_integer.htm" id="a37" style="font-weight: normal; font-style: normal;" name="a37">int</a> <span style="font-style: italic;"><i>id</i></span> )</p>
+<p class="VBA-Text-Indent">Picks the center point of a circular curve. The point is specified by the curve that it belongs to and an identity number.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">PickCurveCirclepointFromId ( <a href="../common_vbageneral/common_general_string.htm" id="a38" style="font-weight: normal; font-style: normal;" name="a38">string</a> <span style="font-style: italic;"><i>curveName</i></span>, <a href="../common_vbageneral/common_general_integer.htm" id="a39" style="font-weight: normal; font-style: normal;" name="a39">int</a> <span style="font-style: italic;"><i>id</i></span>, <a href="../common_vbageneral/common_general_integer.htm" id="a40" style="font-weight: normal; font-style: normal;" name="a40">int</a> <span style="font-style: italic;"><i>index</i></span> )</p>
+<p class="VBA-Text-Indent">Picks a point on a circular curve. The point is specified by the curve that it belongs to and an identity number. Furthermore there are four possible positions on the curve, defined by an index (0-3), each with a phase shift of 90 degree.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">PickCurveEndpointFromId ( <a href="../common_vbageneral/common_general_string.htm" id="a41" style="font-weight: normal; font-style: normal;" name="a41">string</a> <span style="font-style: italic;"><i>curveName</i></span>, <a href="../common_vbageneral/common_general_integer.htm" id="a42" style="font-weight: normal; font-style: normal;" name="a42">int</a> <span style="font-style: italic;"><i>id</i></span> )</p>
+<p class="VBA-Text-Indent">Picks the end point of a curve. The point is specified by the curve that it belongs to and an identity number.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">PickCurveMidpointFromId ( <a href="../common_vbageneral/common_general_string.htm" id="a43" style="font-weight: normal; font-style: normal;" name="a43">string</a> <span style="font-style: italic;"><i>curveName</i></span>, <a href="../common_vbageneral/common_general_integer.htm" id="a44" style="font-weight: normal; font-style: normal;" name="a44">int</a> <span style="font-style: italic;"><i>id</i></span> )</p>
+<p class="VBA-Text-Indent">Picks the middle point of a curve segment. The point is specified by the curve that it belongs to and an identity number.</p>
+<p class="VBA-Heading-Category"><a name="PickPointsFromSolids_CoordBased_" id="PickPointsFromSolids_CoordBased_"></a>Pick Points from Solids (Coordinate based)</p>
+<p class="VBA-Heading-Method">PickCenterpointFromPoint ( <a href="../common_vbageneral/common_general_string.htm" id="a15" style="font-weight: normal; font-style: normal;" name="a15">string</a> <span style="font-style: italic;"><i>shapeName</i></span>, <a href="../common_vbageneral/common_general_double.htm" id="a26" style="font-weight: normal; font-style: normal;" name="a26">double</a> <span style="font-style: italic;"><i>x</i></span>, <a href="../common_vbageneral/common_general_double.htm" id="a16" style="font-weight: normal; font-style: normal;" name="a16">double</a> <span style="font-style: italic;"><i>y</i></span>, <a href="../common_vbageneral/common_general_double.htm" id="a17" style="font-weight: normal; font-style: normal;" name="a17">double</a> <span style="font-style: italic;"><i>z</i></span> )</p>
+<p class="VBA-Text-Indent">Picks the center point of a face. The point is specified by the solid that it belongs to and the desired position in space.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">PickCirclecenterFromPoint ( <span><a href="../common_vbageneral/common_general_string.htm" id="a18" style="font-weight: normal; font-style: normal;" name="a18">string</a></span> <span style="font-style: italic;"><i>shapeName</i></span><span style="font-weight: normal;">, <a href="../common_vbageneral/common_general_double.htm" id="a19" style="font-weight: normal; font-style: normal;" name="a19">double</a></span> <span style="font-style: italic;"><i>x</i></span><span style="font-weight: normal;">, <a href="../common_vbageneral/common_general_double.htm" id="a20" style="font-weight: normal; font-style: normal;" name="a20">double</a></span> <span style="font-style: italic;"><i>y</i></span><span style="font-weight: normal;">, <a href="../common_vbageneral/common_general_double.htm" id="a21" style="font-weight: normal; font-style: normal;" name="a21">double</a></span> <span style="font-style: italic;"><i>z</i></span> )</p>
+<p class="VBA-Text-Indent">Picks the center point of a circular face. The point is specified by the solid that it belongs to and the desired position in space.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">PickCirclepointFromPoint ( <span><a href="../common_vbageneral/common_general_string.htm" id="a22" style="font-weight: normal; font-style: normal;" name="a22">string</a></span> <span style="font-style: italic;"><i>shapeName</i></span><span style="font-weight: normal;">, <a href="../common_vbageneral/common_general_double.htm" id="a23" style="font-weight: normal; font-style: normal;" name="a23">double</a></span> <span style="font-style: italic;"><i>x</i></span><span style="font-weight: normal;">, <a href="../common_vbageneral/common_general_double.htm" id="a24" style="font-weight: normal; font-style: normal;" name="a24">double</a></span> <span style="font-style: italic;"><i>y</i></span><span style="font-weight: normal;">, <a href="../common_vbageneral/common_general_double.htm" id="a25" style="font-weight: normal; font-style: normal;" name="a25">double</a></span> <span style="font-style: italic;"><i>z</i></span> )</p>
+<p class="VBA-Text-Indent">Picks the edge point of a circular face. The point is specified by the solid that it belongs to and the desired position in space.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">PickEndpointFromPoint ( <span><a href="../common_vbageneral/common_general_string.htm" id="a28" style="font-weight: normal; font-style: normal;" name="a28">string</a></span> <span style="font-style: italic;"><i>shapeName</i></span><span style="font-weight: normal;">, <a href="../common_vbageneral/common_general_double.htm" id="a29" style="font-weight: normal; font-style: normal;" name="a29">double</a></span> <span style="font-style: italic;"><i>x</i></span><span style="font-weight: normal;">, <a href="../common_vbageneral/common_general_double.htm" id="a30" style="font-weight: normal; font-style: normal;" name="a30">double</a></span> <span style="font-style: italic;"><i>y</i></span><span style="font-weight: normal;">, <a href="../common_vbageneral/common_general_double.htm" id="a31" style="font-weight: normal; font-style: normal;" name="a31">double</a></span> <span style="font-style: italic;"><i>z</i></span> )</p>
+<p class="VBA-Text-Indent">Picks the end point of a edge. The point is specified by the solid that it belongs to and the desired position in space.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">PickMidpointFromPoint ( <span><a href="../common_vbageneral/common_general_string.htm" id="a32" style="font-weight: normal; font-style: normal;" name="a32">string</a></span> <span style="font-style: italic;"><i>shapeName</i></span><span style="font-weight: normal;">, <a href="../common_vbageneral/common_general_double.htm" id="a33" style="font-weight: normal; font-style: normal;" name="a33">double</a></span> <span style="font-style: italic;"><i>x</i></span><span style="font-weight: normal;">, <a href="../common_vbageneral/common_general_double.htm" id="a34" style="font-weight: normal; font-style: normal;" name="a34">double</a></span> <span style="font-style: italic;"><i>y</i></span><span style="font-weight: normal;">, <a href="../common_vbageneral/common_general_double.htm" id="a35" style="font-weight: normal; font-style: normal;" name="a35">double</a></span> <span style="font-style: italic;"><i>z</i></span> )</p>
+<p class="VBA-Text-Indent">Picks the middle point of an edge. The point is specified by the solid that it belongs to and the desired position in space.</p>
+<p class="VBA-Heading-Category"><a name="PickPointsFromSolids(IdBased)"></a>Pick Points from Solids (Id based)</p>
+<p class="VBA-Heading-Method">PickCenterpointFromId &#160;( <a href="../common_vbageneral/common_general_string.htm" id="a2" style="font-weight: normal; font-style: normal;" name="a2">string</a> <span style="font-style: italic;"><i>shapeName</i></span>, <a href="../common_vbageneral/common_general_integer.htm" id="a4" style="font-weight: normal; font-style: normal;" name="a4">int</a> <span style="font-style: italic;"><i>id</i></span> )</p>
+<p class="VBA-Text-Indent">Picks the center point of a face. The face is specified by the solid that it belongs to and an identity number.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">PickCirclecenterFromId ( <a href="../common_vbageneral/common_general_string.htm" id="a27" style="font-weight: normal; font-style: normal;" name="a27">string</a> <span style="font-style: italic;"><i>shapeName</i></span>, <a href="../common_vbageneral/common_general_integer.htm" id="a1" style="font-weight: normal; font-style: normal;" name="a1">int</a> <span style="font-style: italic;"><i>id</i></span> )</p>
+<p class="VBA-Text-Indent">Picks the center point of a circular face. The face is specified by the solid that it belongs to and an identity number.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">PickCirclepointFromId ( <a href="../common_vbageneral/common_general_string.htm" id="a5" style="font-weight: normal; font-style: normal;" name="a5">string</a> <span style="font-style: italic;"><i>shapeName</i></span>, <a href="../common_vbageneral/common_general_integer.htm" id="a6" style="font-weight: normal; font-style: normal;" name="a6">int</a> <span style="font-style: italic;"><i>id</i></span> )</p>
+<p class="VBA-Text-Indent">Picks the edge point of a circular face. The face is specified by the solid that it belongs to and an identity number.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">PickEndpointFromId ( <a href="../common_vbageneral/common_general_string.htm" id="a7" style="font-weight: normal; font-style: normal;" name="a7">string</a> <span style="font-style: italic;"><i>shapeName</i></span>, <a href="../common_vbageneral/common_general_integer.htm" id="a8" style="font-weight: normal; font-style: normal;" name="a8">int</a> <span style="font-style: italic;"><i>id</i></span> )</p>
+<p class="VBA-Text-Indent">Picks the end point of an edge. The edge is specified by the solid that it belongs to and an identity number.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">PickExtraCirclepointFromId ( <a href="../common_vbageneral/common_general_string.htm" id="a9" style="font-weight: normal; font-style: normal;" name="a9">string</a> <span style="font-style: italic;"><i>shapeName</i></span>, <a href="../common_vbageneral/common_general_integer.htm" id="a10" style="font-weight: normal; font-style: normal;" name="a10">int</a> <span style="font-style: italic;"><i>edgeid</i></span>, <a href="../common_vbageneral/common_general_integer.htm" id="a11" style="font-weight: normal; font-style: normal;" name="a11">int</a> <span style="font-style: italic;"><i>faceid</i></span>, <a href="../common_vbageneral/common_general_integer.htm" id="a12" style="font-weight: normal; font-style: normal;" name="a12">int</a> <span style="font-style: italic;"><i>index</i></span> )</p>
+<p class="VBA-Text-Indent">Picks an extra edge point of a circular face. The edge and face are specified by the solid that it belongs to and two identity numbers. Compared to <span style="font-weight: bold;">PickCirclepointFromId</span> there are three additional possible positions on the edge, defined by an index (0-2), each with a phase shift of 90 degree.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">PickExtraSpherepointFromId ( <a href="../common_vbageneral/common_general_string.htm" id="a159" style="font-weight: normal; font-style: normal;" name="a159">string</a> <span style="font-style: italic;"><i>shapeName</i></span>, <a href="../common_vbageneral/common_general_integer.htm" id="a161" style="font-weight: normal; font-style: normal;" name="a161">int</a> <span style="font-style: italic;"><i>faceid</i></span>, <a href="../common_vbageneral/common_general_integer.htm" id="a162" style="font-weight: normal; font-style: normal;" name="a162">int</a> <span style="font-style: italic;"><i>index</i></span> )</p>
+<p class="VBA-Text-Indent">Picks an extra point of a spherical face. The face is specified by the solid that it belongs to and an identity number. For a sphere there are six additional points positioned on the longitude and latitude lines of the sphere.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">PickMidpointFromId ( <a href="../common_vbageneral/common_general_string.htm" id="a13" style="font-weight: normal; font-style: normal;" name="a13">string</a> <span style="font-style: italic;"><i>shapeName</i></span>, <a href="../common_vbageneral/common_general_integer.htm" id="a14" style="font-weight: normal; font-style: normal;" name="a14">int</a> <span style="font-style: italic;"><i>id</i></span> )</p>
+<p class="VBA-Text-Indent">Picks the middle point of an edge. The edge is specified by the solid that it belongs to and an identity number.</p>
+<p class="VBA-Heading-Category"><a name="PickPointsFromWires" id="PickPointsFromWires"></a>Pick Points from Wires</p>
+<p class="VBA-Heading-Method">PickWireEndpointFromId ( <a href="../common_vbageneral/common_general_string.htm" id="a62" style="font-weight: normal; font-style: normal;" name="a62">string</a> <span style="font-style: italic;"><i>wirename</i></span>, <a href="../common_vbageneral/common_general_integer.htm" id="a63" style="font-weight: normal; font-style: normal;" name="a63">int</a> <span style="font-style: italic;"><i>id</i></span> )</p>
+<p class="VBA-Text-Indent">Picks one of the two wire end point. The end point &#160;is specified by the wire that it belongs to and an identity number.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">PickWireEndpointFromPoint ( <span><a href="../common_vbageneral/common_general_string.htm" id="a64" style="font-weight: normal; font-style: normal;" name="a64">string</a></span> <span style="font-style: italic;"><i>wirename</i></span><span style="font-weight: normal;">, <a href="../common_vbageneral/common_general_double.htm" id="a65" style="font-weight: normal; font-style: normal;" name="a65">double</a></span> <span style="font-style: italic;"><i>x</i></span><span style="font-weight: normal;">, <a href="../common_vbageneral/common_general_double.htm" id="a66" style="font-weight: normal; font-style: normal;" name="a66">double</a></span> <span style="font-style: italic;"><i>y</i></span><span style="font-weight: normal;">, <a href="../common_vbageneral/common_general_double.htm" id="a67" style="font-weight: normal; font-style: normal;" name="a67">double</a></span> <span style="font-style: italic;"><i>z</i></span> <span style="font-weight: normal;">)</span></p>
+<p class="VBA-Text-Indent">Picks the wire end point. The end point &#160;is specified by the wire that it belongs to and the point coordinates.</p>
+<p class="VBA-Heading-Category"><a name="Queries" id="Queries"></a>Queries</p>
+<p class="VBA-Heading-Method">GetEdgeIdFromPoint ( <a href="../common_vbageneral/common_general_string.htm" id="a116" style="font-weight: normal; font-style: normal;" name="a116">string</a> <span style="font-style: italic;"><i>shapename</i></span>, <span><a href="../common_vbageneral/common_general_double.htm" id="a117" style="font-weight: normal; font-style: normal;" name="a117">double</a></span> <span style="font-style: italic;"><i>x</i></span><span style="font-weight: normal;">, <a href="../common_vbageneral/common_general_double.htm" id="a118" style="font-weight: normal; font-style: normal;" name="a118">double</a></span> <span style="font-style: italic;"><i>y</i></span><span style="font-weight: normal;">, <a href="../common_vbageneral/common_general_double.htm" id="a119" style="font-weight: normal; font-style: normal;" name="a119">double</a></span> <span style="font-style: italic;"><i>z</i></span> ) <a href="../common_vbageneral/common_general_long.htm" id="a120" style="font-weight: normal; font-style: normal;" name="a120">long</a></p>
+<p class="VBA-Text-Indent">Returns the edge id at a given point for one shape.</p>
+<p class="VBA-Text">&#160;</p>
+<p class="VBA-Heading-Method">GetFaceIdFromPoint ( <span><a href="../common_vbageneral/common_general_string.htm" id="a121" style="font-weight: normal; font-style: normal;" name="a121">string</a></span> <span style="font-style: italic;"><i>shapename</i></span><span style="font-weight: normal;">,</span> <a href="../common_vbageneral/common_general_double.htm" id="a122" style="font-weight: normal; font-style: normal;" name="a122">double</a> <span style="font-style: italic;"><i>x</i></span><span style="font-weight: normal;">, <a href="../common_vbageneral/common_general_double.htm" id="a123" style="font-weight: normal; font-style: normal;" name="a123">double</a></span> <span style="font-style: italic;"><i>y</i></span><span style="font-weight: normal;">, <a href="../common_vbageneral/common_general_double.htm" id="a124" style="font-weight: normal; font-style: normal;" name="a124">double</a></span> <span style="font-style: italic;"><i>z</i></span> ) <a href="../common_vbageneral/common_general_long.htm" id="a125" style="font-weight: normal; font-style: normal;" name="a125">long</a></p>
+<p class="VBA-Text-Indent">Returns the face id at a given point for one shape.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">GetNumberOfPickedPoints &#160;<span><a href="../common_vbageneral/common_general_integer.htm" id="a126" style="font-weight: normal; font-style: normal;" name="a126">int</a></span></p>
+<p class="VBA-Text-Indent">Returns the total number of picked points.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">GetNumberOfPickedEdges &#160;<span><a href="../common_vbageneral/common_general_integer.htm" id="a75" style="font-weight: normal; font-style: normal;" name="a75">int</a></span></p>
+<p class="VBA-Text-Indent">Returns the total number of picked edges.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">GetNumberOfPickedFaces &#160;<span><a href="../common_vbageneral/common_general_integer.htm" id="a147" style="font-weight: normal; font-style: normal;" name="a147">int</a></span></p>
+<p class="VBA-Text-Indent">Returns the total number of picked faces.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">GetPickpointCoordinatesByIndex ( <a href="../common_vbageneral/common_general_integer.htm" id="a127" style="font-weight: normal; font-style: normal;" name="a127">int</a> <span style="font-style: italic;"><i>index</i></span>, <a href="../common_vbageneral/common_general_double_ref.htm" id="a128" style="font-weight: normal;" name="a128">double_ref</a> <span style="font-style: italic;"><i>x</i></span><span style="font-weight: normal;">, <a href="../common_vbageneral/common_general_double_ref.htm" id="a129" style="font-weight: normal;" name="a129">double_ref</a></span> <span style="font-style: italic;"><i>y</i></span><span style="font-weight: normal;">,</span> <a href="../common_vbageneral/common_general_double_ref.htm" id="a130" style="font-weight: normal;" name="a130">double_ref</a> <span style="font-style: italic;"><i>z</i></span> ) <a href="../common_vbageneral/common_general_bool_data_type.htm" id="a131" style="font-weight: normal; font-style: normal;" name="a131">bool</a></p>
+<p class="VBA-Text-Indent">Returns the coordinates of a picked point through the argument list. The picked point is specified by <span style="font-style: italic;"><i>index</i></span> starting with 0<span style="font-style: italic;"><i>.</i></span></p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">GetPickpointCoordinatesCompByIndex ( <a href="../common_vbageneral/common_general_integer.htm" id="a1271" style="font-weight: normal; font-style: normal;" name="a1271">int</a> <span style="font-style: italic;"><i>index</i></span>, <a href="../common_vbageneral/common_general_integer.htm" id="a12711" style="font-weight: normal; font-style: normal;" name="a12711">int</a> <span style="font-style: italic;"><i>icomp</i></span> ) <span><a href="../common_vbageneral/common_general_double.htm" id="a1691" style="font-weight: normal; font-style: normal;" name="a1691">double</a></span></p>
+<p class="VBA-Text-Indent">Returns the x, y, or z coordinate for <span style="font-style: italic;"><i>icomp</i></span> = 0, 1 or 2 of a picked point. The picked point is specified by <span style="font-style: italic;"><i>index</i></span> starting with 0<span style="font-style: italic;"><i>.</i></span></p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">GetPickedEdgeByIndex ( <a href="../common_vbageneral/common_general_integer.htm" id="a148" style="font-weight: normal; font-style: normal;" name="a148">int</a> <span style="font-style: italic;"><i>index</i></span>, <a href="../common_vbageneral/common_general_long_ref.htm" id="a151" style="font-weight: normal;" name="a151">long_ref</a> <span style="font-style: italic;"><i>edgeid</i></span><span style="font-weight: normal;">,</span> <a href="../common_vbageneral/common_general_long_ref.htm" id="a153" style="font-weight: normal;" name="a153">long_ref</a> <span style="font-style: italic;"><i>vertexid</i></span> ) <span><a href="../common_vbageneral/common_general_string.htm" id="a152" style="font-weight: normal; font-style: normal;" name="a152">string</a></span></p>
+<p class="VBA-Text-Indent">Returns the shapename of a picked edge. The edge id &#160;and the vertex id is returned through the argument list. The picked edge is specified by <span style="font-style: italic;"><i>index</i></span> starting with 0<span style="font-style: italic;"><i>.</i></span></p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">GetPickedFaceByIndex ( <a href="../common_vbageneral/common_general_integer.htm" id="a149" style="font-weight: normal; font-style: normal;" name="a149">int</a> <span style="font-style: italic;"><i>index</i></span>, <a href="../common_vbageneral/common_general_long_ref.htm" id="a154" style="font-weight: normal;" name="a154">long_ref</a> &#160;face<span style="font-style: italic;"><i>id</i></span>) <a href="../common_vbageneral/common_general_string.htm" id="a150" style="font-weight: normal; font-style: normal;" name="a150">string</a></p>
+<p class="VBA-Text-Indent">Returns the shapename of a picked face. The face id is returned through the argument list. The picked face is specified by <span style="font-style: italic;"><i>index</i></span> starting with 0<span style="font-style: italic;"><i>.</i></span></p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">GetPickedFaceAreaByIndex ( <a href="../common_vbageneral/common_general_integer.htm" id="a168" style="font-weight: normal; font-style: normal;" name="a168">int</a> <span style="font-style: italic;"><i>index</i></span> ) <a href="../common_vbageneral/common_general_double.htm" id="a169" style="font-weight: normal; font-style: normal;" name="a169">double</a></p>
+<p class="VBA-Text-Indent">Returns the surface area of a picked face. The picked face is specified by <span style="font-style: italic;"><i>index</i></span> starting with 0<span style="font-style: italic;"><i>.</i></span></p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">GetVertexIdFromPoint ( <a href="../common_vbageneral/common_general_string.htm" id="a132" style="font-weight: normal; font-style: normal;" name="a132">string</a> <span style="font-style: italic;"><i>shapename</i></span>, <span><a href="../common_vbageneral/common_general_double.htm" id="a133" style="font-weight: normal; font-style: normal;" name="a133">double</a></span> <span style="font-style: italic;"><i>x</i></span><span style="font-weight: normal;">, <a href="../common_vbageneral/common_general_double.htm" id="a134" style="font-weight: normal; font-style: normal;" name="a134">double</a></span> <span style="font-style: italic;"><i>y</i></span><span style="font-weight: normal;">, <a href="../common_vbageneral/common_general_double.htm" id="a135" style="font-weight: normal; font-style: normal;" name="a135">double</a></span> <span style="font-style: italic;"><i>z</i></span> ) <a href="../common_vbageneral/common_general_long.htm" id="a136" style="font-weight: normal; font-style: normal;" name="a136">long</a></p>
+<p class="VBA-Text-Indent">Returns the edge id at a given point for one shape.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">ExportFaceTriangles ( <a href="../common_vbageneral/common_general_string.htm" id="a155" style="font-weight: normal; font-style: normal;" name="a155">string</a> <span style="font-style: italic;"><i>filename</i></span>, <a href="../common_vbageneral/common_general_double.htm" id="a156" style="font-weight: normal; font-style: normal;" name="a156">double</a> <span style="font-style: italic;"><i>maxlen</i></span><span style="font-weight: normal;">, <a href="../common_vbageneral/common_general_double.htm" id="a157" style="font-weight: normal; font-style: normal;" name="a157">double</a></span> <span style="font-style: italic;"><i>surftol</i></span> )</p>
+<p class="VBA-Text-Indent">Triangulates the picked faces using the given maximum edge length <span style="font-style: italic;"><i>maxlen</i></span> and surface tolerance <span style="font-style: italic;"><i>surftol</i></span> and writes the triangle points and normals to a file named <span style="font-style: italic;"><i>filename</i></span>.</p>
+<p class="VBA-Heading-Category"><a name="Example" id="Example"></a>Example</p>
+<p class="VBA-Text-Indent" style="font-style: italic;">'Get x, y and z coordinate of first pick point</p>
+<p class="VBA-Text-Indent">Dim x As Double</p>
+<p class="VBA-Text-Indent">Dim y As Double</p>
+<p class="VBA-Text-Indent">Dim z As Double</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Text-Indent">x = Pick.GetPickpointCoordinatesCompByIndex(0,0)</p>
+<p class="VBA-Text-Indent">y = Pick.GetPickpointCoordinatesCompByIndex(0,1)</p>
+<p class="VBA-Text-Indent">z = Pick.GetPickpointCoordinatesCompByIndex(0,2)</p>
+<?rh-p style="margin-bottom: 0px; text-align: Right; margin-left: 18px; 
+                 margin-right: 18px; margin-top: 18px;" ?>
+<div style="width: 100%; position: relative;" id="footer">
+<p style="border-bottom: Solid 1px #dddddd; text-align: Left; margin-left: 0px; font-family: Arial, sans-serif; line-height: Normal; margin-top: 9px; margin-right: 0px; margin-bottom: 6px; border-left-width: 1px; border-top-width: 1px; border-right-width: 1px;"><span style="text-align: Left; font-family: Arial, sans-serif; line-height: Normal;">&#160;</span></p>
+<table cellspacing="0" width="100%">
+<col style="width: 50%;" />
+<col style="width: 50%;" />
+<tr>
+<td style="vertical-align: Top;"><span style="font-family: Arial, sans-serif; line-height: Normal; font-size: 8pt;"><font size="1" style="font-size:8pt;">CST Studio Suite 2026</font></span></td>
+<td style="vertical-align: Top;">
+<p style="text-align: right;">&#160;</p>
+</td>
+</tr>
+</table>
+<p>&#160;</p>
+</div>
+<script type="text/javascript" language="javascript1.2">
+//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+        writeIntopicBar(0);
+
+
+highlightSearch();
+//-->
+//]]>
+</script>
+</body>
+</html>

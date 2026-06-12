@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="Adobe RoboHelp 11" />
+<title>ParticleBeam Object</title>
+<link rel="StyleSheet" href="../online_help_vba.css" type="text/css" />
+<style type="text/css">
+/*<![CDATA[*/
+<!--
+body { border-bottom-style:None; }
+-->
+/*]]>*/
+</style>
+
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+        origWidth = innerWidth;
+        origHeight = innerHeight;
+        onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+/*<![CDATA[*/
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+-->
+/*]]>*/
+</style>
+
+<script type="text/javascript" language="javascript1.2" src="../whmsg.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript" src="../whver.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript1.2" src="../whutils.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript1.2" src="../whproxy.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript1.2" src="../whlang.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript1.2" src="../whtopic.js" charset="utf-8">
+</script>
+</head>
+<body>
+<script type="text/javascript" language="javascript1.2">
+//<![CDATA[
+<!--
+if (window.gbWhTopic)
+{
+        var strUrl = document.location.href;
+        var bc = 0;
+        var n = strUrl.toLowerCase().indexOf("bc-");
+        if(n != -1)
+        {
+                document.location.replace(strUrl.substring(0, n));
+                bc = strUrl.substring(n+3);
+        }
+
+        if (window.addTocInfo)
+        {
+        addTocInfo("3D Simulation VBA\nVBA Objects\nSources and Ports\nParticles\nParticle Beam");
+
+        }
+        if (window.writeBtnStyle)
+                writeBtnStyle();
+
+        if (window.writeIntopicBar)
+                writeIntopicBar(0);
+
+        
+        document.write("<p style=\"font-family: Tahoma; font-size: 9pt; font-weight: 400;  font-style:normal; color: rgb(0, 0, 0); text-decoration:none; text-align: left\"> ");
+AddMasterBreadcrumbs("../index.htm", "font-family: Tahoma; font-size: 9pt; font-weight: 400;  font-style:normal; color: rgb(0, 0, 0); text-decoration:none; text-align: left", "|", "Home", "../special_vbaobjects/special_vbaobjects_vbaobjects.htm");
+document.write("<a style=\"font-family: Tahoma; font-size: 9pt; font-weight: 400;  font-style:normal; color: rgb(0, 0, 0); text-decoration:none; text-align: left\" href=\"../special_vbaobjects/special_vbaobjects_vbaobjects.htm\">3D Simulation VBA<\/a> | <a style=\"font-family: Tahoma; font-size: 9pt; font-weight: 400;  font-style:normal; color: rgb(0, 0, 0); text-decoration:none; text-align: left\" href=\"../special_vbaobjects/special_vbaobjects_vbaobjects.htm\">VBA Objects<\/a> | <a style=\"font-family: Tahoma; font-size: 9pt; font-weight: 400;  font-style:normal; color: rgb(0, 0, 0); text-decoration:none; text-align: left\" href=\"../special_vbasignals/special_vbasignals_timesignal_object.htm\">Sources and Ports<\/a> | <a style=\"font-family: Tahoma; font-size: 9pt; font-weight: 400;  font-style:normal; color: rgb(0, 0, 0); text-decoration:none; text-align: left\" href=\"../special_vbaparticlesource/special_vbaparticlesource_particleinterface_object.htm\">Particles<\/a> | Particle Beam<\/p>");
+
+}
+else
+        if (window.gbIE4)
+                document.location.reload();
+
+onLoadHandler = function()
+{
+  if (window.setRelStartPage)
+        {
+        setTimeout("setRelStartPage('../index.htm');", 1)
+
+    setTimeout("UpdateBreadCrumbsMarker();", 1);
+        }
+}
+
+if (window.addEventListener){  
+        window.addEventListener('load', onLoadHandler, false);   
+} else if (window.attachEvent){  
+        window.attachEvent('onload', onLoadHandler);  
+}
+
+function onSetStartPage()
+{
+  autoSync(1);
+  sendSyncInfo();
+  sendAveInfoOut();
+}
+//-->
+//]]>
+</script><script type="text/javascript" src="../ehlpdhtm.js" language="JavaScript1.2">
+</script>
+<table cellspacing="0" width="100%">
+<col style="width: 50%;" />
+<col style="width: 50%;" />
+<tr>
+<td style="vertical-align: middle; padding-top: 5px; padding-bottom: 5px;">
+<p style="margin-top: 0px; margin-bottom: 0px;"><img src="../3ds.png" alt="" style="border: none;" border="0" /></p>
+</td>
+<td style="vertical-align: middle;">
+<p style="text-align: right;"><a href="https://www.3ds.com/products-services/3dexperience/" target="_blank"><img src="../3dexp.png" alt="" style="border: none;" width="32" height="32" border="0" /></a></p>
+</td>
+</tr>
+</table>
+<p class="VBA-Heading-Object">ParticleBeam Object</p>
+<p class="VBA-Text">This Object is used to define a particle beam source for the wakefield-solver.</p>
+<ul>
+<li class="p-VBA-Index-Category">
+<p class="VBA-Index-Category"><a href="#Methods">Methods</a></p>
+</li>
+<li class="p-VBA-Index-Category">
+<p class="VBA-Index-Category" style="font-weight: bold;"><a href="#Default" style="font-weight: bold;">Default Settings</a></p>
+</li>
+<li class="p-VBA-Index-Category">
+<p class="VBA-Index-Category"><a href="#Examples">Example</a></p>
+</li>
+</ul>
+<p class="VBA-Heading-Category"><a name="Methods" id="Methods"></a>Methods</p>
+<p class="VBA-Heading-Method">Reset</p>
+<p class="VBA-Text-Indent">Resets all internal settings to their default values.</p>
+<p class="vba-text-indent">&#160;</p>
+<p class="VBA-Heading-Method">Delete (<a href="../common_vbageneral/common_general_name.htm" id="a2" style="font-weight: normal; font-style: normal;" name="a2">name</a> &#160;<span style="font-style: italic;"><i>name</i></span>)</p>
+<p class="VBA-Text-Indent">Deletes the specified particle-beam source.</p>
+<p class="vba-text-indent">&#160;</p>
+<p class="VBA-Heading-Method">Rename (<span><a href="../common_vbageneral/common_general_name.htm" id="a3" style="font-weight: normal; font-style: normal;" name="a3">name</a></span> &#160;<span style="font-style: italic;"><i>oldname</i></span>, <span><a href="../common_vbageneral/common_general_name.htm" id="a4" style="font-weight: normal; font-style: normal;" name="a4">name</a></span> &#160;<span style="font-style: italic;"><i>newname</i></span> )</p>
+<p class="VBA-Text-Indent">Renames the specified particle-beam.</p>
+<p class="vba-text-indent">&#160;</p>
+<p class="VBA-Heading-Method">Name (<span><a href="../common_vbageneral/common_general_name.htm" id="a18" style="font-weight: normal; font-style: normal;" name="a18">name</a></span> &#160;<span style="font-style: italic;"><i>name</i></span> )</p>
+<p class="VBA-Text-Indent">Sets the name of the new particle-beam source.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">IsBunchGaussian(<span><a href="../common_vbageneral/common_general_bool_data_type.htm" id="a21" style="font-weight: normal;" name="a21">bool</a></span> <span style="font-style: italic;"><i>flag)</i></span></p>
+<p class="VBA-Text-Indent">Sets the beam shape to a gaussian excitation.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">ExcitationSignal(<a href="../common_vbageneral/common_general_string.htm" id="a22" name="a22"><span style="font-weight: normal; font-style: normal;">string</span></a> &#160;<span style="font-style: italic;"><i>name</i></span> )</p>
+<p class="VBA-Text-Indent">Sets the name of the excitation signal, which should be of type ASCII-import or User-defined.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">Length (<a href="../common_vbageneral/common_general_double.htm" id="a26" style="font-weight: normal; font-style: normal;" name="a26">double</a> &#160;<span style="font-style: italic;"><i>value</i></span>)</p>
+<p class="VBA-Text-Indent">Sets the standard deviation (sigma) of the Gaussian shaped particle bunch.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">Beta (<a href="../common_vbageneral/common_general_double.htm" id="a1" style="font-weight: normal; font-style: normal;" name="a1">double</a> &#160;<span style="font-style: italic;"><i>value</i></span>)</p>
+<p class="VBA-Text-Indent">Sets the velocity of the particle bunch.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">Charge (<span><a href="../common_vbageneral/common_general_double.htm" id="a5" style="font-weight: normal; font-style: normal;" name="a5">double</a></span> &#160;<span style="font-style: italic;"><i>value</i></span>)</p>
+<p class="VBA-Text-Indent">Sets &#160;the total charge of the particle bunch</p>
+<p class="vba-text-indent">&#160;</p>
+<p class="VBA-Heading-Method">ConsiderForMeshRefinement (<span><a href="../common_vbageneral/common_general_bool_data_type.htm" id="a8" style="font-weight: normal;" name="a8">bool</a></span> <span style="font-style: italic;"><i>&#160;flag</i></span>)</p>
+<p class="VBA-Text-Indent">Determines if the bunch settings should affect the mesh generation or not. It is strongly recommended to set this value to "True".</p>
+<p class="vba-text-indent">&#160;</p>
+<p class="VBA-Heading-Method">LinesPerSigma (<a href="../common_vbageneral/common_general_bool_data_type.htm" id="a19" style="font-weight: normal;" name="a19">bool</a> <span style="font-style: italic;"><i>flag,</i></span> <a href="../common_vbageneral/common_general_double.htm" id="a20" style="font-weight: normal; font-style: normal;" name="a20">double</a> lines<span style="font-style: italic;"><i>)</i></span></p>
+<p class="VBA-Text-Indent">Allows to specify a longitudinal mesh refinement for particle beams. In case numerical dispersion plays an important role it is possible to refine the mesh with this setting only in direction of beam propagation.</p>
+<p class="vba-text-indent">&#160;</p>
+<p class="VBA-Heading-Method">BeamPoint &#160;(<a href="../common_vbageneral/common_general_bool_data_type.htm" id="a6" style="font-weight: normal;" name="a6">bool</a> <span style="font-style: italic;"><i>&#160;pickpoint,</i></span> <a href="../common_vbageneral/common_general_double.htm" id="a7" style="font-weight: normal; font-style: normal;" name="a7">double</a> &#160;<span style="font-style: italic;"><i>xcoord,</i></span> <a href="../common_vbageneral/common_general_double.htm" id="a9" style="font-weight: normal; font-style: normal;" name="a9">double</a> &#160;<span style="font-style: italic;"><i>ycoord,</i></span> <a href="../common_vbageneral/common_general_double.htm" id="a10" style="font-weight: normal; font-style: normal;" name="a10">double</a> &#160;<span style="font-style: italic;"><i>zcoord)</i></span></p>
+<p class="VBA-Text-Indent">Define one point on the beam axis by choosing the last pickpoint (set pickpoint to "True") or by defining the coordinates numerically.</p>
+<p class="vba-text-indent">&#160;</p>
+<p class="VBA-Heading-Method">BeamDir (<span><a href="../common_vbageneral/common_general_double.htm" id="a11" style="font-weight: normal; font-style: normal;" name="a11">double</a></span> xdir, <span><a href="../common_vbageneral/common_general_double.htm" id="a12" style="font-weight: normal; font-style: normal;" name="a12">double</a></span> ydir, <span><a href="../common_vbageneral/common_general_double.htm" id="a13" style="font-weight: normal; font-style: normal;" name="a13">double</a></span> zdir)</p>
+<p class="VBA-Text-Indent">Define the beam axis direction numerically. The beam axis must be parallel to a main coordinate axis x,y or z.</p>
+<p class="vba-text-indent">&#160;</p>
+<p class="VBA-Heading-Method">IndirectWakeIntegration (<span><a href="../common_vbageneral/common_general_bool_data_type.htm" id="a14" style="font-weight: normal;" name="a14">bool</a></span> <span style="font-style: italic;"><i>flag)</i></span></p>
+<p class="VBA-Text-Indent">Determines if the indirect integration should be used (more accurate) or not. If it is not possible to compute wakepotentials with the indirect method, the direct integration will be used.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">WakeIntegrationShift (<span><a href="../common_vbageneral/common_general_double.htm" id="a15" style="font-weight: normal; font-style: normal;" name="a15">double</a></span> xshift, <span><a href="../common_vbageneral/common_general_double.htm" id="a16" style="font-weight: normal; font-style: normal;" name="a16">double</a></span> yshift, <span><a href="../common_vbageneral/common_general_double.htm" id="a17" style="font-weight: normal; font-style: normal;" name="a17">double</a></span> zshift)</p>
+<p class="VBA-Text-Indent">The wake integration axis, where the wake potential is calculated can be shifted to the particle beam axis, in order to compute wakefields for particles which are "off-axis". Ony two of three values are taken into account, since the wake-axis is shifted only transversal.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">Create</p>
+<p class="VBA-Text-Indent">Creates the source with the previously made settings.</p>
+<p class="VBA-Heading-Category"><span style="font-weight: bold; font-size: 12pt; font-style: italic;"><font size="3" style="font-size:12pt;"><i><a name="Default" id="Default"></a>Default Settings</i></font></span></p>
+<p class="VBA-Text-Example">Length "0.0"</p>
+<p class="VBA-Text-Example">Beta "0.0"</p>
+<p class="VBA-Text-Example">Charge "0.0"</p>
+<p class="VBA-Text-Example">ConsiderForMeshRefinement "True"</p>
+<p class="VBA-Text-Example">BeamPoint "False", "0.0", "0.0", "0.0"</p>
+<p class="VBA-Text-Example">BeamDir "0.0", "0.0", "0.0"</p>
+<p class="VBA-Text-Example">IndirectWakeIntegration "True"</p>
+<p class="VBA-Text-Example">WakeIntegrationShift "0.0", "0.0", "0.0"</p>
+<p class="VBA-Heading-Category"><a name="Examples" id="Examples"></a>Examples</p>
+<p class="VBA-Text-Example">With ParticleBeam</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.Reset</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.Name "ParticleBeam1"</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.Length "1"</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.Beta "1.0"</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.Charge "1e-12"</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.ConsiderForMeshRefinement "True"</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.BeamPoint "True", "2.4", "-1.2", "3.2"</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.BeamDir "0.0", "0.0", "1.0"</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.IndirectWakeIntegration "False"</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.WakeIntegrationShift "0.0", "0.0", "0.0"</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.Create</p>
+<p class="VBA-Text-Example">End With</p>
+<p class="vba-text-example">&#160;</p>
+<?rh-p style="margin-bottom: 0px; text-align: Right; margin-left: 18px; 
+                 margin-right: 18px; margin-top: 18px;" ?>
+<div style="width: 100%; position: relative;" id="footer">
+<p style="border-bottom: Solid 1px #dddddd; text-align: Left; margin-left: 0px; font-family: Arial, sans-serif; line-height: Normal; margin-top: 9px; margin-right: 0px; margin-bottom: 6px; border-left-width: 1px; border-top-width: 1px; border-right-width: 1px;"><span style="text-align: Left; font-family: Arial, sans-serif; line-height: Normal;">&#160;</span></p>
+<table cellspacing="0" width="100%">
+<col style="width: 50%;" />
+<col style="width: 50%;" />
+<tr>
+<td style="vertical-align: Top;"><span style="font-family: Arial, sans-serif; line-height: Normal; font-size: 8pt;"><font size="1" style="font-size:8pt;">CST Studio Suite 2026</font></span></td>
+<td style="vertical-align: Top;">
+<p style="text-align: right;">&#160;</p>
+</td>
+</tr>
+</table>
+<p>&#160;</p>
+</div>
+<script type="text/javascript" language="javascript1.2">
+//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+        writeIntopicBar(0);
+
+
+highlightSearch();
+//-->
+//]]>
+</script>
+</body>
+</html>

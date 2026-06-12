@@ -1,0 +1,284 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="Adobe RoboHelp 11" />
+<title>PredefinedField Object</title>
+<link rel="StyleSheet" href="../online_help_vba.css" type="text/css" />
+<style type="text/css">
+/*<![CDATA[*/
+<!--
+body { border-bottom-style:None; }
+-->
+/*]]>*/
+</style>
+
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+        origWidth = innerWidth;
+        origHeight = innerHeight;
+        onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+/*<![CDATA[*/
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+-->
+/*]]>*/
+</style>
+
+<script type="text/javascript" language="javascript1.2" src="../whmsg.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript" src="../whver.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript1.2" src="../whutils.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript1.2" src="../whproxy.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript1.2" src="../whlang.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript1.2" src="../whtopic.js" charset="utf-8">
+</script>
+</head>
+<body>
+<script type="text/javascript" language="javascript1.2">
+//<![CDATA[
+<!--
+if (window.gbWhTopic)
+{
+        var strUrl = document.location.href;
+        var bc = 0;
+        var n = strUrl.toLowerCase().indexOf("bc-");
+        if(n != -1)
+        {
+                document.location.replace(strUrl.substring(0, n));
+                bc = strUrl.substring(n+3);
+        }
+
+        if (window.addTocInfo)
+        {
+        addTocInfo("3D Simulation VBA\nVBA Objects\nSources and Ports\nLow Frequency\nPredefined Field");
+
+        }
+        if (window.writeBtnStyle)
+                writeBtnStyle();
+
+        if (window.writeIntopicBar)
+                writeIntopicBar(0);
+
+        
+        document.write("<p style=\"font-family: Tahoma; font-size: 9pt; font-weight: 400;  font-style:normal; color: rgb(0, 0, 0); text-decoration:none; text-align: left\"> ");
+AddMasterBreadcrumbs("../index.htm", "font-family: Tahoma; font-size: 9pt; font-weight: 400;  font-style:normal; color: rgb(0, 0, 0); text-decoration:none; text-align: left", "|", "Home", "../special_vbaobjects/special_vbaobjects_vbaobjects.htm");
+document.write("<a style=\"font-family: Tahoma; font-size: 9pt; font-weight: 400;  font-style:normal; color: rgb(0, 0, 0); text-decoration:none; text-align: left\" href=\"../special_vbaobjects/special_vbaobjects_vbaobjects.htm\">3D Simulation VBA<\/a> | <a style=\"font-family: Tahoma; font-size: 9pt; font-weight: 400;  font-style:normal; color: rgb(0, 0, 0); text-decoration:none; text-align: left\" href=\"../special_vbaobjects/special_vbaobjects_vbaobjects.htm\">VBA Objects<\/a> | <a style=\"font-family: Tahoma; font-size: 9pt; font-weight: 400;  font-style:normal; color: rgb(0, 0, 0); text-decoration:none; text-align: left\" href=\"../special_vbasignals/special_vbasignals_timesignal_object.htm\">Sources and Ports<\/a> | <a style=\"font-family: Tahoma; font-size: 9pt; font-weight: 400;  font-style:normal; color: rgb(0, 0, 0); text-decoration:none; text-align: left\" href=\"../special_vbasourcefield/special_vbasourcefield_sourcefield_object.htm\">Low Frequency<\/a> | Predefined Field<\/p>");
+
+}
+else
+        if (window.gbIE4)
+                document.location.reload();
+
+onLoadHandler = function()
+{
+  if (window.setRelStartPage)
+        {
+        setTimeout("setRelStartPage('../index.htm');", 1)
+
+    setTimeout("UpdateBreadCrumbsMarker();", 1);
+        }
+}
+
+if (window.addEventListener){  
+        window.addEventListener('load', onLoadHandler, false);   
+} else if (window.attachEvent){  
+        window.attachEvent('onload', onLoadHandler);  
+}
+
+function onSetStartPage()
+{
+  autoSync(1);
+  sendSyncInfo();
+  sendAveInfoOut();
+}
+//-->
+//]]>
+</script><script type="text/javascript" src="../ehlpdhtm.js" language="JavaScript1.2">
+</script>
+<table cellspacing="0" width="100%">
+<col style="width: 50%;" />
+<col style="width: 50%;" />
+<tr>
+<td style="vertical-align: middle; padding-top: 5px; padding-bottom: 5px;">
+<p style="margin-top: 0px; margin-bottom: 0px;"><img src="../3ds.png" alt="" style="border: none;" border="0" /></p>
+</td>
+<td style="vertical-align: middle;">
+<p style="text-align: right;"><a href="https://www.3ds.com/products-services/3dexperience/" target="_blank"><img src="../3dexp.png" alt="" style="border: none;" width="32" height="32" border="0" /></a></p>
+</td>
+</tr>
+</table>
+<h1>PredefinedField</h1>
+<p class="VBA-Text">The object is used to initialize predefined electric and magnetic fields for tracking- or PIC-simulations.</p>
+<p class="VBA-Text">Two distinct possibilities exist. One is to define analytical magnetic fields, which can be homogeneous or rotational symmetric. The other possibility is to import fields from external files or from external CST projects.</p>
+<p class="VBA-Text">Although the methods of this object can be used to import external electric or magnetic fields from files, it is recommended to use instead the dialog box "Simulation: Sources and Loads -&gt; Source Field -&gt; Import External Field".</p>
+<ul>
+<li class="p-VBA-Index-Category">
+<p class="VBA-Index-Category"><a href="#Methods">Methods</a></p>
+</li>
+<li class="p-VBA-Index-Category">
+<p class="VBA-Index-Category"><a href="#Default_Settings">Default Settings</a></p>
+</li>
+<li class="p-VBA-Index-Category">
+<p class="VBA-Index-Category"><a href="#Example">Example</a></p>
+</li>
+</ul>
+<p class="VBA-Heading-Category"><a name="Methods" id="Methods"></a>Methods</p>
+<p class="VBA-Heading-Method">ResetAnalyticSettings</p>
+<p class="VBA-Text-Indent">Resets all settings of the analytically-defined magnetic fields to their default values.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">ResetExternalSettings</p>
+<p class="VBA-Text-Indent">Resets all settings of the fields which were imported from external files to their default values.</p>
+<p class="StandardNeu">&#160;</p>
+<p class="VBA-Heading-Method">FieldType (<span style="font-weight: normal;"><a href="../common_vbageneral/common_general_enum.htm">enum</a></span> <span style="font-style: italic;"><i>fieldtype</i></span>)</p>
+<p class="VBA-Text-Indent">Type of the source field.</p>
+<table style="vertical-align: top; margin-left: 50px;" cellspacing="0" width="74.761%">
+<col style="width: 24.989%;" />
+<col style="width: 75.011%;" />
+<tr style="vertical-align: top;">
+<td style="border: Solid 1px #000000; width: 24.989%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text"><span style="font-style: italic; font-weight: bold;"><i>fieldtype</i></span> <span style="font-style: italic;"><i>(</i></span><a href="../common_vbageneral/common_general_enum.htm" id="a5" style="font-weight: normal;" name="a5">enum</a> )</p>
+</td>
+<td style="border-top: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 75.011%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text" style="font-weight: bold;">meaning</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 24.989%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text">"Hconst"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 75.011%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text">A constant homogeneous magnetic field is defined.</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 24.989%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text">"Bconst"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 75.011%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text">A constant homogeneous magnetic flux density is defined.</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 24.989%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text">"Bz"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 75.011%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text">A rotational syymetric field is defined.</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 24.989%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text">"External"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 75.011%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text">An external field from an ASCII file or a .m3d file is imported.</p>
+</td>
+</tr>
+</table>
+<p class="VBA-Heading-Method">&#160;</p>
+<p class="VBA-Heading-Method">HFieldVector (<a href="../common_vbageneral/common_general_double.htm" id="a1" style="font-weight: normal;" name="a1">double</a> <span style="font-style: italic;"><i>xcomp,</i></span> <span><a href="../common_vbageneral/common_general_double.htm" id="a2" style="font-weight: normal; font-style: normal;" name="a2">double</a></span> <span style="font-style: italic;"><i>ycomp,</i></span> <span><a href="../common_vbageneral/common_general_double.htm" id="a3" style="font-style: normal; font-weight: normal;" name="a3">double</a></span> <span style="font-style: italic;"><i>zcomp</i></span>)</p>
+<p class="VBA-Text-Indent" style="font-style: normal;">Constant h-field,. The orientation and strength is given by the three arguments. Only evaluated if fieldtype "Hconst" is chosen.</p>
+<p class="VBA-Heading-Method">&#160;</p>
+<p class="VBA-Heading-Method">BFieldVector (<a href="../common_vbageneral/common_general_double.htm" id="a4" style="font-weight: normal;" name="a4">double</a> <span style="font-style: italic;"><i>xcomp,</i></span> <span><a href="../common_vbageneral/common_general_double.htm" id="a8" style="font-weight: normal; font-style: normal;" name="a8">double</a></span> <span style="font-style: italic;"><i>ycomp,</i></span> <span><a href="../common_vbageneral/common_general_double.htm" id="a9" style="font-style: normal; font-weight: normal;" name="a9">double</a></span> <span style="font-style: italic;"><i>zcomp</i></span>)</p>
+<p class="VBA-Text-Indent" style="font-style: normal;">Constant b-field,. The orientation and strength is given by the three arguments. Only evaluated if fieldtype "Bconst" is chosen.</p>
+<p class="vba-heading-method">&#160;</p>
+<p class="VBA-Heading-Method">AddBzValue <span style="font-weight: normal;">(</span><a href="../common_vbageneral/common_general_double.htm" id="a6" style="font-weight: normal;" name="a6">double</a> &#160;<span style="font-style: italic;"><i>position,</i></span> <span style="font-weight: normal;">&#160;<a href="../common_vbageneral/common_general_double.htm" id="a7" style="font-weight: normal; font-style: normal;" name="a7">double</a></span> <span style="font-style: italic;"><i>bz-value</i></span><span style="font-weight: normal;">)</span></p>
+<p class="VBA-Text-Indent">B-field <span style="font-style: italic;"><i>value</i></span> at the given <span style="font-style: italic;"><i>position</i></span> along the z/w axis of the active coordinate system for the "1d description" definition type. Only evaluated if fieldtype "Bz" is chosen.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">ExternalFieldMur<span style="font-weight: normal;">(</span><a href="../common_vbageneral/common_general_double.htm" id="a10" style="font-weight: normal;" name="a10">double</a> &#160;<span style="font-style: italic;"><i>mur)</i></span></p>
+<p class="VBA-Text-Indent">If a magnetic field monitor has been defined, this value is considered for the calculation of the relevant magnetic flux density.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">UseLocalCopyOnly ( <span style="font-style: italic;"><i><a href="../common_vbageneral/common_general_bool_data_type.htm" id="a12" style="font-weight: normal; font-style: normal;" name="a12">bool</a> switch</i></span> )</p>
+<p class="VBA-Text-Indent">Defines if the local copy of the imported field data file should be used only for all future simulation runs.</p>
+<p class="VBA-Heading-Method">&#160;</p>
+<p class="VBA-Heading-Method">UpdateLocalCopies ( <span style="font-style: italic;"><i><a href="../common_vbageneral/common_general_bool_data_type.htm" id="a17" style="font-weight: normal; font-style: normal;" name="a17">bool</a> switch</i></span> )</p>
+<p class="Topic-Text-Indent">If <span style="font-style: italic;"><i>switch</i></span> is set to True, the local copies of the imported fields are updated with the field data from the import location.</p>
+<p class="VBA-Heading-Method">&#160;</p>
+<p class="VBA-Heading-Method">SetExternalField ( <span style="font-style: italic;"><i><a href="../common_vbageneral/common_general_bool_data_type.htm" id="a13" style="font-weight: normal; font-style: normal;" name="a13">bool</a> switch,</i></span> <a href="../common_vbageneral/common_general_filename.htm" id="a31" style="font-weight: normal; font-style: normal;" name="a31">filename</a> <span style="font-style: italic;"><i>fieldpath,</i></span> <a href="../common_vbageneral/common_general_double.htm" id="a14" style="font-weight: normal;" name="a14">double</a> <span style="font-style: italic;"><i>factor,</i></span> <a href="../common_vbageneral/common_general_double.htm" id="a15" style="font-weight: normal;" name="a15">double</a> &#160;<span style="font-style: italic;"><i>phase,</i></span> <span style="font-weight: normal; text-decoration: underline;"><u><a href="../common_vbageneral/common_general_integer.htm">int</a></u></span> <span style="font-style: italic;"><i>fieldID, <a href="../common_vbageneral/common_general_bool_data_type.htm" id="a16" style="font-weight: normal; font-style: normal;" name="a16">bool</a> relpath</i></span> )</p>
+<p class="VBA-Text-Indent">Defines a new external field source. It is defined by a flag which indicates if the source is active, a field path, a scaling factor and for frequency dependant fields a phase value. The <span style="font-style: italic;"><i>fieldID</i></span> is a unique label that should be used only for the particular field import and it can be set to non-negative integer values.</p>
+<p class="VBA-Text-Indent">When a field is imported from a CST project, <span style="font-style: italic;"><i>fieldpath</i></span> is the path to the CST project including the ending ".cst".</p>
+<p class="VBA-Text-Indent">If <span style="font-style: italic;"><i>relpath</i></span> is set to True, the relative path of an imported file (with respect to the location of the .cst project) is used to access the imported files. For example, if the .cst project absolute path is "C:\projects\gun.cst" and the absolute path of the import file is "C:\imports\field.txt", then the relative path of the import is "..\..\imports\field.txt". This command is useful for simulations with the System Assembly and Modeling (SAM).</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">SetExternalFieldTimeSignal<span style="font-weight: normal;">(</span> <span style="font-weight: normal; text-decoration: underline;"><u><a href="../common_vbageneral/common_general_integer.htm">int</a></u></span> <span style="font-style: italic;"><i>fieldID, <a href="../common_vbageneral/common_general_string.htm" style="font-weight: normal; font-style: normal; text-decoration: underline;">string</a></i></span> &#160;<span style="font-style: italic;"><i>signal)</i></span></p>
+<p class="VBA-Text-Indent">Sets the signal with which the field with the given field ID will be multiplied.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">SetExternalFieldTimeShift<span style="font-weight: normal;">(</span> <span style="font-weight: normal; text-decoration: underline;"><u><a href="../common_vbageneral/common_general_integer.htm">int</a></u></span> <span style="font-style: italic;"><i>fieldID,</i></span> <span><a href="../common_vbageneral/common_general_double.htm" id="a18" style="font-weight: normal;" name="a18">double</a></span> <span style="font-style: italic;"><i>shift)</i></span></p>
+<p class="VBA-Text-Indent">Sets the time shift with which the field with the given field ID will be shifted.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">SetExternalFieldDescription<span style="font-weight: normal;">(</span> <span style="font-weight: normal; text-decoration: underline;"><u><a href="../common_vbageneral/common_general_integer.htm">int</a></u></span> <span style="font-style: italic;"><i>fieldID,</i></span> <a href="../common_vbageneral/common_general_double.htm" id="a19" style="font-weight: normal;" name="a19">double</a> <span style="font-style: italic;"><i>description)</i></span></p>
+<p class="VBA-Text-Indent">In case of a field import from a CST project (with the given field ID as set with <span style="font-weight: bold;">SetExternalField)</span>, the <span style="font-style: italic;"><i>description</i></span> is the name of the field that is imported.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">SetExternalFieldASCIIType<span style="font-weight: normal;">(</span> <span style="text-decoration: underline;"><u><a href="../common_vbageneral/common_general_filename.htm" id="a20" style="font-weight: normal; font-style: normal;" name="a20">filename</a></u></span> <span style="font-style: italic;"><i>fieldpath,</i></span> <a href="../common_vbageneral/common_general_string.htm" style="font-weight: normal; font-style: normal; text-decoration: underline;">string</a> <span style="font-style: italic;"><i>type)</i></span></p>
+<p class="VBA-Text-Indent">In case of a ASCII field import with a given <span style="font-style: italic;"><i>fieldpath</i></span> , the <span style="font-style: italic;"><i>type</i></span> is the field type and must be set to one of the following strings: "B-Field", "H-Field" or "E-Field"..</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">SetExternalFieldASCIISymmetries<span style="font-weight: normal;">(</span> <span style="text-decoration: underline;"><u><a href="../common_vbageneral/common_general_filename.htm" id="a11" style="font-weight: normal; font-style: normal;" name="a11">filename</a></u></span> <span style="font-style: italic;"><i>fieldpath,</i></span> <span><a href="../common_vbageneral/common_general_string.htm" style="font-weight: normal; font-style: normal; text-decoration: underline;">string</a></span> <span style="font-style: italic;"><i>symX</i></span>, <span><a href="../common_vbageneral/common_general_string.htm" style="font-weight: normal; font-style: normal; text-decoration: underline;">string</a></span> <span style="font-style: italic;"><i>symY</i></span>, &#160;<span><a href="../common_vbageneral/common_general_string.htm" style="font-weight: normal; font-style: normal; text-decoration: underline;">string</a></span> <span style="font-style: italic;"><i>symZ</i></span> <span style="font-style: italic;"><i>)</i></span></p>
+<p class="VBA-Text-Indent">In case of a ASCII field import with a given <span style="font-style: italic;"><i>fieldpath</i></span> , &#160;<span style="font-style: italic;"><i>symX, symY</i></span> and <span style="font-style: italic;"><i>symZ</i></span> &#160;set the symmetry type of the field in the corresponding directions and must be set to one of the following strings: "None", "Electric" or "Magnetic".</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">SetExternalFieldASCIIFrequency<span style="font-weight: normal;">(</span> <span style="text-decoration: underline;"><u><a href="../common_vbageneral/common_general_filename.htm" id="a21" style="font-weight: normal; font-style: normal;" name="a21">filename</a></u></span> <span style="font-style: italic;"><i>fieldpath,</i></span> <a href="../common_vbageneral/common_general_double.htm" id="a22" style="font-weight: normal;" name="a22">double</a> <span style="font-style: italic;"><i>frequency )</i></span></p>
+<p class="VBA-Text-Indent">In case of a ASCII field import with a given <span style="font-style: italic;"><i>fieldpath</i></span> , this method sets the frequency of the imported field..</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">Create</p>
+<p class="VBA-Text-Indent">Creates the defined source field.</p>
+<p class="VBA-Heading-Category"><a name="Default_Settings" id="Default_Settings"></a>Default Settings</p>
+<p class="VBA-Text-Example">FieldType &#160;&#160;&#160;&#160;&#160;&#160;&#160;""</p>
+<p class="VBA-Text-Example">HFieldVector &#160;&#160;&#160;&#160;"0", "0", "0"</p>
+<p class="VBA-Text-Example">BFieldVector &#160;&#160;&#160;&#160;"0", "0", "0"</p>
+<p class="VBA-Text-Example">UseLocalCopyOnly "False"</p>
+<p class="VBA-Text-Example">ExternalFieldMur "1.0"</p>
+<p class="VBA-Heading-Category"><a name="Example" id="Example"></a>Example:</p>
+<p class="VBA-Text-Example">With PredefinedField</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.ResetAnalyticSettings</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.FieldType &#160;&#160;&#160;"Hconst"</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.HFieldVector "0.0", "0.0", "1.0"</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.Create</p>
+<p class="VBA-Text-Example">End With</p>
+<?rh-p style="margin-bottom: 0px; text-align: Right; margin-left: 18px; 
+                 margin-right: 18px; margin-top: 18px;" ?>
+<div style="width: 100%; position: relative;" id="footer">
+<p style="border-bottom: Solid 1px #dddddd; text-align: Left; margin-left: 0px; font-family: Arial, sans-serif; line-height: Normal; margin-top: 9px; margin-right: 0px; margin-bottom: 6px; border-left-width: 1px; border-top-width: 1px; border-right-width: 1px;"><span style="text-align: Left; font-family: Arial, sans-serif; line-height: Normal;">&#160;</span></p>
+<table cellspacing="0" width="100%">
+<col style="width: 50%;" />
+<col style="width: 50%;" />
+<tr>
+<td style="vertical-align: Top;"><span style="font-family: Arial, sans-serif; line-height: Normal; font-size: 8pt;"><font size="1" style="font-size:8pt;">CST Studio Suite 2026</font></span></td>
+<td style="vertical-align: Top;">
+<p style="text-align: right;">&#160;</p>
+</td>
+</tr>
+</table>
+<p>&#160;</p>
+</div>
+<script type="text/javascript" language="javascript1.2">
+//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+        writeIntopicBar(0);
+
+
+highlightSearch();
+//-->
+//]]>
+</script>
+</body>
+</html>

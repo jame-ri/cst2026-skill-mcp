@@ -1,0 +1,434 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="Adobe RoboHelp 11" />
+<title>Net Object</title>
+<link rel="StyleSheet" href="../online_help_vba.css" type="text/css" />
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+        origWidth = innerWidth;
+        origHeight = innerHeight;
+        onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+/*<![CDATA[*/
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+-->
+/*]]>*/
+</style>
+
+<script type="text/javascript" language="javascript1.2" src="../whmsg.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript" src="../whver.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript1.2" src="../whutils.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript1.2" src="../whproxy.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript1.2" src="../whlang.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript1.2" src="../whtopic.js" charset="utf-8">
+</script>
+</head>
+<body>
+<script type="text/javascript" language="javascript1.2">
+//<![CDATA[
+<!--
+if (window.gbWhTopic)
+{
+        var strUrl = document.location.href;
+        var bc = 0;
+        var n = strUrl.toLowerCase().indexOf("bc-");
+        if(n != -1)
+        {
+                document.location.replace(strUrl.substring(0, n));
+                bc = strUrl.substring(n+3);
+        }
+
+        if (window.addTocInfo)
+        {
+        addTocInfo("Circuits & Systems VBA\nComponent/Modeling\nNet");
+
+        }
+        if (window.writeBtnStyle)
+                writeBtnStyle();
+
+        if (window.writeIntopicBar)
+                writeIntopicBar(0);
+
+        
+        document.write("<p style=\"font-family: Tahoma; font-size: 9pt; font-weight: 400;  font-style:normal; color: rgb(0, 0, 0); text-decoration:none; text-align: left\"> ");
+AddMasterBreadcrumbs("../index.htm", "font-family: Tahoma; font-size: 9pt; font-weight: 400;  font-style:normal; color: rgb(0, 0, 0); text-decoration:none; text-align: left", "|", "Home", "../special_vbaobjects/cstdesignstudiovbaobjects.htm");
+document.write("<a style=\"font-family: Tahoma; font-size: 9pt; font-weight: 400;  font-style:normal; color: rgb(0, 0, 0); text-decoration:none; text-align: left\" href=\"../special_vbaobjects/cstdesignstudiovbaobjects.htm\">Circuits & Systems VBA<\/a> | <a style=\"font-family: Tahoma; font-size: 9pt; font-weight: 400;  font-style:normal; color: rgb(0, 0, 0); text-decoration:none; text-align: left\" href=\"blockobject.htm\">Component/Modeling<\/a> | Net<\/p>");
+
+}
+else
+        if (window.gbIE4)
+                document.location.reload();
+
+onLoadHandler = function()
+{
+  if (window.setRelStartPage)
+        {
+        setTimeout("setRelStartPage('../index.htm');", 1)
+
+    setTimeout("UpdateBreadCrumbsMarker();", 1);
+        }
+}
+
+if (window.addEventListener){  
+        window.addEventListener('load', onLoadHandler, false);   
+} else if (window.attachEvent){  
+        window.attachEvent('onload', onLoadHandler);  
+}
+
+function onSetStartPage()
+{
+  autoSync(1);
+  sendSyncInfo();
+  sendAveInfoOut();
+}
+//-->
+//]]>
+</script><script type="text/javascript" src="../ehlpdhtm.js" language="JavaScript1.2">
+</script>
+<h1>Net Object</h1>
+<p style="font-family: Arial, sans-serif;">Object refering to the electrical connection topology on the schematic. Use this object to query or manipulate the connection topology.</p>
+<ul>
+<li class="p-VBA-Index-Category">
+<p class="VBA-Index-Category"><a href="#Introduction">Introduction</a></p>
+</li>
+<li class="p-VBA-Index-Category">
+<p class="VBA-Index-Category"><a href="#ComponentPorts">ComponentPorts</a></p>
+</li>
+<li class="p-VBA-Index-Category">
+<p class="VBA-Index-Category"><a href="#General_Methods">Methods</a></p>
+</li>
+<li style="list-style: none; display: inline">
+<ul>
+<li class="p-VBA-Index-Category">
+<p class="VBA-Index-Category"><a href="#General_Methods">General Methods</a></p>
+</li>
+<li class="p-VBA-Index-Category">
+<p class="VBA-Index-Category"><a href="#Getter">Getter</a></p>
+</li>
+<li class="p-VBA-Index-Category">
+<p class="VBA-Index-Category"><a href="#Setter">Setter</a></p>
+</li>
+<li class="p-VBA-Index-Category">
+<p class="VBA-Index-Category"><a href="#Methods for buses">Methods for buses</a></p>
+</li>
+</ul>
+</li>
+<li class="p-VBA-Index-Category">
+<p class="VBA-Index-Category"><a href="#Examples">Examples</a></p>
+</li>
+<li style="list-style: none; display: inline">
+<ul>
+<li class="p-VBA-Index-Category">
+<p class="VBA-Index-Category"><a href="#CreateHyperedge">Connect two blocks with an external port via connection label</a></p>
+</li>
+<li class="p-VBA-Index-Category">
+<p class="VBA-Index-Category"><a href="#busconnection">Establish a bus connection.</a></p>
+</li>
+<li class="p-VBA-Index-Category">
+<p class="VBA-Index-Category"><a href="#nestedarrays">Using built-in "Array" function to define componentports</a></p>
+</li>
+</ul>
+</li>
+</ul>
+<p class="VBA-Heading-Category"><a name="Introduction" id="Introduction"></a>Introduction</p>
+<p class="VBA-Text-Indent">This simple example should help to understand how the net command is used. It shows how a connection between two resistors is created.</p>
+<p class="VBA-Text-Indent">Every electrical net is based on <span style="font-weight: bold; font-style: italic;"><i>componentports</i></span> which need to be defined before creating a new connection.</p>
+<table style="left: 0px; top: 355px; margin-left: 40px; border-collapse: separate; border-collapse: separate;" cellspacing="0" width="616" border="1">
+<col style="width: 51.433%;" />
+<col style="width: 48.567%;" />
+<tr>
+<td>
+<p style="text-align: center;"><img src="../unconnected_resistors.bmp" alt="" style="border: none;" width="310" height="190" border="0" /></p>
+</td>
+<td>
+<p style="text-align: center;"><img src="../connected_resistors.bmp" alt="" style="border: none;" width="310" height="190" border="0" /></p>
+</td>
+</tr>
+</table>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Text-Example" style="margin-left: 40px;">'First we define the array which contains all componentports that should be connected to each other.</p>
+<p class="VBA-Text-Example" style="margin-left: 40px;">'VBA-arrays are zero based. This array has two dimensions with the size 2 and 3:</p>
+<p class="VBA-Text-Example" style="margin-left: 40px;">Dim Componentports(1,2) As Variant</p>
+<p class="VBA-Text-Example" style="margin-left: 40px;">&#160;</p>
+<p class="VBA-Text-Example" style="margin-left: 40px;">'Each componentport contains the component-type</p>
+<p class="VBA-Text-Example" style="margin-left: 40px;">Componentports(0,0) = "Block"</p>
+<p class="VBA-Text-Example" style="margin-left: 40px;">&#160;</p>
+<p class="VBA-Text-Example" style="margin-left: 40px;">'the name as shown in the Navigation Tree</p>
+<p class="VBA-Text-Example" style="margin-left: 40px;">Componentports(0,1) = "RES1"</p>
+<p class="VBA-Text-Example" style="margin-left: 40px;">&#160;</p>
+<p class="VBA-Text-Example" style="margin-left: 40px;">'and the port index.</p>
+<p class="VBA-Text-Example" style="margin-left: 40px;">'Be aware that the portindex does not correspond to the pinname shown on the schematic</p>
+<p class="VBA-Text-Example" style="margin-left: 40px;">Componentports(0,2) = 1</p>
+<p class="VBA-Text-Example" style="margin-left: 40px;">&#160;</p>
+<p class="VBA-Text-Example" style="margin-left: 40px;">'Now we define the second componentport</p>
+<p class="VBA-Text-Example" style="margin-left: 40px;">Componentports(1,0) = "Block"</p>
+<p class="VBA-Text-Example" style="margin-left: 40px;">Componentports(1,1) = "RES2"</p>
+<p class="VBA-Text-Example" style="margin-left: 40px;">Componentports(1,2) = 0</p>
+<p class="VBA-Text-Example" style="margin-left: 40px;">&#160;</p>
+<p class="VBA-Text-Example" style="margin-left: 40px;">With Net</p>
+<p class="VBA-Text-Example" style="margin-left: 80px;">.Reset</p>
+<p class="VBA-Text-Example" style="margin-left: 80px;">.AddComponentPorts("",Componentports,False)</p>
+<p class="VBA-Text-Example" style="margin-left: 80px;">.Apply</p>
+<p class="VBA-Text-Example" style="margin-left: 40px;">End With</p>
+<p class="VBA-Heading-Category"><a name="ComponentPorts" id="ComponentPorts"></a>ComponentPorts</p>
+<p class="VBA-Text-Indent"><span style="font-weight: bold; font-style: italic;"><i>Componentports</i></span> are electrical connection end points (usually a pin of a block can be represented by a <span style="font-weight: bold; font-style: italic;"><i>componentport</i></span>).</p>
+<p class="VBA-Text-Indent">The Net command allows creating electrical connection topologies by defining which <span style="font-weight: bold; font-style: italic;"><i>componentports</i></span> should be connected to each other.</p>
+<p class="VBA-Text-Indent">A ComponentPort is made up of three entries the componenttype the componentname and the portindex.</p>
+<p class="Tip-Note-Heading">Single ComponentPort</p>
+<p class="VBA-Text-Indent">In the VBA context a single ComponentPort is an one dimensional <a href="../common_vbageneral/common_general_variant_ref.htm" id="a9" style="font-weight: normal; font-style: normal;" name="a9">variant_array</a> with the size 3 consisting of the two <a href="../common_vbageneral/common_general_string.htm" id="a3813" style="font-weight: normal; font-style: normal;" name="a3813">strings</a> and an <a href="../common_vbageneral/common_general_integer.htm" id="a381" style="font-weight: normal; font-style: normal;" name="a381">integer</a>.</p>
+<p class="VBA-Text-Indent">The first entry defines the componenttype which is defined by a case insensitive string. The second entry the componentname and the last entry defines the port (using the portindex) of the component.</p>
+<table style="margin-left: 24px; left: 0px; top: 325px;" cellspacing="0" width="650">
+<col />
+<col width="114" />
+<col width="154" />
+<col />
+<tr style="vertical-align: top;">
+<th style="border: Solid 1px #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;" width="100">
+<p class="VBA-Text">Component</p>
+</th>
+<th style="border-top: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;">
+<p class="VBA-Text">componenttype</p>
+</th>
+<th style="border-top: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;">
+<p class="VBA-Text">componentname</p>
+</th>
+<th style="border-top: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;" width="400">
+<p class="VBA-Text">portindex</p>
+</th>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;" width="100">
+<p class="VBA-Text">Block</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;">
+<p class="VBA-Text">"Block"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;">
+<p class="VBA-Text">Name of the block as displayed in the tree.</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;" width="100">
+<p class="VBA-Text">Portindex as displayed in the layout-widget. Alternatively the portindex can also be retrieved using the Blockcommand .GetPortIndex.</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;" width="100">
+<p class="VBA-Text">External Port</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;">
+<p class="VBA-Text">"Externalport"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;">
+<p class="VBA-Text">Name of the external port as displayed in the tree.</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;" width="100">
+<p class="VBA-Text">Portindex of an external port is always 0, and 1 for the differential port. For the special case of external bus ports use ConnectPins (see examples).</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;" width="100">
+<p class="VBA-Text">Probe</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;">
+<p class="VBA-Text">"Probe"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;">
+<p class="VBA-Text">Name of the probe as displayed in the tree.</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;" width="100">
+<p class="VBA-Text">Non-bus-probes are referenced by the portindices 0 and 1. For bus-probes use ConnectPins (see examples).</p>
+</td>
+</tr>
+</table>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="Tip-Note-Heading">ComponentPort Array</p>
+<p class="VBA-Text-Indent">An array of ComponentPorts is a two dimensional <a href="../common_vbageneral/common_general_variant_ref.htm" id="a9" style="font-weight: normal; font-style: normal;" name="a9">variant_array</a> and referenced in the methods as <span style="font-weight: bold; font-style: italic;"><i>componentports</i></span> .</p>
+<p class="VBA-Heading-Category"><a name="General_Methods" id="General_Methods"></a>General Methods</p>
+<p class="VBA-Heading-Method">Apply</p>
+<p class="VBA-Text-Indent">Applies all accumulated changes to the electrical connection topology to the schematic.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">Reset</p>
+<p class="VBA-Text-Indent">Gets the current connection topology of the schematic and resets all accumulated changes that have not been applied, yet.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">DoesExist ( <a href="../common_vbageneral/common_general_name.htm" id="a9" style="font-weight: normal; font-style: normal;" name="a9">name</a> <span style="font-style: italic;"><i>netname</i></span> ) <a href="../common_vbageneral/common_general_bool_data_type.htm" id="a38" style="font-weight: normal; font-style: normal;" name="a38">bool</a></p>
+<p class="VBA-Text-Indent">Returns True if a net with <span style="font-style: italic; font-weight: bold;"><i>netname</i></span> exists.</p>
+<p class="VBA-Heading-Category"><a name="Getter" id="Getter"></a>Getter</p>
+<p class="VBA-Heading-Method">GetNetName ( <a href="../common_vbageneral/common_general_variant_ref.htm" id="a9" style="font-weight: normal; font-style: normal;" name="a9">variant_array</a> <span style="font-style: italic;"><i>componentport</i></span> ) <a href="../common_vbageneral/common_general_string.htm" id="a38" style="font-weight: normal; font-style: normal;" name="a38">string</a></p>
+<p class="VBA-Text-Indent">Returns the netname of the net the given <span style="font-style: italic; font-weight: bold;"><i>componentport</i></span> is part of. If it is not connected an empty string is returned.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">GetNetNameByIndex ( <a href="../common_vbageneral/common_general_integer.htm" id="a9" style="font-weight: normal; font-style: normal;" name="a9">int</a> <span style="font-style: italic;"><i>netIndex</i></span> ) <a href="../common_vbageneral/common_general_string.htm" id="a38" style="font-weight: normal; font-style: normal;" name="a38">string</a></p>
+<p class="VBA-Text-Indent">Returns the netname of the net by the given index. If the given index is smaller than 0 or does not exist an empty string is returned.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">GetNumberOfNets () <span><a href="../common_vbageneral/common_general_integer.htm" id="a381" style="font-weight: normal; font-style: normal;" name="a381">int</a></span></p>
+<p class="VBA-Text-Indent">Returns the number of all nets in the schematic.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">GetNumberOfSubnets ( <span><a href="../common_vbageneral/common_general_name.htm" id="a91" style="font-weight: normal; font-style: normal;" name="a91">name</a></span> <span style="font-style: italic;"><i>netname</i></span>) <span><a href="../common_vbageneral/common_general_integer.htm" id="a381" style="font-weight: normal; font-style: normal;" name="a381">int</a></span></p>
+<p class="VBA-Text-Indent">Returns the number of subnets the given net consists of.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">GetSubnetIndex (&#160;<a href="../common_vbageneral/common_general_variant_ref.htm" id="a92" style="font-weight: normal; font-style: normal;" name="a92">variant_array</a> <span style="font-style: italic;"><i>componentport</i></span> ) <a href="../common_vbageneral/common_general_integer.htm" id="a3811" style="font-weight: normal; font-style: normal;" name="a3811">int</a></p>
+<p class="VBA-Text-Indent">Returns the subnetindex the <span style="font-weight: bold; font-style: italic;"><i>componentport</i></span> is part of. If it is not part of any net -1 is returned.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">GetComponentPorts(&#160;<span><a href="../common_vbageneral/common_general_name.htm" id="a921" style="font-weight: normal; font-style: normal;" name="a921">name</a></span> <span style="font-style: italic;"><i>netname,</i></span> <span><a href="../common_vbageneral/common_general_integer.htm" id="a9211" style="font-weight: normal; font-style: normal;" name="a9211">int</a></span> <span style="font-style: italic;"><i>subnetindex</i></span> ) <span><a href="../common_vbageneral/common_general_variant.htm" id="a38111" style="font-weight: normal; font-style: normal;" name="a38111">variant_array</a></span></p>
+<p class="VBA-Text-Indent">Returns all componentports which are part of the specific subnet of the given net. If <span style="font-weight: bold; font-style: italic;"><i>subnetindex</i></span> is -1 componentports of the whole net are returned.</p>
+<p class="VBA-Heading-Category"><a name="Setter" id="Setter"></a>Setter</p>
+<p class="VBA-Heading-Method">Delete( <span><a href="../common_vbageneral/common_general_name.htm" id="a911" style="font-weight: normal; font-style: normal;" name="a911">name</a></span> <span style="font-style: italic;"><i>netname</i></span> )</p>
+<p class="VBA-Text-Indent">Deletes the electrical net with given <span style="font-weight: bold; font-style: italic;"><i>netname</i></span>.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">AddComponentPorts( <a href="../common_vbageneral/common_general_name.htm" id="a912" style="font-weight: normal; font-style: normal;" name="a912">name</a> <span style="font-style: italic;"><i>netname, <a href="../common_vbageneral/common_general_variant_ref.htm" id="a922" style="font-weight: normal; font-style: normal;" name="a922">variant_array</a> componentports,</i></span> <span><a href="../common_vbageneral/common_general_bool_data_type.htm" id="a923" style="font-weight: normal; font-style: normal;" name="a923">bool</a></span> <span style="font-style: italic;"><i>createNewSubnet</i></span> ) <span><a href="../common_vbageneral/common_general_string.htm" id="a3813" style="font-weight: normal; font-style: normal;" name="a3813">string</a></span></p>
+<p class="VBA-Text-Indent">Adds all given <span style="font-weight: bold; font-style: italic;"><i>componentports</i></span> to the electrical net with name: <span style="font-weight: bold; font-style: italic;"><i>netname</i></span>. If <span style="font-weight: bold; font-style: italic;"><i>netname</i></span> contains an empty string a new net is created.</p>
+<p class="VBA-Text-Indent">If <span style="font-weight: bold; font-style: italic;"><i>createNewSubnet</i></span> is True the given <span style="font-weight: bold; font-style: italic;"><i>componentports</i></span> will be graphically split in its own subnet with a connection label attached.</p>
+<p class="VBA-Text-Indent">Adding <span style="font-weight: bold; font-style: italic;"><i>componentports</i></span> &#160;which are already part of another net, always removes them from their original net and adds them to the currently used one.</p>
+<p class="VBA-Text-Indent">Returns the netname of the currently processed net, in case a new one got created a new name is generated and returned.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">AddToSubnet( <a href="../common_vbageneral/common_general_variant_ref.htm" id="a924" style="font-weight: normal; font-style: normal;" name="a924">variant_array</a> <span style="font-style: italic;"><i>componentports,</i></span> <a href="../common_vbageneral/common_general_name.htm" id="a913" style="font-weight: normal; font-style: normal;" name="a913">name</a> <span style="font-style: italic;"><i>netname,</i></span> <span><a href="../common_vbageneral/common_general_integer.htm" id="a925" style="font-weight: normal; font-style: normal;" name="a925">int</a></span> <span style="font-style: italic;"><i>subnetindex</i></span> ) <span><a href="../common_vbageneral/common_general_bool_data_type.htm" id="a3814" style="font-weight: normal; font-style: normal;" name="a3814">bool</a></span></p>
+<p class="VBA-Text-Indent">Adds <span style="font-style: italic; font-weight: bold;"><i>componentports</i></span> <span style="font-style: italic;"><i>t</i></span>o the given <span style="font-weight: bold; font-style: italic;"><i>netname</i></span>/<span style="font-weight: bold; font-style: italic;"><i>subnetindex</i></span> combination. Returns True if connections were created.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">RemoveComponentPorts( <span style="font-weight: normal;"><a href="../common_vbageneral/common_general_variant_ref.htm" id="a9241" style="font-weight: normal; font-style: normal;" name="a9241">variant_array</a></span> <span style="font-style: italic;"><i>componentports,</i></span> <span><a href="../common_vbageneral/common_general_name.htm" id="a914" style="font-weight: normal; font-style: normal;" name="a914">name</a></span> <span style="font-style: italic;"><i>netname )</i></span></p>
+<p class="VBA-Text-Indent">Removes <span style="font-weight: bold; font-style: italic;"><i>componentports</i></span> <span>from any net</span></p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">MergeSubNets( <span><a href="../common_vbageneral/common_general_name.htm" id="a915" style="font-weight: normal; font-style: normal;" name="a915">name</a></span> <span style="font-style: italic;"><i>netname</i></span> )</p>
+<p class="VBA-Text-Indent">Deletes all connection labels of given net and directly connects all componentports of it.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">Rename( <a href="../common_vbageneral/common_general_name.htm" id="a917" style="font-weight: normal; font-style: normal;" name="a917">name</a> <span style="font-style: italic;"><i>oldnetname,</i></span> <a href="../common_vbageneral/common_general_name.htm" id="a9171" style="font-weight: normal; font-style: normal;" name="a9171">name</a> <span style="font-style: italic;"><i>newnetname</i></span> )</p>
+<p class="VBA-Text-Indent">Renames the net with <span style="font-weight: bold; font-style: italic;"><i>oldnetname</i></span> into n<span style="font-weight: bold; font-style: italic;"><i>ewnetnam</i></span>e.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">ShowNetNameLabel( <a href="../common_vbageneral/common_general_name.htm" id="a916" style="font-weight: normal; font-style: normal;" name="a916">name</a> <span style="font-style: italic;"><i>netname,</i></span> <span><a href="../common_vbageneral/common_general_bool_data_type.htm" id="a9242" style="font-weight: normal; font-style: normal;" name="a9242">bool</a></span> <span style="font-style: italic;"><i>showLabel</i></span> )</p>
+<p class="VBA-Text-Indent">Adds a conncetion label to the given net if <span style="font-weight: bold; font-style: italic;"><i>showLabel</i></span> is True.</p>
+<p class="VBA-Text-Indent"><span>(Only relevant for nets with a single subnet, all nets consisting of more than one subnet already have connection labels attached to them)</span></p>
+<p class="VBA-Heading-Category"><a name="Methods for buses"></a>Methods for buses</p>
+<p class="VBA-Heading-Method">ConnectPins( <span style="font-weight: normal;"><a href="../common_vbageneral/common_general_variant_ref.htm" id="a92411" style="font-weight: normal; font-style: normal;" name="a92411">variant_array</a></span> <span style="font-style: italic;"><i>componentpins</i></span> )</p>
+<p class="VBA-Text-Indent">Establishes bus-connection of two unconnected <span style="font-style: italic; font-weight: bold;"><i>componentpins</i></span>.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">RemoveConnection( <span style="font-weight: normal;"><a href="../common_vbageneral/common_general_variant_ref.htm" id="a92412" style="font-weight: normal; font-style: normal;" name="a92412">variant_array</a></span> <span style="font-style: italic;"><i>componentpins</i></span> )</p>
+<p class="VBA-Text-Indent">Removes the connection (if any) between the given <span style="font-style: italic; font-weight: bold;"><i>componentpins</i></span>.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Category"><a name="Examples" id="Examples"></a>Examples</p>
+<p class="VBA-Text-Example"><a name="CreateHyperedge" id="CreateHyperedge"></a>'Connect two blocks with an external port via connection label.</p>
+<table style="border-collapse: separate; border-collapse: separate;" cellspacing="0" width="60.866%" border="1">
+<col style="width: 36.382%;" />
+<col style="width: 55.556%;" />
+<tr style="height: 187px;">
+<td>
+<p style="text-align: center;"><img src="../unconnected_netexample.bmp" alt="" style="border: none;" width="297" height="182" border="0" /></p>
+</td>
+<td>
+<p style="text-align: center;"><img src="../connected_netexample.bmp" alt="" style="border: none;" width="361" height="222" border="0" /></p>
+</td>
+</tr>
+</table>
+<p class="VBA-Text-Example">&#160;</p>
+<p class="VBA-Text-Example">'VBA arrays are zero-based. Subnet1 contains 2 componentports and Subnet2 1.</p>
+<p class="VBA-Text-Example">Dim Subnet1(1,2) As Variant</p>
+<p class="VBA-Text-Example">Dim Subnet2(0,2) As Variant</p>
+<p class="VBA-Text-Example">&#160;</p>
+<p class="VBA-Text-Example">Dim GeneratedNetName As String</p>
+<p class="VBA-Text-Example">&#160;</p>
+<p class="VBA-Text-Example">'First Block componentport</p>
+<p class="VBA-Text-Example">Subnet1(0,0) = "BLOCK"</p>
+<p class="VBA-Text-Example">Subnet1(0,1) = "RES2"</p>
+<p class="VBA-Text-Example">Subnet1(0,2) = 0</p>
+<p class="VBA-Text-Example">&#160;</p>
+<p class="VBA-Text-Example">'Second Block comoponentport</p>
+<p class="VBA-Text-Example">Subnet1(1,0) = "BLOCK"</p>
+<p class="VBA-Text-Example">Subnet1(1,1) = "RES1"</p>
+<p class="VBA-Text-Example">Subnet1(1,2) = 0</p>
+<p class="VBA-Text-Example">&#160;</p>
+<p class="VBA-Text-Example">'External Port componentport</p>
+<p class="VBA-Text-Example">Subnet2(0,0) = "EXTERNALPORT"</p>
+<p class="VBA-Text-Example">Subnet2(0,1) = "1"</p>
+<p class="VBA-Text-Example">Subnet2(0,2) = 0</p>
+<p class="VBA-Text-Example">&#160;</p>
+<p class="VBA-Text-Example">With Net</p>
+<p class="VBA-Text-Example" style="margin-left: 40px;">.Reset</p>
+<p class="VBA-Text-Example" style="margin-left: 40px;">'Create first subnet, new net is generated and netname returned.</p>
+<p class="VBA-Text-Example" style="margin-left: 40px;">GeneratedNetName = .AddComponentPorts("", Subnet1, False)</p>
+<p class="VBA-Text-Example" style="margin-left: 40px;">'Add a second subnet containing the external port with name "1"</p>
+<p class="VBA-Text-Example" style="margin-left: 40px;">.AddComponentPorts(GeneratedNetName, Subnet2, True)</p>
+<p class="VBA-Text-Example" style="margin-left: 40px;">&#160;</p>
+<p class="VBA-Text-Example" style="margin-left: 40px;">.Apply</p>
+<p class="VBA-Text-Example">End With</p>
+<p class="VBA-Text-Example">&#160;</p>
+<p class="VBA-Text-Example">&#160;</p>
+<p class="VBA-Text-Example"><a name="busconnection" id="busconnection"></a>'Establish a bus connection</p>
+<p class="VBA-Text-Example">&#160;</p>
+<p class="VBA-Text-Example">Dim ComponentPins(1,2) As Variant</p>
+<p class="VBA-Text-Example">&#160;</p>
+<p class="VBA-Text-Example">'First Block componentpin (now we need the pin-index)</p>
+<p class="VBA-Text-Example">Subnet1(0,0) = "BLOCK"</p>
+<p class="VBA-Text-Example">Subnet1(0,1) = "MWSSCHEM1"</p>
+<p class="VBA-Text-Example">Subnet1(0,2) = 0</p>
+<p class="VBA-Text-Example">&#160;</p>
+<p class="VBA-Text-Example">'Second ExternalPort comoponentpin</p>
+<p class="VBA-Text-Example">'The buspin has always the pinindex 0, and the differential pin always 1.</p>
+<p class="VBA-Text-Example">Subnet1(1,0) = "EXTERNALPORT"</p>
+<p class="VBA-Text-Example">Subnet1(1,1) = "BusPort1"</p>
+<p class="VBA-Text-Example">Subnet1(1,2) = 0</p>
+<p class="VBA-Text-Example">&#160;</p>
+<p class="VBA-Text-Example">With Net</p>
+<p class="VBA-Text-Example" style="margin-left: 40px;">.Reset</p>
+<p class="VBA-Text-Example" style="margin-left: 40px;">.ConnectPins(ComponentPins)</p>
+<p class="VBA-Text-Example" style="margin-left: 40px;">.Apply</p>
+<p class="VBA-Text-Example">End With</p>
+<p class="VBA-Text-Example">&#160;</p>
+<p class="VBA-Text-Example">&#160;</p>
+<p class="VBA-Text-Example"><a name="nestedarrays" id="nestedarrays"></a>'Using built-in "Array"-function to define componentports</p>
+<p class="VBA-Text-Example">&#160;</p>
+<p class="VBA-Text-Example">Dim test As Variant</p>
+<p class="VBA-Text-Example">test = Array(Array("B", "RES1", 1), Array("B", "RES2", 0), Array("B", "RES3", 0))</p>
+<p class="VBA-Text-Example">&#160;</p>
+<p class="VBA-Text-Example">With Net</p>
+<p class="VBA-Text-Example" style="margin-left: 40px;">.Reset</p>
+<p class="VBA-Text-Example" style="margin-left: 40px;">.AddComponentPorts("", test, False)</p>
+<p class="VBA-Text-Example" style="margin-left: 40px;">.AddComponentPorts("", Array(Array("B", "RES1", 0), Array("B", "RES3", 1)), False)</p>
+<p class="VBA-Text-Example" style="margin-left: 40px;">.Apply</p>
+<p class="VBA-Text-Example">End With</p>
+<p class="VBA-Text-Example">&#160;</p>
+<div style="width: 100%; position: relative;" id="footer">
+<p style="border-bottom: Solid 1px #dddddd; text-align: Left; margin-left: 0px; font-family: Arial, sans-serif; line-height: Normal; margin-top: 9px; margin-right: 0px; margin-bottom: 6px; border-left-width: 1px; border-top-width: 1px; border-right-width: 1px;"><span style="text-align: Left; font-family: Arial, sans-serif; line-height: Normal;">&#160;</span></p>
+<table cellspacing="0" width="100%">
+<col style="width: 50%;" />
+<col style="width: 50%;" />
+<tr>
+<td style="vertical-align: Top;"><span style="font-family: Arial, sans-serif; line-height: Normal; font-size: 8pt;"><font size="1" style="font-size:8pt;">CST Studio Suite 2026</font></span></td>
+<td style="vertical-align: Top;">
+<p style="text-align: right;"><img src="../3ds.png" alt="" style="border: none;" border="0" /></p>
+</td>
+</tr>
+</table>
+<p>&#160;</p>
+</div>
+<script type="text/javascript" language="javascript1.2">
+//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+        writeIntopicBar(0);
+
+
+highlightSearch();
+//-->
+//]]>
+</script>
+</body>
+</html>

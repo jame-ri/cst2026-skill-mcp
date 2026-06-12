@@ -1,0 +1,528 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="Adobe RoboHelp 11" />
+<title>PICSolver Object</title>
+<link rel="StyleSheet" href="../online_help_vba.css" type="text/css" />
+<style type="text/css">
+/*<![CDATA[*/
+<!--
+body { border-bottom-style:None; }
+-->
+/*]]>*/
+</style>
+
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+        origWidth = innerWidth;
+        origHeight = innerHeight;
+        onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+/*<![CDATA[*/
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+-->
+/*]]>*/
+</style>
+
+<script type="text/javascript" language="javascript1.2" src="../whmsg.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript" src="../whver.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript1.2" src="../whutils.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript1.2" src="../whproxy.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript1.2" src="../whlang.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript1.2" src="../whtopic.js" charset="utf-8">
+</script>
+</head>
+<body>
+<script type="text/javascript" language="javascript1.2">
+//<![CDATA[
+<!--
+if (window.gbWhTopic)
+{
+        var strUrl = document.location.href;
+        var bc = 0;
+        var n = strUrl.toLowerCase().indexOf("bc-");
+        if(n != -1)
+        {
+                document.location.replace(strUrl.substring(0, n));
+                bc = strUrl.substring(n+3);
+        }
+
+        if (window.addTocInfo)
+        {
+        addTocInfo("3D Simulation VBA\nVBA Objects\nSolver\nParticles\nPICSolver");
+
+        }
+        if (window.writeBtnStyle)
+                writeBtnStyle();
+
+        if (window.writeIntopicBar)
+                writeIntopicBar(0);
+
+        
+        document.write("<p style=\"font-family: Tahoma; font-size: 9pt; font-weight: 400;  font-style:normal; color: rgb(0, 0, 0); text-decoration:none; text-align: left\"> ");
+AddMasterBreadcrumbs("../index.htm", "font-family: Tahoma; font-size: 9pt; font-weight: 400;  font-style:normal; color: rgb(0, 0, 0); text-decoration:none; text-align: left", "|", "Home", "../special_vbaobjects/special_vbaobjects_vbaobjects.htm");
+document.write("<a style=\"font-family: Tahoma; font-size: 9pt; font-weight: 400;  font-style:normal; color: rgb(0, 0, 0); text-decoration:none; text-align: left\" href=\"../special_vbaobjects/special_vbaobjects_vbaobjects.htm\">3D Simulation VBA<\/a> | <a style=\"font-family: Tahoma; font-size: 9pt; font-weight: 400;  font-style:normal; color: rgb(0, 0, 0); text-decoration:none; text-align: left\" href=\"../special_vbaobjects/special_vbaobjects_vbaobjects.htm\">VBA Objects<\/a> | <a style=\"font-family: Tahoma; font-size: 9pt; font-weight: 400;  font-style:normal; color: rgb(0, 0, 0); text-decoration:none; text-align: left\" href=\"../special_vbasolver/special_vbasolver_background_object.htm\">Solver<\/a> | <a style=\"font-family: Tahoma; font-size: 9pt; font-weight: 400;  font-style:normal; color: rgb(0, 0, 0); text-decoration:none; text-align: left\" href=\"../special_vbasolver/special_vbasolver_solver_object.htm#bc-1\">Particles<\/a> | PICSolver<\/p>");
+
+}
+else
+        if (window.gbIE4)
+                document.location.reload();
+
+onLoadHandler = function()
+{
+  if (window.setRelStartPage)
+        {
+        setTimeout("setRelStartPage('../index.htm');", 1)
+
+    setTimeout("UpdateBreadCrumbsMarker();", 1);
+        }
+}
+
+if (window.addEventListener){  
+        window.addEventListener('load', onLoadHandler, false);   
+} else if (window.attachEvent){  
+        window.attachEvent('onload', onLoadHandler);  
+}
+
+function onSetStartPage()
+{
+  autoSync(1);
+  sendSyncInfo();
+  sendAveInfoOut();
+}
+//-->
+//]]>
+</script><script type="text/javascript" src="../ehlpdhtm.js" language="JavaScript1.2">
+</script>
+<table cellspacing="0" width="100%">
+<col style="width: 50%;" />
+<col style="width: 50%;" />
+<tr>
+<td style="vertical-align: middle; padding-top: 5px; padding-bottom: 5px;">
+<p style="margin-top: 0px; margin-bottom: 0px;"><img src="../3ds.png" alt="" style="border: none;" border="0" /></p>
+</td>
+<td style="vertical-align: middle;">
+<p style="text-align: right;"><a href="https://www.3ds.com/products-services/3dexperience/" target="_blank"><img src="../3dexp.png" alt="" style="border: none;" width="32" height="32" border="0" /></a></p>
+</td>
+</tr>
+</table>
+<p class="VBA-Heading-Object">PICSolver Object</p>
+<p class="VBA-Text">The PICSolver object defines all the settings that control the simulations with the Particle-in-cell (<span style="font-weight: bold;">PIC</span>) solver.</p>
+<p class="VBA-Text" style="font-weight: bold; margin-left: 21px;">&#160;</p>
+<p class="VBA-Text" style="font-weight: bold; margin-left: 21px;">General</p>
+<ul>
+<li class="p-VBA-Index-Category">
+<p class="VBA-Index-Category"><a href="#General Methods">General Methods</a></p>
+</li>
+<li class="p-VBA-Index-Category">
+<p class="VBA-Index-Category"><a href="#Mesh">Mesh</a></p>
+</li>
+<li class="p-VBA-Index-Category">
+<p class="VBA-Index-Category"><a href="#Queries">Queries</a></p>
+</li>
+<li class="p-VBA-Index-Category">
+<p class="VBA-Index-Category"><a href="#Defaults">Defaults</a></p>
+</li>
+</ul>
+<p class="VBA-Text" style="margin-left: 22px; font-weight: bold;">PIC Solver Settings</p>
+<ul>
+<li class="p-VBA-Index-Category">
+<p class="VBA-Index-Category"><a href="#PIC Solver General">General</a></p>
+</li>
+<li class="p-VBA-Index-Category">
+<p class="VBA-Index-Category"><a href="#PIC Solver Transient Excitation">Transient Excitation</a></p>
+</li>
+<li class="p-VBA-Index-Category">
+<p class="VBA-Index-Category"><a href="#PIC_Solver_Static_Excitation">Static Excitation</a></p>
+</li>
+<li class="p-VBA-Index-Category">
+<p class="VBA-Index-Category"><a href="#PIC_Solver_Waveguide_Ports">Waveguide Ports</a></p>
+</li>
+<li class="p-VBA-Index-Category">
+<p class="VBA-Index-Category"><a href="#PIC Solver Lossy Metal">Lossy Metal</a></p>
+</li>
+<li class="p-VBA-Index-Category">
+<p class="VBA-Index-Category"><a href="#PIC_Solver_Mesh">Mesh</a></p>
+</li>
+<li class="p-VBA-Index-Category">
+<p class="VBA-Index-Category"><a href="#PIC_Solver_Defaults">Defaults</a></p>
+</li>
+<li class="p-VBA-Index-Category">
+<p class="VBA-Index-Category"><a href="#PIC_Solver_Examples">Examples</a></p>
+</li>
+</ul>
+<p class="VBA-Heading-Category"><a name="General Methods"></a>General Methods</p>
+<p class="VBA-Heading-Method">FrequencyRange ( <a href="../common_vbageneral/common_general_double.htm" id="a1" style="font-weight: normal;" name="a1">double</a> <span style="font-style: italic;"><i>fmin,</i></span> <a href="../common_vbageneral/common_general_double.htm" id="a2" style="font-weight: normal;" name="a2">double</a> <span style="font-style: italic;"><i>fmax</i></span> )</p>
+<p class="VBA-Text-Indent">Sets the frequency range for the simulation. Changing the frequency range has several side effects. The mesh will be changed and all previous simulation results will be deleted. However, before the frequency range is actually changed, a dialog window will appear that asks to save the old results to another file.</p>
+<p class="VBA-Heading-Category"><a name="Mesh" id="Mesh"></a>Mesh</p>
+<p class="VBA-Heading-Method">PBAFillLimit ( <a href="../common_vbageneral/common_general_double.htm" id="a48" style="font-weight: normal;" name="a48">double</a> <span style="font-style: italic;"><i>percentage</i></span> )</p>
+<p class="VBA-Text-Indent">Defines when a cell should be treated as entirely filled with Perfectly Conducting Material (PEC). So if a cell is filled with more than <span style="font-style: italic;"><i>percentage</i></span> of the cell with PEC, the entire Cell will be filled with PEC. For other materials this setting has no effect. Generally, this setting should not be changed.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">AlwaysExcludePec ( <span><a href="../common_vbageneral/common_general_bool_data_type.htm" id="a79" style="font-weight: normal;" name="a79">bool</a></span> <span style="font-style: italic;"><i>flag</i></span> )</p>
+<p class="VBA-Text-Indent">This method offers the possibility to automatically exclude all PEC regions from the calculation. In case that large PEC regions exist this option may produce a significant speed-up of the simulation.</p>
+<p class="VBA-Heading-Category"><a name="Queries" id="Queries"></a>Queries</p>
+<p class="VBA-Heading-Method">GetFmin <a href="../common_vbageneral/common_general_double.htm" id="a96" style="font-weight: normal;" name="a96">double</a></p>
+<p class="VBA-Text-Indent">Returns the minimum defined frequency.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">GetFmax <a href="../common_vbageneral/common_general_double.htm" id="a95" style="font-weight: normal;" name="a95">double</a></p>
+<p class="VBA-Text-Indent">Returns the maximum defined frequency.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">GetNumberOfPorts <a href="../common_vbageneral/common_general_integer.htm" id="a98" style="font-weight: normal;" name="a98">int</a></p>
+<p class="VBA-Text-Indent">Returns the number of defined Ports.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">ArePortsSubsequentlyNamed <a href="../common_vbageneral/common_general_bool_data_type.htm" id="a99" style="font-weight: normal;" name="a99">bool</a></p>
+<p class="VBA-Text-Indent">Inquires whether the ports are consecutively numbered or not. If they are, the total number of ports equals to the last port name. Otherwise the last name might be higher.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">GetStimulationPort <a href="../common_vbageneral/common_general_integer.htm" id="a100" style="font-weight: normal;" name="a100">int</a></p>
+<p class="VBA-Text-Indent">Returns -1, if ports = All, 0 if ports = Selected Ports and -2, if plane wave excitation is active.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">GetStimulationMode <a href="../common_vbageneral/common_general_integer.htm" id="a101" style="font-weight: normal;" name="a101">int</a></p>
+<p class="VBA-Text-Indent">Returns 0, if stimulation port is not a wave guide port, returns -1, if modes = All and if there is a wave guide port.</p>
+<p class="VBA-Heading-Category"><a name="Defaults" id="Defaults"></a>Defaults</p>
+<p class="VBA-Text-Example">PBAFillLimit (99)</p>
+<p class="VBA-Heading-Category"><a name="PIC Solver General"></a>PIC Solver General</p>
+<p class="VBA-Heading-Method">Start <a href="../common_vbageneral/common_general_integer.htm" id="a56" style="font-weight: normal;" name="a56">int</a></p>
+<p class="VBA-Text-Indent">Starts the PIC Simulation with the current settings and returns 1 if the calculation is successfully finished and 0 if it failed.</p>
+<p class="VBA-Heading-Method">&#160;</p>
+<p class="VBA-Heading-Method">SimulationTime ( <a href="../common_vbageneral/common_general_double.htm" id="a3" style="font-weight: normal;" name="a3">double</a> <span style="font-style: italic;"><i>value</i></span> )</p>
+<p class="VBA-Text-Indent">Sets the total simulation time for the particle in cell simulation.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method" style="margin-right: -71px;">AvoidSpaceChargeAtPEC ( <a href="../common_vbageneral/common_general_bool_data_type.htm" id="a12" style="font-weight: normal;" name="a12">bool</a> <span style="font-style: italic;"><i>flag</i></span> )</p>
+<p class="VBA-Text-Indent">If <span style="font-style: italic;"><i>flag</i></span> is true, possible non-physical space charge at PEC bodies due to emission and/or collision of particles is avoided.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">ThermalCoupling ( <a href="../common_vbageneral/common_general_bool_data_type.htm" id="a37" style="font-weight: normal;" name="a37">bool</a> <span style="font-style: italic;"><i>flag</i></span>, <a href="../common_vbageneral/common_general_bool_data_type.htm" id="a38" style="font-weight: normal;" name="a38">bool</a> &#160;<span style="font-style: italic;"><i>bUseSimulationTime</i></span>, <a href="../common_vbageneral/common_general_double.htm" id="a39" style="font-weight: normal;" name="a39">double</a> <span style="font-style: italic;"><i>starttime</i></span>, <a href="../common_vbageneral/common_general_double.htm" id="a40" style="font-weight: normal;" name="a40">double</a> <span style="font-style: italic;"><i>endtime</i></span> )</p>
+<p class="VBA-Text-Indent">Calculates a time-averaged power due to particle collisions with solids and write the data to a file. The data can be used to drive a thermal calculation. One can select whether the simulation time or a user-defined interval should be used for the power averaging.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method" style="margin-right: -71px;">UseBBPortDecomposition ( <a href="../common_vbageneral/common_general_bool_data_type.htm" id="a121" style="font-weight: normal;" name="a121">bool</a> <span style="font-style: italic;"><i>flag</i></span> )</p>
+<p class="VBA-Text-Indent">Enables or disables the broadband decomposition for homogeneous ports..</p>
+<p class="VBA-Heading-Method" style="margin-right: -71px;">&#160;</p>
+<p class="VBA-Heading-Method" style="margin-right: -71px;">ParticleSolidInteraction ( <a href="../common_vbageneral/common_general_bool_data_type.htm" id="a42" style="font-weight: normal;" name="a42">bool</a> <span style="font-style: italic;"><i>flag,</i></span> <a href="../common_vbageneral/common_general_integer.htm" id="a41" style="font-weight: normal;" name="a41">int</a> <span style="font-style: italic;"><i>nSamples</i></span> )</p>
+<p class="VBA-Text-Indent">Enables or disables the calculation of the collision information during the solver run. If it is enabled, the maximum number of time points that is displayed is specified by <span style="font-style: italic;"><i>nSamples</i></span>.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method" style="margin-right: -71px;">MultipactingSolverStop ( <a href="../common_vbageneral/common_general_bool_data_type.htm" id="a43" style="font-weight: normal;" name="a43">bool</a> <span style="font-style: italic;"><i>enable,</i></span> <a href="../common_vbageneral/common_general_double.htm" id="a45" style="font-weight: normal;" name="a45">double</a> <span style="font-style: italic;"><i>intervals,</i></span> <a href="../common_vbageneral/common_general_double.htm" id="a44" style="font-weight: normal;" name="a44">double</a> <span style="font-style: italic;"><i>width,</i></span> <a href="../common_vbageneral/common_general_double.htm" id="a54" style="font-weight: normal;" name="a54">double</a> <span style="font-style: italic;"><i>base</i></span> )</p>
+<p class="VBA-Text-Indent">If the multipacting detection is enabled, the mean values of the number of generated secondary particles will be compared each time step. The mean values are calculated in time intervals of width <span style="font-style: italic;"><i>width</i></span>. The solver will stop if the mean values increase exponentially. The base of the exponential growth is given by <span style="font-style: italic;"><i>base</i></span>.</p>
+<p class="vba-text-indent">&#160;</p>
+<p class="VBA-Heading-Method">MeshAdaption ( <a href="../common_vbageneral/common_general_bool_data_type.htm" id="a6" style="font-weight: normal;" name="a6">bool</a> <span style="font-style: italic;"><i>flag</i></span> )</p>
+<p class="VBA-Text-Indent">If MeshAdaption is enabled (<span style="font-style: italic;"><i>flag</i></span> = True) several Simulation runs are started to automatically find the optimum mesh for the given problem.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">UseDistributedComputing ( <a href="../common_vbageneral/common_general_bool_data_type.htm" id="a7" style="font-weight: normal;" name="a7">bool</a> <span style="font-style: italic;"><i>flag</i></span> )</p>
+<p class="VBA-Text-Indent">If <span style="font-style: italic;"><i>flag</i></span> is set to True this method enables the distributed calculation of different solver runs across the network.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">StoreTDResultsInCache ( <a href="../common_vbageneral/common_general_bool_data_type.htm" id="a8" style="font-weight: normal;" name="a8">bool</a> <span style="font-style: italic;"><i>flag</i></span> )</p>
+<p class="VBA-Text-Indent">If <span style="font-style: italic;"><i>flag</i></span> is set to True this method stores results of the time domain solver in the result cache.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">FrequencySamples ( <a href="../common_vbageneral/common_general_integer.htm" id="a9" style="font-weight: normal;" name="a9">int</a> <span style="font-style: italic;"><i>nSamples</i></span> )</p>
+<p class="VBA-Text-Indent">Defines the resolution of all frequency domain signals for the next simulation. This setting has no significant influence on the total simulation time. It has only an effect on the Discrete Fourier Transform (DFT) that is used to transform the time domain signals into the frequency domain. <span style="font-style: italic;"><i>nSamples</i></span> will be the total number of frequency samples that the frequency domain signals will have.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">TimeStepStabilityFactor ( <a href="../common_vbageneral/common_general_double.htm" id="a11" style="font-weight: normal;" name="a11">double</a> <span style="font-style: italic;"><i>value</i></span> )</p>
+<p class="VBA-Text-Indent">Specifies a stability factor that is multiplied to the current valid time step. <span style="font-weight: bold;">Note:</span> Normally the current time step is matched to the stability limit, hence values greater than 1 may make the time domain simulation unstable.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">SetPMLType ( <a href="../common_vbageneral/common_general_enum.htm" id="a78" style="font-weight: normal;" name="a78">enum</a> &#160;<span style="font-style: italic;"><i>key</i></span> )</p>
+<p class="VBA-Text-Indent">Define the PML formulation type. The algorithms that can be set are the Convolution PML, which is set using <span style="font-style: italic;"><i>key</i></span> = "ConvPML", &#160;or the Generalized PML theory, which is set using <span style="font-style: italic;"><i>key</i></span> = GTPML.</p>
+<p class="vba-text-indent">&#160;</p>
+<p class="VBA-Heading-Method">MatrixDump ( <a href="../common_vbageneral/common_general_bool_data_type.htm" id="a154" style="font-weight: normal;" name="a154">bool</a> <span style="font-style: italic;"><i>flag</i></span> )</p>
+<p class="VBA-Text-Indent">If <span style="font-style: italic;"><i>flag</i></span> = true, all solver relevant matrices are written into a file.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">RestartAfterInstabilityAbort ( <a href="../common_vbageneral/common_general_bool_data_type.htm" id="a57" style="font-weight: normal;" name="a57">bool</a> <span style="font-style: italic;"><i>flag</i></span> )</p>
+<p class="VBA-Text-Indent">If <span style="font-style: italic;"><i>flag</i></span> = true, the transient solver is automatically restarted twice with a reduced time step after an instability abort. In case that the occurred instability is due to the time discretization, this process helps to provide a stable simulation during the restarted run.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">HardwareAcceleration ( <a href="../common_vbageneral/common_general_bool_data_type.htm" id="a76" style="font-weight: normal;" name="a76">bool</a> <span style="font-style: italic;"><i>flag</i></span> )</p>
+<p class="VBA-Text-Indent">If <span style="font-style: italic;"><i>flag</i></span> = true, hardware acceleration for the pic solver is activated. Note that a hardware acceleration card must be installed in order to benefit from this setting.</p>
+<p class="VBA-Heading-Method">&#160;</p>
+<p class="VBA-Heading-Method">SEEDeterministicRandom ( <a href="../common_vbageneral/common_general_bool_data_type.htm" id="a77" style="font-weight: normal;" name="a77">bool</a> <span style="font-style: italic;"><i>flag</i></span>)</p>
+<p class="VBA-Text-Indent">Enables or disables a nondeterministic random number generation process for the secondary electron generation. The default setting is True and enables a deterministic random process.</p>
+<p class="VBA-Heading-Method">&#160;</p>
+<p class="VBA-Heading-Method">DisableCurrentComputation ( <a href="../common_vbageneral/common_general_bool_data_type.htm" id="a771" style="font-weight: normal;" name="a771">bool</a> <span style="font-style: italic;"><i>flag</i></span>)</p>
+<p class="VBA-Text-Indent">Enables or disables neglecting the space charge effect. The default setting is False.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">MinimumEmission ( <a href="../common_vbageneral/common_general_enum.htm" id="a85" style="font-weight: normal;" name="a85">enum</a> <span style="font-style: italic;"><i>type,</i></span> <a href="../common_vbageneral/common_general_double.htm" id="a86" style="font-weight: normal;" name="a86">double</a> <span style="font-style: italic;"><i>current,</i></span> <a href="../common_vbageneral/common_general_double.htm" id="a87" style="font-weight: normal;" name="a87">double</a> <span style="font-style: italic;"><i>charge</i></span> )</p>
+<p class="VBA-Text-Indent">Set minimum emission settings for all PIC emission models and secondary emission. The argument <span style="font-style: italic;"><i>type</i></span> can be "Current" or "Charge". Current and charge must be set in absolute values.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">SetTransferBufferSizeMGPU ( <span style="font-style: italic;"><i><a href="../common_vbageneral/common_general_integer.htm" id="a181" style="font-weight: normal; font-style: normal;" name="a181">int</a> particles</i></span> )</p>
+<p class="VBA-Text-Indent">Set the transfer buffer size for PIC on multi-GPU, by default it is set to 100,000. A transfer buffer handles the particle exchange between GPUs. The default size should be sufficient in most simulations. In case the buffer memory is exhausted, an error message is displayed.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">Global ( <a href="../common_vbageneral/common_general_string.htm" id="a36" style="font-weight: normal;" name="a36">string</a> <span style="font-style: italic;"><i>property</i></span>, <a href="../common_vbageneral/common_general_bool_data_type.htm" id="a28" style="font-weight: normal;" name="a28">bool</a> <span style="font-style: italic;"><i>flag )</i></span></p>
+<p class="VBA-Text-Indent">Activates the specified <span style="font-style: italic;"><i>property.</i></span></p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">DefineActiveParticleSourcesAndInterfaces ( <a href="../common_vbageneral/common_general_string.htm" id="a361" style="font-weight: normal;" name="a361">string</a> name, <a href="../common_vbageneral/common_general_bool_data_type.htm" id="a281" style="font-weight: normal;" name="a281">bool</a> <span style="font-style: italic;"><i>flag )</i></span></p>
+<p class="VBA-Text-Indent">Enables or disables the particle source or interface, which navigation tree entry is labeled with name.</p>
+<p class="VBA-Heading-Category"><a name="PIC Solver Transient Excitation"></a>PIC Solver Transient Excitation</p>
+<p class="VBA-Heading-Method">CalculateModesOnly ( <a href="../common_vbageneral/common_general_bool_data_type.htm" id="a13" style="font-weight: normal;" name="a13">bool</a> <span style="font-style: italic;"><i>flag</i></span> )</p>
+<p class="VBA-Text-Indent">If <span style="font-style: italic;"><i>flag</i></span> is True, the solver calculates only the port modes.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">StimulationMode ( <a href="../common_vbageneral/common_general_enum.htm" id="a14" style="font-weight: normal;" name="a14">enum</a> <span style="font-style: italic;"><i>/ <a href="../common_vbageneral/common_general_integer.htm" id="a18" style="font-weight: normal; font-style: normal;" name="a18">int</a> key</i></span> )</p>
+<p class="VBA-Text-Indent">Selects the mode to be used for excitation.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Text-Indent">The parameter <span style="font-style: italic;"><i>key</i></span> may have one of the following values:</p>
+<table style="vertical-align: top; margin-left: 24px; left: 0px; top: 4006px;" cellspacing="0" width="405">
+<col style="width: 31.964%;" />
+<col style="width: 68.036%;" />
+<tr style="vertical-align: top;">
+<td style="border: Solid 1px #000000; width: 31.964%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text">All</p>
+</td>
+<td style="border-top: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 68.036%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text">All modes will be excited once.</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 31.964%; padding-right: 10px; padding-left: 10px;">
+<p><a href="../common_vbageneral/common_general_integer.htm" id="a17" name="a17">int</a> <span style="font-style: italic; font-weight: bold;"><i>modeNumber</i></span></p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 68.036%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text">The mode number to be used for excitation.</p>
+</td>
+</tr>
+</table>
+<p class="vba-text-indent">&#160;</p>
+<p class="VBA-Heading-Method" style="margin-right: -71px;">StimulationPort ( <a href="../common_vbageneral/common_general_enum.htm" id="a15" name="a15"><span style="font-weight: normal;">enum</span></a> <span style="font-style: italic; font-weight: normal;"><i>/</i></span> <a href="../common_vbageneral/common_general_integer.htm" id="a19" style="font-weight: normal;" name="a19">int</a> <span style="font-style: italic;"><i>key</i></span> )</p>
+<p class="VBA-Text-Indent">Selects the port(s) &#160;to be used for excitation.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Text-Indent">The parameter <span style="font-style: italic;"><i>key</i></span> may have one of the following values:</p>
+<table style="vertical-align: top; margin-left: 24px; left: 0px; top: 4152px;" cellspacing="0" width="405">
+<col style="width: 32.598%;" />
+<col style="width: 67.402%;" />
+<tr style="vertical-align: top;">
+<td style="border: Solid 1px #000000; width: 32.598%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text">All</p>
+</td>
+<td style="border-top: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 67.402%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text">All ports will be excited once.</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 32.598%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text">Selected</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 67.402%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text">Only those ports / modes are used for excitation that have been set by <span style="font-weight: bold;">ExcitationPortMode</span>.</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 32.598%; padding-right: 10px; padding-left: 10px;">
+<p>"Plane Wave"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 67.402%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text">A plane wave will be used for excitation.</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 32.598%; padding-right: 10px; padding-left: 10px;">
+<p><a href="../common_vbageneral/common_general_integer.htm" id="a16" name="a16">int</a> <span style="font-style: italic; font-weight: bold;"><i>portNumber</i></span></p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 67.402%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text">The port number (port name) to be used for excitation.</p>
+</td>
+</tr>
+</table>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">ResetExcitationModes</p>
+<p class="VBA-Text-Indent">Resets the complete excitation list, which was previously defined by applying method <span style="font-weight: bold;">ExcitationPortMode</span>.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">ExcitationPortMode ( <a href="../common_vbageneral/common_general_integer.htm" id="a21" style="font-weight: normal;" name="a21">int</a> <span style="font-style: italic;"><i>port,</i></span> <a href="../common_vbageneral/common_general_integer.htm" id="a22" style="font-weight: normal;" name="a22">int</a> <span style="font-style: italic;"><i>mode,</i></span> <a href="../common_vbageneral/common_general_double.htm" id="a20" style="font-weight: normal;" name="a20">double</a> <span style="font-style: italic;"><i>ampli,</i></span> <a href="../common_vbageneral/common_general_double.htm" id="a23" style="font-weight: normal;" name="a23">double</a> <span style="font-style: italic;"><i>phase/time,</i></span> <a href="../common_vbageneral/common_general_name.htm" id="a27" style="font-weight: normal;" name="a27">name</a> <span style="font-style: italic;"><i>signal</i></span>, <a href="../common_vbageneral/common_general_bool_data_type.htm" id="a24" style="font-weight: normal;" name="a24">bool</a> <span style="font-style: italic;"><i>flag</i></span> )</p>
+<p class="VBA-Text-Indent">Defines the excitation signal <span style="font-style: italic;"><i>signal</i></span> that is used to excite the port mode <span style="font-style: italic;"><i>mode</i></span> at the port <span style="font-style: italic;"><i>port</i></span>. The excitation signal must be defined previously. The signal curve is modified due to the defined <span style="font-style: italic;"><i>ampli</i></span> and <span style="font-style: italic;"><i>phase/time</i></span> values, describing the amplitude and the time shift of the excitation. The latter can be defined as a time shift or a phase shift, using the <span style="font-weight: bold;">SetSimultaneousExcitationOffset</span> method. The boolean argument <span style="font-style: italic;"><i>flag</i></span> activates the time shift definition.</p>
+<p class="VBA-Text-Indent">Note: If <span style="font-style: italic;"><i>signal</i></span> = "default", the chosen reference signal is used for excitation. MWS offers an Excitation Signal Library where different time signals can be chosen from. Time signals other than "default" can be chosen only if <span style="font-weight: bold;">SimultaneousExcitation</span> is set to True.</p>
+<p class="VBA-Heading-Method">&#160;</p>
+<p class="VBA-Heading-Method">PhaseRefFrequency ( <a href="../common_vbageneral/common_general_double.htm" id="a25" style="font-weight: normal;" name="a25">double</a> <span style="font-style: italic;"><i>value</i></span> )</p>
+<p class="VBA-Text-Indent">The phase values defined in the excitation list are converted into corresponding time shifts for the time signals by use of this reference frequency. If the reference frequency is set to '0', time delay instead of phase shift is activated. (see <span style="font-weight: bold;">ExcitationPortMode</span> Method) )</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">SimultaneousExcitation ( <a href="../common_vbageneral/common_general_bool_data_type.htm" id="a129" style="font-weight: normal;" name="a129">bool</a> <span style="font-style: italic;"><i>flag</i></span> )</p>
+<p class="VBA-Text-Indent">Enables simultaneous excitation.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">SetSimultaneousExcitAutoLabel ( <a href="../common_vbageneral/common_general_bool_data_type.htm" id="a155" style="font-weight: normal;" name="a155">bool</a> <span style="font-style: italic;"><i>flag</i></span> )</p>
+<p class="VBA-Text-Indent">If a set of excitations has been defined for simultaneous excitation, an automatically generated label (as a prefix) is used to name the signals produced by the simulation. Use this method to activate this automatic labeling.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">SetSimultaneousExcitationLabel ( <a href="../common_vbageneral/common_general_name.htm" id="a31" style="font-weight: normal;" name="a31">name</a> <span style="font-style: italic;"><i>label</i></span> )</p>
+<p class="VBA-Text-Indent">If the <span style="font-weight: bold;">SetSimultaneousExcitAutoLabel</span> method is disabled, it is possible to manually define a prefix name for the signals produced by simultaneous excitation run.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">SetSimultaneousExcitationOffset ( <a href="../common_vbageneral/common_general_enum.htm" id="a156" style="font-weight: normal;" name="a156">enum</a> <span style="font-style: italic;"><i>key )</i></span></p>
+<p class="VBA-Text-Indent">This method determines the time shift definition between different time signals applied for simultaneous excitation.</p>
+<p class="VBA-Text-Indent">The parameter <span style="font-style: italic;"><i>key</i></span> may have one of the following values:</p>
+<table style="vertical-align: top; margin-left: 24px;" cellspacing="0" width="86.074%">
+<col style="width: 21.865%;" />
+<col style="width: 78.135%;" />
+<tr style="vertical-align: top;">
+<td style="border: Solid 1px #000000; width: 21.865%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text">"Timedelay"</p>
+</td>
+<td style="border-top: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 78.135%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text">The time delay defined with the <span style="font-weight: bold;">ExcitationPortMode</span> method is directly used to shift the signals in time.</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 21.865%; padding-right: 10px; padding-left: 10px;">
+<p>"Phaseshift"</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 78.135%; padding-right: 10px; padding-left: 10px;">
+<p class="VBA-Text">The phase shift defined with the <span style="font-weight: bold;">ExcitationPortMode</span> method is used to to calculate the time delay using the phase reference frequency (<span style="font-weight: bold;">PhaseRefFrequency</span> method). This delay value is then used to shift the signals in time.</p>
+</td>
+</tr>
+</table>
+<p class="VBA-Heading-Category"><a name="PIC_Solver_Static_Excitation" id="PIC_Solver_Static_Excitation"></a>PIC Solver Static Excitation</p>
+<p class="VBA-Heading-Method">ConsiderEStaticField ( <a href="../common_vbageneral/common_general_bool_data_type.htm" id="a35" style="font-weight: normal;" name="a35">bool</a> <span style="font-style: italic;"><i>flag</i></span> )</p>
+<p class="VBA-Text-Indent">If <span style="font-style: italic;"><i>flag</i></span> is set to " true" an electrostatic field will be computed, which is considered for the particle simulation.</p>
+<p class="vba-text-indent">&#160;</p>
+<p class="VBA-Heading-Method">EStaticFactor ( <a href="../common_vbageneral/common_general_double.htm" id="a4" style="font-weight: normal;" name="a4">double</a> <span style="font-style: italic;"><i>value</i></span> )</p>
+<p class="VBA-Text-Indent">Sets the scaling factor of an electrostatic field for the particle simulation.</p>
+<p class="vba-text-indent">&#160;</p>
+<p class="VBA-Heading-Method">ConsiderMStaticField ( <a href="../common_vbageneral/common_general_bool_data_type.htm" id="a29" style="font-weight: normal;" name="a29">bool</a> <span style="font-style: italic;"><i>flag</i></span> )</p>
+<p class="VBA-Text-Indent">If <span style="font-style: italic;"><i>flag</i></span> is set to " true" a magnetostatic field will be computed, which is considered for the particle simulation.</p>
+<p class="vba-text-indent">&#160;</p>
+<p class="VBA-Heading-Method">MStaticFactor ( <a href="../common_vbageneral/common_general_double.htm" id="a5" style="font-weight: normal;" name="a5">double</a> <span style="font-style: italic;"><i>value</i></span> )</p>
+<p class="VBA-Text-Indent">Sets the scaling factor of a magnetostatic field for the particle simulation.</p>
+<p class="vba-text-indent">&#160;</p>
+<p class="VBA-Heading-Method">ConsiderAnalyticPredefinedField ( <a href="../common_vbageneral/common_general_bool_data_type.htm" id="a26" style="font-weight: normal;" name="a26">bool</a> <span style="font-style: italic;"><i>flag</i></span> )</p>
+<p class="VBA-Text-Indent">If <span style="font-style: italic;"><i>flag</i></span> is set to " true", analytic predefined fields are considered for the particle simulation.</p>
+<p class="vba-text-indent">&#160;</p>
+<p class="VBA-Heading-Method">AnalyticPredefinedFactor ( <a href="../common_vbageneral/common_general_double.htm" id="a10" style="font-weight: normal;" name="a10">double</a> <span style="font-style: italic;"><i>value</i></span> )</p>
+<p class="VBA-Text-Indent">Sets the scaling factor of analytic predefined fields for the particle simulation.</p>
+<p class="VBA-Heading-Method">&#160;</p>
+<p class="VBA-Heading-Method">ConsiderExternalPredefinedField ( <a href="../common_vbageneral/common_general_bool_data_type.htm" id="a261" style="font-weight: normal;" name="a261">bool</a> <span style="font-style: italic;"><i>flag</i></span> )</p>
+<p class="VBA-Text-Indent">If <span style="font-style: italic;"><i>flag</i></span> is set to " true", external predefined fields are considered for the particle simulation.</p>
+<p class="vba-text-indent">&#160;</p>
+<p class="VBA-Heading-Method">ExternalPredefinedFactor ( <a href="../common_vbageneral/common_general_double.htm" id="a102" style="font-weight: normal;" name="a102">double</a> <span style="font-style: italic;"><i>value</i></span> )</p>
+<p class="VBA-Text-Indent">Sets the scaling factor of external predefined fields for the particle simulation.</p>
+<p class="VBA-Heading-Category"><a name="PIC_Solver_Waveguide_Ports" id="PIC_Solver_Waveguide_Ports"></a>PIC Solver Waveguide Ports</p>
+<p class="VBA-Heading-Method">WaveguideBroadband ( <a href="../common_vbageneral/common_general_bool_data_type.htm" id="a30" style="font-weight: normal;" name="a30">bool</a> <span style="font-style: italic;"><i>flag</i></span> )</p>
+<p class="VBA-Text-Indent">Switches the broadband waveguide boundary condition (BBP) for inhomogeneous ports on/off.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">SetBBPSamples ( <a href="../common_vbageneral/common_general_integer.htm" id="a32" style="font-weight: normal;" name="a32">int</a> <span style="font-style: italic;"><i>nSamples</i></span> )</p>
+<p class="VBA-Text-Indent">Sets the number of frequency points used for a broadband port (BBP). Broadband ports are used for ports at inhomogeneous waveguides. The more points are used, the more accurate the port operator will be. However the simulation time will increase as well, as all selected modes are simulated for every frequency point.</p>
+<p class="vba-text-indent">&#160;</p>
+<p class="VBA-Heading-Method">UseOpenBoundaryForHigherModes ( <a href="../common_vbageneral/common_general_bool_data_type.htm" id="a33" style="font-weight: normal;" name="a33">bool</a> <span style="font-style: italic;"><i>flag</i></span> )</p>
+<p class="VBA-Text-Indent">Determines whether unconsidered higher modes occurring at a waveguide port should be absorbed using a Mur open boundary (<span style="font-style: italic;"><i>switch</i></span> = True) or not (<span style="font-style: italic;"><i>flag</i></span> = False).</p>
+<p class="vba-text-indent">&#160;</p>
+<p class="VBA-Heading-Method">SetModeFreqFactor ( <a href="../common_vbageneral/common_general_double.htm" id="a34" style="font-weight: normal;" name="a34">double</a> <span style="font-style: italic;"><i>value</i></span> )</p>
+<p class="VBA-Text-Indent">Specifies the frequency that is used for the waveguide port mode calculation. The factor is set relatively to the current frequency range. Therefore value may <span style="font-style: italic;"><i>range</i></span> between 0 and 1.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">AdaptivePortMeshing ( <a href="../common_vbageneral/common_general_bool_data_type.htm" id="a51" style="font-weight: normal;" name="a51">bool</a> <span style="font-style: italic;"><i>flag</i></span> )</p>
+<p class="VBA-Text-Indent">Activates the adaptive port meshing feature to automatically calculate a more accurate line impedance and mode pattern. To this end, the port mode solver runs several passes while adaptively refining the port mesh.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">AccuracyAdaptivePortMeshing ( <a href="../common_vbageneral/common_general_integer.htm" id="a55" style="font-weight: normal;" name="a55">int</a> <span style="font-style: italic;"><i>nPercent</i></span> )</p>
+<p class="VBA-Text-Indent">Represents an accuracy limit for the relative error of the line impedance. The adaptive port meshing stops when the line impedance has not changed more than <span style="font-style: italic;"><i>nPercent</i></span> &#160;for two following passes or when the maximum number of passes is reached.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">PassesAdaptivePortMeshing ( <a href="../common_vbageneral/common_general_integer.htm" id="a82" style="font-weight: normal;" name="a82">int</a> <span style="font-style: italic;"><i>nPasses</i></span> )</p>
+<p class="VBA-Text-Indent">Restricts the number of passes in the adaptive port meshing if the port line impedance needs a long time to converge.</p>
+<p class="VBA-Heading-Category"><a name="PIC Solver Lossy Metal"></a>PIC Solver Lossy Metal</p>
+<p class="VBA-Heading-Method">SurfaceImpedanceOrder ( <a href="../common_vbageneral/common_general_integer.htm" id="a46" style="font-weight: normal;" name="a46">int</a> <span style="font-style: italic;"><i>order</i></span> )</p>
+<p class="VBA-Text-Indent">Specifies the order of the one-dimensional surface impedance model. Higher model order leads to enhanced simulation results at the expense of a higher calculation effort.</p>
+<p class="VBA-Heading-Category"><a name="PIC_Solver_Mesh" id="PIC_Solver_Mesh"></a>PIC Solver Mesh</p>
+<p class="VBA-Heading-Method">TimestepReduction ( <a href="../common_vbageneral/common_general_double.htm" id="a50" style="font-weight: normal;" name="a50">double</a> <span style="font-style: italic;"><i>factor</i></span> )</p>
+<p class="VBA-Text-Indent">Reduces the time step by the factor <span style="font-style: italic;"><i>factor</i></span>. Generally it should not be necessary to change this value. A value that is too large might cause instabilities in the simulation and a value that is too low unnecessarily increases the simulation time.</p>
+<p class="vba-text-indent">&#160;</p>
+<p class="VBA-Heading-Method">UseTSTAtPort ( <a href="../common_vbageneral/common_general_bool_data_type.htm" id="a53" style="font-weight: normal;" name="a53">bool</a> <span style="font-style: italic;"><i>flag</i></span> )</p>
+<p class="VBA-Text-Indent">Specifies if TST is used in the port region of a waveguide port (<span style="font-style: italic;"><i>flag</i></span> = True) or not (<span style="font-style: italic;"><i>flag</i></span> = False). &#160;</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">SetSubcycleState (<a href="../common_vbageneral/common_general_enum.htm" id="a80" name="a80"><span style="font-weight: normal;">enum</span></a> <span style="font-weight: normal;">{"Automatic", "Cycles", "NoCycles"}</span> <span style="font-style: italic;"><i>key</i></span> )</p>
+<p class="VBA-Text-Indent">Specifies if the use of subcycles is activated in the time step calculation. By setting "Cycles", the possibility to use subcycles is always considered, whereas by setting "NoCycles" &#160;the use of subcycles is never considered. By setting "Automatic" the use or not of subcycles is regulated internally.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">NumberOfSubcycles ( <a href="../common_vbageneral/common_general_integer.htm" id="a47" style="font-weight: normal;" name="a47">int</a> <span style="font-style: italic;"><i>nCycles</i></span> )</p>
+<p class="VBA-Text-Indent">Specifies the number of extra time steps for cells with a very small local time step. Generally this value should not be changed.</p>
+<p class="vba-heading-method">&#160;</p>
+<p class="VBA-Heading-Method">SubcycleFillLimit ( <a href="../common_vbageneral/common_general_double.htm" id="a49" style="font-weight: normal;" name="a49">double</a> <span style="font-style: italic;"><i>percentage</i></span> )</p>
+<p class="VBA-Text-Indent">Special setting for the PBA method. Generally this setting should not be changed.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">SetSubgridCycleState ( <a href="../common_vbageneral/common_general_enum.htm" id="a81" name="a81"><span style="font-weight: normal;">enum</span></a> <span style="font-weight: normal;">{"Automatic", "Cycles", "NoCycles"}</span> <span style="font-style: italic;"><i>key</i></span> )</p>
+<p class="VBA-Text-Indent">When the Multilevel Subgridding Scheme is activated, this command specifies if the use of subgrid specific cycling is considered in the time step calculation. When subgrid specific cycling is activated, the different grid levels are calculated with different time steps.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">SimplifiedPBAMethod ( <a href="../common_vbageneral/common_general_bool_data_type.htm" id="a83" style="font-weight: normal;" name="a83">bool</a> <span style="font-style: italic;"><i>flag</i></span> )</p>
+<p class="VBA-Text-Indent">This method activates a simplified PBA formulation for the transient simulation without any timestep reduction or usage of subcycled updates. This advantage is gained by a slight loss of accuracy and decrease of convergence.</p>
+<p class="VBA-Heading-Category"><a name="PIC_Solver_Defaults" id="PIC_Solver_Defaults"></a>PIC Solver Defaults</p>
+<p class="VBA-Text-Example">SimulationTime (0.0)</p>
+<p class="VBA-Text-Example">ConsiderEStaticField (False)</p>
+<p class="VBA-Text-Example">EStaticFactor (1.0)</p>
+<p class="VBA-Text-Example">ConsiderMStaticField (False)</p>
+<p class="VBA-Text-Example">MStaticFactor (1.0)</p>
+<p class="VBA-Text-Example">MeshAdaption (False)</p>
+<p class="VBA-Text-Example">UseDistributedComputing (False)</p>
+<p class="VBA-Text-Example">StoreTDResultsInCache (False)</p>
+<p class="VBA-Text-Example">TimeStepStabilityFactor (1.0)</p>
+<p class="VBA-Text-Example">CalculateModesOnly (False)</p>
+<p class="VBA-Text-Example">StimulationMode (1)</p>
+<p class="VBA-Text-Example">SetBBPSamples (5)</p>
+<p class="VBA-Text-Example">WaveguideBroadband (False)</p>
+<p class="VBA-Text-Example">UseOpenBoundaryForHigherModes (False)</p>
+<p class="VBA-Text-Example">SetModeFreqFactor (0.5)</p>
+<p class="VBA-Text-Example">AdaptivePortMeshing (True)</p>
+<p class="VBA-Text-Example">AccuracyAdaptivePortMeshing (1)</p>
+<p class="VBA-Text-Example">PassesAdaptivePortMeshing (3)</p>
+<p class="VBA-Text-Example">NumberOfPulseWidths (20)</p>
+<p class="VBA-Text-Example">SurfaceImpedanceOrder (10)</p>
+<p class="VBA-Text-Example">TimestepReduction (0.45)</p>
+<p class="VBA-Text-Example">SetSubcycleState ("Automatic")</p>
+<p class="VBA-Text-Example">NumberOfSubcycles (4)</p>
+<p class="VBA-Text-Example">SubcycleFillLimit (70)</p>
+<p class="VBA-Text-Example">SetSubgridCycleState ("Automatic")</p>
+<p class="VBA-Text-Example">SimplifiedPBAMethod (False)</p>
+<p class="VBA-Text-Example">SetSimultaneousExcitAutoLabel (True)</p>
+<p class="VBA-Text-Example">SetSimultaneousExcitationOffset ("Phaseshift")</p>
+<p class="VBA-Text-Example">AlwaysExludePec (False)</p>
+<p class="VBA-Text-Example">RestartAfterInstabilityAbort (True)</p>
+<p class="VBA-Text-Example">HardwareAcceleration (False)</p>
+<p class="VBA-Text-Example">SetPMLType ("ConvPML")</p>
+<p class="VBA-Heading-Category"><a name="PIC_Solver_Examples" id="PIC_Solver_Examples"></a>PIC Solver Examples</p>
+<p class="VBA-Text-Example" style="color: #008000;"><span style="color: #008000;"><font color="green">' PIC Solver simulation</font></span></p>
+<p class="VBA-Text-Example">With PICSolver</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.ConsiderEStaticField "False"</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.EStaticFactor "1.0"</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.ConsiderMStaticField "False"</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.MStaticFactor "1.0"</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.StimulationPort "Selected"</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.StimulationMode "All"</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.SimulationTime "2"</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.CalculateModesOnly "False"</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.StoreTDResultsInCache "False"</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.UseDistributedComputing "False"</p>
+<p class="VBA-Text-Example">End With</p>
+<p class="VBA-Text-Example">&#160;</p>
+<?rh-p style="margin-bottom: 0px; text-align: Right; margin-left: 18px; 
+                 margin-right: 18px; margin-top: 18px;" ?>
+<div style="width: 100%; position: relative;" id="footer">
+<p style="border-bottom: Solid 1px #dddddd; text-align: Left; margin-left: 0px; font-family: Arial, sans-serif; line-height: Normal; margin-top: 9px; margin-right: 0px; margin-bottom: 6px; border-left-width: 1px; border-top-width: 1px; border-right-width: 1px;"><span style="text-align: Left; font-family: Arial, sans-serif; line-height: Normal;">&#160;</span></p>
+<table cellspacing="0" width="100%">
+<col style="width: 50%;" />
+<col style="width: 50%;" />
+<tr>
+<td style="vertical-align: Top;"><span style="font-family: Arial, sans-serif; line-height: Normal; font-size: 8pt;"><font size="1" style="font-size:8pt;">CST Studio Suite 2026</font></span></td>
+<td style="vertical-align: Top;">
+<p style="text-align: right;">&#160;</p>
+</td>
+</tr>
+</table>
+<p>&#160;</p>
+</div>
+<script type="text/javascript" language="javascript1.2">
+//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+        writeIntopicBar(0);
+
+
+highlightSearch();
+//-->
+//]]>
+</script>
+</body>
+</html>

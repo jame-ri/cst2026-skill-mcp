@@ -1,0 +1,407 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="Adobe RoboHelp 11" />
+<title>CompactThermalModel Object</title>
+<link rel="StyleSheet" href="../online_help_vba.css" type="text/css" />
+<style type="text/css">
+/*<![CDATA[*/
+<!--
+body { border-bottom-style:None; }
+-->
+/*]]>*/
+</style>
+
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+        origWidth = innerWidth;
+        origHeight = innerHeight;
+        onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+/*<![CDATA[*/
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+-->
+/*]]>*/
+</style>
+
+<script type="text/javascript" language="javascript1.2" src="../whmsg.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript" src="../whver.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript1.2" src="../whutils.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript1.2" src="../whproxy.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript1.2" src="../whlang.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript1.2" src="../whtopic.js" charset="utf-8">
+</script>
+</head>
+<body>
+<script type="text/javascript" language="javascript1.2">
+//<![CDATA[
+<!--
+if (window.gbWhTopic)
+{
+        var strUrl = document.location.href;
+        var bc = 0;
+        var n = strUrl.toLowerCase().indexOf("bc-");
+        if(n != -1)
+        {
+                document.location.replace(strUrl.substring(0, n));
+                bc = strUrl.substring(n+3);
+        }
+
+        if (window.addTocInfo)
+        {
+        addTocInfo("3D Simulation VBA\nVBA Objects\nSources and Ports\nThermal\nCompactThermalModel Object");
+
+        }
+        if (window.writeBtnStyle)
+                writeBtnStyle();
+
+        if (window.writeIntopicBar)
+                writeIntopicBar(0);
+
+        
+        document.write("<p style=\"font-family: Tahoma; font-size: 9pt; font-weight: 400;  font-style:normal; color: rgb(0, 0, 0); text-decoration:none; text-align: left\"> ");
+AddMasterBreadcrumbs("../index.htm", "font-family: Tahoma; font-size: 9pt; font-weight: 400;  font-style:normal; color: rgb(0, 0, 0); text-decoration:none; text-align: left", "|", "Home", "../special_vbaobjects/special_vbaobjects_vbaobjects.htm");
+document.write("<a style=\"font-family: Tahoma; font-size: 9pt; font-weight: 400;  font-style:normal; color: rgb(0, 0, 0); text-decoration:none; text-align: left\" href=\"../special_vbaobjects/special_vbaobjects_vbaobjects.htm\">3D Simulation VBA<\/a> | <a style=\"font-family: Tahoma; font-size: 9pt; font-weight: 400;  font-style:normal; color: rgb(0, 0, 0); text-decoration:none; text-align: left\" href=\"../special_vbaobjects/special_vbaobjects_vbaobjects.htm\">VBA Objects<\/a> | <a style=\"font-family: Tahoma; font-size: 9pt; font-weight: 400;  font-style:normal; color: rgb(0, 0, 0); text-decoration:none; text-align: left\" href=\"../special_vbasignals/special_vbasignals_timesignal_object.htm\">Sources and Ports<\/a> | <a style=\"font-family: Tahoma; font-size: 9pt; font-weight: 400;  font-style:normal; color: rgb(0, 0, 0); text-decoration:none; text-align: left\" href=\"special_vbathermalsolver_compactthermalmodel_object.htm\">Thermal<\/a> | CompactThermalModel Object<\/p>");
+
+}
+else
+        if (window.gbIE4)
+                document.location.reload();
+
+onLoadHandler = function()
+{
+  if (window.setRelStartPage)
+        {
+        setTimeout("setRelStartPage('../index.htm');", 1)
+
+    setTimeout("UpdateBreadCrumbsMarker();", 1);
+        }
+}
+
+if (window.addEventListener){  
+        window.addEventListener('load', onLoadHandler, false);   
+} else if (window.attachEvent){  
+        window.attachEvent('onload', onLoadHandler);  
+}
+
+function onSetStartPage()
+{
+  autoSync(1);
+  sendSyncInfo();
+  sendAveInfoOut();
+}
+//-->
+//]]>
+</script><script type="text/javascript" src="../ehlpdhtm.js" language="JavaScript1.2">
+</script>
+<table cellspacing="0" width="100%">
+<col style="width: 50%;" />
+<col style="width: 50%;" />
+<tr>
+<td style="vertical-align: middle; padding-top: 5px; padding-bottom: 5px;">
+<p style="margin-top: 0px; margin-bottom: 0px;"><img src="../3ds.png" alt="" style="border: none;" border="0" /></p>
+</td>
+<td style="vertical-align: middle;">
+<p style="text-align: right;"><a href="https://www.3ds.com/products-services/3dexperience/" target="_blank"><img src="../3dexp.png" alt="" style="border: none;" width="32" height="32" border="0" /></a></p>
+</td>
+</tr>
+</table>
+<h1>CompactThermalModel Object</h1>
+<p class="VBA-Text">This object is used to create new &#160;two-resistor model sources for the <a href="special_vbathermalsolver_chtsolver.htm">Conjugate Heat Transfer Solver</a>.</p>
+<p class="VBA-Text"><span style="font-size: 12px; font-variant-ligatures: normal; font-variant-caps: normal; orphans: 2; text-align: justify; text-indent: 12px; widows: 2; -webkit-text-stroke-width: 0px; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; display: inline ! important ; float: none;">The two-resistor model can be used to approximate the thermal behavior of single-die packages that can be effectively represented by a single junction temperature. The model is based on the block-and-plate method des</span><span style="font-size: 12px; font-variant-ligatures: normal; font-variant-caps: normal; orphans: 2; text-align: justify; text-indent: 12px; widows: 2; -webkit-text-stroke-width: 0px; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial;">cribed in the Two-Resistor Compact Thermal Model Guideline specified in the JEDEC standard JESD15-3.</span></p>
+<p class="VBA-Text">&#160;</p>
+<p class="VBA-Text"><img src="../image/tworesistor_onlinehelp.png" alt="" style="border: none;" border="0" /></p>
+<ul>
+<li class="p-VBA-Index-Category">
+<p class="VBA-Index-Category"><a href="#Methods">Methods</a></p>
+</li>
+<li class="p-VBA-Index-Category">
+<p class="VBA-Index-Category"><a href="#Defaults">Default Settings</a></p>
+</li>
+<li class="p-VBA-Index-Category">
+<p class="VBA-Index-Category"><a href="#Example">Example</a></p>
+</li>
+</ul>
+<p class="VBA-Heading-Category"><a name="Methods" id="Methods"></a>Methods</p>
+<p class="VBA-Heading-Method">Reset</p>
+<p class="VBA-Text-Indent">Resets all internal settings to their default values.</p>
+<p class="VBA-Heading-Method">&#160;</p>
+<p class="VBA-Heading-Method">Name ( <span style="font-weight: normal;"><a href="../common_vbageneral/common_general_name.htm" id="a9" name="a9">name</a> &#160;</span><span style="font-style: italic;"><i>name</i></span> )</p>
+<p class="VBA-Text-Indent">Sets the <span style="font-style: italic;"><i>name</i></span> of the two-resistor model source. <span lang="EN-US" xml:lang="EN-US">Each source must have a unique name.</span></p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">Rename ( <span style="font-weight: normal;"><a href="../common_vbageneral/common_general_name.htm" id="a2" name="a2">name</a> &#160;</span><span style="font-style: italic;"><i>oldname</i></span>, &#160;<span style="font-weight: normal;"><a href="../common_vbageneral/common_general_name.htm" id="a3" name="a3">name</a></span> <span style="font-style: italic;"><i>newname</i></span> )</p>
+<p class="VBA-Text-Indent">Renames the two-resistor model with the given <span style="font-style: italic;"><i>oldname</i></span> to the defined <span style="font-style: italic;"><i>newname</i></span>. A model with the new name must not already exist.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">Folder ( <a href="../common_vbageneral/common_general_name.htm" style="font-weight: normal;">name</a> <span style="font-style: italic;"><i>foldername</i></span> )</p>
+<p class="VBA-Text-Indent">Sets the name of the folder for the two-resistor model under creation. The folder will be created if it does not exist. &#160;If the name is empty, then the two-resistor model does not belong to a folder.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">NewFolder ( <a href="../common_vbageneral/common_general_name.htm" style="font-weight: normal;">name</a> <span style="font-style: italic;"><i>foldername</i></span> )</p>
+<p class="VBA-Text-Indent">Creates a new folder for two-resistor models with the given name. The name of the new folder (<span style="font-style: italic;"><i>foldername</i></span>) must be unique. Otherwise no new folder will be created.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">RenameFolder ( <span style="font-weight: normal;"><a href="../common_vbageneral/common_general_name.htm" id="a21" name="a21">name</a> &#160;</span><span style="font-style: italic;"><i>oldname</i></span>, &#160;<span style="font-weight: normal;"><a href="../common_vbageneral/common_general_name.htm" id="a31" name="a31">name</a></span> <span style="font-style: italic;"><i>newname</i></span> )</p>
+<p class="VBA-Text-Indent">Renames an existing two-resistor model folder from <span style="font-style: italic;"><i>oldname</i></span> to <span style="font-style: italic;"><i>newname</i></span>, if a folder with <span style="font-style: italic;"><i>newname</i></span> does not already exist. All items below the renamed folder will remain below the folder with the new name.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">DeleteFolder ( <span style="font-style: italic;"><i><a href="../common_vbageneral/common_general_string.htm" id="a611" style="font-style: normal; font-weight: normal;" name="a611">string</a> foldername</i></span> )</p>
+<p class="VBA-Text-Indent">Deletes an existing folder and all the contained elements.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">Enable( <a href="../common_vbageneral/common_general_bool_data_type.htm" style="font-weight: normal;">bool</a> <span style="font-style: italic;"><i>flag</i></span> )</p>
+<p class="VBA-Text-Indent">Enables or disables the two-resistor model under creation depending on <span style="font-style: italic;"><i>flag</i></span>. If <span style="font-style: italic;"><i>flag</i></span> is <span style="font-style: italic;"><i>false,</i></span> the two-resistor model won't be considered for simulation.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">EnableItem( <span style="font-weight: normal;"><a href="../common_vbageneral/common_general_name.htm" id="a22" name="a22">name</a> &#160;</span><span style="font-style: italic;"><i>name</i></span>, &#160;<a href="../common_vbageneral/common_general_bool_data_type.htm" style="font-weight: normal;">bool</a> <span style="font-style: italic;"><i>flag</i></span> )</p>
+<p class="VBA-Text-Indent">Enables or disables the (existing) two-resistor model with the given <span style="font-style: italic;"><i>name</i></span> depending on <span style="font-style: italic;"><i>flag</i></span>. If <span style="font-style: italic;"><i>flag</i></span> is <span style="font-style: italic;"><i>false,</i></span> the two-resistor model won't be considered for simulation.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">Delete ( <span style="font-weight: normal;"><a href="../common_vbageneral/common_general_expression.htm" id="a1" name="a1">name</a> &#160;</span><span style="font-style: italic;"><i>name</i></span> )</p>
+<p class="VBA-Text-Indent">Deletes the two-resistor model with the given <span style="font-style: italic;"><i>name</i></span>.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">Set ( <a href="../common_vbageneral/common_general_string.htm" id="a6111" style="font-style: normal; font-weight: normal;" name="a6111">string</a> <span style="font-style: italic;"><i>parameterName,</i></span> <a href="../common_vbageneral/common_general_variant.htm" style="color: rgb(0, 0, 255); font-family: Arial; font-size: 12px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: left; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px;">variant</a> <span style="font-style: italic;"><i>parameterValues, ...</i></span> )</p>
+<p class="VBA-Text-Indent">To define special parameters for a two-resistor model, the command <span style="font-style: italic;"><i>Set</i></span> can be used. Available <span style="font-style: italic;"><i>parameterName</i></span>s are listed below. All settings must be made before the <span style="font-style: italic;"><i>Create</i></span> command is called.</p>
+<table style="margin-left: 40px; left: 0px; top: 1623px; border-collapse: separate; border-collapse: separate;" cellspacing="0" width="1057" border="1">
+<col style="width: 14.664%;" />
+<col style="width: 21.141%;" />
+<col style="width: 18.948%;" />
+<col style="width: 43.016%;" />
+<tr>
+<td>
+<p style="font-weight: bold;">parameterName</p>
+</td>
+<td>
+<p style="font-weight: bold;">parameterValues</p>
+</td>
+<td>
+<p style="font-weight: bold;">Default</p>
+</td>
+<td>
+<p style="font-weight: bold;">Meaning</p>
+</td>
+</tr>
+<tr>
+<td>
+<p>"Name"</p>
+</td>
+<td>
+<p class="VBA-Heading-Method" style="font-weight: normal;"><a href="../common_vbageneral/common_general_name.htm" style="font-style: normal;">name</a> <span style="font-style: italic;"><i>itemName</i></span></p>
+</td>
+<td>
+<p>&lt;empty / invalid&gt;</p>
+</td>
+<td>
+<p>Specifies the name of the two-resistor model under creation (same as ".Name" command)</p>
+</td>
+</tr>
+<tr>
+<td>
+<p>"Face"</p>
+</td>
+<td>
+<p class="VBA-Heading-Method"><span style="font-weight: normal;"><a href="../common_vbageneral/common_general_solid_names.htm">solidname</a></span> <span style="font-style: italic; font-weight: normal;"><i>solidName,</i></span> <span style="font-weight: normal;"><a href="../common_vbageneral/common_general_integer.htm">int</a></span> <span style="font-style: italic; font-weight: normal;"><i>faceId</i></span></p>
+</td>
+<td>
+<p class="VBA-Heading-Method" style="font-weight: normal;">&lt;empty / invalid&gt;</p>
+</td>
+<td>
+<p>The upper package surface of the two-resistor model package must be a planar face of an existing solid (brick). This solid is specified by <span style="font-style: italic;"><i>solidName</i></span> and the upper package surface is indicated by <span style="font-style: italic;"><i>faceId</i></span> which is the id of the face in the list of faces belonging to the specified solid.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p>"OverwriteCaseEmissivity"</p>
+<p>&#160;</p>
+<p>"CaseEmissivity"</p>
+</td>
+<td>
+<p><a href="../common_vbageneral/common_general_bool_data_type.htm" style="font-weight: normal;">bool</a> <span style="font-style: italic;"><i>flag</i></span></p>
+<p>&#160;</p>
+<p style="font-style: italic;"><a href="../common_vbageneral/common_general_double.htm" style="font-style: normal;">double</a> emissivity</p>
+</td>
+<td>
+<p style="font-style: italic;">False</p>
+<p style="font-style: italic;">&#160;</p>
+<p style="font-style: italic;">0.0</p>
+</td>
+<td><span style="font-family: Arial; font-size: 12px; font-variant-ligatures: normal; font-variant-caps: normal; orphans: 2; text-align: justify; widows: 2; -webkit-text-stroke-width: 0px; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; display: inline ! important ; float: none;">When enabled (</span><span style="font-family: Arial; font-size: 12px; font-variant-ligatures: normal; font-variant-caps: normal; orphans: 2; text-align: justify; widows: 2; -webkit-text-stroke-width: 0px; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; display: inline ! important ; float: none; font-style: italic;"><i>flag = True</i></span><span style="font-family: Arial; font-size: 12px; font-variant-ligatures: normal; font-variant-caps: normal; orphans: 2; text-align: justify; widows: 2; -webkit-text-stroke-width: 0px; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; display: inline ! important ; float: none;">), the user-defined</span> <span style="font-family: Arial; font-size: 12px; font-variant-ligatures: normal; font-variant-caps: normal; orphans: 2; text-align: justify; widows: 2; -webkit-text-stroke-width: 0px; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; display: inline ! important ; float: none; font-style: italic;"><i>emissivity</i></span> <span style="font-family: Arial; font-size: 12px; font-variant-ligatures: normal; font-variant-caps: normal; orphans: 2; text-align: justify; widows: 2; -webkit-text-stroke-width: 0px; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; display: inline ! important ; float: none;">is used to specify the upper package surface emissivity. Otherwise (</span><span style="font-family: Arial; font-size: 12px; font-variant-ligatures: normal; font-variant-caps: normal; orphans: 2; text-align: justify; widows: 2; -webkit-text-stroke-width: 0px; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; display: inline ! important ; float: none; font-style: italic;"><i>flag = False</i></span><span style="font-family: Arial; font-size: 12px; font-variant-ligatures: normal; font-variant-caps: normal; orphans: 2; text-align: justify; widows: 2; -webkit-text-stroke-width: 0px; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; display: inline ! important ; float: none;">), the emissivity of the material assigned to the package (</span><a href="../special_vbalayer/special_vbalayerolayer_object.htm#Thermal_Material_Properties" style="font-size: 12px; font-family: Arial, sans-serif; font-weight: 400; font-style: normal; color: rgb(0, 0, 160); font-variant-ligatures: normal; font-variant-caps: normal; letter-spacing: normal; orphans: 2; text-align: justify; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px;">Thermal</a><span style="font-family: Arial; font-size: 12px; font-variant-ligatures: normal; font-variant-caps: normal; orphans: 2; text-align: justify; widows: 2; -webkit-text-stroke-width: 0px; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; display: inline ! important ; float: none;">) is used and the value of "</span><span style="font-family: Arial; font-size: 12px; font-variant-ligatures: normal; font-variant-caps: normal; orphans: 2; text-align: justify; widows: 2; -webkit-text-stroke-width: 0px; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; display: inline ! important ; float: none; font-style: italic;"><i>CaseEmissivity</i></span><span style="font-family: Arial; font-size: 12px; font-variant-ligatures: normal; font-variant-caps: normal; orphans: 2; text-align: justify; widows: 2; -webkit-text-stroke-width: 0px; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; display: inline ! important ; float: none;">" is ignored..</span></td>
+</tr>
+<tr>
+<td>
+<p>"DissipatedPower"</p>
+</td>
+<td>
+<p style="font-style: italic;"><span style="font-style: italic;"><i><a href="../common_vbageneral/common_general_double.htm" style="font-style: normal;">double</a> power</i></span></p>
+</td>
+<td>
+<p style="font-style: italic;">0.0</p>
+</td>
+<td>
+<p>Specifies the amount of power (in W) dissipated by the package.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p>"JunctionToCase"</p>
+</td>
+<td>
+<p style="font-style: italic;"><a href="../common_vbageneral/common_general_double.htm" style="font-style: normal;">double</a> thermal_resistance, <a href="../common_vbageneral/common_general_string.htm" id="a61121" style="font-style: normal; font-weight: normal;" name="a61121">string</a> unit</p>
+</td>
+<td>
+<p style="font-style: italic;">0.0, "K/W"</p>
+</td>
+<td>
+<p>Specifies the junction-to-case thermal resistance R_jc in the given unit.<br />
+The unit can be either "K/W" or "C/W".</p>
+</td>
+</tr>
+<tr>
+<td>
+<p>"JunctionToBoard"</p>
+</td>
+<td>
+<p><span style="font-style: italic;"><i><a href="../common_vbageneral/common_general_double.htm" style="font-style: normal;">double</a> thermal_resistance, <a href="../common_vbageneral/common_general_string.htm" id="a61122" style="font-style: normal; font-weight: normal;" name="a61122">string</a> unit</i></span></p>
+</td>
+<td>
+<p style="font-style: italic;">0.0, "K/W"</p>
+</td>
+<td>
+<p>Specifies the junction-to-board thermal resistance R_jb in the given unit.<br />
+The unit can be either "K/W" or "C/W".</p>
+</td>
+</tr>
+<tr>
+<td>
+<p>"ContactPropertiesType"</p>
+<p>&#160;</p>
+</td>
+<td>
+<p><a href="../common_vbageneral/common_general_enum.htm" style="font-weight: normal;">enum</a> <span style="font-style: italic;"><i>type</i></span></p>
+<p style="font-style: italic;">{ "None", "Lumped", "Material" }</p>
+</td>
+<td>
+<p>"<span style="font-style: italic;"><i>None</i></span>"</p>
+</td>
+<td>
+<p style="margin-top: 0pt; margin-bottom: 3px; font-variant-ligatures: normal; font-variant-caps: normal; orphans: 2; widows: 2; -webkit-text-stroke-width: 0px; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial;">When the upper package surface is covered by a heat sink (or any solid) it might be useful to assign a contact property between the upper package surface and the heat sink to improve the thermal conduction.</p>
+<p style="margin-top: 0pt; margin-bottom: 3px; font-variant-ligatures: normal; font-variant-caps: normal; orphans: 2; widows: 2; -webkit-text-stroke-width: 0px; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial;">If the <span style="font-style: italic;"><i>type</i></span> "<span style="font-style: italic; font-weight: bold;"><i>None</i></span>" is specified, no contact property will be defined.</p>
+<p style="margin-top: 0pt; margin-bottom: 3px; font-variant-ligatures: normal; font-variant-caps: normal; orphans: 2; widows: 2; -webkit-text-stroke-width: 0px; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial;">The type "<span style="font-style: italic; font-weight: bold;"><i>Lumped</i></span>" is used to specify a lumped element, in this case a thermal resistance, see also "<span style="font-style: italic;"><i>TIMResistance</i></span>" or "<span style="font-style: italic;"><i>TIMResistancePerUnitArea</i></span>".</p>
+<p style="margin-top: 0pt; text-align: justify; margin-bottom: 3px; font-variant-ligatures: normal; font-variant-caps: normal; orphans: 2; widows: 2; -webkit-text-stroke-width: 0px; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial;">The type "<span style="font-style: italic; font-weight: bold;"><i>Material</i></span>" is used to specify the thermal interface material, see also "<span style="font-style: italic;"><i>TIMName</i></span>" and "<span style="font-style: italic;"><i>TIMThickness</i></span>".</p>
+</td>
+</tr>
+<tr>
+<td>
+<p style="font-style: normal;">"TIMResistance"</p>
+<p style="font-style: normal;">&#160;</p>
+<p style="font-style: normal;">"TIMResistancePerUnitArea"</p>
+</td>
+<td>
+<p style="font-style: italic;"><a href="../common_vbageneral/common_general_double.htm" style="font-style: normal;">double</a> thermal_resistance</p>
+<p style="font-style: italic;">&#160;</p>
+<p style="font-style: italic;"><span style="font-style: italic;"><i><a href="../common_vbageneral/common_general_double.htm" style="font-style: normal;">double</a> thermal_resistance</i></span></p>
+</td>
+<td>
+<p style="font-style: italic;">0.0</p>
+</td>
+<td>
+<p style="margin-top: 0pt; margin-bottom: 3px; font-variant-ligatures: normal; font-variant-caps: normal; orphans: 2; widows: 2; -webkit-text-stroke-width: 0px; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial;">Will be considered only if the "<span style="font-style: italic;"><i>ContactPropertiesType</i></span>" is "<span style="font-style: italic;"><i>Lumped</i></span>".</p>
+<p style="margin-top: 0pt; margin-bottom: 3px; font-variant-ligatures: normal; font-variant-caps: normal; orphans: 2; widows: 2; -webkit-text-stroke-width: 0px; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial;">For the contact property, either the thermal resistance (in K/W) or the thermal resistance per unit area (in Km^2/W)&#160;can specified.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p style="font-style: normal;">"TIMName"</p>
+<p style="font-style: normal;">&#160;</p>
+<p style="font-style: normal;">"TIMThickness"</p>
+</td>
+<td>
+<p style="font-style: normal;"><span style="font-style: italic;"><i><a href="../common_vbageneral/common_general_string.htm" id="a611221" style="font-style: normal; font-weight: normal;" name="a611221">string</a> materialName</i></span></p>
+<p style="font-style: normal;">&#160;</p>
+<p style="font-style: italic;"><span style="font-style: italic;"><i><a href="../common_vbageneral/common_general_double.htm" style="font-style: normal;">double</a> thickness</i></span></p>
+</td>
+<td>
+<p style="font-style: italic;">0</p>
+</td>
+<td>
+<p style="margin-top: 0pt; margin-bottom: 3px; font-variant-ligatures: normal; font-variant-caps: normal; orphans: 2; widows: 2; -webkit-text-stroke-width: 0px; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial;">Will be considered only if the "<span style="font-style: italic;"><i>ContactPropertiesType</i></span>" is "<span style="font-style: italic;"><i>Material</i></span>".</p>
+<p style="margin-top: 0pt; margin-bottom: 3px; font-variant-ligatures: normal; font-variant-caps: normal; orphans: 2; widows: 2; -webkit-text-stroke-width: 0px; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial;">The thermal interface material is defined by its thickness and its thermal conductivity. Both, "<span style="font-style: italic;"><i>TIMName</i></span>" (material name) and "<span style="font-style: italic;"><i>TIMThickness</i></span>" (thickness) must be specified.</p>
+</td>
+</tr>
+</table>
+<p class="VBA-Text-Indent" style="font-weight: normal;">&#160;</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">Create</p>
+<p class="VBA-Text-Indent">Creates a two-resistor model source. All required settings for this object have to be made before the <span style="font-style: italic;"><i>Create</i></span> command is called and will be checked for correctness and consistency during the creation state.</p>
+<p class="VBA-Heading-Category"><a name="Defaults" id="Defaults"></a>Default Settings</p>
+<p class="VBA-Text-Example">Name ("")</p>
+<p class="VBA-Text-Example">Set "Face" ("", 0)</p>
+<p class="VBA-Text-Example">Set "OverwriteCaseEmissivity" (False)</p>
+<p class="VBA-Text-Example">Set "DissipatedPower" (0.0)</p>
+<p class="VBA-Text-Example">Set "JunctionToCase" (0.0)</p>
+<p class="VBA-Text-Example">Set "JunctionToBoard" (0.0)</p>
+<p class="VBA-Text-Example">Set "ContactPropertiesType" (None)</p>
+<p class="VBA-Text-Example">Enable (True)</p>
+<p class="VBA-Text-Example">Folder ("")</p>
+<p class="VBA-Heading-Category"><a name="Example" id="Example"></a>Example</p>
+<p class="VBA-Text-Example">With CompactThermalModel</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.Reset</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.Set "Name", "two resistor model 1"</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.Folder ""</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.Enable "True"</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.Set "Face", "component1:solid1", "1"</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.Set "OverwriteCaseEmissivity", "True"</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.Set "CaseEmissivity", "0"</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.Set "DissipatedPower", "2"</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.Set "JunctionToCase", "5.4", "C/W"</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.Set "JunctionToBoard", "11.9", "C/W"</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.Set "ContactPropertiesType", "Lumped"</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.Set "TIMResistance", "1.5"</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.Create</p>
+<p class="VBA-Text-Example">End With</p>
+<p class="VBA-Text-Example">&#160;</p>
+<?rh-p style="margin-bottom: 0px; text-align: Right; margin-left: 18px; 
+                 margin-right: 18px; margin-top: 18px;" ?>
+<div style="width: 100%; position: relative;" id="footer">
+<p style="border-bottom: Solid 1px #dddddd; text-align: Left; margin-left: 0px; font-family: Arial, sans-serif; line-height: Normal; margin-top: 9px; margin-right: 0px; margin-bottom: 6px; border-left-width: 1px; border-top-width: 1px; border-right-width: 1px;"><span style="text-align: Left; font-family: Arial, sans-serif; line-height: Normal;">&#160;</span></p>
+<table cellspacing="0" width="100%">
+<col style="width: 50%;" />
+<col style="width: 50%;" />
+<tr>
+<td style="vertical-align: Top;"><span style="font-family: Arial, sans-serif; line-height: Normal; font-size: 8pt;"><font size="1" style="font-size:8pt;">CST Studio Suite 2026</font></span></td>
+<td style="vertical-align: Top;">
+<p style="text-align: right;">&#160;</p>
+</td>
+</tr>
+</table>
+<p>&#160;</p>
+</div>
+<script type="text/javascript" language="javascript1.2">
+//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+        writeIntopicBar(0);
+
+
+highlightSearch();
+//-->
+//]]>
+</script>
+</body>
+</html>

@@ -1,0 +1,320 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="Adobe RoboHelp 11" />
+<title>External Port Object</title>
+<link rel="StyleSheet" href="../online_help_vba.css" type="text/css" />
+<style type="text/css">
+/*<![CDATA[*/
+<!--
+body { border-bottom-style:None; }
+-->
+/*]]>*/
+</style>
+
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function ehlp_showtip(current,e,text)
+{
+  if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == 'Netscape'))
+  {
+    document.tooltip.document.write("<layer bgColor='yellow' style='border:1px solid black;font-size:12px;'>"+ text + "<\/layer>");
+    document.tooltip.document.close();
+    document.tooltip.left=e.pageX+5;
+    document.tooltip.top=e.pageY+5;
+    document.tooltip.visibility="show";
+  }
+}
+function ehlp_hidetip()
+{
+  document.tooltip.visibility="hidden";
+}
+//]]>
+</script>
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+        origWidth = innerWidth;
+        origHeight = innerHeight;
+        onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+/*<![CDATA[*/
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+-->
+/*]]>*/
+</style>
+
+<script type="text/javascript" language="javascript1.2" src="../whmsg.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript" src="../whver.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript1.2" src="../whutils.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript1.2" src="../whproxy.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript1.2" src="../whlang.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript1.2" src="../whtopic.js" charset="utf-8">
+</script>
+</head>
+<body>
+<script type="text/javascript" language="javascript1.2">
+//<![CDATA[
+<!--
+if (window.gbWhTopic)
+{
+        var strUrl = document.location.href;
+        var bc = 0;
+        var n = strUrl.toLowerCase().indexOf("bc-");
+        if(n != -1)
+        {
+                document.location.replace(strUrl.substring(0, n));
+                bc = strUrl.substring(n+3);
+        }
+
+        if (window.addTocInfo)
+        {
+        addTocInfo("Circuits & Systems VBA\nComponent/Modeling\nExternalPort");
+
+        }
+        if (window.writeBtnStyle)
+                writeBtnStyle();
+
+        if (window.writeIntopicBar)
+                writeIntopicBar(0);
+
+        
+        document.write("<p style=\"font-family: Tahoma; font-size: 9pt; font-weight: 400;  font-style:normal; color: rgb(0, 0, 0); text-decoration:none; text-align: left\"> ");
+AddMasterBreadcrumbs("../index.htm", "font-family: Tahoma; font-size: 9pt; font-weight: 400;  font-style:normal; color: rgb(0, 0, 0); text-decoration:none; text-align: left", "|", "Home", "../special_vbaobjects/cstdesignstudiovbaobjects.htm");
+document.write("<a style=\"font-family: Tahoma; font-size: 9pt; font-weight: 400;  font-style:normal; color: rgb(0, 0, 0); text-decoration:none; text-align: left\" href=\"../special_vbaobjects/cstdesignstudiovbaobjects.htm\">Circuits & Systems VBA<\/a> | <a style=\"font-family: Tahoma; font-size: 9pt; font-weight: 400;  font-style:normal; color: rgb(0, 0, 0); text-decoration:none; text-align: left\" href=\"blockobject.htm\">Component/Modeling<\/a> | ExternalPort<\/p>");
+
+}
+else
+        if (window.gbIE4)
+                document.location.reload();
+
+onLoadHandler = function()
+{
+  if (window.setRelStartPage)
+        {
+        setTimeout("setRelStartPage('../index.htm');", 1)
+
+    setTimeout("UpdateBreadCrumbsMarker();", 1);
+        }
+}
+
+if (window.addEventListener){  
+        window.addEventListener('load', onLoadHandler, false);   
+} else if (window.attachEvent){  
+        window.attachEvent('onload', onLoadHandler);  
+}
+
+function onSetStartPage()
+{
+  autoSync(1);
+  sendSyncInfo();
+  sendAveInfoOut();
+}
+//-->
+//]]>
+</script><script type="text/javascript" src="../ehlpdhtm.js" language="JavaScript1.2">
+</script>
+<table cellspacing="0" width="100%">
+<col style="width: 50%;" />
+<col style="width: 50%;" />
+<tr>
+<td style="vertical-align: middle; padding-top: 5px; padding-bottom: 5px;">
+<p style="margin-top: 0px; margin-bottom: 0px;"><img src="../3ds.png" alt="" style="border: none;" border="0" /></p>
+</td>
+<td style="vertical-align: middle;">
+<p style="text-align: right;"><a href="https://www.3ds.com/products-services/3dexperience/" target="_blank"><img src="../3dexp.png" alt="" style="border: none;" width="32" height="32" border="0" /></a></p>
+</td>
+</tr>
+</table>
+<h1>ExternalPort Object</h1>
+<p class="VBA-Text">Object referring to an external port. Use this object to create or to manipulate an external port.</p>
+<ul>
+<li class="p-VBA-Index-Category">
+<p class="VBA-Index-Category"><a href="#General_Methods">Methods</a></p>
+</li>
+<li style="list-style: none; display: inline">
+<ul>
+<li class="p-VBA-Index-Category">
+<p class="VBA-Index-Category"><a href="#General_Methods">General Methods</a></p>
+</li>
+<li class="p-VBA-Index-Category">
+<p class="VBA-Index-Category"><a href="#Identification">Identification</a></p>
+</li>
+<li class="p-VBA-Index-Category">
+<p class="VBA-Index-Category"><a href="#Getter">Getter</a></p>
+</li>
+<li class="p-VBA-Index-Category">
+<p class="VBA-Index-Category"><a href="#Setter">Setter</a></p>
+</li>
+<li class="p-VBA-Index-Category">
+<p class="VBA-Index-Category"><a href="#Iteration">Iteration</a></p>
+</li>
+<li class="p-VBA-Index-Category">
+<p class="VBA-Index-Category"><a href="#Positioning">Positioning</a></p>
+</li>
+</ul>
+</li>
+<li class="p-VBA-Index-Category">
+<p class="VBA-Index-Category"><a href="#Default_Settings">Default Settings</a></p>
+</li>
+<li class="p-VBA-Index-Category">
+<p class="VBA-Index-Category"><a href="#Examples">Examples</a></p>
+</li>
+<li style="list-style: none; display: inline">
+<ul>
+<li class="p-VBA-Index-Category">
+<p class="VBA-Index-Category"><a href="#Creation" title="Create a new external port" onmouseover="if ((parseInt(navigator.appVersion) == 4) &amp;&amp; (navigator.appName == 'Netscape')) ehlp_showtip(this,event,'Create a new external port');" onmouseout="if ((parseInt(navigator.appVersion) == 4) &amp;&amp; (navigator.appName == 'Netscape')) ehlp_hidetip();">Create a new external port</a></p>
+</li>
+<li class="p-VBA-Index-Category">
+<p class="VBA-Index-Category"><a href="#Modification" title="Modify an existing external port's position" onmouseover="if ((parseInt(navigator.appVersion) == 4) &amp;&amp; (navigator.appName == 'Netscape')) ehlp_showtip(this,event,'Modify an existing external port\'s position');" onmouseout="if ((parseInt(navigator.appVersion) == 4) &amp;&amp; (navigator.appName == 'Netscape')) ehlp_hidetip();">Modify an existing external port's position</a></p>
+</li>
+</ul>
+</li>
+</ul>
+<p class="VBA-Heading-Category"><a name="General_Methods" id="General_Methods"></a>General Methods</p>
+<p class="VBA-Heading-Method">Create</p>
+<p class="VBA-Text-Indent">Creates a new external port.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">Delete</p>
+<p class="VBA-Text-Indent">Deletes the currently selected external port.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">DoesExist <span style="font-weight: normal;"><a href="../common_vbageneral/common_general_bool_data_type.htm">bool</a></span></p>
+<p class="VBA-Text-Indent">Checks if an external port with the currently selected number <span>already exists.</span></p>
+<p class="VBA-Heading-Method">&#160;</p>
+<p class="VBA-Heading-Method">Reset</p>
+<p class="VBA-Text-Indent">Resets all internal settings to their default values.</p>
+<p class="VBA-Heading-Category"><a name="Identification" id="Identification"></a>Identification</p>
+<p class="VBA-Heading-Method">Name ( <a href="../common_vbageneral/common_general_name.htm" id="a7" style="font-weight: normal; font-style: normal;" name="a7">name</a> <span style="font-style: italic;"><i>portname</i></span> )</p>
+<p class="VBA-Text-Indent">This method is used to select an existing external port of your model using its name. Furthermore, it sets the port name to <span style="font-style: italic;"><i>portname</i></span> if not created yet.</p>
+<p class="VBA-Heading-Category"><a name="Getter" id="Getter"></a>Getter</p>
+<p class="VBA-Heading-Method">GetLabel <span style="font-weight: normal;"><a href="../common_vbageneral/common_general_string.htm">string</a></span></p>
+<p class="VBA-Text-Indent">Returns the external port's label. If no label is assigned to the considered external port, an error message with the port number is thrown.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">GetPortName( <a href="../common_vbageneral/common_general_integer.htm" id="a3" style="font-weight: normal; font-style: normal;" name="a3">int</a> <span style="font-style: italic;"><i>portindex</i></span> ) <span style="font-weight: normal;"><a href="../common_vbageneral/common_general_string.htm">string</a></span></p>
+<p class="VBA-Text-Indent">Returns the external port's inne port name referenced by the given portindex.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">GetNumberOfPorts <a href="../common_vbageneral/common_general_integer.htm" id="a3" style="font-weight: normal; font-style: normal;" name="a3">int</a></p>
+<p class="VBA-Text-Indent">Returns the external port's bus size, which corresponds to the number of inner ports.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">IsDifferential <a href="../common_vbageneral/common_general_bool_data_type.htm" id="a3" style="font-weight: normal; font-style: normal;" name="a3">bool</a></p>
+<p class="VBA-Text-Indent">Returns true if the external port has a differenital pin.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">HasCommonReference <a href="../common_vbageneral/common_general_bool_data_type.htm" id="a3" style="font-weight: normal; font-style: normal;" name="a3">bool</a></p>
+<p class="VBA-Text-Indent">Returns true if the external port has common reference pin.</p>
+<p class="VBA-Heading-Category"><a name="Setter" id="Setter"></a>Setter</p>
+<p class="VBA-Heading-Method">SetName ( <a href="../common_vbageneral/common_general_name.htm" id="a8" style="font-weight: normal; font-style: normal;" name="a8">name</a> <span style="font-style: italic;"><i>portname</i></span> )</p>
+<p class="VBA-Text-Indent">Modifies the name of an existing external port.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">SetLabel ( <span style="font-weight: normal;"><a href="../common_vbageneral/common_general_string.htm">string</a></span> <span style="font-style: italic;"><i>portlabel</i></span> )</p>
+<p class="VBA-Text-Indent">Modifies or sets a label to an existing external port.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">SetPortName ( <a href="../common_vbageneral/common_general_integer.htm" id="a3" style="font-weight: normal; font-style: normal;" name="a3">int</a> <span style="font-style: italic;"><i>portindex,</i></span> <a href="../common_vbageneral/common_general_name.htm" id="a8" style="font-weight: normal; font-style: normal;" name="a8">name</a> <span style="font-style: italic;"><i>portname</i></span> )</p>
+<p class="VBA-Text-Indent">Modifies the name of an inner port at the given portindex.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">SetNumberOfPorts ( <a href="../common_vbageneral/common_general_integer.htm" id="a11" style="font-weight: normal; font-style: normal;" name="a11">int</a> <span style="font-style: italic;"><i>numberOfPorts</i></span> )</p>
+<p class="VBA-Text-Indent">Sets the external port's bus size, which corresponds to the number of inner ports.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">SetDifferential ( <span style="font-weight: normal;"><a href="../common_vbageneral/common_general_bool_data_type.htm">bool</a></span> <span style="font-style: italic;"><i>differential</i></span> )</p>
+<p class="VBA-Text-Indent">Makes the external port a differential port, i.e. its reference pin can be accessed.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">SetCommonReference ( <span style="font-weight: normal;"><a href="../common_vbageneral/common_general_bool_data_type.htm">bool</a></span> <span style="font-style: italic;"><i>commonReference</i></span> )</p>
+<p class="VBA-Text-Indent">Unifies all reference ports of the differential bus pin into a signle port.</p>
+<p class="VBA-Heading-Category"><a name="Iteration" id="Iteration"></a>Iteration</p>
+<p class="VBA-Heading-Method">StartPortNameIteration <a href="../common_vbageneral/common_general_integer.htm" id="a2" style="font-weight: normal; font-style: normal;" name="a2">int</a></p>
+<p class="VBA-Text-Indent">Resets the iterator for external ports and returns the number of external ports.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">GetNextPortName <a href="../common_vbageneral/common_general_name.htm" id="a5" style="font-weight: normal; font-style: normal;" name="a5">name</a></p>
+<p class="VBA-Text-Indent">Returns the next external port's name. Call <span style="font-style: italic;"><i>StartPortNameIteration</i></span> before the first call of this method.</p>
+<p class="VBA-Heading-Category"><a name="Positioning" id="Positioning"></a>Positioning</p>
+<p class="VBA-Heading-Method">GetPositionX <a href="../common_vbageneral/common_general_integer.htm" id="a6" style="font-weight: normal; font-style: normal;" name="a6">int</a></p>
+<p class="VBA-Text-Indent">Returns the horizontal position of the center point of an external port.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">GetPositionY <a href="../common_vbageneral/common_general_integer.htm" id="a7" style="font-weight: normal; font-style: normal;" name="a7">int</a></p>
+<p class="VBA-Text-Indent">Returns the vertical position of the center point of an external port.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">Position ( <span style="font-weight: normal;"><a href="../common_vbageneral/common_general_string.htm">string</a></span> <span style="font-style: italic;"><i>x</i></span>, <span style="font-weight: normal;"><a href="../common_vbageneral/common_general_string.htm">string</a></span> <span style="font-style: italic;"><i>y</i></span> )</p>
+<p class="VBA-Text-Indent">Specifies the position of the external port. This setting must be made before calling <span style="font-style: italic;"><i>Create</i></span>. Furthermore, it can be used to modify an external port's position. Possible values are 0 &lt; x, y &lt;100000, i.e. (50000, 50000) is the center of the schematic. It is always ensured that the external port is aligned with the grid, therefore the specified position might get adjusted slightly.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">Rotate ( <span style="font-weight: normal;"><a href="../common_vbageneral/common_general_string.htm">string</a></span> <span style="font-style: italic;"><i>angle</i></span> )</p>
+<p class="VBA-Text-Indent">Rotates the external port by the given angle in degrees around its center point. If this setting is made before calling <span style="font-style: italic;"><i>Create</i></span>, the angle is only stored. The rotation will then be done in <span style="font-style: italic;"><i>Create</i></span>.</p>
+<p class="VBA-Heading-Method">&#160;</p>
+<p class="VBA-Heading-Method">Move ( <span style="font-weight: normal;"><a href="../common_vbageneral/common_general_string.htm">string</a></span> <span style="font-style: italic;"><i>x</i></span>, <span style="font-weight: normal;"><a href="../common_vbageneral/common_general_string.htm">string</a></span> <span style="font-style: italic;"><i>y</i></span> )</p>
+<p class="VBA-Text-Indent">Moves an external port by the given offset. Note that the schematic size is given by 0 &lt; x, y &lt;100000. Use <span style="font-style: italic;"><i>Position</i></span> to specify a certain location. It is always ensured that the external port is aligned with the grid, therefore the specified offset might get adjusted slightly.</p>
+<p class="VBA-Heading-Category"><a name="Default_Settings" id="Default_Settings"></a>Default Settings</p>
+<p class="VBA-Text-Example">Position (50000, 50000)</p>
+<p class="VBA-Heading-Category"><a name="Examples" id="Examples"></a>Examples</p>
+<p class="VBA-Text-Example"><a name="Creation" id="Creation"></a>'Create an external port</p>
+<p class="VBA-Text-Example">&#160;</p>
+<p class="VBA-Text-Example">With ExternalPort</p>
+<p class="VBA-Text-Example" style="margin-left: 40px;">.Reset</p>
+<p class="VBA-Text-Example" style="margin-left: 40px;">.Name ("1")</p>
+<p class="VBA-Text-Example" style="margin-left: 40px;">.Position(50000, 50000)</p>
+<p class="VBA-Text-Example" style="margin-left: 40px;">.Create</p>
+<p class="VBA-Text-Example" style="margin-left: 40px;">.SetLabel("First port")</p>
+<p class="VBA-Text-Example">End With</p>
+<p class="VBA-Text-Example">&#160;</p>
+<p class="VBA-Text-Example"><a name="Modification" id="Modification"></a>'Modify an existing external port's position</p>
+<p class="VBA-Text-Example">&#160;</p>
+<p class="VBA-Text-Example">With ExternalPort</p>
+<p class="VBA-Text-Example" style="margin-left: 40px;">.Reset</p>
+<p class="VBA-Text-Example" style="margin-left: 40px;">.Name ("1")</p>
+<p class="VBA-Text-Example" style="margin-left: 40px;">.Position(57000, 50500) ' Move to absolute position (57000, 50500)</p>
+<p class="VBA-Text-Example" style="margin-left: 40px;">.Move(7000, 500) ' Move by offset (7000, 500) relative to old position</p>
+<p class="VBA-Text-Example">End With</p>
+<p>&#160;</p>
+<p>&#160;</p>
+<?rh-p style="margin-bottom: 0px; text-align: Right; margin-left: 18px; 
+                 margin-right: 18px; margin-top: 18px;" ?>
+<div style="width: 100%; position: relative;" id="footer">
+<p style="border-bottom: Solid 1px #dddddd; text-align: Left; margin-left: 0px; font-family: Arial, sans-serif; line-height: Normal; margin-top: 9px; margin-right: 0px; margin-bottom: 6px; border-left-width: 1px; border-top-width: 1px; border-right-width: 1px;"><span style="text-align: Left; font-family: Arial, sans-serif; line-height: Normal;">&#160;</span></p>
+<table cellspacing="0" width="100%">
+<col style="width: 50%;" />
+<col style="width: 50%;" />
+<tr>
+<td style="vertical-align: Top;"><span style="font-family: Arial, sans-serif; line-height: Normal; font-size: 8pt;"><font size="1" style="font-size:8pt;">CST Studio Suite 2026</font></span></td>
+<td style="vertical-align: Top;">
+<p style="text-align: right;">&#160;</p>
+</td>
+</tr>
+</table>
+<p>&#160;</p>
+</div>
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+ if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == 'Netscape'))
+  document.write("<div id='tooltip' class='WebHelpPopupMenu'><\/div>");
+//]]>
+</script><script type="text/javascript" language="javascript1.2">
+//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+        writeIntopicBar(0);
+
+
+highlightSearch();
+//-->
+//]]>
+</script>
+</body>
+</html>

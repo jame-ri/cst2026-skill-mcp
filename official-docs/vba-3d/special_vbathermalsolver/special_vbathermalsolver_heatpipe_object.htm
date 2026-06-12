@@ -1,0 +1,315 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="Adobe RoboHelp 11" />
+<title>HeatPipe Object</title>
+<link rel="StyleSheet" href="../online_help_vba.css" type="text/css" />
+<style type="text/css">
+/*<![CDATA[*/
+<!--
+body { border-bottom-style:None; }
+-->
+/*]]>*/
+</style>
+
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+        origWidth = innerWidth;
+        origHeight = innerHeight;
+        onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+/*<![CDATA[*/
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+-->
+/*]]>*/
+</style>
+
+<script type="text/javascript" language="javascript1.2" src="../whmsg.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript" src="../whver.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript1.2" src="../whutils.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript1.2" src="../whproxy.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript1.2" src="../whlang.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript1.2" src="../whtopic.js" charset="utf-8">
+</script>
+</head>
+<body>
+<script type="text/javascript" language="javascript1.2">
+//<![CDATA[
+<!--
+if (window.gbWhTopic)
+{
+        var strUrl = document.location.href;
+        var bc = 0;
+        var n = strUrl.toLowerCase().indexOf("bc-");
+        if(n != -1)
+        {
+                document.location.replace(strUrl.substring(0, n));
+                bc = strUrl.substring(n+3);
+        }
+
+        if (window.addTocInfo)
+        {
+        addTocInfo("3D Simulation VBA\nVBA Objects\nSources and Ports\nThermal\nHeatPipe Object");
+
+        }
+        if (window.writeBtnStyle)
+                writeBtnStyle();
+
+        if (window.writeIntopicBar)
+                writeIntopicBar(0);
+
+        
+        document.write("<p style=\"font-family: Tahoma; font-size: 9pt; font-weight: 400;  font-style:normal; color: rgb(0, 0, 0); text-decoration:none; text-align: left\"> ");
+AddMasterBreadcrumbs("../index.htm", "font-family: Tahoma; font-size: 9pt; font-weight: 400;  font-style:normal; color: rgb(0, 0, 0); text-decoration:none; text-align: left", "|", "Home", "../special_vbaobjects/special_vbaobjects_vbaobjects.htm");
+document.write("<a style=\"font-family: Tahoma; font-size: 9pt; font-weight: 400;  font-style:normal; color: rgb(0, 0, 0); text-decoration:none; text-align: left\" href=\"../special_vbaobjects/special_vbaobjects_vbaobjects.htm\">3D Simulation VBA<\/a> | <a style=\"font-family: Tahoma; font-size: 9pt; font-weight: 400;  font-style:normal; color: rgb(0, 0, 0); text-decoration:none; text-align: left\" href=\"../special_vbaobjects/special_vbaobjects_vbaobjects.htm\">VBA Objects<\/a> | <a style=\"font-family: Tahoma; font-size: 9pt; font-weight: 400;  font-style:normal; color: rgb(0, 0, 0); text-decoration:none; text-align: left\" href=\"../special_vbasignals/special_vbasignals_timesignal_object.htm\">Sources and Ports<\/a> | <a style=\"font-family: Tahoma; font-size: 9pt; font-weight: 400;  font-style:normal; color: rgb(0, 0, 0); text-decoration:none; text-align: left\" href=\"special_vbathermalsolver_compactthermalmodel_object.htm\">Thermal<\/a> | HeatPipe Object<\/p>");
+
+}
+else
+        if (window.gbIE4)
+                document.location.reload();
+
+onLoadHandler = function()
+{
+  if (window.setRelStartPage)
+        {
+        setTimeout("setRelStartPage('../index.htm');", 1)
+
+    setTimeout("UpdateBreadCrumbsMarker();", 1);
+        }
+}
+
+if (window.addEventListener){  
+        window.addEventListener('load', onLoadHandler, false);   
+} else if (window.attachEvent){  
+        window.attachEvent('onload', onLoadHandler);  
+}
+
+function onSetStartPage()
+{
+  autoSync(1);
+  sendSyncInfo();
+  sendAveInfoOut();
+}
+//-->
+//]]>
+</script><script type="text/javascript" src="../ehlpdhtm.js" language="JavaScript1.2">
+</script>
+<table cellspacing="0" width="100%">
+<col style="width: 50%;" />
+<col style="width: 50%;" />
+<tr>
+<td style="vertical-align: middle; padding-top: 5px; padding-bottom: 5px;">
+<p style="margin-top: 0px; margin-bottom: 0px;"><img src="../3ds.png" alt="" style="border: none;" border="0" /></p>
+</td>
+<td style="vertical-align: middle;">
+<p style="text-align: right;"><a href="https://www.3ds.com/products-services/3dexperience/" target="_blank"><img src="../3dexp.png" alt="" style="border: none;" width="32" height="32" border="0" /></a></p>
+</td>
+</tr>
+</table>
+<h1>HeatPipe Object</h1>
+<p class="VBA-Text">This object is used to specify a heat pipe for the <a href="special_vbathermalsolver_chtsolver.htm">Conjugate Heat Transfer Solver</a>.</p>
+<ul>
+<li class="p-VBA-Index-Category">
+<p class="VBA-Index-Category"><a href="#Methods">Methods</a></p>
+</li>
+<li class="p-VBA-Index-Category">
+<p class="VBA-Index-Category"><a href="#Example">Example</a></p>
+</li>
+</ul>
+<p class="VBA-Heading-Category"><a name="Methods" id="Methods"></a>Methods</p>
+<p class="VBA-Heading-Method">Reset</p>
+<p class="VBA-Text-Indent">Resets all internal settings of the heat pipe to their default values.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">Name ( <span style="font-style: italic;"><i><a href="../common_vbageneral/common_general_string.htm" id="a6" style="font-weight: normal; font-style: normal;" name="a6">string</a> name</i></span> )</p>
+<p class="VBA-Text-Indent">Specifies the <span style="font-style: italic;"><i>name</i></span> of the heat pipe. Each heat pipe must have a unique name.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">Folder ( <a href="../common_vbageneral/common_general_name.htm" style="font-weight: normal;">name</a> <span style="font-style: italic;"><i>foldername</i></span> )</p>
+<p class="VBA-Text-Indent">Sets the name of the folder for the new heat pipe. If the name is empty, then the heat pipe does not belong to a folder.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">Enable ( <span style="font-weight: normal;"><a href="../common_vbageneral/common_general_bool_data_type.htm" style="font-weight: normal;">bool</a></span> <span style="font-style: italic;"><i>flag</i></span> )</p>
+<p class="VBA-Text-Indent">Enables or disables the heat pipe being created. If <span style="font-style: italic;"><i>flag</i></span> <span>is</span> <span style="font-style: italic;"><i>false,</i></span> <span>the heat pipe will not be considered for simulation and the underlying geometry along with the material will be considered normally instead.</span></p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">EnableItem( <span style="font-weight: normal;"><a href="../common_vbageneral/common_general_name.htm" id="a22" name="a22">name</a> &#160;</span><span style="font-style: italic;"><i>name</i></span>, &#160;<a href="../common_vbageneral/common_general_bool_data_type.htm" style="font-weight: normal;">bool</a> <span style="font-style: italic;"><i>flag</i></span> )</p>
+<p class="VBA-Text-Indent">Enables or disables the (existing) heat pipe with the given <span style="font-style: italic;"><i>name</i></span> depending on <span style="font-style: italic;"><i>flag</i></span>. If <span style="font-style: italic;"><i>flag</i></span> is <span style="font-style: italic;"><i>false,</i></span> the heat pipe will not be considered for simulation.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">MaxAllowedHeatInWatt ( <span style="font-weight: normal;"><a href="../common_vbageneral/common_general_expression.htm">double expression</a></span> <span style="font-style: italic;"><i>Qmax</i></span> &#160;)</p>
+<p class="VBA-Text-Indent">Defines the maximum heat (in W) allowed through the heat pipe. If this value is exceeded in the final solution, a warning message will be printed out.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">ThermalResistance ( <span style="font-weight: normal;"><a href="../common_vbageneral/common_general_expression.htm">double expression</a></span> <span>resistance</span>&#160;)</p>
+<p class="VBA-Text-Indent">Sets the thermal resistance of the contacting solids.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">ThermalResistanceUnit ( <span style="font-weight: normal; font-style: italic;"><i><a href="../common_vbageneral/common_general_enum.htm" style="font-weight: normal;">enum</a></i></span> <span style="font-style: italic;"><i>unit</i></span> <span style="font-style: italic;"><i>{ "Absolute (K/W)", "Per unit area (K/W/m^2)" }</i></span>&#160;)</p>
+<p class="VBA-Text-Indent">Sets the thermal resistance to be defined either absolute or per unit area.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">OverwriteDefaultThermalConductivity ( <span style="font-weight: normal;"><a href="../common_vbageneral/common_general_bool_data_type.htm" style="font-weight: normal;">bool</a></span> <span style="font-style: italic;"><i>flag</i></span> &#160;)</p>
+<p class="VBA-Text-Indent">When <span style="font-style: italic; font-weight: bold;"><i>flag</i></span> is <span style="font-style: italic;"><i>True</i></span>, the default thermal conductivity (50000 W/K/m) for the heat pipe is replaced by the user-defined value.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">ThermalConductivity ( <span style="font-weight: normal;"><a href="../common_vbageneral/common_general_expression.htm">double expression</a></span> <span style="font-style: italic;"><i>conductivity</i></span> )</p>
+<p class="VBA-Text-Indent">Specifies the thermal conductivity value for the heat pipe. It is applied if the <span style="font-weight: bold;">OverwriteDefaultThermalConductivity</span> flag is set to T<span style="font-style: italic;"><i>rue.</i></span></p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">UseSpatiallyVaryingThermalConductivity( <span style="font-weight: normal;"><a href="../common_vbageneral/common_general_bool_data_type.htm" style="font-weight: normal;">bool</a></span> <span style="font-style: italic;"><i>flag</i></span> &#160;)</p>
+<p class="VBA-Text-Indent">When <span style="font-style: italic; font-weight: bold;"><i>flag</i></span> is <span style="font-style: italic;"><i>True</i></span>, the default thermal conductivity (50000 W/K/m) for the heat pipe is replaced by the user-defined space map based thermal conductivity.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">AnisotropicSpatiallyVaryingThermalConductivity ( <span style="font-weight: normal;"><a href="../common_vbageneral/common_general_bool_data_type.htm" style="font-weight: normal;">bool</a></span> <span style="font-style: italic;"><i>flag</i></span> &#160;)</p>
+<p class="VBA-Text-Indent">When <span style="font-style: italic; font-weight: bold;"><i>flag</i></span> is <span style="font-style: italic;"><i>True</i></span>, the three components of the space map based thermal conductivity are considered.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">ThermalConductivityMap ( <span style="font-style: italic;"><i><a href="../common_vbageneral/common_general_string.htm" id="a312" style="font-weight: normal; font-style: normal;" name="a312">string</a> filename</i></span> )</p>
+<p class="VBA-Text-Indent">Sets the map .m3d format for the space map based thermal conductivity, when the <span style="font-weight: bold;">AnisotropicSpatiallyVaryingThermalConductivity</span> &#160;flag is set to <span style="font-style: italic;"><i>False</i></span>.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">ThermalConductivityMapX ( <span style="font-style: italic;"><i><a href="../common_vbageneral/common_general_string.htm" id="a3121" style="font-weight: normal; font-style: normal;" name="a3121">string</a> filename.m3d</i></span> )</p>
+<p class="VBA-Text-Indent">Sets the map in .m3d format for the space map based thermal conductivity<span style="font-style: italic; font-weight: bold;"><i>&#160;</i></span>in the "<span style="font-style: italic;"><i>x</i></span>" direction, when the <span style="font-weight: bold;">AnisotropicSpatiallyVaryingThermalConductivity</span> &#160;flag is set to <span style="font-style: italic;"><i>True</i></span>.</p>
+<p class="VBA-Text-Indent"><span style="font-weight: bold;">ThermalConductivityMap</span> <span>is an alias for</span> <span style="font-weight: bold;">ThermalConductivityMapX</span><span>. It can be used instead.</span></p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">ThermalConductivityMapY ( <span style="font-style: italic;"><i><a href="../common_vbageneral/common_general_string.htm" id="a31211" style="font-weight: normal; font-style: normal;" name="a31211">string</a> filename.m3d</i></span> )</p>
+<p class="VBA-Text-Indent">Sets the map .m3d format for the space map based thermal conductivity<span style="font-style: italic; font-weight: bold;"><i>&#160;</i></span>in the "<span style="font-style: italic;"><i>y</i></span>" direction, when the <span style="font-weight: bold;">AnisotropicSpatiallyVaryingThermalConductivity</span> &#160;flag is set to <span style="font-style: italic;"><i>True</i></span>.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">ThermalConductivityMapZ ( <span style="font-style: italic;"><i><a href="../common_vbageneral/common_general_string.htm" id="a31212" style="font-weight: normal; font-style: normal;" name="a31212">string</a> filename.m3d</i></span> )</p>
+<p class="VBA-Text-Indent">Sets the map .m3d format for the space map based thermal conductivity<span style="font-style: italic; font-weight: bold;"><i>&#160;</i></span>in the "<span style="font-style: italic;"><i>z</i></span>" direction, when the <span style="font-weight: bold;">AnisotropicSpatiallyVaryingThermalConductivity</span> &#160;flag is set to <span style="font-style: italic;"><i>True</i></span>.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">SpatiallyVaryingConductivityType ( <span style="font-weight: normal; font-style: italic;"><i>&#160;<a href="../common_vbageneral/common_general_enum.htm" style="font-weight: normal;">enum</a></i></span> <span style="font-style: italic;"><i>type</i></span> <span style="font-style: italic;"><i>{ "Analytical function", "File import" }</i></span> )</p>
+<p class="VBA-Text-Indent">Specifies the type of definition for the space map based thermal conductivity.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">ThermalConductivityLaw ( <span style="font-weight: normal;"><a href="../common_vbageneral/common_general_expression.htm">double expression</a></span> <span style="font-style: italic;"><i>law</i></span> )</p>
+<p class="VBA-Text-Indent">Sets the law for the space map based thermal conductivity based on the <span style="font-weight: bold;">SpatiallyVaryingConductivityType</span> <span style="font-style: italic; font-weight: bold;"><i>"Analytical function"</i></span>, when the <span style="font-weight: bold;">AnisotropicSpatiallyVaryingThermalConductivity</span> &#160;flag is set to <span style="font-style: italic;"><i>False</i></span>. The <span style="font-style: italic; font-weight: bold;"><i>law</i></span> is evaluated at a discrete set of "<span style="font-style: italic;"><i>x</i></span>", "<span style="font-style: italic;"><i>y</i></span>", "<span style="font-style: italic;"><i>z</i></span>" coordinates. In this law, "<span style="font-style: italic;"><i>x</i></span>", "<span style="font-style: italic;"><i>y</i></span>" and "<span style="font-style: italic;"><i>z</i></span>" are used as variables. Parameters with those names are ignored when evaluating the <span style="font-style: italic; font-weight: bold;"><i>law</i></span>.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">ThermalConductivityLawX ( <span style="font-weight: normal;"><a href="../common_vbageneral/common_general_expression.htm">double expression</a></span> <span style="font-style: italic;"><i>law</i></span> )</p>
+<p class="VBA-Text-Indent">Sets the law for the space map based thermal conductivity based on the <span style="font-weight: bold;">SpatiallyVaryingConductivityType</span> <span style="font-style: italic; font-weight: bold;"><i>"Analytical function"</i></span> in the "<span style="font-style: italic;"><i>x</i></span>" direction, when the <span style="font-weight: bold;">AnisotropicSpatiallyVaryingThermalConductivity</span> &#160;flag is set to <span style="font-style: italic;"><i>True</i></span>.&#160;The <span style="font-style: italic; font-weight: bold;"><i>law</i></span> is evaluated at a discrete set of "<span style="font-style: italic;"><i>x</i></span>", "<span style="font-style: italic;"><i>y</i></span>", "<span style="font-style: italic;"><i>z</i></span>" coordinates. In this law, "<span style="font-style: italic;"><i>x</i></span>", "<span style="font-style: italic;"><i>y</i></span>" and "<span style="font-style: italic;"><i>z</i></span>" are used as variables. Parameters with those names are ignored when evaluating the <span style="font-style: italic; font-weight: bold;"><i>law</i></span>.</p>
+<p class="VBA-Text-Indent"><span style="font-weight: bold;">ThermalConductivityLaw</span> is an alias for <span style="font-weight: bold;">ThermalConductivityLawX</span><span>. It</span> can be used instead.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">ThermalConductivityLawY ( <span style="font-weight: normal;"><a href="../common_vbageneral/common_general_expression.htm">double expression</a></span> <span style="font-style: italic;"><i>law</i></span> )</p>
+<p class="VBA-Text-Indent">Sets the law for the space map based thermal conductivity based on the <span style="font-weight: bold;">SpatiallyVaryingConductivityType</span> <span style="font-style: italic; font-weight: bold;"><i>"Analytical function"</i></span> in the "y" direction, when the <span style="font-weight: bold;">AnisotropicSpatiallyVaryingThermalConductivity</span> &#160;flag is set to <span style="font-style: italic;"><i>True</i></span>.&#160;The <span style="font-style: italic; font-weight: bold;"><i>law</i></span> is evaluated at a discrete set of "<span style="font-style: italic;"><i>x</i></span>", "<span style="font-style: italic;"><i>y</i></span>", "<span style="font-style: italic;"><i>z</i></span>" coordinates. In this law, "<span style="font-style: italic;"><i>x</i></span>", "<span style="font-style: italic;"><i>y</i></span>" and "<span style="font-style: italic;"><i>z</i></span>" are used as variables. Parameters with those names are ignored when evaluating the <span style="font-style: italic; font-weight: bold;"><i>law</i></span>.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">ThermalConductivityLawZ ( <span style="font-weight: normal;"><a href="../common_vbageneral/common_general_expression.htm">double expression</a></span> <span style="font-style: italic;"><i>law</i></span> )</p>
+<p class="VBA-Text-Indent">Sets the law for the space map based thermal conductivity based on the <span style="font-weight: bold;">SpatiallyVaryingConductivityType</span> <span style="font-style: italic; font-weight: bold;"><i>"Analytical function"</i></span> in the "z" direction, when the <span style="font-weight: bold;">AnisotropicSpatiallyVaryingThermalConductivity</span> &#160;flag is set to <span style="font-style: italic;"><i>True</i></span>.&#160;The <span style="font-style: italic; font-weight: bold;"><i>law</i></span> is evaluated at a discrete set of "<span style="font-style: italic;"><i>x</i></span>", "<span style="font-style: italic;"><i>y</i></span>", "<span style="font-style: italic;"><i>z</i></span>" coordinates. In this law, "<span style="font-style: italic;"><i>x</i></span>", "<span style="font-style: italic;"><i>y</i></span>" and "<span style="font-style: italic;"><i>z</i></span>" are used as variables. Parameters with those names are ignored when evaluating the <span style="font-style: italic; font-weight: bold;"><i>law</i></span>.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">ThermalConductivityRangeXMin ( <span style="font-weight: normal;"><a href="../common_vbageneral/common_general_expression.htm">double expression</a></span> <span style="font-style: italic;"><i>value</i></span> )</p>
+<p class="VBA-Text-Indent">Sets the minimum "<span style="font-style: italic;"><i>x</i></span>" value for the evaluation of the law.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">ThermalConductivityRangeXMax ( <span style="font-weight: normal;"><a href="../common_vbageneral/common_general_expression.htm">double expression</a></span> <span style="font-style: italic;"><i>value</i></span> )</p>
+<p class="VBA-Text-Indent">Sets the maximum "<span style="font-style: italic;"><i>x</i></span>" value for the evaluation of the law.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">ThermalConductivityRangeYMin ( <span style="font-weight: normal;"><a href="../common_vbageneral/common_general_expression.htm">double expression</a></span> <span style="font-style: italic;"><i>value</i></span> )</p>
+<p class="VBA-Text-Indent">Sets the minimum "<span style="font-style: italic;"><i>y</i></span>" value for the evaluation of the law.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">ThermalConductivityRangeYMax ( <span style="font-weight: normal;"><a href="../common_vbageneral/common_general_expression.htm">double expression</a></span> <span style="font-style: italic;"><i>value</i></span> )</p>
+<p class="VBA-Text-Indent">Sets the minimum "<span style="font-style: italic;"><i>y</i></span>" value for the evaluation of the law.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">ThermalConductivityRangeZMin ( <span style="font-weight: normal;"><a href="../common_vbageneral/common_general_expression.htm">double expression</a></span> <span style="font-style: italic;"><i>value</i></span> )</p>
+<p class="VBA-Text-Indent">Sets the minimum "<span style="font-style: italic;"><i>z</i></span>" value for the evaluation of the law.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">ThermalConductivityRangeZMax ( <span style="font-weight: normal;"><a href="../common_vbageneral/common_general_expression.htm">double expression</a></span> <span style="font-style: italic;"><i>value</i></span> )</p>
+<p class="VBA-Text-Indent">Sets the minimum "<span style="font-style: italic;"><i>z</i></span>" value for the evaluation of the law.</p>
+<p class="VBA-Heading-Method">&#160;</p>
+<p class="VBA-Heading-Method">ThermalConductivitySamplesX ( <span style="font-weight: normal;"><a href="../common_vbageneral/common_general_integer.htm">int</a> &#160;</span><span style="font-style: italic;"><i>value</i></span><span style="font-weight: normal;">&#160;</span>)</p>
+<p class="VBA-Text-Indent">Sets the number of samples for the "<span style="font-style: italic;"><i>x</i></span>" coordinate for the evaluation of the law.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">ThermalConductivitySamplesY ( <span style="font-weight: normal;"><a href="../common_vbageneral/common_general_integer.htm">int</a> &#160;</span><span style="font-style: italic;"><i>value</i></span><span style="font-weight: normal;">&#160;</span>)</p>
+<p class="VBA-Text-Indent">Sets the number of samples for the "<span style="font-style: italic;"><i>y</i></span>" coordinate for the evaluation of the law.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">ThermalConductivitySamplesZ ( <span style="font-weight: normal;"><a href="../common_vbageneral/common_general_integer.htm">int</a> &#160;</span><span style="font-style: italic;"><i>value</i></span><span style="font-weight: normal;">&#160;</span>)</p>
+<p class="VBA-Text-Indent">Sets the number of samples for the "<span style="font-style: italic;"><i>z</i></span>" coordinate for the evaluation of the law.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">ThermalConductivityImport ( <span style="font-style: italic;"><i><a href="../common_vbageneral/common_general_string.htm" id="a31" style="font-weight: normal; font-style: normal;" name="a31">string</a> filename</i></span> )</p>
+<p class="VBA-Text-Indent">Sets the file to import for the space map based thermal conductivity for the <span style="font-weight: bold;">SpatiallyVaryingConductivityType</span> <span style="font-style: italic; font-weight: bold;"><i>"File import"</i></span>, when the <span style="font-weight: bold;">AnisotropicSpatiallyVaryingThermalConductivity</span> &#160;flag is set to <span style="font-style: italic;"><i>False</i></span>. The imported file must be specified in one of the formats supported by <span style="font-weight: bold;">ConvertMaterialField,</span> see <a href="../special_vbalayer/special_vbalayerolayer_object.htm">Material Object</a>.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">ThermalConductivityImportX ( <span style="font-style: italic;"><i><a href="../common_vbageneral/common_general_string.htm" id="a311" style="font-weight: normal; font-style: normal;" name="a311">string</a> filename</i></span> )</p>
+<p class="VBA-Text-Indent">Sets the file to import for the space map based thermal conductivity for the <span style="font-weight: bold;">SpatiallyVaryingConductivityType</span> <span style="font-style: italic; font-weight: bold;"><i>"File import"&#160;</i></span>in the "<span style="font-style: italic;"><i>x</i></span>" direction, when the <span style="font-weight: bold;">AnisotropicSpatiallyVaryingThermalConductivity</span> &#160;flag is set to <span style="font-style: italic;"><i>True</i></span>. The imported file must be specified in one of the formats supported by <span style="font-weight: bold;">ConvertMaterialField,</span> see <a href="../special_vbalayer/special_vbalayerolayer_object.htm">Material Object</a>.</p>
+<p class="VBA-Text-Indent"><span style="font-weight: bold;">ThermalConductivityImport</span> is an alias for <span style="font-weight: bold;">ThermalConductivityImportX</span>. It can be used instead.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">ThermalConductivityImportY ( <span style="font-style: italic;"><i><a href="../common_vbageneral/common_general_string.htm" id="a3111" style="font-weight: normal; font-style: normal;" name="a3111">string</a> filename</i></span> )</p>
+<p class="VBA-Text-Indent">Sets the file to import for the space map based thermal conductivity for the <span style="font-weight: bold;">SpatiallyVaryingConductivityType</span> <span style="font-style: italic; font-weight: bold;"><i>"File import"&#160;</i></span>in the "<span style="font-style: italic;"><i>y</i></span>" direction, when the <span style="font-weight: bold;">AnisotropicSpatiallyVaryingThermalConductivity</span> &#160;flag is set to <span style="font-style: italic;"><i>True</i></span>. The imported file must be specified in one of the formats supported by <span style="font-weight: bold;">ConvertMaterialField,</span> see <a href="../special_vbalayer/special_vbalayerolayer_object.htm">Material Object</a>.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">ThermalConductivityImportZ ( <span style="font-style: italic;"><i><a href="../common_vbageneral/common_general_string.htm" id="a31111" style="font-weight: normal; font-style: normal;" name="a31111">string</a> filename</i></span> )</p>
+<p class="VBA-Text-Indent">Sets the file to import for the space map based thermal conductivity for the <span style="font-weight: bold;">SpatiallyVaryingConductivityType</span> <span style="font-style: italic; font-weight: bold;"><i>"File import"&#160;</i></span>in the "<span style="font-style: italic;"><i>z</i></span>" direction, when the <span style="font-weight: bold;">AnisotropicSpatiallyVaryingThermalConductivity</span> &#160;flag is set to <span style="font-style: italic;"><i>True</i></span>. The imported file must be specified in one of the formats supported by <span style="font-weight: bold;">ConvertMaterialField,</span> see <a href="../special_vbalayer/special_vbalayerolayer_object.htm">Material Object</a>.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">AddHeatPipePart ( <span style="font-weight: normal;"><a href="../common_vbageneral/common_general_solid_names.htm">solidname</a></span> <span style="font-style: italic;"><i>solidname,</i></span> <span style="font-weight: normal;"><a href="../common_vbageneral/common_general_integer.htm">int</a></span> <span style="font-style: italic;"><i>faceid</i></span> )</p>
+<p class="VBA-Text-Indent">Adds a solid to the solid list for the heat pipe. The solid is picked by a face (indicated by its <span style="font-style: italic;"><i>faceid</i></span>) of a certain solid (indicated by its <span style="font-style: italic;"><i>solidname</i></span>).</p>
+<p class="VBA-Heading-Method">&#160;</p>
+<p class="VBA-Heading-Method">AddContactingSolid ( <span style="font-weight: normal;"><a href="../common_vbageneral/common_general_solid_names.htm">solidname</a></span> <span style="font-style: italic;"><i>solidname,</i></span> <span style="font-weight: normal;"><a href="../common_vbageneral/common_general_integer.htm">int</a></span> <span style="font-style: italic;"><i>faceid</i></span> )</p>
+<p class="VBA-Text-Indent">Adds a solid to the list of contacting solids for the heat pipe. The solid is picked by a face (indicated by its <span style="font-style: italic;"><i>faceid</i></span>) of a certain solid (indicated by its <span style="font-style: italic;"><i>solidname</i></span>).</p>
+<p class="VBA-Heading-Method">&#160;</p>
+<p class="VBA-Heading-Method">Create</p>
+<p class="VBA-Text-Indent">Creates the heat pipe with the previously set parameters.</p>
+<p class="vba-text-indent">&#160;</p>
+<p class="VBA-Heading-Method">Delete ( <span style="font-style: italic;"><i><a href="../common_vbageneral/common_general_string.htm" id="a2" style="font-weight: normal; font-style: normal;" name="a2">string</a> name</i></span> )</p>
+<p class="VBA-Text-Indent">Deletes the heat pipe with the given <span style="font-style: italic;"><i>name</i></span>.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">Rename &#160;( <span style="font-style: italic;"><i><a href="../common_vbageneral/common_general_string.htm" id="a3" style="font-weight: normal; font-style: normal;" name="a3">string</a> oldname,</i></span> &#160;<span style="font-style: italic;"><i><a href="../common_vbageneral/common_general_string.htm" id="a4" style="font-weight: normal; font-style: normal;" name="a4">string</a> newname</i></span> &#160;)</p>
+<p class="VBA-Text-Indent">Renames the heat pipe with the given <span style="font-style: italic;"><i>oldname</i></span> to the defined <span style="font-style: italic;"><i>newname</i></span>.</p>
+<p class="vba-text-indent">&#160;</p>
+<p class="VBA-Heading-Method">NewFolder ( <span style="font-style: italic;"><i><a href="../common_vbageneral/common_general_string.htm" id="a611" style="font-style: normal; font-weight: normal;" name="a611">string</a> foldername</i></span> )</p>
+<p class="vba-text-indent">Creates a new folder with the given name.</p>
+<p class="vba-text-indent">&#160;</p>
+<p class="VBA-Heading-Method">RenameFolder ( <span style="font-style: italic;"><i><a href="../common_vbageneral/common_general_string.htm" id="a62" style="font-style: normal; font-weight: normal;" name="a62">string</a> oldFoldername,</i></span> <span style="font-style: italic;"><i><a href="../common_vbageneral/common_general_string.htm" id="a621" style="font-style: normal; font-weight: normal;" name="a621">string</a> newFoldername</i></span>)</p>
+<p class="vba-text-indent">Changes the name of an existing folder.</p>
+<p class="vba-text-indent">&#160;</p>
+<p class="VBA-Heading-Method">DeleteFolder ( <span style="font-style: italic;"><i><a href="../common_vbageneral/common_general_string.htm" id="a611" style="font-style: normal; font-weight: normal;" name="a611">string</a> foldername</i></span> )</p>
+<p class="vba-text-indent">Deletes an existing folder and all the contained elements.</p>
+<p class="VBA-Heading-Category"><a name="Example" id="Example"></a>Example</p>
+<p class="VBA-Text-Example">With HeatPipe</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.Reset</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.Name "heatpipe1"</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.Folder ""</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.Enable "True"</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.MaxAllowedHeatInWatt "4"</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.ThermalResistance "2"</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.ThermalResistanceUnit "Absolute (K/W)"</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.OverwriteDefaultThermalConductivity "False"</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.ThermalConductivity "55000"</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.AddHeatPipePart "component1:solid2", "2"</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.AddContactingSolid "component1:solid1", "12"</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.AddContactingSolid "component1:solid3", "3"</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.Create</p>
+<p class="VBA-Text-Example">End With</p>
+<p class="VBA-Text-Example">&#160;</p>
+<?rh-p style="margin-bottom: 0px; text-align: Right; margin-left: 18px; 
+                 margin-right: 18px; margin-top: 18px;" ?>
+<div style="width: 100%; position: relative;" id="footer">
+<p style="border-bottom: Solid 1px #dddddd; text-align: Left; margin-left: 0px; font-family: Arial, sans-serif; line-height: Normal; margin-top: 9px; margin-right: 0px; margin-bottom: 6px; border-left-width: 1px; border-top-width: 1px; border-right-width: 1px;"><span style="text-align: Left; font-family: Arial, sans-serif; line-height: Normal;">&#160;</span></p>
+<table cellspacing="0" width="100%">
+<col style="width: 50%;" />
+<col style="width: 50%;" />
+<tr>
+<td style="vertical-align: Top;"><span style="font-family: Arial, sans-serif; line-height: Normal; font-size: 8pt;"><font size="1" style="font-size:8pt;">CST Studio Suite 2026</font></span></td>
+<td style="vertical-align: Top;">
+<p style="text-align: right;">&#160;</p>
+</td>
+</tr>
+</table>
+<p>&#160;</p>
+</div>
+<script type="text/javascript" language="javascript1.2">
+//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+        writeIntopicBar(0);
+
+
+highlightSearch();
+//-->
+//]]>
+</script>
+</body>
+</html>

@@ -1,0 +1,441 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="Adobe RoboHelp 11" />
+<title>Units Object</title>
+<link rel="StyleSheet" href="../online_help_vba.css" type="text/css" />
+<style type="text/css">
+/*<![CDATA[*/
+<!--
+body { border-bottom-style:None; }
+-->
+/*]]>*/
+</style>
+
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+        origWidth = innerWidth;
+        origHeight = innerHeight;
+        onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+/*<![CDATA[*/
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+-->
+/*]]>*/
+</style>
+
+<script type="text/javascript" language="javascript1.2" src="../whmsg.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript" src="../whver.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript1.2" src="../whutils.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript1.2" src="../whproxy.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript1.2" src="../whlang.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript1.2" src="../whtopic.js" charset="utf-8">
+</script>
+</head>
+<body>
+<script type="text/javascript" language="javascript1.2">
+//<![CDATA[
+<!--
+if (window.gbWhTopic)
+{
+        var strUrl = document.location.href;
+        var bc = 0;
+        var n = strUrl.toLowerCase().indexOf("bc-");
+        if(n != -1)
+        {
+                document.location.replace(strUrl.substring(0, n));
+                bc = strUrl.substring(n+3);
+        }
+
+        if (window.addTocInfo)
+        {
+        addTocInfo("Circuits & Systems VBA\nProject\nUnits");
+
+        }
+        if (window.writeBtnStyle)
+                writeBtnStyle();
+
+        if (window.writeIntopicBar)
+                writeIntopicBar(0);
+
+        
+        document.write("<p style=\"font-family: Tahoma; font-size: 9pt; font-weight: 400;  font-style:normal; color: rgb(0, 0, 0); text-decoration:none; text-align: left\"> ");
+AddMasterBreadcrumbs("../index.htm", "font-family: Tahoma; font-size: 9pt; font-weight: 400;  font-style:normal; color: rgb(0, 0, 0); text-decoration:none; text-align: left", "|", "Home", "../special_vbaobjects/cstdesignstudiovbaobjects.htm");
+document.write("<a style=\"font-family: Tahoma; font-size: 9pt; font-weight: 400;  font-style:normal; color: rgb(0, 0, 0); text-decoration:none; text-align: left\" href=\"../special_vbaobjects/cstdesignstudiovbaobjects.htm\">Circuits & Systems VBA<\/a> | <a style=\"font-family: Tahoma; font-size: 9pt; font-weight: 400;  font-style:normal; color: rgb(0, 0, 0); text-decoration:none; text-align: left\" href=\"projectobject.htm\">Project<\/a> | Units<\/p>");
+
+}
+else
+        if (window.gbIE4)
+                document.location.reload();
+
+onLoadHandler = function()
+{
+  if (window.setRelStartPage)
+        {
+        setTimeout("setRelStartPage('../index.htm');", 1)
+
+    setTimeout("UpdateBreadCrumbsMarker();", 1);
+        }
+}
+
+if (window.addEventListener){  
+        window.addEventListener('load', onLoadHandler, false);   
+} else if (window.attachEvent){  
+        window.attachEvent('onload', onLoadHandler);  
+}
+
+function onSetStartPage()
+{
+  autoSync(1);
+  sendSyncInfo();
+  sendAveInfoOut();
+}
+//-->
+//]]>
+</script><script type="text/javascript" src="../ehlpdhtm.js" language="JavaScript1.2">
+</script>
+<table cellspacing="0" width="100%">
+<col style="width: 50%;" />
+<col style="width: 50%;" />
+<tr>
+<td style="vertical-align: middle; padding-top: 5px; padding-bottom: 5px;">
+<p style="margin-top: 0px; margin-bottom: 0px;"><img src="../3ds.png" alt="" style="border: none;" border="0" /></p>
+</td>
+<td style="vertical-align: middle;">
+<p style="text-align: right;"><a href="https://www.3ds.com/products-services/3dexperience/" target="_blank"><img src="../3dexp.png" alt="" style="border: none;" width="32" height="32" border="0" /></a></p>
+</td>
+</tr>
+</table>
+<h1>Units Object</h1>
+<p class="VBA-Text">Offers functions concerning the units of the current project.</p>
+<ul>
+<li class="p-VBA-Index-Category">
+<p class="VBA-Index-Category"><a href="#Methods_for_Units">Methods for Units</a></p>
+</li>
+<li class="p-VBA-Index-Category">
+<p class="VBA-Index-Category"><a href="#Methods Frequency">Methods for Frequency Units</a></p>
+</li>
+<li class="p-VBA-Index-Category">
+<p class="VBA-Index-Category"><a href="#Methods Geometry">Methods for Geometric Units</a></p>
+</li>
+<li class="p-VBA-Index-Category">
+<p class="VBA-Index-Category" style="font-weight: bold;"><a href="#Methods Time">Methods for Time Units</a></p>
+</li>
+<li class="p-VBA-Index-Category">
+<p class="VBA-Index-Category"><a href="#Methods Frequency">Methods for Frequency Units</a></p>
+</li>
+<li class="p-VBA-Index-Category">
+<p class="VBA-Index-Category"><a href="#Voltage_Methods">Methods for Voltage Units</a></p>
+</li>
+<li class="p-VBA-Index-Category">
+<p class="VBA-Index-Category"><a href="#Current_Methods">Methods for Current Units</a></p>
+</li>
+<li class="p-VBA-Index-Category">
+<p class="VBA-Index-Category"><a href="#Resistance_Methods">Methods for Resistance Units</a></p>
+</li>
+<li class="p-VBA-Index-Category">
+<p class="VBA-Index-Category"><a href="#Conductance_Methods">Methods for Conductance Units</a></p>
+</li>
+<li class="p-VBA-Index-Category">
+<p class="VBA-Index-Category"><a href="#Capacitance_Methods">Methods for Capacitance Units</a></p>
+</li>
+<li class="p-VBA-Index-Category">
+<p class="VBA-Index-Category"><a href="#Inductance_Methods">Methods for Inductance Units</a></p>
+</li>
+<li class="p-VBA-Index-Category">
+<p class="VBA-Index-Category"><a href="#Methods_for_Result_Units">Methods for Result Units</a></p>
+</li>
+<li class="p-VBA-Index-Category">
+<p class="VBA-Index-Category"><a href="#Example">Example</a></p>
+</li>
+</ul>
+<p class="VBA-Heading-Category"><a name="Methods_for_Units" id="Methods_for_Units"></a>Methods for Units</p>
+<p class="VBA-Heading-Method">SetUnit (<a href="../common_vbageneral/common_general_enum.htm" id="a181" style="font-weight: normal;" name="a181">enum</a> dimension, <a href="../common_vbageneral/common_general_enum.htm" id="a182" style="font-weight: normal;" name="a182">enum</a> unit)</p>
+<p class="VBA-Text-Indent">Sets the entered unit for the selected dimension. Admissible values for <span style="font-style: italic;"><i>dimension</i></span> and <span style="font-style: italic;"><i>unit</i></span> are:</p>
+<table style="margin-left: 24px; border-collapse: separate; border-collapse: separate;" cellspacing="0" width="500" border="1">
+<col style="width: 24.498%;" />
+<col style="width: 75.502%;" />
+<tr>
+<td>
+<p class="VBA-Text">dimension</p>
+</td>
+<td>
+<p class="VBA-Text">supported units</p>
+</td>
+</tr>
+<tr>
+<td>
+<p class="VBA-Text">Length</p>
+</td>
+<td>
+<p class="VBA-Text">nm, um, mm, cm, m, mil, in, ft</p>
+</td>
+</tr>
+<tr>
+<td>
+<p class="VBA-Text">Time</p>
+</td>
+<td>
+<p class="VBA-Text">fs, ps, ns, us, ms, s</p>
+</td>
+</tr>
+<tr>
+<td>
+<p class="VBA-Text">Frequency</p>
+</td>
+<td>
+<p class="VBA-Text">Hz, kHz, MHz, GHz, THz, PHz</p>
+</td>
+</tr>
+<tr>
+<td>
+<p class="VBA-Text">Temperature</p>
+</td>
+<td>
+<p class="VBA-Text">degC, K, degF</p>
+</td>
+</tr>
+<tr>
+<td>
+<p class="VBA-Text">Voltage</p>
+</td>
+<td>
+<p class="VBA-Text">nV, uV, mV, V ,kV, MV</p>
+</td>
+</tr>
+<tr>
+<td>
+<p class="VBA-Text">Current</p>
+</td>
+<td>
+<p class="VBA-Text">nA, uA, mA, A, kA, MA</p>
+</td>
+</tr>
+<tr>
+<td>
+<p class="VBA-Text">Resistance</p>
+</td>
+<td>
+<p class="VBA-Text">uOhm, mOhm, Ohm, kOhm, MOhm, GOhm</p>
+</td>
+</tr>
+<tr>
+<td>
+<p class="VBA-Text">Conductance</p>
+</td>
+<td>
+<p class="VBA-Text">nS, uS, mS, S</p>
+</td>
+</tr>
+<tr>
+<td>
+<p class="VBA-Text">Capacitance</p>
+</td>
+<td>
+<p class="VBA-Text">fF, pF, nF, uF, mF, F</p>
+</td>
+</tr>
+<tr>
+<td>
+<p class="VBA-Text">Inductance</p>
+</td>
+<td>
+<p class="VBA-Text">pH, nH, uH, mH, H</p>
+</td>
+</tr>
+</table>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Text-Indent">Unit strings are case-sensitive and follow the syntax described in the <a href="../../../userinterface/overview/units.htm">units documentation</a><a href="../../../userinterface/overview/units.htm">.</a></p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">GetUnit (<a href="../common_vbageneral/common_general_enum.htm" id="a1811" style="font-weight: normal;" name="a1811">enum</a> dimension) <a href="../common_vbageneral/common_general_string.htm" style="font-weight: normal;">string</a></p>
+<p class="VBA-Text-Indent">Returns the current unit setting for <span style="font-style: italic;"><i>dimension</i></span>. See <span style="font-weight: bold;">SetUnit</span> for more information on the returned unit strings.</p>
+<p class="VBA-Heading-Category"><a name="Methods Geometry"></a>Methods for Geometric Units</p>
+<p class="VBA-Heading-Method">GetGeometryUnitToSI <a href="../common_vbageneral/common_general_double.htm" id="a38" style="font-weight: normal; font-style: normal;" name="a38">double</a></p>
+<p class="VBA-Text-Indent">Returns the factor to convert a geometry value measured in units of the current project into the units.</p>
+<p class="VBA-Text-Indent">-&gt; a(SI Unit) = factor * b(project Unit)</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">GetGeometrySIToUnit <a href="../common_vbageneral/common_general_double.htm" id="a6" style="font-weight: normal; font-style: normal;" name="a6">double</a></p>
+<p class="VBA-Text-Indent">Returns the factor to convert a geometry value in SI units into the units defined in the current project.</p>
+<p class="VBA-Text-Indent">-&gt; a(project Unit) = factor * b(SI Unit)</p>
+<p class="VBA-Heading-Category"><a name="Methods Time"></a>Methods for Time Units</p>
+<p class="VBA-Heading-Method">GetTimeUnitToSI <a href="../common_vbageneral/common_general_double.htm" id="a7" style="font-weight: normal; font-style: normal;" name="a7">double</a></p>
+<p class="VBA-Text-Indent">Returns the factor to convert a time value measured in units of the current project into SI units.</p>
+<p class="VBA-Text-Indent">-&gt; a(SI Unit) = factor * b(project Unit)</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">GetTimeSIToUnit <a href="../common_vbageneral/common_general_double.htm" id="a8" style="font-weight: normal; font-style: normal;" name="a8">double</a></p>
+<p class="VBA-Text-Indent">Returns the factor to convert a time value in SI units into the units defined in the current project.</p>
+<p class="VBA-Text-Indent">-&gt; a(project Unit) = factor * b(SI Unit)</p>
+<p class="VBA-Heading-Category"><a name="Methods Frequency"></a>Methods for Frequency Units</p>
+<p class="VBA-Heading-Method">GetFrequencyUnitToSI <a href="../common_vbageneral/common_general_double.htm" id="a9" style="font-weight: normal; font-style: normal;" name="a9">double</a></p>
+<p class="VBA-Text-Indent">Returns the factor to convert a frequency value measured in units of the current project into SI units.</p>
+<p class="VBA-Text-Indent">-&gt; a(SI Unit) = factor * b(project Unit)</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">GetFrequencySIToUnit <a href="../common_vbageneral/common_general_double.htm" id="a10" style="font-weight: normal; font-style: normal;" name="a10">double</a></p>
+<p class="VBA-Text-Indent">Returns the factor to convert a frequency value in SI units into the units defined in the current project.</p>
+<p class="VBA-Text-Indent">-&gt; a(project Unit) = factor * b(SI Unit)</p>
+<p class="VBA-Heading-Category"><a name="Voltage_Methods" id="Voltage_Methods"></a>Methods for Voltage Units</p>
+<p class="VBA-Heading-Method">GetVoltageUnitToSI <a href="../common_vbageneral/common_general_double.htm" id="a13" style="font-weight: normal; font-style: normal;" name="a13">double</a></p>
+<p class="VBA-Text-Indent">Returns the factor to convert a voltage value measured in units of the current project into the units.</p>
+<p class="VBA-Text-Indent">-&gt; a(SI Unit) = factor * b(project Unit)</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">GetVoltageSIToUnit <a href="../common_vbageneral/common_general_double.htm" id="a14" style="font-weight: normal; font-style: normal;" name="a14">double</a></p>
+<p class="VBA-Text-Indent">Returns the factor to convert a voltage value in SI units into the units defined in the current project.</p>
+<p class="VBA-Text-Indent">-&gt; a(project Unit) = factor * b(SI Unit)</p>
+<p class="VBA-Heading-Category"><a name="Current_Methods" id="Current_Methods"></a>Methods for Current Units</p>
+<p class="VBA-Heading-Method">GetCurrentUnitToSI <a href="../common_vbageneral/common_general_double.htm" id="a17" style="font-weight: normal; font-style: normal;" name="a17">double</a></p>
+<p class="VBA-Text-Indent">Returns the factor to convert a current value measured in units of the current project into the units.</p>
+<p class="VBA-Text-Indent">-&gt; a(SI Unit) = factor * b(project Unit)</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">GetCurrentSIToUnit <a href="../common_vbageneral/common_general_double.htm" id="a19" style="font-weight: normal; font-style: normal;" name="a19">double</a></p>
+<p class="VBA-Text-Indent">Returns the factor to convert a current value in SI units into the units defined in the current project.</p>
+<p class="VBA-Text-Indent">-&gt; a(project Unit) = factor * b(SI Unit)</p>
+<p class="VBA-Heading-Category"><a name="Resistance_Methods" id="Resistance_Methods"></a>Methods for Resistance Units</p>
+<p class="VBA-Heading-Method">GetResistanceUnitToSI <a href="../common_vbageneral/common_general_double.htm" id="a22" style="font-weight: normal; font-style: normal;" name="a22">double</a></p>
+<p class="VBA-Text-Indent">Returns the factor to convert a resistance value measured in units of the current project into the units.</p>
+<p class="VBA-Text-Indent">-&gt; a(SI Unit) = factor * b(project Unit)</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">GetResistanceSIToUnit <a href="../common_vbageneral/common_general_double.htm" id="a23" style="font-weight: normal; font-style: normal;" name="a23">double</a></p>
+<p class="VBA-Text-Indent">Returns the factor to convert a resistance value in SI units into the units defined in the current project.</p>
+<p class="VBA-Text-Indent">-&gt; a(project Unit) = factor * b(SI Unit)</p>
+<p class="VBA-Heading-Category"><a name="Conductance_Methods" id="Conductance_Methods"></a>Methods for Conductance Units</p>
+<p class="VBA-Heading-Method">GetConductanceUnitToSI <a href="../common_vbageneral/common_general_double.htm" id="a26" style="font-weight: normal; font-style: normal;" name="a26">double</a></p>
+<p class="VBA-Text-Indent">Returns the factor to convert a conductance value measured in units of the current project into the units.</p>
+<p class="VBA-Text-Indent">-&gt; a(SI Unit) = factor * b(project Unit)</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">GetConductanceSIToUnit <a href="../common_vbageneral/common_general_double.htm" id="a27" style="font-weight: normal; font-style: normal;" name="a27">double</a></p>
+<p class="VBA-Text-Indent">Returns the factor to convert a conductance value in SI units into the units defined in the current project.</p>
+<p class="VBA-Text-Indent">-&gt; a(project Unit) = factor * b(SI Unit)</p>
+<p class="VBA-Heading-Category"><a name="Capacitance_Methods" id="Capacitance_Methods"></a>Methods for Capacitance Units</p>
+<p class="VBA-Heading-Method">GetCapacitanceUnitToSI <a href="../common_vbageneral/common_general_double.htm" id="a30" style="font-weight: normal; font-style: normal;" name="a30">double</a></p>
+<p class="VBA-Text-Indent">Returns the factor to convert a capacitance value measured in units of the current project into the units.</p>
+<p class="VBA-Text-Indent">-&gt; a(SI Unit) = factor * b(project Unit)</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">GetCapacitanceSIToUnit <a href="../common_vbageneral/common_general_double.htm" id="a31" style="font-weight: normal; font-style: normal;" name="a31">double</a></p>
+<p class="VBA-Text-Indent">Returns the factor to convert a capacitance value in SI units into the units defined in the current project.</p>
+<p class="VBA-Text-Indent">-&gt; a(project Unit) = factor * b(SI Unit)</p>
+<p class="VBA-Heading-Category"><a name="Inductance_Methods" id="Inductance_Methods"></a>Methods for Inductance Units</p>
+<p class="VBA-Heading-Method">GetInductanceUnitToSI <a href="../common_vbageneral/common_general_double.htm" id="a34" style="font-weight: normal; font-style: normal;" name="a34">double</a></p>
+<p class="VBA-Text-Indent">Returns the factor to convert a inductance value measured in units of the current project into the units.</p>
+<p class="VBA-Text-Indent">-&gt; a(SI Unit) = factor * b(project Unit)</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method">GetInductanceSIToUnit <a href="../common_vbageneral/common_general_double.htm" id="a35" style="font-weight: normal; font-style: normal;" name="a35">double</a></p>
+<p class="VBA-Text-Indent">Returns the factor to convert a inductance value in SI units into the units defined in the current project.</p>
+<p class="VBA-Text-Indent">-&gt; a(project Unit) = factor * b(SI Unit)</p>
+<p class="VBA-Heading-Category"><a name="Methods_for_Result_Units" id="Methods_for_Result_Units"></a>Methods for Result Units</p>
+<p class="VBA-Heading-Method">SetResultUnit ( <a href="../common_vbageneral/common_general_string.htm" style="font-weight: normal;">string</a> <span style="font-style: italic;"><i>Quantity</i></span>, <a href="../common_vbageneral/common_general_string.htm" style="font-weight: normal;">string</a> <span style="font-style: italic;"><i>displayAs</i></span>, <a href="../common_vbageneral/common_general_string.htm" style="font-weight: normal;">string</a> <span style="font-style: italic;"><i>Unit</i></span> )</p>
+<p class="VBA-Text-Indent">This method is available in 3D projects only. It sets a global default display unit for <span style="font-style: italic;"><i>Quantity.</i></span> The configured unit is used by 1D plots, 2D and 3D plots.</p>
+<p class="VBA-Text-Indent">Supported quantities and display units are:</p>
+<table style="margin-left: 24px; border-left-width: 1px; border-right-width: 1px; border-top-width: 1px; border-bottom-width: 1px; border-collapse: separate; border-collapse: separate;" cellspacing="0" width="340" border="1">
+<col width="100" />
+<col width="100" />
+<col width="100" />
+<tr style="height: 19px;">
+<td>
+<p class="VBA-Text">Quantity</p>
+</td>
+<td>
+<p class="VBA-Text">display as</p>
+</td>
+<td>
+<p class="VBA-Text">Dimension</p>
+</td>
+</tr>
+<tr style="height: 23px;">
+<td>
+<p class="VBA-Text">"frequency"</p>
+</td>
+<td>
+<p class="VBA-Text">"frequency"</p>
+</td>
+<td>
+<p class="VBA-Text">frequency</p>
+</td>
+</tr>
+<tr style="height: 23px;">
+<td>
+<p class="VBA-Text">&#160;</p>
+</td>
+<td>
+<p class="VBA-Text">"wavelength"</p>
+</td>
+<td>
+<p class="VBA-Text">length</p>
+</td>
+</tr>
+<tr style="height: 5px;">
+<td>
+<p class="VBA-Text">&#160;</p>
+</td>
+<td>
+<p class="VBA-Text">"wavenumber"</p>
+</td>
+<td>
+<p class="VBA-Text">1/length</p>
+</td>
+</tr>
+</table>
+<p class="VBA-Text-Indent">Any legal <span style="font-style: italic;"><i>Unit</i></span> with dimension <span style="font-style: italic;"><i>Dimension</i></span> is supported. Please refer to the <a href="../../../userinterface/overview/units.htm">documentation of the unit syntax</a> for further information.</p>
+<p class="VBA-Heading-Category"><a name="Example" id="Example"></a>Example</p>
+<p class="VBA-Text-Example">With Units</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.SetUnit ("Length", "mm")</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.SetUnit ("Frequency", "GHz")</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.SetUnit ("Time", "s")</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.SetUnit ("Voltage", "mV")</p>
+<p class="VBA-Text-Example">&#160;&#160;&#160;&#160;&#160;.SetUnit ("Current", "uA")</p>
+<p class="VBA-Text-Example" style="margin-left: 0px;">&#160;&#160;&#160;&#160;&#160;.SetUnit ("Resistance", "kOhm")</p>
+<p class="VBA-Text-Example" style="margin-left: 0px;">&#160;&#160;&#160;&#160;&#160;.SetUnit ("Conductance", "mS")</p>
+<p class="VBA-Text-Example" style="margin-left: 0px;">&#160;&#160;&#160;&#160;&#160;.SetUnit ("Capacitance", "pF")</p>
+<p class="VBA-Text-Example" style="margin-left: 0px;">&#160;&#160;&#160;&#160;&#160;.SetUnit ("Inductance", "nH")</p>
+<p class="VBA-Text-Example" style="margin-left: 0px;">&#160;&#160;&#160;&#160;&#160;.SetUnit ("Temperature", "degC")</p>
+<p class="VBA-Text-Example">End With</p>
+<?rh-p style="margin-bottom: 0px; text-align: Right; margin-left: 18px; 
+                 margin-right: 18px; margin-top: 18px;" ?>
+<div style="width: 100%; position: relative;" id="footer">
+<p style="border-bottom: Solid 1px #dddddd; text-align: Left; margin-left: 0px; font-family: Arial, sans-serif; line-height: Normal; margin-top: 9px; margin-right: 0px; margin-bottom: 6px; border-left-width: 1px; border-top-width: 1px; border-right-width: 1px;"><span style="text-align: Left; font-family: Arial, sans-serif; line-height: Normal;">&#160;</span></p>
+<table cellspacing="0" width="100%">
+<col style="width: 50%;" />
+<col style="width: 50%;" />
+<tr>
+<td style="vertical-align: Top;"><span style="font-family: Arial, sans-serif; line-height: Normal; font-size: 8pt;"><font size="1" style="font-size:8pt;">CST Studio Suite 2026</font></span></td>
+<td style="vertical-align: Top;">
+<p style="text-align: right;">&#160;</p>
+</td>
+</tr>
+</table>
+<p>&#160;</p>
+</div>
+<script type="text/javascript" language="javascript1.2">
+//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+        writeIntopicBar(0);
+
+
+highlightSearch();
+//-->
+//]]>
+</script>
+</body>
+</html>

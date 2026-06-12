@@ -1,0 +1,365 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="Adobe RoboHelp 11" />
+<title>EyeAnalysisTask Object</title>
+<link rel="StyleSheet" href="../online_help_vba.css" type="text/css" />
+<style type="text/css">
+/*<![CDATA[*/
+<!--
+body { border-bottom-style:None; }
+-->
+/*]]>*/
+</style>
+
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+        origWidth = innerWidth;
+        origHeight = innerHeight;
+        onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+/*<![CDATA[*/
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+-->
+/*]]>*/
+</style>
+
+<script type="text/javascript" language="javascript1.2" src="../whmsg.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript" src="../whver.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript1.2" src="../whutils.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript1.2" src="../whproxy.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript1.2" src="../whlang.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript1.2" src="../whtopic.js" charset="utf-8">
+</script>
+</head>
+<body>
+<script type="text/javascript" language="javascript1.2">
+//<![CDATA[
+<!--
+if (window.gbWhTopic)
+{
+        var strUrl = document.location.href;
+        var bc = 0;
+        var n = strUrl.toLowerCase().indexOf("bc-");
+        if(n != -1)
+        {
+                document.location.replace(strUrl.substring(0, n));
+                bc = strUrl.substring(n+3);
+        }
+
+        if (window.addTocInfo)
+        {
+        addTocInfo("Circuits & Systems VBA\nSimulation\nEyeAnalysisTask");
+
+        }
+        if (window.writeBtnStyle)
+                writeBtnStyle();
+
+        if (window.writeIntopicBar)
+                writeIntopicBar(0);
+
+        
+        document.write("<p style=\"font-family: Tahoma; font-size: 9pt; font-weight: 400;  font-style:normal; color: rgb(0, 0, 0); text-decoration:none; text-align: left\"> ");
+AddMasterBreadcrumbs("../index.htm", "font-family: Tahoma; font-size: 9pt; font-weight: 400;  font-style:normal; color: rgb(0, 0, 0); text-decoration:none; text-align: left", "|", "Home", "../special_vbaobjects/cstdesignstudiovbaobjects.htm");
+document.write("<a style=\"font-family: Tahoma; font-size: 9pt; font-weight: 400;  font-style:normal; color: rgb(0, 0, 0); text-decoration:none; text-align: left\" href=\"../special_vbaobjects/cstdesignstudiovbaobjects.htm\">Circuits & Systems VBA<\/a> | <a style=\"font-family: Tahoma; font-size: 9pt; font-weight: 400;  font-style:normal; color: rgb(0, 0, 0); text-decoration:none; text-align: left\" href=\"simulationtaskobject.htm\">Simulation<\/a> | EyeAnalysisTask<\/p>");
+
+}
+else
+        if (window.gbIE4)
+                document.location.reload();
+
+onLoadHandler = function()
+{
+  if (window.setRelStartPage)
+        {
+        setTimeout("setRelStartPage('../index.htm');", 1)
+
+    setTimeout("UpdateBreadCrumbsMarker();", 1);
+        }
+}
+
+if (window.addEventListener){  
+        window.addEventListener('load', onLoadHandler, false);   
+} else if (window.attachEvent){  
+        window.attachEvent('onload', onLoadHandler);  
+}
+
+function onSetStartPage()
+{
+  autoSync(1);
+  sendSyncInfo();
+  sendAveInfoOut();
+}
+//-->
+//]]>
+</script><script type="text/javascript" src="../ehlpdhtm.js" language="JavaScript1.2">
+</script>
+<table cellspacing="0" width="100%">
+<col style="width: 50%;" />
+<col style="width: 50%;" />
+<tr>
+<td style="vertical-align: middle; padding-top: 5px; padding-bottom: 5px;">
+<p style="margin-top: 0px; margin-bottom: 0px;"><img src="../3ds.png" alt="" style="border: none;" border="0" /></p>
+</td>
+<td style="vertical-align: middle;">
+<p style="text-align: right;"><a href="https://www.3ds.com/products-services/3dexperience/" target="_blank"><img src="../3dexp.png" alt="" style="border: none;" width="32" height="32" border="0" /></a></p>
+</td>
+</tr>
+</table>
+<h1>EyeAnalysisTask Object</h1>
+<p>Object referring to an eye analysis task. Use this object to manipulate an <a href="../../../mergedProjects/DES/analysis/simulation/tasks/eye_analysis_task.htm">eye analysis task</a> .</p>
+<ul>
+<li class="p-VBA-Index-Category">
+<p class="VBA-Index-Category"><a href="#Methods">Methods</a></p>
+</li>
+<li class="p-VBA-Index-Category">
+<p class="VBA-Index-Category"><a href="#Example">Example</a></p>
+</li>
+</ul>
+<p class="VBA-Heading-Category"><a name="Methods" id="Methods"></a>Methods</p>
+<p class="VBA-Heading-Method">Name (<a href="../common_vbageneral/common_general_name.htm" id="a9" style="font-weight: normal; font-style: normal;" name="a9">name</a> <span style="font-style: italic;"><i>taskname</i></span>)</p>
+<p class="VBA-Text-Indent" style="text-align: justify;">Sets the name of the eye analysis task to manipulate.</p>
+<p class="VBA-Text-Indent" style="text-align: justify;">&#160;</p>
+<p class="VBA-Heading-Method">SetSourceTask(<a href="../common_vbageneral/common_general_name.htm" id="a9" style="font-weight: normal; font-style: normal;" name="a9">name</a> <span style="font-style: italic;"><i>sourcename</i></span>)</p>
+<p class="VBA-Text-Indent" style="text-align: justify;">Sets the name of the source task in the eye analysis task.</p>
+<p class="VBA-Text-Indent" style="text-align: justify;">&#160;</p>
+<p class="VBA-Heading-Method">SetMode(<a href="../common_vbageneral/common_general_string.htm" id="a232" style="font-weight: normal; font-style: normal;" name="a232">string</a> &#160;<span style="font-style: italic;"><i>mode</i></span>)</p>
+<p class="VBA-Text-Indent" style="text-align: justify;">Sets the eye generation mode of the <span style="font-style: italic;"><i><a href="../../../mergedProjects/DES/analysis/simulation/tasks/eye_analysis_task.htm">eye analysis task</a></i></span>. Available options are <span style="font-style: italic;"><i>Transient</i></span> and <span style="font-style: italic;"><i>Statistical</i></span>.</p>
+<p class="VBA-Text-Indent" style="text-align: justify;">&#160;</p>
+<p class="VBA-Heading-Method">SetResponseType(<a href="../common_vbageneral/common_general_string.htm" id="a2321" style="font-weight: normal; font-style: normal;" name="a2321">string</a> &#160;<span style="font-style: italic;"><i>type</i></span>)</p>
+<p class="VBA-Text-Indent" style="text-align: justify;">Selects &#160;the type of the channel response &#160;to be used in &#160;the <span style="font-style: italic;"><i>statistical</i></span> eye generation&#160;of the <span style="font-style: italic;"><i><a href="../../../mergedProjects/DES/analysis/simulation/tasks/eye_analysis_task.htm">eye analysis task</a></i></span>. Available options are <span style="font-style: italic;"><i>Step</i></span>, <span style="font-style: italic;"><i>Pulse</i></span>, and <span style="font-style: italic;"><i>Impulse</i></span>.</p>
+<p class="VBA-Text-Indent" style="text-align: justify;">&#160;</p>
+<p class="VBA-Heading-Method">SetParametric( <a href="../common_vbageneral/common_general_string.htm" id="a23" style="font-weight: normal; font-style: normal;" name="a23">string</a> <span style="font-style: italic;"><i>groupname, <a href="../common_vbageneral/common_general_bool_data_type.htm" style="font-weight: normal; font-style: normal;">bool</a> bactivate</i></span>)</p>
+<p class="VBA-Text-Indent" style="text-align: justify;">Activates or deactivates the parametric storage of the results for the given group. Supported values for the latter are <span style="font-style: italic;"><i>"Eye diagram", "Mask analysis",</i></span> and <span style="font-style: italic;"><i>" Timing analysis" ;</i></span> namely<span style="font-style: italic;"><i>,</i></span> the three property groups that appear in the <span style="text-align: justify;">task parameter list of the</span> <span style="text-align: justify; font-style: italic;"><i><a href="../../../mergedProjects/DES/analysis/simulation/tasks/eye_analysis_task.htm">eye analysis task</a>.</i></span> <span style="text-align: justify;">&#160;</span><span style="text-align: justify; font-style: italic;"><i>&#160;</i></span></p>
+<p class="VBA-Text-Indent" style="text-align: justify;">&#160;</p>
+<p class="VBA-Heading-Method">SetUnitInterval (<a href="../common_vbageneral/common_general_string.htm" id="a2" style="font-weight: normal; font-style: normal;" name="a2">string</a> <span style="font-style: italic;"><i>UI_exp</i></span>)</p>
+<p class="VBA-Text-Indent">Sets the expression of the unit interval in the eye analysis task. If the eye analysis task's source task is an <span style="font-style: italic;"><i>IbisAmi</i></span> task, then the unit interval is not settable and its expression is readily obtained from that of the source &#160;IbisAmi task.</p>
+<p class="VBA-Heading-Method">&#160;</p>
+<p class="VBA-Heading-Method">SetDiagramCenter (<a href="../common_vbageneral/common_general_string.htm" id="a2" style="font-weight: normal; font-style: normal;" name="a2">string</a> <span style="font-style: italic;"><i>EDC_exp</i></span>)</p>
+<p class="VBA-Text-Indent">Sets the expression of the eye diagram center. This setting is only meaningful if the generation mode of the eye analysis task is <span style="font-style: italic;"><i>Transient</i></span>. &#160;</p>
+<p class="VBA-Heading-Method">&#160;</p>
+<p class="VBA-Heading-Method">SetStartTime (<a href="../common_vbageneral/common_general_string.htm" id="a26" style="font-weight: normal; font-style: normal;" name="a26">string</a> <span style="font-style: italic;"><i>expression</i></span>)</p>
+<p class="VBA-Text-Indent">Sets the expression of the start time, i.e. the time before which the source signal is excluded from the eye analysis. This setting is only meaningful if the generation mode of the eye analysis task is <span style="font-style: italic;"><i>Transient</i></span>. &#160;</p>
+<p class="VBA-Heading-Method">&#160;</p>
+<p class="VBA-Heading-Method">SelectProbe (<a href="../common_vbageneral/common_general_bool_data_type.htm" style="font-weight: normal; font-style: normal;">bool</a> <span style="font-style: italic;"><i>bSelect,</i></span> <a href="../common_vbageneral/common_general_integer.htm" id="a6" style="font-weight: normal; font-style: normal;" name="a6">int</a> <span style="font-style: italic;"><i>index)</i></span></p>
+<p class="VBA-Text-Indent" style="font-style: italic;">Selects or deselects the specified probe signal for wrapping into an eye diagram. Probe signal are only available if the eye analysis task's source task is a transient task.</p>
+<p class="VBA-Heading-Method">&#160;</p>
+<p class="VBA-Heading-Method"><span style="font-style: italic;"><i>SelectChannel (<a href="../common_vbageneral/common_general_bool_data_type.htm" style="font-weight: normal; font-style: normal;">bool</a> <span style="font-style: italic;"><i>bSelect,</i></span> <a href="../common_vbageneral/common_general_integer.htm" id="a6" style="font-weight: normal; font-style: normal;" name="a6">int</a> <span style="font-style: italic;"><i>index)</i></span></i></span></p>
+<p class="VBA-Text-Indent" style="font-style: italic;">Enable or disable the specified channel for eye diagram generation. Channels are only available if the eye analysis task's source task is an IbisAmi or a S-parameter task.</p>
+<p class="VBA-Heading-Method">&#160;</p>
+<p class="VBA-Heading-Method"><span style="font-style: italic;"><i>SelectChannelSection (<a href="../common_vbageneral/common_general_bool_data_type.htm" style="font-weight: normal; font-style: normal;">bool</a> <span style="font-style: italic;"><i>bSelect,</i></span> <a href="../common_vbageneral/common_general_integer.htm" id="a6" style="font-weight: normal; font-style: normal;" name="a6">int</a> index)</i></span></p>
+<p class="VBA-Text-Indent" style="font-style: italic;">Selects or deselects the specified channel section for eye diagram generation. Channel sections are only available if the eye analysis task's source task is an IbisAmi task.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method"><span><span><span style="font-style: italic;"><i>CountProbes <a href="../common_vbageneral/common_general_integer.htm" id="a6" style="font-weight: normal; font-style: normal;" name="a6">int</a></i></span></span></span></p>
+<p class="VBA-Text-Indent" style="font-style: italic;">Retrieves the number of probe signals available in the eye analysis task. If the eye analysis task's source task is an IbisAmi or a S-parameter task, the returned number is by definition zero.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method"><span><span><span style="font-style: italic;"><i>CountChannels <a href="../common_vbageneral/common_general_integer.htm" id="a6" style="font-weight: normal; font-style: normal;" name="a6">int</a></i></span></span></span></p>
+<p class="VBA-Text-Indent" style="font-style: italic;">Retrieves the number of channels available in the eye analysis task. If the eye analysis task's source task is a transient task, the returned number is by definition zero.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method"><span style="font-style: italic;"><i>CountChannelSections <a href="../common_vbageneral/common_general_integer.htm" id="a6" style="font-weight: normal; font-style: normal;" name="a6">int</a></i></span></p>
+<p class="VBA-Text-Indent" style="font-style: italic;">Retrieves the number of channel sections available in the eye analysis task. If the eye analysis task's source task is a transient or S-parameter task, the returned number is by definition zero.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method"><span style="font-style: italic;"><i>GetSourceTask <a href="../common_vbageneral/common_general_string.htm" id="a2" style="font-weight: normal; font-style: normal;" name="a2">string</a></i></span></p>
+<p class="VBA-Text-Indent" style="text-align: justify; font-style: italic;">Gets the name of the source task in the eye analysis task.</p>
+<p class="VBA-Text-Indent" style="text-align: justify; font-style: italic;">&#160;</p>
+<p class="VBA-Heading-Method"><span style="font-style: italic;"><i>GetMode <a href="../common_vbageneral/common_general_string.htm" id="a24" style="font-weight: normal; font-style: normal;" name="a24">string</a></i></span></p>
+<p class="VBA-Text-Indent" style="text-align: justify; font-style: italic;">Gets the eye generation mode in the eye analysis task.</p>
+<p class="VBA-Text-Indent" style="text-align: justify; font-style: italic;">&#160;</p>
+<p class="VBA-Heading-Method"><span style="font-style: italic;"><i>GetResponseType <a href="../common_vbageneral/common_general_string.htm" id="a25" style="font-weight: normal; font-style: normal;" name="a25">string</a></i></span></p>
+<p class="VBA-Text-Indent" style="text-align: justify; font-style: italic;">Gets the channel response type set for statistical eye generation. An error is displayed if the eye analysis task's source task is a S-parameter task or the generation mode is Transient.</p>
+<p class="VBA-Text-Indent" style="text-align: justify;">&#160;</p>
+<p class="VBA-Heading-Method"><span style="font-style: italic;"><i>GetParametric(<a href="../common_vbageneral/common_general_string.htm" id="a231" style="font-weight: normal; font-style: normal;" name="a231">string</a> groupname) <a href="../common_vbageneral/common_general_bool_data_type.htm" style="font-weight: normal; font-style: normal;">bool</a></i></span></p>
+<p class="VBA-Text-Indent"><span style="font-style: italic;"><i>Checks if the parametric storage of the results for the given group is activated or deactivated.</i></span> Supported values for the latter are <span style="font-style: italic;"><i>"Eye diagram", "Mask analysis",</i></span> and <span style="font-style: italic;"><i>" Timing analysis" ;</i></span> namely<span style="font-style: italic;"><i>,</i></span> the three property groups that appear in the</p>
+<p class="VBA-Text-Indent" style="text-align: justify;">task parameter list of the <span style="font-style: italic;"><i><a href="../../../mergedProjects/DES/analysis/simulation/tasks/eye_analysis_task.htm">eye analysis task</a>.</i></span></p>
+<p class="VBA-Text-Indent" style="text-align: justify;">&#160;</p>
+<p class="VBA-Heading-Method"><span><span><span><span style="font-style: italic;"><i>GetUnitInterval <a href="../common_vbageneral/common_general_string.htm" id="a2" style="font-weight: normal; font-style: normal;" name="a2">string</a></i></span></span></span></span></p>
+<p class="VBA-Text-Indent"><span><span><span style="font-style: italic;"><i>Gets the expression of the unit interval in the eye analysis task.</i></span></span></span></p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method"><span><span><span style="font-style: italic;"><i>GetDiagramCenter <a href="../common_vbageneral/common_general_string.htm" id="a2" style="font-weight: normal; font-style: normal;" name="a2">string</a></i></span></span></span></p>
+<p class="VBA-Text-Indent" style="font-style: italic;">Gets the expression of the diagram center in the eye analysis task. If the generation mode of the eye analysis task is Statistical, the returned value is "0." by definition. &#160;&#160;</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method"><span style="font-style: italic;"><i>GetStartTime <a href="../common_vbageneral/common_general_string.htm" id="a27" style="font-weight: normal; font-style: normal;" name="a27">string</a></i></span></p>
+<p class="VBA-Text-Indent" style="font-style: italic;">Returns the expression specifying the start time of the eye analysis. If the generation mode of the eye analysis task is Statistical, the returned value is "0." by definition. &#160;&#160;</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method"><span style="font-style: italic;"><i>GetProbe (<a href="../common_vbageneral/common_general_integer.htm" id="a6" style="font-weight: normal; font-style: normal;" name="a6">int</a></i></span> <span style="font-style: italic;"><i>index) <a href="../common_vbageneral/common_general_string.htm" id="a2" style="font-weight: normal; font-style: normal;" name="a2">string</a></i></span></p>
+<p class="VBA-Text-Indent" style="font-style: italic;">Gets the name of the specified probe in the eye analysis task. If the eye analysis task's source task is an IbisAmi or a S-parameter task, the returned string is by definition empty.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method"><span style="font-style: italic;"><i>GetProbeIndex (</i></span><a href="../common_vbageneral/common_general_string.htm" id="a281" style="font-weight: normal; font-style: normal;" name="a281">string</a> <span style="font-style: italic;"><i>name)</i></span> <a href="../common_vbageneral/common_general_integer.htm" id="a61" style="font-weight: normal; font-style: normal;" name="a61">int</a></p>
+<p class="VBA-Text-Indent" style="font-style: italic;">Gets the probe index associated with the specified probe signal in the eye analysis task. If the eye analysis task's source task is an IbisAmi or a S-parameter task, an error is displayed.</p>
+<p class="VBA-Heading-Method">&#160;</p>
+<p class="VBA-Heading-Method"><span style="font-style: italic;"><i>DoesProbeExist (</i></span><a href="../common_vbageneral/common_general_string.htm" id="a2811" style="font-weight: normal; font-style: normal;" name="a2811">string</a> <span style="font-style: italic;"><i>name)</i></span> <a href="../common_vbageneral/common_general_bool_data_type.htm" style="font-weight: normal; font-style: normal;">bool</a></p>
+<p class="VBA-Text-Indent" style="font-style: italic;">Checks if the specified probe signal exists in the eye analysis task. If the eye analysis task's source task is an IbisAmi or a S-parameter task, the returned value is by definition false.</p>
+<p class="VBA-Text-Indent" style="font-style: italic;">&#160;</p>
+<p class="VBA-Heading-Method"><span style="font-style: italic;"><i>GetChannel (<a href="../common_vbageneral/common_general_integer.htm" id="a6" style="font-weight: normal; font-style: normal;" name="a6">int</a> <span style="font-style: italic;"><i>index) <a href="../common_vbageneral/common_general_string.htm" id="a2" style="font-weight: normal; font-style: normal;" name="a2">string</a></i></span></i></span></p>
+<p class="VBA-Text-Indent" style="font-style: italic;">Gets the name of the specified channel in the eye analysis task. If the eye analysis task's source task is a transient task, the returned string is by definition empty.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method"><span style="font-style: italic;"><i>GetChannelSection (<a href="../common_vbageneral/common_general_integer.htm" id="a6" style="font-weight: normal; font-style: normal;" name="a6">int</a> index) <a href="../common_vbageneral/common_general_string.htm" id="a2" style="font-weight: normal; font-style: normal;" name="a2">string</a></i></span></p>
+<p class="VBA-Text-Indent" style="font-style: italic;">Gets the name of the specified channel section in the eye analysis task. If the eye analysis task's source task is a transient or a S-parameter &#160;task, the returned string is by definition empty.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method"><span><span><span><span><span><span style="font-style: italic;"><i>IsProbeSelected (<a href="../common_vbageneral/common_general_integer.htm" id="a6" style="font-weight: normal; font-style: normal;" name="a6">int</a> <span style="font-style: italic;"><i>index) <a href="../common_vbageneral/common_general_bool_data_type.htm" style="font-weight: normal; font-style: normal;">bool</a></i></span></i></span></span></span></span></span></span></p>
+<p class="VBA-Text-Indent" style="font-style: italic;">Checks if the specified probe signal has been selected for wrapping into an eye diagram. If the eye analysis task's source task is an IbisAmi or a S-parameter task, the returned value is by definition false.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method"><span><span><span><span><span><span><span style="font-style: italic;"><i>IsChannelSelected (<a href="../common_vbageneral/common_general_integer.htm" id="a6" style="font-weight: normal; font-style: normal;" name="a6">int</a> <span style="font-style: italic;"><i>index) <a href="../common_vbageneral/common_general_bool_data_type.htm" style="font-weight: normal; font-style: normal;">bool</a></i></span></i></span></span></span></span></span></span></span></p>
+<p class="VBA-Text-Indent" style="font-style: italic;">Checks if the specified channel has been included for eye diagram generation. If the eye analysis task's source task is a transient task, the returned value is by definition false.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method"><span style="font-style: italic;"><i>IsChannelSectionSelected (<a href="../common_vbageneral/common_general_integer.htm" id="a6" style="font-weight: normal; font-style: normal;" name="a6">int</a> index) <a href="../common_vbageneral/common_general_bool_data_type.htm" style="font-weight: normal; font-style: normal;">bool</a></i></span></p>
+<p class="VBA-Text-Indent" style="font-style: italic;">Checks if the specified channel section has been selected for eye diagram generation. If the eye analysis task's source task is a transient or S-parameter task, the returned value is by definition false.</p>
+<p class="VBA-Heading-Method">&#160;</p>
+<p><span><span><span><span><span><span><span><span><span style="font-style: italic;"><i>The following functions are used to set up and query the attributes of the eye mask in the eye analysis task.</i></span></span></span></span></span></span></span></span></span></p>
+<p class="VBA-Heading-Method">&#160;</p>
+<p class="VBA-Heading-Method"><span style="font-style: italic;"><i><a name="SetMask" id="SetMask"></a>SetMask (<a href="../common_vbageneral/common_general_string.htm" id="a2" style="font-weight: normal; font-style: normal;" name="a2">string</a> shape, <a href="../common_vbageneral/common_general_variant.htm" id="a3" style="font-weight: normal; font-style: normal;" name="a3">variant</a> Atts)</i></span></p>
+<p class="VBA-Text-Indent" style="font-style: italic;">Sets the eye mask in the eye analysis task. Possible values for <span style="font-weight: bold;">shape</span> are "None", "Rectangle", "Trapezoid", "Cross", "Symmetric hexagon", and "Asymmetric hexagon" while <span style="font-weight: bold;">Atts</span> is an array containing the expressions defining the <a href="../../../mergedProjects/DES/analysis/simulation/tasks/eye_analysis_mask_parameters.htm">mask parameters</a> as defined in the <a href="../../../mergedProjects/DES/analysis/simulation/tasks/eye_analysis_task.htm">eye analysis task</a>.</p>
+<p class="VBA-Heading-Method">&#160;</p>
+<p class="VBA-Heading-Method"><span><span><span><span><span><span><span><span><span style="font-style: italic;"><i>SetMaskAttribute (<a href="../common_vbageneral/common_general_string.htm" id="a2" style="font-weight: normal; font-style: normal;" name="a2">string</a> <span style="font-style: italic;"><i>Att</i></span>, <a href="../common_vbageneral/common_general_string.htm" id="a2" style="font-weight: normal; font-style: normal;" name="a2">string</a> <span style="font-style: italic;"><i>Att_exp</i></span>)</i></span></span></span></span></span></span></span></span></span></p>
+<p class="VBA-Text-Indent" style="font-style: italic;">Sets the expression of the specified mask attribute. Possible values for <span style="font-weight: bold;">Att</span> can be "Shape" to set the mask shape, and any of the <a href="../../../mergedProjects/DES/analysis/simulation/tasks/eye_analysis_mask_parameters.htm">mask parameters</a> as defined in the <a href="../../../mergedProjects/DES/analysis/simulation/tasks/eye_analysis_task.htm">eye analysis task</a>. When setting for the mask shape, valid strings for <span style="font-weight: bold;">Att_exp</span> are the ones mentioned in the description of the <a href="#SetMask">SetMask</a> command. If the shape of the mask is set to "None", then setting any valid mask parameter has no effect.</p>
+<p class="VBA-Heading-Method">&#160;</p>
+<p class="VBA-Heading-Method"><span><span><span><span><span><span><span><span><span style="font-style: italic;"><i>GetMaskShape <a href="../common_vbageneral/common_general_string.htm" id="a2" style="font-weight: normal; font-style: normal;" name="a2">string</a></i></span></span></span></span></span></span></span></span></span></p>
+<p class="VBA-Text-Indent" style="font-style: italic;">Gets the shape of the eye mask in the eye analysis task. Possible returned strings are the mask shapes&#160;mentioned in the description of the <a href="#SetMask">SetMask</a> command.</p>
+<p class="VBA-Heading-Method">&#160;</p>
+<p class="VBA-Heading-Method"><span><span><span><span><span><span><span><span><span style="font-style: italic;"><i>GetMaskAttribute (<a href="../common_vbageneral/common_general_string.htm" id="a2" style="font-weight: normal; font-style: normal;" name="a2">string</a> <span style="font-style: italic;"><i>Att</i></span>) <a href="../common_vbageneral/common_general_string.htm" id="a2" style="font-weight: normal; font-style: normal;" name="a2">string</a></i></span></span></span></span></span></span></span></span></span></p>
+<p class="VBA-Text-Indent" style="font-style: italic;">Gets the expression of the specified mask attribute in the eye analysis task. Possible values for <span style="font-weight: bold;">Att</span> can be "Shape" to return the mask shape or any of the <a href="../../../mergedProjects/DES/analysis/simulation/tasks/eye_analysis_mask_parameters.htm">mask parameters</a> as defined in the <a href="../../../mergedProjects/DES/analysis/simulation/tasks/eye_analysis_task.htm">eye analysis task</a>. If the shape of the mask is set to "None", then querying for any valid mask parameter returns always an empty string by definition.</p>
+<p class="VBA-Heading-Method">&#160;</p>
+<p class="VBA-Heading-Method"><span><span><span><span><span><span><span><span><span style="font-style: italic;"><i>EnableEyeCalculation (<a href="../common_vbageneral/common_general_bool_data_type.htm" style="font-weight: normal; font-style: normal;">bool</a> <span style="font-style: italic;"><i>b1DEye, <a href="../common_vbageneral/common_general_bool_data_type.htm" style="font-weight: normal; font-style: normal;">bool</a> <span style="font-style: italic;"><i>b2DEye)</i></span></i></span></i></span></span></span></span></span></span></span></span></span></p>
+<p class="VBA-Text-Indent"><span><span><span><span><span><span><span><span><span><span><span style="font-style: italic;"><i>Enables or disables the type of eye diagram to generate by the <a href="../../../mergedProjects/DES/analysis/simulation/tasks/eye_analysis_task.htm">eye analysis task</a>. If <span style="font-style: italic; font-weight: bold;"><i>b1DEye</i></span> is enabled then the diagrams are generated by wrapping probe signals into a standard eye pattern. On the other hand, if <span style="font-style: italic; font-weight: bold;"><i>b2DEye</i></span> is enabled then the diagrams are generated by wrapping probe signals into a 2D histogram displayed as a colormap representing the frequency with which the signals cross the histogram bins.</i></span></span></span></span></span></span></span></span></span></span></span></p>
+<p class="VBA-Heading-Method">&#160;</p>
+<p class="VBA-Heading-Method"><span style="font-style: italic;"><i><a name="SetAutomaticMaskCentering" id="SetAutomaticMaskCentering"></a></i></span>SetAutomaticMaskCentering(<span style="font-style: italic;"><i><a href="../common_vbageneral/common_general_string.htm" id="a21" style="font-weight: normal; font-style: normal;" name="a21">string</a> option</i></span>)</p>
+<p class="VBA-Text-Indent">Selects an option for the mask placement. Options are '<span style="font-style: italic;"><i>Enabled</i></span>', '<span style="font-style: italic;"><i>Disabled</i></span>', '<span style="font-style: italic;"><i>t_ref only'</i></span>, and '<span style="font-style: italic;"><i>V_ref only</i></span>'. If 'Enabled' is chosen, an algorithms places the mask into the eye so that mask violations are avoided - if possible. If 'Disabled' is chosen, the mask is placed according to the t_ref and V_ref settings. If '<span style="font-style: italic;"><i>t_ref only</i></span>' or '<span style="font-style: italic;"><i>V_ref only</i></span>' is chosen, an algorithm optimizes the mask position only in the time or voltage dimension, respectively.</p>
+<p class="VBA-Heading-Method">&#160;</p>
+<p class="VBA-Heading-Method">GetAutomaticMaskCentering <span><a href="../common_vbageneral/common_general_string.htm" id="a211" style="font-weight: normal; font-style: normal;" name="a211">string</a></span></p>
+<p class="VBA-Text-Indent">Tells the chosen mask placement option. Possible return values are the valid options of the <a href="#SetAutomaticMaskCentering" style="font-style: normal;">SetAutomaticMaskCentering</a> command.</p>
+<p class="VBA-Heading-Method">&#160;</p>
+<p class="VBA-Heading-Method"><span><span><span><span><span><span><span><span><span><span><span style="font-style: italic;"><i>ShowMask (<a href="../common_vbageneral/common_general_bool_data_type.htm" style="font-weight: normal; font-style: normal;">bool</a> <span style="font-style: italic;"><i>bshow)</i></span></i></span></span></span></span></span></span></span></span></span></span></span></p>
+<p class="VBA-Text-Indent" style="font-style: italic;">Enables or disables the display of the defined eye mask in the eye diagram plot.</p>
+<p class="VBA-Heading-Method">&#160;</p>
+<p class="VBA-Heading-Method"><span><span><span><span><span><span><span><span><span><span><span><span style="font-style: italic;"><i>IsMaskShown <a href="../common_vbageneral/common_general_bool_data_type.htm" style="font-weight: normal; font-style: normal;">bool</a></i></span></span></span></span></span></span></span></span></span></span></span></span></p>
+<p class="VBA-Text-Indent" style="font-style: italic;">Check if the display of the defined eye mask in the eye diagram plot is enabled.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Text-Indent" style="font-style: italic; margin-left: 0px;">The following functions are used to set up and query the eye diagram attributes.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method"><span style="font-style: italic;"><i><span><span><span><span><span><span><span><span><span><span><span><span style="font-style: italic;"><i>I</i></span></span></span></span></span></span></span></span></span></span></span></span>s1DEnabled <a href="../common_vbageneral/common_general_bool_data_type.htm" style="font-weight: normal; font-style: normal;">bool</a></i></span></p>
+<p class="VBA-Text-Indent"><span><span><span><span><span><span><span><span><span><span><span style="font-style: italic;"><i>Checks if the standard eye generator is enabled in the <a href="../../../mergedProjects/DES/analysis/simulation/tasks/eye_analysis_task.htm">eye analysis task</a> .</i></span></span></span></span></span></span></span></span></span></span></span></p>
+<p class="VBA-Heading-Method">&#160;</p>
+<p class="VBA-Heading-Method"><span><span><span><span><span><span><span><span><span><span><span style="font-style: italic;"><i>Is2DEnabled <a href="../common_vbageneral/common_general_bool_data_type.htm" style="font-weight: normal; font-style: normal;">bool</a></i></span></span></span></span></span></span></span></span></span></span></span></p>
+<p class="VBA-Text-Indent"><span><span><span><span><span><span><span><span><span><span><span style="font-style: italic;"><i>Checks if the histogram-based eye generator is enabled in the <a href="../../../mergedProjects/DES/analysis/simulation/tasks/eye_analysis_task.htm">eye analysis task</a> .</i></span></span></span></span></span></span></span></span></span></span></span></p>
+<p class="VBA-Heading-Method">&#160;</p>
+<p class="VBA-Heading-Method"><span style="font-style: italic;"><i>SetTimeResolution (<a href="../common_vbageneral/common_general_string.htm" id="a22" style="font-weight: normal; font-style: normal;" name="a22">string</a> resolution)</i></span></p>
+<p class="VBA-Text-Indent"><span style="font-style: italic;"><i>Sets the resolution of 2D eye diagrams in the time dimension. Valid arguments are expressions evaluating to positive numbers.</i></span></p>
+<p class="VBA-Heading-Method">&#160;</p>
+<p class="VBA-Heading-Method"><span style="font-style: italic;"><i>GetTimeResolution <a href="../common_vbageneral/common_general_string.htm" id="a2211" style="font-weight: normal; font-style: normal;" name="a2211">string</a></i></span></p>
+<p class="VBA-Text-Indent"><span style="font-style: italic;"><i>Gets the expression of the time resolution in the eye analysis task.</i></span></p>
+<p class="VBA-Heading-Method">&#160;</p>
+<p class="VBA-Heading-Method"><span style="font-style: italic;"><i>SetVoltageResolution (<a href="../common_vbageneral/common_general_string.htm" id="a221" style="font-weight: normal; font-style: normal;" name="a221">string</a> resolution)</i></span></p>
+<p class="VBA-Text-Indent"><span style="font-style: italic;"><i>Sets the vertical height of the bins in the histogram-based eye generator of the <a href="../../../mergedProjects/DES/analysis/simulation/tasks/eye_analysis_task.htm">eye analysis task</a>. Permissible values for</i></span> <span style="font-style: italic; font-weight: bold;"><i>resolution</i></span> <span style="font-style: italic;"><i>are positive-valued expressions.</i></span></p>
+<p class="VBA-Heading-Method">&#160;</p>
+<p class="VBA-Heading-Method"><span style="font-style: italic;"><i>GetVoltageResolution <a href="../common_vbageneral/common_general_string.htm" id="a22" style="font-weight: normal; font-style: normal;" name="a22">string</a></i></span></p>
+<p class="VBA-Text-Indent"><span><span style="font-style: italic;"><i>Gets the expression of the voltage resolution in the eye analysis task.</i></span></span></p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Text-Indent" style="font-style: italic; margin-left: 0px;">The following functions are used to set up and query the timing analysis configuration in the eye analysis task.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method"><span style="font-style: italic;"><i>&#160;SetGroupSpreadAnalysis</i></span> (<a href="../common_vbageneral/common_general_bool_data_type.htm" style="font-weight: normal; font-style: normal;">bool</a> <span style="font-style: italic;"><i>enable)</i></span></p>
+<p class="VBA-Text-Indent"><span style="font-style: italic;"><i>&#160;Enables or disables the group spread calculation in the <a href="../../../mergedProjects/DES/analysis/simulation/tasks/eye_analysis_task.htm">eye analysis task</a>.</i></span></p>
+<p class="VBA-Heading-Method">&#160;</p>
+<p class="VBA-Heading-Method"><span style="font-style: italic;"><i>GetGroupSpreadAnalysis <a href="../common_vbageneral/common_general_bool_data_type.htm" style="font-weight: normal; font-style: normal;">bool</a></i></span></p>
+<p class="VBA-Text-Indent"><span style="font-style: italic;"><i>Checks if the group spread calculation is enabled in the <a href="../../../mergedProjects/DES/analysis/simulation/tasks/eye_analysis_task.htm">eye analysis task</a> .</i></span></p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method"><span style="font-style: italic;"><i>&#160;SetRefDistanceAnalysis</i></span> (<a href="../common_vbageneral/common_general_bool_data_type.htm" style="font-weight: normal; font-style: normal;">bool</a> <span style="font-style: italic;"><i>enable)</i></span></p>
+<p class="VBA-Text-Indent" style="font-style: italic;">&#160;Enables or disables the reference distance calculation in the <a href="../../../mergedProjects/DES/analysis/simulation/tasks/eye_analysis_task.htm">eye analysis task</a>. This setting is meaningful if the generation mode of the eye analysis task is Transient; otherwise, an error is displayed.</p>
+<p class="VBA-Heading-Method">&#160;</p>
+<p class="VBA-Heading-Method"><span style="font-style: italic;"><i>GetRefDistanceAnalysis <a href="../common_vbageneral/common_general_bool_data_type.htm" style="font-weight: normal; font-style: normal;">bool</a></i></span></p>
+<p class="VBA-Text-Indent"><span style="font-style: italic;"><i>Checks if the reference distance calculation is enabled in the <a href="../../../mergedProjects/DES/analysis/simulation/tasks/eye_analysis_task.htm">eye analysis task</a> .</i></span></p>
+<p class="VBA-Heading-Method">&#160;</p>
+<p class="VBA-Heading-Method"><span style="font-style: italic;"><i>SetRefSignal (<a href="../common_vbageneral/common_general_string.htm" id="a22" style="font-weight: normal; font-style: normal;" name="a22">string</a> name)</i></span></p>
+<p class="VBA-Text-Indent" style="font-style: italic;">Sets the name of the signal that will serve as the timing reference in the reference distance calculation, e.g. "P1 Diff " for a differential probe "P1". Only differential signals can be selected as reference. This setting is meaningful if the generation mode of the eye analysis task is Transient; otherwise, an error is displayed.</p>
+<p class="VBA-Heading-Method">&#160;</p>
+<p class="VBA-Heading-Method"><span style="font-style: italic;"><i>GetRefSignal <a href="../common_vbageneral/common_general_string.htm" id="a2211" style="font-weight: normal; font-style: normal;" name="a2211">string</a></i></span></p>
+<p class="VBA-Text-Indent"><span style="font-style: italic;"><i>Gets the path of the reference signal in the reference distance calculation.</i></span></p>
+<p class="VBA-Heading-Method">&#160;</p>
+<p class="VBA-Heading-Method"><span style="font-style: italic;"><i>SetFrequencyRatio (<a href="../common_vbageneral/common_general_string.htm" id="a22" style="font-weight: normal; font-style: normal;" name="a22">string</a> ratio)</i></span></p>
+<p class="VBA-Text-Indent" style="font-style: italic;">Sets the ratio of the reference signal's frequency to the data signal's frequency for timing analyses . Possible values for <span style="font-weight: bold;">ratio</span> are "1", "2", and "4". For information on the ratios see the description of the <a href="../../../mergedProjects/DES/analysis/simulation/tasks/eye_analysis_task.htm">eye analysis task</a>. This setting is meaningful if the generation mode of the eye analysis task is Transient; otherwise, an error is displayed.</p>
+<p class="VBA-Heading-Method">&#160;</p>
+<p class="VBA-Heading-Method"><span style="font-style: italic;"><i>GetFrequencyRatio <a href="../common_vbageneral/common_general_string.htm" id="a2211" style="font-weight: normal; font-style: normal;" name="a2211">string</a></i></span></p>
+<p class="VBA-Text-Indent" style="font-style: italic;">Returns the specified frequency ratio. Possible return values are "1", "2", and "4".</p>
+<p class="VBA-Text-Indent" style="font-style: italic;">&#160;</p>
+<p class="VBA-Heading-Method"><span style="font-style: italic;"><i>SetNominalOffset (<a href="../common_vbageneral/common_general_string.htm" id="a222" style="font-weight: normal; font-style: normal;" name="a222">string</a> offset)</i></span></p>
+<p class="VBA-Text-Indent" style="font-style: italic;">Sets the nominal offset to be taken into account in the reference distance calculation. The reference signal is virtually shifted by that offset for the calculation of the distance. Options for <span style="font-weight: bold;">offset</span> are "None" and "Half unit interval". This setting is meaningful if the generation mode of the eye analysis task is Transient; otherwise, an error is displayed.</p>
+<p class="VBA-Heading-Method">&#160;</p>
+<p class="VBA-Heading-Method"><span style="font-style: italic;"><i>GetNominalOffset <a href="../common_vbageneral/common_general_string.htm" id="a22111" style="font-weight: normal; font-style: normal;" name="a22111">string</a></i></span></p>
+<p class="VBA-Text-Indent" style="font-style: italic;">Tells the selected nominal offset.</p>
+<p class="VBA-Text-Indent">&#160;</p>
+<p class="VBA-Heading-Method"><span style="font-style: italic;"><i><span style="font-style: italic;"><i>&#160;</i></span>SetGroupSpreadAnalysis</i></span> (<a href="../common_vbageneral/common_general_bool_data_type.htm" style="font-weight: normal; font-style: normal;">bool</a> <span style="font-style: italic;"><i>enable</i></span>)</p>
+<p class="VBA-Text-Indent"><span style="font-style: italic;"><i>Enables or disables the extent analysis.</i></span></p>
+<p class="VBA-Heading-Method">&#160;</p>
+<p class="VBA-Heading-Method"><span style="font-style: italic;"><i>GetExtentAnalysis <a href="../common_vbageneral/common_general_string.htm" id="a221111" style="font-weight: normal; font-style: normal;" name="a221111">bool</a></i></span></p>
+<p class="VBA-Text-Indent"><span style="font-style: italic;"><i>Tells whether the extent calculation is enabled.</i></span></p>
+<p class="VBA-Heading-Category"><a name="Example" id="Example"></a>Example</p>
+<p class="VBA-Text-Indent" style="margin-left: 0px;"><span><span><span><span><span><span><span><span><span><span><span><span style="font-style: italic;"><i>'Create an eye analysis task nested in an IbisAmi task</i></span></span></span></span></span></span></span></span></span></span></span></span></p>
+<p class="VBA-Text-Indent" style="margin-left: 0px;">&#160;</p>
+<p class="VBA-Text-Indent" style="margin-left: 0px;"><span><span><span><span><span><span><span><span><span><span><span><span style="font-style: italic;"><i>With SimulationTask</i></span></span></span></span></span></span></span></span></span></span></span></span></p>
+<p class="VBA-Text-Indent" style="margin-left: 40px;"><span><span><span><span><span><span><span><span><span><span><span><span style="font-style: italic;"><i>.Reset</i></span></span></span></span></span></span></span></span></span></span></span></span></p>
+<p class="VBA-Text-Indent" style="margin-left: 40px;"><span><span><span><span><span><span><span><span><span><span><span><span style="font-style: italic;"><i>.Type ("IbisAmi")</i></span></span></span></span></span></span></span></span></span></span></span></span></p>
+<p class="VBA-Text-Indent" style="margin-left: 40px;"><span><span><span><span><span><span><span><span><span><span><span><span style="font-style: italic;"><i>.Name ("IbisAmi1")</i></span></span></span></span></span></span></span></span></span></span></span></span></p>
+<p class="VBA-Text-Indent" style="margin-left: 40px;"><span><span><span><span><span><span><span><span><span><span><span><span style="font-style: italic;"><i>.Create</i></span></span></span></span></span></span></span></span></span></span></span></span></p>
+<p class="VBA-Text-Indent" style="margin-left: 40px;"><span><span><span><span><span><span><span><span><span><span><span><span style="font-style: italic;"><i>.Reset</i></span></span></span></span></span></span></span></span></span></span></span></span></p>
+<p class="VBA-Text-Indent" style="margin-left: 40px;"><span><span><span><span><span><span><span><span><span><span><span><span style="font-style: italic;"><i>.Type ("Eye Analysis")</i></span></span></span></span></span></span></span></span></span></span></span></span></p>
+<p class="VBA-Text-Indent" style="margin-left: 40px;"><span><span><span><span><span><span><span><span><span><span><span><span style="font-style: italic;"><i>.Name ("IbisAmi1\EyeAnalysis1")</i></span></span></span></span></span></span></span></span></span></span></span></span></p>
+<p class="VBA-Text-Indent" style="margin-left: 40px;"><span><span><span><span><span><span><span><span><span><span><span><span style="font-style: italic;"><i>.Create</i></span></span></span></span></span></span></span></span></span></span></span></span></p>
+<p class="VBA-Text-Indent" style="margin-left: 0px;"><span><span><span><span><span><span><span><span><span><span><span><span style="font-style: italic;"><i>End With</i></span></span></span></span></span></span></span></span></span></span></span></span></p>
+<p class="VBA-Text-Indent" style="margin-left: 0px;">&#160;</p>
+<p class="VBA-Text-Indent" style="margin-left: 0px;"><span><span><span><span><span><span><span><span><span><span><span><span style="font-style: italic;"><i>'Setting Eye diagram center</i></span></span></span></span></span></span></span></span></span></span></span></span></p>
+<p class="VBA-Text-Indent" style="margin-left: 0px;">&#160;</p>
+<p class="VBA-Text-Indent" style="margin-left: 0px;"><span><span><span><span><span><span><span><span><span><span><span><span style="font-style: italic;"><i>With EyeAnalysisTask</i></span></span></span></span></span></span></span></span></span></span></span></span></p>
+<p class="VBA-Text-Indent" style="margin-left: 40px;"><span><span><span><span><span><span><span><span><span><span><span><span style="font-style: italic;"><i>.Name ("IbisAmi1\EyeAnalysis1")</i></span></span></span></span></span></span></span></span></span></span></span></span></p>
+<p class="VBA-Text-Indent" style="margin-left: 40px;"><span><span><span><span><span><span><span><span><span><span><span><span style="font-style: italic;"><i>.SetDiagramCenter ("0.01")</i></span></span></span></span></span></span></span></span></span></span></span></span></p>
+<p class="VBA-Text-Indent" style="margin-left: 40px;"><span><span><span><span><span><span><span><span><span><span><span><span style="font-style: italic;"><i>.SetMaskAttribute ("Shape", "Rectangle")</i></span></span></span></span></span></span></span></span></span></span></span></span></p>
+<p class="VBA-Text-Indent" style="margin-left: 0px;"><span><span><span><span><span><span><span><span><span><span><span><span style="font-style: italic;"><i>End With</i></span></span></span></span></span></span></span></span></span></span></span></span></p>
+<?rh-p style="margin-bottom: 0px; text-align: Right; margin-left: 18px; 
+                 margin-right: 18px; margin-top: 18px;" ?>
+<div style="width: 100%; position: relative;" id="footer">
+<p style="border-bottom: Solid 1px #dddddd; text-align: Left; margin-left: 0px; font-family: Arial, sans-serif; line-height: Normal; margin-top: 9px; margin-right: 0px; margin-bottom: 6px; border-left-width: 1px; border-top-width: 1px; border-right-width: 1px;"><span style="text-align: Left; font-family: Arial, sans-serif; line-height: Normal;">&#160;</span></p>
+<table cellspacing="0" width="100%">
+<col style="width: 50%;" />
+<col style="width: 50%;" />
+<tr>
+<td style="vertical-align: Top;"><span style="font-family: Arial, sans-serif; line-height: Normal; font-size: 8pt;"><font size="1" style="font-size:8pt;">CST Studio Suite 2026</font></span></td>
+<td style="vertical-align: Top;">
+<p style="text-align: right;">&#160;</p>
+</td>
+</tr>
+</table>
+<p>&#160;</p>
+</div>
+<script type="text/javascript" language="javascript1.2">
+//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+        writeIntopicBar(0);
+
+
+highlightSearch();
+//-->
+//]]>
+</script>
+</body>
+</html>
