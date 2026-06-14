@@ -1,4 +1,4 @@
-# CSTapi
+# CST agent
 
 This repository is a CST Studio Suite automation knowledge base for AI agents.
 
