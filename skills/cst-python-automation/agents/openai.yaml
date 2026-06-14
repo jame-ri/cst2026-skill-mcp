@@ -1,0 +1,8 @@
+interface:
+  display_name: "CST Python Automation"
+  short_description: "Control CST and evolve antenna or RF designs"
+  brand_color: "#0F766E"
+  default_prompt: "Use $cst-python-automation to connect to CST, modify parameters or geometry, run simulations, and read S11, farfield, gain, efficiency, and logs."
+
+policy:
+  allow_implicit_invocation: true

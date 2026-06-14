@@ -5,6 +5,7 @@ This repository is a CST Studio Suite automation knowledge base for AI agents.
 It contains:
 
 - Bilingual CST automation skill guides in `skills/`
+- An installable Codex CST automation skill in `skills/cst-python-automation/`
 - A no-dependency MCP server for standardized CST reference and helper tools in `mcp/`
 - Bilingual domain guides for complex antenna design evolution in `domain-guides/`
 - A searchable CST installed macro index and usage guide in `macro-library/`
@@ -18,6 +19,7 @@ The intended split is:
 
 Start here:
 
+- Installable Codex skill: `skills/cst-python-automation/SKILL.md`
 - Chinese guide: `skills/cst-python-automation.zh-CN.md`
 - English guide: `skills/cst-python-automation.en.md`
 - MCP server: `mcp/README.md`
