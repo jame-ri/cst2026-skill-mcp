@@ -71,12 +71,24 @@ that the configured command path is absolute.
 - `docs.*`: search and read CST installed macro references and copied official docs.
 - `history.*`: extract compact VBA/History blocks from macros for `add_to_history()`.
 - `records.*`: create and append design manifests for structure evolution, optimization, and ML data.
-- `cst.*`: run standardized CST Python helper commands when `execute=true`.
+- `cst.inspect_project`: read-only project state, open projects, messages, model tree, and result-tree discovery.
+- `cst.inspect_geometry`: read-only, tree-derived geometry inventory for the Physical Structure Gate.
+- `cst.inspect_physics_setup`: read-only checklist for materials, ports, boundaries, mesh, monitors, solver/result evidence, and CST messages.
+- `cst.result_sanity`: read saved CST result trees and run compact checks such as passive S-parameter `|S| <= 1`.
+- `cst.process_status`: inspect CST-related process, memory, and disk state.
+- `cst.preflight_resources`: block long jobs when process count, memory, or disk thresholds are unsafe.
+- `cst.job_checkpoint` / `cst.recover_job`: record and resume multi-stage CST jobs.
+- `cst.cleanup_stale_processes`: plan or explicitly terminate selected stale PIDs; it never kills by name.
+- `cst.closed_start` / `cst.live_modify_parameter`: controlled CST helper commands when `execute=true`.
+- `cst.close_project`: close a specified CST project with explicit `no_save`, `save_copy`, or `save_original` policy.
 
 ## Safety Defaults
 
 - CST project mutation tools default to `execute=false`.
-- The CST helper does not call `save()` or `Save()`.
+- CST inspect/result sanity tools also default to `execute=false`; they return the planned CST Python command until explicitly executed.
+- Resource/process inspection tools default to `execute=false`; run them with `execute=true` before long jobs.
+- Process cleanup requires explicit `pids`, `execute=true`, and `allow_terminate=true`.
+- CST helpers do not save by default. `cst.close_project` calls `Project.close()` for `no_save`; it calls `Project.save(...)` only when `save_policy` is explicitly `save_copy` or `save_original`.
 - `records.*` only writes inside this repository.
 - Macro reads are limited to the detected CST macro root, normally
   `%CST_MACRO_ROOT%` or `<CST_INSTALL_DIR>\Library\Macros`.
@@ -118,6 +130,137 @@ Create a design manifest:
     "project_path": "D:\\CSTapi\\tmp_case3.cst",
     "objective": "Narrow antenna slot and compare S11 and gain",
     "save_policy": "save_copy"
+  }
+}
+```
+
+Plan a read-only project inspection:
+
+```json
+{
+  "name": "cst.inspect_project",
+  "arguments": {
+    "project_path": "D:\\CSTapi\\tmp_case3.cst",
+    "include_results": true,
+    "max_tree_items": 300
+  }
+}
+```
+
+Close a project without triggering a GUI save prompt:
+
+```json
+{
+  "name": "cst.close_project",
+  "arguments": {
+    "project_path": "D:\\CSTapi\\tmp_case3.cst",
+    "save_policy": "no_save",
+    "require_open": true
+  }
+}
+```
+
+Save a job copy and then close it:
+
+```json
+{
+  "name": "cst.close_project",
+  "arguments": {
+    "project_path": "D:\\CSTapi\\tmp_case3.cst",
+    "save_policy": "save_copy",
+    "save_copy_path": "D:\\CSTapi\\runs\\tmp_case3_reviewed.cst",
+    "allow_overwrite": false,
+    "require_open": true
+  }
+}
+```
+
+Inspect existing geometry evidence before a model edit:
+
+```json
+{
+  "name": "cst.inspect_geometry",
+  "arguments": {
+    "project_path": "D:\\CSTapi\\tmp_case3.cst",
+    "require_open": true,
+    "max_tree_items": 500
+  }
+}
+```
+
+Check physics setup before solving:
+
+```json
+{
+  "name": "cst.inspect_physics_setup",
+  "arguments": {
+    "project_path": "D:\\CSTapi\\tmp_case3.cst",
+    "max_tree_items": 500
+  }
+}
+```
+
+Plan result sanity checks:
+
+```json
+{
+  "name": "cst.result_sanity",
+  "arguments": {
+    "project_path": "D:\\CSTapi\\tmp_case3.cst",
+    "passive": true
+  }
+}
+```
+
+Run a long-job resource preflight:
+
+```json
+{
+  "name": "cst.preflight_resources",
+  "arguments": {
+    "project_path": "D:\\CSTapi\\tmp_case3.cst",
+    "min_free_memory_gb": 12,
+    "min_free_disk_gb": 20,
+    "max_cst_processes": 1,
+    "execute": true
+  }
+}
+```
+
+Record a checkpoint:
+
+```json
+{
+  "name": "cst.job_checkpoint",
+  "arguments": {
+    "job_id": "tmp-case3-sweep",
+    "project_path": "D:\\CSTapi\\tmp_case3.cst",
+    "stage": "preflight",
+    "status": "done",
+    "detail": "Resource gate passed before geometry mutation."
+  }
+}
+```
+
+Recover a job after interruption:
+
+```json
+{
+  "name": "cst.recover_job",
+  "arguments": {
+    "job_id": "tmp-case3-sweep"
+  }
+}
+```
+
+Plan selected PID cleanup:
+
+```json
+{
+  "name": "cst.cleanup_stale_processes",
+  "arguments": {
+    "pids": [12345],
+    "force": false
   }
 }
 ```

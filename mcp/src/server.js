@@ -130,6 +130,26 @@ const tools = [
     }
   },
   {
+    name: "cst.close_project",
+    description: "Close a specified CST project with an explicit no-save, save-copy, or save-original policy to avoid modal save prompts.",
+    inputSchema: {
+      type: "object",
+      properties: {
+        project_path: { type: "string" },
+        save_policy: { type: "string", enum: ["no_save", "save_copy", "save_original"], default: "no_save" },
+        save_copy_path: { type: "string", description: "Required when save_policy is save_copy." },
+        include_results: { type: "boolean", default: false },
+        allow_overwrite: { type: "boolean", default: false },
+        require_open: { type: "boolean", default: true },
+        close_design_environment: { type: "boolean", default: false, description: "Close the DesignEnvironment after the project is closed. Use only for helper-owned hidden sessions." },
+        python_executable: { type: "string" },
+        execute: { type: "boolean", default: false },
+        timeout_sec: { type: "integer", minimum: 5, maximum: 7200, default: 300 }
+      },
+      required: ["project_path"]
+    }
+  },
+  {
     name: "cst.live_modify_parameter",
     description: "Standard CST helper for live project parameter modification and restore without saving the original project.",
     inputSchema: {
@@ -146,6 +166,160 @@ const tools = [
         timeout_sec: { type: "integer", minimum: 5, maximum: 7200, default: 300 }
       },
       required: ["project_path", "parameter", "test_value"]
+    }
+  },
+  {
+    name: "cst.inspect_project",
+    description: "Read-only CST project inspection: open/running projects, project metadata, messages, model tree, and optional result tree.",
+    inputSchema: {
+      type: "object",
+      properties: {
+        project_path: { type: "string" },
+        require_open: { type: "boolean", default: false, description: "If true, fail unless the target project is already open in CST." },
+        include_results: { type: "boolean", default: true, description: "Also inspect saved cst.results result trees when possible." },
+        max_tree_items: { type: "integer", minimum: 20, maximum: 5000, default: 300 },
+        python_executable: { type: "string" },
+        execute: { type: "boolean", default: false },
+        timeout_sec: { type: "integer", minimum: 5, maximum: 7200, default: 300 }
+      },
+      required: ["project_path"]
+    }
+  },
+  {
+    name: "cst.inspect_geometry",
+    description: "Read-only, tree-derived CST geometry inventory to support the Physical Structure Gate before modeling or mutation.",
+    inputSchema: {
+      type: "object",
+      properties: {
+        project_path: { type: "string" },
+        require_open: { type: "boolean", default: false },
+        max_tree_items: { type: "integer", minimum: 20, maximum: 5000, default: 500 },
+        python_executable: { type: "string" },
+        execute: { type: "boolean", default: false },
+        timeout_sec: { type: "integer", minimum: 5, maximum: 7200, default: 300 }
+      },
+      required: ["project_path"]
+    }
+  },
+  {
+    name: "cst.inspect_physics_setup",
+    description: "Read-only CST physics setup checklist for materials, ports, boundaries, mesh, monitors, solver/result paths, and messages.",
+    inputSchema: {
+      type: "object",
+      properties: {
+        project_path: { type: "string" },
+        require_open: { type: "boolean", default: false },
+        max_tree_items: { type: "integer", minimum: 20, maximum: 5000, default: 500 },
+        python_executable: { type: "string" },
+        execute: { type: "boolean", default: false },
+        timeout_sec: { type: "integer", minimum: 5, maximum: 7200, default: 300 }
+      },
+      required: ["project_path"]
+    }
+  },
+  {
+    name: "cst.result_sanity",
+    description: "Read saved CST result trees and perform compact sanity checks, especially passive S-parameter magnitude checks.",
+    inputSchema: {
+      type: "object",
+      properties: {
+        project_path: { type: "string" },
+        tree_path: { type: "string", description: "Optional exact CST result-tree path. If omitted, S-parameter-like paths are auto-selected." },
+        run_id: { type: "integer", minimum: 0, default: 0 },
+        target_frequency: { type: "number", description: "Optional frequency value in the result item's native x-axis units." },
+        passive: { type: "boolean", default: true, description: "Check that selected S-parameter magnitudes are <= 1 for passive structures." },
+        max_tree_items: { type: "integer", minimum: 20, maximum: 5000, default: 500 },
+        python_executable: { type: "string" },
+        execute: { type: "boolean", default: false },
+        timeout_sec: { type: "integer", minimum: 5, maximum: 7200, default: 300 }
+      },
+      required: ["project_path"]
+    }
+  },
+  {
+    name: "cst.process_status",
+    description: "Inspect CST-related process, memory, and disk status before or during a long CST automation job.",
+    inputSchema: {
+      type: "object",
+      properties: {
+        project_path: { type: "string", description: "Optional project path used to choose the disk path for reporting." },
+        work_dir: { type: "string", description: "Optional directory used for disk-space reporting." },
+        pattern: { type: "array", items: { type: "string" }, description: "Optional process match patterns. Defaults to CST and CST helper patterns." },
+        include_commandline: { type: "boolean", default: true },
+        python_executable: { type: "string" },
+        execute: { type: "boolean", default: false },
+        timeout_sec: { type: "integer", minimum: 5, maximum: 300, default: 45 }
+      }
+    }
+  },
+  {
+    name: "cst.preflight_resources",
+    description: "Run a conservative resource gate before launching CST or a long solve: process count, free memory, and free disk.",
+    inputSchema: {
+      type: "object",
+      properties: {
+        project_path: { type: "string" },
+        work_dir: { type: "string" },
+        pattern: { type: "array", items: { type: "string" } },
+        include_commandline: { type: "boolean", default: true },
+        min_free_memory_gb: { type: "number", default: 8 },
+        min_free_disk_gb: { type: "number", default: 10 },
+        max_cst_processes: { type: "integer", minimum: 0, maximum: 100, default: 2 },
+        max_single_cst_memory_gb: { type: "number", default: 48 },
+        python_executable: { type: "string" },
+        execute: { type: "boolean", default: false },
+        timeout_sec: { type: "integer", minimum: 5, maximum: 300, default: 60 }
+      }
+    }
+  },
+  {
+    name: "cst.job_checkpoint",
+    description: "Create or append a CST job checkpoint for resumable multi-step CST automation.",
+    inputSchema: {
+      type: "object",
+      properties: {
+        manifest_path: { type: "string", description: "Existing job manifest path. If omitted, job_id is used under design-records/jobs." },
+        job_id: { type: "string" },
+        project_path: { type: "string" },
+        stage: { type: "string", description: "Current stage, for example preflight, geometry, physics, solve, result_read." },
+        status: { type: "string", enum: ["pending", "running", "done", "failed", "interrupted", "recovered"] },
+        detail: { type: "string" },
+        operation: { type: "object" },
+        metrics: { type: "object" },
+        artifacts: { type: "array", items: { type: "object" } },
+        warnings: { type: "array", items: { type: "string" } },
+        errors: { type: "array", items: { type: "string" } },
+        resource_snapshot: { type: "object" },
+        cst_pids: { type: "array", items: { type: "integer" } }
+      },
+      required: ["stage", "status"]
+    }
+  },
+  {
+    name: "cst.recover_job",
+    description: "Read a CST job checkpoint manifest and recommend the safest resume point after interruption or crash.",
+    inputSchema: {
+      type: "object",
+      properties: {
+        manifest_path: { type: "string" },
+        job_id: { type: "string" }
+      }
+    }
+  },
+  {
+    name: "cst.cleanup_stale_processes",
+    description: "Plan or explicitly terminate stale CST-related PIDs. This never kills by name; PIDs and allow_terminate are required for execution.",
+    inputSchema: {
+      type: "object",
+      properties: {
+        pids: { type: "array", items: { type: "integer" }, minItems: 1 },
+        allow_terminate: { type: "boolean", default: false },
+        force: { type: "boolean", default: false },
+        python_executable: { type: "string" },
+        execute: { type: "boolean", default: false },
+        timeout_sec: { type: "integer", minimum: 5, maximum: 300, default: 60 }
+      },
+      required: ["pids"]
     }
   }
 ];
@@ -572,8 +746,15 @@ function createVariant(args) {
     design_id: designId,
     parent_design_id: args.parent_design_id ?? null,
     objective: args.objective,
+    physical_structure: {},
+    physics_setup: {},
+    job_status: "new",
+    checkpoints: [],
+    resource_guard: {},
+    recovery: {},
     operations: [],
     metrics: {},
+    sanity_checks: {},
     logs: [],
     artifacts: [],
     source_macros: [],
@@ -610,19 +791,176 @@ function appendOperation(args) {
   return { manifest_path: manifestPath, appended: operation, manifest };
 }
 
+function jobRoot() {
+  const root = path.join(recordsRoot, "jobs");
+  fs.mkdirSync(root, { recursive: true });
+  return root;
+}
+
+function resolveJobManifest(args, createIfMissing = false) {
+  if (args.manifest_path) {
+    const manifestPath = safeRepoPath(args.manifest_path);
+    if (!fs.existsSync(manifestPath) && !createIfMissing) throw new Error(`Job manifest not found: ${manifestPath}`);
+    return manifestPath;
+  }
+  const jobId = args.job_id || `job-${nowIso().replace(/[:.]/g, "-")}`;
+  const dir = path.join(jobRoot(), slug(jobId));
+  if (!pathInside(dir, repoRoot)) throw new Error("job_id resolved outside repository.");
+  if (createIfMissing) fs.mkdirSync(dir, { recursive: true });
+  const manifestPath = path.join(dir, "job.json");
+  if (!fs.existsSync(manifestPath) && !createIfMissing) throw new Error(`Job manifest not found for job_id: ${jobId}`);
+  return manifestPath;
+}
+
+function readJsonIfExists(filePath, fallback) {
+  if (!fs.existsSync(filePath)) return fallback;
+  return JSON.parse(fs.readFileSync(filePath, "utf8"));
+}
+
+function cstJobCheckpoint(args) {
+  const manifestPath = resolveJobManifest(args, true);
+  const manifest = readJsonIfExists(manifestPath, {
+    schema_version: "cstapi.job-manifest.v1",
+    created_at: nowIso(),
+    job_id: args.job_id || path.basename(path.dirname(manifestPath)),
+    project_path: args.project_path ?? null,
+    checkpoints: [],
+    warnings: [],
+    errors: []
+  });
+  const checkpoint = {
+    recorded_at: nowIso(),
+    stage: args.stage,
+    status: args.status,
+    project_path: args.project_path ?? manifest.project_path ?? null,
+    detail: args.detail ?? null,
+    operation: args.operation ?? {},
+    metrics: args.metrics ?? {},
+    artifacts: Array.isArray(args.artifacts) ? args.artifacts : [],
+    warnings: Array.isArray(args.warnings) ? args.warnings : [],
+    errors: Array.isArray(args.errors) ? args.errors : [],
+    resource_snapshot: args.resource_snapshot ?? {},
+    cst_pids: Array.isArray(args.cst_pids) ? args.cst_pids : []
+  };
+  manifest.project_path = checkpoint.project_path;
+  manifest.updated_at = nowIso();
+  manifest.current_stage = checkpoint.stage;
+  manifest.current_status = checkpoint.status;
+  manifest.checkpoints = Array.isArray(manifest.checkpoints) ? manifest.checkpoints : [];
+  manifest.checkpoints.push(checkpoint);
+  if (checkpoint.status === "done") {
+    manifest.last_completed_stage = checkpoint.stage;
+    manifest.last_completed_at = checkpoint.recorded_at;
+  }
+  if (["failed", "interrupted"].includes(checkpoint.status)) {
+    manifest.last_failure = checkpoint;
+  }
+  manifest.warnings = [...(manifest.warnings ?? []), ...checkpoint.warnings];
+  manifest.errors = [...(manifest.errors ?? []), ...checkpoint.errors];
+  fs.mkdirSync(path.dirname(manifestPath), { recursive: true });
+  fs.writeFileSync(manifestPath, `${JSON.stringify(manifest, null, 2)}\n`, "utf8");
+  return { manifest_path: manifestPath, checkpoint, manifest };
+}
+
+function cstRecoverJob(args) {
+  const manifestPath = resolveJobManifest(args, false);
+  const manifest = JSON.parse(fs.readFileSync(manifestPath, "utf8"));
+  const checkpoints = Array.isArray(manifest.checkpoints) ? manifest.checkpoints : [];
+  const last = checkpoints.at(-1) ?? null;
+  const lastDone = [...checkpoints].reverse().find((item) => item.status === "done") ?? null;
+  const failed = [...checkpoints].reverse().find((item) => ["failed", "interrupted"].includes(item.status)) ?? null;
+  let recommendation = "No checkpoints exist yet. Start with preflight_resources and record a running checkpoint.";
+  if (last) {
+    if (last.status === "done") {
+      recommendation = `Last checkpoint '${last.stage}' is done. Resume at the next planned stage after verifying resources.`;
+    } else if (last.status === "running") {
+      recommendation = `Last checkpoint '${last.stage}' was still running. Inspect process_status and CST result/messages before marking it recovered, done, or interrupted.`;
+    } else if (["failed", "interrupted"].includes(last.status)) {
+      recommendation = lastDone
+        ? `Resume from the last completed stage '${lastDone.stage}', then rerun or repair '${last.stage}' after preflight.`
+        : `No completed checkpoint exists. Restart from preflight and use a project copy.`;
+    } else if (last.status === "recovered") {
+      recommendation = `Recovery checkpoint exists for '${last.stage}'. Continue with the next planned stage after sanity checks.`;
+    }
+  }
+  return {
+    manifest_path: manifestPath,
+    job_id: manifest.job_id ?? null,
+    project_path: manifest.project_path ?? null,
+    current_stage: manifest.current_stage ?? last?.stage ?? null,
+    current_status: manifest.current_status ?? last?.status ?? null,
+    last_checkpoint: last,
+    last_completed_checkpoint: lastDone,
+    last_failure: failed,
+    checkpoint_count: checkpoints.length,
+    recommendation,
+    manifest
+  };
+}
+
 function defaultCstPython(args) {
   return args.python_executable || cstPaths.pythonExecutable || "python.exe";
 }
 
 function buildCstCommand(kind, args) {
   const python = defaultCstPython(args);
-  const base = [python, cstHelperPath, kind, "--project", args.project_path];
+  const base = [python, cstHelperPath, kind];
+  if (args.project_path) base.push("--project", args.project_path);
+  if (kind === "close-project") {
+    base.push("--save-policy", args.save_policy ?? "no_save");
+    if (args.save_copy_path) base.push("--save-copy-path", String(args.save_copy_path));
+    if (args.include_results === true) base.push("--include-results");
+    if (args.allow_overwrite === true) base.push("--allow-overwrite");
+    if (args.require_open !== false) base.push("--require-open");
+    if (args.close_design_environment === true) base.push("--close-design-environment");
+  }
   if (kind === "live-modify") {
     base.push("--parameter", args.parameter);
     base.push("--test-value", String(args.test_value));
     base.push("--pause-after-set", String(args.pause_after_set ?? 5));
     if (args.restore !== false) base.push("--restore");
     if (args.require_open !== false) base.push("--require-open");
+  }
+  if (kind === "inspect-project") {
+    if (args.require_open === true) base.push("--require-open");
+    if (args.include_results !== false) base.push("--include-results");
+    base.push("--max-tree-items", String(safeNumber(args.max_tree_items, 300, 20, 5000)));
+  }
+  if (kind === "inspect-geometry" || kind === "inspect-physics") {
+    if (args.require_open === true) base.push("--require-open");
+    base.push("--max-tree-items", String(safeNumber(args.max_tree_items, 500, 20, 5000)));
+  }
+  if (kind === "result-sanity") {
+    if (args.tree_path) base.push("--tree-path", String(args.tree_path));
+    if (args.run_id !== undefined) base.push("--run-id", String(safeNumber(args.run_id, 0, 0, 1000000)));
+    if (args.target_frequency !== undefined && args.target_frequency !== null) base.push("--target-frequency", String(args.target_frequency));
+    if (args.passive !== false) base.push("--passive");
+    base.push("--max-tree-items", String(safeNumber(args.max_tree_items, 500, 20, 5000)));
+  }
+  if (kind === "process-status") {
+    if (args.work_dir) base.push("--work-dir", String(args.work_dir));
+    if (args.include_commandline !== false) base.push("--include-commandline");
+    if (Array.isArray(args.pattern)) {
+      for (const pattern of args.pattern) base.push("--pattern", String(pattern));
+    }
+  }
+  if (kind === "preflight-resources") {
+    if (args.work_dir) base.push("--work-dir", String(args.work_dir));
+    if (args.include_commandline !== false) base.push("--include-commandline");
+    if (Array.isArray(args.pattern)) {
+      for (const pattern of args.pattern) base.push("--pattern", String(pattern));
+    }
+    base.push("--min-free-memory-gb", String(safeNumber(args.min_free_memory_gb, 8, 0, 100000)));
+    base.push("--min-free-disk-gb", String(safeNumber(args.min_free_disk_gb, 10, 0, 100000)));
+    base.push("--max-cst-processes", String(safeNumber(args.max_cst_processes, 2, 0, 100)));
+    base.push("--max-single-cst-memory-gb", String(safeNumber(args.max_single_cst_memory_gb, 48, 0, 100000)));
+  }
+  if (kind === "cleanup-stale-processes") {
+    if (Array.isArray(args.pids)) {
+      for (const pid of args.pids) base.push("--pid", String(pid));
+    }
+    if (args.allow_terminate === true) base.push("--allow-terminate");
+    if (args.force === true) base.push("--force");
   }
   return base;
 }
@@ -668,6 +1006,28 @@ async function cstClosedStart(args) {
   return runProcess(command, safeNumber(args.timeout_sec, 180, 5, 3600));
 }
 
+async function cstCloseProject(args) {
+  const command = buildCstCommand("close-project", args);
+  if (!args.execute) {
+    return {
+      execute: false,
+      command,
+      save_policy: args.save_policy ?? "no_save",
+      note: "Set execute=true to close the specified CST project. save_copy requires save_copy_path; no_save uses Project.close() to avoid GUI save prompts."
+    };
+  }
+  if ((args.save_policy ?? "no_save") === "save_copy" && !args.save_copy_path) {
+    return {
+      execute: false,
+      blocked: true,
+      command,
+      save_policy: "save_copy",
+      note: "Refusing save_copy without save_copy_path."
+    };
+  }
+  return runProcess(command, safeNumber(args.timeout_sec, 300, 5, 7200));
+}
+
 async function cstLiveModify(args) {
   const command = buildCstCommand("live-modify", args);
   if (!args.execute) {
@@ -679,6 +1039,91 @@ async function cstLiveModify(args) {
     };
   }
   return runProcess(command, safeNumber(args.timeout_sec, 300, 5, 7200));
+}
+
+async function cstReadOnlyHelper(kind, args, note, timeoutDefault = 300) {
+  const command = buildCstCommand(kind, args);
+  if (!args.execute) {
+    return {
+      execute: false,
+      command,
+      save_policy: "no_save",
+      note
+    };
+  }
+  return runProcess(command, safeNumber(args.timeout_sec, timeoutDefault, 5, 7200));
+}
+
+async function cstInspectProject(args) {
+  return cstReadOnlyHelper(
+    "inspect-project",
+    args,
+    "Set execute=true to perform read-only project inspection. This can open/connect CST but does not save the project."
+  );
+}
+
+async function cstInspectGeometry(args) {
+  return cstReadOnlyHelper(
+    "inspect-geometry",
+    args,
+    "Set execute=true to inspect accessible model-tree evidence before geometry mutation. This helper does not save the project."
+  );
+}
+
+async function cstInspectPhysics(args) {
+  return cstReadOnlyHelper(
+    "inspect-physics",
+    args,
+    "Set execute=true to inspect accessible materials/ports/boundaries/mesh/monitor/result evidence before solving. This helper does not save."
+  );
+}
+
+async function cstResultSanity(args) {
+  return cstReadOnlyHelper(
+    "result-sanity",
+    args,
+    "Set execute=true to read saved CST results and run sanity checks. This helper uses cst.results and does not save the project."
+  );
+}
+
+async function cstProcessStatus(args) {
+  return cstReadOnlyHelper(
+    "process-status",
+    args,
+    "Set execute=true to inspect CST-related process, memory, and disk state. This helper does not modify CST.",
+    45
+  );
+}
+
+async function cstPreflightResources(args) {
+  return cstReadOnlyHelper(
+    "preflight-resources",
+    args,
+    "Set execute=true to run the resource gate before starting or resuming a CST job. This helper does not modify CST.",
+    60
+  );
+}
+
+async function cstCleanupStaleProcesses(args) {
+  const command = buildCstCommand("cleanup-stale-processes", args);
+  if (!args.execute) {
+    return {
+      execute: false,
+      command,
+      save_policy: "no_save",
+      note: "Set execute=true and allow_terminate=true to terminate only the explicit PIDs listed in pids. This never kills by name."
+    };
+  }
+  if (args.allow_terminate !== true) {
+    return {
+      execute: false,
+      blocked: true,
+      command,
+      save_policy: "no_save",
+      note: "Refusing to terminate processes without allow_terminate=true."
+    };
+  }
+  return runProcess(command, safeNumber(args.timeout_sec, 60, 5, 300));
 }
 
 async function callTool(name, args) {
@@ -699,8 +1144,28 @@ async function callTool(name, args) {
       return appendOperation(args);
     case "cst.closed_start":
       return cstClosedStart(args);
+    case "cst.close_project":
+      return cstCloseProject(args);
     case "cst.live_modify_parameter":
       return cstLiveModify(args);
+    case "cst.inspect_project":
+      return cstInspectProject(args);
+    case "cst.inspect_geometry":
+      return cstInspectGeometry(args);
+    case "cst.inspect_physics_setup":
+      return cstInspectPhysics(args);
+    case "cst.result_sanity":
+      return cstResultSanity(args);
+    case "cst.process_status":
+      return cstProcessStatus(args);
+    case "cst.preflight_resources":
+      return cstPreflightResources(args);
+    case "cst.job_checkpoint":
+      return cstJobCheckpoint(args);
+    case "cst.recover_job":
+      return cstRecoverJob(args);
+    case "cst.cleanup_stale_processes":
+      return cstCleanupStaleProcesses(args);
     default:
       throw new Error(`Unknown tool: ${name}`);
   }
