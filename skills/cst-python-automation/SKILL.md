@@ -103,7 +103,7 @@ Resolve `$env:...` paths from the current shell when they exist; if they are uns
 1. Inspect the current project, parameters, result tree, or existing record before proposing changes.
 2. Prefer official CST references, installed macros, and repository examples over guesswork.
 3. Use `cst.interface` for live sessions and `cst.results` for saved result reads.
-4. Use `model3d.add_to_history()` for geometry, ports, boundaries, mesh, and solver setup.
+4. Use `model3d.add_to_history()` for geometry, ports, boundaries, mesh, monitors, and solver setup, and follow the stricter `History Tree Requirements` below.
 5. Use the cached `CST_PYTHON_EXE` path when running local CST Python scripts. If the cached path fails, verify the path once and use a task-local override or current-process environment variable. Update persistent Windows user environment variables or `references/local-environment.md` only when the user explicitly asks for a durable path update.
 6. If a CST VBA/History command is unfamiliar, search the macro library and extract the smallest controllable snippet instead of batch-running full interactive macros as black boxes.
 7. Do not save the original project by default; destructive edits, structure deletion, long simulations, and optimization loops should use a copied project or job copy.
@@ -201,6 +201,19 @@ Stop before solving when the solver type, boundary meaning, material values, or 
 - Put all user-tunable model values in the CST parameter list, including substrate heights, material constants, patch dimensions, slot dimensions, via/pin radii, feed/coax dimensions, array pitch, element count, and solver frequency bounds.
 - Use parameter names and CST expressions in geometry history instead of baking Python-computed numbers into `.Xrange`, `.Yrange`, `.Zrange`, `.Radius`, material epsilon/tanD, or solver frequency fields whenever the value is meant to be manually editable.
 - Store derived coordinates or layer levels as parameters when they are reused, for example `z_top_min`, `z_top_max`, `x_e1`, `x_e2`, etc. This keeps CST rebuilds predictable after manual edits.
+
+## History Tree Requirements
+
+Treat CST History visibility as a deliverable, not an implementation detail.
+
+- For every created, modified, deleted, or transformed CST object, write a visible `model3d.add_to_history()` entry with a specific caption. Do this for materials, bricks/sheets/curves, Boolean operations, ports, boundaries, mesh settings, monitors, solver settings, picks, transforms, and result-setup commands.
+- Prefer one physical object or one tightly coupled operation per History entry. Do not hide many unrelated solids inside one broad entry such as `create geometry` when the user is expected to inspect or edit the History tree. Use captions like `define brick: stack:lower_dielectric`, `define brick: metals:bottom_ground_yneg`, `define waveguide port: microstrip_feed_xmin`, and `define monitor: e-field 10 GHz`.
+- Do not create CST model geometry through direct API calls, imported transient geometry, or helper-side side effects unless an equivalent visible History entry is also written and verified.
+- Create CST parameters before History commands reference them. Keep editable dimensions as parameter names or CST expressions in the History code instead of substituting opaque Python-computed numbers.
+- After saving a generated or modified project, verify that the History was persisted before claiming success. At minimum, inspect the saved project folder's `Model/3D/ModelHistory.json` or use an available CST inspection tool, and confirm the expected captions and command types are present.
+- If the user specifically asks to inspect the CST GUI History tree, open the project and report whether the visible tree contains the expected modeling entries. Do not treat `add_to_history()` success alone as proof of GUI-visible History.
+- If History entries are missing, hidden, overly collapsed, or only present in a side file, stop and rebuild or repair the project before running a solver or presenting the model as complete.
+- In review-gated workflows, include History verification in the review package: list the key captions found, the verification method used, and any unchecked GUI visibility risk.
 
 ## Port Setup Rules
 
