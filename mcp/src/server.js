@@ -11,6 +11,9 @@ const macroInventoryPath = path.join(repoRoot, "macro-library", "macro-inventory
 const officialDocsRoot = path.join(repoRoot, "official-docs");
 const recordsRoot = path.join(repoRoot, "design-records");
 const cstHelperPath = path.join(repoRoot, "mcp", "python", "cst_ops.py");
+const skillReferencesRoot = path.join(repoRoot, "skills", "cst-python-automation", "references");
+const callRecipesPath = path.join(skillReferencesRoot, "cst-call-recipes.md");
+const errorCookbookPath = path.join(skillReferencesRoot, "cst-error-cookbook.md");
 
 let macroRowsCache = null;
 let inputBuffer = "";
@@ -321,6 +324,39 @@ const tools = [
       },
       required: ["pids"]
     }
+  },
+  {
+    name: "knowledge.list_categories",
+    description: "List CST automation recipe categories available from the installed skill knowledge base.",
+    inputSchema: {
+      type: "object",
+      properties: {}
+    }
+  },
+  {
+    name: "knowledge.get_recipe",
+    description: "Read one CST automation call recipe by category before rediscovering macro or History patterns.",
+    inputSchema: {
+      type: "object",
+      properties: {
+        category: { type: "string", description: "Recipe category such as ports, boolean, solver, materials, or structure-understanding." },
+        max_chars: { type: "integer", minimum: 500, maximum: 50000, default: 12000 }
+      },
+      required: ["category"]
+    }
+  },
+  {
+    name: "knowledge.search_lessons",
+    description: "Search CST recipes and error-cookbook lessons for known failure modes and correct call sequences.",
+    inputSchema: {
+      type: "object",
+      properties: {
+        query: { type: "string", description: "Search terms such as Untitled Project.close, DiscretePort waveguide, Update Manager, Boolean, or StoreParameter." },
+        limit: { type: "integer", minimum: 1, maximum: 50, default: 10 },
+        max_chars: { type: "integer", minimum: 200, maximum: 20000, default: 4000 }
+      },
+      required: ["query"]
+    }
   }
 ];
 
@@ -621,6 +657,131 @@ function readOfficialDoc(args) {
     chars: data.chars,
     truncated: data.truncated,
     text: path.extname(full).toLowerCase().startsWith(".htm") ? stripHtml(data.text) : data.text
+  };
+}
+
+function knowledgeFiles() {
+  return [
+    { source: "cst-call-recipes", path: callRecipesPath },
+    { source: "cst-error-cookbook", path: errorCookbookPath }
+  ];
+}
+
+function markdownSections(filePath, source) {
+  if (!pathInside(filePath, skillReferencesRoot)) {
+    throw new Error("Knowledge file path must stay under the CST skill references directory.");
+  }
+  const raw = readTextFile(filePath, 200000).text;
+  const lines = raw.split(/\r?\n/);
+  const sections = [];
+  let current = null;
+  for (const line of lines) {
+    const match = line.match(/^##\s+(.+?)\s*$/);
+    if (match) {
+      if (current) sections.push(current);
+      current = {
+        source,
+        heading: match[1].trim(),
+        text: `${line}\n`
+      };
+    } else if (current) {
+      current.text += `${line}\n`;
+    }
+  }
+  if (current) sections.push(current);
+  return sections;
+}
+
+function recipeSections() {
+  return markdownSections(callRecipesPath, "cst-call-recipes");
+}
+
+function allKnowledgeSections() {
+  return knowledgeFiles().flatMap((file) => markdownSections(file.path, file.source));
+}
+
+function normalizeHeading(value) {
+  return String(value ?? "")
+    .trim()
+    .toLowerCase()
+    .replace(/^lesson:\s*/, "");
+}
+
+function sectionSummary(text) {
+  const purpose = text.match(/Purpose:\s*([^\n]+)/i);
+  if (purpose) return purpose[1].trim();
+  const symptoms = text.match(/Symptoms:\s*\n\s*-\s*([^\n]+)/i);
+  if (symptoms) return symptoms[1].trim();
+  return text
+    .split(/\r?\n/)
+    .map((line) => line.trim())
+    .find((line) => line && !line.startsWith("#")) ?? "";
+}
+
+function listKnowledgeCategories() {
+  const categories = recipeSections().map((section) => ({
+    category: normalizeHeading(section.heading),
+    heading: section.heading,
+    summary: sectionSummary(section.text)
+  }));
+  return {
+    source_path: path.relative(repoRoot, callRecipesPath),
+    categories: categories.map((item) => item.category),
+    entries: categories
+  };
+}
+
+function getKnowledgeRecipe(args) {
+  const category = normalizeHeading(args.category);
+  const maxChars = safeNumber(args.max_chars, 12000, 500, 50000);
+  const sections = recipeSections();
+  const section = sections.find((item) => normalizeHeading(item.heading) === category);
+  if (!section) {
+    return {
+      category,
+      found: false,
+      available_categories: sections.map((item) => normalizeHeading(item.heading))
+    };
+  }
+  const truncated = section.text.length > maxChars;
+  return {
+    category,
+    found: true,
+    source_path: path.relative(repoRoot, callRecipesPath),
+    chars: section.text.length,
+    truncated,
+    text: truncated ? section.text.slice(0, maxChars) : section.text
+  };
+}
+
+function searchKnowledgeLessons(args) {
+  const query = String(args.query ?? "").trim();
+  const terms = splitTerms(query);
+  const limit = safeNumber(args.limit, 10, 1, 50);
+  const maxChars = safeNumber(args.max_chars, 4000, 200, 20000);
+  const matches = allKnowledgeSections()
+    .map((section) => {
+      const haystack = `${section.source} ${section.heading} ${section.text}`;
+      return { section, score: scoreText(haystack, terms) };
+    })
+    .filter((item) => item.score > 0 || query === "*")
+    .sort((a, b) => b.score - a.score || a.section.heading.localeCompare(b.section.heading))
+    .slice(0, limit)
+    .map(({ section, score }) => {
+      const truncated = section.text.length > maxChars;
+      return {
+        score,
+        source: section.source,
+        heading: section.heading,
+        key: normalizeHeading(section.heading),
+        text: truncated ? section.text.slice(0, maxChars) : section.text,
+        truncated
+      };
+    });
+  return {
+    query,
+    count: matches.length,
+    matches
   };
 }
 
@@ -1166,6 +1327,12 @@ async function callTool(name, args) {
       return cstRecoverJob(args);
     case "cst.cleanup_stale_processes":
       return cstCleanupStaleProcesses(args);
+    case "knowledge.list_categories":
+      return listKnowledgeCategories(args);
+    case "knowledge.get_recipe":
+      return getKnowledgeRecipe(args);
+    case "knowledge.search_lessons":
+      return searchKnowledgeLessons(args);
     default:
       throw new Error(`Unknown tool: ${name}`);
   }

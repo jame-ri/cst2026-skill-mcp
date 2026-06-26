@@ -71,6 +71,7 @@ that the configured command path is absolute.
 - `docs.*`: search and read CST installed macro references and copied official docs.
 - `history.*`: extract compact VBA/History blocks from macros for `add_to_history()`.
 - `records.*`: create and append design manifests for structure evolution, optimization, and ML data.
+- `knowledge.*`: read CST call recipes and known failure lessons from the installed skill knowledge base.
 - `cst.inspect_project`: read-only project state, open projects, messages, model tree, and result-tree discovery.
 - `cst.inspect_geometry`: read-only, tree-derived geometry inventory for the Physical Structure Gate.
 - `cst.inspect_physics_setup`: read-only checklist for materials, ports, boundaries, mesh, monitors, solver/result evidence, and CST messages.
@@ -105,6 +106,37 @@ Search macros:
     "category": "Solver",
     "application": "MWS",
     "limit": 10
+  }
+}
+```
+
+List CST recipe categories:
+
+```json
+{
+  "name": "knowledge.list_categories",
+  "arguments": {}
+}
+```
+
+Read the default port workflow before rediscovering macro calls:
+
+```json
+{
+  "name": "knowledge.get_recipe",
+  "arguments": {
+    "category": "ports"
+  }
+}
+```
+
+Search known CST failure lessons:
+
+```json
+{
+  "name": "knowledge.search_lessons",
+  "arguments": {
+    "query": "Untitled Project.close modal"
   }
 }
 ```

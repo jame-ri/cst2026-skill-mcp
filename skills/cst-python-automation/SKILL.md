@@ -11,7 +11,7 @@ This skill governs model behavior: how to interpret natural-language CST request
 
 The repository under `CST_API_ROOT` provides the standardized tool layer: macro search, official-document reads, History/VBA pattern extraction, design manifests, and conservative CST Python helper execution. Read `references/local-environment.md` for this machine's cached paths before using absolute paths.
 
-Prefer MCP tools for standardized actions. If MCP coverage is insufficient, fall back to this skill's rules and inspect the repository references directly.
+Prefer MCP tools for standardized actions. If MCP coverage is insufficient, fall back to this skill's rules and inspect the repository references directly. Before rediscovering a CST call pattern from macros or official docs, check `references/cst-call-recipes.md` and `references/cst-error-cookbook.md` for existing task recipes and known failure lessons.
 
 ## Scope
 
@@ -50,8 +50,9 @@ Contextual triggers only when CST is implied or stated:
 5. Use `cst.inspect_project`, `cst.inspect_geometry`, `cst.inspect_physics_setup`, and `cst.result_sanity` for read-only structure, setup, and result checks before modeling, solving, or interpreting results.
 6. Use `cst.process_status`, `cst.preflight_resources`, `cst.job_checkpoint`, `cst.recover_job`, and `cst.cleanup_stale_processes` to guard long CST jobs against stuck processes, memory pressure, and interrupted multi-step runs.
 7. Use `cst.closed_start`, `cst.close_project`, and `cst.live_modify_parameter` for controlled CST execution; these default to `execute=false` and should only execute when user intent is clear.
-8. Before rediscovering CST executables or documentation paths, read `references/local-environment.md` and check `CST_PYTHON_EXE`, `CST_API_ROOT`, `CST_MCP_ROOT`, `CST_OFFICIAL_DOCS`, and `CST_MACRO_LIBRARY`.
-9. If MCP is unavailable, read repository references directly and write Python/VBA/History scripts under the same safety rules.
+8. Use `knowledge.list_categories`, `knowledge.get_recipe`, and `knowledge.search_lessons` when available to retrieve CST call recipes and known error lessons before re-searching raw macros.
+9. Before rediscovering CST executables or documentation paths, read `references/local-environment.md` and check `CST_PYTHON_EXE`, `CST_API_ROOT`, `CST_MCP_ROOT`, `CST_OFFICIAL_DOCS`, and `CST_MACRO_LIBRARY`.
+10. If MCP is unavailable, read repository references directly and write Python/VBA/History scripts under the same safety rules.
 
 In Codex tool lists, the same MCP tools may be exposed with underscore names or an MCP namespace. Use the actually available callable name:
 
@@ -76,6 +77,9 @@ In Codex tool lists, the same MCP tools may be exposed with underscore names or 
 | `cst.closed_start` | `cst_closed_start` |
 | `cst.close_project` | `cst_close_project` |
 | `cst.live_modify_parameter` | `cst_live_modify_parameter` |
+| `knowledge.list_categories` | `knowledge_list_categories` |
+| `knowledge.get_recipe` | `knowledge_get_recipe` |
+| `knowledge.search_lessons` | `knowledge_search_lessons` |
 
 ## Reference Priority
 
@@ -84,19 +88,21 @@ Read these sources as needed:
 Resolve `$env:...` paths from the current shell when they exist; if they are unset, use the cached values in `references/local-environment.md`.
 
 1. `references/local-environment.md` for this machine's cached CST Python, CST executable, CST API, MCP, official docs, and macro-library paths.
-2. `$env:CST_MCP_ROOT\README.md`
-3. `$env:CST_OFFICIAL_DOCS\python\`
-4. `$env:CST_OFFICIAL_DOCS\python_cst_libraries\cst\`
-5. `$env:CST_OFFICIAL_DOCS\vba-3d\`
-6. `$env:CST_OFFICIAL_DOCS\vba-des\`
-7. `$env:CST_OFFICIAL_DOCS\advanced\`
-8. `$env:CST_MACRO_LIBRARY\macro-inventory.csv`
-9. `$env:CST_MACRO_LIBRARY\cst-macro-usage.en.md`
-10. `$env:CST_MACRO_LIBRARY\macro-catalog.en.md`
-11. `$env:CST_API_ROOT\domain-guides\design-evolution.en.md`
-12. `$env:CST_API_ROOT\domain-guides\geometry-mutation.en.md`
-13. `$env:CST_API_ROOT\domain-guides\result-diagnosis.en.md`
-14. `$env:CST_API_ROOT\domain-guides\optimization-ml-data.en.md`
+2. `references/cst-call-recipes.md` for default workflows by task category: project management, file/result handling, solver, ports, materials, modeling, Boolean operations, process recovery, and structure understanding.
+3. `references/cst-error-cookbook.md` for known CST automation failure modes and the correct next action.
+4. `$env:CST_MCP_ROOT\README.md`
+5. `$env:CST_OFFICIAL_DOCS\python\`
+6. `$env:CST_OFFICIAL_DOCS\python_cst_libraries\cst\`
+7. `$env:CST_OFFICIAL_DOCS\vba-3d\`
+8. `$env:CST_OFFICIAL_DOCS\vba-des\`
+9. `$env:CST_OFFICIAL_DOCS\advanced\`
+10. `$env:CST_MACRO_LIBRARY\macro-inventory.csv`
+11. `$env:CST_MACRO_LIBRARY\cst-macro-usage.en.md`
+12. `$env:CST_MACRO_LIBRARY\macro-catalog.en.md`
+13. `$env:CST_API_ROOT\domain-guides\design-evolution.en.md`
+14. `$env:CST_API_ROOT\domain-guides\geometry-mutation.en.md`
+15. `$env:CST_API_ROOT\domain-guides\result-diagnosis.en.md`
+16. `$env:CST_API_ROOT\domain-guides\optimization-ml-data.en.md`
 
 ## Operating Rules
 
