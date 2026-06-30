@@ -132,6 +132,39 @@ CST automation must be written so it can finish without a human clicking modal d
 - Close ordering: project first, DesignEnvironment second. Do not call `de.close()` while an unsaved helper-owned project is still open.
 - If a modal already appears and blocks automation, stop the CST stage, report the dialog text if known, and ask for UI action or use only an explicit project/PID cleanup path. Do not kill CST by process name.
 
+## Error Diagnosis And Repair Memory
+
+When CST modeling, validation, execution, or result extraction fails, do not blindly retry. First classify the failure source, then repair the smallest cause and record the lesson before continuing.
+
+Use this loop:
+
+```text
+validation/runtime error
+-> classify error source
+-> decide whether it is model physics, CST command/calling, port/setup, or result extraction
+-> generate the smallest repair action
+-> record error, diagnosis, repair, and outcome
+-> reuse the lesson to avoid repeating the same error
+```
+
+Error classes:
+
+| Error class | Meaning | Typical examples |
+| --- | --- | --- |
+| `model_physics_error` | The electromagnetic structure is physically invalid | disconnected feed, signal-ground short, missing reference ground, unintended floating conductor |
+| `cst_command_error` | The CST Python, History, VBA, object naming, or API call is wrong | undefined parameter, invalid object name, failed Boolean operation, unsupported method |
+| `port_setup_error` | The excitation or simulation setup does not match the intended feed physics | wrong CPW port section, missing mode line, lumped port used for distributed feed |
+| `result_extraction_error` | The solve may have run, but requested data cannot be read or trusted | wrong result-tree path, missing monitor, frequency mismatch |
+| `environment_error` | CST, license, modal dialog, file lock, memory, or process state blocks execution | Update Manager popup, stale process, insufficient memory |
+
+Repair rules:
+
+- Inspect the validation report, CST message log, result tree, project state, and prior records before generating a repair.
+- Decide whether the problem is a model-physics issue or a tool-calling/instruction issue; do not mix them.
+- Record `error_signature`, `error_class`, `diagnosis`, `repair_action`, `repair_status`, and whether the same error repeated.
+- If the same error repeats, search known lessons or the error cookbook before trying another repair.
+- Count still-unresolved errors as failed modeling or failed CST runs; do not hide them behind a successful later run.
+
 ## Requirements Intake Gate
 
 When the user asks to create, modify, solve, optimize, or diagnose a CST model, first normalize the request before taking modeling or solver actions.
@@ -253,7 +286,9 @@ Treat CST History visibility as a deliverable, not an implementation detail.
 - Review gate: in `review_gated` mode, after geometry and ports are created but before simulation, present the structure/port review package and wait for user confirmation.
 - Assign materials/boundaries/solver: pass the Material, Boundary, And Solver Gate, using `cst.inspect_physics_setup` when possible, before running or interpreting a solve.
 - Read results: discover result-tree paths before reading S-parameters, farfield, efficiency, gain, logs, or exported tables; use `cst.result_sanity` before turning numerical values into physical conclusions.
-- Optimize or use ML: treat CST as the expensive ground-truth evaluator and record every trial input, output, project copy, log, and dataset version.
+- Diagnose and repair errors: classify the failure source, apply the smallest repair, and record the repair memory before continuing.
+- Tune response: start from a physical mechanism hypothesis, scan likely sensitive parameters, extract response sensitivity, then fine tune.
+- Optimize or use ML: treat CST as the expensive ground-truth evaluator and record every trial input, output, project copy, log, and dataset version; optimizers and samplers provide candidate points, not physical explanations.
 - Finalize: apply the declared save/close policy before ending automation. Close helper-owned temporary projects with `Project.close()` or save to an explicit copy path first; only close the DesignEnvironment after helper-owned projects are already closed.
 
 ## Long-Run Reliability
@@ -266,7 +301,7 @@ Before execution:
 - Check the Update Manager warning state reported by preflight. If automatic update/license popups are likely, record the warning and avoid treating startup UI interruption as a CST modeling failure.
 - Record a `preflight` checkpoint with `cst.job_checkpoint`.
 - Prefer a copied project or job copy; do not depend on unsaved GUI state for recovery.
-- Define stage names before running: `preflight`, `structure_inspect`, `geometry_mutation`, `geometry_verify`, `physics_setup`, `solve`, `result_read`, `sanity`, and `finalize`.
+- Define stage names before running: `preflight`, `structure_inspect`, `geometry_mutation`, `geometry_verify`, `physics_setup`, `solve`, `result_read`, `sanity`, `error_diagnosis`, `sensitivity_scan`, `fine_tuning`, and `finalize`.
 
 During execution:
 
@@ -309,6 +344,40 @@ For solver health, verify:
 
 If sanity checks fail or cannot be performed, report the numerical output as unvalidated data, not as a physical conclusion.
 
+## Physics-Guided Sensitivity Tuning
+
+Do not frame antenna response tuning as blind parameter optimization. Use CST sweeps as physical probes that reveal how geometry changes affect resonances, matching, current distribution, gain, patterns, and efficiency.
+
+Use this loop:
+
+```text
+physical mechanism hypothesis
+-> select likely sensitive parameters
+-> one-at-a-time or low-dimensional parameter scans
+-> extract response sensitivity
+-> update parameter-mode relationship
+-> perform fine tuning around sensitive parameters
+```
+
+Before scanning, state the expected mechanism and candidate sensitive parameters. Examples:
+
+| Observed response | Physical interpretation | Candidate parameters |
+| --- | --- | --- |
+| low-band resonance too high | low-band current path is electrically short | meander length, slot length, ground extension |
+| high-band resonance too high | high-band branch or slot is electrically short | high-band branch length, slot length, coupling position |
+| matching is shallow | coupling or feed impedance is not balanced | feed width, CPW gap, coupling length, branch location |
+| both bands shift together | feed/ground coupling dominates both modes | CPW geometry, ground size, common feed junction |
+| S11 is good but efficiency is poor | lossy current concentration or excessive meander path | strip width, loss path, substrate/material choice |
+
+Sensitivity scan rules:
+
+- Prefer one-at-a-time or low-dimensional scans around physically plausible bounds before any high-dimensional optimization.
+- For each scan, record the parameter, range, step, fixed variables, CST project copy, S11 shift, gain/efficiency change, current or pattern evidence, and physical interpretation.
+- Build a `parameter_mode_map` that links each tunable dimension to the affected resonance, matching depth, bandwidth, gain, efficiency, or radiation mode.
+- Fine tune only after the coarse sensitivity relationship is known; use smaller steps around the sensitive region.
+- If a parameter change improves S11 while degrading gain, efficiency, pattern, or current sanity, report the tradeoff instead of accepting the match alone.
+- Use optimizers, surrogate models, or samplers only as candidate generators; convert their samples into a physical sensitivity explanation before presenting the result.
+
 ## Output Contract
 
 When a task modifies a project, runs or plans CST execution, creates a design record, reads simulation results, or generates artifacts, finish with this compact record:
@@ -326,6 +395,11 @@ mcp_tools: MCP tools called during the task
 operations: parameter/modeling/simulation/result-reading steps
 metrics: extracted values with source paths
 sanity_checks: result-tree, port, farfield, efficiency, convergence, and log checks
+error_diagnosis: error classes, causes, repair actions, repeated errors, and status
+repair_memory: lessons recorded to avoid repeating the same modeling or calling error
+sensitivity_scan_results: parameter ranges, response shifts, and CST evidence from scans
+parameter_mode_map: relationship between parameters, structural changes, resonances, matching, gain, efficiency, and modes
+fine_tuning_trace: final small-step updates derived from the sensitivity map
 job_status: current resumable job status
 checkpoints: preflight/running/done/failed/interrupted/recovered stage records
 resource_guard: process, memory, disk, timeout, and cleanup checks
