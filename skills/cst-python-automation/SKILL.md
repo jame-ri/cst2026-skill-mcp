@@ -13,6 +13,8 @@ The repository under `CST_API_ROOT` provides the standardized tool layer: macro 
 
 Prefer MCP tools for standardized actions. If MCP coverage is insufficient, fall back to this skill's rules and inspect the repository references directly. Before rediscovering a CST call pattern from macros or official docs, check `references/cst-call-recipes.md` and `references/cst-error-cookbook.md` for existing task recipes and known failure lessons.
 
+For every nontrivial CST electromagnetic model creation, mutation, repair, or solver setup, run the `Electromagnetic Design Gate` in `references/em-design-gates.md`. A project, port, boundary, mesh, or solver setup is not complete until every applicable gate step has an allowed status and evidence. Object existence in the CST tree or History is necessary evidence, not sufficient physical validation.
+
 ## Scope
 
 Use this skill for CST Studio Suite workflows involving:
@@ -89,20 +91,21 @@ Resolve `$env:...` paths from the current shell when they exist; if they are uns
 
 1. `references/local-environment.md` for this machine's cached CST Python, CST executable, CST API, MCP, official docs, and macro-library paths.
 2. `references/cst-call-recipes.md` for default workflows by task category: project management, file/result handling, solver, ports, materials, modeling, Boolean operations, process recovery, and structure understanding.
-3. `references/cst-error-cookbook.md` for known CST automation failure modes and the correct next action.
-4. `$env:CST_MCP_ROOT\README.md`
-5. `$env:CST_OFFICIAL_DOCS\python\`
-6. `$env:CST_OFFICIAL_DOCS\python_cst_libraries\cst\`
-7. `$env:CST_OFFICIAL_DOCS\vba-3d\`
-8. `$env:CST_OFFICIAL_DOCS\vba-des\`
-9. `$env:CST_OFFICIAL_DOCS\advanced\`
-10. `$env:CST_MACRO_LIBRARY\macro-inventory.csv`
-11. `$env:CST_MACRO_LIBRARY\cst-macro-usage.en.md`
-12. `$env:CST_MACRO_LIBRARY\macro-catalog.en.md`
-13. `$env:CST_API_ROOT\domain-guides\design-evolution.en.md`
-14. `$env:CST_API_ROOT\domain-guides\geometry-mutation.en.md`
-15. `$env:CST_API_ROOT\domain-guides\result-diagnosis.en.md`
-16. `$env:CST_API_ROOT\domain-guides\optimization-ml-data.en.md`
+3. `references/em-design-gates.md` for mandatory electromagnetic design gates, evidence standards, stop rules, and no-simulation review packages.
+4. `references/cst-error-cookbook.md` for known CST automation failure modes and the correct next action.
+5. `$env:CST_MCP_ROOT\README.md`
+6. `$env:CST_OFFICIAL_DOCS\python\`
+7. `$env:CST_OFFICIAL_DOCS\python_cst_libraries\cst\`
+8. `$env:CST_OFFICIAL_DOCS\vba-3d\`
+9. `$env:CST_OFFICIAL_DOCS\vba-des\`
+10. `$env:CST_OFFICIAL_DOCS\advanced\`
+11. `$env:CST_MACRO_LIBRARY\macro-inventory.csv`
+12. `$env:CST_MACRO_LIBRARY\cst-macro-usage.en.md`
+13. `$env:CST_MACRO_LIBRARY\macro-catalog.en.md`
+14. `$env:CST_API_ROOT\domain-guides\design-evolution.en.md`
+15. `$env:CST_API_ROOT\domain-guides\geometry-mutation.en.md`
+16. `$env:CST_API_ROOT\domain-guides\result-diagnosis.en.md`
+17. `$env:CST_API_ROOT\domain-guides\optimization-ml-data.en.md`
 
 ## Operating Rules
 
@@ -120,6 +123,7 @@ Resolve `$env:...` paths from the current shell when they exist; if they are uns
 12. For long solves, sweeps, optimization, or ML data generation, run a resource preflight, record job checkpoints, and plan recovery before launching CST execution.
 13. Treat CST GUI modal dialogs as automation blockers. Before starting CST, check `cst.process_status` / `cst.preflight_resources`; if the Update Manager reports `License details are required to check for updates`, identify it as an automatic-update configuration issue, not a modeling error. The durable fix is to disable automatic software updates in CST Preferences or repair Update Manager license settings.
 14. Never rely on `DesignEnvironment.close()` to decide how unsaved projects should close. For every helper-owned new or temporary project, explicitly apply the close/save policy first: `no_save` calls `Project.close()`, `save_copy` calls `Project.save(copy_path, ...)` then `Project.close()`, and `save_original` is only allowed for a project that already has a saved filename. Only after all helper-owned projects are closed may the script call `DesignEnvironment.close()`.
+15. Treat the electromagnetic design process as a gate, not a narrative checklist. Every CST create/modify/repair task must record gate statuses using only `pass`, `not_applicable`, `blocked`, or `not_executed`. Do not continue past a critical gate or call the model complete when physical structure, geometry/connectivity, port, boundary/background, solver/mesh, History, save policy, or requested simulation state lacks evidence.
 
 ## Modal Dialog And Close Policy
 
@@ -258,6 +262,7 @@ Treat CST History visibility as a deliverable, not an implementation detail.
 
 - Before defining any port, explicitly classify the feed and conductors: feed type, signal conductor, reference conductor or shield, dielectric region, physical port cross-section, intended mode, and whether the feed is distributed or lumped.
 - Choose the CST port object from the physical feed, not from convenience. Check CST Help or installed macro examples when unsure; the main objects are `Port` for waveguide ports, `DiscretePort` for point/edge lumped ports, `DiscreteFacePort` for face-based lumped ports, and `CablePort` for CST cable-model feeds.
+- A port tree item, a History `Port` command, or a selected face only proves that CST has a port object. It does not prove physical correctness. The port gate passes only when the feed classification, selected CST object, physical transverse section or lumped terminals, reference conductor, dielectric inclusion, orientation, mode line/calibration, and evidence source are all recorded and consistent.
 - Use this selection guide:
 
 | Feed structure | Preferred CST feed | Required setup |
@@ -272,13 +277,14 @@ Treat CST History visibility as a deliverable, not an implementation detail.
 | Periodic unit cell / Floquet excitation or incident plane wave | Floquet port or `PlaneWave`, not a normal lumped feed | Use only for the corresponding boundary/excitation physics and do not report ordinary multiport S-parameters unless the setup supports them. |
 
 - Prefer the CST UI-equivalent picked-face workflow for waveguide-style ports: create or expose the planar port face, clear picks, pick the face, then create `With Port` using `.Coordinates "Picks"` and `.Create`.
+- For microstrip, CPW, stripline, and grounded coplanar feeds, the waveguide `Port` must be placed on the line's transverse feed cross-section, not merely on the outer calculation boundary for convenience and not merely on the metal trace end face. The port span or picked aperture must include the signal conductor, dielectric region, all relevant reference grounds, and needed air region. Add a mode line from signal conductor to reference ground. If this cannot be created or verified, stop with `port_setup_error` and do not present the project as complete.
 - Do not silently fall back from a distributed feed (`Port`) to a lumped feed (`DiscretePort` or `DiscreteFacePort`). If the intended waveguide/coax/SIW/microstrip port cannot be created, stop, inspect the picked face and history commands, and fix the physical port definition.
 - Define mode lines, potentials, port extensions, reference planes, and multipin settings only after confirming the relevant commands in CST Help or installed macros. Keep initial port history minimal and inspectable before adding advanced settings.
 - Record port decisions in the build summary: `feed_type`, chosen CST port object, signal/reference conductors, picked face or point coordinates, mode line, and the help/macro source used.
 
 ## Decision Flow
 
-- Intake: clarify modeling requirements, project source, output expectations, and `automation_mode`; default to `review_gated` unless the user explicitly requests full automation.
+- Intake: clarify modeling requirements, project source, output expectations, and `automation_mode`; default to `review_gated` unless the user explicitly requests full automation. Open an electromagnetic design gate ledger for nontrivial create/modify/repair/setup work.
 - Connect/open CST: run `cst.process_status` and `cst.preflight_resources` first for long jobs; list existing sessions and open projects; use `cst.inspect_project` for read-only state discovery and `cst.closed_start` or equivalent scripts for cold start.
 - Modify parameters: read the original value, write the test value, rebuild, optionally pause for observation, restore by default, and do not save.
 - Modify geometry: pass the Physical Structure Gate, use `cst.inspect_geometry` when an existing project is involved, create a design record, state the hypothesis, then apply the smallest History mutation.
@@ -412,6 +418,7 @@ versions: dataset_version, surrogate_version, CST project copy version
 source_macros: CST installed macro paths used as references or adapted sources
 warnings: assumptions, skipped steps, risks
 errors: failures and recovery attempts
+em_design_gate: per-step status, evidence, pass condition, unchecked risk, and blockers from `references/em-design-gates.md`
 ```
 
 For pure advice or small CST reference questions, answer briefly instead. Include the decision, the CST source or macro checked, and any uncertainty or risk; do not force the full YAML report unless it helps the user continue the workflow.
