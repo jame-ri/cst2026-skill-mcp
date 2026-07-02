@@ -80,7 +80,8 @@ The validator checks universal gate completeness, no-simulation caveats, and fee
 For microstrip, CPW, stripline, and grounded coplanar feeds:
 
 - Preferred CST object: waveguide `Port` on the feed line's transverse cross-section for distributed-line excitation.
-- Required physical coverage: signal conductor, dielectric region, all relevant reference grounds, and needed air region.
+- Required physical coverage: signal conductor, dielectric region, and all relevant reference grounds.
+- For a standard grounded microstrip waveguide port, document a port width that is a few times the microstrip line width, and make the main port height extend from the signal conductor to the reference ground. Do not add above-trace air height as a mandatory microstrip rule; record any CST help or macro-driven air/field extension separately when used.
 - Required reference: mode line or calibration line from signal conductor to reference ground.
 - Required orientation: propagation into the modeled feed line, consistent with the selected transverse section.
 - Not sufficient: port object exists; port is attached to calculation-domain boundary; only the metal trace end face was picked; the reference ground is outside the port span; mode line is missing or not signal-to-ground.
@@ -94,7 +95,7 @@ The validator does not infer physics from an antenna name. It reads the declared
 
 | `feed_type` | What is checked |
 | --- | --- |
-| `microstrip`, `cpw`, `stripline`, `grounded_coplanar` | Distributed waveguide `Port`, transverse line section, signal/dielectric/reference-ground/air span, and signal-to-ground mode line |
+| `microstrip`, `cpw`, `stripline`, `grounded_coplanar` | Distributed waveguide `Port`, transverse line section, signal/dielectric/reference-ground span, documented width factor, height-to-ground rule for grounded microstrip, and signal-to-ground mode line |
 | `coax`, `coaxial` | Waveguide `Port`, inner conductor, dielectric, shield/reference conductor, and aperture coverage |
 | `probe_lumped`, `lumped_gap`, `two_terminal_lumped` | Discrete or face discrete port, lumped excitation declaration, and exactly two terminals |
 | `floquet`, `periodic`, `plane_wave` | Floquet port or plane wave declaration and periodic-boundary declaration |
@@ -120,7 +121,7 @@ Stop and report a blocker instead of continuing when:
 
 - The feed topology or reference conductor is unknown.
 - A distributed feed was replaced with a lumped port for convenience.
-- The port section does not include the needed signal, dielectric, reference ground, and air/field region.
+- The port section does not include the needed signal, dielectric, and reference ground, or a grounded microstrip port height does not reach the reference ground.
 - Geometry inspection cannot confirm required contact/isolation or ground continuity.
 - Boundary conditions were chosen from a default template without a physical reason.
 - A no-simulation workflow is being used but the response starts to imply S-parameters, gain, efficiency, or tuning success.
@@ -142,7 +143,7 @@ Required behavior with this skill:
 
 - Open the gate ledger before modeling.
 - Classify the feed before creating the port.
-- For microstrip, require a waveguide `Port` on the full transverse section.
+- For microstrip, require a waveguide `Port` on the feed transverse section, with width based on the feed-line width and height reaching the reference ground.
 - Record the evidence and unchecked risk for no-simulation review.
 - If only object existence was checked, mark the port gate as not passed and do not call the project complete.
 

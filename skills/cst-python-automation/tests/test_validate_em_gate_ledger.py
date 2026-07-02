@@ -54,8 +54,12 @@ def base_ledger():
                 "signal_conductor",
                 "dielectric_region",
                 "reference_ground",
-                "air_region",
             ],
+            "port_width_factor": 5.0,
+            "height_terminates_at": "reference_ground",
+            "span_parameters": {
+                "zrange": ["z_ground_max", "z_top_metal_max"],
+            },
             "mode_line": {
                 "from": "signal_conductor",
                 "to": "reference_ground",
@@ -99,6 +103,24 @@ def run_validator_file(path):
 class GateLedgerValidatorTests(unittest.TestCase):
     def test_valid_microstrip_ledger_passes(self):
         result = run_validator(base_ledger())
+        self.assertEqual(result.returncode, 0, result.stdout + result.stderr)
+        self.assertIn("PASS", result.stdout)
+
+    def test_valid_microstrip_port_height_to_ground_passes_without_air_region(self):
+        data = base_ledger()
+        data["port_decision"]["port_span_includes"] = [
+            "signal_conductor",
+            "dielectric_region",
+            "reference_ground",
+        ]
+        data["port_decision"]["port_width_factor"] = 5.0
+        data["port_decision"]["height_terminates_at"] = "reference_ground"
+        data["port_decision"]["span_parameters"] = {
+            "zrange": ["z_ground_max", "z_top_metal_max"],
+        }
+
+        result = run_validator(data)
+
         self.assertEqual(result.returncode, 0, result.stdout + result.stderr)
         self.assertIn("PASS", result.stdout)
 

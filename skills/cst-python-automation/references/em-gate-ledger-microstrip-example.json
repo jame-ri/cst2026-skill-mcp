@@ -16,9 +16,18 @@
     "port_span_includes": [
       "signal_conductor",
       "dielectric_region",
-      "reference_ground",
-      "air_region"
+      "reference_ground"
     ],
+    "port_width_factor": 5.0,
+    "port_width_rule": "port width is a few times the microstrip feed width",
+    "height_terminates_at": "reference_ground",
+    "port_height_rule": "port height extends from the microstrip signal conductor to the reference ground",
+    "span_parameters": {
+      "zrange": [
+        "z_ground_max",
+        "z_top_metal_max"
+      ]
+    },
     "mode_line": {
       "from": "signal_conductor",
       "to": "reference_ground"
@@ -57,8 +66,8 @@
     },
     "port": {
       "status": "pass",
-      "evidence": "Port record declares waveguide Port on the feed transverse cross-section, spanning signal conductor, substrate, reference ground, and air with signal-to-ground mode line.",
-      "pass_condition": "Microstrip distributed feed uses waveguide Port on full transverse line cross-section with reference ground and mode line.",
+      "evidence": "Port record declares waveguide Port on the feed transverse cross-section, spanning signal conductor, substrate, and reference ground with signal-to-ground mode line.",
+      "pass_condition": "Microstrip distributed feed uses waveguide Port on transverse line cross-section with width a few times feed width, height to ground, reference ground, and mode line.",
       "unchecked_risk": "No port-mode solve; modal impedance and field quality are unchecked."
     },
     "boundary_background": {

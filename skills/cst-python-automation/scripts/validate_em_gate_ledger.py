@@ -155,7 +155,6 @@ def validate_microstrip_port(port: dict[str, Any]) -> list[str]:
         "signal_conductor",
         "dielectric_region",
         "reference_ground",
-        "air_region",
     }
     actual_span = list_values(port.get("port_span_includes"))
     missing_span = sorted(required_span - actual_span)
@@ -164,6 +163,23 @@ def validate_microstrip_port(port: dict[str, Any]) -> list[str]:
             "microstrip port: port_span_includes must include "
             f"{', '.join(missing_span)}"
         )
+
+    try:
+        width_factor = float(port.get("port_width_factor"))
+    except (TypeError, ValueError):
+        errors.append("microstrip port: port_width_factor must be a number, typically a few times the feed width")
+    else:
+        if not 3.0 <= width_factor <= 10.0:
+            errors.append("microstrip port: port_width_factor must be between 3 and 10")
+
+    if normalized(port.get("height_terminates_at")) != "reference_ground":
+        errors.append("microstrip port: height_terminates_at must be `reference_ground`")
+
+    span_parameters = port.get("span_parameters")
+    if isinstance(span_parameters, dict):
+        zrange_values = list_values(span_parameters.get("zrange"))
+        if zrange_values and not any("ground" in item for item in zrange_values):
+            errors.append("microstrip port: span_parameters.zrange must extend to the reference ground")
 
     mode_line = port.get("mode_line")
     if not isinstance(mode_line, dict):
