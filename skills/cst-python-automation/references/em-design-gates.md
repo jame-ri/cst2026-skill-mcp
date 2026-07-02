@@ -16,6 +16,18 @@ Before editing or solving, open a gate ledger. Each applicable step must be repo
 
 Never use vague statuses such as `looks ok`, `probably`, `assumed`, or `created`. If evidence is missing, the status is not `pass`.
 
+Use `references/em-gate-ledger-template.json` as a fillable starting point. It intentionally contains `not_executed` statuses and should fail completion validation until replaced with task evidence.
+
+Use `references/em-gate-ledger-microstrip-example.json` as a valid no-simulation microstrip example.
+
+Before claiming that a generated or modified CST model is ready for review or simulation, run:
+
+```bash
+python skills/cst-python-automation/scripts/validate_em_gate_ledger.py path/to/gate-ledger.json
+```
+
+The validator checks universal gate completeness, no-simulation caveats, and feed-profile consistency. It does not prove antenna performance or replace CST simulation, port-mode solve, field/current review, or human engineering judgment.
+
 ## Gate Steps
 
 1. `requirements`
@@ -75,6 +87,20 @@ For microstrip, CPW, stripline, and grounded coplanar feeds:
 - Stop condition: if the transverse section cannot be created, selected, or verified, mark `port` as `blocked` or `port_setup_error`; do not present the CST project as complete.
 
 Use `DiscretePort` or `DiscreteFacePort` only when the intended excitation is a short lumped approximation, and record that approximation explicitly.
+
+## Validator Profiles
+
+The validator does not infer physics from an antenna name. It reads the declared `feed_type` and `port_decision` from the ledger, then applies the matching profile:
+
+| `feed_type` | What is checked |
+| --- | --- |
+| `microstrip`, `cpw`, `stripline`, `grounded_coplanar` | Distributed waveguide `Port`, transverse line section, signal/dielectric/reference-ground/air span, and signal-to-ground mode line |
+| `coax`, `coaxial` | Waveguide `Port`, inner conductor, dielectric, shield/reference conductor, and aperture coverage |
+| `probe_lumped`, `lumped_gap`, `two_terminal_lumped` | Discrete or face discrete port, lumped excitation declaration, and exactly two terminals |
+| `floquet`, `periodic`, `plane_wave` | Floquet port or plane wave declaration and periodic-boundary declaration |
+| any other value | `manual_review_required: true` plus nonempty `manual_evidence`, or a new validator profile |
+
+This keeps the gate usable for different antennas: the script checks whether declared electromagnetic intent and evidence are complete and internally consistent. It does not guess topology from names such as patch, Yagi, Vivaldi, array, or metasurface.
 
 ## Evidence Hierarchy
 

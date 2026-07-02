@@ -91,7 +91,7 @@ Resolve `$env:...` paths from the current shell when they exist; if they are uns
 
 1. `references/local-environment.md` for this machine's cached CST Python, CST executable, CST API, MCP, official docs, and macro-library paths.
 2. `references/cst-call-recipes.md` for default workflows by task category: project management, file/result handling, solver, ports, materials, modeling, Boolean operations, process recovery, and structure understanding.
-3. `references/em-design-gates.md` for mandatory electromagnetic design gates, evidence standards, stop rules, and no-simulation review packages.
+3. `references/em-design-gates.md` for mandatory electromagnetic design gates, evidence standards, stop rules, no-simulation review packages, the gate ledger template, and the static validator command.
 4. `references/cst-error-cookbook.md` for known CST automation failure modes and the correct next action.
 5. `$env:CST_MCP_ROOT\README.md`
 6. `$env:CST_OFFICIAL_DOCS\python\`
@@ -123,7 +123,7 @@ Resolve `$env:...` paths from the current shell when they exist; if they are uns
 12. For long solves, sweeps, optimization, or ML data generation, run a resource preflight, record job checkpoints, and plan recovery before launching CST execution.
 13. Treat CST GUI modal dialogs as automation blockers. Before starting CST, check `cst.process_status` / `cst.preflight_resources`; if the Update Manager reports `License details are required to check for updates`, identify it as an automatic-update configuration issue, not a modeling error. The durable fix is to disable automatic software updates in CST Preferences or repair Update Manager license settings.
 14. Never rely on `DesignEnvironment.close()` to decide how unsaved projects should close. For every helper-owned new or temporary project, explicitly apply the close/save policy first: `no_save` calls `Project.close()`, `save_copy` calls `Project.save(copy_path, ...)` then `Project.close()`, and `save_original` is only allowed for a project that already has a saved filename. Only after all helper-owned projects are closed may the script call `DesignEnvironment.close()`.
-15. Treat the electromagnetic design process as a gate, not a narrative checklist. Every CST create/modify/repair task must record gate statuses using only `pass`, `not_applicable`, `blocked`, or `not_executed`. Do not continue past a critical gate or call the model complete when physical structure, geometry/connectivity, port, boundary/background, solver/mesh, History, save policy, or requested simulation state lacks evidence.
+15. Treat the electromagnetic design process as a gate, not a narrative checklist. Every CST create/modify/repair task must record gate statuses using only `pass`, `not_applicable`, `blocked`, or `not_executed`. Do not continue past a critical gate or call the model complete when physical structure, geometry/connectivity, port, boundary/background, solver/mesh, History, save policy, or requested simulation state lacks evidence. When a JSON gate ledger is created, run `scripts/validate_em_gate_ledger.py` before delivery and report failures as blockers instead of completion.
 
 ## Modal Dialog And Close Policy
 

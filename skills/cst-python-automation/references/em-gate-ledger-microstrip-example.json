@@ -1,0 +1,95 @@
+{
+  "schema_version": 1,
+  "design_intent": {
+    "antenna_class": "rectangular_patch",
+    "simulation_allowed": false,
+    "feed_type": "microstrip"
+  },
+  "port_decision": {
+    "feed_type": "microstrip",
+    "selected_port_object": "waveguide_port",
+    "signal_conductor": "patch_antenna:feed_line",
+    "reference_conductor": "patch_antenna:ground",
+    "dielectric_region": "patch_antenna:substrate",
+    "intended_excitation": "distributed",
+    "physical_port_section": "transverse_line_cross_section",
+    "port_span_includes": [
+      "signal_conductor",
+      "dielectric_region",
+      "reference_ground",
+      "air_region"
+    ],
+    "mode_line": {
+      "from": "signal_conductor",
+      "to": "reference_ground"
+    }
+  },
+  "gate_ledger": {
+    "requirements": {
+      "status": "pass",
+      "evidence": "User requested a new 1.65 GHz rectangular patch antenna CST project for review, with no simulation.",
+      "pass_condition": "Task type, output expectation, review-gated mode, frequency intent, and no-simulation instruction are recorded.",
+      "unchecked_risk": "Antenna performance remains unchecked until simulation is allowed."
+    },
+    "physical_structure": {
+      "status": "pass",
+      "evidence": "Structure brief records microstrip-fed rectangular patch on grounded dielectric substrate with radiation normal to top metal.",
+      "pass_condition": "Layer stack, conductors, feed topology, propagation direction, and boundary meaning are recorded.",
+      "unchecked_risk": "No field/current inspection because no solver was run."
+    },
+    "parameterization": {
+      "status": "pass",
+      "evidence": "CST parameters and History entries define units, substrate height, patch dimensions, feed width, frequency range, and derived coordinates.",
+      "pass_condition": "Reusable dimensions are CST parameters before History commands reference them.",
+      "unchecked_risk": "Manual edits after validation require rerunning this ledger."
+    },
+    "materials": {
+      "status": "pass",
+      "evidence": "CST material list contains dielectric substrate material and conductor material used by expected solids.",
+      "pass_condition": "Dielectric, conductor, and background material assignments match the structure brief.",
+      "unchecked_risk": "Material loss impact is not quantified without simulation."
+    },
+    "geometry_connectivity": {
+      "status": "pass",
+      "evidence": "Geometry inventory shows substrate, continuous ground, patch metal, inset region, and feed line with intended contact to patch.",
+      "pass_condition": "Expected solids exist; signal path continuity, ground continuity, layer heights, and intended clearances are recorded.",
+      "unchecked_risk": "No meshed contact or current-flow evidence because no solver was run."
+    },
+    "port": {
+      "status": "pass",
+      "evidence": "Port record declares waveguide Port on the feed transverse cross-section, spanning signal conductor, substrate, reference ground, and air with signal-to-ground mode line.",
+      "pass_condition": "Microstrip distributed feed uses waveguide Port on full transverse line cross-section with reference ground and mode line.",
+      "unchecked_risk": "No port-mode solve; modal impedance and field quality are unchecked."
+    },
+    "boundary_background": {
+      "status": "pass",
+      "evidence": "Boundary setup and background/airbox plan are recorded for radiating antenna review.",
+      "pass_condition": "Boundaries and background match antenna radiation physics and do not replace the feed cross-section check.",
+      "unchecked_risk": "Open boundary/PML performance is not verified without solver messages."
+    },
+    "solver_mesh_monitors": {
+      "status": "pass",
+      "evidence": "Frequency range and solver/mesh intent are recorded, with solver not started.",
+      "pass_condition": "Solver and mesh intent are declared without claiming solved performance.",
+      "unchecked_risk": "no solver run; no port-mode solve; no S-parameter/farfield/gain/efficiency conclusion"
+    },
+    "history": {
+      "status": "pass",
+      "evidence": "Persisted Model/3D/ModelHistory.json contains visible captions for parameters, material setup, geometry, port setup, boundaries, and frequency setup.",
+      "pass_condition": "History entries are visible, specific, and persisted for user review.",
+      "unchecked_risk": "GUI visual inspection can still reveal presentation issues not visible in JSON."
+    },
+    "save_and_simulation_state": {
+      "status": "pass",
+      "evidence": "Project saved as a review copy and result tree checked for absence of solved S-parameter or farfield results.",
+      "pass_condition": "Save path, copy policy, close policy, and no-simulation state are recorded.",
+      "unchecked_risk": "project saved for review; no solver run; no port-mode solve; no S-parameter results"
+    },
+    "delivery": {
+      "status": "pass",
+      "evidence": "Final review package includes project path, design version, gate ledger, port record, assumptions, and unchecked risks.",
+      "pass_condition": "The delivery does not claim antenna performance and names the next allowed action.",
+      "unchecked_risk": "User review and optional simulation remain future steps."
+    }
+  }
+}

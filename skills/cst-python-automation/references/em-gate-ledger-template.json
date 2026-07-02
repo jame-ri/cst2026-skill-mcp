@@ -1,0 +1,83 @@
+{
+  "schema_version": 1,
+  "_template_note": "Fill this file before claiming a CST electromagnetic model is ready. The validator intentionally fails while any gate is blocked or not_executed.",
+  "design_intent": {
+    "antenna_class": "replace_with_declared_topology",
+    "simulation_allowed": false,
+    "feed_type": "replace_with_microstrip_coax_lumped_floquet_or_custom"
+  },
+  "port_decision": {
+    "feed_type": "replace_with_feed_type",
+    "selected_port_object": "replace_with_waveguide_port_discrete_port_floquet_port_or_custom",
+    "manual_review_required": true,
+    "manual_evidence": ""
+  },
+  "gate_ledger": {
+    "requirements": {
+      "status": "not_executed",
+      "evidence": "",
+      "pass_condition": "task type, project source, output expectation, save policy, automation mode, frequency band, and simulation permission are recorded",
+      "unchecked_risk": ""
+    },
+    "physical_structure": {
+      "status": "not_executed",
+      "evidence": "",
+      "pass_condition": "topology, coordinate system, propagation or radiation direction, layers, conductors, feed, and boundary meaning are recorded",
+      "unchecked_risk": ""
+    },
+    "parameterization": {
+      "status": "not_executed",
+      "evidence": "",
+      "pass_condition": "units and reusable CST parameters exist before History commands reference them",
+      "unchecked_risk": ""
+    },
+    "materials": {
+      "status": "not_executed",
+      "evidence": "",
+      "pass_condition": "dielectrics, conductors, losses, and background materials match the structure brief",
+      "unchecked_risk": ""
+    },
+    "geometry_connectivity": {
+      "status": "not_executed",
+      "evidence": "",
+      "pass_condition": "objects, dimensions, contacts, clearances, and ground or shield continuity match the structure brief",
+      "unchecked_risk": ""
+    },
+    "port": {
+      "status": "not_executed",
+      "evidence": "",
+      "pass_condition": "feed type, CST port object, physical section or terminals, reference conductor, dielectric, orientation, and calibration are consistent",
+      "unchecked_risk": ""
+    },
+    "boundary_background": {
+      "status": "not_executed",
+      "evidence": "",
+      "pass_condition": "background and boundaries match antenna, waveguide, periodic, symmetry, or cavity physics",
+      "unchecked_risk": ""
+    },
+    "solver_mesh_monitors": {
+      "status": "not_executed",
+      "evidence": "",
+      "pass_condition": "solver type, frequency range, S-parameter normalization, monitors, mesh strategy, and refinements match requested metrics",
+      "unchecked_risk": "for no-simulation workflows, include: no solver run; no port-mode solve; no S-parameter/farfield/gain/efficiency conclusion"
+    },
+    "history": {
+      "status": "not_executed",
+      "evidence": "",
+      "pass_condition": "visible persisted History captions exist for parameters, materials, geometry, ports, boundaries, mesh, monitors, and solver setup",
+      "unchecked_risk": ""
+    },
+    "save_and_simulation_state": {
+      "status": "not_executed",
+      "evidence": "",
+      "pass_condition": "save path, project version, close policy, and result-tree/simulation state are recorded",
+      "unchecked_risk": "for no-simulation workflows, include: no solver run; no port-mode solve; no S-parameter results"
+    },
+    "delivery": {
+      "status": "not_executed",
+      "evidence": "",
+      "pass_condition": "project path, design id, gate ledger, port record, History evidence, assumptions, risks, and next action are reported",
+      "unchecked_risk": ""
+    }
+  }
+}
