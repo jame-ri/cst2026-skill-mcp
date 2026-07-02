@@ -33,6 +33,15 @@ ALLOWED_STATUSES = {"pass", "not_applicable", "blocked", "not_executed"}
 MICROSTRIP_FEEDS = {"microstrip", "cpw", "stripline", "grounded_coplanar"}
 WAVEGUIDE_PORT_NAMES = {"waveguide_port", "port", "cst_port", "with_port"}
 LUMPED_PORT_NAMES = {"discrete_port", "discretefaceport", "discrete_face_port"}
+REFERENCE_SOURCE_TYPES = {
+    "official_help",
+    "cst_help",
+    "cst_official_doc",
+    "installed_macro",
+    "cst_macro",
+    "repo_recipe",
+    "user_source_document",
+}
 
 
 def load_json(path: Path) -> dict[str, Any]:
@@ -73,6 +82,42 @@ def add_missing(errors: list[str], location: str, fields: list[str], obj: dict[s
             errors.append(f"{location}: missing `{field}`")
 
 
+def reference_entries(value: Any) -> list[dict[str, Any]]:
+    if isinstance(value, dict):
+        return [value]
+    if isinstance(value, list):
+        return [item for item in value if isinstance(item, dict)]
+    return []
+
+
+def validate_reference_checked(location: str, value: Any) -> list[str]:
+    errors: list[str] = []
+    entries = reference_entries(value)
+    if not entries:
+        return [f"{location}: missing `reference_checked` with CST Help, official doc, macro, or source-document evidence"]
+
+    usable = False
+    for index, entry in enumerate(entries):
+        source_type = normalized(entry.get("source_type"))
+        if source_type not in REFERENCE_SOURCE_TYPES:
+            errors.append(
+                f"{location}.reference_checked[{index}]: source_type must be one of "
+                f"{sorted(REFERENCE_SOURCE_TYPES)}"
+            )
+        if not has_text(entry.get("path_or_tool")):
+            errors.append(f"{location}.reference_checked[{index}]: missing `path_or_tool`")
+        if not has_text(entry.get("topic")):
+            errors.append(f"{location}.reference_checked[{index}]: missing `topic`")
+        if not has_text(entry.get("finding")):
+            errors.append(f"{location}.reference_checked[{index}]: missing `finding`")
+        if source_type in REFERENCE_SOURCE_TYPES and has_text(entry.get("path_or_tool")) and has_text(entry.get("topic")):
+            usable = True
+
+    if not usable:
+        errors.append(f"{location}: reference_checked must include at least one usable reference entry")
+    return errors
+
+
 def validate_gate_ledger(data: dict[str, Any]) -> list[str]:
     errors: list[str] = []
     gate_ledger = data.get("gate_ledger")
@@ -100,6 +145,9 @@ def validate_gate_ledger(data: dict[str, Any]) -> list[str]:
 
         if status == "pass":
             add_missing(errors, f"gate_ledger.{step}", ["evidence", "pass_condition"], entry)
+
+        if status in {"pass", "not_applicable"}:
+            errors.extend(validate_reference_checked(f"gate_ledger.{step}", entry.get("reference_checked")))
 
     return errors
 
@@ -141,6 +189,7 @@ def validate_microstrip_port(port: dict[str, Any]) -> list[str]:
         ],
         port,
     )
+    errors.extend(validate_reference_checked("microstrip port", port.get("reference_checked")))
 
     if normalized(port.get("selected_port_object")) not in WAVEGUIDE_PORT_NAMES:
         errors.append("microstrip port: selected_port_object must be `waveguide_port`")
@@ -164,22 +213,16 @@ def validate_microstrip_port(port: dict[str, Any]) -> list[str]:
             f"{', '.join(missing_span)}"
         )
 
-    try:
-        width_factor = float(port.get("port_width_factor"))
-    except (TypeError, ValueError):
-        errors.append("microstrip port: port_width_factor must be a number, typically a few times the feed width")
+    dimension_basis = port.get("dimension_basis")
+    if not isinstance(dimension_basis, dict):
+        errors.append("microstrip port: missing `dimension_basis` from the CST Help or installed macro used for this feed")
     else:
-        if not 3.0 <= width_factor <= 10.0:
-            errors.append("microstrip port: port_width_factor must be between 3 and 10")
-
-    if normalized(port.get("height_terminates_at")) != "reference_ground":
-        errors.append("microstrip port: height_terminates_at must be `reference_ground`")
-
-    span_parameters = port.get("span_parameters")
-    if isinstance(span_parameters, dict):
-        zrange_values = list_values(span_parameters.get("zrange"))
-        if zrange_values and not any("ground" in item for item in zrange_values):
-            errors.append("microstrip port: span_parameters.zrange must extend to the reference ground")
+        add_missing(
+            errors,
+            "microstrip port.dimension_basis",
+            ["source_path", "source_topic", "chosen_rule"],
+            dimension_basis,
+        )
 
     mode_line = port.get("mode_line")
     if not isinstance(mode_line, dict):
@@ -195,6 +238,7 @@ def validate_microstrip_port(port: dict[str, Any]) -> list[str]:
 
 def validate_lumped_port(port: dict[str, Any]) -> list[str]:
     errors: list[str] = []
+    errors.extend(validate_reference_checked("lumped feed", port.get("reference_checked")))
     if normalized(port.get("selected_port_object")) not in LUMPED_PORT_NAMES:
         errors.append("lumped feed: selected_port_object must be `discrete_port` or `discrete_face_port`")
     if normalized(port.get("intended_excitation")) != "lumped":
@@ -207,6 +251,7 @@ def validate_lumped_port(port: dict[str, Any]) -> list[str]:
 
 def validate_coax_port(port: dict[str, Any]) -> list[str]:
     errors: list[str] = []
+    errors.extend(validate_reference_checked("coax port", port.get("reference_checked")))
     if normalized(port.get("selected_port_object")) not in WAVEGUIDE_PORT_NAMES:
         errors.append("coax port: selected_port_object must be `waveguide_port`")
     required_span = {"inner_conductor", "dielectric_region", "shield_or_reference_ground"}
@@ -219,6 +264,7 @@ def validate_coax_port(port: dict[str, Any]) -> list[str]:
 
 def validate_floquet_or_plane_wave(port: dict[str, Any]) -> list[str]:
     errors: list[str] = []
+    errors.extend(validate_reference_checked("periodic or incident-wave excitation", port.get("reference_checked")))
     selected = normalized(port.get("selected_port_object"))
     if selected not in {"floquet_port", "plane_wave"}:
         errors.append("periodic or incident-wave excitation: selected_port_object must be `floquet_port` or `plane_wave`")
@@ -228,11 +274,12 @@ def validate_floquet_or_plane_wave(port: dict[str, Any]) -> list[str]:
 
 
 def validate_unknown_profile(port: dict[str, Any]) -> list[str]:
+    reference_errors = validate_reference_checked("unknown feed profile", port.get("reference_checked"))
     if port.get("manual_review_required") is not True:
-        return ["unknown feed profile: set manual_review_required=true or add a validator profile"]
+        return reference_errors + ["unknown feed profile: set manual_review_required=true or add a validator profile"]
     if not has_text(port.get("manual_evidence")):
-        return ["unknown feed profile: manual_evidence is required when manual_review_required=true"]
-    return []
+        return reference_errors + ["unknown feed profile: manual_evidence is required when manual_review_required=true"]
+    return reference_errors
 
 
 def validate_port_decision(data: dict[str, Any]) -> list[str]:

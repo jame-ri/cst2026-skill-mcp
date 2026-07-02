@@ -29,6 +29,14 @@ def pass_gate():
     return {
         "status": "pass",
         "evidence": "checked in saved CST project and model history",
+        "reference_checked": [
+            {
+                "source_type": "official_help",
+                "path_or_tool": r"D:\CST\Online Help\mergedProjects\3D\special_overview\special_overview_waveguideover.htm",
+                "topic": "gate-specific CST help topic",
+                "finding": "reference reviewed before this gate was marked pass",
+            }
+        ],
         "pass_condition": "required evidence is present and consistent",
         "unchecked_risk": "none for this static gate",
     }
@@ -50,15 +58,31 @@ def base_ledger():
             "dielectric_region": "patch_antenna:substrate",
             "intended_excitation": "distributed",
             "physical_port_section": "transverse_line_cross_section",
+            "reference_checked": [
+                {
+                    "source_type": "official_help",
+                    "path_or_tool": r"D:\CST\Online Help\mergedProjects\3D\special_overview\special_overview_waveguideover.htm",
+                    "topic": "Waveguide Port Overview / Microstrip Lines",
+                    "finding": "port object, section, and dimensions are derived from the help topic",
+                }
+            ],
             "port_span_includes": [
                 "signal_conductor",
                 "dielectric_region",
                 "reference_ground",
             ],
-            "port_width_factor": 5.0,
-            "height_terminates_at": "reference_ground",
+            "dimension_basis": {
+                "source_path": r"D:\CST\Online Help\mergedProjects\3D\special_overview\special_overview_waveguideover.htm",
+                "source_topic": "Microstrip Lines / Port Modes / Port Dimensions",
+                "chosen_rule": "use the CST Help extension-factor method for the declared feed",
+                "chosen_parameters": {
+                    "k": 5.0,
+                    "bottom_extension": "substrate_height_to_ground",
+                    "top_and_side_extension": "k_times_substrate_height",
+                },
+            },
             "span_parameters": {
-                "zrange": ["z_ground_max", "z_top_metal_max"],
+                "zrange": ["z_ground_max", "z_port_air_max"],
             },
             "mode_line": {
                 "from": "signal_conductor",
@@ -106,23 +130,24 @@ class GateLedgerValidatorTests(unittest.TestCase):
         self.assertEqual(result.returncode, 0, result.stdout + result.stderr)
         self.assertIn("PASS", result.stdout)
 
-    def test_valid_microstrip_port_height_to_ground_passes_without_air_region(self):
+    def test_rejects_passed_gate_without_checked_reference(self):
         data = base_ledger()
-        data["port_decision"]["port_span_includes"] = [
-            "signal_conductor",
-            "dielectric_region",
-            "reference_ground",
-        ]
-        data["port_decision"]["port_width_factor"] = 5.0
-        data["port_decision"]["height_terminates_at"] = "reference_ground"
-        data["port_decision"]["span_parameters"] = {
-            "zrange": ["z_ground_max", "z_top_metal_max"],
-        }
+        del data["gate_ledger"]["port"]["reference_checked"]
 
         result = run_validator(data)
 
-        self.assertEqual(result.returncode, 0, result.stdout + result.stderr)
-        self.assertIn("PASS", result.stdout)
+        self.assertNotEqual(result.returncode, 0)
+        self.assertIn("reference_checked", result.stdout)
+        self.assertIn("port", result.stdout)
+
+    def test_rejects_microstrip_port_without_help_driven_dimension_basis(self):
+        data = base_ledger()
+        del data["port_decision"]["dimension_basis"]
+
+        result = run_validator(data)
+
+        self.assertNotEqual(result.returncode, 0)
+        self.assertIn("dimension_basis", result.stdout)
 
     def test_rejects_microstrip_port_that_only_covers_trace_face(self):
         data = base_ledger()
@@ -154,6 +179,14 @@ class GateLedgerValidatorTests(unittest.TestCase):
             "feed_type": "custom_balanced_feed",
             "selected_port_object": "custom",
             "manual_review_required": True,
+            "reference_checked": [
+                {
+                    "source_type": "user_source_document",
+                    "path_or_tool": "user supplied feed drawing",
+                    "topic": "custom balanced feed topology",
+                    "finding": "no built-in validator profile; manual engineering evidence is required",
+                }
+            ],
         }
 
         result = run_validator(data)

@@ -13,19 +13,34 @@
     "dielectric_region": "patch_antenna:substrate",
     "intended_excitation": "distributed",
     "physical_port_section": "transverse_line_cross_section",
+    "reference_checked": [
+      {
+        "source_type": "official_help",
+        "path_or_tool": "D:\\CST\\Online Help\\mergedProjects\\3D\\special_overview\\special_overview_waveguideover.htm",
+        "topic": "Waveguide Port Overview / Microstrip Lines",
+        "finding": "The microstrip port section and dimensions are derived from the CST Help waveguide-port microstrip guidance."
+      }
+    ],
     "port_span_includes": [
       "signal_conductor",
       "dielectric_region",
-      "reference_ground"
+      "reference_ground",
+      "air_region"
     ],
-    "port_width_factor": 5.0,
-    "port_width_rule": "port width is a few times the microstrip feed width",
-    "height_terminates_at": "reference_ground",
-    "port_height_rule": "port height extends from the microstrip signal conductor to the reference ground",
+    "dimension_basis": {
+      "source_path": "D:\\CST\\Online Help\\mergedProjects\\3D\\special_overview\\special_overview_waveguideover.htm",
+      "source_topic": "Microstrip Lines / Port Modes / Port Dimensions",
+      "chosen_rule": "Use the CST Help extension-factor method for the declared microstrip feed; record chosen dimensions from the help topic instead of relying on memory.",
+      "chosen_parameters": {
+        "k": 5.0,
+        "bottom_extension": "substrate_height_to_ground",
+        "top_and_side_extension": "k_times_substrate_height"
+      }
+    },
     "span_parameters": {
       "zrange": [
         "z_ground_max",
-        "z_top_metal_max"
+        "z_port_air_max"
       ]
     },
     "mode_line": {
@@ -37,66 +52,154 @@
     "requirements": {
       "status": "pass",
       "evidence": "User requested a new 1.65 GHz rectangular patch antenna CST project for review, with no simulation.",
+      "reference_checked": [
+        {
+          "source_type": "user_source_document",
+          "path_or_tool": "current user request",
+          "topic": "task scope and no-simulation instruction",
+          "finding": "The user request defines review-gated output and forbids simulation."
+        }
+      ],
       "pass_condition": "Task type, output expectation, review-gated mode, frequency intent, and no-simulation instruction are recorded.",
       "unchecked_risk": "Antenna performance remains unchecked until simulation is allowed."
     },
     "physical_structure": {
       "status": "pass",
       "evidence": "Structure brief records microstrip-fed rectangular patch on grounded dielectric substrate with radiation normal to top metal.",
+      "reference_checked": [
+        {
+          "source_type": "official_help",
+          "path_or_tool": "D:\\CST\\Online Help\\mergedProjects\\3D\\special_overview\\special_overview_waveguideover.htm",
+          "topic": "Microstrip Lines",
+          "finding": "The Help topic identifies microstrip as a field-bearing transmission-line structure requiring the relevant field region to be modeled."
+        }
+      ],
       "pass_condition": "Layer stack, conductors, feed topology, propagation direction, and boundary meaning are recorded.",
       "unchecked_risk": "No field/current inspection because no solver was run."
     },
     "parameterization": {
       "status": "pass",
       "evidence": "CST parameters and History entries define units, substrate height, patch dimensions, feed width, frequency range, and derived coordinates.",
+      "reference_checked": [
+        {
+          "source_type": "cst_official_doc",
+          "path_or_tool": "official-docs/vba-3d/common_vbaunitso/common_vbaunitso_units_object.htm and parameter-related VBA Help",
+          "topic": "Units and parameterized History commands",
+          "finding": "Units and reusable dimensions are checked before commands reference them."
+        }
+      ],
       "pass_condition": "Reusable dimensions are CST parameters before History commands reference them.",
       "unchecked_risk": "Manual edits after validation require rerunning this ledger."
     },
     "materials": {
       "status": "pass",
       "evidence": "CST material list contains dielectric substrate material and conductor material used by expected solids.",
+      "reference_checked": [
+        {
+          "source_type": "cst_official_doc",
+          "path_or_tool": "official-docs/vba-3d/special_vbalayer/special_vbalayerolayer_object.htm or Material Object Help",
+          "topic": "Material definition and assignment",
+          "finding": "Material properties and assignments are checked against CST material-help semantics and the structure brief."
+        }
+      ],
       "pass_condition": "Dielectric, conductor, and background material assignments match the structure brief.",
       "unchecked_risk": "Material loss impact is not quantified without simulation."
     },
     "geometry_connectivity": {
       "status": "pass",
       "evidence": "Geometry inventory shows substrate, continuous ground, patch metal, inset region, and feed line with intended contact to patch.",
+      "reference_checked": [
+        {
+          "source_type": "cst_official_doc",
+          "path_or_tool": "official-docs/vba-3d/common_vbasolido/common_vbasolido_solid_object.htm and Brick Object Help",
+          "topic": "Solid creation, Boolean operations, and object inventory",
+          "finding": "Geometry and connectivity checks are based on CST object and Boolean semantics before port creation."
+        }
+      ],
       "pass_condition": "Expected solids exist; signal path continuity, ground continuity, layer heights, and intended clearances are recorded.",
       "unchecked_risk": "No meshed contact or current-flow evidence because no solver was run."
     },
     "port": {
       "status": "pass",
-      "evidence": "Port record declares waveguide Port on the feed transverse cross-section, spanning signal conductor, substrate, and reference ground with signal-to-ground mode line.",
-      "pass_condition": "Microstrip distributed feed uses waveguide Port on transverse line cross-section with width a few times feed width, height to ground, reference ground, and mode line.",
+      "evidence": "Port record declares waveguide Port on the feed transverse cross-section, with dimensions derived from CST Help and signal-to-ground mode line.",
+      "reference_checked": [
+        {
+          "source_type": "official_help",
+          "path_or_tool": "D:\\CST\\Online Help\\mergedProjects\\3D\\special_overview\\special_overview_waveguideover.htm",
+          "topic": "Microstrip Lines / Port Modes / Port Dimensions and Port Creation",
+          "finding": "The port type, transverse section, and dimension basis are checked against the microstrip waveguide-port Help topic before the port is marked pass."
+        }
+      ],
+      "pass_condition": "The declared feed uses a CST port object and port dimensions supported by the checked Help/macro source for that feed.",
       "unchecked_risk": "No port-mode solve; modal impedance and field quality are unchecked."
     },
     "boundary_background": {
       "status": "pass",
       "evidence": "Boundary setup and background/airbox plan are recorded for radiating antenna review.",
+      "reference_checked": [
+        {
+          "source_type": "official_help",
+          "path_or_tool": "D:\\CST\\Online Help\\mergedProjects\\3D\\special_overview\\special_overview_waveguideover.htm",
+          "topic": "Microstrip Lines and waveguide-port boundaries",
+          "finding": "The Help topic notes the air region above microstrip and the port-boundary behavior used for port-mode calculation."
+        }
+      ],
       "pass_condition": "Boundaries and background match antenna radiation physics and do not replace the feed cross-section check.",
       "unchecked_risk": "Open boundary/PML performance is not verified without solver messages."
     },
     "solver_mesh_monitors": {
       "status": "pass",
       "evidence": "Frequency range and solver/mesh intent are recorded, with solver not started.",
+      "reference_checked": [
+        {
+          "source_type": "official_help",
+          "path_or_tool": "D:\\CST\\Online Help\\mergedProjects\\3D\\special_overview\\special_overview_waveguideover.htm",
+          "topic": "Inhomogeneous waveguide ports and waveguide-port mesh view",
+          "finding": "Solver and mesh risks are recorded from the relevant waveguide-port Help sections before simulation is withheld."
+        }
+      ],
       "pass_condition": "Solver and mesh intent are declared without claiming solved performance.",
       "unchecked_risk": "no solver run; no port-mode solve; no S-parameter/farfield/gain/efficiency conclusion"
     },
     "history": {
       "status": "pass",
       "evidence": "Persisted Model/3D/ModelHistory.json contains visible captions for parameters, material setup, geometry, port setup, boundaries, and frequency setup.",
+      "reference_checked": [
+        {
+          "source_type": "cst_official_doc",
+          "path_or_tool": "official-docs/python/source/cst.interface.html and VBA History examples",
+          "topic": "add_to_history and persisted History",
+          "finding": "History evidence is checked against CST automation documentation before delivery."
+        }
+      ],
       "pass_condition": "History entries are visible, specific, and persisted for user review.",
       "unchecked_risk": "GUI visual inspection can still reveal presentation issues not visible in JSON."
     },
     "save_and_simulation_state": {
       "status": "pass",
       "evidence": "Project saved as a review copy and result tree checked for absence of solved S-parameter or farfield results.",
+      "reference_checked": [
+        {
+          "source_type": "cst_official_doc",
+          "path_or_tool": "official-docs/python/source/cst.interface.html and cst.results Help",
+          "topic": "Project save/open and result-tree inspection",
+          "finding": "Save and result-state claims are checked against CST project/result APIs."
+        }
+      ],
       "pass_condition": "Save path, copy policy, close policy, and no-simulation state are recorded.",
       "unchecked_risk": "project saved for review; no solver run; no port-mode solve; no S-parameter results"
     },
     "delivery": {
       "status": "pass",
       "evidence": "Final review package includes project path, design version, gate ledger, port record, assumptions, and unchecked risks.",
+      "reference_checked": [
+        {
+          "source_type": "repo_recipe",
+          "path_or_tool": "skills/cst-python-automation/references/em-design-gates.md",
+          "topic": "No-simulation review package and completion language",
+          "finding": "Delivery language is checked against the gate workflow before claiming the model is ready for review."
+        }
+      ],
       "pass_condition": "The delivery does not claim antenna performance and names the next allowed action.",
       "unchecked_risk": "User review and optional simulation remain future steps."
     }
