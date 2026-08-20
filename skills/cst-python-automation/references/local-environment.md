@@ -1,20 +1,23 @@
-# Local CST Environment Cache
+# Local CST Environment
 
-Use these paths before rediscovering the CST installation on this machine.
+CST installation paths are machine-specific. Configure them via environment
+variables rather than hardcoding absolute paths.
 
 ## Environment Variables
 
-| Name | Value |
+| Name | Purpose |
 | --- | --- |
-| `CST_PYTHON_EXE` | `D:\CST\Python\python.exe` |
-| `CST_STUDIO_EXE` | `D:\CST\AMD64\CST DESIGN ENVIRONMENT_AMD64.exe` |
-| `CST_API_ROOT` | `D:\CSTapi` |
-| `CST_MCP_ROOT` | `D:\CSTapi\mcp` |
-| `CST_OFFICIAL_DOCS` | `D:\CSTapi\official-docs` |
-| `CST_MACRO_LIBRARY` | `D:\CSTapi\macro-library` |
+| `CST_INSTALL_DIR` | CST installation root |
+| `CST_PYTHON_EXE` | CST bundled Python executable (for `cst.interface` / `cst.results`) |
+| `CST_MACRO_ROOT` | Installed CST macro library root |
+| `CST_DESIGN_ENV_EXE` | CST Design Environment executable |
+| `CST_API_ROOT` | Repository root (auto-detected from script location if unset) |
 
 ## Usage
 
-- Run CST automation scripts with `%CST_PYTHON_EXE%` / `$env:CST_PYTHON_EXE` unless the user explicitly provides another CST Python executable.
-- Use `%CST_API_ROOT%` for local CST MCP helper scripts, copied official docs, macro inventory, and domain guides.
-- If one of these paths fails, verify the path once, update both the Windows user environment variable and this cache file, then continue.
+- Set these in your shell profile, agent MCP config, or the launch script.
+- The MCP server auto-detects common CST 2026 install paths (under
+  `C:\Program Files\...` on Windows) when environment variables are unset.
+- See `mcp/config/` for agent-specific configuration examples.
+- If a path fails, verify it once and update the environment variable;
+  do not edit source code.

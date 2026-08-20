@@ -1,0 +1,17 @@
+# Codex MCP configuration example.
+#
+# Add this block to your Codex config, then restart the Codex session.
+# Use relative paths from the repository root, or set absolute paths
+# matching your local CST installation.
+
+[mcp_servers.cst2026]
+command = "run-cst2026-mcp.cmd"
+args = []
+
+[mcp_servers.cst2026.env]
+# Set these to match your local CST installation.
+# Leave empty to use auto-detection of common CST 2026 install paths.
+CST_INSTALL_DIR = ""
+CST_PYTHON_EXE = ""
+CST_MACRO_ROOT = ""
+CST_DESIGN_ENV_EXE = ""

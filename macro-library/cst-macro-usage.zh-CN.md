@@ -2,7 +2,7 @@
 
 ## 目标
 
-`D:\CST\Library\Macros` 是 CST 安装自带的宏脚本库，里面包含大量可学习的 VBA/History 示例。模型使用它时，不应直接把完整宏当黑盒运行，而应把它当作“官方脚本模式库”：检索相关宏，打开源文件，提取可靠的命令片段，参数化后注入到当前工程。
+`$CST_MACRO_ROOT` 是 CST 安装自带的宏脚本库，里面包含大量可学习的 VBA/History 示例。模型使用它时，不应直接把完整宏当黑盒运行，而应把它当作“官方脚本模式库”：检索相关宏，打开源文件，提取可靠的命令片段，参数化后注入到当前工程。
 
 ## 什么时候查宏库
 
@@ -19,7 +19,7 @@
 推荐命令：
 
 ```powershell
-Import-Csv D:\CSTapi\macro-library\macro-inventory.csv |
+Import-Csv macro-library/macro-inventory.csv |
   Where-Object { $_.keywords -match 'Farfield|Monitor|DiscretePort' } |
   Select-Object category,subcategory,title,applications,source_path
 ```
@@ -27,13 +27,13 @@ Import-Csv D:\CSTapi\macro-library\macro-inventory.csv |
 或用 `rg`：
 
 ```powershell
-rg -n "Farfield|DiscretePort|WaveguidePort|S-Parameter|Optimizer" D:\CSTapi\macro-library\macro-inventory.csv
+rg -n "Farfield|DiscretePort|WaveguidePort|S-Parameter|Optimizer" macro-library/macro-inventory.csv
 ```
 
 找到候选宏后再打开原文件：
 
 ```powershell
-Get-Content -Encoding Default -Path "D:\CST\Library\Macros\Construct\Demo Examples\Dipole Antenna^+MWS.mcs" -TotalCount 220
+Get-Content -Encoding Default -Path "$CST_MACRO_ROOT\Construct\Demo Examples\Dipole Antenna^+MWS.mcs" -TotalCount 220
 ```
 
 ## 文件后缀理解
@@ -127,14 +127,14 @@ RunScript GetInstallPath + "\Library\Macros\Results\- Import and Export\Import T
 - 不复制整段宏中与目标无关的操作，避免带入隐藏副作用。
 - 不直接使用 `GetFilePath`、`MsgBox`、剪贴板、外部 exe 调用，除非用户明确需要。
 - 改结构前记录 `design_id`、`parent_design_id`、`mutation_id`。
-- 每次引用宏库都记录 `source_macro`，例如 `D:\CST\Library\Macros\Solver\Ports\Set Port Mode Evaluation Frequency^+MWS+PS.mcr`。
+- 每次引用宏库都记录 `source_macro`，例如 `$CST_MACRO_ROOT\Solver\Ports\Set Port Mode Evaluation Frequency^+MWS+PS.mcr`。
 
 ## 输出记录模板
 
 ```json
 {
   "operation": "add_farfield_monitor",
-  "source_macro": "D:/CST/Library/Macros/Solver/Monitors and Probes/Broadband Field Monitors^+MWS+PS.mcr",
+  "source_macro": "$CST_MACRO_ROOT/Solver/Monitors and Probes/Broadband Field Monitors^+MWS+PS.mcr",
   "adapted_caption": "M0007 add farfield monitor",
   "method": "extract_history_vba",
   "parameters": {"fmon": "3.5"},

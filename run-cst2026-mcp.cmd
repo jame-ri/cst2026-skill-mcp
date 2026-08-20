@@ -1,13 +1,16 @@
 @echo off
+REM Cross-platform CST2026 MCP server launcher (Windows)
+REM Node.js must be on PATH or pointed to by NODE_EXE.
+REM Agent-agnostic: works with Codex, Claude, Cursor, or any MCP client.
+
 set "NODE_EXE=node"
-if exist "%USERPROFILE%\.cache\codex-runtimes\codex-primary-runtime\dependencies\node\bin\node.exe" (
-  set "NODE_EXE=%USERPROFILE%\.cache\codex-runtimes\codex-primary-runtime\dependencies\node\bin\node.exe"
+if defined NODE_PATH (
+  set "NODE_EXE=%NODE_PATH%"
 )
 
+REM Auto-detect common CST 2026 install paths when env vars are unset.
 if not defined CST_INSTALL_DIR (
-  if exist "D:\CST\CST DESIGN ENVIRONMENT.exe" set "CST_INSTALL_DIR=D:\CST"
-  if not defined CST_INSTALL_DIR if exist "C:\CST\CST DESIGN ENVIRONMENT.exe" set "CST_INSTALL_DIR=C:\CST"
-  if not defined CST_INSTALL_DIR if exist "C:\Program Files\CST Studio Suite 2026\CST DESIGN ENVIRONMENT.exe" set "CST_INSTALL_DIR=C:\Program Files\CST Studio Suite 2026"
+  if exist "C:\Program Files\CST Studio Suite 2026\CST DESIGN ENVIRONMENT.exe" set "CST_INSTALL_DIR=C:\Program Files\CST Studio Suite 2026"
   if not defined CST_INSTALL_DIR if exist "C:\Program Files\Dassault Systemes\CST Studio Suite 2026\CST DESIGN ENVIRONMENT.exe" set "CST_INSTALL_DIR=C:\Program Files\Dassault Systemes\CST Studio Suite 2026"
   if not defined CST_INSTALL_DIR if exist "C:\Program Files\SIMULIA\CST Studio Suite 2026\CST DESIGN ENVIRONMENT.exe" set "CST_INSTALL_DIR=C:\Program Files\SIMULIA\CST Studio Suite 2026"
 )

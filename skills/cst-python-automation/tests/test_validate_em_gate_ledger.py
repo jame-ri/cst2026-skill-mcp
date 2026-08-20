@@ -32,7 +32,7 @@ def pass_gate():
         "reference_checked": [
             {
                 "source_type": "official_help",
-                "path_or_tool": r"D:\CST\Online Help\mergedProjects\3D\special_overview\special_overview_waveguideover.htm",
+                "path_or_tool": "CST Online Help/3D/special_overview/special_overview_waveguideover.htm",
                 "topic": "gate-specific CST help topic",
                 "finding": "reference reviewed before this gate was marked pass",
             }
@@ -61,7 +61,7 @@ def base_ledger():
             "reference_checked": [
                 {
                     "source_type": "official_help",
-                    "path_or_tool": r"D:\CST\Online Help\mergedProjects\3D\special_overview\special_overview_waveguideover.htm",
+                    "path_or_tool": "CST Online Help/3D/special_overview/special_overview_waveguideover.htm",
                     "topic": "Waveguide Port Overview / Microstrip Lines",
                     "finding": "port object, section, and dimensions are derived from the help topic",
                 }
@@ -72,7 +72,7 @@ def base_ledger():
                 "reference_ground",
             ],
             "dimension_basis": {
-                "source_path": r"D:\CST\Online Help\mergedProjects\3D\special_overview\special_overview_waveguideover.htm",
+                "source_path": "CST Online Help/3D/special_overview/special_overview_waveguideover.htm",
                 "source_topic": "Microstrip Lines / Port Modes / Port Dimensions",
                 "chosen_rule": "use the CST Help extension-factor method for the declared feed",
                 "chosen_parameters": {

@@ -11,60 +11,46 @@ creating design records, and invoking conservative CST Python helpers.
 
 ## Run
 
-```powershell
-D:\CSTapi\run-cst2026-mcp.cmd
+```sh
+# Windows
+run-cst2026-mcp.cmd
+
+# macOS / Linux
+./run-cst2026-mcp.sh
+
+# Or directly with Node.js (any platform)
+node mcp/src/server.js
 ```
 
 The server has no npm dependencies. It speaks JSON-RPC over stdio and supports
 the MCP `initialize`, `tools/list`, and `tools/call` methods.
+
+## Agent Configuration
+
+This MCP server is agent-agnostic. Configuration examples for Codex, Claude,
+and Cursor are in `mcp/config/`. See `mcp/config/README.md` for details.
 
 ## Local CST Path Configuration
 
 CST installation paths vary by machine. The launch script and MCP server use
 this order:
 
-1. Explicit environment variables from the Codex MCP config or shell.
-2. Auto-detection of common CST 2026 install paths.
+1. Explicit environment variables from the agent MCP config or shell.
+2. Auto-detection of common CST 2026 install paths (under `C:\Program Files\...`
+   on Windows).
 3. Tool-call override fields such as `python_executable`.
 
 Supported environment variables:
 
-| Variable | Purpose | Example on this machine |
-| --- | --- | --- |
-| `CST_INSTALL_DIR` | CST installation root | `D:\CST` |
-| `CST_PYTHON_EXE` | CST bundled Python used for `cst.interface` / `cst.results` | `D:\CST\Python\python.exe` |
-| `CST_MACRO_ROOT` | Installed CST macro library root | `D:\CST\Library\Macros` |
-| `CST_DESIGN_ENV_EXE` | CST Design Environment executable, for diagnostics/documentation | `D:\CST\CST DESIGN ENVIRONMENT.exe` |
+| Variable | Purpose |
+| --- | --- |
+| `CST_INSTALL_DIR` | CST installation root |
+| `CST_PYTHON_EXE` | CST bundled Python used for `cst.interface` / `cst.results` |
+| `CST_MACRO_ROOT` | Installed CST macro library root |
+| `CST_DESIGN_ENV_EXE` | CST Design Environment executable, for diagnostics/documentation |
 
-The current machine was verified with:
-
-```text
-CST_INSTALL_DIR=D:\CST
-CST_PYTHON_EXE=D:\CST\Python\python.exe
-CST_MACRO_ROOT=D:\CST\Library\Macros
-CST_DESIGN_ENV_EXE=D:\CST\CST DESIGN ENVIRONMENT.exe
-```
-
-If CST is installed somewhere else, set the environment variables in the MCP
-configuration instead of editing source code.
-
-## Suggested Codex MCP Entry
-
-Use this command when adding the server to a Codex MCP config:
-
-```powershell
-D:\CSTapi\run-cst2026-mcp.cmd
-```
-
-An example TOML snippet is available at:
-
-```text
-D:\CSTapi\mcp\codex-config.example.toml
-```
-
-After adding the MCP server to the app config, restart the Codex session. If the
-tools still do not appear, verify that `run-cst2026-mcp.cmd` can be launched and
-that the configured command path is absolute.
+If CST is installed somewhere else, set the environment variables in the agent
+MCP configuration (see `mcp/config/`) instead of editing source code.
 
 ## Tool Groups
 
@@ -95,6 +81,8 @@ that the configured command path is absolute.
   `%CST_MACRO_ROOT%` or `<CST_INSTALL_DIR>\Library\Macros`.
 
 ## Example Tool Calls
+
+Replace `<project.cst>` with your actual project path.
 
 Search macros:
 
@@ -159,7 +147,7 @@ Create a design manifest:
 {
   "name": "records.create_variant",
   "arguments": {
-    "project_path": "D:\\CSTapi\\tmp_case3.cst",
+    "project_path": "<project.cst>",
     "objective": "Narrow antenna slot and compare S11 and gain",
     "save_policy": "save_copy"
   }
@@ -172,7 +160,7 @@ Plan a read-only project inspection:
 {
   "name": "cst.inspect_project",
   "arguments": {
-    "project_path": "D:\\CSTapi\\tmp_case3.cst",
+    "project_path": "<project.cst>",
     "include_results": true,
     "max_tree_items": 300
   }
@@ -185,7 +173,7 @@ Close a project without triggering a GUI save prompt:
 {
   "name": "cst.close_project",
   "arguments": {
-    "project_path": "D:\\CSTapi\\tmp_case3.cst",
+    "project_path": "<project.cst>",
     "save_policy": "no_save",
     "require_open": true
   }
@@ -198,9 +186,9 @@ Save a job copy and then close it:
 {
   "name": "cst.close_project",
   "arguments": {
-    "project_path": "D:\\CSTapi\\tmp_case3.cst",
+    "project_path": "<project.cst>",
     "save_policy": "save_copy",
-    "save_copy_path": "D:\\CSTapi\\runs\\tmp_case3_reviewed.cst",
+    "save_copy_path": "<reviewed_copy.cst>",
     "allow_overwrite": false,
     "require_open": true
   }
@@ -213,7 +201,7 @@ Inspect existing geometry evidence before a model edit:
 {
   "name": "cst.inspect_geometry",
   "arguments": {
-    "project_path": "D:\\CSTapi\\tmp_case3.cst",
+    "project_path": "<project.cst>",
     "require_open": true,
     "max_tree_items": 500
   }
@@ -226,7 +214,7 @@ Check physics setup before solving:
 {
   "name": "cst.inspect_physics_setup",
   "arguments": {
-    "project_path": "D:\\CSTapi\\tmp_case3.cst",
+    "project_path": "<project.cst>",
     "max_tree_items": 500
   }
 }
@@ -238,7 +226,7 @@ Plan result sanity checks:
 {
   "name": "cst.result_sanity",
   "arguments": {
-    "project_path": "D:\\CSTapi\\tmp_case3.cst",
+    "project_path": "<project.cst>",
     "passive": true
   }
 }
@@ -250,7 +238,7 @@ Run a long-job resource preflight:
 {
   "name": "cst.preflight_resources",
   "arguments": {
-    "project_path": "D:\\CSTapi\\tmp_case3.cst",
+    "project_path": "<project.cst>",
     "min_free_memory_gb": 12,
     "min_free_disk_gb": 20,
     "max_cst_processes": 1,
@@ -265,8 +253,8 @@ Record a checkpoint:
 {
   "name": "cst.job_checkpoint",
   "arguments": {
-    "job_id": "tmp-case3-sweep",
-    "project_path": "D:\\CSTapi\\tmp_case3.cst",
+    "job_id": "my-sweep",
+    "project_path": "<project.cst>",
     "stage": "preflight",
     "status": "done",
     "detail": "Resource gate passed before geometry mutation."
@@ -280,7 +268,7 @@ Recover a job after interruption:
 {
   "name": "cst.recover_job",
   "arguments": {
-    "job_id": "tmp-case3-sweep"
+    "job_id": "my-sweep"
   }
 }
 ```
@@ -303,7 +291,7 @@ Plan a live parameter edit without executing:
 {
   "name": "cst.live_modify_parameter",
   "arguments": {
-    "project_path": "D:\\CSTapi\\tmp_case3.cst",
+    "project_path": "<project.cst>",
     "parameter": "fmon",
     "test_value": 1.51,
     "pause_after_set": 5,
@@ -317,10 +305,9 @@ Plan a live parameter edit without executing:
 
 When `execute=true`, the MCP server calls:
 
-```powershell
-%CST_PYTHON_EXE% D:\CSTapi\mcp\python\cst_ops.py ...
+```sh
+$CST_PYTHON_EXE mcp/python/cst_ops.py ...
 ```
 
 Override the Python path with the tool argument `python_executable` or the
-`CST_PYTHON_EXE` environment variable. On this machine the working CST Python is
-`D:\CST\Python\python.exe`.
+`CST_PYTHON_EXE` environment variable.

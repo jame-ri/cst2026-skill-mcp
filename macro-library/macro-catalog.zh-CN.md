@@ -2,7 +2,7 @@
 
 ## 总览
 
-当前索引来自 `D:\CST\Library\Macros`，共记录 414 个宏库文件，包含 `.mcr`、`.mcs`、`.bas`、`.cls`、`.py` 等脚本，也包含图片、PDF、PPT、TXT、示例工程等配套资源。使用时如果只想查可执行脚本，先过滤 `extension` 为 `mcr`、`mcs`、`bas`、`cls` 或 `py`。
+当前索引来自 `$CST_MACRO_ROOT`，共记录 414 个宏库文件，包含 `.mcr`、`.mcs`、`.bas`、`.cls`、`.py` 等脚本，也包含图片、PDF、PPT、TXT、示例工程等配套资源。使用时如果只想查可执行脚本，先过滤 `extension` 为 `mcr`、`mcs`、`bas`、`cls` 或 `py`。
 
 分类概览见 `macro-category-summary.csv`：
 
@@ -23,7 +23,7 @@
 检索：
 
 ```powershell
-rg -n "Dipole|Horn|Waveguide|Microstrip|Reflector|Filter" D:\CSTapi\macro-library\macro-inventory.csv
+rg -n "Dipole|Horn|Waveguide|Microstrip|Reflector|Filter" macro-library/macro-inventory.csv
 ```
 
 高价值示例：
@@ -46,7 +46,7 @@ rg -n "Dipole|Horn|Waveguide|Microstrip|Reflector|Filter" D:\CSTapi\macro-librar
 检索：
 
 ```powershell
-rg -n "DiscretePort|DiscreteFacePort|WaveguidePort|Port Mode|Target Cut Off" D:\CSTapi\macro-library\macro-inventory.csv
+rg -n "DiscretePort|DiscreteFacePort|WaveguidePort|Port Mode|Target Cut Off" macro-library/macro-inventory.csv
 ```
 
 入口：
@@ -68,7 +68,7 @@ rg -n "DiscretePort|DiscreteFacePort|WaveguidePort|Port Mode|Target Cut Off" D:\
 检索：
 
 ```powershell
-rg -n "Farfield|Monitor|Probe|Broadband|TRP|TIS" D:\CSTapi\macro-library\macro-inventory.csv
+rg -n "Farfield|Monitor|Probe|Broadband|TRP|TIS" macro-library/macro-inventory.csv
 ```
 
 入口：
@@ -92,7 +92,7 @@ rg -n "Farfield|Monitor|Probe|Broadband|TRP|TIS" D:\CSTapi\macro-library\macro-i
 检索：
 
 ```powershell
-rg -n "S-Parameter|Touchstone|ResultTree|Result1D|Q-values|MDIF" D:\CSTapi\macro-library\macro-inventory.csv
+rg -n "S-Parameter|Touchstone|ResultTree|Result1D|Q-values|MDIF" macro-library/macro-inventory.csv
 ```
 
 入口：
@@ -115,7 +115,7 @@ rg -n "S-Parameter|Touchstone|ResultTree|Result1D|Q-values|MDIF" D:\CSTapi\macro
 检索：
 
 ```powershell
-rg -n "Solver|Mesh|Optimizer|Broad Band Sweep|GPU|HPC|Unitcell" D:\CSTapi\macro-library\macro-inventory.csv
+rg -n "Solver|Mesh|Optimizer|Broad Band Sweep|GPU|HPC|Unitcell" macro-library/macro-inventory.csv
 ```
 
 入口：
@@ -139,7 +139,7 @@ rg -n "Solver|Mesh|Optimizer|Broad Band Sweep|GPU|HPC|Unitcell" D:\CSTapi\macro-
 检索：
 
 ```powershell
-rg -n "Drude|Graphene|Tensor|Cole-Cole|Tissue|Surface Impedance|Material" D:\CSTapi\macro-library\macro-inventory.csv
+rg -n "Drude|Graphene|Tensor|Cole-Cole|Tissue|Surface Impedance|Material" macro-library/macro-inventory.csv
 ```
 
 入口：

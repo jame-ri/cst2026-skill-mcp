@@ -16,7 +16,7 @@
     "reference_checked": [
       {
         "source_type": "official_help",
-        "path_or_tool": "D:\\CST\\Online Help\\mergedProjects\\3D\\special_overview\\special_overview_waveguideover.htm",
+        "path_or_tool": "CST Online Help/3D/special_overview/special_overview_waveguideover.htm",
         "topic": "Waveguide Port Overview / Microstrip Lines",
         "finding": "The microstrip port section and dimensions are derived from the CST Help waveguide-port microstrip guidance."
       }
@@ -28,7 +28,7 @@
       "air_region"
     ],
     "dimension_basis": {
-      "source_path": "D:\\CST\\Online Help\\mergedProjects\\3D\\special_overview\\special_overview_waveguideover.htm",
+      "source_path": "CST Online Help/3D/special_overview/special_overview_waveguideover.htm",
       "source_topic": "Microstrip Lines / Port Modes / Port Dimensions",
       "chosen_rule": "Use the CST Help extension-factor method for the declared microstrip feed; record chosen dimensions from the help topic instead of relying on memory.",
       "chosen_parameters": {
@@ -69,7 +69,7 @@
       "reference_checked": [
         {
           "source_type": "official_help",
-          "path_or_tool": "D:\\CST\\Online Help\\mergedProjects\\3D\\special_overview\\special_overview_waveguideover.htm",
+          "path_or_tool": "CST Online Help/3D/special_overview/special_overview_waveguideover.htm",
           "topic": "Microstrip Lines",
           "finding": "The Help topic identifies microstrip as a field-bearing transmission-line structure requiring the relevant field region to be modeled."
         }
@@ -125,7 +125,7 @@
       "reference_checked": [
         {
           "source_type": "official_help",
-          "path_or_tool": "D:\\CST\\Online Help\\mergedProjects\\3D\\special_overview\\special_overview_waveguideover.htm",
+          "path_or_tool": "CST Online Help/3D/special_overview/special_overview_waveguideover.htm",
           "topic": "Microstrip Lines / Port Modes / Port Dimensions and Port Creation",
           "finding": "The port type, transverse section, and dimension basis are checked against the microstrip waveguide-port Help topic before the port is marked pass."
         }
@@ -139,7 +139,7 @@
       "reference_checked": [
         {
           "source_type": "official_help",
-          "path_or_tool": "D:\\CST\\Online Help\\mergedProjects\\3D\\special_overview\\special_overview_waveguideover.htm",
+          "path_or_tool": "CST Online Help/3D/special_overview/special_overview_waveguideover.htm",
           "topic": "Microstrip Lines and waveguide-port boundaries",
           "finding": "The Help topic notes the air region above microstrip and the port-boundary behavior used for port-mode calculation."
         }
@@ -153,7 +153,7 @@
       "reference_checked": [
         {
           "source_type": "official_help",
-          "path_or_tool": "D:\\CST\\Online Help\\mergedProjects\\3D\\special_overview\\special_overview_waveguideover.htm",
+          "path_or_tool": "CST Online Help/3D/special_overview/special_overview_waveguideover.htm",
           "topic": "Inhomogeneous waveguide ports and waveguide-port mesh view",
           "finding": "Solver and mesh risks are recorded from the relevant waveguide-port Help sections before simulation is withheld."
         }

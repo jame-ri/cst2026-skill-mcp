@@ -10,7 +10,8 @@
   "scripts": {
     "start": "node src/server.js",
     "check": "node --check src/server.js",
-    "test": "node tests/knowledge-tools-smoke.mjs"
+    "test": "node tests/harness.mjs",
+    "test:smoke": "node tests/knowledge-tools-smoke.mjs"
   },
   "engines": {
     "node": ">=18"

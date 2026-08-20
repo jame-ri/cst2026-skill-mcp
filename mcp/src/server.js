@@ -380,8 +380,6 @@ function detectCstInstallDir() {
   const envRoot = process.env.CST_INSTALL_DIR || process.env.CST_HOME || process.env.CST_ROOT;
   const candidates = unique([
     envRoot,
-    "D:\\CST",
-    "C:\\CST",
     "C:\\Program Files\\CST Studio Suite 2026",
     "C:\\Program Files\\Dassault Systemes\\CST Studio Suite 2026",
     "C:\\Program Files\\SIMULIA\\CST Studio Suite 2026"
@@ -399,8 +397,7 @@ function detectCstPaths() {
   ]);
   const macroCandidates = unique([
     process.env.CST_MACRO_ROOT,
-    installDir ? path.join(installDir, "Library", "Macros") : null,
-    "D:\\CST\\Library\\Macros"
+    installDir ? path.join(installDir, "Library", "Macros") : null
   ]);
   const designEnvironmentCandidates = unique([
     process.env.CST_DESIGN_ENV_EXE,

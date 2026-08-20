@@ -2,7 +2,7 @@
 
 ## Overview
 
-The current index was generated from `D:\CST\Library\Macros` and records 414 macro-library files, including scripts such as `.mcr`, `.mcs`, `.bas`, `.cls`, and `.py`, plus companion resources such as images, PDFs, presentations, text files, and example projects. When only executable script patterns are needed, filter `extension` to `mcr`, `mcs`, `bas`, `cls`, or `py`.
+The current index was generated from `$CST_MACRO_ROOT` and records 414 macro-library files, including scripts such as `.mcr`, `.mcs`, `.bas`, `.cls`, and `.py`, plus companion resources such as images, PDFs, presentations, text files, and example projects. When only executable script patterns are needed, filter `extension` to `mcr`, `mcs`, `bas`, `cls`, or `py`.
 
 See `macro-category-summary.csv` for counts by category:
 
@@ -23,7 +23,7 @@ See `macro-category-summary.csv` for counts by category:
 Search:
 
 ```powershell
-rg -n "Dipole|Horn|Waveguide|Microstrip|Reflector|Filter" D:\CSTapi\macro-library\macro-inventory.csv
+rg -n "Dipole|Horn|Waveguide|Microstrip|Reflector|Filter" macro-library/macro-inventory.csv
 ```
 
 Useful examples:
@@ -42,7 +42,7 @@ Use them to learn parameterized modeling, `StoreParameter`, `Component.New`, `Br
 Search:
 
 ```powershell
-rg -n "DiscretePort|DiscreteFacePort|WaveguidePort|Port Mode|Target Cut Off" D:\CSTapi\macro-library\macro-inventory.csv
+rg -n "DiscretePort|DiscreteFacePort|WaveguidePort|Port Mode|Target Cut Off" macro-library/macro-inventory.csv
 ```
 
 Entry points:
@@ -61,7 +61,7 @@ Use them to learn discrete ports, discrete face ports, waveguide ports, and port
 Search:
 
 ```powershell
-rg -n "Farfield|Monitor|Probe|Broadband|TRP|TIS" D:\CSTapi\macro-library\macro-inventory.csv
+rg -n "Farfield|Monitor|Probe|Broadband|TRP|TIS" macro-library/macro-inventory.csv
 ```
 
 Entry points:
@@ -82,7 +82,7 @@ Use them to set up farfield monitors, broadband monitors, TRP/TIS post-processin
 Search:
 
 ```powershell
-rg -n "S-Parameter|Touchstone|ResultTree|Result1D|Q-values|MDIF" D:\CSTapi\macro-library\macro-inventory.csv
+rg -n "S-Parameter|Touchstone|ResultTree|Result1D|Q-values|MDIF" macro-library/macro-inventory.csv
 ```
 
 Entry points:
@@ -102,7 +102,7 @@ Use them to learn result-tree traversal, S-parameter processing, Touchstone impo
 Search:
 
 ```powershell
-rg -n "Solver|Mesh|Optimizer|Broad Band Sweep|GPU|HPC|Unitcell" D:\CSTapi\macro-library\macro-inventory.csv
+rg -n "Solver|Mesh|Optimizer|Broad Band Sweep|GPU|HPC|Unitcell" macro-library/macro-inventory.csv
 ```
 
 Entry points:
@@ -123,7 +123,7 @@ Use them to learn solver switching, mesh settings, optimizer settings, and HPC c
 Search:
 
 ```powershell
-rg -n "Drude|Graphene|Tensor|Cole-Cole|Tissue|Surface Impedance|Material" D:\CSTapi\macro-library\macro-inventory.csv
+rg -n "Drude|Graphene|Tensor|Cole-Cole|Tissue|Surface Impedance|Material" macro-library/macro-inventory.csv
 ```
 
 Entry points:

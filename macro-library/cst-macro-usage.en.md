@@ -2,7 +2,7 @@
 
 ## Purpose
 
-`D:\CST\Library\Macros` is the macro/script library installed with CST. Treat it as an official pattern library for VBA and History commands. Do not blindly run full macros as black boxes. Search for a relevant macro, inspect the source, extract reliable command blocks, parameterize them, and inject them into the current project.
+`$CST_MACRO_ROOT` is the macro/script library installed with CST. Treat it as an official pattern library for VBA and History commands. Do not blindly run full macros as black boxes. Search for a relevant macro, inspect the source, extract reliable command blocks, parameterize them, and inject them into the current project.
 
 ## When To Search The Macro Library
 
@@ -19,7 +19,7 @@ Search `macro-library/macro-inventory.csv` when:
 PowerShell:
 
 ```powershell
-Import-Csv D:\CSTapi\macro-library\macro-inventory.csv |
+Import-Csv macro-library/macro-inventory.csv |
   Where-Object { $_.keywords -match 'Farfield|Monitor|DiscretePort' } |
   Select-Object category,subcategory,title,applications,source_path
 ```
@@ -27,13 +27,13 @@ Import-Csv D:\CSTapi\macro-library\macro-inventory.csv |
 Or with `rg`:
 
 ```powershell
-rg -n "Farfield|DiscretePort|WaveguidePort|S-Parameter|Optimizer" D:\CSTapi\macro-library\macro-inventory.csv
+rg -n "Farfield|DiscretePort|WaveguidePort|S-Parameter|Optimizer" macro-library/macro-inventory.csv
 ```
 
 After finding a candidate, open the original macro:
 
 ```powershell
-Get-Content -Encoding Default -Path "D:\CST\Library\Macros\Construct\Demo Examples\Dipole Antenna^+MWS.mcs" -TotalCount 220
+Get-Content -Encoding Default -Path "$CST_MACRO_ROOT\Construct\Demo Examples\Dipole Antenna^+MWS.mcs" -TotalCount 220
 ```
 
 ## Filename Suffixes
@@ -134,7 +134,7 @@ Notes:
 ```json
 {
   "operation": "add_farfield_monitor",
-  "source_macro": "D:/CST/Library/Macros/Solver/Monitors and Probes/Broadband Field Monitors^+MWS+PS.mcr",
+  "source_macro": "$CST_MACRO_ROOT/Solver/Monitors and Probes/Broadband Field Monitors^+MWS+PS.mcr",
   "adapted_caption": "M0007 add farfield monitor",
   "method": "extract_history_vba",
   "parameters": {"fmon": "3.5"},

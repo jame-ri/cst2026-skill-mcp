@@ -2,7 +2,7 @@
 
 This directory is a model-readable index for the installed CST macro library at:
 
-`D:\CST\Library\Macros`
+`$CST_MACRO_ROOT`
 
 It does not duplicate the full macro source tree. Instead, it records metadata and usage guidance so an agent can quickly find relevant CST VBA/History examples, open the original macro only when needed, and adapt safe snippets into Python-driven CST automation.
 
@@ -21,7 +21,7 @@ Important columns in `macro-inventory.csv`:
 - `visibility`: `menu-visible` for `^+...`, `hidden/internal` for `^-...`.
 - `keywords`: Detected CST API objects and concepts, such as `Brick`, `DiscretePort`, `Farfield`, `ResultTree`, `Solver`.
 - `first_comment`: First useful comment line from the macro.
-- `source_path`: Original macro path under `D:\CST\Library\Macros`.
+- `source_path`: Original macro path under `$CST_MACRO_ROOT`.
 
 When searching for executable script patterns, filter `extension` to `mcr`, `mcs`, `bas`, `cls`, or `py`. Other rows such as `bmp`, `pdf`, `ppt`, `txt`, and `cst` are companion resources that explain or support the macros.
 

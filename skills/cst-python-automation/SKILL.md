@@ -56,9 +56,10 @@ Contextual triggers only when CST is implied or stated:
 9. Before rediscovering CST executables or documentation paths, read `references/local-environment.md` and check `CST_PYTHON_EXE`, `CST_API_ROOT`, `CST_MCP_ROOT`, `CST_OFFICIAL_DOCS`, and `CST_MACRO_LIBRARY`.
 10. If MCP is unavailable, read repository references directly and write Python/VBA/History scripts under the same safety rules.
 
-In Codex tool lists, the same MCP tools may be exposed with underscore names or an MCP namespace. Use the actually available callable name:
+Different agents (Codex, Claude, Cursor, etc.) may expose MCP tools with underscore
+names or an MCP namespace. Use the actually available callable name:
 
-| README/MCP name | Codex callable name |
+| README/MCP name | Underscore callable name |
 | --- | --- |
 | `docs.search_macros` | `docs_search_macros` |
 | `docs.read_macro` | `docs_read_macro` |
@@ -300,7 +301,7 @@ Treat CST History visibility as a deliverable, not an implementation detail.
 
 ## Long-Run Reliability
 
-For CST solves, sweeps, optimization loops, or any task that may outlive the current Codex turn, use a resumable job pattern.
+For CST solves, sweeps, optimization loops, or any task that may outlive the current agent turn, use a resumable job pattern.
 
 Before execution:
 

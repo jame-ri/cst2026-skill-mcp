@@ -9,7 +9,7 @@ description: "当用户提出 CST Studio Suite / CST-MWS 自动化、.cst 工程
 
 本 skill 负责模型行为：如何理解用户的 CST 需求，如何先问清物理结构，如何使用官方资料和宏库，如何避免误建模，如何做进程/资源/弹窗防护，以及如何记录设计版本和结果。
 
-`D:\CSTapi` 仓库提供标准工具层：CST 官方文档搜索、安装宏库搜索、History/VBA 片段提取、设计记录、CST Python helper、进程预检、恢复和关闭策略。使用绝对路径前先读 `skills/cst-python-automation/references/local-environment.md`。
+本仓库（`$CST_API_ROOT` 或仓库根目录）提供标准工具层：CST 官方文档搜索、安装宏库搜索、History/VBA 片段提取、设计记录、CST Python helper、进程预检、恢复和关闭策略。配置路径前先读 `skills/cst-python-automation/references/local-environment.md`。
 
 优先使用 MCP 工具；MCP 覆盖不足时，再按本 skill 规则直接读仓库资料并写 CST Python / VBA / History 脚本。
 

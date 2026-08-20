@@ -918,9 +918,6 @@ def _cst_install_dir() -> Path | None:
         root = exe.parent.parent
         if (root / "Patches").exists():
             return root
-    for candidate in (Path("D:/CST"), Path("C:/CST")):
-        if candidate.exists():
-            return candidate
     return None
 
 
