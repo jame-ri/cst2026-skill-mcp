@@ -1,6 +1,6 @@
 {
   "name": "cst2026-mcp",
-  "version": "0.1.0",
+  "version": "0.4.0",
   "private": true,
   "type": "module",
   "description": "MCP server for CST automation references, macro search, CST helper execution, and design records.",
@@ -10,7 +10,8 @@
   "scripts": {
     "start": "node src/server.js",
     "check": "node --check src/server.js",
-    "test": "node tests/knowledge-tools-smoke.mjs"
+    "test": "node tests/knowledge-tools-smoke.mjs && node --test tests/knowledge-memory.test.mjs tests/mcp-runtime.test.mjs tests/mcp-boundaries.test.mjs",
+    "test:gates": "python -B tests/test_em_gate_ledger.py"
   },
   "engines": {
     "node": ">=18"

@@ -2,7 +2,9 @@
 
 Use this file before rediscovering CST calls from scratch. Each recipe gives the
 default sequence, the MCP tools to prefer, and the CST History/API pattern to
-confirm when MCP coverage is not enough.
+confirm when MCP coverage is not enough. These are sequences to perform, not
+execution receipts: inspection tools require execute=true for actual evidence.
+Use [the harness](harness.md) to capture verified reusable variants automatically.
 
 ## project-management
 
@@ -28,8 +30,8 @@ Rules:
 - Do not use `save_original` on an Untitled project.
 - Do not kill CST by process name. Use `cst.cleanup_stale_processes` only with
   explicit PIDs and `allow_terminate=true`.
-- When existing solver/modeler processes are active, checkpoint the job and
-  avoid launching another solve unless the user explicitly approves.
+- When solver/modeler processes are active, check target ownership and resource
+  conflicts. Continue only within the existing task authorization and budget.
 
 ## file-save-and-results
 
@@ -67,8 +69,9 @@ Default sequence:
 3. Add or verify materials, ports, boundaries, monitors, mesh, and solver setup.
 4. Run `cst.inspect_physics_setup`.
 5. Run `cst.preflight_resources` and record a `preflight` checkpoint.
-6. Start the solver only after review-gated confirmation or explicit
-   `full_auto` intent.
+6. Start the solver after prerequisites pass and the user has authorized this
+   scoped run. Preserve an explicitly requested review gate; modeling-only work
+   does not authorize solving.
 7. Record `running`, `done`, `failed`, or `interrupted` checkpoints around the
    solve.
 8. Run `cst.result_sanity` before interpreting results.

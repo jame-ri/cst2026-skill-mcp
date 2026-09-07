@@ -1,0 +1,13 @@
+[mcp_servers.cst-api]
+command = "node"
+args = ["mcp/src/server.js"]
+tool_timeout_sec = 7300
+env_vars = [
+  "CST_INSTALL_DIR", "CST_PYTHON_EXE", "CST_PYTHON_LIB_DIR",
+  "CST_HOME", "CST_ROOT", "CST_MACRO_ROOT", "CST_DESIGN_ENV_EXE",
+  "CST_ENABLE_API_EXTENSIONS", "CST_API_LIBRARY_DIR",
+  "CST_EMBEDDING_MODEL", "CST_EMBEDDING_MODEL_ID", "CST_EMBEDDING_PYTHON"
+]
+
+[mcp_servers.cst-api.env]
+CST_MCP_PROFILE = "control"

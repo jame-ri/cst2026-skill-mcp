@@ -1,0 +1,21 @@
+# Configure these in the MCP server's environment.
+# This file is documentation, not an automatically loaded .env file.
+CST_MCP_PROFILE=control
+CST_ENABLE_API_EXTENSIONS=0
+CST_API_LIBRARY_DIR=design-records/api-library
+
+# Machine bindings: use the interpreter compatible with your installed CST.
+# CST_PYTHON_EXE=python
+# CST_INSTALL_DIR is discovered from the local environment when available.
+# CST_PYTHON_LIB_DIR overrides the vendor Python library location.
+
+# Optional offline vector discovery. Provision the model yourself.
+# CST_EMBEDDING_MODEL=models/your-local-model
+# CST_EMBEDDING_MODEL_ID=your-model-revision
+# CST_EMBEDDING_PYTHON=python
+
+# Optional legacy textual workflow memory, available in the full profile.
+# CST_KNOWLEDGE_ENABLED=1
+# CST_KNOWLEDGE_AUTO_CAPTURE=1
+# CST_KNOWLEDGE_DIR=design-records/knowledge
+# CST_KNOWLEDGE_STABLE_RUNS=2

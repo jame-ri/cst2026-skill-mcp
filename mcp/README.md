@@ -1,326 +1,52 @@
-# CST2026 MCP
+# MCP adapter / MCP 接入层
 
-`cst2026-mcp` is the standardized tool layer for this repository.
+MCP 的职责是把 CST API 暴露给 agent，不承担另一套 CST 实现，也不强制先检索资料。
 
-The skill stays responsible for model behavior: how to reason, when to be safe,
-how to report assumptions, and how to manage CST design evolution.
+The stdio MCP adapter exposes the same CST controller and versioned API library to different agents.
 
-The MCP server is responsible for repeatable tool calls: searching CST official
-references, reading installed macro examples, extracting History/VBA patterns,
-creating design records, and invoking conservative CST Python helpers.
+## 启动 / Start
 
-## Run
+From the repository root:
 
-```powershell
-D:\CSTapi\run-cst2026-mcp.cmd
+```sh
+node mcp/src/server.js
 ```
 
-The server has no npm dependencies. It speaks JSON-RPC over stdio and supports
-the MCP `initialize`, `tools/list`, and `tools/call` methods.
+Requirements: Node.js 18+; no npm dependencies for the server core. Live CST calls additionally require the installed CST vendor bindings and a compatible Python interpreter.
 
-## Local CST Path Configuration
+Configuration examples: [generic MCP](../config/mcp-client.example.json), [Codex](../config/codex.example.toml), [environment variables](../config/environment.example). Relative script arguments require a known working directory. Desktop clients may need a launcher rather than the same configuration syntax as a CLI agent.
 
-CST installation paths vary by machine. The launch script and MCP server use
-this order:
+## 工具配置 / Profiles
 
-1. Explicit environment variables from the Codex MCP config or shell.
-2. Auto-detection of common CST 2026 install paths.
-3. Tool-call override fields such as `python_executable`.
+- `CST_MCP_PROFILE=control` is the default: 12 direct CST tools plus 7 API-library tools.
+- `CST_MCP_PROFILE=full` additionally exposes the original document/macro lookup, textual workflow memory, records and legacy CST helpers.
+- A known API never requires a search call. Use `cst.*` directly, or `api.call`.
+- Do not mix legacy CST mutation helpers with an active direct session. Most legacy CST tools are blocked while a direct controller is active.
 
-Supported environment variables:
+See the [root README](../README.md) for the complete default tool list and bilingual usage steps.
 
-| Variable | Purpose | Example on this machine |
-| --- | --- | --- |
-| `CST_INSTALL_DIR` | CST installation root | `D:\CST` |
-| `CST_PYTHON_EXE` | CST bundled Python used for `cst.interface` / `cst.results` | `D:\CST\Python\python.exe` |
-| `CST_MACRO_ROOT` | Installed CST macro library root | `D:\CST\Library\Macros` |
-| `CST_DESIGN_ENV_EXE` | CST Design Environment executable, for diagnostics/documentation | `D:\CST\CST DESIGN ENVIRONMENT.exe` |
+## 输入与结果 / Contracts
 
-The current machine was verified with:
+- All tools publish object input schemas. Unknown top-level arguments are rejected.
+- Missing JSON-RPC `params` may be normalized to an empty object; explicit `params:null`, arrays and other invalid types are rejected rather than treated as an absent parameter.
+- Direct CST tools default to `execute=false`, including live reads. A plan does not connect or create a CST instance.
+- `api.call` and `api.trial` put execution controls inside their nested `arguments` object.
+- CST solve/stop and arbitrary local extension execution require their own explicit authorization gates.
+- Tool project/artifact paths are repository-relative. Paths cannot escape through dot segments, symlinks or junctions.
+- Execution errors are returned as tool results, separately from protocol/argument errors.
+- Solver submission is asynchronous. Not running does not prove successful simulation.
+- An identical `operation_id` returns its prior receipt; it does not execute again. Incomplete receipts block automatic replay.
+- `api.trial` returns both the execution outcome and a separate `registration` outcome.
+- Extensions run with the server's permissions, not in a sandbox. Default extension execution is disabled.
 
-```text
-CST_INSTALL_DIR=D:\CST
-CST_PYTHON_EXE=D:\CST\Python\python.exe
-CST_MACRO_ROOT=D:\CST\Library\Macros
-CST_DESIGN_ENV_EXE=D:\CST\CST DESIGN ENVIRONMENT.exe
-```
+## 实现位置 / Source ownership
 
-If CST is installed somewhere else, set the environment variables in the MCP
-configuration instead of editing source code.
+- `src/mcp-protocol.js`: framing, JSON-RPC and MCP response formatting.
+- `src/server.js`: service entry, profile selection, dispatch and retained legacy adapters.
+- `src/api-tools.js`: API-library tool schemas and routing.
+- `../cst_api/`: actual CST execution.
+- `../api_library/`: candidate storage, discovery, registration and versioned calls.
+- `../harness/`: execution receipts and auxiliary workflow memory.
+- Old Python and JavaScript entry filenames remain compatibility shims.
 
-## Suggested Codex MCP Entry
-
-Use this command when adding the server to a Codex MCP config:
-
-```powershell
-D:\CSTapi\run-cst2026-mcp.cmd
-```
-
-An example TOML snippet is available at:
-
-```text
-D:\CSTapi\mcp\codex-config.example.toml
-```
-
-After adding the MCP server to the app config, restart the Codex session. If the
-tools still do not appear, verify that `run-cst2026-mcp.cmd` can be launched and
-that the configured command path is absolute.
-
-## Tool Groups
-
-- `docs.*`: search and read CST installed macro references and copied official docs.
-- `history.*`: extract compact VBA/History blocks from macros for `add_to_history()`.
-- `records.*`: create and append design manifests for structure evolution, optimization, and ML data.
-- `knowledge.*`: read CST call recipes and known failure lessons from the installed skill knowledge base.
-- `cst.inspect_project`: read-only project state, open projects, messages, model tree, and result-tree discovery.
-- `cst.inspect_geometry`: read-only, tree-derived geometry inventory for the Physical Structure Gate.
-- `cst.inspect_physics_setup`: read-only checklist for materials, ports, boundaries, mesh, monitors, solver/result evidence, and CST messages.
-- `cst.result_sanity`: read saved CST result trees and run compact checks such as passive S-parameter `|S| <= 1`.
-- `cst.process_status`: inspect CST-related process, memory, and disk state.
-- `cst.preflight_resources`: block long jobs when process count, memory, or disk thresholds are unsafe.
-- `cst.job_checkpoint` / `cst.recover_job`: record and resume multi-stage CST jobs.
-- `cst.cleanup_stale_processes`: plan or explicitly terminate selected stale PIDs; it never kills by name.
-- `cst.closed_start` / `cst.live_modify_parameter`: controlled CST helper commands when `execute=true`.
-- `cst.close_project`: close a specified CST project with explicit `no_save`, `save_copy`, or `save_original` policy.
-
-## Safety Defaults
-
-- CST project mutation tools default to `execute=false`.
-- CST inspect/result sanity tools also default to `execute=false`; they return the planned CST Python command until explicitly executed.
-- Resource/process inspection tools default to `execute=false`; run them with `execute=true` before long jobs.
-- Process cleanup requires explicit `pids`, `execute=true`, and `allow_terminate=true`.
-- CST helpers do not save by default. `cst.close_project` calls `Project.close()` for `no_save`; it calls `Project.save(...)` only when `save_policy` is explicitly `save_copy` or `save_original`.
-- `records.*` only writes inside this repository.
-- Macro reads are limited to the detected CST macro root, normally
-  `%CST_MACRO_ROOT%` or `<CST_INSTALL_DIR>\Library\Macros`.
-
-## Example Tool Calls
-
-Search macros:
-
-```json
-{
-  "name": "docs.search_macros",
-  "arguments": {
-    "query": "DiscretePort Farfield Monitor",
-    "category": "Solver",
-    "application": "MWS",
-    "limit": 10
-  }
-}
-```
-
-List CST recipe categories:
-
-```json
-{
-  "name": "knowledge.list_categories",
-  "arguments": {}
-}
-```
-
-Read the default port workflow before rediscovering macro calls:
-
-```json
-{
-  "name": "knowledge.get_recipe",
-  "arguments": {
-    "category": "ports"
-  }
-}
-```
-
-Search known CST failure lessons:
-
-```json
-{
-  "name": "knowledge.search_lessons",
-  "arguments": {
-    "query": "Untitled Project.close modal"
-  }
-}
-```
-
-Extract a reusable History block:
-
-```json
-{
-  "name": "history.extract_pattern",
-  "arguments": {
-    "query": "DiscretePort",
-    "max_blocks": 3
-  }
-}
-```
-
-Create a design manifest:
-
-```json
-{
-  "name": "records.create_variant",
-  "arguments": {
-    "project_path": "D:\\CSTapi\\tmp_case3.cst",
-    "objective": "Narrow antenna slot and compare S11 and gain",
-    "save_policy": "save_copy"
-  }
-}
-```
-
-Plan a read-only project inspection:
-
-```json
-{
-  "name": "cst.inspect_project",
-  "arguments": {
-    "project_path": "D:\\CSTapi\\tmp_case3.cst",
-    "include_results": true,
-    "max_tree_items": 300
-  }
-}
-```
-
-Close a project without triggering a GUI save prompt:
-
-```json
-{
-  "name": "cst.close_project",
-  "arguments": {
-    "project_path": "D:\\CSTapi\\tmp_case3.cst",
-    "save_policy": "no_save",
-    "require_open": true
-  }
-}
-```
-
-Save a job copy and then close it:
-
-```json
-{
-  "name": "cst.close_project",
-  "arguments": {
-    "project_path": "D:\\CSTapi\\tmp_case3.cst",
-    "save_policy": "save_copy",
-    "save_copy_path": "D:\\CSTapi\\runs\\tmp_case3_reviewed.cst",
-    "allow_overwrite": false,
-    "require_open": true
-  }
-}
-```
-
-Inspect existing geometry evidence before a model edit:
-
-```json
-{
-  "name": "cst.inspect_geometry",
-  "arguments": {
-    "project_path": "D:\\CSTapi\\tmp_case3.cst",
-    "require_open": true,
-    "max_tree_items": 500
-  }
-}
-```
-
-Check physics setup before solving:
-
-```json
-{
-  "name": "cst.inspect_physics_setup",
-  "arguments": {
-    "project_path": "D:\\CSTapi\\tmp_case3.cst",
-    "max_tree_items": 500
-  }
-}
-```
-
-Plan result sanity checks:
-
-```json
-{
-  "name": "cst.result_sanity",
-  "arguments": {
-    "project_path": "D:\\CSTapi\\tmp_case3.cst",
-    "passive": true
-  }
-}
-```
-
-Run a long-job resource preflight:
-
-```json
-{
-  "name": "cst.preflight_resources",
-  "arguments": {
-    "project_path": "D:\\CSTapi\\tmp_case3.cst",
-    "min_free_memory_gb": 12,
-    "min_free_disk_gb": 20,
-    "max_cst_processes": 1,
-    "execute": true
-  }
-}
-```
-
-Record a checkpoint:
-
-```json
-{
-  "name": "cst.job_checkpoint",
-  "arguments": {
-    "job_id": "tmp-case3-sweep",
-    "project_path": "D:\\CSTapi\\tmp_case3.cst",
-    "stage": "preflight",
-    "status": "done",
-    "detail": "Resource gate passed before geometry mutation."
-  }
-}
-```
-
-Recover a job after interruption:
-
-```json
-{
-  "name": "cst.recover_job",
-  "arguments": {
-    "job_id": "tmp-case3-sweep"
-  }
-}
-```
-
-Plan selected PID cleanup:
-
-```json
-{
-  "name": "cst.cleanup_stale_processes",
-  "arguments": {
-    "pids": [12345],
-    "force": false
-  }
-}
-```
-
-Plan a live parameter edit without executing:
-
-```json
-{
-  "name": "cst.live_modify_parameter",
-  "arguments": {
-    "project_path": "D:\\CSTapi\\tmp_case3.cst",
-    "parameter": "fmon",
-    "test_value": 1.51,
-    "pause_after_set": 5,
-    "restore": true,
-    "require_open": true
-  }
-}
-```
-
-## CST Python Helper
-
-When `execute=true`, the MCP server calls:
-
-```powershell
-%CST_PYTHON_EXE% D:\CSTapi\mcp\python\cst_ops.py ...
-```
-
-Override the Python path with the tool argument `python_executable` or the
-`CST_PYTHON_EXE` environment variable. On this machine the working CST Python is
-`D:\CST\Python\python.exe`.
+No live CST run or new test execution was performed during this restructuring.

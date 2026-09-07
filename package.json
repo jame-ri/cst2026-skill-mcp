@@ -1,0 +1,13 @@
+{
+  "name": "cst-api-harness",
+  "version": "0.4.0",
+  "private": true,
+  "type": "module",
+  "description": "Direct CST APIs with an agent-neutral MCP adapter and verified extension library.",
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "start": "node mcp/src/server.js"
+  }
+}

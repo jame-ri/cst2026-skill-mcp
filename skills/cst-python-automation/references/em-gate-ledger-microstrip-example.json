@@ -16,7 +16,8 @@
     "reference_checked": [
       {
         "source_type": "official_help",
-        "path_or_tool": "D:\\CST\\Online Help\\mergedProjects\\3D\\special_overview\\special_overview_waveguideover.htm",
+        "path_or_tool": "Online Help/mergedProjects/3D/special_overview/special_overview_waveguideover.htm",
+        "source_root": "cst_install",
         "topic": "Waveguide Port Overview / Microstrip Lines",
         "finding": "The microstrip port section and dimensions are derived from the CST Help waveguide-port microstrip guidance."
       }
@@ -28,11 +29,12 @@
       "air_region"
     ],
     "dimension_basis": {
-      "source_path": "D:\\CST\\Online Help\\mergedProjects\\3D\\special_overview\\special_overview_waveguideover.htm",
+      "source_path": "Online Help/mergedProjects/3D/special_overview/special_overview_waveguideover.htm",
+      "source_root": "cst_install",
       "source_topic": "Microstrip Lines / Port Modes / Port Dimensions",
       "chosen_rule": "Use the CST Help extension-factor method for the declared microstrip feed; record chosen dimensions from the help topic instead of relying on memory.",
       "chosen_parameters": {
-        "k": 5.0,
+        "k": 5,
         "bottom_extension": "substrate_height_to_ground",
         "top_and_side_extension": "k_times_substrate_height"
       }
@@ -69,7 +71,8 @@
       "reference_checked": [
         {
           "source_type": "official_help",
-          "path_or_tool": "D:\\CST\\Online Help\\mergedProjects\\3D\\special_overview\\special_overview_waveguideover.htm",
+          "path_or_tool": "Online Help/mergedProjects/3D/special_overview/special_overview_waveguideover.htm",
+          "source_root": "cst_install",
           "topic": "Microstrip Lines",
           "finding": "The Help topic identifies microstrip as a field-bearing transmission-line structure requiring the relevant field region to be modeled."
         }
@@ -125,7 +128,8 @@
       "reference_checked": [
         {
           "source_type": "official_help",
-          "path_or_tool": "D:\\CST\\Online Help\\mergedProjects\\3D\\special_overview\\special_overview_waveguideover.htm",
+          "path_or_tool": "Online Help/mergedProjects/3D/special_overview/special_overview_waveguideover.htm",
+          "source_root": "cst_install",
           "topic": "Microstrip Lines / Port Modes / Port Dimensions and Port Creation",
           "finding": "The port type, transverse section, and dimension basis are checked against the microstrip waveguide-port Help topic before the port is marked pass."
         }
@@ -139,7 +143,8 @@
       "reference_checked": [
         {
           "source_type": "official_help",
-          "path_or_tool": "D:\\CST\\Online Help\\mergedProjects\\3D\\special_overview\\special_overview_waveguideover.htm",
+          "path_or_tool": "Online Help/mergedProjects/3D/special_overview/special_overview_waveguideover.htm",
+          "source_root": "cst_install",
           "topic": "Microstrip Lines and waveguide-port boundaries",
           "finding": "The Help topic notes the air region above microstrip and the port-boundary behavior used for port-mode calculation."
         }
@@ -153,7 +158,8 @@
       "reference_checked": [
         {
           "source_type": "official_help",
-          "path_or_tool": "D:\\CST\\Online Help\\mergedProjects\\3D\\special_overview\\special_overview_waveguideover.htm",
+          "path_or_tool": "Online Help/mergedProjects/3D/special_overview/special_overview_waveguideover.htm",
+          "source_root": "cst_install",
           "topic": "Inhomogeneous waveguide ports and waveguide-port mesh view",
           "finding": "Solver and mesh risks are recorded from the relevant waveguide-port Help sections before simulation is withheld."
         }
@@ -203,5 +209,10 @@
       "pass_condition": "The delivery does not claim antenna performance and names the next allowed action.",
       "unchecked_risk": "User review and optional simulation remain future steps."
     }
+  },
+  "simulation_state": {
+    "solver_executed": false,
+    "port_modes_executed": false,
+    "results_validated": false
   }
 }

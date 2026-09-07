@@ -1,0 +1,14 @@
+{
+  "mcpServers": {
+    "cst-api": {
+      "command": "node",
+      "args": [
+        "mcp/src/server.js"
+      ],
+      "env": {
+        "CST_MCP_PROFILE": "control",
+        "CST_ENABLE_API_EXTENSIONS": "0"
+      }
+    }
+  }
+}

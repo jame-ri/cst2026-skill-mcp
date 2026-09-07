@@ -1,8 +1,9 @@
 # CST Error Cookbook
 
 Use this file when a CST automation call fails, stalls, produces a modal dialog,
-or makes the agent rediscover a working pattern. Add new lessons whenever a
-failure is diagnosed and corrected.
+or makes the agent rediscover a working pattern. This is the bundled seed
+knowledge. Record new repairs through operation/checkpoint capture as described
+in [harness.md](harness.md); do not append session history to this static file.
 
 ## lesson: update-manager-license-popup
 

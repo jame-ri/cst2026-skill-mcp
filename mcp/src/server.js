@@ -1,8 +1,15 @@
 #!/usr/bin/env node
 import fs from "node:fs";
+import { CstController } from "../../cst_api/controller.js";
+import { directTools } from "../../cst_api/catalog.js";
+import { ApiRegistry } from "../../api_library/registry.js";
+import { apiTools, callApiTool } from "./api-tools.js";
 import path from "node:path";
-import { spawn } from "node:child_process";
+import { randomUUID } from "node:crypto";
+import { InputError, validateArguments, atomicJson, withRecordLock, runHelper } from "../../shared/runtime.js";
+import { serveStdio, rpcError, toolContent } from "./mcp-protocol.js";
 import { fileURLToPath } from "node:url";
+import { KnowledgeStore, knowledgeTools, containedPath, relativePath } from "../../harness/knowledge-store.js";
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -14,16 +21,21 @@ const cstHelperPath = path.join(repoRoot, "mcp", "python", "cst_ops.py");
 const skillReferencesRoot = path.join(repoRoot, "skills", "cst-python-automation", "references");
 const callRecipesPath = path.join(skillReferencesRoot, "cst-call-recipes.md");
 const errorCookbookPath = path.join(skillReferencesRoot, "cst-error-cookbook.md");
+const knowledgeStore = new KnowledgeStore(repoRoot);
+const directController = new CstController(repoRoot, () => defaultCstPython({}));
+const apiRegistry = new ApiRegistry(repoRoot, directController);
 
 let macroRowsCache = null;
-let inputBuffer = "";
-let framedTransport = false;
+
 
 const textExtensions = new Set([".htm", ".html", ".md", ".py", ".txt", ".bas", ".cls", ".mcr", ".mcs"]);
 
 const cstPaths = detectCstPaths();
 
-const tools = [
+const availableTools = [
+  ...directTools,
+  ...apiTools,
+  ...knowledgeTools,
   {
     name: "docs.search_macros",
     description: "Search the indexed CST installed macro library for VBA/History command examples.",
@@ -45,7 +57,7 @@ const tools = [
     inputSchema: {
       type: "object",
       properties: {
-        source_path: { type: "string", description: "Absolute original macro path under the detected CST macro root." },
+        source_path: { type: "string", description: "Legacy alias for a relative path under the configured CST macro root." },
         relative_path: { type: "string", description: "Inventory relative_path, for example Solver\\Ports\\Set Port Mode Evaluation Frequency^+MWS+PS.mcr." },
         max_chars: { type: "integer", minimum: 500, maximum: 100000, default: 12000 }
       }
@@ -352,6 +364,7 @@ const tools = [
       type: "object",
       properties: {
         query: { type: "string", description: "Search terms such as Untitled Project.close, DiscretePort waveguide, Update Manager, Boolean, or StoreParameter." },
+        include_candidates: { type: "boolean", default: false, description: "Include unverified/disputed learned entries for diagnosis only." },
         limit: { type: "integer", minimum: 1, maximum: 50, default: 10 },
         max_chars: { type: "integer", minimum: 200, maximum: 20000, default: 4000 }
       },
@@ -359,6 +372,23 @@ const tools = [
     }
   }
 ];
+
+const profile = process.env.CST_MCP_PROFILE || "control";
+if (!["control", "full"].includes(profile)) throw new Error("CST_MCP_PROFILE must be control or full.");
+const controlNames = new Set([...directTools, ...apiTools].map(tool => tool.name));
+const tools = profile === "full" ? availableTools : availableTools.filter(tool => controlNames.has(tool.name));
+
+for (const tool of tools) {
+  tool.inputSchema.additionalProperties = false;
+  for (const key of ["min_free_memory_gb", "min_free_disk_gb", "max_single_cst_memory_gb"]) {
+    const property = tool.inputSchema.properties?.[key];
+    if (property) { property.minimum = 0; property.maximum = 100000; }
+  }
+  if (tool.inputSchema.properties?.run_id) tool.inputSchema.properties.run_id.maximum = 1000000;
+  for (const key of ["pids", "cst_pids"]) {
+    if (tool.inputSchema.properties?.[key]) tool.inputSchema.properties[key].items.minimum = 1;
+  }
+}
 
 function nowIso() {
   return new Date().toISOString();
@@ -377,16 +407,15 @@ function firstExisting(paths) {
 }
 
 function detectCstInstallDir() {
-  const envRoot = process.env.CST_INSTALL_DIR || process.env.CST_HOME || process.env.CST_ROOT;
-  const candidates = unique([
-    envRoot,
-    "D:\\CST",
-    "C:\\CST",
-    "C:\\Program Files\\CST Studio Suite 2026",
-    "C:\\Program Files\\Dassault Systemes\\CST Studio Suite 2026",
-    "C:\\Program Files\\SIMULIA\\CST Studio Suite 2026"
+  const explicit = process.env.CST_INSTALL_DIR || process.env.CST_HOME || process.env.CST_ROOT;
+  if (explicit) return explicit;
+  const base = process.env.ProgramFiles;
+  if (!base) return null;
+  return firstExisting([
+    path.join(base, "CST Studio Suite 2026"),
+    path.join(base, "Dassault Systemes", "CST Studio Suite 2026"),
+    path.join(base, "SIMULIA", "CST Studio Suite 2026")
   ]);
-  return firstExisting(candidates);
 }
 
 function detectCstPaths() {
@@ -399,8 +428,7 @@ function detectCstPaths() {
   ]);
   const macroCandidates = unique([
     process.env.CST_MACRO_ROOT,
-    installDir ? path.join(installDir, "Library", "Macros") : null,
-    "D:\\CST\\Library\\Macros"
+    installDir ? path.join(installDir, "Library", "Macros") : null
   ]);
   const designEnvironmentCandidates = unique([
     process.env.CST_DESIGN_ENV_EXE,
@@ -427,7 +455,7 @@ function safeNumber(value, fallback, min, max) {
 function splitTerms(query) {
   return String(query ?? "")
     .toLowerCase()
-    .split(/[^a-z0-9_+\-.]+/i)
+    .split(/[^\p{L}\p{N}_+\-.]+/u)
     .filter(Boolean);
 }
 
@@ -519,8 +547,8 @@ function searchMacros(args) {
       applications: row.applications,
       visibility: row.visibility,
       keywords: row.keywords,
-      relative_path: row.relative_path,
-      source_path: row.source_path,
+      relative_path: row.relative_path.replaceAll("\\", "/"),
+      source_path: row.relative_path.replaceAll("\\", "/"),
       first_comment: row.first_comment
     }));
 
@@ -537,27 +565,10 @@ function pathInside(child, parent) {
 }
 
 function findMacroPath(args) {
-  const rows = loadMacroRows();
-  if (args.relative_path) {
-    const requested = normalizeSlashes(args.relative_path).toLowerCase();
-    const row = rows.find((item) => normalizeSlashes(item.relative_path).toLowerCase() === requested);
-    if (!row) throw new Error(`Macro relative_path not found in inventory: ${args.relative_path}`);
-    const detectedPath = path.join(cstPaths.macroRoot, normalizeSlashes(row.relative_path));
-    return fs.existsSync(detectedPath) ? detectedPath : row.source_path;
-  }
-  if (args.source_path) {
-    const requested = normalizeSlashes(args.source_path);
-    const row = rows.find((item) => normalizeSlashes(item.source_path).toLowerCase() === requested.toLowerCase());
-    if (row) {
-      const detectedPath = path.join(cstPaths.macroRoot, normalizeSlashes(row.relative_path));
-      return fs.existsSync(detectedPath) ? detectedPath : row.source_path;
-    }
-    if (!normalizeSlashes(requested).toLowerCase().startsWith(normalizeSlashes(cstPaths.macroRoot).toLowerCase() + "\\")) {
-      throw new Error(`source_path must be under ${cstPaths.macroRoot}`);
-    }
-    return requested;
-  }
-  throw new Error("Provide source_path or relative_path.");
+  if (!cstPaths.macroRoot) throw new Error("Configure CST_MACRO_ROOT or CST_INSTALL_DIR before reading installed macros.");
+  const relative = args.relative_path ?? args.source_path;
+  if (!relative) throw new InputError("Provide a macro-relative path.");
+  return containedPath(cstPaths.macroRoot, relative);
 }
 
 function readTextFile(filePath, maxChars) {
@@ -579,16 +590,13 @@ function readTextFile(filePath, maxChars) {
 function readMacro(args) {
   const maxChars = safeNumber(args.max_chars, 12000, 500, 100000);
   const filePath = findMacroPath(args);
+  const relative = path.relative(fs.realpathSync(cstPaths.macroRoot), filePath).replaceAll("\\", "/");
   const data = readTextFile(filePath, maxChars);
-  const row = loadMacroRows().find((item) => normalizeSlashes(item.source_path).toLowerCase() === normalizeSlashes(filePath).toLowerCase());
+  const row = loadMacroRows().find((item) => normalizeSlashes(item.relative_path).toLowerCase() === normalizeSlashes(relative).toLowerCase());
   return {
-    source_path: filePath,
-    relative_path: row?.relative_path ?? null,
-    title: row?.title ?? path.basename(filePath),
-    extension: path.extname(filePath).slice(1),
-    chars: data.chars,
-    truncated: data.truncated,
-    text: data.text
+    source_path: relative, source_root: "cst_macros", relative_path: relative,
+    title: row?.title ?? path.basename(filePath), extension: path.extname(filePath).slice(1),
+    chars: data.chars, truncated: data.truncated, text: data.text
   };
 }
 
@@ -596,6 +604,7 @@ function walkFiles(root, output = []) {
   if (!fs.existsSync(root)) return output;
   for (const entry of fs.readdirSync(root, { withFileTypes: true })) {
     const full = path.join(root, entry.name);
+    if (entry.isSymbolicLink()) continue;
     if (entry.isDirectory()) {
       if (entry.name === ".git" || entry.name === "MathJax") continue;
       walkFiles(full, output);
@@ -620,7 +629,7 @@ function searchOfficialDocs(args) {
   const terms = splitTerms(query);
   const limit = safeNumber(args.limit, 15, 1, 50);
   const scope = String(args.scope ?? "").replace(/^official-docs[\\/]/i, "");
-  const root = scope ? path.join(officialDocsRoot, scope) : officialDocsRoot;
+  const root = scope ? containedPath(officialDocsRoot, scope) : officialDocsRoot;
   if (!pathInside(root, officialDocsRoot)) throw new Error("scope must stay under official-docs.");
 
   const matches = [];
@@ -649,7 +658,7 @@ function searchOfficialDocs(args) {
 function readOfficialDoc(args) {
   const maxChars = safeNumber(args.max_chars, 20000, 500, 200000);
   const cleaned = String(args.relative_path ?? "").replace(/^official-docs[\\/]/i, "");
-  const full = path.join(officialDocsRoot, cleaned);
+  const full = containedPath(officialDocsRoot, cleaned);
   if (!pathInside(full, officialDocsRoot)) throw new Error("relative_path must stay under official-docs.");
   const data = readTextFile(full, maxChars);
   return {
@@ -719,6 +728,7 @@ function sectionSummary(text) {
 }
 
 function listKnowledgeCategories() {
+  const learned = knowledgeStore.sections({ kind: "workflow" });
   const categories = recipeSections().map((section) => ({
     category: normalizeHeading(section.heading),
     heading: section.heading,
@@ -726,8 +736,9 @@ function listKnowledgeCategories() {
   }));
   return {
     source_path: path.relative(repoRoot, callRecipesPath),
-    categories: categories.map((item) => item.category),
-    entries: categories
+    categories: [...new Set([...categories.map((item) => item.category), ...learned.map((item) => normalizeHeading(item.category))])],
+    entries: categories,
+    learned: learned.map(({ id, category, heading, status }) => ({ id, category, heading, status }))
   };
 }
 
@@ -735,11 +746,15 @@ function getKnowledgeRecipe(args) {
   const category = normalizeHeading(args.category);
   const maxChars = safeNumber(args.max_chars, 12000, 500, 50000);
   const sections = recipeSections();
+  const learned = knowledgeStore.sections({ kind: "workflow" })
+    .filter((item) => normalizeHeading(item.category) === category)
+    .map((item) => ({ ...item, truncated: item.text.length > maxChars, text: item.text.slice(0, maxChars) }));
   const section = sections.find((item) => normalizeHeading(item.heading) === category);
   if (!section) {
     return {
       category,
-      found: false,
+      found: learned.length > 0,
+      learned,
       available_categories: sections.map((item) => normalizeHeading(item.heading))
     };
   }
@@ -747,6 +762,7 @@ function getKnowledgeRecipe(args) {
   return {
     category,
     found: true,
+    learned,
     source_path: path.relative(repoRoot, callRecipesPath),
     chars: section.text.length,
     truncated,
@@ -754,12 +770,14 @@ function getKnowledgeRecipe(args) {
   };
 }
 
-function searchKnowledgeLessons(args) {
+function searchKnowledgeLessons(args, workflowsOnly = false) {
   const query = String(args.query ?? "").trim();
   const terms = splitTerms(query);
   const limit = safeNumber(args.limit, 10, 1, 50);
   const maxChars = safeNumber(args.max_chars, 4000, 200, 20000);
-  const matches = allKnowledgeSections()
+  const learned = knowledgeStore.sections({ kind: workflowsOnly ? "workflow" : undefined,
+    includeCandidates: args.include_candidates === true });
+  const matches = [...(workflowsOnly ? [] : allKnowledgeSections()), ...learned]
     .map((section) => {
       const haystack = `${section.source} ${section.heading} ${section.text}`;
       return { section, score: scoreText(haystack, terms) };
@@ -772,6 +790,7 @@ function searchKnowledgeLessons(args) {
       return {
         score,
         source: section.source,
+        ...(section.id ? { id: section.id, status: section.status, kind: section.kind, category: section.category } : {}),
         heading: section.heading,
         key: normalizeHeading(section.heading),
         text: truncated ? section.text.slice(0, maxChars) : section.text,
@@ -876,9 +895,7 @@ function lineNumberAt(text, index) {
 }
 
 function safeRepoPath(requested, defaultRoot = repoRoot) {
-  const full = path.isAbsolute(requested) ? path.resolve(requested) : path.resolve(defaultRoot, requested);
-  if (!pathInside(full, repoRoot)) throw new Error(`Path must stay under repository root: ${repoRoot}`);
-  return full;
+  return containedPath(defaultRoot, requested);
 }
 
 function slug(value) {
@@ -894,8 +911,8 @@ function createVariant(args) {
   if (!["no_save", "save_copy", "save_original"].includes(savePolicy)) throw new Error("Invalid save_policy.");
   const timestamp = nowIso().replace(/[:.]/g, "-");
   const designId = args.design_id || `design-${timestamp}`;
-  const outputBase = args.output_dir ? safeRepoPath(args.output_dir) : recordsRoot;
-  const dir = path.join(outputBase, `${timestamp}_${slug(designId)}`);
+  const outputBase = safeRepoPath(args.output_dir || "design-records");
+  const dir = path.join(outputBase, `${timestamp}_${slug(designId)}_${randomUUID().slice(0, 8)}`);
   if (!pathInside(dir, repoRoot)) throw new Error("output_dir must stay under repository root.");
   fs.mkdirSync(dir, { recursive: true });
   const manifest = {
@@ -923,13 +940,17 @@ function createVariant(args) {
     errors: []
   };
   const manifestPath = path.join(dir, "manifest.json");
-  fs.writeFileSync(manifestPath, `${JSON.stringify(manifest, null, 2)}\n`, "utf8");
-  return { manifest_path: manifestPath, manifest };
+  atomicJson(manifestPath, manifest);
+  return { manifest_path: path.relative(repoRoot, manifestPath).replaceAll("\\", "/"), manifest };
 }
 
-function appendOperation(args) {
+async function appendOperation(args) {
+  if (!args.operation || typeof args.operation !== "object" || Array.isArray(args.operation)) throw new Error("operation must be an object.");
   const manifestPath = safeRepoPath(args.manifest_path);
+  fs.mkdirSync(path.dirname(manifestPath), { recursive: true });
+  return withRecordLock(manifestPath, () => {
   const manifest = JSON.parse(fs.readFileSync(manifestPath, "utf8"));
+  if (!manifest || typeof manifest !== "object" || Array.isArray(manifest)) throw new InputError("Manifest must be an object.");
   const operation = {
     recorded_at: nowIso(),
     ...args.operation
@@ -948,12 +969,16 @@ function appendOperation(args) {
     manifest.artifacts = [...(manifest.artifacts ?? []), ...operation.artifacts];
   }
   manifest.updated_at = nowIso();
-  fs.writeFileSync(manifestPath, `${JSON.stringify(manifest, null, 2)}\n`, "utf8");
-  return { manifest_path: manifestPath, appended: operation, manifest };
+  atomicJson(manifestPath, manifest);
+  const relativeManifest = path.relative(repoRoot, manifestPath).replaceAll("\\", "/");
+  const knowledge = knowledgeStore.captureAutomatically({ manifest_path: relativeManifest,
+    collection: "operations", index: manifest.operations.length - 1 });
+  return { manifest_path: relativeManifest, appended: operation, manifest, knowledge };
+  });
 }
 
 function jobRoot() {
-  const root = path.join(recordsRoot, "jobs");
+  const root = safeRepoPath("design-records/jobs");
   fs.mkdirSync(root, { recursive: true });
   return root;
 }
@@ -965,7 +990,8 @@ function resolveJobManifest(args, createIfMissing = false) {
     return manifestPath;
   }
   const jobId = args.job_id || `job-${nowIso().replace(/[:.]/g, "-")}`;
-  const dir = path.join(jobRoot(), slug(jobId));
+  jobRoot();
+  const dir = safeRepoPath("design-records/jobs/" + slug(jobId));
   if (!pathInside(dir, repoRoot)) throw new Error("job_id resolved outside repository.");
   if (createIfMissing) fs.mkdirSync(dir, { recursive: true });
   const manifestPath = path.join(dir, "job.json");
@@ -978,8 +1004,10 @@ function readJsonIfExists(filePath, fallback) {
   return JSON.parse(fs.readFileSync(filePath, "utf8"));
 }
 
-function cstJobCheckpoint(args) {
+async function cstJobCheckpoint(args) {
   const manifestPath = resolveJobManifest(args, true);
+  fs.mkdirSync(path.dirname(manifestPath), { recursive: true });
+  return withRecordLock(manifestPath, () => {
   const manifest = readJsonIfExists(manifestPath, {
     schema_version: "cstapi.job-manifest.v1",
     created_at: nowIso(),
@@ -989,6 +1017,8 @@ function cstJobCheckpoint(args) {
     warnings: [],
     errors: []
   });
+  if (!manifest || typeof manifest !== "object" || Array.isArray(manifest)) throw new InputError("Manifest must be an object.");
+  if (args.job_id && manifest.job_id && args.job_id !== manifest.job_id) throw new InputError("job_id does not match manifest.");
   const checkpoint = {
     recorded_at: nowIso(),
     stage: args.stage,
@@ -1019,13 +1049,19 @@ function cstJobCheckpoint(args) {
   manifest.warnings = [...(manifest.warnings ?? []), ...checkpoint.warnings];
   manifest.errors = [...(manifest.errors ?? []), ...checkpoint.errors];
   fs.mkdirSync(path.dirname(manifestPath), { recursive: true });
-  fs.writeFileSync(manifestPath, `${JSON.stringify(manifest, null, 2)}\n`, "utf8");
-  return { manifest_path: manifestPath, checkpoint, manifest };
+  atomicJson(manifestPath, manifest);
+  const relativeManifest = path.relative(repoRoot, manifestPath).replaceAll("\\", "/");
+  const knowledge = knowledgeStore.captureAutomatically({ manifest_path: relativeManifest,
+    collection: "checkpoints", index: manifest.checkpoints.length - 1 });
+  return { manifest_path: relativeManifest, checkpoint, manifest, knowledge };
+  });
 }
 
 function cstRecoverJob(args) {
   const manifestPath = resolveJobManifest(args, false);
   const manifest = JSON.parse(fs.readFileSync(manifestPath, "utf8"));
+  if (!manifest || typeof manifest !== "object" || Array.isArray(manifest)) throw new InputError("Manifest must be an object.");
+  if (args.job_id && manifest.job_id !== args.job_id) throw new InputError("job_id does not match manifest.");
   const checkpoints = Array.isArray(manifest.checkpoints) ? manifest.checkpoints : [];
   const last = checkpoints.at(-1) ?? null;
   const lastDone = [...checkpoints].reverse().find((item) => item.status === "done") ?? null;
@@ -1045,7 +1081,7 @@ function cstRecoverJob(args) {
     }
   }
   return {
-    manifest_path: manifestPath,
+    manifest_path: path.relative(repoRoot, manifestPath).replaceAll("\\", "/"),
     job_id: manifest.job_id ?? null,
     project_path: manifest.project_path ?? null,
     current_stage: manifest.current_stage ?? last?.stage ?? null,
@@ -1060,16 +1096,21 @@ function cstRecoverJob(args) {
 }
 
 function defaultCstPython(args) {
-  return args.python_executable || cstPaths.pythonExecutable || "python.exe";
+  if (args.python_executable) {
+    return /^[A-Za-z0-9_.-]+$/.test(args.python_executable)
+      ? args.python_executable : containedPath(repoRoot, args.python_executable);
+  }
+  return process.env.CST_PYTHON_EXE || cstPaths.pythonExecutable ||
+    (process.platform === "win32" ? "python.exe" : "python3");
 }
 
 function buildCstCommand(kind, args) {
   const python = defaultCstPython(args);
   const base = [python, cstHelperPath, kind];
-  if (args.project_path) base.push("--project", args.project_path);
+  if (args.project_path) base.push("--project", containedPath(repoRoot, args.project_path));
   if (kind === "close-project") {
     base.push("--save-policy", args.save_policy ?? "no_save");
-    if (args.save_copy_path) base.push("--save-copy-path", String(args.save_copy_path));
+    if (args.save_copy_path) base.push("--save-copy-path", containedPath(repoRoot, args.save_copy_path));
     if (args.include_results === true) base.push("--include-results");
     if (args.allow_overwrite === true) base.push("--allow-overwrite");
     if (args.require_open !== false) base.push("--require-open");
@@ -1099,14 +1140,14 @@ function buildCstCommand(kind, args) {
     base.push("--max-tree-items", String(safeNumber(args.max_tree_items, 500, 20, 5000)));
   }
   if (kind === "process-status") {
-    if (args.work_dir) base.push("--work-dir", String(args.work_dir));
+    if (args.work_dir) base.push("--work-dir", containedPath(repoRoot, args.work_dir));
     if (args.include_commandline !== false) base.push("--include-commandline");
     if (Array.isArray(args.pattern)) {
       for (const pattern of args.pattern) base.push("--pattern", String(pattern));
     }
   }
   if (kind === "preflight-resources") {
-    if (args.work_dir) base.push("--work-dir", String(args.work_dir));
+    if (args.work_dir) base.push("--work-dir", containedPath(repoRoot, args.work_dir));
     if (args.include_commandline !== false) base.push("--include-commandline");
     if (Array.isArray(args.pattern)) {
       for (const pattern of args.pattern) base.push("--pattern", String(pattern));
@@ -1127,32 +1168,7 @@ function buildCstCommand(kind, args) {
 }
 
 function runProcess(argv, timeoutSec) {
-  return new Promise((resolve) => {
-    const started = Date.now();
-    const child = spawn(argv[0], argv.slice(1), { cwd: repoRoot, windowsHide: true });
-    let stdout = "";
-    let stderr = "";
-    const timeout = setTimeout(() => {
-      child.kill();
-    }, timeoutSec * 1000);
-    child.stdout.on("data", (chunk) => {
-      stdout += chunk.toString();
-    });
-    child.stderr.on("data", (chunk) => {
-      stderr += chunk.toString();
-    });
-    child.on("close", (code, signal) => {
-      clearTimeout(timeout);
-      resolve({
-        command: argv,
-        exit_code: code,
-        signal,
-        elapsed_ms: Date.now() - started,
-        stdout,
-        stderr
-      });
-    });
-  });
+  return runHelper(argv, { cwd: repoRoot, timeoutMs: timeoutSec * 1000 });
 }
 
 async function cstClosedStart(args) {
@@ -1288,7 +1304,20 @@ async function cstCleanupStaleProcesses(args) {
 }
 
 async function callTool(name, args) {
+  if (directController.names.has(name)) return directController.call(name, args);
+  if (name.startsWith("api.")) return callApiTool(apiRegistry, name, args);
+  if ((directController.active || directController.busy) && name.startsWith("cst.") &&
+      !["cst.process_status", "cst.preflight_resources", "cst.job_checkpoint"].includes(name)) {
+    return { ok: false, blocked: true, status: "blocked",
+      message: "A managed direct session is active. Do not mix legacy CST control with session-bound APIs; disconnect explicitly first." };
+  }
   switch (name) {
+    case "knowledge.capture_operation":
+      return knowledgeStore.capture(args);
+    case "knowledge.get_entry":
+      return knowledgeStore.get(args.id);
+    case "knowledge.search_workflows":
+      return searchKnowledgeLessons(args, true);
     case "docs.search_macros":
       return searchMacros(args);
     case "docs.read_macro":
@@ -1338,102 +1367,86 @@ async function callTool(name, args) {
   }
 }
 
-function jsonContent(data) {
-  return {
-    content: [
-      {
-        type: "text",
-        text: JSON.stringify(data, null, 2)
+function portableResult(value) {
+  if (Array.isArray(value)) return value.map(portableResult);
+  if (value && typeof value === "object") return Object.fromEntries(Object.entries(value).map(([key, item]) => [key, portableResult(item)]));
+  if (typeof value !== "string") return value;
+  const bindings = [
+    [process.env.CST_PYTHON_EXE || cstPaths.pythonExecutable, "CST_PYTHON_EXE"],
+    [repoRoot, "."], [cstPaths.macroRoot, "cst-macros"], [cstPaths.installDir, "cst-install"]
+  ].filter(([root]) => root).sort((a, b) => b[0].length - a[0].length);
+  let result = value;
+  for (const [root, label] of bindings) {
+    for (const form of new Set([root, root.replaceAll("\\", "/"), root.replaceAll("\\", "\\\\")])) {
+      for (const separator of ["\\\\", "\\", "/"]) {
+        result = result.replaceAll(form + separator, label === "." ? "" : label + "/");
       }
-    ]
-  };
+      result = result.replaceAll(form, label);
+    }
+  }
+  return result;
+}
+
+function validateToolPaths(args) {
+  for (const key of ["project_path", "save_copy_path", "manifest_path", "output_dir", "work_dir", "relative_path", "source_path", "scope", "python_executable"]) {
+    if (args[key] !== undefined) {
+      try { relativePath(args[key]); } catch { throw new InputError(key + ": use a contained relative path; configure installation bindings in the server environment."); }
+    }
+  }
 }
 
 async function handleMessage(message) {
-  if (!message || typeof message !== "object") return null;
-  if (message.method?.startsWith("notifications/")) return null;
-
+  if (!message || typeof message !== "object" || Array.isArray(message) ||
+      message.jsonrpc !== "2.0" || typeof message.method !== "string" ||
+      (Object.hasOwn(message, "id") && !["string", "number"].includes(typeof message.id))) {
+    return rpcError(null, -32600, "Invalid JSON-RPC request");
+  }
+  // Notifications have no response and must not execute tools accidentally.
+  if (!Object.hasOwn(message, "id")) return null;
+  const id = message.id;
+  const params = message.params === undefined ? {} : message.params;
+  if (!params || typeof params !== "object" || Array.isArray(params)) return rpcError(id, -32602, "params must be an object");
+  if (message.method === "initialize") {
+    const versions = ["2025-06-18", "2024-11-05"];
+    return { jsonrpc: "2.0", id, result: {
+      protocolVersion: versions.includes(params.protocolVersion) ? params.protocolVersion : versions[0],
+      capabilities: { tools: {} }, serverInfo: { name: "cst2026-mcp", version: "0.4.0" }
+    } };
+  }
+  if (message.method === "ping") return { jsonrpc: "2.0", id, result: {} };
+  if (message.method === "tools/list") return { jsonrpc: "2.0", id, result: { tools } };
+  if (message.method !== "tools/call") return rpcError(id, -32601, "Method not found");
+  const tool = tools.find((item) => item.name === params.name);
+  if (!tool) return rpcError(id, -32602, "Unknown tool");
+  const args = params.arguments === undefined ? {} : params.arguments;
   try {
-    if (message.method === "initialize") {
-      return {
-        jsonrpc: "2.0",
-        id: message.id,
-        result: {
-          protocolVersion: "2024-11-05",
-          capabilities: { tools: {} },
-          serverInfo: { name: "cst2026-mcp", version: "0.1.0" }
-        }
-      };
-    }
-    if (message.method === "tools/list") {
-      return { jsonrpc: "2.0", id: message.id, result: { tools } };
-    }
-    if (message.method === "tools/call") {
-      const result = await callTool(message.params?.name, message.params?.arguments ?? {});
-      return { jsonrpc: "2.0", id: message.id, result: jsonContent(result) };
-    }
-    return {
-      jsonrpc: "2.0",
-      id: message.id,
-      error: { code: -32601, message: `Method not found: ${message.method}` }
-    };
+    validateArguments(args, tool.inputSchema);
+    validateToolPaths(args);
+    if (tool.name === "cst.recover_job" && !args.manifest_path && !args.job_id) throw new InputError("Recovery requires manifest_path or job_id.");
+    if (tool.name === "cst.close_project" && args.save_policy === "save_copy" && !args.save_copy_path) throw new InputError("save_copy requires save_copy_path.");
+    if (tool.name === "docs.read_macro" && !args.relative_path && !args.source_path) throw new InputError("A macro-relative path is required.");
   } catch (error) {
-    return {
-      jsonrpc: "2.0",
-      id: message.id,
-      error: {
-        code: -32000,
-        message: error instanceof Error ? error.message : String(error)
-      }
-    };
+    return rpcError(id, -32602, portableResult(error.message));
+  }
+  try {
+    const result = await callTool(tool.name, args);
+    if (result.execute === false && !result.blocked) result.status = "planned";
+    if (result.helper_result) result.stdout = JSON.stringify(result.helper_result, null, 2);
+    const failed = result.ok === false || result.blocked === true || result.status === "error";
+    return { jsonrpc: "2.0", id, result: toolContent(portableResult(result), failed) };
+  } catch (error) {
+    if (error instanceof InputError) return rpcError(id, -32602, portableResult(error.message));
+    return { jsonrpc: "2.0", id, result: toolContent({
+      status: "failed", error: error.code || "tool_execution_error",
+      message: portableResult(error.message)
+    }, true) };
   }
 }
 
-function sendMessage(message) {
-  if (!message) return;
-  const payload = JSON.stringify(message);
-  if (framedTransport) {
-    process.stdout.write(`Content-Length: ${Buffer.byteLength(payload, "utf8")}\r\n\r\n${payload}`);
-  } else {
-    process.stdout.write(`${payload}\n`);
-  }
-}
-
-async function dispatch(raw) {
-  if (!raw.trim()) return;
-  const message = JSON.parse(raw);
-  sendMessage(await handleMessage(message));
-}
-
-async function processInput() {
-  while (inputBuffer.length > 0) {
-    if (inputBuffer.startsWith("Content-Length:")) {
-      framedTransport = true;
-      const headerEnd = inputBuffer.indexOf("\r\n\r\n");
-      if (headerEnd < 0) return;
-      const header = inputBuffer.slice(0, headerEnd);
-      const match = header.match(/Content-Length:\s*(\d+)/i);
-      if (!match) throw new Error("Invalid Content-Length header.");
-      const length = Number(match[1]);
-      const start = headerEnd + 4;
-      if (inputBuffer.length < start + length) return;
-      const raw = inputBuffer.slice(start, start + length);
-      inputBuffer = inputBuffer.slice(start + length);
-      await dispatch(raw);
-    } else {
-      const newline = inputBuffer.indexOf("\n");
-      if (newline < 0) return;
-      const raw = inputBuffer.slice(0, newline);
-      inputBuffer = inputBuffer.slice(newline + 1);
-      await dispatch(raw);
-    }
-  }
-}
-
-process.stdin.setEncoding("utf8");
-process.stdin.on("data", (chunk) => {
-  inputBuffer += chunk;
-  processInput().catch((error) => {
-    console.error(error);
-  });
+serveStdio(handleMessage);
+process.stdin.once("end", () => directController.stop());
+process.stdin.once("close", () => directController.stop());
+for (const signal of ["SIGINT", "SIGTERM"]) process.once(signal, () => {
+  directController.stop();
+  process.stdin.destroy();
 });

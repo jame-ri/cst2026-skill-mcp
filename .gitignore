@@ -7,3 +7,8 @@ node_modules/
 design-records/
 scripts/
 skills/skill-creator/
+
+# Local API artifacts, model weights and Python bytecode
+models/
+*.pyc
+.env

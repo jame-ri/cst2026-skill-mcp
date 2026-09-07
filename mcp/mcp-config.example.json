@@ -1,0 +1,16 @@
+{
+  "mcpServers": {
+    "cst2026": {
+      "command": "node",
+      "args": [
+        "mcp/src/server.js"
+      ],
+      "env": {
+        "CST_KNOWLEDGE_ENABLED": "1",
+        "CST_KNOWLEDGE_AUTO_CAPTURE": "1",
+        "CST_KNOWLEDGE_DIR": "design-records/knowledge",
+        "CST_KNOWLEDGE_STABLE_RUNS": "2"
+      }
+    }
+  }
+}

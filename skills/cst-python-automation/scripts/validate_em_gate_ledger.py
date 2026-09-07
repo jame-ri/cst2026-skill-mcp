@@ -73,7 +73,7 @@ def list_values(value: Any) -> set[str]:
 
 
 def has_text(value: Any) -> bool:
-    return bool(text(value))
+    return isinstance(value, str) and bool(value.strip())
 
 
 def add_missing(errors: list[str], location: str, fields: list[str], obj: dict[str, Any]) -> None:
@@ -93,6 +93,8 @@ def reference_entries(value: Any) -> list[dict[str, Any]]:
 def validate_reference_checked(location: str, value: Any) -> list[str]:
     errors: list[str] = []
     entries = reference_entries(value)
+    if isinstance(value, list) and any(not isinstance(item, dict) for item in value):
+        errors.append(f"{location}: reference_checked entries must be objects")
     if not entries:
         return [f"{location}: missing `reference_checked` with CST Help, official doc, macro, or source-document evidence"]
 
@@ -142,8 +144,10 @@ def validate_gate_ledger(data: dict[str, Any]) -> list[str]:
         for field in ["evidence", "pass_condition", "unchecked_risk"]:
             if field not in entry:
                 errors.append(f"gate_ledger.{step}: missing `{field}`")
+            elif not isinstance(entry[field], str):
+                errors.append(f"gate_ledger.{step}: `{field}` must be text")
 
-        if status == "pass":
+        if status in {"pass", "not_applicable"}:
             add_missing(errors, f"gate_ledger.{step}", ["evidence", "pass_condition"], entry)
 
         if status in {"pass", "not_applicable"}:
@@ -154,21 +158,38 @@ def validate_gate_ledger(data: dict[str, Any]) -> list[str]:
 
 def validate_no_simulation_state(data: dict[str, Any]) -> list[str]:
     errors: list[str] = []
-    design_intent = data.get("design_intent", {})
+    design_intent = data.get("design_intent")
     if not isinstance(design_intent, dict):
-        errors.append("design_intent: must be an object")
+        return ["design_intent: must be an object"]
+    if not isinstance(design_intent.get("simulation_allowed"), bool):
+        errors.append("design_intent.simulation_allowed: must be a boolean")
+
+    state = data.get("simulation_state")
+    if state is not None:
+        if not isinstance(state, dict):
+            return errors + ["simulation_state: must be an object"]
+        for field in ["solver_executed", "port_modes_executed", "results_validated"]:
+            if not isinstance(state.get(field), bool):
+                errors.append(f"simulation_state.{field}: must be a boolean")
+            elif design_intent.get("simulation_allowed") is False and state[field]:
+                errors.append(f"no-simulation workflow: simulation_state.{field} must be false")
         return errors
 
+    # Backward compatibility for previously recorded ledgers.
     if design_intent.get("simulation_allowed") is False:
-        gate_ledger = data.get("gate_ledger", {})
-        solver_risk = text(gate_ledger.get("solver_mesh_monitors", {}).get("unchecked_risk")).lower()
-        save_risk = text(gate_ledger.get("save_and_simulation_state", {}).get("unchecked_risk")).lower()
-        combined = f"{solver_risk} {save_risk}"
+        ledger = data.get("gate_ledger")
+        if not isinstance(ledger, dict):
+            return errors
+        risks = []
+        for step in ["solver_mesh_monitors", "save_and_simulation_state"]:
+            entry = ledger.get(step)
+            risks.append(text(entry.get("unchecked_risk")) if isinstance(entry, dict) else "")
+        combined = " ".join(risks).lower()
         for phrase in ["no solver", "no port-mode", "no s-parameter"]:
             if phrase not in combined:
                 errors.append(
-                    "no-simulation workflow: unchecked_risk must explicitly mention "
-                    f"`{phrase}`"
+                    "no-simulation workflow: provide structured simulation_state or "
+                    f"unchecked_risk mentioning '{phrase}'"
                 )
     return errors
 
@@ -244,8 +265,10 @@ def validate_lumped_port(port: dict[str, Any]) -> list[str]:
     if normalized(port.get("intended_excitation")) != "lumped":
         errors.append("lumped feed: intended_excitation must be `lumped`")
     terminals = port.get("terminals")
-    if not isinstance(terminals, list) or len(terminals) != 2:
-        errors.append("lumped feed: terminals must list exactly two physical terminals")
+    if not isinstance(terminals, list) or len(terminals) != 2 or any(not has_text(item) for item in terminals):
+        errors.append("lumped feed: terminals must list exactly two nonempty physical terminal descriptions")
+    elif terminals[0].strip() == terminals[1].strip():
+        errors.append("lumped feed: terminal descriptions must identify distinct terminals")
     return errors
 
 
@@ -273,6 +296,19 @@ def validate_floquet_or_plane_wave(port: dict[str, Any]) -> list[str]:
     return errors
 
 
+def validate_plane_wave(port: dict[str, Any]) -> list[str]:
+    errors = validate_reference_checked("plane-wave excitation", port.get("reference_checked"))
+    if normalized(port.get("selected_port_object")) != "plane_wave":
+        errors.append("plane-wave excitation: selected_port_object must be plane_wave")
+    add_missing(
+        errors, "plane-wave excitation",
+        ["propagation_direction", "polarization", "boundary_basis"], port,
+    )
+    if "periodic_boundary_declared" in port and not isinstance(port["periodic_boundary_declared"], bool):
+        errors.append("plane-wave excitation: periodic_boundary_declared must be a boolean")
+    return errors
+
+
 def validate_unknown_profile(port: dict[str, Any]) -> list[str]:
     reference_errors = validate_reference_checked("unknown feed profile", port.get("reference_checked"))
     if port.get("manual_review_required") is not True:
@@ -287,7 +323,12 @@ def validate_port_decision(data: dict[str, Any]) -> list[str]:
     if not isinstance(port, dict):
         return ["root: missing object `port_decision`"]
 
-    feed_type = normalized(port.get("feed_type") or data.get("design_intent", {}).get("feed_type"))
+    intent = data.get("design_intent")
+    intent = intent if isinstance(intent, dict) else {}
+    declared_feed = normalized(intent.get("feed_type"))
+    feed_type = normalized(port.get("feed_type") or declared_feed)
+    if declared_feed and feed_type != declared_feed:
+        return ["port_decision.feed_type: conflicts with design_intent.feed_type"]
     if not feed_type:
         return ["port_decision: missing `feed_type`"]
 
@@ -297,12 +338,16 @@ def validate_port_decision(data: dict[str, Any]) -> list[str]:
         return validate_lumped_port(port)
     if feed_type in {"coax", "coaxial"}:
         return validate_coax_port(port)
-    if feed_type in {"floquet", "periodic", "plane_wave"}:
+    if feed_type in {"floquet", "periodic"}:
         return validate_floquet_or_plane_wave(port)
+    if feed_type == "plane_wave":
+        return validate_plane_wave(port)
     return validate_unknown_profile(port)
 
 
 def validate(data: dict[str, Any]) -> list[str]:
+    if not isinstance(data, dict):
+        return ["root: must be an object"]
     errors: list[str] = []
     if not isinstance(data.get("design_intent"), dict):
         errors.append("root: missing object `design_intent`")

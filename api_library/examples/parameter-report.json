@@ -1,0 +1,29 @@
+{
+  "id": "user.parameter_report",
+  "version": "1.0.0",
+  "description": "Read a live parameter report and independently re-read its expressions as a local consistency check.",
+  "effect": "read",
+  "cst_version": "2026",
+  "implementation": "api_library/examples/parameter-report.py",
+  "entrypoint": "run",
+  "verifier": "verify",
+  "input_schema": {
+    "type": "object",
+    "properties": {
+      "prefix": {
+        "type": "string",
+        "maxLength": 80
+      }
+    },
+    "required": [],
+    "additionalProperties": false
+  },
+  "references": [
+    "official-docs/vba-3d/common_vbaapp/common_vbaappapplication_object.htm"
+  ],
+  "tags": [
+    "parameters",
+    "read",
+    "example"
+  ]
+}

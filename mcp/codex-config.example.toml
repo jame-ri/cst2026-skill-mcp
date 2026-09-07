@@ -1,16 +1,13 @@
-# Example Codex MCP configuration snippet.
-#
-# Add this block to the Codex config that manages local MCP servers, then
-# restart the Codex session so the new server appears in the available tools.
-
+# Merge into your local Codex configuration; preserve existing settings.
+# Launch the MCP from the repository root. No machine paths are committed.
 [mcp_servers.cst2026]
-command = "D:\\CSTapi\\run-cst2026-mcp.cmd"
-args = []
+command = "node"
+args = ["mcp/src/server.js"]
+env_vars = ["CST_INSTALL_DIR", "CST_PYTHON_EXE", "CST_MACRO_ROOT", "CST_DESIGN_ENV_EXE"]
+tool_timeout_sec = 7300
 
-# Optional but recommended when moving this MCP config between machines.
-# Update these values to match the local CST installation path.
 [mcp_servers.cst2026.env]
-CST_INSTALL_DIR = "D:\\CST"
-CST_PYTHON_EXE = "D:\\CST\\Python\\python.exe"
-CST_MACRO_ROOT = "D:\\CST\\Library\\Macros"
-CST_DESIGN_ENV_EXE = "D:\\CST\\CST DESIGN ENVIRONMENT.exe"
+CST_KNOWLEDGE_ENABLED = "1"
+CST_KNOWLEDGE_AUTO_CAPTURE = "1"
+CST_KNOWLEDGE_DIR = "design-records/knowledge"
+CST_KNOWLEDGE_STABLE_RUNS = "2"

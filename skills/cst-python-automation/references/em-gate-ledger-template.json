@@ -181,5 +181,10 @@
       "pass_condition": "project path, design id, gate ledger, port record, History evidence, assumptions, risks, and next action are reported",
       "unchecked_risk": ""
     }
+  },
+  "simulation_state": {
+    "solver_executed": false,
+    "port_modes_executed": false,
+    "results_validated": false
   }
 }

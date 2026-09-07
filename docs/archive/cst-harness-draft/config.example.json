@@ -1,0 +1,24 @@
+{
+  "schema_version": 1,
+  "agent": "auto",
+  "tools": {
+    "discovery": "mcp",
+    "bindings": {}
+  },
+  "paths": {
+    "projects": "projects",
+    "runs": "artifacts/runs",
+    "lessons": "knowledge/lessons"
+  },
+  "execution": {
+    "save_policy": "save_copy",
+    "max_repair_attempts_per_operation": 2,
+    "max_parallel_mutations_per_project": 1,
+    "operation_timeout_seconds": 300,
+    "solver_timeout_seconds": 3600
+  },
+  "knowledge": {
+    "max_retrieved_lessons": 5,
+    "auto_apply_unverified": false
+  }
+}

@@ -1,0 +1,2 @@
+# Optional only. Install explicitly in a separate local Python environment.
+sentence-transformers>=3.4,<6
