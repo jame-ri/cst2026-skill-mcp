@@ -1,210 +1,292 @@
-# CST API + MCP Harness
+# CST 2026 Skill + MCP
 
 [中文](#中文) | [English](#english)
 
+面向 Codex、Claude Code 等 agent 的 CST Studio Suite 2026 自动化 Skill 与 MCP 服务。
+
+Agent instructions and an MCP server for operating CST Studio Suite 2026 from Codex, Claude Code, and other MCP-compatible clients.
+
 ## 中文
 
-这是一个以**直接连接和操作 CST** 为核心的本地工具仓库，不是“每次先查知识库，再临时拼脚本”的系统。
+### 项目简介
+
+本仓库将 CST 自动化所需的几部分组织在同一个可移植项目中：
+
+- **Skill** 告诉 agent 如何选择工具、控制风险、验证结果和处理异常。
+- **MCP 服务**向不同 agent 提供统一的 CST 工具接口。
+- **CST 执行层**负责连接 CST、操作工程、读取参数、调用求解器和读取结果。
+- **Harness** 记录操作意图和执行结果，避免不确定的修改被自动重复执行。
+- **参考资料**在现有工具无法满足任务时，帮助排查问题和扩充能力。
+
+日常主线是“agent 调用 MCP 工具直接操作 CST”。API 扩展、知识记录和向量检索属于可选高级功能，不是每次操作的前置步骤。
+
+### 主要能力
+
+| 类别 | 当前能力 |
+| --- | --- |
+| CST 连接 | 连接指定的现有 CST 实例，或在明确要求时创建新实例；查询状态并安全释放连接 |
+| 工程管理 | 打开或绑定仓库内已有的 `.cst` 工程；保存副本或在明确授权后保存原工程 |
+| 参数操作 | 枚举参数，读取表达式和数值，批量修改参数并重建 History |
+| 求解器 | 启动当前工程配置的求解器，查询状态，停止由当前会话提交的任务 |
+| 结果读取 | 浏览 CST 0D/1D 结果树，按 `run_id` 分页读取标量、曲线和复数数据 |
+| 执行保护 | 默认只生成计划；修改前记录意图；相同操作 ID 不重复执行；未知结果要求人工检查 |
+| 兼容与恢复 | 完整配置下保留文档、宏、记录、资源检查、恢复和文本知识工具 |
+| 能力扩展 | 缺少工具时，可将经过审阅和真实试调用验证的实现注册为本地版本化能力 |
+
+当前实现重点服务于已有 CST 工程，不是 CST 官方 SDK 的完整替代品。完整新建模型、所有几何/材料/端口/边界操作以及全部结果类型仍需要继续扩充。
+
+### 工作方式
 
 ```text
-已知 API -> 直接调用 -> CST -> 返回真实执行结果
-缺少 API -> 查官方资料 -> 编写候选 -> 授权试调用 + 后置条件检查
-         -> 保存执行凭据 -> 自动注册为本地验证通过的 API -> 下次直接调用
+用户任务
+   |
+   v
+Codex / Claude / 其他 agent
+   |  读取 Skill，选择和组合工具
+   v
+MCP 服务
+   |  参数校验、授权检查、结果封装
+   v
+CST 执行层 ---- Harness 执行记录
+   |
+   v
+CST Studio Suite
 ```
 
-向量检索只辅助发现 API。源码单独保存，已知 API 的调用不依赖向量模型、文档检索或文本记忆。
+Skill 与 MCP 相互配合，但不绑定同一种 agent。支持 MCP 的客户端可以使用同一个服务；不支持 Skill 目录约定的客户端，也可以将 [Skill 规则](skills/cst-python-automation/SKILL.md)作为项目说明。
 
-### 目录职责
+### 仓库结构
 
-| 目录 | 职责 |
+| 路径 | 作用 |
 | --- | --- |
-| `cst_api/` | CST 会话、参数、求解器、结果读取和扩展代码执行 |
-| `api_library/` | API 目录、候选快照、版本注册、检索和停用 |
-| `harness/` | 执行意图、结果凭据、重复操作保护及辅助记忆 |
-| `mcp/` | MCP 协议、工具适配和旧入口兼容 |
-| `shared/` | 相对路径约束、输入校验、原子写入和子进程支持 |
-| `skills/` | agent 的工作规则，不承载另一套 CST 实现 |
-| `config/` | 通用 MCP、Codex 和环境配置示例 |
-| `docs/` | 架构与扩展开发说明；旧草稿在 `docs/archive/` |
-| `official-docs/`, `macro-library/`, `domain-guides/` | 原有参考资料，只有缺少能力时才查 |
-| `design-records/` | 本地执行记录与学到的 API，默认不纳入 Git |
+| `skills/cst-python-automation/` | CST 自动化 Skill、工作流程、安全规则和领域参考 |
+| `mcp/` | MCP stdio 服务入口、协议处理、工具适配、兼容入口和测试 |
+| `cst_api/` | CST 会话、工程、参数、求解器、结果读取和扩展执行实现 |
+| `harness/` | 操作日志、重复执行保护、辅助知识记录和可选嵌入适配器 |
+| `api_library/` | 内置/扩展能力目录、候选快照、版本注册与可选检索 |
+| `shared/` | 相对路径检查、输入校验、原子写入和子进程工具 |
+| `config/` | 通用 MCP、Codex 和环境变量配置示例 |
+| `docs/` | 架构、扩展开发和归档设计说明 |
+| `official-docs/` | 随仓库保存的 CST 官方 API 参考资料 |
+| `macro-library/` | CST 宏与脚本清单 |
+| `domain-guides/` | CST/RF 领域工作说明 |
+| `design-records/` | 本地执行记录、检查点和已验证扩展；默认不提交 Git |
+| `scripts/` | 原有或临时的本地脚本，不作为 MCP 主入口 |
 
-用户工程、探测数据和原有临时脚本保持原位置，没有作为框架代码迁移。
+工程文件和实验数据可以放在仓库内单独目录中。框架使用仓库相对路径引用它们，不在 Skill、配置和可复用能力中固化某台机器的绝对路径。
 
-### 安装与连接
+### 环境要求
 
-1. 准备 Node.js 18+。MCP 核心只使用 Node 内置模块，不需要安装 npm 依赖。
-2. 实际操作 CST 时，需要有许可的本地 CST 和与其 Python 绑定兼容的解释器。通过 `CST_PYTHON_EXE`、`CST_INSTALL_DIR` 或 `CST_PYTHON_LIB_DIR` 配置机器环境。
-3. 从仓库根目录启动 agent，并使用 [通用 MCP 配置](config/mcp-client.example.json) 或 [Codex 配置](config/codex.example.toml)。Claude Code 等支持 MCP 的 agent 可使用同一个服务，只需按客户端格式配置。
-4. 按 agent 自身的 skill 机制载入 [SKILL.md](skills/cst-python-automation/SKILL.md)。不支持 skill 的客户端可将其作为项目规则；MCP 本身不依赖特定 agent。
-5. 重启 MCP 连接以加载新的工具列表。修改仓库不会自动更新你以前安装在其他目录的 skill 副本。
+- Node.js 18 或更高版本。MCP 核心仅使用 Node.js 内置模块，不需要安装 npm 依赖。
+- 本地安装并获得许可的 CST Studio Suite 2026。
+- 能够导入 CST Python 库的 Python 解释器。
+- 支持 stdio MCP 的 agent 客户端，例如 Codex 或 Claude Code。
 
-手动启动服务：
+常用环境变量见 [config/environment.example](config/environment.example)：
 
-```sh
-node mcp/src/server.js
-```
-
-也可使用根目录的 `run-cst2026-mcp.cmd` 或 `run-cst2026-mcp.sh`，启动脚本会以自身位置确定仓库目录。服务使用 stdio，由 MCP 客户端负责连接，不是 HTTP 服务。
-
-**工作目录很重要：** 配置中的脚本路径相对服务启动目录。桌面客户端不一定从仓库启动，需要设置服务工作目录，或使用已放入 PATH 的启动器。配置格式和工作目录行为由具体客户端决定；不要直接照搬不受支持的 `cwd` 字段。
-
-### 默认工具
-
-默认 `CST_MCP_PROFILE=control`，提供以下 19 个工具：
-
-| 用途 | 工具 |
+| 变量 | 用途 |
 | --- | --- |
-| 连接与状态 | `cst.connect`, `cst.disconnect`, `cst.session_status` |
-| 工程 | `cst.open_project`, `cst.save_project` |
-| 参数 | `cst.get_parameters`, `cst.set_parameters` |
-| 求解 | `cst.run_solver`, `cst.solver_status`, `cst.stop_solver` |
-| 结果 | `cst.list_results`, `cst.read_result` |
-| API 发现与调用 | `api.search`, `api.describe`, `api.call` |
-| 扩展闭环 | `api.stage`, `api.trial`, `api.retire`, `api.reindex` |
+| `CST_PYTHON_EXE` | 指定兼容 CST Python 绑定的解释器 |
+| `CST_INSTALL_DIR` | 指定 CST 安装目录；未设置时尝试从系统环境发现 |
+| `CST_PYTHON_LIB_DIR` | 直接指定 `python_cst_libraries` 所在目录 |
+| `CST_MCP_PROFILE` | `control` 为默认直接控制工具；`full` 额外启用兼容工具 |
+| `CST_ENABLE_API_EXTENSIONS` | 是否允许执行经过审阅的本地扩展 Python；默认关闭 |
+| `CST_API_LIBRARY_DIR` | 本地扩展和注册记录目录，必须是仓库相对路径 |
 
-设置 `CST_MCP_PROFILE=full` 可额外使用原有资料检索、文本记忆、记录和恢复工具。它们不是常规调用的前置步骤。直接会话存续期间，服务阻止混用大部分旧 CST 控制工具。
+### 快速开始
 
-### 如何使用
+1. 克隆仓库并进入仓库根目录。
+2. 根据本机 CST 安装设置必要的环境变量。
+3. 在 agent 中配置 MCP 服务。
+4. 将仓库 Skill 安装到 agent 的 Skill 目录，或作为项目规则引用。
+5. 重启 MCP 连接，确认工具列表已经加载。
 
-这些是 MCP 工具参数，不是 shell 命令。所有 CST 工具默认 `execute=false`，包括实时读取；实际读取也需要明确执行。
-
-先连接已存在的 CST：
-
-```json
-{"name":"cst.connect","arguments":{"mode":"existing","execute":true}}
-```
-
-存在多个实例时指定 `pid`。没有实例不会偷偷新建，只有明确使用 `mode="new"` 才会创建。
-
-之后按以下顺序调用，使用工具实际返回的 `session_id`、`project_id` 和 `job_id`：
-
-1. `cst.open_project`：选择仓库内已有的相对路径 `.cst` 文件。
-2. `cst.get_parameters`：读取真实参数名、表达式和可用数值。
-3. 如需保护原工程，先 `cst.save_project`，选择 `save_copy` 和不同的 `save_copy_path`。
-4. `cst.set_parameters`：修改已存在的参数，不自动保存；默认重建模型。
-5. 用户授权求解后，`cst.run_solver` 使用 `execute=true` 和 `allow_solve=true`。
-6. `cst.solver_status` 查询实际状态。返回“不在运行”不等于求解成功。
-7. `cst.list_results` 后，用明确的 `tree_path` 和 `run_id` 调用 `cst.read_result`。
-8. 需要保存时单独调用保存工具；最后 `cst.disconnect` 只释放连接，不关闭 CST、不保存、不停止求解。
-
-已知 API 也可统一通过 `api.call` 调用，不需要先搜索：
+通用配置参考 [config/mcp-client.example.json](config/mcp-client.example.json)：
 
 ```json
 {
-  "name": "api.call",
-  "arguments": {
-    "api_id": "cst.get_parameters",
-    "arguments": {
-      "session_id": "<实际返回的 session_id>",
-      "project_id": "<实际返回的 project_id>",
-      "execute": true
+  "mcpServers": {
+    "cst-api": {
+      "command": "node",
+      "args": ["mcp/src/server.js"],
+      "env": {
+        "CST_MCP_PROFILE": "control",
+        "CST_ENABLE_API_EXTENSIONS": "0"
+      }
     }
   }
 }
 ```
 
-### 自动入库
+Codex 可参考 [config/codex.example.toml](config/codex.example.toml)。Claude Code 和其他客户端使用相同的 `node mcp/src/server.js` 服务命令，但配置文件位置和字段以各客户端文档为准。
 
-[API 开发说明](docs/api-development.md) 给出完整格式和示例。
+相对脚本路径要求 MCP 服务从仓库根目录启动。如果客户端不能设置工作目录，可使用根目录的 `run-cst2026-mcp.cmd` 或 `run-cst2026-mcp.sh`。也可以直接运行 `node mcp/src/server.js`。该进程使用 stdio 与 MCP 客户端通信，不是 HTTP 服务。
 
-1. 确认现有 API 没有覆盖，再查官方资料。
-2. 编写参数化 Python 实现、独立的 `verify` 函数和候选 JSON。
-3. `api.stage` 加 `execute=true` 保存不可变快照，不运行源码。
-4. 审阅代码，并在 MCP 服务环境启用 `CST_ENABLE_API_EXTENSIONS=1`。
-5. `api.trial` 的 `arguments` 中显式设置 `execute=true`、`allow_extension_execution=true`；求解类还需要 `allow_solve=true`。
-6. 只有实际调用通过检查且执行凭据保存成功，才默认自动注册为 `locally_verified`。以后用带版本的精确 ID，例如 `user.parameter_report@1.0.0`。
-7. 已注册接口后续验证失败会标记为 `disputed`，不再作为正常可调用接口；修复应使用新版本，或通过 `api.retire` 停用。
+### 典型使用流程
 
-**扩展 Python 不是沙箱。** 它拥有服务进程的权限；“只读”声明不是权限隔离。只对已审阅、已授权的源码启用执行。示例接口尚未经过真实 CST 验证，不会预先注册。
+用户可以直接用自然语言向 agent 描述任务，例如：
 
-### 可选向量检索
+> 连接当前 CST 实例，打开 `projects/filter.cst`，读取全部参数，把 `gap` 改为 `0.25`，保存到 `outputs/filter-gap-025.cst`。先不要运行求解器。
 
-默认不安装模型、不下载模型，也不依赖向量库才能操作 CST。
+agent 应按以下顺序工作：
 
-需要时，单独为检索 Python 环境安装 `harness/requirements-vector.txt` 中的可选依赖，准备完整的本地模型目录，并设置：
+1. 使用 `cst.connect` 连接明确的 CST 实例。存在多个实例时选择 PID；不会自动创建新实例。
+2. 使用 `cst.open_project` 打开或绑定仓库内已有工程，并保存返回的 `session_id` 和 `project_id`。
+3. 读取真实参数、工程状态或结果树，不猜测参数名和结果路径。
+4. 修改前根据风险保存工程副本；修改参数不会自动保存工程。
+5. 只有获得用户授权后，才以 `allow_solve=true` 调用求解器。
+6. 使用返回的 `job_id` 查询实际状态。求解器停止不等于仿真成功。
+7. 读取结果时明确指定结果树路径和 `run_id`，并检查新鲜度、单位和工程状态。
+8. 根据用户要求单独保存，最后释放连接。断开连接不会关闭 CST、保存工程或停止求解器。
 
-```text
-CST_EMBEDDING_MODEL=models/your-local-model
-CST_EMBEDDING_MODEL_ID=your-model-revision
-CST_EMBEDDING_PYTHON=python
-```
+所有直接 CST 工具默认 `execute=false`。此时只返回执行计划，不会连接、读取或修改 CST；真正执行时必须显式设置 `execute=true`。
 
-然后显式调用 `api.reindex`，设置 `execute=true`。`api.search` 的 `mode="vector"` 使用本地语义检索；`auto` 不可用时明确返回关键词降级说明。模型权重改变后必须更新 revision 并重建索引。
+### 工具与配置模式
 
-### 边界与安全
+默认 `CST_MCP_PROFILE=control` 提供 19 个工具：
 
-- 仓库配置、工具工程路径、候选文件和模型目录使用相对路径，拒绝越界和路径链接。安装位置由环境或系统发现，供运行时解析，不硬编码到示例或 API 定义。
-- 默认针对已有工程；新建工程、完整几何/端口/边界配置及所有结果类型并未全部内置。当前直接结果读取覆盖 0D/1D，不应冒充完整 CST SDK。
-- 求解提交、求解结束、结果新鲜度和电磁有效性是不同状态；结果不会默认认定属于刚才的求解。
-- 修改可能部分生效。超时或丢失连接后的未知结果不能自动重放。
-- 相同 `operation_id` 只返回既有凭据，不再次执行；旧会话 ID 在 worker 丢失后无效。
-- 正常退出尽量释放协作租约；强制超时可能留下租约，须核实进程归属后人工处理。不要同时用 GUI 或其他控制器修改同一工程。
-- 本次架构重整未运行新代码的测试、实际 CST 调用或模型安装，不能据此声称已通过运行验证。
+| 用途 | 工具 |
+| --- | --- |
+| 会话 | `cst.connect`, `cst.disconnect`, `cst.session_status` |
+| 工程 | `cst.open_project`, `cst.save_project` |
+| 参数 | `cst.get_parameters`, `cst.set_parameters` |
+| 求解器 | `cst.run_solver`, `cst.solver_status`, `cst.stop_solver` |
+| 结果 | `cst.list_results`, `cst.read_result` |
+| 能力目录 | `api.search`, `api.describe`, `api.call` |
+| 可选扩展管理 | `api.stage`, `api.trial`, `api.retire`, `api.reindex` |
 
-更多内容：[架构](docs/architecture.md) · [MCP 说明](mcp/README.md) · [环境变量](config/environment.example)
+设置 `CST_MCP_PROFILE=full` 后，还会提供原仓库中的文档/宏检索、工作记录、资源检查、恢复和文本知识工具。它们适合处理陌生操作或恢复任务，不是已知 CST 操作的固定前置流程。直接控制会话存在时，服务会阻止混用大部分旧控制工具。
+
+完整工具参数和行为见 [mcp/README.md](mcp/README.md)。
+
+### Harness 与可选能力扩展
+
+Harness 让执行过程可追踪：修改类操作先保存意图，再调用 CST，并保存实际结果。发生超时、连接丢失或结果记录不完整时，系统不会自动重放可能已经生效的操作。
+
+当现有工具确实缺少某项 CST 能力时，可以查阅官方资料并编写参数化扩展。扩展首先作为不可调用的候选保存，只有经过人工审阅、明确授权、真实 CST 试调用和后置条件验证后，才注册为本地版本化能力。详细格式和安全要求见 [docs/api-development.md](docs/api-development.md)。
+
+可选向量检索只用于从能力目录中发现相关工具。已知工具和精确 ID 的调用不依赖向量模型，仓库也不会自动安装依赖或下载模型。
+
+### 多 agent 隔离测试
+
+比较 Codex、Claude 等模型时，不要让它们共享会话状态和学习结果。每个 agent 应使用相同 Git commit，但拥有独立 worktree、MCP 进程、`design-records/`、CST 工程副本、CST 实例/PID，以及空白或相同快照的本地能力目录。任务、授权范围、工具配置和评分标准应保持一致。
+
+如果机器只能运行一个 CST 实例，应串行测试，并在每次测试前恢复相同工程副本和空白运行记录。不要让两个 agent 同时控制同一个 CST PID。
+
+### 注意事项
+
+- 工程、输出、候选文件、记录目录和本地模型目录使用仓库相对路径。CST 安装位置只在运行时从环境解析。
+- `mode="new"`、保存原工程、覆盖文件、求解、停止求解和执行本地扩展都需要明确意图或授权。
+- 修改和保存是两个独立动作；工程清单、执行记录和能力注册记录都不是 `.cst` 工程备份。
+- 求解器已提交、正在运行、已停止、成功计算、结果属于本次运行、结果物理有效是不同状态。
+- 超时或 worker 异常后，CST 可能仍在运行，修改也可能已生效。先检查 CST 状态，再决定后续操作。
+- 相同 `operation_id` 只返回已有凭据，不再次执行。
+- Python 扩展不是安全沙箱，它拥有 MCP 服务进程的权限。只执行经过审阅和明确授权的源码。
+- 不要同时使用 GUI、旧脚本和多个 agent 修改同一个工程。
+- 修改仓库中的 Skill 不会自动更新以前复制到其他目录的 Skill；需要重新同步并重启 agent。
+- 本次架构重整尚未通过新的真实 CST 集成测试，不应宣称所有 CST 版本和工程均已验证。
+
+### 更多文档
+
+- [MCP 使用与协议说明](mcp/README.md)
+- [整体架构](docs/architecture.md)
+- [扩展能力开发](docs/api-development.md)
+- [CST 自动化 Skill](skills/cst-python-automation/SKILL.md)
+- [环境变量示例](config/environment.example)
 
 ## English
 
-This repository is a **direct CST API layer exposed through MCP**, with a harness for evidence-backed local API reuse. It is not a mandatory document-search pipeline.
+### Overview
 
-```text
-Known API -> direct invocation -> CST -> actual outcome
-Missing API -> official references -> candidate implementation -> authorized trial + verifier
-            -> durable execution receipt -> local registration -> direct reuse
-```
+CST 2026 Skill + MCP combines the components required for agent-assisted CST Studio Suite automation:
 
-### Setup
+- The **Skill** teaches an agent how to select tools, control risk, validate evidence, and recover from uncertain outcomes.
+- The **MCP server** exposes a consistent CST toolset to Codex, Claude Code, and other MCP clients.
+- The **CST execution layer** manages sessions, projects, parameters, solver jobs, and results.
+- The **Harness** records intent and outcomes so uncertain mutations are not replayed automatically.
+- Bundled **reference material** supports troubleshooting and extending missing capabilities.
 
-1. Install Node.js 18+. The MCP core uses built-in Node modules and has no npm dependencies.
-2. Actual CST execution requires a licensed local installation and a compatible vendor Python environment. Configure `CST_PYTHON_EXE`, `CST_INSTALL_DIR` or `CST_PYTHON_LIB_DIR` as needed.
-3. Start your agent from the repository root and adapt the [generic MCP configuration](config/mcp-client.example.json) or [Codex configuration](config/codex.example.toml) to your client.
-4. Load the repository [skill](skills/cst-python-automation/SKILL.md) using the agent's own skill mechanism, or use it as project instructions. Codex, Claude Code and other MCP clients share the same server.
-5. Restart the MCP connection after configuration changes. Previously installed skill copies are not updated automatically.
+The normal path is direct CST operation through MCP. API extension, textual memory, and vector discovery are optional facilities, not prerequisites for routine work.
 
-Start the stdio service with `node mcp/src/server.js`, or the platform launcher in the repository root. This is not an HTTP service.
+### Capabilities and repository structure
 
-Relative script arguments require the server's working directory to be the repository root. Desktop clients may need an explicitly configured working directory or a launcher on PATH. Do not assume every client accepts a `cwd` configuration field.
+The repository supports explicit CST sessions, existing project binding, parameter reads and updates, tracked solver jobs, and paged 0D/1D result access. Operations are plan-only by default, and uncertain mutations are never replayed automatically.
 
-### Architecture and tools
+| Path | Responsibility |
+| --- | --- |
+| `skills/cst-python-automation/` | Agent workflow, safety rules, and CST-specific references |
+| `mcp/` | stdio MCP entry point, protocol handling, adapters, compatibility entry points, and tests |
+| `cst_api/` | CST sessions, projects, parameters, solvers, results, and extension execution |
+| `harness/` | Execution journal, replay protection, workflow memory, and optional embedding adapter |
+| `api_library/` | Capability catalog, candidate snapshots, version registration, and optional search |
+| `shared/` | Relative-path validation, input schemas, atomic writes, and subprocess support |
+| `config/` | Generic MCP, Codex, and environment examples |
+| `docs/` | Architecture, extension development, and archived design material |
+| `official-docs/`, `macro-library/`, `domain-guides/` | CST references, macro inventory, and domain guidance |
+| `design-records/` | Local receipts, checkpoints, and verified extensions; ignored by default |
 
-`cst_api/` executes CST operations; `api_library/` manages reusable APIs; `harness/` stores execution evidence; `mcp/` exposes tools. `skills/` contains agent instructions, `config/` contains examples, and local generated data stays under ignored `design-records/`. Existing engineering projects and reference collections are preserved.
+Engineering projects and experiment data can live in separate repository directories. Reusable definitions use repository-relative paths instead of machine-specific absolute paths.
 
-The default `control` profile exposes 12 direct CST tools and 7 API-library tools listed above. Set `CST_MCP_PROFILE=full` to additionally expose legacy retrieval, memory and recovery tools. Retrieval is never a prerequisite for known APIs.
+### Requirements and setup
+
+Requirements are Node.js 18+, a licensed CST Studio Suite 2026 installation, a Python interpreter compatible with the CST bindings, and a stdio MCP client.
+
+Use [config/environment.example](config/environment.example) for environment settings, [config/mcp-client.example.json](config/mcp-client.example.json) for a generic client, and [config/codex.example.toml](config/codex.example.toml) for Codex. Claude Code and other clients use the same `node mcp/src/server.js` command while following their own configuration conventions.
+
+Use the repository root as the service working directory. If the client cannot set it reliably, use `run-cst2026-mcp.cmd` on Windows or `run-cst2026-mcp.sh` on POSIX. The server communicates over stdio and is not an HTTP service.
+
+Install [SKILL.md](skills/cst-python-automation/SKILL.md) through the client's Skill mechanism, or use it as project instructions, then restart the MCP connection.
 
 ### Typical workflow
 
-1. Call `cst.connect` with `mode="existing"` and `execute=true`. Specify a PID when multiple instances exist; creation requires explicit `mode="new"`.
-2. Bind an existing repository-relative project with `cst.open_project`.
-3. Read parameters, save a copy if needed, and modify named parameters.
-4. With user authorization, call `cst.run_solver` with `execute=true` and `allow_solve=true`; poll `cst.solver_status` using the returned job ID.
-5. List results, then read an explicit tree path and run ID. Check provenance and freshness before interpreting the data.
-6. Save explicitly. Disconnecting does not save, close CST or stop a solver.
+1. Connect to an explicitly selected CST instance and retain the returned `session_id`.
+2. Open or bind an existing repository-relative project and retain its `project_id`.
+3. Inspect real parameters and state instead of guessing names or tree paths.
+4. Save an authorized project copy before risky changes; parameter updates do not save automatically.
+5. Start a solver only after user authorization, using `allow_solve=true`.
+6. Poll the returned `job_id`; a stopped solver is not proof of a successful run.
+7. Read an explicit result path and `run_id`, then assess freshness, units, and project provenance.
+8. Save only as requested and disconnect. Disconnecting does not save, close CST, or stop a solver.
 
-Use the actual returned session/project/job IDs. All direct tools, including live reads, default to plan-only. A known tool may also be invoked through `api.call` using its exact `api_id` and nested `arguments`, without any search.
+All direct CST tools default to `execute=false`. They return a plan until execution is explicitly enabled.
 
-### Extending and learning
+### Tools and profiles
 
-Define a versioned candidate JSON, parameterized Python implementation and separate postcondition verifier. Stage it with `api.stage`; staging only snapshots source and reference hashes.
+The default `control` profile exposes 19 tools covering sessions, projects, parameters, solvers, results, capability discovery, and optional extension management. Set `CST_MCP_PROFILE=full` to additionally expose document/macro lookup, workflow records, resource checks, recovery, and textual-memory tools.
 
-After reviewing the source, explicitly enable `CST_ENABLE_API_EXTENSIONS=1` and authorize `api.trial` with nested `execute=true` and `allow_extension_execution=true`. Solver extensions additionally require `allow_solve=true`.
+Compatibility tools help with unfamiliar or recovery work, but are not mandatory preparation for known CST operations. See [mcp/README.md](mcp/README.md) for the complete tool list and contracts.
 
-A passing trial with a durable execution receipt registers that exact version as `locally_verified` by default. Invoke it later by an exact ID such as `user.parameter_report@1.0.0`. A subsequent verification failure disputes the API; repairs require a new version. `api.retire` disables reuse without deleting evidence.
+### Harness and optional extension
 
-**Python extensions are not sandboxed.** They run with the server's privileges. A passing author-supplied verifier proves only its local postconditions, not universal correctness or electromagnetic validity. The bundled example is unverified and not pre-registered. See [API development](docs/api-development.md).
+The Harness stores intent before a mutation, dispatches it once, and records the actual outcome. A timeout, lost worker, or incomplete receipt does not trigger automatic replay.
 
-### Optional semantic discovery
+When the built-in tools lack a CST capability, a reviewed implementation can be staged and trialed against CST. It becomes a versioned local capability only after explicit authorization and passing postcondition evidence. Details belong in [docs/api-development.md](docs/api-development.md).
 
-Install the optional Python dependency explicitly, provision a trusted complete local model, configure `CST_EMBEDDING_MODEL`, `CST_EMBEDDING_MODEL_ID` and optionally `CST_EMBEDDING_PYTHON`, then call `api.reindex` with `execute=true`.
+Optional vector retrieval searches capability descriptions only. Known tools and exact IDs do not depend on an embedding model, and the repository never installs dependencies or downloads model weights automatically.
 
-Only API descriptions and schemas are embedded. Code remains a separate immutable artifact. No dependency installation or model download happens automatically. Exact-ID calls bypass vectors; automatic fallback identifies keyword search honestly. Change the revision and rebuild after changing model weights.
+### Isolated agent evaluation
 
-### Limits and execution status
+For fair Codex-versus-Claude comparisons, give each agent the same Git commit but isolate its worktree, MCP process, `design-records/`, CST project copy, CST instance/PID, and optional local capability index. Keep prompts, authorization, tool profile, and scoring criteria identical.
 
-Project/artifact inputs are repository-relative; machine bindings are resolved from the environment rather than hardcoded. CST may require resolved absolute paths internally, but those are not portable API definitions.
+If only one CST instance can run, evaluate agents serially and restore the same project and record baseline before each run.
 
-This is not a complete vendor SDK wrapper: the bundled operations focus on existing projects, parameters, tracked solver jobs and 0D/1D results. Solver submission or a non-running state does not prove success. Result freshness and physical validity require separate evidence.
+### Important notes
 
-Mutations may partially succeed. Never automatically replay an uncertain operation. Reusing an operation ID returns its receipt instead of rerunning it. Worker loss invalidates live IDs; forced termination may leave a lease requiring owner-aware manual recovery.
+- Project, output, candidate, record, and local-model inputs use repository-relative paths.
+- Creating an instance, saving the original, overwriting, solving, stopping a solver, and running an extension require explicit intent or authorization.
+- Modification and saving are separate. A receipt or capability registration is not a `.cst` project backup.
+- Solver submission, running state, termination, successful computation, result freshness, and physical validity are distinct claims.
+- CST may continue after a timeout or worker failure. Inspect state before proceeding.
+- Reusing an `operation_id` retrieves its receipt instead of executing again.
+- Python extensions are not sandboxed. Run only reviewed and explicitly authorized source.
+- Avoid concurrent GUI, legacy-script, and multi-agent edits to one project.
+- Editing the repository Skill does not update copies installed elsewhere.
+- The restructured architecture has not yet undergone a new live-CST integration run.
 
-**The restructuring has not been tested against a running CST installation, and no new tests, model installations or indexing runs were performed as part of it.**
+### Further documentation
+
+- [MCP usage and contracts](mcp/README.md)
+- [Architecture](docs/architecture.md)
+- [Extension development](docs/api-development.md)
+- [CST automation Skill](skills/cst-python-automation/SKILL.md)
+- [Environment template](config/environment.example)
